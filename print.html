@@ -1,0 +1,550 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js bdfd">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Bot Designer for Discord - Wiki</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('bdfd')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="foreword.html">Foreword</a></li><li class="expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="plans.html">Plans</a></li><li class="expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li><ol class="section"><li class="expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="functions/ping.html"><strong aria-hidden="true">1.2.</strong> $ping</a></li><li class="expanded "><a href="functions/authorID.html"><strong aria-hidden="true">1.3.</strong> $authorID</a></li><li class="expanded "><a href="functions/dm.html"><strong aria-hidden="true">1.4.</strong> $dm</a></li><li class="expanded "><a href="functions/membersCount.html"><strong aria-hidden="true">1.5.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="bdfd">Bot Designer for Discord</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Bot Designer for Discord - Wiki</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#foreword" id="foreword">Foreword</a></h1>
+<p>Welcome to our humble abode. The thing you're seeing is <em>Bot Designer for Discord</em>'s wiki.
+If you're curious about <em>functions</em> please feel free to visit <a href="functions/introduction.html">this section</a>.</p>
+<h1><a class="header" href="#changelog" id="changelog">Changelog</a></h1>
+<p><em>Note that we often forget to update this article, so some stuff are missing.</em></p>
+<h2><a class="header" href="#june" id="june">June</a></h2>
+<ul>
+<li>Fixed <code>$getReactions[]</code> in BDScript Unstable</li>
+</ul>
+<h2><a class="header" href="#may" id="may">May</a></h2>
+<ul>
+<li>Fixed <code>$onlyBotPerms[]</code></li>
+<li>Bot Designer List Open Beta</li>
+<li>Added <code>$botListDescription[]</code> and <code>$botListHide</code></li>
+<li>Fixed brackets issue in <code>$serverNames</code></li>
+<li>Other bug fixing for Bot Designer and Bot Designer List</li>
+</ul>
+<h2><a class="header" href="#april" id="april">April</a></h2>
+<ul>
+<li>Fixed <code>$serverIcon</code></li>
+<li>Added <code>$changeCooldownTime[]</code></li>
+<li>Disabled <code>$randomUserID</code>, <code>$'randomUserID</code>, <code>$deleteIn</code> and <code>$dm</code> in <code>$onMessageDelete</code></li>
+<li>Fixed <code>$addField[]</code></li>
+<li>Added error message in <code>$getServerVar</code> when provided variable does not exist</li>
+<li><code>$userID</code> does not stop code execution if user is not found</li>
+<li>Added <code>$botLeave</code></li>
+<li>Removed permission check from <code>$clear</code> command.</li>
+<li>Fixed <code>$isAdmin[]</code></li>
+</ul>
+<h2><a class="header" href="#march" id="march">March</a></h2>
+<ul>
+<li>Added <code>$getReactions</code> and <code>$userReacted</code></li>
+<li>New command interpreter</li>
+<li>Added to new parser:
+<ul>
+<li><code>$'random[]</code> and <code>$'random</code></li>
+<li><code>$'randomText[]</code></li>
+<li><code>$'randomUser</code></li>
+<li><code>$'randomMention</code></li>
+<li><code>$'randomUserID</code></li>
+<li><code>$'randomString[]</code></li>
+</ul>
+</li>
+<li>Fixed brackets in <code>$getMessage[]</code></li>
+<li>Changed behaviour of <code>$onlyPerms</code> command</li>
+<li>Added <code>$charCount</code></li>
+<li>Added <code>$clearReactions</code></li>
+<li>Added new options to <code>$getMessage</code></li>
+<li>Fixed adding slowmode when using <code>$modifyChannel</code></li>
+<li>Added <code>$checkContains</code></li>
+<li>Added <code>$addEmoji</code></li>
+<li>Fixed the bug with <code>$</code> command prefix and <code>$noMentionMessage</code></li>
+<li>Added <code>$unbanID[id]</code></li>
+<li>Added <code>$hasRole[]</code></li>
+<li>Optimized the leaderboard commands</li>
+<li>Fixed permissions in some commands</li>
+<li>Fixed <code>$onlyPerms</code></li>
+<li>Fixed the bug with <code>$</code> command prefix and <code>$message</code></li>
+</ul>
+<h2><a class="header" href="#february" id="february">February</a></h2>
+<ul>
+<li>Fixed errors in <code>$addField</code></li>
+<li>Added <code>$serverRegion</code></li>
+<li>Added <code>$serverOwner</code></li>
+<li>Added <code>$emoteCount</code></li>
+<li>Added <code>$isMentionable</code></li>
+<li>Added <code>$isHoisted</code></li>
+<li>Added <code>$serverIcon[serverID]</code></li>
+<li>Fixed suppressing errors in some variable commands</li>
+<li>Fixed bug with <code>$replaceText[]()</code> inside <code>$description</code></li>
+<li>Added <code>$isValidHex</code></li>
+<li>Added <code>$isAdmin[]</code></li>
+<li><code>$userID</code> does not require discriminator now</li>
+<li>Added <code>$serverVerificationLvl</code></li>
+<li>Fixed stopping command when <code>$changeUsernameWithID</code> or <code>$changeUsername</code> throws an exception</li>
+<li>Added <code>$modifyRolePerms</code></li>
+<li>Added <code>$isUserDMEnabled</code></li>
+<li>Added new option to <code>$mentioned</code></li>
+<li>When userID is not provided in <code>$discriminator</code>, the author's id will be used</li>
+<li>Added <code>$argCount</code></li>
+<li>Added <code>$roleExists</code> and <code>$roleExists</code> </li>
+<li>Added <code>$varExistError</code></li>
+<li>Removed permissions check for <code>$kick</code> function</li>
+<li>Fixed brackets issue in <code>$message</code> and <code>$noMentionMessage</code></li>
+<li>Fixed <code>$globalUserLeaderboard</code></li>
+<li><code>$repeatMessage</code> won't send an error when there is <code>0</code> provided</li>
+</ul>
+<h2><a class="header" href="#january" id="january">January</a></h2>
+<ul>
+<li>Final premium preparations</li>
+<li>Space commands for premium bots</li>
+<li>Added <code>sendChannelMessage()</code> to JS</li>
+<li>Added <code>$isNumber</code></li>
+<li>Better description for<code> $replaceText</code></li>
+<li>Removed <code>#</code> from <code>$getRoleColor</code></li>
+<li>Added possibility of adding custom error message to <code>$suppressErrors</code></li>
+<li>Added <code>$embedSuppressErrors</code></li>
+<li>Added <code>$getServerVar</code> in command's name for premium bots</li>
+<li>Added custom separators to <code>$numberSeparator</code></li>
+<li>Fixed issue with <code>+</code> and <code>-</code> in <code>$numberSeparator</code></li>
+<li>iOS release</li>
+<li>Added <code>$isBot[]</code></li>
+<li>Added <code>userID</code> option to <code>$takeRole</code></li>
+<li>Fixed problems with timezones</li>
+<li><code>@everyone</code> role shows up now when it's a highest/lowest role in <code>$highestRole/$lowestRole</code></li>
+<li><code>@everyone</code> role now works in <code>$rolePosition</code></li>
+<li>Multiline for <code>$replaceText</code></li>
+<li>Fixed no errors in <code>$roleID[]</code></li>
+<li>Added <code>$toUppercase[]</code> and <code>$toLowercase[]</code></li>
+<li>Added <code>roleID</code> and userID to <code>$modifyChannelPerms</code></li>
+<li>Added <code>$authorOfMessage[]</code></li>
+<li>Added <code>$userID[]</code></li>
+<li>Improved servers response time by over 10x</li>
+<li>Fixed issues with <code>$setServerVar[]</code> and <code>$setUserVar[]</code></li>
+<li>Added multiline support for <code>$textSplit[]</code></li>
+<li>Fixed brackets in <code>$username</code></li>
+</ul>
+<h2><a class="header" href="#december" id="december">December</a></h2>
+<ul>
+<li>Fixed high ping issues</li>
+<li>Fixed whole bunch of other issues</li>
+<li>To JS added:
+<ul>
+<li>authorId,</li>
+<li>channelId,</li>
+<li>userMentions,</li>
+<li>roleMentions,</li>
+<li>unban(),</li>
+<li>takeRole(),</li>
+<li>giveRole(),</li>
+<li>channelTyping(),</li>
+<li>createChannel(),</li>
+<li>removeChannel(),</li>
+<li>unpinMessage(),</li>
+<li>banWithReason(),</li>
+<li>kickWithReason(),</li>
+<li>removeRole(),</li>
+<li>createRole()</li>
+</ul>
+</li>
+<li>Created status website https://status.botdesignerdiscord.com</li>
+<li>Web version of <em>Bot Designer for Discord</em> has been moved to new address https://botdesignerdiscord.com</li>
+<li>Fixed some issues in web version</li>
+<li>Fixed <code>$banID</code></li>
+<li>Preparations for premium points</li>
+</ul>
+<h2><a class="header" href="#november" id="november">November</a></h2>
+<ul>
+<li>Added <code>$rolePosition[roleID]</code></li>
+<li>Released translation strings to volunteers</li>
+<li>Added <code>kick()</code> and ban() to JS</li>
+<li>Released new stable version</li>
+</ul>
+<h1><a class="header" href="#plans" id="plans">Plans</a></h1>
+<ul>
+<li>Better web experience</li>
+<li>Create more wiki articles</li>
+<li>Better JavaScript support</li>
+<li>Premium</li>
+<li>Fix brackets</li>
+<li>Add more translations</li>
+<li>In $onlyPerms allow using <code>!</code> to negate perm</li>
+</ul>
+<p><em>(We probably forgot about adding something to this list so we will update this if needed)</em></p>
+<h1><a class="header" href="#functions-introduction" id="functions-introduction">Functions introduction</a></h1>
+<p>In this section of wiki you will learn about some of the useful functions.<br />
+Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
+They are heart and soul of your bot. Remember that functions start with <code>$</code>.<br />
+For example <code>$nomention</code> or <code>$ping</code>.</p>
+<h1><a class="header" href="#functions-introduction-1" id="functions-introduction-1">Functions introduction</a></h1>
+<p>In this section of wiki you will learn about some of the useful functions.<br />
+Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
+They are heart and soul of your bot. Remember that functions start with <code>$</code>.<br />
+For example <code>$nomention</code> or <code>$ping</code>.</p>
+<h1><a class="header" href="#ping" id="ping">$ping</a></h1>
+<p>Shows the delay between sent message and bot's response.
+The value of <code>$ping</code> is expressed in miliseconds.</p>
+<h2><a class="header" href="#example-command" id="example-command">Example command:</a></h2>
+<pre><code>Ping: $ping ms
+</code></pre>
+<h4><a class="header" href="#expected-output" id="expected-output">Expected output:</a></h4>
+<pre><code>Ping: 50 ms
+</code></pre>
+<p>⠀</p>
+<h1><a class="header" href="#authorid" id="authorid">$authorID</a></h1>
+<p>Returns message's <strong>author ID</strong>. </p>
+<h2><a class="header" href="#example-command-1" id="example-command-1">Example command:</a></h2>
+<pre><code>This command was written by &lt;@$authorID&gt;!
+</code></pre>
+<h4><a class="header" href="#expected-output-1" id="expected-output-1">Expected output:</a></h4>
+<pre><code>This command was written by @user!
+</code></pre>
+<h4><a class="header" href="#explanation" id="explanation">Explanation:</a></h4>
+<p>Discord uses this format <code>&lt;@USER_ID&gt;</code> to mention user.
+So for example let's say that <code>$authorID</code> is equal to <code>246604909451935745</code>.
+If we'll use this <code>&lt;@$authorID&gt;</code> it will be replaced with <code>&lt;@246604909451935745&gt;</code> and discord will
+interpret this as a mention <em>(@Noituri)</em>.</p>
+<h1><a class="header" href="#dm" id="dm">$dm</a></h1>
+<p>There are three possible usages of the <code>$dm</code> command</p>
+<p>The first is:</p>
+<pre><code class="language-php">$dm
+</code></pre>
+<p>This will send the message to the user that runs the command.</p>
+<p>The second is:</p>
+<pre><code class="language-php">$dm[]
+</code></pre>
+<p>This will send the message to the first mentioned user.</p>
+<p>The third is:</p>
+<pre><code class="language-php">$dm[User ID;...]
+</code></pre>
+<p>This will send the message to every user with given User ID.</p>
+<p>If the command fails to send the message, make sure the user
+allows dm messages from anyone.  <br />
+⠀</p>
+<h1><a class="header" href="#memberscount" id="memberscount">$membersCount</a></h1>
+<p>This command returns number of members.</p>
+<h2><a class="header" href="#first-usage-of-the-command" id="first-usage-of-the-command">First usage of the command</a></h2>
+<p><code>$membersCount</code> - returns amount of members in current guild</p>
+<h2><a class="header" href="#second-usage" id="second-usage">Second usage</a></h2>
+<p><code>$membersCount[presence]</code> - returns amount of members that have their presences set
+to provided presence. For example if you will use <code>$membersCount[online]</code> it will show
+you amount of online members.</p>
+<h3><a class="header" href="#available-presences" id="available-presences">Available presences:</a></h3>
+<ul>
+<li><code>online</code> </li>
+<li><code>offline</code></li>
+<li><code>idle</code></li>
+<li><code>dnd</code></li>
+<li><code>invisible</code></li>
+</ul>
+<h1><a class="header" href="#javascript" id="javascript">JavaScript</a></h1>
+<p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
+Discord's API is not fully supported yet but there will be more extensive
+support in the future.</p>
+<h2><a class="header" href="#available-objects-in-the-commands" id="available-objects-in-the-commands">Available objects in the commands:</a></h2>
+<ul>
+<li><code>message</code> - string value. It contains message written by the user.</li>
+<li><code>commandPrefix</code> - string value. It contains name of the used command.</li>
+<li><code>authorId</code> - string value. It contains <strong>ID of the user</strong> that executed that command. </li>
+<li><code>channelId</code> - string value. It contains <strong>ID of the channel</strong> where the command was used.</li>
+<li><code>userMentions</code> - array of string values. It contains user mentions <em>(pings)</em>.</li>
+<li><code>roleMentions</code> - array of string values. It contains role mentions <em>(pings)</em>.</li>
+</ul>
+<h2><a class="header" href="#currently-supported-api-functions" id="currently-supported-api-functions">Currently supported API functions:</a></h2>
+<ul>
+<li><code>setResponse(replyText)</code><br />
+where <code>replyText</code> is a string value. This command will send message to the channel from
+which command was used.</li>
+<li><code>setEmbedResponse(title, description, footer)</code><br />
+where <code>title</code>, <code>description</code>, <code>footer</code> are string values. This command will send embedded
+message to the channel from which command was used.</li>
+<li><code>setEmbedImage(imageURL)</code><br />
+where <code>imageURL</code> is a string value. This command sets image of the embedded message.
+<code>imageURL</code> has to point to the direct url of the image.</li>
+<li><code>ban(userID)</code><br />
+where <code>userID</code> is a string value.</li>
+<li><code>banWithReason(userID, reason)</code><br />
+where <code>userID</code> and <code>reason</code> are the string value.</li>
+<li><code>unban(userID)</code><br />
+where <code>userID</code> is a string value.</li>
+<li><code>kick(userID)</code><br />
+where <code>userID</code> is a string value.</li>
+<li><code>kickWithReason(userID, reason)</code><br />
+where <code>userID</code> and <code>reason</code> are the string value.</li>
+<li><code>giveRole(userID, roleID)</code><br />
+where <code>userID</code> and <code>roleID</code> are the string value. This command gives the role to the user.</li>
+<li><code>takeRole(userID, roleID)</code><br />
+where <code>userID</code> and <code>roleID</code> are the string value. This command takes the role from the user.</li>
+<li><code>channelTyping()</code><br />
+Shows <em>&quot;Bot is typing...&quot;</em> message</li>
+<li><code>createChannel(name, type)</code><br />
+where <code>name</code> and <code>type</code> are the string values.
+<code>type</code> value can be either equal to <code>&quot;text&quot;</code> or <code>&quot;voice&quot;</code>.
+Providing wrong <code>type</code> will result in throwing an exception which you can catch.</li>
+<li><code>removeChannel(chanID)</code><br />
+where <code>chanID</code> is a string value.</li>
+<li><code>pinMessage(channelID, messageID)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
+<li><code>unpinMessage(channelID, messageID)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
+<li><code>sendChannelMessage(channelID, message)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values. Sends message to the provided channel.</li>
+</ul>
+<h1><a class="header" href="#javascript-1" id="javascript-1">JavaScript</a></h1>
+<p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
+Discord's API is not fully supported yet but there will be more extensive
+support in the future.</p>
+<h2><a class="header" href="#available-objects-in-the-commands-1" id="available-objects-in-the-commands-1">Available objects in the commands:</a></h2>
+<ul>
+<li><code>message</code> - string value. It contains message written by the user.</li>
+<li><code>commandPrefix</code> - string value. It contains name of the used command.</li>
+<li><code>authorId</code> - string value. It contains <strong>ID of the user</strong> that executed that command. </li>
+<li><code>channelId</code> - string value. It contains <strong>ID of the channel</strong> where the command was used.</li>
+<li><code>userMentions</code> - array of string values. It contains user mentions <em>(pings)</em>.</li>
+<li><code>roleMentions</code> - array of string values. It contains role mentions <em>(pings)</em>.</li>
+</ul>
+<h2><a class="header" href="#currently-supported-api-functions-1" id="currently-supported-api-functions-1">Currently supported API functions:</a></h2>
+<ul>
+<li><code>setResponse(replyText)</code><br />
+where <code>replyText</code> is a string value. This command will send message to the channel from
+which command was used.</li>
+<li><code>setEmbedResponse(title, description, footer)</code><br />
+where <code>title</code>, <code>description</code>, <code>footer</code> are string values. This command will send embedded
+message to the channel from which command was used.</li>
+<li><code>setEmbedImage(imageURL)</code><br />
+where <code>imageURL</code> is a string value. This command sets image of the embedded message.
+<code>imageURL</code> has to point to the direct url of the image.</li>
+<li><code>ban(userID)</code><br />
+where <code>userID</code> is a string value.</li>
+<li><code>banWithReason(userID, reason)</code><br />
+where <code>userID</code> and <code>reason</code> are the string value.</li>
+<li><code>unban(userID)</code><br />
+where <code>userID</code> is a string value.</li>
+<li><code>kick(userID)</code><br />
+where <code>userID</code> is a string value.</li>
+<li><code>kickWithReason(userID, reason)</code><br />
+where <code>userID</code> and <code>reason</code> are the string value.</li>
+<li><code>giveRole(userID, roleID)</code><br />
+where <code>userID</code> and <code>roleID</code> are the string value. This command gives the role to the user.</li>
+<li><code>takeRole(userID, roleID)</code><br />
+where <code>userID</code> and <code>roleID</code> are the string value. This command takes the role from the user.</li>
+<li><code>channelTyping()</code><br />
+Shows <em>&quot;Bot is typing...&quot;</em> message</li>
+<li><code>createChannel(name, type)</code><br />
+where <code>name</code> and <code>type</code> are the string values.
+<code>type</code> value can be either equal to <code>&quot;text&quot;</code> or <code>&quot;voice&quot;</code>.
+Providing wrong <code>type</code> will result in throwing an exception which you can catch.</li>
+<li><code>removeChannel(chanID)</code><br />
+where <code>chanID</code> is a string value.</li>
+<li><code>pinMessage(channelID, messageID)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
+<li><code>unpinMessage(channelID, messageID)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values.</li>
+<li><code>sendChannelMessage(channelID, message)</code><br />
+where <code>channelID</code> and <code>messageID</code> are the string values. Sends message to the provided channel.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
