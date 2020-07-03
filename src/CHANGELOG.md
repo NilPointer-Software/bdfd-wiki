@@ -1,6 +1,13 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+## July
+- Renamed `$splitText[]` to `$getSplitText[]` to avoid confusion _(`$splitText[]` still works)_
+- Added `$joinSplitText[]`
+- Added `$getInviteInfo[]`
+- Added `$guildID[name]`
+- Fixed `$numberSeparator[]` in the bot's status
+
 ## June
 - Fixed `$getReactions[]` in BDScript Unstable
 - `$message` works in `$onMessageDelete[]` callback now
