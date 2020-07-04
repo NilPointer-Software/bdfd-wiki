@@ -3,6 +3,8 @@ Bot Designer for Discord allows you to use JavaScript *(ES2015)*.\
 Discord's API is not fully supported yet but there will be more extensive
 support in the future.
 
+__(NOTE: Callbacks don't support JavaScript at the moment)__
+
 ## Available objects in the commands:
 - `message` - string value. It contains message written by the user.
 - `commandPrefix` - string value. It contains name of the used command.
