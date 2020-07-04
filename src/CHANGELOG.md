@@ -7,6 +7,7 @@
 - Added `$getInviteInfo[]`
 - Added `$guildID[name]`
 - Fixed `$numberSeparator[]` in the bot's status
+- `$roleID[]` no longer stops code execution
 
 ## June
 - Fixed `$getReactions[]` in BDScript Unstable
