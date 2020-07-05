@@ -9,6 +9,7 @@
 - Fixed `$numberSeparator[]` in the bot's status
 - `$roleID[]` and `$channelID[]` no longer stop code execution
 - Enabled BDScript Unstable for callbacks
+- Added `$getTextSplitLength`
 
 ## June
 - Fixed `$getReactions[]` in BDScript Unstable
