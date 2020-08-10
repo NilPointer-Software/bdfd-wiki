@@ -1,6 +1,9 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+## August
+- Migrated to the new infrastructure (new database and API)
+
 ## July
 - Renamed `$splitText[]` to `$getSplitText[]` to avoid confusion _(`$splitText[]` still works)_
 - Added `$joinSplitText[]`
