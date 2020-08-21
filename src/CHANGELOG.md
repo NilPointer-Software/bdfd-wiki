@@ -4,6 +4,8 @@
 ## August
 - Migrated to the new infrastructure (new database and API)
 - Premium released
+- Fixed `$isMentionable[]`
+- Fixed `$isHoisted[]`
 
 ## July
 - Renamed `$splitText[]` to `$getSplitText[]` to avoid confusion _(`$splitText[]` still works)_
