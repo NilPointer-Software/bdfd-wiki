@@ -6,6 +6,7 @@
 - Premium released
 - Fixed `$isMentionable[]`
 - Fixed `$isHoisted[]`
+- Added `$removeSplitTextElement[]`
 
 ## July
 - Renamed `$splitText[]` to `$getSplitText[]` to avoid confusion _(`$splitText[]` still works)_
