@@ -7,6 +7,7 @@
 - Fixed `$isMentionable[]`
 - Fixed `$isHoisted[]`
 - Added `$removeSplitTextElement[]`
+- `$userAvatar[]` no longer stops code execution
 
 ## July
 - Renamed `$splitText[]` to `$getSplitText[]` to avoid confusion _(`$splitText[]` still works)_
