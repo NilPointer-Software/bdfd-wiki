@@ -11,6 +11,7 @@
 - Fixed `$argCount[]`
 - Added `$findUser[]`
 - Added `$findRole[]`
+- Added `$disableSpecialEscaping`
 
 ## July
 - Renamed `$splitText[]` to `$getSplitText[]` to avoid confusion _(`$splitText[]` still works)_
