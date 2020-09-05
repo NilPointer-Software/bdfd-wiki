@@ -1,6 +1,10 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+## September
+- Added `$ignoreTriggerCase` for premium bots
+- Fixed caching guilds
+
 ## August
 - Migrated to the new infrastructure (new database and API)
 - Premium released
