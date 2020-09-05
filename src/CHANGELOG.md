@@ -29,7 +29,6 @@
 
 ## June
 - Fixed `$getReactions[]` in BDScript Unstable
-- `$message` works in `$onMessageDelete[]` callback now
 - Fixed bracket escaping for some commands in BDScript Unstable
 - Fixed `$modifyChannel[]` (random slowdowns added on channels)
 
