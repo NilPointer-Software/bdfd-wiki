@@ -5,6 +5,7 @@
 - Added `$ignoreTriggerCase` for premium bots
 - Fixed caching guilds
 - `$findUser[]` & `$findRole[]` are no longer case sensitive
+- `$findUser[]` returns authorID if no user found
 
 ## August
 - Migrated to the new infrastructure (new database and API)
