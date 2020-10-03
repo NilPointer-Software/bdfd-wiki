@@ -11,14 +11,14 @@ if provided value is a number. \
 ## `is-number` command
 
 That's how `is-number` command looks like:
-![is-number command](https://i.imgur.com/9IX4mhN.jpg) \
+![is-number command](https://i.imgur.com/WatX9MY.jpg) \
 
 `$awaitFunc[test2]` launches await command which is called `test2`. \
 
 ## Awaited command
 Here you can see the test2 awaited command:
 
-![awaited command](https://i.imgur.com/jh5HNYH.jpg) \
+![awaited command](https://i.imgur.com/gPJH5GC.jpg) \
 
 Have you noticed what's in the command's trigger?\
 `$awaitedCommand[test2;<numeric>]` - the first argument is the command's name.\
@@ -35,7 +35,7 @@ Well, you can create a command which will be used instead.\
 
 ## Awaited error command
 
-![error command](https://i.imgur.com/MwnYbXK.jpg) \
+![error command](https://i.imgur.com/Y27bCZB.jpg) \
 
 As you can see, we are using `$awaitedCommandError[test2]` in the trigger.\
 The first argument specifies the command's name.\
