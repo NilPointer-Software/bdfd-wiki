@@ -7,6 +7,7 @@
 - `$findUser[]` & `$findRole[]` are no longer case sensitive
 - `$findUser[]` returns authorID if no user found
 - Added awaited commands for premium bots
+- Fixed weird brackets in embeds
 
 ## August
 - Migrated to the new infrastructure (new database and API)
