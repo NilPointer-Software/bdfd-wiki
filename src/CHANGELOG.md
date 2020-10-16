@@ -1,6 +1,12 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+## October
+- Optimized memory usage
+- Added member and presence intents
+- Added `$editEmbedIn[]`
+- Added `serverID` field to server variables
+
 ## September
 - Added `$ignoreTriggerCase` for premium bots
 - Fixed caching guilds
