@@ -6,6 +6,7 @@
 - Added member and presence intents
 - Added `$editEmbedIn[]`
 - Added `serverID` field to server variables
+- Allowed using awaited functions in awaited commands
 
 ## September
 - Added `$ignoreTriggerCase` for premium bots
