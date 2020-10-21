@@ -7,6 +7,8 @@
 - Added `$editEmbedIn[]`
 - Added `serverID` field to server variables
 - Allowed using awaited functions in awaited commands
+- Fixed leaderboards
+- Fixed `$randomMention`, `$randomUser` and `$randomUserID`
 
 ## September
 - Added `$ignoreTriggerCase` for premium bots
