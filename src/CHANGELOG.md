@@ -9,6 +9,9 @@
 - Allowed using awaited functions in awaited commands
 - Fixed leaderboards
 - Fixed `$randomMention`, `$randomUser` and `$randomUserID`
+- Added `$awaitReaction[]` for premium bots
+- Added `$usedEmoji`
+- `$deletecommand` sends an error now
 
 ## September
 - Added `$ignoreTriggerCase` for premium bots
