@@ -20,6 +20,7 @@
 - `$findUser[]` returns authorID if no user found
 - Added awaited commands for premium bots
 - Fixed weird brackets in embeds
+- Added trigger list in the app
 
 ## August
 - Migrated to the new infrastructure (new database and API)
