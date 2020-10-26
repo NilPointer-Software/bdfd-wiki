@@ -12,6 +12,7 @@
 - Added `$awaitReaction[]` for premium bots
 - Added `$usedEmoji`
 - `$deletecommand` sends an error now
+- Fixed `$serverVerificationLvl` not working on very high verification servers
 
 ## September
 - Added `$ignoreTriggerCase` for premium bots
