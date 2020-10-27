@@ -13,6 +13,7 @@
 - Added `$usedEmoji`
 - `$deletecommand` sends an error now
 - Fixed `$serverVerificationLvl` not working on very high verification servers
+- Fixed reconnecting bots to gateway
 
 ## September
 - Added `$ignoreTriggerCase` for premium bots
