@@ -1,6 +1,10 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+## November
+- Fixed disappearing bot status
+- Fixed `$serverCount` in bot status
+
 ## October
 - Optimized memory usage
 - Added member and presence intents
