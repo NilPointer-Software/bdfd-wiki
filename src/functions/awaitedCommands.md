@@ -1,6 +1,6 @@
 # Awaited commands and functions
 
-This feature allows premium bots to await for user's answer. \
+This feature lets your bot to await for user's answer. \
 Here's how the end result looks like: \
 
 ![end result](https://i.imgur.com/rRRcIXA.jpg) \
