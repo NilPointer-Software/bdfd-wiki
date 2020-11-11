@@ -4,6 +4,11 @@
 ## November
 - Fixed disappearing bot status
 - Fixed `$serverCount` in bot status
+- Improved caching
+- Functions that require privileged intents are now marked accordingly 
+- Added `$getLeaderboardValue[]`
+- Added `$awaitReactions[]`
+- Awaited functions are now available for everyone
 
 ## October
 - Optimized memory usage
