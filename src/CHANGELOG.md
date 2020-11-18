@@ -9,6 +9,7 @@
 - Added `$getLeaderboardValue[]`
 - Added `$awaitReactions[]`
 - Awaited functions are now available for everyone
+- Added awaited reactions
 
 ## October
 - Optimized memory usage
