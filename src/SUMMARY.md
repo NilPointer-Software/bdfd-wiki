@@ -6,11 +6,14 @@
 
 - [Functions](./functions/introduction.md)
     - [Introduction](./functions/introduction.md)
+    - [Awaited Commands](./functions/awaitedCommands.md)
     - [$ping](./functions/ping.md)
     - [$authorID](./functions/authorID.md)
     - [$dm](./functions/dm.md)
     - [$membersCount](./functions/membersCount.md)
-    - [Awaited Commands](./functions/awaitedCommands.md)
 
 - [JavaScript](./javascript/javascript.md)
     - [Introduction](./javascript/javascript.md)
+
+- [Premium](./premium/awaitedReactions.md)
+    - [Introduction](./premium/awaitedReactions.md)
