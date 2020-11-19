@@ -16,4 +16,4 @@
     - [Introduction](./javascript/javascript.md)
 
 - [Premium](./premium/awaitedReactions.md)
-    - [Introduction](./premium/awaitedReactions.md)
+    - [Awaited reactions](./premium/awaitedReactions.md)
