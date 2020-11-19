@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="CHANGELOG.html" class="active">Changelog</a></li><li class="chapter-item expanded affix "><a href="plans.html">Plans</a></li><li class="chapter-item expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="functions/ping.html"><strong aria-hidden="true">1.2.</strong> $ping</a></li><li class="chapter-item expanded "><a href="functions/authorID.html"><strong aria-hidden="true">1.3.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="functions/dm.html"><strong aria-hidden="true">1.4.</strong> $dm</a></li><li class="chapter-item expanded "><a href="functions/membersCount.html"><strong aria-hidden="true">1.5.</strong> $membersCount</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="premium/awaitedCommands.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premium/awaitedCommands.html"><strong aria-hidden="true">3.1.</strong> Awaited Commands</a></li></ol></li></ol>
+                <ol class="chapter"><li class="expanded affix "><a href="foreword.html">Foreword</a></li><li class="expanded affix "><a href="CHANGELOG.html" class="active">Changelog</a></li><li class="expanded affix "><a href="plans.html">Plans</a></li><li class="expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li><ol class="section"><li class="expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="functions/awaitedCommands.html"><strong aria-hidden="true">1.2.</strong> Awaited Commands</a></li><li class="expanded "><a href="functions/ping.html"><strong aria-hidden="true">1.3.</strong> $ping</a></li><li class="expanded "><a href="functions/authorID.html"><strong aria-hidden="true">1.4.</strong> $authorID</a></li><li class="expanded "><a href="functions/dm.html"><strong aria-hidden="true">1.5.</strong> $dm</a></li><li class="expanded "><a href="functions/membersCount.html"><strong aria-hidden="true">1.6.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Introduction</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,6 +151,32 @@
                     <main>
                         <h1><a class="header" href="#changelog" id="changelog">Changelog</a></h1>
 <p><em>Note that we often forget to update this article, so some stuff are missing.</em></p>
+<h2><a class="header" href="#november" id="november">November</a></h2>
+<ul>
+<li>Fixed disappearing bot status</li>
+<li>Fixed <code>$serverCount</code> in bot status</li>
+<li>Improved caching</li>
+<li>Functions that require privileged intents are now marked accordingly </li>
+<li>Added <code>$getLeaderboardValue[]</code></li>
+<li>Added <code>$awaitReactions[]</code></li>
+<li>Awaited functions are now available for everyone</li>
+<li>Added awaited reactions</li>
+</ul>
+<h2><a class="header" href="#october" id="october">October</a></h2>
+<ul>
+<li>Optimized memory usage</li>
+<li>Added member and presence intents</li>
+<li>Added <code>$editEmbedIn[]</code></li>
+<li>Added <code>serverID</code> field to server variables</li>
+<li>Allowed using awaited functions in awaited commands</li>
+<li>Fixed leaderboards</li>
+<li>Fixed <code>$randomMention</code>, <code>$randomUser</code> and <code>$randomUserID</code></li>
+<li>Added <code>$awaitReaction[]</code> for premium bots</li>
+<li>Added <code>$usedEmoji</code></li>
+<li><code>$deletecommand</code> sends an error now</li>
+<li>Fixed <code>$serverVerificationLvl</code> not working on very high verification servers</li>
+<li>Fixed reconnecting bots to gateway</li>
+</ul>
 <h2><a class="header" href="#september" id="september">September</a></h2>
 <ul>
 <li>Added <code>$ignoreTriggerCase</code> for premium bots</li>
@@ -158,6 +184,8 @@
 <li><code>$findUser[]</code> &amp; <code>$findRole[]</code> are no longer case sensitive</li>
 <li><code>$findUser[]</code> returns authorID if no user found</li>
 <li>Added awaited commands for premium bots</li>
+<li>Fixed weird brackets in embeds</li>
+<li>Added trigger list in the app</li>
 </ul>
 <h2><a class="header" href="#august" id="august">August</a></h2>
 <ul>
@@ -326,7 +354,7 @@
 <li>Fixed <code>$banID</code></li>
 <li>Preparations for premium points</li>
 </ul>
-<h2><a class="header" href="#november" id="november">November</a></h2>
+<h2><a class="header" href="#november-1" id="november-1">November</a></h2>
 <ul>
 <li>Added <code>$rolePosition[roleID]</code></li>
 <li>Released translation strings to volunteers</li>
@@ -377,6 +405,10 @@
 
         
         
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         

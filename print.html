@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="chapter-item expanded affix "><a href="plans.html">Plans</a></li><li class="chapter-item expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="functions/ping.html"><strong aria-hidden="true">1.2.</strong> $ping</a></li><li class="chapter-item expanded "><a href="functions/authorID.html"><strong aria-hidden="true">1.3.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="functions/dm.html"><strong aria-hidden="true">1.4.</strong> $dm</a></li><li class="chapter-item expanded "><a href="functions/membersCount.html"><strong aria-hidden="true">1.5.</strong> $membersCount</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="premium/awaitedCommands.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premium/awaitedCommands.html"><strong aria-hidden="true">3.1.</strong> Awaited Commands</a></li></ol></li></ol>
+                <ol class="chapter"><li class="expanded affix "><a href="foreword.html">Foreword</a></li><li class="expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="plans.html">Plans</a></li><li class="expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li><ol class="section"><li class="expanded "><a href="functions/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="functions/awaitedCommands.html"><strong aria-hidden="true">1.2.</strong> Awaited Commands</a></li><li class="expanded "><a href="functions/ping.html"><strong aria-hidden="true">1.3.</strong> $ping</a></li><li class="expanded "><a href="functions/authorID.html"><strong aria-hidden="true">1.4.</strong> $authorID</a></li><li class="expanded "><a href="functions/dm.html"><strong aria-hidden="true">1.5.</strong> $dm</a></li><li class="expanded "><a href="functions/membersCount.html"><strong aria-hidden="true">1.6.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Introduction</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -156,6 +156,32 @@
 If you're curious about <em>functions</em> please feel free to visit <a href="functions/introduction.html">this section</a>.</p>
 <h1><a class="header" href="#changelog" id="changelog">Changelog</a></h1>
 <p><em>Note that we often forget to update this article, so some stuff are missing.</em></p>
+<h2><a class="header" href="#november" id="november">November</a></h2>
+<ul>
+<li>Fixed disappearing bot status</li>
+<li>Fixed <code>$serverCount</code> in bot status</li>
+<li>Improved caching</li>
+<li>Functions that require privileged intents are now marked accordingly </li>
+<li>Added <code>$getLeaderboardValue[]</code></li>
+<li>Added <code>$awaitReactions[]</code></li>
+<li>Awaited functions are now available for everyone</li>
+<li>Added awaited reactions</li>
+</ul>
+<h2><a class="header" href="#october" id="october">October</a></h2>
+<ul>
+<li>Optimized memory usage</li>
+<li>Added member and presence intents</li>
+<li>Added <code>$editEmbedIn[]</code></li>
+<li>Added <code>serverID</code> field to server variables</li>
+<li>Allowed using awaited functions in awaited commands</li>
+<li>Fixed leaderboards</li>
+<li>Fixed <code>$randomMention</code>, <code>$randomUser</code> and <code>$randomUserID</code></li>
+<li>Added <code>$awaitReaction[]</code> for premium bots</li>
+<li>Added <code>$usedEmoji</code></li>
+<li><code>$deletecommand</code> sends an error now</li>
+<li>Fixed <code>$serverVerificationLvl</code> not working on very high verification servers</li>
+<li>Fixed reconnecting bots to gateway</li>
+</ul>
 <h2><a class="header" href="#september" id="september">September</a></h2>
 <ul>
 <li>Added <code>$ignoreTriggerCase</code> for premium bots</li>
@@ -163,6 +189,8 @@ If you're curious about <em>functions</em> please feel free to visit <a href="fu
 <li><code>$findUser[]</code> &amp; <code>$findRole[]</code> are no longer case sensitive</li>
 <li><code>$findUser[]</code> returns authorID if no user found</li>
 <li>Added awaited commands for premium bots</li>
+<li>Fixed weird brackets in embeds</li>
+<li>Added trigger list in the app</li>
 </ul>
 <h2><a class="header" href="#august" id="august">August</a></h2>
 <ul>
@@ -331,7 +359,7 @@ If you're curious about <em>functions</em> please feel free to visit <a href="fu
 <li>Fixed <code>$banID</code></li>
 <li>Preparations for premium points</li>
 </ul>
-<h2><a class="header" href="#november" id="november">November</a></h2>
+<h2><a class="header" href="#november-1" id="november-1">November</a></h2>
 <ul>
 <li>Added <code>$rolePosition[roleID]</code></li>
 <li>Released translation strings to volunteers</li>
@@ -359,6 +387,37 @@ For example <code>$nomention</code> or <code>$ping</code>.</p>
 Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
 They are heart and soul of your bot. Remember that functions start with <code>$</code>.<br />
 For example <code>$nomention</code> or <code>$ping</code>.</p>
+<h1><a class="header" href="#awaited-commands-and-functions" id="awaited-commands-and-functions">Awaited commands and functions</a></h1>
+<p>This feature lets your bot to await for user's answer. <br />
+Here's how the end result looks like: </p>
+<p><img src="https://i.imgur.com/rRRcIXA.jpg" alt="end result" /> </p>
+<p>As you can see, the bot asks us to provide a number and then checks <br />
+if provided value is a number. </p>
+<h2><a class="header" href="#is-number-command" id="is-number-command"><code>is-number</code> command</a></h2>
+<p>That's how <code>is-number</code> command looks like:
+<img src="https://i.imgur.com/WatX9MY.jpg" alt="is-number command" /> </p>
+<p><code>$awaitFunc[test2]</code> launches await command which is called <code>test2</code>. </p>
+<h2><a class="header" href="#awaited-command" id="awaited-command">Awaited command</a></h2>
+<p>Here you can see the test2 awaited command:</p>
+<p><img src="https://i.imgur.com/gPJH5GC.jpg" alt="awaited command" /> </p>
+<p>Have you noticed what's in the command's trigger?<br />
+<code>$awaitedCommand[test2;&lt;numeric&gt;]</code> - the first argument is the command's name.<br />
+In this case it's <em>test2</em>. The second argument is a filter.<br />
+<code>&lt;numeric&gt;</code> means that the awaited command expects <strong>only numbers</strong>.</p>
+<p>Here are currently available filters:</p>
+<ul>
+<li><strong>&lt;numeric&gt;</strong> - only numbers are accepted</li>
+<li><strong>&lt;this/is/a/choice/filter&gt;</strong> - one of the words separated by <strong>/</strong> is expected</li>
+<li><strong>an empty filter</strong> - every word is accepted</li>
+</ul>
+<p>What happens if the filter doesn't match?<br />
+Well, you can create a command which will be used instead.</p>
+<h2><a class="header" href="#awaited-error-command" id="awaited-error-command">Awaited error command</a></h2>
+<p><img src="https://i.imgur.com/Y27bCZB.jpg" alt="error command" /> </p>
+<p>As you can see, we are using <code>$awaitedCommandError[test2]</code> in the trigger.<br />
+The first argument specifies the command's name.<br />
+This command will only be used when the filter in <br />
+the awaited command does not match user's response.</p>
 <h1><a class="header" href="#ping" id="ping">$ping</a></h1>
 <p>Shows the delay between sent message and bot's response.
 The value of <code>$ping</code> is expressed in miliseconds.</p>
@@ -523,68 +582,40 @@ where <code>channelID</code> and <code>messageID</code> are the string values.</
 <li><code>sendChannelMessage(channelID, message)</code><br />
 where <code>channelID</code> and <code>messageID</code> are the string values. Sends message to the provided channel.</li>
 </ul>
-<h1><a class="header" href="#awaited-commands-and-functions" id="awaited-commands-and-functions">Awaited commands and functions</a></h1>
-<p>This feature allows premium bots to await for user's answer. <br />
-Here's how the end result looks like: </p>
-<p><img src="https://i.imgur.com/rRRcIXA.jpg" alt="end result" /> </p>
-<p>As you can see, the bot asks us to provide a number and then checks <br />
-if provided value is a number. </p>
-<h2><a class="header" href="#is-number-command" id="is-number-command"><code>is-number</code> command</a></h2>
-<p>That's how <code>is-number</code> command looks like:
-<img src="https://i.imgur.com/WatX9MY.jpg" alt="is-number command" /> </p>
-<p><code>$awaitFunc[test2]</code> launches await command which is called <code>test2</code>. </p>
-<h2><a class="header" href="#awaited-command" id="awaited-command">Awaited command</a></h2>
-<p>Here you can see the test2 awaited command:</p>
-<p><img src="https://i.imgur.com/gPJH5GC.jpg" alt="awaited command" /> </p>
-<p>Have you noticed what's in the command's trigger?<br />
-<code>$awaitedCommand[test2;&lt;numeric&gt;]</code> - the first argument is the command's name.<br />
-In this case it's <em>test2</em>. The second argument is a filter.<br />
-<code>&lt;numeric&gt;</code> means that the awaited command expects <strong>only numbers</strong>.</p>
-<p>Here are currently available filters:</p>
-<ul>
-<li><strong>&lt;numeric&gt;</strong> - only numbers are accepted</li>
-<li><strong>&lt;this/is/a/choice/filter&gt;</strong> - one of the words separated by <strong>/</strong> is expected</li>
-<li><strong>an empty filter</strong> - every word is accepted</li>
-</ul>
-<p>What happens if the filter doesn't match?<br />
-Well, you can create a command which will be used instead.</p>
-<h2><a class="header" href="#awaited-error-command" id="awaited-error-command">Awaited error command</a></h2>
-<p><img src="https://i.imgur.com/Y27bCZB.jpg" alt="error command" /> </p>
-<p>As you can see, we are using <code>$awaitedCommandError[test2]</code> in the trigger.<br />
-The first argument specifies the command's name.<br />
-This command will only be used when the filter in <br />
-the awaited command does not match user's response.</p>
-<h1><a class="header" href="#awaited-commands-and-functions-1" id="awaited-commands-and-functions-1">Awaited commands and functions</a></h1>
-<p>This feature allows premium bots to await for user's answer. <br />
-Here's how the end result looks like: </p>
-<p><img src="https://i.imgur.com/rRRcIXA.jpg" alt="end result" /> </p>
-<p>As you can see, the bot asks us to provide a number and then checks <br />
-if provided value is a number. </p>
-<h2><a class="header" href="#is-number-command-1" id="is-number-command-1"><code>is-number</code> command</a></h2>
-<p>That's how <code>is-number</code> command looks like:
-<img src="https://i.imgur.com/WatX9MY.jpg" alt="is-number command" /> </p>
-<p><code>$awaitFunc[test2]</code> launches await command which is called <code>test2</code>. </p>
-<h2><a class="header" href="#awaited-command-1" id="awaited-command-1">Awaited command</a></h2>
-<p>Here you can see the test2 awaited command:</p>
-<p><img src="https://i.imgur.com/gPJH5GC.jpg" alt="awaited command" /> </p>
-<p>Have you noticed what's in the command's trigger?<br />
-<code>$awaitedCommand[test2;&lt;numeric&gt;]</code> - the first argument is the command's name.<br />
-In this case it's <em>test2</em>. The second argument is a filter.<br />
-<code>&lt;numeric&gt;</code> means that the awaited command expects <strong>only numbers</strong>.</p>
-<p>Here are currently available filters:</p>
-<ul>
-<li><strong>&lt;numeric&gt;</strong> - only numbers are accepted</li>
-<li><strong>&lt;this/is/a/choice/filter&gt;</strong> - one of the words separated by <strong>/</strong> is expected</li>
-<li><strong>an empty filter</strong> - every word is accepted</li>
-</ul>
-<p>What happens if the filter doesn't match?<br />
-Well, you can create a command which will be used instead.</p>
-<h2><a class="header" href="#awaited-error-command-1" id="awaited-error-command-1">Awaited error command</a></h2>
-<p><img src="https://i.imgur.com/Y27bCZB.jpg" alt="error command" /> </p>
-<p>As you can see, we are using <code>$awaitedCommandError[test2]</code> in the trigger.<br />
-The first argument specifies the command's name.<br />
-This command will only be used when the filter in <br />
-the awaited command does not match user's response.</p>
+<h1><a class="header" href="#awaited-reactions" id="awaited-reactions">Awaited reactions</a></h1>
+<p><em>(for premium bots)</em></p>
+<p>Thanks to awaited reactions your bot can be triggered by reactions</p>
+<p><img src="https://i.imgur.com/diskuyv.png" alt="end result" /> </p>
+<p>Here's how the end result looks like.</p>
+<h2><a class="header" href="#accept-command" id="accept-command"><code>accept</code> command</a></h2>
+<p><img src="https://i.imgur.com/AEJ9BRk.jpg" alt="accept command" /> </p>
+<p><code>$awaitReactions[awaited reaction name;reaction]</code> is used to specify which command is used when user reacts with <code>reaction</code>.<br />
+<code>$awaitReactions[]</code> allows you to group reactions <em>(as you can see in the accept command)</em> by specifing more <code>awaited reaction name</code>s and <code>reaction</code>s. What does it mean?<br />
+When one of the reactions is used then the other one stops working. So for example if I react with ✔️ then ❌ stops working.</p>
+<h2><a class="header" href="#awaited-reaction-trigger" id="awaited-reaction-trigger">Awaited reaction trigger</a></h2>
+<p>Here you can see the <code>acceptCmd</code> and <code>declineCmd</code> awaited reaction commands:</p>
+<p><img src="https://i.imgur.com/xwFWnbM.jpg" alt="acceptCmd" /> <br />
+<img src="https://i.imgur.com/TEUu2UM.jpg" alt="acceptCmd" /> </p>
+<p><code>$reaction[name]</code>. As you can see it's pretty straightforward.<br />
+If you want to know what emoji was used in the <code>$reaction[]</code> trigger command<br />
+then you can use <code>$usedEmoji</code> which will return the emoji that was used.</p>
+<h1><a class="header" href="#awaited-reactions-1" id="awaited-reactions-1">Awaited reactions</a></h1>
+<p><em>(for premium bots)</em></p>
+<p>Thanks to awaited reactions your bot can be triggered by reactions</p>
+<p><img src="https://i.imgur.com/diskuyv.png" alt="end result" /> </p>
+<p>Here's how the end result looks like.</p>
+<h2><a class="header" href="#accept-command-1" id="accept-command-1"><code>accept</code> command</a></h2>
+<p><img src="https://i.imgur.com/AEJ9BRk.jpg" alt="accept command" /> </p>
+<p><code>$awaitReactions[awaited reaction name;reaction]</code> is used to specify which command is used when user reacts with <code>reaction</code>.<br />
+<code>$awaitReactions[]</code> allows you to group reactions <em>(as you can see in the accept command)</em> by specifing more <code>awaited reaction name</code>s and <code>reaction</code>s. What does it mean?<br />
+When one of the reactions is used then the other one stops working. So for example if I react with ✔️ then ❌ stops working.</p>
+<h2><a class="header" href="#awaited-reaction-trigger-1" id="awaited-reaction-trigger-1">Awaited reaction trigger</a></h2>
+<p>Here you can see the <code>acceptCmd</code> and <code>declineCmd</code> awaited reaction commands:</p>
+<p><img src="https://i.imgur.com/xwFWnbM.jpg" alt="acceptCmd" /> <br />
+<img src="https://i.imgur.com/TEUu2UM.jpg" alt="acceptCmd" /> </p>
+<p><code>$reaction[name]</code>. As you can see it's pretty straightforward.<br />
+If you want to know what emoji was used in the <code>$reaction[]</code> trigger command<br />
+then you can use <code>$usedEmoji</code> which will return the emoji that was used.</p>
 
                     </main>
 
@@ -613,6 +644,10 @@ the awaited command does not match user's response.</p>
 
         
         
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         
