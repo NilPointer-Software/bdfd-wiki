@@ -10,6 +10,7 @@
 - Added `$awaitReactions[]`
 - Awaited functions are now available for everyone
 - Added awaited reactions
+- Fixed problems with DMs
 
 ## October
 - Optimized memory usage
