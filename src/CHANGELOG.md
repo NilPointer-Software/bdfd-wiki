@@ -1,6 +1,12 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+## December
+- Timezones in `$time[]` has been fixed
+- Updated discord API version
+- Added Competing presence
+- Added `$botLeave[server ID]`
+
 ## November
 - Fixed disappearing bot status
 - Fixed `$serverCount` in bot status
