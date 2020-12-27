@@ -6,6 +6,10 @@
 - Updated discord API version
 - Added Competing presence
 - Added `$botLeave[server ID]`
+- Fix for `$getLeaderboardValue[]`
+- Added userID option to reset user var
+- Added serverID option to `$serverOwner`
+- Added `$premiumExpireTime`
 
 ## November
 - Fixed disappearing bot status
