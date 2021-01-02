@@ -1,9 +1,13 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+# 2021
+
 ## Januray
 - Fixed the problem with statuses not showing up
 - Fixed the issue with mentions not working
+
+# 2020
 
 ## December
 - Timezones in `$time[]` has been fixed
@@ -175,6 +179,8 @@
 - Fixed issues with `$setServerVar[]` and `$setUserVar[]`
 - Added multiline support for `$textSplit[]`
 - Fixed brackets in `$username`
+
+# 2019
 
 ## December
 - Fixed high ping issues
