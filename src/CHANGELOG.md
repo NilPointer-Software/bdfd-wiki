@@ -1,6 +1,10 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff are missing.*
 
+## Januray
+- Fixed the problem with statuses not showing up
+- Fixed the issue with mentions not working
+
 ## December
 - Timezones in `$time[]` has been fixed
 - Updated discord API version
