@@ -6,6 +6,7 @@
 ## Januray
 - Fixed the problem with statuses not showing up
 - Fixed the issue with mentions not working
+- Fixed loading bots from database
 
 # 2020
 
