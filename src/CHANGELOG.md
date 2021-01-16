@@ -8,6 +8,7 @@
 - Fixed the issue with mentions not working
 - Fixed loading bots from database
 - Increased duration to 40min for `$deleteIn[]`, `$editIn[]`, `$editEmbedIn[]`, `$replyIn`
+- Added if statements
 
 # 2020
 
