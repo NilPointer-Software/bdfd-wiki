@@ -11,6 +11,7 @@
 - Added if statements
 - GuildID instead of `everyone` is now returned in `$lowestRole[]` and `$highestRole[]`
 - Space commands have been removed (you can still use `$alwaysReply`)
+- Added `$channelTopic[]`
 
 # 2020
 
