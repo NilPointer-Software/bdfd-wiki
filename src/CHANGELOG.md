@@ -9,6 +9,8 @@
 - Fixed loading bots from database
 - Increased duration to 40min for `$deleteIn[]`, `$editIn[]`, `$editEmbedIn[]`, `$replyIn`
 - Added if statements
+- GuildID instead of `everyone` is now returned in `$lowestRole[]` and `$highestRole[]`
+- Space commands have been removed (you can still use `$alwaysReply`)
 
 # 2020
 
