@@ -12,6 +12,7 @@
 - GuildID instead of `everyone` is now returned in `$lowestRole[]` and `$highestRole[]`
 - Space commands have been removed (you can still use `$alwaysReply`)
 - Added `$channelTopic[]`
+- Fixed issues with streaming status
 
 # 2020
 
