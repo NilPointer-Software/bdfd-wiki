@@ -13,6 +13,7 @@
 - Space commands have been removed (you can still use `$alwaysReply`)
 - Added `$channelTopic[]`
 - Fixed issues with streaming status
+- Fixed the issue with tags/discriminators not working for `$userID[]` and `$findUser[]` 
 
 # 2020
 
