@@ -3,6 +3,11 @@
 
 # 2021
 
+## February
+- Added `$sendMessage[]`
+- Added `$reply`
+- Added slash commands
+
 ## January
 - Fixed the problem with statuses not showing up
 - Fixed the issue with mentions not working
