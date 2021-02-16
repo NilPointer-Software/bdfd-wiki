@@ -7,6 +7,7 @@
 - Added `$sendMessage[]`
 - Added `$reply`
 - Added slash commands
+- Fixed mentions in `$findChannel[]`
 
 ## January
 - Fixed the problem with statuses not showing up
