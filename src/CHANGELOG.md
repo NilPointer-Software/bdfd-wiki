@@ -8,6 +8,7 @@
 - Added `$reply`
 - Added slash commands
 - Fixed mentions in `$findChannel[]`
+- Improved performance in the command interpreter
 
 ## January
 - Fixed the problem with statuses not showing up
