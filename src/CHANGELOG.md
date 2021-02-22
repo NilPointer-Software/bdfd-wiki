@@ -9,6 +9,9 @@
 - Added slash commands
 - Fixed mentions in `$findChannel[]`
 - Improved performance in the command interpreter
+- Optimised reaction handlers
+- Added `$isSlash`
+- Added new optional field to `$message[]`
 
 ## January
 - Fixed the problem with statuses not showing up
