@@ -12,6 +12,7 @@
 - Optimised reaction handlers
 - Added `$isSlash`
 - Added new optional field to `$message[]`
+- Fixed semicolons in `$channelSendMessage[]`
 
 ## January
 - Fixed the problem with statuses not showing up
