@@ -3,6 +3,10 @@
 
 # 2021
 
+## March
+- Added `$cropText[]`
+- Added `userID` field to `$awaitFunc`
+
 ## February
 - Added `$sendMessage[]`
 - Added `$reply`
