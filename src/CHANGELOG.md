@@ -7,6 +7,7 @@
 - Added `$cropText[]`
 - Added `userID` field to `$awaitFunc`
 - Fixed removing normal commands and slash commands
+- Added `$removeLinks[]`
 
 ## February
 - Added `$sendMessage[]`
