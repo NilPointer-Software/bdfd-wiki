@@ -8,6 +8,8 @@
 - Added `userID` field to `$awaitFunc`
 - Fixed removing normal commands and slash commands
 - Added `$removeLinks[]`
+- Made returning authorID optional in `$findUser[]`
+- Added `$slowmode[]`
 
 ## February
 - Added `$sendMessage[]`
