@@ -10,6 +10,8 @@
 - Added `$removeLinks[]`
 - Made returning authorID optional in `$findUser[]`
 - Added `$slowmode[]`
+- Added `$checkUserPerms[]`
+- Added `$isNSFW[]`
 
 ## February
 - Added `$sendMessage[]`
