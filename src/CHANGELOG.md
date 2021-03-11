@@ -12,6 +12,7 @@
 - Added `$slowmode[]`
 - Added `$checkUserPerms[]`
 - Added `$isNSFW[]`
+- Fixed setting NSFW in `$modifyChannel[]`
 
 ## February
 - Added `$sendMessage[]`
