@@ -2,6 +2,7 @@
 
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
+[Slash commands](slashCommands.md)
 
 - [BDScript](./bdscript/introduction.md)
     - [Introduction](./bdscript/introduction.md)
