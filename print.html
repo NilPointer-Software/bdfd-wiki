@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="chapter-item expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="chapter-item expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="chapter-item expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="chapter-item expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="expanded affix "><a href="foreword.html">Foreword</a></li><li class="expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="slashCommands.html">Slash commands</a></li><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -157,6 +157,31 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <h1><a class="header" href="#changelog" id="changelog">Changelog</a></h1>
 <p><em>Note that we often forget to update this article, so some stuff are missing.</em></p>
 <h1><a class="header" href="#2021" id="2021">2021</a></h1>
+<h2><a class="header" href="#march" id="march">March</a></h2>
+<ul>
+<li>Added <code>$cropText[]</code></li>
+<li>Added <code>userID</code> field to <code>$awaitFunc</code></li>
+<li>Fixed removing normal commands and slash commands</li>
+<li>Added <code>$removeLinks[]</code></li>
+<li>Made returning authorID optional in <code>$findUser[]</code></li>
+<li>Added <code>$slowmode[]</code></li>
+<li>Added <code>$checkUserPerms[]</code></li>
+<li>Added <code>$isNSFW[]</code></li>
+<li>Fixed setting NSFW in <code>$modifyChannel[]</code></li>
+<li>Fixed <code>$userJoined[]</code> and <code>$userJoinedDiscord[]</code></li>
+</ul>
+<h2><a class="header" href="#february" id="february">February</a></h2>
+<ul>
+<li>Added <code>$sendMessage[]</code></li>
+<li>Added <code>$reply</code></li>
+<li>Added slash commands</li>
+<li>Fixed mentions in <code>$findChannel[]</code></li>
+<li>Improved performance in the command interpreter</li>
+<li>Optimised reaction handlers</li>
+<li>Added <code>$isSlash</code></li>
+<li>Added new optional field to <code>$message[]</code></li>
+<li>Fixed semicolons in <code>$channelSendMessage[]</code></li>
+</ul>
 <h2><a class="header" href="#january" id="january">January</a></h2>
 <ul>
 <li>Fixed the problem with statuses not showing up</li>
@@ -164,6 +189,12 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed loading bots from database</li>
 <li>Increased duration to 40min for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn</code></li>
 <li>Added if statements</li>
+<li>GuildID instead of <code>everyone</code> is now returned in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
+<li>Space commands have been removed (you can still use <code>$alwaysReply</code>)</li>
+<li>Added <code>$channelTopic[]</code></li>
+<li>Fixed issues with streaming status</li>
+<li>Fixed the issue with tags/discriminators not working for <code>$userID[]</code> and <code>$findUser[]</code> </li>
+<li>Added <code>$findChannel[]</code> and <code>$channelExists[]</code></li>
 </ul>
 <h1><a class="header" href="#2020" id="2020">2020</a></h1>
 <h2><a class="header" href="#december" id="december">December</a></h2>
@@ -264,7 +295,7 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Removed permission check from <code>$clear</code> command.</li>
 <li>Fixed <code>$isAdmin[]</code></li>
 </ul>
-<h2><a class="header" href="#march" id="march">March</a></h2>
+<h2><a class="header" href="#march-1" id="march-1">March</a></h2>
 <ul>
 <li>Added <code>$getReactions</code> and <code>$userReacted</code></li>
 <li>New command interpreter</li>
@@ -294,7 +325,7 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed <code>$onlyPerms</code></li>
 <li>Fixed the bug with <code>$</code> command prefix and <code>$message</code></li>
 </ul>
-<h2><a class="header" href="#february" id="february">February</a></h2>
+<h2><a class="header" href="#february-1" id="february-1">February</a></h2>
 <ul>
 <li>Fixed errors in <code>$addField</code></li>
 <li>Added <code>$serverRegion</code></li>
@@ -389,6 +420,50 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Added <code>kick()</code> and ban() to JS</li>
 <li>Released new stable version</li>
 </ul>
+<h1><a class="header" href="#slash-commands" id="slash-commands">Slash Commands</a></h1>
+<p>Slash commands is a new feature added by Discord.
+It let's users interact with your bot by typing <code>/&lt;command name&gt;</code>.</p>
+<p><img src="https://i.imgur.com/kLNyEby.jpg" alt="preview" /> </p>
+<h1><a class="header" href="#general-information" id="general-information">General information</a></h1>
+<ul>
+<li>Discord allows up to 50 slash commands.</li>
+<li>Before using slash commands you need to reinvite the bot with <code>applications.commands</code> scope.</li>
+<li>Creating/modifying/deleting slash command might take up to <strong>1hr</strong>.</li>
+</ul>
+<h1><a class="header" href="#getting-started" id="getting-started">Getting started</a></h1>
+<p>Before we start, you need <strong>1.18.8</strong> version of the app or later.</p>
+<h3><a class="header" href="#reinviting-the-bot" id="reinviting-the-bot">Reinviting the bot</a></h3>
+<ul>
+<li>Open the app</li>
+<li>Pick your bot</li>
+<li>Open navigation drawer and then press <em>&quot;Server invites&quot;</em></li>
+<li>Press the button with <em>eye</em> icon.</li>
+<li>Select <em>Slash commands</em></li>
+<li>Go back</li>
+<li>Press <em>&quot;Add your bot to your server&quot;</em></li>
+<li>Invite the bot to your server
+<img src="https://i.imgur.com/Y5BUx0F.jpg" alt="invite scopes" /> </li>
+</ul>
+<h3><a class="header" href="#creating-a-slash-command" id="creating-a-slash-command">Creating a slash command</a></h3>
+<ul>
+<li>Create or modify existing command</li>
+<li>Press the top-right icon</li>
+<li>Press <em>&quot;Enable slash command trigger&quot;</em></li>
+<li>Fill in necessary data</li>
+<li>Save it
+<img src="https://i.imgur.com/zEF47O5.jpg" alt="slash command page" /> </li>
+</ul>
+<h3><a class="header" href="#retriving-value-from-options" id="retriving-value-from-options">Retriving value from options</a></h3>
+<p>You can retrive a value from an option
+by simply using <code>$message[&lt;option name&gt;]</code>.<br />
+If you want this function to work in a normal and slash command<br />
+then you can use <code>$message[&lt;arg number&gt;;&lt;option name&gt;]</code>.</p>
+<h4><a class="header" href="#example" id="example">Example</a></h4>
+<p><img src="https://i.imgur.com/TZZGQjU.jpg" alt="message example code" /> <br />
+<img src="https://i.imgur.com/vyoslhf.jpg" alt="message example usage" /> </p>
+<h3><a class="header" href="#checking-if-a-command-has-been-executed-by-a-slash-trigger" id="checking-if-a-command-has-been-executed-by-a-slash-trigger">Checking if a command has been executed by a slash trigger</a></h3>
+<p>You can use <code>$isSlash</code> which returns <code>true</code> if a command<br />
+was executed by <em>slash trigger</em>, otherwise it returns <code>false</code>.</p>
 <h1><a class="header" href="#functions-introduction" id="functions-introduction">Functions introduction</a></h1>
 <p>In this section of wiki you will learn about some of the useful functions.<br />
 Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
@@ -677,6 +752,10 @@ then you can use <code>$usedEmoji</code> which will return the emoji that was us
 
         
         
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         

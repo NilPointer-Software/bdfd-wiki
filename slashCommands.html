@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
+        <title>Slash commands - Bot Designer for Discord - Wiki</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="chapter-item expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="chapter-item expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="chapter-item expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="chapter-item expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="expanded affix "><a href="foreword.html">Foreword</a></li><li class="expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="slashCommands.html" class="active">Slash commands</a></li><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,15 +149,65 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#document-not-found-404" id="document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1><a class="header" href="#slash-commands" id="slash-commands">Slash Commands</a></h1>
+<p>Slash commands is a new feature added by Discord.
+It let's users interact with your bot by typing <code>/&lt;command name&gt;</code>.</p>
+<p><img src="https://i.imgur.com/kLNyEby.jpg" alt="preview" /> </p>
+<h1><a class="header" href="#general-information" id="general-information">General information</a></h1>
+<ul>
+<li>Discord allows up to 50 slash commands.</li>
+<li>Before using slash commands you need to reinvite the bot with <code>applications.commands</code> scope.</li>
+<li>Creating/modifying/deleting slash command might take up to <strong>1hr</strong>.</li>
+</ul>
+<h1><a class="header" href="#getting-started" id="getting-started">Getting started</a></h1>
+<p>Before we start, you need <strong>1.18.8</strong> version of the app or later.</p>
+<h3><a class="header" href="#reinviting-the-bot" id="reinviting-the-bot">Reinviting the bot</a></h3>
+<ul>
+<li>Open the app</li>
+<li>Pick your bot</li>
+<li>Open navigation drawer and then press <em>&quot;Server invites&quot;</em></li>
+<li>Press the button with <em>eye</em> icon.</li>
+<li>Select <em>Slash commands</em></li>
+<li>Go back</li>
+<li>Press <em>&quot;Add your bot to your server&quot;</em></li>
+<li>Invite the bot to your server
+<img src="https://i.imgur.com/Y5BUx0F.jpg" alt="invite scopes" /> </li>
+</ul>
+<h3><a class="header" href="#creating-a-slash-command" id="creating-a-slash-command">Creating a slash command</a></h3>
+<ul>
+<li>Create or modify existing command</li>
+<li>Press the top-right icon</li>
+<li>Press <em>&quot;Enable slash command trigger&quot;</em></li>
+<li>Fill in necessary data</li>
+<li>Save it
+<img src="https://i.imgur.com/zEF47O5.jpg" alt="slash command page" /> </li>
+</ul>
+<h3><a class="header" href="#retriving-value-from-options" id="retriving-value-from-options">Retriving value from options</a></h3>
+<p>You can retrive a value from an option
+by simply using <code>$message[&lt;option name&gt;]</code>.<br />
+If you want this function to work in a normal and slash command<br />
+then you can use <code>$message[&lt;arg number&gt;;&lt;option name&gt;]</code>.</p>
+<h4><a class="header" href="#example" id="example">Example</a></h4>
+<p><img src="https://i.imgur.com/TZZGQjU.jpg" alt="message example code" /> <br />
+<img src="https://i.imgur.com/vyoslhf.jpg" alt="message example usage" /> </p>
+<h3><a class="header" href="#checking-if-a-command-has-been-executed-by-a-slash-trigger" id="checking-if-a-command-has-been-executed-by-a-slash-trigger">Checking if a command has been executed by a slash trigger</a></h3>
+<p>You can use <code>$isSlash</code> which returns <code>true</code> if a command<br />
+was executed by <em>slash trigger</em>, otherwise it returns <code>false</code>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="CHANGELOG.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
+                        
+                            <a rel="next" href="bdscript/introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -167,7 +217,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a href="CHANGELOG.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
+                
+                    <a href="bdscript/introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
@@ -179,6 +237,10 @@
 
         
         
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         
