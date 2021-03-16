@@ -14,6 +14,7 @@
 - Added `$isNSFW[]`
 - Fixed setting NSFW in `$modifyChannel[]`
 - Fixed `$userJoined[]` and `$userJoinedDiscord[]`
+- Added `$editMessage[]`
 
 ## February
 - Added `$sendMessage[]`
