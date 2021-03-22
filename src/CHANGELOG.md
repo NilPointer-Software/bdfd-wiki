@@ -15,6 +15,15 @@
 - Fixed setting NSFW in `$modifyChannel[]`
 - Fixed `$userJoined[]` and `$userJoinedDiscord[]`
 - Added `$editMessage[]`
+- Fixed caching for new members.
+- Added $slashCommandsCount
+- Added $botID
+- Added more perms:
+    - AttachFiles
+    - TTS
+    - ManageWebhooks
+    - EmbedLinks
+    - ExternalEmojis
 
 ## February
 - Added `$sendMessage[]`
