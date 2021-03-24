@@ -24,6 +24,7 @@
     - ManageWebhooks
     - EmbedLinks
     - ExternalEmojis
+- Added `$serverCooldown[]`
 
 ## February
 - Added `$sendMessage[]`
