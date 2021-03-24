@@ -16,8 +16,8 @@
 - Fixed `$userJoined[]` and `$userJoinedDiscord[]`
 - Added `$editMessage[]`
 - Fixed caching for new members.
-- Added $slashCommandsCount
-- Added $botID
+- Added `$slashCommandsCount`
+- Added `$botID`
 - Added more perms:
     - AttachFiles
     - TTS
