@@ -25,6 +25,8 @@
     - EmbedLinks
     - ExternalEmojis
 - Added `$serverCooldown[]`
+- Fixed the issue with not expiring app bans
+- Fixed some issues with `[` and `]`
 
 ## February
 - Added `$sendMessage[]`
