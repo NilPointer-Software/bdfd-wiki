@@ -27,6 +27,7 @@
 - Added `$serverCooldown[]`
 - Fixed the issue with not expiring app bans
 - Fixed some issues with `[` and `]`
+- Fixed problems with slash commands and cooldowns
 
 ## February
 - Added `$sendMessage[]`
