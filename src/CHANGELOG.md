@@ -1,11 +1,11 @@
 # Changelog
-*Note that we often forget to update this article, so some stuff are missing.*
+*Note that we often forget to update this article, so some stuff is missing.*
 
 # 2021
 
 ## March
 - Added `$cropText[]`
-- Added `userID` field to `$awaitFunc`
+- Added `userID` field to `$awaitFunc[]`
 - Fixed removing normal commands and slash commands
 - Added `$removeLinks[]`
 - Made returning authorID optional in `$findUser[]`
@@ -18,14 +18,9 @@
 - Fixed caching for new members.
 - Added `$slashCommandsCount`
 - Added `$botID`
-- Added more perms:
-    - AttachFiles
-    - TTS
-    - ManageWebhooks
-    - EmbedLinks
-    - ExternalEmojis
-- Added `$serverCooldown[]`
-- Fixed the issue with not expiring app bans
+- Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis
+- `Added $serverCooldown[]`
+- `Fixed the issue with not expiring app bans`
 - Fixed some issues with `[` and `]`
 - Fixed problems with slash commands and cooldowns
 
@@ -35,7 +30,7 @@
 - Added slash commands
 - Fixed mentions in `$findChannel[]`
 - Improved performance in the command interpreter
-- Optimised reaction handlers
+- Optimized reaction handlers
 - Added `$isSlash`
 - Added new optional field to `$message[]`
 - Fixed semicolons in `$channelSendMessage[]`
@@ -44,8 +39,8 @@
 - Fixed the problem with statuses not showing up
 - Fixed the issue with mentions not working
 - Fixed loading bots from database
-- Increased duration to 40min for `$deleteIn[]`, `$editIn[]`, `$editEmbedIn[]`, `$replyIn`
-- Added if statements
+- Increased duration to 40 minutes for `$deleteIn[]`, `$editIn[]`, `$editEmbedIn[]`, `$replyIn[]`
+- Added if statements (`$if[]`, `$else`, `$endif`)
 - GuildID instead of `everyone` is now returned in `$lowestRole[]` and `$highestRole[]`
 - Space commands have been removed (you can still use `$alwaysReply`)
 - Added `$channelTopic[]`
@@ -59,7 +54,7 @@
 - Timezones in `$time[]` has been fixed
 - Updated discord API version
 - Added Competing presence
-- Added `$botLeave[server ID]`
+- Added `$botLeave[]`
 - Fix for `$getLeaderboardValue[]`
 - Added userID option to reset user var
 - Added serverID option to `$serverOwner`
@@ -72,7 +67,7 @@
 - Functions that require privileged intents are now marked accordingly 
 - Added `$getLeaderboardValue[]`
 - Added `$awaitReactions[]`
-- Awaited functions are now available for everyone
+- Awaited commands are now available for everyone
 - Added awaited reactions
 - Fixed problems with DMs
 
@@ -84,7 +79,7 @@
 - Allowed using awaited functions in awaited commands
 - Fixed leaderboards
 - Fixed `$randomMention`, `$randomUser` and `$randomUserID`
-- Added `$awaitReaction[]` for premium bots
+- Added `$awaitReactions[]` for premium bots
 - Added `$usedEmoji`
 - `$deletecommand` sends an error now
 - Fixed `$serverVerificationLvl` not working on very high verification servers
@@ -115,7 +110,7 @@
 - Renamed `$splitText[]` to `$getSplitText[]` to avoid confusion _(`$splitText[]` still works)_
 - Added `$joinSplitText[]`
 - Added `$getInviteInfo[]`
-- Added `$guildID[name]`
+- Added `$guildID[]`
 - Fixed `$numberSeparator[]` in the bot's status
 - `$roleID[]` and `$channelID[]` no longer stop code execution
 - Enabled BDScript Unstable for callbacks
@@ -124,7 +119,7 @@
 ## June
 - Fixed `$getReactions[]` in BDScript Unstable
 - Fixed bracket escaping for some commands in BDScript Unstable
-- Fixed `$modifyChannel[]` (random slowdowns added on channels)
+- Fixed `$modifyChannel[]` (random slowmodes added on channels)
 
 ## May
 - Fixed `$onlyBotPerms[]`
@@ -138,14 +133,14 @@
 - Added `$changeCooldownTime[]`
 - Disabled `$randomUserID`, `$'randomUserID`, `$deleteIn` and `$dm` in `$onMessageDelete`
 - Fixed `$addField[]`
-- Added error message in `$getServerVar` when provided variable does not exist
-- `$userID` does not stop code execution if user is not found
+- Added error message in `$getServerVar[]` when provided variable does not exist
+- `$userID[]` does not stop code execution if user is not found
 - Added `$botLeave`
 - Removed permission check from `$clear` command.
 - Fixed `$isAdmin[]`
 
 ## March
-- Added `$getReactions` and `$userReacted`
+- Added `$getReactions[]` and `$userReacted[]`
 - New command interpreter
 - Added to new parser:
     - `$'random[]` and `$'random`
@@ -155,19 +150,19 @@
     - `$'randomUserID`
     - `$'randomString[]`
 - Fixed brackets in `$getMessage[]`
-- Changed behaviour of `$onlyPerms` command
-- Added `$charCount`
-- Added `$clearReactions`
-- Added new options to `$getMessage`
-- Fixed adding slowmode when using `$modifyChannel`
-- Added `$checkContains`
-- Added `$addEmoji`
+- Changed behaviour of `$onlyPerms[]` command
+- Added `$charCount[]`
+- Added `$clearReactions[]`
+- Added new options to `$getMessage[]`
+- Fixed adding slowmode when using `$modifyChannel[]`
+- Added `$checkContains[]`
+- Added `$addEmoji[]`
 - Fixed the bug with `$` command prefix and `$noMentionMessage`
-- Added `$unbanID[id]`
+- Added `$unbanID[]`
 - Added `$hasRole[]`
 - Optimized the leaderboard commands
 - Fixed permissions in some commands
-- Fixed `$onlyPerms`
+- Fixed `$onlyPerms[]`
 - Fixed the bug with `$` command prefix and `$message`
 
 ## February
@@ -175,50 +170,50 @@
 - Added `$serverRegion`
 - Added `$serverOwner`
 - Added `$emoteCount`
-- Added `$isMentionable`
-- Added `$isHoisted`
-- Added `$serverIcon[serverID]`
+- Added `$isMentionable[]`
+- Added `$isHoisted[]`
+- Added `$serverIcon[]`
 - Fixed suppressing errors in some variable commands
 - Fixed bug with `$replaceText[]()` inside `$description`
-- Added `$isValidHex`
+- Added `$isValidHex[]`
 - Added `$isAdmin[]`
-- `$userID` does not require discriminator now
+- `$userID[]` does not require discriminator now
 - Added `$serverVerificationLvl`
-- Fixed stopping command when `$changeUsernameWithID` or `$changeUsername` throws an exception
-- Added `$modifyRolePerms`
-- Added `$isUserDMEnabled`
-- Added new option to `$mentioned`
-- When userID is not provided in `$discriminator`, the author's id will be used
-- Added `$argCount`
-- Added `$roleExists` and `$roleExists` 
-- Added `$varExistError`
-- Removed permissions check for `$kick` function
+- Fixed stopping command when `$changeUsernameWithID[]` or `$changeUsername[]` throws an exception
+- Added `$modifyRolePerms[]`
+- Added `$isUserDMEnabled[]`
+- Added new option to `$mentioned[]`
+- When userID is not provided in `$discriminator[]`, the author's ID will be used
+- Added `$argCount[]`
+- Added `$roleExists[]` and `$roleExists[]` 
+- Added `$varExistError[]`
+- Removed permissions check for `$kick[]` function
 - Fixed brackets issue in `$message` and `$noMentionMessage`
-- Fixed `$globalUserLeaderboard`
-- `$repeatMessage` won't send an error when there is `0` provided
+- Fixed `$globalUserLeaderboard[]`
+- `$repeatMessage[]` won't send an error when there is `0` provided
 
 ## January
 - Final premium preparations
 - Space commands for premium bots
 - Added `sendChannelMessage()` to JS
-- Added `$isNumber`
-- Better description for` $replaceText`
-- Removed `#` from `$getRoleColor`
-- Added possibility of adding custom error message to `$suppressErrors`
-- Added `$embedSuppressErrors`
-- Added `$getServerVar` in command's name for premium bots
-- Added custom separators to `$numberSeparator`
-- Fixed issue with `+` and `-` in `$numberSeparator`
+- Added `$isNumber[]`
+- Better description for` $replaceText[]`
+- Removed `#` from `$getRoleColor[]`
+- Added possibility of adding custom error message to `$suppressErrors[]`
+- Added `$embedSuppressErrors[]`
+- Added `$getServerVar[]` in command's name for premium bots
+- Added custom separators to `$numberSeparator[]`
+- Fixed issue with `+` and `-` in `$numberSeparator[]`
 - iOS release
 - Added `$isBot[]`
-- Added `userID` option to `$takeRole`
+- Added `userID` option to `$takeRole[]`
 - Fixed problems with timezones
 - `@everyone` role shows up now when it's a highest/lowest role in `$highestRole/$lowestRole`
-- `@everyone` role now works in `$rolePosition`
-- Multiline for `$replaceText`
+- `@everyone` role now works in `$rolePosition[]`
+- Multiline for `$replaceText[]`
 - Fixed no errors in `$roleID[]`
 - Added `$toUppercase[]` and `$toLowercase[]`
-- Added `roleID` and userID to `$modifyChannelPerms`
+- Added roleID and userID to `$modifyChannelPerms[]`
 - Added `$authorOfMessage[]`
 - Added `$userID[]`
 - Improved servers response time by over 10x
@@ -250,11 +245,11 @@
 - Created status website https://status.botdesignerdiscord.com
 - Web version of *Bot Designer for Discord* has been moved to new address https://botdesignerdiscord.com
 - Fixed some issues in web version
-- Fixed `$banID`
+- Fixed `$banID[]`
 - Preparations for premium points
 
 ## November
-- Added `$rolePosition[roleID]`
+- Added `$rolePosition[]`
 - Released translation strings to volunteers
-- Added `kick()` and ban() to JS
+- Added `kick()` and `ban()` to JS
 - Released new stable version
