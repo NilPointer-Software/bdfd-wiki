@@ -19,8 +19,8 @@
 - Added `$slashCommandsCount`
 - Added `$botID`
 - Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis
-- `Added $serverCooldown[]`
-- `Fixed the issue with not expiring app bans`
+- Added `$serverCooldown[]`
+- Fixed the issue with not expiring app bans
 - Fixed some issues with `[` and `]`
 - Fixed problems with slash commands and cooldowns
 
