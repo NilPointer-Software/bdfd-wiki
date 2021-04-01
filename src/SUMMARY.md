@@ -13,6 +13,7 @@
     - [$dm](./bdscript/dm.md)
     - [$membersCount](./bdscript/membersCount.md)
     - [$channelTopic](./bdscript/channelTopic.md)
+    - [$slowmode](./bdscript/slowmode.md)
 
 - [JavaScript](./javascript/javascript.md)
     - [Introduction](./javascript/javascript.md)
