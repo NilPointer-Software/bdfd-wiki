@@ -14,6 +14,9 @@
     - [$membersCount](./bdscript/membersCount.md)
     - [$channelTopic](./bdscript/channelTopic.md)
     - [$slowmode](./bdscript/slowmode.md)
+    - [$userInfo](./bdscript/userInfo.md)
+    - [$roleInfo](./bdscript/roleInfo.md)
+    - [$serverInfo](./bdscript/serverInfo.md)
 
 - [JavaScript](./javascript/javascript.md)
     - [Introduction](./javascript/javascript.md)
