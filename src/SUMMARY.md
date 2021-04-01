@@ -12,6 +12,7 @@
     - [$authorID](./bdscript/authorID.md)
     - [$dm](./bdscript/dm.md)
     - [$membersCount](./bdscript/membersCount.md)
+    - [$channelTopic](./bdscript/channelTopic.md)
 
 - [JavaScript](./javascript/javascript.md)
     - [Introduction](./javascript/javascript.md)
