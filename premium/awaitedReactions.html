@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../">
         <link rel="stylesheet" href="../css/variables.css">
         <link rel="stylesheet" href="../css/general.css">
         <link rel="stylesheet" href="../css/chrome.css">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded affix "><a href="../foreword.html">Foreword</a></li><li class="expanded affix "><a href="../CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="../slashCommands.html">Slash commands</a></li><li class="expanded "><a href="../bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="expanded "><a href="../bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="../bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="expanded "><a href="../bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="expanded "><a href="../bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="expanded "><a href="../bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="expanded "><a href="../bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="expanded "><a href="../bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="../javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="../javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="expanded "><a href="../premium/awaitedReactions.html" class="active"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="expanded "><a href="../premium/awaitedReactions.html" class="active"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="../CHANGELOG.html">Changelog</a></li><li class="chapter-item expanded affix "><a href="../slashCommands.html">Slash commands</a></li><li class="chapter-item expanded "><a href="../bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="chapter-item expanded "><a href="../bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="chapter-item expanded "><a href="../bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="chapter-item expanded "><a href="../bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="../bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="chapter-item expanded "><a href="../bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="chapter-item expanded "><a href="../javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="../premium/awaitedReactions.html" class="active"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../premium/awaitedReactions.html" class="active"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,17 +149,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#awaited-reactions" id="awaited-reactions">Awaited reactions</a></h1>
+                        <h1 id="awaited-reactions"><a class="header" href="#awaited-reactions">Awaited reactions</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>Thanks to awaited reactions your bot can be triggered by reactions</p>
 <p><img src="https://i.imgur.com/diskuyv.png" alt="end result" /> </p>
 <p>Here's how the end result looks like.</p>
-<h2><a class="header" href="#accept-command" id="accept-command"><code>accept</code> command</a></h2>
+<h2 id="accept-command"><a class="header" href="#accept-command"><code>accept</code> command</a></h2>
 <p><img src="https://i.imgur.com/AEJ9BRk.jpg" alt="accept command" /> </p>
 <p><code>$awaitReactions[awaited reaction name;reaction]</code> is used to specify which command is used when user reacts with <code>reaction</code>.<br />
 <code>$awaitReactions[]</code> allows you to group reactions <em>(as you can see in the accept command)</em> by specifing more <code>awaited reaction name</code>s and <code>reaction</code>s. What does it mean?<br />
 When one of the reactions is used then the other one stops working. So for example if I react with ✔️ then ❌ stops working.</p>
-<h2><a class="header" href="#awaited-reaction-trigger" id="awaited-reaction-trigger">Awaited reaction trigger</a></h2>
+<h2 id="awaited-reaction-trigger"><a class="header" href="#awaited-reaction-trigger">Awaited reaction trigger</a></h2>
 <p>Here you can see the <code>acceptCmd</code> and <code>declineCmd</code> awaited reaction commands:</p>
 <p><img src="https://i.imgur.com/xwFWnbM.jpg" alt="acceptCmd" /> <br />
 <img src="https://i.imgur.com/TEUu2UM.jpg" alt="acceptCmd" /> </p>
@@ -210,10 +210,6 @@ then you can use <code>$usedEmoji</code> which will return the emoji that was us
 
         
         
-        
-        <script type="text/javascript">
-            window.playpen_copyable = true;
-        </script>
         
 
         

@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded affix "><a href="foreword.html">Foreword</a></li><li class="expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="expanded affix "><a href="slashCommands.html">Slash commands</a></li><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="CHANGELOG.html">Changelog</a></li><li class="chapter-item expanded affix "><a href="slashCommands.html">Slash commands</a></li><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="chapter-item expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="chapter-item expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="chapter-item expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="chapter-item expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,16 +151,16 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#foreword" id="foreword">Foreword</a></h1>
+                        <h1 id="foreword"><a class="header" href="#foreword">Foreword</a></h1>
 <p>Welcome to our humble abode. The thing you're seeing is <em>Bot Designer for Discord</em>'s wiki.
 If you're curious about <em>functions</em> please feel free to visit <a href="bdscript/introduction.html">this section</a>.</p>
-<h1><a class="header" href="#changelog" id="changelog">Changelog</a></h1>
-<p><em>Note that we often forget to update this article, so some stuff are missing.</em></p>
-<h1><a class="header" href="#2021" id="2021">2021</a></h1>
-<h2><a class="header" href="#march" id="march">March</a></h2>
+<h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
+<p><em>Note that we often forget to update this article, so some stuff is missing.</em></p>
+<h1 id="2021"><a class="header" href="#2021">2021</a></h1>
+<h2 id="march"><a class="header" href="#march">March</a></h2>
 <ul>
 <li>Added <code>$cropText[]</code></li>
-<li>Added <code>userID</code> field to <code>$awaitFunc</code></li>
+<li>Added <code>userID</code> field to <code>$awaitFunc[]</code></li>
 <li>Fixed removing normal commands and slash commands</li>
 <li>Added <code>$removeLinks[]</code></li>
 <li>Made returning authorID optional in <code>$findUser[]</code></li>
@@ -169,26 +169,35 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Added <code>$isNSFW[]</code></li>
 <li>Fixed setting NSFW in <code>$modifyChannel[]</code></li>
 <li>Fixed <code>$userJoined[]</code> and <code>$userJoinedDiscord[]</code></li>
+<li>Added <code>$editMessage[]</code></li>
+<li>Fixed caching for new members.</li>
+<li>Added <code>$slashCommandsCount</code></li>
+<li>Added <code>$botID</code></li>
+<li>Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis</li>
+<li>Added <code>$serverCooldown[]</code></li>
+<li>Fixed the issue with not expiring app bans</li>
+<li>Fixed some issues with <code>[</code> and <code>]</code></li>
+<li>Fixed problems with slash commands and cooldowns</li>
 </ul>
-<h2><a class="header" href="#february" id="february">February</a></h2>
+<h2 id="february"><a class="header" href="#february">February</a></h2>
 <ul>
 <li>Added <code>$sendMessage[]</code></li>
 <li>Added <code>$reply</code></li>
 <li>Added slash commands</li>
 <li>Fixed mentions in <code>$findChannel[]</code></li>
 <li>Improved performance in the command interpreter</li>
-<li>Optimised reaction handlers</li>
+<li>Optimized reaction handlers</li>
 <li>Added <code>$isSlash</code></li>
 <li>Added new optional field to <code>$message[]</code></li>
 <li>Fixed semicolons in <code>$channelSendMessage[]</code></li>
 </ul>
-<h2><a class="header" href="#january" id="january">January</a></h2>
+<h2 id="january"><a class="header" href="#january">January</a></h2>
 <ul>
 <li>Fixed the problem with statuses not showing up</li>
 <li>Fixed the issue with mentions not working</li>
 <li>Fixed loading bots from database</li>
-<li>Increased duration to 40min for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn</code></li>
-<li>Added if statements</li>
+<li>Increased duration to 40 minutes for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn[]</code></li>
+<li>Added if statements (<code>$if[]</code>, <code>$else</code>, <code>$endif</code>)</li>
 <li>GuildID instead of <code>everyone</code> is now returned in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
 <li>Space commands have been removed (you can still use <code>$alwaysReply</code>)</li>
 <li>Added <code>$channelTopic[]</code></li>
@@ -196,19 +205,19 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed the issue with tags/discriminators not working for <code>$userID[]</code> and <code>$findUser[]</code> </li>
 <li>Added <code>$findChannel[]</code> and <code>$channelExists[]</code></li>
 </ul>
-<h1><a class="header" href="#2020" id="2020">2020</a></h1>
-<h2><a class="header" href="#december" id="december">December</a></h2>
+<h1 id="2020"><a class="header" href="#2020">2020</a></h1>
+<h2 id="december"><a class="header" href="#december">December</a></h2>
 <ul>
 <li>Timezones in <code>$time[]</code> has been fixed</li>
 <li>Updated discord API version</li>
 <li>Added Competing presence</li>
-<li>Added <code>$botLeave[server ID]</code></li>
+<li>Added <code>$botLeave[]</code></li>
 <li>Fix for <code>$getLeaderboardValue[]</code></li>
 <li>Added userID option to reset user var</li>
 <li>Added serverID option to <code>$serverOwner</code></li>
 <li>Added <code>$premiumExpireTime</code></li>
 </ul>
-<h2><a class="header" href="#november" id="november">November</a></h2>
+<h2 id="november"><a class="header" href="#november">November</a></h2>
 <ul>
 <li>Fixed disappearing bot status</li>
 <li>Fixed <code>$serverCount</code> in bot status</li>
@@ -216,11 +225,11 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Functions that require privileged intents are now marked accordingly </li>
 <li>Added <code>$getLeaderboardValue[]</code></li>
 <li>Added <code>$awaitReactions[]</code></li>
-<li>Awaited functions are now available for everyone</li>
+<li>Awaited commands are now available for everyone</li>
 <li>Added awaited reactions</li>
 <li>Fixed problems with DMs</li>
 </ul>
-<h2><a class="header" href="#october" id="october">October</a></h2>
+<h2 id="october"><a class="header" href="#october">October</a></h2>
 <ul>
 <li>Optimized memory usage</li>
 <li>Added member and presence intents</li>
@@ -229,13 +238,13 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Allowed using awaited functions in awaited commands</li>
 <li>Fixed leaderboards</li>
 <li>Fixed <code>$randomMention</code>, <code>$randomUser</code> and <code>$randomUserID</code></li>
-<li>Added <code>$awaitReaction[]</code> for premium bots</li>
+<li>Added <code>$awaitReactions[]</code> for premium bots</li>
 <li>Added <code>$usedEmoji</code></li>
 <li><code>$deletecommand</code> sends an error now</li>
 <li>Fixed <code>$serverVerificationLvl</code> not working on very high verification servers</li>
 <li>Fixed reconnecting bots to gateway</li>
 </ul>
-<h2><a class="header" href="#september" id="september">September</a></h2>
+<h2 id="september"><a class="header" href="#september">September</a></h2>
 <ul>
 <li>Added <code>$ignoreTriggerCase</code> for premium bots</li>
 <li>Fixed caching guilds</li>
@@ -245,7 +254,7 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed weird brackets in embeds</li>
 <li>Added trigger list in the app</li>
 </ul>
-<h2><a class="header" href="#august" id="august">August</a></h2>
+<h2 id="august"><a class="header" href="#august">August</a></h2>
 <ul>
 <li>Migrated to the new infrastructure (new database and API)</li>
 <li>Premium released</li>
@@ -258,24 +267,24 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Added <code>$findRole[]</code></li>
 <li>Added <code>$disableSpecialEscaping</code></li>
 </ul>
-<h2><a class="header" href="#july" id="july">July</a></h2>
+<h2 id="july"><a class="header" href="#july">July</a></h2>
 <ul>
 <li>Renamed <code>$splitText[]</code> to <code>$getSplitText[]</code> to avoid confusion <em>(<code>$splitText[]</code> still works)</em></li>
 <li>Added <code>$joinSplitText[]</code></li>
 <li>Added <code>$getInviteInfo[]</code></li>
-<li>Added <code>$guildID[name]</code></li>
+<li>Added <code>$guildID[]</code></li>
 <li>Fixed <code>$numberSeparator[]</code> in the bot's status</li>
 <li><code>$roleID[]</code> and <code>$channelID[]</code> no longer stop code execution</li>
 <li>Enabled BDScript Unstable for callbacks</li>
 <li>Added <code>$getTextSplitLength</code></li>
 </ul>
-<h2><a class="header" href="#june" id="june">June</a></h2>
+<h2 id="june"><a class="header" href="#june">June</a></h2>
 <ul>
 <li>Fixed <code>$getReactions[]</code> in BDScript Unstable</li>
 <li>Fixed bracket escaping for some commands in BDScript Unstable</li>
-<li>Fixed <code>$modifyChannel[]</code> (random slowdowns added on channels)</li>
+<li>Fixed <code>$modifyChannel[]</code> (random slowmodes added on channels)</li>
 </ul>
-<h2><a class="header" href="#may" id="may">May</a></h2>
+<h2 id="may"><a class="header" href="#may">May</a></h2>
 <ul>
 <li>Fixed <code>$onlyBotPerms[]</code></li>
 <li>Bot Designer List Open Beta</li>
@@ -283,21 +292,21 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed brackets issue in <code>$serverNames</code></li>
 <li>Other bug fixing for Bot Designer and Bot Designer List</li>
 </ul>
-<h2><a class="header" href="#april" id="april">April</a></h2>
+<h2 id="april"><a class="header" href="#april">April</a></h2>
 <ul>
 <li>Fixed <code>$serverIcon</code></li>
 <li>Added <code>$changeCooldownTime[]</code></li>
 <li>Disabled <code>$randomUserID</code>, <code>$'randomUserID</code>, <code>$deleteIn</code> and <code>$dm</code> in <code>$onMessageDelete</code></li>
 <li>Fixed <code>$addField[]</code></li>
-<li>Added error message in <code>$getServerVar</code> when provided variable does not exist</li>
-<li><code>$userID</code> does not stop code execution if user is not found</li>
+<li>Added error message in <code>$getServerVar[]</code> when provided variable does not exist</li>
+<li><code>$userID[]</code> does not stop code execution if user is not found</li>
 <li>Added <code>$botLeave</code></li>
 <li>Removed permission check from <code>$clear</code> command.</li>
 <li>Fixed <code>$isAdmin[]</code></li>
 </ul>
-<h2><a class="header" href="#march-1" id="march-1">March</a></h2>
+<h2 id="march-1"><a class="header" href="#march-1">March</a></h2>
 <ul>
-<li>Added <code>$getReactions</code> and <code>$userReacted</code></li>
+<li>Added <code>$getReactions[]</code> and <code>$userReacted[]</code></li>
 <li>New command interpreter</li>
 <li>Added to new parser:
 <ul>
@@ -310,72 +319,72 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 </ul>
 </li>
 <li>Fixed brackets in <code>$getMessage[]</code></li>
-<li>Changed behaviour of <code>$onlyPerms</code> command</li>
-<li>Added <code>$charCount</code></li>
-<li>Added <code>$clearReactions</code></li>
-<li>Added new options to <code>$getMessage</code></li>
-<li>Fixed adding slowmode when using <code>$modifyChannel</code></li>
-<li>Added <code>$checkContains</code></li>
-<li>Added <code>$addEmoji</code></li>
+<li>Changed behaviour of <code>$onlyPerms[]</code> command</li>
+<li>Added <code>$charCount[]</code></li>
+<li>Added <code>$clearReactions[]</code></li>
+<li>Added new options to <code>$getMessage[]</code></li>
+<li>Fixed adding slowmode when using <code>$modifyChannel[]</code></li>
+<li>Added <code>$checkContains[]</code></li>
+<li>Added <code>$addEmoji[]</code></li>
 <li>Fixed the bug with <code>$</code> command prefix and <code>$noMentionMessage</code></li>
-<li>Added <code>$unbanID[id]</code></li>
+<li>Added <code>$unbanID[]</code></li>
 <li>Added <code>$hasRole[]</code></li>
 <li>Optimized the leaderboard commands</li>
 <li>Fixed permissions in some commands</li>
-<li>Fixed <code>$onlyPerms</code></li>
+<li>Fixed <code>$onlyPerms[]</code></li>
 <li>Fixed the bug with <code>$</code> command prefix and <code>$message</code></li>
 </ul>
-<h2><a class="header" href="#february-1" id="february-1">February</a></h2>
+<h2 id="february-1"><a class="header" href="#february-1">February</a></h2>
 <ul>
 <li>Fixed errors in <code>$addField</code></li>
 <li>Added <code>$serverRegion</code></li>
 <li>Added <code>$serverOwner</code></li>
 <li>Added <code>$emoteCount</code></li>
-<li>Added <code>$isMentionable</code></li>
-<li>Added <code>$isHoisted</code></li>
-<li>Added <code>$serverIcon[serverID]</code></li>
+<li>Added <code>$isMentionable[]</code></li>
+<li>Added <code>$isHoisted[]</code></li>
+<li>Added <code>$serverIcon[]</code></li>
 <li>Fixed suppressing errors in some variable commands</li>
 <li>Fixed bug with <code>$replaceText[]()</code> inside <code>$description</code></li>
-<li>Added <code>$isValidHex</code></li>
+<li>Added <code>$isValidHex[]</code></li>
 <li>Added <code>$isAdmin[]</code></li>
-<li><code>$userID</code> does not require discriminator now</li>
+<li><code>$userID[]</code> does not require discriminator now</li>
 <li>Added <code>$serverVerificationLvl</code></li>
-<li>Fixed stopping command when <code>$changeUsernameWithID</code> or <code>$changeUsername</code> throws an exception</li>
-<li>Added <code>$modifyRolePerms</code></li>
-<li>Added <code>$isUserDMEnabled</code></li>
-<li>Added new option to <code>$mentioned</code></li>
-<li>When userID is not provided in <code>$discriminator</code>, the author's id will be used</li>
-<li>Added <code>$argCount</code></li>
-<li>Added <code>$roleExists</code> and <code>$roleExists</code> </li>
-<li>Added <code>$varExistError</code></li>
-<li>Removed permissions check for <code>$kick</code> function</li>
+<li>Fixed stopping command when <code>$changeUsernameWithID[]</code> or <code>$changeUsername[]</code> throws an exception</li>
+<li>Added <code>$modifyRolePerms[]</code></li>
+<li>Added <code>$isUserDMEnabled[]</code></li>
+<li>Added new option to <code>$mentioned[]</code></li>
+<li>When userID is not provided in <code>$discriminator[]</code>, the author's ID will be used</li>
+<li>Added <code>$argCount[]</code></li>
+<li>Added <code>$roleExists[]</code> and <code>$roleExists[]</code> </li>
+<li>Added <code>$varExistError[]</code></li>
+<li>Removed permissions check for <code>$kick[]</code> function</li>
 <li>Fixed brackets issue in <code>$message</code> and <code>$noMentionMessage</code></li>
-<li>Fixed <code>$globalUserLeaderboard</code></li>
-<li><code>$repeatMessage</code> won't send an error when there is <code>0</code> provided</li>
+<li>Fixed <code>$globalUserLeaderboard[]</code></li>
+<li><code>$repeatMessage[]</code> won't send an error when there is <code>0</code> provided</li>
 </ul>
-<h2><a class="header" href="#january-1" id="january-1">January</a></h2>
+<h2 id="january-1"><a class="header" href="#january-1">January</a></h2>
 <ul>
 <li>Final premium preparations</li>
 <li>Space commands for premium bots</li>
 <li>Added <code>sendChannelMessage()</code> to JS</li>
-<li>Added <code>$isNumber</code></li>
-<li>Better description for<code> $replaceText</code></li>
-<li>Removed <code>#</code> from <code>$getRoleColor</code></li>
-<li>Added possibility of adding custom error message to <code>$suppressErrors</code></li>
-<li>Added <code>$embedSuppressErrors</code></li>
-<li>Added <code>$getServerVar</code> in command's name for premium bots</li>
-<li>Added custom separators to <code>$numberSeparator</code></li>
-<li>Fixed issue with <code>+</code> and <code>-</code> in <code>$numberSeparator</code></li>
+<li>Added <code>$isNumber[]</code></li>
+<li>Better description for<code> $replaceText[]</code></li>
+<li>Removed <code>#</code> from <code>$getRoleColor[]</code></li>
+<li>Added possibility of adding custom error message to <code>$suppressErrors[]</code></li>
+<li>Added <code>$embedSuppressErrors[]</code></li>
+<li>Added <code>$getServerVar[]</code> in command's name for premium bots</li>
+<li>Added custom separators to <code>$numberSeparator[]</code></li>
+<li>Fixed issue with <code>+</code> and <code>-</code> in <code>$numberSeparator[]</code></li>
 <li>iOS release</li>
 <li>Added <code>$isBot[]</code></li>
-<li>Added <code>userID</code> option to <code>$takeRole</code></li>
+<li>Added <code>userID</code> option to <code>$takeRole[]</code></li>
 <li>Fixed problems with timezones</li>
 <li><code>@everyone</code> role shows up now when it's a highest/lowest role in <code>$highestRole/$lowestRole</code></li>
-<li><code>@everyone</code> role now works in <code>$rolePosition</code></li>
-<li>Multiline for <code>$replaceText</code></li>
+<li><code>@everyone</code> role now works in <code>$rolePosition[]</code></li>
+<li>Multiline for <code>$replaceText[]</code></li>
 <li>Fixed no errors in <code>$roleID[]</code></li>
 <li>Added <code>$toUppercase[]</code> and <code>$toLowercase[]</code></li>
-<li>Added <code>roleID</code> and userID to <code>$modifyChannelPerms</code></li>
+<li>Added roleID and userID to <code>$modifyChannelPerms[]</code></li>
 <li>Added <code>$authorOfMessage[]</code></li>
 <li>Added <code>$userID[]</code></li>
 <li>Improved servers response time by over 10x</li>
@@ -383,8 +392,8 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Added multiline support for <code>$textSplit[]</code></li>
 <li>Fixed brackets in <code>$username</code></li>
 </ul>
-<h1><a class="header" href="#2019" id="2019">2019</a></h1>
-<h2><a class="header" href="#december-1" id="december-1">December</a></h2>
+<h1 id="2019"><a class="header" href="#2019">2019</a></h1>
+<h2 id="december-1"><a class="header" href="#december-1">December</a></h2>
 <ul>
 <li>Fixed high ping issues</li>
 <li>Fixed whole bunch of other issues</li>
@@ -410,29 +419,29 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Created status website https://status.botdesignerdiscord.com</li>
 <li>Web version of <em>Bot Designer for Discord</em> has been moved to new address https://botdesignerdiscord.com</li>
 <li>Fixed some issues in web version</li>
-<li>Fixed <code>$banID</code></li>
+<li>Fixed <code>$banID[]</code></li>
 <li>Preparations for premium points</li>
 </ul>
-<h2><a class="header" href="#november-1" id="november-1">November</a></h2>
+<h2 id="november-1"><a class="header" href="#november-1">November</a></h2>
 <ul>
-<li>Added <code>$rolePosition[roleID]</code></li>
+<li>Added <code>$rolePosition[]</code></li>
 <li>Released translation strings to volunteers</li>
-<li>Added <code>kick()</code> and ban() to JS</li>
+<li>Added <code>kick()</code> and <code>ban()</code> to JS</li>
 <li>Released new stable version</li>
 </ul>
-<h1><a class="header" href="#slash-commands" id="slash-commands">Slash Commands</a></h1>
+<h1 id="slash-commands"><a class="header" href="#slash-commands">Slash Commands</a></h1>
 <p>Slash commands is a new feature added by Discord.
 It let's users interact with your bot by typing <code>/&lt;command name&gt;</code>.</p>
 <p><img src="https://i.imgur.com/kLNyEby.jpg" alt="preview" /> </p>
-<h1><a class="header" href="#general-information" id="general-information">General information</a></h1>
+<h1 id="general-information"><a class="header" href="#general-information">General information</a></h1>
 <ul>
 <li>Discord allows up to 50 slash commands.</li>
 <li>Before using slash commands you need to reinvite the bot with <code>applications.commands</code> scope.</li>
 <li>Creating/modifying/deleting slash command might take up to <strong>1hr</strong>.</li>
 </ul>
-<h1><a class="header" href="#getting-started" id="getting-started">Getting started</a></h1>
+<h1 id="getting-started"><a class="header" href="#getting-started">Getting started</a></h1>
 <p>Before we start, you need <strong>1.18.8</strong> version of the app or later.</p>
-<h3><a class="header" href="#reinviting-the-bot" id="reinviting-the-bot">Reinviting the bot</a></h3>
+<h3 id="reinviting-the-bot"><a class="header" href="#reinviting-the-bot">Reinviting the bot</a></h3>
 <ul>
 <li>Open the app</li>
 <li>Pick your bot</li>
@@ -444,7 +453,7 @@ It let's users interact with your bot by typing <code>/&lt;command name&gt;</cod
 <li>Invite the bot to your server
 <img src="https://i.imgur.com/Y5BUx0F.jpg" alt="invite scopes" /> </li>
 </ul>
-<h3><a class="header" href="#creating-a-slash-command" id="creating-a-slash-command">Creating a slash command</a></h3>
+<h3 id="creating-a-slash-command"><a class="header" href="#creating-a-slash-command">Creating a slash command</a></h3>
 <ul>
 <li>Create or modify existing command</li>
 <li>Press the top-right icon</li>
@@ -453,32 +462,32 @@ It let's users interact with your bot by typing <code>/&lt;command name&gt;</cod
 <li>Save it
 <img src="https://i.imgur.com/zEF47O5.jpg" alt="slash command page" /> </li>
 </ul>
-<h3><a class="header" href="#retriving-value-from-options" id="retriving-value-from-options">Retriving value from options</a></h3>
+<h3 id="retriving-value-from-options"><a class="header" href="#retriving-value-from-options">Retriving value from options</a></h3>
 <p>You can retrive a value from an option
 by simply using <code>$message[&lt;option name&gt;]</code>.<br />
 If you want this function to work in a normal and slash command<br />
 then you can use <code>$message[&lt;arg number&gt;;&lt;option name&gt;]</code>.</p>
-<h4><a class="header" href="#example" id="example">Example</a></h4>
+<h4 id="example"><a class="header" href="#example">Example</a></h4>
 <p><img src="https://i.imgur.com/TZZGQjU.jpg" alt="message example code" /> <br />
 <img src="https://i.imgur.com/vyoslhf.jpg" alt="message example usage" /> </p>
-<h3><a class="header" href="#checking-if-a-command-has-been-executed-by-a-slash-trigger" id="checking-if-a-command-has-been-executed-by-a-slash-trigger">Checking if a command has been executed by a slash trigger</a></h3>
+<h3 id="checking-if-a-command-has-been-executed-by-a-slash-trigger"><a class="header" href="#checking-if-a-command-has-been-executed-by-a-slash-trigger">Checking if a command has been executed by a slash trigger</a></h3>
 <p>You can use <code>$isSlash</code> which returns <code>true</code> if a command<br />
 was executed by <em>slash trigger</em>, otherwise it returns <code>false</code>.</p>
-<h1><a class="header" href="#functions-introduction" id="functions-introduction">Functions introduction</a></h1>
+<h1 id="functions-introduction"><a class="header" href="#functions-introduction">Functions introduction</a></h1>
 <p>In this section of wiki you will learn about some of the useful functions.<br />
 Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
 They are heart and soul of your bot. Remember that functions start with <code>$</code>.<br />
 For example <code>$nomention</code> or <code>$ping</code>.</p>
-<h1><a class="header" href="#functions-introduction-1" id="functions-introduction-1">Functions introduction</a></h1>
+<h1 id="functions-introduction-1"><a class="header" href="#functions-introduction-1">Functions introduction</a></h1>
 <p>In this section of wiki you will learn about some of the useful functions.<br />
 Functions <em>(as the name itself says)</em> add extra functionality to your commands.<br />
 They are heart and soul of your bot. Remember that functions start with <code>$</code>.<br />
 For example <code>$nomention</code> or <code>$ping</code>.</p>
-<h1><a class="header" href="#if-statements" id="if-statements">If statements</a></h1>
+<h1 id="if-statements"><a class="header" href="#if-statements">If statements</a></h1>
 <p>Interprets commands conditionally.
 Every <strong>if statement</strong> starts with <code>$if[condition]</code> and has to end with <code>$endif</code>.
 <code>$else</code> is optional.</p>
-<h2><a class="header" href="#examples" id="examples">Examples:</a></h2>
+<h2 id="examples"><a class="header" href="#examples">Examples:</a></h2>
 <pre><code>$if[$username==kubastick]
   Hi Kuba!
 $else
@@ -495,17 +504,17 @@ $endif
   $endif
 $endif
 </code></pre>
-<h1><a class="header" href="#awaited-commands-and-functions" id="awaited-commands-and-functions">Awaited commands and functions</a></h1>
+<h1 id="awaited-commands-and-functions"><a class="header" href="#awaited-commands-and-functions">Awaited commands and functions</a></h1>
 <p>This feature lets your bot to await for user's answer. <br />
 Here's how the end result looks like: </p>
 <p><img src="https://i.imgur.com/rRRcIXA.jpg" alt="end result" /> </p>
 <p>As you can see, the bot asks us to provide a number and then checks <br />
 if provided value is a number. </p>
-<h2><a class="header" href="#is-number-command" id="is-number-command"><code>is-number</code> command</a></h2>
+<h2 id="is-number-command"><a class="header" href="#is-number-command"><code>is-number</code> command</a></h2>
 <p>That's how <code>is-number</code> command looks like:
 <img src="https://i.imgur.com/WatX9MY.jpg" alt="is-number command" /> </p>
 <p><code>$awaitFunc[test2]</code> launches await command which is called <code>test2</code>. </p>
-<h2><a class="header" href="#awaited-command" id="awaited-command">Awaited command</a></h2>
+<h2 id="awaited-command"><a class="header" href="#awaited-command">Awaited command</a></h2>
 <p>Here you can see the test2 awaited command:</p>
 <p><img src="https://i.imgur.com/gPJH5GC.jpg" alt="awaited command" /> </p>
 <p>Have you noticed what's in the command's trigger?<br />
@@ -520,36 +529,36 @@ In this case it's <em>test2</em>. The second argument is a filter.<br />
 </ul>
 <p>What happens if the filter doesn't match?<br />
 Well, you can create a command which will be used instead.</p>
-<h2><a class="header" href="#awaited-error-command" id="awaited-error-command">Awaited error command</a></h2>
+<h2 id="awaited-error-command"><a class="header" href="#awaited-error-command">Awaited error command</a></h2>
 <p><img src="https://i.imgur.com/Y27bCZB.jpg" alt="error command" /> </p>
 <p>As you can see, we are using <code>$awaitedCommandError[test2]</code> in the trigger.<br />
 The first argument specifies the command's name.<br />
 This command will only be used when the filter in <br />
 the awaited command does not match user's response.</p>
-<h1><a class="header" href="#ping" id="ping">$ping</a></h1>
+<h1 id="ping"><a class="header" href="#ping">$ping</a></h1>
 <p>Shows the delay between sent message and bot's response.
 The value of <code>$ping</code> is expressed in miliseconds.</p>
-<h2><a class="header" href="#example-command" id="example-command">Example command:</a></h2>
+<h2 id="example-command"><a class="header" href="#example-command">Example command:</a></h2>
 <pre><code>Ping: $ping ms
 </code></pre>
-<h4><a class="header" href="#expected-output" id="expected-output">Expected output:</a></h4>
+<h4 id="expected-output"><a class="header" href="#expected-output">Expected output:</a></h4>
 <pre><code>Ping: 50 ms
 </code></pre>
 <p>⠀</p>
-<h1><a class="header" href="#authorid" id="authorid">$authorID</a></h1>
+<h1 id="authorid"><a class="header" href="#authorid">$authorID</a></h1>
 <p>Returns message's <strong>author ID</strong>. </p>
-<h2><a class="header" href="#example-command-1" id="example-command-1">Example command:</a></h2>
+<h2 id="example-command-1"><a class="header" href="#example-command-1">Example command:</a></h2>
 <pre><code>This command was written by &lt;@$authorID&gt;!
 </code></pre>
-<h4><a class="header" href="#expected-output-1" id="expected-output-1">Expected output:</a></h4>
+<h4 id="expected-output-1"><a class="header" href="#expected-output-1">Expected output:</a></h4>
 <pre><code>This command was written by @user!
 </code></pre>
-<h4><a class="header" href="#explanation" id="explanation">Explanation:</a></h4>
+<h4 id="explanation"><a class="header" href="#explanation">Explanation:</a></h4>
 <p>Discord uses this format <code>&lt;@USER_ID&gt;</code> to mention user.
 So for example let's say that <code>$authorID</code> is equal to <code>246604909451935745</code>.
 If we'll use this <code>&lt;@$authorID&gt;</code> it will be replaced with <code>&lt;@246604909451935745&gt;</code> and discord will
 interpret this as a mention <em>(@Noituri)</em>.</p>
-<h1><a class="header" href="#dm" id="dm">$dm</a></h1>
+<h1 id="dm"><a class="header" href="#dm">$dm</a></h1>
 <p>There are three possible usages of the <code>$dm</code> command</p>
 <p>The first is:</p>
 <pre><code class="language-php">$dm
@@ -566,15 +575,15 @@ interpret this as a mention <em>(@Noituri)</em>.</p>
 <p>If the command fails to send the message, make sure the user
 allows dm messages from anyone.  <br />
 ⠀</p>
-<h1><a class="header" href="#memberscount" id="memberscount">$membersCount</a></h1>
+<h1 id="memberscount"><a class="header" href="#memberscount">$membersCount</a></h1>
 <p>This command returns number of members.</p>
-<h2><a class="header" href="#first-usage-of-the-command" id="first-usage-of-the-command">First usage of the command</a></h2>
+<h2 id="first-usage-of-the-command"><a class="header" href="#first-usage-of-the-command">First usage of the command</a></h2>
 <p><code>$membersCount</code> - returns amount of members in current guild</p>
-<h2><a class="header" href="#second-usage" id="second-usage">Second usage</a></h2>
+<h2 id="second-usage"><a class="header" href="#second-usage">Second usage</a></h2>
 <p><code>$membersCount[presence]</code> - returns amount of members that have their presences set
 to provided presence. For example if you will use <code>$membersCount[online]</code> it will show
 you amount of online members.</p>
-<h3><a class="header" href="#available-presences" id="available-presences">Available presences:</a></h3>
+<h3 id="available-presences"><a class="header" href="#available-presences">Available presences:</a></h3>
 <ul>
 <li><code>online</code> </li>
 <li><code>offline</code></li>
@@ -582,12 +591,12 @@ you amount of online members.</p>
 <li><code>dnd</code></li>
 <li><code>invisible</code></li>
 </ul>
-<h1><a class="header" href="#javascript" id="javascript">JavaScript</a></h1>
+<h1 id="javascript"><a class="header" href="#javascript">JavaScript</a></h1>
 <p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
 Discord's API is not fully supported yet but there will be more extensive
 support in the future.</p>
 <p><strong>(NOTE: Callbacks don't support JavaScript at the moment)</strong></p>
-<h2><a class="header" href="#available-objects-in-the-commands" id="available-objects-in-the-commands">Available objects in the commands:</a></h2>
+<h2 id="available-objects-in-the-commands"><a class="header" href="#available-objects-in-the-commands">Available objects in the commands:</a></h2>
 <ul>
 <li><code>message</code> - string value. It contains message written by the user.</li>
 <li><code>commandPrefix</code> - string value. It contains name of the used command.</li>
@@ -596,7 +605,7 @@ support in the future.</p>
 <li><code>userMentions</code> - array of string values. It contains user mentions <em>(pings)</em>.</li>
 <li><code>roleMentions</code> - array of string values. It contains role mentions <em>(pings)</em>.</li>
 </ul>
-<h2><a class="header" href="#currently-supported-api-functions" id="currently-supported-api-functions">Currently supported API functions:</a></h2>
+<h2 id="currently-supported-api-functions"><a class="header" href="#currently-supported-api-functions">Currently supported API functions:</a></h2>
 <ul>
 <li><code>setResponse(replyText)</code><br />
 where <code>replyText</code> is a string value. This command will send message to the channel from
@@ -636,12 +645,12 @@ where <code>channelID</code> and <code>messageID</code> are the string values.</
 <li><code>sendChannelMessage(channelID, message)</code><br />
 where <code>channelID</code> and <code>messageID</code> are the string values. Sends message to the provided channel.</li>
 </ul>
-<h1><a class="header" href="#javascript-1" id="javascript-1">JavaScript</a></h1>
+<h1 id="javascript-1"><a class="header" href="#javascript-1">JavaScript</a></h1>
 <p>Bot Designer for Discord allows you to use JavaScript <em>(ES2015)</em>.<br />
 Discord's API is not fully supported yet but there will be more extensive
 support in the future.</p>
 <p><strong>(NOTE: Callbacks don't support JavaScript at the moment)</strong></p>
-<h2><a class="header" href="#available-objects-in-the-commands-1" id="available-objects-in-the-commands-1">Available objects in the commands:</a></h2>
+<h2 id="available-objects-in-the-commands-1"><a class="header" href="#available-objects-in-the-commands-1">Available objects in the commands:</a></h2>
 <ul>
 <li><code>message</code> - string value. It contains message written by the user.</li>
 <li><code>commandPrefix</code> - string value. It contains name of the used command.</li>
@@ -650,7 +659,7 @@ support in the future.</p>
 <li><code>userMentions</code> - array of string values. It contains user mentions <em>(pings)</em>.</li>
 <li><code>roleMentions</code> - array of string values. It contains role mentions <em>(pings)</em>.</li>
 </ul>
-<h2><a class="header" href="#currently-supported-api-functions-1" id="currently-supported-api-functions-1">Currently supported API functions:</a></h2>
+<h2 id="currently-supported-api-functions-1"><a class="header" href="#currently-supported-api-functions-1">Currently supported API functions:</a></h2>
 <ul>
 <li><code>setResponse(replyText)</code><br />
 where <code>replyText</code> is a string value. This command will send message to the channel from
@@ -690,34 +699,34 @@ where <code>channelID</code> and <code>messageID</code> are the string values.</
 <li><code>sendChannelMessage(channelID, message)</code><br />
 where <code>channelID</code> and <code>messageID</code> are the string values. Sends message to the provided channel.</li>
 </ul>
-<h1><a class="header" href="#awaited-reactions" id="awaited-reactions">Awaited reactions</a></h1>
+<h1 id="awaited-reactions"><a class="header" href="#awaited-reactions">Awaited reactions</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>Thanks to awaited reactions your bot can be triggered by reactions</p>
 <p><img src="https://i.imgur.com/diskuyv.png" alt="end result" /> </p>
 <p>Here's how the end result looks like.</p>
-<h2><a class="header" href="#accept-command" id="accept-command"><code>accept</code> command</a></h2>
+<h2 id="accept-command"><a class="header" href="#accept-command"><code>accept</code> command</a></h2>
 <p><img src="https://i.imgur.com/AEJ9BRk.jpg" alt="accept command" /> </p>
 <p><code>$awaitReactions[awaited reaction name;reaction]</code> is used to specify which command is used when user reacts with <code>reaction</code>.<br />
 <code>$awaitReactions[]</code> allows you to group reactions <em>(as you can see in the accept command)</em> by specifing more <code>awaited reaction name</code>s and <code>reaction</code>s. What does it mean?<br />
 When one of the reactions is used then the other one stops working. So for example if I react with ✔️ then ❌ stops working.</p>
-<h2><a class="header" href="#awaited-reaction-trigger" id="awaited-reaction-trigger">Awaited reaction trigger</a></h2>
+<h2 id="awaited-reaction-trigger"><a class="header" href="#awaited-reaction-trigger">Awaited reaction trigger</a></h2>
 <p>Here you can see the <code>acceptCmd</code> and <code>declineCmd</code> awaited reaction commands:</p>
 <p><img src="https://i.imgur.com/xwFWnbM.jpg" alt="acceptCmd" /> <br />
 <img src="https://i.imgur.com/TEUu2UM.jpg" alt="acceptCmd" /> </p>
 <p><code>$reaction[name]</code>. As you can see it's pretty straightforward.<br />
 If you want to know what emoji was used in the <code>$reaction[]</code> trigger command<br />
 then you can use <code>$usedEmoji</code> which will return the emoji that was used.</p>
-<h1><a class="header" href="#awaited-reactions-1" id="awaited-reactions-1">Awaited reactions</a></h1>
+<h1 id="awaited-reactions-1"><a class="header" href="#awaited-reactions-1">Awaited reactions</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>Thanks to awaited reactions your bot can be triggered by reactions</p>
 <p><img src="https://i.imgur.com/diskuyv.png" alt="end result" /> </p>
 <p>Here's how the end result looks like.</p>
-<h2><a class="header" href="#accept-command-1" id="accept-command-1"><code>accept</code> command</a></h2>
+<h2 id="accept-command-1"><a class="header" href="#accept-command-1"><code>accept</code> command</a></h2>
 <p><img src="https://i.imgur.com/AEJ9BRk.jpg" alt="accept command" /> </p>
 <p><code>$awaitReactions[awaited reaction name;reaction]</code> is used to specify which command is used when user reacts with <code>reaction</code>.<br />
 <code>$awaitReactions[]</code> allows you to group reactions <em>(as you can see in the accept command)</em> by specifing more <code>awaited reaction name</code>s and <code>reaction</code>s. What does it mean?<br />
 When one of the reactions is used then the other one stops working. So for example if I react with ✔️ then ❌ stops working.</p>
-<h2><a class="header" href="#awaited-reaction-trigger-1" id="awaited-reaction-trigger-1">Awaited reaction trigger</a></h2>
+<h2 id="awaited-reaction-trigger-1"><a class="header" href="#awaited-reaction-trigger-1">Awaited reaction trigger</a></h2>
 <p>Here you can see the <code>acceptCmd</code> and <code>declineCmd</code> awaited reaction commands:</p>
 <p><img src="https://i.imgur.com/xwFWnbM.jpg" alt="acceptCmd" /> <br />
 <img src="https://i.imgur.com/TEUu2UM.jpg" alt="acceptCmd" /> </p>
@@ -752,10 +761,6 @@ then you can use <code>$usedEmoji</code> which will return the emoji that was us
 
         
         
-        
-        <script type="text/javascript">
-            window.playpen_copyable = true;
-        </script>
         
 
         

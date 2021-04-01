@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded affix "><a href="foreword.html">Foreword</a></li><li class="expanded affix "><a href="CHANGELOG.html" class="active">Changelog</a></li><li class="expanded affix "><a href="slashCommands.html">Slash commands</a></li><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="CHANGELOG.html" class="active">Changelog</a></li><li class="chapter-item expanded affix "><a href="slashCommands.html">Slash commands</a></li><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="bdscript/ifStatements.html"><strong aria-hidden="true">1.2.</strong> If Statements</a></li><li class="chapter-item expanded "><a href="bdscript/awaitedCommands.html"><strong aria-hidden="true">1.3.</strong> Awaited Commands</a></li><li class="chapter-item expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">1.4.</strong> $ping</a></li><li class="chapter-item expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">1.5.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">1.6.</strong> $dm</a></li><li class="chapter-item expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">1.7.</strong> $membersCount</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited reactions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,13 +149,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#changelog" id="changelog">Changelog</a></h1>
-<p><em>Note that we often forget to update this article, so some stuff are missing.</em></p>
-<h1><a class="header" href="#2021" id="2021">2021</a></h1>
-<h2><a class="header" href="#march" id="march">March</a></h2>
+                        <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
+<p><em>Note that we often forget to update this article, so some stuff is missing.</em></p>
+<h1 id="2021"><a class="header" href="#2021">2021</a></h1>
+<h2 id="march"><a class="header" href="#march">March</a></h2>
 <ul>
 <li>Added <code>$cropText[]</code></li>
-<li>Added <code>userID</code> field to <code>$awaitFunc</code></li>
+<li>Added <code>userID</code> field to <code>$awaitFunc[]</code></li>
 <li>Fixed removing normal commands and slash commands</li>
 <li>Added <code>$removeLinks[]</code></li>
 <li>Made returning authorID optional in <code>$findUser[]</code></li>
@@ -164,26 +164,35 @@
 <li>Added <code>$isNSFW[]</code></li>
 <li>Fixed setting NSFW in <code>$modifyChannel[]</code></li>
 <li>Fixed <code>$userJoined[]</code> and <code>$userJoinedDiscord[]</code></li>
+<li>Added <code>$editMessage[]</code></li>
+<li>Fixed caching for new members.</li>
+<li>Added <code>$slashCommandsCount</code></li>
+<li>Added <code>$botID</code></li>
+<li>Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis</li>
+<li>Added <code>$serverCooldown[]</code></li>
+<li>Fixed the issue with not expiring app bans</li>
+<li>Fixed some issues with <code>[</code> and <code>]</code></li>
+<li>Fixed problems with slash commands and cooldowns</li>
 </ul>
-<h2><a class="header" href="#february" id="february">February</a></h2>
+<h2 id="february"><a class="header" href="#february">February</a></h2>
 <ul>
 <li>Added <code>$sendMessage[]</code></li>
 <li>Added <code>$reply</code></li>
 <li>Added slash commands</li>
 <li>Fixed mentions in <code>$findChannel[]</code></li>
 <li>Improved performance in the command interpreter</li>
-<li>Optimised reaction handlers</li>
+<li>Optimized reaction handlers</li>
 <li>Added <code>$isSlash</code></li>
 <li>Added new optional field to <code>$message[]</code></li>
 <li>Fixed semicolons in <code>$channelSendMessage[]</code></li>
 </ul>
-<h2><a class="header" href="#january" id="january">January</a></h2>
+<h2 id="january"><a class="header" href="#january">January</a></h2>
 <ul>
 <li>Fixed the problem with statuses not showing up</li>
 <li>Fixed the issue with mentions not working</li>
 <li>Fixed loading bots from database</li>
-<li>Increased duration to 40min for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn</code></li>
-<li>Added if statements</li>
+<li>Increased duration to 40 minutes for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn[]</code></li>
+<li>Added if statements (<code>$if[]</code>, <code>$else</code>, <code>$endif</code>)</li>
 <li>GuildID instead of <code>everyone</code> is now returned in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
 <li>Space commands have been removed (you can still use <code>$alwaysReply</code>)</li>
 <li>Added <code>$channelTopic[]</code></li>
@@ -191,19 +200,19 @@
 <li>Fixed the issue with tags/discriminators not working for <code>$userID[]</code> and <code>$findUser[]</code> </li>
 <li>Added <code>$findChannel[]</code> and <code>$channelExists[]</code></li>
 </ul>
-<h1><a class="header" href="#2020" id="2020">2020</a></h1>
-<h2><a class="header" href="#december" id="december">December</a></h2>
+<h1 id="2020"><a class="header" href="#2020">2020</a></h1>
+<h2 id="december"><a class="header" href="#december">December</a></h2>
 <ul>
 <li>Timezones in <code>$time[]</code> has been fixed</li>
 <li>Updated discord API version</li>
 <li>Added Competing presence</li>
-<li>Added <code>$botLeave[server ID]</code></li>
+<li>Added <code>$botLeave[]</code></li>
 <li>Fix for <code>$getLeaderboardValue[]</code></li>
 <li>Added userID option to reset user var</li>
 <li>Added serverID option to <code>$serverOwner</code></li>
 <li>Added <code>$premiumExpireTime</code></li>
 </ul>
-<h2><a class="header" href="#november" id="november">November</a></h2>
+<h2 id="november"><a class="header" href="#november">November</a></h2>
 <ul>
 <li>Fixed disappearing bot status</li>
 <li>Fixed <code>$serverCount</code> in bot status</li>
@@ -211,11 +220,11 @@
 <li>Functions that require privileged intents are now marked accordingly </li>
 <li>Added <code>$getLeaderboardValue[]</code></li>
 <li>Added <code>$awaitReactions[]</code></li>
-<li>Awaited functions are now available for everyone</li>
+<li>Awaited commands are now available for everyone</li>
 <li>Added awaited reactions</li>
 <li>Fixed problems with DMs</li>
 </ul>
-<h2><a class="header" href="#october" id="october">October</a></h2>
+<h2 id="october"><a class="header" href="#october">October</a></h2>
 <ul>
 <li>Optimized memory usage</li>
 <li>Added member and presence intents</li>
@@ -224,13 +233,13 @@
 <li>Allowed using awaited functions in awaited commands</li>
 <li>Fixed leaderboards</li>
 <li>Fixed <code>$randomMention</code>, <code>$randomUser</code> and <code>$randomUserID</code></li>
-<li>Added <code>$awaitReaction[]</code> for premium bots</li>
+<li>Added <code>$awaitReactions[]</code> for premium bots</li>
 <li>Added <code>$usedEmoji</code></li>
 <li><code>$deletecommand</code> sends an error now</li>
 <li>Fixed <code>$serverVerificationLvl</code> not working on very high verification servers</li>
 <li>Fixed reconnecting bots to gateway</li>
 </ul>
-<h2><a class="header" href="#september" id="september">September</a></h2>
+<h2 id="september"><a class="header" href="#september">September</a></h2>
 <ul>
 <li>Added <code>$ignoreTriggerCase</code> for premium bots</li>
 <li>Fixed caching guilds</li>
@@ -240,7 +249,7 @@
 <li>Fixed weird brackets in embeds</li>
 <li>Added trigger list in the app</li>
 </ul>
-<h2><a class="header" href="#august" id="august">August</a></h2>
+<h2 id="august"><a class="header" href="#august">August</a></h2>
 <ul>
 <li>Migrated to the new infrastructure (new database and API)</li>
 <li>Premium released</li>
@@ -253,24 +262,24 @@
 <li>Added <code>$findRole[]</code></li>
 <li>Added <code>$disableSpecialEscaping</code></li>
 </ul>
-<h2><a class="header" href="#july" id="july">July</a></h2>
+<h2 id="july"><a class="header" href="#july">July</a></h2>
 <ul>
 <li>Renamed <code>$splitText[]</code> to <code>$getSplitText[]</code> to avoid confusion <em>(<code>$splitText[]</code> still works)</em></li>
 <li>Added <code>$joinSplitText[]</code></li>
 <li>Added <code>$getInviteInfo[]</code></li>
-<li>Added <code>$guildID[name]</code></li>
+<li>Added <code>$guildID[]</code></li>
 <li>Fixed <code>$numberSeparator[]</code> in the bot's status</li>
 <li><code>$roleID[]</code> and <code>$channelID[]</code> no longer stop code execution</li>
 <li>Enabled BDScript Unstable for callbacks</li>
 <li>Added <code>$getTextSplitLength</code></li>
 </ul>
-<h2><a class="header" href="#june" id="june">June</a></h2>
+<h2 id="june"><a class="header" href="#june">June</a></h2>
 <ul>
 <li>Fixed <code>$getReactions[]</code> in BDScript Unstable</li>
 <li>Fixed bracket escaping for some commands in BDScript Unstable</li>
-<li>Fixed <code>$modifyChannel[]</code> (random slowdowns added on channels)</li>
+<li>Fixed <code>$modifyChannel[]</code> (random slowmodes added on channels)</li>
 </ul>
-<h2><a class="header" href="#may" id="may">May</a></h2>
+<h2 id="may"><a class="header" href="#may">May</a></h2>
 <ul>
 <li>Fixed <code>$onlyBotPerms[]</code></li>
 <li>Bot Designer List Open Beta</li>
@@ -278,21 +287,21 @@
 <li>Fixed brackets issue in <code>$serverNames</code></li>
 <li>Other bug fixing for Bot Designer and Bot Designer List</li>
 </ul>
-<h2><a class="header" href="#april" id="april">April</a></h2>
+<h2 id="april"><a class="header" href="#april">April</a></h2>
 <ul>
 <li>Fixed <code>$serverIcon</code></li>
 <li>Added <code>$changeCooldownTime[]</code></li>
 <li>Disabled <code>$randomUserID</code>, <code>$'randomUserID</code>, <code>$deleteIn</code> and <code>$dm</code> in <code>$onMessageDelete</code></li>
 <li>Fixed <code>$addField[]</code></li>
-<li>Added error message in <code>$getServerVar</code> when provided variable does not exist</li>
-<li><code>$userID</code> does not stop code execution if user is not found</li>
+<li>Added error message in <code>$getServerVar[]</code> when provided variable does not exist</li>
+<li><code>$userID[]</code> does not stop code execution if user is not found</li>
 <li>Added <code>$botLeave</code></li>
 <li>Removed permission check from <code>$clear</code> command.</li>
 <li>Fixed <code>$isAdmin[]</code></li>
 </ul>
-<h2><a class="header" href="#march-1" id="march-1">March</a></h2>
+<h2 id="march-1"><a class="header" href="#march-1">March</a></h2>
 <ul>
-<li>Added <code>$getReactions</code> and <code>$userReacted</code></li>
+<li>Added <code>$getReactions[]</code> and <code>$userReacted[]</code></li>
 <li>New command interpreter</li>
 <li>Added to new parser:
 <ul>
@@ -305,72 +314,72 @@
 </ul>
 </li>
 <li>Fixed brackets in <code>$getMessage[]</code></li>
-<li>Changed behaviour of <code>$onlyPerms</code> command</li>
-<li>Added <code>$charCount</code></li>
-<li>Added <code>$clearReactions</code></li>
-<li>Added new options to <code>$getMessage</code></li>
-<li>Fixed adding slowmode when using <code>$modifyChannel</code></li>
-<li>Added <code>$checkContains</code></li>
-<li>Added <code>$addEmoji</code></li>
+<li>Changed behaviour of <code>$onlyPerms[]</code> command</li>
+<li>Added <code>$charCount[]</code></li>
+<li>Added <code>$clearReactions[]</code></li>
+<li>Added new options to <code>$getMessage[]</code></li>
+<li>Fixed adding slowmode when using <code>$modifyChannel[]</code></li>
+<li>Added <code>$checkContains[]</code></li>
+<li>Added <code>$addEmoji[]</code></li>
 <li>Fixed the bug with <code>$</code> command prefix and <code>$noMentionMessage</code></li>
-<li>Added <code>$unbanID[id]</code></li>
+<li>Added <code>$unbanID[]</code></li>
 <li>Added <code>$hasRole[]</code></li>
 <li>Optimized the leaderboard commands</li>
 <li>Fixed permissions in some commands</li>
-<li>Fixed <code>$onlyPerms</code></li>
+<li>Fixed <code>$onlyPerms[]</code></li>
 <li>Fixed the bug with <code>$</code> command prefix and <code>$message</code></li>
 </ul>
-<h2><a class="header" href="#february-1" id="february-1">February</a></h2>
+<h2 id="february-1"><a class="header" href="#february-1">February</a></h2>
 <ul>
 <li>Fixed errors in <code>$addField</code></li>
 <li>Added <code>$serverRegion</code></li>
 <li>Added <code>$serverOwner</code></li>
 <li>Added <code>$emoteCount</code></li>
-<li>Added <code>$isMentionable</code></li>
-<li>Added <code>$isHoisted</code></li>
-<li>Added <code>$serverIcon[serverID]</code></li>
+<li>Added <code>$isMentionable[]</code></li>
+<li>Added <code>$isHoisted[]</code></li>
+<li>Added <code>$serverIcon[]</code></li>
 <li>Fixed suppressing errors in some variable commands</li>
 <li>Fixed bug with <code>$replaceText[]()</code> inside <code>$description</code></li>
-<li>Added <code>$isValidHex</code></li>
+<li>Added <code>$isValidHex[]</code></li>
 <li>Added <code>$isAdmin[]</code></li>
-<li><code>$userID</code> does not require discriminator now</li>
+<li><code>$userID[]</code> does not require discriminator now</li>
 <li>Added <code>$serverVerificationLvl</code></li>
-<li>Fixed stopping command when <code>$changeUsernameWithID</code> or <code>$changeUsername</code> throws an exception</li>
-<li>Added <code>$modifyRolePerms</code></li>
-<li>Added <code>$isUserDMEnabled</code></li>
-<li>Added new option to <code>$mentioned</code></li>
-<li>When userID is not provided in <code>$discriminator</code>, the author's id will be used</li>
-<li>Added <code>$argCount</code></li>
-<li>Added <code>$roleExists</code> and <code>$roleExists</code> </li>
-<li>Added <code>$varExistError</code></li>
-<li>Removed permissions check for <code>$kick</code> function</li>
+<li>Fixed stopping command when <code>$changeUsernameWithID[]</code> or <code>$changeUsername[]</code> throws an exception</li>
+<li>Added <code>$modifyRolePerms[]</code></li>
+<li>Added <code>$isUserDMEnabled[]</code></li>
+<li>Added new option to <code>$mentioned[]</code></li>
+<li>When userID is not provided in <code>$discriminator[]</code>, the author's ID will be used</li>
+<li>Added <code>$argCount[]</code></li>
+<li>Added <code>$roleExists[]</code> and <code>$roleExists[]</code> </li>
+<li>Added <code>$varExistError[]</code></li>
+<li>Removed permissions check for <code>$kick[]</code> function</li>
 <li>Fixed brackets issue in <code>$message</code> and <code>$noMentionMessage</code></li>
-<li>Fixed <code>$globalUserLeaderboard</code></li>
-<li><code>$repeatMessage</code> won't send an error when there is <code>0</code> provided</li>
+<li>Fixed <code>$globalUserLeaderboard[]</code></li>
+<li><code>$repeatMessage[]</code> won't send an error when there is <code>0</code> provided</li>
 </ul>
-<h2><a class="header" href="#january-1" id="january-1">January</a></h2>
+<h2 id="january-1"><a class="header" href="#january-1">January</a></h2>
 <ul>
 <li>Final premium preparations</li>
 <li>Space commands for premium bots</li>
 <li>Added <code>sendChannelMessage()</code> to JS</li>
-<li>Added <code>$isNumber</code></li>
-<li>Better description for<code> $replaceText</code></li>
-<li>Removed <code>#</code> from <code>$getRoleColor</code></li>
-<li>Added possibility of adding custom error message to <code>$suppressErrors</code></li>
-<li>Added <code>$embedSuppressErrors</code></li>
-<li>Added <code>$getServerVar</code> in command's name for premium bots</li>
-<li>Added custom separators to <code>$numberSeparator</code></li>
-<li>Fixed issue with <code>+</code> and <code>-</code> in <code>$numberSeparator</code></li>
+<li>Added <code>$isNumber[]</code></li>
+<li>Better description for<code> $replaceText[]</code></li>
+<li>Removed <code>#</code> from <code>$getRoleColor[]</code></li>
+<li>Added possibility of adding custom error message to <code>$suppressErrors[]</code></li>
+<li>Added <code>$embedSuppressErrors[]</code></li>
+<li>Added <code>$getServerVar[]</code> in command's name for premium bots</li>
+<li>Added custom separators to <code>$numberSeparator[]</code></li>
+<li>Fixed issue with <code>+</code> and <code>-</code> in <code>$numberSeparator[]</code></li>
 <li>iOS release</li>
 <li>Added <code>$isBot[]</code></li>
-<li>Added <code>userID</code> option to <code>$takeRole</code></li>
+<li>Added <code>userID</code> option to <code>$takeRole[]</code></li>
 <li>Fixed problems with timezones</li>
 <li><code>@everyone</code> role shows up now when it's a highest/lowest role in <code>$highestRole/$lowestRole</code></li>
-<li><code>@everyone</code> role now works in <code>$rolePosition</code></li>
-<li>Multiline for <code>$replaceText</code></li>
+<li><code>@everyone</code> role now works in <code>$rolePosition[]</code></li>
+<li>Multiline for <code>$replaceText[]</code></li>
 <li>Fixed no errors in <code>$roleID[]</code></li>
 <li>Added <code>$toUppercase[]</code> and <code>$toLowercase[]</code></li>
-<li>Added <code>roleID</code> and userID to <code>$modifyChannelPerms</code></li>
+<li>Added roleID and userID to <code>$modifyChannelPerms[]</code></li>
 <li>Added <code>$authorOfMessage[]</code></li>
 <li>Added <code>$userID[]</code></li>
 <li>Improved servers response time by over 10x</li>
@@ -378,8 +387,8 @@
 <li>Added multiline support for <code>$textSplit[]</code></li>
 <li>Fixed brackets in <code>$username</code></li>
 </ul>
-<h1><a class="header" href="#2019" id="2019">2019</a></h1>
-<h2><a class="header" href="#december-1" id="december-1">December</a></h2>
+<h1 id="2019"><a class="header" href="#2019">2019</a></h1>
+<h2 id="december-1"><a class="header" href="#december-1">December</a></h2>
 <ul>
 <li>Fixed high ping issues</li>
 <li>Fixed whole bunch of other issues</li>
@@ -405,14 +414,14 @@
 <li>Created status website https://status.botdesignerdiscord.com</li>
 <li>Web version of <em>Bot Designer for Discord</em> has been moved to new address https://botdesignerdiscord.com</li>
 <li>Fixed some issues in web version</li>
-<li>Fixed <code>$banID</code></li>
+<li>Fixed <code>$banID[]</code></li>
 <li>Preparations for premium points</li>
 </ul>
-<h2><a class="header" href="#november-1" id="november-1">November</a></h2>
+<h2 id="november-1"><a class="header" href="#november-1">November</a></h2>
 <ul>
-<li>Added <code>$rolePosition[roleID]</code></li>
+<li>Added <code>$rolePosition[]</code></li>
 <li>Released translation strings to volunteers</li>
-<li>Added <code>kick()</code> and ban() to JS</li>
+<li>Added <code>kick()</code> and <code>ban()</code> to JS</li>
 <li>Released new stable version</li>
 </ul>
 
@@ -459,10 +468,6 @@
 
         
         
-        
-        <script type="text/javascript">
-            window.playpen_copyable = true;
-        </script>
         
 
         
