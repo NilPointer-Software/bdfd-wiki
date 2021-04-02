@@ -17,6 +17,7 @@
     - [$userInfo](./bdscript/userInfo.md)
     - [$roleInfo](./bdscript/roleInfo.md)
     - [$serverInfo](./bdscript/serverInfo.md)
+    - [$checkUserPerms](./bdscript/checkUserPerms.md)
 
 - [JavaScript](./javascript/javascript.md)
     - [Introduction](./javascript/javascript.md)
