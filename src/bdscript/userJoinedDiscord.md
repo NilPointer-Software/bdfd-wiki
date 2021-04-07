@@ -27,4 +27,4 @@ Returns the date when given user created their Discord account. You can also giv
 `2` = Day Of The Month
 
 ### Format Example
-`$userJoined[$authorID;January 2 (Monday), 2006 at 3:04]` would return Month DayOfTheMonth (Day), Year at Time.
+`$userJoinedDiscord[$authorID;January 2 (Monday), 2006 at 3:04]` would return Month DayOfTheMonth (Day), Year at Time.
