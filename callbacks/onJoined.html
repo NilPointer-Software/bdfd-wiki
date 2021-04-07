@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js bdfd">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>$onJoined - Bot Designer for Discord - Wiki</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('bdfd')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="../CHANGELOG.html">Changelog</a></li><li class="chapter-item expanded affix "><a href="../slashCommands.html">Slash commands</a></li><li class="chapter-item expanded "><a href="../bdscript/introduction.html"><strong aria-hidden="true">1.</strong> BDScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bdscript/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../bdscript/awaitedCommands.html"><strong aria-hidden="true">1.2.</strong> Awaited Commands</a></li><li class="chapter-item expanded "><a href="../bdscript/ifStatements.html"><strong aria-hidden="true">1.3.</strong> If Statements</a></li><li class="chapter-item expanded "><a href="../bdscript/authorID.html"><strong aria-hidden="true">1.4.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="../bdscript/botID.html"><strong aria-hidden="true">1.5.</strong> $botID</a></li><li class="chapter-item expanded "><a href="../bdscript/channelTopic.html"><strong aria-hidden="true">1.6.</strong> $channelTopic</a></li><li class="chapter-item expanded "><a href="../bdscript/checkUserPerms.html"><strong aria-hidden="true">1.7.</strong> $checkUserPerms</a></li><li class="chapter-item expanded "><a href="../bdscript/dm.html"><strong aria-hidden="true">1.8.</strong> $dm</a></li><li class="chapter-item expanded "><a href="../bdscript/membersCount.html"><strong aria-hidden="true">1.9.</strong> $membersCount</a></li><li class="chapter-item expanded "><a href="../bdscript/ping.html"><strong aria-hidden="true">1.10.</strong> $ping</a></li><li class="chapter-item expanded "><a href="../bdscript/roleInfo.html"><strong aria-hidden="true">1.11.</strong> $roleInfo</a></li><li class="chapter-item expanded "><a href="../.bdscript/serverCooldown.html"><strong aria-hidden="true">1.12.</strong> $serverCooldown</a></li><li class="chapter-item expanded "><a href="../bdscript/serverInfo.html"><strong aria-hidden="true">1.13.</strong> $serverInfo</a></li><li class="chapter-item expanded "><a href="../.bdscript/slashCommandsCount.html"><strong aria-hidden="true">1.14.</strong> $slashCommandsCount</a></li><li class="chapter-item expanded "><a href="../bdscript/slowmode.html"><strong aria-hidden="true">1.15.</strong> $slowmode</a></li><li class="chapter-item expanded "><a href="../bdscript/userInfo.html"><strong aria-hidden="true">1.16.</strong> $userInfo</a></li><li class="chapter-item expanded "><a href="../bdscript/userJoined.html"><strong aria-hidden="true">1.17.</strong> $userJoined</a></li><li class="chapter-item expanded "><a href="../bdscript/userJoinedDiscord.html"><strong aria-hidden="true">1.18.</strong> $userJoinedDiscord</a></li></ol></li><li class="chapter-item expanded "><a href="../javascript/javascript.html"><strong aria-hidden="true">2.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../javascript/javascript.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="../premium/awaitedReactions.html"><strong aria-hidden="true">3.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../premium/awaitedReactions.html"><strong aria-hidden="true">3.1.</strong> Awaited Reactions</a></li><li class="chapter-item expanded "><a href="../premium/alwaysReply.html"><strong aria-hidden="true">3.2.</strong> $alwaysReply</a></li><li class="chapter-item expanded "><a href="../premium/ignoreTriggerCase.html"><strong aria-hidden="true">3.3.</strong> $ignoreTriggerCase</a></li><li class="chapter-item expanded "><a href="../premium/messageContains.html"><strong aria-hidden="true">3.4.</strong> $messageContains</a></li></ol></li><li class="chapter-item expanded "><a href="../callbacks/introduction.html"><strong aria-hidden="true">4.</strong> Callbacks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../callbacks/introduction.html"><strong aria-hidden="true">4.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../callbacks/onJoined.html" class="active"><strong aria-hidden="true">4.2.</strong> $onJoined</a></li><li class="chapter-item expanded "><a href="../callbacks/onLeave.html"><strong aria-hidden="true">4.3.</strong> $onLeave</a></li><li class="chapter-item expanded "><a href="../callbacks/onBanAdd.html"><strong aria-hidden="true">4.4.</strong> $onBanAdd</a></li><li class="chapter-item expanded "><a href="../callbacks/onBanRemove.html"><strong aria-hidden="true">4.5.</strong> $onBanRemove</a></li><li class="chapter-item expanded "><a href="../callbacks/onMessageDelete.html"><strong aria-hidden="true">4.6.</strong> $onMessageDelete</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="bdfd">Bot Designer for Discord</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Bot Designer for Discord - Wiki</h1>
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="onjoined"><a class="header" href="#onjoined">$onJoined</a></h1>
+<p>When a user joins the server, the bot sends a message.</p>
+<h2 id="example-onjoined"><a class="header" href="#example-onjoined">Example: $onJoined</a></h2>
+<p>a. Make the command trigger <code>$onJoined[CHANNEL ID]</code>.</p>
+<p><img src="https://user-images.githubusercontent.com/69215413/113898668-13549480-979a-11eb-85ae-4e5f691eeee0.png" alt="image" /></p>
+<p>b. Input your code/reply text.
+<img src="https://user-images.githubusercontent.com/69215413/113423045-ca689e80-939b-11eb-9398-861061411f00.png" alt="image (4)" /></p>
+<p>c. Now you have a welcome message!
+<img src="https://user-images.githubusercontent.com/69215413/113423244-19163880-939c-11eb-8315-f998f395d402.png" alt="image (5)" /></p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h4 id="is-onjoined-bugged-or-not-working"><a class="header" href="#is-onjoined-bugged-or-not-working">Is $onJoined bugged or not working?</a></h4>
+<ol>
+<li>
+<p>You must have at least version <code>1.17.9</code> of the app.</p>
+</li>
+<li>
+<p>Go to <a href="https://discord.com/developers/applications">Discord Developer Portal</a> open your bot page and enable member intents.</p>
+</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/69215413/113423563-b83b3000-939c-11eb-8a71-8eaa53d20f2d.png" alt="image" /> </p>
+<p><img src="https://user-images.githubusercontent.com/69215413/113423634-d6089500-939c-11eb-8d2c-083ac87ff66b.png" alt="image" /></p>
+<ol start="3">
+<li>Open app and go to bot settings then enable member intents. </li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/69215413/113425202-7495f580-939f-11eb-8446-9dccb3e0a848.png" alt="image" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/113424859-dace4880-939e-11eb-91de-503252c8a51e.png" alt="image" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/113423734-fafd0800-939c-11eb-8ea7-3394c99ca86b.png" alt="image" /></p>
+<blockquote>
+<p><strong>Note:</strong> Enabled intents in the app should reflect the intents enabled in Discord's dashboard.<br />
+<strong>For example:</strong> If you have <code>members intent</code> enabled in Discord's dashboard then you should respectively
+enable them in the app <em>(unless you don't want to use them at all)</em>.</p>
+</blockquote>
+<ol start="4">
+<li>Make sure <code>$onJoined[CHANNEL ID]</code> is inputted in the 'command trigger' field.</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png" alt="image" /></p>
+<blockquote>
+<p><strong>Note:</strong> Channel IDs are not channel names! Provide a <a href="https://user-images.githubusercontent.com/69215413/113424405-19afce80-939e-11eb-959c-6dc9a095756c.png">channel ID</a>!</p>
+</blockquote>
+<ol start="5">
+<li>Make sure your bot has permission to speak in the channel provided in <code>$onJoined[]</code>.</li>
+</ol>
+<h2 id="advanced"><a class="header" href="#advanced">Advanced</a></h2>
+<p>Both free and premium users can use <code>$onJoined[]</code>. Also, all users can put <code>$getServerVar[]</code> within <code>$onJoined[]</code>. However, free users can not use <code>$getServerVar[]</code> outside of callbacks. </p>
+<p>If you own a global bot and want to make it so multiple different servers can use <code>$onJoined[]</code>. Follow these steps:</p>
+<p>1: Make a variable named &quot;<code>welcome</code>&quot; and the value set to nothing.</p>
+<p>2: Make a command for setting the welcome channel. Then put the following in your code/reply text:</p>
+<pre><code>$setServerVar[welcome;$mentionedChannels[1]]
+$argsCheck[&gt;1;Please mention a channel!]
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Servers will need to setup the channel they want the welcome message to send to. (by running a command with the code above).</p>
+</blockquote>
+<p>3: Now replace your <code>$onJoined[CHANNEL ID]</code> in your welcome command trigger, with <code>$onJoined[$getServerVar[welcome]]</code> and your all set!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../callbacks/introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../callbacks/onLeave.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../callbacks/introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../callbacks/onLeave.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
