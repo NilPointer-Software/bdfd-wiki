@@ -11,7 +11,7 @@ b. Input your code/reply text.
 c. Now you have a welcome message!.
 ![image (5)](https://user-images.githubusercontent.com/69215413/113423244-19163880-939c-11eb-8315-f998f395d402.png)
 
-## Debugging
+## Troubleshooting
 #### Is $onJoined bugged or not working? 
 
 1) You must have at least version `1.17.9` of the app.
@@ -29,6 +29,11 @@ c. Now you have a welcome message!.
 ![image](https://user-images.githubusercontent.com/69215413/113424859-dace4880-939e-11eb-91de-503252c8a51e.png)
 
 ![image](https://user-images.githubusercontent.com/69215413/113423734-fafd0800-939c-11eb-8ea7-3394c99ca86b.png)
+
+>**Note:** Enabled intents in the app should reflect the intents enabled in Discord's dashboard.\
+**For example:** If you have `members intent` enabled in Discord's dashboard then you should respectively
+enable them in the app *(unless you don't want to use them at all)*. Don't enable more intents than it's possible
+for the bot, if you do so, all intents will be automaticaly disabled in the app.
 
 4) Create a command with `$onJoined[CHANNEL ID]` as trigger and write something in code. 
 
