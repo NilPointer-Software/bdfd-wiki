@@ -3,6 +3,9 @@
 
 # 2021
 
+# April
+- Added `$httpGet[]` and `$httpPost[]`
+
 ## March
 - Added `$cropText[]`
 - Added `userID` field to `$awaitFunc[]`
