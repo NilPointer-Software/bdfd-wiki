@@ -50,6 +50,7 @@
 - Fixed issues with streaming status
 - Fixed the issue with tags/discriminators not working for `$userID[]` and `$findUser[]` 
 - Added `$findChannel[]` and `$channelExists[]`
+- Added `$userJoined[]` and `$userJoinedDiscord[]`
 
 # 2020
 
