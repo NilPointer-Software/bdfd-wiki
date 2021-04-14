@@ -5,6 +5,7 @@
 
 # April
 - Added `$httpGet[]` and `$httpPost[]`
+- Improved user cache
 
 ## March
 - Added `$cropText[]`
