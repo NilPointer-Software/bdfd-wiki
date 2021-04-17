@@ -4,8 +4,9 @@
 # 2021
 
 # April
-- Added `$httpGet[]` and `$httpPost[]`
+- Added `$httpGet[]`, `$httpPost[]`, `$httpDelete[]` and `$httpPatch[]`
 - Improved user cache
+- Added `$httpResult[]`
 
 ## March
 - Added `$cropText[]`
