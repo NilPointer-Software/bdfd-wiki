@@ -5,7 +5,7 @@
 
 # April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
-- Improved user cache
+- Improved overall caching
 - Added `$httpResult[]`
 
 ## March
