@@ -7,6 +7,7 @@
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
 - Improved overall caching
 - Added `$httpResult[]`
+- Made command execution faster
 
 ## March
 - Added `$cropText[]`
