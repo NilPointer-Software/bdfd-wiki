@@ -3,6 +3,9 @@
 
 # 2021
 
+# May
+- Fixed a bug which allowed executing certain types of callbacks as normal commands
+
 # April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
 - Improved overall caching
