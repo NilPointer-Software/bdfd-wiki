@@ -7,6 +7,7 @@
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
 - Fixed member caching issue
 - Fixed caching bots
+- Fixed changing tokens in the webapp
 
 # April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
