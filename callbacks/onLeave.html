@@ -150,6 +150,44 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="onleave"><a class="header" href="#onleave">$onLeave</a></h1>
+<p>Triggered when a user leaves the server.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p>a. Make the command trigger <code>$onLeave[CHANNEL ID]</code>.</p>
+<blockquote>
+<p>Channel IDs are not channel names! Please provide a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">channel ID</a>.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/69215413/118005256-3b469300-b318-11eb-8664-9ba03bcd537d.png" alt="image" /></p>
+<p>b. Input your reply message/code.</p>
+<p><img src="https://user-images.githubusercontent.com/69215413/118005506-721ca900-b318-11eb-8894-4a299290a1cd.png" alt="image" /></p>
+<p>c. Now you have a leave message!
+<img src="https://user-images.githubusercontent.com/69215413/118005457-67faaa80-b318-11eb-94c0-dbb96bdb7577.png" alt="image" /></p>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<p>1: You must have at least version 1.17.9 of the app.</p>
+<p>2: Go to <a href="https://discord.com/developers/applications">Discord Developer Portal</a> then open your bot's page and enable member intents.</p>
+<p><img src="https://user-images.githubusercontent.com/69215413/118007092-d1c78400-b319-11eb-8066-4f26c564f673.png" alt="image" />
+<img src="https://user-images.githubusercontent.com/69215413/118007181-e86ddb00-b319-11eb-958a-6f22e93b253f.png" alt="image" /></p>
+<p>3: Open the app and go to bot settings then enable member intents.
+<img src="https://user-images.githubusercontent.com/69215413/118007228-f3c10680-b319-11eb-94f0-3a9a6ba978b7.png" alt="image" />
+<img src="https://user-images.githubusercontent.com/69215413/118007256-fb80ab00-b319-11eb-9429-656f0ab87ad2.png" alt="image" />
+<img src="https://user-images.githubusercontent.com/69215413/118007288-04717c80-b31a-11eb-8899-325d41c9003a.png" alt="image" /></p>
+<blockquote>
+<p>Note: Enabled intents in the app should reflect the intents enabled in Discord's dashboard.  For example: If you have members intent enabled in Discord's dashboard then you should respectively enable them in the app (unless you don't want to use them at all).</p>
+</blockquote>
+<p>4: Make sure <code>$onLeave[CHANNEL ID]</code> is inputted in the 'command trigger' field and has the correct usage.</p>
+<p>5: Make sure your bot has permission to speak in the channel provided in <code>$onLeave[]</code>.</p>
+<p>6: You can not use more that 1 <code>$onLeave[]</code> trigger per bot.</p>
+<h2 id="advanced"><a class="header" href="#advanced">Advanced</a></h2>
+<p>Both free and premium users can use <code>$onLeave[]</code>. Also, all users can put <code>$getServerVar[]</code> within <code>$onLeave[]</code>. However, free users can not use <code>$getServerVar[]</code> outside of callbacks.</p>
+<p>If you own a global bot and want to make it so multiple different servers can use <code>$onLeave[]</code>. Follow these steps:</p>
+<p>1: Make a variable named &quot;leave&quot; and the value set to nothing.</p>
+<p>2: Make a command for setting the leave channel. Then put the following in your code/reply text:</p>
+<pre><code>$setServerVar[leave;$mentionedChannels[1]]
+$argsCheck[&gt;1;Please mention a channel!]
+</code></pre>
+<blockquote>
+<p>Note: Servers will need to setup the channel they want the leave message to send to. (by running a command with the code above).</p>
+</blockquote>
+<p>3: Now replace $onLeave[CHANNEL ID] in your leave command trigger, with <code>$onLeave[$getServerVar[leave]]</code> and your all set!</p>
 
                     </main>
 

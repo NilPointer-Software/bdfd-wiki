@@ -157,6 +157,20 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 <p><em>Note that we often forget to update this article, so some stuff is missing.</em></p>
 <h1 id="2021"><a class="header" href="#2021">2021</a></h1>
+<h1 id="may"><a class="header" href="#may">May</a></h1>
+<ul>
+<li>Fixed a bug which allowed executing certain types of callbacks as normal commands</li>
+<li>Fixed member caching issue</li>
+<li>Fixed caching bots</li>
+<li>Fixed changing tokens in the webapp</li>
+</ul>
+<h1 id="april"><a class="header" href="#april">April</a></h1>
+<ul>
+<li>Added <code>$httpGet[]</code>, <code>$httpPost[]</code>, <code>$httpPut[]</code>, <code>$httpDelete[]</code> and <code>$httpPatch[]</code></li>
+<li>Improved overall caching</li>
+<li>Added <code>$httpResult[]</code></li>
+<li>Made command execution faster</li>
+</ul>
 <h2 id="march"><a class="header" href="#march">March</a></h2>
 <ul>
 <li>Added <code>$cropText[]</code></li>
@@ -204,6 +218,7 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed issues with streaming status</li>
 <li>Fixed the issue with tags/discriminators not working for <code>$userID[]</code> and <code>$findUser[]</code> </li>
 <li>Added <code>$findChannel[]</code> and <code>$channelExists[]</code></li>
+<li>Added <code>$userJoined[]</code> and <code>$userJoinedDiscord[]</code></li>
 </ul>
 <h1 id="2020"><a class="header" href="#2020">2020</a></h1>
 <h2 id="december"><a class="header" href="#december">December</a></h2>
@@ -284,7 +299,7 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed bracket escaping for some commands in BDScript Unstable</li>
 <li>Fixed <code>$modifyChannel[]</code> (random slowmodes added on channels)</li>
 </ul>
-<h2 id="may"><a class="header" href="#may">May</a></h2>
+<h2 id="may-1"><a class="header" href="#may-1">May</a></h2>
 <ul>
 <li>Fixed <code>$onlyBotPerms[]</code></li>
 <li>Bot Designer List Open Beta</li>
@@ -292,7 +307,7 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Fixed brackets issue in <code>$serverNames</code></li>
 <li>Other bug fixing for Bot Designer and Bot Designer List</li>
 </ul>
-<h2 id="april"><a class="header" href="#april">April</a></h2>
+<h2 id="april-1"><a class="header" href="#april-1">April</a></h2>
 <ul>
 <li>Fixed <code>$serverIcon</code></li>
 <li>Added <code>$changeCooldownTime[]</code></li>
@@ -514,10 +529,17 @@ Well, you can create a command which will be used instead.</p>
 The first argument specifies the command's name.<br />
 This command will only be used when the filter in <br />
 the awaited command does not match user's response.</p>
-<h1 id="if-statements"><a class="header" href="#if-statements">If statements</a></h1>
+<h1 id="if-statements"><a class="header" href="#if-statements">If Statements</a></h1>
 <p>Interprets commands conditionally.
 Every <strong>if statement</strong> starts with <code>$if[condition]</code> and has to end with <code>$endif</code>.
 <code>$else</code> is optional.</p>
+<h2 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h2>
+<ul>
+<li>Use <code>$if[]</code> to specify a block of code to be executed, if a specified condition is true.</li>
+<li>Use <code>$else</code> to specify a block of code to be executed, if the same condition is false.</li>
+<li>Use <code>$else</code> and <code>$if[]</code> to specify a new condition to test, if the first condition is false.</li>
+<li>Use <code>$endif</code> to end a if statement.</li>
+</ul>
 <h2 id="examples"><a class="header" href="#examples">Examples:</a></h2>
 <pre><code>$if[$username==kubastick]
   Hi Kuba!
@@ -533,6 +555,36 @@ $endif
   $if[$message[&lt;]==nice]
     Noit said nice
   $endif
+$endif
+</code></pre>
+<h2 id="explaination"><a class="header" href="#explaination">Explaination</a></h2>
+<p><code>$if[]</code> uses the format of: if <code>x</code> is related accordingly (based on the &quot;sign&quot;) with <code>y</code> then the code below runs.</p>
+<h3 id="signs"><a class="header" href="#signs">Signs</a></h3>
+<p><code>==</code> - Equal</p>
+<p><code>!=</code> - Not Equal</p>
+<p><code>&lt;</code> -  Less Than</p>
+<p><code>&gt;</code> - Greater Than</p>
+<p><code>=&gt;</code> - Greater Than Or Equal To</p>
+<p><code>&lt;=</code> - Less Than Or Equal To</p>
+<ul>
+<li>These signs could vary in meaning based on the order or intent of the if statement.</li>
+<li>If you are using text as your <code>x</code> and/or <code>y</code>, you can not use any other signs besides <code>==</code> and <code>!=</code>. However for numbers, you can use any sign shown in the above list.</li>
+</ul>
+<h3 id="base-usage"><a class="header" href="#base-usage">Base Usage</a></h3>
+<p><code>$if[valuex(sign)valuey]</code></p>
+<h2 id="else-if"><a class="header" href="#else-if">Else If</a></h2>
+<ul>
+<li>BDFD doesn't have a specific function for else if blocks, but you can still do them by using <code>$else</code> and <code>$if[]</code>. The difference between <code>$else</code> and <code>$else</code>/<code>$if[]</code> is that else doesn't need a condition. Where as else if is still an if so it needs a condition. The main purpose for else if is to make it so only one if statement runs. Unlike regular if statements, the else if blocks should end with <code>$else</code> then start with another <code>$if[]</code>. Once you are done with your else if statements, close all of them with x number of <code>$endif</code>s (<code>x</code> = number of else if statements) at the bottom of the last else if statement.</li>
+</ul>
+<h3 id="example-else-if"><a class="header" href="#example-else-if">Example Else If</a></h3>
+<pre><code>$if[$checkContains[$message;hi]==true]
+Hello
+
+$else
+$if[$checkContains[$message;yes]==true]
+Sure!
+
+$endif
 $endif
 </code></pre>
 <h1 id="authorid"><a class="header" href="#authorid">$authorID</a></h1>
@@ -559,34 +611,17 @@ interpret this as a mention <em>(@Noituri)</em>.</p>
 <h4 id="expected-output-sample"><a class="header" href="#expected-output-sample">Expected Output Sample</a></h4>
 <p><code>My ID is: 566613317972394004</code></p>
 <h1 id="channeltopic"><a class="header" href="#channeltopic">$channelTopic</a></h1>
-<p><code>$channelTopic</code> returns a channel's topic/description.</p>
-<h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
-<ul>
-<li>There are two usages to the <code>$channelTopic</code> command.</li>
-</ul>
-<h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
-<p><code>$channelTopic</code> - Returns the topic of the channel that the command is being used in.</p>
-<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
-<p><code>$channelTopic[CHANNEL ID]</code> - Returns the channel topic of the provided channel.</p>
-<h2 id="command-example"><a class="header" href="#command-example">Command Example</a></h2>
-<pre><code class="language-$nomention">&lt;#$mentionedChannels[1;yes]&gt;'s channel topic is: 
-```$channelTopic[$mentionedChannels[1;yes]]```
-</code></pre>
-<h3 id="expected-output-2"><a class="header" href="#expected-output-2">Expected Output</a></h3>
-<pre><code>#general's channel topic is:
-```channel topic here```
-</code></pre>
 <h1 id="checkuserperms"><a class="header" href="#checkuserperms">$checkUserPerms</a></h1>
 <p>Command returns 'true' if a user has all of the provided permissions otherwise 'false' is returned.</p>
 <h2 id="usage-1"><a class="header" href="#usage-1">Usage</a></h2>
 <p><code>$checkUserPerms[userID;perm1;(optional) perm2;(optional) etc..]</code></p>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="breakdown-1"><a class="header" href="#breakdown-1">Breakdown</a></h3>
 <p><code>userID</code> - The user that the bot checks the permissions for.</p>
 <p><code>perm1</code> - The first permission the bot checks for.</p>
 <p><code>perm2</code> and <code>etc...</code> - You can put as many permissions as you like, these fields are optional.</p>
 <h2 id="example-command-1"><a class="header" href="#example-command-1">Example Command</a></h2>
 <p><code>$checkUserPerms[$authorID;ban]</code></p>
-<h3 id="expected-output-3"><a class="header" href="#expected-output-3">Expected Output</a></h3>
+<h3 id="expected-output-2"><a class="header" href="#expected-output-2">Expected Output</a></h3>
 <pre><code>If the user has ban permissions: true
 If the user doesn't have ban permissions: false
 </code></pre>
@@ -654,7 +689,7 @@ The value of <code>$ping</code> is expressed in miliseconds.</p>
 <h2 id="example-command-2"><a class="header" href="#example-command-2">Example command:</a></h2>
 <pre><code>Ping: $ping ms
 </code></pre>
-<h4 id="expected-output-4"><a class="header" href="#expected-output-4">Expected output:</a></h4>
+<h4 id="expected-output-3"><a class="header" href="#expected-output-3">Expected output:</a></h4>
 <pre><code>Ping: 50 ms
 </code></pre>
 <p>⠀</p>
@@ -679,7 +714,7 @@ Color: {color}
 Position: {position}]
 $title[Role Info]
 </code></pre>
-<h3 id="expected-output-5"><a class="header" href="#expected-output-5">Expected Output</a></h3>
+<h3 id="expected-output-4"><a class="header" href="#expected-output-4">Expected Output</a></h3>
 <pre><code>Role Info
 Name: RoleName
 ID: RoleID
@@ -714,7 +749,7 @@ Verify Level: {verificationLvl}
 Emojis: {emoji}
 Large Server?: {large};no]
 </code></pre>
-<h3 id="expected-output-6"><a class="header" href="#expected-output-6">Expected Output</a></h3>
+<h3 id="expected-output-5"><a class="header" href="#expected-output-5">Expected Output</a></h3>
 <pre><code class="language-ServerInfo">Server Name: Server-Name
 Region: Server-Region
 Owner: Server-Owner
@@ -733,7 +768,7 @@ Large Server?: true/false
 <h2 id="usage-4"><a class="header" href="#usage-4">Usage</a></h2>
 <pre><code>$slowmode[Channel ID;Delay]
 </code></pre>
-<h3 id="breakdown-1"><a class="header" href="#breakdown-1">Breakdown</a></h3>
+<h3 id="breakdown-2"><a class="header" href="#breakdown-2">Breakdown</a></h3>
 <p><code>Channel ID</code> - The channel in the which the slowmode is being modified in.</p>
 <p><code>Delay</code> - The change in delay (in seconds). E.g: 1s, 180s, 5s, 3s, etc.</p>
 <h3 id="example-command-3"><a class="header" href="#example-command-3">Example Command</a></h3>
@@ -742,7 +777,7 @@ $slowmode[$mentionedChannels[1;yes];$message[1]]
 Slowmode changed to $message[1]!
 $argsCheck[&gt;1;:x: Incorrect Usage! Example: `!slowmode 5s`]
 </code></pre>
-<h4 id="expected-output-7"><a class="header" href="#expected-output-7">Expected Output</a></h4>
+<h4 id="expected-output-6"><a class="header" href="#expected-output-6">Expected Output</a></h4>
 <pre><code>Slowmode changed to ...
 *slowmode gets modified*
 </code></pre>
@@ -778,7 +813,7 @@ Bot?: {BOT}
 Discriminator: {discriminator}]
 $title[User Info]
 </code></pre>
-<h3 id="expected-output-8"><a class="header" href="#expected-output-8">Expected Output</a></h3>
+<h3 id="expected-output-7"><a class="header" href="#expected-output-7">Expected Output</a></h3>
 <pre><code>User Info
 Username: Username
 User ID: User-ID
@@ -791,7 +826,7 @@ Discriminator: four-digit-number
 <p><code>$userJoined[userID;(optional) format]</code></p>
 <h2 id="example-command-4"><a class="header" href="#example-command-4">Example Command</a></h2>
 <p><code>$userJoined[$authorID]</code></p>
-<h3 id="expected-output-9"><a class="header" href="#expected-output-9">Expected Output</a></h3>
+<h3 id="expected-output-8"><a class="header" href="#expected-output-8">Expected Output</a></h3>
 <p><code>the-authors-join-date</code></p>
 <h4 id="expected-output-sample-1"><a class="header" href="#expected-output-sample-1">Expected Output Sample</a></h4>
 <p><code>2020-04-05</code></p>
@@ -812,7 +847,7 @@ Discriminator: four-digit-number
 <p><code>$userJoinedDiscord[userID;(optional) format]</code></p>
 <h2 id="example-command-5"><a class="header" href="#example-command-5">Example Command</a></h2>
 <p><code>$userJoinedDiscord[$authorID]</code></p>
-<h3 id="expected-output-10"><a class="header" href="#expected-output-10">Expected Output</a></h3>
+<h3 id="expected-output-9"><a class="header" href="#expected-output-9">Expected Output</a></h3>
 <p><code>the-authors-discord-creation-date</code></p>
 <h4 id="expected-output-sample-2"><a class="header" href="#expected-output-sample-2">Expected Output Sample</a></h4>
 <p><code>2020-03-05</code></p>
@@ -970,22 +1005,40 @@ When one of the reactions is used then the other one stops working. So for examp
 If you want to know what emoji was used in the <code>$reaction[]</code> trigger command<br />
 then you can use <code>$usedEmoji</code> which will return the emoji that was used.</p>
 <h1 id="alwaysreply"><a class="header" href="#alwaysreply">$alwaysReply</a></h1>
+<p><code>$alwaysReply</code> replies to every message no matter what.</p>
+<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<p>a. Make the trigger <code>$alwaysReply</code></p>
+<p>b. Put something in the reply message/code</p>
+<p><img src="https://user-images.githubusercontent.com/69215413/113947987-da3c1480-97d9-11eb-8739-f0630e4fcbd9.png" alt="image" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/113947993-ddcf9b80-97d9-11eb-9cb4-1b7e33991033.png" alt="image" /></p>
 <h1 id="ignoretriggercase"><a class="header" href="#ignoretriggercase">$ignoreTriggerCase</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$ignoreTriggerCase</code> makes the command trigger <strong>not</strong> case sensitive. For example, <code>!help</code> and <code>!HeLp</code> would both work.</p>
 <h2 id="usage-8"><a class="header" href="#usage-8">Usage</a></h2>
 <p><code>$ignoreTriggerCase</code></p>
-<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<h2 id="example-3"><a class="header" href="#example-3">Example</a></h2>
 <pre><code>$nomention
 $ignoreTriggerCase
 Hello World!
 </code></pre>
-<h3 id="expected-output-11"><a class="header" href="#expected-output-11">Expected Output</a></h3>
+<h3 id="expected-output-10"><a class="header" href="#expected-output-10">Expected Output</a></h3>
 <pre><code>Hello World!
 *ignores command trigger case/caps*
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/113355344-a3b05680-930e-11eb-89a4-27700523218f.png" alt="Preview" /></p>
 <h1 id="messagecontains"><a class="header" href="#messagecontains">$messageContains</a></h1>
+<p><em>(for premium bots)</em></p>
+<p><code>$messageContains[]</code> is a <a href="https://nilpointer-software.github.io/bdfd-wiki/callbacks/introduction.html">callback</a> that allows you to create a trigger with multiple phrases. In addition, the bot also looks for those phrases anywhere in the author's message. This feature is great for creating a auto-response or auto-moderation system. </p>
+<h2 id="usage-9"><a class="header" href="#usage-9">Usage</a></h2>
+<p><code>$messageContains[phrase1;(optional) phrase2;(optional) etc]</code></p>
+<h3 id="breakdown-3"><a class="header" href="#breakdown-3">Breakdown</a></h3>
+<p><code>phrase1</code> - The first phrase the bot checks for.</p>
+<p><code>phrase2</code>/<code>etc</code> - You can add multiple phrases if you would like. These fields are optional.</p>
+<h2 id="example-4"><a class="header" href="#example-4">Example</a></h2>
+<p><strong>a.</strong> Make the command trigger <code>$messageContains[]</code></p>
+<p><strong>b.</strong> Put text in the reply message/code
+<img src="https://user-images.githubusercontent.com/69215413/114110028-8d714000-98a4-11eb-9e75-6d6ea5882756.png" alt="image" /></p>
+<p>Now, let's say in chat someone typed: <code>Hello Bot!</code>, <code>Hello</code>, <code>Hey Everyone!</code>, <code>Hi Noituri</code>, etc. The bot would respond with &quot;Hello there! How are you?&quot;.</p>
 <h1 id="callbacks"><a class="header" href="#callbacks">Callbacks</a></h1>
 <p>Callbacks are commands for triggers which are executed when a certain action is preformed. These actions include banning, unbanning, user joining, user leaving, etc. Callbacks are not used in the command code, they are used in the command trigger. This section will explain the callbacks you can use. </p>
 <h1 id="callbacks-1"><a class="header" href="#callbacks-1">Callbacks</a></h1>
@@ -1045,9 +1098,58 @@ $argsCheck[&gt;1;Please mention a channel!]
 </blockquote>
 <p>3: Now replace your <code>$onJoined[CHANNEL ID]</code> in your welcome command trigger, with <code>$onJoined[$getServerVar[welcome]]</code> and your all set!</p>
 <h1 id="onleave"><a class="header" href="#onleave">$onLeave</a></h1>
+<p>Triggered when a user leaves the server.</p>
+<h2 id="example-5"><a class="header" href="#example-5">Example</a></h2>
+<p>a. Make the command trigger <code>$onLeave[CHANNEL ID]</code>.</p>
+<blockquote>
+<p>Channel IDs are not channel names! Please provide a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">channel ID</a>.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/69215413/118005256-3b469300-b318-11eb-8664-9ba03bcd537d.png" alt="image" /></p>
+<p>b. Input your reply message/code.</p>
+<p><img src="https://user-images.githubusercontent.com/69215413/118005506-721ca900-b318-11eb-8894-4a299290a1cd.png" alt="image" /></p>
+<p>c. Now you have a leave message!
+<img src="https://user-images.githubusercontent.com/69215413/118005457-67faaa80-b318-11eb-94c0-dbb96bdb7577.png" alt="image" /></p>
+<h2 id="troubleshooting-1"><a class="header" href="#troubleshooting-1">Troubleshooting</a></h2>
+<p>1: You must have at least version 1.17.9 of the app.</p>
+<p>2: Go to <a href="https://discord.com/developers/applications">Discord Developer Portal</a> then open your bot's page and enable member intents.</p>
+<p><img src="https://user-images.githubusercontent.com/69215413/118007092-d1c78400-b319-11eb-8066-4f26c564f673.png" alt="image" />
+<img src="https://user-images.githubusercontent.com/69215413/118007181-e86ddb00-b319-11eb-958a-6f22e93b253f.png" alt="image" /></p>
+<p>3: Open the app and go to bot settings then enable member intents.
+<img src="https://user-images.githubusercontent.com/69215413/118007228-f3c10680-b319-11eb-94f0-3a9a6ba978b7.png" alt="image" />
+<img src="https://user-images.githubusercontent.com/69215413/118007256-fb80ab00-b319-11eb-9429-656f0ab87ad2.png" alt="image" />
+<img src="https://user-images.githubusercontent.com/69215413/118007288-04717c80-b31a-11eb-8899-325d41c9003a.png" alt="image" /></p>
+<blockquote>
+<p>Note: Enabled intents in the app should reflect the intents enabled in Discord's dashboard.  For example: If you have members intent enabled in Discord's dashboard then you should respectively enable them in the app (unless you don't want to use them at all).</p>
+</blockquote>
+<p>4: Make sure <code>$onLeave[CHANNEL ID]</code> is inputted in the 'command trigger' field and has the correct usage.</p>
+<p>5: Make sure your bot has permission to speak in the channel provided in <code>$onLeave[]</code>.</p>
+<p>6: You can not use more that 1 <code>$onLeave[]</code> trigger per bot.</p>
+<h2 id="advanced-1"><a class="header" href="#advanced-1">Advanced</a></h2>
+<p>Both free and premium users can use <code>$onLeave[]</code>. Also, all users can put <code>$getServerVar[]</code> within <code>$onLeave[]</code>. However, free users can not use <code>$getServerVar[]</code> outside of callbacks.</p>
+<p>If you own a global bot and want to make it so multiple different servers can use <code>$onLeave[]</code>. Follow these steps:</p>
+<p>1: Make a variable named &quot;leave&quot; and the value set to nothing.</p>
+<p>2: Make a command for setting the leave channel. Then put the following in your code/reply text:</p>
+<pre><code>$setServerVar[leave;$mentionedChannels[1]]
+$argsCheck[&gt;1;Please mention a channel!]
+</code></pre>
+<blockquote>
+<p>Note: Servers will need to setup the channel they want the leave message to send to. (by running a command with the code above).</p>
+</blockquote>
+<p>3: Now replace $onLeave[CHANNEL ID] in your leave command trigger, with <code>$onLeave[$getServerVar[leave]]</code> and your all set!</p>
 <h1 id="onbanadd"><a class="header" href="#onbanadd">$onBanAdd</a></h1>
 <h1 id="onbanremove"><a class="header" href="#onbanremove">$onBanRemove</a></h1>
 <h1 id="onmessagedelete"><a class="header" href="#onmessagedelete">$onMessageDelete</a></h1>
+<p>Triggered when a user deletes a message.</p>
+<h2 id="example-6"><a class="header" href="#example-6">Example</a></h2>
+<p>a. Make a new command, with the trigger <code>$onMessageDelete[CHANNEL ID]</code></p>
+<blockquote>
+<p>Note: Channel IDs are not channel names! Provide a channel ID.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/69215413/116005238-1510bb80-a5d4-11eb-84c0-abddb49e5d0f.png" alt="image" /></p>
+<p>b. Set the reply message/code
+<img src="https://user-images.githubusercontent.com/69215413/116005092-78e6b480-a5d3-11eb-9d3b-2a985cf7c503.png" alt="image" /></p>
+<p>c. Now your bot sends a message when someone deletes a message.
+<img src="https://user-images.githubusercontent.com/69215413/116005102-856b0d00-a5d3-11eb-83e6-d2b2414e0379.png" alt="image" /></p>
 
                     </main>
 

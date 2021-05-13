@@ -150,6 +150,18 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="messagecontains"><a class="header" href="#messagecontains">$messageContains</a></h1>
+<p><em>(for premium bots)</em></p>
+<p><code>$messageContains[]</code> is a <a href="https://nilpointer-software.github.io/bdfd-wiki/callbacks/introduction.html">callback</a> that allows you to create a trigger with multiple phrases. In addition, the bot also looks for those phrases anywhere in the author's message. This feature is great for creating a auto-response or auto-moderation system. </p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p><code>$messageContains[phrase1;(optional) phrase2;(optional) etc]</code></p>
+<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<p><code>phrase1</code> - The first phrase the bot checks for.</p>
+<p><code>phrase2</code>/<code>etc</code> - You can add multiple phrases if you would like. These fields are optional.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p><strong>a.</strong> Make the command trigger <code>$messageContains[]</code></p>
+<p><strong>b.</strong> Put text in the reply message/code
+<img src="https://user-images.githubusercontent.com/69215413/114110028-8d714000-98a4-11eb-9e75-6d6ea5882756.png" alt="image" /></p>
+<p>Now, let's say in chat someone typed: <code>Hello Bot!</code>, <code>Hello</code>, <code>Hey Everyone!</code>, <code>Hi Noituri</code>, etc. The bot would respond with &quot;Hello there! How are you?&quot;.</p>
 
                     </main>
 

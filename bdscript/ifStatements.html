@@ -149,10 +149,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="if-statements"><a class="header" href="#if-statements">If statements</a></h1>
+                        <h1 id="if-statements"><a class="header" href="#if-statements">If Statements</a></h1>
 <p>Interprets commands conditionally.
 Every <strong>if statement</strong> starts with <code>$if[condition]</code> and has to end with <code>$endif</code>.
 <code>$else</code> is optional.</p>
+<h2 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h2>
+<ul>
+<li>Use <code>$if[]</code> to specify a block of code to be executed, if a specified condition is true.</li>
+<li>Use <code>$else</code> to specify a block of code to be executed, if the same condition is false.</li>
+<li>Use <code>$else</code> and <code>$if[]</code> to specify a new condition to test, if the first condition is false.</li>
+<li>Use <code>$endif</code> to end a if statement.</li>
+</ul>
 <h2 id="examples"><a class="header" href="#examples">Examples:</a></h2>
 <pre><code>$if[$username==kubastick]
   Hi Kuba!
@@ -168,6 +175,36 @@ $endif
   $if[$message[&lt;]==nice]
     Noit said nice
   $endif
+$endif
+</code></pre>
+<h2 id="explaination"><a class="header" href="#explaination">Explaination</a></h2>
+<p><code>$if[]</code> uses the format of: if <code>x</code> is related accordingly (based on the &quot;sign&quot;) with <code>y</code> then the code below runs.</p>
+<h3 id="signs"><a class="header" href="#signs">Signs</a></h3>
+<p><code>==</code> - Equal</p>
+<p><code>!=</code> - Not Equal</p>
+<p><code>&lt;</code> -  Less Than</p>
+<p><code>&gt;</code> - Greater Than</p>
+<p><code>=&gt;</code> - Greater Than Or Equal To</p>
+<p><code>&lt;=</code> - Less Than Or Equal To</p>
+<ul>
+<li>These signs could vary in meaning based on the order or intent of the if statement.</li>
+<li>If you are using text as your <code>x</code> and/or <code>y</code>, you can not use any other signs besides <code>==</code> and <code>!=</code>. However for numbers, you can use any sign shown in the above list.</li>
+</ul>
+<h3 id="base-usage"><a class="header" href="#base-usage">Base Usage</a></h3>
+<p><code>$if[valuex(sign)valuey]</code></p>
+<h2 id="else-if"><a class="header" href="#else-if">Else If</a></h2>
+<ul>
+<li>BDFD doesn't have a specific function for else if blocks, but you can still do them by using <code>$else</code> and <code>$if[]</code>. The difference between <code>$else</code> and <code>$else</code>/<code>$if[]</code> is that else doesn't need a condition. Where as else if is still an if so it needs a condition. The main purpose for else if is to make it so only one if statement runs. Unlike regular if statements, the else if blocks should end with <code>$else</code> then start with another <code>$if[]</code>. Once you are done with your else if statements, close all of them with x number of <code>$endif</code>s (<code>x</code> = number of else if statements) at the bottom of the last else if statement.</li>
+</ul>
+<h3 id="example-else-if"><a class="header" href="#example-else-if">Example Else If</a></h3>
+<pre><code>$if[$checkContains[$message;hi]==true]
+Hello
+
+$else
+$if[$checkContains[$message;yes]==true]
+Sure!
+
+$endif
 $endif
 </code></pre>
 
