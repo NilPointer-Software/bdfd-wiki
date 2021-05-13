@@ -1,4 +1,4 @@
-# Awaited commands and functions
+# Awaited Commands and Functions
 
 This feature lets your bot to await for user's answer. \
 Here's how the end result looks like: \
