@@ -2,12 +2,15 @@
 
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
-[Slash commands](slashCommands.md)
+
+- [Guides](./guides/slashCommands.md)
+    - [Slash Commands](./guides/slashCommands.md)
+    - [Awaited Commands](./guides/awaitedCommands.md)
+    - [If Statements](./guides/ifStatements.md)
+    - [HTTP Requests](./guides/httpRequests.md)
 
 - [BDScript](./bdscript/introduction.md)
     - [Introduction](./bdscript/introduction.md)
-    - [Awaited Commands](./bdscript/awaitedCommands.md)
-    - [If Statements](./bdscript/ifStatements.md)
     - [$authorID](./bdscript/authorID.md)
     - [$botID](./bdscript/botID.md)
     - [$channelTopic](./bdscript/channelTopic.md)
@@ -18,7 +21,7 @@
     - [$roleInfo](./bdscript/roleInfo.md)
     - [$serverCooldown](.bdscript/serverCooldown.md)
     - [$serverInfo](./bdscript/serverInfo.md)
-    - [$slashCommandsCount](.bdscript/slashCommandsCount.md)
+    - [$slashCommandsCount](./bdscript/slashCommandsCount.md)
     - [$slowmode](./bdscript/slowmode.md)
     - [$userInfo](./bdscript/userInfo.md)
     - [$userJoined](./bdscript/userJoined.md)
