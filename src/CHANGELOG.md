@@ -3,13 +3,13 @@
 
 # 2021
 
-# May
+## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
 - Fixed member caching issue
 - Fixed caching bots
 - Fixed changing tokens in the webapp
 
-# April
+## April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
 - Improved overall caching
 - Added `$httpResult[]`
