@@ -25,6 +25,7 @@
     - [$isHoisted](./bdscript/isHoisted.md)
     - [$membersCount](./bdscript/membersCount.md)
     - [$message](./bdscript/message.md)
+    - [$modifyChannel](./bdscript/modifyChannel.md)
     - [$nomention](./bdscript/nomention.md)
     - [$ping](./bdscript/ping.md)
     - [$replyIn](./bdscript/replyIn.md)
