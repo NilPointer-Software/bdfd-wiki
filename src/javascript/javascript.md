@@ -50,4 +50,4 @@ where `channelID` and `messageID` are the string values.
 - `unpinMessage(channelID, messageID)`\
 where `channelID` and `messageID` are the string values.
 - `sendChannelMessage(channelID, message)`\
-where `channelID` and `messageID` are the string values. Sends message to the provided channel.
+where `channelID` and `message` are the string values. Sends message to the provided channel.
