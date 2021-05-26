@@ -8,6 +8,7 @@
 - Fixed member caching issue
 - Fixed caching bots
 - Fixed changing tokens in the webapp
+- Fixed `$isUserDMEnabled[]`
 
 ## April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
