@@ -13,6 +13,7 @@
 - Added `$editButton[]`
 - Added `$removeButtons`
 - Added `$onInteraction[]` callback
+- Fixed some issues with slash commands
 
 ## April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
