@@ -9,6 +9,10 @@
 - Fixed caching bots
 - Fixed changing tokens in the webapp
 - Fixed `$isUserDMEnabled[]`
+- Added `$addButton[]`
+- Added `$editButton[]`
+- Added `$removeButtons`
+- Added `$onInteraction[]` callback
 
 ## April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
