@@ -38,6 +38,7 @@
     - [$channelCount](./bdscript/channelCount.md)
     - [$channelExists](./bdscript/channelExists.md)
     - [$channelID](./bdscript/channelID.md)
+    - [$channelName](./bdscript/channelName.md)
     - [$channelTopic](./bdscript/channelTopic.md)
     - [$checkUserPerms](./bdscript/checkUserPerms.md)
     - [$dm](./bdscript/dm.md)
