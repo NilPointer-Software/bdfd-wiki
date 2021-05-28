@@ -39,6 +39,7 @@
     - [$channelExists](./bdscript/channelExists.md)
     - [$channelID](./bdscript/channelID.md)
     - [$channelName](./bdscript/channelName.md)
+    - [$channelSendMessage](./bdscript/channelSendMessage.md)
     - [$channelTopic](./bdscript/channelTopic.md)
     - [$checkUserPerms](./bdscript/checkUserPerms.md)
     - [$dm](./bdscript/dm.md)
