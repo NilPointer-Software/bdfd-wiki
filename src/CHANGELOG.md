@@ -14,6 +14,7 @@
 - Added `$removeButtons`
 - Added `$onInteraction[]` callback
 - Fixed some issues with slash commands
+- Added `$c[]` which can be used for commenting your code
 
 ## April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
