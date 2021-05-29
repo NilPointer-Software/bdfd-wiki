@@ -9,7 +9,7 @@ Think of this like a note. Command names don't impact your command at all, but t
 ### Command Triggers
 What the user types to run the command. Triggers should contain both a prefix (e.g `!`) and the actual command name (like `help`). This combines to `!help`. Do not include any spaces at the end of the trigger. Triggers are case sensitive (unless the premium function: [`$ignoreTriggerCase`](https://nilpointer-software.github.io/bdfd-wiki/premium/ignoreTriggerCase.html) is used in the command code). You can use [callbacks](https://nilpointer-software.github.io/bdfd-wiki/callbacks/introduction.html) in this field.
 
-![image](https://user-images.githubusercontent.com/69215413/120053429-1cbee800-bff8-11eb-8842-062d32eee13f.png)
+![image](https://user-images.githubusercontent.com/69215413/120054343-665e0180-bffd-11eb-9f29-3d64191da988.png)
 
 ### Command Code
 The soul of your command. This is what the bot responds with/does when the command is executed, you can use [functions](https://nilpointer-software.github.io/bdfd-wiki/bdscript/introduction.html) like `$ping` and `$message` here.
