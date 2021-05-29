@@ -5,6 +5,7 @@
 
 - [Guides](./guides/slashCommands.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
+    - [Commands Anatomy](./guides/commandsAnatomy.md)
     - [HTTP Requests](./guides/httpRequests.md)
     - [If Statements](./guides/ifStatements.md)
     - [Permissions](./guides/permissions.md)
