@@ -11,7 +11,7 @@
 - Fixed `$isUserDMEnabled[]`
 - Added `$addButton[]`
 - Added `$editButton[]`
-- Added `$removeButtons`
+- Added `$removeButtons` and `$removeButtons[]`
 - Added `$onInteraction[]` callback
 - Fixed some issues with slash commands
 - Added `$c[]` which can be used for commenting your code
