@@ -10,6 +10,7 @@
     - [If Statements](./guides/ifStatements.md)
     - [Permissions](./guides/permissions.md)
     - [Slash Commands](./guides/slashCommands.md)
+    - [Buttons](./guides/buttons.md)
 
 - [BDScript](./bdscript/introduction.md)
     - [Introduction](./bdscript/introduction.md)
