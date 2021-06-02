@@ -3,6 +3,9 @@
 
 # 2021
 
+## June
+- Fixed `$sendMessage[]` not working in normal BDScript
+
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
 - Fixed member caching issue
