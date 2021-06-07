@@ -45,7 +45,7 @@ $endif
 
 `>` - Greater Than
 
-`=>` - Greater Than Or Equal To
+`>=` - Greater Than Or Equal To
 
 `<=` - Less Than Or Equal To
 
