@@ -5,6 +5,7 @@
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
+- Fixed `$checkUserPerms[]`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
