@@ -61,7 +61,7 @@ There are two functions for this.
 >**Note:** the last argument in `$addButton` is empty because we don't want emojis for this example
 
 ### Creating `$onInteraction[]` callback
-![callback code example](https://user-images.githubusercontent.com/16838075/120206913-1022d580-c22c-11eb-9656-8bc9e7476f51.png)
+![callback code example](https://user-images.githubusercontent.com/16838075/120206913-1022d580-c22c-11eb-9656-8bc9e7476f51.png)\
 >**Note:** ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]` from [this section](#creating-a-simple-interactive-button)\
 >**Note:** In the `$addButton[]` I used `yes` for the `new row` argument so the button would appear in the next row. Check the results below.
 
