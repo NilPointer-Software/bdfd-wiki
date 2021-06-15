@@ -13,6 +13,7 @@
 - Added `$stop[]` **(can be only used in BDScript 2)**
 - Added `$var[]` **(can be only used in BDScript 2)**
 - Added code highlighting
+- Fixed `$lowestRole` and `$highestRole`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
