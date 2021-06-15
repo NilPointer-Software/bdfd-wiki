@@ -6,6 +6,13 @@
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
 - Fixed `$checkUserPerms[]`
+- Added **[BDScript 2](./guides/bdscript2.md)**
+- Added **[$try, $catch and $error](./guides/trycatch.md)**
+- Added `$eval[]` **(can be only used in BDScript 2)**
+- Added `$optOff[]` **(can be only used in BDScript 2)**
+- Added `$stop[]` **(can be only used in BDScript 2)**
+- Added `$var[]` **(can be only used in BDScript 2)**
+- Added code highlighting
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
