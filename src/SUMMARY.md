@@ -11,6 +11,8 @@
     - [Permissions](./guides/permissions.md)
     - [Slash Commands](./guides/slashCommands.md)
     - [Buttons](./guides/buttons.md)
+    - [BDScript 2](./guides/bdscript2.md)
+    - [Error Handling](./guides/trycatch.md)
 
 - [BDScript](./bdscript/introduction.md)
     - [Introduction](./bdscript/introduction.md)
