@@ -153,7 +153,9 @@
 <li>Added <code>$optOff[]</code> <strong>(can be only used in BDScript 2)</strong></li>
 <li>Added <code>$stop[]</code> <strong>(can be only used in BDScript 2)</strong></li>
 <li>Added <code>$var[]</code> <strong>(can be only used in BDScript 2)</strong></li>
-<li>Added code highlighting</li>
+<li>Added customizable code highlighting</li>
+<li>Fixed <code>$lowestRole</code> and <code>$highestRole</code></li>
+<li>Added <code>$isBoolean</code></li>
 </ul>
 <h2 id="may"><a class="header" href="#may">May</a></h2>
 <ul>
@@ -479,20 +481,6 @@
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
                 

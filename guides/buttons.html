@@ -199,9 +199,12 @@ Arguments work exactly the same way as in <a href="#adding-a-button">$addButton<
 <p><strong>Note:</strong> the last argument in <code>$addButton</code> is empty because we don't want emojis for this example</p>
 </blockquote>
 <h3 id="creating-oninteraction-callback"><a class="header" href="#creating-oninteraction-callback">Creating <code>$onInteraction[]</code> callback</a></h3>
-<p><img src="https://user-images.githubusercontent.com/16838075/120206913-1022d580-c22c-11eb-9656-8bc9e7476f51.png" alt="callback code example" /><br />
-&gt;<strong>Note:</strong> ID provided in <code>$onInteraction[]</code> is the same as the one provided in <code>$addButton[]</code> from <a href="#creating-a-simple-interactive-button">this section</a><br />
-&gt;<strong>Note:</strong> In the <code>$addButton[]</code> I used <code>yes</code> for the <code>new row</code> argument so the button would appear in the next row. Check the results below.</p>
+<p><img src="https://user-images.githubusercontent.com/16838075/120206913-1022d580-c22c-11eb-9656-8bc9e7476f51.png" alt="callback code example" /></p>
+<blockquote>
+<p><strong>Note:</strong> ID provided in <code>$onInteraction[]</code> is the same as the one provided in <code>$addButton[]</code> from <a href="#creating-a-simple-interactive-button">this section</a><br />
+<br />
+<strong>Note:</strong> In the <code>$addButton[]</code> I used <code>yes</code> for the <code>new row</code> argument so the button would appear in the next row. Check the results below.</p>
+</blockquote>
 <h3 id="usage"><a class="header" href="#usage">Usage</a></h3>
 <h4 id="command-execution"><a class="header" href="#command-execution">Command execution</a></h4>
 <p><img src="https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png" alt="demonstration" /></p>
@@ -237,20 +240,6 @@ Arguments work exactly the same way as in <a href="#adding-a-button">$addButton<
 
         </div>
 
-                <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
         
                 
