@@ -19,6 +19,7 @@
 - Added optional field `return type` to `$getLeaderboardValue[]`
 - Added `$deleteRole[]`
 - Added `$ephemeral`
+- Added `$elseif[]` **(can be only used in BDScript 2)**
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
