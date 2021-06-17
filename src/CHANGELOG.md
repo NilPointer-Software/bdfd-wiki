@@ -14,9 +14,10 @@
 - Added `$var[]` **(can be only used in BDScript 2)**
 - Added customizable code highlighting
 - Fixed `$lowestRole` and `$highestRole`
-- Added `$isBoolean`
+- Added `$isBoolean[]`
 - Made it possible to add 5 buttons per row
 - Added optional field `return type` to `$getLeaderboardValue[]`
+- Added `$deleteRole[]`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
