@@ -159,7 +159,12 @@ If you're curious about <em>functions</em> please feel free to visit <a href="bd
 <li>Added <code>$var[]</code> <strong>(can be only used in BDScript 2)</strong></li>
 <li>Added customizable code highlighting</li>
 <li>Fixed <code>$lowestRole</code> and <code>$highestRole</code></li>
-<li>Added <code>$isBoolean</code></li>
+<li>Added <code>$isBoolean[]</code></li>
+<li>Made it possible to add 5 buttons per row</li>
+<li>Added optional field <code>return type</code> to <code>$getLeaderboardValue[]</code></li>
+<li>Added <code>$deleteRole[]</code></li>
+<li>Added <code>$ephemeral</code></li>
+<li>Added <code>$elseif[]</code> <strong>(can be only used in BDScript 2)</strong></li>
 </ul>
 <h2 id="may"><a class="header" href="#may">May</a></h2>
 <ul>
@@ -585,26 +590,41 @@ Every <strong>if statement</strong> starts with <code>$if[condition]</code> and 
 <ul>
 <li>Use <code>$if[]</code> to specify a block of code to be executed, if a specified condition is true.</li>
 <li>Use <code>$else</code> to specify a block of code to be executed, if the same condition is false.</li>
-<li>Use <code>$else</code> and <code>$if[]</code> to specify a new condition to test, if the first condition is false.</li>
+<li>Use <code>$elseif[]</code> to specify a new condition to check, if the first condition is false <strong>(can be only used in BDScript 2)</strong></li>
+<li>Use <code>$else</code> and <code>$if[]</code> to specify a new condition to check, if the first condition is false.</li>
 <li>Use <code>$endif</code> to end a if statement.</li>
 </ul>
 <h2 id="examples"><a class="header" href="#examples">Examples:</a></h2>
-<pre><code>$if[$username==kubastick]
+<pre><code class="language-php">$if[$username==kubastick]
   Hi Kuba!
 $else
   Hi $username!
 $endif
 </code></pre>
-<pre><code>$if[$getUserVar[money]&gt;0]
+<pre><code class="language-php">$if[$getUserVar[money]&gt;0]
   You're not broke
 $endif
 </code></pre>
-<pre><code>$if[$username==noituri]
+<pre><code class="language-php">$if[$username==noituri]
   $if[$message[&lt;]==nice]
     Noit said nice
   $endif
 $endif
 </code></pre>
+<p><em>Only for BDScript 2:</em></p>
+<pre><code class="language-php">$if[$message==test]
+  You said test
+$elseif[$message==BDFD]
+  Bot Designer for Discord
+$elseif[$username==noituri]
+  Hi Noituri!
+$else
+  I don't know what to say
+$endif
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> You can use multiple <code>$elseif</code>s</p>
+</blockquote>
 <h2 id="explaination"><a class="header" href="#explaination">Explaination</a></h2>
 <p><code>$if[]</code> uses the format of: if <code>x</code> is related accordingly (based on the &quot;sign&quot;) with <code>y</code> then the code below runs.</p>
 <h3 id="signs"><a class="header" href="#signs">Signs</a></h3>
@@ -621,10 +641,11 @@ $endif
 <h3 id="base-usage"><a class="header" href="#base-usage">Base Usage</a></h3>
 <p><code>$if[valuex(sign)valuey]</code></p>
 <h2 id="else-if"><a class="header" href="#else-if">Else If</a></h2>
-<ul>
-<li>BDFD doesn't have a specific function for else if blocks, but you can still do them by using <code>$else</code> and <code>$if[]</code>. The difference between <code>$else</code> and <code>$else</code>/<code>$if[]</code> is that else doesn't need a condition. Where as else if is still an if so it needs a condition. The main purpose for else if is to make it so only one if statement runs. Unlike regular if statements, the else if blocks should end with <code>$else</code> then start with another <code>$if[]</code>. Once you are done with your else if statements, close all of them with x number of <code>$endif</code>s (<code>x</code> = number of else if statements) at the bottom of the last else if statement.</li>
-</ul>
-<h3 id="example-else-if"><a class="header" href="#example-else-if">Example Else If</a></h3>
+<p><code>$elseif</code> can be only used in <strong>BDScript 2</strong>. If you use different BDScript edition please read the note below.</p>
+<blockquote>
+<p><strong>Note:</strong> Normal BDScript and BDScript Unstable don't have a specific function for else if blocks, but you can still do them by using <code>$else</code> and <code>$if[]</code>. The difference between <code>$else</code> and <code>$else</code>/<code>$if[]</code> is that else doesn't need a condition. Where as else if is still an if so it needs a condition. The main purpose for else if is to make it so only one if statement runs. Unlike regular if statements, the else if blocks should end with <code>$else</code> then start with another <code>$if[]</code>. Once you are done with your else if statements, close all of them with x number of <code>$endif</code>s (<code>x</code> = number of else if statements) at the bottom of the last else if statement.</p>
+</blockquote>
+<h3 id="example-else-if-for-normal-bdscript-and-bdscript-unstable"><a class="header" href="#example-else-if-for-normal-bdscript-and-bdscript-unstable">Example Else If for <strong>Normal BDScript and BDScript Unstable</strong></a></h3>
 <pre><code>$if[$checkContains[$message;hi]==true]
 Hello
 
@@ -801,7 +822,9 @@ For example:</p>
 <p>This will execute every function that has been provided by a user.</p>
 <h3 id="try-catch-and-error"><a class="header" href="#try-catch-and-error">$try, $catch and $error[]</a></h3>
 <p>This works in a very similar way to the equivalents available in other programming languages.<br />
-You can read more about it <a href="guides/./trycatch.html">here</a></p>
+You can read more about it <a href="guides/./trycatch.html">here</a>.</p>
+<h3 id="elseif"><a class="header" href="#elseif">$elseif</a></h3>
+<p>Read <a href="guides/./ifStatements.html">this</a> for more information.</p>
 <h3 id="var"><a class="header" href="#var">$var[]</a></h3>
 <p>It can be used to <strong>temporarily</strong> store a value.
 After the command executes, all of the vars are removed.\ For this specific variable function you don't need to create a coresponding variable in the app.<br />
