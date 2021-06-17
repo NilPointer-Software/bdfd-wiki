@@ -18,6 +18,7 @@
 - Made it possible to add 5 buttons per row
 - Added optional field `return type` to `$getLeaderboardValue[]`
 - Added `$deleteRole[]`
+- Added `$ephemeral`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
