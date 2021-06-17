@@ -25,7 +25,10 @@ This will execute every function that has been provided by a user.
 
 ### $try, $catch and $error[]
 This works in a very similar way to the equivalents available in other programming languages.\
-You can read more about it [here](./trycatch.md)
+You can read more about it [here](./trycatch.md).
+
+### $elseif
+Read [this](./ifStatements.md) for more information.
 
 ### $var[]
 It can be used to **temporarily** store a value.
