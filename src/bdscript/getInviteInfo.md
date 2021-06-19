@@ -9,14 +9,12 @@ $getInviteInfo[inviteCode;inviteProperty]
 ### Breakdown
 `inviteCode` - The invite code to get info about.
 
-`inviteProperty` - The information to get about this invite. (see invite properties)
-
-## Invite Properties
-- `channel` - The channel that this invite is for.
-- `creationDate` - The creation date of this invite.
-- `inviter` - The ID of the user who created this invite.
-- `isTemporary` - Whether or not this invite is temporary.
-- `uses` - How many times this invite has been used.
+`inviteProperty` - The information to get about this invite. Invite properties:
+  - `channel` - The channel that this invite is for.
+  - `creationDate` - The creation date of this invite.
+  - `inviter` - The ID of the user who created this invite.
+  - `isTemporary` - Whether or not this invite is temporary.
+  - `uses` - How many times this invite has been used.
 
 ## Example
 ```
