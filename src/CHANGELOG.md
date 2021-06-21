@@ -21,6 +21,7 @@
 - Added `$ephemeral`
 - Added `$elseif[]` **(can be only used in BDScript 2)**
 - Fixed URL in buttons
+- Fixed buttons in DMs
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
