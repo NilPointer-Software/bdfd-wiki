@@ -1,66 +1,20 @@
 # $checkUserPerms
-Command returns 'true' if a user has all of the provided permissions otherwise 'false' is returned.
+Returns 'true' if a user has all of the provided permissions, otherwise 'false' is returned.
 
 ## Usage
-```$checkUserPerms[userID;perm1;(optional) perm2;(optional) etc..]```
+```$checkUserPerms[userID;permissions]```
 
 ### Breakdown
 `userID` - The user that the bot checks the permissions for.
 
-`perm1` - The first permission the bot checks for.
+`permissions` - The [permissions](https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html) that the bot checks for. Separate permissions using `;`.
 
-`perm2` and `etc...` - You can put as many permissions as you like, these fields are optional.
-
-## Example Command
-```$checkUserPerms[$authorID;ban]```
-
-### Expected Output
+## Example
 ```
-If the user has ban permissions: true
-If the user doesn't have ban permissions: false
+$nomention
+You aren't a admin!
+$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are administrator. F in the chat!] 
 ```
+> This example requires unstable mode enabled!
 
-## Supported Permissions
--   A list of perms/permissions supported in the "perm1", "perm2", etc fields.
-
-• sendmessages 
-
-• readmessages
-
-• createinstantinvite
-
-• admin
-
-• changenicknames
-
-• managenicknames
-
-• addreactions
-
-• ban
-
-• kick
-
-• manageroles
-
-• manageserver
-
-• managemessages
-
-• managechannels
-
-• manageemojis
-
-• mentioneveryone
-
-• readmessagehistory
-
-• attachfiles
-
-• tts
-
-• managewebhooks
-
-• embedlinks
-
-• externalemojis
+![image](https://user-images.githubusercontent.com/69215413/122832238-10594280-d2b9-11eb-9f79-a19f2f328239.png)
