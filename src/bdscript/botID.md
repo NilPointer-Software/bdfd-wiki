@@ -2,13 +2,14 @@
 Returns the bot's ID.
 
 ## Usage
-```$botID```
+```
+$botID
+```
 
 ## Example
-```My ID is: $botID```
+```
+$nomention
+My ID is: $botID
+```
 
-### Expected Output
-```My ID is: the-bots-id```
-
-#### Expected Output Sample
-```My ID is: 566613317972394004```
+![example](https://user-images.githubusercontent.com/69215413/122831592-13076800-d2b8-11eb-819e-bc101e6b4bdd.png)
