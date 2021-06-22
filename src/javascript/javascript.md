@@ -38,24 +38,24 @@ Name      | Type       | Description
 | `roleMentions` | array of string values | Contains role mentions.
 
 ## Supported API Functions
-Name      | Value Types       | Description
-----------|:----------:|----------
-| `setResponse(replyText)` | replyText - string | Sends a message to the channel where the command was used.
-| `setEmbedResponse(title, description, footer)` | title, description, footer - string | Sends a embedded message to the channel where the command was used.
-| `setEmbedImage(imageURL)` | imageURL - string | Sets image of the embedded message.
-| `ban(userID)`| userID - string | Bans a user.
-| `banWithReason(userID, reason)` | userID & reason - string | Bans a user with reason.
-| `unban(userID)` | userID  - string | Unbans the user.
-| `kick(userID)` | userID - string | Kicks a user.
-| `kickWithReason(userID, reason)` | userID & reason - string | Kicks a user with reason.
-| `giveRole(userID, roleID)` | userID & roleID - string | Gives a role to the user.
-| `takeRole(userID, roleID)` | userID & roleID - string | Takes a role from the user.
-| `channelTyping()` | | Shows *"Bot is typing..."* message
-| `createChannel(name, type)` | name & type - string (`type` must be `text` or `voice`) | Creates a channel. Providing wrong `type` will result in throwing an exception which you can catch.
-| `removeChannel(chanID)` | chanID - string | Deletes a channel.
-| `pinMessage(channelID, messageID)` | channelID & messageID - string | Pins a message.
-| `unpinMessage(channelID, messageID)` | channelID & messageID - string | Unpins a pinned message.
-| `sendChannelMessage(channelID, message)` | channelID & message - string | Sends `message` to the provided channel.
+Name      |Description
+----------|----------
+| `setResponse(replyText)` | Where `replyText` is a string value. Sends a message to the channel where the command was used.
+| `setEmbedResponse(title, description, footer)` | Where `title`, `description`, `footer` are string values. Sends a embedded message to the channel where the command was used.
+| `setEmbedImage(imageURL)` | Where `imageURL` is a string value. Sets image of the embedded message.
+| `ban(userID)`|  Where `userID` is a string value. Bans a user.
+| `banWithReason(userID, reason)` | Where `userID` and `reason` are string values. Bans a user with reason.
+| `unban(userID)` | Where `userID` is a string value. Unbans the user.
+| `kick(userID)` |  Where `userID` is a string value. Kicks a user.
+| `kickWithReason(userID, reason)` | Where `userID` and `reason` are string values. Kicks a user with reason.
+| `giveRole(userID, roleID)` | Where `userID` and `roleID` are string values. Gives a role to the user.
+| `takeRole(userID, roleID)` | Where `userID` and `roleID` are string values. Removes a role from the user.
+| `channelTyping()` | Shows *"Bot is typing..."* message.
+| `createChannel(name, type)` | Where `name` and `type` are string values (`type` must be `text` or `voice`). Creates a channel. Providing wrong `type` will result in throwing an exception which you can catch.
+| `removeChannel(channelID)` | Where `channelID` is a string value. Deletes a channel.
+| `pinMessage(channelID, messageID)` | Where `channelID` and `messageID` are string values. Pins a message.
+| `unpinMessage(channelID, messageID)` | Where `channelID` and `messageID` are string values. Unpins a pinned message.
+| `sendChannelMessage(channelID, message)` | Where `channelID` and `message` are string values. Sends `message` to the provided channel. 
 
 ## Example
 *(say command)*
