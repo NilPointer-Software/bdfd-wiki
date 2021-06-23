@@ -38,3 +38,5 @@ $enabled[$getServerVar[enabled];❌ This command is disabled!]
 ```
 
 5: Now your bot has a system where servers can disable/enable command(s).
+
+⚠️ In order to make this changeable for multiple commands, you'll need to do it multiple times (using different variable names). As this only affects the commands you put the "affect" code in.
