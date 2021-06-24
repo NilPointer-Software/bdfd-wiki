@@ -23,6 +23,9 @@
 - Fixed URL in buttons
 - Fixed buttons in DMs
 - Fixed problems with custom prefixes
+- Added `$getUserStatus[]`
+- Added `$min[]`
+- Added `$max[]`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
