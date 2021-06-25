@@ -26,6 +26,7 @@
 - Added `$getUserStatus[]`
 - Added `$min[]`
 - Added `$max[]`
+- Fixed `$customEmoji[]`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
