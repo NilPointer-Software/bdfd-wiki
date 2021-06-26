@@ -12,8 +12,6 @@ $getLeaderboardValue[variableType (user/globalUser/server);variableName;sortType
 
 `sortType` - Whether to sort the values in ascending (asc) or descending (desc) order.
 
-![image](https://user-images.githubusercontent.com/69215413/123284390-37db2580-d4da-11eb-967c-00b6e12bc170.png)
-
 `position` - The leaderboard position to get, e.g `1`, `3`, etc.
 
 `returnType` - The return type. Types:
