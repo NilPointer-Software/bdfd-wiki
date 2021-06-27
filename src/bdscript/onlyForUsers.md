@@ -1,4 +1,4 @@
-# $onlyForChannels
+# $onlyForUsers
 The command can only be executed by users with certain 'usernames'.
 
 ## Usage
