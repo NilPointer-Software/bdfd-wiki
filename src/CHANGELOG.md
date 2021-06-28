@@ -28,6 +28,7 @@
 - Added `$max[]`
 - Fixed `$customEmoji[]`
 - Made it possible to edit embeds in `$editMessage[]`
+- Added support for multiple embeds
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
