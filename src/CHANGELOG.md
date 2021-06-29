@@ -29,6 +29,8 @@
 - Fixed `$customEmoji[]`
 - Made it possible to edit embeds in `$editMessage[]`
 - Added support for multiple embeds
+- Added `$httpAddHeader[]`
+- Added `$httpRemoveHeader[]`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands
