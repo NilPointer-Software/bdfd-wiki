@@ -3,6 +3,9 @@
 
 # 2021
 
+## July
+- Added `$getTimestamp`
+
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
 - Fixed `$checkUserPerms[]`
