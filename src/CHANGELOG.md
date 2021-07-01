@@ -5,6 +5,7 @@
 
 ## July
 - Added `$getTimestamp`
+- Added support for decimals in the math functions
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
