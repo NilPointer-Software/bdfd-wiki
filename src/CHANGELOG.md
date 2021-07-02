@@ -12,6 +12,7 @@
 - Added `$editSelectMenuOption[]`
 - Added `$removeComponent[]`
 - Added `$calculate[]`
+- Added `$round[]`
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
