@@ -6,6 +6,11 @@
 ## July
 - Added `$getTimestamp`
 - Added support for decimals in the math functions
+- Added `$newSelectMenu[]`
+- Added `$addSelectMenuOption[]`
+- Added `$editSelectMenu[]`
+- Added `$editSelectMenuOption[]`
+- Added `$removeComponent[]`
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
