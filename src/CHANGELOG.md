@@ -13,6 +13,7 @@
 - Added `$removeComponent[]`
 - Added `$calculate[]`
 - Added `$round[]`
+- Added `$enableDecimals[]`
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
