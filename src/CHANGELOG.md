@@ -14,6 +14,7 @@
 - Added `$calculate[]`
 - Added `$round[]`
 - Added `$enableDecimals[]`
+- Added `$nickname`
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
