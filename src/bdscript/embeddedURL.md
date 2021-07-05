@@ -1,14 +1,16 @@
 # $embeddedURL
 Sets the title hyperlink (clickable text).
-> Only works if `$title` is also used.
+>🧙‍♂️ Only works if `$title` is also used.
 
 ## Usage
 ```
-$embeddedURL[link]
+$embeddedURL[link;(optional) embedIndex]
 ```
 
 ### Breakdown
 `link` - The link to set the title hyperlink to.
+
+`embedIndex` - What embed the title hyperlink should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
 
 ## Example
 ```
