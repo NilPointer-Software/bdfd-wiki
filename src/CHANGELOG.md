@@ -3,6 +3,19 @@
 
 # 2021
 
+## July
+- Added `$getTimestamp`
+- Added support for decimals in the math functions
+- Added `$newSelectMenu[]`
+- Added `$addSelectMenuOption[]`
+- Added `$editSelectMenu[]`
+- Added `$editSelectMenuOption[]`
+- Added `$removeComponent[]`
+- Added `$calculate[]`
+- Added `$round[]`
+- Added `$enableDecimals[]`
+- Added `$nickname`
+
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
 - Fixed `$checkUserPerms[]`
@@ -29,6 +42,8 @@
 - Fixed `$customEmoji[]`
 - Made it possible to edit embeds in `$editMessage[]`
 - Added support for multiple embeds
+- Added `$httpAddHeader[]`
+- Added `$httpRemoveHeader[]`
 
 ## May
 - Fixed a bug which allowed executing certain types of callbacks as normal commands

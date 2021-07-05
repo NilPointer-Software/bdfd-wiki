@@ -7,6 +7,7 @@
     - [Awaited Commands](./guides/awaitedCommands.md)
     - [BDScript 2](./guides/bdscript2.md)
     - [Buttons](./guides/buttons.md)
+    - [Select Menu](./guides/selectmenu.md)
     - [Commands Anatomy](./guides/commandsAnatomy.md)
     - [Error Handling](./guides/trycatch.md)
     - [HTTP Requests](./guides/httpRequests.md)
