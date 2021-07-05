@@ -3,11 +3,13 @@ Adds a description to the embed.
 
 ## Usage
 ```
-$description[text]
+$description[text;(optional) embedIndex]
 ```
 
 ### Breakdown
 `text` - The text to set the description as.
+
+`embedIndex` - What embed the description should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
 
 ## Example
 ```
