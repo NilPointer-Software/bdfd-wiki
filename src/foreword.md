@@ -1,3 +1,8 @@
 # Foreword
 Welcome to our humble abode. The thing you're seeing is *Bot Designer for Discord*'s wiki.
-If you're curious about *functions* please feel free to visit [this section](bdscript/introduction.md).
+
+- [Guides](https://nilpointer-software.github.io/bdfd-wiki/guides/slashCommands.html)
+- [Functions](https://nilpointer-software.github.io/bdfd-wiki/bdscript/introduction.html)
+- [Callbacks](https://nilpointer-software.github.io/bdfd-wiki/callbacks/introduction.html)
+- [Javascript](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html)
+- [Premium](https://nilpointer-software.github.io/bdfd-wiki/premium/awaitedReactions.html)

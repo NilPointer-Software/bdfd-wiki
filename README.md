@@ -1,2 +1,10 @@
-# Bot Designer for Discord Wiki
-To build wiki you need [mdBook](https://github.com/rust-lang/mdBook)
+# Bot Designer for Discord - Wiki
+A wiki page that explains BDFD functions, callbacks, and features. This is the GitHub repository, here you can contribute and make some wikis with us! 
+
+> Wanna View The Wiki? [Click-Me](https://nilpointer-software.github.io/bdfd-wiki/foreword.html)
+
+### Resources
+- [mdBook](https://github.com/rust-lang/mdBook)
+- [Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+- [BDFD Server](https://discord.gg/nvBur3ne)
+- [BDFD Website](https://botdesignerdiscord.com)
