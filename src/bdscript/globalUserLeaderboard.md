@@ -1,5 +1,5 @@
 # $globalUserLeaderboard
-Returns the top ten user's username and value for the given variable.
+Returns the top ten user's username and value for the given global-user variable.
 
 ## Usage
 ```
