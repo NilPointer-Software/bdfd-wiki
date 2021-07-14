@@ -91,7 +91,7 @@ $c[Replace 'text' with your text.]
 
 Example using this method:
 ```
-$textSplit[$replaceText[hello hey hi; ;,;-1]]
+$textSplit[$replaceText[hello hey hi; ;,;-1];,]
 1: $splitText[1]
 2: $splitText[2]
 3: $splitText[3]
