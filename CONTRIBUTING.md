@@ -23,8 +23,13 @@ Make sure to follow the 'Proper Wiki Structure' when contributing.
 ```
 - Use "we" instead of "I" when referring to yourself.
 ```diff
-- If you use the `$eval` function, I strongly recommend you use `$onlyForIDs`.
-+ If you use the `$eval` function, we strongly recommend you use `$onlyForIDs`.
+- If you use the `$eval` function, I strongly recommend you also use `$onlyForIDs`.
++ If you use the `$eval` function, we strongly recommend you also use `$onlyForIDs`.
+```
+- "You"/"your" instead of "we"/"our"
+```diff
+- We can get our bot's ID using `$botID`.
++ You can get your bot's ID using `$botID`.
 ```
 - Avoid using these phrases:
 ```diff
@@ -32,10 +37,10 @@ Make sure to follow the 'Proper Wiki Structure' when contributing.
 ```
 
 ### Shortening Headers
-Make headers are short as possible.
+Make headers are short as possible, and in [title case](https://www.dummies.com/wp-content/uploads/410813.image0.jpg).
 
 ```diff
-- ## How To Create Embeds
+- ## How to create embeds
 + ## Creating Embeds
 ```
 
