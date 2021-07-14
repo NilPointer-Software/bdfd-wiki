@@ -5,8 +5,8 @@ Make sure to follow the 'Proper Wiki Structure' when contributing.
 
 ### Common Issue
 - My pull request got merged but isn't shown on the wiki page. Why?
-  - The markdown files contributed have to be converted to HTML, then deployed by a developer. You can contribute the the `gh-pages` branch, which is HTML, but the wiki must also be in markdown (HTML is not required to contribute).
-
+  - The markdown files contributed have deployed by a developer (which happens every few weeks).
+   
 ## Terms and Guidelines
 - You may not be credited for the making of wiki. However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
 - The name of files must be in the format of `fileName.md`. No spaces or special characters (e.g `$`).
