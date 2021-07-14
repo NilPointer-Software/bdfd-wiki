@@ -21,8 +21,7 @@ Make sure to follow the 'Proper Wiki Structure' when contributing.
 - He is cool.
 + They are cool.
 ```
-- "we" not "I".
-    - Use "we" instead of "I" when referring to yourself.
+- Use "we" instead of "I" when referring to yourself.
 ```diff
 - If you use the `$eval` function, I strongly recommend you use `$onlyForIDs`.
 + If you use the `$eval` function, we strongly recommend you use `$onlyForIDs`.
