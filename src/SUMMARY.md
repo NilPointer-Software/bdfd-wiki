@@ -3,7 +3,7 @@
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
 
-- [Guides](./guides/slashCommands.md)
+- [Guides](./guides/awaitedCommands.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
     - [BDScript 2](./guides/bdscript2.md)
     - [Buttons](./guides/buttons.md)
@@ -14,6 +14,9 @@
     - [If Statements](./guides/ifStatements.md)
     - [Permissions](./guides/permissions.md)
     - [Slash Commands](./guides/slashCommands.md)   
+
+- [Resources](./resources/bdfdCreation.md)
+    - [BDFD Creation](./resources/bdfdCreation.md)
 
 - [BDScript](./bdscript/introduction.md)
     - [Introduction](./bdscript/introduction.md)
