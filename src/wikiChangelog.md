@@ -6,3 +6,5 @@
 
 ### July
 - Major update to wiki. *(all BDScript functions added, new guides, etc)*
+
+<!-- NOTE: The wiki changelog is just for the repo, not the actual wiki page -->
