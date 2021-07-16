@@ -7,4 +7,4 @@ $deleteChannelsByName[names]
 ```
 
 ### Breakdown
-`names` - The name(s) of the channel(s) to delete. Use `;` to separate channel names.
+- `names` - The name(s) of the channel(s) to delete. Use `;` to separate channel names.
