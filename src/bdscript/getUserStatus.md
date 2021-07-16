@@ -8,9 +8,9 @@ $getUserStatus[userID]
 ```
 
 ### Breakdown
-`userID` - The user to get the status for.
+- `userID` - The user to get the status for.
 
-## Possible Outputs
+### Statuses List
 - online
 - dnd
 - idle
@@ -22,4 +22,4 @@ $nomention
 $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 ```
 
-![image](https://user-images.githubusercontent.com/69215413/124503888-68517800-dd94-11eb-93e5-c0eea7d8b055.png)
+![example](https://user-images.githubusercontent.com/69215413/124503888-68517800-dd94-11eb-93e5-c0eea7d8b055.png)
