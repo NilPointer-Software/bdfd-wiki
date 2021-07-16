@@ -3,11 +3,11 @@ Deletes the provided channel(s).
 
 ## Usage
 ```
-$deleteChannels[channels]
+$deleteChannels[channelIDs]
 ```
 
 ### Breakdown
-`channels` - The channels to delete. Separate channel IDs using `;`.
+- `channels` - The channels to delete. Separate channel IDs using `;`.
 
 ## Example
 ```
