@@ -7,11 +7,9 @@ $getMessage[channelID;messageID;(optional) property]
 ```
 
 ### Breakdown
-`channelID` - The channel that this message belongs to.
-
-`messageID` - The message to get the data from.
-
-`property` - The message data to get. Default is `content`. Message properties:
+- `channelID` - The channel that this message belongs to.
+- `messageID` - The message to get the data from.
+- `property` - The message data to get. Default is `content`. Message properties:
   - `content` - The content of this message.
   - `authorID` - The ID of the message author.
   - `username` - The username of the message author.
