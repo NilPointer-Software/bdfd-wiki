@@ -7,7 +7,7 @@ $divide[numbers]
 ```
 
 ### Breakdown
-`numbers` - The numbers to divide. Separate numbers using `;`.
+- `numbers` - The numbers to divide. Separate numbers using `;`.
 
 ## Example
 ```
@@ -16,4 +16,4 @@ $argsCheck[>2;❌ Please provide the needed arguments! Usage: `!divide (number1)
 Answer: $divide[$message[1];$message[2]]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123011205-f473a080-d38d-11eb-8bf2-1c12d0d3c39e.png)
+![example](https://user-images.githubusercontent.com/69215413/125975569-bfda8ef1-40f8-4e47-b3d7-340e3b4c1048.png)
