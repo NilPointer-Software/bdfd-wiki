@@ -6,18 +6,14 @@ Gets a leaderboard value.
 $getLeaderboardValue[variableType (user/globalUser/server);variableName;sortType (asc/desc);position;(optional) returnType (id/value)]
 ```
 
-`variableType` - The variable type.
-
-`variableName` - The variable name to generate the leaderboard for.
-
-`sortType` - Whether to sort the values in ascending (asc) or descending (desc) order.
-
-`position` - The leaderboard position to get, e.g `1`, `3`, etc.
-
-`returnType` - The return type. Types:
-- none - If this field is excluded, it will return `Username - Value`.
-- id - Returns the ID of the user belonging this position.
-- value - Returns the variable value of this position.
+- `variableType` - The variable type.
+- `variableName` - The variable name to generate the leaderboard for.
+- `sortType` - Whether to sort the values in ascending (asc) or descending (desc) order.
+- `position` - The leaderboard position to get, e.g `1`, `3`, etc.
+- `returnType` - The return type. Types:
+  - none - If this field is excluded, it will return `Username - Value`.
+  - id - Returns the ID of the user belonging this position.
+  - value - Returns the variable value of this position.
 
 ## Example
 ```
