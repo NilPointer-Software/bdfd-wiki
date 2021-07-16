@@ -1,14 +1,13 @@
-## $getUserVar
+# $getUserVar
 Returns a local-user variable value.
 
 ## Usage
 ```
 $getUserVar[variableName;(optional) userID]
 ```
-## Breakdown
-`variableName` - The name of the variable to get.
-
-`userID` - The user to get the variable value for. If no user is provided, the author is used.
+### Breakdown
+- `variableName` - The name of the variable to get.
+- `userID` - The user to get the variable value for. If no user is provided, the author is used.
 
 ## Example
 ```
