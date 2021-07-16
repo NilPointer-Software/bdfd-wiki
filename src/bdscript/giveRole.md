@@ -8,21 +8,20 @@ There are two usages of the `$giveRole` function.
 ```
 $giveRole[userID;roleID]
 ```
-> Gives a role to the provided user.
+Gives a role to the provided user.
 
 #### Breakdown
-`userID` - The user to give the role to.
-
-`roleID` - The role to give the user.
+- `userID` - The user to give the role to.
+- `roleID` - The role to give the user.
 
 ### Usage #2
 ```
 $giveRole[roleID]
 ```
-> Gives the provided role to the mentioned user.
+Gives the provided role to the mentioned user.
 
 #### Breakdown
-`roleID` - The role to give the mentioned user.
+- `roleID` - The role to give the mentioned user.
 
 ## Example
 ```
