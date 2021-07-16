@@ -60,3 +60,5 @@ $c[Deletes the mentioned channel.]
 - Mentioning a Channel - `<#channelID>`
 - Using a Emoji - `<:emojiName:emojiID>`
 - Mentioning a Guild - Guilds can't be mentioned. 
+
+> 🧙‍♂️ Non-bots can use IDs to mention users too!
