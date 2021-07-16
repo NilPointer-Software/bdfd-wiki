@@ -7,7 +7,7 @@ $calculate[expression]
 ```
 
 ### Breakdown
-`expression` - The math expression to solve.
+- `expression` - The math expression to solve.
 
 ## Signs
 - `+` - Addition.
