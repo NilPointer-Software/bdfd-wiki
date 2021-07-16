@@ -7,9 +7,8 @@ $enabled[enabled (yes/no);errorMessage]
 ```
 
 ### Breakdown
-`enabled` - 'yes' means the command is enabled, 'no' means it's disabled.
-
-`errorMessage` - The message that is returned if the command is disabled.
+- `enabled` - 'yes' means the command is enabled, 'no' means it's disabled.
+- `errorMessage` - The message that is returned if the command is disabled.
 
 ## Example
 This section will explain how to disable/enable certain commands using server variables. 
