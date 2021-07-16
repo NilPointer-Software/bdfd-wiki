@@ -18,6 +18,7 @@
 - Added row and column information in BDScript 2 errors
 - Fixed the issue with BDScript 2 not requiring `]`
 - Adjusted the optimizer in BDScript 2
+- Added `$onlyForRoleIDs[]`
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
