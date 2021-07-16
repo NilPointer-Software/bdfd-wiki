@@ -7,13 +7,10 @@ $changeCooldownTime[days;hours;minutes;seconds]
 ```
 
 ### Breakdown
-`days` - The text to replace 'Days' with.
-
-`hours` - The text to replace 'Hours' with.
-
-`minutes` - The text to replace 'Minutes' with.
-
-`seconds` - The text to replace 'Seconds' with.
+- `days` - The text to replace 'Days' with.
+- `hours` - The text to replace 'Hours' with.
+- `minutes` - The text to replace 'Minutes' with.
+- `seconds` - The text to replace 'Seconds' with.
 
 ## Example
 ```
