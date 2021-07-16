@@ -8,19 +8,16 @@ $embeddedURL[link;(optional) embedIndex]
 ```
 
 ### Breakdown
-`link` - The link to set the title hyperlink to.
-
-`embedIndex` - What embed the title hyperlink should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `link` - The link to set the title hyperlink to.
+- `embedIndex` - What embed the title hyperlink should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
 
 ## Example
 ```
 $nomention
 $title[Bot Designer For Discord]
 $embeddedURL[https://botdesignerdiscord.com]
-$description[Bot Designer For Discord is a free-to-use bot maker available for Android, iOS and web.
-It's capable of developing nearly all types of bots - from simple "echo" bots, to advanced multi-purpose administration ones.
-Start with easy command creator, and end with advanced javascript commands.]
+$description[Hello World!]
 $color[#683cb4]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123016086-d9a62980-d397-11eb-9f5d-0e783596039e.png)
+![example](https://user-images.githubusercontent.com/69215413/125976626-45a94f29-cd9b-445f-a0ae-5dba6f49d2a6.png)
