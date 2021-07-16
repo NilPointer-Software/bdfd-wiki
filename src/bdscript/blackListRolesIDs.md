@@ -2,12 +2,13 @@
 Block users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.
 
 ## Usage
-```$blackListRolesIDs[roleIDs;errorMessage]```
+```
+$blackListRolesIDs[roleIDs;errorMessage]
+```
 
 ### Breakdown
-`roleIDs` - The roles that will be blacklisted. Separate roleIDs using `;`.
-
-`errorMessage` - The message that sends if the user has a role in the blacklist.
+- `roleIDs` - The roles that will be blacklisted. Separate roleIDs using `;`.
+- `errorMessage` - The message that sends if the user has a role in the blacklist.
 
 ## Example
 ```
