@@ -2,7 +2,7 @@
 Returns a user's discriminator (the 4 digit number at the end of their username).
 
 ## Usages
-There are two usage of the `$discriminator` function.
+There are two usages of the `$discriminator` function.
 
 ### Usage #1
 ```
@@ -10,13 +10,12 @@ $discriminator[userID]
 ```
 
 #### Breakdown
-`userID` - The user to get the discriminator from.
+- `userID` - The user to get the discriminator from.
 
-## Usage #2
+### Usage #2
 ```
 $discriminator[]
 ```
-
 > Returns the author's discriminator.
 
 ## Example
