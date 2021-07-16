@@ -7,7 +7,7 @@ $getRoleColor[roleID]
 ```
 
 ### Breakdown
-`roleID` - The role to get the color hex from.
+- `roleID` - The role to get the color hex from.
 
 ## Example
 ```
