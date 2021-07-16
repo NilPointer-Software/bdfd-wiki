@@ -21,7 +21,7 @@ $addField[This is the field name! #1;This is the field value! #1]
 $addField[This is the field name! #2;This is the field value! #2]
 $addField[This is the field name! #3;This is the field value! #3]
 ```
-![example1](https://user-images.githubusercontent.com/69215413/119729554-cb212c80-be42-11eb-937d-96954b500f1d.png)
+![example1](https://user-images.githubusercontent.com/69215413/125877161-79acfd73-94a8-43c8-96dc-e6b74a7d5a01.png)
 
 ### Example #2
 *(with inline fields)*
@@ -31,4 +31,4 @@ $addField[This is the field name! #1;This is the field value! #1;yes]
 $addField[This is the field name! #2;This is the field value! #2;yes]
 $addField[This is the field name! #3;This is the field value! #3;yes]
 ```
-![example2](https://user-images.githubusercontent.com/69215413/119729758-07548d00-be43-11eb-8880-4281510fe354.png)
+![example2](https://user-images.githubusercontent.com/69215413/125877197-8ac0caff-fec4-487d-b342-e9aba781eb57.png)
