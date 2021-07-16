@@ -1,6 +1,6 @@
 # $deletecommand
 Deletes the author's message.
-> The bot must have the permission `manage_messages`.
+> 🧙‍♂️ The bot must have the `manage_messages` permission.
 
 ## Usage
 ```
