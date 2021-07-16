@@ -1,6 +1,6 @@
 # $footerIcon
 Sets the embed footer icon.
->🧙‍♂️ There must be footer text in order to set the footer icon.
+> 🧙‍♂️ There must be footer text in order to set the footer icon.
 
 ## Usage
 ```
@@ -8,9 +8,8 @@ $footerIcon[imageURL;(optional) embedIndex]
 ```
 
 ### Breakdown
-`imageURL` - The URL to set the footer icon as. Must be a valid image URL.
-
-`embedIndex` - What embed the footer icon should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `imageURL` - The URL to set the footer icon as. Must be a valid image URL.
+- `embedIndex` - What embed the footer icon should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
 
 ## Example
 ```
