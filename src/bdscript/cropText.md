@@ -7,11 +7,9 @@ $cropText[text;maxCharacters;ending]
 ```
 
 ### Breakdown
-`text` - The text to crop.
-
-`maxCharacters` - The maxmium amount of characters, subsequent characters are removed.
-
-`ending` - The text to end the cropped-text with (if the text was cropped).
+- `text` - The text to crop.
+- `maxCharacters` - The maxmium amount of characters, subsequent characters are removed.
+- `ending` - The text to end the cropped-text with (if the text was cropped).
 
 ## Example
 ```
