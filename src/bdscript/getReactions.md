@@ -1,18 +1,16 @@
 # $getReactions
 Returns a list of users separated by `separator` that reacted to a message.
+
 ## Usage
 ```
 $getReactions[channelID;messageID;separator;emoji]
 ```
 
 ### Breakdown
-`channelID` - The channel that the message belongs to.
-
-`messageID` - The message to get the user-reactions from.
-
-`separator` - The separator between each user.
-
-`emoji` - The emoji to get the user's reactions for.
+- `channelID` - The channel that the message belongs to.
+- `messageID` - The message to get the user-reactions from.
+- `separator` - The separator between each user.
+- `emoji` - The emoji to get the user's reactions for.
 
 ## Example
 ```
