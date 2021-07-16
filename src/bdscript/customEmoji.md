@@ -1,6 +1,6 @@
 # $customEmoji
 Returns a custom emoji. 
-> **Note:** We recommend emoji IDs instead of `$customEmoji` for public bots.
+> 🧙‍♂️ **Note:** We recommend emoji IDs instead of `$customEmoji` for public bots.
 
 ## Usage
 ```
@@ -8,7 +8,7 @@ $customEmoji[emojiName]
 ```
 
 ### Breakdown
-`emojiName` - The name of the emoji to return.
+- `emojiName` - The name of the emoji to return.
 
 ## Example
 ```
