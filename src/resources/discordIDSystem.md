@@ -34,7 +34,7 @@ If you want to get IDs using your client, check out [Discord's full guide on get
 
 There are alot of functions that use IDs. Like, `$deleteChannels`, `$modifyRole` `$banID`, and many more.
 
-Let's use `$deleteChannels` for this example. In order to delete the channel, we need the channel ID. Here's how `$deleteChannels` could look:
+Let's use `$deleteChannels` for this example. In order to delete a channel, we need the channel's ID. Here's how `$deleteChannels` could look:
 ```
 $deleteChannels[320949943877437847]
 $c[Deletes the provided custom channel ID.]
