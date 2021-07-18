@@ -46,7 +46,7 @@ Buttons can be added to a new message or already existing message.\
 >**Note:** if `url` is used in `interaction ID or url` argument, it **has to** start with `http://` or `https://`
 
 ## Editing a button
-`$editButton[buttonID or URL;label;style;disabled (yes/no);emoji (leave empty if not needed);messageID(optional)`\
+`$editButton[buttonID or URL;label;style;disabled (yes/no);emoji (leave empty if not needed);messageID(optional)]`\
 Arguments work exactly the same way as in [$addButton](#adding-a-button) function. `buttonID or URL` is used for finding the button.
 
 ## Removing buttons
