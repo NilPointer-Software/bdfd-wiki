@@ -20,6 +20,7 @@
 - Adjusted the optimizer in BDScript 2
 - Added `$onlyForRoleIDs[]`
 - Added `$getCooldown[]`
+- Fixed problems with `]` in some functions
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
