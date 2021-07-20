@@ -16,6 +16,10 @@ $serverOwner[serverID]
 ```
 Returns the owner ID of the provided server.
 
+#### Breakdown
+- `serverID` - The server to get the owner ID for.
+> 🧙‍♂️ Bot must be present in the server to get the server owner ID.
+
 ## Example
 ```
 $nomention
