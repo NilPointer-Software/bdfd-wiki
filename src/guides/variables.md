@@ -33,8 +33,6 @@ Creating variables can only be done in the app. Here's how to create a variable,
 
 ![ex5](https://user-images.githubusercontent.com/69215413/126074596-7c185a1e-ec81-421d-ab46-bf7bc657e7bc.png)
 
-## Math + Variables
-
 ## Global/Global-User Variables
 `$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to every server and every user. However, if you input a user id in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with a user in every server but are unique per user. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
 
@@ -98,6 +96,40 @@ $getVar[Bio;$mentioned[1;yes]]
 $c[Gets the author/mentioned-user's current bio.]
 ```
 ![ex](https://user-images.githubusercontent.com/69215413/126384903-6b575634-15d3-4e00-90f2-17e51e1c9840.png)
+
+## User Variables
+User variables are unqiue per-user and differ in each server.
+
+### User Variables - Functions
+- `$setUserVar[variableName;newValue;(optional) userID]` - Sets the provided variable to 'newValue' for the inputted 'userID', or the author of the command if no user is provided.
+- `$getUserVar[variableName;(optional) userID]` - Gets the current value for the provided user variable. Returns the author's variable value if no 'userID' is provided.
+
+### User Variables - Examples
+
+⚠️ **This example would require premium to be fully functional!** ⚠️
+
+Here's the variable we're working with:
+![example](https://user-images.githubusercontent.com/69215413/126389484-d74eccfa-9dc1-43ef-a538-4c07e841e102.png)
+
+This command adds `1` to the user's 'Mentions' variable, everytime the user mentions someone.
+> 🧙‍♂️ The trigger for this command would be `$messageContains[<@]`.
+```
+$nomention
+$setUserVar[Mentions;$sum[$getUserVar[Mentions];1]]
+```
+
+This command returns how many times the user has mentioned others, in the current server:
+
+```
+$nomention
+You have mentioned others `$getUserVar[Mentions]` times in $serverName[$guildID]!
+```
+
+![ex](https://user-images.githubusercontent.com/69215413/126389898-817207a8-1232-4288-a07d-48eb3408afd0.png)
+
+## Economy
+
+### Global vs Local
 
 ## Additional Tips
 - You can change the variables with a `userID` or with a mention of the user. Here's a example: 
