@@ -6,7 +6,7 @@ Variables are how we store data in BDFD. Data can be assigned to users, servers,
 ### Variable Elements
 
 - `name` - The name of the variable. This can't be modified by the bot, its used the "call" the current variable.
-- `value` - The value of the variable. This can be modified by the bot, its returned when the variable name is called in certain functions.
+- `value` - The value of the variable. This can be modified by the bot, its returned when the variable name is called in `$getVar`/`$getUserVar`/`$getServerVar`.
 
 ### Creating Variables
 Creating variables can only be done in the app. Here's how to create a variable, which you can get and modify later.
@@ -32,3 +32,87 @@ Creating variables can only be done in the app. Here's how to create a variable,
 **#6:** Save your changes!
 
 ![ex5](https://user-images.githubusercontent.com/69215413/126074596-7c185a1e-ec81-421d-ab46-bf7bc657e7bc.png)
+
+## Math + Variables
+
+## Global/Global-User Variables
+`$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to every server and every user. However, if you input a user id in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with a user in every server but are unique per user. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
+
+
+### Global Variables - Functions
+
+- `$setVar[variableName;newValue]` - Changes the provided global-variable's value to 'newValue'.
+- `$getVar[variableName]` - Gets the current value of the provided global-variable.
+
+> 🧙‍♂️ Global variables are universal, meaning if the variable gets modified, the modification applies to everyone.
+
+### Global Variables - Example
+This is the variable we're working with:
+
+![ex](https://user-images.githubusercontent.com/69215413/126381882-091abee6-7a3a-4129-a7bf-1f008c1e57c0.png)
+
+This command adds `1` cool point to the 'CoolCount' variable value, everytime it is ran.
+```
+$nomention
+$setVar[CoolCount;$sum[$getVar[CoolCount];1]]
+Cool counter updated! 😎
+$c[Updates the variable for all servers.]
+```
+![ex](https://user-images.githubusercontent.com/69215413/126382498-928ac183-7e9e-41cc-83aa-615285b22b2a.png)
+
+This command returns how many cool points have been earned.
+```
+$nomention
+Cool counter is at $getVar[CoolCount] currently! Keep running `!cool` for more cool points.
+$c[This is the same for everyone, no matter who runs it.]
+```
+
+![ex](https://user-images.githubusercontent.com/69215413/126382138-d99ca7e2-0538-48fb-9469-9fd4a3fb094e.png)
+
+### Global-User Variables - Functions
+- `$setVar[variableName;newValue;userID]` - Sets the provided variable to 'newValue' for the inputted 'userID'.
+- `$getVar[variableName;userID]` - Gets the provided variable's value for the inputted 'userID'.
+
+> 🧙‍♂️ Global-user variables stay with the user in every server, they are unique per-user. Unlike user variables which unqiue per-user and differ in each server.
+
+### Global-User Variables - Examples
+This is the variable we're working with:
+
+![ex](https://user-images.githubusercontent.com/69215413/126384691-b289938f-e53d-4e88-91ab-a7fae7e6fae0.png)
+
+This command modifies the user's bio.
+```
+$nomention
+$argsCheck[>1;❌ Please provide text!]
+$setVar[Bio;$noMentionMessage;$authorID]
+Successfully updated your bio!
+$c[Updates the variable for the user in all servers.]
+```
+![ex](https://user-images.githubusercontent.com/69215413/126384863-66d14e77-ef14-4a3a-aa6f-c8601342c465.png)
+
+This command returns the user's current bio.
+```
+$nomention
+**<@$mentioned[1;yes]>'s Bio:**
+$getVar[Bio;$mentioned[1;yes]]
+$c[Gets the author/mentioned-user's current bio.]
+```
+![ex](https://user-images.githubusercontent.com/69215413/126384903-6b575634-15d3-4e00-90f2-17e51e1c9840.png)
+
+## Additional Tips
+- You can change the variables with a `userID` or with a mention of the user. Here's a example: 
+```
+$setUserVar[Money;0;<@696368083517964288>]
+$setUserVar[Money;0;696368083517964288]
+
+$getUserVar[Money;<@696368083517964288>]
+$getUserVar[Money;696368083517964288]
+
+$setVar[Money;0;<@696368083517964288>]
+$setVar[Money;0;696368083517964288]
+
+$getVar[Money;696368083517964288]
+$getVar[Money;696368083517964288]
+
+$c[All of these would work fine!]
+```
