@@ -21,6 +21,8 @@
 - Added `$onlyForRoleIDs[]`
 - Added `$getCooldown[]`
 - Fixed problems with `]` in some functions
+- Fixed component functions inside `$eval[]` function
+- Fixed minor bugs inside BDScript 2 parser
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
