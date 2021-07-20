@@ -109,6 +109,7 @@ User variables are unqiue per-user and differ in each server.
 ⚠️ **This example would require premium to be fully functional!** ⚠️
 
 Here's the variable we're working with:
+
 ![example](https://user-images.githubusercontent.com/69215413/126389484-d74eccfa-9dc1-43ef-a538-4c07e841e102.png)
 
 This command adds `1` to the user's 'Mentions' variable, everytime the user mentions someone.
@@ -130,6 +131,44 @@ You have mentioned others `$getUserVar[Mentions]` times in $serverName[$guildID]
 ## Economy
 
 ### Global vs Local
+- **Local Economy** - Changes per server. If a user has 10,000 coins in one server, in another server they would have a different amount. For example, Unbelievaboat has a local economy. *(local economy uses user-variables)*
+- **Global Economy** - Does not change per server. If a user has 10,000 coins in one server, in another server they would have the same amount. For example, Dank Memer has a global economy. *(global economy uses global-user variables)*
+
+### Global Economy
+
+### Local Economy
+- Replace "Money" with your cash/money variable, if "Money" is the name of your money variable then you can just leave it as is!
+- Replace "Amount" with the amount of money you want to add to the user. Like this: `100`, `$random[1;10]`, `$random[100;1000]`, `10000`.
+
+
+Gets the users' current balance/amount of money. If a user mention is provided, then the bot will return that user's balance:
+```
+$getUserVar[Money;$mentioned[1;yes]]
+```
+
+Adds money to the mentioned user:
+```
+$setUserVar[Money;$sum[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+```
+
+Adds money to the user running the command:
+```
+$setUserVar[Money;$sum[Amount;$getVar[Money;$authorID]];$authorID]
+```
+
+Removes money to the mentioned user:
+```
+$setUserVar[Money;$sub[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+```
+Removes money from the user running the command:
+```
+$setUserVar[Money;$sub[Amount;$getVar[Money;$authorID]];$authorID]
+```
+
+Leaderboard:
+```
+$userLeaderboard[Money;asc]
+```
 
 ## Additional Tips
 - You can change the variables with a `userID` or with a mention of the user. Here's a example: 
