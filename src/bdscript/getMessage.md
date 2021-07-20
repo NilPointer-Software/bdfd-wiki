@@ -18,7 +18,7 @@ $getMessage[channelID;messageID;(optional) property]
 ## Example
 ```
 $nomention
-$argsCheck[>2;Please provide a channel and messahe ID! Usage: `!quote (channel) (messageID)`]
+$argsCheck[>2;Please provide a channel and message ID! Usage: `!quote (channel) (messageID)`]
 $description[$getMessage[$findChannel[$message[1]];$message[2]]]
 $color[#673ab7]
 $authorIcon[$getMessage[$findChannel[$message[1]];$message[2];avatar]]
