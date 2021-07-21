@@ -34,6 +34,7 @@ Creating variables can only be done in the app. Here's how to create a variable,
 ![ex5](https://user-images.githubusercontent.com/69215413/126413430-bf3318c1-1642-4752-a0ed-02bbaf4752e5.png)
 
 ### Editing Variables
+Here's how you can modify a existing variable's name/default value.
 
 **#1:** Select the bot you want to edit the variable for.
 
@@ -58,6 +59,7 @@ Creating variables can only be done in the app. Here's how to create a variable,
 ![ex5](https://user-images.githubusercontent.com/69215413/126413439-98cbbc0f-f4bd-420a-b42a-00fb998bd982.png)
 
 ### Deleting Variables
+Here's how you can delete variables, which means commands using the deleted variable may return error messages.
 
 **#1:** Select the bot you want to delete the variable for.
 
@@ -78,15 +80,13 @@ Creating variables can only be done in the app. Here's how to create a variable,
 ![ex4](https://user-images.githubusercontent.com/69215413/126413742-e9fef40c-01e8-4713-9e61-99d71c2d88f7.png)
 
 ## Global/Global-User Variables
-`$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to every server and every user. However, if you input a user id in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with a user in every server but are unique per user. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
-
+`$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to universally *(they don't change per-server or per-user)*. However, if you input a user in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with the user in every server. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
 
 ### Global Variables - Functions
 
 - `$setVar[variableName;newValue]` - Changes the provided global-variable's value to 'newValue'.
-- `$getVar[variableName]` - Gets the current value of the provided global-variable.
-
 > 🧙‍♂️ Global variables are universal, meaning if the variable gets modified, the modification applies to everyone.
+- `$getVar[variableName]` - Gets the current value of the provided global-variable.
 
 ### Global Variables - Example
 This is the variable we're working with:
@@ -115,7 +115,7 @@ $c[This is the same for everyone, no matter who runs it.]
 - `$setVar[variableName;newValue;userID]` - Sets the provided variable to 'newValue' for the inputted 'userID'.
 - `$getVar[variableName;userID]` - Gets the provided variable's value for the inputted 'userID'.
 
-> 🧙‍♂️ Global-user variables stay with the user in every server, they are unique per-user. Unlike user variables which unqiue per-user and differ in each server.
+> 🧙‍♂️ Global-user variables stay with the user in every server. Unlike user variables which unqiue per-user and differ in each server.
 
 ### Global-User Variables - Examples
 This is the variable we're working with:
@@ -130,6 +130,7 @@ $setVar[Bio;$noMentionMessage;$authorID]
 Successfully updated your bio!
 $c[Updates the variable for the user in all servers.]
 ```
+
 ![ex](https://user-images.githubusercontent.com/69215413/126384863-66d14e77-ef14-4a3a-aa6f-c8601342c465.png)
 
 This command returns the user's current bio.
@@ -139,6 +140,7 @@ $nomention
 $getVar[Bio;$mentioned[1;yes]]
 $c[Gets the author/mentioned-user's current bio.]
 ```
+
 ![ex](https://user-images.githubusercontent.com/69215413/126384903-6b575634-15d3-4e00-90f2-17e51e1c9840.png)
 
 ## User Variables
@@ -164,7 +166,6 @@ $setUserVar[Mentions;$sum[$getUserVar[Mentions];1]]
 ```
 
 This command returns how many times the user has mentioned others, in the current server:
-
 ```
 $nomention
 You have mentioned others `$getUserVar[Mentions]` times in $serverName[$guildID]!
@@ -176,15 +177,16 @@ You have mentioned others `$getUserVar[Mentions]` times in $serverName[$guildID]
 Server variables are unique per-server.
 
 ### Server Variables - Functions
-- `$setServerVar[variableName;newValue;(optional) serverID]` - Sets the provided variable to 'newValue' for the inputted 'serverID', or the server that the command was ran in.
+- `$setServerVar[variableName;newValue;(optional) serverID]` - Sets the provided variable to 'newValue' for the inputted 'serverID', or the server that the command was ran in; if no 'serverID' was provided.
 - `$getServerVar[variableName;(optional) serverID]` - Gets the current value for the provided server variable. Returns the current server's variable value if no 'serverID' is provided.
 
 ### Server Variables - Examples
 
 Here's the variable we're working with:
-![image](https://user-images.githubusercontent.com/69215413/126411663-f93bf15d-57d5-4f36-8a6d-fda6a556aebd.png)
 
-This command adds `1` cookie to the variable.
+![ex](https://user-images.githubusercontent.com/69215413/126411663-f93bf15d-57d5-4f36-8a6d-fda6a556aebd.png)
+
+This command adds `1` cookie to the 'ServerCookies' variable value, everytime it is ran.
 ```
 $nomention
 This server now has `$sum[$getServerVar[ServerCookies];1]` cookies picked 🍪
@@ -205,11 +207,11 @@ Total Server Cookies: 🍪 $getServerVar[ServerCookies]
 
 ### Local vs Global
 - **Local Economy** - Changes per server. If a user has 10,000 coins in one server, in another server they would have a different amount. For example, Unbelievaboat has a local economy. *(local economy uses user-variables)*
-- **Global Economy** - Does not change per server. If a user has 10,000 coins in one server, in another server they would have the same amount. For example, Dank Memer has a global economy. *(global economy uses global-user variables)*
+- **Global Economy** - Does not change per server. If a user has 10,000 coins in one server, in another server they would have the same amount. For example, Dank Memer has a global economy. *(global economy uses global-user variables*
 
 ### Local Economy
 - Replace "Money" with your cash/money variable, if "Money" is the name of your money variable then you can just leave it as is!
-- Replace "Amount" with the amount of money you want to add to the user. Like this: `100`, `$random[1;10]`, `$random[100;1000]`, `10000`.
+- Replace "Amount" with the amount of money you want to add/remove to/from the user. Like this: `100`, `$random[1;10]`, `$random[100;1000]`, `10000`.
 
 Gets the user's current balance. If a user mention is provided, then the bot will return that user's balance:
 ```
@@ -242,9 +244,9 @@ $userLeaderboard[Money;asc]
 
 ### Global Economy
 - Replace "Money" with your cash/money variable, if "Money" is the name of your money variable then you can just leave it as is!
-- Replace "Amount" with the amount of money you want to add to the user. Like this: `100`, `$random[1;10]`, `$random[100;1000]`, `10000`.
+- Replace "Amount" with the amount of money you want to add/remove to/from the user. Like this: `100`, `$random[1;10]`, `$random[100;1000]`, `10000`.
 
-Gets the user's current balance/amount of money. If a user mention is provided then the bot will return that user's balance.
+Gets the user's current balance/amount of money. If a user mention is provided then the bot will return that user's balance:
 ```
 $getVar[Money;$mentioned[1;yes]]
 ```
