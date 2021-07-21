@@ -24,6 +24,7 @@
 - Fixed component functions inside `$eval[]` function
 - Fixed minor bugs inside BDScript 2 parser
 - Fixed author ID not showing up in `$mentioned[..;yes]`
+- Fixed `$serverNames` which removed two last characters
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
