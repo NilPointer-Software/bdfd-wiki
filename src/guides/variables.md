@@ -15,23 +15,67 @@ Creating variables can only be done in the app. Here's how to create a variable,
 
 **#2:** Click the 3-line menu.
 
-![ex1](https://user-images.githubusercontent.com/69215413/126074448-b0bad0e5-b77b-43a8-938f-d784c0a7eb08.png)
+![ex1](https://user-images.githubusercontent.com/69215413/126413034-dc0e938e-f5cc-4e17-8cbb-3570cf27aed7.png)
 
 **#3:** Select the "Variables" tab.
 
-![ex2](https://user-images.githubusercontent.com/69215413/126074572-9bd359b1-31db-4078-92f4-2b592e511316.png)
+![ex2](https://user-images.githubusercontent.com/69215413/126413152-01074611-014f-40af-a239-b061d36cf838.png)
 
 **#4:** Create a new variable.
 
-![ex3](https://user-images.githubusercontent.com/69215413/126074475-aa5e1ff3-56ef-4dc2-9a04-f6430792f9cb.png)
+![ex3](https://user-images.githubusercontent.com/69215413/126413245-efe824c2-d2ca-4e40-8c89-60ebd6fd267a.png)
 
 **#5:** Give the variable a name and value.
 
-![ex4](https://user-images.githubusercontent.com/69215413/126074479-0e4e5e54-62d6-4ccf-866a-32007e8f1d16.png)
+![ex4](https://user-images.githubusercontent.com/69215413/126413362-99e23e07-b01a-4ded-8be3-454837cb1ca5.png)
 
 **#6:** Save your changes!
 
-![ex5](https://user-images.githubusercontent.com/69215413/126074596-7c185a1e-ec81-421d-ab46-bf7bc657e7bc.png)
+![ex5](https://user-images.githubusercontent.com/69215413/126413430-bf3318c1-1642-4752-a0ed-02bbaf4752e5.png)
+
+### Editing Variables
+
+**#1:** Select the bot you want to edit the variable for.
+
+**#2:** Click the 3-line menu.
+
+![ex1](https://user-images.githubusercontent.com/69215413/126413034-dc0e938e-f5cc-4e17-8cbb-3570cf27aed7.png)
+
+**#3:** Select the "Variables" tab.
+
+![ex2](https://user-images.githubusercontent.com/69215413/126413152-01074611-014f-40af-a239-b061d36cf838.png)
+
+**#4:** Select the variable you want to edit.
+
+![ex3](https://user-images.githubusercontent.com/69215413/126413529-b4f1fce6-a0fc-4962-b67c-94020d37a858.png)
+
+**#5:** Edit the variable name and/or value.
+
+![ex4](https://user-images.githubusercontent.com/69215413/126413336-3a0c376c-fa30-435f-b5e4-74100ca0859a.png)
+
+**#6:** Save your changes!
+
+![ex5](https://user-images.githubusercontent.com/69215413/126413439-98cbbc0f-f4bd-420a-b42a-00fb998bd982.png)
+
+### Deleting Variables
+
+**#1:** Select the bot you want to delete the variable for.
+
+**#2:** Click the 3-line menu.
+
+![ex1](https://user-images.githubusercontent.com/69215413/126413034-dc0e938e-f5cc-4e17-8cbb-3570cf27aed7.png)
+
+**#3:** Select the "Variables" tab.
+
+![ex2](https://user-images.githubusercontent.com/69215413/126413152-01074611-014f-40af-a239-b061d36cf838.png)
+
+**#4:** Select the variable you want to delete.
+
+![ex3](https://user-images.githubusercontent.com/69215413/126413671-48dfae45-50e1-446a-843d-46513123a33c.png)
+
+**#5:** Confirm the deletion!
+
+![ex4](https://user-images.githubusercontent.com/69215413/126413742-e9fef40c-01e8-4713-9e61-99d71c2d88f7.png)
 
 ## Global/Global-User Variables
 `$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to every server and every user. However, if you input a user id in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with a user in every server but are unique per user. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
@@ -98,7 +142,7 @@ $c[Gets the author/mentioned-user's current bio.]
 ![ex](https://user-images.githubusercontent.com/69215413/126384903-6b575634-15d3-4e00-90f2-17e51e1c9840.png)
 
 ## User Variables
-User variables are unqiue per-user and differ in each server.
+User variables are unique per-user and differ in each server.
 
 ### User Variables - Functions
 - `$setUserVar[variableName;newValue;(optional) userID]` - Sets the provided variable to 'newValue' for the inputted 'userID', or the author of the command if no user is provided.
@@ -128,20 +172,46 @@ You have mentioned others `$getUserVar[Mentions]` times in $serverName[$guildID]
 
 ![ex](https://user-images.githubusercontent.com/69215413/126389898-817207a8-1232-4288-a07d-48eb3408afd0.png)
 
+## Server Variables
+Server variables are unique per-server.
+
+### Server Variables - Functions
+- `$setServerVar[variableName;newValue;(optional) serverID]` - Sets the provided variable to 'newValue' for the inputted 'serverID', or the server that the command was ran in.
+- `$getServerVar[variableName;(optional) serverID]` - Gets the current value for the provided server variable. Returns the current server's variable value if no 'serverID' is provided.
+
+### Server Variables - Examples
+
+Here's the variable we're working with:
+![image](https://user-images.githubusercontent.com/69215413/126411663-f93bf15d-57d5-4f36-8a6d-fda6a556aebd.png)
+
+This command adds `1` cookie to the variable.
+```
+$nomention
+This server now has `$sum[$getServerVar[ServerCookies];1]` cookies picked 🍪
+$setServerVar[ServerCookies;$sum[$getServerVar[ServerCookies];1]]
+```
+
+![ex](https://user-images.githubusercontent.com/69215413/126411852-648c6701-15c9-46e2-853e-d1ab68f321d3.png)
+
+This command returns how many cookies the server has currently.
+```
+$nomention
+Total Server Cookies: 🍪 $getServerVar[ServerCookies]
+```
+
+![ex](https://user-images.githubusercontent.com/69215413/126411873-6f2ddfb2-d1b1-4000-a7c0-7c8a25ca3bf0.png)
+
 ## Economy
 
-### Global vs Local
+### Local vs Global
 - **Local Economy** - Changes per server. If a user has 10,000 coins in one server, in another server they would have a different amount. For example, Unbelievaboat has a local economy. *(local economy uses user-variables)*
 - **Global Economy** - Does not change per server. If a user has 10,000 coins in one server, in another server they would have the same amount. For example, Dank Memer has a global economy. *(global economy uses global-user variables)*
-
-### Global Economy
 
 ### Local Economy
 - Replace "Money" with your cash/money variable, if "Money" is the name of your money variable then you can just leave it as is!
 - Replace "Amount" with the amount of money you want to add to the user. Like this: `100`, `$random[1;10]`, `$random[100;1000]`, `10000`.
 
-
-Gets the users' current balance/amount of money. If a user mention is provided, then the bot will return that user's balance:
+Gets the user's current balance. If a user mention is provided, then the bot will return that user's balance:
 ```
 $getUserVar[Money;$mentioned[1;yes]]
 ```
@@ -169,6 +239,47 @@ Leaderboard:
 ```
 $userLeaderboard[Money;asc]
 ```
+
+### Global Economy
+- Replace "Money" with your cash/money variable, if "Money" is the name of your money variable then you can just leave it as is!
+- Replace "Amount" with the amount of money you want to add to the user. Like this: `100`, `$random[1;10]`, `$random[100;1000]`, `10000`.
+
+Gets the user's current balance/amount of money. If a user mention is provided then the bot will return that user's balance.
+```
+$getVar[Money;$mentioned[1;yes]]
+```
+
+Adds money to the mentioned user:
+```
+$setVar[Money;$sum[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+```
+
+Adds money to the user running the command:
+```
+$setVar[Money;$sum[Amount;$getVar[Money;$authorID]];$authorID]
+```
+
+Removes money to the mentioned user:
+```
+$setVar[Money;$sub[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+```
+
+Removes money from the user running the command:
+```
+$setVar[Money;$sub[Amount;$getVar[Money;$authorID]];$authorID]
+```
+
+Global leaderboard:
+```
+$globalUserLeaderboard[Money;asc]
+```
+
+## Leaderboards
+You can generate variable leaderboards, using the functions below. *Click the hyperlinks for more information about these leaderboard functions*.
+- [$globalUserLeaderboard](https://nilpointer-software.github.io/bdfd-wiki/bdscript/globalUserLeaderboard.html) - Global-User Variables.
+- [$userLeaderboard](https://nilpointer-software.github.io/bdfd-wiki/bdscript/userLeaderboard.html) - User Variables.
+- [$serverLeaderboard](https://nilpointer-software.github.io/bdfd-wiki/bdscript/serverLeaderboard.html) - Server Variables.
+- [$getLeaderboardValue](https://nilpointer-software.github.io/bdfd-wiki/bdscript/getLeaderboardValue.html) - Fetchs leaderboard value.
 
 ## Additional Tips
 - You can change the variables with a `userID` or with a mention of the user. Here's a example: 
