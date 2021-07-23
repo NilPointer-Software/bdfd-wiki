@@ -25,6 +25,7 @@
 - Fixed minor bugs inside BDScript 2 parser
 - Fixed author ID not showing up in `$mentioned[..;yes]`
 - Fixed `$serverNames` which removed two last characters
+- Fixed `$addTimestamp[]` when used for multiple embeds
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
