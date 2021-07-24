@@ -1,6 +1,6 @@
 # $isUserDMEnabled
 Checks whether or not the bot can DM the user.
-> 'true' means the bot can DM the user, 'false' means it can't.
+> 🧙‍♂️ 'true' means the bot can DM the user, 'false' means it can't.
 
 ## Usage
 ```
@@ -8,7 +8,7 @@ $isUserDMEnabled[userID]
 ```
 
 ### Breakdown
-`userID` - The user to check the DM status for.
+- `userID` - The user to check the DM status for.
 
 ## Example
 ```
