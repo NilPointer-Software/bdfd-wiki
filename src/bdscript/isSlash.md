@@ -1,6 +1,6 @@
 # $isSlash
 Returns whether the command was ran as a slash command or not.
-> 'true' means the command was ran as a slash command, 'false' means it wasn't.
+> 🧙‍♂️ 'true' means the command was ran as a slash command, 'false' means it wasn't.
 
 ## Usage
 ```
@@ -9,11 +9,10 @@ $isSlash
 
 ## Example
 ```
+$nomention
 $if[$isSlash==true]
 $message[text]
-
 $else
-
 $message
 $endif
 ```
