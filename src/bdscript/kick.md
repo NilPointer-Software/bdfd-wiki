@@ -8,17 +8,17 @@ There are two usages of the `$kick` function.
 ```
 $kick
 ```
-> Kicks the user who ran the command.
+Kicks the user who ran the command.
 
 ### Usage #2
 ```
 $kick[userID;(optional) reason]
 ```
+Kicks the provided user.
 
 #### Breakdown
-`userID` - The user to kick from the server.
-
-`reason` - The audit-log reason for the kick. Optional.
+- `userID` - The user to kick from the server.
+- `reason` - The audit-log reason for the kick. Optional.
 
 ## Example
 ```
