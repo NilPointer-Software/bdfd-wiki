@@ -7,7 +7,7 @@ $image[imageURL]
 ```
 
 ### Breakdown
-`imageURL` - The URL of the image that appears. Must be a valid image URL.
+- `imageURL` - The URL of the image that appears. Must be a valid image URL.
 
 ## Example
 ```
