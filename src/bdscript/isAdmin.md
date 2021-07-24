@@ -1,6 +1,6 @@
 # $isAdmin
 Returns whether or not the provided user has the administrator permission.
-> 'true' means the user has the administrator permission, 'false' means they don't.
+> 🧙‍♂️ 'true' means the user has the administrator permission, 'false' means they don't.
 
 ## Usage
 ```
@@ -8,7 +8,7 @@ $isAdmin[userID]
 ```
 
 ### Breakdown
-`userID` - The user to check.
+- `userID` - The user to check.
 
 ## Example
 ```
