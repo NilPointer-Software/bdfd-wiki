@@ -7,7 +7,7 @@ $kickMention[(optional) reason]
 ```
 
 ### Breakdown
-`reason` - The audit-log reason for the kick. Optional.
+- `reason` - The audit-log reason for the kick. Optional.
 
 ## Example
 ```
