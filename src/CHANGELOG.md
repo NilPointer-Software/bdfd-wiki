@@ -26,6 +26,9 @@
 - Fixed author ID not showing up in `$mentioned[..;yes]`
 - Fixed `$serverNames` which removed two last characters
 - Fixed `$addTimestamp[]` when used for multiple embeds
+- Added limits for $round[] commands (max decimal place)
+- Added `$and[]`
+- Added `$or[]
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
