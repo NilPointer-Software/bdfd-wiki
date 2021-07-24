@@ -1,6 +1,6 @@
 # $isNSFW
 Returns whether the provided channel is NSFW (not-safe-for-work) or not.
-> 'true' means the channel is NSFW, 'false' means it isn't.
+> 🧙‍♂️ 'true' means the channel is NSFW, 'false' means it isn't.
 
 ## Usage
 ```
@@ -8,7 +8,7 @@ $isNSFW[channelID]
 ```
 
 ### Breakdown
-`channelID` - The channel to check.
+- `channelID` - The channel to check.
 
 ## Example
 ```
