@@ -1,6 +1,6 @@
 # $modifyChannel
 Edits a channel with the data provided.
->🧙‍ ♂️ You can use `!unchanged` as a argument for the option to remain in its current state.
+> 🧙‍♂️ You can use `!unchanged` as a argument for the option to remain in its current state.
 
 ## Usages
 There are two usages of the `$modifyChannel` function.
