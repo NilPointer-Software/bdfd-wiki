@@ -1,14 +1,20 @@
 # $message
-Returns the user's message without the command trigger. By default `$message` replaces mentions within the message to regular text, you can use `$allowMention` to disable this.
+Returns the user's message *(without the command trigger)*.
 
 ## Usages
-• There are 2 usages for the `$message` command.
+There are two usages of the the `$message` function.
 
-#### Usage #1
-`$message` - Returns the user's message.
+### Usage #1
+```
+$message
+```
+Returns the user's message.
 
-#### Usage #2
-`$message[argument number]` - Returns the argument matching the provided number.
+### Usage #2
+```
+$message[argumentNumber]
+```
+Returns the argument matching the provided number.
 - For example, `$message[1]` would just return the first word of the message.
 - You can also use `$message[>]` to get the last argument/word of the user's message.
 
