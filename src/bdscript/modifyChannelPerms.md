@@ -7,11 +7,9 @@ $modifyChannelPerms[channelID;permissions;userID/roleID]
 ```
 
 ### Breakdown
-`channelID` - The channel to change the permissions for.
-
-`permissions` - The [permissions](https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html) to add/remove. `+` means allow, `-` means deny.
-
-`userID/roleID` - The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
+- `channelID` - The channel to change the permissions for.
+- `permissions` - The [permissions](https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html) to add/remove. `+` means allow, `-` means deny.
+- `userID/roleID` - The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
 
 ## Example
 Lock:
