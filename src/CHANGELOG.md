@@ -29,6 +29,8 @@
 - Added limits for the `$round[]` function *(max decimal place)*
 - Added `$and[]`
 - Added `$or[]`
+- Added `$allowRoleMentions[]`
+- Added `$allowUserMentions[]`
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
