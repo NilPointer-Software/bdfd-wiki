@@ -5,18 +5,14 @@ Modifies a role.
 ```
 $modifyRole[roleID;roleName;colorHex;hoisted (yes/no);mentionable (yes/no)]
 ```
-> 🧙‍♂️ Tip: You can use `!unchanged` as a argument to leave the setting as-is.
+> 🧙‍♂️ You can use `!unchanged` as a argument to leave the setting as-is.
 
 ### Breakdown
-`roleID` - The ID of the role to modify.
-
-`roleName` - The new role name.
-
-`colorHex` - The new role color.
-
-`hoisted` - Whether the role should be displayed separately or not.
-
-`mentionable` - Whether the role should be mentionable by everyone or not.
+- `roleID` - The ID of the role to modify.
+- `roleName` - The new role name.
+- `colorHex` - The new role color.
+- `hoisted` - Whether the role should be displayed separately or not.
+- `mentionable` - Whether the role should be mentionable by everyone or not.
 
 ## Example
 ```
