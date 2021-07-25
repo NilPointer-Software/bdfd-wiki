@@ -7,7 +7,7 @@ $min[numbers]
 ```
 
 ### Breakdown
-`numbers` - The numbers to get the data from. Separate numbers using `;`.
+- `numbers` - The numbers to get the data from. Separate numbers using `;`.
 
 ## Example
 ```
