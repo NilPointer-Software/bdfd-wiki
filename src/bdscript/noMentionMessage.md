@@ -8,16 +8,15 @@ There are 2 usages of the `$noMentionMessage` function.
 ```
 $noMentionMessage
 ```
-> Returns the user's full message (without mentions).
+Returns the user's full message *(without mentions)*.
 
 ### Usage #2
 ```
 $noMentionMessage[argumentNumber]
 ```
-> Returns the argument matching the provided number (excluding mentions).
+Returns the argument matching the provided number *(excluding mentions)*.
 
-> For example, `$message[1]` would just return the first word of the message.
-You can also use `$message[>]` to get the last argument/word of the user's message.
+> 🧙‍♂️ For example, `$noMentionMessage[1]` would just return the first word of the message. You can also use `$noMentionessage[>]` to get the last argument/word of the user's message.
 
 ## Example
 ```
