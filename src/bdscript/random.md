@@ -8,13 +8,13 @@ There are two usages of the `$random` function.
 ```
 $random
 ```
-> Returns a random number between 0 and 9.
+Returns a random number between 0 and 9.
 
 ### Usage #2
 ```
 $random[minimum;maximum]
 ````
-> Returns a random number between 'minimum' and 'maximum'.
+Returns a random number between 'minimum' and 'maximum'.
 
 ## Example
 ```
