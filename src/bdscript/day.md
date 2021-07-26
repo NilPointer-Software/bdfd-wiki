@@ -1,5 +1,5 @@
 # $day
-Returns the current day.
+Returns the current day of the month.
 > 🧙‍♂️ You can use [$time](https://nilpointer-software.github.io/bdfd-wiki/bdscript/time.html) to change the timezone.
 ## Usage
 ```
