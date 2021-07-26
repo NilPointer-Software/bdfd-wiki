@@ -2,19 +2,19 @@
 Bans a user using their ID.
 
 ## Usages
-- There are three usages of the `$banID` command.
+There are three usages of the `$banID` function.
 
 ### Usage #1
 ```
 $banID
 ```
-> Gets the user to ban from the author's message. No reason will be provided in audit logs for the ban.
+Gets the user to ban from the author's message. No reason will be provided in audit logs for the ban.
 
 ### Usage #2
 ```
 $banID[reason]
 ```
-> Gets the user to ban from the author's message. The 'reason' will show in audit logs.
+Gets the user to ban from the author's message. The 'reason' will show in audit logs.
 
 ### Usage #3
 *(recommended)*
@@ -22,7 +22,7 @@ $banID[reason]
 ```
 $banID[reason;userID]
 ```
-> Gets the user to ban from the 'userID' field. The 'reason' will show up in audit logs. You can also leave the 'reason' field empty to provide no reason.
+Gets the user to ban from the 'userID' field. The 'reason' will show up in audit logs. You can also leave the 'reason' field empty to provide no reason.
 
 ## Example
 ```
