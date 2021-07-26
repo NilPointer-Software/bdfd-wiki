@@ -32,6 +32,7 @@
 - Added `$allowRoleMentions[]`
 - Added `$allowUserMentions[]`
 - Added `$guildExists[]`
+- Fixed `$serverVerificationLvl`
 
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
