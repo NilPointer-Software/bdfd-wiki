@@ -8,9 +8,8 @@ $varExistError[variableName;errorMessage]
 > 🧙‍♂️ This function is useful when posting codes in the *#wikis* channel, so users don't forget to create the needed variables.
 
 ### Breakdown
-`variableName` - The variable that should exist.
-
-`errorMessage` - The custom error-message to return if the variable doesn't exist.
+- `variableName` - The variable that should exist.
+- `errorMessage` - The custom error message to return if the variable doesn't exist.
 
 ## Example
 ```
