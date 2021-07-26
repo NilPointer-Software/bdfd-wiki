@@ -7,7 +7,7 @@ $variablesCount[variableType (user/server)]
 ```
 
 ### Breakdown
-`variableType` - The variable type to return the count for.
+- `variableType` - The variable type to return the count for.
 
 ## Example
 ```
