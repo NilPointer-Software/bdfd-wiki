@@ -16,7 +16,7 @@ $discriminator[userID]
 ```
 $discriminator[]
 ```
-> Returns the author's discriminator.
+Returns the author's discriminator.
 
 ## Example
 ```
