@@ -9,13 +9,13 @@ There are two usages of the `$nickname` function.
 ```
 $nickname
 ```
-> Returns the author's display name.
+Returns the author's display name.
 
 ### Usage #2
 ```
 $nickname[userID]
 ```
-> Returns the provided user's display name.
+Returns the provided user's display name.
 
 ## Example
 ```
