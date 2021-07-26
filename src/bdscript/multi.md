@@ -7,7 +7,7 @@ $multi[numbers]
 ```
 
 ### Breakdown
-`numbers` - The numbers to multiply, separate numbers using `;`.
+- `numbers` - The numbers to multiply, separate numbers using `;`.
 
 ## Example
 ```
