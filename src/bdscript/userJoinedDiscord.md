@@ -2,29 +2,25 @@
 Returns the date when given user created their Discord account. You can also give your own date format.
 
 ## Usage
-```$userJoinedDiscord[userID;(optional) format]```
+```
+$userJoinedDiscord[userID;(optional) format]
+```
 
-## Example Command
-```$userJoinedDiscord[$authorID]```
+## Example
+```
+$nomention
+$userJoinedDiscord[$authorID]
+```
 
-### Expected Output
-```the-authors-discord-creation-date```
-
-#### Expected Output Sample
-```2020-03-05```
+![example](https://user-images.githubusercontent.com/69215413/127032089-ef8aa439-89c9-46b2-a2e4-cdf54ab7fa6b.png)
 
 ## Format
-- The `format` option allows you to customize the date format.
+The 'format' option allows you to customize the date format.
 
-`Monday` = Day
+- `Monday` - Day
+- `January` - Month
+- `3:04` - Time
+- `2006` - Year
+- `2` - Day Of The Month
 
-`January` = Month
-
-`3:04` = Time
-
-`2006` = Year
-
-`2` = Day Of The Month
-
-### Format Example
 `$userJoinedDiscord[$authorID;January 2 (Monday), 2006 at 3:04]` would return Month DayOfTheMonth (Day), Year at Time.
