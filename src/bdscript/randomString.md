@@ -7,7 +7,7 @@ $randomString[length]
 ```
 
 ### Breakdown
-`length` - How long the string should be (max `10`).
+- `length` - How long the string should be (max `10`).
 
 ## Example
 ```
