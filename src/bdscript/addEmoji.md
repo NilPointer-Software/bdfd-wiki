@@ -17,4 +17,4 @@ $nomention
 Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes]
 $argsCheck[>2;Provide all needed arguments! Usage: `!add-emoji (imageURL) (emojiName)`]
 ```
-> 🧙‍♂️ Note: This may require BDScript Unstable mode enabled.
+> 🧙‍♂️ This may require BDScript Unstable mode enabled.
