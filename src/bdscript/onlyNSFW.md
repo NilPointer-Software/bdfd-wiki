@@ -7,7 +7,7 @@ $onlyNSFW[errorMessage]
 ```
 
 ### Breakdown
-`errorMessage` - The message that is returned when the command is executed outside of a NSFW channel.
+- `errorMessage` - The message that is returned when the command is executed outside of a NSFW channel.
 
 ## Example
 ```
