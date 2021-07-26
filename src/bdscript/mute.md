@@ -7,7 +7,7 @@ $mute[mutedRoleName]
 ```
 
 ### Breakdown
-`mutedRoleName` - The name of the 'Muted' role (case sensitive).
+- `mutedRoleName` - The name of the 'Muted' role (case sensitive).
 
 ## Example
 ```
