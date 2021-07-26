@@ -13,7 +13,4 @@ $noMentionMessage
 $c[This is a say command. You are reading a comment!]
 ```
 
-![image](https://user-images.githubusercontent.com/69215413/120036018-7e1d9180-bfcd-11eb-912a-b81e663bfa52.png)
-
-
-
+![example](https://user-images.githubusercontent.com/69215413/127033510-b61a5806-c1b5-45f3-99d3-c4f932497322.png)
