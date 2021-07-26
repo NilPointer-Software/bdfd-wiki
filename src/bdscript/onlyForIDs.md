@@ -7,9 +7,8 @@ $onlyForIDs[userIDs;errorMessage]
 ```
 
 ### Breakdown
-`userIDs` - The users that can use this command, separate IDs using `;`.
-
-`errorMessage` - The error message that is returned, when the user running the command is not whitelisted.
+- `userIDs` - The users that can use this command, separate IDs using `;`.
+- `errorMessage` - The error message that is returned, when the user running the command is not whitelisted.
 
 ## Example
 ```
