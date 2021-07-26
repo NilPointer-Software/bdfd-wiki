@@ -7,7 +7,7 @@ $time[timezone]
 ```
 
 ### Breakdown
-`timezone` - The timezone to change the time/date functions to.
+- `timezone` - The timezone to change the time/date functions to.
 
 ⚠️ **[Get timezones from here (click-me)](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)**
 
