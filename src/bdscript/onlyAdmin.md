@@ -7,4 +7,4 @@ $onlyAdmin[errorMessage]
 ```
 
 ### Breakdown
-`errorMessage` - The error message that is returned when the user doesn't have administrator.
+- `errorMessage` - The error message that is returned when the user doesn't have administrator.
