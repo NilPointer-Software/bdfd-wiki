@@ -7,7 +7,7 @@ $useChannel[channelID]
 ```
 
 ### Breakdown
-`channelID` - The channel to redirect the bot's response to.
+- `channelID` - The channel to redirect the bot's response to.
 
 ## Example
 ```
