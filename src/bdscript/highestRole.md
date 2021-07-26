@@ -8,13 +8,13 @@ There are two usages of the `$highestRole` function.
 ```
 $highestRole
 ```
-> Returns the highest role in the server.
+Returns the highest role in the server.
 
 ### Usage #2
 ```
 $highestRole[userID]
 ```
-> Returns the user's highest role.
+Returns the user's highest role.
 
 ## Example
 ```
