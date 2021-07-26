@@ -7,7 +7,7 @@ $randomText[text1;text2;etc]
 ```
 
 ### Breakdown
-`text1`/`text2`/`etc` - The text which the bot can choose from.
+- `text1`/`text2`/`etc` - The text which the bot can choose from.
 
 ## Example
 ```
