@@ -1,6 +1,6 @@
 # $userReacted
 Checks if the user reacted to a message, with the provided 'emoji'.
-> 'true' means the user did react with the emoji, otherwise 'false' is returned.
+> 🧙‍♂️ 'true' means the user did react with the emoji, otherwise 'false' is returned.
 
 ## Usage
 ```
