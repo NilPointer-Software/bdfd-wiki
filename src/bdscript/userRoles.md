@@ -7,7 +7,7 @@ $userRoles[userID]
 ```
 
 ### Breakdown
-`userID` - The user to return the roles for.
+- `userID` - The user to return the roles for.
 
 ## Example
 ```
