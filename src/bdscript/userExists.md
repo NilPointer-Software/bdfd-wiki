@@ -9,7 +9,7 @@ $userExists[userID]
 ```
 
 ### Breakdown
-`userID` - The ID of the hypothetical user.
+- `userID` - The ID of the hypothetical user.
 
 ## Example
 ```
