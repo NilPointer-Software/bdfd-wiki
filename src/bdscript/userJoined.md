@@ -11,6 +11,8 @@ $userJoined[userID;(optional) format]
 $userJoined[$authorID]
 ```
 
+![example](https://user-images.githubusercontent.com/69215413/127031755-17bba8d1-2028-41f6-a305-8074879c681d.png)
+
 ## Format
 - The `format` allows you to customize the date format.
 
