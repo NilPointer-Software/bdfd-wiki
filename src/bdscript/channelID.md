@@ -2,7 +2,7 @@
 Returns a channel's ID.
 
 ## Usages
-There are two usages for the `$channelID` function.
+There are two usages of the `$channelID` function.
 
 ### Usage #1
 `$channelID` - Gets the ID of the current channel.
