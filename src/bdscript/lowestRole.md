@@ -8,13 +8,13 @@ There are two usages of the `$lowestRole` function.
 ```
 $lowestRole
 ```
-> Returns the lowest role in the server.
+Returns the lowest role in the server.
 
 ### Usage #2
 ```
 $lowestRole[userID]
 ```
-> Returns the user's lowest role.
+Returns the user's lowest role.
 
 ## Example
 ```
