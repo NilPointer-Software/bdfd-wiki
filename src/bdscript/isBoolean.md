@@ -16,7 +16,7 @@ $isBoolean[text]
 ```
 
 ### Breakdown
-`text` - The text to check.
+- `text` - The text to check.
 
 ## Example
 ```
