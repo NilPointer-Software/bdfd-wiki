@@ -8,13 +8,13 @@ There are two usages of the `$removeLinks` function.
 ```
 $removeLinks
 ```
-> Removes all links from the bot's reply.
+Removes all links from the bot's reply.
 
 ### Usage #2
 ```
 $removeLinks[text]
 ```
-> Removes all links from the provided 'text'.
+Removes all links from the provided 'text'.
 
 ## Example
 ```
