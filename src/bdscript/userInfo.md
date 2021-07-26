@@ -1,13 +1,5 @@
 # $userInfo
-`$userInfo` allows you to make a 'user info' command without using a bunch of different functions at once. Returns info about the mentioned user.
-
-## Commands
-You can use the 'commands' below within `$userInfo`:
-
-- `{username}` - Returns the user's username
-- `{ID}` - Gets the users ID
-- `{BOT}` - Checks if the user is a bot
-- `{discriminator}` - Gets the user's discriminator
+Allows you to make a 'user info' command without using a bunch of different functions at once. Returns info about the mentioned user.
 
 ## Usage
 ```
@@ -16,7 +8,15 @@ $userInfo[text/code]
 
 ⚠️ You can not include `$userInfo[]` in a command with a `$description[]` (because it makes one automatically).
 
-## Example Code
+### Subset Functions
+You can use the 'subset-functions' below within `$userInfo`:
+
+- `{username}` - Returns the user's username.
+- `{ID}` - Gets the users ID.
+- `{BOT}` - Checks if the user is a bot.
+- `{discriminator}` - Gets the user's discriminator.
+
+## Example
 ```
 $nomention
 $userInfo[Username: {username}
