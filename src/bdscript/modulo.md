@@ -7,7 +7,7 @@ $modulo[numbers]
 ```
 
 ### Breakdown
-`numbers` - The numbers to return the remainder for. Separate numbers using `;`.
+- `numbers` - The numbers to return the remainder for. Separate numbers using `;`.
 
 ## Example
 ```
