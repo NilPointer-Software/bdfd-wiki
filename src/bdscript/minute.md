@@ -1,5 +1,5 @@
 # $minute
-Returns the current minute.
+Returns the current minute of this hour.
 > 🧙‍♂️ You can use [$time](https://nilpointer-software.github.io/bdfd-wiki/bdscript/time.html) to change the timezone.
 
 ## Usage
