@@ -27,7 +27,7 @@ Gets the user to ban from the 'userID' field. The 'reason' will show up in audit
 ## Example
 ```
 $nomention
-$argsCheck[>1;Please provide a 'userID'. Usage: `!ban (user) <reason>`]
+$argsCheck[>1;Please provide a 'user'. Usage: `!ban (user) <reason>`]
 $onlyIf[$findUser[$message[1];no]!=;Failed to find user!]
 $onlyPerms[ban;You need the 'ban' permission to use that command!]
 $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
