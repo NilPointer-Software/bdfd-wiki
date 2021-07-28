@@ -1,23 +1,19 @@
 # $channelTopic
-`$channelTopic` returns a channel's topic/description.
+Returns a channel's topic/description.
 
 ## Usages
-- There are two usages to the `$channelTopic` command.
+There are two usages of the `$channelTopic` function.
 
 ### Usage #1
 `$channelTopic` - Returns the topic of the channel that the command is being used in.
 
 ### Usage #2
-`$channelTopic[CHANNEL ID]` - Returns the channel topic of the provided channel.
+`$channelTopic[channelID]` - Returns the channel topic of the provided 'channelID'.
 
-## Command Example
-```$nomention
-<#$mentionedChannels[1;yes]>'s channel topic is: 
-```$channelTopic[$mentionedChannels[1;yes]]```
+## Example
+```
+$nomention
+<#$channelID>'s channel topic is: $channelTopic
 ```
 
-### Expected Output
-```
-#general's channel topic is:
-```channel topic here```
-```
+![example](https://user-images.githubusercontent.com/69215413/127034232-384f3678-0010-4a97-bf89-9dd5963d8742.png)

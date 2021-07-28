@@ -6,4 +6,6 @@
 should appear.
 
 ## Usage
-```$botTyping```
+```
+$botTyping
+```

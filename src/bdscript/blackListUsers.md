@@ -7,6 +7,5 @@ $blackListUsers[usernames;errorMessage]
 ```
 
 ### Breakdown
-`usernames` - The usernames to blacklist. Separate names using `;`.
-
-`errorMessage` - Message when user's name is in the blacklist.
+- `usernames` - The usernames to blacklist. Separate names using `;`.
+- `errorMessage` - Message when user's name is in the blacklist.

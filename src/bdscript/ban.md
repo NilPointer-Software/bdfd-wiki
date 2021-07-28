@@ -2,7 +2,12 @@
 Bans the mentioned user. Both the bot and user running the command need the 'ban' permission.
 
 ## Usage
-```$ban[(optional) reason]```
+```
+$ban[(optional) reason]
+```
+
+### Breakdown
+- `reason` - The reason for this action, which will be sent to the audit-log. Optional.
 
 ## Examples
 #### Example #1

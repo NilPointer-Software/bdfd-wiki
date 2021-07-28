@@ -1,14 +1,16 @@
 # $argCount
-Returns how many words are in the provided text.
+Returns how many words (aka arguments/args) are in the provided text.
 
 ## Usage
-```$argCount[text]```
+```
+$argCount[text]
+```
 
 ### Breakdown
-`text` - The text to get word count from.
+- `text` - The text to get word count from.
 
 ## Example
 ```
 $argCount[$message]
 ```
-> Returns the word count for the user's message.
+> 🧙‍♂️ Returns the word count of the user's message.

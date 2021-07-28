@@ -7,10 +7,9 @@ $cooldown[duration;errorMessage]
 ```
 
 ### Breakdown
-`duration` - The duration of this cooldown. (e.g `30s`, `3m`, `3h`, `3d`, etc)
-
-`errorMessage` - The message that is returned when the cooldown duration is still ongoing. `%time%` and other related functions can be used here.
-> `%time%` returns how much time is left on the cooldown.
+- `duration` - The duration of this cooldown. (e.g `30s`, `3m`, `3h`, `3d`, etc)
+- `errorMessage` - The message that is returned when the cooldown duration is still ongoing. `%time%` and other related functions can be used here.
+> 🧙‍♂️ `%time%` returns how much time is left on the cooldown.
 
 ## Example
 ```

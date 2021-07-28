@@ -2,23 +2,24 @@
 Returns the author's avatar URL.
 
 ## Usage
-```$authorAvatar```
+```
+$authorAvatar
+```
 
 ## Examples
 ### Example #1
-*(without ?size=)*
 
-```$image[$authorAvatar]```
+```
+$image[$authorAvatar]
+```
 
-![E56C19F9-0604-4902-831F-FD6FD159470C](https://user-images.githubusercontent.com/69215413/119844542-85ae3f00-bed6-11eb-8600-f5fc203d380e.jpeg)
+![example1](https://user-images.githubusercontent.com/69215413/125959889-0fffe8a1-9fad-4c78-9c48-50956d1ad8c4.png)
 
 ### Example #2
-*(with ?size=)*
-> Tip: You can use `?size=size` at the end of the URL to increase the size of the image. Sizes: 1024, 2048, 4096.
+> 🧙‍♂️ You can use `?size=size` at the end of the avatar URL to decrease/increase the image size. Example sizes: 1024, 2048, 4096.
 
-```$image[$authorAvatar?size=4096]```
+```
+$image[$authorAvatar?size=4096]
+```
 
-![060A6359-7789-45FE-9429-3B6E64CCF56B](https://user-images.githubusercontent.com/69215413/119844593-91016a80-bed6-11eb-9aff-b19f4deb4336.jpeg)
-
-
-
+![example2](https://user-images.githubusercontent.com/69215413/125959958-a8a825ff-1023-4d1f-a9f3-cfdf1054d970.png)

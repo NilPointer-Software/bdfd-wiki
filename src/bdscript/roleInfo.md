@@ -1,30 +1,26 @@
 # $roleInfo
-`$roleInfo` allows you to make a 'role info' command without using a bunch of different functions at once. The command returns info about the mentioned role.
+`$roleInfo` allows you to make a 'role info' command without using a bunch of different functions at once. This function returns info about the mentioned role.
+
+## Commands
+You can use the 'commands' below within `$roleInfo`:
+
+- `{name}` - Returns the role name.
+- `{ID}` - Returns the role's ID.
+- `{mentionable}` - Returns if the role is mentionable by everyone.
+- `{hoist}` - Returns if a role is hoisted (displayed separately).
+- `{color}` - Returns the role's color.
+- `{position}` - Returns the roles position on 'roles list'.
 
 ## Usage
-You can use the 'commands' below within it:
-
-`{name}` - Returns the role name
-
-`{ID}` - Return the role's ID 
-
-`{mentionable}` - Sees if the role is mentionable by everyone 
-
-`{hoist}` - Gets if a role is hoisted (displayed separately) 
-
-`{color}` - Gives the role's color hex 
-
-`{position}` - Returns the roles position on 'roles list'
-
-
-Usage: `$roleInfo[commands/text here]`
-
-
+```
+$roleInfo[code/text]
+```
 
 ⚠️ You can not include `$roleInfo[]` in a command with a `$description[]` (because it makes one automatically).
 
-## Example Code
+## Example
 ```
+$nomention
 $roleInfo[Name: {name}
 ID: {ID}
 Mentionable?: {mentionable}
@@ -34,13 +30,4 @@ Position: {position}]
 $title[Role Info]
 ```
 
-### Expected Output
-```
-Role Info
-Name: RoleName
-ID: RoleID
-Mentionable?: true/false
-Hoisted?: true/false
-Color: hex-code
-Position: position-number
-```
+![example](https://user-images.githubusercontent.com/69215413/122831224-8f4d7b80-d2b7-11eb-838a-fc2ba7cd7476.png)

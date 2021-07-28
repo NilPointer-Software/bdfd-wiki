@@ -1,53 +1,68 @@
 # JavaScript
-Bot Designer for Discord allows you to use JavaScript *(ES2015)*.\
-Discord's API is not fully supported yet but there will be more extensive
+*(for advanced users)*
+
+### Index
+- [Notes](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#notes)
+- [Accessing JavaScript](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#accessing-javascript)
+- [Available Objects in Commands](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#available-objects-in-commands)
+- [Supported API Functions](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#supported-api-functions)
+- [Example](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#example)
+
+## Notes
+- Bot Designer for Discord allows you to use JavaScript *(ES2015)*.
+- Discord's API is not fully supported yet but there will be more extensive
 support in the future.
+- Callbacks don't support JavaScript at the moment.
 
-__(NOTE: Callbacks don't support JavaScript at the moment)__
+## Accessing JavaScript
+1: Go to user settings in the BDFD app, and enable "Features for Advanced Users".
 
-## Available objects in the commands:
-- `message` - string value. It contains message written by the user.
-- `commandPrefix` - string value. It contains name of the used command.
-- `authorId` - string value. It contains **ID of the user** that executed that command. 
-- `channelId` - string value. It contains **ID of the channel** where the command was used.
-- `userMentions` - array of string values. It contains user mentions *(pings)*.
-- `roleMentions` - array of string values. It contains role mentions *(pings)*.
+![jswiki1](https://user-images.githubusercontent.com/69215413/122846929-e01f9d00-d2d4-11eb-9e76-80981877b6ab.png)
 
-## Currently supported API functions:
-- `setResponse(replyText)`\
-where `replyText` is a string value. This command will send message to the channel from
-which command was used.
-- `setEmbedResponse(title, description, footer)`\
-where `title`, `description`, `footer` are string values. This command will send embedded
-message to the channel from which command was used.
-- `setEmbedImage(imageURL)`\
-where `imageURL` is a string value. This command sets image of the embedded message.
-`imageURL` has to point to the direct url of the image.
-- `ban(userID)`\
-where `userID` is a string value.
-- `banWithReason(userID, reason)`\
-where `userID` and `reason` are the string value.
-- `unban(userID)`\
-where `userID` is a string value.
-- `kick(userID)`\
-where `userID` is a string value.
-- `kickWithReason(userID, reason)`\
-where `userID` and `reason` are the string value.
-- `giveRole(userID, roleID)`\
-where `userID` and `roleID` are the string value. This command gives the role to the user.
-- `takeRole(userID, roleID)`\
-where `userID` and `roleID` are the string value. This command takes the role from the user.
-- `channelTyping()`\
-Shows *"Bot is typing..."* message
-- `createChannel(name, type)`\
-where `name` and `type` are the string values.
-`type` value can be either equal to `"text"` or `"voice"`.
-Providing wrong `type` will result in throwing an exception which you can catch.
-- `removeChannel(chanID)`\
-where `chanID` is a string value.
-- `pinMessage(channelID, messageID)`\
-where `channelID` and `messageID` are the string values.
-- `unpinMessage(channelID, messageID)`\
-where `channelID` and `messageID` are the string values.
-- `sendChannelMessage(channelID, message)`\
-where `channelID` and `message` are the string values. Sends message to the provided channel.
+![jswiki2](https://user-images.githubusercontent.com/69215413/122846695-67204580-d2d4-11eb-8cfd-a3c679c66ca0.png)
+
+2: After to creating a new command, set the Scripting Language to "JavaScript".
+
+![jswiki3](https://user-images.githubusercontent.com/69215413/122846765-87e89b00-d2d4-11eb-84d9-72706b2fd466.png)
+
+![jswiki4](https://user-images.githubusercontent.com/69215413/122846781-92a33000-d2d4-11eb-9ef7-c645e48e1dc7.png)
+
+## Available Objects in Commands
+Name      | Type       | Description
+----------|:----------:|----------
+| `message` | string | Contains author's message.
+| `commandPrefix` | string | Contains the trigger of this command.
+| `authorId` | string | Contains the ID of the user that executed this command. 
+| `channelId` | string | Contains channel ID where the command was used.
+| `userMentions` | array of string values | Contains user mentions.
+| `roleMentions` | array of string values | Contains role mentions.
+
+## Supported API Functions
+Name      |Description
+----------|----------
+| `setResponse(replyText)` | Where `replyText` is a string value. Sends a message to the channel where the command was used.
+| `setEmbedResponse(title, description, footer)` | Where `title`, `description`, `footer` are string values. Sends a embedded message to the channel where the command was used.
+| `setEmbedImage(imageURL)` | Where `imageURL` is a string value. Sets image of the embedded message.
+| `ban(userID)`|  Where `userID` is a string value. Bans a user.
+| `banWithReason(userID, reason)` | Where `userID` and `reason` are string values. Bans a user with reason.
+| `unban(userID)` | Where `userID` is a string value. Unbans the user.
+| `kick(userID)` |  Where `userID` is a string value. Kicks a user.
+| `kickWithReason(userID, reason)` | Where `userID` and `reason` are string values. Kicks a user with reason.
+| `giveRole(userID, roleID)` | Where `userID` and `roleID` are string values. Gives a role to the user.
+| `takeRole(userID, roleID)` | Where `userID` and `roleID` are string values. Removes a role from the user.
+| `channelTyping()` | Shows *"Bot is typing..."* message.
+| `createChannel(name, type)` | Where `name` and `type` are string values (`type` must be `text` or `voice`). Creates a channel. Providing wrong `type` will result in throwing an exception which you can catch.
+| `removeChannel(channelID)` | Where `channelID` is a string value. Deletes a channel.
+| `pinMessage(channelID, messageID)` | Where `channelID` and `messageID` are string values. Pins a message.
+| `unpinMessage(channelID, messageID)` | Where `channelID` and `messageID` are string values. Unpins a pinned message.
+| `sendChannelMessage(channelID, message)` | Where `channelID` and `message` are string values. Sends `message` to the provided channel. 
+
+## Example
+*(say command)*
+```js
+var text = message.replace(commandPrefix, " ") // Makes 'text' the user's message without the command trigger.
+setResponse(text) // Sets the response as 'text'.
+```
+![image](https://user-images.githubusercontent.com/69215413/122844455-b748d900-d2cf-11eb-9bf5-9887b2323295.png)
+
+

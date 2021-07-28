@@ -7,7 +7,7 @@ $closeTicket[errorMessage]
 ```
 
 ### Breakdown
-`errorMessage` - The error to return if the channel isn't a ticket.
+- `errorMessage` - The error to return if the channel isn't a ticket.
 
 ## Example
 ```

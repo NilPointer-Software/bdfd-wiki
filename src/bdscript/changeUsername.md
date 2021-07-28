@@ -7,7 +7,7 @@ $changeUsername[newNickname]
 ```
 
 ### Breakdown
-`newNickname` - The text to change the user's nickname to.
+- `newNickname` - The text to change the user's nickname to.
 
 ## Example
 ```
@@ -16,4 +16,4 @@ $argsCheck[>2;Wrong usage! Correct Usage: `!nickname (user) (text)`]
 $changeUsername[$noMentionMessage]
 Changed <@$mentioned[1]>'s nickname to `$noMentionMessage`.
 ```
-![image](https://user-images.githubusercontent.com/69215413/120035233-406c3900-bfcc-11eb-8d1a-31d69da21622.png)
+![example](https://user-images.githubusercontent.com/69215413/120035233-406c3900-bfcc-11eb-8d1a-31d69da21622.png)
