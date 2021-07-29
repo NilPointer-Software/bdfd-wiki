@@ -208,7 +208,7 @@
     - [$round](./bdscript/round.md)
     - [$second](./bdscript/second.md)
     - [$sendMessage](./bdscript/sendMessage.md)
-    - [$serverCooldown](.bdscript/serverCooldown.md)
+    - [$serverCooldown](./bdscript/serverCooldown.md)
     - [$serverCount](./bdscript/serverCount.md)
     - [$serverIcon](./bdscript/serverIcon.md)
     - [$serverInfo](./bdscript/serverInfo.md)
