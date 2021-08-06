@@ -10,6 +10,7 @@
 - Added `$webhookContent[]`
 - Added `$webhookUsername[]`
 - Added `$webhookAvatarURL[]`
+- Added `$webhookCreate[]`
 - **Removed permission check from** `$deleteChannelsByName[]`
 - **Removed permission check from** `$deleteChannels[]`
 - **Removed permission check from** `$createChannel[]`
