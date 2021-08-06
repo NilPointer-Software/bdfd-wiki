@@ -13,6 +13,7 @@
 - **Removed permission check from** `$deleteChannelsByName[]`
 - **Removed permission check from** `$deleteChannels[]`
 - **Removed permission check from** `$createChannel[]`
+- Fixed the issue with bots not working in threads
 
 ## July
 - Added `$getTimestamp`
