@@ -1,5 +1,5 @@
 # Webhooks
-This wiki explains create and operate webhooks in BDFD.
+This wiki explains how to create and use webhooks in BDFD.
 
 ## Creating A Webhook
 ```
