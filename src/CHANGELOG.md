@@ -16,6 +16,7 @@
 - **Removed permission check from** `$createChannel[]`
 - Fixed the issue with bots not working in threads
 - Added `$startThread[]`
+- Added `$webhookColor[]`
 
 ## July
 - Added `$getTimestamp`
