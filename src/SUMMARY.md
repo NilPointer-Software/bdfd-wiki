@@ -17,6 +17,7 @@
     - [Slash Commands](./guides/slashCommands.md)
     - [Text Splitting](./guides/textSplitting.md)
     - [Variables](./guides/variables.md)
+    - [Webhooks](./guides/webhooks.md)
 
 - [Resources](./resources/bdfdCreation.md)
     - [BDFD Creation](./resources/bdfdCreation.md)
