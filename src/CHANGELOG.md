@@ -17,6 +17,8 @@
 - Fixed the issue with bots not working in threads
 - Added `$startThread[]`
 - Added `$webhookColor[]`
+- Fixed optional field in `$getServerVar[]`
+- Fixed floating points in $onlyIf conditions
 
 ## July
 - Added `$getTimestamp`
