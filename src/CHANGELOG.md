@@ -3,6 +3,23 @@
 
 # 2021
 
+## August
+- Added `$webhookTitle[]`
+- Added `$webhookDescription[]`
+- Added `$webhookFooter[]`
+- Added `$webhookContent[]`
+- Added `$webhookUsername[]`
+- Added `$webhookAvatarURL[]`
+- Added `$webhookCreate[]`
+- **Removed permission check from** `$deleteChannelsByName[]`
+- **Removed permission check from** `$deleteChannels[]`
+- **Removed permission check from** `$createChannel[]`
+- Fixed the issue with bots not working in threads
+- Added `$startThread[]`
+- Added `$webhookColor[]`
+- Fixed optional field in `$getServerVar[]`
+- Fixed floating points in $onlyIf conditions
+
 ## July
 - Added `$getTimestamp`
 - Added support for decimals in the math functions
