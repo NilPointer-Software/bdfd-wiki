@@ -18,7 +18,7 @@
 - Added `$startThread[]`
 - Added `$webhookColor[]`
 - Fixed optional field in `$getServerVar[]`
-- Fixed floating points in $onlyIf conditions
+- Fixed floating points in `$onlyIf[]` conditions
 
 ## July
 - Added `$getTimestamp`

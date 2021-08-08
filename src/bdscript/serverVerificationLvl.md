@@ -1,5 +1,5 @@
 # $serverVerificationLvl
-The server's verification level. Returns `None`, `Low`, `Medium`, `High`, or `Highest`.
+The server's verification level. Returns `None`, `Low`, `Medium`, `High`, or `Very High`.
 
 ## Usage
 ```
