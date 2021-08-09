@@ -19,6 +19,8 @@
 - Added `$webhookColor[]`
 - Fixed optional field in `$getServerVar[]`
 - Fixed floating points in `$onlyIf[]` conditions
+- Added `$webhookDelete[]`
+- Added `$webhookSend[]`
 
 ## July
 - Added `$getTimestamp`
