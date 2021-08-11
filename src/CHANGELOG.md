@@ -22,6 +22,9 @@
 - Added `$webhookDelete[]`
 - Added `$webhookSend[]`
 - **Removed permission check from** `$modifyChannelPerms[]`
+- Made it possible to use multiple `$onInteraction[]`s
+- Added `$onInteraction` callback (without `[]`)
+- Added `$customID`
 
 ## July
 - Added `$getTimestamp`
