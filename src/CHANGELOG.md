@@ -21,6 +21,7 @@
 - Fixed floating points in `$onlyIf[]` conditions
 - Added `$webhookDelete[]`
 - Added `$webhookSend[]`
+- **Removed permission check from** `$modifyChannelPerms[]`
 
 ## July
 - Added `$getTimestamp`
