@@ -26,6 +26,9 @@
 - Added `$onInteraction` callback (without `[]`)
 - Added `$customID`
 - Made it possible to use different scripting languages in callbacks
+- Added `$editThread[]`
+- Added `$threadAddMember[]`
+- Added `$threadRemoveMember[]`
 
 ## July
 - Added `$getTimestamp`
