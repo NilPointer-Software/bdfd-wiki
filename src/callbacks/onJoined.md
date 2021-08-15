@@ -1,6 +1,6 @@
 # $onJoined
 *When a user joins the server, the command is triggered.*\
-`$onJoined[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user joins the server. You must replace 'channelID' with a [vaild channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
+`$onJoined[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user joins the server. You must replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
 
 ## Example
 **#1:** Make the command trigger `$onJoined[channelID]`.\
@@ -36,11 +36,12 @@ enable them in the app *(unless you don't want to use them at all)*.
 **#4:** Make sure `$onJoined[channelID]` is inputted in the 'command trigger' field, not the code.\
 ![image](https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png)
 
-**#5:** Make sure your bot has the `VIEW_CHANNEL`, `EMBED_LINKS`, `SEND_MESSAGES` permission in the channel provided in `$onJoined[]`, and that you inputted a vaild channel ID.
+**#5:** Make sure your bot has the `VIEW_CHANNEL`, `EMBED_LINKS`, `SEND_MESSAGES` permission in the channel provided in `$onJoined[]`, and that you inputted a valid channel ID.
 
 ## Advanced
-Both free and premium users can use `$onJoined[]`, and all users can put `$getServerVar[]` within `$onJoined[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks *(e.g. for custom prefixes)*.\
-If you own a public bot and want to make it so multiple different servers can use `$onJoined[]`. Follow these steps:
+### Per-Server $onJoined
+Both free and premium users can use `$onJoined[]`, and all users can put `$getServerVar[]` within `$onJoined[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks.\
+If you own a public bot and want to make it so multiple different servers can use `$onJoined[]` *(e.g. set their own welcome channel)*, follow these steps:
 
 **#1:** Make a variable named "`welcome`" and the value set to nothing.\
 ![image](https://user-images.githubusercontent.com/69215413/129489884-9338482c-ab9f-4847-ba01-c618ab746091.png)
@@ -48,11 +49,11 @@ If you own a public bot and want to make it so multiple different servers can us
 **#2:** Make a command for setting the welcome channel. Then put the following in your code:
 ```
 $nomention
+$onlyAdmin[You need the admin permission to use that!]
+$argsCheck[>1;Please mention a channel!]
 Welcome channel updated!
 $setServerVar[welcome;$mentionedChannels[1]]
-$argsCheck[>1;Please mention a channel!]
-$onlyAdmin[You need the admin permission to use that!]
 ```
 > **Note:** Servers will need to setup the channel they want the welcome message to send to *(by running a command with the code above)*.
 
-**#3:** Now replace your `$onJoined[CHANNEL ID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
+**#3:** Now replace `$onJoined[CHANNEL ID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
