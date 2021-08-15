@@ -3,7 +3,8 @@
 `$onJoined[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user joins the server. You must replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
 
 ## Example
-**#1:** Make the command trigger `$onJoined[channelID]`.\
+**#1:** Make the command trigger `$onJoined[channelID]`.
+
 ![example1](https://user-images.githubusercontent.com/69215413/129490506-c91a77b7-ed71-4dc5-9460-d4ec409b36d4.png)
 
 **#2:** Input your code/reply text.
@@ -46,7 +47,7 @@ If you own a public bot and want to make it so multiple different servers can us
 **#1:** Make a variable named "`welcome`" and the value set to nothing.\
 ![image](https://user-images.githubusercontent.com/69215413/129489884-9338482c-ab9f-4847-ba01-c618ab746091.png)
 
-**#2:** Make a command for setting the welcome channel. Then put the following in your code:
+**#2:** Make a command for setting the welcome channel, then put the following in your code:
 ```
 $nomention
 $onlyAdmin[You need the admin permission to use that!]
@@ -56,4 +57,4 @@ $setServerVar[welcome;$mentionedChannels[1]]
 ```
 > **Note:** Servers will need to setup the channel they want the welcome message to send to *(by running a command with the code above)*.
 
-**#3:** Now replace `$onJoined[CHANNEL ID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
+**#3:** Now replace `$onJoined[channelID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
