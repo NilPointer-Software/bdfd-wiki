@@ -12,6 +12,7 @@
     - [Embed Indexes](./guides/embedIndexes.md)
     - [Error Handling](./guides/trycatch.md)
     - [HTTP Requests](./guides/httpRequests.md)
+    - [Hyperlinks](./guides/hyperlinks.md)
     - [If Statements](./guides/ifStatements.md)
     - [Select Menu](./guides/selectmenu.md)
     - [Slash Commands](./guides/slashCommands.md)
