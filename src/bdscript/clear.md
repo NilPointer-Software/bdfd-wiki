@@ -19,3 +19,11 @@ $clear[howMany;(optional) userID;(optional) removePinnedMessages (yes/no)]
 - `howMany` - How many messages to delete. (max 100)
 - `userID` - If a userID is provided, the bot will only delete messages from that user. Optional.
 - `removePinnedMessages` - Decides whether to delete pinned messages or not. Default is 'yes'. Optional.
+
+## Example
+```
+$nomention
+$onlyPerms[managemessages;You need the 'MANAGE_MESSAGES' permission to use that!]
+$argsCheck[>1;Please provide how many messages to clear. Usage: !purge (number)]
+$clear[$message]
+```
