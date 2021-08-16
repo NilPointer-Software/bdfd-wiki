@@ -1,54 +1,60 @@
 # $onLeave
-Triggered when a user leaves the server.
+*When a user leaves the server, the command is triggered.*\
+`$onLeave[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server. You must replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
 
 ## Example
-a. Make the command trigger `$onLeave[CHANNEL ID]`.
-> Channel IDs are not channel names! Please provide a [channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
+**#1:** Make the command trigger `$onLeave[channelID]`.
 
-![image](https://user-images.githubusercontent.com/69215413/118005256-3b469300-b318-11eb-8664-9ba03bcd537d.png)
+![example1](https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png)
 
-b. Input your reply message/code.
+**#2:** Input your code/reply text.
+> 🧙‍♂️ You can use functions like `$username`, `$authorAvatar`, `$authorID`, `$membersCount`, `$serverName[$guildID]` here.
 
-![image](https://user-images.githubusercontent.com/69215413/118005506-721ca900-b318-11eb-8894-4a299290a1cd.png)
+![example2](https://user-images.githubusercontent.com/69215413/129492763-1261a971-4d4c-4f33-9e78-757595484672.png)
 
-c. Now you have a leave message!
-![image](https://user-images.githubusercontent.com/69215413/118005457-67faaa80-b318-11eb-94c0-dbb96bdb7577.png)
+**#3:** Now you have a leave message! ✨\
+![example3](https://user-images.githubusercontent.com/69215413/129492739-3019099d-e2d9-4c94-97b8-65190760cbf4.png)\
+*Not Working? Check out the [Troubleshooting](#troubleshooting) section.*
 
 ## Troubleshooting
-1: You must have at least version 1.17.9 of the app.
+#### Is $onLeave bugged or not working? 
 
-2: Go to [Discord Developer Portal](https://discord.com/developers/applications) then open your bot's page and enable member intents.
+**#1:** You must have atleast version `1.17.9` of the app.
 
-![image](https://user-images.githubusercontent.com/69215413/118007092-d1c78400-b319-11eb-8066-4f26c564f673.png)
-![image](https://user-images.githubusercontent.com/69215413/118007181-e86ddb00-b319-11eb-958a-6f22e93b253f.png)
+**#2:** Go to [Discord Developer Portal](https://discord.com/developers/applications), go to your bot's page, and enable Member Intents.\
+![image](https://user-images.githubusercontent.com/69215413/113423563-b83b3000-939c-11eb-8a71-8eaa53d20f2d.png)\
+![image](https://user-images.githubusercontent.com/69215413/113423634-d6089500-939c-11eb-8d2c-083ac87ff66b.png)
 
+**#3:** Open app and go to bot settings, then enable Member Intents.\
+![image](https://user-images.githubusercontent.com/69215413/129490310-1653423f-455a-462e-82cb-43a13fa5d899.png)\
+![image](https://user-images.githubusercontent.com/69215413/129490262-01fbcaac-aa28-4d8a-9ff1-3391d8b78f29.png)\
+![image](https://user-images.githubusercontent.com/69215413/129490261-bdaf1dab-f3d0-4635-92cc-2aa4af02df59.png)
 
-3: Open the app and go to bot settings then enable member intents.
-![image](https://user-images.githubusercontent.com/69215413/118007228-f3c10680-b319-11eb-94f0-3a9a6ba978b7.png)
-![image](https://user-images.githubusercontent.com/69215413/118007256-fb80ab00-b319-11eb-9429-656f0ab87ad2.png)
-![image](https://user-images.githubusercontent.com/69215413/118007288-04717c80-b31a-11eb-8899-325d41c9003a.png)
+> **Note:** Enabled intents in the app should reflect the intents enabled in the Discord Developer Portal.\
+**For example:** If you have `members intent` enabled in the Discord Developer Portal then you should respectively
+enable them in the app *(unless you don't want to use them at all)*.
 
-> Note: Enabled intents in the app should reflect the intents enabled in Discord's dashboard.  For example: If you have members intent enabled in Discord's dashboard then you should respectively enable them in the app (unless you don't want to use them at all).
+**#4:** Make sure `$onLeave[channelID]` is inputted in the 'command trigger' field, not the code.\
+![image](https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png)
 
-4: Make sure `$onLeave[CHANNEL ID]` is inputted in the 'command trigger' field and has the correct usage.
-
-5: Make sure your bot has permission to speak in the channel provided in `$onLeave[]`.
-
-6: You can not use more that 1 `$onLeave[]` trigger per bot.
+**#5:** Make sure your bot has the `VIEW_CHANNEL`, `EMBED_LINKS`, `SEND_MESSAGES` permission in the channel provided in `$onLeave[]`, and that you inputted a valid channel ID.
 
 ## Advanced
-Both free and premium users can use `$onLeave[]`. Also, all users can put `$getServerVar[]` within `$onLeave[]`. However, free users can not use `$getServerVar[]` outside of callbacks.
+### Per-Server $onLeave
+Both free and premium users can use `$onLeave[]`, and all users can put `$getServerVar[]` within `$onLeave[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks.\
+If you own a public bot and want to make it so multiple different servers can use `$onLeave[]` *(e.g. set their own leave message channel)*, follow these steps:
 
-If you own a global bot and want to make it so multiple different servers can use `$onLeave[]`. Follow these steps:
+**#1:** Make a variable named "`leave`" and the value set to nothing.\
+![image](https://user-images.githubusercontent.com/69215413/129492681-5a50ca36-a76d-4add-a4d9-a64c29d0ed33.png)
 
-1: Make a variable named "leave" and the value set to nothing.
-
-2: Make a command for setting the leave channel. Then put the following in your code/reply text:
+**#2:** Make a command for setting the leave channel, then put the following in your code:
 ```
-$setServerVar[leave;$mentionedChannels[1]]
+$nomention
+$onlyAdmin[You need the admin permission to use that!]
 $argsCheck[>1;Please mention a channel!]
+Leave channel updated!
+$setServerVar[leave;$mentionedChannels[1]]
 ```
+> **Note:** Servers will need to setup the channel they want the leave message to send to *(by running a command with the code above)*.
 
-> Note: Servers will need to setup the channel they want the leave message to send to. (by running a command with the code above).
-
-3: Now replace $onLeave[CHANNEL ID] in your leave command trigger, with `$onLeave[$getServerVar[leave]]` and your all set!
+**#3:** Now replace `$onLeave[channelID]` in your leave command trigger, with `$onLeave[$getServerVar[leave]]` and you're all set!
