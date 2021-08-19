@@ -29,6 +29,8 @@
 - Added `$editThread[]`
 - Added `$threadAddMember[]`
 - Added `$threadRemoveMember[]`
+- Added `$getEmbedData[]`
+- Made it possible to use block functions (`$if[]`, `$try`, etc.) inside function arguments in BDScript 2
 
 ## July
 - Added `$getTimestamp`
