@@ -8,5 +8,5 @@ A wiki page that explains BDFD functions, callbacks, and features. This is the G
 ### Resources
 - [mdBook](https://github.com/rust-lang/mdBook)
 - [Markdown Guide](https://guides.github.com/features/mastering-markdown/)
-- [BDFD Server](https://discord.gg/nvBur3ne)
+- [BDFD Server](https://botdesignerdiscord.com/discord)
 - [BDFD Website](https://botdesignerdiscord.com)
