@@ -1,7 +1,7 @@
 # Threads
-![Screenshot 2021-08-20 12 26 10 PM](https://user-images.githubusercontent.com/69215413/130264464-d976d579-b480-46e5-8dab-abf26a2d4829.png)
+![example](https://user-images.githubusercontent.com/69215413/130264464-d976d579-b480-46e5-8dab-abf26a2d4829.png)
 
-Threads are a new Discord feature which allows for subset-channels within a channel. Threads are great for separating different conversations in one channel. This wiki will explain how you can intergrate threads in your bot.
+Threads are a new Discord feature which allows for subset-channels within a channel. Threads are great for separating different conversations in one channel. This wiki will explain how you can integrate threads in your bot.
 
 ### Creating a Thread
 ```php
