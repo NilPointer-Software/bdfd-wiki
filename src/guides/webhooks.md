@@ -5,7 +5,8 @@ This wiki explains how to create and use webhooks in BDFD.
 ```
 $webhookCreate[channelID;username;avatarURL (can be left empty)]
 ```
-Creates a webhook in the provided 'channelID', with the inputted 'username' and 'avatarURL' assests. This function returns the URL of the newly created webhook.
+Creates a webhook in the provided 'channelID', with the inputted 'username' and 'avatarURL' assests. This function returns the URL of the newly created webhook **(webhook URLs should be kept private, treat them like a password)**.
+> **Note:** Only ten webhooks can be created per channel.
 
 ## Editing A Webhook
 ```
@@ -27,6 +28,18 @@ You can send messages via a webhook using the following functions:
 - `$webhookContent[webhookURL;text]` - The webhook non-embedded message content.
 - `$webhookColor[webhookURL;colorHex]` - The color of the webhook embed.
 
+Alternatively, you can use `$webhookSend[]` for more options and condensement:
+```
+$webhookSend[webhookURL;content;title;titleURL;description;color;author;authorIcon;footer;footerIcon;thumbnail;image;addTimestamp (yes/no)]
+```
+> **Note:** Uneeded fields can be left empty. 
+
+## Deleting A Webhook
+```
+$webhookDelete[webhookURL]
+```
+Deletes the provided webhook.
+
 ## Example
 ```
 $nomention
@@ -38,7 +51,7 @@ $c[❗️This example requires BDScript 2 enabled❗️]
 __Explaination:__
 
 This code is storing the newly created webhook URL returned from `$webhookCreate[]` *(using $var[])*. Then, in the rest of the code `$var[webhookURL]` was called to get the webhook URL, which allowed the webhook message to send using `$webhookContent[]`.
-> 🧙‍♂️ Remember, you need to be in BDScript 2 mode to use `$var[]`!
+> 🧙‍♂️ Remember, you need to be in BDScript 2 mode to use `$var[]`!\
 
 __Output:__
 
