@@ -3,7 +3,7 @@ Fetches embed data from the provided message.
 
 ## Usage
 ```
-$getEmbedData[channelID;messageID;embedIndex;embedProperty (title/description/footer)]
+$getEmbedData[channelID;messageID;embedIndex;embedProperty (title/description/footer/color/image/timestamp)]
 ```
 
 ### Breakdown
