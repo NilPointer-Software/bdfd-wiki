@@ -32,6 +32,7 @@
 - Added `$getEmbedData[]`
 - Made it possible to use block functions (`$if[]`, `$try`, etc.) inside function arguments in BDScript 2
 - Fixed preprocessor failures in some corner cases in BDScript 2
+- Fixed a bug with block-functions adding extra new line in BDScript 2
 
 ## July
 - Added `$getTimestamp`
