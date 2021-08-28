@@ -30,7 +30,7 @@ At first glimpse, you'd assume this makes the link more trustworthy. But, it cou
 **Too good to be true?**\
 Free Nitro scams are extremely common. If you get a DM from a random user/bot telling you that you won something or can earn Nitro, just disregard it.
 
-**Asking for your password/user token?**
+**Asking for your password/user token?**\
 If a site is asking for your Discord account information—don't input it. You should only share your Discord password via Discord's [official login page](http://discord.com/login). Discord will never ask for your user token. 
 
 #### System Messages
