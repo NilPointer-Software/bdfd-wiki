@@ -1,9 +1,11 @@
 # Avoiding Bot Currency Inflation
-If you own a Discord bot that has a currency or economy feature, you are applicable to currency inflation. Inflation occurs when the supply of money is greater than the demand for money, causing trade or shop values to be increased. Bot currency inflation can cause new users of your currency system to get frustrated or users overall being uninteresting in your currency system. This article will share some helpful insights about preventing currency inflation.
+If you own a Discord bot that has a currency or economy feature, you are applicable to currency inflation. Inflation occurs when the supply of money is greater than the demand for money, causing trade or shop values to be increased. Bot currency inflation can cause new users of your currency system to get frustrated or users overall being uninterested in your currency system. This article will share some helpful insights about preventing currency inflation.
 
 ### Balance Gaining and Losing Money
-We notice frequently that less matured bots only feature ways to make money, not lose it. In any economic system, it is needed for users to lose money or be "broke"; else the currency has little value. For example, if you have a `fish` command that always grants you 1-5 fish, you should create a chance that the user will not catch any fish or lose money/items. This is made easy with [if statements](./guides/ifStatements.md).
+We notice frequently that some bots only feature ways to make money, not lose it. In any economic system, it is needed for users to lose money; else the currency has little value. For example, if you have a `fish` command that always grants you 1-5 fish, you should create a chance that the user will not catch any fish or lose money/items. This is made easy with [if statements](./guides/ifStatements.md).
 ```
+$nomention
+$cooldown[1m;Please wait %time%, then use that command again!]
 $if[$random[1;11]!=6]
 You went fishing and caught `$random[1;6]` fish!
 $setUserVar[Fish;$sum[$getUserVar[Fish;$authorID];$random[1;6]];$authorID]
@@ -13,7 +15,6 @@ $if[$random[1;11]==6]
 Ha ha! You fell in the water and lost your $randomText[fishing rod;bait;cooler]. You lost `$$random[100;1000]`!
 $setUserVar[Money;$sub[$getUserVar[Money;$authorID];$random[500;1000]];$authorID]
 $endif
-$cooldown[1m;Please wait %time%, then use that command again!]
 ```
 > "Money" shall be replaced with the name our your currency variable. "Fish" shall be replaced with your fish variable name. Using this code for a global-user economy: replace setUserVar/setUserVar with setVar and getVar, as well as, cooldown with globalCooldown.
 
@@ -51,7 +52,6 @@ $c[>>> THIS CODE REQUIRES UNSTABLE MODE ENABLED <<<]
 ```
 > "Money" shall be replaced with the name our your currency variable. Using this code for a global-user economy: replace setUserVar/setUserVar with setVar and getVar, as well as, cooldown with globalCooldown.
 
-
 ### Cooldowns
 Having cooldowns on currency commands is essential! Without cooldowns, commands can be spammed by users which will cause users to gain lots of money; with little effort. You can use [$cooldown[]](./bdscript/cooldown.md) or [$globalCooldown[]](./bdscript/globalCooldown.md) for cooldowns. Here's an example:
 ```
@@ -68,17 +68,17 @@ $setUserVar[Money;$$randomText[sum;sub][$getUserVar[Money;$authorID];$divide[$re
 $description[**You $replaceText[$replaceText[$randomText[sum;sub];sum;earned;1];sub;lost;1] $$numberSeparator[$divide[$replaceText[$message[1];,;;-1];$randomText[1;2;3;4]]]**]
 $footer[$replaceText[$replaceText[$randomText[sum;sub];sum;Won;1];sub;Lost;1] by $replaceText[$replaceText[$replaceText[$replaceText[$randomText[1;2;3;4];1;100%;1];2;50%;1];3;33%;1];4;25%;1]]
 $color[$replaceText[$replaceText[$randomText[sum;sub];sum;#31F325;1];sub;#FF483F;1]]
-$onlyIf[$isNumber[$replaceText[$message[1];,;;-1]]==true;Please provide a number between 300 and 200,000.]
+$onlyIf[$isNumber[$replaceText[$message[1];,;;-1]]==true;Please provide a number between 250 and 200,000.]
 $onlyIf[$checkContains[$message;-]==false;]
-$argsCheck[>1;Incorrect usage! correct usage: `!bet (number)`]
+$argsCheck[>1;Incorrect usage!  Correct usage: `!bet (number)`]
 $onlyIf[$getUserVar[Money;$authorID]>=$replaceText[$message[1];,;;-1];You don't have enough money!]
-$onlyIf[$replaceText[$message[1];,;;-1]<=200000;You can't bet more than 200,000]
-$onlyIf[$replaceText[$message[1];,;;-1]>=300;The minimum bet is 300!]
+$onlyIf[$replaceText[$message[1];,;;-1]<=200000;You can't bet more than 200,000!]
+$onlyIf[$replaceText[$message[1];,;;-1]>=250;The minimum bet is 250!]
 $cooldown[10s;You need to wait %time% to bet again!]
 $c[>>> THIS CODE REQUIRES UNSTABLE MODE ENABLED <<<]
 ```
 > "Money" shall be replaced with the name our your currency variable. Using this code for a global-user economy: replace setUserVar/setUserVar with setVar and getVar, as well as, cooldown with globalCooldown.
 
-### Summary
+### Conclusion
 Implementing anti-inflation features within your bot's currency is a must, as inflation can affect user engagement with your currency (and bot overall). Hopefully, this article shared some helpful insight about preventing currency inflation!
 > 🧙‍♂️ Have more questions? Ask in our [community server](https://botdesignerdiscord.com/discord).
