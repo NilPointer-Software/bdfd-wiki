@@ -35,6 +35,7 @@
 - Fixed a bug with block-functions adding extra new line in BDScript 2
 - Fixed and optimised `$setVar[]`
 - Added `$sendEmbedMessage[]`
+- Fixed condition parsing in `$if[]` for the normal BDScript and BDScript Unstable (BDScript 2 didn't have any issues)
 
 ## July
 - Added `$getTimestamp`
