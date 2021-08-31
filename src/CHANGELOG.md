@@ -36,6 +36,7 @@
 - Fixed and optimised `$setVar[]`
 - Added `$sendEmbedMessage[]`
 - Fixed condition parsing in `$if[]` for the normal BDScript and BDScript Unstable (BDScript 2 didn't have any issues)
+- Made command saving faster
 
 ## July
 - Added `$getTimestamp`
