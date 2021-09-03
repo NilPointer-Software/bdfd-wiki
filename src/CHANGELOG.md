@@ -33,6 +33,10 @@
 - Made it possible to use block functions (`$if[]`, `$try`, etc.) inside function arguments in BDScript 2
 - Fixed preprocessor failures in some corner cases in BDScript 2
 - Fixed a bug with block-functions adding extra new line in BDScript 2
+- Fixed and optimised `$setVar[]`
+- Added `$sendEmbedMessage[]`
+- Fixed condition parsing in `$if[]` for the normal BDScript and BDScript Unstable (BDScript 2 didn't have any issues)
+- Made command saving faster
 
 ## July
 - Added `$getTimestamp`
