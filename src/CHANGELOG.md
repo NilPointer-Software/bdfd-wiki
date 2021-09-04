@@ -5,6 +5,7 @@
 
 ## September
 - Updated ToS
+- Fixed `$executionTime` not working in embeds
 
 ## August
 - Added `$webhookTitle[]`
