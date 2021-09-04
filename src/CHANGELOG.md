@@ -3,6 +3,9 @@
 
 # 2021
 
+## September
+- Updated ToS
+
 ## August
 - Added `$webhookTitle[]`
 - Added `$webhookDescription[]`
