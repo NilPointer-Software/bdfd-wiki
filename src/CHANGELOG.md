@@ -6,6 +6,8 @@
 ## September
 - Updated ToS
 - Fixed `$executionTime` not working in embeds
+- Added `$botNode`
+- Added `$isBanned[]`
 
 ## August
 - Added `$webhookTitle[]`
