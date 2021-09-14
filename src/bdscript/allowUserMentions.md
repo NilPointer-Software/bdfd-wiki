@@ -1,4 +1,4 @@
-# $allowRoleMentions
+# $allowUserMentions
 Disables the pings for the users not provided, which means the user will be 'fake pinged' *(the user will be pinged, but the user will not get notified of the ping)*. While, the inputted allowed users are ones that can be pinged *(and it will work like a regular ping)*.
 
 ## Usage
