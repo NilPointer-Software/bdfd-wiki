@@ -15,11 +15,12 @@ Hello!
 $c[Bot replies with "Hello" when the 'click_me' button is clicked by a user.]
 $endif
 ```
-> Using `$onInteraction` (with brackets) can help save command space.
-custom IDs must be unique per component, multiple buttons on the same message must not share the same custom ID. custom ID is a string of max 100 characters.
+> 🧙🏼‍♂️ Using `$onInteraction` (with brackets) can help save command space.
+
+Custom IDs must be unique per component, multiple buttons on the same message must not share the same custom ID. Custom ID is a string of max 100 characters.
 > Custom IDs may also be referred to as interaction IDs.
 
 ## Examples
-- Buttons
-- Author-Only Buttons
-- Select Menu
+- [Buttons](https://nilpointer-software.github.io/bdfd-wiki/guides/buttons.html)
+- [Author-Only Buttons](https://nilpointer-software.github.io/bdfd-wiki/bdscript/customID.html)
+- [Select Menu](https://nilpointer-software.github.io/bdfd-wiki/guides/selectmenu.html)
