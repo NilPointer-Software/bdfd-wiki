@@ -22,7 +22,7 @@ $addSelectMenuOption[selectMenuCustomID;label;value;description;default (yes/no)
 - `label` - The name of this option.
 - `description` - The description of this option.
 - `value` - The data that gets passed to [`$onInteraction[]`](./callbacks/onInteraction.md)/[`$onInteraction`](./callbacks/onInteraction.md) callback. **The value has to be unique in the select menu!**
-> When used in `$onInteraction[]`/`$onInteraction`, `$message` contains `value`'s data. It can be used to tell which option was selected, that can be later used within a [if statement](./bdscript/ifStatements.md). 
+> When used in `$onInteraction[]`/`$onInteraction`, `$message` contains `value`'s data. It can be used to tell which option was selected, that can be later used within a [if statement](./guides/ifStatements.md). 
 - `default` - Whether the option be selected by default or not. **There can be only one default option per select menu!**
 - `emoji` - The emoji shows up next to the `label`, leave the field empty if not needed.
 - `messageID` - ID of a message that should have this option added to it, by default it's the bot's response.
