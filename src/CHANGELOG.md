@@ -9,6 +9,7 @@
 - Added `$botNode`
 - Added `$isBanned[]`
 - Fixed a problem with `$charCount[]` having problems with unicode
+- Added `$channelType[]`
 
 ## August
 - Added `$webhookTitle[]`
