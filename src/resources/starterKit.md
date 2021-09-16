@@ -32,6 +32,8 @@ Commands Count: $commandsCount]
 $nomention
 $title[$username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]]]
 $image[$userAvatar[$mentioned[1;yes]]
+```
+
 ### Moderation
 #### Ban Command
 ```
