@@ -13,7 +13,7 @@ wip
 ```
 $nomention
 $reply
-Pong!
+🏓 Pong!
 ```
 
 #### Statics Command
