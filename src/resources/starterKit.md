@@ -87,10 +87,71 @@ $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;-addreactions;$guild
 Successfully locked <#$mentionedChannels[1;yes]>!
 ```
 
-#### Unlocked
+#### Unlock Command
 ```
 $nomention
 $onlyPerms[managechannels;You need the `MANAGE_CHANNELS` permission to use that command!]
 $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;+addreactions;$guildID]
 Successfully unlocked <#$mentionedChannels[1;yes]>!
 ```
+
+#### Slowmode Command
+```
+$nomention
+$onlyPerms[managechannels;You need the `MANAGE_CHANNELS` permission to use that command!]
+$slowmode[$mentionedChannels[1;yes];$message[1]]
+Set <#$mentionedChannels[1;yes]>'s slowmode to `$message[1]`!
+```
+
+### Economy: Local
+
+
+#### Balance Command
+```
+$nomention
+$username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]] currently has `$getUserVar[money;$mentioned[1;yes]]` coins!
+```
+
+#### Work Command
+```
+$nomention
+$globalCooldown[1h;Please wait %time%, then use that command again!]
+$setUserVar[money;$sum[$getUserVar[money;$authorID];$random[300;1001]];$authorID]
+You worked for 1 hour and earned `$random[300;1001]` coins!
+```
+
+
+### Deposit Command
+```
+$nomention
+$argsCheck[>1;Please provide the needed arguments! Usage: `!deposit (number/all)`]
+$if[$getUserVar[money;$authorID]==0]
+You have nothing to deposit!
+$else
+$if[$checkContains[$toLowercase[$noMentionMessage];all;max]==true]
+$setUserVar[bank;$getUserVar[money;$authorID]]
+$setUserVar[money;$sub[$getUserVar[money;$authorID];$getUserVar[money;$authorID]];$authorID]
+
+$else
+$if[$isNumber[$noMentionMessage]==false]
+Failed to convert `$noMentionMessage` to a valid number!
+
+$else
+$if[$getUserVar[coins]>=$noMentionMessage]
+$setUserVar[bank;$sum[$getUserVar[bank;$authorID];$noMentionMessage];$authorID]
+$setUserVar[money;$sub[$getUserVar[money;$authorID];$noMentionMessage];$authorID]
+Deposited `$noMentionMessage` coins into your bank!
+
+$else
+$if[$getUserVar[money;$authorID]==0]
+You have nothing to deposit!
+
+$else
+$if[$getUserVar[money;$authorID]<=$noMentionMessage]
+You can not deposit more money than you have!
+$endif
+$endif
+$endif
+```
+
+### Economy: Global
