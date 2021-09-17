@@ -1,4 +1,4 @@
-# Message Content Privileged Intents
+# Message Content Privileged Intent
 **In April of 2022**, access to message content will become a Privileged Intent—like presence and guild member data—for developers with verified Discord bots.
 > **Note:** We will roll-out more information on this topic, as Discord provides it. Most information in this article comes from [Discord's Developer Support Article](https://support-dev.discord.com/hc/en-us/articles/4404772028055).
 
