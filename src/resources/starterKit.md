@@ -1,10 +1,12 @@
 # BDFD-Starter Kit
 wip
 
-## Sharecode
-wip
+> **Note:** Economy features are not built-in to the sharecode, this is because you must choose whether to have a global or local economy. You may paste codes from [Economy#Global](#economy-global) or [Economy#Local](#economy-local).
 
-### Using the Sharecode
+## Sharecode
+Run `s!sharecode` in our [community server](https://botdesignerdiscord.com/discord) to get the current up-to-date sharecode.
+
+### Configuration
 wip
 
 ## Features
