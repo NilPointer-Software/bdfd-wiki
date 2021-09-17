@@ -251,3 +251,36 @@ $footer[$randomText[Imagine Begging;Oh, You Poor Little Beggar;Ew Begging]]
 $addTimestamp
 $reply
 ```
+
+#### Deposit Command
+```
+$nomention
+$argsCheck[>1;Please provide the needed arguments! Usage: `!deposit (number/all)`]
+
+$if[$getVar[money;$authorID]==0]
+You have nothing to deposit!
+
+$else
+$if[$checkContains[$toLowercase[$noMentionMessage];all;max]==true]
+$setUserVar[bank;$getVar[money;$authorID]]
+$setVar[money;$sub[$getVar[money;$authorID];$getVar[money;$authorID]];$authorID]
+
+$else
+$if[$isNumber[$noMentionMessage]==false]
+Failed to convert `$noMentionMessage` to a valid number!
+
+$else
+$if[$getUserVar[coins]>=$noMentionMessage]
+$setUserVar[bank;$sum[$getUserVar[bank;$authorID];$noMentionMessage];$authorID]
+$setVar[money;$sub[$getVar[money;$authorID];$noMentionMessage];$authorID]
+Deposited `$noMentionMessage` coins into your bank!
+
+$else
+$if[$getVar[money;$authorID]<=$noMentionMessage]
+You can not deposit more money than you have!
+$endif
+$endif
+$endif
+$endif
+$endif
+````
