@@ -4,10 +4,25 @@ wip
 > **Note:** Economy features are not built-in to the sharecode, this is because you must choose whether to have a global or local economy. You may paste codes from [Economy#Global](#economy-global) or [Economy#Local](#economy-local).
 
 ## Sharecode
-Run `s!sharecode` in our [community server](https://botdesignerdiscord.com/discord) to get the current up-to-date sharecode.
+**Run `s!sharecode` in our [community server](https://botdesignerdiscord.com/discord) to get the current up-to-date sharecode.**
 
 ### Configuration
-wip
+**#1:** Go to the *Bot Designer for Discord* app.
+
+**#2:** Click "Create new bot".\
+![](https://user-images.githubusercontent.com/69215413/133850258-838f56d8-1d22-4f2a-9332-2a1cadb40858.PNG)
+
+**#3:** Input your bot's name and token. Then, provide the sharecode you got from `s!sharecode`. Finally, agree to Discord's and BDFD's Terms of Service.\
+![](https://user-images.githubusercontent.com/69215413/133850653-584529f7-f480-4bc7-8411-01440c8fce48.PNG)\
+![](https://user-images.githubusercontent.com/69215413/133850765-399e1155-a1f4-4325-b168-d2999d4223fd.PNG)
+
+**#4:** Edit the `botOwnerID` variable - Set the value to your [user ID](https://dis.gd/findmyid).\
+![](https://user-images.githubusercontent.com/69215413/133851404-04afffad-1b85-43da-84e4-1ec97dea4e56.PNG)\
+![](https://user-images.githubusercontent.com/69215413/133851500-387f4f6e-58b3-4e74-b402-cf12080d8bdc.PNG)\
+![](https://user-images.githubusercontent.com/69215413/133851597-3a456c0b-250e-4453-85ba-d1aaf395df5d.PNG)\
+![](https://user-images.githubusercontent.com/69215413/133851727-cd054072-5ad1-408e-9707-8c41b67e5365.PNG)\
+![](https://user-images.githubusercontent.com/69215413/133851785-855436d8-fe6b-42d2-a5bf-4f85d2da03cd.PNG)
+
 
 ## Features
 ### Core
