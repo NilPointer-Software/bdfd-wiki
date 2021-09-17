@@ -162,8 +162,26 @@ $setUserVar[money;$sum[$getUserVar[money;$authorID];$random[300;1001]];$authorID
 You worked for 1 hour and earned `$random[300;1001]` coins!
 ```
 
+#### Beg Command
+```
+$nomention
+$cooldown[1m;❌ Please wait %time% then use that command again!]
+$if[$random[1;5]!=2]
+$description[You begged $randomText[someone;a moderator;<@$serverOwner>;your friends] and gained `$random[50;301]` coins!]
+$setUserVar[Money;$sum[$getUserVar[Money;$authorID];$random[50;301]];$authorID]
+$endif
 
-### Deposit Command
+$if[$random[1;5]==2]
+$description[You attempted begging but didn't get anything!]
+$endif
+
+$title[Begging]
+$footer[$randomText[Imagine Begging;Oh, You Poor Little Beggar;Ew Begging]]
+$addTimestamp
+$reply
+```
+
+#### Deposit Command
 ```
 $nomention
 $argsCheck[>1;Please provide the needed arguments! Usage: `!deposit (number/all)`]
@@ -197,3 +215,22 @@ $endif
 ```
 
 ### Economy: Global
+
+#### Beg Command
+```
+$nomention
+$globalCooldown[1m;❌ Please wait %time% then use that command again!]
+$if[$random[1;5]!=2]
+$description[You begged $randomText[someone;a moderator;<@$serverOwner>;your friends] and gained `$random[50;301]` coins!]
+$setVar[Money;$sum[$getVar[Money;$authorID];$random[50;301]];$authorID]
+$endif
+
+$if[$random[1;5]==2]
+$description[You attempted begging but didn't get anything!]
+$endif
+
+$title[Begging]
+$footer[$randomText[Imagine Begging;Oh, You Poor Little Beggar;Ew Begging]]
+$addTimestamp
+$reply
+```
