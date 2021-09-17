@@ -125,8 +125,10 @@ You worked for 1 hour and earned `$random[300;1001]` coins!
 ```
 $nomention
 $argsCheck[>1;Please provide the needed arguments! Usage: `!deposit (number/all)`]
+
 $if[$getUserVar[money;$authorID]==0]
 You have nothing to deposit!
+
 $else
 $if[$checkContains[$toLowercase[$noMentionMessage];all;max]==true]
 $setUserVar[bank;$getUserVar[money;$authorID]]
@@ -143,12 +145,10 @@ $setUserVar[money;$sub[$getUserVar[money;$authorID];$noMentionMessage];$authorID
 Deposited `$noMentionMessage` coins into your bank!
 
 $else
-$if[$getUserVar[money;$authorID]==0]
-You have nothing to deposit!
-
-$else
 $if[$getUserVar[money;$authorID]<=$noMentionMessage]
 You can not deposit more money than you have!
+$endif
+$endif
 $endif
 $endif
 $endif
