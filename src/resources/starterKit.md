@@ -30,8 +30,21 @@ Commands Count: $commandsCount]
 #### Avatar Command
 ```
 $nomention
-$title[$username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]]]
-$image[$userAvatar[$mentioned[1;yes]]
+$title[$username[$findUser[$message]]#$discriminator[$findUser[$message]]'s Avatar]
+$image[$userAvatar[$findUser[$message]]?size=4096]
+$addButton[no;$userAvatar[$findUser[$message]]?size=2048;Download;link;no;]
+```
+
+#### Roll Command
+```
+$nomention
+$if[$isNumber[$message[1]]==false]
+🎲 You rolled `$random[1;7]` 
+$endif
+
+$if[$isNumber[$message[1]]==true]
+🎲 You rolled `$random[1;$sum[$message[1];1]]`
+$endif
 ```
 
 ### Moderation
@@ -102,6 +115,35 @@ $onlyPerms[managechannels;You need the `MANAGE_CHANNELS` permission to use that 
 $slowmode[$mentionedChannels[1;yes];$message[1]]
 Set <#$mentionedChannels[1;yes]>'s slowmode to `$message[1]`!
 ```
+
+### Developer-Only
+#### Eval Command
+```
+$nomention
+$onlyForIDs[YOUR_ID;]
+$eval[$noMentionMessage]
+```
+> Replace `YOUR_ID` with your Discord user ID.
+
+### Leave-Server Command
+```
+$nomention
+$onlyForIDs[YOUR_ID;❌ Only my developer can use that command!]
+$onlyIf[$guildExists[$message]==true;❌ The 'serverID' provided doesn't exist. Usage: `!leave (serverID)`]
+✅ Successfully left server: `$serverName[$message]`
+$botLeave[$message]
+```
+> Replace `YOUR_ID` with your Discord user ID.
+
+### Server-Names Command
+```
+$nomention
+$onlyForIDs[$getVar[botOwnerID];❌ Only my developer can use that!]
+$serverNames
+```
+> **Note:** `$serverNames` returns a maxium of 10 servers at a time.
+
+> Replace `YOUR_ID` with your Discord user ID.
 
 ### Economy: Local
 
