@@ -185,7 +185,7 @@ $nomention
 $cooldown[1m;❌ Please wait %time% then use that command again!]
 $if[$random[1;5]!=2]
 $description[You begged $randomText[someone;a moderator;<@$serverOwner>;your friends] and gained `$random[50;301]` coins!]
-$setUserVar[Money;$sum[$getUserVar[Money;$authorID];$random[50;301]];$authorID]
+$setUserVar[money;$sum[$getUserVar[money;$authorID];$random[50;301]];$authorID]
 $endif
 
 $if[$random[1;5]==2]
@@ -239,7 +239,7 @@ $nomention
 $globalCooldown[1m;❌ Please wait %time% then use that command again!]
 $if[$random[1;5]!=2]
 $description[You begged $randomText[someone;a moderator;<@$serverOwner>;your friends] and gained `$random[50;301]` coins!]
-$setVar[Money;$sum[$getVar[Money;$authorID];$random[50;301]];$authorID]
+$setVar[money;$sum[$getVar[money;$authorID];$random[50;301]];$authorID]
 $endif
 
 $if[$random[1;5]==2]
