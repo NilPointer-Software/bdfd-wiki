@@ -12,6 +12,7 @@
 - Added `$channelType[]`
 - Added `$async[]` block function and `$endasync`
 - Added `$await[]`
+- Added `$sort[]`
 
 ## August
 - Added `$webhookTitle[]`
