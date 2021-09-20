@@ -58,7 +58,7 @@ $random // returns 1
 ```
 
 ## Enabling BDScript 2
-**#1:** Go to user settings, and enable "Features for advanced users".
+**#1:** Go to user settings, and enable "Features for advanced users".\
 ![](https://user-images.githubusercontent.com/69215413/133001619-290315aa-3c87-4a73-b417-73e13d142437.PNG)\
 ![](https://user-images.githubusercontent.com/69215413/133001665-7a22d15c-b53c-4b2e-bd91-f7678ca4d2ca.PNG)
 
