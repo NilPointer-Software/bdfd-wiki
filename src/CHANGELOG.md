@@ -13,6 +13,8 @@
 - Added `$async[]` block function and `$endasync`
 - Added `$await[]`
 - Added `$sort[]`
+- Added `$userPerms[]`
+- Added `$serverNames[]`
 
 ## August
 - Added `$webhookTitle[]`
