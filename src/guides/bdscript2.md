@@ -27,6 +27,9 @@ This will execute every function that has been provided by a user.
 This works in a very similar way to the equivalents available in other programming languages.\
 You can read more about it [here](./trycatch.md).
 
+### $async
+Runs functions asynchronously. Read [this](./async.md) for more information.
+
 ### $elseif
 Read [this](./ifStatements.md) for more information.
 
