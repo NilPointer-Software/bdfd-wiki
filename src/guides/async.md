@@ -1,15 +1,14 @@
 # Async
-Runs functions in the background. It can speed up your commands by a lot!
+Runs functions in the background. Using async features properly can optimize your code and make it faster!
+> **Warning:** Async features only work in [BDScript 2](./bdscript2.md).
 
-> **Warning:** works only in [BDScript 2](./bdscript2.md)
-
-## Breakdown
-- Use `$async[name]` to start async block. The name has to be unique. Functions inside async block run in the background without blocking the command's thread.
+### Breakdown
+- Use `$async[name]` to start an async block. The name must be unique to the block. Functions inside async blocks run in the background without blocking the command's thread.
 - Use `$endasync` to end async block.
 - Use `$await[name]` to wait for the async block's result.
 
-## Examples
-### #1
+### Examples
+#### Example #1
 ```php
 $async[test]
   $setVar[money;0]
@@ -19,7 +18,7 @@ $endasync
 Money set to 0
 ```
 
-### #2
+#### Example #2
 ```php
 $async[test1]
   $setVar[banned;1]
