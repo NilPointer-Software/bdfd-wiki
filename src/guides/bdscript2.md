@@ -13,9 +13,9 @@ That's where **BDScript 2** comes in. This edition of BDScript executes commands
 Besides that, **BDScript 2** has new features like `$eval[]`, `$try`/`$catch`/`$error[]`, and many more.\
 This edition is still rough on edges but we intend to polish it, and eventually make it the default scripting mode in the app.
 
-
 ## Features
-> Features which can only be used in BDScript 2.
+Features which can only be used in BDScript 2.
+
 ### $eval[]
 > **Warning**: It should be used with caution. Remember to restrict the command with `$onlyForIDs[]` or a similar function!
 It executes every function that is provided as an argument.
