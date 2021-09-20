@@ -3,7 +3,8 @@
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
 
-- [Guides](./guides/awaitedCommands.md)
+- [Guides](./guides/async.md)
+    - [Async](./guides/async.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
     - [BDScript 2](./guides/bdscript2.md)
     - [Buttons](./guides/buttons.md)

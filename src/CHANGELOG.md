@@ -10,6 +10,11 @@
 - Added `$isBanned[]`
 - Fixed a problem with `$charCount[]` having problems with unicode
 - Added `$channelType[]`
+- Added `$async[]` block function and `$endasync`
+- Added `$await[]`
+- Added `$sort[]`
+- Added `$userPerms[]`
+- Added `$serverNames[]`
 
 ## August
 - Added `$webhookTitle[]`

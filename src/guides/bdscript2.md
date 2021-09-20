@@ -29,6 +29,9 @@ This will execute every function that has been provided by the user.
 Error Handling works in a very similar way to the equivalents available in other programming languages.\
 You can read more about Error Handling [here](./trycatch.md).
 
+### $async
+Runs functions asynchronously. Read [this](./async.md) for more information.
+
 ### $elseif
 Read [this](./ifStatements.md) for more information.
 
