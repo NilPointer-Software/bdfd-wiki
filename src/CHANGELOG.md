@@ -15,6 +15,7 @@
 - Added `$sort[]`
 - Added `$userPerms[]`
 - Added `$serverNames[]`
+- Improved variables lookup time
 
 ## August
 - Added `$webhookTitle[]`
