@@ -1,7 +1,7 @@
 # Code Grant
 ![](https://user-images.githubusercontent.com/69215413/135365673-11bf49a9-2058-4f76-96b2-bba70ab123d6.png)
 
-If you get a error like the image above when trying to invite your bot, it means you enabled the `Requires OAUTH2 Code Grant` setting.\
+If you get an error like the image above when trying to invite your bot, it means you enabled the `Requires OAUTH2 Code Grant` setting.\
 Don't worry! You can disable it by following these steps:
 
 **#1:** Go to the Discord Developer Portal and select your bot.
