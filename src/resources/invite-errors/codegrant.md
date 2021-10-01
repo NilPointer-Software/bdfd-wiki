@@ -4,7 +4,7 @@
 If you get an error like the image above when trying to invite your bot, it means you enabled the `Requires OAUTH2 Code Grant` setting.\
 Don't worry! You can disable it by following these steps:
 
-**#1:** Go to the Discord Developer Portal and select your bot.
+**#1:** Go to the [Discord Developer Portal](https://discord.com/developers/applications) and select your bot.
 
 **#2:** Select the "Bot" tab.\
 ![](https://user-images.githubusercontent.com/69215413/135365274-3722963f-0c3d-4d35-a7ba-8cbff291ce08.png)
