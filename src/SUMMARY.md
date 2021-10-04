@@ -28,7 +28,7 @@
     - [Embed Indexes](./resources/embedIndexes.md)
     - [2FA & Elevated Permissions](./resources/2FA.md)
     - [Permissions](./resources/permissions.md)
-    - [Security](.resources/security.md)
+    - [Security](./resources/security.md)
 
 - [BDScript](./bdscript/introduction.md)
     - [Introduction](./bdscript/introduction.md)
