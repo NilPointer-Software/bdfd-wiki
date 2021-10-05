@@ -3,6 +3,9 @@
 
 # 2021
 
+## October
+- Fixed caching issue for `$serverIcon`
+
 ## September
 - Updated ToS
 - Fixed `$executionTime` not working in embeds
