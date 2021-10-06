@@ -1,45 +1,31 @@
-# Awaited Commands and Functions
+# Awaited Commands
+With Awaited Commands, you can await a user's response after a command.
 
-This feature lets your bot to await for user's answer. \
-Here's how the end result looks like: \
+## Breakdown
+- `$awaitFunc[awaitedCommandName;(optional) userID]` - Starts a awaited command. By default, the bot awaits the author's response. You can customize which user the bot awaits by using the optional `userID` field.
+- `$awaitedCommand[awaitedCommandName;filter]` - Used as a callback in a command's trigger. `$awaitedCommand[]` is used to define what happens when the user responds. The `filter` field allows you to customize which responses are accepted. Available filters:
+  - `<numberic>` - Only numbers are accepted.
+  - `<this/is/a/custom/filter>` Custom filter. For example, `<yes/no/maybe>` would limit the accepted responses to `yes`, `no`, or `maybe`. Filter phrases are separated using `/`, the filter must start with `<` and end with `>`.
+  - Empty - Leave the `filter` field empty for no filter.
+- `$awaitedCommandError[awaitedCommandName]` - Used as a callback in a command's trigger. Can be used to define what happens when the `filter` requirements aren't met.
+> Check out [the example](#example) to see awaited commands in action!
 
-![end result](https://i.imgur.com/rRRcIXA.jpg) \
+## Example
+`!pineapple`:
 
-As you can see, the bot asks us to provide a number and then checks \
-if provided value is a number. \
+![](https://user-images.githubusercontent.com/69215413/136297136-f1fb392d-41ef-4b09-8a74-aca1045f32a3.PNG)
 
-## `is-number` command
+Awaited command:
 
-That's how `is-number` command looks like:
-![is-number command](https://i.imgur.com/WatX9MY.jpg) \
+![IMG_7383](https://user-images.githubusercontent.com/69215413/136297222-1fb844b0-1ea2-4e73-8225-1a51d94bd604.PNG)
 
-`$awaitFunc[test2]` launches await command which is called `test2`. \
+Awaited command error:
+> For this example, we're making an error message when the user gives a response that is not `yes` or `no`.
 
-## Awaited command
-Here you can see the test2 awaited command:
+![](https://user-images.githubusercontent.com/69215413/136297541-ecc51145-e215-4dae-a58f-c9bf47ecfab0.PNG)
 
-![awaited command](https://i.imgur.com/gPJH5GC.jpg) \
+### Result
+![](https://user-images.githubusercontent.com/69215413/136297034-bea11009-2eac-45ed-a8e9-8e2f645bb4c0.png)
 
-Have you noticed what's in the command's trigger?\
-`$awaitedCommand[test2;<numeric>]` - the first argument is the command's name.\
-In this case it's *test2*. The second argument is a filter.\
-`<numeric>` means that the awaited command expects **only numbers**.
-
-Here are currently available filters:
-- **\<numeric\>** - only numbers are accepted
-- **<this/is/a/choice/filter>** - one of the words separated by **/** is expected
-- **an empty filter** - every word is accepted
-
-What happens if the filter doesn't match?\
-Well, you can create a command which will be used instead.\
-
-## Awaited error command
-
-![error command](https://i.imgur.com/Y27bCZB.jpg) \
-
-As you can see, we are using `$awaitedCommandError[test2]` in the trigger.\
-The first argument specifies the command's name.\
-This command will only be used when the filter in \
-the awaited command does not match user's response.
-
-
+### Error Result
+![](https://user-images.githubusercontent.com/69215413/136297780-f7de1311-0334-4c3d-8a0f-bfa99d0ff212.png)
