@@ -5,7 +5,6 @@
 
 ## October
 - Fixed caching issue for `$serverIcon`
-- Added additional error messages
 
 ## September
 - Updated ToS
