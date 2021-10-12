@@ -6,6 +6,8 @@
 ## October
 - Fixed caching issue for `$serverIcon`
 - Made it possible to use empty labels in buttons
+- New UI
+- Added search bar in variables section
 
 ## September
 - Updated ToS
