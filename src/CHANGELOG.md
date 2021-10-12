@@ -5,6 +5,7 @@
 
 ## October
 - Fixed caching issue for `$serverIcon`
+- Made it possible to use empty labels in buttons
 
 ## September
 - Updated ToS
