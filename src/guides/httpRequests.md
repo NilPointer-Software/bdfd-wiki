@@ -36,6 +36,10 @@ Description: The PATCH method applies partial modifications to a resource.
 
 Function: `$httpPatch[url;(optional) request's body]`
 
+## HTTP Headers
+
+To add headers, use `$httpAddHeader[header name;header value]`
+
 ## HTTP Results
 To return the result of a HTTP method function, you can use `$httpResult`/`$httpResult[]`.
 
