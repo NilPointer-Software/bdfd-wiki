@@ -9,6 +9,8 @@
 - New UI
 - Added search bar in the variables section
 - Made it possible to use `https://youtu.be/` URL in the streaming statuses
+- Added `$getTextSplitIndex[]`
+- Added `$serverChannelExists[]`
 
 ## September
 - Updated ToS
