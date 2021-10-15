@@ -36,6 +36,12 @@ Description: The PATCH method applies partial modifications to a resource.
 
 Function: `$httpPatch[url;(optional) request's body]`
 
+## HTTP Headers
+
+HTTP Headers is used to add more information. Most of the time, this is used to send an API Key to the API.
+
+To add headers, use `$httpAddHeader[header name;header value]`
+
 ## HTTP Results
 To return the result of a HTTP method function, you can use `$httpResult`/`$httpResult[]`.
 
