@@ -11,6 +11,8 @@
 - Made it possible to use `https://youtu.be/` URL in the streaming statuses
 - Added `$getTextSplitIndex[]`
 - Added `$serverChannelExists[]`
+- Fixed `$changeUsername[]` `$changeUsernameWithID[]` not working on the current bot
+- Made `$ephemeral` work with the butttons
 
 ## September
 - Updated ToS
