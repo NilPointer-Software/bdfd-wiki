@@ -12,6 +12,7 @@
 - Added `$getTextSplitIndex[]`
 - Added `$serverChannelExists[]`
 - Fixed `$changeUsername[]` `$changeUsernameWithID[]` not working on the current bot
+- Made `$ephemeral` work with the butttons
 
 ## September
 - Updated ToS
