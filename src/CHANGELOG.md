@@ -13,6 +13,7 @@
 - Added `$serverChannelExists[]`
 - Fixed `$changeUsername[]` `$changeUsernameWithID[]` not working on the current bot
 - Made `$ephemeral` work with the buttons
+- Fixed global variables not getting saved
 
 ## September
 - Updated ToS
