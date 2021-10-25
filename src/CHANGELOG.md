@@ -15,6 +15,7 @@
 - Made `$ephemeral` work with the buttons
 - Fixed global variables not getting saved
 - Fixed `$deletecommand` not getting catched by `$try` block
+- Made it possible to open function's wiki article from the functions list
 
 ## September
 - Updated ToS
