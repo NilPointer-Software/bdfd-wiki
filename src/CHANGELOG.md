@@ -14,6 +14,7 @@
 - Fixed `$changeUsername[]` `$changeUsernameWithID[]` not working on the current bot
 - Made `$ephemeral` work with the buttons
 - Fixed global variables not getting saved
+- Fixed `$deletecommand` not getting catched by `$try` block
 
 ## September
 - Updated ToS
