@@ -4,6 +4,7 @@
 # 2021
 
 ## October
+- Added timestamp option to `$premiumExpireTime`
 - Fixed `$isUserDMEnabled[]`
 - Fixed `image` parameter in `$sendEmbedMessage[]` and `$webhookSend[]`
 - Fixed caching issue for `$serverIcon`
