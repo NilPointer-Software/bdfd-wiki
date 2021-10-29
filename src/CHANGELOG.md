@@ -4,6 +4,7 @@
 # 2021
 
 ## October
+- Added `$deleteMessage[]`
 - Added `$hostingExpireTime`
 - Added timestamp option to `$premiumExpireTime`
 - Fixed `$isUserDMEnabled[]`
