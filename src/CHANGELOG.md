@@ -5,7 +5,7 @@
 
 ## October
 - Added `$deleteMessage[]`
-- Added `$hostingExpireTime`
+- Added `$hostingExpireTime[]`
 - Added timestamp option to `$premiumExpireTime`
 - Fixed `$isUserDMEnabled[]`
 - Fixed `image` parameter in `$sendEmbedMessage[]` and `$webhookSend[]`
