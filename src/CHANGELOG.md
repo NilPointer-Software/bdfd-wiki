@@ -3,6 +3,9 @@
 
 # 2021
 
+## November
+- `$addReactions[]` now works in slash commands
+
 ## October
 - Added `$deleteMessage[]`
 - Added `$hostingExpireTime[]`
