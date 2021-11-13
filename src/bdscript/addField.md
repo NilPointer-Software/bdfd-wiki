@@ -3,7 +3,7 @@ Adds a field to the embed.
 
 ## Usage
 ```
-$addField[name;value;(optional) inline (yes/no)]
+$addField[name;value;(optional) inline (yes/no);index (optional)]
 ```
 
 ### Breakdown
@@ -11,6 +11,7 @@ $addField[name;value;(optional) inline (yes/no)]
 - `value` - The value of the field.
 - `inline` - If 'yes', fields will appear in same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. 'no' by default. Optional.
 > 🧙‍♂️ Inline fields may not appear inline on some mobile devices.
+- `index` - What embed this new field should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Examples
 ### Example #1

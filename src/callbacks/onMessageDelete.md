@@ -1,5 +1,6 @@
 # $onMessageDelete
-*Triggered when a user deletes a message.*\
+*Triggered when a user deletes a message.*
+
 `$onMessageDelete[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user deletes a message. You must replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID (`$getServerVar[]`).
 
 ## Example

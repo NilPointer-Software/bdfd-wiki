@@ -6,4 +6,4 @@ Adds a option to the select menu.
 $addSelectMenuOption[selectMenuCustomID;label;value;description;default (yes/no);emoji (canBeLeftEmpty);messageID (optional)]
 ```
 
-> **Please refer to [select menu](./guides/selectmenu.md) guide for detailed info!**
+> **Please refer to [select menu](/src/guides/selectmenu.md) guide for detailed info!**

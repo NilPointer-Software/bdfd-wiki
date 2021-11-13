@@ -7,7 +7,7 @@ $getCooldown[cooldownType (normal/server/global)]
 ```
 
 ### Breakdown
-- `cooldownType` - The cooldown type *(normal - $cooldown | server - $serverCooldown | global - $globalCooldown)*.
+- `cooldownType` - The cooldown type *(`normal` - $cooldown | `server` - $serverCooldown | `global` - $globalCooldown)*.
 
 ## Example
 ```

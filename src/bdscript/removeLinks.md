@@ -21,5 +21,4 @@ Removes all links from the provided 'text'.
 $nomention
 $removeLinks[$noMentionMessage]
 ```
-
 ![example](https://user-images.githubusercontent.com/69215413/123530440-40914e80-d6c8-11eb-9fa1-e1aa488a1c80.png)

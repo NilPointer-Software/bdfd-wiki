@@ -6,4 +6,4 @@ Adds a select menu to the message.
 $newSelectMenu[customID;minValuesToSelect;maxValuesToSelect;placeholder;messageID (optional)]
 ```
 
-> **Please refer to the [select menu](./guides/selectmenu.md) guide for detailed info!**
+> **Please refer to the [select menu](/src/guides/selectmenu.md) guide for detailed info!**

@@ -1,6 +1,8 @@
 # JavaScript
 *(for advanced users)*
 
+> **Warning:** JavaScript is depreacted, meaning no additional features are planned for it.
+
 ### Index
 - [Notes](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#notes)
 - [Accessing JavaScript](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#accessing-javascript)
@@ -10,8 +12,7 @@
 
 ## Notes
 - Bot Designer for Discord allows you to use JavaScript *(ES2015)*.
-- Discord's API is not fully supported yet but there will be more extensive
-support in the future.
+- Discord's API is not fully supported.
 - Callbacks don't support JavaScript at the moment.
 
 ## Accessing JavaScript
@@ -64,5 +65,3 @@ var text = message.replace(commandPrefix, " ") // Makes 'text' the user's messag
 setResponse(text) // Sets the response as 'text'.
 ```
 ![image](https://user-images.githubusercontent.com/69215413/122844455-b748d900-d2cf-11eb-9bf5-9887b2323295.png)
-
-

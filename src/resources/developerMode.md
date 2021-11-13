@@ -1,16 +1,10 @@
-# Discord's ID System
-Discord's ID System allows bot's to manage and use IDs to get/edit object data (e.g. returning user's name, deleting a role, etc).
-
-### What's A ID?
-A ID is a Discord object identifier. Let's break this down:
-- A 'object' refers to a Discord channel, role, user, server/guild, etc.
-- A 'identifier' (typically called 'ID') refers to the multi-digit number that the object belongs to.
+# Discord Developer Mode
+Discord's Developer Mode allows you to copy IDs, which is what bot use to identify, use, and/or edit Discord users, roles, channels, etc.
 
 ### Enabling Developer Mode
 In order to access and copy IDs in the Discord client, you must enable developer mode. Here's how:
 
 **Desktop**
-
 ![ex1](https://user-images.githubusercontent.com/69215413/125985126-43a85702-0dd5-4173-8441-671702d845af.png)
 
 ![ex2](https://user-images.githubusercontent.com/69215413/125985082-7968aad1-c47e-45cf-8af2-c441420565b8.png)
@@ -28,7 +22,7 @@ For Android users, go to User Settings > App Settings > Behavior and turn on Dev
 
 You can use '[Functions That Return IDs](https://nilpointer-software.github.io/bdfd-wiki/guides/httpRequests.html#functions-that-return-ids)' to retrieve IDs.
 
-If you want to get IDs using your client, check out [Discord's full guide on getting IDs!](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
+If you want to get IDs using your client, check out [Discord's full guide on getting IDs](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)!
 
 ### Using IDs in Commands
 
@@ -61,4 +55,4 @@ $c[Deletes the mentioned channel.]
 - Using a Emoji - `<:emojiName:emojiID>`
 - Mentioning a Guild - Guilds can't be mentioned. 
 
-> 🧙‍♂️ Non-bots can use IDs to mention objects too!
+> 🧙‍♂️ Non-bots can use IDs to mention things too!

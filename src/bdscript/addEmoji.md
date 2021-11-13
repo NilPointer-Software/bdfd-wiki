@@ -1,5 +1,6 @@
 # $addEmoji
 Adds a emoji to the server.
+> Bot must have the `MANAGE_EMOJIS` permission!
 
 ## Usage
 ```
@@ -16,5 +17,7 @@ $addEmoji[name;imageURL;returnEmoji (yes/no)]
 $nomention
 Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes]
 $argsCheck[>2;Provide all needed arguments! Usage: `!add-emoji (imageURL) (emojiName)`]
+$onlyBotPerms[manageemojis;I need the manage emojis permission!]
+$onlyPerms[manageemojis;You need the manage emojis permission!]
 ```
-> 🧙‍♂️ This may require BDScript Unstable mode enabled.
+> 🧙‍♂️ This example may require BDScript Unstable mode enabled.

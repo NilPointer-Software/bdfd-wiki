@@ -12,7 +12,7 @@ $enableDecimals[enable (yes/no)]
 ## Explaination
 By default, decimals in math functions (e.g `$sum`, `$sub`, `$multi`, etc) are disabled. The only use for this function is to enable decimals, if you want decimals enabled for math functions in that command.
 
-Enabling decimals:
+**Enabling Decimals:**
 ```
 $enableDecimals[yes]
 ```

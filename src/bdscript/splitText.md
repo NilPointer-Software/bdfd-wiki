@@ -9,4 +9,4 @@ $splitText[index]
 ### Breakdown
 - `index` - The split value to get (e.g 2 for the second split).
 
-[*See more in the Text Splitting guide...*](https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html)
+> **Please refer to [Text Splitting](/src/guides/textSplitting.md) guide for more info!**

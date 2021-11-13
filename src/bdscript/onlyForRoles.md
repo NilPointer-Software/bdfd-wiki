@@ -1,5 +1,5 @@
 # $onlyForRoles
-The command can only executed by the provided roles.
+The command can only executed by the provided roles (uses role names).
 
 ## Usage
 ```

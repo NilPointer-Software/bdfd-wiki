@@ -1,14 +1,16 @@
 # $banID
 Bans a user using their ID.
 
+> **Warning:** Your bot must have the 'ban' permission. The bot cannot ban the server owner or users with higher roles than it. 'ban' is an elevated permission, so 2FA may be required for the bot owner [(click here for more info)](src/resources/2FA.md).
+
 ## Usages
-There are three usages of the `$banID` function.
+There are three usages of this function.
 
 ### Usage #1
 ```
 $banID
 ```
-Gets the user to ban from the author's message. No reason will be provided in audit logs for the ban.
+Gets the user's ID to ban from the author's message. No reason will be provided in audit logs for the ban.
 
 ### Usage #2
 ```
@@ -27,11 +29,18 @@ Gets the user to ban from the 'userID' field. The 'reason' will show up in audit
 ## Example
 ```
 $nomention
-$argsCheck[>1;Please provide a 'user'. Usage: `!ban (user) <reason>`]
-$onlyIf[$findUser[$message[1];no]!=;Failed to find user!]
-$onlyPerms[ban;You need the 'ban' permission to use that command!]
+$if[$userExists[$message[1]]==true]
+$banID[$message[1];$replaceText[$message;$message[1];;-1]]
+Banned **$username[$message[1]]#$discriminator[$message[1]]**
+$else
+$onlyIf[$findUser[$message[1];no]!=;❌ Failed to find user!]
 $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
-<@$findUser[$message[1];no]> was banned!
+Banned **$username[$findUser[$message[1];no]]#$discriminator[$findUser[$message[1];no]]**
+$endif
+$allowMention
+$argsCheck[>1;❌ Please provide a 'user' to ban. Usage: `!ban (user) <reason>`]
+$onlyBotPerms[ban;❌ I need the 'ban' permission to ban users!]
+$onlyPerms[ban;❌ You need the 'ban' permission to use that command!]
 ```
 > 🧙‍♂️ The code above accepts both IDs or mentions to ban a user!
 

@@ -13,5 +13,5 @@ $allowUserMentions[userIDs]
 ```
 $nomention
 $allowUserMentions[]
-Hi <@696368083517964288>! I mentioned you, but you didn't get pinged.
+Hi <@696368083517964288>! I mentioned you, but you didn't get notified.
 ```

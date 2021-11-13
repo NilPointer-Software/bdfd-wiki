@@ -10,4 +10,4 @@ $textSplit[text;splitter]
 - `text` - The text to split.
 - `splitter` - The splitter to split arguments with.
 
-[*See more in the Text Splitting guide...*](https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html)
+> **Please refer to [Text Splitting](/src/guides/textSplitting.md) guide for more info!**

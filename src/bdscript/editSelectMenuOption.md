@@ -6,4 +6,4 @@ Edits a option from a select menu.
 $editSelectMenuOption[selectMenuCustomID;label;value;description;default (yes/no);emoji (canBeLeftEmpty);messageID (optional)]
 ```
 
-> **Please refer to the [select menu](./guides/selectmenu.md) guide for detailed info!**
+> **Please refer to the [select menu](/src/guides/selectmenu.md) guide for detailed info!**

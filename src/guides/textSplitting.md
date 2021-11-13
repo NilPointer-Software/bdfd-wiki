@@ -41,7 +41,7 @@ $removeSplitTextElement[1]
 
 ![example](https://user-images.githubusercontent.com/69215413/125673476-a25418c5-56bf-459b-aade-6b298bd064bf.png)
 
-### $joinSplitText
+### $joinSplitText[]
 ```
 $joinSplitText[splitter]
 ```
@@ -52,6 +52,16 @@ $joinSplitText[+]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/125674054-ed3b0f6b-8627-4020-b5e2-0ae206f131d7.png)
+
+
+### $getTextSplitIndex[]
+Returns the argument index of a value separated by the 'splitter' in `$textSplit`. `-1` is returned if no value in `$textSplit` matches `value`. Here's a example:
+```
+$textSplit[hello,hi,hey;,]
+$getTextSplitIndex[hi]
+```
+![](https://user-images.githubusercontent.com/69215413/141649185-72c6fddd-7b76-4db2-88c3-280cfb68a012.png)
+
 
 ## Examples
 ### Example #1
@@ -77,7 +87,7 @@ Length: $getTextSplitLength
 
 ## Advanced
 ### Splitting via Spaces
-In `$textSplit`, BDFD reads spaces differently. Here's a example:
+In `$textSplit`, BDFD interpets whitespaces differently. Here's a example:
 ```
 $textSplit[this is some text; ]
 ```
@@ -85,13 +95,13 @@ Instead of splitting the text by each space, it splits the text by each characte
 
 To prevent this from happening, you can use the code below:
 ```
-$textSplit[$replaceText[text; ;,;-1];,]
+$textSplit[$replaceText[text; ;|;-1];,]
 $c[Replace 'text' with your text.]
 ```
 
 Example using this method:
 ```
-$textSplit[$replaceText[hello hey hi; ;,;-1];,]
+$textSplit[$replaceText[hello hey hi; ;|;-1];,]
 1: $splitText[1]
 2: $splitText[2]
 3: $splitText[3]

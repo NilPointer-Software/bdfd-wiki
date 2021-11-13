@@ -5,7 +5,7 @@ In this section you'll learn how to use the select menu component.\
 
 
 ## Creating a new select menu
-`$newSelectMenu[interaction ID;min values to select;max values to select;placeholder;messageID(optional)]`
+`$newSelectMenu[interactionID;min values to select;max values to select;placeholder;messageID(optional)]`
 - `interaction ID` - it's used for `$onInteraction[ID]` callback. It works the same way as [buttons](./buttons.md)
 - `min values to select` - minimum amount of values that can be selected
 - `max values to select` - maximum amount of values that can be selected

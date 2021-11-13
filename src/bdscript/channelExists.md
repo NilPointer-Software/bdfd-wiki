@@ -8,4 +8,11 @@ $channelExists[channelID]
 ```
 
 ### Breakdown
-- `channelID` - The "channel" which the bot checks.
+- `channelID` - The hypothetical channel which the bot checks.
+
+## Examples
+### Example #1
+```
+$nomention
+$channelExists[$mentionedChannels[1]]
+```

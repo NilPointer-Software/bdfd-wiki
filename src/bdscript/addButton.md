@@ -6,4 +6,4 @@ Adds a button to the message.
 $addButton[newRow (yes/no);customID/URL;label;style;disabled (yes/no);emoji (leaveEmptyIfNotNeeded);messageID (optional)]
 ```
 
-> **Please refer to [buttons](./guides/buttons.md) guide for detailed info!**
+> **Please refer to [buttons](/src/guides/buttons.md) guide for detailed info!**

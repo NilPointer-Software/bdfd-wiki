@@ -7,7 +7,7 @@ $embedSuppressErrors[title;description;color;author;footerText;footerIcon]
 ``` 
 > 🧙‍♂️ All fields are optional, leave the field empty to not include it. Atleast one field needs to be inputted, however.
 
-> `$embedSuppressErrors[Error!;There was a error!;;;;]` - this is correct. `$embedSuppressErrors[Error!;There was a error!]` - this is incorrect.
+`$embedSuppressErrors[Error!;There was a error!;;;;]` - this is correct. `$embedSuppressErrors[Error!;There was a error!]` - this is incorrect.
 
 ### Breakdown
 - `title` - The title of the embed.

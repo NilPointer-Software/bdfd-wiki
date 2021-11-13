@@ -8,7 +8,7 @@ $footer[text;(optional) embedIndex]
 
 ### Breakdown
 - `text` - The text to set the footer as.
-- `embedIndex` - What embed the footer text should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `embedIndex` - What embed the footer text should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```

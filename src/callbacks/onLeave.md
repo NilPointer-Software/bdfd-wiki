@@ -1,5 +1,6 @@
 # $onLeave
-*When a user leaves the server, the command is triggered.*\
+*When a user leaves the server, the command is triggered.*
+
 `$onLeave[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server. You must replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
 
 ## Example

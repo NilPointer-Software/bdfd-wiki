@@ -6,7 +6,7 @@ Makes the bot's response ephemeral.
 ```
 $ephemeral
 ```
-> ⚠️ Ephemeral responses are only supported for slash commands currently!
+> **Warning:** Ephemeral responses are only supported for slash commands, buttons, and select menus! Not regular messages.
 
 ## Example
 ![Example2](https://user-images.githubusercontent.com/69215413/122575265-91e17400-d01e-11eb-9789-de224722f3ab.png)

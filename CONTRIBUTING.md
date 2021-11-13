@@ -16,17 +16,17 @@ Make sure to follow the 'Proper Wiki Structure' when contributing.
 
 ## Proper Wiki Structure
 ### Grammar
-- Don't use gendered pronouns (e.g. she/her/hers/he/him/his). Instead use: They, them, their.
+- Don't use gendered pronouns (e.g. she/her/hers/he/him/his). Instead use: They, them, their:
 ```diff
 - He is cool.
 + They are cool.
 ```
-- Use "we" instead of "I" when referring to yourself.
+- Use "we" instead of "I" when referring to yourself:
 ```diff
 - If you use the `$eval` function, I strongly recommend you also use `$onlyForIDs`.
 + If you use the `$eval` function, we strongly recommend you also use `$onlyForIDs`.
 ```
-- "You"/"your" instead of "we"/"our"
+- "You"/"your" instead of "we"/"our":
 ```diff
 - We can get our bot's ID using `$botID`.
 + You can get your bot's ID using `$botID`.

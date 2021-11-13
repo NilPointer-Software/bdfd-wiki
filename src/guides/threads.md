@@ -15,7 +15,7 @@ $editThread[threadID;name;archived (yes/no);archiveDuration (60/1440/4320/10080)
 ```
 Edits a existing thread. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/bdscript/editThread.html)
 
-### Member Thread Management
+### Thread Member Management
 
 #### Adding a User to a Thread
 ```

@@ -9,3 +9,10 @@ should appear.
 ```
 $botTyping
 ```
+
+## Example
+```
+$nomention
+$botTyping
+Hello World!
+```

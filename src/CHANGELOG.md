@@ -4,22 +4,22 @@
 # 2021
 
 ## October
-- Fixed caching issue for `$serverIcon`
-- Made it possible to use empty labels in the buttons
+- Fixed caching issue with `$serverIcon`
+- Made it possible to use empty labels for buttons
 - New UI
-- Added search bar in the variables section
+- Added search bar in the variables tab
 - Made it possible to use `https://youtu.be/` URL in the streaming statuses
 - Added `$getTextSplitIndex[]`
 - Added `$serverChannelExists[]`
 - Fixed `$changeUsername[]` `$changeUsernameWithID[]` not working on the current bot
-- Made `$ephemeral` work with the butttons
+- Made `$ephemeral` work with butttons
 
 ## September
 - Updated ToS
 - Fixed `$executionTime` not working in embeds
 - Added `$botNode`
 - Added `$isBanned[]`
-- Fixed a problem with `$charCount[]` having problems with unicode
+- Fixed a problem with `$charCount[]` and unicode
 - Added `$channelType[]`
 - Added `$async[]` block function and `$endasync`
 - Added `$await[]`

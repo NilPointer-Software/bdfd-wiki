@@ -2,10 +2,12 @@
 Returns the provided user's status.
 > 🧙‍♂️ The user must share atleast 1 server with the bot, for this function to work.
 
+
 ## Usage
 ```
 $getUserStatus[userID]
 ```
+> ⚠️ Requires the `PRESENCE` privileged intent enabled in the app and [Discord Developer Portal](https://discord.com/developers/applications).
 
 ### Breakdown
 - `userID` - The user to get the status for.

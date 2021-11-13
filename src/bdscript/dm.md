@@ -2,7 +2,7 @@
 Direct messages a user.
 
 ## Usages
-There are three possible usages of the `$dm` function.
+There are tible usages ois dm` function.
 
 ### Usage #1
 ```
@@ -14,13 +14,10 @@ This will send the message to the user that runs the command.
 ```
 $dm[]
 ```
-This will send the message to the first mentioned user.
-
-### Usage #3
-```
+This will send the message to the first ment Usage #3serID1 ususerID1 userID2;etc]``
 $dm[UserID;...]
 ```
-This will send the message to every user with given User ID.
-
+This will send the message to euserIDs.
+ with given Userfunction
 ## Note
-If the command fails to send the message, make sure the user allows dm messages from everyone.
+If the command fails to send the message, mdirect messagese user allows d You can use [$isUserDMEnabled[]](./isUserDMEnabled.md)to check if the bot can DM a user. messages from everyone.
