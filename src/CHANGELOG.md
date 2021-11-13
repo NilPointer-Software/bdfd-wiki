@@ -5,6 +5,9 @@
 
 ## November
 - `$addReactions[]` now works in slash commands
+- `$dm[]` now can dm to more than one mention and can be used multiple times
+- `$dm` now can be used with `$dm[]`
+- `$random[]` now can use decimals
 
 ## October
 - Added `$deleteMessage[]`
