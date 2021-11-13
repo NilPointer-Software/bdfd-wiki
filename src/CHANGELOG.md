@@ -3,23 +3,37 @@
 
 # 2021
 
+## November
+- `$addReactions[]` now works in slash commands
+- `$dm[]` now can dm to more than one mention and can be used multiple times
+- `$dm` now can be used with `$dm[]`
+- `$random[]` now can use decimals
+
 ## October
-- Fixed caching issue with `$serverIcon`
-- Made it possible to use empty labels for buttons
+- Added `$deleteMessage[]`
+- Added `$hostingExpireTime[]`
+- Added timestamp option to `$premiumExpireTime`
+- Fixed `$isUserDMEnabled[]`
+- Fixed `image` parameter in `$sendEmbedMessage[]` and `$webhookSend[]`
+- Fixed caching issue for `$serverIcon`
+- Made it possible to use empty labels in the buttons
 - New UI
-- Added search bar in the variables tab
+- Added search bar in the variables section
 - Made it possible to use `https://youtu.be/` URL in the streaming statuses
 - Added `$getTextSplitIndex[]`
 - Added `$serverChannelExists[]`
 - Fixed `$changeUsername[]` `$changeUsernameWithID[]` not working on the current bot
-- Made `$ephemeral` work with butttons
+- Made `$ephemeral` work with the buttons
+- Fixed global variables not getting saved
+- Fixed `$deletecommand` not getting catched by `$try` block
+- Made it possible to open function's wiki article from the functions list
 
 ## September
 - Updated ToS
 - Fixed `$executionTime` not working in embeds
 - Added `$botNode`
 - Added `$isBanned[]`
-- Fixed a problem with `$charCount[]` and unicode
+- Fixed a problem with `$charCount[]` having problems with unicode
 - Added `$channelType[]`
 - Added `$async[]` block function and `$endasync`
 - Added `$await[]`
