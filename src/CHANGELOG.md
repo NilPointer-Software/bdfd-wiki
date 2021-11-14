@@ -9,6 +9,7 @@
 - `$dm` now can be used with `$dm[]`
 - `$random[]` now can use decimals
 - Added `$'randomChannelID` (BDScript Unstable only)
+- Fixed `$textSplit[]` removing space
 
 ## October
 - Added `$deleteMessage[]`
