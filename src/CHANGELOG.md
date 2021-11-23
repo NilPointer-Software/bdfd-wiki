@@ -4,6 +4,7 @@
 # 2021
 
 ## November
+- Added `$botCommands[]`
 - Added `$unpinMessage[]`
 - Added `$pinMessage[]`
 - Fixed `$isUserDMEnabled[]` not returning false in some cases
