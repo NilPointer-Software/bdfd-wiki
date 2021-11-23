@@ -4,6 +4,7 @@
 # 2021
 
 ## November
+- Sped up the node starting time
 - Added `$botCommands[]`
 - Added `$unpinMessage[]`
 - Added `$pinMessage[]`
