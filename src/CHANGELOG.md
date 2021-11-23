@@ -4,6 +4,7 @@
 # 2021
 
 ## November
+- Added `$pinMessage[]`
 - Fixed `$isUserDMEnabled[]` not returning false in some cases
 - `$addReactions[]` now works in slash commands
 - `$dm[]` now can dm to more than one mention and can be used multiple times
