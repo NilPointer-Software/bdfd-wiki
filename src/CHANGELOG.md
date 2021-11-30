@@ -4,6 +4,7 @@
 # 2021
 
 ## November
+- Added `$reply[]`
 - Added `$trimSpace[]`
 - Added `$url[]`
 - Upgraded the database
