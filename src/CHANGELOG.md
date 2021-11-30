@@ -4,6 +4,8 @@
 # 2021
 
 ## November
+- Added $trimSpace[]
+- Upgraded the database
 - Sped up the node starting time
 - Added `$botCommands[]`
 - Added `$unpinMessage[]`
