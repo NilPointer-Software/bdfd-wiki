@@ -5,6 +5,7 @@
 
 ## November
 - Added `$trimSpace[]`
+- Added `$url[]`
 - Upgraded the database
 - Sped up the node starting time
 - Added `$botCommands[]`
