@@ -4,6 +4,7 @@
 # 2021
 
 ## December
+- Added sharding
 - Improved interaction handling
 
 ## November
