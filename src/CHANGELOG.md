@@ -3,6 +3,9 @@
 
 # 2021
 
+## December
+- Improved interaction handling
+
 ## November
 - Added `$reply[]`
 - Added `$trimSpace[]`
