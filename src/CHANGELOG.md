@@ -6,6 +6,7 @@
 ## December
 - Added sharding
 - Improved interaction handling
+- Added `$defer`
 
 ## November
 - Added `$reply[]`
