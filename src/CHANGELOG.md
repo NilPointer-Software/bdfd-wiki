@@ -4,6 +4,7 @@
 # 2021
 
 ## December
+- Added `$shardID[]`
 - Added sharding
 - Improved interaction handling
 - Added `$defer`
