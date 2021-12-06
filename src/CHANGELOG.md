@@ -4,6 +4,7 @@
 # 2021
 
 ## December
+- Slash command's option description is now required
 - Added `$shardID[]`
 - Added sharding
 - Improved interaction handling
