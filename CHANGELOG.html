@@ -143,9 +143,52 @@
                         <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 <p><em>Note that we often forget to update this article, so some stuff is missing.</em></p>
 <h1 id="2021"><a class="header" href="#2021">2021</a></h1>
+<h2 id="december"><a class="header" href="#december">December</a></h2>
+<ul>
+<li>Fixed the role cache</li>
+<li>Slash command's option description is now required</li>
+<li>Added <code>$shardID[]</code></li>
+<li>Added sharding</li>
+<li>Improved interaction handling</li>
+<li>Added <code>$defer</code></li>
+</ul>
+<h2 id="november"><a class="header" href="#november">November</a></h2>
+<ul>
+<li>Added <code>$reply[]</code></li>
+<li>Added <code>$trimSpace[]</code></li>
+<li>Added <code>$url[]</code></li>
+<li>Upgraded the database</li>
+<li>Sped up the node starting time</li>
+<li>Added <code>$botCommands[]</code></li>
+<li>Added <code>$unpinMessage[]</code></li>
+<li>Added <code>$pinMessage[]</code></li>
+<li>Fixed <code>$isUserDMEnabled[]</code> not returning false in some cases</li>
+<li><code>$addReactions[]</code> now works in slash commands</li>
+<li><code>$dm[]</code> now can dm to more than one mention and can be used multiple times</li>
+<li><code>$dm</code> now can be used with <code>$dm[]</code></li>
+<li><code>$random[]</code> now can use decimals</li>
+<li>Added <code>$'randomChannelID</code> (BDScript Unstable only)</li>
+<li>Fixed <code>$textSplit[]</code> removing space</li>
+</ul>
 <h2 id="october"><a class="header" href="#october">October</a></h2>
 <ul>
+<li>Added <code>$deleteMessage[]</code></li>
+<li>Added <code>$hostingExpireTime[]</code></li>
+<li>Added timestamp option to <code>$premiumExpireTime</code></li>
+<li>Fixed <code>$isUserDMEnabled[]</code></li>
+<li>Fixed <code>image</code> parameter in <code>$sendEmbedMessage[]</code> and <code>$webhookSend[]</code></li>
 <li>Fixed caching issue for <code>$serverIcon</code></li>
+<li>Made it possible to use empty labels in the buttons</li>
+<li>New UI</li>
+<li>Added search bar in the variables section</li>
+<li>Made it possible to use <code>https://youtu.be/</code> URL in the streaming statuses</li>
+<li>Added <code>$getTextSplitIndex[]</code></li>
+<li>Added <code>$serverChannelExists[]</code></li>
+<li>Fixed <code>$changeUsername[]</code> <code>$changeUsernameWithID[]</code> not working on the current bot</li>
+<li>Made <code>$ephemeral</code> work with the buttons</li>
+<li>Fixed global variables not getting saved</li>
+<li>Fixed <code>$deletecommand</code> not getting catched by <code>$try</code> block</li>
+<li>Made it possible to open function's wiki article from the functions list</li>
 </ul>
 <h2 id="september"><a class="header" href="#september">September</a></h2>
 <ul>
@@ -331,7 +374,7 @@
 <li>Added <code>$userJoined[]</code> and <code>$userJoinedDiscord[]</code></li>
 </ul>
 <h1 id="2020"><a class="header" href="#2020">2020</a></h1>
-<h2 id="december"><a class="header" href="#december">December</a></h2>
+<h2 id="december-1"><a class="header" href="#december-1">December</a></h2>
 <ul>
 <li>Timezones in <code>$time[]</code> has been fixed</li>
 <li>Updated discord API version</li>
@@ -342,7 +385,7 @@
 <li>Added serverID option to <code>$serverOwner</code></li>
 <li>Added <code>$premiumExpireTime</code></li>
 </ul>
-<h2 id="november"><a class="header" href="#november">November</a></h2>
+<h2 id="november-1"><a class="header" href="#november-1">November</a></h2>
 <ul>
 <li>Fixed disappearing bot status</li>
 <li>Fixed <code>$serverCount</code> in bot status</li>
@@ -518,7 +561,7 @@
 <li>Fixed brackets in <code>$username</code></li>
 </ul>
 <h1 id="2019"><a class="header" href="#2019">2019</a></h1>
-<h2 id="december-1"><a class="header" href="#december-1">December</a></h2>
+<h2 id="december-2"><a class="header" href="#december-2">December</a></h2>
 <ul>
 <li>Fixed high ping issues</li>
 <li>Fixed whole bunch of other issues</li>
@@ -547,7 +590,7 @@
 <li>Fixed <code>$banID[]</code></li>
 <li>Preparations for premium points</li>
 </ul>
-<h2 id="november-1"><a class="header" href="#november-1">November</a></h2>
+<h2 id="november-2"><a class="header" href="#november-2">November</a></h2>
 <ul>
 <li>Added <code>$rolePosition[]</code></li>
 <li>Released translation strings to volunteers</li>
