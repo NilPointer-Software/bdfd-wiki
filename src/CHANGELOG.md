@@ -4,6 +4,7 @@
 # 2021
 
 ## December
+- Fixed the role cache
 - Slash command's option description is now required
 - Added `$shardID[]`
 - Added sharding
