@@ -10,6 +10,7 @@
 - Added sharding
 - Improved interaction handling
 - Added `$defer`
+- Fixed getting invites
 
 ## November
 - Added `$reply[]`
