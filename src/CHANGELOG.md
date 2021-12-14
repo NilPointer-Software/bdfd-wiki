@@ -11,6 +11,7 @@
 - Improved interaction handling
 - Added `$defer`
 - Fixed getting invites
+- Added debug information inside the app for translators
 
 ## November
 - Added `$reply[]`
