@@ -13,6 +13,7 @@
 - Fixed getting invites
 - Added debug information inside the app for translators
 - Fixed `$serverNames`
+- Added `%` *(modulo)* to `$calculate[]`
 
 ## November
 - Added `$reply[]`
