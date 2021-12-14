@@ -12,6 +12,7 @@
 - Added `$defer`
 - Fixed getting invites
 - Added debug information inside the app for translators
+- Fixed `$serverNames`
 
 ## November
 - Added `$reply[]`
