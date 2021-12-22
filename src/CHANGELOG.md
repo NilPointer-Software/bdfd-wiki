@@ -15,6 +15,7 @@
 - Added debug information inside the app for translators
 - Fixed `$serverNames`
 - Added `%` *(modulo)* to `$calculate[]`
+- Fixed removing custom images
 
 ## November
 - Added `$reply[]`
