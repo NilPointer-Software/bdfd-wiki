@@ -4,6 +4,8 @@
 # 2021
 
 ## December
+- Added `$timeout[]` and `$untimeout[]`
+- `$mute[]` and `$unmute[]` has been marked as deprecated
 - Added `guildID` argument to `$getUserVar[]` and `$setUserVar[]`
 - Fixed the issue with some bots not starting with invalid intents enabled
 - Fixed the role cache
