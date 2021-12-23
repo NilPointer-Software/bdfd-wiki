@@ -4,6 +4,7 @@
 # 2021
 
 ## December
+- Added `guildID` argument to `$getUserVar[]` and `$setUserVar[]`
 - Fixed the issue with some bots not starting with invalid intents enabled
 - Fixed the role cache
 - Slash command's option description is now required
