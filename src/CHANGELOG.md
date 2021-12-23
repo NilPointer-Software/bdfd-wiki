@@ -16,6 +16,7 @@
 - Fixed `$serverNames`
 - Added `%` *(modulo)* to `$calculate[]`
 - Fixed removing custom images
+- Added missing permissions
 
 ## November
 - Added `$reply[]`
