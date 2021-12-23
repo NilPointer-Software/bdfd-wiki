@@ -4,6 +4,7 @@
 # 2021
 
 ## December
+- Fixed `$noMentionMessage[]` in BDScript 2
 - Added `$timeout[]` and `$untimeout[]`
 - `$mute[]` and `$unmute[]` has been marked as deprecated
 - Added `guildID` argument to `$getUserVar[]` and `$setUserVar[]`
