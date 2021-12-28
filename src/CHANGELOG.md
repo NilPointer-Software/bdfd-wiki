@@ -4,6 +4,7 @@
 # 2021
 
 ## December
+- Saving a command no longer causes the bot to restart
 - Fixed `$noMentionMessage[]` in BDScript 2
 - Added `$timeout[]` and `$untimeout[]`
 - `$mute[]` and `$unmute[]` has been marked as deprecated
