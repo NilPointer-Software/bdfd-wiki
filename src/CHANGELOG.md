@@ -22,6 +22,7 @@
 - Added `%` *(modulo)* to `$calculate[]`
 - Fixed removing custom images
 - Added missing permissions
+- Fixed unintentional server restarts 
 
 ## November
 - Added `$reply[]`
