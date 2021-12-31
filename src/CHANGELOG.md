@@ -22,7 +22,8 @@
 - Added `%` *(modulo)* to `$calculate[]`
 - Fixed removing custom images
 - Added missing permissions
-- Fixed unintentional server restarts 
+- Fixed unintentional server restarts
+- The last argument in `$replaceText[]` is now optional
 
 ## November
 - Added `$reply[]`
