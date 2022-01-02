@@ -5,7 +5,7 @@
 
 ## January
 -  Added `$unescape[]`
--  Added neutral permission (`/<perm>`) to `$modifyChannelPerms[]`
+-  Added a neutral permission (`/<perm>`) to `$modifyChannelPerms[]`
 
 # 2021
 
