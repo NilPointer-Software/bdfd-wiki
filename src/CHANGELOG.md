@@ -7,6 +7,7 @@
 -  Added `$unescape[]`
 -  Added a neutral permission (`/<perm>`) to `$modifyChannelPerms[]`
 -  Added stop bot button in the app
+-  Added restart bot button in the app
 
 # 2021
 
