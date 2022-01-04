@@ -1,6 +1,5 @@
 # BDScript 2
 The new edition of BDScript.
-> **Warning**: It is still in beta. It may cause unexpected behaviour.
 
 ## Introduction
 As you probably know, the default scripting language in the app is **BDScript**, there is also an alternative edition called **BDScript Unstable**.\
