@@ -8,6 +8,8 @@
 -  Added a neutral permission (`/<perm>`) to `$modifyChannelPerms[]`
 -  Added stop bot button in the app
 -  Added restart bot button in the app
+-  Added `$editChannelPerms[]` (replacement for the deprecated `$modifyChannelPerms[]`)
+-  Added `$roleGrant[]` (replacement for the deprecated `$giveRole[]` and `$takeRole[]`)
 
 # 2021
 
