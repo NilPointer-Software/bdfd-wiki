@@ -10,6 +10,7 @@
 -  Added restart bot button in the app
 -  Added `$editChannelPerms[]` (replacement for the deprecated `$modifyChannelPerms[]`)
 -  Added `$roleGrant[]` (replacement for the deprecated `$giveRole[]` and `$takeRole[]`)
+-  Fixed component functions inside `$async[]` scope
 
 # 2021
 
