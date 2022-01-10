@@ -242,7 +242,6 @@
     - [$slowmode](./bdscript/slowmode.md)
     - [$splitText](./bdscript/splitText.md)
     - [$startThread](./bdscript/startThread.md)
-    - [$startThread](./bdscript/startThread.md)
     - [$sub](./bdscript/sub.md)
     - [$sum](./bdscript/sum.md)
     - [$suppressErrors](./bdscript/suppressErrors.md)
