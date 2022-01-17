@@ -12,6 +12,7 @@
 -  Added `$roleGrant[]` (replacement for the deprecated `$giveRole[]` and `$takeRole[]`)
 -  Fixed component functions inside `$async[]` scope
 -  Increased the limit of http functions in one command to `5`
+-  Fixed `$userPerms[]`
 
 # 2021
 
