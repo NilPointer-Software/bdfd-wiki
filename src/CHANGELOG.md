@@ -13,6 +13,7 @@
 -  Fixed component functions inside `$async[]` scope
 -  Increased the limit of http functions in one command to `5`
 -  Fixed `$userPerms[]`
+-  Fixed some bugs regarding math commands
 
 # 2021
 
