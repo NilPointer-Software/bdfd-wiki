@@ -15,6 +15,7 @@
 -  Fixed `$userPerms[]`
 -  Fixed some bugs regarding math commands
 -  Added public BDFD API
+-  Added `$serverDescription[]`
 
 # 2021
 
