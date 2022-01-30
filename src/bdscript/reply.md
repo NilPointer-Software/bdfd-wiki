@@ -1,5 +1,5 @@
 # $reply
-Replies to the user's message. This feature makes use of Discord's replying feature, learn more [here](https://support.discord.com/hc/en-us/articles/360057382374-Replies-FAQ).
+Replies to the user's command
 
 ## Usage
 ```
@@ -10,7 +10,14 @@ $reply
 ```
 $nomention
 $reply
-Hello $username!
+Hello $username 👋🏻
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/126919464-204a6169-2acb-4237-b9f4-08bc04d786bf.png)
+## Example
+With `$reply`:
+
+![image](https://user-images.githubusercontent.com/42785890/151721130-51524143-b136-4cfc-b028-694b1d09e84a.png)
+
+Without `$reply`:
+
+![image](https://user-images.githubusercontent.com/42785890/151721184-6fa5846c-9ffb-47bb-bf82-0973e0caa3e9.png)
