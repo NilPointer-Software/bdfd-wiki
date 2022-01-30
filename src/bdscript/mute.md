@@ -1,5 +1,8 @@
 # $mute
+*(deprecated)*
 Mutes the mentioned user.
+
+> 🧙‍♂️ This command is deprecated instead better use [$timeout](https://nilpointer-software.github.io/bdfd-wiki/bdscript/timeout.html).
 
 ## Usage
 ```
