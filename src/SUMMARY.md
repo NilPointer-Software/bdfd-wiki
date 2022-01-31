@@ -251,6 +251,7 @@
     - [$threadRemoveMember](./bdscript/threadRemoveMember.md)
     - [$thumbnail](./bdscript/thumbnail.md)
     - [$time](./bdscript/time.md)
+    - [$timeout](./bdscript/timeout.md)
     - [$title](./bdscript/title.md)
     - [$toLowercase](./bdscript/toLowercase.md)
     - [$toUppercase](./bdscript/toUppercase.md)
