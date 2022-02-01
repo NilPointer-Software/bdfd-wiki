@@ -1,4 +1,8 @@
 # $unmute
+*(deprecated)*
+
+> 🧙‍♂️ This command is deprecated instead better use [$untimeout](https://nilpointer-software.github.io/bdfd-wiki/bdscript/untimeout.html).
+
 Unmutes the mentioned user.
 
 ## Usage

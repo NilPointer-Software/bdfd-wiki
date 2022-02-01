@@ -14,6 +14,7 @@ $calculate[expression]
 - `-` - Subtraction.
 - `/` - Division.
 - `*` - Multiplication.
+- `%` - Modulo.
 - `()` - Parentheses you can put equations in.
 
 ## Example
