@@ -1,4 +1,8 @@
 # $modifyChannelPerms
+*(deprecated)*
+
+> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](https://nilpointer-software.github.io/bdfd-wiki/bdscript/editChannelPerms.html).
+
 Modifies a channel's permissions.
 
 ## Usage
