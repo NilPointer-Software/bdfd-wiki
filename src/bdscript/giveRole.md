@@ -1,4 +1,7 @@
-# $giveRole
+# $giveRole 
+*(deprecated)*
+> 🧙‍♂️ This command is deprecated instead better use [$roleGrant](https://nilpointer-software.github.io/bdfd-wiki/bdscript/roleGrant.html).
+
 Adds a role to the provided user.
 
 ## Usages
