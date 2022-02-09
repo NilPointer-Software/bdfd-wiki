@@ -24,4 +24,4 @@ $nomention
 $roleGrant[$mentioned[1];+$mentionedRoles[1]]
 <@$mentioned[1]> user was given <@&$mentionedRoles[1]> role
 ```
-![image](https://user-images.githubusercontent.com/42785890/153123355-70d242f2-b7cd-4f07-8844-225726ea97bf.png)
+![image](https://user-images.githubusercontent.com/42785890/153126389-d8c9bf0d-4fee-49ce-8e16-7dd39987a368.png)
