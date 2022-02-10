@@ -1,5 +1,5 @@
 # $botCommands
-Calculates a math expression.
+Returns a list of the bot's commands.
 
 ## Usage
 ```
