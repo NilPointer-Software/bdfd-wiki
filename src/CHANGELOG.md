@@ -3,6 +3,9 @@
 
 # 2022
 
+## February
+- `$httpResult[]` can return JSON now
+
 ## January
 -  Added `$unescape[]`
 -  Added a neutral permission (`/<perm>`) to `$modifyChannelPerms[]`
