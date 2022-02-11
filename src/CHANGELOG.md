@@ -5,6 +5,7 @@
 
 ## February
 - `$httpResult[]` can return JSON now
+- Fixed `$httpResult[]` not working with multiple requests
 
 ## January
 -  Added `$unescape[]`
