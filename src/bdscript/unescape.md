@@ -1,6 +1,6 @@
 # $unescape
 Unescapes special characters from a text. 
-This can be used so the script reads special characters as a part of a function.
+This can be used so the script reads special characters from texts such as messages, names, etc as a part of a function.
 
 ## Usage
 ```
