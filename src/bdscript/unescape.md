@@ -1,16 +1,16 @@
-#$unescape
+# $unescape
 Unescapes special characters from a text. 
 This can be used so the script reads special characters as a part of a function.
 
-##Usage
+## Usage
 ```
 $unescape[text]
 ```
 
-###Breakdown
+### Breakdown
 - `text` - The text to unescape.
 
-##Example
+## Example
 ```
 $nomention
 $randomText[$unescape[$message]]
