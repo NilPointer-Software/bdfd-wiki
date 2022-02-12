@@ -270,6 +270,7 @@
     - [$tts](./bdscript/tts.md)
     - [$unban](./bdscript/unban.md)
     - [$unbanID](./bdscript/unbanID.md)
+    - [$unescape](./bdscript/unescape.md)
     - [$unmute](./bdscript/unmute.md)
     - [$unpinMessage](./bdscript/unpinMessage.md)
     - [$untimeout](./dbscript/untimeout.md)
