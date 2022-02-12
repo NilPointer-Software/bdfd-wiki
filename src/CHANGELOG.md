@@ -6,6 +6,7 @@
 ## February
 - `$httpResult[]` can return JSON now
 - Fixed `$httpResult[]` not working with multiple requests
+- Saving a command in the webapp no longer restarts the bots
 
 ## January
 -  Added `$unescape[]`
