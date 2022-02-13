@@ -17,3 +17,5 @@ $getTextSplitIndex[$message[1]]
 ``` 
 
 ![image](https://user-images.githubusercontent.com/42785890/151845189-1866a9c2-cacb-401b-9efe-137cc54586b6.png)
+
+*[See more about Text Splitting in here...](https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html)*
