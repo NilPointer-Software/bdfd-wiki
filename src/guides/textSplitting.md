@@ -19,19 +19,29 @@ Retrieves a value from `$textSplit`.
 ```
 $getTextSplitLength
 ```
-Returns how many splits there are in `$textSplit`. Here's a example:
+Returns how many splits there are in `$textSplit`. Here's an example:
 ```
 $textSplit[hello world | hello planet | hello earth;|]
 $getTextSplitLength
 ```
-
 ![example](https://user-images.githubusercontent.com/69215413/125673180-c7832e3e-2227-4cd7-a269-84e8053cbd90.png)
+
+### $getTextSplitIndex 
+```
+$getTextSplitIndex
+```
+Retrieves the position of the provided value in `$textSplit`. Returns `-1` if it couldn't find the value. Here's an example:
+```
+$textSplit[Cake-Bread;-]
+$getTextSplitIndex[$message]
+```
+​![​image​](https://user-images.githubusercontent.com/42785890/151845189-1866a9c2-cacb-401b-9efe-137cc54586b6.png)
 
 ### $removeSplitTextElement[]
 ```
 $removeSplitTextElement[index]
 ```
-Removes a element from `$splitText`. Here's a example:
+Removes a element from `$splitText`. Here's an example:
 ```
 $textSplit[hello world | hello planet | hello earth;|]
 $removeSplitTextElement[1]
@@ -77,7 +87,7 @@ Length: $getTextSplitLength
 
 ## Advanced
 ### Splitting via Spaces
-In `$textSplit`, BDFD reads spaces differently. Here's a example:
+In `$textSplit`, BDFD reads spaces differently. Here's an example:
 ```
 $textSplit[this is some text; ]
 ```
