@@ -9,6 +9,7 @@
 - Saving a command in the webapp no longer restarts the bots
 - Optimized slash commands resynchronization
 - Fixed custom images not working after saving a command
+- Made it possible to escape `\` by using `\\`
 
 ## January
 -  Added `$unescape[]`
