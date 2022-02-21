@@ -10,6 +10,7 @@
 - Optimized slash commands resynchronization
 - Fixed custom images not working after saving a command
 - Made it possible to escape `\` by using `\\`
+- **Removed user permission check for $ban[], $banID[], $unban[] and $unbanID[]**
 
 ## January
 -  Added `$unescape[]`
