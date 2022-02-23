@@ -12,7 +12,7 @@
 - Made it possible to escape `\` by using `\\`
 - **Removed user permission check for $ban[], $banID[], $unban[] and $unbanID[]**
 - Added `$newModal[]`
-- Added `$$addTextInput[]`
+- Added `$addTextInput[]`
 - Added `$input[]`
 
 ## January
