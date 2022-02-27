@@ -14,6 +14,7 @@
 - Added `$newModal[]`
 - Added `$addTextInput[]`
 - Added `$input[]`
+- Deprecated `$channelIDFromName[]`, use `$channelID[]` instead
 
 ## January
 -  Added `$unescape[]`
