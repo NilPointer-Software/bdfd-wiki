@@ -16,6 +16,7 @@
 - Added `$input[]`
 - Deprecated `$channelIDFromName[]`, use `$channelID[]` instead
 - Added `$onlyForCategories[]`
+- Fixed `$modifyChannelPerms[]` ignoring last permission
 
 ## January
 -  Added `$unescape[]`
