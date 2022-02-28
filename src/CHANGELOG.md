@@ -15,6 +15,7 @@
 - Added `$addTextInput[]`
 - Added `$input[]`
 - Deprecated `$channelIDFromName[]`, use `$channelID[]` instead
+- Added `$onlyForCategories[]`
 
 ## January
 -  Added `$unescape[]`
