@@ -17,6 +17,10 @@
 - Deprecated `$channelIDFromName[]`, use `$channelID[]` instead
 - Added `$onlyForCategories[]`
 - Fixed `$modifyChannelPerms[]` ignoring last permission
+- Added `$onAutoComplete[]` callback
+- Added `$autoCompleteOptionName`
+- Added `$autoCompleteOptionValue`
+- Added `$appendOptionSuggestion[]`
 
 ## January
 -  Added `$unescape[]`
