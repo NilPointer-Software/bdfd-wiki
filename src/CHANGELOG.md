@@ -3,6 +3,9 @@
 
 # 2022
 
+## March
+- Added `$toTitleCase[]`
+
 ## February
 - `$httpResult[]` can return JSON now
 - Fixed `$httpResult[]` not working with multiple requests
