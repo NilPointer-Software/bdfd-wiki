@@ -15,7 +15,7 @@ This is a list of all permissions supported in BDFD. The permissions are all cas
 - externalstickers
 - kick
 - managechannels
-- manageemojis/managestickers
+- manageemojis
 - manageevents
 - managemessages
 - managenicknames
