@@ -1,24 +1,43 @@
 # Permissions
-This is a list of all permissions supported in BDFD.
+This is a list of all permissions supported in BDFD. The permissions are all case insensitive (i.e: both `BAN` and `Ban` will work).  
 
 - addreactions
 - admin
 - attachfiles
 - ban
 - changenicknames
+- connect
 - createinstantinvite
+- createprivatethreads
+- createpublicthreads
 - embedlinks
 - externalemojis
+- externalstickers
 - kick
 - managechannels
 - manageemojis
+- manageevents
 - managemessages
 - managenicknames
 - manageroles
 - manageserver
+- managethreads
 - managewebhooks
 - mentioneveryone
+- moderatemembers
+- movemembers
+- priorityspeaker
 - readmessagehistory
 - readmessages
+- requesttospeak
 - sendmessages
+- sendmessagesinthreads
+- slashcommands
+- speak
+- stream
 - tts
+- usevad
+- viewauditlog
+- viewguildinsights
+- voicedeafen
+- voicemute
