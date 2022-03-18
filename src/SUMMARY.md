@@ -107,6 +107,7 @@
     - [$discriminator](./bdscript/discriminator.md)
     - [$divide](./bdscript/divide.md)
     - [$dm](./bdscript/dm.md)
+    - [$editChannelPerms](./bdscript/editChannelPerms.md)
     - [$editEmbedIn](./bdscript/editEmbedIn.md)
     - [$editIn](./bdscript/editIn.md)
     - [$editMessage](./bdscript/editMessage.md)
