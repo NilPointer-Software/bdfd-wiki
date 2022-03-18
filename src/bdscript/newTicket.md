@@ -3,7 +3,7 @@ Creates a new ticket.
 
 ## Usage
 ```
-$newTicket[categoryID/name;messageWhenNoSubject;MessageInTicket;MessageToUser;errorMessage]
+$newTicket[categoryID/name;messageWhenNoSubject;MessageInTicket;MessageToUser;errorMessage;(ticket number)]
 ```
 
 ### Breakdown
@@ -14,6 +14,7 @@ $newTicket[categoryID/name;messageWhenNoSubject;MessageInTicket;MessageToUser;er
 - `messageInTicket` - The message that is sent in the new ticket channel.
 - `messageToUser` - The message that gets sent in the current channel.
 - `errorMessage` - The message that gets returned when the ticket can't be created.
+- `ticket number` - For custom ticket number.
 
 ### Subset Functions
 You can use these subset functions in `$newTicket`.
