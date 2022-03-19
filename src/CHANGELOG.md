@@ -5,6 +5,7 @@
 
 ## March
 - Added `$toTitleCase[]`
+- Fixed invite permission calculator
 
 ## February
 - `$httpResult[]` can return JSON now
