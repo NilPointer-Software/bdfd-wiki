@@ -3,6 +3,8 @@
 
 # 2022
 
+**If you're getting Invalid permissions error on your invite link,  disable Stream and View guild insights permissions in the invite editor.**
+
 ## March
 - Added `$toTitleCase[]`
 - Fixed invite permission calculator
