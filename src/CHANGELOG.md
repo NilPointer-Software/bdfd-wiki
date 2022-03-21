@@ -8,6 +8,7 @@
 - Added `$toTitleCase[]`
 - Fixed invite permission calculator
 - Fixed `$suppressErrors[]` and `$embedSuppressErrors[]` getting ignored by components errors
+- Fixed updating some components
 
 ## February
 - `$httpResult[]` can return JSON now
