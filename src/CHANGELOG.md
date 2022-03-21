@@ -7,6 +7,7 @@
 - **If you're getting Invalid permissions error on your invite link,  disable Stream and View guild insights permissions in the invite editor.**
 - Added `$toTitleCase[]`
 - Fixed invite permission calculator
+- Fixed `$suppressErrors[]` and `$embedSuppressErrors[]` getting ignored by components errors
 
 ## February
 - `$httpResult[]` can return JSON now
