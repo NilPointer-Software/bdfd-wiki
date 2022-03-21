@@ -9,6 +9,8 @@
 - Fixed invite permission calculator
 - Fixed `$suppressErrors[]` and `$embedSuppressErrors[]` getting ignored by components errors
 - Fixed updating some components
+- Added `$registerGuildCommands[]`
+- Added `$unregisterGuildCommands[]`
 
 ## February
 - `$httpResult[]` can return JSON now
