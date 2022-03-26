@@ -11,6 +11,7 @@
 - Fixed updating some components
 - Added `$registerGuildCommands[]`
 - Added `$unregisterGuildCommands[]`
+- Added `/callback_list`, `/callback_tag_list`, and `/callback/:callback_tag` endpoints to public BDFD API
 
 ## February
 - `$httpResult[]` can return JSON now
