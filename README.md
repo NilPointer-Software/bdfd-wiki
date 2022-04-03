@@ -3,7 +3,7 @@ A wiki page that explains BDFD functions, callbacks, and features. This is the G
 
 > Wanna View The Wiki? [Click-Me](https://nilpointer-software.github.io/bdfd-wiki/foreword.html)
 
-> How Do I Contribute? [Click-Me](https://github.com/DevSpen/bdfd-wiki/blob/master/CONTRIBUTING.md)
+> How Do I Contribute? [Click-Me](CONTRIBUTING.md)
 
 ### Resources
 - [mdBook](https://github.com/rust-lang/mdBook)
