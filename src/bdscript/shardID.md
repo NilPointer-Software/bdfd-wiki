@@ -17,5 +17,7 @@ There are two usages of  the ` $shardID ` function.
 
 ## Example
 
-![Screenshot_20220407_131929](https://user-images.githubusercontent.com/95774950/162150767-ae24e7b0-a0ce-47e1-b7d9-5f7b4310cac9.png)
-
+```
+$nomention
+$shardID
+```
