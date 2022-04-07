@@ -1,6 +1,6 @@
 # $shardID
 
-Returns the id of the currently used shard
+Returns the id of the currently used shard.
 
 
 ## Usages
