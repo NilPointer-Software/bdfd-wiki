@@ -1,9 +1,18 @@
 # $editButton
-Edits a existing button.
+Edits an existing button.
 
 ## Usage
-```
-$editButton[customID/URL;label;style;disabled (yes/no);emoji (leaveEmptyIfNotNeeded);messageID (optional)]
+```php
+$editButton[interactionID/URL;label;style;(disabled;emoji;message ID)]
 ```
 
 > **Please refer to [buttons](/src/guides/buttons.md) guide for detailed info!**
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

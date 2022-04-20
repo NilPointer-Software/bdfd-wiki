@@ -1,7 +1,7 @@
 # JavaScript
 *(for advanced users)*
 
-> **Warning:** JavaScript is depreacted, meaning no additional features are planned for it.
+> ⚠️ **Warning:** JavaScript is depreacted, meaning no additional features are planned for it.
 
 ### Index
 - [Notes](https://nilpointer-software.github.io/bdfd-wiki/javascript/javascript.html#notes)
@@ -61,7 +61,7 @@ Name      |Description
 ## Example
 *(say command)*
 ```js
-var text = message.replace(commandPrefix, " ") // Makes 'text' the user's message without the command trigger.
+var text = message.replace(commandPrefix, "") // Makes 'text' the user's message without the command trigger.
 setResponse(text) // Sets the response as 'text'.
 ```
-![image](https://user-images.githubusercontent.com/69215413/122844455-b748d900-d2cf-11eb-9bf5-9887b2323295.png)
+![](https://user-images.githubusercontent.com/69215413/122844455-b748d900-d2cf-11eb-9bf5-9887b2323295.png)

@@ -2,17 +2,18 @@
 Modifies a role.
 
 ## Usage
+```php
+$modifyRole[role ID;(name;color;hoisted;mentionable)]
 ```
-$modifyRole[roleID;roleName;colorHex;hoisted (yes/no);mentionable (yes/no)]
-```
-> 🧙‍♂️ You can use `!unchanged` as a argument to leave the setting as-is.
+> 🧠 **Tip:** You can use `!unchanged` as a argument to leave the setting as-is.
 
-### Breakdown
-- `roleID` - The ID of the role to modify.
-- `roleName` - The new role name.
-- `colorHex` - The new role color.
-- `hoisted` - Whether the role should be displayed separately or not.
-- `mentionable` - Whether the role should be mentionable by everyone or not.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| roleID | The ID of the role to modify. |[Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
+| name | The new role name. | [String](/src/resources/arguments/types.md#string) | [Optional](/src/resources/arguments/flags.md#optional)
+| color | The new role color. | [Color](/src/resources/arguments/types.md#color) | [Optional](/src/resources/arguments/flags.md#optional)
+| hoisted | Whether the role should be displayed separately. | [Bool](/src/resources/arguments/types.md#bool) | [Optional](/src/resources/arguments/flags.md#optional)
+| mentionable | Whether the role should be mentionable by everyone. | [Bool](/src/resources/arguments/types.md#bool) | [Optional](/src/resources/arguments/flags.md#optional)
 
 ## Example
 ```
@@ -22,5 +23,4 @@ $onlyPerms[manageroles;❌ You are missing the manage_roles permission!]
 $modifyRole[$findRole[$message[1]];$replaceText[$message;$message[1];;1];!unchanged;!unchanged;!unchanged]
 $description[✅ Changed role name of <@&$findRole[$message[1]]>]
 ```
-
-![example](https://user-images.githubusercontent.com/69215413/123530371-771a9980-d6c7-11eb-987d-c4ba3bb40bd1.png)
+![](https://user-images.githubusercontent.com/69215413/123530371-771a9980-d6c7-11eb-987d-c4ba3bb40bd1.png)

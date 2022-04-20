@@ -7,7 +7,7 @@ Triggered upon an interaction being emitted (e.g. a button being clicked).
 - `$onInteraction[customID]` - Command runs upon the provided 'customID' being clicked/selected/interacted with.
 
 ## Custom IDs
-Components (e.g. buttons and select menus), must have a custom ID. This property is defined by the developer when using [$addButton[]](/src/guides/buttons.md), [$newSelectMenu[]](/src/guides/selectmenu.md), etc. 
+Components (e.g. buttons and select menus), must have a custom ID. This property is defined by the developer when using [$addButton\[\]](/src/guides/buttons.md), [$newSelectMenu[]](/src/guides/selectmenu.md), etc. 
 For example, if you set customID to `click_me` on a button, in `$onInteraction[]` you'd put `click_me`: `$onInteraction[click_me]`. Alternatively, you can use `$onInteraction` (without brackets) with [if statements](/src/guides/ifStatements.md) and [$customID](/src/bdscript/customID.md):
 ```php
 $if[$customID==click_me]

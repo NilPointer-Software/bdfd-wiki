@@ -1,14 +1,15 @@
 # $title
-Sets the embed title.
+Sets the embed's title.
 
 ## Usage
-```
-$title[text;(optional) embedIndex]
+```php
+$title[text;(embedIndex)]
 ```
 
-### Breakdown
-- `text` - The text to set the title as.
-- `embedIndex` - What embed the title should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| text | The text to set the title as. | [String](/src/resources/arguments/types.md#string) | [Emptiable](/src/resources/arguments/flags.md#emptiable)
+| embedIndex | The embed index, default is `1`. [(learn more)](/src/guides/embedIndexes.html) | [Integer](/src/resources/arguments/types.md#integer) | [Optional](/src/resources/arguments/flags.md#optional)
 
 ## Example
 ```
@@ -16,5 +17,13 @@ $nomention
 $title[This is a title!]
 $description[⬆️ That is a nice title.]
 ```
+![](https://user-images.githubusercontent.com/69215413/123186040-4c310b00-d465-11eb-99b1-6c43828c8ddb.png)
 
-![example](https://user-images.githubusercontent.com/69215413/123186040-4c310b00-d465-11eb-99b1-6c43828c8ddb.png)
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

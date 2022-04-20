@@ -2,7 +2,7 @@
 The server's verification level. Returns `None`, `Low`, `Medium`, `High`, or `Very High`.
 
 ## Usage
-```
+```php
 $serverVerificationLvl
 ```
 

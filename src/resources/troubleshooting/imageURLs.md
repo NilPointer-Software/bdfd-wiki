@@ -1,0 +1,4 @@
+# Image URL Troubleshooting
+You should not use media files, such as GIFs, in your code if they don't have a extension (e.i. .gif for GIFs, .png/.jpg/.jpeg/.webp for images, etc). This is because the link probably goes to the site, rather than the media itself. Adding the extension to the link won't change that, most of the time. As such, you must use media files that already have extension. The best practice is to download the necessary media file and send it in Discord, then copy it's link (the media URL, not message URL) and then use it in your code. 
+
+Keep in mind that if the image doesn't load in Discord, this is most likely a issue with Discord or the image itself, not Bot Designer for Discord.

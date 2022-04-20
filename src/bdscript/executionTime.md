@@ -2,7 +2,7 @@
 Returns how long the command took to execute, in milliseconds.
 
 ## Usage
-```
+```php
 $executionTime
 ```
 
@@ -10,5 +10,14 @@ $executionTime
 ```
 $nomention
 $c[Some code here]
-$footer[Executed In $executionTime ms]
+$footer[Executed in $executionTime ms]
 ```
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

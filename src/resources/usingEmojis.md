@@ -21,4 +21,4 @@ Here's a video example:
 ![](https://imgur.com/xN7YS3T.gif)
 
 ### Alternatives
-You can use `$customEmoji[emojiName]` to use custom emojis as well, but this function only works if the emoji belongs to the server that the bot is being used in. Therefore, it's not as stable as emoji IDs.
+You can use `$customEmoji[emojiName]` to use custom emojis as well, but if multiple servers your bot is in have a emoji with the same name, then it may return the wrong emoji. Therefore, this method not as stable as emoji IDs.

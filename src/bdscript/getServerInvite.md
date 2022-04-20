@@ -1,21 +1,18 @@
 # $getServerInvite
-Gets a server's invite URL.
+Creates and returns a server's invite URL.
+> ⚠️ **Warning:** The bot must have the `CREATE_INSTANT_INVITE` permission and be in the current server to create an invite.
 
-## Usages
-There are two usages of the `$getServerInvite` function.
-
-### Usage #1
+## Usage
+```php
+$getServerInvite[(guildID)]
 ```
-$getServerInvite
-```
-Returns a invite to the current server.
 
-### Usage #2
-```
-$getServerInvite[guildID]
-```
-Returns a invite URL for the server provided.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| guildID | The server to get the invite for. **\*** | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Optional](/src/resources/arguments/flags.md#optional)
 
-> 🧙‍♂️ Note: The bot must be in the provided server for it to create a invite. 
-
-> 🧙‍♂️ [How do I find a server/guild ID? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
+## Example
+```
+$nomention
+Here's the server invite: $getServerInvite
+````

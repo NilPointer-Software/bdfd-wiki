@@ -1,11 +1,42 @@
-# Awaited reactions
+# Awaited Reactions
 *(for premium bots)*
 
-Thanks to awaited reactions your bot can be triggered by reactions
-
+Awaited reactions allow you to make commands triggered by a reaction.
 ![end result](https://i.imgur.com/diskuyv.png) \
 
 Here's how the end result looks like.
+## Breakdown
+- You can use `$usedEmoji` to get the emoji the user reacted with.
+
+## Creating an Awaited Reaction Command
+**!icecream**
+```
+$nomention
+$title[What's your favorite ice cream?]
+$description[
+1️⃣ Vanilla
+2️⃣ Chocolate
+3️⃣ Strawberry
+]
+$awaitReactions[icecream;1️⃣;icecream;2️⃣;icecream;3️⃣]
+```
+
+**$reaction[icecream]**:
+```
+$if[$usedEmoji==1️⃣]
+  You picked **Vanilla** ice cream!
+$endif
+
+$if[$usedEmoji==2️⃣]
+  You picked **Chocolate** ice cream!
+$endif
+
+$if[$usedEmoji==3️⃣]
+  You picked **Strawberry** ice cream!
+$endif
+```
+
+If you want to avoid using [if statements](/src/guides/ifStatements.md), then you could create separatr commands for each reaction. For example, `$awaitReactions[icecream_vanilla;1️⃣;icecream_chocolate;2️⃣;icecream_strawberry;3️⃣]`, then you'd create 3 commands named `$reaction[icecream_vanilla]`, `$reaction[icecream_chocolate]`, `$reaction[icecream_strawberry]`.
 
 ## `accept` command
 

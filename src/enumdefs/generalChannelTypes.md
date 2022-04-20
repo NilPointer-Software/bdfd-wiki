@@ -1,0 +1,4 @@
+# GeneralChannelTypes
+-  text
+-  voice
+-  category

@@ -220,21 +220,21 @@ $getUserVar[Money;$mentioned[1;yes]]
 
 Adds money to the mentioned user:
 ```
-$setUserVar[Money;$sum[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+$setUserVar[Money;$sum[Amount;$getUserVar[Money;$mentioned[1]]];$mentioned[1]]
 ```
 
 Adds money to the user running the command:
 ```
-$setUserVar[Money;$sum[Amount;$getVar[Money;$authorID]];$authorID]
+$setUserVar[Money;$sum[Amount;$getUserVar[Money;$authorID]];$authorID]
 ```
 
 Removes money to the mentioned user:
 ```
-$setUserVar[Money;$sub[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+$setUserVar[Money;$sub[Amount;$getUserVar[Money;$mentioned[1]]];$mentioned[1]]
 ```
 Removes money from the user running the command:
 ```
-$setUserVar[Money;$sub[Amount;$getVar[Money;$authorID]];$authorID]
+$setUserVar[Money;$sub[Amount;$getUserVar[Money;$authorID]];$authorID]
 ```
 
 Leaderboard:

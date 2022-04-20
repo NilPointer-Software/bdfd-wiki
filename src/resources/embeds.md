@@ -28,4 +28,4 @@ You can use *Bot Designer for Discord*'s embed functions to create embeds:
 - Ten embeds can be sent per message
 
 ### How do I send multiple embeds in one message?
-You can send up to ten embeds per message using [embed indexes (click me for more info)](/src/resources/embedIndexes.md)
+You can send up to ten embeds per message using [embed indexes (click me for more info)](/src/resources/embedIndexes.md).

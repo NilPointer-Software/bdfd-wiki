@@ -1,19 +1,28 @@
 # $image
-Adds a image to the embed.
+Adds an image to the embed.
 
 ## Usage
-```
-$image[imageURL;(optional) embedIndex]
+```php
+$image[imageURL;(embedIndex)]
 ```
 
-### Breakdown
-- `imageURL` - The URL of the image that appears. Must be a valid image URL.
-- `embedIndex` - What embed the image should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| imageURL | The image source URL. | [URL](/src/resources/arguments/types.md#url) | [Required](/src/resources/arguments/flags.md#required)
+| embedIndex |  The embed index, default is `1`. [(learn more)](/src/resources/embedIndexes.md) | [Integer](/src/resources/arguments/types.md#integer) | [Optional](/src/resources/arguments/flags.md#optional)
 
 ## Example
 ```
 $nomention
 $image[$userAvatar[$botID]]
 ```
+![](https://user-images.githubusercontent.com/69215413/123516701-76ecb080-d66b-11eb-9c65-fb7bbb5710b4.png)
 
-![example](https://user-images.githubusercontent.com/69215413/123516701-76ecb080-d66b-11eb-9c65-fb7bbb5710b4.png)
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

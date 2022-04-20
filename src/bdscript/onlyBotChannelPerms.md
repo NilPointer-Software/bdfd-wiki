@@ -1,12 +1,15 @@
 # $onlyBotChannelPerms
-The command can only be executed if the bot has all of the provided permissions in a channel.
+The command can only be executed if the bot has all of the provided permissions in a certain channel, else the error message is returned.
 
 ## Usage
-```
-$onlyBotChannelPerms[channelID;permissions;errorMessage]
+```php
+$onlyBotChannelPerms[channelID;permission;...;errorMessage]
 ```
 
-### Breakdown
-- `channelID` - The channel to check the permissions for. Use `$channelID` for the current channel.
-- `permissions` - The [permissions](https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html) that the bot needs to execute the command. Separate permissions with `;`.
-- `errorMessage` - The message that is returned when the bot doesn't have the needed permissions.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| channelID | The channel to check the permissions of. **\*** | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
+| permission | The [permissions](/src/resources/permissions.md) that the bot needs. | [Permission](/src/resources/arguments/types.md#permission) | [Required](/src/resources/arguments/flags.md#required)
+| errorMessage | Message returned when the bot is missing permissions. | [String](/src/resources/arguments/types.md#string) | [Emptiable](/src/resources/arguments/flags.md#emptiable)
+
+**\*** Use `$channelID` as the `channelID` argument for the current channel.

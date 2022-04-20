@@ -1,11 +1,21 @@
 # $onlyForRoleIDs
-The command can only executed by the provided roles (uses role IDs).
+The command can only executed by users with all of the provided roles (uses role IDs, unlike [`$onlyForRoles`](./onlyForRoles.md)).
 
 ## Usage
-```
-$onlyForRolesIDs[roleIDs;errorMessage]
+```php
+$onlyForRoleIDs[roleID;...;errorMessage]
 ```
 
-### Breakdown
-- `roleIDs` - The role IDs to allow, separate IDs by `;`.
-- `errorMessage` - The message to return when the user doesn't have the required roles.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| roleID | The role ID(s) to allow. | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
+| errorMessage | Message returned when the user doesn't have the required roles. | [String](/src/resources/arguments/types.md#string) | [Emptiable](/src/resources/arguments/flags.md#emptiable)
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

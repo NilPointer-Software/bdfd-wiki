@@ -2,14 +2,14 @@
 Blocks certain users from using the command.
 
 ## Usage
-```
-$blackListIDs[userIDs;errorMessage]
+```php
+$blackListIDs[userIDs;...;errorMessage]
 ```
 
-### Breakdown
-- `userIDs` - The users to blacklist from using the command. Separate userIDs with `;`.
-> 🧙‍♂️ [Please provide real userID(s). Click-me for more info!](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
-- `errorMessage` - The message that appears when the user running the command is blacklisted.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| userIDs | The users to blacklist from using the command. | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
+ | errorMessage | Message returned when user is blacklisted. |[String](/src/resources/arguments/types.md#string) | [Emptiable](/src/resources/arguments/flags.md#emptiable) |
 
 ## Example
 ```
@@ -17,3 +17,13 @@ $nomention
 $blackListIDs[566613317972394004;246604909451935745;❌ You can't use this command!]
 $c[Some code here]
 ```
+> 🤔 **Explanation:** Users with the ID '566613317972394004' or '246604909451935745' will not be able to use the command. 
+
+## Specifications
+| Scripting Mode | Status
+| --- | --- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported | 👎 Supported, but Deprecated*

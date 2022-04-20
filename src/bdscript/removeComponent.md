@@ -2,10 +2,22 @@
 Removes certain component from a message.
 
 ## Usage
-```
-$removeComponent[customID;(optional) messageID]
+```php
+$removeComponent[customID;(messageID)]
 ```
 
-### Breakdown
-- `customID` - The select-menu/button custom ID to remove from the message.
-- `messageID` - The message to remove the component from, uses the bot's current message if no 'messageID' is provided.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| customID | The custom ID of the component to remove. | [String](/src/resources/arguments/types.md#string) | [Required](/src/resources/arguments/flags.md#required)
+| messageID | The message to remove the component from. **\*** | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Optional](/src/resources/arguments/flags.md#optional)
+
+**\*** If no `messageID` is provided, then the component gets removed from the bot's current command response.
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

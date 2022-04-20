@@ -2,7 +2,7 @@
 Mentions a random user from the server.
 
 ## Usage
-```
+```php
 $randomMention
 ```
 
@@ -11,3 +11,12 @@ $randomMention
 $nomention
 Random User: $randomMention
 ```
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

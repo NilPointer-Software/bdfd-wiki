@@ -1,5 +1,5 @@
 # $roleInfo
-`$roleInfo` allows you to make a 'role info' command without using a bunch of different functions at once. This function returns info about the mentioned role.
+`$roleInfo[]` allows you to make a 'role info' command without using a bunch of different functions at once. This function returns info about the mentioned role.
 
 ## Commands
 You can use the 'commands' below within `$roleInfo`:
@@ -12,11 +12,11 @@ You can use the 'commands' below within `$roleInfo`:
 - `{position}` - Returns the roles position on 'roles list'.
 
 ## Usage
-```
+```php
 $roleInfo[code/text]
 ```
 
-⚠️ You can not include `$roleInfo[]` in a command with a `$description[]` (because it makes one automatically).
+> ⚠️ **Warning:** You can not include `$roleInfo[]` in a command with a `$description[]` (because it makes one automatically).
 
 ## Example
 ```
@@ -29,5 +29,4 @@ Color: {color}
 Position: {position}]
 $title[Role Info]
 ```
-
-![example](https://user-images.githubusercontent.com/69215413/122831224-8f4d7b80-d2b7-11eb-838a-fc2ba7cd7476.png)
+![](https://user-images.githubusercontent.com/69215413/122831224-8f4d7b80-d2b7-11eb-838a-fc2ba7cd7476.png)

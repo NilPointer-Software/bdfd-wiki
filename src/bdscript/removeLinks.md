@@ -1,24 +1,29 @@
 # $removeLinks
 Removes links from a value.
 
-## Usages
-There are two usages of the `$removeLinks` function.
+## Usage
+```php
+$removeLinks[(text)]
+```
 
-### Usage #1
-```
-$removeLinks
-```
-Removes all links from the bot's reply.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| text | The text to remove links from. **\*** | [String](/src/resources/arguments/types.md#string) | [Vacantable](/src/resources/arguments/flags.md#vacantable)
 
-### Usage #2
-```
-$removeLinks[text]
-```
-Removes all links from the provided 'text'.
+**\*** If no `text` is provided and the function is used without brackets, then all links are removed from the bot's reply. 
 
 ## Example
 ```
 $nomention
 $removeLinks[$noMentionMessage]
 ```
-![example](https://user-images.githubusercontent.com/69215413/123530440-40914e80-d6c8-11eb-9fa1-e1aa488a1c80.png)
+![](https://user-images.githubusercontent.com/69215413/123530440-40914e80-d6c8-11eb-9fa1-e1aa488a1c80.png)
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

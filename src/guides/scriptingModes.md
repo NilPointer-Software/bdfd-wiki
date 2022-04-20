@@ -35,7 +35,7 @@ If you would like to change the scripting mode you're using for a command, then 
 ![](https://user-images.githubusercontent.com/69215413/141647785-9c21d996-7ee1-41cb-9737-52635bf1c4ed.png)
 
 ### Limiter Hoisting
-Limiters are functions like `$onlyIf`, `$onlyPerms`, `$onlyBotPerms`, `$onlyForRoles`, and any other function that stops code execution if a condition isn't met (e.g. if a user doesn't have a certain role, then the command will not run).\
+Limiters are functions like `$onlyIf`, `$enabled`, `$onlyPerms`, `$onlyBotPerms`, `$onlyForRoles`, and any other function that stops code execution if a condition isn't met (e.g. if a user doesn't have a certain role, then the command will not run).\
 The positioning of these limiter functions matters in different scripting modes, as the limiter's conditions should be checked before executing any other part of the code.
 
 #### BDScript 2

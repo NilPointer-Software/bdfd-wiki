@@ -1,22 +1,18 @@
 # $getUserStatus
 Returns the provided user's status.
-> 🧙‍♂️ The user must share atleast 1 server with the bot, for this function to work.
-
+> 🗒️ **Note:** The user must share at least one server with the bot for this function to work.
 
 ## Usage
 ```
 $getUserStatus[userID]
 ```
-> ⚠️ Requires the `PRESENCE` privileged intent enabled in the app and [Discord Developer Portal](https://discord.com/developers/applications).
+> ⚠️ **Warning:** This function requires the `PRESENCE` privileged intent enabled in the *Bot Designer for Discord* application and [Discord Developer Portal](https://discord.com/developers/applications).
 
-### Breakdown
-- `userID` - The user to get the status for.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| userID | The user to get the status of. | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
 
-### Statuses List
-- online
-- dnd
-- idle
-- offline
+> 🧠 **Tip:** The possible outputs for `$getUserStatus[]` are: `online`, `dnd`, `idle`, `invisible`, or `offline`. 
 
 ## Example
 ```
@@ -24,4 +20,4 @@ $nomention
 $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/124503888-68517800-dd94-11eb-93e5-c0eea7d8b055.png)
+![](https://user-images.githubusercontent.com/69215413/124503888-68517800-dd94-11eb-93e5-c0eea7d8b055.png)

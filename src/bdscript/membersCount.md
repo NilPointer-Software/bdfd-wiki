@@ -1,22 +1,34 @@
-# $membersCountReturns the  number of member in the current server..
+# $membersCountReturns the number of members in the current server.
 
-Usages
-### Usage #1an``
-d
-`$membersC
+## Usage
+```php
+$membersCount[(presence)]
 ```
-Returns the total members count of the guild.
-ild# Usage #2 u``
-sage
-`$membersCount[pr
+
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| presence | The presence to filter members with. | [Enum](/src/resources/arguments/types.md#enum) ? [MemberPresence](/src/enumdefs/memberPresenses.md) | [Required](/src/resources/arguments/flags.md#required)
+
+## Examples
+### Example #1
 ```
-Returns the eturns amoserver unt of members that havestatusesences set
-to pstatuspresence. For, examplyou will use `$membersCount[online]` it w theshow
-you amount of online members.
+$nomention
+There are **$membersCount members** in this server!
+```
+![](https://user-images.githubusercontent.com/69215413/147861716-13c851b2-1815-45a6-903d-5a887b530422.png)
 
-###PAvailable presences: 
+### Example #2
+```
+$nomention
+There are **$membersCount[online] online members** in this server. 
+```
+![](https://user-images.githubusercontent.com/69215413/147861731-0533440c-5e15-45c9-9544-ad57c0caa199.png)
 
-- `offline`
-- `idle`
-- `dnd
-- `invisible`
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

@@ -1,26 +1,32 @@
 # $random
 Returns random numbers.
 
-## Usages
-There are two usages of the `$random` function.
+## Usage
+```php
+$random[(minimum;maximum)]
+```
 
-### Usage #1
-```
-$random
-```
-Returns a random number between 0 and 9.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| minimum | The minimum number to pick. **\*** | [Integer](/src/resources/arguments/types.md#integer) \| [Float](/src/resources/arguments/types.md#float) | [Optional](/src/resources/arguments/flags.md#optional) 
+| maximum | The maximum number to pick. |  [Integer](/src/resources/arguments/types.md#integer) \| [Float](/src/resources/arguments/types.md#float) | [Optional](/src/resources/arguments/flags.md#optional) 
 
-### Usage #2
-```
-$random[minimum;maximum]
-````
-Returns a random number between 'minimum' and 'maximum'.
+**\*** If `$random` is used with no arguments or brackets, then a random number between 0 and 9 is returned.
 
 ## Example
 ```
 $nomention
 🎲 You rolled `$random[1;7]`!
 ```
-> `$random[]` never returns the 'maxium' value, as it's right side exclusive range. Basically, to get a random number between 1 and 10; you'd put 11 as the 'maxium' instead of 10.
+> 🗒️ **Note:** `$random[]` never returns the 'maximum' value, as it's right side exclusive range. To get a random number between 1 and 6; you'd put 7 as the 'maximum' instead of 6.
 
-![example](https://user-images.githubusercontent.com/69215413/123555172-0d939d00-d752-11eb-9d30-975bf6e8e99f.png)
+![](https://user-images.githubusercontent.com/69215413/123555172-0d939d00-d752-11eb-9d30-975bf6e8e99f.png)
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

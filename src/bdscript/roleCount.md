@@ -2,7 +2,7 @@
 Returns how many roles are in the current server.
 
 ## Usage
-```
+```php
 $roleCount
 ```
 
@@ -11,5 +11,13 @@ $roleCount
 $nomention
 There are $roleCount roles in $serverName[$guildID]
 ```
+![](https://imgur.com/cyGQeVT.png)
 
-![example](https://imgur.com/cyGQeVT.png)
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

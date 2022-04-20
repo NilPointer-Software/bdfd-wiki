@@ -1,18 +1,26 @@
 # $creationDate
 Gets the creation date of a user, channel, role, etc.
-> 🧙‍♂️ Date Format of `$creationDate` is `yyyy-mm-dd`.
+> 🗒️ **Note:** The date format used is `yyyy-mm-dd`.
 
 ## Usage
-```
-$creationDate[ID]
+```php
+$creationDate[id]
 ```
 
-### Breakdown
-- `ID` - The channelID/userID/roleID/messageID/serverID to get the creation date for.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| id | The channelID/userID/roleID/messageID/serverID/etc to get the creation date for. | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
 
 ## Example
 ```
 $username[$mentioned[1;yes]]'s Creation Date: $creationDate[$mentioned[1;yes]]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/122796861-dd00be80-d28c-11eb-85f8-66a850e12809.png)
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

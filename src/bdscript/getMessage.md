@@ -1,19 +1,18 @@
 # $getMessage
-Gets data from a message, with the provided message and channel IDs.
+Gets data from a message, with the provided message and channel ID.
 
 ## Usage
-```
-$getMessage[channelID;messageID;(optional) property]
+```php
+$getMessage[channelID;messageID;(property)]
 ```
 
-### Breakdown
-- `channelID` - The channel that this message belongs to.
-- `messageID` - The message to get the data from.
-- `property` - The message data to get. Default is `content`. Message properties:
-  - `content` - The content of this message.
-  - `authorID` - The ID of the message author.
-  - `username` - The username of the message author.
-  - `avatar` - The avatar of the message author.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| channelID | The channel that this message belongs to. | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
+| messageID | The message to get the data from. | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Required](/src/resources/arguments/flags.md#required)
+| property | The message data to get. **\*** | [Enum](/src/resources/arguments/types.md#enum) ? [MessageProperty](/src/enum/messageProperties.md) | [Required](/src/resources/arguments/flags.md#required)
+
+**\*** `property`'s default is `content`.
 
 ## Example
 ```
@@ -24,5 +23,13 @@ $color[#673ab7]
 $authorIcon[$getMessage[$findChannel[$message[1]];$message[2];avatar]]
 $author[$getMessage[$findChannel[$message[1]];$message[2];username]#$discriminator[$getMessage[$findChannel[$message[1]];$message[2];authorID]]]
 ```
+![](https://user-images.githubusercontent.com/69215413/122654424-3e078580-d119-11eb-9524-e68f08f787d7.png)
 
-![example](https://user-images.githubusercontent.com/69215413/122654424-3e078580-d119-11eb-9524-e68f08f787d7.png)
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

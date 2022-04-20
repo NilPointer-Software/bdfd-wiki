@@ -2,18 +2,17 @@
 Gets a leaderboard value.
 
 ## Usage
-```
-$getLeaderboardValue[variableType (user/globalUser/server);variableName;sortType (asc/desc);position;(optional) returnType (id/value)]
+```php
+$getLeaderboardValue[variableType;variableName;sort;position;(returnType)]
 ```
 
-- `variableType` - The variable type.
-- `variableName` - The variable name to generate the leaderboard for.
-- `sortType` - Whether to sort the values in ascending (asc) or descending (desc) order.
-- `position` - The leaderboard position to get, e.g `1`, `3`, etc.
-- `returnType` - The return type. Types:
-  - none - If this field is excluded, it will return `Username - Value`.
-  - id - Returns the ID of the user belonging this position.
-  - value - Returns the variable value of this position.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| variableType | The variable type. | [Enum](/src/resources/arguments/types.md#enum) ? [VariableType](/src/enumdefs/variableTypes.md) | [Required](/src/resources/arguments/flags.md#required)
+| variableName | The variable name to get the leaderboard value of. | [String](/src/resources/arguments/types.md#string) | [Required](/src/resources/arguments/flags.md#required)
+| sort | Whether to sort the leaderboard ascendingly (`asc`) or descendingly (`desc`). | [Enum](/src/resources/arguments/types.md#enum) ? [SortType](/src/enumdefs/sortTypes.md) | [Required](/src/resources/arguments/flags.md#required)
+| position | The leaderboard position to get, e.g `1`, `3`, etc. | [Integer](/src/resources/arguments/types.md#integer) | [Required](/src/resources/arguments/flags.md#required)
+| returnType | The return value type. | [Enum](/src/resources/arguments/types.md#enum) ? [LeaderboardReturnType](/src/enumdefs/leaderboardReturnType.md) | [Optional](/src/resources/arguments/flags.md#optional)
 
 ## Example
 ```
@@ -30,5 +29,14 @@ $description[#1 - $getLeaderboardValue[globalUser;Money;asc;1]
 #9 - $getLeaderboardValue[globalUser;Money;asc;9]
 #10 - $getLeaderboardValue[globalUser;Money;asc;10]]
 $color[FFFF00]
-$c[This is for global-user variables.]
+$c[This example is for global-user variables]
 ```
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

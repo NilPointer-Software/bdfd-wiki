@@ -2,21 +2,21 @@
 Changes the timezone for date/time functions.
 
 ## Usage
-```
+```php
 $time[timezone]
 ```
 
-### Breakdown
-- `timezone` - The timezone to change the time/date functions to.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| timezone | The timezone to change the time/date functions to. | [String](/src/resources/arguments/types.md#string) | [Required](/src/resources/arguments/flags.md#required)
 
-⚠️ **[Get timezones from here (click-me)](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)**
+**\*** ⚠️ **[Get timezones from here (click-me)](https://wikipedia.org/wiki/List_of_tz_database_time_zones#List)**
 
 
 ## Example
 ```
 $nomention
 $time[America/New_York]
-Date: $date
+$hour:$minute
 ```
-
-![Example](https://user-images.githubusercontent.com/69215413/122826867-a5f0d400-d2b1-11eb-961b-e4d9fa3cb273.png)
+![](https://user-images.githubusercontent.com/69215413/162586227-fa08a004-0ae2-4daf-97e4-e618b0d6f0a0.png)

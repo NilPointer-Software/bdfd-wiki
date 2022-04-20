@@ -1,4 +1,7 @@
 # Statuses
+How do I add a status to my bot?\
+Here's a step-by-step guide to adding a cool status to your bot like this:
+![](https://user-images.githubusercontent.com/69215413/145660329-172a5250-416a-4e01-8a7d-e96ae7024a88.png)
 
 **#1:** Select the bot that you want to add the status to.
 

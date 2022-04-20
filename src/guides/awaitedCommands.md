@@ -8,7 +8,7 @@ With Awaited Commands, you can await a user's response after a command.
   - `<this/is/a/custom/filter>` Custom filter. For example, `<yes/no/maybe>` would limit the accepted responses to `yes`, `no`, or `maybe`. Filter phrases are separated using `/`, the filter must start with `<` and end with `>`.
   - Empty - Leave the `filter` field empty for no filter.
 - `$awaitedCommandError[awaitedCommandName]` - Used as a callback in a command's trigger. Can be used to define what happens when the `filter` requirements aren't met.
-> Check out [the example](#example) to see awaited commands in action!
+> 🧠 **Tip:** Check out [the example](#example) to see awaited commands in action!
 
 ## Example
 `!pineapple`:

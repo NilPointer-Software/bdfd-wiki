@@ -1,13 +1,35 @@
 # Changelog
 *Note that we often forget to update this article, so some stuff is missing.*
 
+# 2022
+## January
+- Rewrote the [BDFD wiki](https://nilpointer-software.github.io/bdfd-wiki/foreword.html)
+
 # 2021
+## December
+- Fixed the role cache
+- Slash command's option description is now required
+- Added `$shardID[]`
+- Added sharding
+- Improved interaction handling
+- Added `$defer`
 
 ## November
+- Added `$reply[]`
+- Added `$trimSpace[]`
+- Added `$url[]`
+- Upgraded the database
+- Sped up the node starting time
+- Added `$botCommands[]`
+- Added `$unpinMessage[]`
+- Added `$pinMessage[]`
+- Fixed `$isUserDMEnabled[]` not returning false in some cases
 - `$addReactions[]` now works in slash commands
 - `$dm[]` now can dm to more than one mention and can be used multiple times
 - `$dm` now can be used with `$dm[]`
 - `$random[]` now can use decimals
+- Added `$'randomChannelID` (BDScript Unstable only)
+- Fixed `$textSplit[]` removing space
 
 ## October
 - Added `$deleteMessage[]`

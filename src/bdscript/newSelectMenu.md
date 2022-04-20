@@ -2,7 +2,7 @@
 Adds a select menu to the message.
 
 ## Usage
-```
+```php
 $newSelectMenu[customID;minValuesToSelect;maxValuesToSelect;placeholder;messageID (optional)]
 ```
 

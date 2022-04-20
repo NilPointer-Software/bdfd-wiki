@@ -2,17 +2,26 @@
 Picks one value from the provided values randomly.
 
 ## Usage
-```
-$randomText[text1;text2;etc]
+```php
+$randomText[text;...]
 ```
 
-### Breakdown
-- `text1`/`text2`/`etc` - The text which the bot can choose from.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| text | The text values to choose from. | [String](/src/resources/arguments/types.md#string) | [Emptiable](/src/resources/arguments/flags.md#emptiable)
 
 ## Example
 ```
 $nomention
 $randomText[Hello;Hi;Hey]!
 ```
+![](https://user-images.githubusercontent.com/69215413/148659979-4d1f45af-3a04-42b0-ab77-bf8df039ba6a.png)
 
-![example](https://user-images.githubusercontent.com/69215413/123556366-e42a3f80-d758-11eb-94fa-8836cccc882f.png)
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

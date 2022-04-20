@@ -2,7 +2,7 @@
 Checks if a condition is `true` or `false`.
 
 ## Usage
-```
+```php
 $checkCondition[condition]
 ```
 
@@ -12,6 +12,7 @@ Simply put, `$checkCondition` serves as a way to make a custom true or false sta
 Base Usage: `$checkCondition[value1(sign)value2]`
 
 **What's Sign?**
+
 Replace (sign) with one of these.
 
 - `==` - Should be equal 
@@ -27,3 +28,12 @@ The value is what the bot is checking. Like one of the examples above: `$checkCo
 - value1 is $username
 - sign is ==
 - value2 is Spen
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*

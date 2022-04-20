@@ -2,8 +2,8 @@
 Returns 'true' if every provided condition is true, otherwise 'false' is returned.
 
 ## Usage
-```
-$and[condition1;condition2;etc]
+```php
+$and[conditions;...]
 ```
 
 ## Example
@@ -13,4 +13,13 @@ $if[$and[$username==noituri;$checkContains[$toLowercase[$message];update]==true]
 Noit said "Update"!
 $endif
 ```
-> The code in the if statement only executes if the user's username is 'noituri', and the message content is 'update'.
+> 🤔 **Explanation:** The code in the if statement only executes if the user's username is 'noituri', and the message content is 'update'.
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported | 👎 Supported, but Deprecated*

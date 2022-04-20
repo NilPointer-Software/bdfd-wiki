@@ -3,7 +3,7 @@ Edits a option from a select menu.
 
 ## Usage
 ```
-$editSelectMenuOption[selectMenuCustomID;label;value;description;default (yes/no);emoji (canBeLeftEmpty);messageID (optional)]
+$editSelectMenuOption[menu option ID;label;value;description;(default;emoji;message ID)]
 ```
 
 > **Please refer to the [select menu](/src/guides/selectmenu.md) guide for detailed info!**

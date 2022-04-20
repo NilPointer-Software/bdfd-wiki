@@ -1,9 +1,9 @@
 # $getTextSplitLength
-Returns the number of splits in [$textSplit](./textSplit.md).
-> 🧙‍♂️ This function can't be used, if `$textSplit` isn't present in the code.
+Returns the number of splits in [$textSplit[]](./textSplit.md).
+> ⚠️ **Warning:** This function can't be used if [`$textSplit[]`](./textSplit.md) isn't also present in the code.
 
 ## Usage
-```
+```php
 $getTextSplitLength
 ```
 

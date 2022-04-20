@@ -2,25 +2,54 @@
 Adds reactions to the message that triggered the command.
 
 ## Usage
+```php
+$addCmdReactions[emojis;...]
 ```
-$addCmdReactions[emojis]
-```
-> 🧙‍♂️ You can use unicode emojis or emoji IDs, not emoji names. *For emoji IDs:* The bot must be present in the server, that you are using the emoji from.
 
-### Breakdown
-- `emojis` - The emoji(s) the bot reacts with. Separate emojis using `;`.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| emojis | The emoji(s) the bot reacts with. | [String](/src/resources/arguments/types.md#string) | [Required](/src/resources/arguments/flags.md#required)
 
-## Unicode Emojis
-Do not use emoji names: `$addCmdReactions[:smile:]`
+> 📝 **Note:** You can use Unicode emojis or emoji IDs, not emoji names. *For emoji IDs:* The bot must be present in the server, that you are using the emoji from.
 
-Use the unicode version: `$addCmdReactions[😀]`
+### Unicode Emojis
+❌ Do not use emoji names: `$addCmdReactions[:smile:]`\
+✅ Use the unicode version: `$addCmdReactions[😀]`
 
-> List of unicode emojis: https://getemoji.com
+> [List of unicode emojis (click-me)](https://getemoji.com)
  
-## Emoji IDs
-1. Type `\:TheEmojiName:`
-2. Send the message.
-3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
-4. Input the emoji ID into `$addCmdReactions[]`. (e.g `$addCmdReactions[<:hollyDab:828628880629825546>]`)
+### Emoji IDs
+Refer to the [using emojis guide](/src/resources/usingEmojis.md) to learn about emoji IDs. Syntax: `$addCmdReactions[<emoji id>]`.
 
-> 🧙‍♂️ Note: If `\:TheEmojiName:` doesn't work, try `:-:TheEmojiName:`. Both methods require [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) enabled! 
+## Examples
+### Example #1
+```
+$nomention
+$addCmdReactions[✅]
+```
+![](https://user-images.githubusercontent.com/69215413/141665170-b9818e76-184e-43fb-bb1c-7661d7ec0501.png)
+
+### Example #2
+```
+$nomention
+$addCmdReactions[😂;😅]
+```
+![](https://user-images.githubusercontent.com/69215413/141665447-3850b98b-8460-4073-84cd-81f8fe8eb278.png)
+
+### Example #3
+```
+$nomention
+$addCmdReactions[<:Wave:856635526710558741>]
+```
+![](https://user-images.githubusercontent.com/69215413/141665460-945a52a3-23d9-48b2-924f-bab4355728fb.png)
+
+> 📝 **Note:** This code won't work for your bot because the specific 'Wave' emoji isn't in any servers with your bot. You can replace it with an emoji ID from a server your bot is in though!
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported | 👎 Supported, but Deprecated*
