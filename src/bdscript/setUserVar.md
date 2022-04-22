@@ -21,11 +21,16 @@ $setUserVar[variableName;newValue;(userID;guildID)]
 $setUserVar[Example;true]
 ```
 **\*** This will change the value of the variable to true for the author of the command.
+
+![Attachment](https://cdn.discordapp.com/attachments/967164752390398003/967173474554642482/Screenshot_20220423-0021412.png)
+
 ### Changing the value of a variable (Mentioned user)
 ```
 $setUserVar[Example;true;$mentioned[1]]
 ```
 **\*** This will change the value of the variable to true for the mentioned user.
+
+![Attachment](https://cdn.discordapp.com/attachments/967164752390398003/967173937001812028/Screenshot_20220423-0023402.png)
 
 ## Specifications
 | Scripting Mode | Status
