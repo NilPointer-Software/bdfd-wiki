@@ -1,5 +1,5 @@
 # $setServerVar
-Updates a variable value for a server.
+Sets value to given variable. It's a server variable, it means that this variable is assigned to server.
 
 ## Usage
 ```
