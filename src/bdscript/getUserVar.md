@@ -1,5 +1,5 @@
 # $getUserVar
-Returns a local user variable value.
+Returns the Variable's value. It's a user variable, it means that this variable is assigned to user that used this command.
 
 ## Usage
 ```php
@@ -13,7 +13,7 @@ $getUserVar[name;(user ID;guild ID)]
 | guildID  | The server to get the variable value for. **\*** | [Snowflake](/src/resources/arguments/types.md#snowflake) | [Optional](/src/resources/arguments/flags.md#optional)
 
 **\*** If no user is provided, the author is used.
-**\*** If no user is provided, the server where the command was executed is used.
+**\*** If no guild is provided, the server where the command was executed is used.
 
 > **Find more information about variables [here](/src/guides/variables.md).**
 
