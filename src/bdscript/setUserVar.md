@@ -1,5 +1,5 @@
 # $setUserVar
-Updates a variable's value for a user.
+Sets value to given variable. It's a user variable, it means that this variable is assigned to user that used this command.
 
 ## Usage
 ```
