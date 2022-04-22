@@ -1,21 +1,21 @@
 # $var
-Can be used to *temporarily* store a value. After the command executes, all of the temporary variables are deleted. For this specific variable function, you don't need to create a corresponding variable in the application.
-
-> **Warning: This function requires [BDScript 2](/src/guides/bdscript2.md) mode enabled in order to work!**
+Can be only used in BDScript 2. It can be used to save a value temporarily. It doesn't require setting up a new variable in the app. The data is removed after the command is executed. If value is provided the variable is set otherwise the value is retrieved.
 
 ## Usage
 ```
-$var[name;value]
+$var[variableName;(newValue)]
 ```
 
-### Breakdown
-- To store a value, you use `$var[variableName;value]`.
-- To retrieve the value of a temporary variable, you use `$var[variableName]`.
-> **Note:** Variables must be set before they are retrieved.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| variableName | The variable name | [String](/src/resources/arguments/types.md#string) | [Required](/src/resources/arguments/flags.md#required)
+| newValue | The newly assigned variable value. **\*** | [String](/src/resources/arguments/types.md#string) | [Vacantable](/src/resources/arguments/flags.md#vacantable)
+
+**\*** If the argument is present, this will set the value of the variable. If the argument is not present, it will return the value of the temporary variable.
 
 ## Examples
 ### Example #1
-*Stores the response in a variable, then calls the variable to set the response.*
+> Stores the response in a variable, then calls the variable to set the response.
 ```
 $nomention
 $var[message;Hello World!]
@@ -23,7 +23,7 @@ $var[message]
 ```
 
 ### Example #2
-*Creates a channel then responds with it's mention.*
+> Creates a channel then responds with it's mention.
 ```
 $nomention
 $var[channelName;insert-channel-name-here]
@@ -38,7 +38,7 @@ Created channel <#$channelID[$var[channelName]]>!
 ```
 
 ### Example #3
-*Creates a role then responds with it's mention.*
+> Creates a role then responds with it's mention.
 ```
 $nomention
 $var[roleName;insert role name]
@@ -51,3 +51,12 @@ $await[creation] $c[Awaits the role being created]
 
 Created role <@&$roleID[$var[roleName]]>!
 ```
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ❌ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ❌ |
+
+*✅ Supported | ❌ Unsupported*
