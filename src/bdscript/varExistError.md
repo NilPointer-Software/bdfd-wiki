@@ -23,3 +23,12 @@ You are now cool!
 
 ## Tip
 Useful for publishing your commands in #wikis on the official BDFD server. This way you can explain in more detail to the user that he forgot to create the required variable.
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*
