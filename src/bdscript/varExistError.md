@@ -21,8 +21,7 @@ You are now cool!
 
 ![example](https://user-images.githubusercontent.com/69215413/125121239-9a7b1680-e0c1-11eb-8ceb-b9b695f1b89f.png)
 
-## Tip
-Useful for publishing your commands in #wikis on the official BDFD server. This way you can explain in more detail to the user that he forgot to create the required variable.
+> 📝 **Tip:** This function is commonly used for publishing commands in *#wikis* channel on the official BDFD server. This way you can explain in more detail to the developer that they forgot to create the required variable.
 
 ## Specifications
 | Scripting Mode | Status
