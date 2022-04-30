@@ -1,15 +1,15 @@
 # $varExistError
-Returns a custom error if a certain variable doesn't exist.
+Returns custom error if variable does not exist.
 
 ## Usage
 ```
 $varExistError[variableName;errorMessage]
 ```
-> 🧙‍♂️ This function is useful when posting codes in the *#wikis* channel, so users don't forget to create the needed variables.
 
-### Breakdown
-- `variableName` - The variable that should exist.
-- `errorMessage` - The custom error message to return if the variable doesn't exist.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| variableName | The variable that should exist. | [String](/src/resources/arguments/types.md#string) | [Required](/src/resources/arguments/flags.md#required)
+| errorMessage | The custom error message to return if the variable doesn't exist. | [String](/src/resources/arguments/types.md#string) | [Emptiable](/src/resources/arguments/flags.md#emptiable)
 
 ## Example
 ```
@@ -20,3 +20,14 @@ You are now cool!
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/125121239-9a7b1680-e0c1-11eb-8ceb-b9b695f1b89f.png)
+
+> 📝 **Tip:** This function is commonly used for publishing commands in *#wikis* channel on the official BDFD server. This way you can explain in more detail to the developer that they forgot to create the required variable.
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*
