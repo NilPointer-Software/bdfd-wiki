@@ -6,6 +6,7 @@ A embed is a rich Discord message which can be sent by webhooks or bots.
 #### How do I create embeds?
 You can use *Bot Designer for Discord*'s embed functions to create embeds:
 - [$title](/src/bdscript/title.md) - The embed's title.
+- [$embeddedURL](/src/bdscript/embeddedURL.md) - The embed's title URL, must be a valid link.
 - [$description](/src/bdscript/description.md) - The embed's description.
 - [$author](/src/bdscript/author.md) - The embed's author text.
 - [$authorIcon](/src/bdscript/authorIcon.md) - The embed's author icon, must be a valid image link.
