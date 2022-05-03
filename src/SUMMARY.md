@@ -232,6 +232,7 @@
     - [$roleInfo](./bdscript/roleInfo.md)
     - [$roleName](./bdscript/roleName.md)
     - [$roleNames](./bdscript/roleNames.md)
+    - [$roleGrant](./bdscript/roleGrant.md)
     - [$rolePosition](./bdscript/rolePosition.md)
     - [$round](./bdscript/round.md)
     - [$second](./bdscript/second.md)
