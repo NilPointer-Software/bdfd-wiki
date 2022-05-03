@@ -3,6 +3,9 @@
 
 # 2022
 
+## May
+- Fixed token issues
+
 ## April
 - Added `"return ID of the ticket message"` argument to `$newTicket[]`
 - Fixed disappearing slash commands from the app's state
