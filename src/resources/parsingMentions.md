@@ -1,5 +1,5 @@
 # Parsing Mentions
-#### How do I mention the command's author?\
+#### How do I mention the command's author?
 `<@$authorID>`
 
 #### How do I mention the channel that the command was ran in?
