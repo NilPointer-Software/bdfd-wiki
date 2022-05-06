@@ -5,6 +5,7 @@
 
 ## May
 - Fixed token issues
+- Fixed disappearing slash command options
 
 ## April
 - Added `"return ID of the ticket message"` argument to `$newTicket[]`
