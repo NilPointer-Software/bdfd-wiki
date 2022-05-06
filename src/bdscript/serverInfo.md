@@ -15,7 +15,8 @@ $serverInfo[text;(thumbnail)]
 
 **\*** Default is `yes`.
 
-⚠️ You can not include `$serverInfo[]` in a command with a `$description[]` (because it makes one automatically).
+### Warning
+You can not include [`$serverInfo[]`](/src/bdscript/serverInfo.md) in a command with a [`$description[]`](/src/bdscript/description.md) because it makes one automatically.
 
 ### Subset-Functions
 You can use the 'subset-functions' below within `$serverInfo`:
