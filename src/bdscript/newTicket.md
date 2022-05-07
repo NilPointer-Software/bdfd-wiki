@@ -15,7 +15,7 @@ $newTicket[categoryID/name;messageWhenNoSubject;MessageInTicket;MessageToUser;er
 - `messageToUser` - The message that gets sent in the current channel.
 - `errorMessage` - The message that gets returned when the ticket can't be created.
 - `ticket number` - For custom ticket number.
-- `return id of the ticket message` - (yes/no) whether you want the ticket message to return it's id.
+- `return id of the ticket message` - (yes/no) Whether you want the ticket message to return it's id.
 
 ### Subset Functions
 You can use these subset functions in `$newTicket`.
