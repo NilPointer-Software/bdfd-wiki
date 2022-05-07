@@ -194,6 +194,7 @@
     - [$onlyAdmin](./bdscript/onlyAdmin.md)
     - [$onlyBotChannelPerms](./bdscript/onlyBotChannelPerms.md)
     - [$onlyBotPerms](./bdscript/onlyBotPerms.md)
+    - [$onlyForCategories](./bdscript/onlyForCategories.md)
     - [$onlyForChannels](./bdscript/onlyForChannels.md)
     - [$onlyForIDs](./bdscript/onlyForIDs.md)
     - [$onlyForRoles](./bdscript/onlyForRoles.md)
