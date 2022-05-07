@@ -1,5 +1,5 @@
 # $toTitleCase
-Changes provided text to lowercase.
+Changes first letter of the word to uppercase in provided text.
 
 ## Usage
 ```
