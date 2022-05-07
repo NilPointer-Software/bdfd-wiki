@@ -5,7 +5,7 @@
 | Name | Discord Tag | Position 
 | ------------- | ------------- | -------------
 Jakub Tomana | wiadr000#1947 (kubastick) | Owner/Developer
-Mikołaj Radkowski  | noituri#2489 | Developer/DevOp
+Mikołaj Radkowski  | noituri#1111 | Developer/DevOp
 Bartłomiej Skoczeń | MineBartekSA#4899 | Developer/DevOp
 
 ### The Company
