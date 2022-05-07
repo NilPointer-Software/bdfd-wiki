@@ -269,6 +269,7 @@
     - [$timeout](./bdscript/timeout.md)
     - [$title](./bdscript/title.md)
     - [$toLowercase](./bdscript/toLowercase.md)
+    - [$toTitleCase](./bdscript/toTitleCase.md)
     - [$toUppercase](./bdscript/toUppercase.md)
     - [$trimSpace](./bdscript/trimSpace.md)
     - [$tts](./bdscript/tts.md)
