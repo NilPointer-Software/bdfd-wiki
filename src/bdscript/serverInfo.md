@@ -3,14 +3,20 @@ Allows you to make a 'server info' command without using a bunch of different fu
 
 ## Usage
 ```
-$serverInfo[text/code;(optional) showIcon (yes/no)]
+$serverInfo[text;(thumbnail)]
 ```
 
-### Breakdown
-- `text/code` - The text that is returned.
-- `showIcon` - Whether or not to show the server icon as the thumbnail. Default is `yes`.
+| Argument | Description | Type | Flags |
+| :---- | :---- | :---- | :---- |
+| text |  The text that is returned. **\*** | [String](/src/resources/arguments/types.md#string) | [Required](/src/resources/arguments/flags.md#required)
+| thumbnail | Whether or not to show the server icon as the thumbnail. **\*** | [Bool](/src/resources/arguments/types.md#bool) | [Optional](/src/resources/arguments/flags.md#optional)
 
-⚠️ You can not include `$serverInfo[]` in a command with a `$description[]` (because it makes one automatically).
+**\*** You can also write some code here.
+
+**\*** Default is `yes`.
+
+### Warning
+You can not include [`$serverInfo[]`](/src/bdscript/serverInfo.md) in a command with a [`$description[]`](/src/bdscript/description.md) because it makes one automatically.
 
 ### Subset-Functions
 You can use the 'subset-functions' below within `$serverInfo`:
@@ -37,3 +43,12 @@ Large Server?: {large};no]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/122832982-3206f980-d2ba-11eb-9a31-8f94cad26df7.png)
+
+## Specifications
+| Scripting Mode | Status
+| :---- | :---- |
+| BDScript | ✅ |
+| BDScript 2 | ✅ |
+| BDScript Unstable | ✅ |
+
+*✅ Supported | ❌ Unsupported*
