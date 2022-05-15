@@ -47,6 +47,8 @@ Name : $input[modalInput1]
 Pronouns : $input[modalInput2]
 About me : $input[modalInput3]
 ```
-Preview
+### Preview
+
 ![Screenshot_20220516_034020](https://user-images.githubusercontent.com/95774950/168496005-e6c16929-16c5-4415-a95f-3133bddf081c.png)
+
 ![Screenshot_20220516_033827](https://user-images.githubusercontent.com/95774950/168496047-df8a194a-1658-42aa-99a7-75d5bc627c2d.png)
