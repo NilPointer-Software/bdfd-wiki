@@ -23,3 +23,27 @@ In this section you'll learn how to use the modal.
 - `placeholder` - Text which appears if no text is written in the text field. _(Max 100 characters)_
 
 ## Example
+Main
+
+```
+$nomention
+Modal Example
+$addButton[no;id;Click me!;primary]
+```
+
+Interaction #1 - $onInteraction[id]
+```
+$nomention
+$newModal[modal;User Bio]
+$addTextInput[modalInput1;short;What is your name?;3;30;yes;;Mikołaj]
+$addTextInput[modalInput2;short;What are your pronouns?;2;30;yes;;He/Him]
+$addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I am a Developer]
+```
+
+Interaction #2 - $onInteraction[modal]
+```
+$nomention
+Name : $input[modalInput1]
+Pronouns : $input[modalInput2]
+About me : $input[modalInput3]
+```
