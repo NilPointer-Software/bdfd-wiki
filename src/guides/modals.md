@@ -52,7 +52,7 @@ Command Trigger: `$onInteraction[bio]` | Command Code:
 ```
 $nomention
 $newModal[modal;User Bio]
-$addTextInput[modalInput1;short;What is your name?;3;30;yes;;MikoÅ‚aj]
+$addTextInput[modalInput1;short;What is your name?;3;30;yes;;Mikołaj]
 $addTextInput[modalInput2;short;What are your pronouns?;2;30;yes;;He/Him]
 $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I am a Developer]
 ```
