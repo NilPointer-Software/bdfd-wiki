@@ -4,6 +4,8 @@ In this section, you'll learn how to use the modal message component.
 
 ![](https://imgur.com/XUbUhdG.png)
 
+> :warning: **Warning:** Modals are only supported for interaction responses  slash commands, buttons, select menus, etc), you can't open a modal from just a message command.
+
 ## Creating a Modal
 
 `$newModal[modalID;title]`
@@ -21,11 +23,19 @@ In this section, you'll learn how to use the modal message component.
   ![](https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png)
 
 - `label` - The content of the label which is displayed above the text input box.
-- `minimumLength` - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and cannot be greater than the `maximum length`.
-- `maximumLength` - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and cannot be less than the `minimum length`.  
+- `minimumLength` - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the `maximumLength`.
+- `maximumLength` - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the `minimumLength`.  
   `required` - Whether the text field is required, defaults to true.
 - `value` - Text that's shown by default in the text field. This value should be less than 4000 characters.
 - `placeholder` - Text which appears if no text is written in the text field. This value should be less than 100 characters.
+
+## Getting Input from a Modal Submission
+
+_Use this function in response to the modal submission interaction:_
+
+`$input[textInputID]`
+
+- `textInputID` - The text input field to get the user's input from.
 
 ## Example
 
@@ -47,6 +57,8 @@ $addTextInput[modalInput2;short;What are your pronouns?;2;30;yes;;He/Him]
 $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I am a Developer]
 ```
 
+> 🤔 **Explanation:** The code above executes when the [button](./buttons.md) from the previous code gets clicked. So, when the user clicks the button the modal appears.
+
 Command Trigger: `$onInteraction[modal]` | Command Code:
 
 ```
@@ -55,6 +67,8 @@ Name : $input[modalInput1]
 Pronouns : $input[modalInput2]
 About me : $input[modalInput3]
 ```
+
+> 🤔 **Explanation:** The code above executes when the modal is submitted, because in the previous command we inputted the custom ID 'modal' into the `$newModal[]` function: `$newModal[modal;User Bio]`.
 
 ### Result
 
