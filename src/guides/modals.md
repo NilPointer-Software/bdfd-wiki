@@ -25,7 +25,7 @@ In this section, you'll learn how to use the modal message component.
 - `label` - The content of the label which is displayed above the text input box.
 - `minimumLength` - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the `maximumLength`.
 - `maximumLength` - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the `minimumLength`.  
-  `required` - Whether the text field is required, defaults to true.
+- `required` - Whether the text field is required, defaults to true.
 - `value` - Text that's shown by default in the text field. This value should be less than 4000 characters.
 - `placeholder` - Text which appears if no text is written in the text field. This value should be less than 100 characters.
 
