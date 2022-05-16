@@ -1,4 +1,4 @@
-# Modal
+# Modals
 
 In this section, you'll learn how to use the modal message component.
 
