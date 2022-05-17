@@ -18,7 +18,7 @@ In this section, you'll learn how to use the modal message component.
 `$addTextInput[textInputID;style;label;(minimumLength;maximumLength;required;value;placeholder)]`
 
 - `textInputID` - ID that is used to retrieve the text input in the text field. This value should be unique. _(Used in `$input[textInputID]` for retrieving input)_
-- `style` - The modal style, either `short ` or `paragraph`. _(Check below for style preview)_\
+- `style` - The modal style, either `short` or `paragraph`. _(Check below for style preview)_\
   \
   ![](https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png)
 
