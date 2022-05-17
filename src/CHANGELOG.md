@@ -8,6 +8,7 @@
 - Fixed disappearing slash command options
 - `AllowedMentions` field is now used in `$channelSendMessage[]`, `$sendEmbedMessage[]` and `$sendMessage[]`
 - Fixed black screen after bot creation
+- Fixed in-app tutorial
 
 ## April
 - Added `"return ID of the ticket message"` argument to `$newTicket[]`
