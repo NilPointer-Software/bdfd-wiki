@@ -14,6 +14,7 @@
     - [HTTP Requests](./guides/httpRequests.md)
     - [Hyperlinks](./guides/hyperlinks.md)
     - [If Statements](./guides/ifStatements.md)
+    - [Modals](./guides/modals.md)
     - [Select Menu](./guides/selectmenu.md)
     - [Slash Commands](./guides/slashCommands.md)
     - [Text Splitting](./guides/textSplitting.md)
@@ -21,8 +22,8 @@
     - [Variables](./guides/variables.md)
     - [Webhooks](./guides/webhooks.md)
 
-- [Resources](./resources/bdfdCreation.md)
-    - [Avoiding Currency Inflation](./resources/currencyInflation.md)
+- [Resources](./resources/api.md)
+    - [API](./resources/api.md)
     - [BDFD's Creation](./resources/bdfdCreation.md)
     - [Discord's ID System](./resources/discordIDSystem.md)
     - [Embed Indexes](./resources/embedIndexes.md)
