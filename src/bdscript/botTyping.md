@@ -20,9 +20,9 @@ Hello World!
 
 ## Specifications
 | Scripting Mode | Status
-| --- | --- |
+| :---- | :---- |
 | BDScript | ✅ |
 | BDScript 2 | ✅ |
 | BDScript Unstable | ✅ |
 
-*✅ Supported | ❌ Unsupported*
+*✅ Supported | ❌ Unsupported | 👎 Supported, but Deprecated*

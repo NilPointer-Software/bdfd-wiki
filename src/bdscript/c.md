@@ -20,9 +20,9 @@ $c[This is a say command. You are reading a comment!]
 
 ## Specifications
 | Scripting Mode | Status
-| --- | --- |
+| :---- | :---- |
 | BDScript | ✅ |
 | BDScript 2 | ✅ |
 | BDScript Unstable | ✅ |
 
-*✅ Supported | ❌ Unsupported*
+*✅ Supported | ❌ Unsupported | 👎 Supported, but Deprecated*

@@ -1,5 +1,5 @@
 # $botListDescription
-Sets the description of this command, for the BDL command list (if the bot is on [Bot Designer List](https://botdesignerlist.com)).
+Sets the description of this command, for the Bot Designer List command list (if the bot is on [Bot Designer List](https://botdesignerlist.com)).
 
 ## Usage
 ```php
@@ -13,8 +13,8 @@ $botListDescription[text]
 ## Example
 ```
 $nomention
-Pong!
 $botListDescription[Ping? Pong!]
+Pong!
 ```
 
 ## Specifications
@@ -24,4 +24,4 @@ $botListDescription[Ping? Pong!]
 | BDScript 2 | ✅ |
 | BDScript Unstable | ✅ |
 
-*✅ Supported | ❌ Unsupported*
+*✅ Supported | ❌ Unsupported | 👎 Supported, but Deprecated*
