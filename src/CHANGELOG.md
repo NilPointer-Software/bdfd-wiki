@@ -11,6 +11,7 @@
 - Fixed in-app tutorial
 - Fixed escaping response in interactions
 - Fixed cooldown error messages
+- Fixed empty values in variables not getting saved
 
 ## April
 - Added `"return ID of the ticket message"` argument to `$newTicket[]`
