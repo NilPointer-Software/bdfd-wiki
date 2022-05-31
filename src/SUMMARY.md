@@ -199,7 +199,7 @@
     - [$onlyForChannels](./bdscript/onlyForChannels.md)
     - [$onlyForIDs](./bdscript/onlyForIDs.md)
     - [$onlyForRoles](./bdscript/onlyForRoles.md)
-    - [$onlyForRolesIDs](./bdscript/onlyForRolesIDs.md)
+    - [$onlyForRoleIDs](./bdscript/onlyForRoleIDs.md)
     - [$onlyForServers](./bdscript/onlyForServers.md)
     - [$onlyForUsers](./bdscript/onlyForUsers.md)
     - [$onlyIf](./bdscript/onlyIf.md)
