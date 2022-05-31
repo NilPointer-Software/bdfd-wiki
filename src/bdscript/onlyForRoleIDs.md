@@ -1,11 +1,11 @@
-# $onlyForRolesIDs
+# $onlyForRoleIDs
 The command can only executed by the provided roles.
 
 ## Usage
 ```
-$onlyForRolesIDs[roleIDs;errorMessage]
+$onlyForRoleIDs[roleID;...;errorMessage]
 ```
 
 ### Breakdown
-- `roleIDs` - The role IDs to allow, separate IDs using `;`.
+- `roleID` - The role IDs which are allowed to use the command, separate IDs using `;`.
 - `errorMessage` - The message to return when the user doesn't have the required roles.
