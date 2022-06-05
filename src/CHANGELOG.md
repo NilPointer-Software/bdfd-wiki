@@ -12,6 +12,7 @@
 - Fixed escaping response in interactions
 - Fixed cooldown error messages
 - Fixed empty values in variables not getting saved
+- Fixed userID being ignored when guildID was passed to `$getUserVar[]`
 
 ## April
 - Added `"return ID of the ticket message"` argument to `$newTicket[]`
