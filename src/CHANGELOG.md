@@ -3,6 +3,9 @@
 
 # 2022
 
+## June
+- Fixed `$onlyBotChannelPerms[]`
+
 ## May
 - Fixed token issues
 - Fixed disappearing slash command options
