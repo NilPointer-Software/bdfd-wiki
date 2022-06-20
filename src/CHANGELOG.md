@@ -6,6 +6,7 @@
 ## June
 - Fixed `$onlyBotChannelPerms[]`
 - Fixed description verification in `$addSelectMenuOption[]` and `$editSelectMenuOption[]`
+- Updated limits of select menu options
 
 ## May
 - Fixed token issues
