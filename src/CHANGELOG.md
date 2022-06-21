@@ -7,6 +7,7 @@
 - Fixed `$onlyBotChannelPerms[]`
 - Fixed description verification in `$addSelectMenuOption[]` and `$editSelectMenuOption[]`
 - Updated limits of select menu options
+- Fixed updating components which are refering to `$messageID`
 
 ## May
 - Fixed token issues
