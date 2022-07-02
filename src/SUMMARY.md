@@ -5,6 +5,7 @@
 
 - [Guides](./guides/async.md)
     - [Async](./guides/async.md)
+    - [Auto Complete](./guides/autoComplete.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
     - [BDScript 2](./guides/bdscript2.md)
     - [Buttons](./guides/buttons.md)
