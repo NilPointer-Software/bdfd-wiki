@@ -3,6 +3,9 @@
 
 # 2022
 
+## July
+- Added hex to the color picker
+
 ## June
 - Fixed `$onlyBotChannelPerms[]`
 - Fixed description verification in `$addSelectMenuOption[]` and `$editSelectMenuOption[]`
