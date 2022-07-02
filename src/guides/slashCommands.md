@@ -1,8 +1,8 @@
 # Slash Commands
 Slash commands is a new feature added by Discord.
-It let's users interact with your bot by typing `/<command name>`.\
+It let's users interact with your bot by typing `/<command name>`.
 
-![preview](https://i.imgur.com/kLNyEby.jpg) \
+![preview](https://i.imgur.com/kLNyEby.jpg) 
 
 # General information
 - Discord allows up to 50 slash commands.
@@ -21,7 +21,7 @@ Before we start, you need **1.18.8** version of the app or later.
 - Go back
 - Press *"Add your bot to your server"*
 - Invite the bot to your server
-![invite scopes](https://i.imgur.com/Y5BUx0F.jpg) \
+![invite scopes](https://i.imgur.com/Y5BUx0F.jpg) 
 
 ### Creating a slash command
 - Create or modify existing command
@@ -29,7 +29,7 @@ Before we start, you need **1.18.8** version of the app or later.
 - Press *"Enable slash command trigger"*
 - Fill in necessary data
 - Save it
-![slash command page](https://i.imgur.com/zEF47O5.jpg) \
+![slash command page](https://i.imgur.com/zEF47O5.jpg) 
 
 ### Retriving value from options
 You can retrive a value from an option
@@ -38,7 +38,7 @@ If you want this function to work in a normal and slash command\
 then you can use `$message[<arg number>;<option name>]`.
 #### Example
 ![message example code](https://i.imgur.com/TZZGQjU.jpg) \
-![message example usage](https://i.imgur.com/vyoslhf.jpg) \
+![message example usage](https://i.imgur.com/vyoslhf.jpg) 
 
 
 ### Checking if a command has been executed by a slash trigger
