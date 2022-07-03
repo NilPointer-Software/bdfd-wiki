@@ -6,6 +6,7 @@
 ## July
 - Added hex to the color picker
 - Fixed `$executionTime` not working inside embed fields
+- App now sends notification when bot hosting is expired
 
 ## June
 - Fixed `$onlyBotChannelPerms[]`
