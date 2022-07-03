@@ -5,6 +5,7 @@
 
 ## July
 - Added hex to the color picker
+- Fixed `$executionTime` not working inside embed fields
 
 ## June
 - Fixed `$onlyBotChannelPerms[]`
