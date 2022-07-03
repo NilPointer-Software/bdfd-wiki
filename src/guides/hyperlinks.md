@@ -2,13 +2,13 @@
 A hyperlink is clickable-text. When the user clicks on the text, it directs them to a certain URL.
 
 ## General Hyperlinks
-You can use this method inside of `$description[]` and the `$addField[]` value field.
+You can use hyperlinks inside [`$description[]`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/description.html), [`$addField[]`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/addField.html) and in [webhook](https://nilpointer-software.github.io/bdfd-wiki/guides/webhooks.html) content/description.
 
-### Sytnax
+### Syntax
 ```
-[text](link)
+[text\](link)
 ```
-> **Note:** If you are using BDScript 2 or get a error while using hyperlinks, add a `\` to the left bracket of the hyperlink: `[text\](link)`.
+> **Note:** This is the syntax for BDScript 2 and BDScript Unstable. For the BDScript, the syntax is `[text](link)`.
 
 ### Example
 ```
