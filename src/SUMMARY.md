@@ -307,6 +307,7 @@
     - [$alwaysReply](./premium/alwaysReply.md)
     - [$ignoreTriggerCase](./premium/ignoreTriggerCase.md)
     - [$messageContains](./premium/messageContains.md)
+    - [$sendNotification](./premium/sendNotification.md)
 
 - [JavaScript](./javascript/javascript.md)
     - [Introduction](./javascript/javascript.md)
