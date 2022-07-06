@@ -1,5 +1,5 @@
 # Auto Complete for Slash Command Options
-Auto complete allows your bot to read user input as they type it and give user suggestions based on that.
+Auto complete allows your bot to read user input as they type it and give user suggestions based on that.\
 ![example-autocomplete](https://user-images.githubusercontent.com/16838075/177011403-6cfa02e5-ae59-4c8b-895d-219eaa4b8e7f.png)\
 Check [example](#Example) to get started quickly.
 
