@@ -52,9 +52,9 @@ $httpResult
 
 ### Usage #2
 ```
-$httpResult[jSON Key;...]
+$httpResult[JSON Key;...]
 ```
-> Retrieves JSON from HTTP request. All arguments after *jSON Key* are optional.
+> Retrieves JSON from HTTP request. All arguments after *JSON Key* are optional.
 
 ## Examples
 
