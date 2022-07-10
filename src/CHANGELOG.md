@@ -8,6 +8,7 @@
 - Fixed `$executionTime` not working inside embed fields
 - App now sends notification when bot hosting is expired
 - Added `$sendNotification[]` for premium bots
+- Made it possible to use only one option in a select menu
 
 ## June
 - Fixed `$onlyBotChannelPerms[]`
