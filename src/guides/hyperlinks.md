@@ -2,7 +2,7 @@
 A hyperlink is clickable-text. When the user clicks on the text, it directs them to a certain URL.
 
 ## General Hyperlinks
-You can use hyperlinks inside [`$description[]`](../bdscript/description.md), [`$addField[]`](../bdscript/addField.md), [webhook](../guides/webhooks.md) content/description, [slash command](../guides/slashCommands.md) response content and ephemeral [$onInteraction](../callbacks/onInteraction.md) response content.
+You can use hyperlinks inside [`$description[]`](../bdscript/description.md), [`$addField[]`](../bdscript/addField.md), [webhook](../guides/webhooks.md) content/description, [slash command](../guides/slashCommands.md) response content, and ephemeral [`$onInteraction`](../callbacks/onInteraction.md) response content.
 
 ### Syntax
 ```
