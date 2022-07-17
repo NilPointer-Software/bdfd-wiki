@@ -1,6 +1,7 @@
 # Slash Commands
-Slash commands is a new feature added by Discord.
-It let's users interact with your bot by typing `/<command name>`.
+In this guide, we will learn more about implementing slash commands to your discord bot using BDFD.
+
+Slash commands are type of interactive application commands. It let's users to interact with your bot by typing `/<command name>`.
 
 ![preview](https://i.imgur.com/kLNyEby.jpg) 
 
@@ -20,13 +21,13 @@ Before we start, you need **2.0.18** version of the app or later.
    - Visit [Discord Developer](https://discord.com/developers/applications) official website and select your bot application.
    - Click hamburger icon `≡` on top-left of the website and choose `OAuth2` tab.
    - In `OAuth2` tab, click `URL Generator` sub-tab.
-   - Choose `bot` & `application.commands` in scope part and desired bot permissions.
+   - Choose `bot` & `application.commands` in scopes and desired bot permissions.
    - Copy the generated url below and invite your bot into your server.
 
 - Method #2
    - Open BDFD app and select your bot.
    - Press `Add invite bot to server` button in dashboard tab.
-   - Click `Edit invite link scopes` and enable *"Slash commands"* if it disabled.
+   - Click `Edit invite link scopes` and enable *"Slash commands"* if its disabled.
    - Now, go back & press *"Add your bot to your server"*
    - Finally, invite the bot into your server.
 
@@ -35,8 +36,10 @@ Before we start, you need **2.0.18** version of the app or later.
 - Click *"Slash command trigger"*.
 
    ![](https://i.ibb.co/XYRc7Pv/Screenshot-20220717-164715.png)
-- Choose *"Enable global slash command"* or *"Enable guild slash command"* depending on your preference.
+- Choose *"Enable global slash command"* or *"Enable guild slash command"* as per your preference.
 - Fill-up necessary data and save it.
+
+> 📝 Slash commands can have a maximum of 4000 characters _(combined name, description, and value properties)_ per slash.
 
 #### Example
 
@@ -53,18 +56,18 @@ To create a slash option,
 - Click *"Add"* button in `Options` section.
 - Fill-up necessary data and save the changes.
 
-> 📝 Slash commands can have upto max 25 options per slash.
+> 📝 Slash commands can have upto maximum 25 options per slash.
 
 ### Slash options types
 
-- Text - Accepts any string data input _(Max character limit is 4000)_.
+- Text - Accepts any string data input.
 - Integer - Accepts only integer value input. For example: 3, -70 etc.
 - Number - Accepts only number value input. For example: 5.3, -35, 23 etc.
 - Boolean - Accepts either true or false input.
-- User - It allows to mention any user of current guild.
-- Channel - It allows to mention any channel of current guild.
-- Role - It allows to mention any role of current guild.
-- Mentionable - It allows to mention any user or role of current guild.
+- User - It allows to mention any user.
+- Channel - It allows to mention any channel.
+- Role - It allows to mention any role.
+- Mentionable - It allows to mention any user or role.
 - Attachments - It allows to upload attachments.
 
 ### Retrieving value from options
@@ -80,19 +83,18 @@ then you can use `$message[<arg number>;<option name>]`.
 ![Screenshot_20220717_175649](https://user-images.githubusercontent.com/95774950/179398327-6c1f1c00-205f-4dcf-a0ce-08cefed5c937.png)
 
 ## Pre-defined choices
-Choices are generally sub-options. It let's users to choose one sub-option out of all available sub-options.
 
-To create choices in options :
+To create choices in options,
 - In your slash command edit trigger page, create an option and fill-up the necessary data.
 - Toggle *"Enabled"* in `Predefined choices` section.
 - Then, click *"Add a new choice"* button.
 - Type your choice name and value.
 - Click *"Add"* and save the changes.
 
-> 📝 A slash command can have upto max 25 choices per option.
+> 📝 A slash command can have upto maximum 25 choices per option.
 
 ### Retrieving choices
-You can get user's selected option choice using `$if` statements.
+You can retrieve user's option choices using `$if` statements.
 
 #### Format
 ```
@@ -106,13 +108,8 @@ $endif
 > ⚠️ Above code snippet requires BDScript 2 in order to execute since it contains `$elseif`.
 
 #### Example
+![Screenshot_20220717_194906](https://user-images.githubusercontent.com/95774950/179402684-17c15db5-fcd5-408d-9f20-86e31ccfbbb4.png)
+![Screenshot_20220717_195016](https://user-images.githubusercontent.com/95774950/179402739-230b6b25-57a2-4c4f-bdad-2732ee988fbf.png)
 ![Screenshot_20220717_194125](https://user-images.githubusercontent.com/95774950/179402565-cc6bb202-7197-45cb-8b20-d44ca8080d27.png)
 ![Screenshot_20220717_194202](https://user-images.githubusercontent.com/95774950/179402575-a308ac57-6e29-4b83-8e8c-31970a508daa.png)
 ![Screenshot_20220717_194214](https://user-images.githubusercontent.com/95774950/179402578-608de95d-4799-4ca8-af70-dca9ca6769dd.png)
-![Screenshot_20220717_194847](https://user-images.githubusercontent.com/95774950/179402679-2601b891-d500-4607-9e7a-115322f1beed.png)
-![Screenshot_20220717_194906](https://user-images.githubusercontent.com/95774950/179402684-17c15db5-fcd5-408d-9f20-86e31ccfbbb4.png)
-![Screenshot_20220717_195016](https://user-images.githubusercontent.com/95774950/179402739-230b6b25-57a2-4c4f-bdad-2732ee988fbf.png)
-
-### Checking if a command has been executed by a slash trigger
-You can use `$isSlash` which returns `true` if a command\
-was executed by *slash trigger*, otherwise it returns `false`.
