@@ -39,6 +39,6 @@ Here, are the available functions you can use in your bot status -
 
 #### Example
 
-<img width="596" height="281" src="https://user-images.githubusercontent.com/95774950/179421363-05c2a0e0-a686-4ee8-9745-e5df4fcb11f6.png">
+![](https://user-images.githubusercontent.com/95774950/179421363-05c2a0e0-a686-4ee8-9745-e5df4fcb11f6.png)
 
 ![Screenshot_20220718_003851](https://user-images.githubusercontent.com/95774950/179421369-64e5fce9-9758-432f-ace6-600e322c2ccb.png)
