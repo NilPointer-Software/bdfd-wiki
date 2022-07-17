@@ -83,6 +83,12 @@ Choices
 > 📝 A slash command can have max 25 choices per option.
 
 ###
+![Screenshot_20220717_194125](https://user-images.githubusercontent.com/95774950/179402565-cc6bb202-7197-45cb-8b20-d44ca8080d27.png)
+![Screenshot_20220717_194202](https://user-images.githubusercontent.com/95774950/179402575-a308ac57-6e29-4b83-8e8c-31970a508daa.png)
+![Screenshot_20220717_194214](https://user-images.githubusercontent.com/95774950/179402578-608de95d-4799-4ca8-af70-dca9ca6769dd.png)
+![Screenshot_20220717_194847](https://user-images.githubusercontent.com/95774950/179402679-2601b891-d500-4607-9e7a-115322f1beed.png)
+![Screenshot_20220717_194906](https://user-images.githubusercontent.com/95774950/179402684-17c15db5-fcd5-408d-9f20-86e31ccfbbb4.png)
+![Screenshot_20220717_195016](https://user-images.githubusercontent.com/95774950/179402739-230b6b25-57a2-4c4f-bdad-2732ee988fbf.png)
 
 ```
 ```
