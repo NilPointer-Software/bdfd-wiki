@@ -40,6 +40,10 @@ Before we start, you need **2.0.18** version of the app or later.
 
 Example
 
+![Screenshot_20220717_170852](https://user-images.githubusercontent.com/95774950/179396882-832a7158-f3db-46f2-bf38-2f5a3125c201.png)
+![Screenshot_20220717_170915](https://user-images.githubusercontent.com/95774950/179396889-d9891b2a-74dd-4454-97b5-75eee1d12db0.png)
+![Screenshot_20220717_171511](https://user-images.githubusercontent.com/95774950/179396894-e8b8e0c7-fe73-4f0b-8787-d40f8d3df630.png)
+
 
 ### Slash Options
 Slash commands can have upto 25 options per slash.
