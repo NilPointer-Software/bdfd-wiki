@@ -15,7 +15,7 @@ It let's users interact with your bot by typing `/<command name>`.
 # Getting started
 Before we start, you need **2.0.18** version of the app or later.
 
-### Inviting the bot
+## Inviting the bot
 - Method #1
    - Visit [Discord Developer](https://discord.com/developers/applications) official website and select your bot application.
    - Click hamburger icon `≡` on top-left of the website and choose `OAuth2` tab.
@@ -30,7 +30,7 @@ Before we start, you need **2.0.18** version of the app or later.
    - Now, go back & press *"Add your bot to your server"*
    - Finally, invite the bot into your server.
 
-### Creating a slash command
+## Creating a slash command
 - Create or modify an existing command.
 - Click *"Slash command trigger"*.
 
@@ -38,31 +38,32 @@ Before we start, you need **2.0.18** version of the app or later.
 - Choose *"Enable global slash command"* or *"Enable guild slash command"* depending on your preference.
 - Fill-up necessary data and save it.
 
-Example
+#### Example
 
 ![Screenshot_20220717_170852](https://user-images.githubusercontent.com/95774950/179396882-832a7158-f3db-46f2-bf38-2f5a3125c201.png)
 ![Screenshot_20220717_170915](https://user-images.githubusercontent.com/95774950/179396889-d9891b2a-74dd-4454-97b5-75eee1d12db0.png)
 ![Screenshot_20220717_171511](https://user-images.githubusercontent.com/95774950/179396894-e8b8e0c7-fe73-4f0b-8787-d40f8d3df630.png)
 
 
-### Slash Options
+## Slash options
 Slash commands can have upto 25 options per slash.
 
-Text - Accepts any string data input (Max character limit is 4000)
-Integer - Accept any integer value i.e non-fractional values
-Number - Accept any number value
-Boolean - 
-User -
-Channel -
-Role -
-Mentionable -
-Attachments - Support
+### Slash options types
+- Text - Accepts any string data input _(Max character limit is 4000)_.
+- Integer - Accept any integer value i.e non-fractional values
+- Number - Accept any number value
+- Boolean - Accept true or false values
+- User - Accept user mention
+- Channel - Accept channel mention
+- Role - Accept role mention
+- Mentionable - Let user to mention any user or role
+- Attachments - Let user to send attachments
 
 
 ### Retriving value from options
-You can retrive a value from an option
-by simply using `$message[<option name>]`.\
-If you want this function to work in a normal and slash command\
+To retrive a value from an option, use  `$message[<option name>]`.
+
+> If you want this function to work in a normal and slash command\
 then you can use `$message[<arg number>;<option name>]`.
 #### Example
 ![message example code](https://i.imgur.com/TZZGQjU.jpg) \
