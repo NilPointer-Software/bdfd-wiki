@@ -1,5 +1,5 @@
 # Slash Commands
-In this guide, we will learn more about implementing slash commands to your discord bot using BDFD.
+In this guide, we will learn more about implementing slash commands to your bot.
 
 Slash commands are type of interactive application commands. It let's users to interact with your bot by typing `/<command name>`.
 
@@ -34,8 +34,6 @@ Before we start, you need **2.0.18** version of the app or later.
 ## Creating a slash command
 - Create or modify an existing command.
 - Click *"Slash command trigger"*.
-
-   ![](https://i.ibb.co/XYRc7Pv/Screenshot-20220717-164715.png)
 - Choose *"Enable global slash command"* or *"Enable guild slash command"* as per your preference.
 - Fill-up necessary data and save it.
 
