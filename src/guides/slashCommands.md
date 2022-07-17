@@ -62,6 +62,11 @@ Slash commands can have upto 25 options per slash.
 
 ### Retriving value from options
 To retrive a value from an option, use  `$message[<option name>]`.
+![Screenshot_20220717_175216](https://user-images.githubusercontent.com/95774950/179398281-90ae991d-1eb6-4435-b1f7-2206a92ce25f.png)
+![Screenshot_20220717_175229](https://user-images.githubusercontent.com/95774950/179398295-7c086521-9751-4ffe-b595-f278e088fe58.png)
+![Screenshot_20220717_175245](https://user-images.githubusercontent.com/95774950/179398313-cec8420e-942b-4184-8b8b-c813584cb420.png)
+![Screenshot_20220717_175635](https://user-images.githubusercontent.com/95774950/179398322-d9a27169-0030-458d-8abc-ed4462637862.png)
+![Screenshot_20220717_175649](https://user-images.githubusercontent.com/95774950/179398327-6c1f1c00-205f-4dcf-a0ce-08cefed5c937.png)
 
 > If you want this function to work in a normal and slash command\
 then you can use `$message[<arg number>;<option name>]`.
