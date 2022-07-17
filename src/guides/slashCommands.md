@@ -13,15 +13,15 @@ It let's users interact with your bot by typing `/<command name>`.
 
     > 📝 Guild slash commands doesn't appear in DMs unlike global slash commands.
 # Getting started
-Before we start, you need **1.18.8** version of the app or later.
+Before we start, you need **2.0.18** version of the app or later.
 
 ### Inviting the bot
 - Method #1
    - Visit [Discord Developer](https://discord.com/developers/applications) official website and select your bot application.
-   - Click hamburger icon on top left of the website and choose `OAuth2` tab.
-   - Then, in `OAuth2` tab. Click `URL Generator` sub-tab.
-   - Choose `bot` & `application.commands` in scope part and your desired bot permissions.
-   - Copy the generated url below and invite your bot to your server.
+   - Click hamburger icon `≡` on top-left of the website and choose `OAuth2` tab.
+   - In `OAuth2` tab, click `URL Generator` sub-tab.
+   - Choose `bot` & `application.commands` in scope part and desired bot permissions.
+   - Copy the generated url below and invite your bot into your server.
 
 - Method #2
    - Open BDFD app and select your bot.
@@ -31,12 +31,29 @@ Before we start, you need **1.18.8** version of the app or later.
    - Finally, invite the bot into your server.
 
 ### Creating a slash command
-- Create or modify existing command
-- Press the top-right icon
-- Press *"Enable slash command trigger"*
-- Fill in necessary data
-- Save it
-![slash command page](https://i.imgur.com/zEF47O5.jpg) 
+- Create or modify an existing command.
+- Click *"Slash command trigger"*.
+
+   ![](https://i.ibb.co/XYRc7Pv/Screenshot-20220717-164715.png)
+- Choose *"Enable global slash command"* or *"Enable guild slash command"* depending on your preference.
+- Fill-up necessary data and save it.
+
+Example
+
+
+### Slash Options
+Slash commands can have upto 25 options per slash.
+
+Text - Accepts any string data input (Max character limit is 4000)
+Integer - Accept any integer value i.e non-fractional values
+Number - Accept any number value
+Boolean - 
+User -
+Channel -
+Role -
+Mentionable -
+Attachments - Support
+
 
 ### Retriving value from options
 You can retrive a value from an option
@@ -51,4 +68,3 @@ then you can use `$message[<arg number>;<option name>]`.
 ### Checking if a command has been executed by a slash trigger
 You can use `$isSlash` which returns `true` if a command\
 was executed by *slash trigger*, otherwise it returns `false`.
-
