@@ -5,23 +5,30 @@ It let's users interact with your bot by typing `/<command name>`.
 ![preview](https://i.imgur.com/kLNyEby.jpg) 
 
 # General information
-- Discord allows up to 50 slash commands.
-- Before using slash commands you need to reinvite the bot with `applications.commands` scope.
-- Creating/modifying/deleting slash command might take up to **1hr**.
+- Discord allows up to 200 slash commands _(100 global & 100 guild based commands)_.
+- To use slash commands, you need to invite the bot with `applications.commands` scope.
+- Creating/modifying/deleting global slash commands might take up to **1 hour**.
+- Creating a guild slash command is instant but it won't appear unless you have registered them in the current guild using `$registerGuildCommands[(slash command name;...)]` function.
 
+
+    > 📝 Guild slash commands doesn't appear in DMs unlike global slash commands.
 # Getting started
 Before we start, you need **1.18.8** version of the app or later.
 
-### Reinviting the bot
-- Open the app
-- Pick your bot
-- Open navigation drawer and then press *"Server invites"*
-- Press the button with *eye* icon.
-- Select *Slash commands*
-- Go back
-- Press *"Add your bot to your server"*
-- Invite the bot to your server
-![invite scopes](https://i.imgur.com/Y5BUx0F.jpg) 
+### Inviting the bot
+- Method #1
+   - Visit [Discord Developer](https://discord.com/developers/applications) official website and select your bot application.
+   - Click hamburger icon on top left of the website and choose `OAuth2` tab.
+   - Then, in `OAuth2` tab. Click `URL Generator` sub-tab.
+   - Choose `bot` & `application.commands` in scope part and your desired bot permissions.
+   - Copy the generated url below and invite your bot to your server.
+
+- Method #2
+   - Open BDFD app and select your bot.
+   - Press `Add invite bot to server` button in dashboard tab.
+   - Click `Edit invite link scopes` and enable *"Slash commands"* if it disabled.
+   - Now, go back & press *"Add your bot to your server"*
+   - Finally, invite the bot into your server.
 
 ### Creating a slash command
 - Create or modify existing command
