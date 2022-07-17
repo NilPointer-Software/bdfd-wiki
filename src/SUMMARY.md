@@ -8,6 +8,7 @@
     - [Auto Complete](./guides/autoComplete.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
     - [BDScript 2](./guides/bdscript2.md)
+    - [Bot Status](./guides/botStatus.md)
     - [Buttons](./guides/buttons.md)
     - [Character Escaping](./guides/characterEscaping.md)
     - [Commands Anatomy](./guides/commandsAnatomy.md)
