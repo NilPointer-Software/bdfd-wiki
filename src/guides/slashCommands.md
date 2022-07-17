@@ -1,5 +1,5 @@
 # Slash Commands
-In this guide, we will learn more about implementing slash commands to your bot.
+In this guide, you will learn more about implementing slash commands to your bot.
 
 Slash commands are type of interactive application commands. It let's users to interact with your bot by typing `/<command name>`.
 
@@ -14,7 +14,7 @@ Slash commands are type of interactive application commands. It let's users to i
 
     > 📝 Guild slash commands doesn't appear in DMs unlike global slash commands.
 # Getting started
-Before we start, you need **2.0.18** version of the app or later.
+Before you start, you need **2.0.18** version of the app or later.
 
 ## Inviting the bot
 - Method #1
