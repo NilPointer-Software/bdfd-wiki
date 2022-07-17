@@ -46,13 +46,14 @@ Before we start, you need **2.0.18** version of the app or later.
 
 
 ## Slash options
-Slash options are great way to get an user's input. To create a slash option, click *"Add"* button in `Options` section and fill-up necessary data.
+Slash options are great way to get an user's input in slash commands.
 
-> 📝 Slash commands can have upto 25 options per slash.
+To create a slash option,
+- Open your slash command edit trigger page.
+- Click *"Add"* button in `Options` section.
+- Fill-up necessary data and save the changes.
 
-#### Example
-
-![Screenshot_20220717_175216](https://user-images.githubusercontent.com/95774950/179398281-90ae991d-1eb6-4435-b1f7-2206a92ce25f.png)
+> 📝 Slash commands can have upto max 25 options per slash.
 
 ### Slash options types
 
@@ -69,7 +70,7 @@ Slash options are great way to get an user's input. To create a slash option, cl
 ### Retrieving value from options
 To retrieve a value from an option, use  `$message[<option name>]`.
 
-> 📝 If you want this function to work both in normal and slash command\
+> 📝 If you want this function to work both in normal and slash command,\
 then you can use `$message[<arg number>;<option name>]`.
 
 #### Example
@@ -79,20 +80,38 @@ then you can use `$message[<arg number>;<option name>]`.
 ![Screenshot_20220717_175649](https://user-images.githubusercontent.com/95774950/179398327-6c1f1c00-205f-4dcf-a0ce-08cefed5c937.png)
 
 ## Pre-defined choices
-Choices
-> 📝 A slash command can have max 25 choices per option.
+Choices are generally sub-options. It let's users to choose one sub-option out of all available sub-options.
 
-###
+To create choices in options :
+- In your slash command edit trigger page, create an option and fill-up the necessary data.
+- Toggle *"Enabled"* in `Predefined choices` section.
+- Then, click *"Add a new choice"* button.
+- Type your choice name and value.
+- Click *"Add"* and save the changes.
+
+> 📝 A slash command can have upto max 25 choices per option.
+
+### Retrieving choices
+You can get user's selected option choice using `$if` statements.
+
+#### Format
+```
+$if[$message[<option name>]==<choice #1 value>]
+      $c[Text/code here when user select 1st choice]
+$elseif[$message[<option name>]==<choice #2 value>]
+             $c[Text/code here when user select 2nd choice]
+$endif
+```
+
+> ⚠️ Above code snippet requires BDScript 2 in order to execute since it contains `$elseif`.
+
+#### Example
 ![Screenshot_20220717_194125](https://user-images.githubusercontent.com/95774950/179402565-cc6bb202-7197-45cb-8b20-d44ca8080d27.png)
 ![Screenshot_20220717_194202](https://user-images.githubusercontent.com/95774950/179402575-a308ac57-6e29-4b83-8e8c-31970a508daa.png)
 ![Screenshot_20220717_194214](https://user-images.githubusercontent.com/95774950/179402578-608de95d-4799-4ca8-af70-dca9ca6769dd.png)
 ![Screenshot_20220717_194847](https://user-images.githubusercontent.com/95774950/179402679-2601b891-d500-4607-9e7a-115322f1beed.png)
 ![Screenshot_20220717_194906](https://user-images.githubusercontent.com/95774950/179402684-17c15db5-fcd5-408d-9f20-86e31ccfbbb4.png)
 ![Screenshot_20220717_195016](https://user-images.githubusercontent.com/95774950/179402739-230b6b25-57a2-4c4f-bdad-2732ee988fbf.png)
-
-```
-```
-> Learn more about $if statements here.
 
 ### Checking if a command has been executed by a slash trigger
 You can use `$isSlash` which returns `true` if a command\
