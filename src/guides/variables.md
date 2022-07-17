@@ -5,7 +5,7 @@ Variables are how we store data in BDFD. Data can be assigned to users, servers,
 
 ### Variable Elements
 
-- `name` - The name of the variable. This can't be modified by the bot, its used the "call" the current variable.
+- `name` - The name of the variable. This can't be modified by the bot, its used to "call" the current variable.
 - `value` - The value of the variable. This can be modified by the bot, its returned when the variable name is called in `$getVar`/`$getUserVar`/`$getServerVar`.
 
 ### Creating Variables
@@ -13,38 +13,30 @@ Creating variables can only be done in the app. Here's how to create a variable,
 
 **#1:** Select the bot you want to add the new variable to.
 
-**#2:** Click the 3-line menu.
+**#2:** Select the "Variables" tab.
 
-![ex1](https://user-images.githubusercontent.com/69215413/126413034-dc0e938e-f5cc-4e17-8cbb-3570cf27aed7.png)
+![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
 
-**#3:** Select the "Variables" tab.
+**#3:** Create a new variable.
 
-![ex2](https://user-images.githubusercontent.com/69215413/126413152-01074611-014f-40af-a239-b061d36cf838.png)
+![ex3](https://i.ibb.co/Mc0nL0b/Screenshot-20220717-133047.png)
 
-**#4:** Create a new variable.
-
-![ex3](https://user-images.githubusercontent.com/69215413/126413245-efe824c2-d2ca-4e40-8c89-60ebd6fd267a.png)
-
-**#5:** Give the variable a name and value.
+**#4:** Give the variable a name and value.
 
 ![ex4](https://user-images.githubusercontent.com/69215413/126413362-99e23e07-b01a-4ded-8be3-454837cb1ca5.png)
 
-**#6:** Save your changes!
+**#5:** Save your changes!
 
-![ex5](https://user-images.githubusercontent.com/69215413/126413430-bf3318c1-1642-4752-a0ed-02bbaf4752e5.png)
+![ex5](https://i.ibb.co/dbpJDmr/Screenshot-20220717-133424.png)
 
 ### Editing Variables
-Here's how you can modify a existing variable's name/default value.
+Here's how you can modify an existing variable's name/default value.
 
 **#1:** Select the bot you want to edit the variable for.
 
-**#2:** Click the 3-line menu.
+**#2:** Select the "Variables" tab.
 
-![ex1](https://user-images.githubusercontent.com/69215413/126413034-dc0e938e-f5cc-4e17-8cbb-3570cf27aed7.png)
-
-**#3:** Select the "Variables" tab.
-
-![ex2](https://user-images.githubusercontent.com/69215413/126413152-01074611-014f-40af-a239-b061d36cf838.png)
+![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
 
 **#4:** Select the variable you want to edit.
 
@@ -56,20 +48,16 @@ Here's how you can modify a existing variable's name/default value.
 
 **#6:** Save your changes!
 
-![ex5](https://user-images.githubusercontent.com/69215413/126413439-98cbbc0f-f4bd-420a-b42a-00fb998bd982.png)
+![ex5](https://i.ibb.co/dbpJDmr/Screenshot-20220717-133424.png)
 
 ### Deleting Variables
-Here's how you can delete variables, which means commands using the deleted variable may return error messages.
+Here's how you can delete variables,
 
 **#1:** Select the bot you want to delete the variable for.
 
-**#2:** Click the 3-line menu.
+**#2:** Select the "Variables" tab.
 
-![ex1](https://user-images.githubusercontent.com/69215413/126413034-dc0e938e-f5cc-4e17-8cbb-3570cf27aed7.png)
-
-**#3:** Select the "Variables" tab.
-
-![ex2](https://user-images.githubusercontent.com/69215413/126413152-01074611-014f-40af-a239-b061d36cf838.png)
+![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
 
 **#4:** Select the variable you want to delete.
 
@@ -78,6 +66,8 @@ Here's how you can delete variables, which means commands using the deleted vari
 **#5:** Confirm the deletion!
 
 ![ex4](https://user-images.githubusercontent.com/69215413/126413742-e9fef40c-01e8-4713-9e61-99d71c2d88f7.png)
+
+> :warning: Deleting variables might return error message in those commands which were using the deleted variables.
 
 ## Global/Global-User Variables
 `$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to universally *(they don't change per-server or per-user)*. However, if you input a user in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with the user in every server. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
@@ -115,7 +105,7 @@ $c[This is the same for everyone, no matter who runs it.]
 - `$setVar[variableName;newValue;userID]` - Sets the provided variable to 'newValue' for the inputted 'userID'.
 - `$getVar[variableName;userID]` - Gets the provided variable's value for the inputted 'userID'.
 
-> 🧙‍♂️ Global-user variables stay with the user in every server. Unlike user variables which unqiue per-user and differ in each server.
+> 🧙‍♂️ Global-user variables stay with the user in every server. Unlike user variables which are unique per-user and differ in each server.
 
 ### Global-User Variables - Examples
 This is the variable we're working with:
@@ -147,8 +137,8 @@ $c[Gets the author/mentioned-user's current bio.]
 User variables are unique per-user and differ in each server.
 
 ### User Variables - Functions
-- `$setUserVar[variableName;newValue;(optional) userID]` - Sets the provided variable to 'newValue' for the inputted 'userID', or the author of the command if no user is provided.
-- `$getUserVar[variableName;(optional) userID]` - Gets the current value for the provided user variable. Returns the author's variable value if no 'userID' is provided.
+- `$setUserVar[variableName;newValue;(userID;guildID)]` - Sets the provided variable to 'newValue' for the inputted 'userID' and 'guildID', or the author of the command if no 'userID' is provided and current guild if no 'guildID' is provided.
+- `$getUserVar[variableName;(userID;guildID)]` - Gets the current value for the provided user variable. Returns the author's variable value if no 'userID' is provided and uses the current guild if no 'guildID' is provided.
 
 ### User Variables - Examples
 
@@ -207,7 +197,7 @@ Total Server Cookies: 🍪 $getServerVar[ServerCookies]
 
 ### Local vs Global
 - **Local Economy** - Changes per server. If a user has 10,000 coins in one server, in another server they would have a different amount. For example, Unbelievaboat has a local economy. *(local economy uses user-variables)*
-- **Global Economy** - Does not change per server. If a user has 10,000 coins in one server, in another server they would have the same amount. For example, Dank Memer has a global economy. *(global economy uses global-user variables*
+- **Global Economy** - Does not change per server. If a user has 10,000 coins in one server, in another server they would have the same amount. For example, Dank Memer has a global economy. *(global economy uses global-user variables)*
 
 ### Local Economy
 - Replace "Money" with your cash/money variable, if "Money" is the name of your money variable then you can just leave it as is!
@@ -220,21 +210,21 @@ $getUserVar[Money;$mentioned[1;yes]]
 
 Adds money to the mentioned user:
 ```
-$setUserVar[Money;$sum[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+$setUserVar[Money;$sum[Amount;$getUserVar[Money;$mentioned[1]]];$mentioned[1]]
 ```
 
 Adds money to the user running the command:
 ```
-$setUserVar[Money;$sum[Amount;$getVar[Money;$authorID]];$authorID]
+$setUserVar[Money;$sum[Amount;$getUserVar[Money]]]
 ```
 
 Removes money to the mentioned user:
 ```
-$setUserVar[Money;$sub[Amount;$getVar[Money;$mentioned[1]]];$mentioned[1]]
+$setUserVar[Money;$sub[Amount;$getUserVar[Money;$mentioned[1]]];$mentioned[1]]
 ```
 Removes money from the user running the command:
 ```
-$setUserVar[Money;$sub[Amount;$getVar[Money;$authorID]];$authorID]
+$setUserVar[Money;$sub[Amount;$getUserVar[Money]]]
 ```
 
 Leaderboard:
