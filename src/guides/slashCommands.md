@@ -57,14 +57,14 @@ Slash options are great way to get an user's input. To create a slash option, cl
 ### Slash options types
 
 - Text - Accepts any string data input _(Max character limit is 4000)_.
-- Integer - Accept any integer value i.e non-fractional values
-- Number - Accept any number value
-- Boolean - Accept true or false values
-- User - Accept user mention
-- Channel - Accept channel mention
-- Role - Accept role mention
-- Mentionable - Let user to mention any user or role
-- Attachments - Let user to send attachments
+- Integer - Accepts only integer value input. For example: 3, -70 etc.
+- Number - Accepts only number value input. For example: 5.3, -35, 23 etc.
+- Boolean - Accepts either true or false input.
+- User - It allows to mention any user of current guild.
+- Channel - It allows to mention any channel of current guild.
+- Role - It allows to mention any role of current guild.
+- Mentionable - It allows to mention any user or role of current guild.
+- Attachments - It allows to upload attachments.
 
 ### Retrieving value from options
 To retrieve a value from an option, use  `$message[<option name>]`.
@@ -78,9 +78,15 @@ then you can use `$message[<arg number>;<option name>]`.
 ![Screenshot_20220717_175635](https://user-images.githubusercontent.com/95774950/179398322-d9a27169-0030-458d-8abc-ed4462637862.png)
 ![Screenshot_20220717_175649](https://user-images.githubusercontent.com/95774950/179398327-6c1f1c00-205f-4dcf-a0ce-08cefed5c937.png)
 
-## Slash option choices
+## Pre-defined choices
 Choices
-> 📝 A slash command can have 25 choices per option.
+> 📝 A slash command can have max 25 choices per option.
+
+###
+
+```
+```
+> Learn more about $if statements here.
 
 ### Checking if a command has been executed by a slash trigger
 You can use `$isSlash` which returns `true` if a command\
