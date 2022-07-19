@@ -84,27 +84,3 @@ Length: $getTextSplitLength
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/125674632-6e7b41f1-8e0f-40a9-95f8-56e32f90b015.png)
-
-## Advanced
-### Splitting via Spaces
-In `$textSplit`, BDFD reads spaces differently. Here's an example:
-```
-$textSplit[this is some text; ]
-```
-Instead of splitting the text by each space, it splits the text by each character.
-
-To prevent this from happening, you can use the code below:
-```
-$textSplit[$replaceText[text; ;,;-1];,]
-$c[Replace 'text' with your text.]
-```
-
-Example using this method:
-```
-$textSplit[$replaceText[hello hey hi; ;,;-1];,]
-1: $splitText[1]
-2: $splitText[2]
-3: $splitText[3]
-```
-
-![example](https://user-images.githubusercontent.com/69215413/125679466-df4a5055-fe09-489b-9854-7243dea46e93.png)
