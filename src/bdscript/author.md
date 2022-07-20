@@ -7,7 +7,7 @@ $author[text;(optional) embedIndex]
 ```
 
 ### Breakdown
-- `text` - The text that appears in the author text.
+- `text` - The text that appears in the author text. It cannot exceed more than 256 characters.
 - `embedIndex` - What embed the author text should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
