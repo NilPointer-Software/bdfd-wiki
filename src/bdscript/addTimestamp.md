@@ -7,7 +7,7 @@ $addTimestamp[(index)]
 ```
 
 ### Breakdown
-- `index` - Adds timestamp to specified embed index. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the timestamp should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```
