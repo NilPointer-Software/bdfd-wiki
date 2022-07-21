@@ -3,12 +3,12 @@ Rounds up the provided number.
 
 ## Usage
 ```
-$round[number;decimalPlace]
+$round[number;(decimalPlace)]
 ```
 
 ### Breakdown
 - `number` - The number to round.
-- `decimalPlace` - The decimal place to round the number to. `0` removes decimal place.
+- `decimalPlace` - The decimal place to round the number to. Default as `0`. Optional.
 
 ## Example
 ```
