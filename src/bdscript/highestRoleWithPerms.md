@@ -7,7 +7,7 @@ $highestRoleWithPerms[permissions]
 ```
 
 ### Breakdown
-- `permissions` - The permissions that the role needs to have.  [(see permissions list)](https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html)
+- `permissions` - The permissions that the role needs to have.  [(see permissions list)](/src/resources/permissions.md)
 
 ## Example
 ```
