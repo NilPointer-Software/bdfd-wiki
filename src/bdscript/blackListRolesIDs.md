@@ -13,6 +13,6 @@ $blackListRolesIDs[roleIDs;errorMessage]
 ## Example
 ```
 $nomention
-$noMentionMessage
 $blackListRolesIDs[730739881072132166;727999173600739398;❌ You aren't allowed to use this command!]
+$noMentionMessage
 ```
