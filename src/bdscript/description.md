@@ -7,8 +7,8 @@ $description[text;(optional) embedIndex]
 ```
 
 ### Breakdown
-- `text` - The text to set the description as.
-- `embedIndex` - What embed the description should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `text` - The text to set the description as. It cannot exceed more than 4096 characters.
+- `embedIndex` - What embed the description should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```
