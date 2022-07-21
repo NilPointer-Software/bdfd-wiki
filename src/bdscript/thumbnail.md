@@ -8,7 +8,7 @@ $thumbnail[imageURL;(optional) embedIndex]
 
 ### Breakdown
 - `imageURL` - The image to set as the thumbnail.
-- `embedIndex` - What embed the thumbnail should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `embedIndex` - What embed the thumbnail should belong to. Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
