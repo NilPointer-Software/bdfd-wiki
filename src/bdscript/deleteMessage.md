@@ -6,11 +6,13 @@ Deletes a message
 ```
 $deleteMessage[channel ID;message ID]
 ```
+### Breakdown
+- `channel ID` - The channel ID where the message is.
+- `message ID` - The ID of the message which needs to be deleted.
 
 ## Example
 ```
 $nomention
-$var[getPing;$sendMessage[Please Wait...;yes]]
-$deleteMessage[$channelID;$var[getPing]]
-$description[$ping ms]
+$deleteMessage[$channelID;$messageID]
+Hello $username!
 ```
