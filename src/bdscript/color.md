@@ -8,7 +8,7 @@ $color[colorHex;(optional) embedIndex]
 
 ### Breakdown
 - `colorHex` - The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as.
-- `embedIndex` - What embed the color border should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `embedIndex` - What embed the color border should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```
