@@ -7,7 +7,7 @@ $createChannel[name;type;(optional) categoryID]
 ```
 
 ### Breakdown
-- `name` - The name to give this channel.
+- `name` - The name to give this channel. It cannot exceed more than 100 characters.
 - `type` - The channel type. Channel types:
   - `category`
   - `text`
