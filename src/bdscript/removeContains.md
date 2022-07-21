@@ -8,7 +8,7 @@ $removeContains[phrases;howMany]
 
 ### Breakdown
 - `phrases` - The phrases/words to delete, separate phrases using `;`.
-- `howMany` - How many messages containing the provided phrases to delete.
+- `howMany` - How many messages containing the provided phrases to delete. Max is 100.
 
 ## Example
 ```
