@@ -9,7 +9,7 @@ $footerIcon[imageURL;(optional) embedIndex]
 
 ### Breakdown
 - `imageURL` - The URL to set the footer icon as. Must be a valid image URL.
-- `embedIndex` - What embed the footer icon should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `embedIndex` - What embed the footer icon should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```
