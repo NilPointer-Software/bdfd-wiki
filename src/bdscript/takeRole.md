@@ -1,6 +1,6 @@
 # $takeRole
 *(deprecated)*
-> 🧙‍♂️ This command is deprecated instead better use [$roleGrant](./roleGrant.md)).
+> 🧙‍♂️ This command is deprecated instead better use [$roleGrant](./roleGrant.md).
 
 Removes a role to the provided user.
 
