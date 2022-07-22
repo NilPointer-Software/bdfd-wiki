@@ -7,7 +7,7 @@ $lowestRoleWithPerms[permissions;...]
 ```
 
 ### Breakdown
-- `permissions` - The permissions that the role needs to have.  [(see permissions list)](/src/resources/embedIndexes.md). Use `;` as separator for multiple permissions
+- `permissions` - The permissions that the role needs to have.  [(see permissions list)](/src/resources/permissions.md). Use `;` as separator for multiple permissions
 
 ## Example
 ```
