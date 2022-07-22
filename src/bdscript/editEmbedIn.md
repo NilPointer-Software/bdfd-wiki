@@ -5,7 +5,7 @@ Edits the bot's message after the given time, as an embed.
 ```
 $editEmbedIn[time;title;description;footer;color]
 ```
-> 📝 Optional fields can be left empty. At least one embed field (`title`, `description`, or `footer`) needs to be inputted (excluding `color`, which is always needed).
+> 📝 Optional fields can be left empty. At least one embed field (`title`, `description`, or `footer`) needs to be inputted.
 
 ### Breakdown
 - `time` - The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max time is 40 minutes (for premium users, it's 120 minutes). Required.
@@ -13,7 +13,7 @@ $editEmbedIn[time;title;description;footer;color]
 - `title` - The new embed title. Optional.
 - `description` - The new embed description. Optional.
 - `footer` - The new embed footer. Optional.
-- `color` - The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker). Required (use `0` for default color).
+- `color` - The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for default color.
 
 ## Example
 ```
