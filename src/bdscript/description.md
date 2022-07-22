@@ -1,14 +1,14 @@
 # $description
-Adds a description to the embed.
+Adds a description to an embed.
 
 ## Usage
 ```
-$description[text;(optional) embedIndex]
+$description[message;(index)]
 ```
 
 ### Breakdown
-- `text` - The text to set the description as. It cannot exceed more than 4096 characters.
-- `embedIndex` - What embed the description should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `message` - The text to set the description as. It cannot exceed more than 4096 characters.
+- `index` - What embed the description should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```
