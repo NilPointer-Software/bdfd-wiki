@@ -1,5 +1,5 @@
 # $removeSplitTextElement
-Removes a certain element from the [$textSplit](https://nilpointer-software.github.io/bdfd-wiki/bdscript/textSplit.html) values.
+Removes a certain element from the [$textSplit](./textSplit.md) values.
 > 🧙‍♂️ This function is unneeded, if `$textSplit` isn't present in the code.
 
 ## Usage
