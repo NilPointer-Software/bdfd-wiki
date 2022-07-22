@@ -14,9 +14,9 @@ $slowmode[channelID;delay]
 ### Example
 ```
 $nomention
+$argsCheck[>1;:x: Incorrect Usage! Example: `!slowmode 5s`]
 $slowmode[$mentionedChannels[1;yes];$message[1]]
 Slowmode changed to $message[1]!
-$argsCheck[>1;:x: Incorrect Usage! Example: `!slowmode 5s`]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/126920569-eef1a425-e57d-4062-ba1f-84a09c17ed84.png)

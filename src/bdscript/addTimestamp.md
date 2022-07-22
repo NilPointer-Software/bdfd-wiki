@@ -1,13 +1,13 @@
 # $addTimestamp
-Adds a timestamp to the embed.
+Adds a timestamp to an embed.
 
 ## Usage
 ```
-$addTimestamp[(optional) embedIndex]
+$addTimestamp[(index)]
 ```
 
 ### Breakdown
-- `embedIndex` - What embed the timestamp should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `index` - What embed the timestamp should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```

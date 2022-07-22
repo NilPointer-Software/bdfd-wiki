@@ -1,5 +1,5 @@
 # $addEmoji
-Adds a emoji to the server.
+Adds an emoji to the server.
 
 ## Usage
 ```
@@ -14,7 +14,6 @@ $addEmoji[name;imageURL;returnEmoji (yes/no)]
 ## Example
 ```
 $nomention
-Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes]
 $argsCheck[>2;Provide all needed arguments! Usage: `!add-emoji (imageURL) (emojiName)`]
+Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes]
 ```
-> 🧙‍♂️ This may require BDScript Unstable mode enabled.

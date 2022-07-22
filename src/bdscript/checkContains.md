@@ -1,5 +1,5 @@
 # $checkContains
-Checks if the 'text' contains atleast one of the provided 'phrases'.
+Checks if the 'text' contains at least one of the provided 'phrases'.
 
 ## Usage
 ```

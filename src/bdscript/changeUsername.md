@@ -7,7 +7,7 @@ $changeUsername[newNickname]
 ```
 
 ### Breakdown
-- `newNickname` - The text to change the user's nickname to.
+- `newNickname` - The text to change the user's nickname to. It cannot exceed more than 32 characters.
 
 ## Example
 ```
