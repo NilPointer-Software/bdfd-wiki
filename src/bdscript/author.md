@@ -3,12 +3,12 @@ Adds author text to an embed.
 
 ## Usage
 ```
-$author[text;(optional) embedIndex]
+$author[text;(index)]
 ```
 
 ### Breakdown
 - `text` - The text that appears in the author text. It cannot exceed more than 256 characters.
-- `embedIndex` - What embed the author text should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the author text should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```
