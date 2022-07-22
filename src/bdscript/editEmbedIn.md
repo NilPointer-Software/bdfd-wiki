@@ -3,7 +3,7 @@ Edits the bot's message after the given time, as an embed.
 
 ## Usage
 ```
-$editEmbedIn[time;title;description;footer;color]
+$editEmbedIn[time;(title;description;footer;color)]
 ```
 > 📝 Optional fields can be left empty. At least one embed field (`title`, `description`, or `footer`) needs to be inputted.
 
@@ -13,7 +13,7 @@ $editEmbedIn[time;title;description;footer;color]
 - `title` - The new embed title. Optional.
 - `description` - The new embed description. Optional.
 - `footer` - The new embed footer. Optional.
-- `color` - The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for default color.
+- `color` - The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for default color. Optional.
 
 ## Example
 ```
