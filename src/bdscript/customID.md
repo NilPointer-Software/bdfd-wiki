@@ -1,5 +1,5 @@
 # $customID
-Can only be used with the [$onInteraction](./callbacks/onInteraction.md) *(without brackets)* callback. Returns the custom ID of this interaction.
+Can only be used with the [$onInteraction](/src/callbacks/onInteraction.md) callback. Returns the custom ID of this interaction.
 
 ### Example
 `!buttons` code:

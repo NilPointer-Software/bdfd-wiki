@@ -7,12 +7,12 @@ $getCooldown[cooldownType (normal/server/global)]
 ```
 
 ### Breakdown
-- `cooldownType` - The cooldown type *(normal - $cooldown | server - $serverCooldown | global - $globalCooldown)*.
+- `cooldownType` - The cooldown type *(normal - [$cooldown](./cooldown.md) | server - [$serverCooldown](./serverCooldown.md) | global - [$globalCooldown](./globalCooldown.md))*.
 
 ## Example
 ```
 $nomention
-$cooldown[1h;You're on cooldown! (<t:$sum[$getTimestamp;$getCooldown[type]]>)]
+$cooldown[1h;You're on cooldown! (<t:$sum[$getTimestamp;$getCooldown[normal]]>)]
 Hello World!
 $c[This example should be used in BDScript 2 only.]
 ```

@@ -3,12 +3,12 @@ Adds a image to the embed.
 
 ## Usage
 ```
-$image[imageURL;(optional) embedIndex]
+$image[image url;(index)]
 ```
 
 ### Breakdown
-- `imageURL` - The URL of the image that appears. Must be a valid image URL.
-- `embedIndex` - What embed the image should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `image url` - The URL of the image that appears. Must be a valid image URL.
+- `index` - What embed the image should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```

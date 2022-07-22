@@ -1,5 +1,5 @@
 # $or
-Returns 'true' if atleast one of the provided conditions is true, otherwise 'false' is returned.
+Returns 'true' if at least one of the provided conditions is true, otherwise 'false' is returned.
 
 ## Usage
 ```

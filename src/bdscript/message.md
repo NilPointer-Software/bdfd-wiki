@@ -19,4 +19,4 @@ Returns the argument matching the provided number.
 - You can also use `$message[>]` to get the last argument/word of the user's message.
 
 ### Optimization
-Find info about optimizing `$message[]` for slash commands [here](https://nilpointer-software.github.io/bdfd-wiki/slashCommands.html#retriving-value-from-options).
+Find info about optimizing `$message[]` for slash commands [here](/src/guides/slashCommands.md#retrieving-value-from-options).

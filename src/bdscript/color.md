@@ -3,12 +3,12 @@ Sets the embed border color.
 
 ## Usage
 ```
-$color[colorHex;(optional) embedIndex]
+$color[colorHex;(index)]
 ```
 
 ### Breakdown
-- `colorHex` - The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as.
-- `embedIndex` - What embed the color border should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `colorHex` - The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as. You can also use color integer number.
+- `index` - What embed the color border should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```

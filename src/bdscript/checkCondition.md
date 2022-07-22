@@ -18,7 +18,7 @@ Replace (sign) with one of these.
 - `!=` - Should be not equal 
 - `<`- Should be less than (only numbers) 
 - `>`- Should be greater than (only numbers) 
-- `=>` - Should be greater than or equal to (only numbers) 
+- `>=` - Should be greater than or equal to (only numbers) 
 - `<=` - Should be less than or equal to (only numbers) 
 
 **What Are Values?**

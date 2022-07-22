@@ -1,14 +1,14 @@
 # $author
-Adds author text to the embed.
+Adds author text to an embed.
 
 ## Usage
 ```
-$author[text;(optional) embedIndex]
+$author[text;(index)]
 ```
 
 ### Breakdown
-- `text` - The text that appears in the author text.
-- `embedIndex` - What embed the author text should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `text` - The text that appears in the author text. It cannot exceed more than 256 characters.
+- `index` - What embed the author text should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```

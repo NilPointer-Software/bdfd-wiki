@@ -1,5 +1,5 @@
 # $slashCommandsCount
-Returns the number of [slash commands](https://nilpointer-software.github.io/bdfd-wiki/slashCommands.html) the bot has enabled.
+Returns the number of [slash commands](../guides/slashCommands.md) the bot has enabled.
 
 ## Usage
 ```

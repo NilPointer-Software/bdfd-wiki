@@ -3,12 +3,13 @@ Adds a hyperlink to the author text.
 
 ## Usage
 ```
-$authorURL[link]
+$authorURL[url;(index)]
 ```
 > 🧙‍♂️ `$authorURL` cannot work without `$author`.
 
 ### Breakdown
-- `link` - The link to set as the author hyperlink.
+- `url` - The link to set as the author hyperlink.
+- `index` - What embed the author url should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```

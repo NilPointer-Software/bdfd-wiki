@@ -3,12 +3,12 @@ Adds a thumbnail to the embed.
 
 ## Usage
 ```
-$thumbnail[imageURL;(optional) embedIndex]
+$thumbnail[image url;(index)]
 ```
 
 ### Breakdown
-- `imageURL` - The image to set as the thumbnail.
-- `embedIndex` - What embed the thumbnail should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `image url` - The image to set as the thumbnail.
+- `index` - What embed the thumbnail should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

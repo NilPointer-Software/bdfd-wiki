@@ -1,15 +1,15 @@
 # $authorIcon
-Adds a icon to the author section in the embed.
+Adds an icon to the author section in the embed.
 > 🧙‍♂️ `$authorIcon` can't work without author text ($author).
 
 ## Usage
 ```
-$authorIcon[imageURL;(optional) embedIndex]
+$authorIcon[image url;(index)]
 ```
 
 ### Breakdown
-- `imageURL` - The image that appears in the author icon. This must be a valid image URL.
-- `embedIndex` - What embed the author icon should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `image url` - The image that appears in the author icon. This must be a valid image URL.
+- `index` - What embed the author icon should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```

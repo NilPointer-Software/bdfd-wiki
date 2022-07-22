@@ -3,12 +3,12 @@ Sets the embed title.
 
 ## Usage
 ```
-$title[text;(optional) embedIndex]
+$title[text;(index)]
 ```
 
 ### Breakdown
-- `text` - The text to set the title as.
-- `embedIndex` - What embed the title should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `text` - The text to set the title as. It cannot exceed more than 256 characters.
+- `index` - What embed the title should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

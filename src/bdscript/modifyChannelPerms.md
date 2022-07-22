@@ -1,7 +1,7 @@
 # $modifyChannelPerms
 *(deprecated)*
 
-> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](https://nilpointer-software.github.io/bdfd-wiki/bdscript/editChannelPerms.html).
+> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](./editChannelPerms.md).
 
 Modifies a channel's permissions.
 
@@ -12,15 +12,15 @@ $modifyChannelPerms[channelID;permissions;userID/roleID]
 
 ### Breakdown
 - `channelID` - The channel to change the permissions for.
-- `permissions` - The [permissions](https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
+- `permissions` - The [permissions](/src/resources/permissions.md) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
 - `userID/roleID` - The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
 
 ## Example
 Lock:
 ```
 $nomention
-✅ Successfully locked <#$mentionedChannels[1;yes]>!
 $onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
+✅ Successfully locked <#$mentionedChannels[1;yes]>!
 $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$guildID]
 ```
 
@@ -29,8 +29,8 @@ $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$guildID]
 Unlock:
 ```
 $nomention
-✅ Successfully unlocked <#$mentionedChannels[1;yes]>!
 $onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
+✅ Successfully unlocked <#$mentionedChannels[1;yes]>!
 $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 ```
 
