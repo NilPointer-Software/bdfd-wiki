@@ -17,15 +17,15 @@ In this section, you'll learn how to use the modal message component.
 
 `$addTextInput[textInputID;style;label;(minimumLength;maximumLength;required;value;placeholder)]`
 
-- `textInputID` - ID that is used to retrieve the text input in the field. This value must be unique. _(Used in `$input[textInputID]` for retrieving input)_
-- `style` - The text input field style, either `short` or `paragraph`. _(Check below for style preview)_\
+- `textInputID` - ID that is used to retrieve the text input in the field. This value must be unique. _(Used in [`$input[textInputID]`](#getting-input-from-a-modal-submission))_
+- `style` - The text input field style, either `short` or `paragraph`.
   \
   ![](https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png)
 
 - `label` - Name of the text input field. This value must be less than or equal to 45 characters.
 - `minimumLength` - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the `maximumLength`.
 - `maximumLength` - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the `minimumLength`.  
-- `required` - Whether the text input field is required, defaults to true.
+- `required` - Whether a user must fill in the text input field, defaults to true.
 - `value` - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than `minimumLength` and no more than `maximumLength`.
 - `placeholder` - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.
 
