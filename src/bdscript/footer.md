@@ -3,12 +3,12 @@ Sets the embed footer text.
 
 ## Usage
 ```
-$footer[text;(optional) embedIndex]
+$footer[text;(index)]
 ```
 
 ### Breakdown
 - `text` - The text to set the footer as. It cannot exceed more than 2048 characters.
-- `embedIndex` - What embed the footer text should belong to. Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the footer text should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
 
 ## Example
 ```
