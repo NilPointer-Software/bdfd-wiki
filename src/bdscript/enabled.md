@@ -17,7 +17,7 @@ This section will explain how to disable/enable certain commands using server va
 
     ![example](https://user-images.githubusercontent.com/69215413/123017732-31925f80-d39b-11eb-8e23-ca01b0dc5ed4.png)
 
-2. Create a command for the enable command. Put this in the reply text/code section:
+2. Create a command for the enable code. Put this in the reply text/code section:
       ```
      $onlyAdmin[❌ Only admins can enable commands!]
      $setServerVar[enabled;yes]
