@@ -9,4 +9,4 @@ $channelIDFromName[channel name]
 ```
 
 ### Breakdown
-- `channel name` - The channel name that the bot will return it's channel id.
+- `channel name` - The channel name that the bot will return the channel id for.
