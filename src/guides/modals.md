@@ -29,7 +29,7 @@ In this section, you'll learn how to use the modal message component.
 - `value` - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than `minimumLength` and no more than `maximumLength`.
 - `placeholder` - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.
 
-> 🧙‍♂️ **Note:** You can't add more than 5 input fields.
+> 🧙‍♂️ **Note:** You can't add more than 5 text input fields.
 
 ## Getting Input from a Modal Submission
 
