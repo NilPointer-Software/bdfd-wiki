@@ -35,10 +35,10 @@ jobs:
         mv .nightly nightly
     - name: Deploy to nightly
       if: github.ref == 'refs/heads/prerelease'
-      runs: |
+      run: |
         mv book/* nightly/.
     - name: Push deployment
-      runs: |
+      run: |
         git add .
         git commit -m "Deploy $GITHUB_SHA to gh-pages on $type"
         git push --force --set-upstream origin gh-pages
