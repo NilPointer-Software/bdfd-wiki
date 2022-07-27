@@ -33,12 +33,15 @@ jobs:
         rm -rf *
         mv .book/* .
         mv .nightly nightly
+        rm -rf .book
     - name: Deploy to nightly
       if: github.ref == 'refs/heads/prerelease'
       run: |
         mv book/* nightly/.
+        rm -r book
     - name: Push deployment
       run: |
+        rm -rf src mdbook
         git add .
-        git commit -m "Deploy $GITHUB_SHA to gh-pages on $type"
+        git commit -m "Deploy $GITHUB_SHA to gh-pages"
         git push --force --set-upstream origin gh-pages
