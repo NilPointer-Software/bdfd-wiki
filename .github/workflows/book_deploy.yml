@@ -17,7 +17,7 @@ jobs:
         mkdir mdbook
         curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.14/mdbook-v0.4.14-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
         echo `pwd`/mdbook >> $GITHUB_PATH
-    - name: Deploy GitHub Pages
+    - name: Build Wiki Book
       run: |
         type=$(if [[ "$(git rev-parse --abbrev-ref HEAD)" == "prerelease" ]]; then echo "nightly"; else echo "stable"; fi)
         echo "::notice::Building Wiki for $type"
@@ -25,9 +25,20 @@ jobs:
         git checkout gh-pages
         git config user.name "Github Actions"
         git config user.email ""
-        cd $type
+    - name: Deploy to stable
+      if: github.ref == 'refs/heads/master'
+      run: |
+        mv nightly .nightly
+        mv book .book
         rm -rf *
-        mv ../book/* .
+        mv .book/* .
+        mv .nightly nightly
+    - name: Deploy to nightly
+      if: github.ref == 'refs/heads/prerelease'
+      runs: |
+        mv book/* nightly/.
+    - name: Push deployment
+      runs: |
         git add .
         git commit -m "Deploy $GITHUB_SHA to gh-pages on $type"
         git push --force --set-upstream origin gh-pages
