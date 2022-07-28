@@ -10,6 +10,7 @@
 - Added `$sendNotification[]` for premium bots
 - Made it possible to use only one option in a select menu
 - Fixed `$editChannelPerms[]`
+- Fixed verification of slash command names
 
 ## June
 - Fixed `$onlyBotChannelPerms[]`
