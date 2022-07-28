@@ -1,4 +1,5 @@
 name: Wiki Deploy
+
 on:
   push:
     branches:
@@ -6,43 +7,73 @@ on:
       - master
 
 jobs:
-  deploy:
+  build:
+    name: Build wiki book
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Install mdbook
       run: |
         mkdir mdbook
         curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.14/mdbook-v0.4.14-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=./mdbook
         echo `pwd`/mdbook >> $GITHUB_PATH
-    - name: Build Wiki Book
+    - name: Build book
+      run: mdbook build
+    - name: Upload book
+      uses: actions/upload-artifact@v3
+      with:
+        name: book
+        path: book
+
+  deploy-stable:
+    name: Deploy stable wiki
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - name: Fetch book artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: book
+        path: ..
+    - name: Deploy
       run: |
-        type=$(if [[ "$(git rev-parse --abbrev-ref HEAD)" == "prerelease" ]]; then echo "nightly"; else echo "stable"; fi)
-        echo "::notice::Building Wiki for $type"
-        mdbook build
-        git checkout gh-pages
+        mv nightly ..
+        rm -rf *
+        mv ../book/* .
+        mv ../nightly .
         git config user.name "Github Actions"
         git config user.email ""
-    - name: Deploy to stable
-      if: github.ref == 'refs/heads/master'
-      run: |
-        mv nightly .nightly
-        mv book .book
-        rm -rf *
-        mv .book/* .
-        mv .nightly nightly
-        rm -rf .book
-    - name: Deploy to nightly
-      if: github.ref == 'refs/heads/prerelease'
-      run: |
-        rm -rf nightly/*
-        mv book/* nightly/.
-        rm -r book
-    - name: Push deployment
-      run: |
-        rm -rf src mdbook
         git add .
         git commit -m "Deploy $GITHUB_SHA to gh-pages"
+        git push --force --set-upstream origin gh-pages
+
+  deploy-nightly:
+    name: Deploy nightly wiki
+    needs: build
+    if: github.ref == 'refs/heads/prerelease'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - name: Fetch book artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: book
+        path: ..
+    - name: Deploy
+      run: |
+        rm -rf nightly/*
+        mv ../book/* nightly/.
+        git config user.name "Github Actions"
+        git config user.email ""
+        git add .
+        git commit -m "Deploy nightly $GITHUB_SHA to gh-pages"
         git push --force --set-upstream origin gh-pages
