@@ -36,16 +36,16 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: gh-pages
+    - name: Prepare to fetch book
+      run: |
+        mv nightly ..
+        rm -rf *
     - name: Fetch book artifact
       uses: actions/download-artifact@v3
       with:
         name: book
-        path: ..
     - name: Deploy
       run: |
-        mv nightly ..
-        rm -rf *
-        mv ../book/* .
         mv ../nightly .
         git config user.name "Github Actions"
         git config user.email ""
@@ -63,15 +63,16 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: gh-pages
+    - name: Prepare to fetch book
+      run: |
+        rm -rf nightly/*
     - name: Fetch book artifact
       uses: actions/download-artifact@v3
       with:
         name: book
-        path: ..
+        path: nightly
     - name: Deploy
       run: |
-        rm -rf nightly/*
-        mv ../book/* nightly/.
         git config user.name "Github Actions"
         git config user.email ""
         git add .
