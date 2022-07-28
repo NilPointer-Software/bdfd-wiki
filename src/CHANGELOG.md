@@ -9,6 +9,7 @@
 - App now sends notification when bot hosting is expired
 - Added `$sendNotification[]` for premium bots
 - Made it possible to use only one option in a select menu
+- Fixed `$editChannelPerms[]`
 
 ## June
 - Fixed `$onlyBotChannelPerms[]`
