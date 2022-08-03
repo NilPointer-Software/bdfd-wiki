@@ -1,7 +1,9 @@
 # Changelog
-*Note that we often forget to update this article, so some stuff is missing.*
 
 # 2022
+
+## August
+- Added `$scriptLanguage`
 
 ## July
 - Added hex to the color picker
