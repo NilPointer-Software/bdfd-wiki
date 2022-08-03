@@ -3,6 +3,9 @@
 
 # 2022
 
+## August
+- Added `$scriptLanguage`
+
 ## July
 - Added hex to the color picker
 - Fixed `$executionTime` not working inside embed fields
