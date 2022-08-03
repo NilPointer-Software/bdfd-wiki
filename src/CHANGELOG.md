@@ -1,5 +1,4 @@
 # Changelog
-*Note that we often forget to update this article, so some stuff is missing.*
 
 # 2022
 
