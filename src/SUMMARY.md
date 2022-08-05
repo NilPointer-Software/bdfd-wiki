@@ -231,6 +231,7 @@
     - [$resetUserVar](./bdscript/resetUserVar.md)
     - [$roleCount](./bdscript/roleCount.md)
     - [$roleExists](./bdscript/roleExists.md)
+    - [$roleGrant](./bdscript/roleGrant.md)
     - [$roleID](./bdscript/roleID.md)
     - [$roleInfo](./bdscript/roleInfo.md)
     - [$roleName](./bdscript/roleName.md)
