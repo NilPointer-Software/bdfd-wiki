@@ -1,7 +1,9 @@
 # Changelog
-*Note that we often forget to update this article, so some stuff is missing.*
 
 # 2022
+
+## August
+- Added `$scriptLanguage`
 
 ## July
 - Added hex to the color picker
@@ -9,6 +11,8 @@
 - App now sends notification when bot hosting is expired
 - Added `$sendNotification[]` for premium bots
 - Made it possible to use only one option in a select menu
+- Fixed `$editChannelPerms[]`
+- Fixed verification of slash command names
 
 ## June
 - Fixed `$onlyBotChannelPerms[]`
