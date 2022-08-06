@@ -8,14 +8,13 @@ Gateway Intents must be enabled in the Discord Developer Portal and in the BDFD 
 1. Go to the [Discord Developer Portal](https://discord.com/developers/applications) and select your application.
 2. Go to the "Bot" tab.
 3. Scroll down and enable the Gateway Intents you are interested in.
-4. Save changes. \
-![soon](soon)
+4. Save changes.
+
 ### BDFD App
 1. Open the app and select your bot.
 2. Go to the "Settings" tab.
 3. Scroll down and enable the Gateway Intents you are interested in.
-4. Save changes. \
-![soon](soon)
+4. Save changes. 
 
 ## Use of Gateway Intents
 ### Presence Intent
