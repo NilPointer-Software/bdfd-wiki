@@ -14,6 +14,7 @@
     - [Buttons](./guides/buttons.md)
     - [Character Escaping](./guides/characterEscaping.md)
     - [Commands Anatomy](./guides/commandsAnatomy.md)
+    - [Gateway Intents](./guides/gatewayIntents.md)
     - [Error Handling](./guides/trycatch.md)
     - [HTTP Requests](./guides/httpRequests.md)
     - [Hyperlinks](./guides/hyperlinks.md)
