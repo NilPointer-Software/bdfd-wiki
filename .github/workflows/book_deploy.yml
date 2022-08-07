@@ -52,6 +52,12 @@ jobs:
         git add .
         git commit -m "Deploy $GITHUB_SHA to gh-pages"
         git push --force --set-upstream origin gh-pages
+    - name: Send wiki update notification
+      uses: Ilshidur/action-discord@0.3.2
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.WEBHOOK }}
+      with:
+        args: "Stable Wiki update!\n`${{ github.event.head_commit.message }}` by ${{ github.event.head_commit.author.name }}"
 
   deploy-nightly:
     name: Deploy nightly wiki
@@ -78,3 +84,9 @@ jobs:
         git add .
         git commit -m "Deploy nightly $GITHUB_SHA to gh-pages"
         git push --force --set-upstream origin gh-pages
+    - name: Send wiki update notification
+      uses: Ilshidur/action-discord@0.3.2
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.WEBHOOK }}
+      with:
+        args: "Nightly Wiki update!\n`${{ github.event.head_commit.message }}` by ${{ github.event.head_commit.author.name }}"
