@@ -3,7 +3,9 @@
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
 
-- [Guides](./guides/async.md)
+---
+
+- [Guides]()
     - [Async](./guides/async.md)
     - [Auto Complete](./guides/autoComplete.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
@@ -12,6 +14,7 @@
     - [Buttons](./guides/buttons.md)
     - [Character Escaping](./guides/characterEscaping.md)
     - [Commands Anatomy](./guides/commandsAnatomy.md)
+    - [Gateway Intents](./guides/gatewayIntents.md)
     - [Error Handling](./guides/trycatch.md)
     - [HTTP Requests](./guides/httpRequests.md)
     - [Hyperlinks](./guides/hyperlinks.md)
@@ -24,7 +27,7 @@
     - [Variables](./guides/variables.md)
     - [Webhooks](./guides/webhooks.md)
 
-- [Resources](./resources/api.md)
+- [Resources]()
     - [API](./resources/api.md)
     - [BDFD's Creation](./resources/bdfdCreation.md)
     - [Discord's ID System](./resources/discordIDSystem.md)
@@ -33,7 +36,7 @@
     - [Permissions](./resources/permissions.md)
     - [Security](./resources/security.md)
 
-- [BDScript](./bdscript/introduction.md)
+- [BDScript]()
     - [Introduction](./bdscript/introduction.md)
     - [$addCmdReactions](./bdscript/addCmdReactions.md)
     - [$addEmoji](./bdscript/addEmoji.md)
@@ -231,6 +234,7 @@
     - [$resetUserVar](./bdscript/resetUserVar.md)
     - [$roleCount](./bdscript/roleCount.md)
     - [$roleExists](./bdscript/roleExists.md)
+    - [$roleGrant](./bdscript/roleGrant.md)
     - [$roleID](./bdscript/roleID.md)
     - [$roleInfo](./bdscript/roleInfo.md)
     - [$roleName](./bdscript/roleName.md)
@@ -300,7 +304,7 @@
     - [$variablesCount](./bdscript/variablesCount.md)
     - [$year](./bdscript/year.md)
 
-- [Premium](./premium/introduction.md)
+- [Premium]()
     - [Introduction](./premium/introduction.md)
     - [Awaited Reactions](./premium/awaitedReactions.md)
     - [Custom Images](./premium/customImages.md)
@@ -310,10 +314,10 @@
     - [$messageContains](./premium/messageContains.md)
     - [$sendNotification](./premium/sendNotification.md)
 
-- [JavaScript](./javascript/javascript.md)
+- [JavaScript]()
     - [Introduction](./javascript/javascript.md)
 
-- [Callbacks](./callbacks/introduction.md)
+- [Callbacks]()
     - [Introduction](./callbacks/introduction.md)
     - [$onJoined](./callbacks/onJoined.md)
     - [$onLeave](./callbacks/onLeave.md)
