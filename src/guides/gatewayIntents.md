@@ -10,11 +10,16 @@ Gateway Intents must be enabled in the Discord Developer Portal and in the BDFD 
 3. Scroll down and enable the Gateway Intents you are interested in.
 4. Save changes.
 
+![DDP](https://user-images.githubusercontent.com/70456337/183294128-52e5a4e4-f833-49dd-8bee-1ebec7c2c999.gif)
+
+
 ### BDFD App
 1. Open the app and select your bot.
 2. Go to the "Settings" tab.
 3. Scroll down and enable the Gateway Intents you are interested in.
-4. Save changes. 
+4. Save changes.
+
+![BDFD](https://user-images.githubusercontent.com/70456337/183294156-4ecc60b0-7112-4bf3-b833-39b8c2004fc6.gif)
 
 ## Use of Gateway Intents
 ### Presence Intent
