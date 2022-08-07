@@ -61,3 +61,4 @@ If you own a public bot and want to make it so multiple different servers can us
     > 📝 Servers will need to setup the channel they want the welcome message to send to *(by running a command with the code above)*.
 
 3. Now replace `$onJoined[channelID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
+![Screenshot_20220808_042857](https://user-images.githubusercontent.com/95774950/183314334-76b0f2e0-651f-4b25-8be7-08e39725174a.png)![Screenshot_20220808_043030](https://user-images.githubusercontent.com/95774950/183314360-da7320a5-4370-47b1-b8e2-bfd6d4d2ef05.png)
