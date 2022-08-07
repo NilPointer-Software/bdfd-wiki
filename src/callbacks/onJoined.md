@@ -27,15 +27,14 @@
 ![image](https://user-images.githubusercontent.com/69215413/113423634-d6089500-939c-11eb-8d2c-083ac87ff66b.png)
 
 - Open BDFD app and select your bot. Go to bot settings and enable Member Intents.\
-![image](https://user-images.githubusercontent.com/69215413/129490310-1653423f-455a-462e-82cb-43a13fa5d899.png)\
-![image](https://user-images.githubusercontent.com/69215413/129490262-01fbcaac-aa28-4d8a-9ff1-3391d8b78f29.png)\
-![image](https://user-images.githubusercontent.com/69215413/129490261-bdaf1dab-f3d0-4635-92cc-2aa4af02df59.png)
+![Screenshot_20220808_042857](https://user-images.githubusercontent.com/95774950/183314334-76b0f2e0-651f-4b25-8be7-08e39725174a.png)\
+![Screenshot_20220808_043030](https://user-images.githubusercontent.com/95774950/183314360-da7320a5-4370-47b1-b8e2-bfd6d4d2ef05.png)
 
-> 📝 Enabled intents in the app should reflect the intents enabled in the Discord Developer Portal.\
+   > 📝 Enabled intents in the app should reflect the intents enabled in the Discord Developer Portal.\
 **For example:** If you have `Members Intent` enabled in the Discord Developer Portal then you should respectively
 enable them in the app *(unless you don't want to use them at all)*.
 
-- Make sure, `$onJoined[channelID]` is written in the 'command trigger' field and not in the code.\
+- Make sure `$onJoined[channelID]` is written in the 'command trigger' field and not in the code.\
 ![image](https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png)
 
 - Make sure your bot has `VIEW_CHANNEL`, `EMBED_LINKS`, `SEND_MESSAGES` permission in the channel provided in `$onJoined[]`, and that you inputted a valid channel ID.
@@ -61,4 +60,3 @@ If you own a public bot and want to make it so multiple different servers can us
     > 📝 Servers will need to setup the channel they want the welcome message to send to *(by running a command with the code above)*.
 
 3. Now replace `$onJoined[channelID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
-![Screenshot_20220808_042857](https://user-images.githubusercontent.com/95774950/183314334-76b0f2e0-651f-4b25-8be7-08e39725174a.png)![Screenshot_20220808_043030](https://user-images.githubusercontent.com/95774950/183314360-da7320a5-4370-47b1-b8e2-bfd6d4d2ef05.png)
