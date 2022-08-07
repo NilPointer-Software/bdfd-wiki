@@ -23,8 +23,8 @@ Gateway Intents must be enabled in the Discord Developer Portal and in the BDFD 
 
 ## Use of Gateway Intents
 ### Presence Intent
-Required for the functions [`$membersCount[]`](./bdscript/membersCount.md#second-usage) and [`$getUserStatus[]`](./bdscript/getUserStatus.md) to work.
+Required for the functions [`$membersCount[]`](../bdscript/membersCount.md#second-usage) and [`$getUserStatus[]`](../bdscript/getUserStatus.md) to work.
 ### Server Members Intent
-Required for some callbacks to work (e.g. for [`$onJoined[]`](./callbacks/onJoined.md))
+Required for some callbacks to work (e.g. for [`$onJoined[]`](../callbacks/onJoined.md))
 ### Message Content Intent
 Required for text commands to work if your bot is verified. Without this intent, your bot can only be based on slash commands.
