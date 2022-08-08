@@ -224,6 +224,7 @@
     - [$randomText](./bdscript/randomText.md)
     - [$randomUser](./bdscript/randomUser.md)
     - [$randomUserID](./bdscript/randomUserID.md)
+    - [$removeButtons](./bdscript/removeButtons.md)
     - [$removeComponent](./bdscript/removeComponent.md)
     - [$removeContains](./bdscript/removeContains.md)
     - [$removeLinks](./bdscript/removeLinks.md)
