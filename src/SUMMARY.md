@@ -21,6 +21,7 @@
     - [If Statements](./guides/ifStatements.md)
     - [Modals](./guides/modals.md)
     - [Select Menu](./guides/selectmenu.md)
+    - [Share Code](./guides/sharecode.md)
     - [Slash Commands](./guides/slashCommands.md)
     - [Text Splitting](./guides/textSplitting.md)
     - [Threads](./guides/threads.md)
