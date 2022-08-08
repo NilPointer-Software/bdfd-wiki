@@ -1,4 +1,4 @@
-# Getting Started
+# Introduction
 In this guide, you will learn how to create a discord bot in BDFD.
 
 ### Creating a Discord Bot
