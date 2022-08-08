@@ -1,10 +1,12 @@
 # $untimeout
 
-Untimeouts the mentioned users, or the user provided in 'User ID'
+Removes timeout from mentioned users, or the provided user.
+
+> Note: To timeout users see [`$timeout[]`](./timeout.md)
 
 ## Usage
 ```
-$untimeout[(optional) userID]
+$untimeout[(user ID)]
 ```
 
 ## Example
