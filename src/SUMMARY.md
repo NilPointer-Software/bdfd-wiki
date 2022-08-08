@@ -285,7 +285,7 @@
     - [$unescape](./bdscript/unescape.md)
     - [$unmute](./bdscript/unmute.md)
     - [$unpinMessage](./bdscript/unpinMessage.md)
-    - [$untimeout](./dbscript/untimeout.md)
+    - [$untimeout](./bdscript/untimeout.md)
     - [$uptime](./bdscript/uptime.md)
     - [$url](./bdscript/url.md)
     - [$useChannel](./bdscript/useChannel.md)
