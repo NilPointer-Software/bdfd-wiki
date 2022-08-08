@@ -1,15 +1,13 @@
 # BDScript 2
-The new edition of BDScript.
 
 ## Introduction
-As you probably know, the default scripting language in the app is **BDScript**, there is also an alternative edition called **BDScript Unstable**.\
-**BDScript 2** has been created with intention of enhancing its capabilities and fixing some of the problems the other versions had.\
-The default edition of **BDScript** has one big issue, commands like `$sum[$sum[3;2];1]` don't work. The reason it doesn't work is because **BDScript** has a predefined order for executing functions.
-I won't go into the nitty-gritty details how exactly it works so, just so you know there are certain function combinations that don't work together.\
-In order to fix the issue, we've created a new BDScript edition called **BDScript Unstable**. It executes function in a command from bottom to top, from right to left.
-It fixed the issue but the new edtition had its own quirks which for some commands could be problematic. That's were **BDScript 2** comes in. This edition executes commands from top to bottom, from left to right *(basically just the way you read most of the books)*.
-Besides that, **BDScript 2** has new features like `$eval[]`, `$try` and `$catch` and more.\
-This edition is still rough on edges but we intend to polish it and make it the default choice in the app.
+**BDScript 2** is the default scripting language in-app _(as of October 2021)_. It has been created with intention of enhancing it's capabilities and fixing some of the problems the other versions had.
+
+The first edition of **BDScript** has one big issue, commands like `$sum[$sum[3;2];1]` didn't work. The reason it didn't work is because **BDScript** has a pre-defined order for executing functions.
+
+In order to fix the issue, a new BDScript edition was developed called **BDScript Unstable**. It executes function in a command from bottom to top and from right to left.
+It fixed the issue but the new edtition had its own quirks which for some commands could be problematic. That's why **BDScript 2** comes in. This edition executes commands from top to bottom and from left to right *(basically, just the way you read most of the books)*.\
+Besides that, **BDScript 2** has additional features like `$eval[]`, `$try` and `$catch` and more.
 
 ## Features
 ### $eval[]
@@ -34,8 +32,11 @@ Read [this](./ifStatements.md) for more information.
 
 ### $var[]
 It can be used to **temporarily** store a value.
-After the command executes, all of the vars are removed.\ For this specific variable function you don't need to create a coresponding variable in the app.\
-To store a value you simply use `$var[VARIABLE NAME;VALUE]`. To retrieve it you just do `$var[VARIABLE NAME]`.
+After the command executes, all of the vars are removed.
+
+For this specific variable function, you don't need to create a corresponding variable in the app.
+
+To store a value, simply use `$var[VARIABLE NAME;VALUE]` and to retrieve, do `$var[VARIABLE NAME]`.
 
 ### $stop
 It stops the command execution. It may seem like a useless function but it can come in handy with `$if`s or `$try`s.
@@ -44,6 +45,7 @@ It stops the command execution. It may seem like a useless function but it can c
 It should be used only by more advanced users.\
 The full function's name is *optimizations off*. Sometimes **BDScript 2** doesn't execute the same function twice and it uses the previous result instead.
 **$optOff[]** allows disabling that behaviour for provided functions.
+
 Here's a small example:
 ```php
 $random // returns 3
