@@ -60,8 +60,8 @@ Arguments work exactly the same way as in [$addButton](#adding-a-button) functio
 
 ## Removing buttons
 Removing button from a message can be done using these three functions :
-- `$removeButtons`
-- `$removeButtons[messageID]`
+- [`$removeButtons`](../bdscript/removeButtons.md)
+- [`$removeButtons[messageID]`](../bdscript/removeButtons.md)
 - [`$removeComponent[Custom ID;(Message ID)]`](../bdscript/removeComponent.md)
 
 ## Examples
