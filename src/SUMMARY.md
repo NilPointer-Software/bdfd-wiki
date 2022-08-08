@@ -241,6 +241,7 @@
     - [$roleNames](./bdscript/roleNames.md)
     - [$rolePosition](./bdscript/rolePosition.md)
     - [$round](./bdscript/round.md)
+    - [$scriptLanguage](./bdscript/scriptLanguage.md)
     - [$second](./bdscript/second.md)
     - [$sendEmbedMessage](./bdscript/sendEmbedMessage.md)
     - [$sendMessage](./bdscript/sendMessage.md)
