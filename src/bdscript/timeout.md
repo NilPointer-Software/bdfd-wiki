@@ -10,13 +10,13 @@ $timeout[duration;(userID)]
 ```
 
 ## Examples
-### Usage 1
+### Example 1
 ```
 $nomention
 $timeout[$message[1]]
 ```
 ![](https://user-images.githubusercontent.com/70456337/183470087-6b72ea9f-9365-4686-9483-09bad385e10b.png)
-### Usage 2
+### Example 2
 ```
 $nomention
 $timeout[$message[1];$findUser[$message[2];no]]
