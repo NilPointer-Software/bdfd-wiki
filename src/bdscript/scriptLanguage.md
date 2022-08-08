@@ -1,19 +1,20 @@
 # $scriptLanguage
 Returns the name of scripting language used by the command.
 
-### Output value
-- BDScript
-- BDScript 2
-- BDScript Unstable
-
-> 📝 This function is useful for letting users know which script language should the command be used in.
+## Usage
+```
+$scriptLanguage
+```
 
 ## Example
 ```
 $nomention
-$if[$scriptLanguage!=BDScript 2]
-You need to use BDScript 2 in this command.
-$else
-You used BDScript 2!
-$endif
+This command uses `$scriptLanguage`.
 ```
+![](https://user-images.githubusercontent.com/70456337/183467283-fb264df3-27ea-4111-85bd-9d336d221fa9.png)
+> **Note:** After each execution of the command, we changed the script to another one.
+
+### Output value
+- BDScript
+- BDScript 2
+- BDScript Unstable

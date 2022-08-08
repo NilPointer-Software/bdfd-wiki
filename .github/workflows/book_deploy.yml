@@ -52,12 +52,6 @@ jobs:
         git add .
         git commit -m "Deploy $GITHUB_SHA to gh-pages"
         git push --force --set-upstream origin gh-pages
-    - name: Send wiki update notification
-      uses: Ilshidur/action-discord@0.3.2
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.WEBHOOK }}
-      with:
-        args: "Stable Wiki update!\n```${{ github.event.head_commit.message }}``` by ${{ github.event.head_commit.author.username }}"
 
   deploy-nightly:
     name: Deploy nightly wiki
@@ -84,9 +78,20 @@ jobs:
         git add .
         git commit -m "Deploy nightly $GITHUB_SHA to gh-pages"
         git push --force --set-upstream origin gh-pages
+
+  notify-discord:
+    name: Send notification
+    needs: [deploy-stable, deploy-nightly]
+    if: ${{ success() || cancelled() }}
+    runs-on: ubuntu-latest
+    env:
+      TYPE: Nightly
+    steps:
+    - name: Set Stable notification type
+      if: github.ref == 'refs/heads/master'
+      run: echo "TYPE=Stable" >> $GITHUB_ENV
     - name: Send wiki update notification
-      uses: Ilshidur/action-discord@0.3.2
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.WEBHOOK }}
+      uses: MineBartekSA/discord-webhook@v1.1
       with:
-        args: "Nightly Wiki update!\n```${{ github.event.head_commit.message }}``` by ${{ github.event.head_commit.author.username }}"
+        webhook: ${{ secrets.WEBHOOK }}
+        content: "${{ env.TYPE }} Wiki update! ```${{ github.event.head_commit.message }}``` by ${{ github.event.head_commit.author.username }}"
