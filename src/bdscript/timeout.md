@@ -4,7 +4,7 @@ Timeouts the mentioned users, or the user provided in 'User ID', for a certain '
 
 ## Usage
 ```
-$timeout[duration;(optional) userID]
+$timeout[duration;(userID)]
 ```
 
 ## Example
