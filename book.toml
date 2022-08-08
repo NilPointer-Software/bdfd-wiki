@@ -10,3 +10,6 @@ theme = "src/theme"
 default-theme = "bdfd"
 preferred-dark-theme = "bdfd"
 git-repository-url = "https://github.com/NilPointer-Software/bdfd-wiki"
+
+[output.html.search]
+boost-title = 4  
