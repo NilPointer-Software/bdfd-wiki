@@ -7,9 +7,16 @@ Timeouts the mentioned users, or the user provided in 'User ID', for a certain '
 $timeout[duration;(userID)]
 ```
 
-## Example
+## Examples
+### Usage 1
 ```
 $nomention
-$timeout[$message[1];$mentioned[1]]
+$timeout[$message[1]]
 ```
-![example](https://user-images.githubusercontent.com/42785890/151719718-2f89a492-3cd0-4ad3-b000-d2188e9766b2.png)
+![](https://user-images.githubusercontent.com/70456337/183470087-6b72ea9f-9365-4686-9483-09bad385e10b.png)
+### Usage 2
+```
+$nomention
+$timeout[$message[1];$findUser[$message[2];no]]
+```
+![](https://user-images.githubusercontent.com/70456337/183470187-305f846a-7515-46b5-af7e-6c2f5713656f.png)
