@@ -2,6 +2,8 @@
 
 Timeouts the mentioned users, or the user provided in 'User ID', for a certain 'Duration' (max 28 days)
 
+> **Note:** To untimeout users see [`$untimeout[]`](./untimeout.md)
+
 ## Usage
 ```
 $timeout[duration;(userID)]
