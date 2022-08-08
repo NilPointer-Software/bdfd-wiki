@@ -1,9 +1,9 @@
 # Character Escaping
 *(for advanced users)*
 
-**What Are Escape Characters?**
+**What are Escape Characters?**
 
-Escape characters are used to indicate that the character should not be interpeted as a modifaction of the code, rather just text that appears in the code or bot's response. Basically, escape characters let your bot return the function-triggering characters (e.g `;`, `$`, `[`, `]`) without any changes to the code.
+Escape characters are used to indicate that the character should not be interpreted as a modification of the code, rather just text that appears in the code or bot's response. Basically, escape characters let your bot return the function-triggering characters (e.g `;`, `$`, `[`, `]`) without any changes to the code.
 
 ## Escapable Characters
 Character | Escaped
