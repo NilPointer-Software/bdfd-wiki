@@ -1,5 +1,5 @@
 # Getting Started
-In this guide, you will learn how to create a discord bot and host it in BDFD.
+In this guide, you will learn how to create a discord bot in BDFD.
 
 ### Creating a Discord Bot
 - Go to [Discord Developer](https://discord.com/developers/applications) portal.
