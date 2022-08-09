@@ -44,3 +44,7 @@ $usedEmoji
 ```
 
 ## Example
+![Screenshot_20220809_194823](https://user-images.githubusercontent.com/95774950/183701101-550bf56c-3cd2-4511-bc03-8f8398fe4d8b.png)
+![Screenshot_20220809_194754](https://user-images.githubusercontent.com/95774950/183701030-c82a8744-9dff-4ad9-83b5-2aa64f45cc59.png)
+![Screenshot_20220809_194805](https://user-images.githubusercontent.com/95774950/183701074-395c4770-8439-4441-a0ad-5c69ae9cded4.png)
+![Screenshot_20220809_194642](https://user-images.githubusercontent.com/95774950/183700978-16ae78d2-a305-4f2b-8388-c55ecadd83cc.png)
