@@ -40,6 +40,7 @@ enable them in the app *(unless you don't want to use them at all)*.
 
 - Make sure your bot has `VIEW_CHANNEL`, `EMBED_LINKS`, `SEND_MESSAGES` permission in the channel provided in `$onLeave[]`, and that you inputted a valid channel ID.
 - Also, make sure you don't have more than 1 `$onLeave[]`.
+
 ## Advanced
 ### Per-Server $onLeave
 Both free and premium users can use `$onLeave[]`, and all users can put `$getServerVar[]` within `$onLeave[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks.\
