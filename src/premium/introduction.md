@@ -3,10 +3,12 @@
 
 ### Purchasing Premium Points
 1. Open BDFD app and click on profile icon.
-![InShot_20220809_185729644](https://user-images.githubusercontent.com/95774950/183664366-78e3481f-656b-43b3-b334-4f4d00138fe3.jpg)
+
+    ![InShot_20220809_185729644](https://user-images.githubusercontent.com/95774950/183664366-78e3481f-656b-43b3-b334-4f4d00138fe3.jpg)
 
 2. Then, click *"Buy premium points"*.
-![Screenshot_20220809_190558](https://user-images.githubusercontent.com/95774950/183664494-1672d304-5250-4a6a-9bb3-60d2fbb960bc.png)
+
+    ![Screenshot_20220809_190558](https://user-images.githubusercontent.com/95774950/183664494-1672d304-5250-4a6a-9bb3-60d2fbb960bc.png)
 
 3. Choose your preferable package and confirm your purchase.
 
@@ -20,7 +22,8 @@ After successful purchasing of premium point(s), here's how to redeem it :
     ![Screenshot_20220809_112223](https://user-images.githubusercontent.com/95774950/183578142-e93ed985-9ea7-4b18-8d8b-3f29d073ad9f.png)
 
 2. Select the amount of point(s) you want to add to the bot, then confirm.
-![IMG_20220809_152453](https://user-images.githubusercontent.com/95774950/183664582-2f2bbb33-819b-49c9-ab48-a4ec6500cd1e.jpg)
+
+     ![IMG_20220809_152453](https://user-images.githubusercontent.com/95774950/183664582-2f2bbb33-819b-49c9-ab48-a4ec6500cd1e.jpg)
 
     > 📝 One premium point equals one week of premium hosting.
 
