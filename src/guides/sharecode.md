@@ -10,4 +10,4 @@ Here is how you can create a share code of your bot -
 
 Now, you can give the code to your friend or someone other, and they will be able to create a carbon copy of your bot.
 
-> ⚠️ Once a share code has been used. It gets expired after 1 month.
+> ⚠️ Once a share code has been used, it expires after a month.
