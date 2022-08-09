@@ -21,4 +21,4 @@ Welcome to our humble abode. The thing you're seeing is *Bot Designer for Discor
 - [Functions](./bdscript/introduction.md)
 - [Callbacks](./callbacks/introduction.md)
 - [JavaScript](./javascript/javascript.md)
-- [Premium](./premium/alwaysReply.md)
+- [Premium](./premium/introduction.md)
