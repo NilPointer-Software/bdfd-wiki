@@ -1,7 +1,7 @@
 # Awaited reactions
 *(for premium bots)*
 
-**Awaited reactions** are same like [awaited commands](../guides/awaitedCommands.md). Unlike awaited commands which waits for a message, it waits for a reaction instead. 
+**Awaited reactions** are similar to [awaited commands](../guides/awaitedCommands.md). Unlike awaited commands which wait for a message, they wait for a reaction instead. 
 
 ![end result](https://i.imgur.com/diskuyv.png)
 
