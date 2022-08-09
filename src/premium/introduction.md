@@ -15,7 +15,7 @@
     ![Screenshot_20220809_114500](https://user-images.githubusercontent.com/95774950/183578062-f8b1074b-4462-4630-ae76-70ec670a97a6.png)
 
 ### Redeeming Premium
-After successful purchasing of premium point(s), here's how to redeem it :
+After a successful purchase of premium points, here's how to redeem them :
 
 1. Select your bot in app homepage and click *"Add premium time"* button in dashboard tab.
 
