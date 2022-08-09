@@ -1,5 +1,5 @@
 # Share code
-*"Share code"* is a feature which let's users to share their all bot codes to an another bot.
+*"Share code"* is a feature that lets users share a copy of their entire bot.
 
 ## Creating a share code
 Here is how you can create your own bot share code -
