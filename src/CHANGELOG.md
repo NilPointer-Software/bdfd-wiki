@@ -4,6 +4,7 @@
 
 ## August
 - Added `$scriptLanguage`
+- Fixed `$stop` breaking `$if[]`
 
 ## July
 - Added hex to the color picker
