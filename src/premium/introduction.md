@@ -33,7 +33,7 @@ After successful purchasing of premium point(s), here's how to redeem it :
 - Awaited reactions.
 - Access to [`$messageContains[]`](./messageContains.md) and [`$alwaysReply`](./alwaysReply.md) callbacks.
 - Custom images.
-- Access to [`$ignoreTriggerCase`](./ignoreTriggerCase.md) and [`$sendNotification`](./sendNotification.md) function.
+- Access to [`$ignoreTriggerCase`](./ignoreTriggerCase.md) and [`$sendNotification`](./sendNotification.md) functions.
 - Unlimited commands/variables.
 - Ad-free hosting time.
 - Priority bot hosting/startup.
