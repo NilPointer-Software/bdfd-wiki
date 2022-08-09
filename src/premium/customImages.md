@@ -29,7 +29,7 @@ $customImage[Custom image name]
 ```
 
 #### Breakdown
-- `custom image name` - The tag that you set the custom image to, previously.
+- `custom image tag` - The tag that you set the custom image to, previously.
 
 #### Example
 ```
