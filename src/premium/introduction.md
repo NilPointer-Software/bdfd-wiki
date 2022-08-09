@@ -3,15 +3,19 @@
 
 ### Purchasing Premium Points
 1. Select any bot in app homepage and click *"Add premium time"* button in dashboard tab.
+![Screenshot_20220809_112223](https://user-images.githubusercontent.com/95774950/183578006-d0db6e9b-0114-474b-9aeb-6251c08ca7af.png)
 
 2. Then, click *"Buy premium points"*.
+![Screenshot_20220809_114443](https://user-images.githubusercontent.com/95774950/183578039-4d35a070-fb2f-43e2-bf26-7fcc94d57388.png)
 
 3. Choose your preferable package and confirm your purchase.
+![Screenshot_20220809_114500](https://user-images.githubusercontent.com/95774950/183578062-f8b1074b-4462-4630-ae76-70ec670a97a6.png)
 
 ### Redeeming Premium
 After successful purchasing of premium point(s), here's how to redeem it :
 
 1. Select your bot in app homepage and click *"Add premium time"* button in dashboard tab.
+![Screenshot_20220809_112223](https://user-images.githubusercontent.com/95774950/183578142-e93ed985-9ea7-4b18-8d8b-3f29d073ad9f.png)
 
 2. Select the amount of point(s) you want to add to the bot, then confirm.
 
