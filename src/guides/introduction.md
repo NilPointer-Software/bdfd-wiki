@@ -13,7 +13,7 @@ In this guide, you will learn how to create a discord bot in BDFD.
    > 📝 Make sure when you are creating a new bot, your discord account is logged-in in BDFD app. So that, you don't lose access to your bot in future.
 - Enter bot name and it's token *(the one which you have copied it earlier from discord developer portal)*.
 - If you have a [share code](./sharecode.md), toggle on *"Use share code"* and put your shared code in the text field.
-- After agreeing terms of service of both [BDFD](https://botdesignerdiscord.com/tos) app & [Discord](https://discord.com/terms)'s, click on "Create bot" to create your discord bot.
+- After agreeing to the terms of service of both [BDFD](https://botdesignerdiscord.com/tos) app & [Discord](https://discord.com/terms)'s, click on "Create bot" to create your discord bot.
 
 ### Inviting the bot
 To add the bot into a server, click [me](./slashCommands.md#inviting-the-bot).
