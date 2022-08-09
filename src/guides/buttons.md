@@ -39,7 +39,7 @@ $addButton[New row;Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
 ### Function arguments breakdown
 - `new row` - If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button. Check [examples](#examples) below.
 
-    > 📝 A message can have a maximum of 25 buttons (5 per row, 5 per column).
+    > 📝 A message can have a maximum of 25 buttons (5 rows of 5 buttons).
 
 - `button ID/url` - Depending on a button type, you either set it to `interactionID` which is then used in `$onInteraction[ID]` callback or `URL` if it's link button.
 - `label` - It's the text value visible on a button
