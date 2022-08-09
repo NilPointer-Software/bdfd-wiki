@@ -25,7 +25,7 @@ This function is used to return the uploaded image in the app.
 
 #### Usage
 ```
-$customImage[Custom image name]
+$customImage[Custom image tag]
 ```
 
 #### Breakdown
