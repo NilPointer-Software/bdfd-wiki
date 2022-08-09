@@ -5,7 +5,7 @@ Make sure to follow the 'Proper Wiki Structure' when contributing.
 
 ### Common Issue
 - My pull request got merged but isn't shown on the wiki page. Why?
-  - The markdown files contributed is deployed by a developer (which happens every few weeks).
+  - The markdown files contributed is deployed by a developer (which happens every few weeks). You can view recently merged pull request in [nightly](https://nilpointer-software.github.io/bdfd-wiki/nightly/) wiki version.
    
 ## Terms and Guidelines
 - You may not be credited for the making of wiki. However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
