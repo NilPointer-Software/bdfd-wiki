@@ -37,7 +37,7 @@ After successful purchasing of premium point(s), here's how to redeem it :
 - Priority bot hosting/startup.
 - Maximum 120 minutes duration in `$replyIn` & `$editEmbedIn`.
 - Increased server and global variable character limits.
-
+- Bot guild list.
 
 #### [Discord Server](https://botdesignerdiscord.com/discord) Perks
 - The premium role. Run `!getPremiumRole`.
