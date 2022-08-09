@@ -35,7 +35,7 @@ After successful purchasing of premium point(s), here's how to redeem it :
 - Unlimited commands/variables.
 - Ad-free hosting time.
 - Priority bot hosting/startup.
-- Maximum 120 minutes duration in `$replyIn`.
+- Maximum 120 minutes duration in `$replyIn` & `$editEmbedIn`.
 - Increased server and global variable character limits.
 
 
