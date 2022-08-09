@@ -22,7 +22,7 @@ $awaitReactions[<Command name;Reaction>;...]
 
 
 
-> 📝 You can group reactions by specifying more *"command name(s)"* and *"reaction(s)"* in `$awaitReactions[]`.\
+> 📝 You can group reactions by specifying more *"command names"* and *"reactions"* in `$awaitReactions[]`.\
 \
 > ⚠️ In group reactions, when one reaction is used, the others stop working i.e let's say, a command awaits two reactions (✔️ & ❌). If the user reacts ✔️ then ❌ stops working.
 
