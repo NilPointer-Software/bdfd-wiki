@@ -2,13 +2,9 @@
 *Bot Designer for Discord*'s premium points system allows you to support the developers financially and gain some sweet perks!
 
 ### Purchasing Premium Points
-1. Select any bot in app homepage and click *"Add premium time"* button in dashboard tab.
-
-    ![Screenshot_20220809_112223](https://user-images.githubusercontent.com/95774950/183578006-d0db6e9b-0114-474b-9aeb-6251c08ca7af.png)
+1. Open BDFD app and click on profile icon.
 
 2. Then, click *"Buy premium points"*.
-
-    ![Screenshot_20220809_114443](https://user-images.githubusercontent.com/95774950/183578039-4d35a070-fb2f-43e2-bf26-7fcc94d57388.png)
 
 3. Choose your preferable package and confirm your purchase.
 
