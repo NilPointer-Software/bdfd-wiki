@@ -82,7 +82,7 @@ jobs:
   notify-discord:
     name: Send notification
     needs: [deploy-stable, deploy-nightly]
-    if: ${{ success() || cancelled() }}
+    if: ${{ !failure() }}
     runs-on: ubuntu-latest
     env:
       TYPE: Nightly
