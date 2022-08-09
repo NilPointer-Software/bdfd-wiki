@@ -6,6 +6,7 @@
 ---
 
 - [Guides]()
+    - [Introduction](./guides/introduction.md)
     - [Async](./guides/async.md)
     - [Auto Complete](./guides/autoComplete.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
@@ -21,6 +22,7 @@
     - [If Statements](./guides/ifStatements.md)
     - [Modals](./guides/modals.md)
     - [Select Menu](./guides/selectmenu.md)
+    - [Share Code](./guides/sharecode.md)
     - [Slash Commands](./guides/slashCommands.md)
     - [Text Splitting](./guides/textSplitting.md)
     - [Threads](./guides/threads.md)
@@ -222,6 +224,7 @@
     - [$randomText](./bdscript/randomText.md)
     - [$randomUser](./bdscript/randomUser.md)
     - [$randomUserID](./bdscript/randomUserID.md)
+    - [$removeButtons](./bdscript/removeButtons.md)
     - [$removeComponent](./bdscript/removeComponent.md)
     - [$removeContains](./bdscript/removeContains.md)
     - [$removeLinks](./bdscript/removeLinks.md)
