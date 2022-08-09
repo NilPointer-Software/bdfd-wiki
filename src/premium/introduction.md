@@ -21,7 +21,7 @@ After successful purchasing of premium point(s), here's how to redeem it :
 
     ![Screenshot_20220809_112223](https://user-images.githubusercontent.com/95774950/183578142-e93ed985-9ea7-4b18-8d8b-3f29d073ad9f.png)
 
-2. Select the amount of point(s) you want to add to the bot, then confirm.
+2. Select the amount of points you want to spend, then confirm.
 
      ![IMG_20220809_152453](https://user-images.githubusercontent.com/95774950/183664582-2f2bbb33-819b-49c9-ab48-a4ec6500cd1e.jpg)
 
