@@ -5,7 +5,7 @@
 
 ![end result](https://i.imgur.com/diskuyv.png)
 
-> 📝 Reaction roles are not possible at the moment since awaited reactions can only be triggered by author and it gets expired whenever bot goes offline.
+> 📝 Reaction roles are not possible at the moment since awaited reactions can only be triggered by the author and they expire whenever the bot goes offline.
 
 ## Getting Started
 To create an awaited reaction command, following functions and callback are used :
