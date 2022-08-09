@@ -87,11 +87,22 @@ jobs:
     env:
       TYPE: Nightly
     steps:
-    - name: Set Stable notification type
+    - name: Prepare notification
+      env:
+        RAW: ${{ github.event.head_commit.message }}
+      run: |
+        echo "MESSAGE<<EOF" >> $GITHUB_ENV
+        echo "$RAW" | head -n 10 >> $GITHUB_ENV
+        if [ $(echo "$RAW" | wc -l) -gt 10 ]
+        then
+          echo "..." >> $GITHUB_ENV
+        fi
+        echo "EOF" >> $GITHUB_ENV
+    - name: Set notification type
       if: github.ref == 'refs/heads/master'
       run: echo "TYPE=Stable" >> $GITHUB_ENV
     - name: Send wiki update notification
       uses: MineBartekSA/discord-webhook@v1.3
       with:
         webhook: ${{ secrets.WEBHOOK }}
-        content: "${{ env.TYPE }} Wiki update!\n```${{ github.event.head_commit.message }}``` by ${{ github.event.head_commit.author.username }}"
+        content: "${{ env.TYPE }} Wiki update!\n```${{ env.MESSAGE }}``` by ${{ github.event.head_commit.author.username }}"
