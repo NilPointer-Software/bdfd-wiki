@@ -13,7 +13,7 @@ Upload custom images in the app from device without image links. You can use the
 
      ![example3](https://user-images.githubusercontent.com/69215413/126851897-314262e5-8f9c-459f-865a-88de836e703b.png)
 
-3. Provide a image name and tag. The tag is used in `$customImage[]` to get the image. The name can be anything.
+3. Provide an image name and tag. The tag is used in `$customImage[]` to get the image. The name can be anything.
 
      ![Screenshot_20220809-223744](https://user-images.githubusercontent.com/95774950/183711379-3fb0ae4b-1f65-426d-bcdc-ab7204b9e792.jpg)
 
