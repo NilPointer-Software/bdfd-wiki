@@ -1,7 +1,7 @@
 # BDScript 2
 
 ## Introduction
-**BDScript 2** is the default scripting language in-app _(as of October 2021)_. It has been created with intention of enhancing it's capabilities and fixing some of the problems the other versions had.
+**BDScript 2** is the default in-app scripting language _(as of October 2021)_. It has been created with intention of enhancing its capabilities and fixing some of the problems previous versions had.
 
 The first edition of **BDScript** has one big issue, commands like `$sum[$sum[3;2];1]` didn't work. The reason it didn't work is because **BDScript** has a pre-defined order for executing functions.
 
