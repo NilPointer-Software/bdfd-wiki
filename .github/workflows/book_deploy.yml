@@ -102,7 +102,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       run: echo "TYPE=Stable" >> $GITHUB_ENV
     - name: Send wiki update notification
-      uses: MineBartekSA/discord-webhook@v1.3
+      uses: MineBartekSA/discord-webhook@v1.4
       with:
         webhook: ${{ secrets.WEBHOOK }}
         content: "${{ env.TYPE }} Wiki update!\n```${{ env.MESSAGE }}``` by ${{ github.event.head_commit.author.username }}"
