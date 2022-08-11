@@ -6,6 +6,8 @@
 - Added `$scriptLanguage`
 - Fixed `$stop` breaking `$if[]`
 - Renamed `$customImage[]` argument to `Custom image tag`
+- Added `$hypesquad[]`
+- Added `$dmChannelID[]`
 
 ## July
 - Added hex to the color picker
