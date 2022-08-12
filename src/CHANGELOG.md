@@ -8,7 +8,7 @@
 - Renamed `$customImage[]` argument to `Custom image tag`
 - Added `$hypesquad[]`
 - Added `$dmChannelID[]`
-- Fixed max choices limit in the app
+- Fixed the app's max choices limit
 
 ## July
 - Added hex to the color picker
