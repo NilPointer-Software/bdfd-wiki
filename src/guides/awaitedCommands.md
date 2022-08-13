@@ -11,7 +11,7 @@ Awaited commands are a special type of command where the bot waits for the user'
 To create an awaited command, following function and callbacks are used -
 
 ### $awaitFunc[]
-`$awaitFunc` is a function. It is used to initiate an awaited command.
+`$awaitFunc` is a function. It's used to initiate an awaited command.
 
 #### Usage
 ```
