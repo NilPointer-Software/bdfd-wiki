@@ -19,7 +19,9 @@ In order to access and copy IDs in the Discord client, you must enable developer
 
 - **Mobile**
 
-   For Android users, go to User Settings > App Settings > Behavior and turn on Developer Mode. For iOS you’ll head to User Settings > Appearance > Advanced and turn on Developer Mode.
+   For Android users, go to User Settings > App Settings > Behavior and turn on Developer Mode.
+
+   For iOS, you’ll head to User Settings > Appearance > Advanced and turn on Developer Mode.
 
    ![ex4](https://user-images.githubusercontent.com/69215413/125985535-55e42f16-68e9-46a2-bb2a-75b5a65b7053.png)
 
@@ -32,7 +34,7 @@ If you want to get IDs using your client, check out [Discord's full guide on get
 
 ### Using IDs in Commands
 
-There are alot of functions that use IDs. Like, `$deleteChannels`, `$modifyRole` `$banID`, and many more.
+There are a lot of functions that use IDs. Like, `$deleteChannels`, `$modifyRole` `$banID`, and many more.
 
 Let's use `$deleteChannels` for this example. In order to delete a channel, we need the channel's ID. Here's how `$deleteChannels` could look:
 ```
