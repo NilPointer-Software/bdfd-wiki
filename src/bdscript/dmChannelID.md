@@ -1,5 +1,5 @@
 # $dmChannelID
-Retrieves the DM channel ID of the provided user id.
+Retrieves the DM channel ID for the provided user id.
 
 ## Usage
 ```
