@@ -1,6 +1,6 @@
 # Awaited Commands
 
-Awaited commands are special type of commands where bot waits for user's response.
+Awaited commands are a special type of command where the bot waits for the user's response.
 
 ![end result](https://i.imgur.com/rRRcIXA.jpg) 
 
