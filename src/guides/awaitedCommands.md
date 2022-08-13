@@ -18,7 +18,7 @@ To create an awaited command, following function and callbacks are used -
 $awaitFunc[command name;(user ID)]
 ```
 - `command name` - The name which is used inside [`$awaitedCommand`](#awaitedcommand) and [`$awaitedCommandError`](#awaitedcommanderror) callback.
-- `user ID` - The user to trigger the awaited command for. Uses command author, if `user id` is not written.
+- `user ID` - The user the awaited command will trigger for. Uses command author, if `user id` is not given.
 
 ### $awaitedCommand[]
 `$awaitedCommand` is a callback. It gets triggered when an awaited command gets initiated.
