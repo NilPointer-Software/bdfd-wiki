@@ -7,6 +7,7 @@
 
 - [Guides]()
     - [Introduction](./guides/introduction.md)
+        - [Beginning](./guides/beginning.md)
     - [Async](./guides/async.md)
     - [Auto Complete](./guides/autoComplete.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
