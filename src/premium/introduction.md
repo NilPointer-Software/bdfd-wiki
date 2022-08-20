@@ -1,4 +1,4 @@
-# Introduction
+# Premium
 *Bot Designer for Discord*'s premium points system allows you to support the developers financially and gain some sweet perks!
 
 ### Purchasing Premium Points
