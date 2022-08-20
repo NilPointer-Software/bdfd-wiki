@@ -7,6 +7,7 @@
 
 - [Guides]()
     - [Introduction](./guides/introduction.md)
+        - [Beginning](./guides/beginning.md)
     - [Async](./guides/async.md)
     - [Auto Complete](./guides/autoComplete.md)
     - [Awaited Commands](./guides/awaitedCommands.md)
@@ -30,6 +31,7 @@
     - [Webhooks](./guides/webhooks.md)
 
 - [Resources]()
+    - [Introduction](./resources/introduction.md)
     - [API](./resources/api.md)
     - [BDFD's Creation](./resources/bdfdCreation.md)
     - [Discord's ID System](./resources/discordIDSystem.md)

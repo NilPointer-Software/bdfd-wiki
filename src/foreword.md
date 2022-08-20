@@ -17,8 +17,8 @@ Welcome to our humble abode. The thing you're seeing is *Bot Designer for Discor
 
 ### 📂 Wiki Index
 - [Guides](./guides/introduction.md)
-- [Resources](./resources/2FA.md)
-- [Functions](./bdscript/introduction.md)
-- [Callbacks](./callbacks/introduction.md)
-- [JavaScript](./javascript/javascript.md)
+- [Resources](./resources/introduction.md)
+- [BDScript](./bdscript/introduction.md)
 - [Premium](./premium/introduction.md)
+- [JavaScript](./javascript/javascript.md)
+- [Callbacks](./callbacks/introduction.md)
