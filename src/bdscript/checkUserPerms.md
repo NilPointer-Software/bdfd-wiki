@@ -8,7 +8,7 @@ $checkUserPerms[userID;permissions]
 
 ### Breakdown
 - `userID` - The user that the bot checks the permissions for.
-- `permissions` - The [permissions](/src/resources/permissions.md) that the bot checks for. Separate permissions using `;`.
+- `permissions` - The [permissions](../resources/permissions.md) that the bot checks for. Separate permissions using `;`.
 
 ## Example
 ```
