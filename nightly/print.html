@@ -1956,10 +1956,10 @@ Total Server Cookies: 🍪 $getServerVar[ServerCookies]
 <h2 id="leaderboards"><a class="header" href="#leaderboards">Leaderboards</a></h2>
 <p>You can generate variable leaderboards, using the functions below. <em>Click the hyperlinks for more information about these leaderboard functions</em>.</p>
 <ul>
-<li><a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/globalUserLeaderboard.html">$globalUserLeaderboard</a> - Global-User Variables.</li>
-<li><a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/userLeaderboard.html">$userLeaderboard</a> - User Variables.</li>
-<li><a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/serverLeaderboard.html">$serverLeaderboard</a> - Server Variables.</li>
-<li><a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/getLeaderboardValue.html">$getLeaderboardValue</a> - Fetchs leaderboard value.</li>
+<li><a href="guides/../bdscript/globalUserLeaderboard.html">$globalUserLeaderboard</a> - Global-User Variables.</li>
+<li><a href="guides/../bdscript/userLeaderboard.html">$userLeaderboard</a> - User Variables.</li>
+<li><a href="guides/..bdscript/serverLeaderboard.html">$serverLeaderboard</a> - Server Variables.</li>
+<li><a href="guides/../bdscript/getLeaderboardValue.html">$getLeaderboardValue</a> - Fetchs leaderboard value.</li>
 </ul>
 <h2 id="additional-tips"><a class="header" href="#additional-tips">Additional Tips</a></h2>
 <ul>
@@ -2335,7 +2335,7 @@ Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes
 <li><code>name</code> - The name of the field. It cannot exceed more than 256 characters.</li>
 <li><code>value</code> - The value of the field. It cannot exceed more than 1024 characters.</li>
 <li><code>inline</code> - If 'yes', fields will appear in same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. 'no' by default. (Optional)</li>
-<li><code>index</code> - Adds field to specified embed index number (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - Adds field to specified embed index number (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <blockquote>
 <p>📝 Inline fields may not appear inline on some mobile devices.</p>
@@ -2390,7 +2390,7 @@ $addField[This is the field name! #3;This is the field value! #3;yes]
 </code></pre>
 <h3 id="breakdown-7"><a class="header" href="#breakdown-7">Breakdown</a></h3>
 <ul>
-<li><code>index</code> - What embed the timestamp should belong to. Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the timestamp should belong to. Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-14"><a class="header" href="#example-14">Example</a></h2>
 <pre><code>$description[Hi!]
@@ -2510,7 +2510,7 @@ $noMentionMessage
 <h3 id="breakdown-12"><a class="header" href="#breakdown-12">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text that appears in the author text. It cannot exceed more than 256 characters.</li>
-<li><code>index</code> - What embed the author text should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the author text should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-22"><a class="header" href="#example-22">Example</a></h2>
 <pre><code>$nomention
@@ -2545,7 +2545,7 @@ $author[This is the author text!]
 <h3 id="breakdown-13"><a class="header" href="#breakdown-13">Breakdown</a></h3>
 <ul>
 <li><code>image url</code> - The image that appears in the author icon. This must be a valid image URL.</li>
-<li><code>index</code> - What embed the author icon should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the author icon should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-23"><a class="header" href="#example-23">Example</a></h2>
 <pre><code>$nomention
@@ -2589,7 +2589,7 @@ If we use this: <code>&lt;@$authorID&gt;</code>, it will be replaced with <code>
 <h3 id="breakdown-15"><a class="header" href="#breakdown-15">Breakdown</a></h3>
 <ul>
 <li><code>url</code> - The link to set as the author hyperlink.</li>
-<li><code>index</code> - What embed the author url should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the author url should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-25"><a class="header" href="#example-25">Example</a></h2>
 <pre><code>$nomention
@@ -3098,7 +3098,7 @@ $closeTicket[That channel isn't a ticket!]
 <h3 id="breakdown-37"><a class="header" href="#breakdown-37">Breakdown</a></h3>
 <ul>
 <li><code>colorHex</code> - The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> to set the embed border color as. You can also use color integer number.</li>
-<li><code>index</code> - What embed the color border should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the color border should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-49"><a class="header" href="#example-49">Example</a></h2>
 <pre><code>$nomention
@@ -3414,7 +3414,7 @@ Deleted role!
 <h3 id="breakdown-50"><a class="header" href="#breakdown-50">Breakdown</a></h3>
 <ul>
 <li><code>message</code> - The text to set the description as. It cannot exceed more than 4096 characters.</li>
-<li><code>index</code> - What embed the description should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the description should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-65"><a class="header" href="#example-65">Example</a></h2>
 <pre><code>$nomention
@@ -3514,7 +3514,7 @@ Answer: $divide[$message[1];$message[2]]
 </li>
 </ul>
 <blockquote>
-<p>🧙🏻‍♂️ You can see the available permissions here in <a href="https://nilpointer-software.github.io/bdfd-wiki/resources/permissions.html">Permissions</a></p>
+<p>🧙🏻‍♂️ You can see the available permissions here in <a href="bdscript/../resources/permissions.html">Permissions</a></p>
 </blockquote>
 <h2 id="example-70"><a class="header" href="#example-70">Example</a></h2>
 <pre><code>$nomention
@@ -3632,7 +3632,7 @@ $editMessage[853070225398693898;857040509549281292;This message has been edited!
 <h3 id="breakdown-58"><a class="header" href="#breakdown-58">Breakdown</a></h3>
 <ul>
 <li><code>link</code> - The link to set the title hyperlink to.</li>
-<li><code>index</code> - What embed the title hyperlink should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the title hyperlink should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-74"><a class="header" href="#example-74">Example</a></h2>
 <pre><code>$nomention
@@ -3822,7 +3822,7 @@ $findUser[$message]
 <h3 id="breakdown-66"><a class="header" href="#breakdown-66">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to set the footer as. It cannot exceed more than 2048 characters.</li>
-<li><code>index</code> - What embed the footer text should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the footer text should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-82"><a class="header" href="#example-82">Example</a></h2>
 <pre><code>$nomention
@@ -3840,7 +3840,7 @@ $footer[Hi! I'm a footer.]
 <h3 id="breakdown-67"><a class="header" href="#breakdown-67">Breakdown</a></h3>
 <ul>
 <li><code>icon url</code> - The URL to set the footer icon as. Must be a valid image URL.</li>
-<li><code>index</code> - What embed the footer icon should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the footer icon should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-83"><a class="header" href="#example-83">Example</a></h2>
 <pre><code>$nomention
@@ -4047,7 +4047,7 @@ $color[$getRoleColor[$highestRole[$authorID]]]
 <li><code>guildID</code> - The server to get the value for. If no guildID is inputted, then the current server is used.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="gettextsplitindex-1"><a class="header" href="#gettextsplitindex-1">$getTextSplitIndex</a></h1>
-<p>Retrieves index from the provided value. Returns -1 if it couldn't find the value.</p>
+<p>Retrieves index from the provided value in <a href="bdscript/./textSplit.html"><code>$textSplit</code></a>. Returns -1 if it couldn't find the value.</p>
 <h2 id="usage-98"><a class="header" href="#usage-98">Usage</a></h2>
 <pre><code>$getTextSplitIndex[value]
 </code></pre>
@@ -4061,16 +4061,16 @@ $textSplit[Cake-Bread;-]
 $getTextSplitIndex[$message[1]] 
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/42785890/151845189-1866a9c2-cacb-401b-9efe-137cc54586b6.png" alt="image" /></p>
-<p><em><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html">See more about Text Splitting in here...</a></em></p>
+<p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="gettextsplitlength-1"><a class="header" href="#gettextsplitlength-1">$getTextSplitLength</a></h1>
-<p>Returns the number of splits in <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/textSplit.html">$textSplit</a>.</p>
+<p>Returns the number of splits in <a href="bdscript/./textSplit.html"><code>$textSplit</code></a>.</p>
 <blockquote>
 <p>🧙‍♂️ This function can't be used, if <code>$textSplit</code> isn't present in the code.</p>
 </blockquote>
 <h2 id="usage-99"><a class="header" href="#usage-99">Usage</a></h2>
 <pre><code>$getTextSplitLength
 </code></pre>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
+<p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="gettimestamp"><a class="header" href="#gettimestamp">$getTimestamp</a></h1>
 <p>Returns <a href="https://www.unixtimestamp.com/">unix timestamp</a> (in seconds).</p>
 <h2 id="usage-100"><a class="header" href="#usage-100">Usage</a></h2>
@@ -4324,7 +4324,7 @@ Current Hour: $hour
 <h3 id="breakdown-88"><a class="header" href="#breakdown-88">Breakdown</a></h3>
 <ul>
 <li><code>image url</code> - The URL of the image that appears. Must be a valid image URL.</li>
-<li><code>index</code> - What embed the image should belong to (Optional). Default is <code>1</code>. <a href="bdscript//src/resources/embedIndexes.html">(learn more)</a></li>
+<li><code>index</code> - What embed the image should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-103"><a class="header" href="#example-103">Example</a></h2>
 <pre><code>$nomention
@@ -4516,7 +4516,7 @@ $message
 <li><code>colorHex</code> - The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> to check.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="joinsplittext-1"><a class="header" href="#joinsplittext-1">$joinSplitText</a></h1>
-<p>Joins <code>$textSplit</code> values with provided separator.</p>
+<p>Joins <a href="bdscript/./textSplit.html"><code>$textSplit</code></a> values with provided separator.</p>
 <h2 id="usage-124"><a class="header" href="#usage-124">Usage</a></h2>
 <pre><code>$joinSplitText[separator]
 </code></pre>
@@ -4524,7 +4524,7 @@ $message
 <ul>
 <li><code>separator</code> - The separator to be put between the text split values.</li>
 </ul>
-<p><em><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html">See more in the Text Splitting guide...</a></em></p>
+<p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kick"><a class="header" href="#kick">$kick</a></h1>
 <p>Kicks a user.</p>
 <h2 id="usages-11"><a class="header" href="#usages-11">Usages</a></h2>
@@ -4771,7 +4771,7 @@ $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchange
 <h3 id="breakdown-109"><a class="header" href="#breakdown-109">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel to change the permissions for.</li>
-<li><code>permissions</code> - The <a href="bdscript//src/resources/permissions.html">permissions</a> to add/remove. <code>+</code> means allow, <code>-</code> means deny, <code>/</code> means neutral permission.</li>
+<li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> to add/remove. <code>+</code> means allow, <code>-</code> means deny, <code>/</code> means neutral permission.</li>
 <li><code>userID/roleID</code> - The role or user to modify the permissions for. Use <code>$guildID</code> for <em>@everyone</em>.</li>
 </ul>
 <h2 id="example-126"><a class="header" href="#example-126">Example</a></h2>
@@ -4821,7 +4821,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 <h3 id="breakdown-111"><a class="header" href="#breakdown-111">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role to modify the permissions for. Use <code>$guildID</code> for the <em>@everyone</em> role.</li>
-<li><code>permissions</code> - The <a href="https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html">permissions</a> to toggle, separate permissions using <code>;</code>.</li>
+<li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> to toggle, separate permissions using <code>;</code>.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modulo"><a class="header" href="#modulo">$modulo</a></h1>
 <p>Returns remainder between numbers.</p>
@@ -5001,7 +5001,7 @@ $numberSeparator[5000]
 <h3 id="breakdown-118"><a class="header" href="#breakdown-118">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel to check the permissions for. Use <code>$channelID</code> for the current channel.</li>
-<li><code>permissions</code> - The <a href="bdscript//src/resources/permissions.html">permissions</a> that the bot needs to execute the command. Separate permissions with <code>;</code>.</li>
+<li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to execute the command. Separate permissions with <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that is returned when the bot doesn't have the needed permissions.</li>
 </ul>
 <h3 id="example-137"><a class="header" href="#example-137">Example</a></h3>
@@ -5016,7 +5016,7 @@ $description[Hey! I have `embed links` permission in current channel.]
 </code></pre>
 <h3 id="breakdown-119"><a class="header" href="#breakdown-119">Breakdown</a></h3>
 <ul>
-<li><code>permissions</code> - The <a href="bdscript//src/resources/permissions.html">permissions</a> that the bot needs to run the command. Use <code>;</code> as separator for multiple permissions.</li>
+<li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to run the command. Use <code>;</code> as separator for multiple permissions.</li>
 <li><code>errorMessage</code> - The message to return when the bot doesn't have all the provided permissions.</li>
 </ul>
 <h3 id="example-138"><a class="header" href="#example-138">Example</a></h3>
@@ -5354,7 +5354,7 @@ $removeLinks[$noMentionMessage]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/123530440-40914e80-d6c8-11eb-9fa1-e1aa488a1c80.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removesplittextelement-1"><a class="header" href="#removesplittextelement-1">$removeSplitTextElement</a></h1>
-<p>Removes a certain element from the <a href="bdscript/./textSplit.html">$textSplit</a> values.</p>
+<p>Removes a certain element from the <a href="bdscript/./textSplit.html"><code>$textSplit</code></a> values.</p>
 <blockquote>
 <p>🧙‍♂️ This function is unneeded, if <code>$textSplit</code> isn't present in the code.</p>
 </blockquote>
@@ -5365,7 +5365,7 @@ $removeLinks[$noMentionMessage]
 <ul>
 <li><code>index</code> - The index of the <code>$textSplit</code> value to remove.</li>
 </ul>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
+<p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="repeatmessage"><a class="header" href="#repeatmessage">$repeatMessage</a></h1>
 <p>Repeats the provided text a certain amount of times.</p>
 <h2 id="usage-169"><a class="header" href="#usage-169">Usage</a></h2>
@@ -6019,7 +6019,7 @@ $sort[8;5;9;1;3;asc;4; - ]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/42785890/151884966-c05627cf-29c3-49ca-9f9d-46f3b1eb0215.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="splittext-1"><a class="header" href="#splittext-1">$splitText</a></h1>
-<p>Retrieves a value from <code>$textSplit</code>.</p>
+<p>Retrieves a value from <a href="bdscript/./textSplit.html"><code>$textSplit</code></a>.</p>
 <blockquote>
 <p>⚠️ This function is used with <code>$textSplit</code>.</p>
 </blockquote>
@@ -6038,7 +6038,7 @@ $splitText[2]
 <blockquote>
 <p>The above example will return output as <code>Hello</code>.</p>
 </blockquote>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
+<p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="startthread"><a class="header" href="#startthread">$startThread</a></h1>
 <p>Creates a new thread.</p>
 <h2 id="usage-203"><a class="header" href="#usage-203">Usage</a></h2>
@@ -6136,7 +6136,7 @@ Removed $roleName[867492530463178803] from $username[$mentioned[1]]!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126550658-18a048dc-55ca-4b42-b176-5ad6900bf568.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="textsplit-1"><a class="header" href="#textsplit-1">$textSplit</a></h1>
-<p>Separates 'text' by the 'splitter', and saves data for <code>$splitText</code>.</p>
+<p>Separates 'text' by the 'splitter', and saves data for <a href="bdscript/./splitText.html"><code>$splitText</code></a>.</p>
 <h2 id="usage-206"><a class="header" href="#usage-206">Usage</a></h2>
 <pre><code>$textSplit[text;splitter]
 </code></pre>
@@ -6145,7 +6145,7 @@ Removed $roleName[867492530463178803] from $username[$mentioned[1]]!
 <li><code>text</code> - The text to split.</li>
 <li><code>splitter</code> - The splitter to split arguments with.</li>
 </ul>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
+<p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="threadaddmember"><a class="header" href="#threadaddmember">$threadAddMember</a></h1>
 <p>Adds a member to a thread.</p>
 <h2 id="usage-207"><a class="header" href="#usage-207">Usage</a></h2>
