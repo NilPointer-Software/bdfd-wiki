@@ -52,6 +52,7 @@ After a successful purchase of premium points, here's how to redeem them :
 - [Awaited Reactions](./awaitedReactions.md)
 - [Custom Prefixes](./customPrefixes.md)
 - [Custom Images](./customImages.md)
+- [Embed Builder](./embedBuilder.md)
 - [$alwaysReply](./alwaysReply.md)
 - [$ignoreTriggerCase](./ignoreTriggerCase.md)
 - [$messageContains](./messageContains.md)
