@@ -1,5 +1,5 @@
 # $joinSplitText
-Joins [`$textSplit`](./bdscript/textSplit.md) values with provided separator.
+Joins [`$textSplit`](./textSplit.md) values with provided separator.
 
 ## Usage
 ```
