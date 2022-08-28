@@ -8,7 +8,7 @@ $image[image url;(index)]
 
 ### Breakdown
 - `image url` - The URL of the image that appears. Must be a valid image URL.
-- `index` - What embed the image should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the image should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

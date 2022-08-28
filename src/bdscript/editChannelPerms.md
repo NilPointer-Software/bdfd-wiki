@@ -14,7 +14,7 @@ $editChannelPerms[channel ID;userID/RoleID;permission;...]
   - `+` - set + to add permission.
   - `-` - set - to remove the permission.
 
-> 🧙🏻‍♂️ You can see the available permissions here in [Permissions](https://nilpointer-software.github.io/bdfd-wiki/resources/permissions.html)
+> 🧙🏻‍♂️ You can see the available permissions here in [Permissions](../resources/permissions.md)
 
 ## Example
 ```

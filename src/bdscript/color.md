@@ -8,7 +8,7 @@ $color[colorHex;(index)]
 
 ### Breakdown
 - `colorHex` - The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as. You can also use color integer number.
-- `index` - What embed the color border should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the color border should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

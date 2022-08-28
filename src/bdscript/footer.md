@@ -8,7 +8,7 @@ $footer[text;(index)]
 
 ### Breakdown
 - `text` - The text to set the footer as. It cannot exceed more than 2048 characters.
-- `index` - What embed the footer text should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the footer text should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
