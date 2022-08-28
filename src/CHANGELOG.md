@@ -9,6 +9,7 @@
 - Added `$hypesquad[]`
 - Added `$dmChannelID[]`
 - Fixed the app's max choices limit
+- Fixed `$registerGuildCommands[]` removing previously registered commands
 
 ## July
 - Added hex to the color picker
