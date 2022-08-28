@@ -268,10 +268,10 @@ $globalUserLeaderboard[Money;asc]
 
 ## Leaderboards
 You can generate variable leaderboards, using the functions below. *Click the hyperlinks for more information about these leaderboard functions*.
-- [$globalUserLeaderboard](https://nilpointer-software.github.io/bdfd-wiki/bdscript/globalUserLeaderboard.html) - Global-User Variables.
-- [$userLeaderboard](https://nilpointer-software.github.io/bdfd-wiki/bdscript/userLeaderboard.html) - User Variables.
-- [$serverLeaderboard](https://nilpointer-software.github.io/bdfd-wiki/bdscript/serverLeaderboard.html) - Server Variables.
-- [$getLeaderboardValue](https://nilpointer-software.github.io/bdfd-wiki/bdscript/getLeaderboardValue.html) - Fetchs leaderboard value.
+- [$globalUserLeaderboard](../bdscript/globalUserLeaderboard.md) - Global-User Variables.
+- [$userLeaderboard](../bdscript/userLeaderboard.md) - User Variables.
+- [$serverLeaderboard](..bdscript/serverLeaderboard.md) - Server Variables.
+- [$getLeaderboardValue](../bdscript/getLeaderboardValue.md) - Fetchs leaderboard value.
 
 ## Additional Tips
 - You can change the variables with a `userID` or with a mention of the user. Here's a example: 
