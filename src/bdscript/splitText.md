@@ -1,5 +1,5 @@
 # $splitText
-Retrieves a value from [`$textSplit`](./bdscript/textSplit.md).
+Retrieves a value from [`$textSplit`](./textSplit.md).
 
 > ⚠️ This function is used with `$textSplit`.
 
