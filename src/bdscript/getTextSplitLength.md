@@ -1,5 +1,5 @@
 # $getTextSplitLength
-Returns the number of splits in [$textSplit](./bdscript/textSplit.md).
+Returns the number of splits in [`$textSplit`](./bdscript/textSplit.md).
 > 🧙‍♂️ This function can't be used, if `$textSplit` isn't present in the code.
 
 ## Usage
