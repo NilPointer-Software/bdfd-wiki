@@ -270,7 +270,7 @@ $globalUserLeaderboard[Money;asc]
 You can generate variable leaderboards, using the functions below. *Click the hyperlinks for more information about these leaderboard functions*.
 - [$globalUserLeaderboard](../bdscript/globalUserLeaderboard.md) - Global-User Variables.
 - [$userLeaderboard](../bdscript/userLeaderboard.md) - User Variables.
-- [$serverLeaderboard](..bdscript/serverLeaderboard.md) - Server Variables.
+- [$serverLeaderboard](../bdscript/serverLeaderboard.md) - Server Variables.
 - [$getLeaderboardValue](../bdscript/getLeaderboardValue.md) - Fetchs leaderboard value.
 
 ## Additional Tips
