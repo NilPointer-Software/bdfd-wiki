@@ -1,5 +1,5 @@
 # $textSplit
-Separates 'text' by the 'splitter', and saves data for [`$splitText`](./bdscript/splitText.md).
+Separates 'text' by the 'splitter', and saves data for [`$splitText`](./splitText.md).
 
 ## Usage
 ```
