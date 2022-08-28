@@ -1,7 +1,7 @@
 # $modifyChannelPerms
 *(deprecated)*
 
-> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](./editChannelPerms.md).
+> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](./bdscript/editChannelPerms.md).
 
 Modifies a channel's permissions.
 
@@ -12,7 +12,7 @@ $modifyChannelPerms[channelID;permissions;userID/roleID]
 
 ### Breakdown
 - `channelID` - The channel to change the permissions for.
-- `permissions` - The [permissions](/src/resources/permissions.md) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
+- `permissions` - The [permissions](../resources/permissions.md) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
 - `userID/roleID` - The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
 
 ## Example
