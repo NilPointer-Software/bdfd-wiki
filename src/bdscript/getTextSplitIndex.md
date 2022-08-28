@@ -1,5 +1,5 @@
 # $getTextSplitIndex 
-Retrieves index from the provided value in [`$textSplit`](./bdscript/textSplit.md). Returns -1 if it couldn't find the value.
+Retrieves index from the provided value in [`$textSplit`](./textSplit.md). Returns -1 if it couldn't find the value.
 
 ## Usage
 ``` 
