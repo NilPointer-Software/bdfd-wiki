@@ -9,7 +9,7 @@ $embeddedURL[link;(index)]
 
 ### Breakdown
 - `link` - The link to set the title hyperlink to.
-- `index` - What embed the title hyperlink should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the title hyperlink should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
