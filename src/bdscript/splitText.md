@@ -1,5 +1,5 @@
 # $splitText
-Retrieves a value from `$textSplit`.
+Retrieves a value from [`$textSplit`](./bdscript/textSplit.md).
 
 > ⚠️ This function is used with `$textSplit`.
 
@@ -19,4 +19,4 @@ $splitText[2]
 ```
 > The above example will return output as `Hello`.
 
-[*See more in the Text Splitting guide...*](https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html)
+[*See more in the Text Splitting guide...*](../guides/textSplitting.md)
