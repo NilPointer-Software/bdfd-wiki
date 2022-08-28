@@ -1,7 +1,7 @@
 # $modifyChannelPerms
 *(deprecated)*
 
-> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](./bdscript/editChannelPerms.md).
+> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](./editChannelPerms.md).
 
 Modifies a channel's permissions.
 
