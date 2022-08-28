@@ -1,5 +1,5 @@
 # $textSplit
-Separates 'text' by the 'splitter', and saves data for `$splitText`.
+Separates 'text' by the 'splitter', and saves data for [`$splitText`](./bdscript/splitText.md).
 
 ## Usage
 ```
@@ -10,4 +10,4 @@ $textSplit[text;splitter]
 - `text` - The text to split.
 - `splitter` - The splitter to split arguments with.
 
-[*See more in the Text Splitting guide...*](https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html)
+[*See more in the Text Splitting guide...*](../guides/textSplitting.md)
