@@ -1,5 +1,5 @@
 # $getTextSplitLength
-Returns the number of splits in [$textSplit](https://nilpointer-software.github.io/bdfd-wiki/bdscript/textSplit.html).
+Returns the number of splits in [$textSplit](./bdscript/textSplit.md).
 > 🧙‍♂️ This function can't be used, if `$textSplit` isn't present in the code.
 
 ## Usage
@@ -7,4 +7,4 @@ Returns the number of splits in [$textSplit](https://nilpointer-software.github.
 $getTextSplitLength
 ```
 
-[*See more in the Text Splitting guide...*](https://nilpointer-software.github.io/bdfd-wiki/guides/textSplitting.html)
+[*See more in the Text Splitting guide...*](../guides/textSplitting.md)
