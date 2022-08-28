@@ -40,6 +40,8 @@ After a successful purchase of premium points, here's how to redeem them :
 - Maximum 120 minutes duration in `$replyIn` & `$editEmbedIn`.
 - Increased server and global variable character limits.
 - Bot guild list.
+- Embed builder.
+- Sharding.
 
 #### [Discord Server](https://botdesignerdiscord.com/discord) Perks
 - The premium role. Run `!getPremiumRole`.
@@ -50,6 +52,7 @@ After a successful purchase of premium points, here's how to redeem them :
 - [Awaited Reactions](./awaitedReactions.md)
 - [Custom Prefixes](./customPrefixes.md)
 - [Custom Images](./customImages.md)
+- [Embed Builder](./embedBuilder.md)
 - [$alwaysReply](./alwaysReply.md)
 - [$ignoreTriggerCase](./ignoreTriggerCase.md)
 - [$messageContains](./messageContains.md)

@@ -316,6 +316,7 @@
     - [Awaited Reactions](./premium/awaitedReactions.md)
     - [Custom Images](./premium/customImages.md)
     - [Custom Prefixes](./premium/customPrefixes.md)
+    - [Embed Builder](./premium/embedBuilder.md)
     - [$alwaysReply](./premium/alwaysReply.md)
     - [$ignoreTriggerCase](./premium/ignoreTriggerCase.md)
     - [$messageContains](./premium/messageContains.md)
