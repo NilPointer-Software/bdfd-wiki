@@ -10,6 +10,7 @@
 - Added `$dmChannelID[]`
 - Fixed the app's max choices limit
 - Fixed `$registerGuildCommands[]` removing previously registered commands
+- Fixed `$reply` not working in DMs
 
 ## July
 - Added hex to the color picker
