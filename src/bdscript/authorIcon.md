@@ -9,7 +9,7 @@ $authorIcon[image url;(index)]
 
 ### Breakdown
 - `image url` - The image that appears in the author icon. This must be a valid image URL.
-- `index` - What embed the author icon should belong to (Optional). Default is `1`. [(learn more)](/src/resources/embedIndexes.md)
+- `index` - What embed the author icon should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
