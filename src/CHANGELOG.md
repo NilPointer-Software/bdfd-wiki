@@ -12,6 +12,7 @@
 - Fixed `$registerGuildCommands[]` removing previously registered commands
 - Fixed `$reply` not working in DMs
 - Made it possible to return milliseconds and nanoseconds in `$getTimestamp`
+- Fixed `$addTextInput[]` not verifying max length
 
 ## July
 - Added hex to the color picker
