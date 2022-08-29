@@ -13,6 +13,7 @@
 - Fixed `$reply` not working in DMs
 - Made it possible to return milliseconds and nanoseconds in `$getTimestamp`
 - Fixed `$addTextInput[]` not verifying max length
+- Fixed `$url[]` returning an error when no input was provided
 
 ## July
 - Added hex to the color picker
