@@ -15,6 +15,7 @@
 - Fixed `$addTextInput[]` not verifying max length
 - Fixed `$url[]` returning an error when no input was provided
 - Added `$userServerAvatar[]`
+- Fixed `$cropText[]` not supporting unicode
 
 ## July
 - Added hex to the color picker
