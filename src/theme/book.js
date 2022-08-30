@@ -296,13 +296,13 @@ function playpen_text(playpen) {
     function set_theme(theme, store = true) {
         let ace_theme;
 
-        if (theme == 'coal' || theme == 'navy' || theme == 'bdfd') {
+        if (theme == 'coal' || theme == 'navy' || theme == 'bdfd' || theme == "shiro") {
             stylesheets.ayuHighlight.disabled = true;
             stylesheets.tomorrowNight.disabled = false;
             stylesheets.highlight.disabled = true;
 
             ace_theme = "ace/theme/tomorrow_night";
-        } else if (theme == 'ayu') {
+        } else if (theme == 'ayu' || theme == 'shiro') {
             stylesheets.ayuHighlight.disabled = false;
             stylesheets.tomorrowNight.disabled = true;
             stylesheets.highlight.disabled = true;
