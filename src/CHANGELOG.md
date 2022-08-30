@@ -16,6 +16,7 @@
 - Fixed `$url[]` returning an error when no input was provided
 - Added `$userServerAvatar[]`
 - Fixed `$cropText[]` not supporting unicode
+- Not putting required slash command options on top no longer breaks the commands
 
 ## July
 - Added hex to the color picker
