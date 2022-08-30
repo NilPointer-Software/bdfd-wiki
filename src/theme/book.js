@@ -302,7 +302,7 @@ function playpen_text(playpen) {
             stylesheets.highlight.disabled = true;
 
             ace_theme = "ace/theme/tomorrow_night";
-        } else if (theme == 'ayu' || theme == 'shiro') {
+        } else if (theme == 'ayu') {
             stylesheets.ayuHighlight.disabled = false;
             stylesheets.tomorrowNight.disabled = true;
             stylesheets.highlight.disabled = true;
