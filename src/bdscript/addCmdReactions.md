@@ -5,7 +5,7 @@ Adds reactions to the message that triggered the command.
 ```
 $addCmdReactions[emojis;...]
 ```
-> 📝 You can use unicode emojis or emoji IDs, not emoji names. *For emoji IDs* : The bot must be present in the server, that you are using the emoji from.
+>  You can use unicode emojis or emoji IDs, not emoji names. *For emoji IDs*, the bot must be present in the server, that you are using the emoji from.
 
 ### Breakdown
 - `emojis` - The emoji(s) the bot reacts with. Separate emojis using `;`.
