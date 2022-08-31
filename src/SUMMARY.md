@@ -159,7 +159,6 @@
     - [$guildExists](./bdscript/guildExists.md)
     - [$guildID](./bdscript/guildID.md)
     - [$hasRole](./bdscript/hasRole.md)
-    - [$hypesquad](./bdscript/hypesquad.md)
     - [$highestRole](./bdscript/highestRole.md)
     - [$highestRoleWithPerms](./bdscript/highestRoleWithPerms.md)
     - [$hostingExpireTime](./bdscript/hostingExpireTime.md)
