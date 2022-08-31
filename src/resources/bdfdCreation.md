@@ -5,8 +5,8 @@
 | Name | Discord Tag | Position 
 | ------------- | ------------- | -------------
 Jakub Tomana | wiadr000#1947 (kubastick) | Owner/Developer
-Mikołaj Radkowski  | noituri#1111 | Developer/DevOp
-Bartłomiej Skoczeń | MineBartekSA#4899 | Developer/DevOp
+Mikołaj Radkowski  | noituri#1111 | Developer
+Bartłomiej Skoczeń | MineBartekSA#4899 | Developer
 
 ### The Company
 *[NilPointer Software](https://nilpointer.software/)* is the company that made *Bot Designer For Discord*. *NilPointer Software*, a start-up focused on providing fast and quality software.
@@ -14,7 +14,7 @@ Bartłomiej Skoczeń | MineBartekSA#4899 | Developer/DevOp
 ### BDFD's Beginning and Growth
 Kubastick was inspired by one of his friends to create the application. One day, his friend stated, "It would be nice if there'd be an app for creating bots". Kubastick having previous programming knowledge, took this idea and ran with it.
 
-By early 2019, the premature version of BDFD was created. Later on, Kubastick acquired two talented Developers, MineBartekSA and noituri. This is when the app's functions and UI got majorly improved.
+By early 2019, the premature version of BDFD was created. Later on, Kubastick acquired two developers, MineBartekSA and noituri. This is when the app's functions and UI got majorly improved.
 
 BDFD was slowly growing, until Discord's explosion during the COVID-19 pandemic, which caused a uproar of users coming to BDFD to create their very own bots... and the rest is history... The growth of BDFD isn't stopping though, as the developers are actively integrating new features; and the community is growing larger by the day.
 
