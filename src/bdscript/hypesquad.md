@@ -12,14 +12,13 @@ $hypesquad[userID]
 
 ### Breakdown
 
-- `userID` - ID of the user whose name of the hypesquad should be returned
+- `userID` - ID of the user whose hypesquad name should be returned
 
 ## Example
 
 ```
-
-$hypesquad[$mentioned[1;yes]]
-
+$nomention
+You are in $hypesquad[$authorID] house.
 ```
 
-![Example](https://user-images.githubusercontent.com/70456337/187594202-f182c813-de92-4ca3-80a2-5c4a3410e92b.png)
+![Screenshot_20220831_101316](https://user-images.githubusercontent.com/95774950/187594740-3eab54bf-1df1-4c4e-a2fe-372f8a45eb39.png)
