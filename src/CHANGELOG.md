@@ -2,6 +2,9 @@
 
 # 2022
 
+## September
+- Added `channelID` field to `$awaitFunc[]`
+
 ## August
 - Added `$scriptLanguage`
 - Fixed `$stop` breaking `$if[]`
