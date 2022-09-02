@@ -1,6 +1,6 @@
 # $month
 Returns the current month of this year.
-> 🧙‍♂️ You can use [$time](https://nilpointer-software.github.io/bdfd-wiki/bdscript/time.html) to change the timezone.
+> 🧙‍♂️ You can use [$time](./bdscript/time.md) to change the timezone.
 
 ## Usage
 ```
