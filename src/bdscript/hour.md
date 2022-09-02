@@ -1,6 +1,6 @@
 # $hour
 Returns the current minute.
-> 🧙‍♂️ You can use [$time](https://nilpointer-software.github.io/bdfd-wiki/bdscript/time.html) to change the timezone.
+> 🧙‍♂️ You can use [$time](./time.md) to change the timezone.
 
 > *Note:* The `$hour` function  uses the twenty-four-hour clock instead of two groups of twelve hours; this also known as, Military Time.
 
