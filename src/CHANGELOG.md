@@ -4,6 +4,7 @@
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
+- Added `$trimContent`
 
 ## August
 - Added `$scriptLanguage`
