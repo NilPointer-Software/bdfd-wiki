@@ -12,7 +12,7 @@ Bartłomiej Skoczeń | MineBartekSA#4899 | Developer
 *[NilPointer Software](https://nilpointer.software/)* is the company that made *Bot Designer For Discord*. *NilPointer Software*, a start-up focused on providing fast and quality software.
 
 ### BDFD's Beginning and Growth
-Kubastick was inspired by one of his friends to create the application. One day, his friend stated, "It would be nice if there'd be an app for creating bots". Kubastick having previous programming knowledge, took this idea and ran with it.
+Kubastick was inspired by one of his friends to create the application. One day, his friend stated, “It would be nice if there'd be an app for creating bots”. Kubastick having previous programming knowledge, took this idea and ran with it.
 
 By early 2019, the premature version of BDFD was created. Later on, Kubastick acquired two developers, MineBartekSA and noituri. This is when the app's functions and UI got majorly improved.
 
