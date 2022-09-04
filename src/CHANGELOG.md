@@ -7,6 +7,7 @@
 - Added `$trimContent`
 - Fixed fetching guilds not always working in the app
 - Added `$slashID`
+- Fixed slash command reordering
 
 ## August
 - Added `$scriptLanguage`
