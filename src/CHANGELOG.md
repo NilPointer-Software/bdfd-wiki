@@ -5,6 +5,7 @@
 ## September
 - Added `channelID` field to `$awaitFunc[]`
 - Added `$trimContent`
+- Fixed fetching guilds not always working in the app
 
 ## August
 - Added `$scriptLanguage`
