@@ -30,6 +30,7 @@
 - Made it possible to use only one option in a select menu
 - Fixed `$editChannelPerms[]`
 - Fixed verification of slash command names
+- Fixed `$sort` not working with `-1` as return amount
 
 ## June
 - Fixed `$onlyBotChannelPerms[]`
