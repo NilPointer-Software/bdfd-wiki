@@ -6,7 +6,7 @@ If you look around BDFD embed functions (eg. [`$title`](../bdscript/title.md), [
 ## Creating Multi-Embeds
 By default, the `index` is set to `1` *(the first embed)*. To create a second embed, you have to write `2` in `index` argument and so on. You can specify any number between `1` to `10` in `index` argument.
 
-> 📝 Total character length of the overall message should not exceed more than 6,000. If it does, the bot won't send any message.
+> 📝 Total character length of the overall response should not exceed more than 6,000. If it does, the bot won't send the message.
 
 ### Example
 ```
