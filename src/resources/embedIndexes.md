@@ -1,11 +1,17 @@
 # Embed Indexes
-Discord now allows 10 embeds per bot message. There is a `embedIndex` field in embed functions, for this purpose.
+If you look around BDFD embed functions (eg. [`$title`](../bdscript/title.md), [`$footer`](../bdscript/footer.md), [`$addTimestamp`](../bdscript/addTimestamp.md) etc.). You'll see an argument called `index`. This argument is used to create multi-embeds.
 
-By default, the `embedIndex` is set to `1` *(the first embed)*. You can provide any number between `1` and `10` in `embedIndex` fields.
+> 📝 Discord supports creating upto a maximum of 10 embeds per bot message.
 
-## Example
+## Creating Multi-Embeds
+By default, the `index` is set to `1` *(the first embed)*. To create a second embed, you have to write `2` in `index` argument and so on. You can specify any number between `1` to `10` in `index` argument.
+
+> 📝 Total character length of the overall message should not exceed more than 6,000. If it does, the bot won't send any message.
+
+### Example
 ```
 $nomention
+
 $title[Title #1]
 $description[Description #1]
 
