@@ -50,6 +50,46 @@
     --search-mark-bg: #355c7d;
 }
 
+.shiro {
+    --bg: hsl(0, 0%, 0%);
+    --fg: #c5c5c5;
+
+    --sidebar-bg: hsl(0, 0%, 0%);
+    --sidebar-fg: #c5c5c5;
+    --sidebar-non-existant: #5c6773;
+    --sidebar-active: #2e91fb;
+    --sidebar-spacer: #2e91fb;
+
+    --scrollbar: var(--sidebar-fg);
+
+    --icons: #737480;
+    --icons-hover: #2e91fb;
+
+    --links: #a689fc;
+
+    --inline-code-color: #2e91fb;
+
+    --theme-popup-bg: hsl(0, 0%, 0%);
+    --theme-popup-border: #2e91fb;
+    --theme-hover: #2e91fb;
+
+    --quote-bg: hsl(0, 0%, 0%);
+    --quote-border: #2e91fb;
+
+    --table-border-color: hsl(210, 25%, 13%);
+    --table-header-bg: hsl(210, 25%, 28%);
+    --table-alternate-bg: hsl(210, 25%, 11%);
+
+    --searchbar-border-color: #2e91fb;
+    --searchbar-bg: hsl(0, 0%, 0%);
+    --searchbar-fg: #2e91fb;
+    --searchbar-shadow-color: #d4c89f;
+    --searchresults-header-fg: #666;
+    --searchresults-border-color: #888;
+    --searchresults-li-bg: #252932;
+    --search-mark-bg: #2e91fb;
+}
+
 .ayu {
     --bg: hsl(210, 25%, 8%);
     --fg: #c5c5c5;
