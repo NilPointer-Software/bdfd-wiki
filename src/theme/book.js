@@ -296,7 +296,7 @@ function playpen_text(playpen) {
     function set_theme(theme, store = true) {
         let ace_theme;
 
-        if (theme == 'coal' || theme == 'navy' || theme == 'bdfd') {
+        if (theme == 'coal' || theme == 'navy' || theme == 'bdfd' || theme == "shiro") {
             stylesheets.ayuHighlight.disabled = true;
             stylesheets.tomorrowNight.disabled = false;
             stylesheets.highlight.disabled = true;
@@ -319,6 +319,7 @@ function playpen_text(playpen) {
         const themeToggle = document.getElementById("theme-toggle");
         const searchToggle = document.getElementById("search-toggle");
         const printToggle = document.getElementById("print-button");
+        const githubLink = document.getElementById("git-repository-button");
 
         if (theme == 'bdfd') {
             menuBar.style.backgroundColor = '#673ab7';
@@ -327,6 +328,7 @@ function playpen_text(playpen) {
             themeToggle.style.color = '#fff';
             searchToggle.style.color = '#fff';
             printToggle.style.color = '#fff';
+            githubLink.style.color = '#fff';
         } else {
             menuBar.style.backgroundColor = '';
             menuBar.style.color = '';
@@ -334,6 +336,7 @@ function playpen_text(playpen) {
             themeToggle.style.color = '';
             searchToggle.style.color = '';
             printToggle.style.color = '';
+            githubLink.style.color = '';
         }
 
         setTimeout(function () {

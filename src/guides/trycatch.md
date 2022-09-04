@@ -13,6 +13,8 @@ Possible arguments:
 - `command` - retrieves the name of a function that failed.
 - `source` - retrieves the whole function together with arguments.
 - `message` - retrieves the error message.
+- `row` - retrieves the error code row number.
+- `column` - retrieves the error code column number.
 
 ## Examples
 ### 1

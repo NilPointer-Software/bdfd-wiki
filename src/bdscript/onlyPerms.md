@@ -7,5 +7,5 @@ $onlyPerms[permissions;errorMessage]
 ```
 
 ### Breakdown
-- `permissions` - The required permissions [(see permissions list)](https://nilpointer-software.github.io/bdfd-wiki/guides/permissions.html). Separate permissions using `;`.
+- `permissions` - The required permissions [(see permissions list)](../resources/permissions.md). Separate permissions using `;`.
 - `errorMessage` - The message that is returned when the user is missing the required permissions.

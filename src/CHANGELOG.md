@@ -1,12 +1,67 @@
 # Changelog
-*Note that we often forget to update this article, so some stuff is missing.*
 
 # 2022
+
+## September
+- Added `channelID` field to `$awaitFunc[]`
+- Added `$trimContent`
+
+## August
+- Added `$scriptLanguage`
+- Fixed `$stop` breaking `$if[]`
+- Renamed `$customImage[]` argument to `Custom image tag`
+- Added `$hypesquad[]`
+- Added `$dmChannelID[]`
+- Fixed the app's max choices limit
+- Fixed `$registerGuildCommands[]` removing previously registered commands
+- Fixed `$reply` not working in DMs
+- Made it possible to return milliseconds and nanoseconds in `$getTimestamp`
+- Fixed `$addTextInput[]` not verifying max length
+- Fixed `$url[]` returning an error when no input was provided
+- Added `$userServerAvatar[]`
+- Fixed `$cropText[]` not supporting unicode
+- Not putting required slash command options on top no longer breaks the commands
+
+## July
+- Added hex to the color picker
+- Fixed `$executionTime` not working inside embed fields
+- App now sends notification when bot hosting is expired
+- Added `$sendNotification[]` for premium bots
+- Made it possible to use only one option in a select menu
+- Fixed `$editChannelPerms[]`
+- Fixed verification of slash command names
+- Fixed `$sort` not working with `-1` as return amount
+
+## June
+- Fixed `$onlyBotChannelPerms[]`
+- Fixed description verification in `$addSelectMenuOption[]` and `$editSelectMenuOption[]`
+- Updated limits of select menu options
+- Fixed updating components which are refering to `$messageID`
+
+## May
+- Fixed token issues
+- Fixed disappearing slash command options
+- `AllowedMentions` field is now used in `$channelSendMessage[]`, `$sendEmbedMessage[]` and `$sendMessage[]`
+- Fixed black screen after bot creation
+- Fixed in-app tutorial
+- Fixed escaping response in interactions
+- Fixed cooldown error messages
+- Fixed empty values in variables not getting saved
+- Fixed userID being ignored when guildID was passed to `$getUserVar[]`
+
+## April
+- Added `"return ID of the ticket message"` argument to `$newTicket[]`
+- Fixed disappearing slash commands from the app's state
 
 ## March
 - **If you're getting Invalid permissions error on your invite link,  disable Stream and View guild insights permissions in the invite editor.**
 - Added `$toTitleCase[]`
 - Fixed invite permission calculator
+- Fixed `$suppressErrors[]` and `$embedSuppressErrors[]` getting ignored by components errors
+- Fixed updating some components
+- Added `$registerGuildCommands[]`
+- Added `$unregisterGuildCommands[]`
+- Added `/callback_list`, `/callback_tag_list`, and `/callback/:callback_tag` endpoints to public BDFD API
 
 ## February
 - `$httpResult[]` can return JSON now
@@ -22,6 +77,10 @@
 - Deprecated `$channelIDFromName[]`, use `$channelID[]` instead
 - Added `$onlyForCategories[]`
 - Fixed `$modifyChannelPerms[]` ignoring last permission
+- Added `$onAutoComplete[]` callback
+- Added `$autoCompleteOptionName`
+- Added `$autoCompleteOptionValue`
+- Added `$appendOptionSuggestion[]`
 
 ## January
 -  Added `$unescape[]`

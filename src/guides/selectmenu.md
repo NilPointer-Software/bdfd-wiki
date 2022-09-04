@@ -16,8 +16,8 @@ In this section you'll learn how to use the select menu component.\
 `$addSelectMenuOption[select menu's interaction ID;label;value;description;default (yes/no);emoji (can be left empty);messageID (optional)]`
 - `select menu's interaction ID` - it has to be the same as the ID used in `$newSelectMenu[]`
 - `label` - the name of the option
-- `description` - it shows up under the `label`
 - `value` - it's the data that gets passed to `$onInteraction[]` callback. **The value has to be unique in the select menu!**
+- `description` - it shows up under the `label`
 - `default (yes/no)` - should the option be selected by default. **There can be only one default option!**
 - `emoji` - it shows up next to the `label`
 - `messageID (optional)` - same as in `$newSelectMenu[]`

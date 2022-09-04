@@ -14,6 +14,6 @@ $blackListIDs[userIDs;errorMessage]
 ## Example
 ```
 $nomention
-Pong! $ping ms
 $blackListIDs[566613317972394004;246604909451935745;❌ You can't use this command!]
+Pong! $ping ms
 ```

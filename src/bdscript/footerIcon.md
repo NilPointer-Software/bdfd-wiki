@@ -4,12 +4,12 @@ Sets the embed footer icon.
 
 ## Usage
 ```
-$footerIcon[imageURL;(optional) embedIndex]
+$footerIcon[icon url;(index)]
 ```
 
 ### Breakdown
-- `imageURL` - The URL to set the footer icon as. Must be a valid image URL.
-- `embedIndex` - What embed the footer icon should belong to. Default is `1`. [(learn more)](https://nilpointer-software.github.io/bdfd-wiki/guides/embedIndexes.html)
+- `icon url` - The URL to set the footer icon as. Must be a valid image URL.
+- `index` - What embed the footer icon should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

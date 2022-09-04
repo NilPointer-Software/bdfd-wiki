@@ -21,6 +21,7 @@ Custom IDs must be unique per component, multiple buttons on the same message mu
 > Custom IDs may also be referred to as interaction IDs.
 
 ## Examples
-- [Buttons](https://nilpointer-software.github.io/bdfd-wiki/guides/buttons.html)
-- [Author-Only Buttons](https://nilpointer-software.github.io/bdfd-wiki/bdscript/customID.html)
-- [Select Menu](https://nilpointer-software.github.io/bdfd-wiki/guides/selectmenu.html)
+- [Buttons](../guides/buttons.md)
+- [Author-Only Buttons](../bdscript/customID.md)
+- [Select Menu](../guides/selectmenu.md)
+- [Modals](../guides/modals.md)

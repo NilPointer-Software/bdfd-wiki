@@ -1,6 +1,6 @@
 # $takeRole
 *(deprecated)*
-> 🧙‍♂️ This command is deprecated instead better use [$roleGrant](https://nilpointer-software.github.io/bdfd-wiki/bdscript/roleGrant.html).
+> 🧙‍♂️ This command is deprecated instead better use [$roleGrant](./roleGrant.md).
 
 Removes a role to the provided user.
 

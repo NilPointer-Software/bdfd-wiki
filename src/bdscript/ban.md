@@ -1,5 +1,5 @@
 # $ban
-Bans the mentioned user. Both the bot and user running the command need the 'ban' permission.
+Bans the mentioned user.
 
 ## Usage
 ```
