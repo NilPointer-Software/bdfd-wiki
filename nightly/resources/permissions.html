@@ -142,49 +142,54 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="permissions"><a class="header" href="#permissions">Permissions</a></h1>
-<p>This is a list of all permissions supported in BDFD. The permissions are all case insensitive (i.e: both <code>BAN</code> and <code>Ban</code> will work).</p>
-<ul>
-<li>addreactions</li>
-<li>admin</li>
-<li>attachfiles</li>
-<li>ban</li>
-<li>changenicknames</li>
-<li>connect</li>
-<li>createinstantinvite</li>
-<li>createprivatethreads</li>
-<li>createpublicthreads</li>
-<li>embedlinks</li>
-<li>externalemojis</li>
-<li>externalstickers</li>
-<li>kick</li>
-<li>managechannels</li>
-<li>manageemojis</li>
-<li>manageevents</li>
-<li>managemessages</li>
-<li>managenicknames</li>
-<li>manageroles</li>
-<li>manageserver</li>
-<li>managethreads</li>
-<li>managewebhooks</li>
-<li>mentioneveryone</li>
-<li>moderatemembers</li>
-<li>movemembers</li>
-<li>priorityspeaker</li>
-<li>readmessagehistory</li>
-<li>readmessages</li>
-<li>requesttospeak</li>
-<li>sendmessages</li>
-<li>sendmessagesinthreads</li>
-<li>slashcommands</li>
-<li>speak</li>
-<li>stream</li>
-<li>tts</li>
-<li>usevad</li>
-<li>viewauditlog</li>
-<li>viewguildinsights</li>
-<li>voicedeafen</li>
-<li>voicemute</li>
-</ul>
+<p><strong>Permissions</strong> allow users to have specific privileges and access in the server. Some permissions can be as basic as allowing users the ability to add reactions to messages while other permissions grant users more administrative actions. These permissions are based on the roles assigned to users in a server and permissions can be assigned per role on both the server level and channel level.</p>
+<h2 id="list-of-permissions"><a class="header" href="#list-of-permissions">List of Permissions</a></h2>
+<p>Following is the list of permissions which are supported in BDFD -</p>
+<table><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody>
+<tr><td>addreactions</td><td>Allows to react emojis in messages <em>(Doesn't affect existing emojis in messages)</em>.</td></tr>
+<tr><td>admin</td><td>Grants all permissions and bypasses all channel permissions overwrites.</td></tr>
+<tr><td>attachfiles</td><td>Allows to upload attachments in channels.</td></tr>
+<tr><td>ban</td><td>Allows banning/unbanning members.</td></tr>
+<tr><td>changenicknames</td><td>Allows editing own server nickname.</td></tr>
+<tr><td>connect</td><td>Allows to join voice/stage channels.</td></tr>
+<tr><td>createinstantinvite</td><td>Allows to create invites.</td></tr>
+<tr><td>createprivatethreads</td><td>Allows to create private threads.</td></tr>
+<tr><td>createpublicthreads</td><td>Allows to create public threads.</td></tr>
+<tr><td>embedlinks</td><td>Allows to send embedded content and links in channels.</td></tr>
+<tr><td>externalemojis</td><td>Allows to use custom emojis from a different server.</td></tr>
+<tr><td>externalstickers</td><td>Allows to use custom stickers from a different server.</td></tr>
+<tr><td>kick</td><td>Allows kicking members.</td></tr>
+<tr><td>managechannels</td><td>Allows to create/delete/modify channels of the server.</td></tr>
+<tr><td>manageemojis</td><td>Allows to create/delete/modify custom emojis and stickers of the server.</td></tr>
+<tr><td>manageevents</td><td>Allows to create/delete/modify events in the server.</td></tr>
+<tr><td>managemessages</td><td>Allows deleting messages of other members and pinning/unpinning messages in channels.</td></tr>
+<tr><td>managenicknames</td><td>Allows to modify server members nicknames.</td></tr>
+<tr><td>manageroles</td><td>Allows to create/delete/modify server roles. It also allows modifying individual channel's permissions.</td></tr>
+<tr><td>manageserver</td><td>Allows to create/modify AutoMod rules, add bots, view invites and change server settings.</td></tr>
+<tr><td>managethreads</td><td>Allows to create/delete/modify channel threads.</td></tr>
+<tr><td>managewebhooks</td><td>Allows to create/delete/modify channel webhooks.</td></tr>
+<tr><td>mentioneveryone</td><td>Allows to mention ping <code>@everyone</code>, <code>@here</code> and all server roles.</td></tr>
+<tr><td>moderatemembers</td><td>Allows to timeout/untimeout members. This permission is also known as <em>&quot;Timeout members&quot;</em>.</td></tr>
+<tr><td>movemembers</td><td>Allows to move members between voice/stage channels.</td></tr>
+<tr><td>priorityspeaker</td><td>Allows to be easily heard in voice/stage channels.</td></tr>
+<tr><td>readmessagehistory</td><td>Allows to view channel message history.</td></tr>
+<tr><td>readmessages</td><td>Allows to view a channel. This permission is also known as <em>&quot;View channel&quot;</em>.</td></tr>
+<tr><td>requesttospeak</td><td>Allows to request to speak in stage.</td></tr>
+<tr><td>sendmessages</td><td>Allows to send messages in channels.</td></tr>
+<tr><td>sendmessagesinthreads</td><td>Allows to send messages in threads.</td></tr>
+<tr><td>slashcommands</td><td>Allows to use application commands <em>(i.e slash commands, context-menus)</em> in channels. This permission is also known as <em>&quot;Use Application Commands&quot;</em>.</td></tr>
+<tr><td>speak</td><td>Allows to speak in voice/stage channel.</td></tr>
+<tr><td>stream</td><td>Allows to stream live in voice/stage channels.</td></tr>
+<tr><td>tts</td><td>Allows to send text-to-speech (tts) messages.</td></tr>
+<tr><td>usevad</td><td>Allows to use voice-activity detection. Members without this permission will have to use push-to-talk voice feature. This permission is also known as <em>&quot;Use voice activity&quot;</em>.</td></tr>
+<tr><td>viewauditlog</td><td>Allows to view server audit logs.</td></tr>
+<tr><td>viewguildinsights</td><td>Allows to view <a href="https://discord.com/developers/servers">insights</a> of a server.</td></tr>
+<tr><td>voicedeafen</td><td>Allows to deafen a member in voice/stage channel.</td></tr>
+<tr><td>voicemute</td><td>Allows to mute a member from speaking in voice/stage channel.</td></tr>
+</tbody></table>
+<blockquote>
+<p>📝 All permissions are case insensitive (i.e both <code>BAN</code> and <code>Ban</code> will work).</p>
+</blockquote>
 
                     </main>
 

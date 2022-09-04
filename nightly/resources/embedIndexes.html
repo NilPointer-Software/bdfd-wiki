@@ -142,10 +142,18 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="embed-indexes"><a class="header" href="#embed-indexes">Embed Indexes</a></h1>
-<p>Discord now allows 10 embeds per bot message. There is a <code>embedIndex</code> field in embed functions, for this purpose.</p>
-<p>By default, the <code>embedIndex</code> is set to <code>1</code> <em>(the first embed)</em>. You can provide any number between <code>1</code> and <code>10</code> in <code>embedIndex</code> fields.</p>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p>If you look around BDFD embed functions (eg. <a href="../bdscript/title.html"><code>$title</code></a>, <a href="../bdscript/footer.html"><code>$footer</code></a>, <a href="../bdscript/addTimestamp.html"><code>$addTimestamp</code></a> etc.). You'll see an argument called <code>index</code>. This argument is used to create multi-embeds.</p>
+<blockquote>
+<p>📝 Discord supports creating upto a maximum of 10 embeds per bot message.</p>
+</blockquote>
+<h2 id="creating-multi-embeds"><a class="header" href="#creating-multi-embeds">Creating Multi-Embeds</a></h2>
+<p>By default, the <code>index</code> is set to <code>1</code> <em>(the first embed)</em>. To create a second embed, you have to write <code>2</code> in <code>index</code> argument and so on. You can specify any number between <code>1</code> to <code>10</code> in <code>index</code> argument.</p>
+<blockquote>
+<p>📝 Total character length of the overall response should not exceed more than 6,000. If it does, the bot won't send the message.</p>
+</blockquote>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
 <pre><code>$nomention
+
 $title[Title #1]
 $description[Description #1]
 
