@@ -2,7 +2,7 @@
 Returns current [unix timestamp](https://www.unixtimestamp.com/).
 
 ## Usage
-There are two usages of `$getTimstamp` function -
+There are two usages of `$getTimestamp` function :
 
 ### Usage #1
 ```
@@ -30,3 +30,11 @@ $getTimestamp[Time unit]
     > - `ns` (nanoseconds)
 
 #### Example
+```
+$nomention
+Unix Timestamp
+ In Seconds - $getTimestamp[s]
+ In Milliseconds - $getTimestamp[ms]
+ In Nanoseconds - $getTimestamp[ns]
+ ```
+ ![Screenshot_20220904_150511](https://user-images.githubusercontent.com/95774950/188307175-48845a0d-6229-46f3-80eb-f1f9d3fde974.png)
