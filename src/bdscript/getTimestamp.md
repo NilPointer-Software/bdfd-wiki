@@ -22,7 +22,7 @@ Unix Timestamp: $getTimestamp
 ```
 $getTimestamp[Time unit]
 ```
-- `Time unit` - Returns unix timestamp in selected time unit.
+- `Time unit` - Sets timestamp time unit
 
     > 📝 Time unit value can either be :
     > - `s` (seconds)
