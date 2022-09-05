@@ -8,6 +8,7 @@
 - Fixed fetching guilds not always working in the app
 - Added `$slashID`
 - Fixed slash command reordering
+- Added intent autodetection 
 
 ## August
 - Added `$scriptLanguage`
