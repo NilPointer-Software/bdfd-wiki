@@ -9,6 +9,7 @@
 - Added `$slashID`
 - Fixed slash command reordering
 - Added intent autodetection 
+- Added `globaluser` option to `$variablesCount[]`
 
 ## August
 - Added `$scriptLanguage`
