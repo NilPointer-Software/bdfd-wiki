@@ -7,10 +7,11 @@ $var[Name;(Value)]
 ```
 
 ## Example
-1. Saving the user's message into the temporary variable `message`.
-> 🧙‍♂️ There we will make so that the entire message is in lower case.
-2. Saving the ID of the message into the `id` temporary variable sent with `$sendMessage` (where the value of the `message` temporary variable will be passed).
-3. Adding a button to a sent message.
+We will create a command that will:
+1. Set a temporary variable named `message` with the user's message.
+> 🧙‍♂️ We will make it so that the entire user message is in lower case.
+2. Set another variable named `id` with the ID of the message sent using `$sendMessage`, which will contain the previously set `message` temporary variable.
+3. Add a button to the sent message.
 
 ```
 $var[message;$toLowercase[$message]]
