@@ -61,6 +61,7 @@
     - [$authorID](./bdscript/authorID.md)
     - [$authorOfMessage](./bdscript/authorOfMessage.md)
     - [$authorURL](./bdscript/authorURL.md)
+    - [$alternativeParsing](./bdscript/alternativeParsing.md)
     - [$ban](./bdscript/ban.md)
     - [$banID](./bdscript/banID.md)
     - [$blackListIDs](./bdscript/blackListIDs.md)
