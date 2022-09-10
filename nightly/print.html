@@ -6783,10 +6783,12 @@ $variablesCount[server]
 <li>Set a temporary variable named <code>message</code> with the user's message.</li>
 </ol>
 <blockquote>
-<p>🧙‍♂️ We will make it so that the entire user message is in lower case.
-2. Set another variable named <code>id</code> with the ID of the message sent using <code>$sendMessage</code>, which will contain the previously set <code>message</code> temporary variable.
-3. Add a button to the sent message.</p>
+<p>🧙‍♂️ We will make it so that the entire user message is in lower case.</p>
 </blockquote>
+<ol start="2">
+<li>Set another variable named <code>id</code> with the ID of the message sent using <code>$sendMessage</code>, which will contain the previously set <code>message</code> temporary variable.</li>
+<li>Add a button to the sent message.</li>
+</ol>
 <pre><code>$var[message;$toLowercase[$message]]
 $var[id;$sendMessage[$var[message];yes]]
 $addButton[no;interactionID;Example;secondary;no;;$var[id]]
