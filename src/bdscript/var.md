@@ -7,9 +7,9 @@ $var[Name;(Value)]
 ```
 
 ## Example
-1. Entering the user's message into the temporary variable `message`.
+1. Saving the user's message into the temporary variable `message`.
 > 🧙‍♂️ There we will make so that the entire message is in lower case.
-2. Entering the ID of the message into the `id` temporary variable sent with `$sendMessage` (where the value of the `message` temporary variable will be passed).
+2. Saving the ID of the message into the `id` temporary variable sent with `$sendMessage` (where the value of the `message` temporary variable will be passed).
 3. Adding a button to a sent message.
 
 ```
