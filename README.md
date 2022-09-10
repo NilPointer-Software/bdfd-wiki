@@ -1,5 +1,5 @@
 # Bot Designer for Discord - Wiki
-A wiki page that explains BDFD functions, callbacks, and features. This is the GitHub repository, here you can contribute and make some wikis with us! 
+A wiki page that explains BDFD functions, callbacks, and features. This is the GitHub repository, here you can contribute and make some wikis with us! Test
 
 > Wanna View The Wiki? [Click-Me](https://nilpointer-software.github.io/bdfd-wiki/foreword.html)
 
