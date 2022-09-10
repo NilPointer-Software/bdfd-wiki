@@ -52,7 +52,7 @@
     - [$allowMention](./bdscript/allowMention.md)
     - [$allowRoleMentions](./bdscript/allowRoleMentions.md)
     - [$allowUserMentions](./bdscript/allowUserMentions.md)
-    - [$alternativeParsing(./bdscript/alternativeParsing.md)
+    - [$alternativeParsing](./bdscript/alternativeParsing.md)
     - [$and](./bdscript/and.md)
     - [$argCount](./bdscript/argCount.md)
     - [$argsCheck](./bdscript/argsCheck.md)
