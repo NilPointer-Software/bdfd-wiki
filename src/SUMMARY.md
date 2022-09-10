@@ -52,6 +52,7 @@
     - [$allowMention](./bdscript/allowMention.md)
     - [$allowRoleMentions](./bdscript/allowRoleMentions.md)
     - [$allowUserMentions](./bdscript/allowUserMentions.md)
+    - [$alternativeParsing(./bdscript/alternativeParsing.md)
     - [$and](./bdscript/and.md)
     - [$argCount](./bdscript/argCount.md)
     - [$argsCheck](./bdscript/argsCheck.md)
@@ -256,6 +257,7 @@
     - [$serverChannelExists](./bdscript/serverChannelExists.md)
     - [$serverCooldown](./bdscript/serverCooldown.md)
     - [$serverCount](./bdscript/serverCount.md)
+    - [$serverDescription](./bdscript/serverDescription.md)
     - [$serverIcon](./bdscript/serverIcon.md)
     - [$serverInfo](./bdscript/serverInfo.md)
     - [$serverLeaderboard](./bdscript/serverLeaderboard.md)
@@ -311,6 +313,7 @@
     - [$userRoles](./bdscript/userRoles.md)
     - [$userServerAvatar](./bdscript/userServerAvatar.md)
     - [$variablesCount](./bdscript/variablesCount.md)
+    - [$var](./bdscript/var.md)
     - [$varExistError](./bdscript/varExistError.md)
     - [$year](./bdscript/year.md)
 
