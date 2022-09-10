@@ -257,6 +257,7 @@
     - [$serverChannelExists](./bdscript/serverChannelExists.md)
     - [$serverCooldown](./bdscript/serverCooldown.md)
     - [$serverCount](./bdscript/serverCount.md)
+    - [$serverDescription](./bdscript/serverDescription.md)
     - [$serverIcon](./bdscript/serverIcon.md)
     - [$serverInfo](./bdscript/serverInfo.md)
     - [$serverLeaderboard](./bdscript/serverLeaderboard.md)
