@@ -1,5 +1,5 @@
 # $alternativeParsing
-Changes the way how arguments are read.
+Changes the way how triggers are read.
 
 ## Usage
 ```
