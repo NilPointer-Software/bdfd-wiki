@@ -52,6 +52,7 @@
     - [$allowMention](./bdscript/allowMention.md)
     - [$allowRoleMentions](./bdscript/allowRoleMentions.md)
     - [$allowUserMentions](./bdscript/allowUserMentions.md)
+    - [$alternativeParsing(./bdscript/alternativeParsing.md)
     - [$and](./bdscript/and.md)
     - [$argCount](./bdscript/argCount.md)
     - [$argsCheck](./bdscript/argsCheck.md)
@@ -61,7 +62,6 @@
     - [$authorID](./bdscript/authorID.md)
     - [$authorOfMessage](./bdscript/authorOfMessage.md)
     - [$authorURL](./bdscript/authorURL.md)
-    - [$alternativeParsing](./bdscript/alternativeParsing.md)
     - [$ban](./bdscript/ban.md)
     - [$banID](./bdscript/banID.md)
     - [$blackListIDs](./bdscript/blackListIDs.md)
@@ -312,6 +312,7 @@
     - [$userRoles](./bdscript/userRoles.md)
     - [$userServerAvatar](./bdscript/userServerAvatar.md)
     - [$variablesCount](./bdscript/variablesCount.md)
+    - [$var](./bdscript/var.md)
     - [$varExistError](./bdscript/varExistError.md)
     - [$year](./bdscript/year.md)
 
