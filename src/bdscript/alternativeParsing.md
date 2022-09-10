@@ -16,4 +16,4 @@ $alternativeParsing
 What happens if we remove this function from the code?
 ![Without](https://user-images.githubusercontent.com/70456337/189479541-ad8c6a5a-4f8d-4800-9007-986a3fee0b75.png)
 
-> ⚠️ This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. The `$onlyIf` analog is more stable. You should not use `$alternativeParsing` when creating your bot.
+> ⚠️ This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. You should not use `$alternativeParsing` when making your bot.
