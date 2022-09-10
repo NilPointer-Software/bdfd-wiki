@@ -28,6 +28,7 @@
         - [Webhooks](./guides/webhooks.md)
     - [Other]()
         - [Character Escaping](./guides/characterEscaping.md)
+        - [How To Sleep](./guides/howToSleep.md)
         - [Hyperlinks](./guides/hyperlinks.md)
         - [Share Code](./guides/sharecode.md)
 
