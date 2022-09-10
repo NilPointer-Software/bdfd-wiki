@@ -10,6 +10,7 @@ $var[Name;(Value)]
 We will create a command that will:
 1. Set a temporary variable named `message` with the user's message.
 > 🧙‍♂️ We will make it so that the entire user message is in lower case.
+
 2. Set another variable named `id` with the ID of the message sent using `$sendMessage`, which will contain the previously set `message` temporary variable.
 3. Add a button to the sent message.
 
