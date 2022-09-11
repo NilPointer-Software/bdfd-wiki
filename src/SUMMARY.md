@@ -24,7 +24,7 @@
         - [Слеш-команды](./guides/slashCommands.md)
             - [Автозаполнение](./guides/autoComplete.md)
         - [Ветки](./guides/threads.md)
-        - [Разделение Текста](./guides/textSplitting.md)
+        - [Разделение текста](./guides/textSplitting.md)
         - [Вебхуки](./guides/webhooks.md)
     - [Другое]()
         - [Экранирование символов](./guides/characterEscaping.md)
