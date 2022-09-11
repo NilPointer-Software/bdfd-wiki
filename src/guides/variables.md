@@ -67,7 +67,7 @@ Here's how you can delete variables,
 
 ![ex4](https://user-images.githubusercontent.com/69215413/126413742-e9fef40c-01e8-4713-9e61-99d71c2d88f7.png)
 
-> :warning: Deleting variables might return error message in those commands which were using the deleted variables.
+> ⚠️ Deleting variables might return error message in those commands which were using the deleted variables.
 
 ## Global/Global-User Variables
 `$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to universally *(they don't change per-server or per-user)*. However, if you input a user in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with the user in every server. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
