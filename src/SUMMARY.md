@@ -5,7 +5,7 @@
 
 ---
 
-- [Гиды]()
+- [Руководства]()
     - [Введение](./guides/introduction.md)
     - [Начало](./guides/beginning.md)
         - [Анатомия команд](./guides/commandsAnatomy.md)
@@ -334,7 +334,7 @@
 - [JavaScript]()
     - [Введение](./javascript/javascript.md)
 
-- [Обратные Вызовы]()
+- [Обратные вызовы]()
     - [Введение](./callbacks/introduction.md)
     - [$onJoined](./callbacks/onJoined.md)
     - [$onLeave](./callbacks/onLeave.md)
