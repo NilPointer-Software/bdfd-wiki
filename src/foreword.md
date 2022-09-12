@@ -17,9 +17,9 @@
 Добро пожаловать в нашу скромную обитель. То, что вы видите, это вики *Bot Designer for Discord*.
 
 ### 📂 Вики-указатель
-- [Гиды](./guides/introduction.md)
+- [Руководства](./guides/introduction.md)
 - [Ресурсы](./resources/introduction.md)
 - [BDScript](./bdscript/introduction.md)
 - [Премиум](./premium/introduction.md)
 - [JavaScript](./javascript/javascript.md)
-- [Обратные Вызовы](./callbacks/introduction.md)
+- [Обратные вызовы](./callbacks/introduction.md)
