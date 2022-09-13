@@ -7,11 +7,13 @@ $defer
 ```
 
 ### Example
-Sometimes the code we make needs more time to fully execute.
-In normal cases, the bot will just respond to you after a while, but only if it's not an interaction.
-Interactions have a wait timeout of up to 3 seconds.
-But `$defer` changes this timeout to 15 minutes, giving the bot a chance to completely finish executing the code.
-Below is an example of code that will take more than 3 seconds to execute.
+Sometimes the code we write needs more time to execute fully.
+In normal commands, this isn't a problem, but interactions are different.
+Interactions have a 3-second long timeout in which our code needs to respond in.
+The `$defer` function solves this by telling Discord to wait a bit longer for our response.
+With `$defer` we have 15 minutes to finish executing our code.
+
+This is an example of a code that will take more than 3 seconds to execute.
 ```
 $nomention
 
