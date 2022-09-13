@@ -3367,13 +3367,47 @@ Today Is: $day
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/122829655-45fc2c80-d2b5-11eb-96ce-39a7baeaef52.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="defer"><a class="header" href="#defer">$defer</a></h1>
-<p>Defers the interaction (components/slash commands).</p>
-<blockquote>
-<p>This will allow interactions wait up to 15 minutes until the task is finished instead of giving an error after 3 seconds of loading.</p>
-</blockquote>
+<p>Defers response to an interaction from components and slash commands.</p>
 <h2 id="usage-61"><a class="header" href="#usage-61">Usage</a></h2>
 <pre><code>$defer
 </code></pre>
+<h3 id="example-61"><a class="header" href="#example-61">Example</a></h3>
+<p>Sometimes the code we write needs more time to execute fully.
+In normal commands, this isn't a problem, but interactions are different.
+Interactions have a 3-second long timeout in which our code needs to respond in.
+The <code>$defer</code> function solves this by telling Discord to wait a bit longer for our response.
+With <code>$defer</code> we have 15 minutes to finish executing our code.</p>
+<p>This is an example of a code that will take more than 3 seconds to execute.</p>
+<pre><code>$nomention
+
+$title[$getEmbedData[$channelID;$message[message-id];1;title];1]
+$description[$getEmbedData[$channelID;$message[message-id];1;description];1]
+$footer[$getEmbedData[$channelID;$message[message-id];1;footer];1]
+$color[$getEmbedData[$channelID;$message[message-id];1;color];1]
+
+$title[$getEmbedData[$channelID;$message[message-id];2;title];2]
+$description[$getEmbedData[$channelID;$message[message-id];2;description];2]
+$footer[$getEmbedData[$channelID;$message[message-id];2;footer];2]
+$color[$getEmbedData[$channelID;$message[message-id];2;color];2]
+</code></pre>
+<p>Let's execute it.</p>
+<h4 id="without-defer"><a class="header" href="#without-defer">Without <code>$defer</code></a></h4>
+<p><img src="https://user-images.githubusercontent.com/70456337/189966580-203e3626-02e5-47a6-a649-07ff55079414.gif" alt="Without" /></p>
+<h4 id="with-defer"><a class="header" href="#with-defer">With <code>$defer</code></a></h4>
+<pre><code>$nomention
+$defer
+
+$title[$getEmbedData[$channelID;$message[message-id];1;title];1]
+$description[$getEmbedData[$channelID;$message[message-id];1;description];1]
+$footer[$getEmbedData[$channelID;$message[message-id];1;footer];1]
+$color[$getEmbedData[$channelID;$message[message-id];1;color];1]
+
+$title[$getEmbedData[$channelID;$message[message-id];2;title];2]
+$description[$getEmbedData[$channelID;$message[message-id];2;description];2]
+$footer[$getEmbedData[$channelID;$message[message-id];2;footer];2]
+$color[$getEmbedData[$channelID;$message[message-id];2;color];2]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/189966702-1dafdaf5-f706-419a-a150-c7eead0c0e17.gif" alt="With" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deletechannels"><a class="header" href="#deletechannels">$deleteChannels</a></h1>
 <p>Deletes the provided channel(s).</p>
 <h2 id="usage-62"><a class="header" href="#usage-62">Usage</a></h2>
@@ -3383,7 +3417,7 @@ Today Is: $day
 <ul>
 <li><code>channels</code> - The channels to delete. Separate channel IDs using <code>;</code>.</li>
 </ul>
-<h2 id="example-61"><a class="header" href="#example-61">Example</a></h2>
+<h2 id="example-62"><a class="header" href="#example-62">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;Please mention a channel!]
 $onlyPerms[managechannels;You need the manage channels permission to use that!]
@@ -3417,7 +3451,7 @@ $deleteChannels[$mentionedChannels[1]]
 <ul>
 <li><code>duration</code> - The time to wait before deleting the message (e.g <code>3s</code>, <code>30s</code>, <code>1m</code>, etc). Max duration is <code>40m</code>.</li>
 </ul>
-<h2 id="example-62"><a class="header" href="#example-62">Example</a></h2>
+<h2 id="example-63"><a class="header" href="#example-63">Example</a></h2>
 <pre><code>$nomention
 Hello World!
 $deleteIn[3s]
@@ -3432,7 +3466,7 @@ $deleteIn[3s]
 <li><code>channel ID</code> - The channel ID where the message is.</li>
 <li><code>message ID</code> - The ID of the message which will be deleted.</li>
 </ul>
-<h2 id="example-63"><a class="header" href="#example-63">Example</a></h2>
+<h2 id="example-64"><a class="header" href="#example-64">Example</a></h2>
 <pre><code>$nomention
 $deleteMessage[$channelID;$messageID]
 Hello $username!
@@ -3446,7 +3480,7 @@ Hello $username!
 <ul>
 <li><code>roleID</code> - The role to delete.</li>
 </ul>
-<h2 id="example-64"><a class="header" href="#example-64">Example</a></h2>
+<h2 id="example-65"><a class="header" href="#example-65">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[manageroles;You are missing permissions!]
 $argsCheck[&gt;1;Please provide a role to delete!]
@@ -3466,7 +3500,7 @@ Deleted role!
 <li><code>message</code> - The text to set the description as. It cannot exceed more than 4096 characters.</li>
 <li><code>index</code> - What embed the description should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-65"><a class="header" href="#example-65">Example</a></h2>
+<h2 id="example-66"><a class="header" href="#example-66">Example</a></h2>
 <pre><code>$nomention
 $description[This is a description! 😎]
 </code></pre>
@@ -3477,7 +3511,7 @@ $description[This is a description! 😎]
 <h2 id="usage-69"><a class="header" href="#usage-69">Usage</a></h2>
 <pre><code>$disableSpecialEscaping
 </code></pre>
-<h2 id="example-66"><a class="header" href="#example-66">Example</a></h2>
+<h2 id="example-67"><a class="header" href="#example-67">Example</a></h2>
 <pre><code>$nomention
 $disableSpecialEscaping 
 %{DOL}%replaceText[Hello World!%{-SEMICOL-}%World%{-SEMICOL-}%Planet%{-SEMICOL-}%1]
@@ -3498,7 +3532,7 @@ $disableSpecialEscaping
 <pre><code>$discriminator[]
 </code></pre>
 <p>Returns the author's discriminator.</p>
-<h2 id="example-67"><a class="header" href="#example-67">Example</a></h2>
+<h2 id="example-68"><a class="header" href="#example-68">Example</a></h2>
 <pre><code>$nomention
 Hello $username#$discriminator[]!
 </code></pre>
@@ -3512,7 +3546,7 @@ Hello $username#$discriminator[]!
 <ul>
 <li><code>numbers</code> - The numbers to divide. Separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-68"><a class="header" href="#example-68">Example</a></h2>
+<h2 id="example-69"><a class="header" href="#example-69">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;❌ Please provide the needed arguments! Usage: `!divide (number1) (number2)`]
 Answer: $divide[$message[1];$message[2]]
@@ -3544,7 +3578,7 @@ Answer: $divide[$message[1];$message[2]]
 <ul>
 <li><code>userID</code> - The user for whom to fetch the DM channel ID for</li>
 </ul>
-<h2 id="example-69"><a class="header" href="#example-69">Example</a></h2>
+<h2 id="example-70"><a class="header" href="#example-70">Example</a></h2>
 <p><img src="https://user-images.githubusercontent.com/95774950/184350154-4e08f818-e1c6-483b-bfc0-f7741c1381da.png" alt="Screenshot_20220812_170857" /></p>
 <p><img src="https://user-images.githubusercontent.com/95774950/184350174-776d0d09-de35-4f2a-bef8-7683135752ea.png" alt="Screenshot_20220812_171230" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editchannelperms"><a class="header" href="#editchannelperms">$editChannelPerms</a></h1>
@@ -3566,7 +3600,7 @@ Answer: $divide[$message[1];$message[2]]
 <blockquote>
 <p>🧙🏻‍♂️ You can see the available permissions here in <a href="bdscript/../resources/permissions.html">Permissions</a></p>
 </blockquote>
-<h2 id="example-70"><a class="header" href="#example-70">Example</a></h2>
+<h2 id="example-71"><a class="header" href="#example-71">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[managechannels; ❌ You need the manage_channels permission to use that!]
 
@@ -3600,7 +3634,7 @@ $editChannelPerms[$channelID;$mentionedRoles[1];-sendmessages]
 <p><code>color</code> - The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a> or color integer number. Use <code>0</code> for default color. Optional.</p>
 </li>
 </ul>
-<h2 id="example-71"><a class="header" href="#example-71">Example</a></h2>
+<h2 id="example-72"><a class="header" href="#example-72">Example</a></h2>
 <pre><code>$nomention
 $title[Cool Title]
 $description[This is a cool embed to edit!]
@@ -3622,7 +3656,7 @@ $editEmbedIn[5s;Epic Title;This is the edited description!;;#E46AFC]
 <li><code>time</code> - The time to wait before editing the message (e.g <code>3s</code>, <code>30s</code>, <code>10m</code>). Max is <code>40m</code>.</li>
 <li><code>newMessage</code> - The text that appears when this message is edited.</li>
 </ul>
-<h2 id="example-72"><a class="header" href="#example-72">Example</a></h2>
+<h2 id="example-73"><a class="header" href="#example-73">Example</a></h2>
 <pre><code>$nomention
 This is a nice message to edit!
 $editIn[5s;This is the edited message!]
@@ -3650,7 +3684,7 @@ $editIn[5s;This is the edited message!]
 <li><code>color</code> - The new embed color border hex. Optional.</li>
 <li><code>footer</code> - The new embed footer text. Optional.</li>
 </ul>
-<h2 id="example-73"><a class="header" href="#example-73">Example</a></h2>
+<h2 id="example-74"><a class="header" href="#example-74">Example</a></h2>
 <pre><code>$nomention
 $editMessage[853070225398693898;857040509549281292;This message has been edited!]
 </code></pre>
@@ -3684,7 +3718,7 @@ $editMessage[853070225398693898;857040509549281292;This message has been edited!
 <li><code>link</code> - The link to set the title hyperlink to.</li>
 <li><code>index</code> - What embed the title hyperlink should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-74"><a class="header" href="#example-74">Example</a></h2>
+<h2 id="example-75"><a class="header" href="#example-75">Example</a></h2>
 <pre><code>$nomention
 $title[Bot Designer For Discord]
 $embeddedURL[https://botdesignerdiscord.com]
@@ -3717,7 +3751,7 @@ $color[#683cb4]
 <h2 id="usage-79"><a class="header" href="#usage-79">Usage</a></h2>
 <pre><code>$emoteCount
 </code></pre>
-<h2 id="example-75"><a class="header" href="#example-75">Example</a></h2>
+<h2 id="example-76"><a class="header" href="#example-76">Example</a></h2>
 <pre><code>$nomention
 There are $emoteCount emojis in $serverName[$guildID]!
 </code></pre>
@@ -3732,7 +3766,7 @@ There are $emoteCount emojis in $serverName[$guildID]!
 <li><code>enabled</code> - 'yes' means the command is enabled, 'no' means it's disabled.</li>
 <li><code>errorMessage</code> - The message that is returned if the command is disabled.</li>
 </ul>
-<h2 id="example-76"><a class="header" href="#example-76">Example</a></h2>
+<h2 id="example-77"><a class="header" href="#example-77">Example</a></h2>
 <p>This section will explain how to disable/enable certain commands using server variables. </p>
 <ol>
 <li>
@@ -3793,7 +3827,7 @@ I successfully disabled __ command!
 <blockquote>
 <p>⚠️ You can get an ephemeral response only through an interaction (Slash commands, button, select menus etc.)</p>
 </blockquote>
-<h2 id="example-77"><a class="header" href="#example-77">Example</a></h2>
+<h2 id="example-78"><a class="header" href="#example-78">Example</a></h2>
 <p><img src="https://user-images.githubusercontent.com/69215413/122575265-91e17400-d01e-11eb-9789-de224722f3ab.png" alt="Example2" /></p>
 <p><img src="https://user-images.githubusercontent.com/69215413/122575261-90b04700-d01e-11eb-942c-1cd5096998d0.png" alt="Example1" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="eval-1"><a class="header" href="#eval-1">$eval</a></h1>
@@ -3808,7 +3842,7 @@ I successfully disabled __ command!
 <ul>
 <li><code>BDScript source code</code> - The code to be evaluated.</li>
 </ul>
-<h2 id="example-78"><a class="header" href="#example-78">Example</a></h2>
+<h2 id="example-79"><a class="header" href="#example-79">Example</a></h2>
 <pre><code>$nomention
 $eval[$message]
 </code></pre>
@@ -3830,7 +3864,7 @@ $eval[$message]
 <ul>
 <li><code>channel</code> - The channel name/ID/mention to find.</li>
 </ul>
-<h2 id="example-79"><a class="header" href="#example-79">Example</a></h2>
+<h2 id="example-80"><a class="header" href="#example-80">Example</a></h2>
 <pre><code>$nomention
 $findChannel[$message]
 </code></pre>
@@ -3844,7 +3878,7 @@ $findChannel[$message]
 <ul>
 <li><code>role</code> - The role name, ID, or mention to find.</li>
 </ul>
-<h2 id="example-80"><a class="header" href="#example-80">Example</a></h2>
+<h2 id="example-81"><a class="header" href="#example-81">Example</a></h2>
 <pre><code>$nomention
 $findRole[$message]
 </code></pre>
@@ -3859,7 +3893,7 @@ $findRole[$message]
 <li><code>user</code> - The user's username, ID, or mention to find.</li>
 <li><code>returnAuthorID</code> - Whether to return the author ID if no user was found. Default is <code>yes</code>. Optional.</li>
 </ul>
-<h2 id="example-81"><a class="header" href="#example-81">Example</a></h2>
+<h2 id="example-82"><a class="header" href="#example-82">Example</a></h2>
 <pre><code>$nomention
 $findUser[$message]
 </code></pre>
@@ -3874,7 +3908,7 @@ $findUser[$message]
 <li><code>text</code> - The text to set the footer as. It cannot exceed more than 2048 characters.</li>
 <li><code>index</code> - What embed the footer text should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-82"><a class="header" href="#example-82">Example</a></h2>
+<h2 id="example-83"><a class="header" href="#example-83">Example</a></h2>
 <pre><code>$nomention
 $footer[Hi! I'm a footer.]
 </code></pre>
@@ -3892,7 +3926,7 @@ $footer[Hi! I'm a footer.]
 <li><code>icon url</code> - The URL to set the footer icon as. Must be a valid image URL.</li>
 <li><code>index</code> - What embed the footer icon should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-83"><a class="header" href="#example-83">Example</a></h2>
+<h2 id="example-84"><a class="header" href="#example-84">Example</a></h2>
 <pre><code>$nomention
 $footer[⬅️ That is a footer icon!]
 $footerIcon[$authorAvatar]
@@ -3903,7 +3937,7 @@ $footerIcon[$authorAvatar]
 <h2 id="usage-90"><a class="header" href="#usage-90">Usage</a></h2>
 <pre><code>$getBotInvite
 </code></pre>
-<h2 id="example-84"><a class="header" href="#example-84">Example</a></h2>
+<h2 id="example-85"><a class="header" href="#example-85">Example</a></h2>
 <pre><code>$nomention
 Invite Me! $getBotInvite
 </code></pre>
@@ -3917,7 +3951,7 @@ Invite Me! $getBotInvite
 <ul>
 <li><code>cooldownType</code> - The cooldown type <em>(normal - <a href="bdscript/./cooldown.html">$cooldown</a> | server - <a href="bdscript/./serverCooldown.html">$serverCooldown</a> | global - <a href="bdscript/./globalCooldown.html">$globalCooldown</a>)</em>.</li>
 </ul>
-<h2 id="example-85"><a class="header" href="#example-85">Example</a></h2>
+<h2 id="example-86"><a class="header" href="#example-86">Example</a></h2>
 <pre><code>$nomention
 $cooldown[1h;You're on cooldown! (&lt;t:$sum[$getTimestamp;$getCooldown[normal]]&gt;)]
 Hello World!
@@ -3935,7 +3969,7 @@ $c[This example should be used in BDScript 2 only.]
 <li><code>embedIndex</code> - The embed of this message to get data from. Use <code>1</code> for the first embed of this message.</li>
 <li><code>embedProperty</code> - The embed property to return.</li>
 </ul>
-<h2 id="example-86"><a class="header" href="#example-86">Example</a></h2>
+<h2 id="example-87"><a class="header" href="#example-87">Example</a></h2>
 <pre><code>$nomention
 Title: $getEmbedData[876920205526319144;878299081380876339;1;title]
 Description: $getEmbedData[876920205526319144;878299081380876339;1;description]
@@ -3963,7 +3997,7 @@ Footer: $getEmbedData[876920205526319144;878299081380876339;1;footer]
 </ul>
 </li>
 </ul>
-<h2 id="example-87"><a class="header" href="#example-87">Example</a></h2>
+<h2 id="example-88"><a class="header" href="#example-88">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;Please provide a valid invite code!]
 $title[Invite Info]
@@ -3993,7 +4027,7 @@ $color[#673ab7]
 </ul>
 </li>
 </ul>
-<h2 id="example-88"><a class="header" href="#example-88">Example</a></h2>
+<h2 id="example-89"><a class="header" href="#example-89">Example</a></h2>
 <pre><code>$nomention
 $title[**Global Leaderboard**]
 $description[#1 - $getLeaderboardValue[globalUser;Money;asc;1]
@@ -4027,7 +4061,7 @@ $c[This is for global-user variables.]
 </ul>
 </li>
 </ul>
-<h2 id="example-89"><a class="header" href="#example-89">Example</a></h2>
+<h2 id="example-90"><a class="header" href="#example-90">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;Please provide a channel and message ID! Usage: `!quote (channel) (messageID)`]
 $description[$getMessage[$findChannel[$message[1]];$message[2]]]
@@ -4048,7 +4082,7 @@ $author[$getMessage[$findChannel[$message[1]];$message[2];username]#$discriminat
 <li><code>separator</code> - The separator between each user.</li>
 <li><code>emoji</code> - The emoji to get the user's reactions for.</li>
 </ul>
-<h2 id="example-90"><a class="header" href="#example-90">Example</a></h2>
+<h2 id="example-91"><a class="header" href="#example-91">Example</a></h2>
 <pre><code>$nomention
 $getReactions[2394734883474774;38483494328934989;, ;&lt;:tip:3943484884834848483&gt;]
 </code></pre>
@@ -4062,7 +4096,7 @@ $getReactions[2394734883474774;38483494328934989;, ;&lt;:tip:3943484884834848483
 <ul>
 <li><code>roleID</code> - The role to get the color hex from.</li>
 </ul>
-<h2 id="example-91"><a class="header" href="#example-91">Example</a></h2>
+<h2 id="example-92"><a class="header" href="#example-92">Example</a></h2>
 <pre><code>$nomention
 $description[&lt;@$authorID&gt;'s color: `#$getRoleColor[$highestRole[$authorID]]`]
 $color[$getRoleColor[$highestRole[$authorID]]]
@@ -4105,7 +4139,7 @@ $color[$getRoleColor[$highestRole[$authorID]]]
 <ul>
 <li><code>value</code> - The value to search in the text split.</li>
 </ul>
-<h2 id="example-92"><a class="header" href="#example-92">Example</a></h2>
+<h2 id="example-93"><a class="header" href="#example-93">Example</a></h2>
 <pre><code>$nomention 
 $textSplit[Cake-Bread;-] 
 $getTextSplitIndex[$message[1]] 
@@ -4129,7 +4163,7 @@ $getTextSplitIndex[$message[1]]
 <pre><code>$getTimestamp
 </code></pre>
 <p>Returns unix timestamp in seconds.</p>
-<h4 id="example-93"><a class="header" href="#example-93">Example</a></h4>
+<h4 id="example-94"><a class="header" href="#example-94">Example</a></h4>
 <pre><code>$nomention
 Unix Timestamp: $getTimestamp
 </code></pre>
@@ -4150,7 +4184,7 @@ Unix Timestamp: $getTimestamp
 </blockquote>
 </li>
 </ul>
-<h4 id="example-94"><a class="header" href="#example-94">Example</a></h4>
+<h4 id="example-95"><a class="header" href="#example-95">Example</a></h4>
 <pre><code>$nomention
 Unix Timestamp
  In Seconds - $getTimestamp[s]
@@ -4177,7 +4211,7 @@ Unix Timestamp
 <li>idle</li>
 <li>offline</li>
 </ul>
-<h2 id="example-95"><a class="header" href="#example-95">Example</a></h2>
+<h2 id="example-96"><a class="header" href="#example-96">Example</a></h2>
 <pre><code>$nomention
 $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 </code></pre>
@@ -4193,7 +4227,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <li><code>userID</code> - The user to get the variable value for. If no user is provided, the author is used.</li>
 <li><code>guildID</code> - The guild to get the variable value for. If no guild is provided, current guild is used.</li>
 </ul>
-<h2 id="example-96"><a class="header" href="#example-96">Example</a></h2>
+<h2 id="example-97"><a class="header" href="#example-97">Example</a></h2>
 <pre><code>$nomention
 &lt;@$mentioned[1;yes]&gt; has $getUserVar[Money;$mentioned[1;yes]] coins.
 </code></pre>
@@ -4211,7 +4245,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <li><code>variableName</code> - The name of the variable to get the value from.</li>
 <li><code>userID</code> - The user to get the value for (if global-user).</li>
 </ul>
-<h2 id="example-97"><a class="header" href="#example-97">Example</a></h2>
+<h2 id="example-98"><a class="header" href="#example-98">Example</a></h2>
 <pre><code>$nomention
 You have $getVar[Money;$mentioned[1;yes]] coins!
 </code></pre>
@@ -4243,7 +4277,7 @@ You have $getVar[Money;$mentioned[1;yes]] coins!
 <ul>
 <li><code>roleID</code> - The role to give the mentioned user.</li>
 </ul>
-<h2 id="example-98"><a class="header" href="#example-98">Example</a></h2>
+<h2 id="example-99"><a class="header" href="#example-99">Example</a></h2>
 <pre><code>$onlyPerms[manageroles;Missing permissions!]
 $giveRole[807004801753284618]
 Added $roleName[807004801753284618] to $username[$mentioned[1]]!
@@ -4275,7 +4309,7 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 <blockquote>
 <p>🧙‍♂️ <code>$globalUserLeaderboard</code> automatically generates a description. So, <code>$description</code> should not be used in the code.</p>
 </blockquote>
-<h2 id="example-99"><a class="header" href="#example-99">Example</a></h2>
+<h2 id="example-100"><a class="header" href="#example-100">Example</a></h2>
 <pre><code>$nomention
 $globalUserLeaderboard[Money;asc]
 </code></pre>
@@ -4312,7 +4346,7 @@ $globalUserLeaderboard[Money;asc]
 <li><code>userID</code> - The user to check for the role.</li>
 <li><code>roleID</code> - The role that the bot is checking the user for.</li>
 </ul>
-<h2 id="example-100"><a class="header" href="#example-100">Example</a></h2>
+<h2 id="example-101"><a class="header" href="#example-101">Example</a></h2>
 <pre><code>$nomention
 $hasRole[$authorID;858376972303204362]
 </code></pre>
@@ -4329,7 +4363,7 @@ $hasRole[$authorID;858376972303204362]
 <pre><code>$highestRole[userID]
 </code></pre>
 <p>Returns the user's highest role.</p>
-<h2 id="example-101"><a class="header" href="#example-101">Example</a></h2>
+<h2 id="example-102"><a class="header" href="#example-102">Example</a></h2>
 <pre><code>$nomention
 $username[$mentioned[1;yes]]'s highest role: $roleName[$highestRole[$mentioned[1;yes]]] ($highestRole[$mentioned[1;yes]])
 </code></pre>
@@ -4343,7 +4377,7 @@ $username[$mentioned[1;yes]]'s highest role: $roleName[$highestRole[$mentioned[1
 <ul>
 <li><code>permissions</code> - The permissions that the role needs to have.  <a href="bdscript//src/resources/permissions.html">(see permissions list)</a></li>
 </ul>
-<h2 id="example-102"><a class="header" href="#example-102">Example</a></h2>
+<h2 id="example-103"><a class="header" href="#example-103">Example</a></h2>
 <pre><code>$nomention
 Highest Role with Administrator:  $roleName[$highestRoleWithPerms[admin]] ($highestRoleWithPerms[admin])
 </code></pre>
@@ -4378,7 +4412,7 @@ I will be offline &lt;t:$hostingExpireTime[yes]:R&gt;
 <h2 id="usage-111"><a class="header" href="#usage-111">Usage</a></h2>
 <pre><code>$hour
 </code></pre>
-<h2 id="example-103"><a class="header" href="#example-103">Example</a></h2>
+<h2 id="example-104"><a class="header" href="#example-104">Example</a></h2>
 <pre><code>$nomention
 Current Hour: $hour
 </code></pre>
@@ -4394,7 +4428,7 @@ $hypesquad[userID]
 <ul>
 <li><code>userID</code> - ID of the user whose hypesquad name should be returned</li>
 </ul>
-<h2 id="example-104"><a class="header" href="#example-104">Example</a></h2>
+<h2 id="example-105"><a class="header" href="#example-105">Example</a></h2>
 <pre><code>$nomention
 You are in $hypesquad[$authorID] house.
 </code></pre>
@@ -4419,7 +4453,7 @@ You are in $hypesquad[$authorID] house.
 <li><code>image url</code> - The URL of the image that appears. Must be a valid image URL.</li>
 <li><code>index</code> - What embed the image should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-105"><a class="header" href="#example-105">Example</a></h2>
+<h2 id="example-106"><a class="header" href="#example-106">Example</a></h2>
 <pre><code>$nomention
 $image[$userAvatar[$botID]]
 </code></pre>
@@ -4436,7 +4470,7 @@ $image[$userAvatar[$botID]]
 <ul>
 <li><code>userID</code> - The user to check.</li>
 </ul>
-<h2 id="example-106"><a class="header" href="#example-106">Example</a></h2>
+<h2 id="example-107"><a class="header" href="#example-107">Example</a></h2>
 <pre><code>$nomention
 Are You A Admin?: `$isAdmin[$authorID]`
 </code></pre>
@@ -4446,7 +4480,7 @@ Are You A Admin?: `$isAdmin[$authorID]`
 <h2 id="usage-116"><a class="header" href="#usage-116">Usage</a></h2>
 <pre><code>$isBanned[user ID]
 </code></pre>
-<h2 id="example-107"><a class="header" href="#example-107">Example</a></h2>
+<h2 id="example-108"><a class="header" href="#example-108">Example</a></h2>
 <pre><code>$nomention
 $isBanned[$mentioned[1]]
 </code></pre>
@@ -4469,7 +4503,7 @@ $isBanned[$mentioned[1]]
 <ul>
 <li><code>text</code> - The text to check.</li>
 </ul>
-<h2 id="example-108"><a class="header" href="#example-108">Example</a></h2>
+<h2 id="example-109"><a class="header" href="#example-109">Example</a></h2>
 <pre><code>$nomention
 $isBoolean[$message]
 </code></pre>
@@ -4486,7 +4520,7 @@ $isBoolean[$message]
 <ul>
 <li><code>userID</code> - The user to check.</li>
 </ul>
-<h2 id="example-109"><a class="header" href="#example-109">Example</a></h2>
+<h2 id="example-110"><a class="header" href="#example-110">Example</a></h2>
 <pre><code>$nomention
 Bot? $isBot[$findUser[$message]]
 </code></pre>
@@ -4503,7 +4537,7 @@ Bot? $isBot[$findUser[$message]]
 <ul>
 <li><code>roleID</code> - The role which the bot checks is hoisted or not.</li>
 </ul>
-<h2 id="example-110"><a class="header" href="#example-110">Example</a></h2>
+<h2 id="example-111"><a class="header" href="#example-111">Example</a></h2>
 <pre><code>$nomention
 $isHoisted[$findRole[$message]]
 </code></pre>
@@ -4521,7 +4555,7 @@ $isHoisted[$findRole[$message]]
 <ul>
 <li><code>roleID</code> - The role which the bot checks is mentionable or not.</li>
 </ul>
-<h2 id="example-111"><a class="header" href="#example-111">Example</a></h2>
+<h2 id="example-112"><a class="header" href="#example-112">Example</a></h2>
 <pre><code>$nomention
 $isMentionable[$findRole[$message]]
 </code></pre>
@@ -4538,7 +4572,7 @@ $isMentionable[$findRole[$message]]
 <ul>
 <li><code>channelID</code> - The channel to check.</li>
 </ul>
-<h2 id="example-112"><a class="header" href="#example-112">Example</a></h2>
+<h2 id="example-113"><a class="header" href="#example-113">Example</a></h2>
 <pre><code>$nomention
 Is &lt;#$channelID&gt; NSFW?: `$isNSFW[$channelID]`
 </code></pre>
@@ -4555,7 +4589,7 @@ Is &lt;#$channelID&gt; NSFW?: `$isNSFW[$channelID]`
 <ul>
 <li><code>value</code> - The text to check.</li>
 </ul>
-<h2 id="example-113"><a class="header" href="#example-113">Example</a></h2>
+<h2 id="example-114"><a class="header" href="#example-114">Example</a></h2>
 <pre><code>$nomention
 $isNumber[$message]
 </code></pre>
@@ -4568,7 +4602,7 @@ $isNumber[$message]
 <h2 id="usage-123"><a class="header" href="#usage-123">Usage</a></h2>
 <pre><code>$isSlash
 </code></pre>
-<h2 id="example-114"><a class="header" href="#example-114">Example</a></h2>
+<h2 id="example-115"><a class="header" href="#example-115">Example</a></h2>
 <pre><code>$nomention
 $if[$isSlash==true]
 $message[text]
@@ -4589,7 +4623,7 @@ $endif
 <ul>
 <li><code>userID</code> - The user to check the DM status for.</li>
 </ul>
-<h2 id="example-115"><a class="header" href="#example-115">Example</a></h2>
+<h2 id="example-116"><a class="header" href="#example-116">Example</a></h2>
 <pre><code>$nomention
 $onlyIf[$isUserDMEnabled[$authorID]==true;❌ Failed to DM you. Make sure you have your DMs on!]
 $dm
@@ -4635,7 +4669,7 @@ $message
 <li><code>userID</code> - The user to kick from the server.</li>
 <li><code>reason</code> - The audit-log reason for the kick. Optional.</li>
 </ul>
-<h2 id="example-116"><a class="header" href="#example-116">Example</a></h2>
+<h2 id="example-117"><a class="header" href="#example-117">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[kick;❌ You need the `kick` permission to use that!]
 $argsCheck[&gt;1;❌ Please provide a user to kick. Usage: `!kick (user) &lt;reason&gt;`.]
@@ -4652,7 +4686,7 @@ $kick[$mentioned[1];$noMentionMessage]
 <ul>
 <li><code>reason</code> - The audit-log reason for the kick. Optional.</li>
 </ul>
-<h2 id="example-117"><a class="header" href="#example-117">Example</a></h2>
+<h2 id="example-118"><a class="header" href="#example-118">Example</a></h2>
 <pre><code>$nomention
 $kickMention[$noMentionMessage]
 ✅ Kicked `$username[$mentioned[1]]#$discriminator[$mentioned[1]]`!
@@ -4670,7 +4704,7 @@ $kickMention[$noMentionMessage]
 <pre><code>$lowestRole[userID]
 </code></pre>
 <p>Returns the user's lowest role.</p>
-<h2 id="example-118"><a class="header" href="#example-118">Example</a></h2>
+<h2 id="example-119"><a class="header" href="#example-119">Example</a></h2>
 <pre><code>$nomention
 $username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;yes]]] ($lowestRole[$mentioned[1;yes]])
 </code></pre>
@@ -4684,7 +4718,7 @@ $username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;y
 <ul>
 <li><code>permissions</code> - The permissions that the role needs to have.  <a href="bdscript//src/resources/permissions.html">(see permissions list)</a>. Use <code>;</code> as separator for multiple permissions</li>
 </ul>
-<h2 id="example-119"><a class="header" href="#example-119">Example</a></h2>
+<h2 id="example-120"><a class="header" href="#example-120">Example</a></h2>
 <pre><code>$nomention
 Lowest Role with Administrator:  $roleName[$lowestRoleWithPerms[admin]] ($lowestRoleWithPerms[admin])
 </code></pre>
@@ -4698,7 +4732,7 @@ Lowest Role with Administrator:  $roleName[$lowestRoleWithPerms[admin]] ($lowest
 <ul>
 <li><code>numbers</code> - The numbers to get the data from. Separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-120"><a class="header" href="#example-120">Example</a></h2>
+<h2 id="example-121"><a class="header" href="#example-121">Example</a></h2>
 <pre><code>$nomention
 $max[100;20;50]
 </code></pre>
@@ -4729,7 +4763,7 @@ you amount of online members.</p>
 <li><code>mentionNumber</code> - The user-mention to get from the author's message  (<code>1</code> = first user-mention, <code>2</code> = second, etc).</li>
 <li><code>returnAuthor</code> - Whether to return the author's ID if no user is mentioned or not.</li>
 </ul>
-<h2 id="example-121"><a class="header" href="#example-121">Example</a></h2>
+<h2 id="example-122"><a class="header" href="#example-122">Example</a></h2>
 <pre><code>$nomention
 $mentioned[1]
 </code></pre>
@@ -4744,7 +4778,7 @@ $mentioned[1]
 <li><code>mentionNumber</code> - The channel-mention to get from the author's message  (<code>1</code> = first channel-mention, <code>2</code> = second, etc).</li>
 <li><code>returnCurrent</code> - Whether to return the current channel ID if no channel is mentioned or not.</li>
 </ul>
-<h2 id="example-122"><a class="header" href="#example-122">Example</a></h2>
+<h2 id="example-123"><a class="header" href="#example-123">Example</a></h2>
 <pre><code>$nomention
 $mentionedChannels[1]
 </code></pre>
@@ -4758,7 +4792,7 @@ $mentionedChannels[1]
 <ul>
 <li><code>mentionNumber</code> - The role-mention to get from the author's message  (<code>1</code> = first role-mention, <code>2</code> = second, etc).</li>
 </ul>
-<h2 id="example-123"><a class="header" href="#example-123">Example</a></h2>
+<h2 id="example-124"><a class="header" href="#example-124">Example</a></h2>
 <pre><code>$nomention
 $mentionedRoles[1]
 </code></pre>
@@ -4789,7 +4823,7 @@ $mentionedRoles[1]
 <h2 id="usage-133"><a class="header" href="#usage-133">Usage</a></h2>
 <pre><code>$messageID
 </code></pre>
-<h2 id="example-124"><a class="header" href="#example-124">Example</a></h2>
+<h2 id="example-125"><a class="header" href="#example-125">Example</a></h2>
 <pre><code>$nomention
 $messageID
 </code></pre>
@@ -4803,7 +4837,7 @@ $messageID
 <ul>
 <li><code>numbers</code> - The numbers to get the data from. Separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-125"><a class="header" href="#example-125">Example</a></h2>
+<h2 id="example-126"><a class="header" href="#example-126">Example</a></h2>
 <pre><code>$nomention
 $min[3;5;1]
 </code></pre>
@@ -4816,7 +4850,7 @@ $min[3;5;1]
 <h2 id="usage-135"><a class="header" href="#usage-135">Usage</a></h2>
 <pre><code>$minute
 </code></pre>
-<h2 id="example-126"><a class="header" href="#example-126">Example</a></h2>
+<h2 id="example-127"><a class="header" href="#example-127">Example</a></h2>
 <pre><code>$nomention
 Current Minute: $minute
 </code></pre>
@@ -4847,7 +4881,7 @@ Current Minute: $minute
 <blockquote>
 <p>🧙‍♂️ You can use <code>$channelID[category/channelName]</code> to get the ID of a category or channel.</p>
 </blockquote>
-<h2 id="example-127"><a class="header" href="#example-127">Example</a></h2>
+<h2 id="example-128"><a class="header" href="#example-128">Example</a></h2>
 <p><em>For this example, we will be changing the channel name from 'general' to 'chill-chat'. As well as changing the channel topic to 'A chill chat!'.</em></p>
 <pre><code>$nomention
 $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchanged]
@@ -4867,7 +4901,7 @@ $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchange
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> to add/remove. <code>+</code> means allow, <code>-</code> means deny, <code>/</code> means neutral permission.</li>
 <li><code>userID/roleID</code> - The role or user to modify the permissions for. Use <code>$guildID</code> for <em>@everyone</em>.</li>
 </ul>
-<h2 id="example-128"><a class="header" href="#example-128">Example</a></h2>
+<h2 id="example-129"><a class="header" href="#example-129">Example</a></h2>
 <p>Lock:</p>
 <pre><code>$nomention
 $onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
@@ -4898,7 +4932,7 @@ $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 <li><code>hoisted</code> - Whether the role should be displayed separately or not.</li>
 <li><code>mentionable</code> - Whether the role should be mentionable by everyone or not.</li>
 </ul>
-<h2 id="example-129"><a class="header" href="#example-129">Example</a></h2>
+<h2 id="example-130"><a class="header" href="#example-130">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;❌ Please provide the needed arguments! Usage: `!role-name (role) (newRoleName)`]
 $onlyPerms[manageroles;❌ You are missing the manage_roles permission!]
@@ -4925,7 +4959,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 <ul>
 <li><code>numbers</code> - The numbers to return the remainder for. Separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-130"><a class="header" href="#example-130">Example</a></h2>
+<h2 id="example-131"><a class="header" href="#example-131">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;❌ Invalid usage. Usage: `!modulo (number1) (number2)`]
 $modulo[$message[1];$message[2]]
@@ -4939,7 +4973,7 @@ $modulo[$message[1];$message[2]]
 <h2 id="usage-140"><a class="header" href="#usage-140">Usage</a></h2>
 <pre><code>$month
 </code></pre>
-<h2 id="example-131"><a class="header" href="#example-131">Example</a></h2>
+<h2 id="example-132"><a class="header" href="#example-132">Example</a></h2>
 <pre><code>$nomention
 Current Month: $month
 </code></pre>
@@ -4953,7 +4987,7 @@ Current Month: $month
 <ul>
 <li><code>numbers</code> - The numbers to multiply, separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-132"><a class="header" href="#example-132">Example</a></h2>
+<h2 id="example-133"><a class="header" href="#example-133">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;❌ Invalid usage. Usage: `!multiply (number1) (number2)`]
 $multi[$message[1];$message[2]]
@@ -4972,7 +5006,7 @@ $multi[$message[1];$message[2]]
 <ul>
 <li><code>mutedRoleName</code> - The name of the 'Muted' role (case sensitive).</li>
 </ul>
-<h2 id="example-133"><a class="header" href="#example-133">Example</a></h2>
+<h2 id="example-134"><a class="header" href="#example-134">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[manageroles;❌ You are missing permission: `MANAGE_ROLES`.]
 $mute[Muted]
@@ -5006,7 +5040,7 @@ $mute[Muted]
 <li><code>{subject}</code> - Returns the ticket subject (user's message).</li>
 <li><code>{channel}</code> - Mentions the new ticket channel.</li>
 </ul>
-<h2 id="example-134"><a class="header" href="#example-134">Example</a></h2>
+<h2 id="example-135"><a class="header" href="#example-135">Example</a></h2>
 <pre><code>$nomention
 $newTicket[Tickets;No subject was provided.;Thanks for making a ticket. Please explain your issue in detail so we can help.
 Subject: {subject}
@@ -5027,7 +5061,7 @@ User: &lt;@$authorID&gt;;Created ticket! {channel};Failed to make ticket!]
 <pre><code>$nickname[userID]
 </code></pre>
 <p>Returns the provided user's display name.</p>
-<h2 id="example-135"><a class="header" href="#example-135">Example</a></h2>
+<h2 id="example-136"><a class="header" href="#example-136">Example</a></h2>
 <pre><code>$nomention
 &lt;@$mentioned[1;yes]&gt;'s nickname is `$nickname[$mentioned[1;yes]]`
 </code></pre>
@@ -5037,7 +5071,7 @@ User: &lt;@$authorID&gt;;Created ticket! {channel};Failed to make ticket!]
 <h2 id="usage-144"><a class="header" href="#usage-144">Usage</a></h2>
 <pre><code>$nomention
 </code></pre>
-<h2 id="example-136"><a class="header" href="#example-136">Example</a></h2>
+<h2 id="example-137"><a class="header" href="#example-137">Example</a></h2>
 <p>With <code>$nomention</code>:</p>
 <p><img src="https://user-images.githubusercontent.com/69215413/126917956-197108f9-7cd4-4e96-9a24-12d36b1886d8.png" alt="example" /></p>
 <p>Without <code>$nomention</code>:</p>
@@ -5057,7 +5091,7 @@ User: &lt;@$authorID&gt;;Created ticket! {channel};Failed to make ticket!]
 <blockquote>
 <p>🧙‍♂️ For example, <code>$noMentionMessage[1]</code> would just return the first word of the message. You can also use <code>$noMentionessage[&gt;]</code> to get the last argument/word of the user's message.</p>
 </blockquote>
-<h2 id="example-137"><a class="header" href="#example-137">Example</a></h2>
+<h2 id="example-138"><a class="header" href="#example-138">Example</a></h2>
 <pre><code>$nomention
 $noMentionMessage
 </code></pre>
@@ -5072,7 +5106,7 @@ $noMentionMessage
 <li><code>number</code> - The number to apply the separator to.</li>
 <li><code>customSeparator</code> - The separator between each thousand. Default is <code>,</code>. Optional.</li>
 </ul>
-<h2 id="example-138"><a class="header" href="#example-138">Example</a></h2>
+<h2 id="example-139"><a class="header" href="#example-139">Example</a></h2>
 <pre><code>$nomention
 $numberSeparator[5000]
 </code></pre>
@@ -5097,7 +5131,7 @@ $numberSeparator[5000]
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to execute the command. Separate permissions with <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that is returned when the bot doesn't have the needed permissions.</li>
 </ul>
-<h3 id="example-139"><a class="header" href="#example-139">Example</a></h3>
+<h3 id="example-140"><a class="header" href="#example-140">Example</a></h3>
 <pre><code>$nomention
 $onlyBotChannelPerms[$channelID;sendmessages;embedlinks;Missing permissions!]
 $description[Hey! I have `embed links` permission in current channel.]
@@ -5112,7 +5146,7 @@ $description[Hey! I have `embed links` permission in current channel.]
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to run the command. Use <code>;</code> as separator for multiple permissions.</li>
 <li><code>errorMessage</code> - The message to return when the bot doesn't have all the provided permissions.</li>
 </ul>
-<h3 id="example-140"><a class="header" href="#example-140">Example</a></h3>
+<h3 id="example-141"><a class="header" href="#example-141">Example</a></h3>
 <pre><code>$nomention
 $onlyBotPerms[sendmessages;embedlinks;Missing permissions!]
 $description[Hey! I have `embed links` permission.]
@@ -5147,7 +5181,7 @@ $description[Hey! I have `embed links` permission.]
 <li><code>userIDs</code> - The users that can use this command, separate IDs using <code>;</code>.</li>
 <li><code>errorMessage</code> - The error message that is returned, when the user running the command is not whitelisted.</li>
 </ul>
-<h2 id="example-141"><a class="header" href="#example-141">Example</a></h2>
+<h2 id="example-142"><a class="header" href="#example-142">Example</a></h2>
 <pre><code>$onlyForIDs[YOUR_ID;❌ You are not my owner!]
 $eval[$message]
 $c[This can only be executed in BDScript 2.]
@@ -5226,7 +5260,7 @@ $c[This can only be executed in BDScript 2.]
 <ul>
 <li><code>errorMessage</code> - The message that is returned when the command is executed outside of a NSFW channel.</li>
 </ul>
-<h2 id="example-142"><a class="header" href="#example-142">Example</a></h2>
+<h2 id="example-143"><a class="header" href="#example-143">Example</a></h2>
 <pre><code>$nomention
 $onlyNSFW[❌ That command can only be used in NSFW channels.]
 $c[Put your code here.]
@@ -5246,7 +5280,7 @@ $c[Put your code here.]
 <h2 id="usage-160"><a class="header" href="#usage-160">Usage</a></h2>
 <pre><code>$or[condition1;condition2;etc]
 </code></pre>
-<h2 id="example-143"><a class="header" href="#example-143">Example</a></h2>
+<h2 id="example-144"><a class="header" href="#example-144">Example</a></h2>
 <pre><code>$nomention
 $if[$or[$message==hi;$message==hey;$message==hello]==true]
 Hello $username!
@@ -5274,7 +5308,7 @@ The value of <code>$ping</code> is expressed in miliseconds.</p>
 <pre><code>$pinMessage
 </code></pre>
 <p>It pins bot's response message.</p>
-<h4 id="example-144"><a class="header" href="#example-144">Example</a></h4>
+<h4 id="example-145"><a class="header" href="#example-145">Example</a></h4>
 <pre><code>$nomention
 $pinMessage
 This is a cool pinned message! 😎
@@ -5284,7 +5318,7 @@ This is a cool pinned message! 😎
 <pre><code>$pinMessage[channelID;messageID]
 </code></pre>
 <p>It pins a specific message using it's message ID &amp; channel ID.</p>
-<h5 id="example-145"><a class="header" href="#example-145">Example</a></h5>
+<h5 id="example-146"><a class="header" href="#example-146">Example</a></h5>
 <pre><code>$nomention
 $pinMessage[$channelID;$messageID]
 I have pinned your message!
@@ -5302,7 +5336,7 @@ I have pinned your message!
 <ul>
 <li><code>unix timestamp</code> - Accepts either &quot;yes&quot; or &quot;no&quot;. If &quot;yes&quot; is written, it will return premium expiration value in UNIX timestamp and if &quot;no&quot;, it will output as normal time format. Default as &quot;no&quot;.</li>
 </ul>
-<h2 id="example-146"><a class="header" href="#example-146">Example</a></h2>
+<h2 id="example-147"><a class="header" href="#example-147">Example</a></h2>
 <h4 id="when-no-premium"><a class="header" href="#when-no-premium">When no premium</a></h4>
 <pre><code>$nomention
 My premium expires in: $premiumExpireTime
@@ -5325,7 +5359,7 @@ My premium expires in: $premiumExpireTime (UNIX Timestamp : $premiumExpireTime[y
 <pre><code>$random[minimum;maximum]
 </code></pre>
 <p>Returns a random number between 'minimum' and 'maximum'.</p>
-<h2 id="example-147"><a class="header" href="#example-147">Example</a></h2>
+<h2 id="example-148"><a class="header" href="#example-148">Example</a></h2>
 <pre><code>$nomention
 🎲 You rolled `$random[1;7]`!
 </code></pre>
@@ -5338,7 +5372,7 @@ My premium expires in: $premiumExpireTime (UNIX Timestamp : $premiumExpireTime[y
 <h2 id="usage-162"><a class="header" href="#usage-162">Usage</a></h2>
 <pre><code>$randomChannelID
 </code></pre>
-<h2 id="example-148"><a class="header" href="#example-148">Example</a></h2>
+<h2 id="example-149"><a class="header" href="#example-149">Example</a></h2>
 <pre><code>$nomention
 Here's A Random Channel: &lt;#$randomChannelID&gt;
 </code></pre>
@@ -5348,7 +5382,7 @@ Here's A Random Channel: &lt;#$randomChannelID&gt;
 <h2 id="usage-163"><a class="header" href="#usage-163">Usage</a></h2>
 <pre><code>$randomMention
 </code></pre>
-<h2 id="example-149"><a class="header" href="#example-149">Example</a></h2>
+<h2 id="example-150"><a class="header" href="#example-150">Example</a></h2>
 <pre><code>$nomention
 Random User: $randomMention
 </code></pre>
@@ -5361,7 +5395,7 @@ Random User: $randomMention
 <ul>
 <li><code>length</code> - How long the string should be (max <code>10</code>).</li>
 </ul>
-<h2 id="example-150"><a class="header" href="#example-150">Example</a></h2>
+<h2 id="example-151"><a class="header" href="#example-151">Example</a></h2>
 <pre><code>$nomention
 String: `$randomString[$message]`
 </code></pre>
@@ -5375,7 +5409,7 @@ String: `$randomString[$message]`
 <ul>
 <li><code>text1</code>/<code>text2</code>/<code>etc</code> - The text which the bot can choose from.</li>
 </ul>
-<h2 id="example-151"><a class="header" href="#example-151">Example</a></h2>
+<h2 id="example-152"><a class="header" href="#example-152">Example</a></h2>
 <pre><code>$nomention
 $randomText[Hello;Hi;Hey]!
 </code></pre>
@@ -5423,7 +5457,7 @@ $randomText[Hello;Hi;Hey]!
 <li><code>phrases</code> - The phrases/words to delete, separate phrases using <code>;</code>.</li>
 <li><code>howMany</code> - How many messages containing the provided phrases to delete. Max is 100.</li>
 </ul>
-<h2 id="example-152"><a class="header" href="#example-152">Example</a></h2>
+<h2 id="example-153"><a class="header" href="#example-153">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[managemessages;❌ You are missing the `MANAGE_MESSAGES` permission!]
 $removeContains[https://discord.gg/;discord.gg/;https://discord.com/invite;$noMentionMessage]
@@ -5441,7 +5475,7 @@ Successful purged `$noMentionMessage` messages containing invites!
 <pre><code>$removeLinks[text]
 </code></pre>
 <p>Removes all links from the provided 'text'.</p>
-<h2 id="example-153"><a class="header" href="#example-153">Example</a></h2>
+<h2 id="example-154"><a class="header" href="#example-154">Example</a></h2>
 <pre><code>$nomention
 $removeLinks[$noMentionMessage]
 </code></pre>
@@ -5516,12 +5550,12 @@ $repeatMessage[5;Hello World! ]
 <h2 id="usage-173"><a class="header" href="#usage-173">Usage</a></h2>
 <pre><code>$reply
 </code></pre>
-<h2 id="example-154"><a class="header" href="#example-154">Example</a></h2>
+<h2 id="example-155"><a class="header" href="#example-155">Example</a></h2>
 <pre><code>$nomention
 $reply
 Hello $username 👋🏻
 </code></pre>
-<h2 id="example-155"><a class="header" href="#example-155">Example</a></h2>
+<h2 id="example-156"><a class="header" href="#example-156">Example</a></h2>
 <p>With <code>$reply</code>:</p>
 <p><img src="https://user-images.githubusercontent.com/42785890/151721130-51524143-b136-4cfc-b028-694b1d09e84a.png" alt="image" /></p>
 <p>Without <code>$reply</code>:</p>
@@ -5538,7 +5572,7 @@ Hello $username 👋🏻
 <ul>
 <li><code>delay</code> - How long the command is delayed (e.g: 10s, 10m, 40m).</li>
 </ul>
-<h2 id="example-156"><a class="header" href="#example-156">Example</a></h2>
+<h2 id="example-157"><a class="header" href="#example-157">Example</a></h2>
 <pre><code>$replyIn[5s]
 Hi $username!
 </code></pre>
@@ -5572,7 +5606,7 @@ Hi $username!
 <h2 id="usage-177"><a class="header" href="#usage-177">Usage</a></h2>
 <pre><code>$roleCount
 </code></pre>
-<h2 id="example-157"><a class="header" href="#example-157">Example</a></h2>
+<h2 id="example-158"><a class="header" href="#example-158">Example</a></h2>
 <pre><code>$nomention
 There are $roleCount roles in $serverName[$guildID]
 </code></pre>
@@ -5630,7 +5664,7 @@ $roleGrant[$mentioned[1];+$mentionedRoles[1]]
 <ul>
 <li><code>roleName</code> - The role name to get the role ID for.</li>
 </ul>
-<h2 id="example-158"><a class="header" href="#example-158">Example</a></h2>
+<h2 id="example-159"><a class="header" href="#example-159">Example</a></h2>
 <pre><code>$nomention
 Role ID For &quot;$message&quot;: $roleID[$message]
 </code></pre>
@@ -5651,7 +5685,7 @@ Role ID For &quot;$message&quot;: $roleID[$message]
 <pre><code>$roleInfo[code/text]
 </code></pre>
 <p>⚠️ You can not include <code>$roleInfo[]</code> in a command with a <code>$description[]</code> (because it makes one automatically).</p>
-<h2 id="example-159"><a class="header" href="#example-159">Example</a></h2>
+<h2 id="example-160"><a class="header" href="#example-160">Example</a></h2>
 <pre><code>$nomention
 $roleInfo[Name: {name}
 ID: {ID}
@@ -5671,7 +5705,7 @@ $title[Role Info]
 <ul>
 <li><code>roleID</code> - The role to get the name of.</li>
 </ul>
-<h2 id="example-160"><a class="header" href="#example-160">Example</a></h2>
+<h2 id="example-161"><a class="header" href="#example-161">Example</a></h2>
 <pre><code>$nomention
 $roleName[$highestRole[$authorID]]
 </code></pre>
@@ -5681,7 +5715,7 @@ $roleName[$highestRole[$authorID]]
 <h2 id="usage-183"><a class="header" href="#usage-183">Usage</a></h2>
 <pre><code>$roleNames
 </code></pre>
-<h2 id="example-161"><a class="header" href="#example-161">Example</a></h2>
+<h2 id="example-162"><a class="header" href="#example-162">Example</a></h2>
 <pre><code>$nomention
 $description[Server Roles: $roleNames]
 </code></pre>
@@ -5695,7 +5729,7 @@ $description[Server Roles: $roleNames]
 <ul>
 <li><code>roleID</code> - The role to get the position of.</li>
 </ul>
-<h2 id="example-162"><a class="header" href="#example-162">Example</a></h2>
+<h2 id="example-163"><a class="header" href="#example-163">Example</a></h2>
 <pre><code>$nomention
 $description[&lt;@&amp;$findRole[$message]&gt;'s Position: $rolePosition[$findRole[$message]]]
 </code></pre>
@@ -5710,7 +5744,7 @@ $description[&lt;@&amp;$findRole[$message]&gt;'s Position: $rolePosition[$findRo
 <li><code>number</code> - The number to round.</li>
 <li><code>decimalPlace</code> - The decimal place to round the number to. Default as <code>0</code>. Optional.</li>
 </ul>
-<h2 id="example-163"><a class="header" href="#example-163">Example</a></h2>
+<h2 id="example-164"><a class="header" href="#example-164">Example</a></h2>
 <pre><code>$nomention
 $round[100.123;1]
 </code></pre>
@@ -5720,7 +5754,7 @@ $round[100.123;1]
 <h2 id="usage-186"><a class="header" href="#usage-186">Usage</a></h2>
 <pre><code>$scriptLanguage
 </code></pre>
-<h2 id="example-164"><a class="header" href="#example-164">Example</a></h2>
+<h2 id="example-165"><a class="header" href="#example-165">Example</a></h2>
 <pre><code>$nomention
 This command uses `$scriptLanguage`.
 </code></pre>
@@ -5742,7 +5776,7 @@ This command uses `$scriptLanguage`.
 <h2 id="usage-187"><a class="header" href="#usage-187">Usage</a></h2>
 <pre><code>$second
 </code></pre>
-<h2 id="example-165"><a class="header" href="#example-165">Example</a></h2>
+<h2 id="example-166"><a class="header" href="#example-166">Example</a></h2>
 <pre><code>$nomention
 Current Second: $second
 </code></pre>
@@ -5768,7 +5802,7 @@ Current Second: $second
 <li><code>add timestamp</code> - add the time to send (use yes or no).</li>
 <li><code>return ID</code> - output the message ID outside the embed (use yes or no).</li>
 </ul>
-<h2 id="example-166"><a class="header" href="#example-166">Example</a></h2>
+<h2 id="example-167"><a class="header" href="#example-167">Example</a></h2>
 <pre><code>$nomention
 $sendEmbedMessage[$channelID;;Title;https://discord.gg/;description;000000;author;$authorAvatar;footer;$authorAvatar;$authorAvatar;$authorAvatar;no;no]
 </code></pre>
@@ -5833,7 +5867,7 @@ $serverChannelExists[$channelID[channelName]]
 <h2 id="usage-192"><a class="header" href="#usage-192">Usage</a></h2>
 <pre><code>$serverCount
 </code></pre>
-<h2 id="example-167"><a class="header" href="#example-167">Example</a></h2>
+<h2 id="example-168"><a class="header" href="#example-168">Example</a></h2>
 <pre><code>$nomention
 I'm currently in $serverCount servers!
 </code></pre>
@@ -5846,7 +5880,7 @@ I'm currently in $serverCount servers!
 <h2 id="usage-193"><a class="header" href="#usage-193">Usage</a></h2>
 <pre><code>$serverDescription
 </code></pre>
-<h2 id="example-168"><a class="header" href="#example-168">Example</a></h2>
+<h2 id="example-169"><a class="header" href="#example-169">Example</a></h2>
 <pre><code>Hey, this server has a great description: $serverDescription
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/189480730-f72d6770-2e45-4f01-b73c-cec642ccf51f.png" alt="Example" /></p>
@@ -5866,7 +5900,7 @@ I'm currently in $serverCount servers!
 <ul>
 <li><code>serverID</code> - The server to get the icon for <em>(bot must be in the server)</em>.</li>
 </ul>
-<h2 id="example-169"><a class="header" href="#example-169">Example</a></h2>
+<h2 id="example-170"><a class="header" href="#example-170">Example</a></h2>
 <pre><code>$nomention
 $image[$serverIcon]
 </code></pre>
@@ -5893,7 +5927,7 @@ $image[$serverIcon]
 <li><code>{verificationLvl}</code> - Returns the server verification level.</li>
 <li><code>{large}</code> - Finds out if a server is considered 'large'.</li>
 </ul>
-<h2 id="example-170"><a class="header" href="#example-170">Example</a></h2>
+<h2 id="example-171"><a class="header" href="#example-171">Example</a></h2>
 <pre><code>$nomention
 $title[Server Info]
 $serverInfo[Server Name: {name}
@@ -5930,7 +5964,7 @@ Large Server?: {large};no]
 <blockquote>
 <p>🧙‍♂️ The bot must be present in the server to return it's name.</p>
 </blockquote>
-<h2 id="example-171"><a class="header" href="#example-171">Example</a></h2>
+<h2 id="example-172"><a class="header" href="#example-172">Example</a></h2>
 <pre><code>$nomention
 Server Name: $serverName[$guildID]
 </code></pre>
@@ -5943,7 +5977,7 @@ Server Name: $serverName[$guildID]
 <pre><code>$serverNames
 </code></pre>
 <p>Returns 10 servers names that the bot is in</p>
-<h4 id="example-172"><a class="header" href="#example-172">Example</a></h4>
+<h4 id="example-173"><a class="header" href="#example-173">Example</a></h4>
 <pre><code>$nomention
 $onlyForIDs[YOUR_ID;Only my owner can use that!]
 $serverNames
@@ -5960,7 +5994,7 @@ $serverNames
 <li><code>amount</code> - The <em>x</em> amount of server names you want. Use <code>-1</code> if you want to return all server names.</li>
 <li><code>separator</code> - A custom separator for separating server names.</li>
 </ul>
-<h4 id="example-173"><a class="header" href="#example-173">Example</a></h4>
+<h4 id="example-174"><a class="header" href="#example-174">Example</a></h4>
 <pre><code>$nomention
 $serverNames[5;
 ]
@@ -5984,7 +6018,7 @@ $serverNames[5;
 <blockquote>
 <p>🧙‍♂️ Bot must be present in the server to get the server owner ID.</p>
 </blockquote>
-<h2 id="example-174"><a class="header" href="#example-174">Example</a></h2>
+<h2 id="example-175"><a class="header" href="#example-175">Example</a></h2>
 <pre><code>$nomention
 This server is owned by &lt;@$serverOwner&gt;!
 </code></pre>
@@ -6003,7 +6037,7 @@ This server is owned by &lt;@$serverOwner&gt;!
 <h2 id="usage-198"><a class="header" href="#usage-198">Usage</a></h2>
 <pre><code>$serverVerificationLvl
 </code></pre>
-<h2 id="example-175"><a class="header" href="#example-175">Example</a></h2>
+<h2 id="example-176"><a class="header" href="#example-176">Example</a></h2>
 <pre><code>$nomention
 This server's verification level is $serverVerificationLvl
 </code></pre>
@@ -6062,7 +6096,7 @@ This server's verification level is $serverVerificationLvl
 <p><code>$shardID</code> - Returns the shard id of the current guild.</p>
 <h3 id="usage-2-26"><a class="header" href="#usage-2-26">Usage #2</a></h3>
 <p><code>$shardID[guildID]</code> - Returns the shard id of the provided guild.</p>
-<h2 id="example-176"><a class="header" href="#example-176">Example</a></h2>
+<h2 id="example-177"><a class="header" href="#example-177">Example</a></h2>
 <pre><code>$nomention
 $shardID
 </code></pre>
@@ -6072,7 +6106,7 @@ $shardID
 <h2 id="usage-202"><a class="header" href="#usage-202">Usage</a></h2>
 <pre><code>$slashCommandsCount
 </code></pre>
-<h2 id="example-177"><a class="header" href="#example-177">Example</a></h2>
+<h2 id="example-178"><a class="header" href="#example-178">Example</a></h2>
 <pre><code>$nomention
 I have $slashCommandsCount slash commands!
 </code></pre>
@@ -6090,7 +6124,7 @@ I have $slashCommandsCount slash commands!
 <li><code>channelID</code> - The channel in the which the slowmode is being modified in. Use <code>0</code>/<code>0s</code> to disable the slowmode.</li>
 <li><code>delay</code> - The new slowmode delay <em>(in seconds, e.g. 1s, 180s, 5s, 3s, etc)</em>.</li>
 </ul>
-<h3 id="example-178"><a class="header" href="#example-178">Example</a></h3>
+<h3 id="example-179"><a class="header" href="#example-179">Example</a></h3>
 <pre><code>$nomention
 $argsCheck[&gt;1;:x: Incorrect Usage! Example: `!slowmode 5s`]
 $slowmode[$mentionedChannels[1;yes];$message[1]]
@@ -6118,7 +6152,7 @@ Slowmode changed to $message[1]!
 </li>
 <li><code>separator</code> - the separator between each number.</li>
 </ul>
-<h2 id="example-179"><a class="header" href="#example-179">Example</a></h2>
+<h2 id="example-180"><a class="header" href="#example-180">Example</a></h2>
 <pre><code>$nomention
 $sort[8;5;9;1;3;asc;4; - ]
 </code></pre>
@@ -6135,7 +6169,7 @@ $sort[8;5;9;1;3;asc;4; - ]
 <ul>
 <li><code>index</code> - The split value to get (e.g 2 for the second split). You can also use <code>&gt;</code> to return the last splitted value i.e <code>$splitText[&gt;]</code>.</li>
 </ul>
-<h3 id="example-180"><a class="header" href="#example-180">Example</a></h3>
+<h3 id="example-181"><a class="header" href="#example-181">Example</a></h3>
 <pre><code>$nomention
 $textSplit[Hi-Hello-Hey;-]
 $splitText[2]
@@ -6157,7 +6191,7 @@ $splitText[2]
 <li><code>archiveDuration</code> - The archive duration of this thread in minutes. Only 60, 1440,4320, 10080 can be used. Note that for the 4320 archive duration option, the server needs to be level 1 boosted, and for 10080 the server needs level 2.</li>
 <li><code>returnThreadID</code> - Whether to return the thread channel ID or not.</li>
 </ul>
-<h2 id="example-181"><a class="header" href="#example-181">Example</a></h2>
+<h2 id="example-182"><a class="header" href="#example-182">Example</a></h2>
 <pre><code>$var[threadID;$startThread[Cool Thread;$channelID;;1440;yes]]
 I created a new thread! &lt;#$var[threadID]&gt;
 $c[❗️This example requires BDScript 2 enabled❗️]
@@ -6174,7 +6208,7 @@ This code is storing the newly created thread ID returned from <code>$startThrea
 <ul>
 <li><code>numbers</code> - The numbers to subtract, separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-182"><a class="header" href="#example-182">Example</a></h2>
+<h2 id="example-183"><a class="header" href="#example-183">Example</a></h2>
 <pre><code>$nomention
 $sub[10;5]
 </code></pre>
@@ -6188,7 +6222,7 @@ $sub[10;5]
 <ul>
 <li><code>numbers</code> - The numbers to add together, separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-183"><a class="header" href="#example-183">Example</a></h2>
+<h2 id="example-184"><a class="header" href="#example-184">Example</a></h2>
 <pre><code>$nomention
 $sum[10;5]
 </code></pre>
@@ -6233,7 +6267,7 @@ $sum[10;5]
 <ul>
 <li><code>roleID</code> - The role to remove from the mentioned user.</li>
 </ul>
-<h2 id="example-184"><a class="header" href="#example-184">Example</a></h2>
+<h2 id="example-185"><a class="header" href="#example-185">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[manageroles;Missing permissions!]
 $takeRole[867492530463178803]
@@ -6261,7 +6295,7 @@ Removed $roleName[867492530463178803] from $username[$mentioned[1]]!
 <li><code>threadID</code> - The ID of the thread channel to add this user to.</li>
 <li><code>userID</code> - The user to add to the thread.</li>
 </ul>
-<h2 id="example-185"><a class="header" href="#example-185">Example</a></h2>
+<h2 id="example-186"><a class="header" href="#example-186">Example</a></h2>
 <pre><code>$nomention
 $var[thread;$startThread[Cool Thread;$channelID;;60;yes]]
 $threadAddMember[$var[thread];$authorID]
@@ -6279,7 +6313,7 @@ $c[Adds the author to the newly created 'Cool Thread']
 <li><code>threadID</code> - The ID of the thread channel to remove this user from.</li>
 <li><code>userID</code> - The user to remove from the thread.</li>
 </ul>
-<h2 id="example-186"><a class="header" href="#example-186">Example</a></h2>
+<h2 id="example-187"><a class="header" href="#example-187">Example</a></h2>
 <pre><code>$nomention
 $threadRemoveMember[878305123707785218;$authorID]
 </code></pre>
@@ -6294,7 +6328,7 @@ $threadRemoveMember[878305123707785218;$authorID]
 <li><code>image url</code> - The image to set as the thumbnail.</li>
 <li><code>index</code> - What embed the thumbnail should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-187"><a class="header" href="#example-187">Example</a></h2>
+<h2 id="example-188"><a class="header" href="#example-188">Example</a></h2>
 <pre><code>$nomention
 $description[This is the thumbnail ↘️]
 $thumbnail[$authorAvatar]
@@ -6310,7 +6344,7 @@ $thumbnail[$authorAvatar]
 <li><code>timezone</code> - The timezone to change the time/date functions to.</li>
 </ul>
 <p>⚠️ <strong><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Get timezones from here (click-me)</a></strong></p>
-<h2 id="example-188"><a class="header" href="#example-188">Example</a></h2>
+<h2 id="example-189"><a class="header" href="#example-189">Example</a></h2>
 <pre><code>$nomention
 $time[America/New_York]
 Date: $date
@@ -6345,7 +6379,7 @@ $timeout[$message[1];$findUser[$message[2];no]]
 <li><code>text</code> - The text to set the title as. It cannot exceed more than 256 characters.</li>
 <li><code>index</code> - What embed the title should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-189"><a class="header" href="#example-189">Example</a></h2>
+<h2 id="example-190"><a class="header" href="#example-190">Example</a></h2>
 <pre><code>$nomention
 $title[This is a title!]
 $description[⬆️ That is a nice title.]
@@ -6360,7 +6394,7 @@ $description[⬆️ That is a nice title.]
 <ul>
 <li><code>text</code> - The text to convert.</li>
 </ul>
-<h2 id="example-190"><a class="header" href="#example-190">Example</a></h2>
+<h2 id="example-191"><a class="header" href="#example-191">Example</a></h2>
 <pre><code>$nomention
 $toLowercase[THIS TEXT IS NOW lowercase]
 </code></pre>
@@ -6383,7 +6417,7 @@ $toLowercase[THIS TEXT IS NOW lowercase]
 <ul>
 <li><code>text</code> - The text to convert.</li>
 </ul>
-<h2 id="example-191"><a class="header" href="#example-191">Example</a></h2>
+<h2 id="example-192"><a class="header" href="#example-192">Example</a></h2>
 <pre><code>$nomention
 $toUppercase[this text is now UPPERCASE]
 </code></pre>
@@ -6393,7 +6427,7 @@ $toUppercase[this text is now UPPERCASE]
 <h2 id="usage-219"><a class="header" href="#usage-219">Usage</a></h2>
 <pre><code>$trimSpace[text]
 </code></pre>
-<h2 id="example-192"><a class="header" href="#example-192">Example</a></h2>
+<h2 id="example-193"><a class="header" href="#example-193">Example</a></h2>
 <pre><code>$nomention
 &gt;$trimSpace[ Hi ]&lt;
 </code></pre>
@@ -6411,7 +6445,7 @@ $toUppercase[this text is now UPPERCASE]
 <h2 id="usage-221"><a class="header" href="#usage-221">Usage</a></h2>
 <pre><code>$unban
 </code></pre>
-<h2 id="example-193"><a class="header" href="#example-193">Example</a></h2>
+<h2 id="example-194"><a class="header" href="#example-194">Example</a></h2>
 <pre><code>$nomention
 $unban
 Successfully unbanned user!
@@ -6437,7 +6471,7 @@ Successfully unbanned user!
 <ul>
 <li><code>userID</code> - The user to unban.</li>
 </ul>
-<h2 id="example-194"><a class="header" href="#example-194">Example</a></h2>
+<h2 id="example-195"><a class="header" href="#example-195">Example</a></h2>
 <pre><code>$nomention
 $unbanID
 Successfully unbanned user!
@@ -6453,7 +6487,7 @@ This can be used so the script reads special characters from texts such as messa
 <ul>
 <li><code>text</code> - The text to unescape.</li>
 </ul>
-<h2 id="example-195"><a class="header" href="#example-195">Example</a></h2>
+<h2 id="example-196"><a class="header" href="#example-196">Example</a></h2>
 <pre><code>$nomention
 $randomText[$unescape[$message]]
 </code></pre>
@@ -6471,7 +6505,7 @@ $randomText[$unescape[$message]]
 <ul>
 <li><code>mutedRoleName</code> - The name of the 'Muted' role (case sensitive).</li>
 </ul>
-<h2 id="example-196"><a class="header" href="#example-196">Example</a></h2>
+<h2 id="example-197"><a class="header" href="#example-197">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[manageroles;❌ You are missing permission: `MANAGE_ROLES`.]
 $unmute[Muted]
@@ -6507,7 +6541,7 @@ $untimeout[$findUser[$message[1];no]]
 <h2 id="usage-226"><a class="header" href="#usage-226">Usage</a></h2>
 <pre><code>$uptime
 </code></pre>
-<h2 id="example-197"><a class="header" href="#example-197">Example</a></h2>
+<h2 id="example-198"><a class="header" href="#example-198">Example</a></h2>
 <pre><code>$nomention
 I've been online for `$uptime`!
 </code></pre>
@@ -6522,7 +6556,7 @@ I've been online for `$uptime`!
 <li><code>encode</code> - encode text.</li>
 <li><code>decode</code> - decode text.</li>
 </ul>
-<h2 id="example-198"><a class="header" href="#example-198">Example</a></h2>
+<h2 id="example-199"><a class="header" href="#example-199">Example</a></h2>
 <pre><code>$nomention
 $url[encode;@Wiki Bot]
 </code></pre>
@@ -6536,7 +6570,7 @@ $url[encode;@Wiki Bot]
 <ul>
 <li><code>channelID</code> - The channel to redirect the bot's response to.</li>
 </ul>
-<h2 id="example-199"><a class="header" href="#example-199">Example</a></h2>
+<h2 id="example-200"><a class="header" href="#example-200">Example</a></h2>
 <pre><code>$nomention
 $useChannel[$mentionedChannels[1]]
 $description[hi]
@@ -6553,7 +6587,7 @@ $title[hello]
 <ul>
 <li><code>userID</code> - The user to return the avatar for.</li>
 </ul>
-<h2 id="example-200"><a class="header" href="#example-200">Example</a></h2>
+<h2 id="example-201"><a class="header" href="#example-201">Example</a></h2>
 <pre><code>$nomention
 $image[$userAvatar[$mentioned[1;yes]]]
 </code></pre>
@@ -6577,7 +6611,7 @@ $image[$userAvatar[$mentioned[1;yes]]?size=4096]
 <ul>
 <li><code>userID</code> - The ID of the hypothetical user.</li>
 </ul>
-<h2 id="example-201"><a class="header" href="#example-201">Example</a></h2>
+<h2 id="example-202"><a class="header" href="#example-202">Example</a></h2>
 <pre><code>$nomention
 $userExists[$mentioned[1]]
 </code></pre>
@@ -6589,7 +6623,7 @@ $userExists[$mentioned[1]]
 </code></pre>
 <h3 id="breakdown-184"><a class="header" href="#breakdown-184">Breakdown</a></h3>
 <p><code>username/tag</code> - The user's username (User) or tag (User#0000) to return the ID for.</p>
-<h2 id="example-202"><a class="header" href="#example-202">Example</a></h2>
+<h2 id="example-203"><a class="header" href="#example-203">Example</a></h2>
 <pre><code>$userID[Spen]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/125357565-c999be00-e335-11eb-9b17-037bb574de53.png" alt="example" /></p>
@@ -6607,7 +6641,7 @@ $userExists[$mentioned[1]]
 <li><code>{BOT}</code> - Checks if the user is a bot.</li>
 <li><code>{discriminator}</code> - Gets the user's discriminator.</li>
 </ul>
-<h2 id="example-203"><a class="header" href="#example-203">Example</a></h2>
+<h2 id="example-204"><a class="header" href="#example-204">Example</a></h2>
 <pre><code>$nomention
 $userInfo[Username: {username}
 User ID: {ID}
@@ -6621,7 +6655,7 @@ $title[User Info]
 <h2 id="usage-233"><a class="header" href="#usage-233">Usage</a></h2>
 <pre><code>$userJoined[userID;(optional) format]
 </code></pre>
-<h2 id="example-204"><a class="header" href="#example-204">Example</a></h2>
+<h2 id="example-205"><a class="header" href="#example-205">Example</a></h2>
 <pre><code>$nomention
 $userJoined[$authorID]
 </code></pre>
@@ -6641,7 +6675,7 @@ $userJoined[$authorID]
 <h2 id="usage-234"><a class="header" href="#usage-234">Usage</a></h2>
 <pre><code>$userJoinedDiscord[userID;(optional) format]
 </code></pre>
-<h2 id="example-205"><a class="header" href="#example-205">Example</a></h2>
+<h2 id="example-206"><a class="header" href="#example-206">Example</a></h2>
 <pre><code>$nomention
 $userJoinedDiscord[$authorID]
 </code></pre>
@@ -6669,7 +6703,7 @@ $userJoinedDiscord[$authorID]
 <blockquote>
 <p>🧙‍♂️ <code>$userLeaderbard</code> automatically generates a description. So, <code>$description</code> should not be used in the code.</p>
 </blockquote>
-<h2 id="example-206"><a class="header" href="#example-206">Example</a></h2>
+<h2 id="example-207"><a class="header" href="#example-207">Example</a></h2>
 <pre><code>$nomention
 $userLeaderboard[Money;asc]
 </code></pre>
@@ -6705,7 +6739,7 @@ $username just hugged $username[$mentioned[1]]!
 <li><code>return amount</code> - how many permissions you want to get, use -1 to extract all.</li>
 <li><code>separator</code> - text/character to use to separate each permission</li>
 </ul>
-<h2 id="example-207"><a class="header" href="#example-207">Example</a></h2>
+<h2 id="example-208"><a class="header" href="#example-208">Example</a></h2>
 <pre><code>$nomention
 $userPerms[$mentioned[1];-1;-]
 </code></pre>
@@ -6725,7 +6759,7 @@ $userPerms[$mentioned[1];-1;-]
 <li><code>userID</code> - The user that should of reacted.</li>
 <li><code>emoji</code> - The emoji that the user should of reacted with.</li>
 </ul>
-<h2 id="example-208"><a class="header" href="#example-208">Example</a></h2>
+<h2 id="example-209"><a class="header" href="#example-209">Example</a></h2>
 <pre><code>$nomention
 $userReacted[$channelID;9213992398838926;3894834783463753;🧙‍♂️]
 </code></pre>
@@ -6739,7 +6773,7 @@ $userReacted[$channelID;9213992398838926;3894834783463753;🧙‍♂️]
 <ul>
 <li><code>userID</code> - The user to return the roles for.</li>
 </ul>
-<h2 id="example-209"><a class="header" href="#example-209">Example</a></h2>
+<h2 id="example-210"><a class="header" href="#example-210">Example</a></h2>
 <pre><code>$nomention
 $description[&lt;@$mentioned[1;yes]&gt;'s roles: 
 $userRoles[$mentioned[1;yes]]]
@@ -6753,7 +6787,7 @@ $userRoles[$mentioned[1;yes]]]
 <ul>
 <li><code>user id</code> - The user to get it's server avatar. If user doesn't have server avatar. Then, it returns default user avatar.</li>
 </ul>
-<h3 id="example-210"><a class="header" href="#example-210">Example</a></h3>
+<h3 id="example-211"><a class="header" href="#example-211">Example</a></h3>
 <pre><code>$nomention
 $image[$userServerAvatar[$authorID]?size=4096]
 </code></pre>
@@ -6767,7 +6801,7 @@ $image[$userServerAvatar[$authorID]?size=4096]
 <ul>
 <li><code>variableType</code> - The variable type to return the count for.</li>
 </ul>
-<h2 id="example-211"><a class="header" href="#example-211">Example</a></h2>
+<h2 id="example-212"><a class="header" href="#example-212">Example</a></h2>
 <pre><code>$nomention
 $variablesCount[server]
 </code></pre>
@@ -6777,7 +6811,7 @@ $variablesCount[server]
 <h2 id="usage-241"><a class="header" href="#usage-241">Usage</a></h2>
 <pre><code>$var[Name;(Value)]
 </code></pre>
-<h2 id="example-212"><a class="header" href="#example-212">Example</a></h2>
+<h2 id="example-213"><a class="header" href="#example-213">Example</a></h2>
 <p>We will create a command that will:</p>
 <ol>
 <li>Set a temporary variable named <code>message</code> with the user's message.</li>
@@ -6807,7 +6841,7 @@ $addButton[no;interactionID;Example;secondary;no;;$var[id]]
 <li><code>variableName</code> - The variable that should exist.</li>
 <li><code>errorMessage</code> - The custom error message to return if the variable doesn't exist.</li>
 </ul>
-<h2 id="example-213"><a class="header" href="#example-213">Example</a></h2>
+<h2 id="example-214"><a class="header" href="#example-214">Example</a></h2>
 <pre><code>$nomention
 $varExistError[Cool;Add the 'Cool' variable in the app.]
 $setUserVar[Cool;true;$authorID]
@@ -6822,7 +6856,7 @@ You are now cool!
 <h2 id="usage-243"><a class="header" href="#usage-243">Usage</a></h2>
 <pre><code>$year
 </code></pre>
-<h2 id="example-214"><a class="header" href="#example-214">Example</a></h2>
+<h2 id="example-215"><a class="header" href="#example-215">Example</a></h2>
 <pre><code>$nomention
 Current Year: $year
 </code></pre>
@@ -6911,7 +6945,7 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <ul>
 <li><code>word</code> - The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
 </ul>
-<h2 id="example-215"><a class="header" href="#example-215">Example</a></h2>
+<h2 id="example-216"><a class="header" href="#example-216">Example</a></h2>
 <ol>
 <li>
 <p>Create a new command with command trigger set as <code>$messageContains[]</code>.</p>
@@ -6928,7 +6962,7 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <h2 id="usage-245"><a class="header" href="#usage-245">Usage</a></h2>
 <pre><code>$ignoreTriggerCase
 </code></pre>
-<h2 id="example-216"><a class="header" href="#example-216">Example</a></h2>
+<h2 id="example-217"><a class="header" href="#example-217">Example</a></h2>
 <pre><code>$nomention
 $ignoreTriggerCase
 Hello World!
@@ -6943,7 +6977,7 @@ Hello World!
 <li><code>message</code> - The text that should be in the sent notification.</li>
 <li><code>image URL</code> - The URL for the image to be attached.</li>
 </ul>
-<h2 id="example-217"><a class="header" href="#example-217">Example</a></h2>
+<h2 id="example-218"><a class="header" href="#example-218">Example</a></h2>
 <pre><code>$sendNotification[Hello, I miss you!;$userAvatar[$botID]]
 </code></pre>
 <p><img src="https://i.imgur.com/yfSTLVY.png" alt="example" /></p>
@@ -6983,7 +7017,7 @@ Hello World!
 <h4 id="usage-249"><a class="header" href="#usage-249">Usage</a></h4>
 <pre><code>$usedEmoji
 </code></pre>
-<h2 id="example-218"><a class="header" href="#example-218">Example</a></h2>
+<h2 id="example-219"><a class="header" href="#example-219">Example</a></h2>
 <p><img src="https://user-images.githubusercontent.com/95774950/183701101-550bf56c-3cd2-4511-bc03-8f8398fe4d8b.png" alt="Screenshot_20220809_194823" />
 <img src="https://user-images.githubusercontent.com/95774950/183701030-c82a8744-9dff-4ad9-83b5-2aa64f45cc59.png" alt="Screenshot_20220809_194754" />
 <img src="https://user-images.githubusercontent.com/95774950/183701074-395c4770-8439-4441-a0ad-5c69ae9cded4.png" alt="Screenshot_20220809_194805" />
@@ -7019,7 +7053,7 @@ Hello World!
 <ul>
 <li><code>custom image tag</code> - The tag that you set the custom image to, previously.</li>
 </ul>
-<h4 id="example-219"><a class="header" href="#example-219">Example</a></h4>
+<h4 id="example-220"><a class="header" href="#example-220">Example</a></h4>
 <pre><code>$nomention
 $customImage[NiceImage]
 </code></pre>
@@ -7130,7 +7164,7 @@ Set $serverName[$guildID]'s prefix to `$noMentionMessage`
 <tr><td><code>unpinMessage(channelID, messageID)</code></td><td>Where <code>channelID</code> and <code>messageID</code> are string values. Unpins a pinned message.</td></tr>
 <tr><td><code>sendChannelMessage(channelID, message)</code></td><td>Where <code>channelID</code> and <code>message</code> are string values. Sends <code>message</code> to the provided channel.</td></tr>
 </tbody></table>
-<h2 id="example-220"><a class="header" href="#example-220">Example</a></h2>
+<h2 id="example-221"><a class="header" href="#example-221">Example</a></h2>
 <p><em>(say command)</em></p>
 <pre><code class="language-js">var text = message.replace(commandPrefix, &quot; &quot;) // Makes 'text' the user's message without the command trigger.
 setResponse(text) // Sets the response as 'text'.
@@ -7142,7 +7176,7 @@ setResponse(text) // Sets the response as 'text'.
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onjoined"><a class="header" href="#onjoined">$onJoined</a></h1>
 <p><em>When a user joins the server, the command is triggered.</em></p>
 <p><code>$onJoined[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user joins the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>.</p>
-<h2 id="example-221"><a class="header" href="#example-221">Example</a></h2>
+<h2 id="example-222"><a class="header" href="#example-222">Example</a></h2>
 <ol>
 <li>
 <p>Make the command trigger <code>$onJoined[channelID]</code>.<br />
@@ -7221,7 +7255,7 @@ $setServerVar[welcome;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onleave"><a class="header" href="#onleave">$onLeave</a></h1>
 <p><em>When a user leaves the server, the command is triggered.</em></p>
 <p><code>$onLeave[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>.</p>
-<h2 id="example-222"><a class="header" href="#example-222">Example</a></h2>
+<h2 id="example-223"><a class="header" href="#example-223">Example</a></h2>
 <ol>
 <li>
 <p>Make the command trigger <code>$onLeave[channelID]</code>.</p>
@@ -7300,7 +7334,7 @@ $setServerVar[leave;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onbanadd"><a class="header" href="#onbanadd">$onBanAdd</a></h1>
 <p><em>Triggered when a user gets banned from the server.</em></p>
 <p><code>$onBanAdd[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
-<h2 id="example-223"><a class="header" href="#example-223">Example</a></h2>
+<h2 id="example-224"><a class="header" href="#example-224">Example</a></h2>
 <p><strong>#1:</strong> Make a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
 <blockquote>
 <p>🧙‍♂️ You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
@@ -7313,7 +7347,7 @@ $setServerVar[leave;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onbanremove"><a class="header" href="#onbanremove">$onBanRemove</a></h1>
 <p><em>Triggered when a user gets unbanned from the server.</em></p>
 <p><code>$onBanRemove[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is unbanned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
-<h2 id="example-224"><a class="header" href="#example-224">Example</a></h2>
+<h2 id="example-225"><a class="header" href="#example-225">Example</a></h2>
 <p><strong>#1:</strong> Make a command with <code>$onBanRemove[channelID]</code> as the trigger.</p>
 <blockquote>
 <p>🧙‍♂️ You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
@@ -7326,7 +7360,7 @@ $setServerVar[leave;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onmessagedelete"><a class="header" href="#onmessagedelete">$onMessageDelete</a></h1>
 <p><em>Triggered when a user deletes a message.</em></p>
 <p><code>$onMessageDelete[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user deletes a message. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
-<h2 id="example-225"><a class="header" href="#example-225">Example</a></h2>
+<h2 id="example-226"><a class="header" href="#example-226">Example</a></h2>
 <ol>
 <li>
 <p>Make a new command, with the trigger <code>$onMessageDelete[channelID]</code>.</p>
