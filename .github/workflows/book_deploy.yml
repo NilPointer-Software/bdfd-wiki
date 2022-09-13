@@ -115,5 +115,5 @@ jobs:
           thumbnail: |
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
-            Сообщение: ```${{ github.event.head_commit.message }}```
-            Коммиты: ```${{ github.event.commits }}```
+            Сообщение ```${{ github.event.head_commit.message }}```
+            Коммиты ```${{ github.event.commits }}```
