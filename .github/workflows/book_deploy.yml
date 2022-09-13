@@ -111,8 +111,7 @@ jobs:
             name: ${{ github.event.sender.login }}
             url: https://github.com/${{ github.event.sender.login }}
             icon_url: ${{ github.event.sender.avatar_url }}
-          title:
-            text: "Обновление • ${{ github.event.repository.name }}"
+          title: Обновление • ${{ github.event.repository.name }}
           thumbnail:
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
