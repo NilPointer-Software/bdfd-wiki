@@ -106,17 +106,13 @@ jobs:
       with:
         webhook: ${{ secrets.WEBHOOK }}
         embed: |
-          {
-              "color": 65535,
-              "author":{
-                  "name":"${{ github.event.sender.login }}",
-                  "url": "https://github.com/${{ github.event.sender.login }}",
-                  "icon_url": "${{ github.event.sender.avatar_url }}"
-                        },
-              "title": "Обновление • ${{ github.event.repository.name }}",
-              "thumbnail": "${{ github.event.repository.owner.avatar_url }}",
-              "description": {
-                   "Сообщение ```${{ github.event.head_commit.message }}```
-                   Коммиты ```${{ github.event.commits }}```"
-                             }
-          }
+          color: 65535
+          author: |
+            name: ${{ github.event.sender.login }}
+            url: https://github.com/${{ github.event.sender.login }}
+            icon_url: ${{ github.event.sender.avatar_url }}
+          title: Обновление • ${{ github.event.repository.name }}
+          thumbnail: ${{ github.event.repository.owner.avatar_url }}
+          description: |
+            Сообщение ```${{ github.event.head_commit.message }}```
+            Коммиты ```${{ github.event.commits }}```
