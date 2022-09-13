@@ -1,5 +1,5 @@
 # $defer
-Defers interactions with components and slash commands.
+Defers response to an interaction from components and slash commands.
 
 ## Usage
 ```
