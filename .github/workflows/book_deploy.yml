@@ -92,7 +92,7 @@ jobs:
         RAW: ${{ github.event.head_commit.message }}
       run: |
         echo "MESSAGE<<EOF" >> $GITHUB_ENV
-        echo "$RAW" | head -n 10 >> $GITHUB_ENV
+        echo "$RAW" | head -n 10 | sed ':a;N;$!ba;s/\n/\n            /g' >> $GITHUB_ENV
         if [ $(echo "$RAW" | wc -l) -gt 10 ]
         then
           echo "..." >> $GITHUB_ENV
@@ -114,5 +114,5 @@ jobs:
           title: Обновление • ${{ github.event.repository.name }}
           thumbnail: ${{ github.event.repository.owner.avatar_url }}
           description: |
-            Сообщение ```${{ github.event.head_commit.message }}```
+            Сообщение ```${{ env.MESSAGE }}```
             Коммиты ```${{ github.event.commits }}```
