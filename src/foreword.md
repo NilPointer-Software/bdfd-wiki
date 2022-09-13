@@ -23,5 +23,3 @@
 - [Премиум](./premium/introduction.md)
 - [JavaScript](./javascript/javascript.md)
 - [Обратные вызовы](./callbacks/introduction.md)
-
-.
