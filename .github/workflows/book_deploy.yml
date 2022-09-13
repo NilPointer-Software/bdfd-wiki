@@ -105,4 +105,16 @@ jobs:
       uses: MineBartekSA/discord-webhook@v2.1
       with:
         webhook: ${{ secrets.WEBHOOK }}
-        content: "${{ env.TYPE }} Wiki update!\n```${{ env.MESSAGE }}``` by ${{ github.event.head_commit.author.username }}"
+        embed: |
+      color: 65535
+      author:
+        name: ${{ github.event.sender.login }}
+        url: https://github.com/${{ github.event.sender.login }}
+        icon_url: ${{ github.event.sender.avatar_url }}
+      title:
+        text: "Обновление • ${{ github.event.repository.name }}"
+      thumbnail:
+        url: ${{ github.event.repository.owner.avatar_url }}
+      description: |
+        Сообщение: ```${{ github.event.head_commit.message }}```
+        Коммиты: ```${{ github.event.commits[] }}```
