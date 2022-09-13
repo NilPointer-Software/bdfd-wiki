@@ -117,4 +117,4 @@ jobs:
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
             Сообщение: ```${{ github.event.head_commit.message }}```
-            Коммиты: ```${{ github.event.commits[] }}```
+            Коммиты: ```${{ github.event.commits }}```
