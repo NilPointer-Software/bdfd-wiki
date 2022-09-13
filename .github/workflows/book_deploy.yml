@@ -105,14 +105,14 @@ jobs:
       uses: MineBartekSA/discord-webhook@v2.1
       with:
         webhook: ${{ secrets.WEBHOOK }}
-        embed:
+        embed: |
           color: 65535
-          author:
+          author: |
             name: ${{ github.event.sender.login }}
             url: https://github.com/${{ github.event.sender.login }}
             icon_url: ${{ github.event.sender.avatar_url }}
           title: Обновление • ${{ github.event.repository.name }}
-          thumbnail:
+          thumbnail: |
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
             Сообщение: ```${{ github.event.head_commit.message }}```
