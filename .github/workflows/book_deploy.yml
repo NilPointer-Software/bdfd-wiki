@@ -105,7 +105,7 @@ jobs:
       uses: MineBartekSA/discord-webhook@v2.1
       with:
         webhook: ${{ secrets.WEBHOOK }}
-        embed: |
+        embed:
           color: 65535
           author:
             name: ${{ github.event.sender.login }}
