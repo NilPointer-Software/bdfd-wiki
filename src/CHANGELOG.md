@@ -1,6 +1,6 @@
 # Changelog
 
-# 2022 j
+# 2022
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
