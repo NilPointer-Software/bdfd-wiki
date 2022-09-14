@@ -117,8 +117,8 @@ jobs:
           description: |
             > **Содержание**
             ```${{ env.MESSAGE }}```
-       component: |
-         type: 2
-         style: 5
-         label: Перейти к коммиту
-         url: ${{ github.event.head_commit.url }}
+        component: |
+          type: 2
+          style: 5
+          label: Перейти к коммиту
+          url: ${{ github.event.head_commit.url }}
