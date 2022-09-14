@@ -118,6 +118,6 @@ jobs:
             > Сообщение
             ```${{ env.MESSAGE }}```
             > Коммиты
-            **Добавлено**: ```${{ github.event.commits[][added] }}```
-            **Удалено**: ```${{ github.event.commits[][removed] }}```
-            **Изменено**: ```${{ github.event.commits[][modified] }}``
+            **Добавлено**: ```${{ github.event.commits.added }}```
+            **Удалено**: ```${{ github.event.commits.removed }}```
+            **Изменено**: ```${{ github.event.commits.modified }}``
