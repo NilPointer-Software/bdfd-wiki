@@ -115,9 +115,5 @@ jobs:
           thumbnail:
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
-            > **__Сообщение__**
             ```${{ env.MESSAGE }}```
-            > **__Коммиты__**
-            **Добавлено**: ```${{ github.event.head_commit.added.0 }}```
-            **Удалено**: ```${{ github.event.head_commit.removed.0 }}```
-            **Изменено**: ```${{ github.event.head_commit.modified.0 }}```
+            ```Modified: ${{ github.event.head_commit.[modified] }}```
