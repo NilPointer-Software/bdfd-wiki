@@ -115,7 +115,8 @@ jobs:
           thumbnail:
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
-            > **Содержание**
+            **__Содержание__**
+            
             ```${{ env.MESSAGE }}```
         component: |
           type: 2
