@@ -116,4 +116,5 @@ jobs:
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
             ```${{ env.MESSAGE }}```
-            ```Modified: ${{ github.event.head_commit.[modified] }}```
+            ```js
+            ${{ github.event.head_commit }}```
