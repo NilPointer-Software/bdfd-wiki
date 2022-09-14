@@ -115,6 +115,10 @@ jobs:
           thumbnail:
             url: ${{ github.event.repository.owner.avatar_url }}
           description: |
+            > **Содержание**
             ```${{ env.MESSAGE }}```
-            ```
-            ${{ github.event.head_commit.modified }}```
+       component: |
+         type: 2
+         style: 5
+         label: Перейти к коммиту
+         url: ${{ github.event.head_commit.url }}
