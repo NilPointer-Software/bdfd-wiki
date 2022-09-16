@@ -1,20 +1,20 @@
-# Character Escaping
-*(for advanced users)*
+# Экранирование символов
+*(для продвинутых пользователей)*
 
-**What are Escape Characters?**
+**Что такое экранированные символы?**
 
-Escape characters are used to indicate that the character should not be interpreted as a modification of the code, rather just text that appears in the code or bot's response. Basically, escape characters let your bot return the function-triggering characters (e.g `;`, `$`, `[`, `]`) without any changes to the code.
+Экранированные символы используются для обозначения символов, которое не должны быть обработаны как изменители кода, а вместо этого, как текст в коде или ответе бота. Обычно, экранированные символы позволяют возвращать символы, которые выполняют функции (например, `;`, `$`, `[`, `]`), при этом не делая каких-либо изменений в коде.
 
-## Escapable Characters
-Character | Escaped
+## Экранированные символы
+Символ | Экранирование
 --------- | --------
-; | `%{-SEMICOL-}%` or `\;`
+; | `%{-SEMICOL-}%` или `\;`
 $ | `%{DOL}%`
 [ | `\[`
-] | `%ESCAPED%` or `\]`
+] | `%ESCAPED%` или `\]`
 \ | `\\`
 
-## Example
+## Пример
 ```
 $sendMessage[[ Hi, this is pretty cool\; right? \]]
 ```
