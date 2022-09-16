@@ -15,7 +15,7 @@ Do not use emoji names: `$addCmdReactions[:smile:]`
 
 Use the unicode version: `$addCmdReactions[😀]`
 
-> List of unicode emojis: https://getemoji.com
+> List of unicode emojis: [😋 Get Emoji](https://getemoji.com)
  
 ## Emoji IDs
 1. Type `\:TheEmojiName:`
