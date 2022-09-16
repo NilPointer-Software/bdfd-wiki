@@ -12,7 +12,7 @@ $addCmdReactions[emojis;...]
 ## Unicode эмодзи
 Не используйте названия эмодзи: `$addCmdReactions[:smile:]`
 
-Используйте версию unicode: `$addCmdReactions[😀]`
+Используйте unicode версию: `$addCmdReactions[😀]`
 
 > Список unicode эмодзи: https://getemoji.com
  
