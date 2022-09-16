@@ -1,26 +1,25 @@
 # $addCmdReactions
-Adds reactions to the message that triggered the command.
+Добавляет реакции на сообщение, которое вызвало команду
 
-## Usage
+## Использование
 ```
 $addCmdReactions[emojis;...]
 ```
->  You can use unicode emojis or emoji IDs, not emoji names. *For emoji IDs*, the bot must be present in the server, that you are using the emoji from.
+>  Вы можете использовать Unicode эмодзи или айди эмодзи, но не имена эмодзи. *Для использования айди эмодзи* бот должен присутствовать на сервере, с которого вы используете этот эмодзи.
+### Разбор аргументов
+- `emojis` - Эмодзи, которые будут добавлены. Разделяйте эмодзи с помощью `;`.
 
-### Breakdown
-- `emojis` - The emoji(s) the bot reacts with. Separate emojis using `;`.
+## Unicode эмодзи
+Не используйте названия эмодзи: `$addCmdReactions[:smile:]`
 
-## Unicode Emojis
-Do not use emoji names: `$addCmdReactions[:smile:]`
+Используйте unicode версию: `$addCmdReactions[😀]`
 
-Use the unicode version: `$addCmdReactions[😀]`
-
-> List of unicode emojis: https://getemoji.com
+> Список unicode эмодзи: https://getemoji.com
  
-## Emoji IDs
-1. Type `\:TheEmojiName:`
-2. Send the message.
-3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
-4. Input the emoji ID into `$addCmdReactions[]`. (e.g `$addCmdReactions[<:hollyDab:828628880629825546>]`)
+## Айди Эмодзи
+1. Напишите `\:TheEmojiName:`
+2. Отправьте сообщение.
+3. Скопируйте айди, которое вернётся. (Айди эмодзи должен быть в таком формате: `<:emojiName:ID>`. Если эмодзи анимированный, он должен выглядеть следующим образом: `<a:emojiName:ID>`.)
+4. Вставьте айди эмодзи в `$addCmdReactions[]`. (например, `$addCmdReactions[<:hollyDab:828628880629825546>]`)
 
-> 📝 This method requires [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) enabled! 
+> 📝 Этот метод требует включённый [Режим Разработчика](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)!
