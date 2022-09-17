@@ -1,105 +1,101 @@
-# Contributing
-You can contribute to the BDFD wiki by making a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+# Вношение вклада
+> Версия для переводчиков
 
-Make sure to follow the 'Proper Wiki Structure' when contributing.
+Вы можете внести вклад в перевод BDFD вики на русский язык путём создания [пулреквеста](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
-### Common Issue
-- My pull request got merged but isn't shown on the wiki page. Why?
-  - The markdown files contributed is deployed by a developer (which happens every few weeks). You can view recently merged pull request in [nightly](https://nilpointer-software.github.io/bdfd-wiki/nightly/) wiki version.
-   
-## Terms and Guidelines
-- You may not be credited for the making of wiki. However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
-- The name of files must be in the format of `fileName.md`. No spaces or special characters (e.g `$`).
-- Do not make duplicates or useless pull requests.
-- Do not make troll or NSFW pull requests.
-- Fact-check/verify information included in the pull request.
+Убедитесь, что вы соблюдаете 'Правильную структуру вики', когда вносите клад.
 
-## Proper Wiki Structure
-### Grammar
-- Don't use gendered pronouns (e.g. she/her/hers/he/him/his). Instead use: They, them, their.
+## Правила и рекомендации
+- Не создавайте и не удаляйте какие-либо файлы.
+  - Не изменяйте изначальный контент файла.
+
+> Мы переводим вики, а не модифицируем её.
+
+- Не делайте дубликаты или бесполезные пулреквесты.
+- Не делайте шуточные или NSFW содержащие пулреквесты.
+- Переводя примеры кода, "переводите" и изображение (если есть), где показано выполнение кода.
+
+## Правильная структура вики
+### Грамматика
+- Используйте "мы" вместо "я", когда пишите от своего лица.
 ```diff
-- He is cool.
-+ They are cool.
+- Если вы используете `$eval` функцию, я крайне рекомендую вам использовать `$onlyForIDs`.
++ Если вы используете `$eval` функцию, мы крайне рекомендуем вам использовать `$onlyForIDs`.
 ```
-- Use "we" instead of "I" when referring to yourself.
+- "Вы"/"ваш" вместо "мы"/"наш"
 ```diff
-- If you use the `$eval` function, I strongly recommend you also use `$onlyForIDs`.
-+ If you use the `$eval` function, we strongly recommend you also use `$onlyForIDs`.
+- Мы можем получить ID нашего бота используя `$botID`.
++ Вы пожете получить ID вашего бота используя `$botID`
 ```
-- "You"/"your" instead of "we"/"our"
+- Избегайте использовать подобные фразы:
 ```diff
-- We can get our bot's ID using `$botID`.
-+ You can get your bot's ID using `$botID`.
-```
-- Avoid using these phrases:
-```diff
-- dumb, weird, stupid, ugly, uneeded, useless, bad, deadly, noob, trash, suck, I don't know, I don't care, idiot
+- тупой, странный, глупый, уродливый, не нужный, бесполезный, плохой, смертельный, нуб, мусор, отстой, я не знаю, мне всё равно, идиот
 ```
 
-### Shortening Headers
-Make headers are short as possible, and in [title case](https://www.dummies.com/wp-content/uploads/410813.image0.jpg).
+### Укорачивайте заголовки
+Делайте заголовки настолько короткими, насколько это возможно.
 
 ```diff
-- ## How to create embeds
-+ ## Creating Embeds
+- ## Как создать эмбеды
++ ## Создание эмбедов
 ```
 
 ### Markdown
-#### Basic
-- \*\*Bold\*\* - **Bold**
-- \*Italics\* - *Italics*
-- \`code-snippet\`  - `code-snippet`
+#### Базово
+- \*\*Жирный текст\*\* - **Жирный текст**
+- \*Курсивный текст\* - *Курсивный текст*
+- \`Фрагмент кода\`  - `Фрагмент кода`
 
-#### Advanced
+#### Расширенно
 
-**Lists:**
+**Списки:**
 
-\- item1
+\- Пункт 1
 
-\- item2
+\- Пункт 2
 
-\- item3
+\- Пункт 3
 
-*Output:*
-- item1
-- item2
-- item3
+*Выход:*
+- Пункт 1
+- Пункт 2
+- Пункт 3
 
-**Large Code Blocks:**
-
-\`\`\`
-
-code
+**Большие блоки кода:**
 
 \`\`\`
 
-*Output:*
+Код
+
+\`\`\`
+
+*Выход:*
 ```
-code
+Код
 ```
 
-**Quotes:**
+**Цитата:**
 
-\> This is a quote.
+\> Это цитата.
 
-*Output:*
-> This is a quote.
+*Выход:*
+> Это цитата.
 
-#### Headers
+#### Заголовки
 
-\# Title
+\# Заголовок
 
-\## Section
+\## Секция
 
-\### Sub-Section
+\### Подсекция
 
-\#### Small-Topic
+\#### Малая тема
 
-*Output:*
-# Title
+*Выход:*
+# Заголовок
 
-## Section
+## Секция
 
-### Sub-Section
+### Подсекция
 
-#### Small-Topic
+#### Малая тема

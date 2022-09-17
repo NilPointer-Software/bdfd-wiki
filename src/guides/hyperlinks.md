@@ -1,26 +1,26 @@
-# Hyperlinks
-A hyperlink is clickable-text. When the user clicks on the text, it directs them to a certain URL.
+# Гипер-ссылки
+Гипер-ссылка - это текст, на который можно нажать. Когда пользователь нажимает на текст, пользователя перенаправляет на определенный URL.
 
-## General Hyperlinks
-You can use hyperlinks inside [`$description[]`](../bdscript/description.md), [`$addField[]`](../bdscript/addField.md), [webhook](../guides/webhooks.md) content/description, [slash command](../guides/slashCommands.md) response content, and ephemeral [`$onInteraction`](../callbacks/onInteraction.md) response content.
+## Общие гипер-ссылки
+Вы можете использовать гипер-ссылки внутри [`$description[]`](../bdscript/description.md), [`$addField[]`](../bdscript/addField.md), контента/описания [вебхука](../guides/webhooks.md), контента ответа [слеш-команды](../guides/slashCommands.md) и контента эфемерного ответа [`$onInteraction`](../callbacks/onInteraction.md).
 
-### Syntax
+### Синтакс
 ```
-[text\](link)
+[текст\](ссылка)
 ```
-> **Note:** This is the syntax for BDScript 2 and BDScript Unstable. For the BDScript, the syntax is `[text](link)`.
+> **Заметка:** Это синтакс для BDScript 2 и BDScript Unstable. Для BDScript используется другой синтакс - `[текст](ссылка)`.
 
-> **Note:** In the case of using hyperlinks inside slash command response content or ephemeral `$onInteraction` response content, the syntax for BDScript should be used. Does not apply to hyperlinks that are inside functions that support hyperlinks. 
+> **Заметка**: В случае использования гипер-ссылок внутри контента ответа слеш-команды или контента эфемерного ответа `$onInteraction`, синтакс от BDScript должен быть использован. Не относится к гипер-ссылкам, которые находятся внутри функций, поддерживающих гипер-ссылки.
 
-### Example
+### Пример
 ```
 $nomention
 $description[This bot is made with [Bot Designer For Discord\](https://botdesignerdiscord.com)]
 ```
 ![example](https://user-images.githubusercontent.com/69215413/127039004-e1a607b5-af0f-4761-9d33-954f7dcad155.png)
 
-## Title Hyperlinks
-Use the [$embeddedURL](../bdscript/embeddedURL.md) function to add a hyperlink in [$title](../bdscript/title.md).
+## Гипер-ссылки внутри поля заголовка
+Используйте функцию [$embeddedURL](../bdscript/embeddedURL.md), чтобы добавить гипер-ссылку внутрь [$title](../bdscript/title.md).
 
-## Author Hyperlinks
-Use the [$authorURL](../bdscript/authorURL.md) function to add a hyperlink in [$author](../bdscript/author.md).
+## Гипер-ссылки внутри поля автора
+Используйте функцию [$authorURL](../bdscript/authorURL.md), чтобы добавить гипер-ссылку внутрь [$author](../bdscript/author.md).
