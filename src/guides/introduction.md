@@ -1,3 +1,3 @@
-# Руководства
-Этот раздел BDFD Вики содержит руководства, относящиеся к BDFD.
-Здесь вы можете научиться тому, как создать вашего первого бота, а так же как работать с такими штуками, как Меню выбора, Кнопки и многое другое!
+# Guides
+This section of the wiki contains guides related to BDFD.
+Here you can learn how to create your first BDFD bot, as well as how to work with things like Select Menu, Buttons and more! 

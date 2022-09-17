@@ -1,25 +1,25 @@
-# Предисловие
-### ✨ Представьте приложение...
-...Которое упрощает создание ботов в Discord с функциями, удобными для начинающих. Это позволяет разрабатывать почти все типы ботов — от простых *эхо*-ботов до продвинутых многоцелевых ботов для администрирования. Когда простота сочетается с функциональностью и масштабируемостью, это *Bot Designer For Discord*.
+# Foreword
+### ✨ Imagine An App...
+...That makes building Discord Bots easy, with beginner-friendly functions. That's capable of developing nearly all types of bots - from simple *echo* bots, to advanced multi-purpose administration ones. Where simplicity meets functionality and scalability, that's *Bot Designer for Discord*.
 
-Чего вы ждёте? Создайте бота своей мечты сегодня!
+What are you waiting for? Create the bot of your dreams today!
 
-**Начать с [*Bot Designer for Discord*](https://botdesignerdiscord.com)**
+**Start with [*Bot Designer for Discord*](https://botdesignerdiscord.com)**
 
-### 📎 Ссылки
-- [Официальный BDFD Сервер](https://botdesignerdiscord.com/discord)
-- [Веб-сайт](https://botdesignerdiscord.com/)
-- [Android Приложение](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
-- [iOS Приложение](https://apps.apple.com/app/bot-designer-for-discord/id1495536477)
-- [Web Приложение](https://botdesignerdiscord.com/app/) *(Альфа Версия)*
+### 📎 Links
+- [BDFD Official Server](https://botdesignerdiscord.com/discord)
+- [Website](https://botdesignerdiscord.com/)
+- [Android App](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
+- [iOS App](https://apps.apple.com/app/bot-designer-for-discord/id1495536477)
+- [Web App](https://botdesignerdiscord.com/app/) *(Alpha Version)*
 ---
-## 📓 Вики
-Добро пожаловать в нашу скромную обитель. То, что вы видите, это вики *Bot Designer for Discord*.
+## 📓 Wiki
+Welcome to our humble abode. The thing you're seeing is *Bot Designer for Discord*'s wiki.
 
-### 📂 Вики-указатель
-- [Руководства](./guides/introduction.md)
-- [Ресурсы](./resources/introduction.md)
+### 📂 Wiki Index
+- [Guides](./guides/introduction.md)
+- [Resources](./resources/introduction.md)
 - [BDScript](./bdscript/introduction.md)
-- [Премиум](./premium/introduction.md)
+- [Premium](./premium/introduction.md)
 - [JavaScript](./javascript/javascript.md)
-- [Обратные вызовы](./callbacks/introduction.md)
+- [Callbacks](./callbacks/introduction.md)
