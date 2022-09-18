@@ -11,6 +11,7 @@
 - Added intent autodetection 
 - Added `globaluser` option to `$variablesCount[]`
 - Added support for big numbers in the math functions
+- Added new text tutorial
 
 ## August
 - Added `$scriptLanguage`
