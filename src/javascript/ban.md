@@ -17,12 +17,15 @@ try {
   const msg = message.replace(commandPrefix, '').trim();
 
   if (!msg.length) {
-    setResponse(`Usage : \` ${commandPrefix} [@user]  \``);
+    setResponse(`Usage : \` ${commandPrefix} @user  \``);
   } else {
     const mention = /^<@!?(\d+)>/.test(msg);
 
     if (!mention || !userMentions[0])
       throw new Error('Mention an user!');
+
+   if (userMentions[0] === authorId)
+      throw new Error('You can\'t ban yourself!');
 
     sendChannelMessage(channelId, `*<@${authorId}> bans <@${userMentions[0]}>!!*`);
 
