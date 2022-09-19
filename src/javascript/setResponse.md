@@ -9,6 +9,12 @@ setResponse(replyText)
 ### Parameters
 - `replyText` : The provided text to send. (Optional)
 
+### Permissions
+Required permissions which the bot must have for this function to work properly.
+- `sendmessages`
+- `sendmessagesinthreads`
+- `readmessages`
+
 ## Example
 ```js
 setResponse(`Hi! <@${authorId}>`);
