@@ -13,6 +13,12 @@ setEmbedResponse(title, description, footer)
 
 > 📌 All parameters are optional.
 
+### Permissions
+Required permission which the bot must have for this function to work properly.
+- `embedlinks`
+- `sendmessages`
+- `sendmessagesinthreads`
+
 ##  Example
 ```js
 const date = new Date().toDateString();
