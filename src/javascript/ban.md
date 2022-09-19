@@ -1,8 +1,6 @@
 # ban
 Bans an user from the current guild.
 
-> 📌 In order to ban an user from a guild, the bot must have `BAN` permission.
-
 ## Syntax
 ```js
 ban(userID)
@@ -10,6 +8,10 @@ ban(userID)
 
 ### Parameters
 - `userID` : The user to ban. Value must be a valid user snowflake ID.
+
+### Permissions
+Required permission which the bot must have for this function to work properly.
+- `ban`
 
 ### Example
 ```js
