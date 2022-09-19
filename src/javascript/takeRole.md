@@ -10,8 +10,6 @@ takeRole(userID, roleID)
 - `userID` : The user of whose role is to get removed. Value must be a valid user snowflake ID.
 - `roleID` : The role to take from the user. Value must be a valid role snowflake ID.
 
-> 📌 All parameters are required.
-
 ### Permissions
 Required permissions which the bot must have for this function to work properly.
 - `manageroles`
