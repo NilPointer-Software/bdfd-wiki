@@ -8,8 +8,9 @@ channelTyping()
 
 ### Permissions
 Required permissions which the bot must have for this function to work properly.
-- `sendmessage`
+- `sendmessages`
 - `sendmessagesinthreads`
+- `readmessages`
 
 ## Example
 ```js
