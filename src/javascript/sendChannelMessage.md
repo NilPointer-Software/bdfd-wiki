@@ -35,7 +35,7 @@ try {
       throw new Error('Provide a message!');
 
     const
-      channelID = msg[0].replace(/<#!?/, '').replace('>', ''),
+      channelID = msg[0].match(/\d/g).join(''),
       content = message.replace(commandPrefix, '').replace(msg[0], '').trim();
 
     if (content.length > 2000)
