@@ -10,8 +10,9 @@ ban(userID)
 - `userID` : The user to ban. Value must be a valid user snowflake ID.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permissions which the bot must have for this function to work properly.
 - `ban`
+- `readmessages`
 
 ### Example
 ```js
