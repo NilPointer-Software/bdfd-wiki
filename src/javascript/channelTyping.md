@@ -6,6 +6,11 @@ Emits the `TYPING_START` event. It shows *"Bot is typing..."* in the channel whe
 channelTyping()
 ```
 
+### Permissions
+Required permissions which the bot must have for this function to work properly.
+- `sendmessage`
+- `sendmessagesinthreads`
+
 ## Example
 ```js
 channelTyping();
