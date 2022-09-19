@@ -10,8 +10,6 @@ sendChannelMessage(channelId, message)
 - `channelId` : The channel to send the message. Value must be a valid channel snowflake ID.
 - `message` : The message to send to the provided channel ID.
 
-> 📝 All parameters are required.
-
 ### Permissions
 Required permissions which the bot must have for this function to work properly.
 - `sendmessages`
