@@ -13,6 +13,7 @@
 - Added support for big numbers in the math functions
 - Added new text tutorial
 - Fixed `$checkUserPerms[]` ignoring channel permissions
+- Fixed `$addReactions[]` not working on slash commands
 
 ## August
 - Added `$scriptLanguage`
