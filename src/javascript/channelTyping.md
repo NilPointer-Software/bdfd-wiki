@@ -15,7 +15,7 @@ Required permissions which the bot must have for this function to work properly.
 ## Example
 ```js
 channelTyping();
-setResponse('Wow! I did typed.');
+setResponse('Wow! I did type.');
 ```
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/95774950/190845046-416c8926-bb4f-403d-8f9f-d337a61bae58.gif)
