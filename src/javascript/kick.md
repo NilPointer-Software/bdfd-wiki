@@ -1,5 +1,5 @@
 # kick
-Kick an user from the current guild.
+Kicks an user from the current guild.
 
 ## Syntax
 ```js
