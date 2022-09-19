@@ -13,8 +13,9 @@ giveRole(userID, roleID)
 > 📌 All parameters are required.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permissions which the bot must have for this function to work properly.
 - `manageroles`
+- `readmessages`
 
 ## Example
 ```js
