@@ -7,7 +7,7 @@ setEmbedImage(imageURL)
 ```
 
 ### Parameters
-- `imageURL` : The image to set in the embed. Must be a valid image link. (Optional)
+- `imageURL` : The image to set in the embed. Value must be a valid image link. (Optional)
 
 ## Example
 ```js
