@@ -8,5 +8,5 @@ To enable JavaScript in BDFD, follow the steps described below :
 
     ![ezgif com-gif-maker](https://user-images.githubusercontent.com/95774950/190889967-138211d4-1e11-4bde-baf1-2d6bf8dbd7a1.gif)
 
-    > 📌 You can't use BDScript functions anymore once you enable *"Javascript"* in a command.
+    > 📌 You cannot use BDScript functions anymore once you enable *"Javascript"* in a command.
 3. That's it! Now, you can start writing your JavaScript code.
