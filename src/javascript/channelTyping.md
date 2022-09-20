@@ -18,4 +18,4 @@ channelTyping();
 setResponse('Wow! I did type.');
 ```
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/95774950/190845046-416c8926-bb4f-403d-8f9f-d337a61bae58.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/95774950/191220685-2515dabf-626e-4709-9bf7-ec951aa35c44.gif)
