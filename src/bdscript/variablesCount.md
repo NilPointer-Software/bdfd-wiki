@@ -3,7 +3,7 @@ Returns how many of a certain variable type the bot has.
 
 ## Usage
 ```
-$variablesCount[variableType (user/server)]
+$variablesCount[variableType (user/server/globaluser)]
 ```
 
 ### Breakdown
