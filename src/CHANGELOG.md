@@ -14,6 +14,7 @@
 - Added new text tutorial
 - Fixed `$checkUserPerms[]` ignoring channel permissions
 - Fixed `$addReactions[]` not working on slash commands
+- Fixed `Ticket number` argument not working in `$newTicket[]`
 
 ## August
 - Added `$scriptLanguage`
