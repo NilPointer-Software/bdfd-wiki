@@ -69,7 +69,9 @@ $endif
 - If you are using text as your `x` and/or `y`, you can not use any other signs besides `==` and `!=`. However for numbers, you can use any sign shown in the above list.
 
 ### Base Usage
-```$if[value-x(sign)value-y]```
+```
+$if[value-x(sign)value-y]
+```
 
 ## Else If
 `$elseif` can be only used in **BDScript 2**. If you use different BDScript edition please read the note below.
