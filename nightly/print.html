@@ -1448,24 +1448,24 @@ Every <strong>if statement</strong> starts with <code>$if[condition]</code> and 
 <li>Use <code>$endif</code> to end a if statement.</li>
 </ul>
 <h2 id="examples-5"><a class="header" href="#examples-5">Examples:</a></h2>
-<pre><code class="language-php">$if[$username==kubastick]
+<pre><code>$if[$username==kubastick]
   Hi Kuba!
 $else
   Hi $username!
 $endif
 </code></pre>
-<pre><code class="language-php">$if[$getUserVar[money]&gt;0]
+<pre><code>$if[$getUserVar[money]&gt;0]
   You're not broke
 $endif
 </code></pre>
-<pre><code class="language-php">$if[$username==noituri]
+<pre><code>$if[$username==noituri]
   $if[$message[&lt;]==nice]
     Noit said nice
   $endif
 $endif
 </code></pre>
 <p><em>Only for BDScript 2:</em></p>
-<pre><code class="language-php">$if[$message==test]
+<pre><code>$if[$message==test]
   You said test
 $elseif[$message==BDFD]
   Bot Designer for Discord
@@ -1492,11 +1492,12 @@ $endif
 <li>If you are using text as your <code>x</code> and/or <code>y</code>, you can not use any other signs besides <code>==</code> and <code>!=</code>. However for numbers, you can use any sign shown in the above list.</li>
 </ul>
 <h3 id="base-usage"><a class="header" href="#base-usage">Base Usage</a></h3>
-<p><code>$if[valuex(sign)valuey]</code></p>
+<pre><code>$if[value-x(sign)value-y]
+</code></pre>
 <h2 id="else-if"><a class="header" href="#else-if">Else If</a></h2>
 <p><code>$elseif</code> can be only used in <strong>BDScript 2</strong>. If you use different BDScript edition please read the note below.</p>
 <blockquote>
-<p><strong>Note:</strong> Normal BDScript and BDScript Unstable don't have a specific function for else if blocks, but you can still do them by using <code>$else</code> and <code>$if[]</code>. The difference between <code>$else</code> and <code>$else</code>/<code>$if[]</code> is that else doesn't need a condition. Where as else if is still an if so it needs a condition. The main purpose for else if is to make it so only one if statement runs. Unlike regular if statements, the else if blocks should end with <code>$else</code> then start with another <code>$if[]</code>. Once you are done with your else if statements, close all of them with x number of <code>$endif</code>s (<code>x</code> = number of else if statements) at the bottom of the last else if statement.</p>
+<p><strong>Note:</strong> Normal BDScript and BDScript Unstable don't have a specific function for else if blocks, but you can still do them by using <code>$else</code> and <code>$if[]</code>. The difference between <code>$else</code> and <code>$elseif[]</code> is that <code>$else</code> doesn't need a condition. Where as <code>$elseif[]</code> is still an <code>$if[]</code> so it needs a condition. The main purpose for <code>$elseif[]</code> is to make it so only one if statement runs. Unlike regular if statements, the else if blocks should end with <code>$else</code> then start with another <code>$if[]</code>. Once you are done with your else if statements, close all of them with x number of <code>$endif</code>s (<code>x</code> = number of else if statements) at the bottom of the last else if statement.</p>
 </blockquote>
 <h3 id="example-else-if-for-normal-bdscript-and-bdscript-unstable"><a class="header" href="#example-else-if-for-normal-bdscript-and-bdscript-unstable">Example Else If for <strong>Normal BDScript and BDScript Unstable</strong></a></h3>
 <pre><code>$if[$checkContains[$message;hi]==true]
