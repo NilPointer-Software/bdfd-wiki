@@ -10,9 +10,8 @@ ban(userID)
 - `userID` : The user to ban. Value must be a valid user snowflake ID.
 
 ### Permissions
-Required permissions which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly.
 - `ban`
-- `readmessages`
 
 ### Example
 ```js
@@ -22,7 +21,7 @@ try {
   if (!msg.length) {
     setResponse(`Usage : \` ${commandPrefix} [@user]  \``);
   } else {
-    const mention = /^<@!?(\d+)>/.test(msg);
+    const mention = /^<@!?(\d{17,20})>/.test(msg);
 
     if (!mention || !userMentions[0])
       throw new Error('Mention an user!');
