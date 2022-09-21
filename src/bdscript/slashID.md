@@ -1,7 +1,7 @@
 # $slashID
 Returns ID of provided slash command.
 
-## Usage №#1
+## Usage #1
 ```
 $slashID
 ```
