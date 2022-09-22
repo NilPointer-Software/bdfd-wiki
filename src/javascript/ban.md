@@ -19,7 +19,7 @@ try {
   const msg = message.replace(commandPrefix, '').trim();
 
   if (!msg) {
-    setResponse(`Usage : \` ${commandPrefix} [@user]  \``);
+    setResponse(`Usage : \` ${commandPrefix} [@user] \``);
   } else {
     const mention = /^<@!?(\d{17,20})>/.test(msg);
 
