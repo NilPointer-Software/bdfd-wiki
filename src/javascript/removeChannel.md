@@ -10,19 +10,18 @@ removeChannel(channelID)
 - `channelID` : The channel to be removed. Value must be a valid channel snowflake ID.
 
 ### Permissions
-Required permissions which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly.
 - `managechannels`
-- `readmessages`
 
 ## Example
 ```js
 try {
-  const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 1);
+  const msg = message.replace(commandPrefix, '').trim().split(' ');
 
-  if (!msg.length) {
+  if (!msg[0]) {
     setResponse(`Usage : \` ${commandPrefix} [#channel] \``);
   } else {
-    const isChannel = /^<#!?(\d+)>$/.test(msg);
+    const isChannel = /^<#!?(\d{17,20})>$/.test(msg[0]);
 
     if (!isChannel)
       throw new Error('Mention a valid channel!');
