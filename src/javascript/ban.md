@@ -18,7 +18,7 @@ Required permission which the bot must have for this function to work properly.
 try {
   const msg = message.replace(commandPrefix, '').trim();
 
-  if (!msg.length) {
+  if (!msg) {
     setResponse(`Usage : \` ${commandPrefix} [@user]  \``);
   } else {
     const mention = /^<@!?(\d{17,20})>/.test(msg);
