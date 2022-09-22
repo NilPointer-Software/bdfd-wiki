@@ -10,19 +10,18 @@ kick(userID)
 - `userID` : The user to kick. Value must be a valid user snowflake ID.
 
 ### Permissions
-Required permissions which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly.
 - `kick`
-- `readmessages`
 
 ## Example
 ```js
 try {
   const msg = message.replace(commandPrefix, '').trim();
 
-  if (!msg.length) {
-    setResponse(`Usage : \` ${commandPrefix} [@user]  \``);
+  if (!msg) {
+    setResponse(`Usage : \` ${commandPrefix} [@user] \``);
   } else {
-    const mention = /^<@!?(\d+)>/.test(msg);
+    const mention = /^<@!?(\d{17,20})>/.test(msg);
 
     if (!mention || !userMentions[0])
       throw new Error('Mention an user!');
