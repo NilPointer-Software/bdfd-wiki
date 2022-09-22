@@ -11,7 +11,7 @@ giveRole(userID, roleID)
 - `roleID` : The role to assign to the user. Value must be a valid role snowflake ID.
 
 ### Permissions
-Required permissions which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly.
 - `manageroles`
 
 ## Example
