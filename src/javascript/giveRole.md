@@ -13,7 +13,6 @@ giveRole(userID, roleID)
 ### Permissions
 Required permissions which the bot must have for this function to work properly.
 - `manageroles`
-- `readmessages`
 
 ## Example
 ```js
@@ -24,8 +23,8 @@ try {
     setResponse(`Usage : \` ${commandPrefix} [@user] [@role] \``);
   } else {
     const
-      userMention = /^<@!?(\d+)>$/.test(msg[0]),
-      roleMention = /^<@&!?(\d+)>$/.test(msg[1]);
+      userMention = /^<@!?(\d{17,20})>$/.test(msg[0]),
+      roleMention = /^<@&!?(\d{17,20})>$/.test(msg[1]);
 
     if (!userMention || !userMentions[0])
       throw new Error('Mention an user!');
