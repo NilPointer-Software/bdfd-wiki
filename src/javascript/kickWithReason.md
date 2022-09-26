@@ -11,7 +11,7 @@ kickWithReason(userID, reason)
 - `reason` : The kick reason to add in Audit Logs. Reason must not exceed more than 512 characters.
 
 ### Permissions
-Required permissions which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly.
 - `kick`
 
 ## Example
