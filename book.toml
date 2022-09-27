@@ -15,3 +15,7 @@ site-url = "/bdfd-wiki/"
 
 [output.html.search]
 boost-title = 4  
+
+[output.html.fold]
+enable = true
+level = 0
