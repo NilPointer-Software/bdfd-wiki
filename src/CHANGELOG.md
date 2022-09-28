@@ -16,6 +16,7 @@
 - Fixed `$addReactions[]` not working on slash commands
 - Fixed `Ticket number` argument not working in `$newTicket[]`
 - Fixed `$httpAddHeader[]`
+- Fixed some callbacks not being detected as callbacks
 
 ## August
 - Added `$scriptLanguage`
