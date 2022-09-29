@@ -17,6 +17,7 @@
 - Fixed `Ticket number` argument not working in `$newTicket[]`
 - Fixed `$httpAddHeader[]`
 - Fixed some callbacks not being detected as callbacks
+- Better ratelimit detection
 
 ## August
 - Added `$scriptLanguage`
