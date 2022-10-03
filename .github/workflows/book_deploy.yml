@@ -3,8 +3,8 @@ name: Wiki Deploy
 on:
   push:
     branches:
-      - prerelease
-      - master
+      - dev
+      - prod
 
 jobs:
   build:
@@ -26,10 +26,10 @@ jobs:
         name: book
         path: book
 
-  deploy-stable:
-    name: Deploy stable wiki
+  deploy-prod:
+    name: Deploy production wiki
     needs: build
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/prod'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -56,7 +56,7 @@ jobs:
   deploy-nightly:
     name: Deploy nightly wiki
     needs: build
-    if: github.ref == 'refs/heads/prerelease'
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -81,7 +81,7 @@ jobs:
 
   notify-discord:
     name: Send notification
-    needs: [deploy-stable, deploy-nightly]
+    needs: [deploy-prod, deploy-nightly]
     if: ${{ !failure() }}
     runs-on: ubuntu-latest
     env:
@@ -99,8 +99,8 @@ jobs:
         fi
         echo "EOF" >> $GITHUB_ENV
     - name: Set notification type
-      if: github.ref == 'refs/heads/master'
-      run: echo "TYPE=Stable" >> $GITHUB_ENV
+      if: github.ref == 'refs/heads/prod'
+      run: echo "TYPE=Production" >> $GITHUB_ENV
     - name: Send wiki update notification
       uses: MineBartekSA/discord-webhook@v2.1
       with:
