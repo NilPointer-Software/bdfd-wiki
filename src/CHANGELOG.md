@@ -18,6 +18,7 @@
 - Fixed `$httpAddHeader[]`
 - Fixed some callbacks not being detected as callbacks
 - Better ratelimit detection
+- Fixed attachments not working in slash commands
 
 ## August
 - Added `$scriptLanguage`
