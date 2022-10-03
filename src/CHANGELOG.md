@@ -5,6 +5,20 @@
 ## September
 - Added `channelID` field to `$awaitFunc[]`
 - Added `$trimContent`
+- Fixed fetching guilds not always working in the app
+- Added `$slashID`
+- Fixed slash command reordering
+- Added intent autodetection 
+- Added `globaluser` option to `$variablesCount[]`
+- Added support for big numbers in the math functions
+- Added new text tutorial
+- Fixed `$checkUserPerms[]` ignoring channel permissions
+- Fixed `$addReactions[]` not working on slash commands
+- Fixed `Ticket number` argument not working in `$newTicket[]`
+- Fixed `$httpAddHeader[]`
+- Fixed some callbacks not being detected as callbacks
+- Better ratelimit detection
+- Fixed attachments not working in slash commands
 
 ## August
 - Added `$scriptLanguage`

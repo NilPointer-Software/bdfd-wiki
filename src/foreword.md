@@ -7,7 +7,7 @@ What are you waiting for? Create the bot of your dreams today!
 **Start with [*Bot Designer for Discord*](https://botdesignerdiscord.com)**
 
 ### 📎 Links
-- [BDFD Official Server](https://botdesignerdiscord.com/discord)
+- [Discord Server](https://botdesignerdiscord.com/discord)
 - [Website](https://botdesignerdiscord.com/)
 - [Android App](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
 - [iOS App](https://apps.apple.com/app/bot-designer-for-discord/id1495536477)
@@ -21,5 +21,5 @@ Welcome to our humble abode. The thing you're seeing is *Bot Designer for Discor
 - [Resources](./resources/introduction.md)
 - [BDScript](./bdscript/introduction.md)
 - [Premium](./premium/introduction.md)
-- [JavaScript](./javascript/javascript.md)
+- [JavaScript](./javascript/introduction.md)
 - [Callbacks](./callbacks/introduction.md)

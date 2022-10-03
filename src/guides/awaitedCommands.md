@@ -15,10 +15,11 @@ To create an awaited command, following function and callbacks are used -
 
 #### Usage
 ```
-$awaitFunc[command name;(user ID)]
+$awaitFunc[command name;(user ID;channel ID)]
 ```
 - `command name` - The name which is used inside [`$awaitedCommand`](#awaitedcommand) and [`$awaitedCommandError`](#awaitedcommanderror) callback.
-- `user ID` - The user the awaited command will trigger for. Uses command author, if `user id` is not given.
+- `user ID` - The user the awaited command will trigger for. Uses command author, if `user ID` is not given.
+- `channel ID` - The channel id where the command should be awaited. Uses current channel, if `channel ID` is not given.
 
 ### $awaitedCommand[]
 `$awaitedCommand` is a callback. It gets triggered when an awaited command gets initiated.
