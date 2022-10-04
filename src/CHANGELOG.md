@@ -2,6 +2,9 @@
 
 # 2022
 
+## October
+- Added `$publishMessage[]`
+
 ## September
 - Added `channelID` field to `$awaitFunc[]`
 - Added `$trimContent`
