@@ -12,6 +12,7 @@ preferred-dark-theme = "bdfd"
 git-repository-url = "https://github.com/NilPointer-Software/bdfd-wiki"
 input-404 = "404.md"
 site-url = "/bdfd-wiki/"
+no-section-label = true
 
 [output.html.search]
 boost-title = 4  
