@@ -1,5 +1,4 @@
 # Modals
-
 In this section, you'll learn how to use the modal message component.
 
 ![](https://imgur.com/XUbUhdG.png)
@@ -7,37 +6,38 @@ In this section, you'll learn how to use the modal message component.
 > ⚠️ **Warning:** Modals are only supported for interaction responses  (like slash commands, buttons, select menus, etc), you can't open a modal from just a message command.
 
 ## Creating a Modal
+```
+$newModal[Modal ID;Title]
+```
 
-`$newModal[modalID;title]`
+- `Modal ID` - Used in `$onInteraction[ID]` callback. It works same way as [buttons](./buttons.md) and [select menus](./selectmenu.md).
+- `Title` - The text which is displayed on top of a modal. This value must be less than or equal to 45 characters.
 
-- `modalID` - Used in `$onInteraction[ID]` callback. It works same way as [buttons](./buttons.md) and [select menus](./selectmenu.md).
-- `title` - The text which is displayed on top of a modal. This value must be less than or equal to 45 characters.
+## Adding Input Fields
+```
+$addTextInput[Text Input ID;Style;Label;(Minimum length;Maximum length;Required;Value;Placeholder)]
+```
 
-## Adding Input Fields in the Modal
-
-`$addTextInput[textInputID;style;label;(minimumLength;maximumLength;required;value;placeholder)]`
-
-- `textInputID` - ID that is used to retrieve the text input in the field. This value must be unique. _(Used in [`$input[textInputID]`](#getting-input-from-a-modal-submission))_
-- `style` - The text input field style, either `short` or `paragraph`.
+- `Text Input ID` - ID that is used to retrieve the text input in the field. This value must be unique. _(Used in [`$input[Text Input ID]`](#getting-input-from-a-modal-submission))_
+- `Style` - The text input field style, either `short` or `paragraph`.
   \
   ![](https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png)
-
-- `label` - Name of the text input field. This value must be less than or equal to 45 characters.
-- `minimumLength` - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the `maximumLength`.
-- `maximumLength` - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the `minimumLength`.  
-- `required` - Whether a user must fill in the text input field, defaults to true.
-- `value` - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than `minimumLength` and no more than `maximumLength`.
-- `placeholder` - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.
+- `Label` - Name of the text input field. This value must be less than or equal to 45 characters.
+- `Minimum length` - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the `Maximum length`.
+- `Maximum length` - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the `Minimum length`.  
+- `Required` - Whether a user must fill in the text input field, defaults to true.
+- `Value` - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than `Minimum length` and no more than `Maximum length`.
+- `Placeholder` - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.
 
 > 🧙‍♂️ **Note:** You can't add more than 5 text input fields.
 
 ## Getting Input from a Modal Submission
-
 _Use this function in response to the modal submission interaction:_
+```
+$input[Text Input ID]
+```
 
-`$input[textInputID]`
-
-- `textInputID` - The text input field to get the user's input from.
+- `Text Input ID` - The text input field to get the user's input from.
 
 ## Example
 
