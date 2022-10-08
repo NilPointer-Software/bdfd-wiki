@@ -1,62 +1,67 @@
-# $try, $catch and $error
-Allows handling errors in [BDScript 2](./bdscript2.md)
+# Error Handling
+In BDScript 2 you can handle errors returned by functions or limiters (such as `$cooldown[]` or `$onlyIf[]`).
 
-## Breakdown
-- Use `$try` to specify functions to execute
-- Optionally use `$catch` to specify what functions should be executed if one of the functions in `$try` fails.
-- Use `$error[]` inside `$catch` to retrieve information about the error.
-- Use `$endtry` to end `$try`
-
-## $error[]
-It can be used inside `$catch` to retrieve information about the error.\
-Possible arguments:
-- `command` - retrieves the name of a function that failed.
-- `source` - retrieves the whole function together with arguments.
-- `message` - retrieves the error message.
-- `row` - retrieves the error code row number.
-- `column` - retrieves the error code column number.
+## Error Handling Functions
+### $try
+Used to open the Error Handling block.
+### $endtry
+Used to close the Error Handling block.
+### $catch
+Used to create a sub-block between `$try` and `$endtry` that will contain the code that will be executed when an error occurs.
+### $error[]
+Used in the `$catch` block to return error information.
+#### Possible Arguments
+- `command` - returns the name of the function that returned the error.
+- `message` - returns the error message that was received.
+- `source` - returns the content of the line where the error occurred.
+- `row` - returns the number of the row in the code where the error occurred.
+- `column` - returns the number of the column in the code where the error occurred.
 
 ## Examples
-### 1
-```php
-Hi!
+### Function Error
+```
+$nomention
+
 $try
-  Sum: $sum[$message[1];$message[2]]
-  Sub: $sub[$message[1];$message[2]]
+  $color[FFFFFF]
+  $title[Hi]
+  $description[Some broken code;]
 $catch
-  Error occured: $error[message]
+  $color[E74C3C]
+  $title[Error Handling]
+  $addField[Function:;$error[command]]
+  $addField[Error:;$error[message]]
 $endtry
 ```
+![Function Error](https://user-images.githubusercontent.com/70456337/194721708-b8062ac5-7ef3-48af-b412-1d66381add44.png)
+### Limiter Error
+As a way to use Error Handling with Limiter Errors, we'll use `$cooldown[]`. With the help of Error Handling, we can make a nice cooldown error message.
 
-Output for `$message[1]` equal to `10` and `$message[2]` equal to `5`:
-```console
-Hi!
-Sum: 15
-Sub: 5
+To handle only the error of our limiter, we will use a [temporary variable](../bdscript/var.md) and [if statements](./ifStatements.md).
+If `$cooldown[]` returns an error, the value of the temporary variable will be set to `true` (in which case our nice error message will be sent).
+
+> **Note**: The `error message` argument in `$cooldown[]` must be left blank.
+
 ```
+$nomention
 
-Output for `$message[1]` equal to `abc` and `$message[2]` equal to `5`:
-```console
-Error occured: Invalid arguments!
-```
+$var[cooldownError;false]
 
-### 2
-In this example we won't use `$catch`
-```php
 $try
-$time[$message]
+  $cooldown[3m;]
+$catch
+  $var[cooldownError;true]
 $endtry
-Time zone has been set!
-```
 
-Output for `$message` equal to `Europe/Warsaw` (correct timezone):
-```console
-Time zone has been set!
+$if[$var[cooldownError]==false]
+Hey $username, are you making an example for the guide?
+$else
+$color[E74C3C]
+$author[Oops, $username!]
+$authorIcon[$authorAvatar]
+$title[You have a cooldown!]
+$description[Come back <t:$sum[$getTimestamp;$getCooldown[normal]]:R>.]
+$endif
 ```
-
-Output for `$message` equal to `Mars` (wrong timezone):
-```console
-Time zone has been set!
-```
-
-As you can see the output is the same because we don't handle the errors here *(there is no `$catch`)*. We just simply ignore them.
+![Limiter Error](https://user-images.githubusercontent.com/70456337/194721773-c9487fd5-89de-4d4d-8296-a56150b94db7.png)
+![Limiter Error](https://user-images.githubusercontent.com/70456337/194721785-cbbd2936-033b-4e0b-b554-6af8b3325c38.png)
