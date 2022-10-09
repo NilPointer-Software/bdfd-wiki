@@ -1,15 +1,14 @@
-
 /* Globals */
-
 :root {
     --sidebar-width: 300px;
     --page-padding: 15px;
     --content-max-width: 750px;
     --menu-bar-height: 50px;
 }
+/* Globals */
 
-/* Themes */
-
+/* Community Themes */
+/* BDFD */
 .bdfd {
     --bg: hsl(200, 7%, 8%);
     --fg: #98a3ad;
@@ -49,7 +48,9 @@
     --searchresults-li-bg: #2b2b2f;
     --search-mark-bg: #355c7d;
 }
+/* BDFD */
 
+/* Gluo */
 .gluo {
     --bg: hsl(240, 7%, 11%);
     --fg: #fff;
@@ -95,7 +96,67 @@
 .gluo a:not(.header) {
     text-shadow: 0 0 10px #257df0;
 }
+/* Gluo */
 
+/* Kinda Neon */
+.kneon {
+    --bg: #170312;
+    --fg: #c5c5c5;
+
+    --sidebar-bg: #170312;
+    --sidebar-fg: #c5c5c5;
+    --sidebar-non-existant: #5c6773;
+    --sidebar-active: #fe27c3;
+    --sidebar-spacer: #fe27c3;
+
+    --scrollbar: #91146f;
+
+    --icons: #f76ed1;
+    --icons-hover: #91146f;
+
+    --links: #fe275b;
+
+    --inline-code-color: #fe27c3;
+
+    --theme-popup-bg: #170312;
+    --theme-popup-border: #fe27c3;
+    --theme-hover: #91146f;
+
+    --quote-bg: #35112b;
+    --quote-border: #fe27c3;
+
+    --table-border-color: #91146f;
+    --table-header-bg: #2d0221;
+    --table-alternate-bg: #2d0221;
+
+    --searchbar-border-color: #fe27c3;
+    --searchbar-bg: #170312;
+    --searchbar-fg: #f76ed1;
+    --searchbar-shadow-color: #fe275b;
+    --searchresults-header-fg: #f76ed1;
+    --searchresults-border-color: #fe275b;
+    --searchresults-li-bg: #170312;
+    --search-mark-bg: #f76ed1;
+
+    --chapter-hover-bg: #170312
+}
+
+.kneon {
+    text-shadow: 0 0 10px #170312;
+}
+
+.kneon ::-webkit-scrollbar {
+    width: 15px;
+    height: 15px
+}
+
+.kneon code {
+    background: #35112b;
+    border-radius: 2px;
+}
+/* Kinda Neon */
+
+/* Shiro's Theme */
 .shiro {
     --bg: hsl(0, 0%, 0%);
     --fg: #c5c5c5;
@@ -135,7 +196,10 @@
     --searchresults-li-bg: #252932;
     --search-mark-bg: #2e91fb;
 }
+/* Shiro's Theme */
+/* Community Themes */
 
+/* Initial Themes */
 .ayu {
     --bg: hsl(210, 25%, 8%);
     --fg: #c5c5c5;
@@ -335,6 +399,7 @@
     --searchresults-li-bg: #dec2a2;
     --search-mark-bg: #e69f67;
 }
+/* Initial Themes */
 
 @media (prefers-color-scheme: dark) {
     .light.no-js {

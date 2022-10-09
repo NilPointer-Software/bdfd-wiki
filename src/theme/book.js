@@ -296,7 +296,7 @@ function playpen_text(playpen) {
     function set_theme(theme, store = true) {
         let ace_theme;
 
-        if (theme == 'coal' || theme == 'navy' || theme == 'bdfd' || theme == "shiro" || theme == "gluo") {
+        if (theme == 'coal' || theme == 'navy' || theme == 'bdfd' || theme == "shiro" || theme == "gluo" || theme == "kneon") {
             stylesheets.ayuHighlight.disabled = true;
             stylesheets.tomorrowNight.disabled = false;
             stylesheets.highlight.disabled = true;
