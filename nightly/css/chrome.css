@@ -142,7 +142,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 
 .nav-chapters:hover {
     text-decoration: none;
-    background-color: var(--theme-hover);
+    background-color: var(--chapter-hover-bg);
     transition: background-color 0.15s, color 0.15s;
 }
 
@@ -157,7 +157,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     text-decoration: none;
     width: 90px;
     border-radius: 5px;
-    background-color: var(--sidebar-bg);
+    background-color: var(---chapter-hover-bg);
 }
 
 .previous {
