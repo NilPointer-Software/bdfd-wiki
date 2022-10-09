@@ -8,6 +8,7 @@
 - [Guides]()
     - [Introduction](./guides/introduction.md)
     - [Beginning](./guides/beginning.md)
+        - [Bot Status](./guides/botStatus.md)
         - [Commands Anatomy](./guides/commandsAnatomy.md)
         - [Gateway Intents](./guides/gatewayIntents.md)
         - [Variables](./guides/variables.md)
