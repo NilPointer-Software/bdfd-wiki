@@ -1,5 +1,5 @@
 # Contributing
-Hey! 👋 Thanks for checking out. If you would like to contribute in this repository, do not hesitate! Pull requests are always welcome to us at any hour.
+Hey! 👋 Thanks for checking out. If you would like to contribute to this repository, do not hesitate! Pull requests are always welcome at any hour.
 
 > **Note** : Contributions to this repository are generally done through submitting a pull request.
 If you are comparatively new to GitHub or aren't familiar how to submit a pull request, enlighten yourself a bit by checking [GitHub docs](https://docs.github.com/en/pull-requests)
