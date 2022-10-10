@@ -1,9 +1,9 @@
 # Contributing
 Hey! 👋 Thanks for checking out. If you would like to contribute to this repository, do not hesitate! Pull requests are always welcome at any hour.
 
-> **Note** : Contributions to this repository are generally done through submitting a pull request.
-If you are comparatively new to GitHub or aren't familiar how to submit a pull request, enlighten yourself a bit by checking [GitHub docs](https://docs.github.com/en/pull-requests)
-or you can also ask anyone from the active [contributors](https://github.com/NilPointer-Software/bdfd-wiki/graphs/contributors) to submit your contributions on behalf.
+> **Note** : Contributions to this repository are generally made by submitting a pull request.
+If you are comparatively new to GitHub or aren't familiar with how to submit a pull request, enlighten yourself a bit by checking [GitHub docs](https://docs.github.com/en/pull-requests)
+or you can also ask anyone from the active [contributors](https://github.com/NilPointer-Software/bdfd-wiki/graphs/contributors) to submit your contributions on your behalf.
 
 ## Guidelines
 General guidelines to keep in mind when contributing :
