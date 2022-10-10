@@ -22,7 +22,8 @@ Some of the frequently asked questions from users -
 
 2. Do I get any perks for contributing?
 
-   Although, you may not be credited for making of the wiki. However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
+   You are credited for your contributions to the wiki here on GitHub, by being shown as a contributor.
+   However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
 
 3. Any correct steps to submit contributions?
 
