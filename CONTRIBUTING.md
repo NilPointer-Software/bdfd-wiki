@@ -18,7 +18,7 @@ General guidelines to keep in mind when contributing :
 Some of the frequently asked questions from users -
 1. My pull request has been merged but isn't shown on the wiki page. Why?
 
-   Once a pull request is merged successfully, the changes can been seen in [Nightly Wiki](https://nilpointer-software.github.io/bdfd-wiki/nightly) after 2-3 minutes. In the case of [Main Wiki](https://nilpointer-software.github.io/bdfd-wiki), it will take some weeks since the contributed markdown files is deployed by a Developer only.
+   Once a pull request is merged successfully, the changes can be seen in [Nightly Wiki](https://nilpointer-software.github.io/bdfd-wiki/nightly) after 2-3 minutes. In the case of [Main Wiki](https://nilpointer-software.github.io/bdfd-wiki), it will take some weeks since the contributed markdown files are deployed by a Developer only.
 
 2. Do i get any perks for contributing?
 
