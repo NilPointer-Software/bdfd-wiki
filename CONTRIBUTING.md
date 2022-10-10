@@ -20,7 +20,7 @@ Some of the frequently asked questions from users -
 
    Once a pull request is merged successfully, the changes can be seen in [Nightly Wiki](https://nilpointer-software.github.io/bdfd-wiki/nightly) after 2-3 minutes. In the case of [Main Wiki](https://nilpointer-software.github.io/bdfd-wiki), it will take some weeks since the contributed markdown files are deployed by a Developer only.
 
-2. Do i get any perks for contributing?
+2. Do I get any perks for contributing?
 
    Although, you may not be credited for making of the wiki. However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
 
