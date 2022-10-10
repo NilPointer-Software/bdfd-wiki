@@ -1,56 +1,61 @@
 # Contributing
-You can contribute to the BDFD wiki by making a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+Hey! 👋 Thanks for checking out. If you would like to contribute in this repository, do not hesitate! Pull requests are always welcome to us at any hour.
 
-Make sure to follow the 'Proper Wiki Structure' when contributing.
+> **Note** : Contributions to this repository are generally done through submitting a pull request.
+If you are comparatively new to GitHub or aren't familiar how to submit a pull request, enlighten yourself a bit by checking [GitHub docs](https://docs.github.com/en/pull-requests)
+or you can also ask anyone from the active [contributors](https://github.com/NilPointer-Software/bdfd-wiki/graphs/contributors) to submit your contributions on behalf.
 
-### Common Issue
-- My pull request got merged but isn't shown on the wiki page. Why?
-  - The markdown files contributed is deployed by a developer (which happens every few weeks). You can view recently merged pull request in [nightly](https://nilpointer-software.github.io/bdfd-wiki/nightly/) wiki version.
-   
-## Terms and Guidelines
-- You may not be credited for the making of wiki. However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
-- The name of files must be in the format of `fileName.md`. No spaces or special characters (e.g `$`).
+## Guidelines
+General guidelines to keep in mind when contributing :
+- All file names must be in "[lowerCamelCase](https://wiki.c2.com/?LowerCamelCase)" format (i.e `fileName.md`).
+- Avoid using spaces or any special characters (e.g `$`) in file names.
 - Do not make duplicates or useless pull requests.
 - Do not make troll or NSFW pull requests.
 - Fact-check/verify information included in the pull request.
+- Make sure to follow [Proper Wiki Structure](#proper-wiki-structure).
+
+## FAQs
+Some of the frequently asked questions from users -
+1. My pull request has been merged but isn't shown on the wiki page. Why?
+
+   Once a pull request is merged successfully, the changes can been seen in [Nightly Wiki](https://nilpointer-software.github.io/bdfd-wiki/nightly) after 2-3 minutes. In the case of [Main Wiki](https://nilpointer-software.github.io/bdfd-wiki), it will take some weeks since the contributed markdown files is deployed by a Developer only.
+
+2. Do i get any perks for contributing?
+
+   Although, you may not be credited for making of the wiki. However, if applicable the Developers reserve the right to give perks/accreditation to users for contributing.
+
+3. Any correct steps to submit contributions?
+
+   Follow the steps described below :
+   - Fork the repository.
+   - Create a new branch from `dev` branch.
+   - Do the required changes in the new branch and then, submit a pull request.
+   - Once, the pull request has been merged successfully, fetch the upstream in `dev` branch *(Optionally, you can also delete the pull request branch if you want)*.
+   - That's it...Happy Contributing!!
 
 ## Proper Wiki Structure
+
 ### Grammar
-- Don't use gendered pronouns (e.g. she/her/hers/he/him/his). Instead use: They, them, their.
-```diff
-- He is cool.
-+ They are cool.
-```
-- Use "we" instead of "I" when referring to yourself.
-```diff
-- If you use the `$eval` function, I strongly recommend you also use `$onlyForIDs`.
-+ If you use the `$eval` function, we strongly recommend you also use `$onlyForIDs`.
-```
-- "You"/"your" instead of "we"/"our"
-```diff
-- We can get our bot's ID using `$botID`.
-+ You can get your bot's ID using `$botID`.
-```
-- Avoid using these phrases:
-```diff
-- dumb, weird, stupid, ugly, uneeded, useless, bad, deadly, noob, trash, suck, I don't know, I don't care, idiot
-```
+- Don't use gendered pronouns *(i.e She/Her/Hers or He/Him/His)*, instead use neutral pronouns *(i.e They, Them, Their)*.
+- Use *"We"* instead of *"I"* when referring to yourself.
+- Use *"You/Your"* instead of *"We/Our"* when referring to the reader.
+- Avoid using offensive phrases or words *(i.e dumb, useless, bad, trash, suck etc)*.
 
 ### Shortening Headers
-Make headers are short as possible, and in [title case](https://www.dummies.com/wp-content/uploads/410813.image0.jpg).
+Always keep section headers short, consise, and in [Title Case](https://en.m.wikipedia.org/wiki/Title_case) format. For example,
 
-```diff
-- ## How to create embeds
-+ ## Creating Embeds
+```
+❌ How to create embeds
+✅ Creating Embeds
 ```
 
 ### Markdown
-#### Basic
-- \*\*Bold\*\* - **Bold**
-- \*Italics\* - *Italics*
-- \`code-snippet\`  - `code-snippet`
 
-#### Advanced
+\*\*Bold\*\* - **Bold**
+
+\*Italics\* - *Italics*
+
+\`code-snippet\`  - `code-snippet`
 
 **Lists:**
 
@@ -60,20 +65,18 @@ Make headers are short as possible, and in [title case](https://www.dummies.com/
 
 \- item3
 
-*Output:*
+##### Output
 - item1
 - item2
 - item3
 
 **Large Code Blocks:**
 
+\`\`\`\
+code\
 \`\`\`
 
-code
-
-\`\`\`
-
-*Output:*
+##### Output
 ```
 code
 ```
@@ -82,10 +85,10 @@ code
 
 \> This is a quote.
 
-*Output:*
+##### Output
 > This is a quote.
 
-#### Headers
+**Headers**
 
 \# Title
 
@@ -95,7 +98,7 @@ code
 
 \#### Small-Topic
 
-*Output:*
+##### Output
 # Title
 
 ## Section
