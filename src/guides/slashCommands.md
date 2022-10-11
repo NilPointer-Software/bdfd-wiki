@@ -12,7 +12,7 @@ Slash commands are type of interactive application commands. It let's users to i
 - Creating a guild slash command is instant but it won't appear unless you have registered them in the current guild using `$registerGuildCommands[(slash command name;...)]` function.
 
 
-    > 📝 Guild slash commands doesn't appear in DMs unlike global slash commands.
+    > 📝 Guild slash commands don't appear in DMs unlike global slash commands.
 # Getting started
 Before you start, you need **2.0.18** version of the app or later.
 
@@ -54,7 +54,7 @@ To create a slash option,
 - Click *"Add"* button in `Options` section.
 - Fill-up necessary data and save the changes.
 
-> 📝 Slash commands can have upto maximum 25 options per slash.
+> 📝 Slash commands can have up to maximum 25 options per slash.
 
 ### Slash options types
 
