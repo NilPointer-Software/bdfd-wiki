@@ -5,6 +5,7 @@
 ## October
 - Added `$publishMessage[]`
 - Made `$useChannel[]` work with message components
+- Added `$channelPosition[]`
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
