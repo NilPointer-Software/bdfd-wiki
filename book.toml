@@ -19,3 +19,6 @@ boost-title = 4
 [output.html.fold]
 enable = true
 level = 0
+
+[output.html.playground]
+copyable = true
