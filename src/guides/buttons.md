@@ -15,8 +15,8 @@ Here, are all possible values for `style` function argument.
 > 📝 If `link` style is used, the button **won't send** any interactions!
 
 ### Style examples
-![button styles](https://user-images.githubusercontent.com/16838075/120202615-19f60a00-c227-11eb-8e8e-5cd3c38f6c1b.png)\
-*The image was taken from [Discord Docs](https://discord.com/developers/docs/interactions/message-components#buttons-button-styles)*
+![button styles](https://user-images.githubusercontent.com/70456337/196046466-7df5f832-e88d-484d-97f9-ddedfce895cb.jpg)
+
 
 ## Button types
 There are 2 types of buttons : `interactive` and `link`.
