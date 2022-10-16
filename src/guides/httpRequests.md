@@ -69,6 +69,24 @@ $image[$httpResult[results;0;url]]
 $footer[nekos.best API]
 $color[#e91e63]
 ```
+
+<details><summary>Show Example API Response</summary>
+
+```json
+{
+    "results":[
+        {
+            "artist_href":"https://www.pixiv.net/en/users/4284365",
+            "artist_name":"イカたると",
+            "source_url":"https://www.pixiv.net/en/artworks/55142454",
+            "url":"https://nekos.best/api/v2/neko/0023.png"
+        }
+    ]
+}
+```
+
+</details>
+
 ![Neko](https://i.imgur.com/grfUOlX.png)
 > API: [nekos.best](https://docs.nekos.best)
 ### Advanced level
