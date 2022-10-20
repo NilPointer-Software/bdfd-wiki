@@ -151,12 +151,16 @@
 
 .kneon ::-webkit-scrollbar {
     width: 15px;
-    height: 15px
+    height: 12px
 }
 
 .kneon code {
     background: #35112b;
-    border-radius: 2px;
+    border-radius: 10px;
+}
+
+.kneon blockquote {
+    border-radius: 10px;
 }
 /* Kinda Neon */
 
