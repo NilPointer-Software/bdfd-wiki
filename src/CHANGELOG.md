@@ -9,6 +9,10 @@
 - Added `$categoryID`
 - Added `$varExists[]`
 - Added `$boostCount`
+- Added `$categoryCount`
+- Added `$isTimedOut[]`
+- Added `stage` and `forum` channel types to `$createChannel[]`
+- Added `stage`, `announcement`, and `forum` channel types to `$channelType[]`
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
