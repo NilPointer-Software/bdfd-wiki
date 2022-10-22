@@ -6,7 +6,7 @@ Publishes a message from an announcement channel to all following servers.
 $publishMessage[Channel ID;Message ID]
 ```
 - `Channel ID` : The ID of the channel where the message is.
-- `Message ID` : The ID of the message which needs to be publish.
+- `Message ID` : The ID of the message which will be published.
 
 ## Example
 ```
