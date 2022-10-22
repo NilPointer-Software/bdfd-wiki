@@ -117,7 +117,7 @@ jobs:
           description: |
             **__Content__**
 
-            ${{ env.MESSAGE }}
+            ```${{ env.MESSAGE }}```
         component: |
           type: 2
           style: 5
