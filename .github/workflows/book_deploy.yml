@@ -56,7 +56,7 @@ jobs:
   deploy-nightly:
     name: Deploy nightly wiki
     needs: build
-    if: false && github.ref == 'refs/heads/dev' 
+    if: false && github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -92,7 +92,7 @@ jobs:
         RAW: ${{ github.event.head_commit.message }}
       run: |
         echo "MESSAGE<<EOF" >> $GITHUB_ENV
-        echo "$RAW" | head -n 10 >> $GITHUB_ENV
+        echo "$RAW" | head -n 10 | sed ':a;N;$!ba;s/\n/\n  /g' >> $GITHUB_ENV
         if [ $(echo "$RAW" | wc -l) -gt 10 ]
         then
           echo "..." >> $GITHUB_ENV
@@ -106,12 +106,20 @@ jobs:
       with:
         webhook: ${{ secrets.WEBHOOK }}
         embed: |
-          title: "${{ env.TYPE }} wiki update"
+          title: "${{ env.TYPE }} Wiki Update"
           color: 10001644
-          fields:
-            - name: "Message"
-              value: "${{env.MESSAGE}}"
-            - name: "Author"
-              value: "${{ github.event.head_commit.author.username }}"
-            - name: "Link"
-              value: "[here](https://github.com/NilPointer-Software/bdfd-wiki/commit/${{github.sha}})"
+          author:
+            name: ${{ github.event.sender.login }}
+            url: https://github.com/${{ github.event.sender.login }}
+            icon_url: ${{ github.event.sender.avatar_url }}
+          thumbnail:
+            url: ${{ github.event.repository.owner.avatar_url }}
+          description: |
+            **__Content__**
+
+            ${{ env.MESSAGE }}
+        component: |
+          type: 2
+          style: 5
+          label: Jump to commit
+          url: ${{ github.event.head_commit.url }}
