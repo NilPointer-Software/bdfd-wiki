@@ -113,10 +113,9 @@ jobs:
             url: https://github.com/${{ github.event.sender.login }}
             icon_url: ${{ github.event.sender.avatar_url }}
           thumbnail:
-            url: ${{ github.event.repository.owner.avatar_url }}
+            url: https://botdesignerdiscord.com/logo512.png
           description: |
             **__Content__**
-
             ```${{ env.MESSAGE }}```
         component: |
           type: 2
