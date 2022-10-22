@@ -13,6 +13,8 @@
 - Added `$isTimedOut[]`
 - Added `stage` and `forum` channel types to `$createChannel[]`
 - Added `stage`, `announcement`, and `forum` channel types to `$channelType[]`
+- Added `$hasNitro[]`
+- `$enableDecimals[]` now works with `$calculate[]`
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
