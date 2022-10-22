@@ -106,4 +106,10 @@ jobs:
       uses: MineBartekSA/discord-webhook@v2.1
       with:
         webhook: ${{ secrets.WEBHOOK }}
-        content: "${{ env.TYPE }} Wiki update!\n```${{ env.MESSAGE }}``` by ${{ github.event.head_commit.author.username }}\nhttps://github.com/NilPointer-Software/bdfd-wiki/commit/${{github.sha}}"
+        embed: |
+          title: "${{ env.TYPE }} wiki update"
+          fields:
+            - name: "Message"
+              value: env.MESSAGE
+            - name: "Link"
+              value: "[here](https://github.com/NilPointer-Software/bdfd-wiki/commit/${{github.sha}})"
