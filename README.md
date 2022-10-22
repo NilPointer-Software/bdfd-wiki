@@ -22,7 +22,7 @@
 
 **Bot Designer For Discord** is a free-to-use Discord Bot maker available for Android, iOS and Web. It's capable of developing nearly all types of bots from simple "echo" bots to advanced multi-purpose administration ones.
 
-This is the official GitHub repository of BDFD Wiki which explains BDFD functions, callbacks, and features. 
+This is the official GitHub repository of BDFD Wiki which explains BDFD functions, callbacks, and features.
 
 ### Links
 - [Website](https://botdesignerdiscord.com)
