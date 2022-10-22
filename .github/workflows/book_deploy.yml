@@ -92,6 +92,7 @@ jobs:
         RAW: ${{ github.event.head_commit.message }}
       run: |
         echo "MESSAGE<<EOF" >> $GITHUB_ENV
+        RAW=$(echo "$RAW" | sed -r '/^\s*$/d')
         echo "$RAW" | head -n 10 | sed ':a;N;$!ba;s/\n/\n  /g' >> $GITHUB_ENV
         if [ $(echo "$RAW" | wc -l) -gt 10 ]
         then
@@ -116,7 +117,8 @@ jobs:
             url: https://botdesignerdiscord.com/logo512.png
           description: |
             **__Content__**
-            ```${{ env.MESSAGE }}```
+
+            ${{ env.MESSAGE }}
         component: |
           type: 2
           style: 5
