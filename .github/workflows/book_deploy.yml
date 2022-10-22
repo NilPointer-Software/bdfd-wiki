@@ -111,5 +111,7 @@ jobs:
           fields:
             - name: "Message"
               value: "${{env.MESSAGE}}"
+            - name: "Author"
+              value: "${{ github.event.head_commit.author.username }}"
             - name: "Link"
               value: "[here](https://github.com/NilPointer-Software/bdfd-wiki/commit/${{github.sha}})"
