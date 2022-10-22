@@ -56,7 +56,8 @@ jobs:
   deploy-nightly:
     name: Deploy nightly wiki
     needs: build
-    if: github.ref == 'refs/heads/dev'
+#     if: false && github.ref == 'refs/heads/dev' 
+    if: ${{ false }}  # disable for now
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
