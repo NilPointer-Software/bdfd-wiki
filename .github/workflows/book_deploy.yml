@@ -108,8 +108,9 @@ jobs:
         webhook: ${{ secrets.WEBHOOK }}
         embed: |
           title: "${{ env.TYPE }} wiki update"
+          color: 10001644
           fields:
             - name: "Message"
-              value: env.MESSAGE
+              value: "${{env.MESSAGE}}"
             - name: "Link"
               value: "[here](https://github.com/NilPointer-Software/bdfd-wiki/commit/${{github.sha}})"
