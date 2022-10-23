@@ -1,5 +1,5 @@
 # $userReacted
-Checks if an user reacted to a message with the provided emoji. Returns "true", if the user did react else "false".
+Checks if a user reacted to a message with the provided emoji. Returns "true" if the user did react otherwise, "false".
 
 ## Syntax
 ```
