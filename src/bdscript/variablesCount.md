@@ -1,18 +1,17 @@
 # $variablesCount
 Returns how many of a certain variable type the bot has.
 
-## Usage
+## Syntax
 ```
-$variablesCount[variableType (user/server/globaluser)]
+$variablesCount[Type]
 ```
 
-### Breakdown
-- `variableType` - The variable type to return the count for.
+### Parameters
+- `Type` : The variable type to return the count for. Accepts either `user`, `server` or `globaluser` as input.
 
 ## Example
 ```
 $nomention
 $variablesCount[server]
 ```
-
 ![example](https://user-images.githubusercontent.com/69215413/125121829-82f05d80-e0c2-11eb-9a78-4b7ea7e3d224.png)
