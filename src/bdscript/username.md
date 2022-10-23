@@ -2,26 +2,33 @@
 Returns a user's username.
 
 ## Usages
-There are two usages of the `$username` function.
+There are two usages of this function :
 
 ### Usage #1
-`$username` - Returns the username of the user running this command.
+#### Syntax
+```
+$username
+```
+Returns the username of the user who triggered the command.
 
-
-### Usage #2
-`$username[userID]` - Returns username of the user with the 'userID' that is provided.
-
-## Examples
-### Example #1
-*(for this example a echo command)*
+#### Example
 ```
 $nomention
 Hello $username!
 ```
 ![example1](https://user-images.githubusercontent.com/69215413/114783581-fc88e180-9d47-11eb-91a6-02e60b20fcf4.png)
 
-### Example #2
-*(for this example a hug command)*
+### Usage #2
+#### Syntax
+```
+$username[User ID]
+```
+Returns username of a specific user using it's ID.
+
+##### Parameters
+- `User ID` : The ID of the user whose username is to get.
+
+#### Examples
 ```
 $nomention
 $username just hugged $username[$mentioned[1]]!
