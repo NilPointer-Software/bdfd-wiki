@@ -1,5 +1,5 @@
 # $userPerms
-Returns an user's permissions.
+Returns a user's permissions.
 
 ## Syntax
 ```
