@@ -10,7 +10,7 @@ $userLeaderboard[Variable name;(Sort)]
 
 ### Parameters
 - `Variable name` : The variable to create the leaderboard for.
-- `Sort` : Sorts the leaderboard values in ascending (`asc`) or descending (`desc`) order. Defaults as `desc` (Optional).
+- `Sort` : Sorts the leaderboard values in ascending (`asc`) or descending (`desc`) order. Defaults to `desc` (Optional).
 
 ## Example
 ```
