@@ -26,7 +26,7 @@ $username[User ID]
 Returns the username of a specific user given its ID.
 
 ##### Parameters
-- `User ID` : The ID of the user whose username is to get.
+- `User ID` : The user to get the username for.
 
 #### Example
 ```
