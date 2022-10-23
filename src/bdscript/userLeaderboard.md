@@ -1,5 +1,5 @@
 # $userLeaderboard
-Returns the top 10 user's username and value for a given user variable.
+Returns the top 10 users' usernames and values for a given user variable.
 
 > 📌 [`$userLeaderboard`](./userLeaderboard.md) automatically generates a description. So, [`$description`](./description.md) of index `1` should be avoided in the code.
 
