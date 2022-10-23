@@ -7,9 +7,9 @@ $userPerms[User ID;Return amount;Separator]
 ```
 
 ### Parameters
-- `User ID` : The user to get their permissions.
+- `User ID` : The user to get permissions for.
 - `Return amount` : The no. of permissions to return. Use `-1` to return all.
-- `Separator` : A text/character which is use for separating each permission.
+- `Separator` : A text/character which is used for separating each permission.
 
 ## Example
 ```
