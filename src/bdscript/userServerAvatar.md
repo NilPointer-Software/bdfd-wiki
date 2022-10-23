@@ -1,5 +1,5 @@
 # $userServerAvatar
-Returns server avatar URL of given user ID.
+Returns the URL for the server avatar of a given user.
 
 ## Syntax
 ```
