@@ -147,20 +147,27 @@
                         <h1 id="username"><a class="header" href="#username">$username</a></h1>
 <p>Returns a user's username.</p>
 <h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
-<p>There are two usages of the <code>$username</code> function.</p>
+<p>There are two usages of this function :</p>
 <h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
-<p><code>$username</code> - Returns the username of the user running this command.</p>
-<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
-<p><code>$username[userID]</code> - Returns username of the user with the 'userID' that is provided.</p>
-<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<h3 id="example-1"><a class="header" href="#example-1">Example #1</a></h3>
-<p><em>(for this example a echo command)</em></p>
+<h4 id="syntax"><a class="header" href="#syntax">Syntax</a></h4>
+<pre><code>$username
+</code></pre>
+<p>Returns the username of the user who triggered the command.</p>
+<h4 id="example"><a class="header" href="#example">Example</a></h4>
 <pre><code>$nomention
 Hello $username!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/114783581-fc88e180-9d47-11eb-91a6-02e60b20fcf4.png" alt="example1" /></p>
-<h3 id="example-2"><a class="header" href="#example-2">Example #2</a></h3>
-<p><em>(for this example a hug command)</em></p>
+<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
+<h4 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h4>
+<pre><code>$username[User ID]
+</code></pre>
+<p>Returns the username of a specific user given its ID.</p>
+<h5 id="parameters"><a class="header" href="#parameters">Parameters</a></h5>
+<ul>
+<li><code>User ID</code> : The user to get the username for.</li>
+</ul>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
 <pre><code>$nomention
 $username just hugged $username[$mentioned[1]]!
 </code></pre>

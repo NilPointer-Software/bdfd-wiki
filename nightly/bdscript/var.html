@@ -145,25 +145,31 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="var"><a class="header" href="#var">$var</a></h1>
-<p>Can be used to save a value temporary. It doesn't require setting up a new variable in the app. The data is removed after the command is executed. If value is provided the variable is set otherwise the value is retrieved. </p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>Creates a temporary variable.</p>
+<p>Unlike, it's counterpart variables (i.e <a href="./setVar.html"><code>$setVar</code></a>, <a href="./setUserVar.html"><code>$setUserVar</code></a> etc.) which needs you to create a variable in the app, <a href="./var.html"><code>$var[]</code></a> doesn't require you to do that.
+Instead, it creates the variable automatically during it's runtime and gets deleted once the command execution terminates.</p>
+<p>The data stored in the temporary variable can only be retrieved during its execution period and is removed once it's finished.</p>
+<blockquote>
+<p>📌 This function can only be used in <code>BDScript 2</code> script language.</p>
+</blockquote>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$var[Name;(Value)]
 </code></pre>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
-<p>We will create a command that will:</p>
-<ol>
-<li>Set a temporary variable named <code>message</code> with the user's message.</li>
-</ol>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Name</code> : The name of the temporary variable.</li>
+<li><code>Value</code> : The data to store (Optional).</li>
+</ul>
 <blockquote>
-<p>🧙‍♂️ We will make it so that the entire user message is in lower case.</p>
+<p>📌 To retrieve the temporary stored value, type <code>$var[Name]</code>, where <em>&quot;Name&quot;</em> is the temporary variable name.</p>
 </blockquote>
-<ol start="2">
-<li>Set another variable named <code>id</code> with the ID of the message sent using <code>$sendMessage</code>, which will contain the previously set <code>message</code> temporary variable.</li>
-<li>Add a button to the sent message.</li>
-</ol>
-<pre><code>$var[message;$toLowercase[$message]]
-$var[id;$sendMessage[$var[message];yes]]
-$addButton[no;interactionID;Example;secondary;no;;$var[id]]
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$argsCheck[&gt;1;Type a message!]
+
+$var[ID;$sendMessage[$toLowercase[$message];yes]]
+
+$addButton[no;interactionID;Example;secondary;;;$var[ID]]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/189480166-d37cbdb8-05ce-44e8-8f2e-14d030baa9a9.png" alt="Example" /></p>
 

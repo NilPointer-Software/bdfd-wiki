@@ -145,25 +145,22 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="userreacted"><a class="header" href="#userreacted">$userReacted</a></h1>
-<p>Checks if the user reacted to a message, with the provided 'emoji'.</p>
-<blockquote>
-<p>🧙‍♂️ 'true' means the user did react with the emoji, otherwise 'false' is returned.</p>
-</blockquote>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$userReacted[channelID;messageID;userID;emoji]
+<p>Checks if a user reacted to a message with the provided emoji. Returns &quot;true&quot; if the user did react otherwise, &quot;false&quot;.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$userReacted[Channel ID;Message ID;User ID;Emoji]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> - The channel where the message is located.</li>
-<li><code>messageID</code> - The message to check the reactions for.</li>
-<li><code>userID</code> - The user that should of reacted.</li>
-<li><code>emoji</code> - The emoji that the user should of reacted with.</li>
+<li><code>Channel ID</code> : The channel where the message is located.</li>
+<li><code>Message ID</code> : The message to check the reactions for.</li>
+<li><code>User ID</code> : The user to check the reaction for.</li>
+<li><code>Emoji</code> : The emoji of the reaction to check.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$userReacted[$channelID;9213992398838926;3894834783463753;🧙‍♂️]
+$userReacted[$channelID;$message;$authorID;🍀]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125123192-56d5dc00-e0c4-11eb-8074-38d34c9c24b3.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/197375576-dbe6fc17-68cb-44ed-802a-81a16db98ce9.png" alt="Screenshot_20221023_105811" /></p>
 
                     </main>
 
