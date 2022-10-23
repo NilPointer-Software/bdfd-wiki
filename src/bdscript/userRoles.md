@@ -1,5 +1,5 @@
 # $userRoles
-Returns all roles names of an user.
+Returns all role names given to the user.
 
 ## Syntax
 ```
