@@ -1,20 +1,19 @@
 # $userPerms
+Returns a user's permissions.
 
-Returns user permissions. Amount to return can be set to -1 if you'd like to return every permission
-
-## Usage
+## Syntax
 ```
-$userPerms[user ID;return amount;separator]
+$userPerms[User ID;Return amount;Separator]
 ```
 
-## Breakdown
-- `user id` - the userID to get their permissions.
-- `return amount` - how many permissions you want to get, use -1 to extract all.
-- `separator` - text/character to use to separate each permission
+### Parameters
+- `User ID` : The user to get permissions for.
+- `Return amount` : The no. of permissions to return. Use `-1` to return all.
+- `Separator` : A text/character which is used for separating each permission.
 
 ## Example
 ```
 $nomention
-$userPerms[$mentioned[1];-1;-]
+$userPerms[$mentioned[1;yes];-1;-]
 ```
 ![image](https://user-images.githubusercontent.com/42785890/151909707-d8e093f2-1279-4754-88a5-51466270fde6.png)
