@@ -23,7 +23,7 @@ Hello $username!
 ```
 $username[User ID]
 ```
-Returns username of a specific user using it's ID.
+Returns the username of a specific user given its ID.
 
 ##### Parameters
 - `User ID` : The ID of the user whose username is to get.
