@@ -110,9 +110,9 @@ jobs:
           title: "${{ env.TYPE }} Wiki Update"
           color: 10001644
           author:
-            name: ${{ github.event.sender.login }}
-            url: https://github.com/${{ github.event.sender.login }}
-            icon_url: ${{ github.event.sender.avatar_url }}
+            name: ${{ github.event.head_commit.author.username }}
+            url: https://github.com/${{ github.event.head_commit.author.username }}
+            icon_url: https://github.com/${{ github.event.head_commit.author.username }}.png
           thumbnail:
             url: https://botdesignerdiscord.com/logo512.png
           description: |
