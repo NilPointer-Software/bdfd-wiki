@@ -1,7 +1,7 @@
 # $var
 Creates a temporary variable.
 
-Unlike, it's counterpart variables (i.e [`$setVar`](./setVar.md), [`$setUserVar`](./setUserVar.md) etc.) which needs to create a variable in the app in order to store data. [`$var[]`](./var.md) doesn't require.
+Unlike, it's counterpart variables (i.e [`$setVar`](./setVar.md), [`$setUserVar`](./setUserVar.md) etc.) which needs you to create a variable in the app, [`$var[]`](./var.md) doesn't require you to do that.
 Instead, it creates the variable automatically during it's runtime and gets deleted once the command execution terminates.
 
 The data stored in the temporary variable can only be retrieved during its execution period and is removed once it's finished.
