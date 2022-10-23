@@ -7,7 +7,7 @@ $userRoles[User ID]
 ```
 
 ### Parameters
-- `User ID` : The user to return the roles for.
+- `User ID` : The user to return the role names for.
 
 ## Example
 ```
