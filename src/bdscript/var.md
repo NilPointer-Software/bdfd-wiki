@@ -4,7 +4,7 @@ Creates a temporary variable.
 Unlike, it's counterpart variables (i.e [`$setVar`](./setVar.md), [`$setUserVar`](./setUserVar.md) etc.) which needs to create a variable in the app in order to store data. [`$var[]`](./var.md) doesn't require.
 Instead, it creates the variable automatically during it's runtime and gets deleted once the command execution terminates.
 
-The data stored in the temporary variable can be retrieved during it's execution period only and is removed once it's finishes.
+The data stored in the temporary variable can only be retrieved during its execution period and is removed once it's finished.
 
 > 📌 This function can only be used in `BDScript 2` script language.
 
