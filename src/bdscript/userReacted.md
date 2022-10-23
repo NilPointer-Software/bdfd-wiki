@@ -9,8 +9,8 @@ $userReacted[Channel ID;Message ID;User ID;Emoji]
 ### Parameters
 - `Channel ID` : The channel where the message is located.
 - `Message ID` : The message to check the reactions for.
-- `User ID` : The user that should of reacted.
-- `Emoji` : The emoji that the user should of reacted with.
+- `User ID` : The user to check the reaction for.
+- `Emoji` : The emoji of the reaction to check.
 
 ## Example
 ```
