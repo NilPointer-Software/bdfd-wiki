@@ -28,7 +28,7 @@ Returns username of a specific user using it's ID.
 ##### Parameters
 - `User ID` : The ID of the user whose username is to get.
 
-#### Examples
+#### Example
 ```
 $nomention
 $username just hugged $username[$mentioned[1]]!
