@@ -7,7 +7,7 @@ $userServerAvatar[User ID]
 ```
 
 ### Parameters
-- `User ID` : The user to get it's server avatar. If user doesn't have a server avatar. Then, it returns the default user avatar.
+- `User ID` : The user to get the server avatar for. If the user doesn't have a server avatar, then the default user avatar will be returned instead.
 
 ### Example
 ```
