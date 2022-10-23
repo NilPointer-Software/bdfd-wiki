@@ -1,11 +1,14 @@
 # $userServerAvatar
 Returns server avatar URL of given user ID.
 
-## Usage
+## Syntax
 ```
 $userServerAvatar[User ID]
 ```
-- `user id` - The user to get it's server avatar. If user doesn't have server avatar. Then, it returns default user avatar.
+
+### Parameters
+- `User ID` : The user to get it's server avatar. If user doesn't have a server avatar. Then, it returns the default user avatar.
+
 ### Example
 ```
 $nomention
