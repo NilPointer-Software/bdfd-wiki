@@ -1,5 +1,5 @@
 # $url
-URL encodes or decodes a provided text.
+Encodes or decodes the provided text in the URL encoding format.
 
 URL encoding is a method of converting of reserved, unsafe, and non-ASCII characters in URLs to a format that is universally accepted and understood by all web browsers and servers while URL decoding is the vice-versa of URL encoding.
 
