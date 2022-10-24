@@ -41,6 +41,7 @@
     - [2FA & Elevated Permissions](./resources/2FA.md)
     - [Permissions](./resources/permissions.md)
     - [Security](./resources/security.md)
+    - [Time Format](./resources/timeFormat.md)
 
 - [BDScript]()
     - [Introduction](./bdscript/introduction.md)
