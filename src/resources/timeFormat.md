@@ -37,4 +37,4 @@ MST                    |   Timezone name
 
 > 📌 All time format values are case-sensitive.
 
-[^1]: Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone.
+[^1]: Replacing the sign in the format with a Z character triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC (+00:00) zone.
