@@ -9,7 +9,7 @@ $useChannel[Channel ID]
 ```
 
 ### Parameters
-- `Channel ID` : The ID of the channel to where it should redirect.
+- `Channel ID` : The ID of the channel to where the message will be redirected.
 
 ## Example
 ```
