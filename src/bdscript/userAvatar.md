@@ -1,5 +1,5 @@
 # $userAvatar
-Returns a provided user's avatar URL.
+Returns user's avatar URL.
 
 ## Syntax
 ```
