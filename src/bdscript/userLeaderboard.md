@@ -19,5 +19,5 @@ $userLeaderboard[Money;asc]
 ```
 ![Screenshot_20221023_113048](https://user-images.githubusercontent.com/95774950/197376578-309895b3-4e37-44c8-8bcc-acb73578fe78.png)
 
-> 📌 Why my leaderboard is showing inaccurate values?\
+> 📌 Why is my leaderboard showing inaccurate values?\
 Leaderboard values are not updated in real-time. The previous values are cached for a short duration. It will take about 5 minutes to show the updated values.

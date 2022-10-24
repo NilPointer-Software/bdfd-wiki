@@ -1,17 +1,17 @@
 # $userID
-Gets the user's ID using their username or tag.
+Fetches a user's ID using their username or user-tag.
 
-## Usage
+## Syntax
 ```
-$userID[username/tag]
+$userID[Username#Discriminator / Username]
 ```
 
-### Breakdown
-`username/tag` - The user's username (User) or tag (User#0000) to return the ID for.
+### Parameters
+- `Username#Discriminator / Username` : The user's username (User) or user-tag (User#0000) to return the ID for.
 
 ## Example
 ```
-$userID[Spen]
+$nomention
+$userID[$username]
 ```
-
 ![example](https://user-images.githubusercontent.com/69215413/125357565-c999be00-e335-11eb-9b17-037bb574de53.png)

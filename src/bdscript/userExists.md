@@ -1,20 +1,17 @@
 # $userExists
-Returns whether the provided user actually exists.
+Checks if a user exists in Discord using it's ID. Returns "true", if it exists otherwise "false".
 
-> 🧙‍♂️ 'true' means the user exists, 'false' means they don't.
-
-## Usage
+## Syntax
 ```
-$userExists[userID]
+$userExists[User ID]
 ```
 
-### Breakdown
-- `userID` - The ID of the hypothetical user.
+### Parameters
+- `User ID` : The ID of the user to check.
 
 ## Example
 ```
 $nomention
 $userExists[$mentioned[1]]
 ```
-
 ![example](https://user-images.githubusercontent.com/69215413/125201977-82310600-e23f-11eb-9b0b-72d77006e0c6.jpeg)
