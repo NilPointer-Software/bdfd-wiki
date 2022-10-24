@@ -1,26 +1,29 @@
 # $userJoined
-Returns date when given user joined the server. You can also give your own date format.
+Returns the server joining date of a given user.
 
-## Usage
+## Syntax
 ```
-$userJoined[userID;(optional) format]
+$userJoined[User ID;(Format)]
 ```
+
+### Parameters
+- `User ID` : The ID of the user whose join date is to return.
+- `Format` : Customize the default time format output (Optional).
+
+    > 📌 Click [me](../resources/timeFormat.md) to check all supported time format values.
 
 ## Example
-```
-$nomention
-$userJoined[$authorID]
-```
+- Default format
+   ```
+   $nomention
+   $userJoined[$authorID]
+   ```
 
-![example](https://user-images.githubusercontent.com/69215413/127031755-17bba8d1-2028-41f6-a305-8074879c681d.png)
+  ![example](https://user-images.githubusercontent.com/69215413/127031755-17bba8d1-2028-41f6-a305-8074879c681d.png)
+- Custom format
+   ```
+   $nomention
+   $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
+   ```
 
-## Format
-The `format` allows you to customize the date format.
-
-- `Monday` - Day
-- `January` - Month
-- `3:04` Time
-- `2006` - Year
-- `2` - Day Of The Month
-
-`$userJoined[$authorID;January 2 (Monday), 2006 at 3:04]` would return Month DayOfTheMonth (Day), Year at Time.
+   ![Screenshot_20221024_120922](https://user-images.githubusercontent.com/95774950/197465280-84f4c971-0906-4e16-9f7f-583e042cd37c.png)
