@@ -11,7 +11,7 @@ There are two usages of this function :
 ```
 $unbanID
 ```
-Unbans a user by using their ID. The ID is taken from the last argument of the author's message.
+Unbans a user by using their ID taken from the last argument of the author's message.
 
 #### Example
 ```
