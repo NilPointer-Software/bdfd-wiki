@@ -1,5 +1,5 @@
 # $toLowercase
-Converts a provided text to lowercase format.
+Converts the provided text to lowercase format.
 
 ## Syntax
 ```
