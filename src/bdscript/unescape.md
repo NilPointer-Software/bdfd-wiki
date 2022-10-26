@@ -1,5 +1,5 @@
 # $unescape
-Unescapes semicolons `;` from the provided text. It allows interpreting of regular escaped semicolon as unescaped version.
+Unescapes semicolons `;` from the provided text. It allows interpreting of escaped semicolons as unescaped ones.
 
 ## Syntax
 ```
