@@ -10,7 +10,7 @@ $untimeout[(User ID)]
 - `User ID` : The ID of the user to untimeout. If this parameter is empty, untimeouts the mentioned users (Optional).
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permissions that the bot must have for this function to work properly :
 - `moderatemembers`
 
 ## Example
