@@ -1,14 +1,13 @@
 # $unescape
-Unescapes special characters from a text. 
-This can be used so the script reads special characters from texts such as messages, names, etc as a part of a function.
+Unescapes semicolons `;` from the provided text. It allows interpreting of regular escaped semicolon as unescaped version.
 
-## Usage
+## Syntax
 ```
-$unescape[text]
+$unescape[Text]
 ```
 
-### Breakdown
-- `text` - The text to unescape.
+### Parameters
+- `Text` : The text to unescape.
 
 ## Example
 ```
