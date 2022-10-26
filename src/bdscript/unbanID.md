@@ -1,7 +1,7 @@
 # $unbanID
 Unbans a user by using their ID.
 
-> 📌 In order to unban a user from the guild, the bot must have `ban` permission.
+> 📌 In order to unban a user from the guild, the bot must have the `ban` permission.
 
 ## Usages
 There are two usages of this function :
