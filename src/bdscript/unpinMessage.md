@@ -11,7 +11,7 @@ $unpinMessage[Channel ID;Message ID]
 - `Message ID` : The ID of the message to unpin.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permissions that the bot must have for this function to work properly :
 - `managemessages`
 
 ## Example
