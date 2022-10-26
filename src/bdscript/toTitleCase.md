@@ -1,5 +1,5 @@
 # $toTitleCase
-Converts the first letter of each word to uppercase of the provided text.
+Converts the first letter of each word to uppercase in the provided text.
 
 ## Syntax
 ```
