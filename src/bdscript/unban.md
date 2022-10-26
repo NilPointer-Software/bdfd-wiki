@@ -1,5 +1,5 @@
 # $unban
-Unbans a user by providing their username *(from the author's message)*.
+Unbans a user by providing their username in the author's message.
 
 ## Syntax
 ```
