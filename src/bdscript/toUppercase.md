@@ -1,5 +1,5 @@
 # $toUppercase
-Converts a provided text to uppercase format.
+Converts the provided text to uppercase format.
 
 ## Syntax
 ```
