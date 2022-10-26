@@ -7,7 +7,7 @@ $trimSpace[Text]
 ```
 
 ### Parameters
-- `Text` : The text which needs white-space characters removal.
+- `Text` : The text from which the white-space characters will be removed.
 
 ## Example
 ```
