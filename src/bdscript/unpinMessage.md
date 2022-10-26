@@ -8,7 +8,7 @@ $unpinMessage[Channel ID;Message ID]
 
 ### Parameters
 - `Channel ID` : The channel where the message is located.
-- `Message ID` : The ID of the message to unpin it.
+- `Message ID` : The ID of the message to unpin.
 
 ### Permissions
 Required permission which the bot must have for this function to work properly.
