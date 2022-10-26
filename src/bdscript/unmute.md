@@ -12,7 +12,7 @@ $unmute[Muted]
 - `Muted` : The name of the 'Muted' role (Case sensitive).
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permissions that the bot must have for this function to work properly :
 - `manageroles`
 
 ## Example
