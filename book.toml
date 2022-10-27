@@ -4,6 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Bot Designer for Discord - Wiki"
+description = "A wiki page which explains BDFD functions, callbacks, features & much more."
 
 [output.html]
 theme = "src/theme"
@@ -20,6 +21,3 @@ boost-title = 4
 [output.html.fold]
 enable = true
 level = 0
-
-[output.html.playground]
-copyable = true
