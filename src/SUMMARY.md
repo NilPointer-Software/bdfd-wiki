@@ -312,6 +312,7 @@
     - [$unescape](./bdscript/unescape.md)
     - [$unmute](./bdscript/unmute.md)
     - [$unpinMessage](./bdscript/unpinMessage.md)
+    - [$unregisterGuildCommands](./bdscript/unregisterGuildCommands.md)
     - [$untimeout](./bdscript/untimeout.md)
     - [$uptime](./bdscript/uptime.md)
     - [$url](./bdscript/url.md)
