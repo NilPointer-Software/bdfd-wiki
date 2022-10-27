@@ -16,6 +16,7 @@
 - `$enableDecimals[]` now works with `$calculate[]`
 - Added `$httpStatus`
 - Added `$httpGetHeader[]`
+- Added `$botOwnerID`
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
