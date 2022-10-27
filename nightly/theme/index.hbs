@@ -4,17 +4,20 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>{{ title }}</title>
+
         {{#if is_print }}
-        <meta name="robots" content="noindex" />
+           <meta name="robots" content="noindex">
         {{/if}}
+
         {{#if base_url}}
-	   <base href="{{ base_url }}">
-	   {{/if}}
+	         <base href="{{ base_url }}">
+	    {{/if}}
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="{{ description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#748bd4">
+        <meta name="og:image" content="https://botdesignerdiscord.com/logo512.png">
 
         <link rel="shortcut icon" href="{{ path_to_root }}{{ favicon }}">
         <link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
@@ -26,7 +29,7 @@
         <link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
@@ -35,23 +38,24 @@
 
         <!-- Custom theme stylesheets -->
         {{#each additional_css}}
-        <link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}">
+           <link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}">
         {{/each}}
 
         {{#if mathjax_support}}
-        <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+           <!-- MathJax -->
+           <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         {{/if}}
     </head>
+  
     <body>
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "{{ path_to_root }}";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "{{ preferred_dark_theme }}" : "{{ default_theme }}";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -67,7 +71,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -79,7 +83,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -148,7 +152,7 @@
                            <a href="{{git_repository_edit_url}}" title="Suggest an edit" aria-label="Suggest an edit">
                                <i id="git-edit-button" class="fa fa-edit"></i>
                            </a>
-                          {{/if}}
+                           {{/if}}
 
                         </div>
                     </div>
@@ -168,7 +172,7 @@
                 {{/if}}
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -218,7 +222,7 @@
 
         {{#if livereload}}
         <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
+        <script>
             var socket = new WebSocket("{{{livereload}}}");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
@@ -235,7 +239,7 @@
 
         {{#if google_analytics}}
         <!-- Google Analytics Tag -->
-        <script type="text/javascript">
+        <script>
             var localAddrs = ["localhost", "127.0.0.1", ""];
 
             // make sure we don't activate google analytics if the developer is
@@ -252,44 +256,30 @@
         </script>
         {{/if}}
 
-        {{#if playpen_line_numbers}}
-        <script type="text/javascript">
-            window.playpen_line_numbers = true;
+        {{#if playground_copyable}}
+        <script>
+            window.playground_copyable = true;
         </script>
-        {{/if}}
-        
-        {{#if playpen_copyable}}
-        <script type="text/javascript">
-            window.playpen_copyable = true;
-        </script>
-        {{/if}}
-
-        {{#if playpen_js}}
-        <script src="{{ path_to_root }}ace.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}editor.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}mode-rust.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}theme-dawn.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
         {{/if}}
 
         {{#if search_js}}
-        <script src="{{ path_to_root }}elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ path_to_root }}elasticlunr.min.js" charset="utf-8"></script>
+        <script src="{{ path_to_root }}mark.min.js" charset="utf-8"></script>
+        <script src="{{ path_to_root }}searcher.js" charset="utf-8"></script>
         {{/if}}
 
-        <script src="{{ path_to_root }}clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="{{ path_to_root }}clipboard.min.js" charset="utf-8"></script>
+        <script src="{{ path_to_root }}highlight.js" charset="utf-8"></script>
+        <script src="{{ path_to_root }}book.js" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         {{#each additional_js}}
-        <script type="text/javascript" src="{{ ../path_to_root }}{{this}}"></script>
+        <script src="{{ ../path_to_root }}{{this}}"></script>
         {{/each}}
 
         {{#if is_print}}
         {{#if mathjax_support}}
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
                 window.setTimeout(window.print, 100);
@@ -297,7 +287,7 @@
         });
         </script>
         {{else}}
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
