@@ -17,6 +17,7 @@
 - Added `$httpStatus`
 - Added `$httpGetHeader[]`
 - Added `$botOwnerID`
+- Added `$repliedMessageID`
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
