@@ -293,6 +293,46 @@
     
     --chapter-hover-bg: var(--theme-hover);
 }
+.highcon {
+    --bg: #070707;
+    --fg: #ffd334;
+
+    --sidebar-bg: #070707;
+    --sidebar-fg: #ffd334;
+    --sidebar-non-existant: #000;
+    --sidebar-active: #04afff;
+    --sidebar-spacer: #04afff;
+
+    --scrollbar: #fff;
+
+    --icons: #ffd334;
+    --icons-hover: #04afff;
+
+    --links: #04afff;
+
+    --inline-code-color: #fff;
+
+    --theme-popup-bg: #070707;
+    --theme-popup-border: #ffffff;
+    --theme-hover: #04afff25;
+
+    --quote-bg: #1c1c1c;
+    --quote-border: #04afff;
+
+    --table-border-color: #fff;
+    --table-header-bg: #1c1c1c;
+    --table-alternate-bg: #1c1c1c;
+
+    --searchbar-border-color: #04afff;
+    --searchbar-bg: #070707;
+    --searchbar-fg: #ffd334;
+    --searchbar-shadow-color: #ffffff;
+    --searchresults-header-fg: #ffffff;
+    --searchresults-border-color: #ffffff;
+    --searchresults-li-bg: #fff;
+    --search-mark-bg: #fff;
+}
+
 
 .light {
     --bg: hsl(0, 0%, 100%);
