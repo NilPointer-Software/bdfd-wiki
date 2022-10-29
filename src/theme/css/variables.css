@@ -207,6 +207,65 @@
     --chapter-hover-bg: var(--theme-hover);
 }
 /* Shiro's Theme */
+
+/* Terminal */
+.terminal {
+    --bg: hsl(240, 0%, 0%);
+    --fg: #149414;
+
+    --sidebar-bg: #000;
+    --sidebar-fg: #9ccc9c;
+    --sidebar-non-existant: #2b5329;
+    --sidebar-active: #649568;
+    --sidebar-spacer: #23242a;
+
+    --scrollbar: #2b5329;
+
+    --icons: #fff;
+    --icons-hover: #2b5329;
+
+    --links: #9ccc9c;
+
+    --inline-code-color: #c5c8c6;
+
+    --theme-popup-bg: #000;
+    --theme-popup-border: #0e6b0e;
+    --theme-hover: #2b5329;
+
+    --quote-bg: #000;
+    --quote-border: #0e6b0e;
+
+    --table-border-color: #2b5329;
+    --table-header-bg: #2b5329;
+    --table-alternate-bg: #0e1c0d;
+
+    --searchbar-border-color: #9ccc9c;
+    --searchbar-bg: #000;
+    --searchbar-fg: #9ccc9c;
+    --searchbar-shadow-color: #9ccc9c;
+    --searchresults-header-fg: #9ccc9c;
+    --searchresults-border-color: #649568;
+    --searchresults-li-bg: #2b5329;
+    --search-mark-bg: #2b5329;
+
+    --chapter-hover-bg: var(--theme-hover);
+
+    font: 65% Inconsolata, monospace;
+}
+
+.terminal a:not(.header),
+h1:not(.header),
+i:not(.header),
+li:not(.header) {
+    text-shadow: 0 0 5px #C8C8C8;
+}
+
+.terminal h3:not(.header),
+p:not(.header) {
+    text-shadow: 0 0 5px #149414;
+}
+
+/* Terminal */
 /* Community Themes */
 
 /* Initial Themes */
