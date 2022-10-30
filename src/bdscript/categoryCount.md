@@ -11,7 +11,7 @@ $categoryCount
 ```
 Returns the category count of the current guild.
 
-### Example
+#### Example
 ```
 $nomention
 There are $categoryCount categories in this server!
