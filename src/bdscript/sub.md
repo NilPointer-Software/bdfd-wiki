@@ -7,7 +7,7 @@ $sub[Number;...]
 ```
 
 ### Parameters
-- `Number` : The numbers to subtract. Separate multiple values using `;`.
+- `Number`: The numbers to subtract. Separate multiple values using `;`.
 
 ## Example
 ```
