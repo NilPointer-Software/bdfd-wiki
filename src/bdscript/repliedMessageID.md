@@ -11,7 +11,7 @@ There are two usages of this function :
 ```
 $repliedMessageID
 ```
-Returns ID of a replied message.
+Returns the ID of the replied message from the triggering message.
 
 ### Usage #2
 #### Syntax
