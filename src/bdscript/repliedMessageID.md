@@ -1,5 +1,5 @@
 # $repliedMessageID
-Returns message ID of the replied message.
+Returns the ID of the replied message.
 
 > 🧙‍♂️ If the message is not a reply, nothing is returned.
 
