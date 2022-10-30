@@ -25,6 +25,9 @@ $categoryID[Channel Name]
 ```
 Returns category ID for given channel name.
 
+#### Parameters
+- `Channel Name`: The name of the channel from which to retrieve the category ID.
+
 #### Example
 ```
 $nomention
