@@ -3,7 +3,7 @@ Returns whether the user is timed out or not.
 
 ## Usage
 ```
-$isTimedOut[user ID]
+$isTimedOut[User ID]
 ```
 
 ## Example
