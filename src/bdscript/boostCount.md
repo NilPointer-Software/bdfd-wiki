@@ -14,7 +14,7 @@ Returns the current guild's number of nitro boosts.
 ### Usage #2
 #### Syntax
 ```
-$boostCount[guild ID]
+$boostCount[Guild ID]
 ```
 Returns the given guild's number of nitro boosts.
 
