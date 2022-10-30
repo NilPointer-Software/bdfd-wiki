@@ -18,6 +18,7 @@
 - Added `$httpGetHeader[]`
 - Added `$botOwnerID`
 - Added `$repliedMessageID`
+- Fixed the guild list fetching issue
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
