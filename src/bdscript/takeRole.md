@@ -6,7 +6,7 @@ Removes a role from the provided user.
 >  📌 In order to remove a role from a user, the bot must have the `manageroles` permission.
 
 ## Usages
-There are two usages of this function :
+There are two usages of this function:
 
 ### Usage #1
 #### Syntax
