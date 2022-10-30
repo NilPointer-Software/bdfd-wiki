@@ -2,7 +2,7 @@
 Prevents the default function error messages from being send whenever an error occurs.
 
 ## Usages
-There are two usages of this function :
+There are two usages of this function:
 
 ### Usage #1
 #### Syntax
