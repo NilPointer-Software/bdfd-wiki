@@ -20,8 +20,9 @@ $repliedMessageID[Channel ID;Message ID]
 ```
 Returns the ID of the replied message form the given message.
 
-- `Channel ID` : The ID of the channel where the message is.
-- `Message ID` : The ID of the message.
+#### Parameters
+- `Channel ID` : The channel where the message is located.
+- `Message ID` : The message from which the ID of the replied message will be taken from.
 
 ## Example
 ```
