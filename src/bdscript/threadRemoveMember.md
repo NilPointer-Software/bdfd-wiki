@@ -7,8 +7,8 @@ $threadRemoveMember[Thread ID;User ID]
 ```
 
 ### Parameters
-- `Thread ID` : The ID of the thread channel to remove the user from.
-- `User ID` : The user to remove from the thread.
+- `Thread ID`: The ID of the thread channel to remove the user from.
+- `User ID`: The user to remove from the thread.
 
 ## Example
 ```
