@@ -25,7 +25,7 @@ $categoryCount[Guild ID]
 ```
 Returns the category count of a provided guild.
 
-### Example
+#### Example
 ```
 $nomention
 There are $categoryCount[$message[1]] categories in the server!
