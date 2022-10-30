@@ -9,7 +9,7 @@ There are two usages of this function:
 ```
 $suppressErrors
 ```
-Prevents the default error message from being send.
+Prevents the default error message from being sent.
 
 #### Example
 ```
