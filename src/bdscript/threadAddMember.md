@@ -1,5 +1,5 @@
 # $threadAddMember
-Adds a member to a thread.
+Adds a user to a thread.
 
 ## Syntax
 ```
