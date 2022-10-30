@@ -107,6 +107,10 @@
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="green">Green</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ios">iOS</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="terminal">Terminal</button></li>
                             </ul>
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search"></i>
@@ -152,14 +156,21 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="thumbnail"><a class="header" href="#thumbnail">$thumbnail</a></h1>
-<p>Adds a thumbnail to the embed.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$thumbnail[image url;(index)]
+<p>Adds an embedded thumbnail to bot's response message.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$thumbnail[Image url;(Index)]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>image url</code> - The image to set as the thumbnail.</li>
-<li><code>index</code> - What embed the thumbnail should belong to (Optional). Default is <code>1</code>. <a href="../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>Image url</code>: The image to set as the thumbnail.</li>
+<li><code>Index</code>: What <a href="../resources/embedIndexes.html">embed index</a> the thumbnail should belong to, default to <code>1</code> (Optional).</li>
+</ul>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>sendmessages</code></li>
+<li><code>sendmessagesinthreads</code></li>
+<li><code>embedlinks</code></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

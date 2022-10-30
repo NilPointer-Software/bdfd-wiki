@@ -107,6 +107,10 @@
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="green">Green</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ios">iOS</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="terminal">Terminal</button></li>
                             </ul>
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search"></i>
@@ -152,24 +156,43 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="timeout"><a class="header" href="#timeout">$timeout</a></h1>
-<p>Timeouts the mentioned users, or the user provided in 'User ID', for a certain 'Duration' (max 28 days)</p>
-<blockquote>
-<p><strong>Note:</strong> To untimeout users see <a href="./untimeout.html"><code>$untimeout[]</code></a></p>
-</blockquote>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$timeout[duration;(userID)]
+<p>Timeouts a user for a certain duration.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$timeout[Duration;(User ID)]
 </code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Duration</code>: The amount of time the user should be timed out for. It shouldn't exceed more than &quot;28 days&quot;.</li>
+<li><code>User ID</code>: The user to timeout. If this parameter is empty, timeouts the mentioned users (Optional).</li>
+</ul>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>moderatemembers</code></li>
+</ul>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<h3 id="example-1"><a class="header" href="#example-1">Example 1</a></h3>
+<ul>
+<li>
+<p>Without ID</p>
 <pre><code>$nomention
 $timeout[$message[1]]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/183470087-6b72ea9f-9365-4686-9483-09bad385e10b.png" alt="" /></p>
-<h3 id="example-2"><a class="header" href="#example-2">Example 2</a></h3>
+</li>
+<li>
+<p>With ID</p>
 <pre><code>$nomention
+$allowMention
 $timeout[$message[1];$findUser[$message[2];no]]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/183470187-305f846a-7515-46b5-af7e-6c2f5713656f.png" alt="" /></p>
+</li>
+</ul>
+<h2 id="related-resources"><a class="header" href="#related-resources">Related Resources</a></h2>
+<ul>
+<li><a href="https://support.discord.com/hc/en-us/articles/4413305239191-Time-Out-FAQ">Time Out FAQ</a></li>
+<li><a href="./untimeout.html">$untimeout</a></li>
+</ul>
 
                     </main>
 

@@ -107,6 +107,10 @@
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="green">Green</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ios">iOS</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="terminal">Terminal</button></li>
                             </ul>
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search"></i>
@@ -152,15 +156,15 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="bot-status"><a class="header" href="#bot-status">Bot Status</a></h1>
-<p>Here, you will learn how to setup custom bot status &amp; activity.</p>
+<p>Here, you will learn how to set-up a custom bot status &amp; activity.</p>
 <h2 id="status"><a class="header" href="#status">Status</a></h2>
-<p>To setup custom status,</p>
+<p>To set a custom status,</p>
 <ul>
 <li>
 <p>Select your bot.</p>
 </li>
 <li>
-<p>Go to <code>Status</code> tab and click gear icon <code>⚙️</code> at top-right corner.</p>
+<p>Go to the <em>&quot;Status&quot;</em> tab and press gear icon <code>⚙️</code> at top-right corner.</p>
 </li>
 <li>
 <p>Toggle on <em>&quot;Enable bot presence&quot;</em>.</p>
@@ -169,9 +173,9 @@
 <p>In <em>&quot;Bot status&quot;</em>, choose your preferred bot presence <em>(i.e <code>Online</code>, <code>Idle</code>, <code>Invisible</code> etc.)</em></p>
 </li>
 <li>
-<p>In <em>&quot;Interval amount&quot;</em>, set a custom interval duration. It is the <em>x</em> seconds your bot status will be refreshed <em>(Minimum interval duration is 12 seconds while maximum is 600 seconds)</em>.</p>
+<p>In <em>&quot;Interval amount&quot;</em>, set a custom interval duration. This changes how many seconds your bot will wait before refreshing its status <em>(Minimum interval duration is 12 seconds while maximum is 600 seconds)</em>.</p>
 <blockquote>
-<p>📝 If you have multiple bot status activities, it will switch to next status instead of refreshing current status.</p>
+<p>📝 If you have multiple bot status entries, it will switch to next status instead of refreshing current status.</p>
 </blockquote>
 </li>
 </ul>
@@ -182,17 +186,17 @@
 <p>To set custom rich presence,</p>
 <ul>
 <li>Select your bot.</li>
-<li>Go to <code>Status</code> tab and click <code>Add new entry</code>.</li>
-<li>Choose activity type <em>(i.e <code>PLAYING</code>, <code>STREAMING</code>, <code>LISTENING</code> etc.)</em> in <em>&quot;Status prefix&quot;</em> dropdown selection.</li>
-<li>In <em>&quot;Status&quot;</em>, type any text which you want to display in bot status. Additionally, you can also use some bdfd <a href="#available-functions">functions</a> in bot status.</li>
-<li><em>&quot;Status details&quot;</em> is just a text for you. It won't display anywhere.</li>
-<li>Now, save the changes.</li>
+<li>Go to the <em>&quot;Status&quot;</em> tab and press <code>Add new entry</code>.</li>
+<li>Choose activity type <em>(i.e <code>PLAYING</code>, <code>STREAMING</code>, <code>LISTENING</code> etc.)</em> in the <em>&quot;Status prefix&quot;</em> dropdown selection.</li>
+<li>In <em>&quot;Status&quot;</em>, type any text that you would like to display as your bot's status. Additionally, you can also use some <a href="#available-functions">BDFD functions</a> in your bot's status.</li>
+<li><em>&quot;Status details&quot;</em> is just a text for you to see. It won't display anywhere.</li>
+<li>Save the changes.</li>
 </ul>
 <blockquote>
 <p>📝 If the activity type is <code>STREAMING</code>, there will be an additional required field called <em>&quot;Streaming URL&quot;</em>. You can only put either YouTube or Twitch URL.</p>
 </blockquote>
 <h3 id="available-functions"><a class="header" href="#available-functions">Available functions</a></h3>
-<p>Here, are the available functions you can use in your bot status -</p>
+<p>Here are the available functions that you can use in your bot's status:</p>
 <ul>
 <li>
 <p><code>$membersCount</code></p>
