@@ -21,7 +21,7 @@ There are $categoryCount categories in this server!
 ### Usage #2
 #### Syntax
 ```
-$categoryCount[guild ID]
+$categoryCount[Guild ID]
 ```
 Returns the category count in a guild.
 
