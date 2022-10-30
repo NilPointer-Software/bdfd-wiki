@@ -1,7 +1,7 @@
 # $repliedMessageID
 Returns the ID of the replied message.
 
-> 🧙‍♂️ If the message is not a reply, nothing is returned.
+> 🧙‍♂️ If the message is not a reply, nothing will be returned.
 
 ## Usages
 There are two usages of this function :
