@@ -12,4 +12,4 @@ $nomention
 My owner's ID is: $botOwnerID
 ```
 
-![example](https://user-images.githubusercontent.com/94063167/198889350-b4b56e02-9742-49c2-bcb8-dfdc39c11eec.png)
+![example](https://user-images.githubusercontent.com/94063167/198900308-9dd205a7-59d8-4319-b750-3bea6bc21ff4.png)

@@ -1,14 +1,38 @@
 # $repliedMessageID
 Returns message ID of the replied message.
 
-## Usage
+> 🧙‍♂️ If the message is not a reply, nothing is returned.
+
+## Usages
+There are two usages of this function :
+
+### Usage #1
+#### Syntax
 ```
 $repliedMessageID
 ```
+Returns ID of a replied message.
+
+### Usage #2
+#### Syntax
+```
+$repliedMessageID[Channel ID;Message ID]
+```
+Returns ID of a replied message.
+
+- `Channel ID` : The ID of the channel where the message is.
+- `Message ID` : The ID of the message.
 
 ## Example
 ```
 $nomention
 The message ID you replied to is: $repliedMessageID
 ```
-![example](https://user-images.githubusercontent.com/94063167/198895379-fd01fad2-b918-4fc8-a5ea-4303204d9b68.png)
+![example](https://user-images.githubusercontent.com/94063167/198900570-ad5b8a25-56ad-4e66-9c3e-6495406d7fda.png)
+
+
+
+
+
+
+

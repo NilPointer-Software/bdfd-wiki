@@ -1,14 +1,26 @@
 # $boostCount
-Returns the amount of boosts of the current guild.
+Returns the guild's number of nitro boosts.
 
-## Usage
+## Usages
+There are two usages of this function :
+
+### Usage #1
+#### Syntax
 ```
 $boostCount
 ```
+Returns the current guild's number of nitro boosts.
+
+### Usage #2
+#### Syntax
+```
+$boostCount[guild ID]
+```
+Returns the given guild's number of nitro boosts.
 
 ## Example
 ```
 $nomention
 This server currently has $boostCount boost(s).
 ```
-![example](https://user-images.githubusercontent.com/94063167/198893356-f83b323d-ccaf-466e-9966-81f8ef042970.png)
+![example](https://user-images.githubusercontent.com/94063167/198900495-ed3261f1-b8cd-4a54-b6c5-71641108321c.png)

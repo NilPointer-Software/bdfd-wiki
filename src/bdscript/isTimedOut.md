@@ -12,6 +12,6 @@ $nomention
 User is timed out: $isTimedOut[$mentioned[1]]
 ```
 
-![example](https://user-images.githubusercontent.com/94063167/198890460-d44d0699-71f2-4365-9eec-3d18faf6c320.png)
+![example](https://user-images.githubusercontent.com/94063167/198900738-ed1059b6-0d73-4e97-8669-40c770281e51.png)
 
 
