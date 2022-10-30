@@ -7,7 +7,7 @@ $time[Timezone]
 ```
 
 ### Parameters
-- `Timezone` : The timezone to change the date/time functions to. Accepts [TZ database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) timezones name as input.
+- `Timezone`: The timezone to change the date/time functions to. Accepts [TZ database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) timezones name as input.
 
 ## Example
 ```
