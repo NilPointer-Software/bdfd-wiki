@@ -6,10 +6,10 @@ Checks if a variable exists. Returns `true` if it exists, otherwise `false`.
 $varExists[Name]
 ```
 
-#### Parameters
+### Parameters
 - `Name` : The variable's name to check.
 
-#### Example
+## Example
 ```
 $nomention
 $varExists[$message]
