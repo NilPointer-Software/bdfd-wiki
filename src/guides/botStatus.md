@@ -1,31 +1,31 @@
 # Bot Status
-Here, you will learn how to setup custom bot status & activity.
+Here, you will learn how to set-up a custom bot status & activity.
 
 ## Status
-To setup custom status,
+To set a custom status,
 - Select your bot.
-- Go to `Status` tab and click gear icon `⚙️` at top-right corner.
+- Go to the *"Status"* tab and press gear icon `⚙️` at top-right corner.
 - Toggle on *"Enable bot presence"*.
 - In *"Bot status"*, choose your preferred bot presence _(i.e `Online`, `Idle`, `Invisible` etc.)_
-- In *"Interval amount"*, set a custom interval duration. It is the _x_ seconds your bot status will be refreshed _(Minimum interval duration is 12 seconds while maximum is 600 seconds)_.
+- In *"Interval amount"*, set a custom interval duration. This changes how many seconds your bot will wait before refreshing its status _(Minimum interval duration is 12 seconds while maximum is 600 seconds)_.
 
-    > 📝 If you have multiple bot status activities, it will switch to next status instead of refreshing current status.
+    > 📝 If you have multiple bot status entries, it will switch to next status instead of refreshing current status.
 
 ## Activity
 > ⚠️ You need to toggle on `Enable bot presence` in *"Bot status settings"* in order to show activity.
 
 To set custom rich presence,
 - Select your bot.
-- Go to `Status` tab and click `Add new entry`.
-- Choose activity type _(i.e `PLAYING`, `STREAMING`, `LISTENING` etc.)_ in *"Status prefix"* dropdown selection.
-- In *"Status"*, type any text which you want to display in bot status. Additionally, you can also use some bdfd [functions](#available-functions) in bot status.
-- *"Status details"* is just a text for you. It won't display anywhere.
-- Now, save the changes.
+- Go to the *"Status"* tab and press `Add new entry`.
+- Choose activity type _(i.e `PLAYING`, `STREAMING`, `LISTENING` etc.)_ in the *"Status prefix"* dropdown selection.
+- In *"Status"*, type any text that you would like to display as your bot's status. Additionally, you can also use some [BDFD functions](#available-functions) in your bot's status.
+- *"Status details"* is just a text for you to see. It won't display anywhere.
+- Save the changes.
 
 > 📝 If the activity type is `STREAMING`, there will be an additional required field called *"Streaming URL"*. You can only put either YouTube or Twitch URL.
 
 ### Available functions
-Here, are the available functions you can use in your bot status -
+Here are the available functions that you can use in your bot's status:
 
 - `$membersCount`
 
