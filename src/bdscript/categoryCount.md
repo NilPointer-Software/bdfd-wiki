@@ -23,7 +23,7 @@ There are $categoryCount categories in this server!
 ```
 $categoryCount[Guild ID]
 ```
-Returns the category count in a guild.
+Returns the category count of a provided guild.
 
 ### Example
 ```
