@@ -293,6 +293,8 @@
     
     --chapter-hover-bg: var(--theme-hover);
 }
+
+/* High Contrast */
 .highcon {
     --bg: #070707;
     --fg: #ffd334;
