@@ -7,8 +7,8 @@ $timeout[Duration;(User ID)]
 ```
 
 ### Parameters
-- `Duration` : The amount of time the user should be timed out. It shouldn't exceed more than "28 days".
-- `User ID` : The user to timeout. If this parameter is empty, timeouts the mentioned users (Optional).
+- `Duration`: The amount of time the user should be timed out for. It shouldn't exceed more than "28 days".
+- `User ID`: The user to timeout. If this parameter is empty, timeouts the mentioned users (Optional).
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly :
