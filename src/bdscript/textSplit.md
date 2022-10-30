@@ -20,7 +20,7 @@ $splitText[1]
 ```
 ![Screenshot_20221029_203537](https://user-images.githubusercontent.com/95774950/198839569-338c0892-80ef-4e7a-bbb7-dd696c6ab15b.png)
 
-###### _In the above example, [`$textSplit`](#textsplit) splits the provided text using comma (`,`) as separator. After that, [`$splitText`](./splitText.md) is being used to retrieve the first splitted value._
+###### _In the above example, [`$textSplit`](#textsplit) splits the provided text using a comma (`,`) as the separator. After that, [`$splitText`](./splitText.md) is used to retrieve the first split value._
 
 ## Related Resources
 - [Text Splitting Guide](../guides/textSplitting.md)
