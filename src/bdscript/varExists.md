@@ -1,9 +1,10 @@
 # $varExists
-Checks if the variable exists. Returns `true` if it exists, `false` if it doesn't.
+Checks if a variable exists. Returns `true` if it exists, otherwise `false`.
 
-## Usage
+## Syntax
 ```
 $varExists[Name]
 ```
+
 #### Parameters
 - `Name` : The variable's name to check.
