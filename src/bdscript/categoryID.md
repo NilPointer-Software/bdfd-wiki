@@ -17,5 +17,3 @@ Returns the current channel's category ID.
 $categoryID[Channel Name]
 ```
 Returns category ID for given category name.
-
-
