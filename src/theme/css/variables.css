@@ -57,9 +57,7 @@
     color: #eadfff;
     background-color: #302638;
 }
-.ios {
-    text-shadow: 0 0 10px #42316a;
-}
+
 .ios {
     --bg: #221c2a;
     --fg: #eadfff;
@@ -334,19 +332,11 @@
 
     --chapter-hover-bg: var(--theme-hover);
 
-    font: 65% Inconsolata, monospace;
 }
 
-.terminal a:not(.header),
-h1:not(.header),
-i:not(.header),
-li:not(.header) {
-    text-shadow: 0 0 5px #C8C8C8;
-}
-
-.terminal h3:not(.header),
-p:not(.header) {
-    text-shadow: 0 0 5px #149414;
+.terminal {
+    font-family: Inconsolata, monospace;
+    text-shadow: 0 0 10px #149414;
 }
 /* Terminal */
 /* Community Themes */
