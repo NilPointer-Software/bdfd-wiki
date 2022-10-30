@@ -157,20 +157,23 @@
                     <main>
                         <h1 id="time"><a class="header" href="#time">$time</a></h1>
 <p>Changes the timezone for date/time functions.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$time[timezone]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$time[Timezone]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>timezone</code> - The timezone to change the time/date functions to.</li>
+<li><code>Timezone</code>: The timezone to use in the date/time functions. Accepts <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ database</a> timezone name as input.</li>
 </ul>
-<p>⚠️ <strong><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Get timezones from here (click-me)</a></strong></p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
+
 $time[America/New_York]
-Date: $date
+New York : $hour:$minute:$second
+
+$time[Europe/Warsaw]
+Warsaw : $optOff[$hour:$minute:$second]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/122826867-a5f0d400-d2b1-11eb-961b-e4d9fa3cb273.png" alt="Example" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/198847125-b093d143-7890-4478-a437-1c80c35c4c41.png" alt="Screenshot_20221029_234758" /></p>
 
                     </main>
 

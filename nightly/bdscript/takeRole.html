@@ -156,37 +156,54 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="takerole"><a class="header" href="#takerole">$takeRole</a></h1>
-<p><em>(deprecated)</em></p>
+<p>Removes a role from the provided user.</p>
 <blockquote>
-<p>🧙‍♂️ This command is deprecated instead better use <a href="./roleGrant.html">$roleGrant</a>.</p>
+<p>📌 As of December 2021, this function has been deprecated in favor of <a href="./roleGrant.html">$roleGrant</a>.</p>
+<p>📌 In order to remove a role from a user, the bot must have the <code>manageroles</code> permission.</p>
 </blockquote>
-<p>Removes a role to the provided user.</p>
 <h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
-<p>There are two usages of the <code>$takeRole</code> function.</p>
+<p>There are two usages of this function:</p>
 <h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
-<pre><code>$takeRole[userID;roleID]
+<h4 id="syntax"><a class="header" href="#syntax">Syntax</a></h4>
+<pre><code>$takeRole[User ID;Role ID]
 </code></pre>
-<p>Removes a role for the provided user.</p>
-<h4 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h4>
+<p>Removes a role from the provided user.</p>
+<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
 <ul>
-<li><code>userID</code> - The user to remove the role for.</li>
-<li><code>roleID</code> - The role to remove from the user.</li>
+<li><code>User ID</code>: The user to remove the role from.</li>
+<li><code>Role ID</code>: The role to remove from the user.</li>
 </ul>
-<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
-<pre><code>$takeRole[roleID]
-</code></pre>
-<p>Removes the provided role from the mentioned user.</p>
-<h4 id="breakdown-1"><a class="header" href="#breakdown-1">Breakdown</a></h4>
-<ul>
-<li><code>roleID</code> - The role to remove from the mentioned user.</li>
-</ul>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h4 id="example"><a class="header" href="#example">Example</a></h4>
 <pre><code>$nomention
-$onlyPerms[manageroles;Missing permissions!]
-$takeRole[867492530463178803]
-Removed $roleName[867492530463178803] from $username[$mentioned[1]]!
+$allowRoleMentions[]
+$allowUserMentions[]
+
+$takeRole[$mentioned[1];$mentionedRoles[1]]
+Removed &lt;@&amp;$mentionedRoles[1]&gt; from &lt;@$mentioned[1]&gt;!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/126550658-18a048dc-55ca-4b42-b176-5ad6900bf568.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/198837000-f9647416-754f-4c99-8d5f-bb86dcfb84f8.png" alt="Screenshot_20221029_194307" /></p>
+<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
+<h4 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h4>
+<pre><code>$takeRole[Role ID]
+</code></pre>
+<p>Removes the provided role from the mentioned users.</p>
+<h4 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h4>
+<ul>
+<li><code>Role ID</code>: The role to remove from the mentioned users.</li>
+</ul>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
+<pre><code>$nomention
+$allowRoleMentions[]
+
+$takeRole[$mentionedRoles[1]]
+Removed &lt;@&amp;$mentionedRoles[1]&gt; from the mentioned users!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/95774950/198837013-a39c8a69-29aa-4cec-b319-0b04365c200d.png" alt="Screenshot_20221029_193751" /></p>
+<h2 id="related-resources"><a class="header" href="#related-resources">Related Resources</a></h2>
+<ul>
+<li><a href="./roleGrant.html">$roleGrant</a></li>
+<li><a href="./takeRole.html">$takeRole</a></li>
+</ul>
 
                     </main>
 

@@ -6670,134 +6670,210 @@ $c[❗️This example requires BDScript 2 enabled❗️]
 This code is storing the newly created thread ID returned from <code>$startThread[]</code> <em>(using $var[]</em>). Then, in the rest of the code <code>$var[threadID]</code> was called to get the thread ID;  which allowed the bot to mention the new thread channel.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sub"><a class="header" href="#sub">$sub</a></h1>
 <p>Returns the subtraction of the provided numbers.</p>
-<h2 id="usage-221"><a class="header" href="#usage-221">Usage</a></h2>
-<pre><code>$sub[numbers]
+<h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
+<pre><code>$sub[Number;...]
 </code></pre>
-<h3 id="breakdown-164"><a class="header" href="#breakdown-164">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>numbers</code> - The numbers to subtract, separate numbers using <code>;</code>.</li>
+<li><code>Number</code>: The numbers to subtract. Separate multiple values using <code>;</code>.</li>
 </ul>
 <h2 id="example-199"><a class="header" href="#example-199">Example</a></h2>
 <pre><code>$nomention
-$sub[10;5]
+$sub[20;10;5]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126549467-f13c397e-9749-4fe5-80bd-c31b720d41aa.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sum"><a class="header" href="#sum">$sum</a></h1>
 <p>Returns the addition of the provided numbers.</p>
-<h2 id="usage-222"><a class="header" href="#usage-222">Usage</a></h2>
-<pre><code>$sum[numbers]
+<h2 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h2>
+<pre><code>$sum[Number;...]
 </code></pre>
-<h3 id="breakdown-165"><a class="header" href="#breakdown-165">Breakdown</a></h3>
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
 <ul>
-<li><code>numbers</code> - The numbers to add together, separate numbers using <code>;</code>.</li>
+<li><code>Number</code>: The numbers to add. Separate multiple values using <code>;</code>.</li>
 </ul>
 <h2 id="example-200"><a class="header" href="#example-200">Example</a></h2>
 <pre><code>$nomention
-$sum[10;5]
+$sum[5;5;5]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126549257-1f66a009-8581-4331-bd40-c006df7ccc4f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="suppresserrors"><a class="header" href="#suppresserrors">$suppressErrors</a></h1>
-<p>Suppresses error messages.</p>
+<p>Prevents the default function error message from being sent whenever an error occurs.</p>
 <h2 id="usages-25"><a class="header" href="#usages-25">Usages</a></h2>
-<p>There are two usages of <code>$suppressErrors</code>.</p>
+<p>There are two usages of this function:</p>
 <h3 id="usage-1-29"><a class="header" href="#usage-1-29">Usage #1</a></h3>
+<h4 id="syntax-6"><a class="header" href="#syntax-6">Syntax</a></h4>
 <pre><code>$suppressErrors
 </code></pre>
-<p>Prevents error messages from being returned as the response.</p>
-<blockquote>
-<p>Simply put, the bot will not respond if there is a error message.</p>
-</blockquote>
-<h3 id="usage-2-29"><a class="header" href="#usage-2-29">Usage #2</a></h3>
-<pre><code>$suppressErrors[customError]
-</code></pre>
-<p>Prevents error messages from being returned as the response. Instead, the 'customError' text is returned.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="takerole"><a class="header" href="#takerole">$takeRole</a></h1>
-<p><em>(deprecated)</em></p>
-<blockquote>
-<p>🧙‍♂️ This command is deprecated instead better use <a href="bdscript/./roleGrant.html">$roleGrant</a>.</p>
-</blockquote>
-<p>Removes a role to the provided user.</p>
-<h2 id="usages-26"><a class="header" href="#usages-26">Usages</a></h2>
-<p>There are two usages of the <code>$takeRole</code> function.</p>
-<h3 id="usage-1-30"><a class="header" href="#usage-1-30">Usage #1</a></h3>
-<pre><code>$takeRole[userID;roleID]
-</code></pre>
-<p>Removes a role for the provided user.</p>
-<h4 id="breakdown-166"><a class="header" href="#breakdown-166">Breakdown</a></h4>
-<ul>
-<li><code>userID</code> - The user to remove the role for.</li>
-<li><code>roleID</code> - The role to remove from the user.</li>
-</ul>
-<h3 id="usage-2-30"><a class="header" href="#usage-2-30">Usage #2</a></h3>
-<pre><code>$takeRole[roleID]
-</code></pre>
-<p>Removes the provided role from the mentioned user.</p>
-<h4 id="breakdown-167"><a class="header" href="#breakdown-167">Breakdown</a></h4>
-<ul>
-<li><code>roleID</code> - The role to remove from the mentioned user.</li>
-</ul>
-<h2 id="example-201"><a class="header" href="#example-201">Example</a></h2>
+<p>Prevents the default error message from being sent.</p>
+<h4 id="example-201"><a class="header" href="#example-201">Example</a></h4>
 <pre><code>$nomention
-$onlyPerms[manageroles;Missing permissions!]
-$takeRole[867492530463178803]
-Removed $roleName[867492530463178803] from $username[$mentioned[1]]!
+$suppressErrors
+$argsCheck[&gt;1;Usage : ` !command &lt;math expression&gt; `]
+$calculate[$message]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/126550658-18a048dc-55ca-4b42-b176-5ad6900bf568.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/198821156-3752e153-2289-4cd8-8bfb-07ae72455530.png" alt="Screenshot_20221029_133343" /></p>
+<h3 id="usage-2-29"><a class="header" href="#usage-2-29">Usage #2</a></h3>
+<h4 id="syntax-7"><a class="header" href="#syntax-7">Syntax</a></h4>
+<pre><code>$suppressErrors[Error message]
+</code></pre>
+<p>Sends a custom error message instead of the default error message.</p>
+<h4 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h4>
+<ul>
+<li><code>Error message</code>: The custom error message to send.</li>
+</ul>
+<h4 id="example-202"><a class="header" href="#example-202">Example</a></h4>
+<pre><code>$nomention
+$suppressErrors[**Error** : ` Invalid math expression! `]
+$argsCheck[&gt;1;Usage : ` !command &lt;math expression&gt; `]
+$calculate[$message]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/95774950/198820510-bc2140f0-838b-4357-80e7-e12c69b3739f.png" alt="Screenshot_20221029_132111" /></p>
+<h2 id="related-resources"><a class="header" href="#related-resources">Related Resources</a></h2>
+<ul>
+<li><a href="bdscript/./embedSuppressErrors.html">$embedSuppressErrors</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="takerole"><a class="header" href="#takerole">$takeRole</a></h1>
+<p>Removes a role from the provided user.</p>
+<blockquote>
+<p>📌 As of December 2021, this function has been deprecated in favor of <a href="bdscript/./roleGrant.html">$roleGrant</a>.</p>
+<p>📌 In order to remove a role from a user, the bot must have the <code>manageroles</code> permission.</p>
+</blockquote>
+<h2 id="usages-26"><a class="header" href="#usages-26">Usages</a></h2>
+<p>There are two usages of this function:</p>
+<h3 id="usage-1-30"><a class="header" href="#usage-1-30">Usage #1</a></h3>
+<h4 id="syntax-8"><a class="header" href="#syntax-8">Syntax</a></h4>
+<pre><code>$takeRole[User ID;Role ID]
+</code></pre>
+<p>Removes a role from the provided user.</p>
+<h4 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h4>
+<ul>
+<li><code>User ID</code>: The user to remove the role from.</li>
+<li><code>Role ID</code>: The role to remove from the user.</li>
+</ul>
+<h4 id="example-203"><a class="header" href="#example-203">Example</a></h4>
+<pre><code>$nomention
+$allowRoleMentions[]
+$allowUserMentions[]
+
+$takeRole[$mentioned[1];$mentionedRoles[1]]
+Removed &lt;@&amp;$mentionedRoles[1]&gt; from &lt;@$mentioned[1]&gt;!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/95774950/198837000-f9647416-754f-4c99-8d5f-bb86dcfb84f8.png" alt="Screenshot_20221029_194307" /></p>
+<h3 id="usage-2-30"><a class="header" href="#usage-2-30">Usage #2</a></h3>
+<h4 id="syntax-9"><a class="header" href="#syntax-9">Syntax</a></h4>
+<pre><code>$takeRole[Role ID]
+</code></pre>
+<p>Removes the provided role from the mentioned users.</p>
+<h4 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h4>
+<ul>
+<li><code>Role ID</code>: The role to remove from the mentioned users.</li>
+</ul>
+<h4 id="example-204"><a class="header" href="#example-204">Example</a></h4>
+<pre><code>$nomention
+$allowRoleMentions[]
+
+$takeRole[$mentionedRoles[1]]
+Removed &lt;@&amp;$mentionedRoles[1]&gt; from the mentioned users!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/95774950/198837013-a39c8a69-29aa-4cec-b319-0b04365c200d.png" alt="Screenshot_20221029_193751" /></p>
+<h2 id="related-resources-1"><a class="header" href="#related-resources-1">Related Resources</a></h2>
+<ul>
+<li><a href="bdscript/./roleGrant.html">$roleGrant</a></li>
+<li><a href="bdscript/./takeRole.html">$takeRole</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="textsplit-1"><a class="header" href="#textsplit-1">$textSplit</a></h1>
-<p>Separates 'text' by the 'splitter', and saves data for <a href="bdscript/./splitText.html"><code>$splitText</code></a>.</p>
-<h2 id="usage-223"><a class="header" href="#usage-223">Usage</a></h2>
-<pre><code>$textSplit[text;splitter]
+<p>Splits the provided text by a given separator and saves the value temporarily.</p>
+<blockquote>
+<p>📌 To retrieve the split values, use <a href="bdscript/./splitText.html"><code>$splitText</code></a>.</p>
+</blockquote>
+<h2 id="syntax-10"><a class="header" href="#syntax-10">Syntax</a></h2>
+<pre><code>$textSplit[Text;Separator]
 </code></pre>
-<h3 id="breakdown-168"><a class="header" href="#breakdown-168">Breakdown</a></h3>
+<h3 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h3>
 <ul>
-<li><code>text</code> - The text to split.</li>
-<li><code>splitter</code> - The splitter to split arguments with.</li>
+<li><code>Text</code>: The text to split.</li>
+<li><code>Separator</code>: The separator to split the text with. If this parameter is empty, it separates the text by each characters.</li>
 </ul>
-<p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
+<h3 id="example-205"><a class="header" href="#example-205">Example</a></h3>
+<pre><code>$nomention
+$textSplit[Coffee, Tea, Milk;,]
+$splitText[1]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/95774950/198839569-338c0892-80ef-4e7a-bbb7-dd696c6ab15b.png" alt="Screenshot_20221029_203537" /></p>
+<h6 id="in-the-above-example-textsplit-splits-the-provided-text-using-a-comma--as-the-separator-after-that-splittext-is-used-to-retrieve-the-first-split-value"><a class="header" href="#in-the-above-example-textsplit-splits-the-provided-text-using-a-comma--as-the-separator-after-that-splittext-is-used-to-retrieve-the-first-split-value"><em>In the above example, <a href="bdscript/textSplit.html#textsplit"><code>$textSplit</code></a> splits the provided text using a comma (<code>,</code>) as the separator. After that, <a href="bdscript/./splitText.html"><code>$splitText</code></a> is used to retrieve the first split value.</em></a></h6>
+<h2 id="related-resources-2"><a class="header" href="#related-resources-2">Related Resources</a></h2>
+<ul>
+<li><a href="bdscript/../guides/textSplitting.html">Text Splitting Guide</a></li>
+<li><a href="bdscript/./getTextSplitIndex.html">$getTextSplitIndex</a></li>
+<li><a href="bdscript/./getTextSplitLength.html">$getTextSplitLength</a></li>
+<li><a href="bdscript/./joinSplitText.html">$joinSplitText</a></li>
+<li><a href="bdscript/./removeSplitTextElement.html">$removeSplitTextElement</a></li>
+<li><a href="bdscript/./splitText.html">$splitText</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="threadaddmember"><a class="header" href="#threadaddmember">$threadAddMember</a></h1>
-<p>Adds a member to a thread.</p>
-<h2 id="usage-224"><a class="header" href="#usage-224">Usage</a></h2>
-<pre><code>$threadAddMember[threadID;userID]
+<p>Adds a user to a thread.</p>
+<h2 id="syntax-11"><a class="header" href="#syntax-11">Syntax</a></h2>
+<pre><code>$threadAddMember[Thread ID;User ID]
 </code></pre>
-<h3 id="breakdown-169"><a class="header" href="#breakdown-169">Breakdown</a></h3>
+<h3 id="parameters-6"><a class="header" href="#parameters-6">Parameters</a></h3>
 <ul>
-<li><code>threadID</code> - The ID of the thread channel to add this user to.</li>
-<li><code>userID</code> - The user to add to the thread.</li>
+<li><code>Thread ID</code>: The ID of the thread channel to add the user to.</li>
+<li><code>User ID</code>: The user to add to the thread.</li>
 </ul>
-<h2 id="example-202"><a class="header" href="#example-202">Example</a></h2>
+<h2 id="example-206"><a class="header" href="#example-206">Example</a></h2>
 <pre><code>$nomention
 $var[thread;$startThread[Cool Thread;$channelID;;60;yes]]
 $threadAddMember[$var[thread];$authorID]
-$c[Adds the author to the newly created 'Cool Thread']
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/130260166-768cb59f-2377-49e3-9588-6425028484d9.png" alt="example1" /></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/130260148-0c6b54ec-96ea-4f94-9aee-8a583667d80d.png" alt="example2" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="threadremovemember"><a class="header" href="#threadremovemember">$threadRemoveMember</a></h1>
-<p>Removes a member from a thread.</p>
-<h2 id="usage-225"><a class="header" href="#usage-225">Usage</a></h2>
-<pre><code>$threadRemoveMember[threadID;userID]
-</code></pre>
-<h3 id="breakdown-170"><a class="header" href="#breakdown-170">Breakdown</a></h3>
+<p><img src="https://user-images.githubusercontent.com/69215413/130260166-768cb59f-2377-49e3-9588-6425028484d9.png" alt="example1" /><br />
+<img src="https://user-images.githubusercontent.com/69215413/130260148-0c6b54ec-96ea-4f94-9aee-8a583667d80d.png" alt="example2" /></p>
+<h2 id="related-resources-3"><a class="header" href="#related-resources-3">Related Resources</a></h2>
 <ul>
-<li><code>threadID</code> - The ID of the thread channel to remove this user from.</li>
-<li><code>userID</code> - The user to remove from the thread.</li>
+<li><a href="bdscript/../guides/threads.html">Threads Guide</a></li>
+<li><a href="bdscript/./editThread.html">$editThread</a></li>
+<li><a href="bdscript/./startThread.html">$startThread</a></li>
+<li><a href="bdscript/./threadRemoveMember.html">$threadRemoveMember</a></li>
 </ul>
-<h2 id="example-203"><a class="header" href="#example-203">Example</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="threadremovemember"><a class="header" href="#threadremovemember">$threadRemoveMember</a></h1>
+<p>Removes a user from a thread.</p>
+<h2 id="syntax-12"><a class="header" href="#syntax-12">Syntax</a></h2>
+<pre><code>$threadRemoveMember[Thread ID;User ID]
+</code></pre>
+<h3 id="parameters-7"><a class="header" href="#parameters-7">Parameters</a></h3>
+<ul>
+<li><code>Thread ID</code>: The ID of the thread channel to remove the user from.</li>
+<li><code>User ID</code>: The user to remove from the thread.</li>
+</ul>
+<h2 id="example-207"><a class="header" href="#example-207">Example</a></h2>
 <pre><code>$nomention
 $threadRemoveMember[878305123707785218;$authorID]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/130261147-1d44af9b-a951-4286-88a3-1908702d3fe0.png" alt="example" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="thumbnail"><a class="header" href="#thumbnail">$thumbnail</a></h1>
-<p>Adds a thumbnail to the embed.</p>
-<h2 id="usage-226"><a class="header" href="#usage-226">Usage</a></h2>
-<pre><code>$thumbnail[image url;(index)]
-</code></pre>
-<h3 id="breakdown-171"><a class="header" href="#breakdown-171">Breakdown</a></h3>
+<h2 id="related-resources-4"><a class="header" href="#related-resources-4">Related Resources</a></h2>
 <ul>
-<li><code>image url</code> - The image to set as the thumbnail.</li>
-<li><code>index</code> - What embed the thumbnail should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><a href="bdscript/../guides/threads.html">Threads Guide</a></li>
+<li><a href="bdscript/./editThread.html">$editThread</a></li>
+<li><a href="bdscript/./startThread.html">$startThread</a></li>
+<li><a href="bdscript/./threadAddMember.html">$threadAddMember</a></li>
 </ul>
-<h2 id="example-204"><a class="header" href="#example-204">Example</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="thumbnail"><a class="header" href="#thumbnail">$thumbnail</a></h1>
+<p>Adds an embedded thumbnail to bot's response message.</p>
+<h2 id="syntax-13"><a class="header" href="#syntax-13">Syntax</a></h2>
+<pre><code>$thumbnail[Image url;(Index)]
+</code></pre>
+<h3 id="parameters-8"><a class="header" href="#parameters-8">Parameters</a></h3>
+<ul>
+<li><code>Image url</code>: The image to set as the thumbnail.</li>
+<li><code>Index</code>: What <a href="bdscript/../resources/embedIndexes.html">embed index</a> the thumbnail should belong to, default to <code>1</code> (Optional).</li>
+</ul>
+<h3 id="permissions-1"><a class="header" href="#permissions-1">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>sendmessages</code></li>
+<li><code>sendmessagesinthreads</code></li>
+<li><code>embedlinks</code></li>
+</ul>
+<h2 id="example-208"><a class="header" href="#example-208">Example</a></h2>
 <pre><code>$nomention
 $description[This is the thumbnail ↘️]
 $thumbnail[$authorAvatar]
@@ -6805,50 +6881,79 @@ $thumbnail[$authorAvatar]
 <p><img src="https://user-images.githubusercontent.com/69215413/126551913-b3746b47-615a-48a3-9729-d07529e33f97.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="time"><a class="header" href="#time">$time</a></h1>
 <p>Changes the timezone for date/time functions.</p>
-<h2 id="usage-227"><a class="header" href="#usage-227">Usage</a></h2>
-<pre><code>$time[timezone]
+<h2 id="syntax-14"><a class="header" href="#syntax-14">Syntax</a></h2>
+<pre><code>$time[Timezone]
 </code></pre>
-<h3 id="breakdown-172"><a class="header" href="#breakdown-172">Breakdown</a></h3>
+<h3 id="parameters-9"><a class="header" href="#parameters-9">Parameters</a></h3>
 <ul>
-<li><code>timezone</code> - The timezone to change the time/date functions to.</li>
+<li><code>Timezone</code>: The timezone to use in the date/time functions. Accepts <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ database</a> timezone name as input.</li>
 </ul>
-<p>⚠️ <strong><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Get timezones from here (click-me)</a></strong></p>
-<h2 id="example-205"><a class="header" href="#example-205">Example</a></h2>
+<h2 id="example-209"><a class="header" href="#example-209">Example</a></h2>
 <pre><code>$nomention
+
 $time[America/New_York]
-Date: $date
+New York : $hour:$minute:$second
+
+$time[Europe/Warsaw]
+Warsaw : $optOff[$hour:$minute:$second]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/122826867-a5f0d400-d2b1-11eb-961b-e4d9fa3cb273.png" alt="Example" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/198847125-b093d143-7890-4478-a437-1c80c35c4c41.png" alt="Screenshot_20221029_234758" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="timeout"><a class="header" href="#timeout">$timeout</a></h1>
-<p>Timeouts the mentioned users, or the user provided in 'User ID', for a certain 'Duration' (max 28 days)</p>
-<blockquote>
-<p><strong>Note:</strong> To untimeout users see <a href="bdscript/./untimeout.html"><code>$untimeout[]</code></a></p>
-</blockquote>
-<h2 id="usage-228"><a class="header" href="#usage-228">Usage</a></h2>
-<pre><code>$timeout[duration;(userID)]
+<p>Timeouts a user for a certain duration.</p>
+<h2 id="syntax-15"><a class="header" href="#syntax-15">Syntax</a></h2>
+<pre><code>$timeout[Duration;(User ID)]
 </code></pre>
+<h3 id="parameters-10"><a class="header" href="#parameters-10">Parameters</a></h3>
+<ul>
+<li><code>Duration</code>: The amount of time the user should be timed out for. It shouldn't exceed more than &quot;28 days&quot;.</li>
+<li><code>User ID</code>: The user to timeout. If this parameter is empty, timeouts the mentioned users (Optional).</li>
+</ul>
+<h3 id="permissions-2"><a class="header" href="#permissions-2">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>moderatemembers</code></li>
+</ul>
 <h2 id="examples-15"><a class="header" href="#examples-15">Examples</a></h2>
-<h3 id="example-1-8"><a class="header" href="#example-1-8">Example 1</a></h3>
+<ul>
+<li>
+<p>Without ID</p>
 <pre><code>$nomention
 $timeout[$message[1]]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/183470087-6b72ea9f-9365-4686-9483-09bad385e10b.png" alt="" /></p>
-<h3 id="example-2-8"><a class="header" href="#example-2-8">Example 2</a></h3>
+</li>
+<li>
+<p>With ID</p>
 <pre><code>$nomention
+$allowMention
 $timeout[$message[1];$findUser[$message[2];no]]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/183470187-305f846a-7515-46b5-af7e-6c2f5713656f.png" alt="" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="title"><a class="header" href="#title">$title</a></h1>
-<p>Sets the embed title.</p>
-<h2 id="usage-229"><a class="header" href="#usage-229">Usage</a></h2>
-<pre><code>$title[text;(index)]
-</code></pre>
-<h3 id="breakdown-173"><a class="header" href="#breakdown-173">Breakdown</a></h3>
-<ul>
-<li><code>text</code> - The text to set the title as. It cannot exceed more than 256 characters.</li>
-<li><code>index</code> - What embed the title should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+</li>
 </ul>
-<h2 id="example-206"><a class="header" href="#example-206">Example</a></h2>
+<h2 id="related-resources-5"><a class="header" href="#related-resources-5">Related Resources</a></h2>
+<ul>
+<li><a href="https://support.discord.com/hc/en-us/articles/4413305239191-Time-Out-FAQ">Time Out FAQ</a></li>
+<li><a href="bdscript/./untimeout.html">$untimeout</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="title"><a class="header" href="#title">$title</a></h1>
+<p>Adds an embedded title to bot's response message.</p>
+<h2 id="syntax-16"><a class="header" href="#syntax-16">Syntax</a></h2>
+<pre><code>$title[Text;(Index)]
+</code></pre>
+<h3 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h3>
+<ul>
+<li><code>Text</code>: The text to set the title as. It cannot exceed more than 256 characters.</li>
+<li><code>Index</code>: What <a href="bdscript/../resources/embedIndexes.html">embed index</a> the title should belong to, defaults to <code>1</code> (Optional).</li>
+</ul>
+<h3 id="permissions-3"><a class="header" href="#permissions-3">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>sendmessages</code></li>
+<li><code>sendmessagesinthreads</code></li>
+<li><code>embedlinks</code></li>
+</ul>
+<h2 id="example-210"><a class="header" href="#example-210">Example</a></h2>
 <pre><code>$nomention
 $title[This is a title!]
 $description[⬆️ That is a nice title.]
@@ -6856,52 +6961,52 @@ $description[⬆️ That is a nice title.]
 <p><img src="https://user-images.githubusercontent.com/69215413/123186040-4c310b00-d465-11eb-99b1-6c43828c8ddb.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tolowercase"><a class="header" href="#tolowercase">$toLowercase</a></h1>
 <p>Converts the provided text to lowercase format.</p>
-<h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
+<h2 id="syntax-17"><a class="header" href="#syntax-17">Syntax</a></h2>
 <pre><code>$toLowercase[Text]
 </code></pre>
-<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<h3 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to convert.</li>
 </ul>
-<h2 id="example-207"><a class="header" href="#example-207">Example</a></h2>
+<h2 id="example-211"><a class="header" href="#example-211">Example</a></h2>
 <pre><code>$nomention
 $toLowercase[THIS TEXT IS NOW lowercase]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/125359116-d4ede900-e337-11eb-827b-5c0dcbe2ffbf.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="totitlecase"><a class="header" href="#totitlecase">$toTitleCase</a></h1>
 <p>Converts the first letter of each word to uppercase in the provided text.</p>
-<h2 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h2>
+<h2 id="syntax-18"><a class="header" href="#syntax-18">Syntax</a></h2>
 <pre><code>$toTitleCase[Text]
 </code></pre>
-<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
+<h3 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to convert.</li>
 </ul>
-<h2 id="example-208"><a class="header" href="#example-208">Example</a></h2>
+<h2 id="example-212"><a class="header" href="#example-212">Example</a></h2>
 <pre><code>$nomention
 $toTitleCase[$message]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/197995207-d7e45a80-88a8-4daa-918e-810efd84ce45.png" alt="Screenshot_20221026_151232" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="touppercase"><a class="header" href="#touppercase">$toUppercase</a></h1>
 <p>Converts the provided text to uppercase format.</p>
-<h2 id="syntax-6"><a class="header" href="#syntax-6">Syntax</a></h2>
+<h2 id="syntax-19"><a class="header" href="#syntax-19">Syntax</a></h2>
 <pre><code>$toUppercase[Text]
 </code></pre>
-<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
+<h3 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to convert.</li>
 </ul>
-<h2 id="example-209"><a class="header" href="#example-209">Example</a></h2>
+<h2 id="example-213"><a class="header" href="#example-213">Example</a></h2>
 <pre><code>$nomention
 $toUppercase[this text is now UPPERCASE]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/125359304-154d6700-e338-11eb-94b9-f792bcbabef3.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="trimcontent"><a class="header" href="#trimcontent">$trimContent</a></h1>
 <p>Removes duplicate spaces from incoming message content.</p>
-<h2 id="syntax-7"><a class="header" href="#syntax-7">Syntax</a></h2>
+<h2 id="syntax-20"><a class="header" href="#syntax-20">Syntax</a></h2>
 <pre><code>$trimContent
 </code></pre>
-<h3 id="example-210"><a class="header" href="#example-210">Example</a></h3>
+<h3 id="example-214"><a class="header" href="#example-214">Example</a></h3>
 <pre><code>$nomention
 $trimContent
 
@@ -6916,14 +7021,14 @@ $trimContent
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="trimspace"><a class="header" href="#trimspace">$trimSpace</a></h1>
 <p>Removes all leading and trailing white-space characters from the provided text.</p>
-<h2 id="syntax-8"><a class="header" href="#syntax-8">Syntax</a></h2>
+<h2 id="syntax-21"><a class="header" href="#syntax-21">Syntax</a></h2>
 <pre><code>$trimSpace[Text]
 </code></pre>
-<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
+<h3 id="parameters-15"><a class="header" href="#parameters-15">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text from which the white-space characters will be removed.</li>
 </ul>
-<h2 id="example-211"><a class="header" href="#example-211">Example</a></h2>
+<h2 id="example-215"><a class="header" href="#example-215">Example</a></h2>
 <pre><code>$nomention
 &gt;$trimSpace[        Hi
         ]&lt;
@@ -6934,30 +7039,30 @@ $trimContent
 <blockquote>
 <p>📌 <a href="https://support.discord.com/hc/en-us/articles/212517297-Text-to-Speech-101">TTS</a> feature is currently supported only in Discord Desktop and Webapp.</p>
 </blockquote>
-<h2 id="syntax-9"><a class="header" href="#syntax-9">Syntax</a></h2>
+<h2 id="syntax-22"><a class="header" href="#syntax-22">Syntax</a></h2>
 <pre><code>$tts
 </code></pre>
-<h3 id="permissions-1"><a class="header" href="#permissions-1">Permissions</a></h3>
+<h3 id="permissions-4"><a class="header" href="#permissions-4">Permissions</a></h3>
 <p>Required permissions that the bot must have for this function to work properly :</p>
 <ul>
 <li><code>tts</code></li>
 </ul>
-<h2 id="example-212"><a class="header" href="#example-212">Example</a></h2>
+<h2 id="example-216"><a class="header" href="#example-216">Example</a></h2>
 <pre><code>$nomention
 $tts
 Hello! Can you hear me?
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unban"><a class="header" href="#unban">$unban</a></h1>
 <p>Unbans a user by providing their username in the author's message.</p>
-<h2 id="syntax-10"><a class="header" href="#syntax-10">Syntax</a></h2>
+<h2 id="syntax-23"><a class="header" href="#syntax-23">Syntax</a></h2>
 <pre><code>$unban
 </code></pre>
-<h3 id="permissions-2"><a class="header" href="#permissions-2">Permissions</a></h3>
+<h3 id="permissions-5"><a class="header" href="#permissions-5">Permissions</a></h3>
 <p>Required permissions that the bot must have for this function to work properly :</p>
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h2 id="example-213"><a class="header" href="#example-213">Example</a></h2>
+<h2 id="example-217"><a class="header" href="#example-217">Example</a></h2>
 <pre><code>$nomention
 $unban
 Successfully unbanned user!
@@ -6972,26 +7077,26 @@ Successfully unbanned user!
 <h2 id="usages-27"><a class="header" href="#usages-27">Usages</a></h2>
 <p>There are two usages of this function :</p>
 <h3 id="usage-1-31"><a class="header" href="#usage-1-31">Usage #1</a></h3>
-<h4 id="syntax-11"><a class="header" href="#syntax-11">Syntax</a></h4>
+<h4 id="syntax-24"><a class="header" href="#syntax-24">Syntax</a></h4>
 <pre><code>$unbanID
 </code></pre>
 <p>Unbans a user by using their ID taken from the last argument of the author's message.</p>
-<h4 id="example-214"><a class="header" href="#example-214">Example</a></h4>
+<h4 id="example-218"><a class="header" href="#example-218">Example</a></h4>
 <pre><code>$nomention
 $unbanID
 Successfully unbanned user!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126553929-c30e6bd8-63ab-4e2a-9dc5-0ec1f23d6221.png" alt="example" /></p>
 <h3 id="usage-2-31"><a class="header" href="#usage-2-31">Usage #2</a></h3>
-<h4 id="syntax-12"><a class="header" href="#syntax-12">Syntax</a></h4>
+<h4 id="syntax-25"><a class="header" href="#syntax-25">Syntax</a></h4>
 <pre><code>$unbanID[User ID]
 </code></pre>
 <p>Unbans a user by using the ID provided in the 'User ID' parameter.</p>
-<h5 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h5>
+<h5 id="parameters-16"><a class="header" href="#parameters-16">Parameters</a></h5>
 <ul>
 <li><code>User ID</code> : The ID of the user to unban.</li>
 </ul>
-<h4 id="example-215"><a class="header" href="#example-215">Example</a></h4>
+<h4 id="example-219"><a class="header" href="#example-219">Example</a></h4>
 <pre><code>$nomention
 $unbanID[$message[1]]
 Successfully unbanned user!
@@ -6999,14 +7104,14 @@ Successfully unbanned user!
 <p><img src="https://user-images.githubusercontent.com/69215413/126553929-c30e6bd8-63ab-4e2a-9dc5-0ec1f23d6221.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unescape"><a class="header" href="#unescape">$unescape</a></h1>
 <p>Unescapes semicolons <code>;</code> from the provided text. It allows interpreting of escaped semicolons as unescaped ones.</p>
-<h2 id="syntax-13"><a class="header" href="#syntax-13">Syntax</a></h2>
+<h2 id="syntax-26"><a class="header" href="#syntax-26">Syntax</a></h2>
 <pre><code>$unescape[Text]
 </code></pre>
-<h3 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h3>
+<h3 id="parameters-17"><a class="header" href="#parameters-17">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to unescape.</li>
 </ul>
-<h2 id="example-216"><a class="header" href="#example-216">Example</a></h2>
+<h2 id="example-220"><a class="header" href="#example-220">Example</a></h2>
 <pre><code>$nomention
 $randomText[$unescape[$message]]
 </code></pre>
@@ -7016,19 +7121,19 @@ $randomText[$unescape[$message]]
 <blockquote>
 <p>📌 As of December 2021, this function has been deprecated in favor of <a href="bdscript/./untimeout.html">$untimeout</a>.</p>
 </blockquote>
-<h2 id="syntax-14"><a class="header" href="#syntax-14">Syntax</a></h2>
+<h2 id="syntax-27"><a class="header" href="#syntax-27">Syntax</a></h2>
 <pre><code>$unmute[Muted]
 </code></pre>
-<h3 id="parameters-6"><a class="header" href="#parameters-6">Parameters</a></h3>
+<h3 id="parameters-18"><a class="header" href="#parameters-18">Parameters</a></h3>
 <ul>
 <li><code>Muted</code> : The name of the 'Muted' role (Case sensitive).</li>
 </ul>
-<h3 id="permissions-3"><a class="header" href="#permissions-3">Permissions</a></h3>
+<h3 id="permissions-6"><a class="header" href="#permissions-6">Permissions</a></h3>
 <p>Required permissions that the bot must have for this function to work properly :</p>
 <ul>
 <li><code>manageroles</code></li>
 </ul>
-<h2 id="example-217"><a class="header" href="#example-217">Example</a></h2>
+<h2 id="example-221"><a class="header" href="#example-221">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[manageroles;❌ You are missing permission: `MANAGE_ROLES`.]
 $unmute[Muted]
@@ -7037,20 +7142,20 @@ $unmute[Muted]
 <p><img src="https://user-images.githubusercontent.com/69215413/125666289-5aecf227-0ae0-455e-8779-8501307a0894.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unpinmessage"><a class="header" href="#unpinmessage">$unpinMessage</a></h1>
 <p>Unpins a pinned message from the channel.</p>
-<h2 id="syntax-15"><a class="header" href="#syntax-15">Syntax</a></h2>
+<h2 id="syntax-28"><a class="header" href="#syntax-28">Syntax</a></h2>
 <pre><code>$unpinMessage[Channel ID;Message ID]
 </code></pre>
-<h3 id="parameters-7"><a class="header" href="#parameters-7">Parameters</a></h3>
+<h3 id="parameters-19"><a class="header" href="#parameters-19">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> : The channel where the message is located.</li>
 <li><code>Message ID</code> : The ID of the message to unpin.</li>
 </ul>
-<h3 id="permissions-4"><a class="header" href="#permissions-4">Permissions</a></h3>
+<h3 id="permissions-7"><a class="header" href="#permissions-7">Permissions</a></h3>
 <p>Required permissions that the bot must have for this function to work properly :</p>
 <ul>
 <li><code>managemessages</code></li>
 </ul>
-<h2 id="example-218"><a class="header" href="#example-218">Example</a></h2>
+<h2 id="example-222"><a class="header" href="#example-222">Example</a></h2>
 <pre><code>$nomention
 $unpinMessage[$mentionedChannels[1];$noMentionMessage]
 A message has been unpinned!
@@ -7062,26 +7167,26 @@ A message has been unpinned!
 <h2 id="usages-28"><a class="header" href="#usages-28">Usages</a></h2>
 <p>There are two usages of this function :</p>
 <h3 id="usage-1-32"><a class="header" href="#usage-1-32">Usage #1</a></h3>
-<h4 id="syntax-16"><a class="header" href="#syntax-16">Syntax</a></h4>
+<h4 id="syntax-29"><a class="header" href="#syntax-29">Syntax</a></h4>
 <pre><code>$unregisterGuildCommands
 </code></pre>
 <p>Unregisters all guild slash commands from the current guild.</p>
-<h4 id="example-219"><a class="header" href="#example-219">Example</a></h4>
+<h4 id="example-223"><a class="header" href="#example-223">Example</a></h4>
 <pre><code>$nomention
 $unregisterGuildCommands
 Successfully unregistered all guild slash commands!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/198040434-101a9391-7f93-457a-b59e-adb8a7eda6b3.png" alt="Screenshot_20221026_184650" /></p>
 <h3 id="usage-2-32"><a class="header" href="#usage-2-32">Usage #2</a></h3>
-<h4 id="syntax-17"><a class="header" href="#syntax-17">Syntax</a></h4>
+<h4 id="syntax-30"><a class="header" href="#syntax-30">Syntax</a></h4>
 <pre><code>$unregisterGuildCommands[Slash command name;...]
 </code></pre>
 <p>Unregisters provided guild slash commands from the current guild.</p>
-<h4 id="parameters-8"><a class="header" href="#parameters-8">Parameters</a></h4>
+<h4 id="parameters-20"><a class="header" href="#parameters-20">Parameters</a></h4>
 <ul>
 <li><code>Slash command name</code> : Name of guild slash command to unregister. Use semicolons <code>;</code> as separator to separate multiple guild slash command names.</li>
 </ul>
-<h4 id="example-220"><a class="header" href="#example-220">Example</a></h4>
+<h4 id="example-224"><a class="header" href="#example-224">Example</a></h4>
 <pre><code>$nomention
 $argsCheck[&gt;1;Provide guild slash command names!]
 
@@ -7091,19 +7196,19 @@ Successfully unregistered the provided guild slash commands!
 <p><img src="https://user-images.githubusercontent.com/95774950/198040479-f19497a7-e93b-4695-95fb-d8b629be5a1d.png" alt="Screenshot_20221026_185535" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="untimeout"><a class="header" href="#untimeout">$untimeout</a></h1>
 <p>Untimeouts a timed out user.</p>
-<h2 id="syntax-18"><a class="header" href="#syntax-18">Syntax</a></h2>
+<h2 id="syntax-31"><a class="header" href="#syntax-31">Syntax</a></h2>
 <pre><code>$untimeout[(User ID)]
 </code></pre>
-<h3 id="parameters-9"><a class="header" href="#parameters-9">Parameters</a></h3>
+<h3 id="parameters-21"><a class="header" href="#parameters-21">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The ID of the user to untimeout. If this parameter is empty, untimeouts the mentioned users (Optional).</li>
 </ul>
-<h3 id="permissions-5"><a class="header" href="#permissions-5">Permissions</a></h3>
+<h3 id="permissions-8"><a class="header" href="#permissions-8">Permissions</a></h3>
 <p>Required permissions that the bot must have for this function to work properly :</p>
 <ul>
 <li><code>moderatemembers</code></li>
 </ul>
-<h2 id="example-221"><a class="header" href="#example-221">Example</a></h2>
+<h2 id="example-225"><a class="header" href="#example-225">Example</a></h2>
 <ul>
 <li>
 <p>Without ID</p>
@@ -7123,10 +7228,10 @@ $untimeout[$findUser[$message[1];no]]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="uptime"><a class="header" href="#uptime">$uptime</a></h1>
 <p>Returns how long the bot has been online.</p>
-<h2 id="syntax-19"><a class="header" href="#syntax-19">Syntax</a></h2>
+<h2 id="syntax-32"><a class="header" href="#syntax-32">Syntax</a></h2>
 <pre><code>$uptime
 </code></pre>
-<h2 id="example-222"><a class="header" href="#example-222">Example</a></h2>
+<h2 id="example-226"><a class="header" href="#example-226">Example</a></h2>
 <pre><code>$nomention
 I've been online for `$uptime`!
 </code></pre>
@@ -7134,15 +7239,15 @@ I've been online for `$uptime`!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="url"><a class="header" href="#url">$url</a></h1>
 <p>Encodes or decodes the provided text in the URL encoding format.</p>
 <p>URL encoding is a method of converting reserved, unsafe, or non-ASCII characters to a URL format that is universally accepted and understood by all web browsers and servers while URL decoding is the vice-versa of URL encoding.</p>
-<h2 id="syntax-20"><a class="header" href="#syntax-20">Syntax</a></h2>
+<h2 id="syntax-33"><a class="header" href="#syntax-33">Syntax</a></h2>
 <pre><code>$url[Mode;Text]
 </code></pre>
-<h3 id="parameters-10"><a class="header" href="#parameters-10">Parameters</a></h3>
+<h3 id="parameters-22"><a class="header" href="#parameters-22">Parameters</a></h3>
 <ul>
 <li><code>Mode</code> : Whether to encode or decode the provided text. Accepts either <code>encode</code> or <code>decode</code> as input.</li>
 <li><code>Text</code> : The text to change.</li>
 </ul>
-<h2 id="example-223"><a class="header" href="#example-223">Example</a></h2>
+<h2 id="example-227"><a class="header" href="#example-227">Example</a></h2>
 <ul>
 <li>
 <p>Encoding</p>
@@ -7164,14 +7269,14 @@ $url[decode;https://example.url/decode?convert=Hello+world%21%21]
 <blockquote>
 <p>📌 <a href="bdscript/./useChannel.html"><code>$useChannel</code></a> cannot redirect the original slash command response.</p>
 </blockquote>
-<h2 id="syntax-21"><a class="header" href="#syntax-21">Syntax</a></h2>
+<h2 id="syntax-34"><a class="header" href="#syntax-34">Syntax</a></h2>
 <pre><code>$useChannel[Channel ID]
 </code></pre>
-<h3 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h3>
+<h3 id="parameters-23"><a class="header" href="#parameters-23">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> : The ID of the channel to where the message will be redirected.</li>
 </ul>
-<h2 id="example-224"><a class="header" href="#example-224">Example</a></h2>
+<h2 id="example-228"><a class="header" href="#example-228">Example</a></h2>
 <pre><code>$nomention
 $useChannel[$mentionedChannels[1]]
 $title[hello]
@@ -7181,14 +7286,14 @@ $description[hi]
 <img src="https://user-images.githubusercontent.com/69215413/125665365-ade65a36-0c1e-4e1c-a5c5-ad9929f769bc.png" alt="ex2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="useravatar"><a class="header" href="#useravatar">$userAvatar</a></h1>
 <p>Returns user's avatar URL.</p>
-<h2 id="syntax-22"><a class="header" href="#syntax-22">Syntax</a></h2>
+<h2 id="syntax-35"><a class="header" href="#syntax-35">Syntax</a></h2>
 <pre><code>$userAvatar[User ID]
 </code></pre>
-<h3 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h3>
+<h3 id="parameters-24"><a class="header" href="#parameters-24">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to return the avatar for.</li>
 </ul>
-<h2 id="example-225"><a class="header" href="#example-225">Example</a></h2>
+<h2 id="example-229"><a class="header" href="#example-229">Example</a></h2>
 <pre><code>$nomention
 $image[$userAvatar[$mentioned[1;yes]]]
 </code></pre>
@@ -7198,28 +7303,28 @@ $image[$userAvatar[$mentioned[1;yes]]]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userexists"><a class="header" href="#userexists">$userExists</a></h1>
 <p>Checks if a user exists in Discord using it's ID. Returns &quot;true&quot;, if it exists otherwise &quot;false&quot;.</p>
-<h2 id="syntax-23"><a class="header" href="#syntax-23">Syntax</a></h2>
+<h2 id="syntax-36"><a class="header" href="#syntax-36">Syntax</a></h2>
 <pre><code>$userExists[User ID]
 </code></pre>
-<h3 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h3>
+<h3 id="parameters-25"><a class="header" href="#parameters-25">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The ID of the user to check.</li>
 </ul>
-<h2 id="example-226"><a class="header" href="#example-226">Example</a></h2>
+<h2 id="example-230"><a class="header" href="#example-230">Example</a></h2>
 <pre><code>$nomention
 $userExists[$mentioned[1]]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/125201977-82310600-e23f-11eb-9b0b-72d77006e0c6.jpeg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userid"><a class="header" href="#userid">$userID</a></h1>
 <p>Fetches a user's ID using their username or user-tag.</p>
-<h2 id="syntax-24"><a class="header" href="#syntax-24">Syntax</a></h2>
+<h2 id="syntax-37"><a class="header" href="#syntax-37">Syntax</a></h2>
 <pre><code>$userID[Username#Discriminator / Username]
 </code></pre>
-<h3 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h3>
+<h3 id="parameters-26"><a class="header" href="#parameters-26">Parameters</a></h3>
 <ul>
 <li><code>Username#Discriminator / Username</code> : The user's username (User) or user-tag (User#0000) to return the ID for.</li>
 </ul>
-<h2 id="example-227"><a class="header" href="#example-227">Example</a></h2>
+<h2 id="example-231"><a class="header" href="#example-231">Example</a></h2>
 <pre><code>$nomention
 $userID[$username]
 </code></pre>
@@ -7229,10 +7334,10 @@ $userID[$username]
 <blockquote>
 <p>📌 <a href="bdscript/./userInfo.html"><code>$userInfo</code></a> automatically generates a description. So, <a href="bdscript/./description.html"><code>$description</code></a> of index <code>1</code> should be avoided in the code.</p>
 </blockquote>
-<h2 id="syntax-25"><a class="header" href="#syntax-25">Syntax</a></h2>
+<h2 id="syntax-38"><a class="header" href="#syntax-38">Syntax</a></h2>
 <pre><code>$userInfo[Message]
 </code></pre>
-<h3 id="parameters-15"><a class="header" href="#parameters-15">Parameters</a></h3>
+<h3 id="parameters-27"><a class="header" href="#parameters-27">Parameters</a></h3>
 <ul>
 <li>
 <p><code>Message</code> : The message to include in the description.</p>
@@ -7247,7 +7352,7 @@ $userID[$username]
 </blockquote>
 </li>
 </ul>
-<h2 id="example-228"><a class="header" href="#example-228">Example</a></h2>
+<h2 id="example-232"><a class="header" href="#example-232">Example</a></h2>
 <pre><code>$nomention
 $title[User Info]
 $userInfo[Username: {username}
@@ -7261,10 +7366,10 @@ Discriminator: {discriminator}]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userjoined"><a class="header" href="#userjoined">$userJoined</a></h1>
 <p>Returns the server joining date of a given user.</p>
-<h2 id="syntax-26"><a class="header" href="#syntax-26">Syntax</a></h2>
+<h2 id="syntax-39"><a class="header" href="#syntax-39">Syntax</a></h2>
 <pre><code>$userJoined[User ID;(Format)]
 </code></pre>
-<h3 id="parameters-16"><a class="header" href="#parameters-16">Parameters</a></h3>
+<h3 id="parameters-28"><a class="header" href="#parameters-28">Parameters</a></h3>
 <ul>
 <li>
 <p><code>User ID</code> : The user whose join date will be returned.</p>
@@ -7276,7 +7381,7 @@ Discriminator: {discriminator}]
 </blockquote>
 </li>
 </ul>
-<h2 id="example-229"><a class="header" href="#example-229">Example</a></h2>
+<h2 id="example-233"><a class="header" href="#example-233">Example</a></h2>
 <ul>
 <li>
 <p>Default format</p>
@@ -7298,10 +7403,10 @@ $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <blockquote>
 <p>📌 Besides user IDs, <a href="bdscript/./userJoinedDiscord.html"><code>$userJoinedDiscord</code></a> can also return creation date of any valid Discord Snowflake ID. Unlike <a href="bdscript/./creationDate.html"><code>$creationDate</code></a>, this function allows you to customize the output time format.</p>
 </blockquote>
-<h2 id="syntax-27"><a class="header" href="#syntax-27">Syntax</a></h2>
+<h2 id="syntax-40"><a class="header" href="#syntax-40">Syntax</a></h2>
 <pre><code>$userJoinedDiscord[User ID;(Format)]
 </code></pre>
-<h3 id="parameters-17"><a class="header" href="#parameters-17">Parameters</a></h3>
+<h3 id="parameters-29"><a class="header" href="#parameters-29">Parameters</a></h3>
 <ul>
 <li>
 <p><code>User ID</code> : The user whose account creation date will be returned. </p>
@@ -7313,7 +7418,7 @@ $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 </blockquote>
 </li>
 </ul>
-<h2 id="example-230"><a class="header" href="#example-230">Example</a></h2>
+<h2 id="example-234"><a class="header" href="#example-234">Example</a></h2>
 <ul>
 <li>
 <p>Default format</p>
@@ -7335,15 +7440,15 @@ $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <blockquote>
 <p>📌 <a href="bdscript/./userLeaderboard.html"><code>$userLeaderboard</code></a> automatically generates a description. So, <a href="bdscript/./description.html"><code>$description</code></a> of index <code>1</code> should be avoided in the code.</p>
 </blockquote>
-<h2 id="syntax-28"><a class="header" href="#syntax-28">Syntax</a></h2>
+<h2 id="syntax-41"><a class="header" href="#syntax-41">Syntax</a></h2>
 <pre><code>$userLeaderboard[Variable name;(Sort)]
 </code></pre>
-<h3 id="parameters-18"><a class="header" href="#parameters-18">Parameters</a></h3>
+<h3 id="parameters-30"><a class="header" href="#parameters-30">Parameters</a></h3>
 <ul>
 <li><code>Variable name</code> : The variable to create the leaderboard for.</li>
 <li><code>Sort</code> : Sorts the leaderboard values in ascending (<code>asc</code>) or descending (<code>desc</code>) order. Defaults to <code>desc</code> (Optional).</li>
 </ul>
-<h2 id="example-231"><a class="header" href="#example-231">Example</a></h2>
+<h2 id="example-235"><a class="header" href="#example-235">Example</a></h2>
 <pre><code>$nomention
 $userLeaderboard[Money;asc]
 </code></pre>
@@ -7357,72 +7462,72 @@ Leaderboard values are not updated in real-time. The previous values are cached 
 <h2 id="usages-29"><a class="header" href="#usages-29">Usages</a></h2>
 <p>There are two usages of this function :</p>
 <h3 id="usage-1-33"><a class="header" href="#usage-1-33">Usage #1</a></h3>
-<h4 id="syntax-29"><a class="header" href="#syntax-29">Syntax</a></h4>
+<h4 id="syntax-42"><a class="header" href="#syntax-42">Syntax</a></h4>
 <pre><code>$username
 </code></pre>
 <p>Returns the username of the user who triggered the command.</p>
-<h4 id="example-232"><a class="header" href="#example-232">Example</a></h4>
+<h4 id="example-236"><a class="header" href="#example-236">Example</a></h4>
 <pre><code>$nomention
 Hello $username!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/114783581-fc88e180-9d47-11eb-91a6-02e60b20fcf4.png" alt="example1" /></p>
 <h3 id="usage-2-33"><a class="header" href="#usage-2-33">Usage #2</a></h3>
-<h4 id="syntax-30"><a class="header" href="#syntax-30">Syntax</a></h4>
+<h4 id="syntax-43"><a class="header" href="#syntax-43">Syntax</a></h4>
 <pre><code>$username[User ID]
 </code></pre>
 <p>Returns the username of a specific user given its ID.</p>
-<h5 id="parameters-19"><a class="header" href="#parameters-19">Parameters</a></h5>
+<h5 id="parameters-31"><a class="header" href="#parameters-31">Parameters</a></h5>
 <ul>
 <li><code>User ID</code> : The user to get the username for.</li>
 </ul>
-<h4 id="example-233"><a class="header" href="#example-233">Example</a></h4>
+<h4 id="example-237"><a class="header" href="#example-237">Example</a></h4>
 <pre><code>$nomention
 $username just hugged $username[$mentioned[1]]!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/114783383-f430a680-9d47-11eb-91e5-6ade1c6ef234.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userperms"><a class="header" href="#userperms">$userPerms</a></h1>
 <p>Returns a user's permissions.</p>
-<h2 id="syntax-31"><a class="header" href="#syntax-31">Syntax</a></h2>
+<h2 id="syntax-44"><a class="header" href="#syntax-44">Syntax</a></h2>
 <pre><code>$userPerms[User ID;Return amount;Separator]
 </code></pre>
-<h3 id="parameters-20"><a class="header" href="#parameters-20">Parameters</a></h3>
+<h3 id="parameters-32"><a class="header" href="#parameters-32">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to get permissions for.</li>
 <li><code>Return amount</code> : The no. of permissions to return. Use <code>-1</code> to return all.</li>
 <li><code>Separator</code> : A text/character which is used for separating each permission.</li>
 </ul>
-<h2 id="example-234"><a class="header" href="#example-234">Example</a></h2>
+<h2 id="example-238"><a class="header" href="#example-238">Example</a></h2>
 <pre><code>$nomention
 $userPerms[$mentioned[1;yes];-1;-]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/42785890/151909707-d8e093f2-1279-4754-88a5-51466270fde6.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userreacted"><a class="header" href="#userreacted">$userReacted</a></h1>
 <p>Checks if a user reacted to a message with the provided emoji. Returns &quot;true&quot; if the user did react otherwise, &quot;false&quot;.</p>
-<h2 id="syntax-32"><a class="header" href="#syntax-32">Syntax</a></h2>
+<h2 id="syntax-45"><a class="header" href="#syntax-45">Syntax</a></h2>
 <pre><code>$userReacted[Channel ID;Message ID;User ID;Emoji]
 </code></pre>
-<h3 id="parameters-21"><a class="header" href="#parameters-21">Parameters</a></h3>
+<h3 id="parameters-33"><a class="header" href="#parameters-33">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> : The channel where the message is located.</li>
 <li><code>Message ID</code> : The message to check the reactions for.</li>
 <li><code>User ID</code> : The user to check the reaction for.</li>
 <li><code>Emoji</code> : The emoji of the reaction to check.</li>
 </ul>
-<h2 id="example-235"><a class="header" href="#example-235">Example</a></h2>
+<h2 id="example-239"><a class="header" href="#example-239">Example</a></h2>
 <pre><code>$nomention
 $userReacted[$channelID;$message;$authorID;🍀]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/197375576-dbe6fc17-68cb-44ed-802a-81a16db98ce9.png" alt="Screenshot_20221023_105811" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userroles"><a class="header" href="#userroles">$userRoles</a></h1>
 <p>Returns all role names given to the user.</p>
-<h2 id="syntax-33"><a class="header" href="#syntax-33">Syntax</a></h2>
+<h2 id="syntax-46"><a class="header" href="#syntax-46">Syntax</a></h2>
 <pre><code>$userRoles[User ID]
 </code></pre>
-<h3 id="parameters-22"><a class="header" href="#parameters-22">Parameters</a></h3>
+<h3 id="parameters-34"><a class="header" href="#parameters-34">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to return the role names for.</li>
 </ul>
-<h2 id="example-236"><a class="header" href="#example-236">Example</a></h2>
+<h2 id="example-240"><a class="header" href="#example-240">Example</a></h2>
 <pre><code>$nomention
 $description[&lt;@$mentioned[1;yes]&gt;'s roles: 
 $userRoles[$mentioned[1;yes]]]
@@ -7430,14 +7535,14 @@ $userRoles[$mentioned[1;yes]]]
 <p><img src="https://user-images.githubusercontent.com/69215413/125122358-4e30d600-e0c3-11eb-8930-07276f1bfbbd.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userserveravatar"><a class="header" href="#userserveravatar">$userServerAvatar</a></h1>
 <p>Returns the URL for the server avatar of a given user.</p>
-<h2 id="syntax-34"><a class="header" href="#syntax-34">Syntax</a></h2>
+<h2 id="syntax-47"><a class="header" href="#syntax-47">Syntax</a></h2>
 <pre><code>$userServerAvatar[User ID]
 </code></pre>
-<h3 id="parameters-23"><a class="header" href="#parameters-23">Parameters</a></h3>
+<h3 id="parameters-35"><a class="header" href="#parameters-35">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to get the server avatar for. If the user doesn't have a server avatar, then the default user avatar will be returned instead.</li>
 </ul>
-<h3 id="example-237"><a class="header" href="#example-237">Example</a></h3>
+<h3 id="example-241"><a class="header" href="#example-241">Example</a></h3>
 <pre><code>$nomention
 $image[$userServerAvatar[$authorID]?size=4096]
 </code></pre>
@@ -7450,10 +7555,10 @@ Instead, it creates the variable automatically during it's runtime and gets dele
 <blockquote>
 <p>📌 This function can only be used in <code>BDScript 2</code> script language.</p>
 </blockquote>
-<h2 id="syntax-35"><a class="header" href="#syntax-35">Syntax</a></h2>
+<h2 id="syntax-48"><a class="header" href="#syntax-48">Syntax</a></h2>
 <pre><code>$var[Name;(Value)]
 </code></pre>
-<h3 id="parameters-24"><a class="header" href="#parameters-24">Parameters</a></h3>
+<h3 id="parameters-36"><a class="header" href="#parameters-36">Parameters</a></h3>
 <ul>
 <li><code>Name</code> : The name of the temporary variable.</li>
 <li><code>Value</code> : The data to store (Optional).</li>
@@ -7461,7 +7566,7 @@ Instead, it creates the variable automatically during it's runtime and gets dele
 <blockquote>
 <p>📌 To retrieve the temporary stored value, type <code>$var[Name]</code>, where <em>&quot;Name&quot;</em> is the temporary variable name.</p>
 </blockquote>
-<h2 id="example-238"><a class="header" href="#example-238">Example</a></h2>
+<h2 id="example-242"><a class="header" href="#example-242">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;Type a message!]
 
@@ -7472,15 +7577,15 @@ $addButton[no;interactionID;Example;secondary;;;$var[ID]]
 <p><img src="https://user-images.githubusercontent.com/70456337/189480166-d37cbdb8-05ce-44e8-8f2e-14d030baa9a9.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="varexisterror"><a class="header" href="#varexisterror">$varExistError</a></h1>
 <p>Returns a custom error if a certain variable doesn't exist in the app.</p>
-<h2 id="syntax-36"><a class="header" href="#syntax-36">Syntax</a></h2>
+<h2 id="syntax-49"><a class="header" href="#syntax-49">Syntax</a></h2>
 <pre><code>$varExistError[Name;Error message]
 </code></pre>
-<h3 id="parameters-25"><a class="header" href="#parameters-25">Parameters</a></h3>
+<h3 id="parameters-37"><a class="header" href="#parameters-37">Parameters</a></h3>
 <ul>
 <li><code>Name</code> : The variable that should exist.</li>
 <li><code>Error message</code> : The custom error message to return if the variable doesn't exist.</li>
 </ul>
-<h2 id="example-239"><a class="header" href="#example-239">Example</a></h2>
+<h2 id="example-243"><a class="header" href="#example-243">Example</a></h2>
 <pre><code>$nomention
 $varExistError[Cool;Add the 'Cool' variable in the app.]
 $setUserVar[Cool;true]
@@ -7489,14 +7594,14 @@ You are now cool!
 <p><img src="https://user-images.githubusercontent.com/69215413/125121239-9a7b1680-e0c1-11eb-8ceb-b9b695f1b89f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="variablescount"><a class="header" href="#variablescount">$variablesCount</a></h1>
 <p>Returns how many of a certain variable type the bot has.</p>
-<h2 id="syntax-37"><a class="header" href="#syntax-37">Syntax</a></h2>
+<h2 id="syntax-50"><a class="header" href="#syntax-50">Syntax</a></h2>
 <pre><code>$variablesCount[Type]
 </code></pre>
-<h3 id="parameters-26"><a class="header" href="#parameters-26">Parameters</a></h3>
+<h3 id="parameters-38"><a class="header" href="#parameters-38">Parameters</a></h3>
 <ul>
 <li><code>Type</code> : The variable type to return the count for. Accepts either <code>user</code>, <code>server</code>, or <code>globaluser</code> as input.</li>
 </ul>
-<h2 id="example-240"><a class="header" href="#example-240">Example</a></h2>
+<h2 id="example-244"><a class="header" href="#example-244">Example</a></h2>
 <pre><code>$nomention
 $variablesCount[server]
 </code></pre>
@@ -7506,10 +7611,10 @@ $variablesCount[server]
 <blockquote>
 <p>📌 You can use <a href="bdscript/./time.html">$time</a> to change the timezone.</p>
 </blockquote>
-<h2 id="syntax-38"><a class="header" href="#syntax-38">Syntax</a></h2>
+<h2 id="syntax-51"><a class="header" href="#syntax-51">Syntax</a></h2>
 <pre><code>$year
 </code></pre>
-<h2 id="example-241"><a class="header" href="#example-241">Example</a></h2>
+<h2 id="example-245"><a class="header" href="#example-245">Example</a></h2>
 <pre><code>$nomention
 Current Year: $year
 </code></pre>
@@ -7520,7 +7625,7 @@ Current Year: $year
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onjoined"><a class="header" href="#onjoined">$onJoined</a></h1>
 <p><em>When a user joins the server, the command is triggered.</em></p>
 <p><code>$onJoined[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user joins the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>.</p>
-<h2 id="example-242"><a class="header" href="#example-242">Example</a></h2>
+<h2 id="example-246"><a class="header" href="#example-246">Example</a></h2>
 <ol>
 <li>
 <p>Make the command trigger <code>$onJoined[channelID]</code>.<br />
@@ -7599,7 +7704,7 @@ $setServerVar[welcome;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onleave"><a class="header" href="#onleave">$onLeave</a></h1>
 <p><em>When a user leaves the server, the command is triggered.</em></p>
 <p><code>$onLeave[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>.</p>
-<h2 id="example-243"><a class="header" href="#example-243">Example</a></h2>
+<h2 id="example-247"><a class="header" href="#example-247">Example</a></h2>
 <ol>
 <li>
 <p>Make the command trigger <code>$onLeave[channelID]</code>.</p>
@@ -7678,7 +7783,7 @@ $setServerVar[leave;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onbanadd"><a class="header" href="#onbanadd">$onBanAdd</a></h1>
 <p><em>Triggered when a user gets banned from the server.</em></p>
 <p><code>$onBanAdd[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
-<h2 id="example-244"><a class="header" href="#example-244">Example</a></h2>
+<h2 id="example-248"><a class="header" href="#example-248">Example</a></h2>
 <p><strong>#1:</strong> Make a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
 <blockquote>
 <p>🧙‍♂️ You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
@@ -7691,7 +7796,7 @@ $setServerVar[leave;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onbanremove"><a class="header" href="#onbanremove">$onBanRemove</a></h1>
 <p><em>Triggered when a user gets unbanned from the server.</em></p>
 <p><code>$onBanRemove[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is unbanned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
-<h2 id="example-245"><a class="header" href="#example-245">Example</a></h2>
+<h2 id="example-249"><a class="header" href="#example-249">Example</a></h2>
 <p><strong>#1:</strong> Make a command with <code>$onBanRemove[channelID]</code> as the trigger.</p>
 <blockquote>
 <p>🧙‍♂️ You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
@@ -7704,7 +7809,7 @@ $setServerVar[leave;$mentionedChannels[1]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onmessagedelete"><a class="header" href="#onmessagedelete">$onMessageDelete</a></h1>
 <p><em>Triggered when a user deletes a message.</em></p>
 <p><code>$onMessageDelete[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user deletes a message. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
-<h2 id="example-246"><a class="header" href="#example-246">Example</a></h2>
+<h2 id="example-250"><a class="header" href="#example-250">Example</a></h2>
 <ol>
 <li>
 <p>Make a new command, with the trigger <code>$onMessageDelete[channelID]</code>.</p>
@@ -7833,14 +7938,14 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="messagecontains"><a class="header" href="#messagecontains">$messageContains</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$messageContains[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a> that allows you to create a trigger with multiple phrases. In addition, the bot also looks for those phrases anywhere in the author's message. This feature is great for creating an auto-response or auto-moderation system. </p>
-<h2 id="usage-230"><a class="header" href="#usage-230">Usage</a></h2>
+<h2 id="usage-221"><a class="header" href="#usage-221">Usage</a></h2>
 <pre><code>$messageContains[word;...]
 </code></pre>
-<h3 id="breakdown-174"><a class="header" href="#breakdown-174">Breakdown</a></h3>
+<h3 id="breakdown-164"><a class="header" href="#breakdown-164">Breakdown</a></h3>
 <ul>
 <li><code>word</code> - The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
 </ul>
-<h2 id="example-247"><a class="header" href="#example-247">Example</a></h2>
+<h2 id="example-251"><a class="header" href="#example-251">Example</a></h2>
 <ol>
 <li>
 <p>Create a new command with command trigger set as <code>$messageContains[]</code>.</p>
@@ -7854,25 +7959,25 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignoretriggercase"><a class="header" href="#ignoretriggercase">$ignoreTriggerCase</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$ignoreTriggerCase</code> is a function that makes the command trigger <strong>not</strong> case sensitive. For example, <code>!help</code> and <code>!HeLp</code> would both work.</p>
-<h2 id="usage-231"><a class="header" href="#usage-231">Usage</a></h2>
+<h2 id="usage-222"><a class="header" href="#usage-222">Usage</a></h2>
 <pre><code>$ignoreTriggerCase
 </code></pre>
-<h2 id="example-248"><a class="header" href="#example-248">Example</a></h2>
+<h2 id="example-252"><a class="header" href="#example-252">Example</a></h2>
 <pre><code>$nomention
 $ignoreTriggerCase
 Hello World!
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendnotification"><a class="header" href="#sendnotification">$sendNotification</a></h1>
 <p>Sends notification to your mobile phone</p>
-<h2 id="usage-232"><a class="header" href="#usage-232">Usage</a></h2>
+<h2 id="usage-223"><a class="header" href="#usage-223">Usage</a></h2>
 <pre><code>$sendNotification[message;(image URL)]
 </code></pre>
-<h3 id="breakdown-175"><a class="header" href="#breakdown-175">Breakdown</a></h3>
+<h3 id="breakdown-165"><a class="header" href="#breakdown-165">Breakdown</a></h3>
 <ul>
 <li><code>message</code> - The text that should be in the sent notification.</li>
 <li><code>image URL</code> - The URL for the image to be attached.</li>
 </ul>
-<h2 id="example-249"><a class="header" href="#example-249">Example</a></h2>
+<h2 id="example-253"><a class="header" href="#example-253">Example</a></h2>
 <pre><code>$sendNotification[Hello, I miss you!;$userAvatar[$botID]]
 </code></pre>
 <p><img src="https://i.imgur.com/yfSTLVY.png" alt="example" /></p>
@@ -7887,7 +7992,7 @@ Hello World!
 <p>To create an awaited reaction command, following functions and callback are used :</p>
 <h3 id="awaitreactions"><a class="header" href="#awaitreactions">$awaitReactions[]</a></h3>
 <p>This function is used to await an reaction command.</p>
-<h4 id="usage-233"><a class="header" href="#usage-233">Usage</a></h4>
+<h4 id="usage-224"><a class="header" href="#usage-224">Usage</a></h4>
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
 <ul>
@@ -7901,7 +8006,7 @@ Hello World!
 </blockquote>
 <h3 id="reaction"><a class="header" href="#reaction">$reaction[]</a></h3>
 <p><code>$reaction[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
-<h4 id="usage-234"><a class="header" href="#usage-234">Usage</a></h4>
+<h4 id="usage-225"><a class="header" href="#usage-225">Usage</a></h4>
 <pre><code>$reaction[name]
 </code></pre>
 <ul>
@@ -7909,10 +8014,10 @@ Hello World!
 </ul>
 <h3 id="usedemoji"><a class="header" href="#usedemoji">$usedEmoji</a></h3>
 <p>This function is used to return the emoji which was triggered in <code>$reaction[]</code> command.</p>
-<h4 id="usage-235"><a class="header" href="#usage-235">Usage</a></h4>
+<h4 id="usage-226"><a class="header" href="#usage-226">Usage</a></h4>
 <pre><code>$usedEmoji
 </code></pre>
-<h2 id="example-250"><a class="header" href="#example-250">Example</a></h2>
+<h2 id="example-254"><a class="header" href="#example-254">Example</a></h2>
 <p><img src="https://user-images.githubusercontent.com/95774950/183701101-550bf56c-3cd2-4511-bc03-8f8398fe4d8b.png" alt="Screenshot_20220809_194823" />
 <img src="https://user-images.githubusercontent.com/95774950/183701030-c82a8744-9dff-4ad9-83b5-2aa64f45cc59.png" alt="Screenshot_20220809_194754" />
 <img src="https://user-images.githubusercontent.com/95774950/183701074-395c4770-8439-4441-a0ad-5c69ae9cded4.png" alt="Screenshot_20220809_194805" />
@@ -7941,14 +8046,14 @@ Hello World!
 <h2 id="retrieving"><a class="header" href="#retrieving">Retrieving</a></h2>
 <h3 id="customimage"><a class="header" href="#customimage">$customImage[]</a></h3>
 <p>This function is used to return the uploaded image in the app.</p>
-<h4 id="usage-236"><a class="header" href="#usage-236">Usage</a></h4>
+<h4 id="usage-227"><a class="header" href="#usage-227">Usage</a></h4>
 <pre><code>$customImage[Custom image tag]
 </code></pre>
-<h4 id="breakdown-176"><a class="header" href="#breakdown-176">Breakdown</a></h4>
+<h4 id="breakdown-166"><a class="header" href="#breakdown-166">Breakdown</a></h4>
 <ul>
 <li><code>custom image tag</code> - The tag that you set the custom image to, previously.</li>
 </ul>
-<h4 id="example-251"><a class="header" href="#example-251">Example</a></h4>
+<h4 id="example-255"><a class="header" href="#example-255">Example</a></h4>
 <pre><code>$nomention
 $customImage[NiceImage]
 </code></pre>
@@ -8051,19 +8156,19 @@ Then, check out the following JavaScript learning resources :<br />
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="ban-1"><a class="header" href="#ban-1">ban</a></h1>
 <p>Bans an user from the current guild.</p>
-<h2 id="syntax-39"><a class="header" href="#syntax-39">Syntax</a></h2>
+<h2 id="syntax-52"><a class="header" href="#syntax-52">Syntax</a></h2>
 <pre><code class="language-js">ban(userID)
 </code></pre>
-<h3 id="parameters-27"><a class="header" href="#parameters-27">Parameters</a></h3>
+<h3 id="parameters-39"><a class="header" href="#parameters-39">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to ban. Value must be a valid user snowflake ID.</li>
 </ul>
-<h3 id="permissions-6"><a class="header" href="#permissions-6">Permissions</a></h3>
+<h3 id="permissions-9"><a class="header" href="#permissions-9">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h3 id="example-252"><a class="header" href="#example-252">Example</a></h3>
+<h3 id="example-256"><a class="header" href="#example-256">Example</a></h3>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim();
 
@@ -8090,20 +8195,20 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/190855782-1aa5bf81-06d0-409d-bc06-2cf4aaecc1fb.jpg" alt="InShot_20220917_172017419" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="banwithreason"><a class="header" href="#banwithreason">banWithReason</a></h1>
 <p>Bans an user from the current guild with reason.</p>
-<h2 id="syntax-40"><a class="header" href="#syntax-40">Syntax</a></h2>
+<h2 id="syntax-53"><a class="header" href="#syntax-53">Syntax</a></h2>
 <pre><code class="language-js">banWithReason(userID, reason)
 </code></pre>
-<h3 id="parameters-28"><a class="header" href="#parameters-28">Parameters</a></h3>
+<h3 id="parameters-40"><a class="header" href="#parameters-40">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to ban. Value must be a valid user snowflake ID.</li>
 <li><code>reason</code> : The ban reason to add in Audit Logs and Guild Bans. Reason must not exceed more than 512 characters.</li>
 </ul>
-<h3 id="permissions-7"><a class="header" href="#permissions-7">Permissions</a></h3>
+<h3 id="permissions-10"><a class="header" href="#permissions-10">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h3 id="example-253"><a class="header" href="#example-253">Example</a></h3>
+<h3 id="example-257"><a class="header" href="#example-257">Example</a></h3>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().split(' ');
 
@@ -8138,37 +8243,37 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/191721557-9301171b-3807-4fb5-a7a2-ec770844438f.jpg" alt="InShot_20220922_153537132" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltyping"><a class="header" href="#channeltyping">channelTyping</a></h1>
 <p>Emits the <code>TYPING_START</code> event. It shows <em>&quot;Bot is typing...&quot;</em> in the channel where the command was triggered.</p>
-<h2 id="syntax-41"><a class="header" href="#syntax-41">Syntax</a></h2>
+<h2 id="syntax-54"><a class="header" href="#syntax-54">Syntax</a></h2>
 <pre><code class="language-js">channelTyping()
 </code></pre>
-<h3 id="permissions-8"><a class="header" href="#permissions-8">Permissions</a></h3>
+<h3 id="permissions-11"><a class="header" href="#permissions-11">Permissions</a></h3>
 <p>Required permissions which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>sendmessages</code></li>
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-254"><a class="header" href="#example-254">Example</a></h2>
+<h2 id="example-258"><a class="header" href="#example-258">Example</a></h2>
 <pre><code class="language-js">channelTyping();
 setResponse('Wow! I did type.');
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/191220685-2515dabf-626e-4709-9bf7-ec951aa35c44.gif" alt="ezgif com-gif-maker" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createchannel-1"><a class="header" href="#createchannel-1">createChannel</a></h1>
 <p>Creates a new channel in the current guild.</p>
-<h2 id="syntax-42"><a class="header" href="#syntax-42">Syntax</a></h2>
+<h2 id="syntax-55"><a class="header" href="#syntax-55">Syntax</a></h2>
 <pre><code class="language-js">createChannel(name, type)
 </code></pre>
-<h3 id="parameters-29"><a class="header" href="#parameters-29">Parameters</a></h3>
+<h3 id="parameters-41"><a class="header" href="#parameters-41">Parameters</a></h3>
 <ul>
 <li><code>name</code> : The name of the channel.</li>
 <li><code>type</code> : The type of the channel to create. Value must be either <em><strong>text</strong></em> or <em><strong>voice</strong></em>.</li>
 </ul>
-<h3 id="permissions-9"><a class="header" href="#permissions-9">Permissions</a></h3>
+<h3 id="permissions-12"><a class="header" href="#permissions-12">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>managechannels</code></li>
 </ul>
-<h2 id="example-255"><a class="header" href="#example-255">Example</a></h2>
+<h2 id="example-259"><a class="header" href="#example-259">Example</a></h2>
 <pre><code class="language-js">try {
   const
     msg = message.replace(commandPrefix, '').trim().replace(/  +/g, ' ').split(' '),
@@ -8198,20 +8303,20 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191656407-b2b61c57-ff3b-4259-b9f1-8ae92c0bf79b.jpg" alt="InShot_20220922_092945515" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="giverole-1"><a class="header" href="#giverole-1">giveRole</a></h1>
 <p>Assigns a role to a specified user.</p>
-<h2 id="syntax-43"><a class="header" href="#syntax-43">Syntax</a></h2>
+<h2 id="syntax-56"><a class="header" href="#syntax-56">Syntax</a></h2>
 <pre><code class="language-js">giveRole(userID, roleID)
 </code></pre>
-<h3 id="parameters-30"><a class="header" href="#parameters-30">Parameters</a></h3>
+<h3 id="parameters-42"><a class="header" href="#parameters-42">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to get the role. Value must be a valid user snowflake ID.</li>
 <li><code>roleID</code> : The role to assign to the user. Value must be a valid role snowflake ID.</li>
 </ul>
-<h3 id="permissions-10"><a class="header" href="#permissions-10">Permissions</a></h3>
+<h3 id="permissions-13"><a class="header" href="#permissions-13">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>manageroles</code></li>
 </ul>
-<h2 id="example-256"><a class="header" href="#example-256">Example</a></h2>
+<h2 id="example-260"><a class="header" href="#example-260">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().replace(/  +/g, ' ').split(' ', 2);
 
@@ -8240,19 +8345,19 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/190871625-9e676924-68b4-4189-9bba-44a7c3cf4488.jpg" alt="InShot_20220918_000019652" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kick-1"><a class="header" href="#kick-1">kick</a></h1>
 <p>Kicks an user from the current guild.</p>
-<h2 id="syntax-44"><a class="header" href="#syntax-44">Syntax</a></h2>
+<h2 id="syntax-57"><a class="header" href="#syntax-57">Syntax</a></h2>
 <pre><code class="language-js">kick(userID)
 </code></pre>
-<h3 id="parameters-31"><a class="header" href="#parameters-31">Parameters</a></h3>
+<h3 id="parameters-43"><a class="header" href="#parameters-43">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to kick. Value must be a valid user snowflake ID.</li>
 </ul>
-<h3 id="permissions-11"><a class="header" href="#permissions-11">Permissions</a></h3>
+<h3 id="permissions-14"><a class="header" href="#permissions-14">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>kick</code></li>
 </ul>
-<h2 id="example-257"><a class="header" href="#example-257">Example</a></h2>
+<h2 id="example-261"><a class="header" href="#example-261">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim();
 
@@ -8279,20 +8384,20 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191005572-538deebc-e660-4ce3-89ff-5929197c41ae.jpg" alt="InShot_20220919_164211838" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kickwithreason"><a class="header" href="#kickwithreason">kickWithReason</a></h1>
 <p>Kicks an user from the current guild with reason.</p>
-<h2 id="syntax-45"><a class="header" href="#syntax-45">Syntax</a></h2>
+<h2 id="syntax-58"><a class="header" href="#syntax-58">Syntax</a></h2>
 <pre><code class="language-js">kickWithReason(userID, reason)
 </code></pre>
-<h3 id="parameters-32"><a class="header" href="#parameters-32">Parameters</a></h3>
+<h3 id="parameters-44"><a class="header" href="#parameters-44">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to kick. Value must be a valid user snowflake ID.</li>
 <li><code>reason</code> : The kick reason to add in Audit Logs. Reason must not exceed more than 512 characters.</li>
 </ul>
-<h3 id="permissions-12"><a class="header" href="#permissions-12">Permissions</a></h3>
+<h3 id="permissions-15"><a class="header" href="#permissions-15">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>kick</code></li>
 </ul>
-<h2 id="example-258"><a class="header" href="#example-258">Example</a></h2>
+<h2 id="example-262"><a class="header" href="#example-262">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().split(' ');
 
@@ -8327,20 +8432,20 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192129456-d5c1092f-dd4d-4bd5-a450-5534acc097d3.jpg" alt="InShot_20220925_104547037" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pinmessage-1"><a class="header" href="#pinmessage-1">pinMessage</a></h1>
 <p>Pins a message to the channel.</p>
-<h2 id="syntax-46"><a class="header" href="#syntax-46">Syntax</a></h2>
+<h2 id="syntax-59"><a class="header" href="#syntax-59">Syntax</a></h2>
 <pre><code class="language-js">pinMessage(channelID, messageID)
 </code></pre>
-<h3 id="parameters-33"><a class="header" href="#parameters-33">Parameters</a></h3>
+<h3 id="parameters-45"><a class="header" href="#parameters-45">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel where the message is located. Value must be a valid channel snowflake ID.</li>
 <li><code>messageID</code> : The ID of the message. Value must be a valid message snowflake ID.</li>
 </ul>
-<h3 id="permissions-13"><a class="header" href="#permissions-13">Permissions</a></h3>
+<h3 id="permissions-16"><a class="header" href="#permissions-16">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>managemessages</code></li>
 </ul>
-<h2 id="example-259"><a class="header" href="#example-259">Example</a></h2>
+<h2 id="example-263"><a class="header" href="#example-263">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 2);
 
@@ -8366,19 +8471,19 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192140467-786505ff-02e0-4443-82e4-03afcfdb2eed.png" alt="Screenshot_20220925_162938" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removechannel"><a class="header" href="#removechannel">removeChannel</a></h1>
 <p>Removes a specified channel from the current server.</p>
-<h2 id="syntax-47"><a class="header" href="#syntax-47">Syntax</a></h2>
+<h2 id="syntax-60"><a class="header" href="#syntax-60">Syntax</a></h2>
 <pre><code class="language-js">removeChannel(channelID)
 </code></pre>
-<h3 id="parameters-34"><a class="header" href="#parameters-34">Parameters</a></h3>
+<h3 id="parameters-46"><a class="header" href="#parameters-46">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel to be removed. Value must be a valid channel snowflake ID.</li>
 </ul>
-<h3 id="permissions-14"><a class="header" href="#permissions-14">Permissions</a></h3>
+<h3 id="permissions-17"><a class="header" href="#permissions-17">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>managechannels</code></li>
 </ul>
-<h2 id="example-260"><a class="header" href="#example-260">Example</a></h2>
+<h2 id="example-264"><a class="header" href="#example-264">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().split(' ');
 
@@ -8404,22 +8509,22 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191010751-6e7bd8d8-00ef-4ca6-850d-4124254cc5a3.jpg" alt="InShot_20220919_171824516" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendchannelmessage"><a class="header" href="#sendchannelmessage">sendChannelMessage</a></h1>
 <p>Sends a message to the provided channel.</p>
-<h2 id="syntax-48"><a class="header" href="#syntax-48">Syntax</a></h2>
+<h2 id="syntax-61"><a class="header" href="#syntax-61">Syntax</a></h2>
 <pre><code class="language-js">sendChannelMessage(channelId, message)
 </code></pre>
-<h3 id="parameters-35"><a class="header" href="#parameters-35">Parameters</a></h3>
+<h3 id="parameters-47"><a class="header" href="#parameters-47">Parameters</a></h3>
 <ul>
 <li><code>channelId</code> : The channel to send the message. Value must be a valid channel snowflake ID.</li>
 <li><code>message</code> : The message to send to the provided channel ID.</li>
 </ul>
-<h3 id="permissions-15"><a class="header" href="#permissions-15">Permissions</a></h3>
+<h3 id="permissions-18"><a class="header" href="#permissions-18">Permissions</a></h3>
 <p>Required permissions which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>sendmessages</code></li>
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-261"><a class="header" href="#example-261">Example</a></h2>
+<h2 id="example-265"><a class="header" href="#example-265">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 2);
 
@@ -8450,24 +8555,24 @@ setResponse('Wow! I did type.');
 <p><img src="https://user-images.githubusercontent.com/95774950/190842663-13d63729-2008-4f7f-85ce-1aa52242fd8c.png" alt="Screenshot_20220917_102010" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedimage"><a class="header" href="#setembedimage">setEmbedImage</a></h1>
 <p>Adds an image to an embed.</p>
-<h2 id="syntax-49"><a class="header" href="#syntax-49">Syntax</a></h2>
+<h2 id="syntax-62"><a class="header" href="#syntax-62">Syntax</a></h2>
 <pre><code class="language-js">setEmbedImage(imageURL)
 </code></pre>
-<h3 id="parameters-36"><a class="header" href="#parameters-36">Parameters</a></h3>
+<h3 id="parameters-48"><a class="header" href="#parameters-48">Parameters</a></h3>
 <ul>
 <li><code>imageURL</code> : The image to set in the embed. Value must be a valid image link. (Optional)</li>
 </ul>
-<h2 id="example-262"><a class="header" href="#example-262">Example</a></h2>
+<h2 id="example-266"><a class="header" href="#example-266">Example</a></h2>
 <pre><code class="language-js">setEmbedImage('https://http.cat/200');
 setEmbedResponse();
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/190847481-06a7de9d-b1f2-44f2-9a4a-d167d69f5d20.png" alt="Screenshot_20220917_134716" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedresponse"><a class="header" href="#setembedresponse">setEmbedResponse</a></h1>
 <p>Sends an embedded message to the current channel.</p>
-<h2 id="syntax-50"><a class="header" href="#syntax-50">Syntax</a></h2>
+<h2 id="syntax-63"><a class="header" href="#syntax-63">Syntax</a></h2>
 <pre><code class="language-js">setEmbedResponse(title, description, footer)
 </code></pre>
-<h3 id="parameters-37"><a class="header" href="#parameters-37">Parameters</a></h3>
+<h3 id="parameters-49"><a class="header" href="#parameters-49">Parameters</a></h3>
 <ul>
 <li><code>title</code> : Adds a title to the embed.</li>
 <li><code>description</code> : Adds a description to the embed.</li>
@@ -8476,7 +8581,7 @@ setEmbedResponse();
 <blockquote>
 <p>📌 All parameters are optional.</p>
 </blockquote>
-<h3 id="permissions-16"><a class="header" href="#permissions-16">Permissions</a></h3>
+<h3 id="permissions-19"><a class="header" href="#permissions-19">Permissions</a></h3>
 <p>Required permissions which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>embedlinks</code></li>
@@ -8484,47 +8589,47 @@ setEmbedResponse();
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-263"><a class="header" href="#example-263">Example</a></h2>
+<h2 id="example-267"><a class="header" href="#example-267">Example</a></h2>
 <pre><code class="language-js">const date = new Date().toDateString();
 setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/190715616-324db8db-8e68-41db-9daa-73ad0d852fe4.png" alt="Screenshot_20220917_005110" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setresponse"><a class="header" href="#setresponse">setResponse</a></h1>
 <p>Sends a message to the current channel.</p>
-<h2 id="syntax-51"><a class="header" href="#syntax-51">Syntax</a></h2>
+<h2 id="syntax-64"><a class="header" href="#syntax-64">Syntax</a></h2>
 <pre><code class="language-js">setResponse(replyText)
 </code></pre>
-<h3 id="parameters-38"><a class="header" href="#parameters-38">Parameters</a></h3>
+<h3 id="parameters-50"><a class="header" href="#parameters-50">Parameters</a></h3>
 <ul>
 <li><code>replyText</code> : The provided text to send. (Optional)</li>
 </ul>
-<h3 id="permissions-17"><a class="header" href="#permissions-17">Permissions</a></h3>
+<h3 id="permissions-20"><a class="header" href="#permissions-20">Permissions</a></h3>
 <p>Required permissions which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>sendmessages</code></li>
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-264"><a class="header" href="#example-264">Example</a></h2>
+<h2 id="example-268"><a class="header" href="#example-268">Example</a></h2>
 <pre><code class="language-js">setResponse(`Hi! &lt;@${authorId}&gt;`);
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/190676703-2caf1838-0de1-4dc5-9d2d-85b7c9dc5dc1.png" alt="Screenshot_20220916_205326" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="takerole-1"><a class="header" href="#takerole-1">takeRole</a></h1>
 <p>Removes a role from a specified user.</p>
-<h2 id="syntax-52"><a class="header" href="#syntax-52">Syntax</a></h2>
+<h2 id="syntax-65"><a class="header" href="#syntax-65">Syntax</a></h2>
 <pre><code class="language-js">takeRole(userID, roleID)
 </code></pre>
-<h3 id="parameters-39"><a class="header" href="#parameters-39">Parameters</a></h3>
+<h3 id="parameters-51"><a class="header" href="#parameters-51">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user of whose role is to get removed. Value must be a valid user snowflake ID.</li>
 <li><code>roleID</code> : The role to take from the user. Value must be a valid role snowflake ID.</li>
 </ul>
-<h3 id="permissions-18"><a class="header" href="#permissions-18">Permissions</a></h3>
+<h3 id="permissions-21"><a class="header" href="#permissions-21">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>manageroles</code></li>
 </ul>
-<h2 id="example-265"><a class="header" href="#example-265">Example</a></h2>
+<h2 id="example-269"><a class="header" href="#example-269">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().replace(/  +/g, ' ').split(' ', 2);
 
@@ -8553,19 +8658,19 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/190939183-d1666cdd-4079-4ee2-a5b2-587e0dd656ed.jpg" alt="InShot_20220919_023352223" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unban-1"><a class="header" href="#unban-1">unban</a></h1>
 <p>Unbans an user from the current guild.</p>
-<h2 id="syntax-53"><a class="header" href="#syntax-53">Syntax</a></h2>
+<h2 id="syntax-66"><a class="header" href="#syntax-66">Syntax</a></h2>
 <pre><code class="language-js">unban(userID)
 </code></pre>
-<h3 id="parameters-40"><a class="header" href="#parameters-40">Parameters</a></h3>
+<h3 id="parameters-52"><a class="header" href="#parameters-52">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to unban. Value must be a valid user snowflake ID.</li>
 </ul>
-<h3 id="permissions-19"><a class="header" href="#permissions-19">Permissions</a></h3>
+<h3 id="permissions-22"><a class="header" href="#permissions-22">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h2 id="example-266"><a class="header" href="#example-266">Example</a></h2>
+<h2 id="example-270"><a class="header" href="#example-270">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 1);
 
@@ -8592,20 +8697,20 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/191576471-5677053f-c375-4d96-8f22-e15b0c5502f0.jpg" alt="InShot_20220921_230931790" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unpinmessage-1"><a class="header" href="#unpinmessage-1">unpinMessage</a></h1>
 <p>Unpins a message from the channel.</p>
-<h2 id="syntax-54"><a class="header" href="#syntax-54">Syntax</a></h2>
+<h2 id="syntax-67"><a class="header" href="#syntax-67">Syntax</a></h2>
 <pre><code class="language-js">unpinMessage(channelID, messageID)
 </code></pre>
-<h3 id="parameters-41"><a class="header" href="#parameters-41">Parameters</a></h3>
+<h3 id="parameters-53"><a class="header" href="#parameters-53">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel where the message is located. Value must be a valid channel snowflake ID.</li>
 <li><code>messageID</code> : The ID of the message. Value must be a valid message snowflake ID.</li>
 </ul>
-<h3 id="permissions-20"><a class="header" href="#permissions-20">Permissions</a></h3>
+<h3 id="permissions-23"><a class="header" href="#permissions-23">Permissions</a></h3>
 <p>Required permission which the bot must have for this function to work properly.</p>
 <ul>
 <li><code>managemessages</code></li>
 </ul>
-<h2 id="example-267"><a class="header" href="#example-267">Example</a></h2>
+<h2 id="example-271"><a class="header" href="#example-271">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 2);
 

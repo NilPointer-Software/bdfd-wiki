@@ -156,20 +156,27 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="threadremovemember"><a class="header" href="#threadremovemember">$threadRemoveMember</a></h1>
-<p>Removes a member from a thread.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$threadRemoveMember[threadID;userID]
+<p>Removes a user from a thread.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$threadRemoveMember[Thread ID;User ID]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>threadID</code> - The ID of the thread channel to remove this user from.</li>
-<li><code>userID</code> - The user to remove from the thread.</li>
+<li><code>Thread ID</code>: The ID of the thread channel to remove the user from.</li>
+<li><code>User ID</code>: The user to remove from the thread.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $threadRemoveMember[878305123707785218;$authorID]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/130261147-1d44af9b-a951-4286-88a3-1908702d3fe0.png" alt="example" /></p>
+<h2 id="related-resources"><a class="header" href="#related-resources">Related Resources</a></h2>
+<ul>
+<li><a href="../guides/threads.html">Threads Guide</a></li>
+<li><a href="./editThread.html">$editThread</a></li>
+<li><a href="./startThread.html">$startThread</a></li>
+<li><a href="./threadAddMember.html">$threadAddMember</a></li>
+</ul>
 
                     </main>
 

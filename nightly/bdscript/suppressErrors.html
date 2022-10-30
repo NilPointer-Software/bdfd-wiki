@@ -156,20 +156,41 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="suppresserrors"><a class="header" href="#suppresserrors">$suppressErrors</a></h1>
-<p>Suppresses error messages.</p>
+<p>Prevents the default function error message from being sent whenever an error occurs.</p>
 <h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
-<p>There are two usages of <code>$suppressErrors</code>.</p>
+<p>There are two usages of this function:</p>
 <h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
+<h4 id="syntax"><a class="header" href="#syntax">Syntax</a></h4>
 <pre><code>$suppressErrors
 </code></pre>
-<p>Prevents error messages from being returned as the response.</p>
-<blockquote>
-<p>Simply put, the bot will not respond if there is a error message.</p>
-</blockquote>
-<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
-<pre><code>$suppressErrors[customError]
+<p>Prevents the default error message from being sent.</p>
+<h4 id="example"><a class="header" href="#example">Example</a></h4>
+<pre><code>$nomention
+$suppressErrors
+$argsCheck[&gt;1;Usage : ` !command &lt;math expression&gt; `]
+$calculate[$message]
 </code></pre>
-<p>Prevents error messages from being returned as the response. Instead, the 'customError' text is returned.</p>
+<p><img src="https://user-images.githubusercontent.com/95774950/198821156-3752e153-2289-4cd8-8bfb-07ae72455530.png" alt="Screenshot_20221029_133343" /></p>
+<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
+<h4 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h4>
+<pre><code>$suppressErrors[Error message]
+</code></pre>
+<p>Sends a custom error message instead of the default error message.</p>
+<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<ul>
+<li><code>Error message</code>: The custom error message to send.</li>
+</ul>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
+<pre><code>$nomention
+$suppressErrors[**Error** : ` Invalid math expression! `]
+$argsCheck[&gt;1;Usage : ` !command &lt;math expression&gt; `]
+$calculate[$message]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/95774950/198820510-bc2140f0-838b-4357-80e7-e12c69b3739f.png" alt="Screenshot_20221029_132111" /></p>
+<h2 id="related-resources"><a class="header" href="#related-resources">Related Resources</a></h2>
+<ul>
+<li><a href="./embedSuppressErrors.html">$embedSuppressErrors</a></li>
+</ul>
 
                     </main>
 
