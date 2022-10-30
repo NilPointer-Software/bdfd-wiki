@@ -1,7 +1,7 @@
 # $botOwnerID
 Returns the bot owner's ID.
 
-## Usage
+## Syntax
 ```
 $botOwnerID
 ```
