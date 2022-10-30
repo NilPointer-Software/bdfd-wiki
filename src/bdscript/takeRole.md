@@ -16,8 +16,8 @@ $takeRole[User ID;Role ID]
 Removes a role from the provided user.
 
 #### Parameters
-- `User ID` : The user to remove the role for.
-- `Role ID` : The role to remove from the user.
+- `User ID`: The user to remove the role for.
+- `Role ID`: The role to remove from the user.
 
 #### Example
 ```
