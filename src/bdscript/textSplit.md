@@ -1,7 +1,7 @@
 # $textSplit
 Splits the provided text by a given separator and saves the value temporarily.
 
-> 📌 To retrieve the splitted values, use [`$splitText`](./splitText.md).
+> 📌 To retrieve the split values, use [`$splitText`](./splitText.md).
 
 ## Syntax
 ```
