@@ -1,5 +1,5 @@
 # $categoryCount
-Returns the category count in a guild.
+Returns the category count of a guild.
 
 ## Usages
 There are two usages of this function :
