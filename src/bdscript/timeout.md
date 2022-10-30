@@ -11,7 +11,7 @@ $timeout[Duration;(User ID)]
 - `User ID`: The user to timeout. If this parameter is empty, timeouts the mentioned users (Optional).
 
 ### Permissions
-Required permissions that the bot must have for this function to work properly :
+Required permissions that the bot must have for this function to work properly:
 - `moderatemembers`
 
 ## Examples
