@@ -38,7 +38,7 @@ $takeRole[Role ID]
 Removes the provided role from the mentioned users.
 
 #### Parameters
-- `Role ID` : The role to remove from the mentioned users.
+- `Role ID`: The role to remove from the mentioned users.
 
 #### Example
 ```
