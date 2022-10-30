@@ -18,7 +18,7 @@ Returns the ID of the replied message from the triggering message.
 ```
 $repliedMessageID[Channel ID;Message ID]
 ```
-Returns ID of a replied message.
+Returns the ID of the replied message form the given message.
 
 - `Channel ID` : The ID of the channel where the message is.
 - `Message ID` : The ID of the message.
