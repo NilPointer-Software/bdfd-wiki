@@ -11,7 +11,7 @@ $thumbnail[Image url;(Index)]
 - `Index`: What [embed index](../resources/embedIndexes.md) the thumbnail should belong to, default to `1` (Optional).
 
 ### Permissions
-Required permissions that the bot must have for this function to work properly :
+Required permissions that the bot must have for this function to work properly:
 - `sendmessages`
 - `sendmessagesinthreads`
 - `embedlinks`
