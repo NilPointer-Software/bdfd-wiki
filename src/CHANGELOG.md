@@ -17,6 +17,8 @@
 - Added `$httpStatus`
 - Added `$httpGetHeader[]`
 - Added `$botOwnerID`
+- Added `$repliedMessageID`
+- Fixed the guild list fetching issue
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
@@ -33,7 +35,6 @@
 - Fixed `Ticket number` argument not working in `$newTicket[]`
 - Fixed `$httpAddHeader[]`
 - Fixed some callbacks not being detected as callbacks
-- Better ratelimit detection
 - Fixed attachments not working in slash commands
 
 ## August
