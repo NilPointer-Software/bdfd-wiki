@@ -1,5 +1,5 @@
 # $isTimedOut
-Returns whether the user is timed out or not.
+Returns "true" if the user is timed out, otherwise "false".
 
 ## Usage
 ```
