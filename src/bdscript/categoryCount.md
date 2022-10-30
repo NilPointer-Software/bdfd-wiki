@@ -9,7 +9,7 @@ There are two usages of this function :
 ```
 $categoryCount
 ```
-Returns the category count in the current guild.
+Returns the category count of the current guild.
 
 ### Example
 ```
