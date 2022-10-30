@@ -9,8 +9,8 @@ $textSplit[Text;Separator]
 ```
 
 ### Parameters
-- `Text` : The text to split.
-- `Separator` : The separator to split the text with. If this parameter is empty, it separates the text by each characters.
+- `Text`: The text to split.
+- `Separator`: The separator to split the text with. If this parameter is empty, it separates the text by each characters.
 
 ### Example
 ```
