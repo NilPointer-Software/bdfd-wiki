@@ -1,22 +1,22 @@
 # $time
 Changes the timezone for date/time functions.
 
-## Usage
+## Syntax
 ```
-$time[timezone]
+$time[Timezone]
 ```
 
-### Breakdown
-- `timezone` - The timezone to change the time/date functions to.
-
-⚠️ **[Get timezones from here (click-me)](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)**
-
+### Parameters
+- `Timezone`: The timezone to use in the date/time functions. Accepts [TZ database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) timezone name as input.
 
 ## Example
 ```
 $nomention
-$time[America/New_York]
-Date: $date
-```
 
-![Example](https://user-images.githubusercontent.com/69215413/122826867-a5f0d400-d2b1-11eb-961b-e4d9fa3cb273.png)
+$time[America/New_York]
+New York : $hour:$minute:$second
+
+$time[Europe/Warsaw]
+Warsaw : $optOff[$hour:$minute:$second]
+```
+![Screenshot_20221029_234758](https://user-images.githubusercontent.com/95774950/198847125-b093d143-7890-4478-a437-1c80c35c4c41.png)
