@@ -31,6 +31,6 @@ Returns the given guild's number of nitro boosts.
 #### Example
 ```
 $nomention
-This server currently has $boostCount[$guildID] boost(s).
+This server currently has $boostCount[$message1]] boost(s).
 ```
 ![example2](https://user-images.githubusercontent.com/94063167/198905185-be96ee82-9961-41c3-b042-bc663c787d58.png)
