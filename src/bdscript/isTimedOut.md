@@ -1,7 +1,7 @@
 # $isTimedOut
 Returns "true" if the user is timed out, otherwise "false".
 
-## Usage
+## Syntax
 ```
 $isTimedOut[User ID]
 ```
