@@ -21,7 +21,7 @@ Returns the given guild's number of nitro boosts.
 #### Parameters
 - `Guild ID`: The ID of the guild to get it's boosts.
 
-## Example
+#### Example
 ```
 $nomention
 This server currently has $boostCount boost(s).
