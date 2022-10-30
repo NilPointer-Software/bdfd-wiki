@@ -336,7 +336,6 @@
 }
 /* High Contrast */
 
-
 .light {
     --bg: hsl(0, 0%, 100%);
     --fg: #333333;
