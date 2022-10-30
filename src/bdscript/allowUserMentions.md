@@ -1,5 +1,5 @@
 # $allowUserMentions
-Enables user pings only for the provided user IDs, while the user not provided will be 'fake pinged' (the user will be pinged, but user will not be notified).
+Enables user pings only for the provided user IDs, while the user not provided will be 'fake pinged' *(the user will be pinged, but user will not be notified)*.
 
 ## Usage
 ```
