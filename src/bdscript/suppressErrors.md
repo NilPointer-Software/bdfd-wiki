@@ -1,5 +1,5 @@
 # $suppressErrors
-Prevents the default function error messages from being send whenever an error occurs.
+Prevents the default function error message from being sent whenever an error occurs.
 
 ## Usages
 There are two usages of this function:
