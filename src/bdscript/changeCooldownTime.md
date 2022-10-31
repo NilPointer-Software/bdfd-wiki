@@ -1,5 +1,5 @@
 # $changeCooldownTime
-Changes the cooldown metrics for `%time-d%`, `%time-h%`, `%time-m%`, and `%time-s%`. These can be used in cooldown error messages, its useful for translating.
+Changes the cooldown metrics for `%time-d%`, `%time-h%`, `%time-m%`, and `%time-s%`. These can be used in cooldown error messages. It can be useful for translating.
 
 ## Usage
 ```
