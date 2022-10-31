@@ -14,6 +14,8 @@ $createChannel[name;type;(optional) categoryID]
   - `category`
   - `text`
   - `voice`
+  - `stage`
+  - `forum`
 - `categoryID` - The category to put the channel in (if applicable).
 
 ## Example
