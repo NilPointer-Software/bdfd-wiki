@@ -31,6 +31,6 @@ Returns the parent category ID for given channel ID.
 #### Example
 ```
 $nomention
-Category ID: $parentID[$message]
+Category ID: $parentID[$mentionedChannels[1]]
 ```
-![example2](https://user-images.githubusercontent.com/94063167/199021971-65ef4587-ee7c-438e-a685-4867b039dc2a.png)
+![grafik](https://user-images.githubusercontent.com/94063167/199022843-84b86272-d690-4630-99ba-80e024ffea52.png)
