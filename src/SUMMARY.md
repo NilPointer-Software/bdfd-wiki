@@ -37,12 +37,12 @@
     - [API](./resources/api.md)
     - [BDFD's Creation](./resources/bdfdCreation.md)
     - [Discord's ID System](./resources/discordIDSystem.md)
+    - [Discord Timestamps](./resources/discordTimestamps.md)
     - [Embed Indexes](./resources/embedIndexes.md)
     - [2FA & Elevated Permissions](./resources/2FA.md)
     - [Permissions](./resources/permissions.md)
     - [Security](./resources/security.md)
     - [Time Format](./resources/timeFormat.md)
-    - [Discord Timestamps](./resources/discordTimestamps.md)
 
 - [BDScript]()
     - [Introduction](./bdscript/introduction.md)
