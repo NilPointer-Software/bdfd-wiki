@@ -1,5 +1,5 @@
 # $channelExists
-Checks if the channel provided actually exists.
+Checks if the provided channel exists in any server the bot is in.
 > 🧙‍♂️ 'true' means the channel does exist, 'false' means it doesn't.
 
 ## Usage
@@ -8,4 +8,4 @@ $channelExists[channelID]
 ```
 
 ### Breakdown
-- `channelID` - The "channel" which the bot checks.
+- `channelID` - The channel which the bot checks for.
