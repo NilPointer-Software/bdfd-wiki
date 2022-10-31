@@ -8,4 +8,4 @@ $channelExists[channelID]
 ```
 
 ### Breakdown
-- `channelID` - The channel which the bot checks for.
+- `channelID` - The channel which the bot will check for.
