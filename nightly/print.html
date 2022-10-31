@@ -2579,7 +2579,7 @@ $addButton[no;test;Say hello!;primary;no;]
 <pre><code>$addCmdReactions[emojis;...]
 </code></pre>
 <blockquote>
-<p>You can use unicode emojis or emoji IDs, not emoji names. <em>For emoji IDs</em>, the bot must be present in the server, that you are using the emoji from.</p>
+<p>🧙‍♂️ You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from.</p>
 </blockquote>
 <h3 id="breakdown-2"><a class="header" href="#breakdown-2">Breakdown</a></h3>
 <ul>
@@ -2623,13 +2623,13 @@ Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes
 <pre><code>$addField[name;value;(inline;index)]
 </code></pre>
 <blockquote>
-<p>📝 You can create upto a maximum of 25 fields per embed.</p>
+<p>📝 You can create up to a maximum of 25 fields per embed.</p>
 </blockquote>
 <h3 id="breakdown-4"><a class="header" href="#breakdown-4">Breakdown</a></h3>
 <ul>
 <li><code>name</code> - The name of the field. It cannot exceed more than 256 characters.</li>
 <li><code>value</code> - The value of the field. It cannot exceed more than 1024 characters.</li>
-<li><code>inline</code> - If 'yes', fields will appear in same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. 'no' by default. (Optional)</li>
+<li><code>inline</code> - If 'yes', fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to 'no' by default. (Optional)</li>
 <li><code>index</code> - Adds field to specified embed index number (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <blockquote>
@@ -2656,7 +2656,7 @@ $addField[This is the field name! #3;This is the field value! #3;yes]
 <pre><code>$addReactions[emojis]
 </code></pre>
 <blockquote>
-<p>🧙‍♂️ You can use unicode emojis or emoji IDs, not emoji names. <em>For emoji IDs:</em> The bot must be present in the server, that you are using the emoji from.</p>
+<p>🧙‍♂️ You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from.</p>
 </blockquote>
 <h3 id="breakdown-5"><a class="header" href="#breakdown-5">Breakdown</a></h3>
 <ul>
@@ -2750,7 +2750,7 @@ $message
 <h4 id="without-allowmention"><a class="header" href="#without-allowmention">Without $allowMention</a></h4>
 <p><img src="https://user-images.githubusercontent.com/69215413/118008703-52d34b00-b31b-11eb-945e-72104df7ab5d.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="allowrolementions"><a class="header" href="#allowrolementions">$allowRoleMentions</a></h1>
-<p>Disables the pings for the roles not provided, which means the role will be 'fake pinged' <em>(the role will be pinged, but users will not get notified of the ping)</em>. While, the inputted allowed roles are ones that can be pinged <em>(and it will work like a regular ping)</em>.</p>
+<p>Enables role pings only for the provided role IDs, while the roles not provided will be 'fake pinged' <em>(the role will be pinged, but users will not be notified)</em>.</p>
 <h2 id="usage-17"><a class="header" href="#usage-17">Usage</a></h2>
 <pre><code>$allowRoleMentions[roleIDs]
 </code></pre>
@@ -2765,7 +2765,7 @@ I'm pinging &lt;@&amp;858376972303204362&gt;, but no one got notified; wow!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/128615927-d93f9e54-e8ad-4067-a363-eedb540d6b37.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="allowusermentions"><a class="header" href="#allowusermentions">$allowUserMentions</a></h1>
-<p>Disables the pings for the users not provided, which means the user will be 'fake pinged' <em>(the user will be pinged, but the user will not get notified of the ping)</em>. While, the inputted allowed users are ones that can be pinged <em>(and it will work like a regular ping)</em>.</p>
+<p>Enables user pings only for the provided user IDs, while the user not provided will be 'fake pinged' <em>(the user will be pinged, but user will not be notified)</em>.</p>
 <h2 id="usage-18"><a class="header" href="#usage-18">Usage</a></h2>
 <pre><code>$allowUserMentions[userIDs]
 </code></pre>
@@ -2872,7 +2872,7 @@ $author[This is the author text!]
 <p><img src="https://user-images.githubusercontent.com/69215413/125959889-0fffe8a1-9fad-4c78-9c48-50956d1ad8c4.png" alt="example1" /></p>
 <h3 id="example-2-3"><a class="header" href="#example-2-3">Example #2</a></h3>
 <blockquote>
-<p>🧙‍♂️ You can use <code>?size=size</code> at the end of the avatar URL to decrease/increase the image size. Example sizes: 1024, 2048, 4096.</p>
+<p>🧙‍♂️ You can use <code>?size=size</code> at the end of the avatar URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096.</p>
 </blockquote>
 <pre><code>$image[$authorAvatar?size=4096]
 </code></pre>
@@ -2880,7 +2880,7 @@ $author[This is the author text!]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authoricon"><a class="header" href="#authoricon">$authorIcon</a></h1>
 <p>Adds an icon to the author section in the embed.</p>
 <blockquote>
-<p>🧙‍♂️ <code>$authorIcon</code> can't work without author text ($author).</p>
+<p>🧙‍♂️ <code>$authorIcon</code> will not work if there is no text provided in $author.</p>
 </blockquote>
 <h2 id="usage-25"><a class="header" href="#usage-25">Usage</a></h2>
 <pre><code>$authorIcon[image url;(index)]
@@ -2906,7 +2906,7 @@ $author[⬅️ That is the author icon. This is the author text.]
 This command was written by &lt;@$authorID&gt;!
 </code></pre>
 <h3 id="explanation-1"><a class="header" href="#explanation-1">Explanation</a></h3>
-<p>Discord uses this format: <code>&lt;@USER_ID&gt;</code> to mention user. For example, let's say that <code>$authorID</code> is equal to <code>246604909451935745</code>. 
+<p>Discord uses this format: <code>&lt;@USER_ID&gt;</code> to mention users. For example, let's say that <code>$authorID</code> is equal to <code>246604909451935745</code>. 
 If we use this: <code>&lt;@$authorID&gt;</code>, it will be replaced with <code>&lt;@246604909451935745&gt;</code> and discord will interpret this as a mention <em>(@Noituri)</em>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authorofmessage"><a class="header" href="#authorofmessage">$authorOfMessage</a></h1>
 <p>Returns the ID of the provided message's author.</p>
@@ -2927,7 +2927,7 @@ If we use this: <code>&lt;@$authorID&gt;</code>, it will be replaced with <code>
 <pre><code>$authorURL[url;(index)]
 </code></pre>
 <blockquote>
-<p>🧙‍♂️ <code>$authorURL</code> cannot work without <code>$author</code>.</p>
+<p>🧙‍♂️ <code>$authorURL</code> will not work if there is no text provided in <code>$author</code>.</p>
 </blockquote>
 <h3 id="breakdown-14"><a class="header" href="#breakdown-14">Breakdown</a></h3>
 <ul>
@@ -2948,7 +2948,7 @@ $authorURL[https://botdesignerdiscord.com]
 </code></pre>
 <h3 id="breakdown-15"><a class="header" href="#breakdown-15">Breakdown</a></h3>
 <ul>
-<li><code>reason</code> - The reason for this action, which will be sent to the audit-log. Optional.</li>
+<li><code>reason</code> - The reason for this action, which will be sent to the audit-log. <em>(Optional)</em></li>
 </ul>
 <h2 id="examples-9"><a class="header" href="#examples-9">Examples</a></h2>
 <h4 id="example-1-4"><a class="header" href="#example-1-4">Example #1</a></h4>
