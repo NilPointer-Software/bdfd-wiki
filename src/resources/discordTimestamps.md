@@ -22,7 +22,6 @@ The only functions that can return Unix Time are: [`$getTimestamp`](https://nilp
 ### Example
 
 #### Code:
-
 ```
 $nomention
 <t:$getTimestamp:D>
