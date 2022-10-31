@@ -26,7 +26,7 @@ $boostCount[Guild ID]
 Returns the given guild's number of nitro boosts.
 
 #### Parameters
-- `Guild ID`: The ID of the guild to get its boosts.
+- `Guild ID`: The guild to get its boosts.
 
 #### Example
 ```

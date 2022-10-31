@@ -1,6 +1,6 @@
 # $authorIcon
 Adds an icon to the author section in the embed.
-> 🧙‍♂️ `$authorIcon` can't work without author text ($author).
+> 🧙‍♂️ `$authorIcon` will not work if there is no text provided in $author.
 
 ## Usage
 ```
