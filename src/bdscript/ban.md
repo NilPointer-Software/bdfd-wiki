@@ -7,7 +7,7 @@ $ban[(optional) reason]
 ```
 
 ### Breakdown
-- `reason` - The reason for this action, which will be sent to the audit-log. Optional.
+- `reason` - The reason for this action, which will be sent to the audit-log. *(Optional)*
 
 ## Examples
 #### Example #1

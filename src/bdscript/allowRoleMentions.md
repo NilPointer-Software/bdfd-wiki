@@ -1,5 +1,5 @@
 # $allowRoleMentions
-Disables the pings for the roles not provided, which means the role will be 'fake pinged' *(the role will be pinged, but users will not get notified of the ping)*. While, the inputted allowed roles are ones that can be pinged *(and it will work like a regular ping)*.
+Enables role pings only for the provided role IDs, while the roles not provided will be 'fake pinged' *(the role will be pinged, but users will not be notified)*.
 
 ## Usage
 ```
