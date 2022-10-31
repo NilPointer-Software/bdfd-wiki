@@ -42,6 +42,7 @@
     - [Permissions](./resources/permissions.md)
     - [Security](./resources/security.md)
     - [Time Format](./resources/timeFormat.md)
+    - [Discord Timestamps](./resources/discordTimestamps.md)
 
 - [BDScript]()
     - [Introduction](./bdscript/introduction.md)
