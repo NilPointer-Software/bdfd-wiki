@@ -19,6 +19,7 @@
 - Added `$botOwnerID`
 - Added `$repliedMessageID`
 - Fixed the guild list fetching issue
+- Added `$parentID`
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
