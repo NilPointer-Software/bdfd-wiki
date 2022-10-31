@@ -14,7 +14,7 @@ Returns the current channel's category ID.
 #### Example
 ```
 $nomention
-Current category ID: $categoryID
+Current category: $categoryID
 ```
 ![example](https://user-images.githubusercontent.com/94063167/198906344-b98b8db2-2ae5-4cbf-b708-c50fc6963d04.png)
 
