@@ -1,5 +1,5 @@
 # Discord Timestamps
-Discord timestamps are used to provide time in multiple formants. The information is given according to the user's timezone and locale. Discord timestamps are built with the Unix Time system, meaning that they are dynamic. These can be used by anyone; This includes users, webhooks, and applications.
+Discord timestamps are used to provide time in multiple formats. The information is given according to the user's timezone and locale. Discord timestamps are built with the Unix Time system, meaning that they are dynamic. These can be used by anyone; This includes users, webhooks, and applications.
 ## Styling
 
 Timestamp syntax: `<t:unixTime:Style>`
