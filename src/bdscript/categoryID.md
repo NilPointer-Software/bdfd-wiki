@@ -1,7 +1,7 @@
 # $categoryID
 Returns category ID for given category name.
 
-> 📌 To get the category ID from a *channel name* use [$parentID](./parentID.md).
+> 📌 To get the category ID from a *channel ID* use [$parentID](./parentID.md).
 
 ## Syntax
 ```
