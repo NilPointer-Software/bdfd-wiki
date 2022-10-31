@@ -25,7 +25,6 @@ Functions which return UNIX timestamp:
 - [`$premiumExpireTime`](../bdscript/premiumExpireTime.md)
 
 ### Example
-#### Code:
 ```
 $nomention
 <t:$getTimestamp:D>
