@@ -14,7 +14,8 @@ Here's a list of all supported time format styles.
 | F | <t:1667219160:F> | Monday, October 31, 2022 12:26 AM | Long Date/Time |
 | R | <t:1667219160:R> | 27 minutes ago | Relative Time |
 
-> The default style is `f`, if no style provided.
+> 📌 The default style is `f`, if no style provided.
+
 
 ## BDFD usability
 Functions which return UNIX timestamp:
