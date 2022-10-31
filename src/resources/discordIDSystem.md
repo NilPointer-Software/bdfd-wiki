@@ -11,17 +11,17 @@ In order to access and copy IDs in the Discord client, you must enable developer
 
 - **Desktop**
 
-    ![ex1](https://user-images.githubusercontent.com/69215413/125985126-43a85702-0dd5-4173-8441-671702d845af.png)
+    ![ex1](https://user-images.githubusercontent.com/116581988/199096924-0aff5394-5b58-4c16-b9fd-fe744dd48669.png)
 
-    ![ex2](https://user-images.githubusercontent.com/69215413/125985082-7968aad1-c47e-45cf-8af2-c441420565b8.png)
+    ![ex2](https://user-images.githubusercontent.com/116581988/199097049-49fd06e2-29e9-40a6-900f-009c3b5897db.png)
 
-    ![ex3](https://user-images.githubusercontent.com/69215413/125985079-3350556a-f890-4259-af4f-1ba1cb598029.png)
+    ![ex3](https://user-images.githubusercontent.com/116581988/199097113-91a52937-af03-430b-a58e-d1b561b1debb.png)
 
 - **Mobile**
 
    Go to User Settings > Appearance > Advanced and turn on Developer Mode.
 
-   ![ex4](https://user-images.githubusercontent.com/69215413/125985535-55e42f16-68e9-46a2-bb2a-75b5a65b7053.png)
+   ![ex4](https://user-images.githubusercontent.com/116581988/199097168-e304e814-53ba-4015-a7a4-4b5ff72bf7f4.png)
 
 ### Finding IDs
 *Where do I find these 'IDs'?*
