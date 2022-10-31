@@ -17,7 +17,6 @@ Timestamp syntax: `<t:unixTime:Style>`
 > The default style is `f`, if no style provided.
 
 ## BDFD usability
-
 The only functions that can return Unix Time are: [`$getTimestamp`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/getTimestamp), [`$hostingExpireTime`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/hostingExpireTime), and [`$premiumExpireTime`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/premiumExpireTime).
 
 ### Example
