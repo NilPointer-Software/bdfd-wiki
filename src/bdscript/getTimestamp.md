@@ -39,4 +39,4 @@ Unix Timestamp
  ```
  ![Screenshot_20220904_150511](https://user-images.githubusercontent.com/95774950/188307175-48845a0d-6229-46f3-80eb-f1f9d3fde974.png)
  
- > For more info about UNIX timestamps on Discord click [here](../resources/discordTimestamps.md)
+ > 📄 For more info about UNIX timestamps on Discord click [here](../resources/discordTimestamps.md)
