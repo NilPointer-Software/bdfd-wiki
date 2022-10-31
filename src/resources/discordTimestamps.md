@@ -4,7 +4,7 @@ Discord timestamps are used to provide time in multiple formats. The information
 ## Syntax
 Timestamp syntax: `<t:unixTime:Style>`
 
-## Formats
+## Styles
 Here's a list of all supported time format styles.
 
 | Style | Input | Output | Description |
