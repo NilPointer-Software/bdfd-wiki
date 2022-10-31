@@ -21,16 +21,16 @@ Current category: $parentID
 ### Usage #2
 #### Syntax
 ```
-$parentID[Channel Name]
+$parentID[Channel ID]
 ```
-Returns the parent category ID for given channel name.
+Returns the parent category ID for given channel ID.
 
 #### Parameters
-- `Channel Name`: The name of the channel from which to retrieve the category ID.
+- `Channel ID`: The ID of the channel from which to retrieve the category ID.
 
 #### Example
 ```
 $nomention
 Category ID: $parentID[$message]
 ```
-![example2](https://user-images.githubusercontent.com/94063167/199016074-47bf94f5-cef8-4fe0-900a-ce1cde6cb0e7.png)
+![example2](https://user-images.githubusercontent.com/94063167/199021971-65ef4587-ee7c-438e-a685-4867b039dc2a.png)
