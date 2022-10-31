@@ -1,34 +1,17 @@
 # $categoryID
-Returns a category ID.
+Returns category ID for given category name.
 
-## Usages
-There are two usages of this function :
+> 📌 To get the category ID from a *channel name* use [$parentID](./parentID.md).
 
-### Usage #1
-#### Syntax
+## Syntax
 ```
-$categoryID
+$categoryID[Category Name]
 ```
-Returns the current channel's category ID.
 
-#### Example
-```
-$nomention
-Current category: $categoryID
-```
-![example](https://user-images.githubusercontent.com/94063167/198906344-b98b8db2-2ae5-4cbf-b708-c50fc6963d04.png)
+### Parameters
+- `Category Name`: The name of the category from which to retrieve the category ID.
 
-### Usage #2
-#### Syntax
-```
-$categoryID[Channel Name]
-```
-Returns category ID for given channel name.
-
-#### Parameters
-- `Channel Name`: The name of the channel from which to retrieve the category ID.
-
-#### Example
+## Example
 ```
 $nomention
 Category ID: $categoryID[$message]

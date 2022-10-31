@@ -238,6 +238,7 @@
     - [$onlyNSFW](./bdscript/onlyNSFW.md)
     - [$onlyPerms](./bdscript/onlyPerms.md)
     - [$or](./bdscript/or.md)
+    - [$parentID](./bdscript/parentID.md)
     - [$ping](./bdscript/ping.md)
     - [$pinMessage](./bdscript/pinMessage.md)
     - [$premiumExpireTime](./bdscript/premiumExpireTime.md)
