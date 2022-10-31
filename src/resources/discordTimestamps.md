@@ -17,7 +17,7 @@ Timestamp syntax: `<t:unixTime:Style>`
 > The default style is `f`, if no style provided.
 
 ## BDFD usability
-Functions which returns UNIX timestamp:
+Functions which return UNIX timestamp:
 - [`$getTimestamp`](../bdscript/getTimestamp.md)
 - [`$hostingExpireTime`](../bdscript/hostingExpireTime.md)
 - [`$premiumExpireTime`](../bdscript/premiumExpireTime.md)
