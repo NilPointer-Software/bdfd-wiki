@@ -19,7 +19,6 @@ Here's a list of all supported time format styles.
 
 > 📌 The default style is `f`, if no style provided.
 
-
 ## Usability
 
 Functions which return UNIX timestamp:
