@@ -29,5 +29,4 @@ Functions which return UNIX timestamp:
 $nomention
 <t:$getTimestamp:D>
 ```
-#### Output:
 ![image](https://user-images.githubusercontent.com/113247745/199022364-84ebdc91-4259-4f1f-9299-832784349db4.png)
