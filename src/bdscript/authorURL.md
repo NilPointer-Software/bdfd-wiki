@@ -5,7 +5,7 @@ Adds a hyperlink to the author text.
 ```
 $authorURL[url;(index)]
 ```
-> 🧙‍♂️ `$authorURL` will not work without text in `$author`.
+> 🧙‍♂️ `$authorURL` will not work if there is no text provided in `$author`.
 
 ### Breakdown
 - `url` - The link to set as the author hyperlink.
