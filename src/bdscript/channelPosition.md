@@ -2,7 +2,7 @@
 Returns the position of a channel in the server.
 
 ## Usages
-There are two usages of this function :
+There are two usages of this function:
 
 ### Usage #1
 #### Syntax
@@ -23,7 +23,7 @@ $channelPosition
 ```
 $channelPosition[Channel ID]
 ````
-- `Channel ID` : The ID of a specific channel to get it's position.
+- `Channel ID`: The ID of a specific channel to get it's position.
 
 Returns the position of a specified channel in the server using it's ID.
 
