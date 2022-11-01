@@ -156,20 +156,36 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="reply"><a class="header" href="#reply">$reply</a></h1>
-<p>Replies to the user's command</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>Replies to the user's message.</p>
+<h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
+<p>There are two usages of this function:</p>
+<h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
+<h4 id="syntax"><a class="header" href="#syntax">Syntax</a></h4>
 <pre><code>$reply
 </code></pre>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p>Replies to the author's message.</p>
+<h4 id="example"><a class="header" href="#example">Example</a></h4>
 <pre><code>$nomention
 $reply
 Hello $username 👋🏻
 </code></pre>
-<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
-<p>With <code>$reply</code>:</p>
 <p><img src="https://user-images.githubusercontent.com/42785890/151721130-51524143-b136-4cfc-b028-694b1d09e84a.png" alt="image" /></p>
-<p>Without <code>$reply</code>:</p>
-<p><img src="https://user-images.githubusercontent.com/42785890/151721184-6fa5846c-9ffb-47bb-bf82-0973e0caa3e9.png" alt="image" /></p>
+<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
+<h4 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h4>
+<pre><code>$reply[Channel ID;Message ID]
+</code></pre>
+<p>Replies to a provided message.</p>
+<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<ul>
+<li><code>Channel ID</code>: The channel where the message is.</li>
+<li><code>Message ID</code>: The message to reply.</li>
+</ul>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
+<pre><code>$nomention
+$reply[$mentionedChannels[1];$noMentionMessage]
+Replied!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113247745/199210421-a7833741-34ff-4670-99d5-d756ef85629e.png" alt="image" /></p>
 
                     </main>
 
