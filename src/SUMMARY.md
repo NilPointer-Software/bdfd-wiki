@@ -154,6 +154,7 @@
     - [$footerIcon](./bdscript/footerIcon.md)
     - [$getBotInvite](./bdscript/getBotInvite.md)
     - [$getCooldown](./bdscript/getCooldown.md)
+    - [$getCustomStatus](./bdscript/getCustomStatus.md)
     - [$getEmbedData](./bdscript/getEmbedData.md)
     - [$getInviteInfo](./bdscript/getInviteInfo.md)
     - [$getLeaderboardValue](./bdscript/getLeaderboardValue.md)
