@@ -4,7 +4,7 @@ Security is an important topic to discuss. If security measures are disregarded,
 This article will share tips about how you can keep your bot and account safe.
 
 ### Sharing Tokens and Passwords
-**Do not share token(s) with anyone**. This includes both bot and regular user account tokens. Sharing your bot token with someone (or posting it publicly) grants them full-unlimited access to your editing bot. Sharing your user account token with someone (or posting it publicly) allows them to have full access to your account (even if they don't have your password or email). Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers. 
+**Do not share token(s) with anyone**. This includes both bot and regular user account tokens. Sharing your bot token with someone (or posting it publicly) grants them full-unlimited access to your editing bot. Sharing your user account token with someone (or posting it publicly) allows them to have full access to your account (even if they don't have your password or email). Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers.
 
 In the event that your **bot's token** is shared, the only thing you can do is regenerate it, but by then, the damage has most likely been done. In the event you share your **account token** but still have access to your account, you can regenerate your token by changing your password. If you don't, you will need to contact Discord support for an optimal solution.
 
@@ -27,8 +27,6 @@ If you see a device or location that you haven't authorised, you can log out of 
 ![image](https://user-images.githubusercontent.com/116581988/199320198-e856f6f2-47dc-4dda-bd8c-809eb34bcfdb.png)
 
 ![image](https://user-images.githubusercontent.com/116581988/199233646-029b44bc-5b84-4c19-92dd-8302c0e3daf9.png)
-
-
 
 ### Avoid Scams and Untrusted Links/Files
 Scam (or "phishing") links put user’s accounts, personal information, and IP addresses in the hands of scammers and hackers. There's some good news, these scams are preventable! This section will discuss how to protect yourself and your friends from harmful scams.
