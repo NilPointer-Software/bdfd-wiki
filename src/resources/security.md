@@ -20,9 +20,11 @@ Discord recently added the ability to see all your current sessions and their re
 
 ![image](https://user-images.githubusercontent.com/116581988/199214548-911dc935-3c52-43cc-b0d7-74d18e283903.png)
 
-![image](https://user-images.githubusercontent.com/116581988/199242828-29445f26-0e55-4ece-857f-12bd4c002940.png)
+If you see a device or location that you haven't authorised, you can log out of that particular device by pressing the 'X' button or all known devices by clicking the button at the bottom of the page. This will log out that session, invalidating that token. 
 
-![image](https://user-images.githubusercontent.com/116581988/199233606-1acd9d6b-af68-468f-8a05-411e8c731c35.png)
+![image](https://user-images.githubusercontent.com/116581988/199320324-fd93384f-31e1-4a50-98c3-f4f875b91536.png)
+
+![image](https://user-images.githubusercontent.com/116581988/199320198-e856f6f2-47dc-4dda-bd8c-809eb34bcfdb.png)
 
 ![image](https://user-images.githubusercontent.com/116581988/199233646-029b44bc-5b84-4c19-92dd-8302c0e3daf9.png)
 
