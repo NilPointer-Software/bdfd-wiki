@@ -14,6 +14,7 @@
 - Added `stage` and `forum` channel types to `$createChannel[]`
 - Added `stage`, `announcement`, and `forum` channel types to `$channelType[]`
 - `$enableDecimals[]` now works with `$calculate[]`
+- Added `$getCustomStatus[]`
 - Added `$httpStatus`
 - Added `$httpGetHeader[]`
 - Added `$botOwnerID`
