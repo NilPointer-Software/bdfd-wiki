@@ -7,7 +7,7 @@ $getCustomStatus[User ID]
 ```
 
 ### Parameters
-- `User ID`: The user to get its custom status.
+- `User ID`: The user whose custom status to get.
 
 ## Example
 ```
