@@ -2,6 +2,10 @@
 
 # 2022
 
+## November
+- Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
+- Added `Format` argument to `$creationDate[]`
+
 ## October
 - Added `$publishMessage[]`
 - Made `$useChannel[]` work with message components
