@@ -3,11 +3,12 @@ Security is an important topic to discuss. If security measures are disregarded,
 
 This article will share tips about how you can keep your bot and account safe.
 
-### Sharing Tokens
+### Sharing Tokens and Passwords
 **Do not share token(s) with anyone**. This includes both bot and regular user account tokens. Sharing your bot token with someone (or posting it publicly) grants them full-unlimited access to your editing bot. Sharing your user account token with someone (or posting it publicly) allows them to have full access to your account (even if they don't have your password or email). Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers.
 
-The only thing you can do is regenerate your bot's token, but likely, the damage has already been done when you regenerate the token. You can't regenerate user account tokens, in such case you need to; you must contact Discord support for an optimal solution. So please, do not risk sharing your token(s) with anyone.
-The same applies to your account password, in such case you expose your account password; you should change it in user settings as soon as possible.
+The only thing you can do is regenerate your bot's token, but likely, the damage has already been done when you regenerate the token. If you still have access to your account, you can regenerate your token by changing your password. If you don't, you will need to contact Discord support for an optimal solution.
+
+Passwords, like tokens, should not be shared, and in the event that you accidentally share your account password, you should change it in user settings as soon as possible.
 
 > 📝 If your account is hacked, you should [contact Discord](https://support.discord.com/hc/requests/new) for further assistance.
 
@@ -33,7 +34,7 @@ This sub-section will breakdown how you identify trusted and untrusted links.
 
 3. **Was the link sent by a friend?**
 
-     At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so still, be careful when clicking links from friends.
+     At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so still be careful when clicking links from friends.
 
 4. **Too good to be true?**
 
@@ -44,7 +45,7 @@ This sub-section will breakdown how you identify trusted and untrusted links.
      If a site is asking for your Discord account information—don't input it. You should only share your Discord password via Discord's [official login page](http://discord.com/login). Discord will never ask for your user token. 
 
 #### System Messages
-If a message is official by Discord, there will be a 'system' badge next to the system user's name, like:
+If a message is officially by Discord, there will be a 'system' badge next to the system user's name, like:
 
 ![image](https://user-images.githubusercontent.com/69215413/131226868-8e1ad12d-fdfb-4fa4-ad07-2d0d50b5247f.png)
 
