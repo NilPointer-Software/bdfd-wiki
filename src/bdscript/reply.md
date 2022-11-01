@@ -33,7 +33,7 @@ Replies to a provided message.
 #### Example
 ```
 $nomention
-$reply[1015287764385808524;1036936363016204339]
-Replied
+$reply[$mentionedChannels[1];$noMentionMessage]
+Replied!
 ```
-![image](https://user-images.githubusercontent.com/113247745/199205538-8cba8ff3-9aa4-4bbd-b8f9-7e8248f10667.png)
+![image](https://user-images.githubusercontent.com/113247745/199210421-a7833741-34ff-4670-99d5-d756ef85629e.png)
