@@ -47,7 +47,7 @@ This sub-section will breakdown how you identify trusted and untrusted links.
 
 3. **Was the link sent by a friend?**
 
-     At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so still be careful when clicking links from friends.
+     At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so you should still be careful when clicking links from friends.
 
 4. **Too good to be true?**
 
