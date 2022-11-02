@@ -36,7 +36,7 @@ Scam (or "phishing") links put user’s accounts, personal information, and IP a
 - Trusted Links are links that can be trusted to visit.
 - Untrusted Links are links that should be avoided.
 
-This sub-section will breakdown how you identify trusted and untrusted links.
+This sub-section will breakdown how you can identify between a trusted link and an untrusted link.
 
 1. **Does the link have a weird spelling?**
 
