@@ -19,7 +19,11 @@ Functions which requires this intent are as follows:
 - [`$membersCount[]`](../bdscript/membersCount.md#second-usage)
 
 ### Server Members Intent
-Required for some callbacks to work (e.g. for [`$onJoined[]`](../callbacks/onJoined.md)).\
+Allows the bot to receive `GUILD_MEMBER_ADD`, `GUILD_MEMBER_UPDATE, `GUILD_MEMBER_REMOVE`, and `THREAD_MEMBERS_UPDATE` events. This intent is primarily required to fetch entire list of guild members and getting specific guild member info (like guild joining, leaving, profile update etc.).
+
+Callbacks which requires this intent are as follows:
+- [`$onJoined[]`](../callbacks/onJoined.md)
+- [`$onLeave[]`](../callbacks/onLeave.md)
 
 ### Message Content Intent
 Required for the bot to receive information stored in the message (such as message content or embed data).\
