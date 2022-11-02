@@ -15,6 +15,6 @@ Required for the functions [`$membersCount[]`](../bdscript/membersCount.md#secon
 ### Server Members Intent
 Required for some callbacks to work (e.g. for [`$onJoined[]`](../callbacks/onJoined.md))
 ### Message Content Intent
-Required for the bot to receive information about the message (such as embed data).\
+Required for the bot to receive information stored in the message (such as message content or embed data).\
 It's also required for text commands to work, otherwise your bot can be based only on slash commands. 
 
