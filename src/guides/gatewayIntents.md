@@ -2,7 +2,7 @@
 This guide will explain to you how to use Gateway Intents in BDFD, and what they are for.
 If you are looking for general information about Discord's Gateway Intents, read it [here](https://discord.com/developers/docs/topics/gateway#gateway-intents).
 
-## How to enable Gateway Intents
+## Enabling Gateway Intents
 1. Before starting, make sure that you have installed a version of the app not lower than 2.2.2.
 2. After that, follow the instruction below.
 
