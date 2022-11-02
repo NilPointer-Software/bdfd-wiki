@@ -9,7 +9,7 @@ If you are looking for general information about Discord's Gateway Intents, read
 ![Instruction](https://user-images.githubusercontent.com/70456337/199396053-706bc3a5-fc19-4f03-b40f-9cf13755750c.gif)
 
 
-## Use of Gateway Intents
+## Privileged Gateway Intents
 ### Presence Intent
 Required for the functions [`$membersCount[]`](../bdscript/membersCount.md#second-usage), [`$getUserStatus[]`](../bdscript/getUserStatus.md), and [`$getCustomStatus[]`](../bdscript/getCustomStatus.md) to work.\
 Allows bot to get information about users in the guild (such as current status).
