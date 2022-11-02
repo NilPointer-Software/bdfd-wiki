@@ -12,7 +12,6 @@ If you are looking for general information about Discord's Gateway Intents, read
 ## Privileged Gateway Intents
 ### Presence Intent
 Required for the functions [`$membersCount[]`](../bdscript/membersCount.md#second-usage), [`$getUserStatus[]`](../bdscript/getUserStatus.md), and [`$getCustomStatus[]`](../bdscript/getCustomStatus.md) to work.\
-Allows bot to get information about users in the guild (such as current status).
 
 ### Server Members Intent
 Required for some callbacks to work (e.g. for [`$onJoined[]`](../callbacks/onJoined.md)).\
