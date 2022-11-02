@@ -2478,15 +2478,25 @@ $description[Description #3;3]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="security"><a class="header" href="#security">Security</a></h1>
 <p>Security is an important topic to discuss. If security measures are disregarded, your bot and/or account could be at risk of being hacked.</p>
 <p>This article will share tips about how you can keep your bot and account safe.</p>
-<h3 id="sharing-tokens"><a class="header" href="#sharing-tokens">Sharing Tokens</a></h3>
-<p><strong>Do not share token(s) with anyone</strong>. This includes both bot and regular user account tokens. Sharing your bot token with someone (or posting it publicly) grants them full-unlimited access to your editing bot. Sharing your user account token with someone (or posting it publicly) allows them to have full access to your account (even if they don't have your password or email). Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers.</p>
-<p>The only thing you can do is regenerate your bot's token, but likely, the damage has already been done when you regenerate the token. You can't regenerate user account tokens, in such case you need to; you must contact Discord support for an optimal solution. So please, do not risk sharing your token(s) with anyone.
-The same applies to your account password, in such case you expose your account password; you should change it in user settings as soon as possible.</p>
+<h3 id="sharing-tokens-and-passwords"><a class="header" href="#sharing-tokens-and-passwords">Sharing Tokens and Passwords</a></h3>
+<p><strong>Do not share token(s) with anyone</strong>. This includes both bot and regular user account tokens. Sharing your bot token with someone (or posting it publicly) will grant them full access to edit your bot.
+While sharing your user account token with someone (or posting it publicly) will allow them to have full access to your account (even if they don't have your password or email).
+Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers, etc.</p>
+<p>In the event, that your <strong>bot's token</strong> is shared, the only thing you can do to secure it is to regenerate the bot's token. But by then, the damage has most likely been done.
+In the case of a <strong>user account token</strong>, if you still have access to your account, regenerate your token by changing your password. If you cannot or don't have access to it anymore, you will need to contact <a href="https://support.discord.com/hc/en-us/requests/new">Discord support</a> for an optimal solution.</p>
+<p>Passwords, like tokens, should not be shared. If, however, you accidentally share your account password, you should change it as soon as possible.</p>
 <blockquote>
-<p>📝 If your account is hacked, you should <a href="https://support.discord.com/hc/requests/new">contact Discord</a> for further assistance.</p>
+<p>📌 If your account is hacked, you should <a href="https://support.discord.com/hc/requests/new">contact Discord</a> for further assistance.</p>
 </blockquote>
 <h3 id="account-2fa"><a class="header" href="#account-2fa">Account 2FA</a></h3>
 <p>Bot owners should consider enabling two-factor authentication on their accounts. <a href="resources/./2FA.html">Learn more about 2FA and why it's essential for bot owners</a>.</p>
+<h3 id="sessions"><a class="header" href="#sessions">Sessions</a></h3>
+<p>Discord recently added the ability to see all your current sessions and their respective locations.</p>
+<p><img src="https://user-images.githubusercontent.com/116581988/199214548-911dc935-3c52-43cc-b0d7-74d18e283903.png" alt="image" /></p>
+<p>If you see a device or location that you haven't authorised, you can log out of that particular device by pressing the 'X' button or all known devices by clicking the button at the bottom of the page. This will log out those sessions, invalidating the tokens. </p>
+<p><img src="https://user-images.githubusercontent.com/116581988/199320324-fd93384f-31e1-4a50-98c3-f4f875b91536.png" alt="image" /><br />
+<img src="https://user-images.githubusercontent.com/116581988/199320198-e856f6f2-47dc-4dda-bd8c-809eb34bcfdb.png" alt="image" /><br />
+<img src="https://user-images.githubusercontent.com/116581988/199233646-029b44bc-5b84-4c19-92dd-8302c0e3daf9.png" alt="image" /></p>
 <h3 id="avoid-scams-and-untrusted-linksfiles"><a class="header" href="#avoid-scams-and-untrusted-linksfiles">Avoid Scams and Untrusted Links/Files</a></h3>
 <p>Scam (or &quot;phishing&quot;) links put user’s accounts, personal information, and IP addresses in the hands of scammers and hackers. There's some good news, these scams are preventable! This section will discuss how to protect yourself and your friends from harmful scams.</p>
 <h4 id="link-diagnosis"><a class="header" href="#link-diagnosis">Link Diagnosis</a></h4>
@@ -2494,7 +2504,7 @@ The same applies to your account password, in such case you expose your account 
 <li>Trusted Links are links that can be trusted to visit.</li>
 <li>Untrusted Links are links that should be avoided.</li>
 </ul>
-<p>This sub-section will breakdown how you identify trusted and untrusted links.</p>
+<p>This sub-section will breakdown how you can identify between a trusted link and an untrusted link.</p>
 <ol>
 <li>
 <p><strong>Does the link have a weird spelling?</strong></p>
@@ -2506,7 +2516,7 @@ The same applies to your account password, in such case you expose your account 
 </li>
 <li>
 <p><strong>Was the link sent by a friend?</strong></p>
-<p>At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so still, be careful when clicking links from friends.</p>
+<p>At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so you should still be careful when clicking links from friends.</p>
 </li>
 <li>
 <p><strong>Too good to be true?</strong></p>
@@ -2518,7 +2528,7 @@ The same applies to your account password, in such case you expose your account 
 </li>
 </ol>
 <h4 id="system-messages"><a class="header" href="#system-messages">System Messages</a></h4>
-<p>If a message is official by Discord, there will be a 'system' badge next to the system user's name, like:</p>
+<p>If a message is officially by Discord, there will be a 'system' badge next to the system user's name, like:</p>
 <p><img src="https://user-images.githubusercontent.com/69215413/131226868-8e1ad12d-fdfb-4fa4-ad07-2d0d50b5247f.png" alt="image" /></p>
 <h4 id="discord-offical-links"><a class="header" href="#discord-offical-links">Discord Offical Links</a></h4>
 <p>The following is a list of all official Discord links that are operated by Discord themselves.</p>
