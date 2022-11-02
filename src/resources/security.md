@@ -13,7 +13,7 @@ In the case of a **user account token**, if you still have access to your accoun
 
 Passwords, like tokens, should not be shared. If, however, you accidentally share your account password, you should change it as soon as possible.
 
-> 📝 If your account is hacked, you should [contact Discord](https://support.discord.com/hc/requests/new) for further assistance.
+> 📌 If your account is hacked, you should [contact Discord](https://support.discord.com/hc/requests/new) for further assistance.
 
 ### Account 2FA
 Bot owners should consider enabling two-factor authentication on their accounts. [Learn more about 2FA and why it's essential for bot owners](./2FA.md).
