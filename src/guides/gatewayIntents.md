@@ -11,7 +11,12 @@ If you are looking for general information about Discord's Gateway Intents, read
 
 ## Privileged Gateway Intents
 ### Presence Intent
-Required for the functions [`$membersCount[]`](../bdscript/membersCount.md#second-usage), [`$getUserStatus[]`](../bdscript/getUserStatus.md), and [`$getCustomStatus[]`](../bdscript/getCustomStatus.md) to work.\
+Allows the bot to receive `PRESENCE_UPDATE` event. This intent is primarily used to retrieve current user's presence state. For example, Activities (i.e PLAYING, LISTENING), Presence (i.e Online, Idle) and Custom status.
+
+Functions which requires this intent are as follows:
+- [`$getCustomStatus[]`](../bdscript/getCustomStatus.md)
+- [`$getUserStatus[]`](../bdscript/getUserStatus.md)
+- [`$membersCount[]`](../bdscript/membersCount.md#second-usage)
 
 ### Server Members Intent
 Required for some callbacks to work (e.g. for [`$onJoined[]`](../callbacks/onJoined.md)).\
