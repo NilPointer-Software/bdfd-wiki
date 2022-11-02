@@ -8,7 +8,8 @@ This article will share tips about how you can keep your bot and account safe.
 While sharing your user account token with someone (or posting it publicly) will allow them to have full access to your account (even if they don't have your password or email).
 Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers, etc.
 
-In the event that your **bot's token** is shared, the only thing you can do is regenerate it, but by then, the damage has most likely been done. In the event you share your **account token** but still have access to your account, you can regenerate your token by changing your password. If you don't, you will need to contact Discord support for an optimal solution.
+In the event, that your **bot's token** is shared, the only thing you can do to secure it is to regenerate the bot's token. But by then, the damage has most likely been done.
+In the case of a **user account token**, if you still have access to your account, regenerate your token by changing your password. If you cannot or don't have access to it anymore, you will need to contact [Discord support](https://support.discord.com/hc/en-us/requests/new) for an optimal solution.
 
 Passwords, like tokens, should not be shared. If, however, you accidentally share your account password, you should change it as soon as possible.
 
