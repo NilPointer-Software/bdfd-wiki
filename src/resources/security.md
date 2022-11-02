@@ -3,16 +3,31 @@ Security is an important topic to discuss. If security measures are disregarded,
 
 This article will share tips about how you can keep your bot and account safe.
 
-### Sharing Tokens
-**Do not share token(s) with anyone**. This includes both bot and regular user account tokens. Sharing your bot token with someone (or posting it publicly) grants them full-unlimited access to your editing bot. Sharing your user account token with someone (or posting it publicly) allows them to have full access to your account (even if they don't have your password or email). Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers.
+### Sharing Tokens and Passwords
+**Do not share token(s) with anyone**. This includes both bot and regular user account tokens. Sharing your bot token with someone (or posting it publicly) will grant them full access to edit your bot.
+While sharing your user account token with someone (or posting it publicly) will allow them to have full access to your account (even if they don't have your password or email).
+Once someone has your account or bot's token, there is a high chance of it being used for malicious purposes. For example, stealing personal info, spreading scams, modifying your bot to nuke/raid servers, etc.
 
-The only thing you can do is regenerate your bot's token, but likely, the damage has already been done when you regenerate the token. You can't regenerate user account tokens, in such case you need to; you must contact Discord support for an optimal solution. So please, do not risk sharing your token(s) with anyone.
-The same applies to your account password, in such case you expose your account password; you should change it in user settings as soon as possible.
+In the event, that your **bot's token** is shared, the only thing you can do to secure it is to regenerate the bot's token. But by then, the damage has most likely been done.
+In the case of a **user account token**, if you still have access to your account, regenerate your token by changing your password. If you cannot or don't have access to it anymore, you will need to contact [Discord support](https://support.discord.com/hc/en-us/requests/new) for an optimal solution.
 
-> 📝 If your account is hacked, you should [contact Discord](https://support.discord.com/hc/requests/new) for further assistance.
+Passwords, like tokens, should not be shared. If, however, you accidentally share your account password, you should change it as soon as possible.
+
+> 📌 If your account is hacked, you should [contact Discord](https://support.discord.com/hc/requests/new) for further assistance.
 
 ### Account 2FA
 Bot owners should consider enabling two-factor authentication on their accounts. [Learn more about 2FA and why it's essential for bot owners](./2FA.md).
+
+### Sessions
+Discord recently added the ability to see all your current sessions and their respective locations.
+
+![image](https://user-images.githubusercontent.com/116581988/199214548-911dc935-3c52-43cc-b0d7-74d18e283903.png)
+
+If you see a device or location that you haven't authorised, you can log out of that particular device by pressing the 'X' button or all known devices by clicking the button at the bottom of the page. This will log out those sessions, invalidating the tokens. 
+
+![image](https://user-images.githubusercontent.com/116581988/199320324-fd93384f-31e1-4a50-98c3-f4f875b91536.png)\
+![image](https://user-images.githubusercontent.com/116581988/199320198-e856f6f2-47dc-4dda-bd8c-809eb34bcfdb.png)\
+![image](https://user-images.githubusercontent.com/116581988/199233646-029b44bc-5b84-4c19-92dd-8302c0e3daf9.png)
 
 ### Avoid Scams and Untrusted Links/Files
 Scam (or "phishing") links put user’s accounts, personal information, and IP addresses in the hands of scammers and hackers. There's some good news, these scams are preventable! This section will discuss how to protect yourself and your friends from harmful scams.
@@ -21,7 +36,7 @@ Scam (or "phishing") links put user’s accounts, personal information, and IP a
 - Trusted Links are links that can be trusted to visit.
 - Untrusted Links are links that should be avoided.
 
-This sub-section will breakdown how you identify trusted and untrusted links.
+This sub-section will breakdown how you can identify between a trusted link and an untrusted link.
 
 1. **Does the link have a weird spelling?**
 
@@ -33,7 +48,7 @@ This sub-section will breakdown how you identify trusted and untrusted links.
 
 3. **Was the link sent by a friend?**
 
-     At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so still, be careful when clicking links from friends.
+     At first glimpse, you'd assume this makes the link more trustworthy. But, it could be that their account has been compromised, so you should still be careful when clicking links from friends.
 
 4. **Too good to be true?**
 
@@ -44,7 +59,7 @@ This sub-section will breakdown how you identify trusted and untrusted links.
      If a site is asking for your Discord account information—don't input it. You should only share your Discord password via Discord's [official login page](http://discord.com/login). Discord will never ask for your user token. 
 
 #### System Messages
-If a message is official by Discord, there will be a 'system' badge next to the system user's name, like:
+If a message is officially by Discord, there will be a 'system' badge next to the system user's name, like:
 
 ![image](https://user-images.githubusercontent.com/69215413/131226868-8e1ad12d-fdfb-4fa4-ad07-2d0d50b5247f.png)
 
