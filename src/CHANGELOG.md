@@ -5,6 +5,7 @@
 ## November
 - Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
 - Added `Format` argument to `$creationDate[]`
+- Added `$editSplitText[]`
 
 ## October
 - Added `$publishMessage[]`
