@@ -20,7 +20,6 @@ Functions which requires this intent are as follows:
 
 ### Server Members Intent
 Required for some callbacks to work (e.g. for [`$onJoined[]`](../callbacks/onJoined.md)).\
-Allows bot to get a list of users in the guild.
 
 ### Message Content Intent
 Required for the bot to receive information stored in the message (such as message content or embed data).\
