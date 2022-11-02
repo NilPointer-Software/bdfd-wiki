@@ -27,7 +27,6 @@ If you see a device or location that you haven't authorised, you can log out of 
 
 ![image](https://user-images.githubusercontent.com/116581988/199320324-fd93384f-31e1-4a50-98c3-f4f875b91536.png)
 ![image](https://user-images.githubusercontent.com/116581988/199320198-e856f6f2-47dc-4dda-bd8c-809eb34bcfdb.png)
-
 ![image](https://user-images.githubusercontent.com/116581988/199233646-029b44bc-5b84-4c19-92dd-8302c0e3daf9.png)
 
 ### Avoid Scams and Untrusted Links/Files
