@@ -15,7 +15,7 @@ For example, a bot needs to send the `GUILD_MESSAGES` standard intent and the `M
 > 📚 Learn more about Gateway Intents [here](https://discord.com/developers/docs/topics/gateway#gateway-intents).
 
 ### Privileged Gateway Intents
-Privileged Gateway Intents are special intents which needs to be manually enabled in your bot application settings.
+Privileged Gateway Intents are special intents which need to be manually enabled in your bot application settings.
 Due to their sensitive information nature, Discord disables them by default.
 You should only enable them when it is required.
 
