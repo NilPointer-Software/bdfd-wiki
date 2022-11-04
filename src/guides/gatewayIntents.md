@@ -1,30 +1,84 @@
 # Gateway Intents
-This guide will explain to you how to use Gateway Intents in BDFD, and what they are for.
-If you are looking for general information about Discord's Gateway Intents, read it [here](https://discord.com/developers/docs/topics/gateway#gateway-intents).
+In this guide, you will learn about Discord's Gateway Intents and how to enable them in BDFD.
 
-## How to enable Gateway Intents
-Gateway Intents must be enabled in the Discord Developer Portal and in the BDFD app for them to work.
-### Discord Developer Portal
-1. Go to the [Discord Developer Portal](https://discord.com/developers/applications) and select your application.
-2. Go to the "Bot" tab.
-3. Scroll down and enable the Gateway Intents you are interested in.
-4. Save changes.
+## What are Gateway Intents?
+When a bot is connected to the [Discord Gateway](https://discord.com/developers/docs/topics/gateway), it receives events on actions happening on Discord.
+Bots can receive a large amount of events from Discord, so in order to decrease the amount of events each bot receives, Discord requires bots to send Gateway Intents when connecting to the Gateway.\
+Gateway Intents allow to specify which events the bot wants to receive.
 
-![DDP](https://user-images.githubusercontent.com/70456337/183294128-52e5a4e4-f833-49dd-8bee-1ebec7c2c999.gif)
+Gateway Intents can be further divided into:
+- Standard Intents[^1]
+- [Privileged Intents](#privileged-gateway-intents)
 
+For example, a bot needs to send the `GUILD_MESSAGES` standard intent and the `MESSAGE_CONTENT` privileged intent to receive the `MESSAGE_CREATE` event with the messsage content.
 
-### BDFD App
-1. Open the app and select your bot.
-2. Go to the "Settings" tab.
-3. Scroll down and enable the Gateway Intents you are interested in.
-4. Save changes.
+> 📚 Learn more about Gateway Intents [here](https://discord.com/developers/docs/topics/gateway#gateway-intents).
 
-![BDFD](https://user-images.githubusercontent.com/70456337/183294156-4ecc60b0-7112-4bf3-b833-39b8c2004fc6.gif)
+### Privileged Gateway Intents
+Privileged Gateway Intents are special intents which need to be manually enabled in your bot application settings.
+Due to their sensitive information nature, Discord disables them by default.
+You should only enable them when it is required.
 
-## Use of Gateway Intents
-### Presence Intent
-Required for the functions [`$membersCount[]`](../bdscript/membersCount.md#second-usage) and [`$getUserStatus[]`](../bdscript/getUserStatus.md) to work.
-### Server Members Intent
-Required for some callbacks to work (e.g. for [`$onJoined[]`](../callbacks/onJoined.md))
-### Message Content Intent
-Required for text commands to work if your bot is verified. Without this intent, your bot can only be based on slash commands.
+Currently, there are only 3 privileged gateway intents:
+- [`GUILD_MEMBERS`](#server-members-intent)
+- [`GUILD_PRESENCES`](#presence-intent)
+- [`MESSAGE_CONTENT`](#message-content-intent)
+
+> 📌 Verified bots require approval from Discord in order to enable these intents.
+
+#### Presence Intent
+Allows the bot to receive `PRESENCE_UPDATE` event.
+This intent is primarily used to allow for retrieval of user presences data.
+For example, Activities (i.e PLAYING, LISTENING), Presence (i.e Online, Idle) and Custom status.
+
+The following functions require this intent:
+- [`$getCustomStatus[]`](../bdscript/getCustomStatus.md)
+- [`$getUserStatus[]`](../bdscript/getUserStatus.md)
+- [`$membersCount[]`](../bdscript/membersCount.md#second-usage)
+
+#### Server Members Intent
+Allows the bot to receive `GUILD_MEMBER_ADD`, `GUILD_MEMBER_UPDATE`, `GUILD_MEMBER_REMOVE`, and `THREAD_MEMBERS_UPDATE` events.
+This intent is primarily required to fetch the entire list of guild members, and to receive specific guild member info (like guild joining, leaving, profile update etc.).
+
+The following callbacks require this intent:
+- [`$onJoined[]`](../callbacks/onJoined.md)
+- [`$onLeave[]`](../callbacks/onLeave.md)
+
+#### Message Content Intent
+Unlike the two intents above, Message Content Intent doesn't allow for any new events.
+Instead, it allows the bot to receive message content data, which includes `content`, `attachments`, `embeds`, and `components`.
+
+If your bot is based on prefix-based commands, then this intent is required.
+Otherwise, you will need to use [slash commands](./slashCommands.md) instead.
+
+> 📌 Without this intent, your bot can only read message content data in DMs, messages where your bot was mentioned, and it's own messages.
+
+The following functions/callbacks require this intent:
+- [`$awaitedCommand[]`](../guides/awaitedCommands.md)
+- [`$messageContains[]`](../premium/messageContains.md)
+- [`$argsCheck`](../bdscript/argsCheck.md)
+- [`$banID`](../bdscript/banID.md) (First & Second Usage)
+- [`$getEmbedData`](../bdscript/getEmbedData.md)
+- [`$getMessage`](../bdscript/getMessage.md) (Only for `content` type)
+- [`$ignoreTriggerCase`](../premium/ignoreTriggerCase.md)
+- [`$message`](../bdscript/message.md)
+- [`$noMentionMessage`](../bdscript/noMentionMessage.md)
+- [`$removeContains`](../bdscript/removeContains.md)
+- [`$trimContent`](../bdscript/trimContent.md)
+- [`$unban`](../bdscript/unban.md)
+- [`$unbanID`](../bdscript/unbanID.md#usage-1)
+
+## Enabling Privileged Gateway Intents
+To enable Privileged Gateway Intents in your bot, follow these steps:
+
+1. Open your bot dashboard in the BDFD app (Make sure your app version is `2.2.2` or above).
+2. Click on the "Settings" tab, and then on "Go to gateway intents settings".
+3. After that, click on "Change gateway intents on Developer Portal".
+4. Select your required intents and save the changes.
+
+    > 📌 The intents you have enabled in the Developer portal should be reflected in the BDFD app. If they aren't, click on "Sync intents with Developer Portal settings".
+
+### Example
+![Instruction](https://user-images.githubusercontent.com/70456337/199396053-706bc3a5-fc19-4f03-b40f-9cf13755750c.gif)
+
+[^1]:  We will not be discussing about Standard Intents here, since it isn't required and is auto-handled by BDFD internally. If you still want to learn more about it, feel free to check [Discord Docs](https://discord.com/developers/docs/topics/gateway#gateway-intents).
