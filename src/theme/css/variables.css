@@ -395,9 +395,9 @@
     --scrollbar: #292b2f;
 
     --icons: #fff;
-    --icons-hover: #2b5329;
+    --icons-hover: #292b2f;
 
-    --links: #009aff;
+    --links: #2b91f4;
 
     --inline-code-color: #c5c8c6;
 
@@ -418,8 +418,8 @@
     --searchbar-shadow-color: #40444b;
     --searchresults-header-fg: #a0a0a0;
     --searchresults-border-color: #a0a0a0;
-    --searchresults-li-bg: #b5b5b5;
-    --search-mark-bg: #b5b5b5;
+    --searchresults-li-bg: #a0a0a0;
+    --search-mark-bg: #a0a0a0;
 
     --chapter-hover-bg: var(--theme-hover);
 }
