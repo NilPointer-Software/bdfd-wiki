@@ -156,33 +156,99 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="gateway-intents"><a class="header" href="#gateway-intents">Gateway Intents</a></h1>
-<p>This guide will explain to you how to use Gateway Intents in BDFD, and what they are for.
-If you are looking for general information about Discord's Gateway Intents, read it <a href="https://discord.com/developers/docs/topics/gateway#gateway-intents">here</a>.</p>
-<h2 id="how-to-enable-gateway-intents"><a class="header" href="#how-to-enable-gateway-intents">How to enable Gateway Intents</a></h2>
-<p>Gateway Intents must be enabled in the Discord Developer Portal and in the BDFD app for them to work.</p>
-<h3 id="discord-developer-portal"><a class="header" href="#discord-developer-portal">Discord Developer Portal</a></h3>
+<p>In this guide, you will learn about Discord's Gateway Intents and how to enable them in BDFD.</p>
+<h2 id="what-are-gateway-intents"><a class="header" href="#what-are-gateway-intents">What are Gateway Intents?</a></h2>
+<p>When a bot is connected to the <a href="https://discord.com/developers/docs/topics/gateway">Discord Gateway</a>, it receives events on actions happening on Discord.
+Bots can receive a large amount of events from Discord, so in order to decrease the amount of events each bot receives, Discord requires bots to send Gateway Intents when connecting to the Gateway.<br />
+Gateway Intents allow to specify which events the bot wants to receive.</p>
+<p>Gateway Intents can be further divided into:</p>
+<ul>
+<li>Standard Intents<sup class="footnote-reference"><a href="#1">1</a></sup></li>
+<li><a href="#privileged-gateway-intents">Privileged Intents</a></li>
+</ul>
+<p>For example, a bot needs to send the <code>GUILD_MESSAGES</code> standard intent and the <code>MESSAGE_CONTENT</code> privileged intent to receive the <code>MESSAGE_CREATE</code> event with the messsage content.</p>
+<blockquote>
+<p>📚 Learn more about Gateway Intents <a href="https://discord.com/developers/docs/topics/gateway#gateway-intents">here</a>.</p>
+</blockquote>
+<h3 id="privileged-gateway-intents"><a class="header" href="#privileged-gateway-intents">Privileged Gateway Intents</a></h3>
+<p>Privileged Gateway Intents are special intents which need to be manually enabled in your bot application settings.
+Due to their sensitive information nature, Discord disables them by default.
+You should only enable them when it is required.</p>
+<p>Currently, there are only 3 privileged gateway intents:</p>
+<ul>
+<li><a href="#server-members-intent"><code>GUILD_MEMBERS</code></a></li>
+<li><a href="#presence-intent"><code>GUILD_PRESENCES</code></a></li>
+<li><a href="#message-content-intent"><code>MESSAGE_CONTENT</code></a></li>
+</ul>
+<blockquote>
+<p>📌 Verified bots require approval from Discord in order to enable these intents.</p>
+</blockquote>
+<h4 id="presence-intent"><a class="header" href="#presence-intent">Presence Intent</a></h4>
+<p>Allows the bot to receive <code>PRESENCE_UPDATE</code> event.
+This intent is primarily used to allow for retrieval of user presences data.
+For example, Activities (i.e PLAYING, LISTENING), Presence (i.e Online, Idle) and Custom status.</p>
+<p>The following functions require this intent:</p>
+<ul>
+<li><a href="../bdscript/getCustomStatus.html"><code>$getCustomStatus[]</code></a></li>
+<li><a href="../bdscript/getUserStatus.html"><code>$getUserStatus[]</code></a></li>
+<li><a href="../bdscript/membersCount.html#second-usage"><code>$membersCount[]</code></a></li>
+</ul>
+<h4 id="server-members-intent"><a class="header" href="#server-members-intent">Server Members Intent</a></h4>
+<p>Allows the bot to receive <code>GUILD_MEMBER_ADD</code>, <code>GUILD_MEMBER_UPDATE</code>, <code>GUILD_MEMBER_REMOVE</code>, and <code>THREAD_MEMBERS_UPDATE</code> events.
+This intent is primarily required to fetch the entire list of guild members, and to receive specific guild member info (like guild joining, leaving, profile update etc.).</p>
+<p>The following callbacks require this intent:</p>
+<ul>
+<li><a href="../callbacks/onJoined.html"><code>$onJoined[]</code></a></li>
+<li><a href="../callbacks/onLeave.html"><code>$onLeave[]</code></a></li>
+</ul>
+<h4 id="message-content-intent"><a class="header" href="#message-content-intent">Message Content Intent</a></h4>
+<p>Unlike the two intents above, Message Content Intent doesn't allow for any new events.
+Instead, it allows the bot to receive message content data, which includes <code>content</code>, <code>attachments</code>, <code>embeds</code>, and <code>components</code>.</p>
+<p>If your bot is based on prefix-based commands, then this intent is required.
+Otherwise, you will need to use <a href="./slashCommands.html">slash commands</a> instead.</p>
+<blockquote>
+<p>📌 Without this intent, your bot can only read message content data in DMs, messages where your bot was mentioned, and it's own messages.</p>
+</blockquote>
+<p>The following functions/callbacks require this intent:</p>
+<ul>
+<li><a href="../guides/awaitedCommands.html"><code>$awaitedCommand[]</code></a></li>
+<li><a href="../premium/messageContains.html"><code>$messageContains[]</code></a></li>
+<li><a href="../bdscript/argsCheck.html"><code>$argsCheck</code></a></li>
+<li><a href="../bdscript/banID.html"><code>$banID</code></a> (First &amp; Second Usage)</li>
+<li><a href="../bdscript/getEmbedData.html"><code>$getEmbedData</code></a></li>
+<li><a href="../bdscript/getMessage.html"><code>$getMessage</code></a> (Only for <code>content</code> type)</li>
+<li><a href="../premium/ignoreTriggerCase.html"><code>$ignoreTriggerCase</code></a></li>
+<li><a href="../bdscript/message.html"><code>$message</code></a></li>
+<li><a href="../bdscript/noMentionMessage.html"><code>$noMentionMessage</code></a></li>
+<li><a href="../bdscript/removeContains.html"><code>$removeContains</code></a></li>
+<li><a href="../bdscript/trimContent.html"><code>$trimContent</code></a></li>
+<li><a href="../bdscript/unban.html"><code>$unban</code></a></li>
+<li><a href="../bdscript/unbanID.html#usage-1"><code>$unbanID</code></a></li>
+</ul>
+<h2 id="enabling-privileged-gateway-intents"><a class="header" href="#enabling-privileged-gateway-intents">Enabling Privileged Gateway Intents</a></h2>
+<p>To enable Privileged Gateway Intents in your bot, follow these steps:</p>
 <ol>
-<li>Go to the <a href="https://discord.com/developers/applications">Discord Developer Portal</a> and select your application.</li>
-<li>Go to the &quot;Bot&quot; tab.</li>
-<li>Scroll down and enable the Gateway Intents you are interested in.</li>
-<li>Save changes.</li>
+<li>
+<p>Open your bot dashboard in the BDFD app (Make sure your app version is <code>2.2.2</code> or above).</p>
+</li>
+<li>
+<p>Click on the &quot;Settings&quot; tab, and then on &quot;Go to gateway intents settings&quot;.</p>
+</li>
+<li>
+<p>After that, click on &quot;Change gateway intents on Developer Portal&quot;.</p>
+</li>
+<li>
+<p>Select your required intents and save the changes.</p>
+<blockquote>
+<p>📌 The intents you have enabled in the Developer portal should be reflected in the BDFD app. If they aren't, click on &quot;Sync intents with Developer Portal settings&quot;.</p>
+</blockquote>
+</li>
 </ol>
-<p><img src="https://user-images.githubusercontent.com/70456337/183294128-52e5a4e4-f833-49dd-8bee-1ebec7c2c999.gif" alt="DDP" /></p>
-<h3 id="bdfd-app"><a class="header" href="#bdfd-app">BDFD App</a></h3>
-<ol>
-<li>Open the app and select your bot.</li>
-<li>Go to the &quot;Settings&quot; tab.</li>
-<li>Scroll down and enable the Gateway Intents you are interested in.</li>
-<li>Save changes.</li>
-</ol>
-<p><img src="https://user-images.githubusercontent.com/70456337/183294156-4ecc60b0-7112-4bf3-b833-39b8c2004fc6.gif" alt="BDFD" /></p>
-<h2 id="use-of-gateway-intents"><a class="header" href="#use-of-gateway-intents">Use of Gateway Intents</a></h2>
-<h3 id="presence-intent"><a class="header" href="#presence-intent">Presence Intent</a></h3>
-<p>Required for the functions <a href="../bdscript/membersCount.html#second-usage"><code>$membersCount[]</code></a> and <a href="../bdscript/getUserStatus.html"><code>$getUserStatus[]</code></a> to work.</p>
-<h3 id="server-members-intent"><a class="header" href="#server-members-intent">Server Members Intent</a></h3>
-<p>Required for some callbacks to work (e.g. for <a href="../callbacks/onJoined.html"><code>$onJoined[]</code></a>)</p>
-<h3 id="message-content-intent"><a class="header" href="#message-content-intent">Message Content Intent</a></h3>
-<p>Required for text commands to work if your bot is verified. Without this intent, your bot can only be based on slash commands.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p><img src="https://user-images.githubusercontent.com/70456337/199396053-706bc3a5-fc19-4f03-b40f-9cf13755750c.gif" alt="Instruction" /></p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>We will not be discussing about Standard Intents here, since it isn't required and is auto-handled by BDFD internally. If you still want to learn more about it, feel free to check <a href="https://discord.com/developers/docs/topics/gateway#gateway-intents">Discord Docs</a>.</p>
+</div>
 
                     </main>
 
