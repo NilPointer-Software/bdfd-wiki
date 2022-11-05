@@ -292,10 +292,10 @@
 
 /* Terminal */
 .terminal {
-    --bg: hsl(240, 0%, 0%);
+    --bg: #0c0c0c;
     --fg: #149414;
 
-    --sidebar-bg: #000;
+    --sidebar-bg: #090808;
     --sidebar-fg: #9ccc9c;
     --sidebar-non-existant: #2b5329;
     --sidebar-active: #649568;
@@ -310,11 +310,11 @@
 
     --inline-code-color: #c5c8c6;
 
-    --theme-popup-bg: #000;
+    --theme-popup-bg: #0c0c0c;
     --theme-popup-border: #0e6b0e;
     --theme-hover: #2b5329;
 
-    --quote-bg: #000;
+    --quote-bg: #0c0c0c;
     --quote-border: #0e6b0e;
 
     --table-border-color: #2b5329;
@@ -331,12 +331,10 @@
     --search-mark-bg: #2b5329;
 
     --chapter-hover-bg: var(--theme-hover);
-
 }
 
-.terminal {
-    font-family: Inconsolata, monospace;
-    text-shadow: 0 0 10px #149414;
+.terminal a:not(.header) {
+    text-shadow: 0 0 10px#00ff05;
 }
 /* Terminal */
 
@@ -381,6 +379,49 @@
     --search-mark-bg: #fff;
 }
 /* High Contrast */
+
+.discord {
+    --bg: #36393F;
+    --fg: #fff;
+
+    --sidebar-bg: #2f3136;
+    --sidebar-fg: #fff;
+    --sidebar-non-existant: #4b4b4b;
+    --sidebar-active: #fff;
+    --sidebar-spacer: 	#40444b;
+
+    --scrollbar: #292b2f;
+
+    --icons: #fff;
+    --icons-hover: #292b2f;
+
+    --links: #2b91f4;
+
+    --inline-code-color: #c5c8c6;
+
+    --theme-popup-bg: #36393F;
+    --theme-popup-border: #202225;
+    --theme-hover: #2f3136;
+
+    --quote-bg: #36393F;
+    --quote-border: #2f3136;
+
+    --table-border-color:#2f3136;
+    --table-header-bg:#2f3136;
+    --table-alternate-bg: #2f3136;
+
+    --searchbar-border-color: #292b2f;
+    --searchbar-bg: #2f3136;
+    --searchbar-fg: #b5b5b5;
+    --searchbar-shadow-color: #40444b;
+    --searchresults-header-fg: #a0a0a0;
+    --searchresults-border-color: #a0a0a0;
+    --searchresults-li-bg: #a0a0a0;
+    --search-mark-bg: #a0a0a0;
+
+    --chapter-hover-bg: var(--theme-hover);
+}
+/* Discord */
 /* Community Themes */
 
 /* Initial Themes */

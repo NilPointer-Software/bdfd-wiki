@@ -62,7 +62,7 @@ if (window.playground_copyable) {
 	function set_theme(theme, store = true) {
 		let ace_theme;
 
-		if (theme == 'coal' || theme == 'navy' || theme == 'bdfd' || theme == "green" || theme == "ios" || theme == "shiro" || theme == "gluo" || theme == "kneon" || theme == "terminal" || theme == "highcon") {
+		if (theme == 'coal' || theme == 'navy' || theme == 'bdfd' || theme == "green" || theme == "ios" || theme == "shiro" || theme == "gluo" || theme == "kneon" || theme == "terminal" || theme == "highcon" || theme == "discord") {
 			stylesheets.ayuHighlight.disabled = true;
 			stylesheets.tomorrowNight.disabled = false;
 			stylesheets.highlight.disabled = true;
