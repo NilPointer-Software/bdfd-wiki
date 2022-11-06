@@ -107,7 +107,7 @@ You have several commands with this callback.\
 You can only have one command with this callback. If you were planning to make a welcome message for multiple servers instead of just one, then check out [Per-Server $onJoined](../callbacks/onJoined.md#per-server-onjoined).
 
 ---
-## Moderation And Server Managment Related Commands
+## Moderation And Server Management Related Commands
 ### The Bot Can't Assing Or Take Roles
 **The 1st Reason**\
 Your bot doesn't have the `manageroles` permission.
