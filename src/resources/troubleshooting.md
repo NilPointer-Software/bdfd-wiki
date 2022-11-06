@@ -1,5 +1,5 @@
 # Troubleshooting
-This page contains a number of Troubleshooting that can help you solve problems that BDFD users often encounter.
+This page contains a number of Troubleshootings that can help you solve problems that BDFD users often encounter.
 
 # Summary
 ## Troubleshooting for...
@@ -81,12 +81,12 @@ Your bot doesn't have the `sendmessages` permission to send messages to a channe
 *Best Practice Solution*\
 Grant both of these permissions to the bot on this channel in the channel's permissions settings:
 
-![edit-channel](https://user-images.githubusercontent.com/70456337/197336593-92116a39-4587-4c67-a682-830553fe4409.png)
+![edit-channel](https://user-images.githubusercontent.com/70456337/197336593-92116a39-4587-4c67-a682-830553fe4409.png)\
 ![perms](https://user-images.githubusercontent.com/70456337/197336613-bd663cad-842b-4759-a0f9-938129362c13.png)
-![add](https://user-images.githubusercontent.com/70456337/197336635-ff8d4338-8293-4b1a-b57d-bc3658705509.png)
-![search](https://user-images.githubusercontent.com/70456337/197336687-9412086c-60fd-4a4f-b3b1-c0ca5b2df192.png)
-![message](https://user-images.githubusercontent.com/70456337/197336704-cf9ce709-dd7f-4156-b1dc-756f76ccf690.png)
-![embed](https://user-images.githubusercontent.com/70456337/197336720-d71688d1-195c-4481-a2d2-295265a3c64d.png)
+![add](https://user-images.githubusercontent.com/70456337/197336635-ff8d4338-8293-4b1a-b57d-bc3658705509.png)\
+![search](https://user-images.githubusercontent.com/70456337/197336687-9412086c-60fd-4a4f-b3b1-c0ca5b2df192.png)\
+![message](https://user-images.githubusercontent.com/70456337/197336704-cf9ce709-dd7f-4156-b1dc-756f76ccf690.png)\
+![embed](https://user-images.githubusercontent.com/70456337/197336720-d71688d1-195c-4481-a2d2-295265a3c64d.png)\
 ![save](https://user-images.githubusercontent.com/70456337/197336732-8da2c6e5-ab6e-4588-8b94-d0b240c4bf5a.png)
 
 **The 3rd Reason**\
@@ -114,6 +114,7 @@ Your bot doesn't have the `manageroles` permission.
 Make sure that the permission list of any role that the bot has has this permission.
 
 ![perm-mroles](https://user-images.githubusercontent.com/70456337/197348144-3cfc97ec-c2c8-4805-b0b8-1691bf6b4d7d.png)
+
 **The 2nd Reason**\
 You are trying to assign or take roles that is higher than the highest role your bot has.
 ### Gives an Error When Trying To Moderate a Member
@@ -596,7 +597,7 @@ $setUserVar[Money;$var[ourNewBalance]]
 <details> <summary>Expand Attachments</summary>
 
 ![r-ex-1](https://user-images.githubusercontent.com/70456337/200128118-0b5bb7bf-a73f-47c5-8e4a-d070d1b5ce5c.png)
-![r-ex-2](https://user-images.githubusercontent.com/70456337/200128126-f40866cd-a58c-4510-983c-b331aa57fecb.png)
+![r-ex-2](https://user-images.githubusercontent.com/70456337/200128126-f40866cd-a58c-4510-983c-b331aa57fecb.png)\
 ![r-ex-3](https://user-images.githubusercontent.com/70456337/200128133-1938b7ad-f2b6-40fa-8efb-ee1d78a82922.png)
 
 </details>
@@ -604,7 +605,7 @@ $setUserVar[Money;$var[ourNewBalance]]
 ### Desynchronized Balance
 #### The Balance Is Different On Different Servers
 This is because you're probably using [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in your economy. But these functions are based as [local variables](../guides/variables.md#local-economy). Their values are unique for each server.\
-If you want the same balance on all servers, you should use [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) (with `userID` arguments). These functions are based as [global user variables](../guides/variables.md#globalglobal-user-variables).\
+If you want the same balance on all servers, you should use [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) (with `userID` arguments). These functions are based as [global user variables](../guides/variables.md#globalglobal-user-variables).
 #### The Displayed Balance Is Different For Different Commands
 Most often this is because you've mixed up the variable functions and you're using the wrong variable type.\
 For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in the Roulette command and [`$getVar`](../bdscript/getVar.md) in the Balance command, this will show different values. The solution to this is to replace [`$getVar`](../bdscript/getVar.md) with [`$getUserVar`](../bdscript/getUserVar.md) in the Balance command, or vice versa, replace [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) with [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) accordingly  in the Roulette command.\
@@ -710,6 +711,7 @@ Restarting will cause existing slash commands to be cached.
 **The 3rd Reason**\
 Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands have the same name, but one is created using a third-party service, and the other through the BDFD, this can cause a conflict and the slash command will not appear.\
 You can solve this problem by Syncing slash commands with discord in the bot's settings. This removes third-party service slash commands and leaves only those that were created in our application.
+    
 ![sync](https://user-images.githubusercontent.com/70456337/200124426-6dbe69aa-1711-4838-9569-689b5e30f48f.gif)
 
 ---
