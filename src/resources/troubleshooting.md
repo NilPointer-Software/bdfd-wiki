@@ -387,7 +387,7 @@ $endif
     ```
     Checks if the specified amount is less than 0.\
     If yes, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $if[$var[comment]==]
         $var[comment;Not provided.]
     $endif
