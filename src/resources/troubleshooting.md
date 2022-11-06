@@ -111,7 +111,7 @@ You can only have one command with this callback. If you were planning to make a
 ### The Bot Can't Assign Or Take Roles
 **The 1st Reason**\
 Your bot doesn't have the `manageroles` permission.
-Make sure that the permission list of any role that the bot has has this permission.
+Make sure that the permission list of any role that the bot has, have this permission.
 
 ![perm-mroles](https://user-images.githubusercontent.com/70456337/197348144-3cfc97ec-c2c8-4805-b0b8-1691bf6b4d7d.png)
 
