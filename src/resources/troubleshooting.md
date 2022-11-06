@@ -8,7 +8,7 @@ This page contains a number of Troubleshootings that can help you solve problems
     - **[The Callback Doesn't Work](#the-callback-doesnt-work)**
 2. **[Moderation And Server Management Related Commands](#moderation-and-server-management-related-commands)**\
     Problems about why the bot can't assign or take roles, why it gives an error when trying to ban a member, and others, and how to solve them.
-    - **[The Bot Can't Assign Or Take Roles](#the-bot-cant-assing-or-take-roles)**
+    - **[The Bot Can't Assign Or Take Roles](#the-bot-cant-assign-or-take-roles)**
     - **[Gives an Error When Trying To Moderate a Member](#gives-an-error-when-trying-to-moderate-a-member)**
     - **[Gives an Error When Trying To Purge Messages](#gives-an-error-when-trying-to-purge-messages)**
 3. **[$addReactions And $addCmdReactions](#addreactions-and-addcmdreactions)**\
