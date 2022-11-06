@@ -697,7 +697,7 @@ You should not stack such functions and try to perform them all at once.
 **The 3rd Reason**\
 The node your bot is running on is experiencing some slight problems (such as a rate limits). If you're sure this is the case, you can regenerate the bot's token and replace it with a new one. This will cause your bot to change its node.
 
-### The Slash Commands Don't Appear
+### The Slash Commands Doesn't Appear
 **The 1st Reason**\
 Old version of the application. Make sure that you have a latest version of the application installed.\
 New versions of the application have been improved and updated, and new features have been added. In addition, errors with the validity check of the slash commands have been fixed. You will be warned if you set up your slash command incorrectly, in which case the application will not allow you to save the slash command.
