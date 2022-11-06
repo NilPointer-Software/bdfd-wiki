@@ -82,7 +82,7 @@ Your bot doesn't have the `sendmessages` permission to send messages to a channe
 Grant both of these permissions to the bot on this channel in the channel's permissions settings:
 
 ![edit-channel](https://user-images.githubusercontent.com/70456337/197336593-92116a39-4587-4c67-a682-830553fe4409.png)\
-![perms](https://user-images.githubusercontent.com/70456337/197336613-bd663cad-842b-4759-a0f9-938129362c13.png)
+![perms](https://user-images.githubusercontent.com/70456337/197336613-bd663cad-842b-4759-a0f9-938129362c13.png)\
 ![add](https://user-images.githubusercontent.com/70456337/197336635-ff8d4338-8293-4b1a-b57d-bc3658705509.png)\
 ![search](https://user-images.githubusercontent.com/70456337/197336687-9412086c-60fd-4a4f-b3b1-c0ca5b2df192.png)\
 ![message](https://user-images.githubusercontent.com/70456337/197336704-cf9ce709-dd7f-4156-b1dc-756f76ccf690.png)\
