@@ -205,7 +205,7 @@ This solution can be an alternative to "Prevent actions when the amount is great
 <details><summary>View Arguments Formatting In Code.</summary>
     
 - Target
-    ```rb
+    ```
     $var[target;$findUser[$message[1];no]]
     ```
 - Amount
