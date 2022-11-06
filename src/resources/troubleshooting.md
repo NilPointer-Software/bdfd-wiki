@@ -377,7 +377,7 @@ $endif
     Checks if the specified amount is an integer.\
     If not, an embed error will be returned and code execution will be stopped.\
     Exists in order to avoid payments with floating numbers.
-- ```rb
+- ```
     $if[$var[amount]<0]
         $color[FF544C]
         $title[Payment System]
