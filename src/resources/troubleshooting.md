@@ -108,7 +108,7 @@ You can only have one command with this callback. If you were planning to make a
 
 ---
 ## Moderation And Server Management Related Commands
-### The Bot Can't Assing Or Take Roles
+### The Bot Can't Assign Or Take Roles
 **The 1st Reason**\
 Your bot doesn't have the `manageroles` permission.
 Make sure that the permission list of any role that the bot has has this permission.
