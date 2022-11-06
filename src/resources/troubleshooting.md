@@ -715,5 +715,5 @@ You can solve this problem by Syncing slash commands with discord in the bot's s
 ![sync](https://user-images.githubusercontent.com/70456337/200124426-6dbe69aa-1711-4838-9569-689b5e30f48f.gif)
 
 ---
-# That's Where The List Of Troubleshootings Ends
+## That's Where The List Of Troubleshootings Ends
 If you know of other problems that users often encounter or have suggestions, feel free to let us know on the [support server](https://discord.gg/botdesigner) or by [contributing](https://github.com/NilPointer-Software/bdfd-wiki/blob/dev/CONTRIBUTING.md)!
