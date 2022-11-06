@@ -213,7 +213,7 @@ This solution can be an alternative to "Prevent actions when the amount is great
     $var[amount;$message[2]]
     ```
 - Comment
-    ```rb
+    ```
     $var[comment;$trimSpace[$replaceText[$replaceText[$message;$message[1];];$message[2];]]]
     ```
 
@@ -221,14 +221,14 @@ This solution can be an alternative to "Prevent actions when the amount is great
 <br>
 
 - Limiters Method
-    ```rb
+    ```
     $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
 
     $onlyIf[$var[ourNewBalance]>0;Error Message]
     ```
 - If Statements Method
-    ```rb
-    $var[ourNewBalanc;$sub[$getUserVar[Money];$var[amount]]]
+    ```
+    $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
 
     $if[$var[ourNewBalance]<0]
         Error Message
@@ -239,7 +239,7 @@ This solution can be an alternative to "Prevent actions when the amount is great
 #### Pay Command
 <details><summary>Expand Code Example (67 lines)</summary>
 
-```rb
+```
 $nomention
 $allowMention
 
@@ -314,7 +314,7 @@ $endif
 ```
 <details><summary>Expand Code Breakdown</summary>
 
-- ```rb
+- ```
     $if[$argCount[$message]<2]
         $color[FF544C]
         $title[Payment System]
@@ -324,7 +324,7 @@ $endif
     ```
     Checks the number of arguments in the code.\
     If there are less than 2 arguments, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $var[target;$findUser[$message[1];no]]
     $var[amount;$message[2]]
     $var[comment;$trimSpace[$replaceText[$replaceText[$message;$message[1];];$message[2];]]]
@@ -332,11 +332,11 @@ $endif
     $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
     ```
     Argument formatting. 
-    - ```rb
+    - ```
         $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
         ```
         Calculates the *our* future balance after making a payment.
-- ```rb
+- ```
     $if[$var[target]==]
         $color[FF544C]
         $title[Payment System]
@@ -346,7 +346,7 @@ $endif
     ```
     Checks if the target presents on the current server.\
     If not, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $if[$var[target]==$authorID]
         $color[FF544C]
         $title[Payment System]
@@ -356,7 +356,7 @@ $endif
     ```
     Checks if the command author is the target.\
     If yes, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $if[$isNumber[$var[amount]]==false]
         $color[FF544C]
         $title[Payment System]
@@ -457,7 +457,7 @@ This solution may be suitable for gambling-related commands, if you do not want 
 </details>
 <br>
 
-```rb
+```
 $var[ourNewBalance;$sub[$getUserVar[Money];$var[bet]]]
 
 $if[$var[ourNewBalance]<0]
@@ -468,7 +468,7 @@ $endif
 #### Roulette Command
 <details><summary>Expand Code Example (53 lines)</summary>
 
-```rb
+```
 $nomention
 
 $var[bet;$message[1]]
@@ -526,11 +526,11 @@ $setUserVar[Money;$var[ourNewBalance]]
 ```
 <details><summary>Expand Code Breakdown</summary>
 
-- ```rb
+- ```
     $var[bet;$message[1]]
     ```
     Argument formatting.
-- ```rb
+- ```
     $if[$isNumber[$var[bet]]==false]
         $color[FF544C]
         $title[Roulette]
@@ -540,7 +540,7 @@ $setUserVar[Money;$var[ourNewBalance]]
     ```
     Checks if the bet is a valid number.\
     If not, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $if[$checkContains[$var[bet];.]==true]
         $color[FF544C]
         $title[Roulette]
@@ -551,7 +551,7 @@ $setUserVar[Money;$var[ourNewBalance]]
     Checks if the bet is an integer.\
     If not, an embed error will be returned and code execution will be stopped.\
     Exists in order to avoid bets with floating numbers.
-- ```rb
+- ```
     $if[$var[bet]>$getUserVar[Money]]
         $color[FF544C]
         $title[Roulette]
@@ -561,7 +561,7 @@ $setUserVar[Money;$var[ourNewBalance]]
     ```
     Checks if the bet is higher than *our* balance.\
     If yes, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $if[$var[bet]<0]
         $color[FF544C]
         $title[Roulette]
@@ -571,7 +571,7 @@ $setUserVar[Money;$var[ourNewBalance]]
     ```
     Checks if the bet is less than 0.\
     If yes, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $if[$random[1;3]==1]
         $var[ourNewBalance;$sum[$getUserVar[Money];$var[bet]]]
         <...>
