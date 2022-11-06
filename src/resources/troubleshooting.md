@@ -393,7 +393,7 @@ $endif
     $endif
     ```
     Checks for a comment. If there is no comment (the argument is empty), "Not provided." will be written as comment.
-- ```rb
+- ```
     $if[$var[ourNewBalance]<0]
         $color[FF544C]
         $title[Payment System]
