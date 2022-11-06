@@ -459,6 +459,7 @@ This solution may be suitable for gambling-related commands, if you do not want 
 
 ```rb
 $var[ourNewBalance;$sub[$getUserVar[Money];$var[bet]]]
+
 $if[$var[ourNewBalance]<0]
     $var[ourNewBalance;0]
 $endif
