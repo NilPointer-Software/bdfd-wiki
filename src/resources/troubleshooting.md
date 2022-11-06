@@ -7,7 +7,7 @@ This page contains a number of Troubleshootings that can help you solve problems
     Problems about why it doesn't work and how to solve it.
     - **[The Callback Doesn't Work](#the-callback-doesnt-work)**
 2. **[Moderation And Server Managment Related Commands](#moderation-and-server-managment-related-commands)**\
-    Problems about why the bot can't assing or take roles, why it gives an error when trying to ban a member, and others, and how to solve them.
+    Problems about why the bot can't assign or take roles, why it gives an error when trying to ban a member, and others, and how to solve them.
     - **[The Bot Can't Assing Or Take Roles](#the-bot-cant-assing-or-take-roles)**
     - **[Gives an Error When Trying To Moderate a Member](#gives-an-error-when-trying-to-moderate-a-member)**
     - **[Gives an Error When Trying To Purge Messages](#gives-an-error-when-trying-to-purge-messages)**
