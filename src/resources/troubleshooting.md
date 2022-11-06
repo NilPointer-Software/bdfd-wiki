@@ -450,7 +450,7 @@ This solution may be suitable for gambling-related commands, if you do not want 
 <details><summary>View Arguments Formatting In Code.</summary>
     
 - Bet
-    ```rb
+    ```
     $var[bet;$message[1]]
     ```
 
