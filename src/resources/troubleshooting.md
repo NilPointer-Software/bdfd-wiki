@@ -37,7 +37,7 @@ This page contains a number of Troubleshootings that can help you solve problems
     - **[Desynchronization of Commands](#desynchronization-of-commands)**
         - **[Ghost Command](#ghost-command)**
     - **[The Bot Takes A Long Time To Respond](#the-bot-takes-a-long-time-to-respond)**
-    - **[The Slash Commands Don't Appear](#the-slash-commands-dont-appear)**
+    - **[The Slash Commands Doesn't Appear](#the-slash-commands-doesnt-appear)**
 
 ---
 # Let's Troubleshoot Everything!
