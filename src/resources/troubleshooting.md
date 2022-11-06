@@ -366,7 +366,7 @@ $endif
     ```
     Checks if the specified amount is a valid number.\
     If not, an embed error will be returned and code execution will be stopped.
-- ```rb
+- ```
     $if[$checkContains[$var[amount];.]==true]
         $color[FF544C]
         $title[Payment System]
