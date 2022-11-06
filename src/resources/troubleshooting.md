@@ -209,7 +209,7 @@ This solution can be an alternative to "Prevent actions when the amount is great
     $var[target;$findUser[$message[1];no]]
     ```
 - Amount
-    ```rb
+    ```
     $var[amount;$message[2]]
     ```
 - Comment
