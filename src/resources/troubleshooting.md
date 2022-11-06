@@ -214,7 +214,7 @@ This solution can be an alternative to "Prevent actions when the amount is great
     ```
 - Comment
     ```rb
-    $var[comment;$replaceText[$replaceText[$message;$message[1];];$message[2];]]
+    $var[comment;$trimSpace[$replaceText[$replaceText[$message;$message[1];];$message[2];]]]
     ```
 
 </details>
