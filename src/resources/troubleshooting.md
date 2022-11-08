@@ -51,7 +51,7 @@ How to get the Channel ID correctly:
 <details><summary>Example For Desktop</summary>
 
 > Before starting, make sure you have Developer Mode enabled in Discord.\
-    ![dev-desktop](https://user-images.githubusercontent.com/70456337/197304100-119ebf4d-5e77-450b-8677-9e3ee9a75308.gif)
+> ![dev-desktop](https://user-images.githubusercontent.com/70456337/197304100-119ebf4d-5e77-450b-8677-9e3ee9a75308.gif)
 
 ![id-desktop](https://user-images.githubusercontent.com/70456337/197304139-1e1a410d-acae-4036-9012-6c1f20bbdec2.gif)
 
