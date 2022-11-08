@@ -202,7 +202,7 @@ Adding limiters or if statements that will prevent actions in which the executor
 This solution can be an alternative to "Prevent actions when the amount is greater than the user's balance".
 
 |    Argument       |    Content              |
-| --------------  |  ---------------  |
+| :-------------:  |  :--------------:  |
 |  1st - Target      |     Afternoon         |
 |  2nd - Amount  |         50                  |
 |  3rd - Comment | Happy Birthday! |
