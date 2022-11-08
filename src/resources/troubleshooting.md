@@ -1,5 +1,5 @@
 # Troubleshooting
-This page contains a number of Troubleshootings that can help you solve problems that BDFD users often encounter.
+This page contains a number of Troubleshootings that can help you to solve problems that BDFD users often encounter.
 
 # Summary
 ## Troubleshooting for...
