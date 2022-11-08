@@ -191,19 +191,22 @@ BDFD uses formats and time zones from this list: [TZ Database](https://en.wikipe
 ## Economy Related Commands
 - This part will have fully working and quality code examples that you can use in your bot.
 - This part, examples and more will be based on the [*local economy*](../guides/variables.md#local-economy) and [BDScript 2](../guides/bdscript2.md).
-    | Variable Name | Default Variable Value | *Our* Variable Value | Target's Variable Value |
-    |    :---:      |         :---:          |         :---:        |           :---:         |
-    |    Money      |           0            |          100         |            120          |
+
+| Variable Name | Default Variable Value | *Our* Variable Value | Target's Variable Value |
+| -------------- | ---------------------  | -------------------  | ---------------------- |
+|       Money        |                  0                     |                100               |                 120                   |
 
 ### Negative Balance
 **The 1st Possible Solution**\
 Adding limiters or if statements that will prevent actions in which the executor's or target's balance becomes negative.\
 This solution can be an alternative to "Prevent actions when the amount is greater than the user's balance".
-|    Argument    |    Content      |
-|      :--:      |     :---:       |
-|  1st - Target  |   Afternoon     |
-|  2nd - Amount  |      50         |
+
+|    Argument       |    Content              |
+| --------------  |  ---------------  |
+|  1st - Target      |     Afternoon         |
+|  2nd - Amount  |         50                  |
 |  3rd - Comment | Happy Birthday! |
+
 <details><summary>View Arguments Formatting In Code.</summary>
     
 - Target
@@ -446,9 +449,11 @@ $endif
 **The 2nd Possible Solution**\
 Setting the balance to 0 if the future balance becomes negative.\
 This solution may be suitable for gambling-related commands, if you do not want the user's balance to become negative in case of losses.
+
 |    Argument    |    Content      |
-|      :--:      |     :---:       |
-|  1st - Bet     |      60         |
+| ------------- | ------------ |
+|  1st - Bet         |      60             |
+
 <details><summary>View Arguments Formatting In Code.</summary>
     
 - Bet
