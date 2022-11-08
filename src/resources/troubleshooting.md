@@ -451,7 +451,7 @@ Setting the balance to 0 if the future balance becomes negative.\
 This solution may be suitable for gambling-related commands, if you do not want the user's balance to become negative in case of losses.
 
 |    Argument    |    Content      |
-| ------------- | ------------ |
+| :------------: | :-----------: |
 |  1st - Bet         |      60             |
 
 <details><summary>View Arguments Formatting In Code.</summary>
