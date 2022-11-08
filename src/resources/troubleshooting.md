@@ -714,7 +714,7 @@ They're also cached on the client side, if they were successfully cached in disc
 Restarting will cause existing slash commands to be cached.
 
 **The 3rd Reason**\
-Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands have the same name, but one is created using a third-party service, and the other through the BDFD, this can cause a conflict and the slash command will not appear.\
+Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands of same type have the same name, but one is created using a third-party service, and the other through the BDFD, this can cause a conflict and the slash command will not appear.\
 You can solve this problem by Syncing slash commands with discord in the bot's settings. This removes third-party service slash commands and leaves only those that were created in our application.
     
 ![sync](https://user-images.githubusercontent.com/70456337/200124426-6dbe69aa-1711-4838-9569-689b5e30f48f.gif)
