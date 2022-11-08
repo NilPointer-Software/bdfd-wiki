@@ -1,7 +1,7 @@
 # Troubleshooting
 This page contains a number of Troubleshootings that can help you to solve problems that BDFD users often encounter.
 
-# Summary
+## Summary
 ### Troubleshooting for...
 1. **[$onJoined[]](#onjoined)**\
     Problems about why it doesn't work and how to solve it.
