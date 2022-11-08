@@ -123,7 +123,7 @@ Your bot is lower priority than the specified user. This means that the highest 
 
 **The 2nd Reason**\
 Your bot doesn't have the required permissions.
-Make sure that the permission list of any role that the bot has has required permissions.
+Make sure that the permission list of any role that the bot has, have these required permissions.
 - If you're trying to ban a user.\
     ![perm-ban](https://user-images.githubusercontent.com/70456337/197348222-87b63505-d3a3-4842-8f29-0724454f83fe.png)
 - If you're trying to kick a user.\
