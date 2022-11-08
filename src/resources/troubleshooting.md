@@ -40,7 +40,7 @@ This page contains a number of Troubleshootings that can help you solve problems
     - **[The Slash Commands Doesn't Appear](#the-slash-commands-doesnt-appear)**
 
 ---
-# Let's Troubleshoot Everything!
+### Let's Troubleshoot Everything!
 
 ---
 ## $onJoined[]
