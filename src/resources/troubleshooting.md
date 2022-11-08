@@ -193,7 +193,7 @@ BDFD uses formats and time zones from this list: [TZ Database](https://en.wikipe
 - This part, examples and more will be based on the [*local economy*](../guides/variables.md#local-economy) and [BDScript 2](../guides/bdscript2.md).
 
 | Variable Name | Default Variable Value | *Our* Variable Value | Target's Variable Value |
-| -------------- | ---------------------  | -------------------  | ---------------------- |
+| :-------------: |  :--------------------: |  :------------------: |  :--------------------:  |
 |       Money        |                  0                     |                100               |                 120                   |
 
 ### Negative Balance
