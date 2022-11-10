@@ -38,6 +38,11 @@ This page contains a number of Troubleshootings that can help you to solve probl
         - **[Ghost Command](#ghost-command)**
     - **[The Bot Takes A Long Time To Respond](#the-bot-takes-a-long-time-to-respond)**
     - **[The Slash Commands Doesn't Appear](#the-slash-commands-doesnt-appear)**
+    - **[Integration Requires Code Grant](#integration-requires-code-grant)**
+8. **[App Issues](#app-issues)**\
+    Problems about why the ad button doesn't work, and others, and how to solve them.
+    - **[The Ad Button Doesn't Work](#the-ad-button-doesnt-work)**
+    - **[Ghost Functions From The Changelog](#ghost-functions-from-the-changelog)**
 
 ---
 ### Let's Troubleshoot Everything!
@@ -723,6 +728,43 @@ Conflict of slash commands due to other services that you're no longer using. Fo
 You can solve this problem by Syncing slash commands with discord in the bot's settings. This removes third-party service slash commands and leaves only those that were created in our application.
     
 ![sync](https://user-images.githubusercontent.com/70456337/200124426-6dbe69aa-1711-4838-9569-689b5e30f48f.gif)
+
+### Integration Requires Code Grant
+You can only get this error when trying to invite a bot to any server.\
+Most likely, you have accidentally or unknowingly enabled the `Require OAauth2 Code Grant` parameter in your bot's settings on [developer portal](https://discord.com/developers/applications).\
+This is the reason why you get this error.
+
+This parameter is required only for applications with scopes such as identify, email, and others to work with the user account in discord. But BDFD doesn't have such support, so you should not enable this parameter or choose any other scopes other than `bot`.
+
+---
+## App Issues
+
+### The Ad Button Doesn't Work
+> In this troubleshooting, you can skip the part about listing the reasons, and instead jump to [Possible Solutions](#possible-solutions).
+
+**The 1st Reason**\
+Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see " Loading ad...".
+
+**The 2nd Reason**\
+There're no more ads for you. If that's the reason, there's nothing we can do about it, it's the provider who provides the ads, not us. Try to see the ad later. If the case persists, go to [support server](https://discord.gg/botdesigner), create a ticket using the `!new' command and inform the staff about your problem by providing a screen recording longer than 30 seconds.
+
+**The 3nd Reason**\
+The advertising provider we use is blocked in your country or region. There is nothing we can do in this case.
+
+#### Possible Solutions
+1. Clearing the application cache and restarting it.
+2. Using VPN services. This may be the best solution for the 2nd and 3rd reasons, and in some cases for the 1st reason.
+3. In a desperate case, restart the smartphone and/or reinstall the app.
+    > If you decide to reinstall the app, make sure that you are logged in to the app, otherwise you will lose access to your bots.
+
+### Ghost Functions From The Changelog
+In this troubleshooting, the easiest way to explain everything is through dialogue: 
+- `Random Guy`: I was told by a friend that a new function, `$botOwnerID`, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:\
+    ![I5dLLUVB](https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png)
+- `Shiro`: This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.
+- `Shiro`: Usually, all nodes are updated by the end of the month. 
+- `Random Guy`: Allright, thank you! I will wait patiently!
+- `Shiro`: You're welcome, Random Guy.
 
 ---
 ## That's Where The List Of Troubleshootings Ends
