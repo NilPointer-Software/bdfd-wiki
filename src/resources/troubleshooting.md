@@ -654,8 +654,8 @@ Usually restarting doesn't take more than 5-10 minutes.\
 So please wait a while and have a cup of tea or coffee while the node restarts.
 
 **The 2nd Reason**\
-For some reason, bot's token is no longer valid or the BDFD app thinks so.\
-You can solve this problem by regenerating bot's token on the developer portal and then replacing the old token in the BDFD app with the new one in the bot's Settings tab.
+For some reason, your bot's token is no longer valid or the BDFD app thinks so.\
+You can solve this problem by regenerating your bot's token on the developer portal and then replacing the old token with the new one in the BDFD app bot's Settings tab.
 
 **The 3rd Reason**\
 Not a common problem, but possible. The node your bot is running on is experiencing problems.\
