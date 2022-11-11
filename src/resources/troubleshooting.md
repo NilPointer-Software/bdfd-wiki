@@ -685,7 +685,7 @@ This problem is related to database synchronization (between your application da
 **Solution Options**\
 *The 1st Solution*\
 Restart the app.\
-Close the app from Recent apps and reopen it. This may result in a deleted command that the deletion didn't sync with the database, and then you can delete that command again.
+Close the app from Recent apps and reopen it. This may result in a deleted command reappearing due to desync with the database. You can just delete that command again.
 
 *The 2nd Solution*\
 Attempting to forcibly restart the bot.\
