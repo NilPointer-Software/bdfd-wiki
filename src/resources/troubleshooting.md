@@ -146,7 +146,7 @@ You are trying to purge messages that have been around for more than two weeks.\
 BDFD uses a bulk request to purge messages, and it can't process messages that are more than two weeks old.
 
 ---
-## $addReactions And $addCmdReactions
+## $addReactions and $addCmdReactions
 ### The Bot Fails To Add Reactions
 **The 1st Reason**\
 The user has blocked the bot, so the bot can't react to the user's messages. This works exactly the same if the user has blocked another user.
