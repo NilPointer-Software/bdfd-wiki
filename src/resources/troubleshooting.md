@@ -90,8 +90,8 @@ Grant both of these permissions to the bot in the desired channel through the ch
 
 **The 3rd Reason**\
 There's a critical error in your code.\
-Callbacks can't return errors that occurred in code.
-Therefore, sometimes it's difficult to solve errors in the callback's code.\
+Callbacks can't return errors that occurred during code execution.
+Therefore, sometimes it's difficult to solve errors in the callback code.\
 *Best Practice Solution*\
 Try debugging your command as a text command. In most cases, they're backward compatible with the `$onJoined` callback, since both by default process the actions of the command author (when user joins the server, this user becomes the executor of this callback).
 
