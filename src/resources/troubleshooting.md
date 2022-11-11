@@ -137,7 +137,7 @@ Make sure that the permission list of any role that the bot has, have these requ
 ### Gives an Error When Trying To Purge Messages
 **The 1st Reason**\
 Your bot doesn't have the `managemessages` permission.
-Make sure that the permission list of any role that the bot has, have this permission.
+Make sure that one of the roles that the bot has, has this permission enabled.
 
 ![perm-mmesages](https://user-images.githubusercontent.com/70456337/197358582-dcb39545-ae01-4eb9-bbe2-34c0af6c4f02.png)
 
