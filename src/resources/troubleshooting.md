@@ -178,8 +178,9 @@ Incorrect use of the function. The function doesn't return the current time or a
 The function's role is to change the timezone for time-related functions (such as [`$day`](../bdscript/day.md), [`$hour`](../bdscript/hour.md), and so on)
 
 **The 2nd Reason**\
-Incorrect time zone or incorrect format for specifying the time zone.\
-BDFD uses formats and time zones from this list: [TZ Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)
+Incorrect time zone or incorrect time zone format.\
+BDFD uses the official IANA time zone database for time zone information.\
+Please use the [TZ Database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) from this list in the `$time` function.
 ```diff
 - $time[America]
 - $time[New_York]
