@@ -76,7 +76,7 @@ Check out these functions:
 </details>
 
 **The 2nd Reason**\
-Your bot doesn't have the `sendmessages` permission to send messages to a channel and/or the `embedlinks` permission to allow the bot to send embed messages.\
+Your bot doesn't have the `sendmessages` and/or the `embedlinks` permission that allow the bot to send messages (or embed messages) in a given channel.\
 *Best Practice Solution*\
 Grant both of these permissions to the bot on this channel in the channel's permissions settings:
 
