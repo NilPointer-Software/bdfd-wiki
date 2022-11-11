@@ -632,9 +632,9 @@ You've chosen the wrong leaderboard function.
 **The 2nd Reason**\
 *(In case you are using the [`$getLeaderboardValue`](../bdscript/getLeaderboardValue.md) function)*\
 You specified the wrong variable type.
-- If you're using the [`$setUserVar`](../bdscript/setUserVar.md)/[`$getUserVar`](../bdscript/getUserVar.md) functions, you've to specify the `user` as type.
-- If in your're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you've to specify the `globalUser` as type.
-- If you're using the [`$setServerVar`](../bdscript/setServerVar.md)/[`$getServerVar`](../bdscript/getServerVar.md) functions, you've specify the `server` as type.
+- If you're using the [`$setUserVar`](../bdscript/setUserVar.md)/[`$getUserVar`](../bdscript/getUserVar.md) functions, you should specify the `user` as type.
+- If in your're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you should specify the `globalUser` as type.
+- If you're using the [`$setServerVar`](../bdscript/setServerVar.md)/[`$getServerVar`](../bdscript/getServerVar.md) functions, you should specify the `server` as type.
 
 **The 3rd Reason**\
 The leaderboard haven't generated yet.\
