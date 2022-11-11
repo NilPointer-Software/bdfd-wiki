@@ -754,7 +754,7 @@ The advertising provider we use is blocked in your country or region. There is n
     > If you decide to reinstall the app, make sure that you are logged in to the app, otherwise you will lose access to your bots.
 
 ### Ghost Functions From The Changelog
-In this troubleshooting, the easiest way to explain everything is through dialogue: 
+In this section, the easiest way to explain everything is through dialogue: 
 - `Random Guy`: I was told by a friend that a new function, `$botOwnerID`, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:\
     ![I5dLLUVB](https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png)
 - `Shiro`: This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.
