@@ -118,7 +118,9 @@ Make sure that one of the roles that the bot has, has this permission enabled.
 You are trying to assign or take roles that are higher than the highest role your bot has.
 ### Gives an Error When Trying To Moderate a Member
 **The 1st Reason**\
-Your bot is lower priority than the specified user. This means that the highest role of the bot is lower in position than the highest role that the specified user has. Or, the specified user is the owner of the server.
+Your bot has lower priority than the specified user.\
+This means that the highest role your bot has is lower in position than the highest role the specified user has.\
+Or, the specified user is the owner of the server.
 
 **The 2nd Reason**\
 Your bot doesn't have the required permissions.
