@@ -103,7 +103,7 @@ Read the [Gateway Intents Guide](../guides/gatewayIntents.md) for more details.
 
 **The 5th Reason**\
 You have several commands with this callback.\
-You can only have one command with this callback. If you were planning to make a welcome message for multiple servers instead of just one, then check out [Per-Server $onJoined](../callbacks/onJoined.md#per-server-onjoined).
+You can only have one command with this callback. If you want to make a unique welcome message for multiple servers instead of just one, then check out [Per-Server $onJoined](../callbacks/onJoined.md#per-server-onjoined).
 
 ---
 ## Moderation And Server Management Related Commands
