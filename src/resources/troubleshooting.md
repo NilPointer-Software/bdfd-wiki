@@ -349,7 +349,7 @@ $endif
         $stop
     $endif
     ```
-    Checks if the target presents on the current server.\
+    Checks if the target is present on the current server.\
     If not, an embed error will be returned and code execution will be stopped.
 - ```
     $if[$var[target]==$authorID]
