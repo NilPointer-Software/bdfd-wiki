@@ -557,7 +557,7 @@ $setUserVar[Money;$var[ourNewBalance]]
     ```
     Checks if the bet is an integer.\
     If not, an embed error will be returned and code execution will be stopped.\
-    Exists in order to avoid bets with floating numbers.
+    Exists in order to avoid bets with floating (decimal) numbers.
 - ```
     $if[$var[bet]>$getUserVar[Money]]
         $color[FF544C]
