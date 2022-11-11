@@ -55,7 +55,7 @@ How to get the Channel ID correctly:
 
 
 </details>
-<details><summary>Example For Mobile</summary>
+<details><summary>For Mobile</summary>
 
 > Before starting, make sure you have Developer Mode enabled on Discord.
 >
