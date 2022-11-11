@@ -3,27 +3,27 @@ This page contains a number of troubleshooting that can help you to solve proble
 
 ## Summary
 ### Troubleshooting for...
-1. **[$onJoined[]](#onjoined)**\
+1. **[$onJoined[]](#onjoined)**
     - **[The Callback Doesn't Work](#the-callback-doesnt-work)**
-2. **[Moderation And Server Management Related Commands](#moderation-and-server-management-related-commands)**\
+2. **[Moderation And Server Management Related Commands](#moderation-and-server-management-related-commands)**
     - **[The Bot Can't Assign Or Take Roles](#the-bot-cant-assign-or-take-roles)**
     - **[Gives an Error When Trying To Moderate a Member](#gives-an-error-when-trying-to-moderate-a-member)**
     - **[Gives an Error When Trying To Purge Messages](#gives-an-error-when-trying-to-purge-messages)**
-3. **[$addReactions and $addCmdReactions](#addreactions-and-addcmdreactions)**\
+3. **[$addReactions and $addCmdReactions](#addreactions-and-addcmdreactions)**
     - **[The Bot Fails To Add Reactions](#the-bot-fails-to-add-reactions)**
-4. **[$time](#time)**\
+4. **[$time](#time)**
     - **[The Function Returns an Error](#the-function-returns-an-error)**
-5. **[Economy Related Commands](#economy-related-commands)**\
+5. **[Economy Related Commands](#economy-related-commands)**
     - **[Negative Balance](#negative-balance)**
         - **[Pay Command](#pay-command)**
         - **[Roulette Command](#roulette-command)**
     - **[Desynchronized Balance](#desynchronized-balance)**
         - **[The Balance Is Different On Different Servers](#the-balance-is-different-on-different-servers)**
         - **[The Displayed Balance Is Different For Different Commands](#the-displayed-balance-is-different-for-different-commands)**
-6. **[Leaderboards](#leaderboards)**\
+6. **[Leaderboards](#leaderboards)**
     - **[The Leaderboard Is Empty](#the-leaderboard-is-empty)**
     - **[The User's Value Isn't Updated](#the-users-value-isnt-updated)**
-7. **[Bot Issues](#bot-issues)**\
+7. **[Bot Issues](#bot-issues)**
     - **[The Bot Is Offline](#the-bot-is-offline)**
     - **[The Bot Doesn't Respond](#the-bot-doesnt-respond)**
     - **[The Bot Goes Offline From Time To Time](#the-bot-goes-offline-from-time-to-time)**
@@ -32,7 +32,7 @@ This page contains a number of troubleshooting that can help you to solve proble
     - **[The Bot Takes A Long Time To Respond](#the-bot-takes-a-long-time-to-respond)**
     - **[The Slash Commands Doesn't Appear](#the-slash-commands-doesnt-appear)**
     - **[Integration Requires Code Grant](#integration-requires-code-grant)**
-8. **[App Issues](#app-issues)**\
+8. **[App Issues](#app-issues)**
     - **[The Ad Button Doesn't Work](#the-ad-button-doesnt-work)**
     - **[Ghost Functions From The Changelog](#ghost-functions-from-the-changelog)**
 
@@ -42,6 +42,10 @@ This page contains a number of troubleshooting that can help you to solve proble
 ---
 ## $onJoined[]
 ### The Callback Doesn't Work
+**The Null Reason**\
+You misspelled the callback name. Make sure you don't make any mistakes in the callback name.\
+Also remember that callbacks are case-sensitive: you can't write `$onjoined[Channel ID]`, but must write `$onJoined[Channel ID]`.
+
 **The 1st Reason**\
 You specified the wrong Channel ID.
 How to get the Channel ID correctly:
@@ -616,7 +620,7 @@ This is because you're probably using [`$setUserVar`](../bdscript/setUserVar.md)
 If you want the same balance on all servers, you should use [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) (with `userID` arguments). These functions are based on [global user variables](../guides/variables.md#globalglobal-user-variables).
 #### The Displayed Balance Is Different For Different Commands
 Most often this is because you've mixed up the variable functions and you're using the wrong variable type.\
-For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in the Roulette command and [`$getVar`](../bdscript/getVar.md) in the Balance command, this will show different values. The solution to this is to replace [`$getVar`](../bdscript/getVar.md) with [`$getUserVar`](../bdscript/getUserVar.md) in the Balance command, or vice versa, replace [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) with [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) accordingly  in the Roulette command.\
+For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in the Roulette command and [`$getVar`](../bdscript/getVar.md) in the Balance command, this will show different values. The solution to this is to replace [`$getVar`](../bdscript/getVar.md) with [`$getUserVar`](../bdscript/getUserVar.md) in the Balance command, or vice versa, replace [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) with [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) accordingly  in the Roulette command.\
 **Note:** don't forget that [global user variables](../guides/variables.md#globalglobal-user-variables) require a `userID` argument.
 
 
