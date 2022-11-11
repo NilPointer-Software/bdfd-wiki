@@ -624,10 +624,10 @@ For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUse
 ## Leaderboards
 ### The Leaderboard Is Empty
 **The 1st Reason**\
-You choosed the wrong leaderboard function.
-- If you're using the [`$setUserVar`](../bdscript/setUserVar.md)/[`$getUserVar`](../bdscript/getUserVar.md) functions, you've to choose the [`$userLeaderboard`](../bdscript/userLeaderboard.md) function.
-- If in your're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you've to choose the [`$globalUserLeaderboard`](../bdscript/globalUserLeaderboard.md) function.
-- If you're using the [`$setServerVar`](../bdscript/setServerVar.md)/[`$getServerVar`](../bdscript/getServerVar.md) functions, you've to choose the [`$serverLeaderboard`](../bdscript/serverLeaderboard.md) function.
+You've chosen the wrong leaderboard function.
+- If you're using the [`$setUserVar`](../bdscript/setUserVar.md)/[`$getUserVar`](../bdscript/getUserVar.md) functions, you should use the [`$userLeaderboard`](../bdscript/userLeaderboard.md) function.
+- If in your're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you should use the [`$globalUserLeaderboard`](../bdscript/globalUserLeaderboard.md) function.
+- If you're using the [`$setServerVar`](../bdscript/setServerVar.md)/[`$getServerVar`](../bdscript/getServerVar.md) functions, you should use the [`$serverLeaderboard`](../bdscript/serverLeaderboard.md) function.
 
 **The 2nd Reason**\
 *(In case of using the [`$getLeaderboardValue`](../bdscript/getLeaderboardValue.md) function)*\
