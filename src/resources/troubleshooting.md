@@ -661,7 +661,7 @@ You can solve this problem by regenerating your bot's token on the developer por
 Not a common problem, but possible. The node your bot is running on is experiencing problems.\
 In this case, join the [support server](https://discord.gg/botdesigner), create a ticket using the `!new` command and tell the staff your bot's ID and node number, if you know it (node number can be found out using the [`$botNode`](../bdscript/botNode.md) function when your bot is online).\
 The staff will inform the developers of the current problems, providing the scale of the problem (affected bots and/or nodes).\
-**Please don't regenerate bot token in this case**, as it leads to changing the node, and if everyone starts changing their node from problem node to healthy node, healthy node can also be affected by the problem.
+**Please don't regenerate your bot token in this case**, as it leads to node change. If everyone starts changing their node because there is a problem on that node, then a healthy node can also be affected by this problem.
 
 
 ### The Bot Doesn't Respond
