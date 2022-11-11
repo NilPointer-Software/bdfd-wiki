@@ -675,7 +675,7 @@ Your bot doesn't have the necessary permissions.\
 In order for your bot to respond correctly to a command, it must have permissions for `Send Messages`, `Embed Links` (if your code has embed functions), and `Read Messages` in order for the bot to have access to the channel.
 
 ### The Bot Goes Offline From Time To Time
-This is due to the fact that nodes are restarted from time to time to maintain stable operation of all the bots, which also work on this node.
+This is due to the fact that nodes are restarted from time to time to maintain the stable operation of all the bots that also work on this node.
 
 ### Desynchronization of Commands
 Desynchronization of commands means, for example, that you have deleted a command but the bot still responds to it (aka. Ghost Command), or you see different code of your command in the web app and another in the mobile app.
