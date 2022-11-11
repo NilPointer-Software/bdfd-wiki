@@ -713,7 +713,7 @@ New versions of the application have been improved and updated, and new features
 Slash commands are cached by discord, so it takes time before they appear in discord.
 
 They're also cached on the client side, if they were successfully cached in discord. If other users have a new slash command and you don't, restart the discord client.\
-Restarting will cause existing slash commands to be cached.
+Restarting will cause existing slash commands to be cleared and new ones will cache.
 
 **The 3rd Reason**\
 Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands of same type have the same name, but one is created using a third-party service, and the other through the BDFD, this can cause a conflict and the slash command will not appear.\
