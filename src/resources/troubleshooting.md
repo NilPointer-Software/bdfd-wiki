@@ -115,7 +115,7 @@ Make sure that one of the roles that the bot has, has this permission enabled.
 ![perm-mroles](https://user-images.githubusercontent.com/70456337/197348144-3cfc97ec-c2c8-4805-b0b8-1691bf6b4d7d.png)
 
 **The 2nd Reason**\
-You are trying to assign or take roles that is higher than the highest role your bot has.
+You are trying to assign or take roles that are higher than the highest role your bot has.
 ### Gives an Error When Trying To Moderate a Member
 **The 1st Reason**\
 Your bot is lower priority than the specified user. This means that the highest role of the bot is lower in position than the highest role that the specified user has. Or, the specified user is the owner of the server.
