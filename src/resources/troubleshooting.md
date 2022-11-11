@@ -190,7 +190,7 @@ Please use the [TZ Database name](https://en.wikipedia.org/wiki/List_of_tz_datab
 ---
 ## Economy Related Commands
 - This part will have fully working and quality code examples that you can use in your bot.
-- This part, examples and more will be based on the [*local economy*](../guides/variables.md#local-economy) and [BDScript 2](../guides/bdscript2.md).
+- In this part, examples and more will be based on the [*local economy*](../guides/variables.md#local-economy) and [BDScript 2](../guides/bdscript2.md).
 
 | Variable Name | Default Variable Value | *Our* Variable Value | Target's Variable Value |
 | :-------------: |  :--------------------: |  :------------------: |  :--------------------:  |
