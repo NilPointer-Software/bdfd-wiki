@@ -65,7 +65,7 @@ How to get the Channel ID correctly:
 
 
 </details>
-<details><summary>Function Method Example</summary>
+<details><summary>Using a Function</summary>
 
 Using the `$channelID`, `$mentionedChannels` or `$findChannel` functions, you can get the Channel ID of the desired channel.
 Check out these functions:
