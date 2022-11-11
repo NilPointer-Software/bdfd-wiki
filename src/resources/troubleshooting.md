@@ -45,7 +45,7 @@ This page contains a number of troubleshooting that can help you to solve proble
 **The 1st Reason**\
 You specified the wrong Channel ID.
 How to get the Channel ID correctly:
-<details><summary>Example For Desktop</summary>
+<details><summary>For Desktop</summary>
 
 > Before starting, make sure you have Developer Mode enabled on Discord.
 >
