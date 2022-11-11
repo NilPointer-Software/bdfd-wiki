@@ -7,6 +7,10 @@
 - Added `Format` argument to `$creationDate[]`
 - Added `$editSplitText[]`
 - Added `$serverEmojis[]`
+- Added `$setChannelVar[]`
+- Added `$getChannelVar[]`
+- Added `$resetChannelVar[]`
+- Added `channel` option to `$variablesCount[]`
 
 ## October
 - Added `$publishMessage[]`
