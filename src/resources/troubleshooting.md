@@ -732,7 +732,7 @@ This parameter is required only for applications with scopes such as identify, e
 ## App Issues
 
 ### The Ad Button Doesn't Work
-> In this troubleshooting, you can skip the part about listing the reasons, and instead jump to [Possible Solutions](#possible-solutions).
+> In this section, you can skip possible reasons to [Possible Solutions](#possible-solutions).
 
 **The 1st Reason**\
 Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see " Loading ad...".
