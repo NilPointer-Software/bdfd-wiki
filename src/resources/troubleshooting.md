@@ -666,7 +666,8 @@ The staff will inform the developers of the current problems, providing the scal
 
 ### The Bot Doesn't Respond
 **The 1st Reason**\
-If your bot is based on text commands, and if you have Message Content Intent disabled, you must enable it in your bot's settings.\
+If your bot is based on text commands and you don't have the Message Content Intent enabled.\
+You must enable it in your bot's settings to use text commands.\
 Read the [Gateway Intents Guide](../guides/gatewayIntents.md) for more details.
 
 **The 2nd Reason**\
