@@ -4,21 +4,16 @@ This page contains a number of troubleshooting that can help you to solve proble
 ## Summary
 ### Troubleshooting for...
 1. **[$onJoined[]](#onjoined)**\
-    Problems about why it doesn't work and how to solve it.
     - **[The Callback Doesn't Work](#the-callback-doesnt-work)**
 2. **[Moderation And Server Management Related Commands](#moderation-and-server-management-related-commands)**\
-    Problems about why the bot can't assign or take roles, why it gives an error when trying to ban a member, and others, and how to solve them.
     - **[The Bot Can't Assign Or Take Roles](#the-bot-cant-assign-or-take-roles)**
     - **[Gives an Error When Trying To Moderate a Member](#gives-an-error-when-trying-to-moderate-a-member)**
     - **[Gives an Error When Trying To Purge Messages](#gives-an-error-when-trying-to-purge-messages)**
-3. **[$addReactions And $addCmdReactions](#addreactions-and-addcmdreactions)**\
-    Why the bot fails to add reactions and how to solve it.
+3. **[$addReactions and $addCmdReactions](#addreactions-and-addcmdreactions)**\
     - **[The Bot Fails To Add Reactions](#the-bot-fails-to-add-reactions)**
 4. **[$time](#time)**\
-    Why the function returns an error and how to solve it.
     - **[The Function Returns an Error](#the-function-returns-an-error)**
 5. **[Economy Related Commands](#economy-related-commands)**\
-    Problems about negative balance, desynchronized balance and often mistakes, and how to solve them.
     - **[Negative Balance](#negative-balance)**
         - **[Pay Command](#pay-command)**
         - **[Roulette Command](#roulette-command)**
@@ -26,11 +21,9 @@ This page contains a number of troubleshooting that can help you to solve proble
         - **[The Balance Is Different On Different Servers](#the-balance-is-different-on-different-servers)**
         - **[The Displayed Balance Is Different For Different Commands](#the-displayed-balance-is-different-for-different-commands)**
 6. **[Leaderboards](#leaderboards)**\
-    Problems about why the leaderboard is empty, why the user's value isn't updated, and how to solve it.
     - **[The Leaderboard Is Empty](#the-leaderboard-is-empty)**
     - **[The User's Value Isn't Updated](#the-users-value-isnt-updated)**
 7. **[Bot Issues](#bot-issues)**\
-    Problems about why the bot is offline, why doesn't respond to commands, and others, and how to solve them.
     - **[The Bot Is Offline](#the-bot-is-offline)**
     - **[The Bot Doesn't Respond](#the-bot-doesnt-respond)**
     - **[The Bot Goes Offline From Time To Time](#the-bot-goes-offline-from-time-to-time)**
@@ -40,7 +33,6 @@ This page contains a number of troubleshooting that can help you to solve proble
     - **[The Slash Commands Doesn't Appear](#the-slash-commands-doesnt-appear)**
     - **[Integration Requires Code Grant](#integration-requires-code-grant)**
 8. **[App Issues](#app-issues)**\
-    Problems about why the ad button doesn't work, and others, and how to solve them.
     - **[The Ad Button Doesn't Work](#the-ad-button-doesnt-work)**
     - **[Ghost Functions From The Changelog](#ghost-functions-from-the-changelog)**
 
