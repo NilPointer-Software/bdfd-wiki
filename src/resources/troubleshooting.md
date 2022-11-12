@@ -738,7 +738,6 @@ This parameter is required only for applications with scopes such as identify, e
 
 ---
 ## App Issues
-
 ### The Ad Button Doesn't Work
 > In this section, you can skip possible reasons to [Possible Solutions](#possible-solutions).
 
