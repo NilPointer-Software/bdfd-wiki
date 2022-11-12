@@ -44,7 +44,7 @@ This page contains a number of troubleshooting that can help you to solve proble
 ### The Callback Doesn't Work
 **The Null Reason**\
 You misspelled the callback name. Make sure you don't make any mistakes in the callback name.\
-Also remember that callbacks are case-sensitive: you can't write `$onjoined[Channel ID]`, but must write `$onJoined[Channel ID]`.
+Also, remember that callbacks are case-sensitive: you can't write `$onjoined[Channel ID]`, you must write `$onJoined[Channel ID]`.
 
 **The 1st Reason**\
 You specified the wrong Channel ID.
