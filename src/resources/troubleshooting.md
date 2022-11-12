@@ -740,7 +740,7 @@ This option is required only for applications with scopes such as identify, emai
 ## App Issues
 ### The Ad Button Doesn't Work
 **The 1st Reason**\
-Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see " Loading ad...".
+Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see "Loading ad...".
 
 **The 2nd Reason**\
 There're no more ads for you. If that's the reason, there's nothing we can do about it, it's the provider who provides the ads, not us. Try to see the ad later. If the case persists, go to [support server](https://discord.gg/botdesigner), create a ticket using the `!new` command and inform the staff about your problem by providing a screen recording longer than 30 seconds.
