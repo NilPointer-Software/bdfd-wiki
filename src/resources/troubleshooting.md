@@ -739,7 +739,6 @@ This option is required only for applications with scopes such as identify, emai
 ---
 ## App Issues
 ### The Ad Button Doesn't Work
-
 **The 1st Reason**\
 Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see " Loading ad...".
 
