@@ -734,7 +734,7 @@ You can only get this error when trying to invite a bot to any server.\
 Most likely, you have accidentally or unknowingly enabled the `Require OAuth2 Code Grant` option in your bot's settings in the [developer portal](https://discord.com/developers/applications).\
 This is the reason why you get this error.
 
-This parameter is required only for applications with scopes such as identify, email, and others to work with the user account in discord. But BDFD doesn't have such support, so you should not enable this parameter or choose any other scopes other than `bot`.
+This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. But BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than `bot` and `application.commands`.
 
 ---
 ## App Issues
