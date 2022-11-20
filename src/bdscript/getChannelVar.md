@@ -3,7 +3,7 @@ Returns the value of the provided channel variable.
 
 ## Syntax
 ```
-$getChannelVar[variableName;(optional) channelID]
+$getChannelVar[Name;(Channel ID)]
 ```
 
 ### Breakdown
