@@ -5,7 +5,7 @@ Resets a channel variable back to its default value *(the one provided in the ap
 
 ## Syntax
 ```
-$resetChannelVar[variableName]
+$resetChannelVar[Variable Name]
 ```
 
 ### Breakdown
