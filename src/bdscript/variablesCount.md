@@ -7,7 +7,7 @@ $variablesCount[Type]
 ```
 
 ### Parameters
-- `Type` : The variable type to return the count for. Accepts either `user`, `server`, or `globaluser` as input.
+- `Type`: The variable type to return the count for. Accepts either `user`, `server`, `channel`, or `globaluser` as input.
 
 ## Example
 ```
