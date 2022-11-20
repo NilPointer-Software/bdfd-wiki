@@ -1,7 +1,7 @@
 # $setChannelVar
 Updates a variable's value for a channel.
 
-## Usage
+## Syntax
 ```
 $setUserVar[variableName;newValue;(channelID)]
 ```
