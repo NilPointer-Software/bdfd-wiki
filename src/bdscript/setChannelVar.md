@@ -8,7 +8,7 @@ $setUserVar[variableName;newValue;(channelID)]
 
 ### Breakdown
 - `Name`: The variable to update.
-- `newValue` - The newly assigned variable value.
+- `Value`: The newly assigned variable value.
 - `channelID` - The channel to assign the new value to, uses current channel if no 'channelID' is provided.
 
 > 📝 Channel variables value has a max character limit of 499.
