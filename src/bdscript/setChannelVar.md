@@ -3,7 +3,7 @@ Updates a variable's value for a channel.
 
 ## Syntax
 ```
-$setUserVar[Variable Name;New Value;(Channel ID)]
+$setChannelVar[Variable Name;New Value;(Channel ID)]
 ```
 
 ### Parameters
