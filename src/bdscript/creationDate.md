@@ -7,7 +7,7 @@ $creationDate[ID;(Format)]
 ```
 
 ### Parameters
-- `ID`: The ID to get it's creation date for.
+- `ID`: The ID from which to get the creation date.
 - `Format`: Customize the default time format output (Optional).
 
    > 📌 Click [me](../resources/timeFormat.md) to check all supported time format values.
