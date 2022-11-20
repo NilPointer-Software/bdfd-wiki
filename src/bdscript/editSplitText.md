@@ -13,6 +13,7 @@ $editSplitText[Index;Value]
 ## Example
 ```
 $nomention
+
 $textSplit[$message; ]
 
 $var[Index;$splitText[$sub[$getTextSplitLength;1]]]
@@ -21,12 +22,10 @@ $var[Value;$splitText[$getTextSplitLength]]
 $removeSplitTextElement[$getTextSplitLength]
 $removeSplitTextElement[$sub[$getTextSplitLength;1]]
 
-$var[Text;$joinSplitText[]]
-
-$textSplit[$var[Text];]
+$textSplit[$joinSplitText[];]
 $editSplitText[$var[Index];$var[Value]]
 
-Original Text: $var[Text]
+Original Text: $joinSplitText[]
 New Text: $optOff[$joinSplitText[]]
 ```
 ![example](https://user-images.githubusercontent.com/95774950/202880969-9ce5041a-cc6c-4bd2-a275-76e9d80be5b5.png)
