@@ -1,7 +1,7 @@
 # $getChannelVar
 Returns the value of the provided channel variable.
 
-## Usage
+## Syntax
 ```
 $getChannelVar[variableName;(optional) channelID]
 ```
