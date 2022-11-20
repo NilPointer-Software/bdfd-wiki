@@ -13,4 +13,4 @@ $setUserVar[variableName;newValue;(channelID)]
 
 > 📌 Channel variables value has a max character limit of 499 (4999, if premium).
 
-[See more in the Variables guide...](https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html)
+[See more in the Variables guide...](../guides/variables.md)
