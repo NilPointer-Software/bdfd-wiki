@@ -21,9 +21,9 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
-	    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../highlight.css">
@@ -100,20 +100,20 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="bdfd">Bot Designer for Discord</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="shiro">Shiro's Theme</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="discord">Discord</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="gluo">Gluo</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="green">Green</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ios">iOS</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="kneon">Kinda Neon</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="green">Green</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ios">iOS</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="shiro">Shiro's Theme</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="terminal">Terminal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="discord">Discord</button></li>
                             </ul>
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search"></i>
@@ -159,26 +159,28 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="startthread"><a class="header" href="#startthread">$startThread</a></h1>
-<p>Creates a new thread.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$startThread[name;channelID;messageID (canBeLeftEmpty);archiveDuration (60/1440/4320/10080);returnThreadID (yes/no)]
+<p>Creates a new thread in the provided channel.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$startThread[Name;Channel ID;Message ID;(Archive duration;Return thread/channel ID)]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>name</code> - The name of the newly created thread.</li>
-<li><code>channelID</code> - The channel that is the parent of this thread.</li>
-<li><code>messageID</code> - The message that this thread is created for, can be left empty.</li>
-<li><code>archiveDuration</code> - The archive duration of this thread in minutes. Only 60, 1440,4320, 10080 can be used. Note that for the 4320 archive duration option, the server needs to be level 1 boosted, and for 10080 the server needs level 2.</li>
-<li><code>returnThreadID</code> - Whether to return the thread channel ID or not.</li>
+<li><code>Name</code>: The name of the newly created thread.</li>
+<li><code>Channel ID</code>: The channel where the thread shall be created.</li>
+<li><code>Message ID</code>: The message from which the thread will be created. Can be left empty.</li>
+<li><code>Archive duration</code>: The duration after which the thread will be auto-archived due to inactivity. Accepts <code>60</code> (1 hour), <code>1440</code> (1 day), <code>4320</code> (3 days), or <code>10080</code> (7 days) as input. Defaults to <code>60</code> (Optional).</li>
+<li><code>Return thread/channel ID</code>: Whether to return the thread channel ID or not. Defaults to <code>no</code> (Optional).</li>
+</ul>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>createpublicthreads</code></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<pre><code>$var[threadID;$startThread[Cool Thread;$channelID;;1440;yes]]
-I created a new thread! &lt;#$var[threadID]&gt;
-$c[❗️This example requires BDScript 2 enabled❗️]
+<pre><code>$nomention
+I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/128615731-c61c95c1-d1ec-42cf-9964-e8722df30dfe.png" alt="example" /></p>
-<p><strong>Explaination:</strong><br />
-This code is storing the newly created thread ID returned from <code>$startThread[]</code> <em>(using $var[]</em>). Then, in the rest of the code <code>$var[threadID]</code> was called to get the thread ID;  which allowed the bot to mention the new thread channel.</p>
 
                     </main>
 

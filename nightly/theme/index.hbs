@@ -10,8 +10,8 @@
         {{/if}}
 
         {{#if base_url}}
-	         <base href="{{ base_url }}">
-	    {{/if}}
+           <base href="{{ base_url }}">
+        {{/if}}
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="{{ description }}">
@@ -29,9 +29,9 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
-	    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
@@ -117,20 +117,20 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">{{ theme_option "Ayu" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="bdfd">{{ theme_option "Bot Designer for Discord" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="shiro">{{ theme_option "Shiro's Theme" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">{{ theme_option "Coal" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="discord">{{ theme_option "Discord" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="gluo">{{ theme_option "Gluo" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="green">{{ theme_option "Green" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">{{ theme_option "High Contrast" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ios">{{ theme_option "iOS" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="kneon">{{ theme_option "Kinda Neon" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="light">{{ theme_option "Light" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">{{ theme_option "Rust" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">{{ theme_option "Coal" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">{{ theme_option "Navy" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">{{ theme_option "Ayu" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="highcon">{{ theme_option "High Contrast" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="green">{{ theme_option "Green" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ios">{{ theme_option "iOS" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">{{ theme_option "Rust" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="shiro">{{ theme_option "Shiro's Theme" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="terminal">{{ theme_option "Terminal" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="discord">{{ theme_option "Discord" }}</button></li>
                             </ul>
                             {{#if search_enabled}}
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
