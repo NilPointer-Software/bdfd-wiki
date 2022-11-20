@@ -8,5 +8,5 @@ Resets a channel variable back to its default value *(the one provided in the ap
 $resetChannelVar[Variable Name]
 ```
 
-### Breakdown
-- `variableName` - The name of the variable to reset.
+### Parameters
+- `Variable Name`: The name of the variable to reset.
