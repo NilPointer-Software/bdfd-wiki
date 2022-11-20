@@ -26,4 +26,4 @@ $creationDate[ID;(Format)]
    $creationDate[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
    ```
 
-   ![Screenshot_20221023_152611](https://user-images.githubusercontent.com/95774950/197385800-92a434d2-e388-4067-8a78-d9357f6184bd.png)
+   ![example](https://user-images.githubusercontent.com/95774950/197385800-92a434d2-e388-4067-8a78-d9357f6184bd.png)
