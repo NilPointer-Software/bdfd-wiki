@@ -3,7 +3,7 @@ Resets a channel variable back to it's default value *(the one inputted in the a
 
 > 🧙‍♂️ Use this function wisely!
 
-## Usage
+## Syntax
 ```
 $resetChannelVar[variableName]
 ```
