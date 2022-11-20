@@ -7,5 +7,5 @@ $getChannelVar[Name;(Channel ID)]
 ```
 
 ### Parameters
-- `variableName` - The name of the variable to get.
+- `Name`: The name of the variable to get.
 - `channelID` - The channel to get the value for. If no channelID is inputted, then the current channel is used.
