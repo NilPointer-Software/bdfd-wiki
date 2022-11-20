@@ -1,5 +1,5 @@
 # $resetChannelVar
-Resets a channel variable back to it's default value *(the one inputted in the app)* **for every server**.
+Resets a channel variable back to its default value *(the one provided in the app)* **for every channel in every server**.
 
 > 🧙‍♂️ Use this function wisely!
 
