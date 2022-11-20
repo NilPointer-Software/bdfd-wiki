@@ -7,7 +7,7 @@ $setUserVar[variableName;newValue;(channelID)]
 ```
 
 ### Breakdown
-- `variableName` - The variable to update.
+- `Name`: The variable to update.
 - `newValue` - The newly assigned variable value.
 - `channelID` - The channel to assign the new value to, uses current channel if no 'channelID' is provided.
 
