@@ -7,7 +7,7 @@ $setChannelVar[Variable Name;New Value;(Channel ID)]
 ```
 
 ### Parameters
-- `Name`: The variable to update.
+- `Variable Name`: The variable to update.
 - `Value`: The newly assigned variable value.
 - `Channel ID`: The channel to assign the new value to. If no 'Channel ID' is present, the current channel will be used.
 
