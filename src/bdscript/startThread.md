@@ -1,26 +1,25 @@
 # $startThread
-Creates a new thread.
+Creates a new thread in the provided channel.
 
-## Usage
+## Syntax
 ```
-$startThread[name;channelID;messageID (canBeLeftEmpty);archiveDuration (60/1440/4320/10080);returnThreadID (yes/no)]
+$startThread[Name;Channel ID;Message ID;(Archive duration;Return thread/channel ID)]
 ```
 
-### Breakdown
-- `name` - The name of the newly created thread.
-- `channelID` - The channel that is the parent of this thread.
-- `messageID` - The message that this thread is created for, can be left empty.
-- `archiveDuration` - The archive duration of this thread in minutes. Only 60, 1440,4320, 10080 can be used. Note that for the 4320 archive duration option, the server needs to be level 1 boosted, and for 10080 the server needs level 2.
-- `returnThreadID` - Whether to return the thread channel ID or not.
+### Parameters
+- `Name`: The name of the newly created thread.
+- `Channel ID`: The channel where the thread shall be created.
+- `Message ID`: The message from which the thread will be created. Can be left empty.
+- `Archive duration`: The duration after which the thread will be auto-archived due to inactivity. Accepts `60` (1 hour), `1440` (1 day), `4320` (3 days), or `10080` (7 days) as input. Defaults to `60` (Optional).
+- `Return thread/channel ID`: Whether to return the thread channel ID or not. Defaults to `no` (Optional).
+
+### Permissions
+Required permissions that the bot must have for this function to work properly:
+- `createpublicthreads`
 
 ## Example
 ```
-$var[threadID;$startThread[Cool Thread;$channelID;;1440;yes]]
-I created a new thread! <#$var[threadID]>
-$c[❗️This example requires BDScript 2 enabled❗️]
+$nomention
+I created a new thread! <#$startThread[Cool Thread;$channelID;;1440;yes]>
 ```
-
 ![example](https://user-images.githubusercontent.com/69215413/128615731-c61c95c1-d1ec-42cf-9964-e8722df30dfe.png)
-
-__Explaination:__\
-This code is storing the newly created thread ID returned from `$startThread[]` *(using $var[]*). Then, in the rest of the code `$var[threadID]` was called to get the thread ID;  which allowed the bot to mention the new thread channel.

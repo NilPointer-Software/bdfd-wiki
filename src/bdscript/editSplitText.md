@@ -22,10 +22,10 @@ $var[Value;$splitText[$getTextSplitLength]]
 $removeSplitTextElement[$getTextSplitLength]
 $removeSplitTextElement[$sub[$getTextSplitLength;1]]
 
-$textSplit[$joinSplitText[];]
+$textSplit[$joinSplitText[ ];]
 $editSplitText[$var[Index];$var[Value]]
 
-Original Text: $joinSplitText[]
-New Text: $optOff[$joinSplitText[]]
+Original Text: $joinSplitText[ ]
+New Text: $joinSplitText[]
 ```
 ![example](https://user-images.githubusercontent.com/95774950/202880969-9ce5041a-cc6c-4bd2-a275-76e9d80be5b5.png)
