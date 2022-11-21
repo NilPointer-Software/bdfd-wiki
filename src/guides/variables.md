@@ -1,76 +1,72 @@
 # Variables Guide
 
 ## Introduction
-Variables are how we store data in BDFD. Data can be assigned to users, servers, and globally. Each variable has two elements, which we will breakdown in this section.
+Variables are how we store data in BDFD. Data can be assigned to users, servers, channels and globally. Each variable has two elements, which we will breakdown in this section.
 
 ### Variable Elements
 
 - `name` - The name of the variable. This can't be modified by the bot, its used to "call" the current variable.
 - `value` - The value of the variable. This can be modified by the bot, its returned when the variable name is called in `$getVar`/`$getUserVar`/`$getServerVar`/`$getChannelVar`.
 
-### Creating Variables
-Creating variables can only be done in the app. Here's how to create a variable, which you can get and modify later.
+ ### Creating Variables 
+> 📌 Creating variables can only be done in the app.
 
-**#1:** Select the bot you want to add the new variable to.
+Here's how to create a variable, which you can get and modify later:
 
-**#2:** Select the "Variables" tab.
+1. Select the bot you want to add the new variable to.
+2. Go to "Variables" tab.
 
-![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
+    ![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
+3. Then, click "+ New variable" button.
 
-**#3:** Create a new variable.
+     ![ex3](https://i.ibb.co/Mc0nL0b/Screenshot-20220717-133047.png) 
+4. Give the variable a name and value. 
 
-![ex3](https://i.ibb.co/Mc0nL0b/Screenshot-20220717-133047.png)
+     ![ex4](https://user-images.githubusercontent.com/69215413/126413362-99e23e07-b01a-4ded-8be3-454837cb1ca5.png) 
+5. Finally, save the changes! 
 
-**#4:** Give the variable a name and value.
-
-![ex4](https://user-images.githubusercontent.com/69215413/126413362-99e23e07-b01a-4ded-8be3-454837cb1ca5.png)
-
-**#5:** Save your changes!
-
-![ex5](https://i.ibb.co/dbpJDmr/Screenshot-20220717-133424.png)
-
+    ![ex5](https://i.ibb.co/dbpJDmr/Screenshot-20220717-133424.png) 
+ 
 ### Editing Variables
-Here's how you can modify an existing variable's name/default value.
+Here's how you can modify an existing variable's name/default value:
 
-**#1:** Select the bot you want to edit the variable for.
+1. Select the bot you want to edit the variable for.
+2. Go to "Variables" tab.
 
-**#2:** Select the "Variables" tab.
+    ![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
+3. Click the edit/pencil icon near the variable name that you want to edit.
 
-![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
+    ![ex3](https://user-images.githubusercontent.com/69215413/126413529-b4f1fce6-a0fc-4962-b67c-94020d37a858.png)
+4. Provide a new variable name and/or value.
 
-**#4:** Select the variable you want to edit.
+    ![ex4](https://user-images.githubusercontent.com/69215413/126413336-3a0c376c-fa30-435f-b5e4-74100ca0859a.png)
+5. Finally, save the changes!
 
-![ex3](https://user-images.githubusercontent.com/69215413/126413529-b4f1fce6-a0fc-4962-b67c-94020d37a858.png)
+    ![ex5](https://i.ibb.co/dbpJDmr/Screenshot-20220717-133424.png)
 
-**#5:** Edit the variable name and/or value.
+ ### Deleting Variables
+Here's how you can delete variables:
 
-![ex4](https://user-images.githubusercontent.com/69215413/126413336-3a0c376c-fa30-435f-b5e4-74100ca0859a.png)
+1. Select the bot you want to delete the variable for.
+2. Go to "Variables" tab.
 
-**#6:** Save your changes!
+    ![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
+3. Select the variable you want to delete.
 
-![ex5](https://i.ibb.co/dbpJDmr/Screenshot-20220717-133424.png)
+    ![ex3](https://user-images.githubusercontent.com/69215413/126413671-48dfae45-50e1-446a-843d-46513123a33c.png)
+4. Finally, confirm the deletion!
 
-### Deleting Variables
-Here's how you can delete variables,
+    ![ex4](https://user-images.githubusercontent.com/69215413/126413742-e9fef40c-01e8-4713-9e61-99d71c2d88f7.png)
 
-**#1:** Select the bot you want to delete the variable for.
-
-**#2:** Select the "Variables" tab.
-
-![ex2](https://i.ibb.co/ng3yJNn/Screenshot-20220717-132641.png)
-
-**#4:** Select the variable you want to delete.
-
-![ex3](https://user-images.githubusercontent.com/69215413/126413671-48dfae45-50e1-446a-843d-46513123a33c.png)
-
-**#5:** Confirm the deletion!
-
-![ex4](https://user-images.githubusercontent.com/69215413/126413742-e9fef40c-01e8-4713-9e61-99d71c2d88f7.png)
-
-> ⚠️ Deleting variables might return error message in those commands which were using the deleted variables.
+> 📌 Deleting variables might return error message in those commands which were using the deleted variables.
 
 ## Global/Global-User Variables
-`$setVar[variableName;newValue]`/`$getVar[variableName]` are global variable functions, this means they apply to universally *(they don't change per-server or per-user)*. However, if you input a user in the optional `userID` field then it becomes a global-user variable. Global-user variables stay with the user in every server. The usage of global-user variables looks like this: `$setVar[variableName;newValue;userID]`/`$getVar[variable name;userID]`.
+[`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) are global variable functions, this means they apply to universally *(i.e they don't change per-server or per-user)*.\
+However, if you provide a user ID in the optional `User ID` parameter then it becomes a global-user variable.
+
+Global-user variables value stay with the user in every server. The usage of global-user variables looks like this:
+- `$setVar[Variable Name;New Value;User ID]`
+- `$getVar[Variable Name;User ID]`.
 
 ### Global Variables - Functions
 
