@@ -44,7 +44,7 @@ Here's how you can modify an existing variable's name/default value:
 
     ![ex5](https://i.ibb.co/dbpJDmr/Screenshot-20220717-133424.png)
 
- ### Deleting Variables
+### Deleting Variables
 Here's how you can delete variables:
 
 1. Select the bot you want to delete the variable for.
