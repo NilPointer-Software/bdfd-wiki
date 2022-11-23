@@ -190,18 +190,17 @@ Total Server Cookies: 🍪 $getServerVar[ServerCookies]
 ![ex](https://user-images.githubusercontent.com/69215413/126411873-6f2ddfb2-d1b1-4000-a7c0-7c8a25ca3bf0.png)
 
 ### Channel Variables - Functions
-- `$setChannelVar[variableName;newValue;(optional) channelID]` - Sets the provided variable to 'newValue' for the inputted 'channelID', or the channel that the command was ran in; if no 'channelID' was provided.
-- `$getChannelVar[variableName;(optional) channelID]` - Gets the current value for the provided channel variable. Returns the current channel's variable value if no 'channelID' is provided.
+- `$setChannelVar[Variable Name;New Value;(Channel ID)]`: Sets the provided variable to 'New Value' for the provided 'Channel ID', or the channel that the command was ran in; if no 'Channel ID' was provided.
+- `$getChannelVar[Variable Name;(Channel ID)]`: Gets the current value for the provided channel variable. Returns the current channel's variable value if no 'Channel ID' is provided.
 
 ### Channel Variables - Examples
-
 Here's the variable we're working with:
 
 ![ex](https://user-images.githubusercontent.com/113303649/202899818-b265e793-9a56-4a41-9539-9af01b622de8.png)
 
 This command adds `1` uses to the 'Uses' variable value, everytime it is ran.
 
-> 🧙‍♂️ The trigger for this command will be your bot's prefix, example: `!`.
+> 📌 The trigger for this command will be your bot's prefix, example: `!`.
 ```
 $nomention
 This channel has now `$sum[$getChannelVar[Uses];1]` uses of the command.
