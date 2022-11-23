@@ -1,7 +1,7 @@
 # Variables Guide
 
 ## Introduction
-Variables are how we store data in BDFD. Data can be assigned to users, servers, channels and globally. Each variable has two elements, which we will breakdown in this section.
+Variables are how we store data in BDFD. Data can be assigned to users, servers, channels, and globally. Each variable has two elements, which we will breakdown in this section.
 
 ### Variable Elements
 
