@@ -6,7 +6,7 @@ Variables are how we store data in BDFD. Data can be assigned to users, servers,
 ### Variable Elements
 
 - `Name`: The name of the variable. This can't be modified by the bot, its used to "call" the current variable.
-- `value` - The value of the variable. This can be modified by the bot, its returned when the variable name is called in `$getVar`/`$getUserVar`/`$getServerVar`/`$getChannelVar`.
+- `Value`: The value of the variable. This can be modified by the bot, its returned when the variable name is called in `$getVar`/`$getUserVar`/`$getServerVar`/`$getChannelVar`.
 
  ### Creating Variables 
 > 📌 Creating variables can only be done in the app.
