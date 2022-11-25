@@ -60,7 +60,7 @@ Here's how you can delete variables:
 > 📌 Deleting variables might return error message in those commands which were using the deleted variables.
 
 ## Global/Global-User Variables
-[`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) are global variable functions, this means they apply to universally *(i.e they don't change per-server, per-channel, or per-user)*.\
+[`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) are global variable functions, which means they apply universally *(i.e they don't change per-server, per-channel, or per-user)*.\
 However, if you provide a user ID in the optional `User ID` parameter then it becomes a global-user variable.
 
 Global-user variables value stay same with the user in every server. The usage of global-user variables looks like this:
