@@ -11,6 +11,7 @@
 - Added `$getChannelVar[]`
 - Added `$resetChannelVar[]`
 - Added `channel` option to `$variablesCount[]`
+- Fixed BDScript 2's escaping not working in some cases
 
 ## October
 - Added `$publishMessage[]`
