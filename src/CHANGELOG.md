@@ -2,6 +2,9 @@
 
 # 2022
 
+## December
+- Added limit on input numbers to 2^128 on the basic math functions
+
 ## November
 - Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
 - Added `Format` argument to `$creationDate[]`
