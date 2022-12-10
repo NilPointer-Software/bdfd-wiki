@@ -11,48 +11,23 @@ Besides that, **BDScript 2** has additional features like `$eval[]`, `$try` and 
 
 ## Features
 ### $eval[]
-> **Warning**: It should be used with caution. Remember to restrict the command with `$onlyForIDs[]` or similar function!
-If you programmed in JavaScript, you probably know what it does.
-It basically executes every function that is provided as an argument.
-For example:
-```php
-$eval[$message]
-```
-This will execute every function that has been provided by a user.
+Evaluates the provided BDScript code. Read [this](../bdscript/eval.md) for more information.
 
 ### $try, $catch and $error[]
 This works in a very similar way to the equivalents available in other programming languages.\
 You can read more about it [here](./trycatch.md).
 
 ### $async
-Runs functions asynchronously. Read [this](./async.md) for more information.
+Runs functions asynchronously. Read [Async Guide](./async.md) for more information.
 
 ### $elseif
-Read [this](./ifStatements.md) for more information.
+Read [If Statements Guide](./ifStatements.md) for more information.
 
 ### $var[]
-It can be used to **temporarily** store a value.
-After the command executes, all of the vars are removed.
-
-For this specific variable function, you don't need to create a corresponding variable in the app.
-
-To store a value, simply use `$var[VARIABLE NAME;VALUE]` and to retrieve, do `$var[VARIABLE NAME]`.
+Creates a temporary variable. Read [this](../bdscript/var.md) for more information.
 
 ### $stop
 It stops the command execution. It may seem like a useless function but it can come in handy with `$if`s or `$try`s.
 
 ### $optOff[]
-It should be used only by more advanced users.\
-The full function's name is *optimizations off*. Sometimes **BDScript 2** doesn't execute the same function twice and it uses the previous result instead.
-**$optOff[]** allows disabling that behaviour for provided functions.
-
-Here's a small example:
-```php
-$random // returns 3
-$random // returns 3
-$random // returns 3
-$optOff[$random] // returns 1
-$random // returns 1
-$random // returns 1
-```
-
+Executes functions with turned off optimizations. Read [this](../bdscript/optOff.md) for more information.

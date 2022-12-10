@@ -242,6 +242,7 @@
     - [$onlyIfMessageContains](./bdscript/onlyIfMessageContains.md)
     - [$onlyNSFW](./bdscript/onlyNSFW.md)
     - [$onlyPerms](./bdscript/onlyPerms.md)
+    - [$optOff](./bdscript/optOff.md)
     - [$or](./bdscript/or.md)
     - [$parentID](./bdscript/parentID.md)
     - [$ping](./bdscript/ping.md)

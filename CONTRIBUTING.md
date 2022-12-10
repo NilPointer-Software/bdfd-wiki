@@ -45,65 +45,101 @@ Some of the frequently asked questions from users -
 ### Shortening Headers
 Always keep section headers short, consise, and in [Title Case](https://en.m.wikipedia.org/wiki/Title_case) format. For example,
 
-```
-❌ How to create embeds
-✅ Creating Embeds
+```diff
+- How to create embeds
++ Creating Embeds
 ```
 
 ### Markdown
+Markdown allows you to make headings, format text, make lists and tables.
 
-\*\*Bold\*\* - **Bold**
+---
+#### Text Formatting
+| Name | Sign |
+| :---: | :---: |
+| *Italics* | \*...\* or \_...\_ |
+| **Bold** | \*\*...\*\* or \_\_...\_\_ |
+| ~~Line-Through~~ | \~\~...\~\~ |
+| `Code Snippet` | \`...\` |
 
-\*Italics\* - *Italics*
-
-\`code-snippet\`  - `code-snippet`
-
-**Lists:**
-
-\- item1
-
-\- item2
-
-\- item3
-
+---
+#### Lists
+\- Item 1\
+\- Item 2\
+\- Item 3
 ##### Output
-- item1
-- item2
-- item3
+- Item 1
+- Item 2
+- Item 3
 
-**Large Code Blocks:**
-
+---
+#### Large Code Block
 \`\`\`\
-code\
+Large Code Block\
 \`\`\`
-
 ##### Output
 ```
-code
+Large code block
 ```
-
-**Quotes:**
-
+---
+#### Quotes
 \> This is a quote.
-
 ##### Output
 > This is a quote.
 
-**Headers**
-
-\# Title
-
-\## Section
-
-\### Sub-Section
-
-\#### Small-Topic
-
+---
+#### Headers
+| Name | Sign |
+| :---: | :---: |
+| Title | # |
+| Section | ## |
+| Sub-Section | ### |
+| Small-Topic | #### |
+| Sub-Small-Topic | ##### |
 ##### Output
 # Title
-
 ## Section
-
 ### Sub-Section
-
 #### Small-Topic
+
+##### Sub-Small-Topic
+
+---
+#### Tables
+
+1. Centered Text
+   ```
+   | Name | Value |
+   | :---: | :---: |
+   | Name | Value |
+   | Name | The Longest Value |
+   | Name | Value |
+   | Name | Value |
+   | Name | Value |
+   ```
+   ##### Output
+   | Name | Value |
+   | :---: | :---: |
+   | Name | Value |
+   | Name | The Longest Value |
+   | Name | Value |
+   | Name | Value |
+   | Name | Value |
+2. Uncentered Text
+   ```
+   | Name | Value |
+   | --- | --- |
+   | Name | Value |
+   | Name | The Longest Value |
+   | Name | Value |
+   | Name | Value |
+   | Name | Value |
+   ```
+   ##### Output
+   | Name | Value |
+   | --- | --- |
+   | Name | Value |
+   | Name | The Longest Value |
+   | Name | Value |
+   | Name | Value |
+   | Name | Value |
