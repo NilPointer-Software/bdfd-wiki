@@ -6,6 +6,7 @@
 - Added limit on input numbers to 2^128 on the basic math functions
 - Fixed BDScript 2 having problems with handling unicode characters
 - Fixed `$stop` causing undefined behaviour
+- Added `$getBanReason[]`
 
 ## November
 - Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
