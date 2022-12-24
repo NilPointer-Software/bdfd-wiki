@@ -148,7 +148,7 @@ $editSplitText[index;value]
 
 #### Breakdown
 - `index` - The index of the element to be replaced.
-- `value` - the text, that is, what will replace the specified element.
+- `value` - The text, that is, what will replace the specified element.
 
 ### Example
 ```
