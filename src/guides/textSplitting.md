@@ -90,7 +90,9 @@ $getTextSplitIndex[value]
 ```
 $textSplit[hello-world-!;-]
 
-$if[$getTextSplitIndex[$message]!=-1] The index of the specified element: $getTextSplitIndex[$message] $else The specified element wasn't found or doesn't exist! $endif
+$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
+
+The index of the specified element: $getTextSplitIndex[$message]
 ```
 
 ![$getTextSplitIndex](https://user-images.githubusercontent.com/70456337/209445822-b46a7cd7-e724-471d-8c2b-e9da543cb3bc.png)
