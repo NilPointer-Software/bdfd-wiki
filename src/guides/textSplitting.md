@@ -1,86 +1,163 @@
 # Text Splitting
 Text splitting functions are useful for advanced codes that deal with multiple user arguments, or even adjusting function outputs *(for advanced users)*. This wiki includes information on how to use these functions.
 
-## Functions
-### $textSplit[]
-```
-$textSplit[text;splitter]
-```
-Splits the text into sections by a splitter.
+# Functions
+There are seven functions in Text Splitting. One of them - $textSplit - is the main function that you start to work with Text Splitting.
 
-### $splitText[]
+## $textSplit
+This function separates the text with a separator and saves the text for later use.
+
+### Usage
+```
+$textSplit[separatedText;separator]
+```
+
+#### Breakdown
+- `separatedText` - The text separated by a separator.
+- `separator` - The separator that separates the text.
+
+### Example
+```
+$textSplit[hello-world-!;-]
+```
+
+## $splitText
+Each separated text has a number, i.e. an index. `$splitText` is a function that returns one of the elements of the separated text by an index or the sign `<` - the very first element, or `>` - the very last element.
+
+### Usage
 ```
 $splitText[index]
 ```
-Retrieves a value from `$textSplit`.
-> 🧙‍♂️ You can also use `$splitText[>]` to retrieve the last value of the split.
 
-### $getTextSplitLength
+#### Breakdown
+- `index` - The index of the element to be returned.
+
+### Examples
+
+#### Example #1
+```
+$textSplit[hello-world-!;-]
+
+The 1st element: $splitText[1]
+The 2nd element: $splitText[2]
+The 3rd element: $splitText[3]
+```
+
+![$splitText-1](https://user-images.githubusercontent.com/70456337/209445547-a808333c-9c9f-40b9-aad7-bfe1ea12aee3.png)
+
+
+#### Example #2
+```
+$textSplit[hello-world-!;-]
+
+The very first element: $splitText[<]
+The very last element: $splitText[>]
+```
+
+![$splitText-2](https://user-images.githubusercontent.com/70456337/209445550-a0a38b58-6722-4450-a4d6-ca14dbc03973.png)
+
+
+## $getTextSplitLength
+This function has a simple purpose: `$getTextSplitLength` returns the length of the separated text, that is, the number of words separated by a separator. The returned value is the maximum index for the given separated text.
+
+### Usage
 ```
 $getTextSplitLength
 ```
-Returns how many splits there are in `$textSplit`. Here's an example:
-```
-$textSplit[hello world | hello planet | hello earth;|]
-$getTextSplitLength
-```
-![example](https://user-images.githubusercontent.com/69215413/125673180-c7832e3e-2227-4cd7-a269-84e8053cbd90.png)
 
-### $getTextSplitIndex 
+### Example
 ```
-$getTextSplitIndex
-```
-Retrieves the position of the provided value in `$textSplit`. Returns `-1` if it couldn't find the value. Here's an example:
-```
-$textSplit[Cake-Bread;-]
-$getTextSplitIndex[$message]
-```
-​![​image​](https://user-images.githubusercontent.com/42785890/151845189-1866a9c2-cacb-401b-9efe-137cc54586b6.png)
+$textSplit[hello-world-!;-]
 
-### $removeSplitTextElement[]
+The maximum index: $getTextSplitLength
+```
+
+![$getTextSplitLength](https://user-images.githubusercontent.com/70456337/209445774-edec9a26-892f-4028-906b-b7ec08f94df5.png)
+
+
+## $getTextSplitIndex
+This function searches for the specified element in the separated text and returns its index. If the specified element wasn't found or doesn't exist, the function will return `-1`.
+
+### Usage
+```
+$getTextSplitIndex[value]
+```
+
+#### Breakdown
+- `value` - The text, that is, the element whose index is should be returned.
+
+### Example
+```
+$textSplit[hello-world-!;-]
+
+$if[$getTextSplitIndex[$message]!=-1] The index of the specified element: $getTextSplitIndex[$message] $else The specified element wasn't found or doesn't exist! $endif
+```
+
+![$getTextSplitIndex](https://user-images.githubusercontent.com/70456337/209445822-b46a7cd7-e724-471d-8c2b-e9da543cb3bc.png)
+
+
+## $joinSplitText
+This function returns the current elements of the separated text with the specified (sometimes new) separator.
+
+### Usage
+```
+$joinSplitText[separator]
+```
+
+#### Breakdown
+- `separator` - (The new) separator with which the elements should be returned.
+
+### Example
+See example below, using [$removeSplitTextElement](#removesplittextelement) or [$editSplitText](#editsplittext).
+
+
+## $removeSplitTextElement
+This function removes an element from the separated text by the specified index.
+
+### Usage
 ```
 $removeSplitTextElement[index]
 ```
-Removes a element from `$splitText`. Here's an example:
+
+#### Breakdown
+- `index` - The index of the element to be removed.
+
+### Example
 ```
-$textSplit[hello world | hello planet | hello earth;|]
-$removeSplitTextElement[1]
-1: $splitText[1]
-2: $splitText[2]
+$textSplit[hello-world-!;-]
+
+$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
+
+$removeSplitTextElement[$getTextSplitIndex[$message]]
+Successfully removed element with index $getTextSplitIndex[$message]!
+Current elements: $joinSplitText[-]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/125673476-a25418c5-56bf-459b-aade-6b298bd064bf.png)
+![$removeSplitTextElement](https://user-images.githubusercontent.com/70456337/209445832-e8922a39-c311-4d20-bb19-cddc2db18ecc.png)
 
-### $joinSplitText
-```
-$joinSplitText[splitter]
-```
-Joins `$textSplit` values with provided 'splitter'. Here's a example:
-```
-$textSplit[hello world | hello planet | hello earth;|]
-$joinSplitText[+]
-```
 
-![example](https://user-images.githubusercontent.com/69215413/125674054-ed3b0f6b-8627-4020-b5e2-0ae206f131d7.png)
+## $editSplitText
+This function replaces the element with the specified index with a new element instead of the previous one.
 
-## Examples
-### Example #1
+### Usage
 ```
-$textSplit[hello world | hello planet | hello earth;|]
-1: $splitText[1]
-2: $splitText[2]
-3: $splitText[3]
-```
-![example](https://user-images.githubusercontent.com/69215413/125674553-4b4e80e8-9e4b-410b-9b53-f9766363aee8.png)
-
-### Example #2
-```
-$textSplit[text1-text2-text3-text4;-]
-1: $splitText[1]
-2: $splitText[2]
-3: $splitText[3]
-4: $splitText[4]
-Length: $getTextSplitLength
+$editSplitText[index;value]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/125674632-6e7b41f1-8e0f-40a9-95f8-56e32f90b015.png)
+#### Breakdown
+- `index` - The index of the element to be replaced.
+- `value` - the text, that is, what will replace the specified element.
+
+### Example
+```
+$textSplit[hello-world-!;-]
+
+$onlyIf[$getTextSplitIndex[$message[1]]!=-1;The specified element wasn't found or doesn't exist!]
+
+$editSplitText[$getTextSplitIndex[$message[1]];$message[2]]
+
+The element with index $getTextSplitIndex[$message[1]] has been replaced by $message[2]!
+Current elements: $joinSplitText[-]
+```
+
+![$editSplitText](https://user-images.githubusercontent.com/70456337/209445845-df23ab33-e4e5-4918-8c48-bcd8fd3b6fc8.png)
