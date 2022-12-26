@@ -139,7 +139,7 @@ Current elements: $joinSplitText[-]
 
 
 ## $editSplitText
-This function replaces the element with the specified index with a new element instead of the previous one.
+This function replaces the element at the specified index with a new element instead of the previous one.
 
 ### Usage
 ```
