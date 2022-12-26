@@ -167,69 +167,125 @@
                     <main>
                         <h1 id="text-splitting"><a class="header" href="#text-splitting">Text Splitting</a></h1>
 <p>Text splitting functions are useful for advanced codes that deal with multiple user arguments, or even adjusting function outputs <em>(for advanced users)</em>. This wiki includes information on how to use these functions.</p>
-<h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
-<h3 id="textsplit"><a class="header" href="#textsplit">$textSplit[]</a></h3>
-<pre><code>$textSplit[text;splitter]
+<h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
+<p>There are 7 functions in this guide. One of them, <code>$textSplit</code>, is the main function that you start off.</p>
+<h2 id="textsplit"><a class="header" href="#textsplit">$textSplit</a></h2>
+<p>This function separates the text with a separator and saves the text for later use.</p>
+<h3 id="usage"><a class="header" href="#usage">Usage</a></h3>
+<pre><code>$textSplit[separatedText;separator]
 </code></pre>
-<p>Splits the text into sections by a splitter.</p>
-<h3 id="splittext"><a class="header" href="#splittext">$splitText[]</a></h3>
+<h4 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h4>
+<ul>
+<li><code>separatedText</code> - The text separated by a separator.</li>
+<li><code>separator</code> - The separator that separates the text.</li>
+</ul>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<pre><code>$textSplit[hello-world-!;-]
+</code></pre>
+<h2 id="splittext"><a class="header" href="#splittext">$splitText</a></h2>
+<p>Each separated text has a number, i.e. an index. <code>$splitText</code> is a function that returns one of the elements of the separated text by an index or the sign <code>&lt;</code> - the very first element, or <code>&gt;</code> - the very last element.</p>
+<h3 id="usage-1"><a class="header" href="#usage-1">Usage</a></h3>
 <pre><code>$splitText[index]
 </code></pre>
-<p>Retrieves a value from <code>$textSplit</code>.</p>
-<blockquote>
-<p>🧙‍♂️ You can also use <code>$splitText[&gt;]</code> to retrieve the last value of the split.</p>
-</blockquote>
-<h3 id="gettextsplitlength"><a class="header" href="#gettextsplitlength">$getTextSplitLength</a></h3>
+<h4 id="breakdown-1"><a class="header" href="#breakdown-1">Breakdown</a></h4>
+<ul>
+<li><code>index</code> - The index of the element to be returned.</li>
+</ul>
+<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
+<h4 id="example-1"><a class="header" href="#example-1">Example #1</a></h4>
+<pre><code>$textSplit[hello-world-!;-]
+
+The 1st element: $splitText[1]
+The 2nd element: $splitText[2]
+The 3rd element: $splitText[3]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/209445547-a808333c-9c9f-40b9-aad7-bfe1ea12aee3.png" alt="$splitText-1" /></p>
+<h4 id="example-2"><a class="header" href="#example-2">Example #2</a></h4>
+<pre><code>$textSplit[hello-world-!;-]
+
+The very first element: $splitText[&lt;]
+The very last element: $splitText[&gt;]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/209445550-a0a38b58-6722-4450-a4d6-ca14dbc03973.png" alt="$splitText-2" /></p>
+<h2 id="gettextsplitlength"><a class="header" href="#gettextsplitlength">$getTextSplitLength</a></h2>
+<p>This function has a simple purpose: <code>$getTextSplitLength</code> returns the length of the separated text, that is, the number of words separated by a separator. The returned value is the maximum index for the given separated text.</p>
+<h3 id="usage-2"><a class="header" href="#usage-2">Usage</a></h3>
 <pre><code>$getTextSplitLength
 </code></pre>
-<p>Returns how many splits there are in <code>$textSplit</code>. Here's an example:</p>
-<pre><code>$textSplit[hello world | hello planet | hello earth;|]
-$getTextSplitLength
+<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<pre><code>$textSplit[hello-world-!;-]
+
+The maximum index: $getTextSplitLength
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125673180-c7832e3e-2227-4cd7-a269-84e8053cbd90.png" alt="example" /></p>
-<h3 id="gettextsplitindex"><a class="header" href="#gettextsplitindex">$getTextSplitIndex</a></h3>
-<pre><code>$getTextSplitIndex
+<p><img src="https://user-images.githubusercontent.com/70456337/209445774-edec9a26-892f-4028-906b-b7ec08f94df5.png" alt="$getTextSplitLength" /></p>
+<h2 id="gettextsplitindex"><a class="header" href="#gettextsplitindex">$getTextSplitIndex</a></h2>
+<p>This function searches for the specified element in the separated text and returns its index. If the specified element wasn't found or doesn't exist, the function will return <code>-1</code>.</p>
+<h3 id="usage-3"><a class="header" href="#usage-3">Usage</a></h3>
+<pre><code>$getTextSplitIndex[value]
 </code></pre>
-<p>Retrieves the position of the provided value in <code>$textSplit</code>. Returns <code>-1</code> if it couldn't find the value. Here's an example:</p>
-<pre><code>$textSplit[Cake-Bread;-]
-$getTextSplitIndex[$message]
+<h4 id="breakdown-2"><a class="header" href="#breakdown-2">Breakdown</a></h4>
+<ul>
+<li><code>value</code> - The text, that is, the element whose index is should be returned.</li>
+</ul>
+<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
+<pre><code>$textSplit[hello-world-!;-]
+
+$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
+
+The index of the specified element: $getTextSplitIndex[$message]
 </code></pre>
-<p>​<img src="https://user-images.githubusercontent.com/42785890/151845189-1866a9c2-cacb-401b-9efe-137cc54586b6.png" alt="​image​" /></p>
-<h3 id="removesplittextelement"><a class="header" href="#removesplittextelement">$removeSplitTextElement[]</a></h3>
+<p><img src="https://user-images.githubusercontent.com/70456337/209445822-b46a7cd7-e724-471d-8c2b-e9da543cb3bc.png" alt="$getTextSplitIndex" /></p>
+<h2 id="joinsplittext"><a class="header" href="#joinsplittext">$joinSplitText</a></h2>
+<p>This function returns the current elements of the separated text with the specified (sometimes new) separator.</p>
+<h3 id="usage-4"><a class="header" href="#usage-4">Usage</a></h3>
+<pre><code>$joinSplitText[separator]
+</code></pre>
+<h4 id="breakdown-3"><a class="header" href="#breakdown-3">Breakdown</a></h4>
+<ul>
+<li><code>separator</code> - (The new) separator with which the elements should be returned.</li>
+</ul>
+<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
+<p>See example below, using <a href="#removesplittextelement">$removeSplitTextElement</a> or <a href="#editsplittext">$editSplitText</a>.</p>
+<h2 id="removesplittextelement"><a class="header" href="#removesplittextelement">$removeSplitTextElement</a></h2>
+<p>This function removes an element from the separated text by the specified index.</p>
+<h3 id="usage-5"><a class="header" href="#usage-5">Usage</a></h3>
 <pre><code>$removeSplitTextElement[index]
 </code></pre>
-<p>Removes a element from <code>$splitText</code>. Here's an example:</p>
-<pre><code>$textSplit[hello world | hello planet | hello earth;|]
-$removeSplitTextElement[1]
-1: $splitText[1]
-2: $splitText[2]
+<h4 id="breakdown-4"><a class="header" href="#breakdown-4">Breakdown</a></h4>
+<ul>
+<li><code>index</code> - The index of the element to be removed.</li>
+</ul>
+<h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
+<pre><code>$textSplit[hello-world-!;-]
+
+$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
+
+$removeSplitTextElement[$getTextSplitIndex[$message]]
+Successfully removed element with index $getTextSplitIndex[$message]!
+Current elements: $joinSplitText[-]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125673476-a25418c5-56bf-459b-aade-6b298bd064bf.png" alt="example" /></p>
-<h3 id="joinsplittext"><a class="header" href="#joinsplittext">$joinSplitText</a></h3>
-<pre><code>$joinSplitText[splitter]
+<p><img src="https://user-images.githubusercontent.com/70456337/209445832-e8922a39-c311-4d20-bb19-cddc2db18ecc.png" alt="$removeSplitTextElement" /></p>
+<h2 id="editsplittext"><a class="header" href="#editsplittext">$editSplitText</a></h2>
+<p>This function replaces the element at the specified index with a new element instead of the previous one.</p>
+<h3 id="usage-6"><a class="header" href="#usage-6">Usage</a></h3>
+<pre><code>$editSplitText[index;value]
 </code></pre>
-<p>Joins <code>$textSplit</code> values with provided 'splitter'. Here's a example:</p>
-<pre><code>$textSplit[hello world | hello planet | hello earth;|]
-$joinSplitText[+]
+<h4 id="breakdown-5"><a class="header" href="#breakdown-5">Breakdown</a></h4>
+<ul>
+<li><code>index</code> - The index of the element to be replaced.</li>
+<li><code>value</code> - The text, that is, what will replace the specified element.</li>
+</ul>
+<h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
+<pre><code>$textSplit[hello-world-!;-]
+
+$onlyIf[$getTextSplitIndex[$message[1]]!=-1;The specified element wasn't found or doesn't exist!]
+
+$editSplitText[$getTextSplitIndex[$message[1]];$message[2]]
+
+The element with index $getTextSplitIndex[$message[1]] has been replaced by $message[2]!
+Current elements: $joinSplitText[-]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125674054-ed3b0f6b-8627-4020-b5e2-0ae206f131d7.png" alt="example" /></p>
-<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<h3 id="example-1"><a class="header" href="#example-1">Example #1</a></h3>
-<pre><code>$textSplit[hello world | hello planet | hello earth;|]
-1: $splitText[1]
-2: $splitText[2]
-3: $splitText[3]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125674553-4b4e80e8-9e4b-410b-9b53-f9766363aee8.png" alt="example" /></p>
-<h3 id="example-2"><a class="header" href="#example-2">Example #2</a></h3>
-<pre><code>$textSplit[text1-text2-text3-text4;-]
-1: $splitText[1]
-2: $splitText[2]
-3: $splitText[3]
-4: $splitText[4]
-Length: $getTextSplitLength
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125674632-6e7b41f1-8e0f-40a9-95f8-56e32f90b015.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/70456337/209445845-df23ab33-e4e5-4918-8c48-bcd8fd3b6fc8.png" alt="$editSplitText" /></p>
 
                     </main>
 
