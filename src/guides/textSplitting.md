@@ -2,7 +2,7 @@
 Text splitting functions are useful for advanced codes that deal with multiple user arguments, or even adjusting function outputs *(for advanced users)*. This wiki includes information on how to use these functions.
 
 # Functions
-There are seven functions in Text Splitting. One of them - $textSplit - is the main function that you start to work with Text Splitting.
+There are 7 functions in this guide. One of them, `$textSplit`, is the main function that you start off.
 
 ## $textSplit
 This function separates the text with a separator and saves the text for later use.
