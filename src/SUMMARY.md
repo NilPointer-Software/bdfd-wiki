@@ -154,6 +154,7 @@
     - [$findUser](./bdscript/findUser.md)
     - [$footer](./bdscript/footer.md)
     - [$footerIcon](./bdscript/footerIcon.md)
+    - [$getBanReason](./bdscript/getBanReason.md)
     - [$getBotInvite](./bdscript/getBotInvite.md)
     - [$getChannelVar](./bdscript/getChannelVar.md)
     - [$getCooldown](./bdscript/getCooldown.md)
