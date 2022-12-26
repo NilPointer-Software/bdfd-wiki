@@ -4,7 +4,7 @@ Gets the user's ban reason.
 
 ## Usage
 ```
-$getBanReason[User ID;(optional) Guild ID]
+$getBanReason[User ID;(Guild ID)]
 ```
 
 ### Parameters
