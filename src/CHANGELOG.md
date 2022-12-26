@@ -7,6 +7,7 @@
 - Fixed BDScript 2 having problems with handling unicode characters
 - Fixed `$stop` causing undefined behaviour
 - Added `$getBanReason[]`
+- Fixed caching issues for the text splitting functions
 
 ## November
 - Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
