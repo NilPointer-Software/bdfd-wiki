@@ -8,8 +8,8 @@ $getBanReason[User ID;(Guild ID)]
 ```
 
 ### Parameters
-- `User ID` User to get the ban reason for
-- `Guild ID` The server id from which to get the ban reason. Optional
+- `User ID`: User to get the ban reason for
+- `Guild ID`: The server id from which to get the ban reason. Optional
 
 
 #### Example
