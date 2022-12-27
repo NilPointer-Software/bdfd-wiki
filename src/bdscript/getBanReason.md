@@ -15,7 +15,7 @@ $getBanReason[User ID;(Guild ID)]
 #### Example
 ```
 $nomention
-Ban reason: $getBanReason[$findUser[$message;no]]
+Ban Reason: $getBanReason[154148273307910144]
 ```
 
-![example](https://user-images.githubusercontent.com/113303649/209573943-c4124c26-50a3-455e-a785-d295dac96331.png)
+![example](https://user-images.githubusercontent.com/113303649/209688041-a4a229d1-9b7b-40bc-b85f-9acb5c8e0011.png)
