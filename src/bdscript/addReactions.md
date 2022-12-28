@@ -15,7 +15,7 @@ $addReactions[emojis]
  
 ### How to get emoji ID?
 
-> This method requires [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) enabled! 
+> This method requires [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to be enabled! 
 
 1. Type `\:TheEmojiName:`
 2. Send the message.
