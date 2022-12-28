@@ -9,7 +9,7 @@ $addEmoji[name;imageURL;return emoji?]
 ## Parameters
 - `name`: The name of the new emoji.
 - `imageURL`: The image that the emoji showcases. This needs to be a valid image URL.
-- `return E+emoji`: Whether to show the emoji in the bot's message or not. (yes/no)
+- `return emoji?`: Whether to show the emoji in the bot's message or not. (yes/no)
 
 ## Example
 ```
