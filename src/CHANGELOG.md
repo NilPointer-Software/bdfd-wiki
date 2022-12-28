@@ -8,6 +8,7 @@
 - Fixed `$stop` causing undefined behaviour
 - Added `$getBanReason[]`
 - Fixed caching issues for the text splitting functions
+- Fixed issues with custom images
 
 ## November
 - Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
