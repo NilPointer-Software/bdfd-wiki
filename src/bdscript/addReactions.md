@@ -20,6 +20,6 @@ $addReactions[emojis]
 1. Type `\:TheEmojiName:`
 2. Send the message.
 3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
-4. Input the emoji ID into `$addCmdReactions[]`. (e.g `$addCmdReactions[<:hollyDab:828628880629825546>]`)
+4. Input the emoji ID into `$addReactions[]`. (e.g `$addReactions[<:hollyDab:828628880629825546>]`)
 
 > If you're still having issues, check [Troubleshooting](https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions).
