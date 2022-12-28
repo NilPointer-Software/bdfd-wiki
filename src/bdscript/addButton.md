@@ -3,7 +3,7 @@ Adds button to the response.
 
 ## Usage
 ```
-$addButton[new row?;button ID/URL;label;style;(disabled?;emoji;message ID)]
+$addButton[new row?;interaction ID/url;label;style;(disabled?;emoji;message ID)]
 ```
 
 ## Parameters
