@@ -13,7 +13,7 @@ $addCmdReactions[emojis;...]
 > 
 > List of unicode emojis: [😋 Get Emoji](https://getemoji.com)
  
-## How to get emoji ID?
+### How to get emoji ID?
 
 > This method requires [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) enabled! 
 
