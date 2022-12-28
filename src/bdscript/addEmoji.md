@@ -3,13 +3,13 @@ Adds an emoji to the server.
 
 ## Usage
 ```
-$addEmoji[name;imageURL;returnEmoji (yes/no)]
+$addEmoji[name;image URL;return emoji?]
 ```
 
-### Breakdown
-- `name` - The name of the new emoji.
-- `imageURL` - The image that the emoji showcases. This needs to be a valid image URL.
-- `returnEmoji` - Whether to show the emoji in the bot's message or not.
+## Parameters
+- `name`: The name of the new emoji.
+- `image URL`: The image of the new emoji. The link needs to be a valid image URL.
+- `return emoji?`: Whether to show the emoji in the bot's message or not. (yes/no)
 
 ## Example
 ```
