@@ -170,20 +170,18 @@
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
 <pre><code>$addCmdReactions[emojis;...]
 </code></pre>
-<blockquote>
-<p>🧙‍♂️ You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from.</p>
-</blockquote>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li><code>emojis</code> - The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
+<li><code>emojis</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
 </ul>
-<h2 id="unicode-emojis"><a class="header" href="#unicode-emojis">Unicode Emojis</a></h2>
-<p>Do not use emoji names: <code>$addCmdReactions[:smile:]</code></p>
-<p>Use the unicode version: <code>$addCmdReactions[😀]</code></p>
 <blockquote>
+<p>You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 <p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a></p>
 </blockquote>
-<h2 id="emoji-ids"><a class="header" href="#emoji-ids">Emoji IDs</a></h2>
+<h3 id="how-to-get-emoji-id"><a class="header" href="#how-to-get-emoji-id">How to get emoji ID?</a></h3>
+<blockquote>
+<p>This method requires <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Developer Mode</a> to be enabled! </p>
+</blockquote>
 <ol>
 <li>Type <code>\:TheEmojiName:</code></li>
 <li>Send the message.</li>
@@ -191,7 +189,7 @@
 <li>Input the emoji ID into <code>$addCmdReactions[]</code>. (e.g <code>$addCmdReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
 </ol>
 <blockquote>
-<p>📝 This method requires <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Developer Mode</a> enabled! </p>
+<p>If you're still having issues, check the <a href="https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions">Troubleshooting page</a>.</p>
 </blockquote>
 
                     </main>

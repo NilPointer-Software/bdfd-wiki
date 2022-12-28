@@ -168,13 +168,59 @@
                         <h1 id="addbutton"><a class="header" href="#addbutton">$addButton</a></h1>
 <p>Adds button to the response.</p>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$addButton[New row;Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
+<pre><code>$addButton[new row?;interaction ID/url;label;style;(disabled?;emoji;message ID)]
 </code></pre>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<ul>
+<li>
+<p><code>new row?</code>: If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button.</p>
+<blockquote>
+<p>📝 A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
+</blockquote>
+</li>
+<li>
+<p><code>interaction ID/url</code>: Depending on the button type, you either set it to <code>interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</p>
+</li>
+<li>
+<p><code>label</code>: The text value visible on the button.</p>
+</li>
+<li>
+<p><code>style</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set the value to <code>link</code>. Check <a href="#button-style">this section</a> for more details.</p>
+</li>
+<li>
+<p><code>disabled?</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>. <em>(Optional)</em></p>
+</li>
+<li>
+<p><code>emoji</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>. <em>(Optional)</em></p>
+</li>
+<li>
+<p><code>message ID</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot. <em>(Optional)</em></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.<br />
+<br />
+<strong>Note:</strong> If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
+</blockquote>
+<h2 id="button-style"><a class="header" href="#button-style">Button Style</a></h2>
+<p>Buttons can have different styles <em>(background colors)</em>.
+Here, are all possible values for <code>style</code> function argument.</p>
+<ul>
+<li>primary</li>
+<li>secondary</li>
+<li>success</li>
+<li>danger</li>
+<li>link</li>
+</ul>
+<blockquote>
+<p>📝 If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
+</blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<pre><code>Hi
+<pre><code>$nomention
+Hi
 $addButton[no;test;Say hello!;primary;no;]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png" alt="" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png" alt="example" /></p>
 <blockquote>
 <p>For more info, see the <a href="../guides/buttons.html">Button Guide</a>.</p>
 </blockquote>

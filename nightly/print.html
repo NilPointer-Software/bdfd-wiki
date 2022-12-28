@@ -3534,13 +3534,59 @@ For example, <code>$nomention</code> or <code>$ping</code>. It is also worth rem
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addbutton"><a class="header" href="#addbutton">$addButton</a></h1>
 <p>Adds button to the response.</p>
 <h2 id="usage-14"><a class="header" href="#usage-14">Usage</a></h2>
-<pre><code>$addButton[New row;Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
+<pre><code>$addButton[new row?;interaction ID/url;label;style;(disabled?;emoji;message ID)]
 </code></pre>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<ul>
+<li>
+<p><code>new row?</code>: If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button.</p>
+<blockquote>
+<p>📝 A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
+</blockquote>
+</li>
+<li>
+<p><code>interaction ID/url</code>: Depending on the button type, you either set it to <code>interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</p>
+</li>
+<li>
+<p><code>label</code>: The text value visible on the button.</p>
+</li>
+<li>
+<p><code>style</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set the value to <code>link</code>. Check <a href="bdscript/addButton.html#button-style">this section</a> for more details.</p>
+</li>
+<li>
+<p><code>disabled?</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>. <em>(Optional)</em></p>
+</li>
+<li>
+<p><code>emoji</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>. <em>(Optional)</em></p>
+</li>
+<li>
+<p><code>message ID</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot. <em>(Optional)</em></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.<br />
+<br />
+<strong>Note:</strong> If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
+</blockquote>
+<h2 id="button-style-1"><a class="header" href="#button-style-1">Button Style</a></h2>
+<p>Buttons can have different styles <em>(background colors)</em>.
+Here, are all possible values for <code>style</code> function argument.</p>
+<ul>
+<li>primary</li>
+<li>secondary</li>
+<li>success</li>
+<li>danger</li>
+<li>link</li>
+</ul>
+<blockquote>
+<p>📝 If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
+</blockquote>
 <h2 id="example-23"><a class="header" href="#example-23">Example</a></h2>
-<pre><code>Hi
+<pre><code>$nomention
+Hi
 $addButton[no;test;Say hello!;primary;no;]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png" alt="" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png" alt="example" /></p>
 <blockquote>
 <p>For more info, see the <a href="bdscript/../guides/buttons.html">Button Guide</a>.</p>
 </blockquote>
@@ -3549,20 +3595,18 @@ $addButton[no;test;Say hello!;primary;no;]
 <h2 id="usage-15"><a class="header" href="#usage-15">Usage</a></h2>
 <pre><code>$addCmdReactions[emojis;...]
 </code></pre>
-<blockquote>
-<p>🧙‍♂️ You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from.</p>
-</blockquote>
-<h3 id="breakdown-8"><a class="header" href="#breakdown-8">Breakdown</a></h3>
+<h2 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h2>
 <ul>
-<li><code>emojis</code> - The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
+<li><code>emojis</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
 </ul>
-<h2 id="unicode-emojis"><a class="header" href="#unicode-emojis">Unicode Emojis</a></h2>
-<p>Do not use emoji names: <code>$addCmdReactions[:smile:]</code></p>
-<p>Use the unicode version: <code>$addCmdReactions[😀]</code></p>
 <blockquote>
+<p>You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 <p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a></p>
 </blockquote>
-<h2 id="emoji-ids"><a class="header" href="#emoji-ids">Emoji IDs</a></h2>
+<h3 id="how-to-get-emoji-id"><a class="header" href="#how-to-get-emoji-id">How to get emoji ID?</a></h3>
+<blockquote>
+<p>This method requires <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Developer Mode</a> to be enabled! </p>
+</blockquote>
 <ol>
 <li>Type <code>\:TheEmojiName:</code></li>
 <li>Send the message.</li>
@@ -3570,18 +3614,18 @@ $addButton[no;test;Say hello!;primary;no;]
 <li>Input the emoji ID into <code>$addCmdReactions[]</code>. (e.g <code>$addCmdReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
 </ol>
 <blockquote>
-<p>📝 This method requires <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Developer Mode</a> enabled! </p>
+<p>If you're still having issues, check the <a href="https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions">Troubleshooting page</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addemoji"><a class="header" href="#addemoji">$addEmoji</a></h1>
 <p>Adds an emoji to the server.</p>
 <h2 id="usage-16"><a class="header" href="#usage-16">Usage</a></h2>
-<pre><code>$addEmoji[name;imageURL;returnEmoji (yes/no)]
+<pre><code>$addEmoji[name;image URL;return emoji?]
 </code></pre>
-<h3 id="breakdown-9"><a class="header" href="#breakdown-9">Breakdown</a></h3>
+<h2 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h2>
 <ul>
-<li><code>name</code> - The name of the new emoji.</li>
-<li><code>imageURL</code> - The image that the emoji showcases. This needs to be a valid image URL.</li>
-<li><code>returnEmoji</code> - Whether to show the emoji in the bot's message or not.</li>
+<li><code>name</code>: The name of the new emoji.</li>
+<li><code>image URL</code>: The image of the new emoji. The link needs to be a valid image URL.</li>
+<li><code>return emoji?</code>: Whether to show the emoji in the bot's message or not. (yes/no)</li>
 </ul>
 <h2 id="example-24"><a class="header" href="#example-24">Example</a></h2>
 <pre><code>$nomention
@@ -3591,55 +3635,53 @@ Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addfield"><a class="header" href="#addfield">$addField</a></h1>
 <p>Adds a field to an embed.</p>
 <h2 id="usage-17"><a class="header" href="#usage-17">Usage</a></h2>
-<pre><code>$addField[name;value;(inline;index)]
+<pre><code>$addField[name;value;(inline?;index)]
 </code></pre>
 <blockquote>
-<p>📝 You can create up to a maximum of 25 fields per embed.</p>
+<p>You can create up to 25 fields per embed.</p>
 </blockquote>
-<h3 id="breakdown-10"><a class="header" href="#breakdown-10">Breakdown</a></h3>
+<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
 <ul>
-<li><code>name</code> - The name of the field. It cannot exceed more than 256 characters.</li>
-<li><code>value</code> - The value of the field. It cannot exceed more than 1024 characters.</li>
-<li><code>inline</code> - If 'yes', fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to 'no' by default. (Optional)</li>
-<li><code>index</code> - Adds field to specified embed index number (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>name</code>: The name of the field. It cannot exceed more than 256 characters.</li>
+<li><code>value</code>: The value of the field. It cannot exceed more than 1024 characters.</li>
+<li><code>inline?</code>: If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default. (Optional)</li>
+<li><code>index</code>: Adds field to specified embed index number (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <blockquote>
-<p>📝 Inline fields may not appear inline on some mobile devices.</p>
+<p>Inline fields may not appear inline on some mobile devices.</p>
 </blockquote>
 <h2 id="examples-7"><a class="header" href="#examples-7">Examples</a></h2>
-<h4 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h4>
+<h3 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h3>
 <pre><code>$nomention
 $addField[This is the field name! #1;This is the field value! #1]
 $addField[This is the field name! #2;This is the field value! #2]
 $addField[This is the field name! #3;This is the field value! #3]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125877161-79acfd73-94a8-43c8-96dc-e6b74a7d5a01.png" alt="example1" /></p>
-<h4 id="with-inline-fields"><a class="header" href="#with-inline-fields">With inline fields</a></h4>
+<p><img src="https://user-images.githubusercontent.com/113303649/209849131-47574fa5-ba65-4552-b30e-c71f7af980a9.png" alt="example" /></p>
+<h3 id="with-inline-fields"><a class="header" href="#with-inline-fields">With inline fields</a></h3>
 <pre><code>$nomention
 $addField[This is the field name! #1;This is the field value! #1;yes]
 $addField[This is the field name! #2;This is the field value! #2;yes]
 $addField[This is the field name! #3;This is the field value! #3;yes]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125877197-8ac0caff-fec4-487d-b342-e9aba781eb57.png" alt="example2" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209849351-0fb6875c-2bfa-4f14-9e01-84e6d31b0bee.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addreactions"><a class="header" href="#addreactions">$addReactions</a></h1>
 <p>Adds reactions to the bot's response.</p>
 <h2 id="usage-18"><a class="header" href="#usage-18">Usage</a></h2>
 <pre><code>$addReactions[emojis]
 </code></pre>
-<blockquote>
-<p>🧙‍♂️ You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from.</p>
-</blockquote>
-<h3 id="breakdown-11"><a class="header" href="#breakdown-11">Breakdown</a></h3>
+<h2 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h2>
 <ul>
-<li><code>emojis</code> - The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
+<li><code>emojis</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
 </ul>
-<h2 id="unicode-emojis-1"><a class="header" href="#unicode-emojis-1">Unicode Emojis</a></h2>
-<p>Do not use emoji names: <code>$addReactions[:smile:]</code></p>
-<p>Use the unicode version: <code>$addReactions[😀]</code></p>
 <blockquote>
+<p>You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 <p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a></p>
 </blockquote>
-<h2 id="emoji-ids-1"><a class="header" href="#emoji-ids-1">Emoji IDs</a></h2>
+<h3 id="how-to-get-emoji-id-1"><a class="header" href="#how-to-get-emoji-id-1">How to get emoji ID?</a></h3>
+<blockquote>
+<p>This method requires <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Developer Mode</a> to be enabled! </p>
+</blockquote>
 <ol>
 <li>Type <code>\:TheEmojiName:</code></li>
 <li>Send the message.</li>
@@ -3647,7 +3689,7 @@ $addField[This is the field name! #3;This is the field value! #3;yes]
 <li>Input the emoji ID into <code>$addReactions[]</code>. (e.g <code>$addReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
 </ol>
 <blockquote>
-<p>🧙‍♂️ Note: If <code>\:TheEmojiName:</code> doesn't work, try <code>:-:TheEmojiName:</code>. This requires <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Developer Mode</a> enabled!</p>
+<p>If you're still having issues, check the <a href="https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions">Troubleshooting page</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addselectmenuoption"><a class="header" href="#addselectmenuoption">$addSelectMenuOption</a></h1>
 <p>Adds select menu option to a select menu.</p>
@@ -3684,7 +3726,7 @@ $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I
 <h2 id="usage-21"><a class="header" href="#usage-21">Usage</a></h2>
 <pre><code>$addTimestamp[(index)]
 </code></pre>
-<h3 id="breakdown-12"><a class="header" href="#breakdown-12">Breakdown</a></h3>
+<h3 id="breakdown-8"><a class="header" href="#breakdown-8">Breakdown</a></h3>
 <ul>
 <li><code>index</code> - What embed the timestamp should belong to. Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
@@ -3725,7 +3767,7 @@ $message
 <h2 id="usage-24"><a class="header" href="#usage-24">Usage</a></h2>
 <pre><code>$allowRoleMentions[roleIDs]
 </code></pre>
-<h3 id="breakdown-13"><a class="header" href="#breakdown-13">Breakdown</a></h3>
+<h3 id="breakdown-9"><a class="header" href="#breakdown-9">Breakdown</a></h3>
 <ul>
 <li><code>roleIDs</code> - The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using <code>;</code>.</li>
 </ul>
@@ -3740,7 +3782,7 @@ I'm pinging &lt;@&amp;858376972303204362&gt;, but no one got notified; wow!
 <h2 id="usage-25"><a class="header" href="#usage-25">Usage</a></h2>
 <pre><code>$allowUserMentions[userIDs]
 </code></pre>
-<h3 id="breakdown-14"><a class="header" href="#breakdown-14">Breakdown</a></h3>
+<h3 id="breakdown-10"><a class="header" href="#breakdown-10">Breakdown</a></h3>
 <ul>
 <li><code>userIDs</code> - The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using <code>;</code>.</li>
 </ul>
@@ -3784,7 +3826,7 @@ $c[The code in the if statement only executes if the user's username is 'noituri
 <h2 id="usage-28"><a class="header" href="#usage-28">Usage</a></h2>
 <pre><code>$argCount[text]
 </code></pre>
-<h3 id="breakdown-15"><a class="header" href="#breakdown-15">Breakdown</a></h3>
+<h3 id="breakdown-11"><a class="header" href="#breakdown-11">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to get word count from.</li>
 </ul>
@@ -3799,7 +3841,7 @@ $c[The code in the if statement only executes if the user's username is 'noituri
 <h2 id="usage-29"><a class="header" href="#usage-29">Usage</a></h2>
 <pre><code>$argsCheck[how-many;error message]
 </code></pre>
-<h3 id="breakdown-16"><a class="header" href="#breakdown-16">Breakdown</a></h3>
+<h3 id="breakdown-12"><a class="header" href="#breakdown-12">Breakdown</a></h3>
 <ul>
 <li><code>how-many</code> - How many arguments there should be in the user’s message.</li>
 </ul>
@@ -3821,7 +3863,7 @@ $noMentionMessage
 <h2 id="usage-30"><a class="header" href="#usage-30">Usage</a></h2>
 <pre><code>$author[text;(index)]
 </code></pre>
-<h3 id="breakdown-17"><a class="header" href="#breakdown-17">Breakdown</a></h3>
+<h3 id="breakdown-13"><a class="header" href="#breakdown-13">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text that appears in the author text. It cannot exceed more than 256 characters.</li>
 <li><code>index</code> - What embed the author text should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -3856,7 +3898,7 @@ $author[This is the author text!]
 <h2 id="usage-32"><a class="header" href="#usage-32">Usage</a></h2>
 <pre><code>$authorIcon[image url;(index)]
 </code></pre>
-<h3 id="breakdown-18"><a class="header" href="#breakdown-18">Breakdown</a></h3>
+<h3 id="breakdown-14"><a class="header" href="#breakdown-14">Breakdown</a></h3>
 <ul>
 <li><code>image url</code> - The image that appears in the author icon. This must be a valid image URL.</li>
 <li><code>index</code> - What embed the author icon should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -3884,7 +3926,7 @@ If we use this: <code>&lt;@$authorID&gt;</code>, it will be replaced with <code>
 <h2 id="usage-34"><a class="header" href="#usage-34">Usage</a></h2>
 <pre><code>$authorOfMessage[channelID;messageID]
 </code></pre>
-<h3 id="breakdown-19"><a class="header" href="#breakdown-19">Breakdown</a></h3>
+<h3 id="breakdown-15"><a class="header" href="#breakdown-15">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel where the message was sent.</li>
 <li><code>messageID</code> - The message that the bot returns the author ID for.</li>
@@ -3900,7 +3942,7 @@ If we use this: <code>&lt;@$authorID&gt;</code>, it will be replaced with <code>
 <blockquote>
 <p>🧙‍♂️ <code>$authorURL</code> will not work if there is no text provided in <code>$author</code>.</p>
 </blockquote>
-<h3 id="breakdown-20"><a class="header" href="#breakdown-20">Breakdown</a></h3>
+<h3 id="breakdown-16"><a class="header" href="#breakdown-16">Breakdown</a></h3>
 <ul>
 <li><code>url</code> - The link to set as the author hyperlink.</li>
 <li><code>index</code> - What embed the author url should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -3917,7 +3959,7 @@ $authorURL[https://botdesignerdiscord.com]
 <h2 id="usage-36"><a class="header" href="#usage-36">Usage</a></h2>
 <pre><code>$ban[(optional) reason]
 </code></pre>
-<h3 id="breakdown-21"><a class="header" href="#breakdown-21">Breakdown</a></h3>
+<h3 id="breakdown-17"><a class="header" href="#breakdown-17">Breakdown</a></h3>
 <ul>
 <li><code>reason</code> - The reason for this action, which will be sent to the audit-log. <em>(Optional)</em></li>
 </ul>
@@ -3970,7 +4012,7 @@ $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
 <h2 id="usage-37"><a class="header" href="#usage-37">Usage</a></h2>
 <pre><code>$blackListIDs[userIDs;errorMessage]
 </code></pre>
-<h3 id="breakdown-22"><a class="header" href="#breakdown-22">Breakdown</a></h3>
+<h3 id="breakdown-18"><a class="header" href="#breakdown-18">Breakdown</a></h3>
 <ul>
 <li><code>userIDs</code> - The users to blacklist from using the command. Separate userIDs with <code>;</code>.</li>
 </ul>
@@ -3990,7 +4032,7 @@ Pong! $ping ms
 <h2 id="usage-38"><a class="header" href="#usage-38">Usage</a></h2>
 <pre><code>$blackListRoles[roleNames;errorMessage]
 </code></pre>
-<h3 id="breakdown-23"><a class="header" href="#breakdown-23">Breakdown</a></h3>
+<h3 id="breakdown-19"><a class="header" href="#breakdown-19">Breakdown</a></h3>
 <ul>
 <li><code>roleNames</code> -  The name(s) of the role(s) to blacklist. Separate role names using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that appears when the user has a role in the blacklist.</li>
@@ -4000,7 +4042,7 @@ Pong! $ping ms
 <h2 id="usage-39"><a class="header" href="#usage-39">Usage</a></h2>
 <pre><code>$blackListRolesIDs[roleIDs;errorMessage]
 </code></pre>
-<h3 id="breakdown-24"><a class="header" href="#breakdown-24">Breakdown</a></h3>
+<h3 id="breakdown-20"><a class="header" href="#breakdown-20">Breakdown</a></h3>
 <ul>
 <li><code>roleIDs</code> - The roles that will be blacklisted. Separate roleIDs using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that sends if the user has a role in the blacklist.</li>
@@ -4015,7 +4057,7 @@ $noMentionMessage
 <h2 id="usage-40"><a class="header" href="#usage-40">Usage</a></h2>
 <pre><code>$blackListServers[serverIDs;errorMessage]
 </code></pre>
-<h3 id="breakdown-25"><a class="header" href="#breakdown-25">Breakdown</a></h3>
+<h3 id="breakdown-21"><a class="header" href="#breakdown-21">Breakdown</a></h3>
 <ul>
 <li><code>serverIDs</code> - The servers to blacklist. Separate server IDs using <code>;</code>.</li>
 </ul>
@@ -4030,7 +4072,7 @@ $noMentionMessage
 <h2 id="usage-41"><a class="header" href="#usage-41">Usage</a></h2>
 <pre><code>$blackListUsers[usernames;errorMessage]
 </code></pre>
-<h3 id="breakdown-26"><a class="header" href="#breakdown-26">Breakdown</a></h3>
+<h3 id="breakdown-22"><a class="header" href="#breakdown-22">Breakdown</a></h3>
 <ul>
 <li><code>usernames</code> - The usernames to blacklist. Separate names using <code>;</code>.</li>
 <li><code>errorMessage</code> - Message when user's name is in the blacklist.</li>
@@ -4054,7 +4096,7 @@ This server currently has $boostCount boost(s).
 <pre><code>$boostCount[Guild ID]
 </code></pre>
 <p>Returns the given guild's number of nitro boosts.</p>
-<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<h4 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h4>
 <ul>
 <li><code>Guild ID</code>: The guild to get its boosts.</li>
 </ul>
@@ -4068,7 +4110,7 @@ This server currently has $boostCount[$message[1]] boost(s).
 <h2 id="usage-42"><a class="header" href="#usage-42">Usage</a></h2>
 <pre><code>$botCommands[separator]
 </code></pre>
-<h3 id="breakdown-27"><a class="header" href="#breakdown-27">Breakdown</a></h3>
+<h3 id="breakdown-23"><a class="header" href="#breakdown-23">Breakdown</a></h3>
 <ul>
 <li><code>separator</code> - Will be used to separate each command.</li>
 </ul>
@@ -4102,7 +4144,7 @@ My ID is: $botID
 <h2 id="usage-44"><a class="header" href="#usage-44">Usage</a></h2>
 <pre><code>$botListDescription[text]
 </code></pre>
-<h3 id="breakdown-28"><a class="header" href="#breakdown-28">Breakdown</a></h3>
+<h3 id="breakdown-24"><a class="header" href="#breakdown-24">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text that description is set to.</li>
 </ul>
@@ -4165,7 +4207,7 @@ $c[This is a say command. You are reading a comment!]
 <h2 id="usage-49"><a class="header" href="#usage-49">Usage</a></h2>
 <pre><code>$calculate[expression]
 </code></pre>
-<h3 id="breakdown-29"><a class="header" href="#breakdown-29">Breakdown</a></h3>
+<h3 id="breakdown-25"><a class="header" href="#breakdown-25">Breakdown</a></h3>
 <ul>
 <li><code>expression</code> - The math expression to solve.</li>
 </ul>
@@ -4202,7 +4244,7 @@ There are $categoryCount categories in this server!
 <pre><code>$categoryCount[Guild ID]
 </code></pre>
 <p>Returns the category count of a provided guild.</p>
-<h4 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h4>
+<h4 id="parameters-6"><a class="header" href="#parameters-6">Parameters</a></h4>
 <ul>
 <li><code>Guild ID</code>: The guild to get its category count.</li>
 </ul>
@@ -4219,7 +4261,7 @@ There are $categoryCount[$message[1]] categories in the server!
 <h2 id="syntax-7"><a class="header" href="#syntax-7">Syntax</a></h2>
 <pre><code>$categoryID[Category Name]
 </code></pre>
-<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
+<h3 id="parameters-7"><a class="header" href="#parameters-7">Parameters</a></h3>
 <ul>
 <li><code>Category Name</code>: The name of the category from which to retrieve the category ID.</li>
 </ul>
@@ -4233,7 +4275,7 @@ Category ID: $categoryID[$message]
 <h2 id="usage-50"><a class="header" href="#usage-50">Usage</a></h2>
 <pre><code>$changeCooldownTime[days;hours;minutes;seconds]
 </code></pre>
-<h3 id="breakdown-30"><a class="header" href="#breakdown-30">Breakdown</a></h3>
+<h3 id="breakdown-26"><a class="header" href="#breakdown-26">Breakdown</a></h3>
 <ul>
 <li><code>days</code> - The text to replace 'Days' with.</li>
 <li><code>hours</code> - The text to replace 'Hours' with.</li>
@@ -4250,7 +4292,7 @@ $cooldown[10m;Please wait %time-m%!]
 <h2 id="usage-51"><a class="header" href="#usage-51">Usage</a></h2>
 <pre><code>$changeUsername[newNickname]
 </code></pre>
-<h3 id="breakdown-31"><a class="header" href="#breakdown-31">Breakdown</a></h3>
+<h3 id="breakdown-27"><a class="header" href="#breakdown-27">Breakdown</a></h3>
 <ul>
 <li><code>newNickname</code> - The text to change the user's nickname to. It cannot exceed more than 32 characters.</li>
 </ul>
@@ -4266,7 +4308,7 @@ Changed &lt;@$mentioned[1]&gt;'s nickname to `$noMentionMessage`.
 <h2 id="usage-52"><a class="header" href="#usage-52">Usage</a></h2>
 <pre><code>$changeUsernameWithID[userID;newNickname]
 </code></pre>
-<h3 id="breakdown-32"><a class="header" href="#breakdown-32">Breakdown</a></h3>
+<h3 id="breakdown-28"><a class="header" href="#breakdown-28">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - The ID of the user whose nickname will be changed.</li>
 <li><code>newNickname</code> - The text to change the user's nickname to. It cannot exceed more than 32 characters.</li>
@@ -4296,7 +4338,7 @@ There are $channelCount channels in this server!
 <h2 id="usage-54"><a class="header" href="#usage-54">Usage</a></h2>
 <pre><code>$channelExists[channelID]
 </code></pre>
-<h3 id="breakdown-33"><a class="header" href="#breakdown-33">Breakdown</a></h3>
+<h3 id="breakdown-29"><a class="header" href="#breakdown-29">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel which the bot will check for.</li>
 </ul>
@@ -4313,7 +4355,7 @@ There are $channelCount channels in this server!
 <h2 id="usage-55"><a class="header" href="#usage-55">Usage</a></h2>
 <pre><code>$channelName[channelID]
 </code></pre>
-<h3 id="breakdown-34"><a class="header" href="#breakdown-34">Breakdown</a></h3>
+<h3 id="breakdown-30"><a class="header" href="#breakdown-30">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel that the bot gets the channel name from.</li>
 </ul>
@@ -4358,7 +4400,7 @@ $channelPosition[$mentionedChannels[1;yes]]
 <h2 id="usage-56"><a class="header" href="#usage-56">Usage</a></h2>
 <pre><code>$channelSendMessage[channelID;message]
 </code></pre>
-<h3 id="breakdown-35"><a class="header" href="#breakdown-35">Breakdown</a></h3>
+<h3 id="breakdown-31"><a class="header" href="#breakdown-31">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel to send the message in.</li>
 <li><code>message</code> - The message that gets sent to the channel.</li>
@@ -4399,7 +4441,7 @@ $channelType[$channelID]
 <h2 id="usage-58"><a class="header" href="#usage-58">Usage</a></h2>
 <pre><code>$charCount[text]
 </code></pre>
-<h3 id="breakdown-36"><a class="header" href="#breakdown-36">Breakdown</a></h3>
+<h3 id="breakdown-32"><a class="header" href="#breakdown-32">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to return the character count for.</li>
 </ul>
@@ -4439,7 +4481,7 @@ Replace (sign) with one of these.</p>
 <h2 id="usage-60"><a class="header" href="#usage-60">Usage</a></h2>
 <pre><code>$checkContains[text;phrases]
 </code></pre>
-<h3 id="breakdown-37"><a class="header" href="#breakdown-37">Breakdown</a></h3>
+<h3 id="breakdown-33"><a class="header" href="#breakdown-33">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text that will be checked.</li>
 <li><code>phrases</code> - The phrases/words the bot will check for in 'text'. Separate phrases using <code>;</code>.</li>
@@ -4454,7 +4496,7 @@ $checkContains[$message;hi;hello]
 <h2 id="usage-61"><a class="header" href="#usage-61">Usage</a></h2>
 <pre><code>$checkUserPerms[userID;permissions]
 </code></pre>
-<h3 id="breakdown-38"><a class="header" href="#breakdown-38">Breakdown</a></h3>
+<h3 id="breakdown-34"><a class="header" href="#breakdown-34">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - The user that the bot checks the permissions for.</li>
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot checks for. Separate permissions using <code>;</code>.</li>
@@ -4478,7 +4520,7 @@ You aren't a admin!
 <h3 id="usage-2-8"><a class="header" href="#usage-2-8">Usage #2</a></h3>
 <pre><code>$clear[howMany;(optional) userID;(optional) removePinnedMessages (yes/no)]
 </code></pre>
-<h4 id="breakdown-39"><a class="header" href="#breakdown-39">Breakdown</a></h4>
+<h4 id="breakdown-35"><a class="header" href="#breakdown-35">Breakdown</a></h4>
 <ul>
 <li><code>howMany</code> - How many messages to delete. (max 100)</li>
 <li><code>userID</code> - If a userID is provided, the bot will only delete messages from that user. Optional.</li>
@@ -4498,7 +4540,7 @@ $clear[$message]
 <h2 id="usage-62"><a class="header" href="#usage-62">Usage</a></h2>
 <pre><code>$clearReactions[channelID;messageID;emoji/!all]
 </code></pre>
-<h3 id="breakdown-40"><a class="header" href="#breakdown-40">Breakdown</a></h3>
+<h3 id="breakdown-36"><a class="header" href="#breakdown-36">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel that the message belongs to.</li>
 <li><code>messageID</code> - The message to remove the reaction from.</li>
@@ -4509,7 +4551,7 @@ $clear[$message]
 <h2 id="usage-63"><a class="header" href="#usage-63">Usage</a></h2>
 <pre><code>$closeTicket[errorMessage]
 </code></pre>
-<h3 id="breakdown-41"><a class="header" href="#breakdown-41">Breakdown</a></h3>
+<h3 id="breakdown-37"><a class="header" href="#breakdown-37">Breakdown</a></h3>
 <ul>
 <li><code>errorMessage</code> - The error to return if the channel isn't a ticket.</li>
 </ul>
@@ -4522,7 +4564,7 @@ $closeTicket[That channel isn't a ticket!]
 <h2 id="usage-64"><a class="header" href="#usage-64">Usage</a></h2>
 <pre><code>$color[colorHex;(index)]
 </code></pre>
-<h3 id="breakdown-42"><a class="header" href="#breakdown-42">Breakdown</a></h3>
+<h3 id="breakdown-38"><a class="header" href="#breakdown-38">Breakdown</a></h3>
 <ul>
 <li><code>colorHex</code> - The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> to set the embed border color as. You can also use color integer number.</li>
 <li><code>index</code> - What embed the color border should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -4538,7 +4580,7 @@ $color[#673ab7]
 <h2 id="usage-65"><a class="header" href="#usage-65">Usage</a></h2>
 <pre><code>$colorRole[colorHex]
 </code></pre>
-<h3 id="breakdown-43"><a class="header" href="#breakdown-43">Breakdown</a></h3>
+<h3 id="breakdown-39"><a class="header" href="#breakdown-39">Breakdown</a></h3>
 <ul>
 <li><code>colorHex</code> - The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> to change the mentioned role color to.</li>
 </ul>
@@ -4563,7 +4605,7 @@ I have $commandsCount commands!
 <h2 id="usage-67"><a class="header" href="#usage-67">Usage</a></h2>
 <pre><code>$cooldown[duration;errorMessage]
 </code></pre>
-<h3 id="breakdown-44"><a class="header" href="#breakdown-44">Breakdown</a></h3>
+<h3 id="breakdown-40"><a class="header" href="#breakdown-40">Breakdown</a></h3>
 <ul>
 <li>
 <p><code>duration</code> - The duration of this cooldown. (e.g <code>30s</code>, <code>3m</code>, <code>3h</code>, <code>3d</code>, etc)</p>
@@ -4585,7 +4627,7 @@ Hi!
 <h2 id="usage-68"><a class="header" href="#usage-68">Usage</a></h2>
 <pre><code>$createChannel[name;type;(optional) categoryID]
 </code></pre>
-<h3 id="breakdown-45"><a class="header" href="#breakdown-45">Breakdown</a></h3>
+<h3 id="breakdown-41"><a class="header" href="#breakdown-41">Breakdown</a></h3>
 <ul>
 <li>
 <p><code>name</code> - The name to give this channel.</p>
@@ -4618,7 +4660,7 @@ $createChannel[cool-channel;text]
 <h2 id="usage-69"><a class="header" href="#usage-69">Usage</a></h2>
 <pre><code>$createRole[roleName;colorHex;hoist (yes/no);mentionable (yes/no)]
 </code></pre>
-<h3 id="breakdown-46"><a class="header" href="#breakdown-46">Breakdown</a></h3>
+<h3 id="breakdown-42"><a class="header" href="#breakdown-42">Breakdown</a></h3>
 <ul>
 <li><code>roleName</code> - The name to give the new role.</li>
 <li><code>colorHex</code> - The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> of the new role.</li>
@@ -4641,7 +4683,7 @@ Created new role!
 <h2 id="syntax-10"><a class="header" href="#syntax-10">Syntax</a></h2>
 <pre><code>$creationDate[ID;(Format)]
 </code></pre>
-<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
+<h3 id="parameters-8"><a class="header" href="#parameters-8">Parameters</a></h3>
 <ul>
 <li>
 <p><code>ID</code>: The ID from which to get the creation date.</p>
@@ -4675,7 +4717,7 @@ $creationDate[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <h2 id="usage-70"><a class="header" href="#usage-70">Usage</a></h2>
 <pre><code>$cropText[text;maxCharacters;ending]
 </code></pre>
-<h3 id="breakdown-47"><a class="header" href="#breakdown-47">Breakdown</a></h3>
+<h3 id="breakdown-43"><a class="header" href="#breakdown-43">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to crop.</li>
 <li><code>maxCharacters</code> - The maxmium amount of characters, subsequent characters are removed.</li>
@@ -4694,7 +4736,7 @@ $cropText[$noMentionMessage;100;...]
 <h2 id="usage-71"><a class="header" href="#usage-71">Usage</a></h2>
 <pre><code>$customEmoji[emojiName]
 </code></pre>
-<h3 id="breakdown-48"><a class="header" href="#breakdown-48">Breakdown</a></h3>
+<h3 id="breakdown-44"><a class="header" href="#breakdown-44">Breakdown</a></h3>
 <ul>
 <li><code>emojiName</code> - The name of the emoji to return.</li>
 </ul>
@@ -4810,7 +4852,7 @@ $color[$getEmbedData[$channelID;$message[message-id];2;color];2]
 <h2 id="usage-75"><a class="header" href="#usage-75">Usage</a></h2>
 <pre><code>$deleteChannels[channelIDs]
 </code></pre>
-<h3 id="breakdown-49"><a class="header" href="#breakdown-49">Breakdown</a></h3>
+<h3 id="breakdown-45"><a class="header" href="#breakdown-45">Breakdown</a></h3>
 <ul>
 <li><code>channels</code> - The channels to delete. Separate channel IDs using <code>;</code>.</li>
 </ul>
@@ -4827,7 +4869,7 @@ $deleteChannels[$mentionedChannels[1]]
 <h2 id="usage-76"><a class="header" href="#usage-76">Usage</a></h2>
 <pre><code>$deleteChannelsByName[names]
 </code></pre>
-<h3 id="breakdown-50"><a class="header" href="#breakdown-50">Breakdown</a></h3>
+<h3 id="breakdown-46"><a class="header" href="#breakdown-46">Breakdown</a></h3>
 <ul>
 <li><code>names</code> - The name(s) of the channel(s) to delete. Use <code>;</code> to separate channel names.</li>
 </ul>
@@ -4844,7 +4886,7 @@ $deleteChannels[$mentionedChannels[1]]
 <h2 id="usage-78"><a class="header" href="#usage-78">Usage</a></h2>
 <pre><code>$deleteIn[duration]
 </code></pre>
-<h3 id="breakdown-51"><a class="header" href="#breakdown-51">Breakdown</a></h3>
+<h3 id="breakdown-47"><a class="header" href="#breakdown-47">Breakdown</a></h3>
 <ul>
 <li><code>duration</code> - The time to wait before deleting the message (e.g <code>3s</code>, <code>30s</code>, <code>1m</code>, etc). Max duration is <code>40m</code>.</li>
 </ul>
@@ -4858,7 +4900,7 @@ $deleteIn[3s]
 <h2 id="usage-79"><a class="header" href="#usage-79">Usage</a></h2>
 <pre><code>$deleteMessage[channel ID;message ID]
 </code></pre>
-<h3 id="breakdown-52"><a class="header" href="#breakdown-52">Breakdown</a></h3>
+<h3 id="breakdown-48"><a class="header" href="#breakdown-48">Breakdown</a></h3>
 <ul>
 <li><code>channel ID</code> - The channel ID where the message is.</li>
 <li><code>message ID</code> - The ID of the message which will be deleted.</li>
@@ -4873,7 +4915,7 @@ Hello $username!
 <h2 id="usage-80"><a class="header" href="#usage-80">Usage</a></h2>
 <pre><code>$deleteRole[roleID]
 </code></pre>
-<h3 id="breakdown-53"><a class="header" href="#breakdown-53">Breakdown</a></h3>
+<h3 id="breakdown-49"><a class="header" href="#breakdown-49">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role to delete.</li>
 </ul>
@@ -4892,7 +4934,7 @@ Deleted role!
 <h2 id="usage-81"><a class="header" href="#usage-81">Usage</a></h2>
 <pre><code>$description[message;(index)]
 </code></pre>
-<h3 id="breakdown-54"><a class="header" href="#breakdown-54">Breakdown</a></h3>
+<h3 id="breakdown-50"><a class="header" href="#breakdown-50">Breakdown</a></h3>
 <ul>
 <li><code>message</code> - The text to set the description as. It cannot exceed more than 4096 characters.</li>
 <li><code>index</code> - What embed the description should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -4921,7 +4963,7 @@ $disableSpecialEscaping
 <h3 id="usage-1-9"><a class="header" href="#usage-1-9">Usage #1</a></h3>
 <pre><code>$discriminator[userID]
 </code></pre>
-<h4 id="breakdown-55"><a class="header" href="#breakdown-55">Breakdown</a></h4>
+<h4 id="breakdown-51"><a class="header" href="#breakdown-51">Breakdown</a></h4>
 <ul>
 <li><code>userID</code> - The user to get the discriminator from.</li>
 </ul>
@@ -4939,7 +4981,7 @@ Hello $username#$discriminator[]!
 <h2 id="usage-83"><a class="header" href="#usage-83">Usage</a></h2>
 <pre><code>$divide[numbers]
 </code></pre>
-<h3 id="breakdown-56"><a class="header" href="#breakdown-56">Breakdown</a></h3>
+<h3 id="breakdown-52"><a class="header" href="#breakdown-52">Breakdown</a></h3>
 <ul>
 <li><code>numbers</code> - The numbers to divide. Separate numbers using <code>;</code>.</li>
 </ul>
@@ -5000,7 +5042,7 @@ $addButton[no;http://botdesignerdiscord.com;Check our website;link;no;👀]
 <h2 id="usage-86"><a class="header" href="#usage-86">Usage</a></h2>
 <pre><code>$editChannelPerms[channel ID;userID/RoleID;permission;...]
 </code></pre>
-<h3 id="breakdown-57"><a class="header" href="#breakdown-57">Breakdown</a></h3>
+<h3 id="breakdown-53"><a class="header" href="#breakdown-53">Breakdown</a></h3>
 <ul>
 <li><code>channel ID</code> - place the ID of the channel to which the roles are modified.</li>
 <li><code>userID/RoleID</code> - place the ID of the role or user whose permissions will be modified.</li>
@@ -5030,7 +5072,7 @@ $editChannelPerms[$channelID;$mentionedRoles[1];-sendmessages]
 <blockquote>
 <p>📝 Optional fields can be left empty. At least one embed field (<code>title</code>, <code>description</code>, or <code>footer</code>) needs to be inputted.</p>
 </blockquote>
-<h3 id="breakdown-58"><a class="header" href="#breakdown-58">Breakdown</a></h3>
+<h3 id="breakdown-54"><a class="header" href="#breakdown-54">Breakdown</a></h3>
 <ul>
 <li>
 <p><code>time</code> - The time to wait before editing the message (e.g <code>3s</code>, <code>30s</code>, <code>10m</code>). Max time is 40 minutes (for premium users, it's 120 minutes). Required.</p>
@@ -5065,7 +5107,7 @@ $editEmbedIn[5s;Epic Title;This is the edited description!;;#E46AFC]
 <h2 id="usage-88"><a class="header" href="#usage-88">Usage</a></h2>
 <pre><code>$editIn[time;newMessage]
 </code></pre>
-<h3 id="breakdown-59"><a class="header" href="#breakdown-59">Breakdown</a></h3>
+<h3 id="breakdown-55"><a class="header" href="#breakdown-55">Breakdown</a></h3>
 <ul>
 <li><code>time</code> - The time to wait before editing the message (e.g <code>3s</code>, <code>30s</code>, <code>10m</code>). Max is <code>40m</code>.</li>
 <li><code>newMessage</code> - The text that appears when this message is edited.</li>
@@ -5088,7 +5130,7 @@ $editIn[5s;This is the edited message!]
 <blockquote>
 <p>🧙‍♂️ <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">How Do I Get The Channel / Message ID? (click-me)</a></p>
 </blockquote>
-<h3 id="breakdown-60"><a class="header" href="#breakdown-60">Breakdown</a></h3>
+<h3 id="breakdown-56"><a class="header" href="#breakdown-56">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel that this message belongs to.</li>
 <li><code>messageID</code> - The ID of the message to edit (must be a message that the bot sent).</li>
@@ -5146,7 +5188,7 @@ $editSelectMenuOption[Example;Third;third-option;The third option;no;3️⃣]
 <h2 id="syntax-11"><a class="header" href="#syntax-11">Syntax</a></h2>
 <pre><code>$editSplitText[Index;Value]
 </code></pre>
-<h3 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h3>
+<h3 id="parameters-9"><a class="header" href="#parameters-9">Parameters</a></h3>
 <ul>
 <li><code>Index</code>: The index of the element to edit.</li>
 <li><code>Value</code>: The new value to assign to the provided index.</li>
@@ -5174,7 +5216,7 @@ New Text: $joinSplitText[]
 <h2 id="usage-92"><a class="header" href="#usage-92">Usage</a></h2>
 <pre><code>$editThread[threadID;name;archived (yes/no);archiveDuration (60/1440/4320/10080);locked (yes/no);slowmode (in seconds)]
 </code></pre>
-<h3 id="breakdown-61"><a class="header" href="#breakdown-61">Breakdown</a></h3>
+<h3 id="breakdown-57"><a class="header" href="#breakdown-57">Breakdown</a></h3>
 <ul>
 <li><code>threadID</code> - The thread channel to edit.</li>
 <li><code>name</code> - The new name of the thread.</li>
@@ -5189,7 +5231,7 @@ New Text: $joinSplitText[]
 <h2 id="usage-93"><a class="header" href="#usage-93">Usage</a></h2>
 <pre><code>$embeddedURL[link;(index)]
 </code></pre>
-<h3 id="breakdown-62"><a class="header" href="#breakdown-62">Breakdown</a></h3>
+<h3 id="breakdown-58"><a class="header" href="#breakdown-58">Breakdown</a></h3>
 <ul>
 <li><code>link</code> - The link to set the title hyperlink to.</li>
 <li><code>index</code> - What embed the title hyperlink should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -5213,7 +5255,7 @@ $color[#683cb4]
 <blockquote>
 <p><code>$embedSuppressErrors[Error!;There was a error!;;;;]</code> - this is correct. <code>$embedSuppressErrors[Error!;There was a error!]</code> - this is incorrect.</p>
 </blockquote>
-<h3 id="breakdown-63"><a class="header" href="#breakdown-63">Breakdown</a></h3>
+<h3 id="breakdown-59"><a class="header" href="#breakdown-59">Breakdown</a></h3>
 <ul>
 <li><code>title</code> - The title of the embed.</li>
 <li><code>description</code> - The embed description.</li>
@@ -5237,7 +5279,7 @@ There are $emoteCount emojis in $serverName[$guildID]!
 <h2 id="usage-96"><a class="header" href="#usage-96">Usage</a></h2>
 <pre><code>$enabled[enabled (yes/no);errorMessage]
 </code></pre>
-<h3 id="breakdown-64"><a class="header" href="#breakdown-64">Breakdown</a></h3>
+<h3 id="breakdown-60"><a class="header" href="#breakdown-60">Breakdown</a></h3>
 <ul>
 <li><code>enabled</code> - 'yes' means the command is enabled, 'no' means it's disabled.</li>
 <li><code>errorMessage</code> - The message that is returned if the command is disabled.</li>
@@ -5280,7 +5322,7 @@ I successfully disabled __ command!
 <h2 id="usage-97"><a class="header" href="#usage-97">Usage</a></h2>
 <pre><code>$enableDecimals[enable (yes/no)]
 </code></pre>
-<h3 id="breakdown-65"><a class="header" href="#breakdown-65">Breakdown</a></h3>
+<h3 id="breakdown-61"><a class="header" href="#breakdown-61">Breakdown</a></h3>
 <ul>
 <li><code>enable</code> - Whether to enable decimals in math functions or not.</li>
 </ul>
@@ -5314,7 +5356,7 @@ I successfully disabled __ command!
 <h2 id="usage-99"><a class="header" href="#usage-99">Usage</a></h2>
 <pre><code>$eval[BDScript source code]
 </code></pre>
-<h3 id="breakdown-66"><a class="header" href="#breakdown-66">Breakdown</a></h3>
+<h3 id="breakdown-62"><a class="header" href="#breakdown-62">Breakdown</a></h3>
 <ul>
 <li><code>BDScript source code</code> - The code to be evaluated.</li>
 </ul>
@@ -5336,7 +5378,7 @@ $eval[$message]
 <h2 id="usage-101"><a class="header" href="#usage-101">Usage</a></h2>
 <pre><code>$findChannel[channel]
 </code></pre>
-<h3 id="breakdown-67"><a class="header" href="#breakdown-67">Breakdown</a></h3>
+<h3 id="breakdown-63"><a class="header" href="#breakdown-63">Breakdown</a></h3>
 <ul>
 <li><code>channel</code> - The channel name/ID/mention to find.</li>
 </ul>
@@ -5350,7 +5392,7 @@ $findChannel[$message]
 <h2 id="usage-102"><a class="header" href="#usage-102">Usage</a></h2>
 <pre><code>$findRole[role]
 </code></pre>
-<h3 id="breakdown-68"><a class="header" href="#breakdown-68">Breakdown</a></h3>
+<h3 id="breakdown-64"><a class="header" href="#breakdown-64">Breakdown</a></h3>
 <ul>
 <li><code>role</code> - The role name, ID, or mention to find.</li>
 </ul>
@@ -5364,7 +5406,7 @@ $findRole[$message]
 <h2 id="usage-103"><a class="header" href="#usage-103">Usage</a></h2>
 <pre><code>$findUser[user;(optional) returnAuthorID (yes/no)]
 </code></pre>
-<h2 id="breakdown-69"><a class="header" href="#breakdown-69">Breakdown</a></h2>
+<h2 id="breakdown-65"><a class="header" href="#breakdown-65">Breakdown</a></h2>
 <ul>
 <li><code>user</code> - The user's username, ID, or mention to find.</li>
 <li><code>returnAuthorID</code> - Whether to return the author ID if no user was found. Default is <code>yes</code>. Optional.</li>
@@ -5379,7 +5421,7 @@ $findUser[$message]
 <h2 id="usage-104"><a class="header" href="#usage-104">Usage</a></h2>
 <pre><code>$footer[text;(index)]
 </code></pre>
-<h3 id="breakdown-70"><a class="header" href="#breakdown-70">Breakdown</a></h3>
+<h3 id="breakdown-66"><a class="header" href="#breakdown-66">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to set the footer as. It cannot exceed more than 2048 characters.</li>
 <li><code>index</code> - What embed the footer text should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -5397,7 +5439,7 @@ $footer[Hi! I'm a footer.]
 <h2 id="usage-105"><a class="header" href="#usage-105">Usage</a></h2>
 <pre><code>$footerIcon[icon url;(index)]
 </code></pre>
-<h3 id="breakdown-71"><a class="header" href="#breakdown-71">Breakdown</a></h3>
+<h3 id="breakdown-67"><a class="header" href="#breakdown-67">Breakdown</a></h3>
 <ul>
 <li><code>icon url</code> - The URL to set the footer icon as. Must be a valid image URL.</li>
 <li><code>index</code> - What embed the footer icon should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -5413,7 +5455,7 @@ $footerIcon[$authorAvatar]
 <h2 id="usage-106"><a class="header" href="#usage-106">Usage</a></h2>
 <pre><code>$getBanReason[User ID;(Guild ID)]
 </code></pre>
-<h3 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h3>
+<h3 id="parameters-10"><a class="header" href="#parameters-10">Parameters</a></h3>
 <ul>
 <li><code>User ID</code>: User to get the ban reason for</li>
 <li><code>Guild ID</code>: The server id from which to get the ban reason. Optional</li>
@@ -5438,7 +5480,7 @@ Invite Me! $getBotInvite
 <h2 id="syntax-12"><a class="header" href="#syntax-12">Syntax</a></h2>
 <pre><code>$getChannelVar[Variable Name;(Channel ID)]
 </code></pre>
-<h3 id="parameters-6"><a class="header" href="#parameters-6">Parameters</a></h3>
+<h3 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h3>
 <ul>
 <li><code>Variable Name</code>: The name of the variable to get.</li>
 <li><code>Channel ID</code>: The channel to get the value for. If no Channel ID is present, then the current channel will be used.</li>
@@ -5448,7 +5490,7 @@ Invite Me! $getBotInvite
 <h2 id="usage-108"><a class="header" href="#usage-108">Usage</a></h2>
 <pre><code>$getCooldown[cooldownType (normal/server/global)]
 </code></pre>
-<h3 id="breakdown-72"><a class="header" href="#breakdown-72">Breakdown</a></h3>
+<h3 id="breakdown-68"><a class="header" href="#breakdown-68">Breakdown</a></h3>
 <ul>
 <li><code>cooldownType</code> - The cooldown type <em>(normal - <a href="bdscript/./cooldown.html">$cooldown</a> | server - <a href="bdscript/./serverCooldown.html">$serverCooldown</a> | global - <a href="bdscript/./globalCooldown.html">$globalCooldown</a>)</em>.</li>
 </ul>
@@ -5463,7 +5505,7 @@ $c[This example should be used in BDScript 2 only.]
 <h2 id="syntax-13"><a class="header" href="#syntax-13">Syntax</a></h2>
 <pre><code>$getCustomStatus[User ID]
 </code></pre>
-<h3 id="parameters-7"><a class="header" href="#parameters-7">Parameters</a></h3>
+<h3 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h3>
 <ul>
 <li><code>User ID</code>: The user whose custom status to get.</li>
 </ul>
@@ -5477,7 +5519,7 @@ Your custom status: $getCustomStatus[$authorID]
 <h2 id="usage-109"><a class="header" href="#usage-109">Usage</a></h2>
 <pre><code>$getEmbedData[channelID;messageID;embedIndex;embedProperty (title/description/footer/color/image/timestamp)]
 </code></pre>
-<h3 id="breakdown-73"><a class="header" href="#breakdown-73">Breakdown</a></h3>
+<h3 id="breakdown-69"><a class="header" href="#breakdown-69">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel this message belongs to.</li>
 <li><code>messageID</code> - The message to get this embed data from.</li>
@@ -5496,7 +5538,7 @@ Footer: $getEmbedData[876920205526319144;878299081380876339;1;footer]
 <h2 id="usage-110"><a class="header" href="#usage-110">Usage</a></h2>
 <pre><code>$getInviteInfo[inviteCode;inviteProperty]
 </code></pre>
-<h3 id="breakdown-74"><a class="header" href="#breakdown-74">Breakdown</a></h3>
+<h3 id="breakdown-70"><a class="header" href="#breakdown-70">Breakdown</a></h3>
 <ul>
 <li>
 <p><code>inviteCode</code> - The invite code to get info about.</p>
@@ -5563,7 +5605,7 @@ $c[This is for global-user variables.]
 <h2 id="usage-112"><a class="header" href="#usage-112">Usage</a></h2>
 <pre><code>$getMessage[channelID;messageID;(optional) property]
 </code></pre>
-<h3 id="breakdown-75"><a class="header" href="#breakdown-75">Breakdown</a></h3>
+<h3 id="breakdown-71"><a class="header" href="#breakdown-71">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel that this message belongs to.</li>
 <li><code>messageID</code> - The message to get the data from.</li>
@@ -5590,7 +5632,7 @@ $author[$getMessage[$findChannel[$message[1]];$message[2];username]#$discriminat
 <h2 id="usage-113"><a class="header" href="#usage-113">Usage</a></h2>
 <pre><code>$getReactions[channelID;messageID;separator;emoji]
 </code></pre>
-<h3 id="breakdown-76"><a class="header" href="#breakdown-76">Breakdown</a></h3>
+<h3 id="breakdown-72"><a class="header" href="#breakdown-72">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel that the message belongs to.</li>
 <li><code>messageID</code> - The message to get the user-reactions from.</li>
@@ -5607,7 +5649,7 @@ $getReactions[2394734883474774;38483494328934989;, ;&lt;:tip:3943484884834848483
 <h2 id="usage-114"><a class="header" href="#usage-114">Usage</a></h2>
 <pre><code>$getRoleColor[roleID]
 </code></pre>
-<h3 id="breakdown-77"><a class="header" href="#breakdown-77">Breakdown</a></h3>
+<h3 id="breakdown-73"><a class="header" href="#breakdown-73">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role to get the color hex from.</li>
 </ul>
@@ -5640,7 +5682,7 @@ $color[$getRoleColor[$highestRole[$authorID]]]
 <h2 id="usage-115"><a class="header" href="#usage-115">Usage</a></h2>
 <pre><code>$getServerVar[variableName;(optional) guildID]
 </code></pre>
-<h3 id="breakdown-78"><a class="header" href="#breakdown-78">Breakdown</a></h3>
+<h3 id="breakdown-74"><a class="header" href="#breakdown-74">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The name of the variable to get.</li>
 <li><code>guildID</code> - The server to get the value for. If no guildID is inputted, then the current server is used.</li>
@@ -5650,7 +5692,7 @@ $color[$getRoleColor[$highestRole[$authorID]]]
 <h2 id="usage-116"><a class="header" href="#usage-116">Usage</a></h2>
 <pre><code>$getTextSplitIndex[value]
 </code></pre>
-<h3 id="breakdown-79"><a class="header" href="#breakdown-79">Breakdown</a></h3>
+<h3 id="breakdown-75"><a class="header" href="#breakdown-75">Breakdown</a></h3>
 <ul>
 <li><code>value</code> - The value to search in the text split.</li>
 </ul>
@@ -5718,7 +5760,7 @@ Unix Timestamp
 <h2 id="usage-119"><a class="header" href="#usage-119">Usage</a></h2>
 <pre><code>$getUserStatus[userID]
 </code></pre>
-<h3 id="breakdown-80"><a class="header" href="#breakdown-80">Breakdown</a></h3>
+<h3 id="breakdown-76"><a class="header" href="#breakdown-76">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - The user to get the status for.</li>
 </ul>
@@ -5739,7 +5781,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <h2 id="usage-120"><a class="header" href="#usage-120">Usage</a></h2>
 <pre><code>$getUserVar[variableName;(userID;guildID)]
 </code></pre>
-<h3 id="breakdown-81"><a class="header" href="#breakdown-81">Breakdown</a></h3>
+<h3 id="breakdown-77"><a class="header" href="#breakdown-77">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The name of the variable to get.</li>
 <li><code>userID</code> - The user to get the variable value for. If no user is provided, the author is used.</li>
@@ -5758,7 +5800,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <blockquote>
 <p>🧙‍♂️ For a global variable, a <code>userID</code> doesn't need to be provided. For a global-user variable, <code>userID</code> must be provided.</p>
 </blockquote>
-<h3 id="breakdown-82"><a class="header" href="#breakdown-82">Breakdown</a></h3>
+<h3 id="breakdown-78"><a class="header" href="#breakdown-78">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The name of the variable to get the value from.</li>
 <li><code>userID</code> - The user to get the value for (if global-user).</li>
@@ -5782,7 +5824,7 @@ You have $getVar[Money;$mentioned[1;yes]] coins!
 <pre><code>$giveRole[userID;roleID]
 </code></pre>
 <p>Gives a role to the provided user.</p>
-<h4 id="breakdown-83"><a class="header" href="#breakdown-83">Breakdown</a></h4>
+<h4 id="breakdown-79"><a class="header" href="#breakdown-79">Breakdown</a></h4>
 <ul>
 <li><code>userID</code> - The user to give the role to.</li>
 <li><code>roleID</code> - The role to give the user.</li>
@@ -5791,7 +5833,7 @@ You have $getVar[Money;$mentioned[1;yes]] coins!
 <pre><code>$giveRole[roleID]
 </code></pre>
 <p>Gives the provided role to the mentioned user.</p>
-<h4 id="breakdown-84"><a class="header" href="#breakdown-84">Breakdown</a></h4>
+<h4 id="breakdown-80"><a class="header" href="#breakdown-80">Breakdown</a></h4>
 <ul>
 <li><code>roleID</code> - The role to give the mentioned user.</li>
 </ul>
@@ -5806,7 +5848,7 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 <h2 id="usage-122"><a class="header" href="#usage-122">Usage</a></h2>
 <pre><code>$globalCooldown[duration;errorMessage]
 </code></pre>
-<h3 id="breakdown-85"><a class="header" href="#breakdown-85">Breakdown</a></h3>
+<h3 id="breakdown-81"><a class="header" href="#breakdown-81">Breakdown</a></h3>
 <ul>
 <li><code>duration</code> - The duration until the user can use this command again.</li>
 <li><code>errorMessage</code> - The message to return when the cooldown duration is still ongoing.</li>
@@ -5819,7 +5861,7 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 <h2 id="usage-123"><a class="header" href="#usage-123">Usage</a></h2>
 <pre><code>$globalUserLeaderboard[variableName;sortType (asc/desc)]
 </code></pre>
-<h3 id="breakdown-86"><a class="header" href="#breakdown-86">Breakdown</a></h3>
+<h3 id="breakdown-82"><a class="header" href="#breakdown-82">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The variable to create the leaderboard for.</li>
 <li><code>sortType</code> - Whether to sort the leaderboard in ascending (<code>asc</code>) or descending (<code>desc</code>) order.</li>
@@ -5836,7 +5878,7 @@ $globalUserLeaderboard[Money;asc]
 <h2 id="usage-124"><a class="header" href="#usage-124">Usage</a></h2>
 <pre><code>$guildExists[guildID]
 </code></pre>
-<h3 id="breakdown-87"><a class="header" href="#breakdown-87">Breakdown</a></h3>
+<h3 id="breakdown-83"><a class="header" href="#breakdown-83">Breakdown</a></h3>
 <ul>
 <li><code>guildID</code> - The ID of the hypothetical server.</li>
 </ul>
@@ -5859,7 +5901,7 @@ $globalUserLeaderboard[Money;asc]
 <h2 id="usage-125"><a class="header" href="#usage-125">Usage</a></h2>
 <pre><code>$hasRole[userID;roleID]
 </code></pre>
-<h3 id="breakdown-88"><a class="header" href="#breakdown-88">Breakdown</a></h3>
+<h3 id="breakdown-84"><a class="header" href="#breakdown-84">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - The user to check for the role.</li>
 <li><code>roleID</code> - The role that the bot is checking the user for.</li>
@@ -5891,7 +5933,7 @@ $username[$mentioned[1;yes]]'s highest role: $roleName[$highestRole[$mentioned[1
 <h2 id="usage-126"><a class="header" href="#usage-126">Usage</a></h2>
 <pre><code>$highestRoleWithPerms[permissions]
 </code></pre>
-<h3 id="breakdown-89"><a class="header" href="#breakdown-89">Breakdown</a></h3>
+<h3 id="breakdown-85"><a class="header" href="#breakdown-85">Breakdown</a></h3>
 <ul>
 <li><code>permissions</code> - The permissions that the role needs to have.  <a href="bdscript//src/resources/permissions.html">(see permissions list)</a></li>
 </ul>
@@ -5905,7 +5947,7 @@ Highest Role with Administrator:  $roleName[$highestRoleWithPerms[admin]] ($high
 <h2 id="usage-127"><a class="header" href="#usage-127">Usage</a></h2>
 <pre><code>$hostingExpireTime[(unix timestamp?)]
 </code></pre>
-<h3 id="breakdown-90"><a class="header" href="#breakdown-90">Breakdown</a></h3>
+<h3 id="breakdown-86"><a class="header" href="#breakdown-86">Breakdown</a></h3>
 <ul>
 <li><code>unix timestamp</code> - Whether to return the expire time in Unix Timestamp or not.</li>
 </ul>
@@ -5942,7 +5984,7 @@ Current Hour: $hour
 $hypesquad[userID]
 
 </code></pre>
-<h3 id="breakdown-91"><a class="header" href="#breakdown-91">Breakdown</a></h3>
+<h3 id="breakdown-87"><a class="header" href="#breakdown-87">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - ID of the user whose hypesquad name should be returned</li>
 </ul>
@@ -5956,7 +5998,7 @@ You are in $hypesquad[$authorID] house.
 <h2 id="usage-130"><a class="header" href="#usage-130">Usage</a></h2>
 <pre><code>$ignoreChannels[channelIDs;errorMessage]
 </code></pre>
-<h3 id="breakdown-92"><a class="header" href="#breakdown-92">Breakdown</a></h3>
+<h3 id="breakdown-88"><a class="header" href="#breakdown-88">Breakdown</a></h3>
 <ul>
 <li><code>channelIDs</code> - The channels to ignore. Separate IDs using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that is returned when the channel is ignored.</li>
@@ -5980,7 +6022,7 @@ https://media.discordapp.net/attachments/1011682358031826994/1027580044928888832
 <h2 id="usage-132"><a class="header" href="#usage-132">Usage</a></h2>
 <pre><code>$image[image url;(index)]
 </code></pre>
-<h3 id="breakdown-93"><a class="header" href="#breakdown-93">Breakdown</a></h3>
+<h3 id="breakdown-89"><a class="header" href="#breakdown-89">Breakdown</a></h3>
 <ul>
 <li><code>image url</code> - The URL of the image that appears. Must be a valid image URL.</li>
 <li><code>index</code> - What embed the image should belong to (Optional). Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -6014,7 +6056,7 @@ About me : $input[modalInput3]
 <h2 id="usage-134"><a class="header" href="#usage-134">Usage</a></h2>
 <pre><code>$isAdmin[userID]
 </code></pre>
-<h3 id="breakdown-94"><a class="header" href="#breakdown-94">Breakdown</a></h3>
+<h3 id="breakdown-90"><a class="header" href="#breakdown-90">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - The user to check.</li>
 </ul>
@@ -6048,7 +6090,7 @@ $isBanned[$mentioned[1]]
 <h2 id="usage-136"><a class="header" href="#usage-136">Usage</a></h2>
 <pre><code>$isBoolean[text]
 </code></pre>
-<h3 id="breakdown-95"><a class="header" href="#breakdown-95">Breakdown</a></h3>
+<h3 id="breakdown-91"><a class="header" href="#breakdown-91">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to check.</li>
 </ul>
@@ -6065,7 +6107,7 @@ $isBoolean[$message]
 <h2 id="usage-137"><a class="header" href="#usage-137">Usage</a></h2>
 <pre><code>$isBot[userID]
 </code></pre>
-<h3 id="breakdown-96"><a class="header" href="#breakdown-96">Breakdown</a></h3>
+<h3 id="breakdown-92"><a class="header" href="#breakdown-92">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - The user to check.</li>
 </ul>
@@ -6082,7 +6124,7 @@ Bot? $isBot[$findUser[$message]]
 <h2 id="usage-138"><a class="header" href="#usage-138">Usage</a></h2>
 <pre><code>$isHoisted[roleID]
 </code></pre>
-<h3 id="breakdown-97"><a class="header" href="#breakdown-97">Breakdown</a></h3>
+<h3 id="breakdown-93"><a class="header" href="#breakdown-93">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role which the bot checks is hoisted or not.</li>
 </ul>
@@ -6100,7 +6142,7 @@ $isHoisted[$findRole[$message]]
 <h2 id="usage-139"><a class="header" href="#usage-139">Usage</a></h2>
 <pre><code>$isMentionable[roleID]
 </code></pre>
-<h3 id="breakdown-98"><a class="header" href="#breakdown-98">Breakdown</a></h3>
+<h3 id="breakdown-94"><a class="header" href="#breakdown-94">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role which the bot checks is mentionable or not.</li>
 </ul>
@@ -6117,7 +6159,7 @@ $isMentionable[$findRole[$message]]
 <h2 id="usage-140"><a class="header" href="#usage-140">Usage</a></h2>
 <pre><code>$isNSFW[channelID]
 </code></pre>
-<h3 id="breakdown-99"><a class="header" href="#breakdown-99">Breakdown</a></h3>
+<h3 id="breakdown-95"><a class="header" href="#breakdown-95">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel to check.</li>
 </ul>
@@ -6134,7 +6176,7 @@ Is &lt;#$channelID&gt; NSFW?: `$isNSFW[$channelID]`
 <h2 id="usage-141"><a class="header" href="#usage-141">Usage</a></h2>
 <pre><code>$isNumber[value]
 </code></pre>
-<h3 id="breakdown-100"><a class="header" href="#breakdown-100">Breakdown</a></h3>
+<h3 id="breakdown-96"><a class="header" href="#breakdown-96">Breakdown</a></h3>
 <ul>
 <li><code>value</code> - The text to check.</li>
 </ul>
@@ -6165,7 +6207,7 @@ $endif
 <h2 id="syntax-14"><a class="header" href="#syntax-14">Syntax</a></h2>
 <pre><code>$isTimedOut[User ID]
 </code></pre>
-<h3 id="parameters-8"><a class="header" href="#parameters-8">Parameters</a></h3>
+<h3 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h3>
 <ul>
 <li><code>User ID</code>: The user to check for.</li>
 </ul>
@@ -6182,7 +6224,7 @@ User is timed out: $isTimedOut[$mentioned[1]]
 <h2 id="usage-143"><a class="header" href="#usage-143">Usage</a></h2>
 <pre><code>$isUserDMEnabled[userID]
 </code></pre>
-<h3 id="breakdown-101"><a class="header" href="#breakdown-101">Breakdown</a></h3>
+<h3 id="breakdown-97"><a class="header" href="#breakdown-97">Breakdown</a></h3>
 <ul>
 <li><code>userID</code> - The user to check the DM status for.</li>
 </ul>
@@ -6201,7 +6243,7 @@ $message
 <h2 id="usage-144"><a class="header" href="#usage-144">Usage</a></h2>
 <pre><code>$isValidHex[colorHex]
 </code></pre>
-<h3 id="breakdown-102"><a class="header" href="#breakdown-102">Breakdown</a></h3>
+<h3 id="breakdown-98"><a class="header" href="#breakdown-98">Breakdown</a></h3>
 <ul>
 <li><code>colorHex</code> - The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> to check.</li>
 </ul>
@@ -6210,7 +6252,7 @@ $message
 <h2 id="usage-145"><a class="header" href="#usage-145">Usage</a></h2>
 <pre><code>$joinSplitText[separator]
 </code></pre>
-<h3 id="breakdown-103"><a class="header" href="#breakdown-103">Breakdown</a></h3>
+<h3 id="breakdown-99"><a class="header" href="#breakdown-99">Breakdown</a></h3>
 <ul>
 <li><code>separator</code> - The separator to be put between the text split values.</li>
 </ul>
@@ -6227,7 +6269,7 @@ $message
 <pre><code>$kick[userID;(optional) reason]
 </code></pre>
 <p>Kicks the provided user.</p>
-<h4 id="breakdown-104"><a class="header" href="#breakdown-104">Breakdown</a></h4>
+<h4 id="breakdown-100"><a class="header" href="#breakdown-100">Breakdown</a></h4>
 <ul>
 <li><code>userID</code> - The user to kick from the server.</li>
 <li><code>reason</code> - The audit-log reason for the kick. Optional.</li>
@@ -6245,7 +6287,7 @@ $kick[$mentioned[1];$noMentionMessage]
 <h2 id="usage-146"><a class="header" href="#usage-146">Usage</a></h2>
 <pre><code>$kickMention[(optional) reason]
 </code></pre>
-<h3 id="breakdown-105"><a class="header" href="#breakdown-105">Breakdown</a></h3>
+<h3 id="breakdown-101"><a class="header" href="#breakdown-101">Breakdown</a></h3>
 <ul>
 <li><code>reason</code> - The audit-log reason for the kick. Optional.</li>
 </ul>
@@ -6277,7 +6319,7 @@ $username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;y
 <h2 id="usage-147"><a class="header" href="#usage-147">Usage</a></h2>
 <pre><code>$lowestRoleWithPerms[permissions;...]
 </code></pre>
-<h3 id="breakdown-106"><a class="header" href="#breakdown-106">Breakdown</a></h3>
+<h3 id="breakdown-102"><a class="header" href="#breakdown-102">Breakdown</a></h3>
 <ul>
 <li><code>permissions</code> - The permissions that the role needs to have.  <a href="bdscript//src/resources/permissions.html">(see permissions list)</a>. Use <code>;</code> as separator for multiple permissions</li>
 </ul>
@@ -6291,7 +6333,7 @@ Lowest Role with Administrator:  $roleName[$lowestRoleWithPerms[admin]] ($lowest
 <h2 id="usage-148"><a class="header" href="#usage-148">Usage</a></h2>
 <pre><code>$max[numbers]
 </code></pre>
-<h3 id="breakdown-107"><a class="header" href="#breakdown-107">Breakdown</a></h3>
+<h3 id="breakdown-103"><a class="header" href="#breakdown-103">Breakdown</a></h3>
 <ul>
 <li><code>numbers</code> - The numbers to get the data from. Separate numbers using <code>;</code>.</li>
 </ul>
@@ -6321,7 +6363,7 @@ you amount of online members.</p>
 <h2 id="usage-149"><a class="header" href="#usage-149">Usage</a></h2>
 <pre><code>$mentioned[mentionNumber;(optional) returnAuthor (yes/no)]
 </code></pre>
-<h3 id="breakdown-108"><a class="header" href="#breakdown-108">Breakdown</a></h3>
+<h3 id="breakdown-104"><a class="header" href="#breakdown-104">Breakdown</a></h3>
 <ul>
 <li><code>mentionNumber</code> - The user-mention to get from the author's message  (<code>1</code> = first user-mention, <code>2</code> = second, etc).</li>
 <li><code>returnAuthor</code> - Whether to return the author's ID if no user is mentioned or not.</li>
@@ -6336,7 +6378,7 @@ $mentioned[1]
 <h2 id="usage-150"><a class="header" href="#usage-150">Usage</a></h2>
 <pre><code>$mentionedChannels[mentionNumber;(optional) returnCurrent (yes/no)]
 </code></pre>
-<h3 id="breakdown-109"><a class="header" href="#breakdown-109">Breakdown</a></h3>
+<h3 id="breakdown-105"><a class="header" href="#breakdown-105">Breakdown</a></h3>
 <ul>
 <li><code>mentionNumber</code> - The channel-mention to get from the author's message  (<code>1</code> = first channel-mention, <code>2</code> = second, etc).</li>
 <li><code>returnCurrent</code> - Whether to return the current channel ID if no channel is mentioned or not.</li>
@@ -6351,7 +6393,7 @@ $mentionedChannels[1]
 <h2 id="usage-151"><a class="header" href="#usage-151">Usage</a></h2>
 <pre><code>$mentionedRoles[mentionNumber]
 </code></pre>
-<h3 id="breakdown-110"><a class="header" href="#breakdown-110">Breakdown</a></h3>
+<h3 id="breakdown-106"><a class="header" href="#breakdown-106">Breakdown</a></h3>
 <ul>
 <li><code>mentionNumber</code> - The role-mention to get from the author's message  (<code>1</code> = first role-mention, <code>2</code> = second, etc).</li>
 </ul>
@@ -6396,7 +6438,7 @@ $messageID
 <h2 id="usage-153"><a class="header" href="#usage-153">Usage</a></h2>
 <pre><code>$min[numbers]
 </code></pre>
-<h3 id="breakdown-111"><a class="header" href="#breakdown-111">Breakdown</a></h3>
+<h3 id="breakdown-107"><a class="header" href="#breakdown-107">Breakdown</a></h3>
 <ul>
 <li><code>numbers</code> - The numbers to get the data from. Separate numbers using <code>;</code>.</li>
 </ul>
@@ -6428,7 +6470,7 @@ Current Minute: $minute
 <h3 id="usage-1-19"><a class="header" href="#usage-1-19">Usage #1</a></h3>
 <pre><code>$modifyChannel[channelID;channelName;topic;NSFW (yes/no);position]
 </code></pre>
-<h4 id="breakdown-112"><a class="header" href="#breakdown-112">Breakdown</a></h4>
+<h4 id="breakdown-108"><a class="header" href="#breakdown-108">Breakdown</a></h4>
 <ul>
 <li><code>channelID</code> - The channel the bot will edit.</li>
 <li><code>channelName</code> - The new channel name.</li>
@@ -6439,7 +6481,7 @@ Current Minute: $minute
 <h3 id="usage-2-19"><a class="header" href="#usage-2-19">Usage #2</a></h3>
 <pre><code>$modifyChannel[channelID;channelName;topic;NSFW (yes/no);position;categoryID]
 </code></pre>
-<h4 id="breakdown-113"><a class="header" href="#breakdown-113">Breakdown</a></h4>
+<h4 id="breakdown-109"><a class="header" href="#breakdown-109">Breakdown</a></h4>
 <p>Same usage as the first. The only new option is <code>categoryID</code>. This will choose what category the channel is put in.</p>
 <blockquote>
 <p>🧙‍♂️ You can use <code>$channelID[category/channelName]</code> to get the ID of a category or channel.</p>
@@ -6458,7 +6500,7 @@ $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchange
 <h2 id="usage-155"><a class="header" href="#usage-155">Usage</a></h2>
 <pre><code>$modifyChannelPerms[channelID;permissions;userID/roleID]
 </code></pre>
-<h3 id="breakdown-114"><a class="header" href="#breakdown-114">Breakdown</a></h3>
+<h3 id="breakdown-110"><a class="header" href="#breakdown-110">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel to change the permissions for.</li>
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> to add/remove. <code>+</code> means allow, <code>-</code> means deny, <code>/</code> means neutral permission.</li>
@@ -6487,7 +6529,7 @@ $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 <blockquote>
 <p>🧙‍♂️ You can use <code>!unchanged</code> as a argument to leave the setting as-is.</p>
 </blockquote>
-<h3 id="breakdown-115"><a class="header" href="#breakdown-115">Breakdown</a></h3>
+<h3 id="breakdown-111"><a class="header" href="#breakdown-111">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The ID of the role to modify.</li>
 <li><code>roleName</code> - The new role name.</li>
@@ -6508,7 +6550,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 <h2 id="usage-157"><a class="header" href="#usage-157">Usage</a></h2>
 <pre><code>$modifyRolePerms[roleID;permissions]
 </code></pre>
-<h3 id="breakdown-116"><a class="header" href="#breakdown-116">Breakdown</a></h3>
+<h3 id="breakdown-112"><a class="header" href="#breakdown-112">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role to modify the permissions for. Use <code>$guildID</code> for the <em>@everyone</em> role.</li>
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> to toggle, separate permissions using <code>;</code>.</li>
@@ -6518,7 +6560,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 <h2 id="usage-158"><a class="header" href="#usage-158">Usage</a></h2>
 <pre><code>$modulo[numbers]
 </code></pre>
-<h3 id="breakdown-117"><a class="header" href="#breakdown-117">Breakdown</a></h3>
+<h3 id="breakdown-113"><a class="header" href="#breakdown-113">Breakdown</a></h3>
 <ul>
 <li><code>numbers</code> - The numbers to return the remainder for. Separate numbers using <code>;</code>.</li>
 </ul>
@@ -6546,7 +6588,7 @@ Current Month: $month
 <h2 id="usage-160"><a class="header" href="#usage-160">Usage</a></h2>
 <pre><code>$multi[numbers]
 </code></pre>
-<h3 id="breakdown-118"><a class="header" href="#breakdown-118">Breakdown</a></h3>
+<h3 id="breakdown-114"><a class="header" href="#breakdown-114">Breakdown</a></h3>
 <ul>
 <li><code>numbers</code> - The numbers to multiply, separate numbers using <code>;</code>.</li>
 </ul>
@@ -6565,7 +6607,7 @@ $multi[$message[1];$message[2]]
 <h2 id="usage-161"><a class="header" href="#usage-161">Usage</a></h2>
 <pre><code>$mute[mutedRoleName]
 </code></pre>
-<h3 id="breakdown-119"><a class="header" href="#breakdown-119">Breakdown</a></h3>
+<h3 id="breakdown-115"><a class="header" href="#breakdown-115">Breakdown</a></h3>
 <ul>
 <li><code>mutedRoleName</code> - The name of the 'Muted' role (case sensitive).</li>
 </ul>
@@ -6611,7 +6653,7 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 <h2 id="usage-164"><a class="header" href="#usage-164">Usage</a></h2>
 <pre><code>$newTicket[categoryID/name;messageWhenNoSubject;MessageInTicket;MessageToUser;errorMessage;(ticket number;(yes/no) return id of the ticket message)]
 </code></pre>
-<h3 id="breakdown-120"><a class="header" href="#breakdown-120">Breakdown</a></h3>
+<h3 id="breakdown-116"><a class="header" href="#breakdown-116">Breakdown</a></h3>
 <ul>
 <li><code>categoryID/name</code> - The category to put the ticket channels in. Can be a category ID or name.</li>
 </ul>
@@ -6694,7 +6736,7 @@ $noMentionMessage
 <h2 id="usage-166"><a class="header" href="#usage-166">Usage</a></h2>
 <pre><code>$numberSeparator[number;(optional) customSeparator]
 </code></pre>
-<h3 id="breakdown-121"><a class="header" href="#breakdown-121">Breakdown</a></h3>
+<h3 id="breakdown-117"><a class="header" href="#breakdown-117">Breakdown</a></h3>
 <ul>
 <li><code>number</code> - The number to apply the separator to.</li>
 <li><code>customSeparator</code> - The separator between each thousand. Default is <code>,</code>. Optional.</li>
@@ -6709,7 +6751,7 @@ $numberSeparator[5000]
 <h2 id="usage-167"><a class="header" href="#usage-167">Usage</a></h2>
 <pre><code>$onlyAdmin[errorMessage]
 </code></pre>
-<h3 id="breakdown-122"><a class="header" href="#breakdown-122">Breakdown</a></h3>
+<h3 id="breakdown-118"><a class="header" href="#breakdown-118">Breakdown</a></h3>
 <ul>
 <li><code>errorMessage</code> - The error message that is returned when the user doesn't have administrator.</li>
 </ul>
@@ -6718,7 +6760,7 @@ $numberSeparator[5000]
 <h2 id="usage-168"><a class="header" href="#usage-168">Usage</a></h2>
 <pre><code>$onlyBotChannelPerms[channelID;permissions;...;errorMessage]
 </code></pre>
-<h3 id="breakdown-123"><a class="header" href="#breakdown-123">Breakdown</a></h3>
+<h3 id="breakdown-119"><a class="header" href="#breakdown-119">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel to check the permissions for. Use <code>$channelID</code> for the current channel.</li>
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to execute the command. Separate permissions with <code>;</code>.</li>
@@ -6734,7 +6776,7 @@ $description[Hey! I have `embed links` permission in current channel.]
 <h2 id="usage-169"><a class="header" href="#usage-169">Usage</a></h2>
 <pre><code>$onlyBotPerms[permissions;...;errorMessage]
 </code></pre>
-<h3 id="breakdown-124"><a class="header" href="#breakdown-124">Breakdown</a></h3>
+<h3 id="breakdown-120"><a class="header" href="#breakdown-120">Breakdown</a></h3>
 <ul>
 <li><code>permissions</code> - The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to run the command. Use <code>;</code> as separator for multiple permissions.</li>
 <li><code>errorMessage</code> - The message to return when the bot doesn't have all the provided permissions.</li>
@@ -6749,7 +6791,7 @@ $description[Hey! I have `embed links` permission.]
 <h1 id="usage-170"><a class="header" href="#usage-170">Usage</a></h1>
 <pre><code>$onlyForCategories[category IDs;error message]
 </code></pre>
-<h1 id="breakdown-125"><a class="header" href="#breakdown-125">Breakdown</a></h1>
+<h1 id="breakdown-121"><a class="header" href="#breakdown-121">Breakdown</a></h1>
 <ul>
 <li><code>category IDs</code> - The categories where the command can be executed in. Separate the categories using <code>;</code>.</li>
 <li><code>error message</code> - The message that is returned when the command is executed in non-whitelisted categories.</li>
@@ -6759,7 +6801,7 @@ $description[Hey! I have `embed links` permission.]
 <h2 id="usage-171"><a class="header" href="#usage-171">Usage</a></h2>
 <pre><code>$onlyForChannels[channelIDs;errorMessage]
 </code></pre>
-<h3 id="breakdown-126"><a class="header" href="#breakdown-126">Breakdown</a></h3>
+<h3 id="breakdown-122"><a class="header" href="#breakdown-122">Breakdown</a></h3>
 <ul>
 <li><code>channelIDs</code> - The channels that the command can be executed in. Separate the IDs using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that is returned when the command is used in a non-whitelisted channel.</li>
@@ -6769,7 +6811,7 @@ $description[Hey! I have `embed links` permission.]
 <h2 id="usage-172"><a class="header" href="#usage-172">Usage</a></h2>
 <pre><code>$onlyForIDs[userIDs;errorMessage]
 </code></pre>
-<h3 id="breakdown-127"><a class="header" href="#breakdown-127">Breakdown</a></h3>
+<h3 id="breakdown-123"><a class="header" href="#breakdown-123">Breakdown</a></h3>
 <ul>
 <li><code>userIDs</code> - The users that can use this command, separate IDs using <code>;</code>.</li>
 <li><code>errorMessage</code> - The error message that is returned, when the user running the command is not whitelisted.</li>
@@ -6784,7 +6826,7 @@ $c[This can only be executed in BDScript 2.]
 <h2 id="usage-173"><a class="header" href="#usage-173">Usage</a></h2>
 <pre><code>$onlyForRoles[roleNames;errorMessage]
 </code></pre>
-<h3 id="breakdown-128"><a class="header" href="#breakdown-128">Breakdown</a></h3>
+<h3 id="breakdown-124"><a class="header" href="#breakdown-124">Breakdown</a></h3>
 <ul>
 <li><code>roleNames</code> - The role names to allow.</li>
 <li><code>errorMessage</code> - The message to return when the user doesn't have the required roles.</li>
@@ -6794,7 +6836,7 @@ $c[This can only be executed in BDScript 2.]
 <h2 id="usage-174"><a class="header" href="#usage-174">Usage</a></h2>
 <pre><code>$onlyForRoleIDs[roleID;...;errorMessage]
 </code></pre>
-<h3 id="breakdown-129"><a class="header" href="#breakdown-129">Breakdown</a></h3>
+<h3 id="breakdown-125"><a class="header" href="#breakdown-125">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role IDs which are allowed to use the command, separate IDs using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message to return when the user doesn't have the required roles.</li>
@@ -6804,7 +6846,7 @@ $c[This can only be executed in BDScript 2.]
 <h2 id="usage-175"><a class="header" href="#usage-175">Usage</a></h2>
 <pre><code>$onlyForServers[serverIDs;errorMessage]
 </code></pre>
-<h3 id="breakdown-130"><a class="header" href="#breakdown-130">Breakdown</a></h3>
+<h3 id="breakdown-126"><a class="header" href="#breakdown-126">Breakdown</a></h3>
 <ul>
 <li><code>serverIDs</code> - The servers that the command can be executed in. Separate the IDs using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that is returned when the command is used in a non-whitelisted server.</li>
@@ -6814,7 +6856,7 @@ $c[This can only be executed in BDScript 2.]
 <h2 id="usage-176"><a class="header" href="#usage-176">Usage</a></h2>
 <pre><code>$onlyForUsers[usernames;errorMessage]
 </code></pre>
-<h3 id="breakdown-131"><a class="header" href="#breakdown-131">Breakdown</a></h3>
+<h3 id="breakdown-127"><a class="header" href="#breakdown-127">Breakdown</a></h3>
 <ul>
 <li><code>usernames</code> - The name's of the users that this command can be executed by. Separate the usernames using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that is returned when the command is used by a non-whitelisted user.</li>
@@ -6838,7 +6880,7 @@ $c[This can only be executed in BDScript 2.]
 <h2 id="usage-178"><a class="header" href="#usage-178">Usage</a></h2>
 <pre><code>$onlyIfMessageContains[text;indexes;errorMessage]
 </code></pre>
-<h3 id="breakdown-132"><a class="header" href="#breakdown-132">Breakdown</a></h3>
+<h3 id="breakdown-128"><a class="header" href="#breakdown-128">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to check.</li>
 <li><code>indexes</code> - The phrases that the text must contain, separate phrases using <code>;</code>.</li>
@@ -6849,7 +6891,7 @@ $c[This can only be executed in BDScript 2.]
 <h2 id="usage-179"><a class="header" href="#usage-179">Usage</a></h2>
 <pre><code>$onlyNSFW[errorMessage]
 </code></pre>
-<h3 id="breakdown-133"><a class="header" href="#breakdown-133">Breakdown</a></h3>
+<h3 id="breakdown-129"><a class="header" href="#breakdown-129">Breakdown</a></h3>
 <ul>
 <li><code>errorMessage</code> - The message that is returned when the command is executed outside of a NSFW channel.</li>
 </ul>
@@ -6863,7 +6905,7 @@ $c[Put your code here.]
 <h2 id="usage-180"><a class="header" href="#usage-180">Usage</a></h2>
 <pre><code>$onlyPerms[permissions;errorMessage]
 </code></pre>
-<h3 id="breakdown-134"><a class="header" href="#breakdown-134">Breakdown</a></h3>
+<h3 id="breakdown-130"><a class="header" href="#breakdown-130">Breakdown</a></h3>
 <ul>
 <li><code>permissions</code> - The required permissions <a href="bdscript/../resources/permissions.html">(see permissions list)</a>. Separate permissions using <code>;</code>.</li>
 <li><code>errorMessage</code> - The message that is returned when the user is missing the required permissions.</li>
@@ -6928,7 +6970,7 @@ Current category: $parentID
 <pre><code>$parentID[Channel ID]
 </code></pre>
 <p>Returns the parent category ID for given channel ID.</p>
-<h4 id="parameters-9"><a class="header" href="#parameters-9">Parameters</a></h4>
+<h4 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h4>
 <ul>
 <li><code>Channel ID</code>: The ID of the channel from which to retrieve the category ID.</li>
 </ul>
@@ -6982,7 +7024,7 @@ I have pinned your message!
 <h2 id="usage-183"><a class="header" href="#usage-183">Usage</a></h2>
 <pre><code>$premiumExpireTime[(unix timestamp)]
 </code></pre>
-<h3 id="breakdown-135"><a class="header" href="#breakdown-135">Breakdown</a></h3>
+<h3 id="breakdown-131"><a class="header" href="#breakdown-131">Breakdown</a></h3>
 <ul>
 <li><code>unix timestamp</code> - Accepts either &quot;yes&quot; or &quot;no&quot;. If &quot;yes&quot; is written, it will return premium expiration value in UNIX timestamp and if &quot;no&quot;, it will output as normal time format. Default as &quot;no&quot;.</li>
 </ul>
@@ -7057,7 +7099,7 @@ Random User: $randomMention
 <h2 id="usage-186"><a class="header" href="#usage-186">Usage</a></h2>
 <pre><code>$randomString[length]
 </code></pre>
-<h3 id="breakdown-136"><a class="header" href="#breakdown-136">Breakdown</a></h3>
+<h3 id="breakdown-132"><a class="header" href="#breakdown-132">Breakdown</a></h3>
 <ul>
 <li><code>length</code> - How long the string should be (max <code>10</code>).</li>
 </ul>
@@ -7071,7 +7113,7 @@ String: `$randomString[$message]`
 <h2 id="usage-187"><a class="header" href="#usage-187">Usage</a></h2>
 <pre><code>$randomText[text1;text2;etc]
 </code></pre>
-<h3 id="breakdown-137"><a class="header" href="#breakdown-137">Breakdown</a></h3>
+<h3 id="breakdown-133"><a class="header" href="#breakdown-133">Breakdown</a></h3>
 <ul>
 <li><code>text1</code>/<code>text2</code>/<code>etc</code> - The text which the bot can choose from.</li>
 </ul>
@@ -7108,7 +7150,7 @@ $randomText[Hello;Hi;Hey]!
 <h2 id="usage-190"><a class="header" href="#usage-190">Usage</a></h2>
 <pre><code>$removeComponent[customID;(optional) messageID]
 </code></pre>
-<h3 id="breakdown-138"><a class="header" href="#breakdown-138">Breakdown</a></h3>
+<h3 id="breakdown-134"><a class="header" href="#breakdown-134">Breakdown</a></h3>
 <ul>
 <li><code>customID</code> - The select-menu/button custom ID to remove from the message.</li>
 <li><code>messageID</code> - The message to remove the component from, uses the bot's current message if no 'messageID' is provided.</li>
@@ -7118,7 +7160,7 @@ $randomText[Hello;Hi;Hey]!
 <h2 id="usage-191"><a class="header" href="#usage-191">Usage</a></h2>
 <pre><code>$removeContains[phrases;howMany]
 </code></pre>
-<h3 id="breakdown-139"><a class="header" href="#breakdown-139">Breakdown</a></h3>
+<h3 id="breakdown-135"><a class="header" href="#breakdown-135">Breakdown</a></h3>
 <ul>
 <li><code>phrases</code> - The phrases/words to delete, separate phrases using <code>;</code>.</li>
 <li><code>howMany</code> - How many messages containing the provided phrases to delete. Max is 100.</li>
@@ -7154,7 +7196,7 @@ $removeLinks[$noMentionMessage]
 <h2 id="usage-192"><a class="header" href="#usage-192">Usage</a></h2>
 <pre><code>$removeSplitTextElement[index]
 </code></pre>
-<h3 id="breakdown-140"><a class="header" href="#breakdown-140">Breakdown</a></h3>
+<h3 id="breakdown-136"><a class="header" href="#breakdown-136">Breakdown</a></h3>
 <ul>
 <li><code>index</code> - The index of the <code>$textSplit</code> value to remove.</li>
 </ul>
@@ -7164,7 +7206,7 @@ $removeLinks[$noMentionMessage]
 <h2 id="usage-193"><a class="header" href="#usage-193">Usage</a></h2>
 <pre><code>$repeatMessage[howMany;text]
 </code></pre>
-<h3 id="breakdown-141"><a class="header" href="#breakdown-141">Breakdown</a></h3>
+<h3 id="breakdown-137"><a class="header" href="#breakdown-137">Breakdown</a></h3>
 <ul>
 <li><code>howMany</code> - How many times the text is repeated <em>(max 10 times)</em>.</li>
 <li><code>text</code> - The text to repeat.</li>
@@ -7188,7 +7230,7 @@ $repeatMessage[5;Hello World! ]
 <h2 id="usage-194"><a class="header" href="#usage-194">Usage</a></h2>
 <pre><code>$replaceText[text;sample;new;(optional) howMany]
 </code></pre>
-<h3 id="breakdown-142"><a class="header" href="#breakdown-142">Breakdown</a></h3>
+<h3 id="breakdown-138"><a class="header" href="#breakdown-138">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text where the bot is searching for the 'sample'.</li>
 <li><code>sample</code> - The text to replace with 'new'.</li>
@@ -7233,7 +7275,7 @@ The message ID you replied to is: $repliedMessageID
 <pre><code>$repliedMessageID[Channel ID;Message ID]
 </code></pre>
 <p>Returns the ID of the replied message form the given message.</p>
-<h4 id="parameters-10"><a class="header" href="#parameters-10">Parameters</a></h4>
+<h4 id="parameters-15"><a class="header" href="#parameters-15">Parameters</a></h4>
 <ul>
 <li><code>Channel ID</code> : The channel where the message is located.</li>
 <li><code>Message ID</code> : The message from which the ID of the replied message will be taken from.</li>
@@ -7263,7 +7305,7 @@ Hello $username 👋🏻
 <pre><code>$reply[Channel ID;Message ID]
 </code></pre>
 <p>Replies to a provided message.</p>
-<h4 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h4>
+<h4 id="parameters-16"><a class="header" href="#parameters-16">Parameters</a></h4>
 <ul>
 <li><code>Channel ID</code>: The channel where the message is.</li>
 <li><code>Message ID</code>: The message to reply.</li>
@@ -7282,7 +7324,7 @@ Replied!
 <blockquote>
 <p>🧙‍♂️ Maximum 'delay' can be 40 minutes <em>(For premium users, it's 120 minutes)</em> while minimum delay is 1 second.</p>
 </blockquote>
-<h3 id="breakdown-143"><a class="header" href="#breakdown-143">Breakdown</a></h3>
+<h3 id="breakdown-139"><a class="header" href="#breakdown-139">Breakdown</a></h3>
 <ul>
 <li><code>delay</code> - How long the command is delayed (e.g: 10s, 10m, 40m).</li>
 </ul>
@@ -7295,7 +7337,7 @@ Hi $username!
 <h2 id="syntax-22"><a class="header" href="#syntax-22">Syntax</a></h2>
 <pre><code>$resetChannelVar[Variable Name]
 </code></pre>
-<h3 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h3>
+<h3 id="parameters-17"><a class="header" href="#parameters-17">Parameters</a></h3>
 <ul>
 <li><code>Variable Name</code>: The name of the variable to reset.</li>
 </ul>
@@ -7307,7 +7349,7 @@ Hi $username!
 <h2 id="usage-196"><a class="header" href="#usage-196">Usage</a></h2>
 <pre><code>$resetServerVar[variableName]
 </code></pre>
-<h3 id="breakdown-144"><a class="header" href="#breakdown-144">Breakdown</a></h3>
+<h3 id="breakdown-140"><a class="header" href="#breakdown-140">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The name of the variable to reset.</li>
 </ul>
@@ -7319,7 +7361,7 @@ Hi $username!
 <h2 id="usage-197"><a class="header" href="#usage-197">Usage</a></h2>
 <pre><code>$resetUserVar[variableName;(optional) userID]
 </code></pre>
-<h3 id="breakdown-145"><a class="header" href="#breakdown-145">Breakdown</a></h3>
+<h3 id="breakdown-141"><a class="header" href="#breakdown-141">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The name of the variable to reset.</li>
 <li><code>userID</code> - The user to reset the variable for, if no user is provided, then the variable is reset for everyone!</li>
@@ -7342,7 +7384,7 @@ There are $roleCount roles in $serverName[$guildID]
 <h2 id="usage-199"><a class="header" href="#usage-199">Usage</a></h2>
 <pre><code>$roleExists[roleID]
 </code></pre>
-<h3 id="breakdown-146"><a class="header" href="#breakdown-146">Breakdown</a></h3>
+<h3 id="breakdown-142"><a class="header" href="#breakdown-142">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> -  The &quot;role&quot; which the bot checks.</li>
 </ul>
@@ -7362,7 +7404,7 @@ $c[This role exists!]
 <h2 id="usage-200"><a class="header" href="#usage-200">Usage</a></h2>
 <pre><code>$roleGrant[user ID;+/-Role ID;...]
 </code></pre>
-<h3 id="breakdown-147"><a class="header" href="#breakdown-147">Breakdown</a></h3>
+<h3 id="breakdown-143"><a class="header" href="#breakdown-143">Breakdown</a></h3>
 <ul>
 <li><code>user ID</code> - the user ID.</li>
 <li><code>+/-</code> - In front of RoleID use '+' to add the role or '-' to remove it.</li>
@@ -7383,7 +7425,7 @@ $roleGrant[$mentioned[1];+$mentionedRoles[1]]
 <h2 id="usage-201"><a class="header" href="#usage-201">Usage</a></h2>
 <pre><code>$roleID[roleName]
 </code></pre>
-<h3 id="breakdown-148"><a class="header" href="#breakdown-148">Breakdown</a></h3>
+<h3 id="breakdown-144"><a class="header" href="#breakdown-144">Breakdown</a></h3>
 <ul>
 <li><code>roleName</code> - The role name to get the role ID for.</li>
 </ul>
@@ -7424,7 +7466,7 @@ $title[Role Info]
 <h2 id="usage-203"><a class="header" href="#usage-203">Usage</a></h2>
 <pre><code>$roleName[roleID]
 </code></pre>
-<h3 id="breakdown-149"><a class="header" href="#breakdown-149">Breakdown</a></h3>
+<h3 id="breakdown-145"><a class="header" href="#breakdown-145">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role to get the name of.</li>
 </ul>
@@ -7448,7 +7490,7 @@ $description[Server Roles: $roleNames]
 <h2 id="usage-205"><a class="header" href="#usage-205">Usage</a></h2>
 <pre><code>$rolePosition[roleID]
 </code></pre>
-<h3 id="breakdown-150"><a class="header" href="#breakdown-150">Breakdown</a></h3>
+<h3 id="breakdown-146"><a class="header" href="#breakdown-146">Breakdown</a></h3>
 <ul>
 <li><code>roleID</code> - The role to get the position of.</li>
 </ul>
@@ -7462,7 +7504,7 @@ $description[&lt;@&amp;$findRole[$message]&gt;'s Position: $rolePosition[$findRo
 <h2 id="usage-206"><a class="header" href="#usage-206">Usage</a></h2>
 <pre><code>$round[number;(decimalPlace)]
 </code></pre>
-<h3 id="breakdown-151"><a class="header" href="#breakdown-151">Breakdown</a></h3>
+<h3 id="breakdown-147"><a class="header" href="#breakdown-147">Breakdown</a></h3>
 <ul>
 <li><code>number</code> - The number to round.</li>
 <li><code>decimalPlace</code> - The decimal place to round the number to. Default as <code>0</code>. Optional.</li>
@@ -7509,7 +7551,7 @@ Current Second: $second
 <h2 id="usage-209"><a class="header" href="#usage-209">Usage</a></h2>
 <pre><code>$sendEmbedMessage[channel ID;content;title;title URL;description;color;author;author icon;footer;footer icon;thumbnail;image;add timestamp;return ID]
 </code></pre>
-<h3 id="breakdown-152"><a class="header" href="#breakdown-152">Breakdown</a></h3>
+<h3 id="breakdown-148"><a class="header" href="#breakdown-148">Breakdown</a></h3>
 <ul>
 <li><code>channel ID</code> - id of the channel where the message will be sent.</li>
 <li><code>content</code> - text to be sent before embed.</li>
@@ -7535,7 +7577,7 @@ $sendEmbedMessage[$channelID;;Title;https://discord.gg/;description;000000;autho
 <h2 id="usage-210"><a class="header" href="#usage-210">Usage</a></h2>
 <pre><code>$sendMessage[text;(optional) returnMessageID (yes/no)]
 </code></pre>
-<h3 id="breakdown-153"><a class="header" href="#breakdown-153">Breakdown</a></h3>
+<h3 id="breakdown-149"><a class="header" href="#breakdown-149">Breakdown</a></h3>
 <ul>
 <li><code>text</code> - The text to send in the new message.</li>
 <li><code>returnMessageID</code> - Whether to return the ID of the newly created message, in another message. Optional, default is <code>no</code>.</li>
@@ -7559,7 +7601,7 @@ $sendMessage[This is message #2!;yes]
 <h2 id="usage-211"><a class="header" href="#usage-211">Usage</a></h2>
 <pre><code>$serverChannelExists[channel ID]
 </code></pre>
-<h3 id="breakdown-154"><a class="header" href="#breakdown-154">Breakdown</a></h3>
+<h3 id="breakdown-150"><a class="header" href="#breakdown-150">Breakdown</a></h3>
 <ul>
 <li><code>true</code> - If could find the channel.</li>
 <li><code>false</code> - If couldn't find the channel</li>
@@ -7577,7 +7619,7 @@ $serverChannelExists[$channelID[channelName]]
 <h2 id="usage-212"><a class="header" href="#usage-212">Usage</a></h2>
 <pre><code>$serverCooldown[duration;errorMessage]
 </code></pre>
-<h3 id="breakdown-155"><a class="header" href="#breakdown-155">Breakdown</a></h3>
+<h3 id="breakdown-151"><a class="header" href="#breakdown-151">Breakdown</a></h3>
 <ul>
 <li><code>duration</code> - The duration of this cooldown.</li>
 <li><code>errorMessage</code> - The error to return when the cooldown is still ongoing.</li>
@@ -7612,7 +7654,7 @@ I'm currently in $serverCount servers!
 <h2 id="syntax-23"><a class="header" href="#syntax-23">Syntax</a></h2>
 <pre><code>$serverEmojis[Guild ID;Separator]
 </code></pre>
-<h3 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h3>
+<h3 id="parameters-18"><a class="header" href="#parameters-18">Parameters</a></h3>
 <ul>
 <li><code>Guild ID</code>: The guild to return it's emojis.</li>
 <li><code>Separator</code>: The separator to separate the emojis with.</li>
@@ -7634,7 +7676,7 @@ $serverEmojis[$guildID; ]
 <pre><code>$serverIcon[serverID]
 </code></pre>
 <p>Returns the icon of the server provided.</p>
-<h4 id="breakdown-156"><a class="header" href="#breakdown-156">Breakdown</a></h4>
+<h4 id="breakdown-152"><a class="header" href="#breakdown-152">Breakdown</a></h4>
 <ul>
 <li><code>serverID</code> - The server to get the icon for <em>(bot must be in the server)</em>.</li>
 </ul>
@@ -7648,7 +7690,7 @@ $image[$serverIcon]
 <h2 id="usage-215"><a class="header" href="#usage-215">Usage</a></h2>
 <pre><code>$serverInfo[text/code;(optional) showIcon (yes/no)]
 </code></pre>
-<h3 id="breakdown-157"><a class="header" href="#breakdown-157">Breakdown</a></h3>
+<h3 id="breakdown-153"><a class="header" href="#breakdown-153">Breakdown</a></h3>
 <ul>
 <li><code>text/code</code> - The text that is returned.</li>
 <li><code>showIcon</code> - Whether or not to show the server icon as the thumbnail. Default is <code>yes</code>.</li>
@@ -7682,7 +7724,7 @@ Large Server?: {large};no]
 <h2 id="usage-216"><a class="header" href="#usage-216">Usage</a></h2>
 <pre><code>$serverLeaderboard[variableName;sortType (asc/desc)]
 </code></pre>
-<h3 id="breakdown-158"><a class="header" href="#breakdown-158">Breakdown</a></h3>
+<h3 id="breakdown-154"><a class="header" href="#breakdown-154">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The variable to create the leaderboard for.</li>
 <li><code>sortType</code> - Whether to sort the leaderboard in ascending (asc) or descending (desc) order.</li>
@@ -7695,7 +7737,7 @@ Large Server?: {large};no]
 <h2 id="usage-217"><a class="header" href="#usage-217">Usage</a></h2>
 <pre><code>$serverName[guildID]
 </code></pre>
-<h3 id="breakdown-159"><a class="header" href="#breakdown-159">Breakdown</a></h3>
+<h3 id="breakdown-155"><a class="header" href="#breakdown-155">Breakdown</a></h3>
 <ul>
 <li><code>guildID</code> - The server to get the name of. Use <code>$guildID</code> for the current server.</li>
 </ul>
@@ -7727,7 +7769,7 @@ $serverNames
 <pre><code>$serverNames[amount;separator]
 </code></pre>
 <p>Returns <em>x</em> server names that the bot is in.</p>
-<h4 id="breakdown-160"><a class="header" href="#breakdown-160">Breakdown</a></h4>
+<h4 id="breakdown-156"><a class="header" href="#breakdown-156">Breakdown</a></h4>
 <ul>
 <li><code>amount</code> - The <em>x</em> amount of server names you want. Use <code>-1</code> if you want to return all server names.</li>
 <li><code>separator</code> - A custom separator for separating server names.</li>
@@ -7749,7 +7791,7 @@ $serverNames[5;
 <pre><code>$serverOwner[serverID]
 </code></pre>
 <p>Returns the owner ID of the provided server.</p>
-<h4 id="breakdown-161"><a class="header" href="#breakdown-161">Breakdown</a></h4>
+<h4 id="breakdown-157"><a class="header" href="#breakdown-157">Breakdown</a></h4>
 <ul>
 <li><code>serverID</code> - The server to get the owner ID for.</li>
 </ul>
@@ -7785,7 +7827,7 @@ This server's verification level is $serverVerificationLvl
 <h2 id="syntax-24"><a class="header" href="#syntax-24">Syntax</a></h2>
 <pre><code>$setChannelVar[Variable Name;New Value;(Channel ID)]
 </code></pre>
-<h3 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h3>
+<h3 id="parameters-19"><a class="header" href="#parameters-19">Parameters</a></h3>
 <ul>
 <li><code>Variable Name</code>: The variable to update.</li>
 <li><code>New Value</code>: The new variable value.</li>
@@ -7800,7 +7842,7 @@ This server's verification level is $serverVerificationLvl
 <h2 id="usage-220"><a class="header" href="#usage-220">Usage</a></h2>
 <pre><code>$setServerVar[variableName;newValue;(optional) serverID]
 </code></pre>
-<h3 id="breakdown-162"><a class="header" href="#breakdown-162">Breakdown</a></h3>
+<h3 id="breakdown-158"><a class="header" href="#breakdown-158">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The variable to update.</li>
 <li><code>newValue</code> - The newly assigned variable value.</li>
@@ -7815,7 +7857,7 @@ This server's verification level is $serverVerificationLvl
 <h2 id="usage-221"><a class="header" href="#usage-221">Usage</a></h2>
 <pre><code>$setUserVar[variableName;newValue;(userID;guildID)]
 </code></pre>
-<h3 id="breakdown-163"><a class="header" href="#breakdown-163">Breakdown</a></h3>
+<h3 id="breakdown-159"><a class="header" href="#breakdown-159">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The variable to update.</li>
 <li><code>newValue</code> - The newly assigned variable value.</li>
@@ -7831,7 +7873,7 @@ This server's verification level is $serverVerificationLvl
 <h2 id="usage-222"><a class="header" href="#usage-222">Usage</a></h2>
 <pre><code>$setVar[variableName;newValue;(optional) userID]
 </code></pre>
-<h3 id="breakdown-164"><a class="header" href="#breakdown-164">Breakdown</a></h3>
+<h3 id="breakdown-160"><a class="header" href="#breakdown-160">Breakdown</a></h3>
 <ul>
 <li><code>variableName</code> - The variable to update.</li>
 <li><code>newValue</code> - The newly assigned variable value.</li>
@@ -7893,7 +7935,7 @@ The bot can only find its own global slash commands.</p>
 <h2 id="usage-224"><a class="header" href="#usage-224">Usage</a></h2>
 <pre><code>$slowmode[channelID;delay]
 </code></pre>
-<h3 id="breakdown-165"><a class="header" href="#breakdown-165">Breakdown</a></h3>
+<h3 id="breakdown-161"><a class="header" href="#breakdown-161">Breakdown</a></h3>
 <ul>
 <li><code>channelID</code> - The channel in the which the slowmode is being modified in. Use <code>0</code>/<code>0s</code> to disable the slowmode.</li>
 <li><code>delay</code> - The new slowmode delay <em>(in seconds, e.g. 1s, 180s, 5s, 3s, etc)</em>.</li>
@@ -7910,7 +7952,7 @@ Slowmode changed to $message[1]!
 <h2 id="usage-225"><a class="header" href="#usage-225">Usage</a></h2>
 <pre><code>$sort[numbers;...;direction;return amount;separator]
 </code></pre>
-<h3 id="breakdown-166"><a class="header" href="#breakdown-166">Breakdown</a></h3>
+<h3 id="breakdown-162"><a class="header" href="#breakdown-162">Breakdown</a></h3>
 <ul>
 <li><code>numbers</code> - sets numbers separated by <em>;</em> (ex: 1;2;3)</li>
 <li><code>direction</code> - what order will be used (ascending or descending).
@@ -7939,7 +7981,7 @@ $sort[8;5;9;1;3;asc;4; - ]
 <h2 id="usage-226"><a class="header" href="#usage-226">Usage</a></h2>
 <pre><code>$splitText[index]
 </code></pre>
-<h3 id="breakdown-167"><a class="header" href="#breakdown-167">Breakdown</a></h3>
+<h3 id="breakdown-163"><a class="header" href="#breakdown-163">Breakdown</a></h3>
 <ul>
 <li><code>index</code> - The split value to get (e.g 2 for the second split). You can also use <code>&gt;</code> to return the last splitted value i.e <code>$splitText[&gt;]</code>.</li>
 </ul>
@@ -7957,7 +7999,7 @@ $splitText[2]
 <h2 id="syntax-25"><a class="header" href="#syntax-25">Syntax</a></h2>
 <pre><code>$startThread[Name;Channel ID;Message ID;(Archive duration;Return thread/channel ID)]
 </code></pre>
-<h3 id="parameters-15"><a class="header" href="#parameters-15">Parameters</a></h3>
+<h3 id="parameters-20"><a class="header" href="#parameters-20">Parameters</a></h3>
 <ul>
 <li><code>Name</code>: The name of the newly created thread.</li>
 <li><code>Channel ID</code>: The channel where the thread shall be created.</li>
@@ -7980,7 +8022,7 @@ I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 <h2 id="syntax-26"><a class="header" href="#syntax-26">Syntax</a></h2>
 <pre><code>$sub[Number;...]
 </code></pre>
-<h3 id="parameters-16"><a class="header" href="#parameters-16">Parameters</a></h3>
+<h3 id="parameters-21"><a class="header" href="#parameters-21">Parameters</a></h3>
 <ul>
 <li><code>Number</code>: The numbers to subtract. Separate multiple values using <code>;</code>.</li>
 </ul>
@@ -7994,7 +8036,7 @@ $sub[20;10;5]
 <h2 id="syntax-27"><a class="header" href="#syntax-27">Syntax</a></h2>
 <pre><code>$sum[Number;...]
 </code></pre>
-<h3 id="parameters-17"><a class="header" href="#parameters-17">Parameters</a></h3>
+<h3 id="parameters-22"><a class="header" href="#parameters-22">Parameters</a></h3>
 <ul>
 <li><code>Number</code>: The numbers to add. Separate multiple values using <code>;</code>.</li>
 </ul>
@@ -8024,7 +8066,7 @@ $calculate[$message]
 <pre><code>$suppressErrors[Error message]
 </code></pre>
 <p>Sends a custom error message instead of the default error message.</p>
-<h4 id="parameters-18"><a class="header" href="#parameters-18">Parameters</a></h4>
+<h4 id="parameters-23"><a class="header" href="#parameters-23">Parameters</a></h4>
 <ul>
 <li><code>Error message</code>: The custom error message to send.</li>
 </ul>
@@ -8052,7 +8094,7 @@ $calculate[$message]
 <pre><code>$takeRole[User ID;Role ID]
 </code></pre>
 <p>Removes a role from the provided user.</p>
-<h4 id="parameters-19"><a class="header" href="#parameters-19">Parameters</a></h4>
+<h4 id="parameters-24"><a class="header" href="#parameters-24">Parameters</a></h4>
 <ul>
 <li><code>User ID</code>: The user to remove the role from.</li>
 <li><code>Role ID</code>: The role to remove from the user.</li>
@@ -8071,7 +8113,7 @@ Removed &lt;@&amp;$mentionedRoles[1]&gt; from &lt;@$mentioned[1]&gt;!
 <pre><code>$takeRole[Role ID]
 </code></pre>
 <p>Removes the provided role from the mentioned users.</p>
-<h4 id="parameters-20"><a class="header" href="#parameters-20">Parameters</a></h4>
+<h4 id="parameters-25"><a class="header" href="#parameters-25">Parameters</a></h4>
 <ul>
 <li><code>Role ID</code>: The role to remove from the mentioned users.</li>
 </ul>
@@ -8096,7 +8138,7 @@ Removed &lt;@&amp;$mentionedRoles[1]&gt; from the mentioned users!
 <h2 id="syntax-32"><a class="header" href="#syntax-32">Syntax</a></h2>
 <pre><code>$textSplit[Text;Separator]
 </code></pre>
-<h3 id="parameters-21"><a class="header" href="#parameters-21">Parameters</a></h3>
+<h3 id="parameters-26"><a class="header" href="#parameters-26">Parameters</a></h3>
 <ul>
 <li><code>Text</code>: The text to split.</li>
 <li><code>Separator</code>: The separator to split the text with. If this parameter is empty, it separates the text by each characters.</li>
@@ -8122,7 +8164,7 @@ $splitText[1]
 <h2 id="syntax-33"><a class="header" href="#syntax-33">Syntax</a></h2>
 <pre><code>$threadAddMember[Thread ID;User ID]
 </code></pre>
-<h3 id="parameters-22"><a class="header" href="#parameters-22">Parameters</a></h3>
+<h3 id="parameters-27"><a class="header" href="#parameters-27">Parameters</a></h3>
 <ul>
 <li><code>Thread ID</code>: The ID of the thread channel to add the user to.</li>
 <li><code>User ID</code>: The user to add to the thread.</li>
@@ -8146,7 +8188,7 @@ $threadAddMember[$var[thread];$authorID]
 <h2 id="syntax-34"><a class="header" href="#syntax-34">Syntax</a></h2>
 <pre><code>$threadRemoveMember[Thread ID;User ID]
 </code></pre>
-<h3 id="parameters-23"><a class="header" href="#parameters-23">Parameters</a></h3>
+<h3 id="parameters-28"><a class="header" href="#parameters-28">Parameters</a></h3>
 <ul>
 <li><code>Thread ID</code>: The ID of the thread channel to remove the user from.</li>
 <li><code>User ID</code>: The user to remove from the thread.</li>
@@ -8168,7 +8210,7 @@ $threadRemoveMember[878305123707785218;$authorID]
 <h2 id="syntax-35"><a class="header" href="#syntax-35">Syntax</a></h2>
 <pre><code>$thumbnail[Image url;(Index)]
 </code></pre>
-<h3 id="parameters-24"><a class="header" href="#parameters-24">Parameters</a></h3>
+<h3 id="parameters-29"><a class="header" href="#parameters-29">Parameters</a></h3>
 <ul>
 <li><code>Image url</code>: The image to set as the thumbnail.</li>
 <li><code>Index</code>: What <a href="bdscript/../resources/embedIndexes.html">embed index</a> the thumbnail should belong to, default to <code>1</code> (Optional).</li>
@@ -8191,7 +8233,7 @@ $thumbnail[$authorAvatar]
 <h2 id="syntax-36"><a class="header" href="#syntax-36">Syntax</a></h2>
 <pre><code>$time[Timezone]
 </code></pre>
-<h3 id="parameters-25"><a class="header" href="#parameters-25">Parameters</a></h3>
+<h3 id="parameters-30"><a class="header" href="#parameters-30">Parameters</a></h3>
 <ul>
 <li><code>Timezone</code>: The timezone to use in the date/time functions. Accepts <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ database</a> timezone name as input.</li>
 </ul>
@@ -8210,7 +8252,7 @@ Warsaw : $optOff[$hour:$minute:$second]
 <h2 id="syntax-37"><a class="header" href="#syntax-37">Syntax</a></h2>
 <pre><code>$timeout[Duration;(User ID)]
 </code></pre>
-<h3 id="parameters-26"><a class="header" href="#parameters-26">Parameters</a></h3>
+<h3 id="parameters-31"><a class="header" href="#parameters-31">Parameters</a></h3>
 <ul>
 <li><code>Duration</code>: The amount of time the user should be timed out for. It shouldn't exceed more than &quot;28 days&quot;.</li>
 <li><code>User ID</code>: The user to timeout. If this parameter is empty, timeouts the mentioned users (Optional).</li>
@@ -8248,7 +8290,7 @@ $timeout[$message[1];$findUser[$message[2];no]]
 <h2 id="syntax-38"><a class="header" href="#syntax-38">Syntax</a></h2>
 <pre><code>$title[Text;(Index)]
 </code></pre>
-<h3 id="parameters-27"><a class="header" href="#parameters-27">Parameters</a></h3>
+<h3 id="parameters-32"><a class="header" href="#parameters-32">Parameters</a></h3>
 <ul>
 <li><code>Text</code>: The text to set the title as. It cannot exceed more than 256 characters.</li>
 <li><code>Index</code>: What <a href="bdscript/../resources/embedIndexes.html">embed index</a> the title should belong to, defaults to <code>1</code> (Optional).</li>
@@ -8271,7 +8313,7 @@ $description[⬆️ That is a nice title.]
 <h2 id="syntax-39"><a class="header" href="#syntax-39">Syntax</a></h2>
 <pre><code>$toLowercase[Text]
 </code></pre>
-<h3 id="parameters-28"><a class="header" href="#parameters-28">Parameters</a></h3>
+<h3 id="parameters-33"><a class="header" href="#parameters-33">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to convert.</li>
 </ul>
@@ -8285,7 +8327,7 @@ $toLowercase[THIS TEXT IS NOW lowercase]
 <h2 id="syntax-40"><a class="header" href="#syntax-40">Syntax</a></h2>
 <pre><code>$toTitleCase[Text]
 </code></pre>
-<h3 id="parameters-29"><a class="header" href="#parameters-29">Parameters</a></h3>
+<h3 id="parameters-34"><a class="header" href="#parameters-34">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to convert.</li>
 </ul>
@@ -8299,7 +8341,7 @@ $toTitleCase[$message]
 <h2 id="syntax-41"><a class="header" href="#syntax-41">Syntax</a></h2>
 <pre><code>$toUppercase[Text]
 </code></pre>
-<h3 id="parameters-30"><a class="header" href="#parameters-30">Parameters</a></h3>
+<h3 id="parameters-35"><a class="header" href="#parameters-35">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to convert.</li>
 </ul>
@@ -8331,7 +8373,7 @@ $trimContent
 <h2 id="syntax-43"><a class="header" href="#syntax-43">Syntax</a></h2>
 <pre><code>$trimSpace[Text]
 </code></pre>
-<h3 id="parameters-31"><a class="header" href="#parameters-31">Parameters</a></h3>
+<h3 id="parameters-36"><a class="header" href="#parameters-36">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text from which the white-space characters will be removed.</li>
 </ul>
@@ -8399,7 +8441,7 @@ Successfully unbanned user!
 <pre><code>$unbanID[User ID]
 </code></pre>
 <p>Unbans a user by using the ID provided in the 'User ID' parameter.</p>
-<h5 id="parameters-32"><a class="header" href="#parameters-32">Parameters</a></h5>
+<h5 id="parameters-37"><a class="header" href="#parameters-37">Parameters</a></h5>
 <ul>
 <li><code>User ID</code> : The ID of the user to unban.</li>
 </ul>
@@ -8414,7 +8456,7 @@ Successfully unbanned user!
 <h2 id="syntax-48"><a class="header" href="#syntax-48">Syntax</a></h2>
 <pre><code>$unescape[Text]
 </code></pre>
-<h3 id="parameters-33"><a class="header" href="#parameters-33">Parameters</a></h3>
+<h3 id="parameters-38"><a class="header" href="#parameters-38">Parameters</a></h3>
 <ul>
 <li><code>Text</code> : The text to unescape.</li>
 </ul>
@@ -8431,7 +8473,7 @@ $randomText[$unescape[$message]]
 <h2 id="syntax-49"><a class="header" href="#syntax-49">Syntax</a></h2>
 <pre><code>$unmute[Muted]
 </code></pre>
-<h3 id="parameters-34"><a class="header" href="#parameters-34">Parameters</a></h3>
+<h3 id="parameters-39"><a class="header" href="#parameters-39">Parameters</a></h3>
 <ul>
 <li><code>Muted</code> : The name of the 'Muted' role (Case sensitive).</li>
 </ul>
@@ -8452,7 +8494,7 @@ $unmute[Muted]
 <h2 id="syntax-50"><a class="header" href="#syntax-50">Syntax</a></h2>
 <pre><code>$unpinMessage[Channel ID;Message ID]
 </code></pre>
-<h3 id="parameters-35"><a class="header" href="#parameters-35">Parameters</a></h3>
+<h3 id="parameters-40"><a class="header" href="#parameters-40">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> : The channel where the message is located.</li>
 <li><code>Message ID</code> : The ID of the message to unpin.</li>
@@ -8489,7 +8531,7 @@ Successfully unregistered all guild slash commands!
 <pre><code>$unregisterGuildCommands[Slash command name;...]
 </code></pre>
 <p>Unregisters provided guild slash commands from the current guild.</p>
-<h4 id="parameters-36"><a class="header" href="#parameters-36">Parameters</a></h4>
+<h4 id="parameters-41"><a class="header" href="#parameters-41">Parameters</a></h4>
 <ul>
 <li><code>Slash command name</code> : Name of guild slash command to unregister. Use semicolons <code>;</code> as separator to separate multiple guild slash command names.</li>
 </ul>
@@ -8506,7 +8548,7 @@ Successfully unregistered the provided guild slash commands!
 <h2 id="syntax-53"><a class="header" href="#syntax-53">Syntax</a></h2>
 <pre><code>$untimeout[(User ID)]
 </code></pre>
-<h3 id="parameters-37"><a class="header" href="#parameters-37">Parameters</a></h3>
+<h3 id="parameters-42"><a class="header" href="#parameters-42">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The ID of the user to untimeout. If this parameter is empty, untimeouts the mentioned users (Optional).</li>
 </ul>
@@ -8549,7 +8591,7 @@ I've been online for `$uptime`!
 <h2 id="syntax-55"><a class="header" href="#syntax-55">Syntax</a></h2>
 <pre><code>$url[Mode;Text]
 </code></pre>
-<h3 id="parameters-38"><a class="header" href="#parameters-38">Parameters</a></h3>
+<h3 id="parameters-43"><a class="header" href="#parameters-43">Parameters</a></h3>
 <ul>
 <li><code>Mode</code> : Whether to encode or decode the provided text. Accepts either <code>encode</code> or <code>decode</code> as input.</li>
 <li><code>Text</code> : The text to change.</li>
@@ -8579,7 +8621,7 @@ $url[decode;https://example.url/decode?convert=Hello+world%21%21]
 <h2 id="syntax-56"><a class="header" href="#syntax-56">Syntax</a></h2>
 <pre><code>$useChannel[Channel ID]
 </code></pre>
-<h3 id="parameters-39"><a class="header" href="#parameters-39">Parameters</a></h3>
+<h3 id="parameters-44"><a class="header" href="#parameters-44">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> : The ID of the channel to where the message will be redirected.</li>
 </ul>
@@ -8596,7 +8638,7 @@ $description[hi]
 <h2 id="syntax-57"><a class="header" href="#syntax-57">Syntax</a></h2>
 <pre><code>$userAvatar[User ID]
 </code></pre>
-<h3 id="parameters-40"><a class="header" href="#parameters-40">Parameters</a></h3>
+<h3 id="parameters-45"><a class="header" href="#parameters-45">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to return the avatar for.</li>
 </ul>
@@ -8613,7 +8655,7 @@ $image[$userAvatar[$mentioned[1;yes]]]
 <h2 id="syntax-58"><a class="header" href="#syntax-58">Syntax</a></h2>
 <pre><code>$userExists[User ID]
 </code></pre>
-<h3 id="parameters-41"><a class="header" href="#parameters-41">Parameters</a></h3>
+<h3 id="parameters-46"><a class="header" href="#parameters-46">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The ID of the user to check.</li>
 </ul>
@@ -8627,7 +8669,7 @@ $userExists[$mentioned[1]]
 <h2 id="syntax-59"><a class="header" href="#syntax-59">Syntax</a></h2>
 <pre><code>$userID[Username#Discriminator / Username]
 </code></pre>
-<h3 id="parameters-42"><a class="header" href="#parameters-42">Parameters</a></h3>
+<h3 id="parameters-47"><a class="header" href="#parameters-47">Parameters</a></h3>
 <ul>
 <li><code>Username#Discriminator / Username</code> : The user's username (User) or user-tag (User#0000) to return the ID for.</li>
 </ul>
@@ -8644,7 +8686,7 @@ $userID[$username]
 <h2 id="syntax-60"><a class="header" href="#syntax-60">Syntax</a></h2>
 <pre><code>$userInfo[Message]
 </code></pre>
-<h3 id="parameters-43"><a class="header" href="#parameters-43">Parameters</a></h3>
+<h3 id="parameters-48"><a class="header" href="#parameters-48">Parameters</a></h3>
 <ul>
 <li>
 <p><code>Message</code> : The message to include in the description.</p>
@@ -8676,7 +8718,7 @@ Discriminator: {discriminator}]
 <h2 id="syntax-61"><a class="header" href="#syntax-61">Syntax</a></h2>
 <pre><code>$userJoined[User ID;(Format)]
 </code></pre>
-<h3 id="parameters-44"><a class="header" href="#parameters-44">Parameters</a></h3>
+<h3 id="parameters-49"><a class="header" href="#parameters-49">Parameters</a></h3>
 <ul>
 <li>
 <p><code>User ID</code> : The user whose join date will be returned.</p>
@@ -8714,7 +8756,7 @@ $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <h2 id="syntax-62"><a class="header" href="#syntax-62">Syntax</a></h2>
 <pre><code>$userJoinedDiscord[User ID;(Format)]
 </code></pre>
-<h3 id="parameters-45"><a class="header" href="#parameters-45">Parameters</a></h3>
+<h3 id="parameters-50"><a class="header" href="#parameters-50">Parameters</a></h3>
 <ul>
 <li>
 <p><code>User ID</code> : The user whose account creation date will be returned. </p>
@@ -8751,7 +8793,7 @@ $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <h2 id="syntax-63"><a class="header" href="#syntax-63">Syntax</a></h2>
 <pre><code>$userLeaderboard[Variable name;(Sort)]
 </code></pre>
-<h3 id="parameters-46"><a class="header" href="#parameters-46">Parameters</a></h3>
+<h3 id="parameters-51"><a class="header" href="#parameters-51">Parameters</a></h3>
 <ul>
 <li><code>Variable name</code> : The variable to create the leaderboard for.</li>
 <li><code>Sort</code> : Sorts the leaderboard values in ascending (<code>asc</code>) or descending (<code>desc</code>) order. Defaults to <code>desc</code> (Optional).</li>
@@ -8784,7 +8826,7 @@ Hello $username!
 <pre><code>$username[User ID]
 </code></pre>
 <p>Returns the username of a specific user given its ID.</p>
-<h5 id="parameters-47"><a class="header" href="#parameters-47">Parameters</a></h5>
+<h5 id="parameters-52"><a class="header" href="#parameters-52">Parameters</a></h5>
 <ul>
 <li><code>User ID</code> : The user to get the username for.</li>
 </ul>
@@ -8798,7 +8840,7 @@ $username just hugged $username[$mentioned[1]]!
 <h2 id="syntax-66"><a class="header" href="#syntax-66">Syntax</a></h2>
 <pre><code>$userPerms[User ID;Return amount;Separator]
 </code></pre>
-<h3 id="parameters-48"><a class="header" href="#parameters-48">Parameters</a></h3>
+<h3 id="parameters-53"><a class="header" href="#parameters-53">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to get permissions for.</li>
 <li><code>Return amount</code> : The no. of permissions to return. Use <code>-1</code> to return all.</li>
@@ -8814,7 +8856,7 @@ $userPerms[$mentioned[1;yes];-1;-]
 <h2 id="syntax-67"><a class="header" href="#syntax-67">Syntax</a></h2>
 <pre><code>$userReacted[Channel ID;Message ID;User ID;Emoji]
 </code></pre>
-<h3 id="parameters-49"><a class="header" href="#parameters-49">Parameters</a></h3>
+<h3 id="parameters-54"><a class="header" href="#parameters-54">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> : The channel where the message is located.</li>
 <li><code>Message ID</code> : The message to check the reactions for.</li>
@@ -8831,7 +8873,7 @@ $userReacted[$channelID;$message;$authorID;🍀]
 <h2 id="syntax-68"><a class="header" href="#syntax-68">Syntax</a></h2>
 <pre><code>$userRoles[User ID]
 </code></pre>
-<h3 id="parameters-50"><a class="header" href="#parameters-50">Parameters</a></h3>
+<h3 id="parameters-55"><a class="header" href="#parameters-55">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to return the role names for.</li>
 </ul>
@@ -8846,7 +8888,7 @@ $userRoles[$mentioned[1;yes]]]
 <h2 id="syntax-69"><a class="header" href="#syntax-69">Syntax</a></h2>
 <pre><code>$userServerAvatar[User ID]
 </code></pre>
-<h3 id="parameters-51"><a class="header" href="#parameters-51">Parameters</a></h3>
+<h3 id="parameters-56"><a class="header" href="#parameters-56">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> : The user to get the server avatar for. If the user doesn't have a server avatar, then the default user avatar will be returned instead.</li>
 </ul>
@@ -8866,7 +8908,7 @@ Instead, it creates the variable automatically during it's runtime and gets dele
 <h2 id="syntax-70"><a class="header" href="#syntax-70">Syntax</a></h2>
 <pre><code>$var[Name;(Value)]
 </code></pre>
-<h3 id="parameters-52"><a class="header" href="#parameters-52">Parameters</a></h3>
+<h3 id="parameters-57"><a class="header" href="#parameters-57">Parameters</a></h3>
 <ul>
 <li><code>Name</code> : The name of the temporary variable.</li>
 <li><code>Value</code> : The data to store (Optional).</li>
@@ -8888,7 +8930,7 @@ $addButton[no;interactionID;Example;secondary;;;$var[ID]]
 <h2 id="syntax-71"><a class="header" href="#syntax-71">Syntax</a></h2>
 <pre><code>$varExistError[Name;Error message]
 </code></pre>
-<h3 id="parameters-53"><a class="header" href="#parameters-53">Parameters</a></h3>
+<h3 id="parameters-58"><a class="header" href="#parameters-58">Parameters</a></h3>
 <ul>
 <li><code>Name</code> : The variable that should exist.</li>
 <li><code>Error message</code> : The custom error message to return if the variable doesn't exist.</li>
@@ -8905,7 +8947,7 @@ You are now cool!
 <h2 id="syntax-72"><a class="header" href="#syntax-72">Syntax</a></h2>
 <pre><code>$varExists[Name]
 </code></pre>
-<h3 id="parameters-54"><a class="header" href="#parameters-54">Parameters</a></h3>
+<h3 id="parameters-59"><a class="header" href="#parameters-59">Parameters</a></h3>
 <ul>
 <li><code>Name</code> : The variable's name to check.</li>
 </ul>
@@ -8919,7 +8961,7 @@ $varExists[$message]
 <h2 id="syntax-73"><a class="header" href="#syntax-73">Syntax</a></h2>
 <pre><code>$variablesCount[Type]
 </code></pre>
-<h3 id="parameters-55"><a class="header" href="#parameters-55">Parameters</a></h3>
+<h3 id="parameters-60"><a class="header" href="#parameters-60">Parameters</a></h3>
 <ul>
 <li><code>Type</code>: The variable type to return the count for. Accepts either <code>user</code>, <code>server</code>, <code>channel</code>, or <code>globaluser</code> as input.</li>
 </ul>
@@ -9263,7 +9305,7 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <h2 id="usage-227"><a class="header" href="#usage-227">Usage</a></h2>
 <pre><code>$messageContains[word;...]
 </code></pre>
-<h3 id="breakdown-168"><a class="header" href="#breakdown-168">Breakdown</a></h3>
+<h3 id="breakdown-164"><a class="header" href="#breakdown-164">Breakdown</a></h3>
 <ul>
 <li><code>word</code> - The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
 </ul>
@@ -9294,7 +9336,7 @@ Hello World!
 <h2 id="usage-229"><a class="header" href="#usage-229">Usage</a></h2>
 <pre><code>$sendNotification[message;(image URL)]
 </code></pre>
-<h3 id="breakdown-169"><a class="header" href="#breakdown-169">Breakdown</a></h3>
+<h3 id="breakdown-165"><a class="header" href="#breakdown-165">Breakdown</a></h3>
 <ul>
 <li><code>message</code> - The text that should be in the sent notification.</li>
 <li><code>image URL</code> - The URL for the image to be attached.</li>
@@ -9371,7 +9413,7 @@ Hello World!
 <h4 id="usage-233"><a class="header" href="#usage-233">Usage</a></h4>
 <pre><code>$customImage[Custom image tag]
 </code></pre>
-<h4 id="breakdown-170"><a class="header" href="#breakdown-170">Breakdown</a></h4>
+<h4 id="breakdown-166"><a class="header" href="#breakdown-166">Breakdown</a></h4>
 <ul>
 <li><code>custom image tag</code> - The tag that you set the custom image to, previously.</li>
 </ul>
@@ -9481,7 +9523,7 @@ Then, check out the following JavaScript learning resources :<br />
 <h2 id="syntax-75"><a class="header" href="#syntax-75">Syntax</a></h2>
 <pre><code class="language-js">ban(userID)
 </code></pre>
-<h3 id="parameters-56"><a class="header" href="#parameters-56">Parameters</a></h3>
+<h3 id="parameters-61"><a class="header" href="#parameters-61">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to ban. Value must be a valid user snowflake ID.</li>
 </ul>
@@ -9520,7 +9562,7 @@ Then, check out the following JavaScript learning resources :<br />
 <h2 id="syntax-76"><a class="header" href="#syntax-76">Syntax</a></h2>
 <pre><code class="language-js">banWithReason(userID, reason)
 </code></pre>
-<h3 id="parameters-57"><a class="header" href="#parameters-57">Parameters</a></h3>
+<h3 id="parameters-62"><a class="header" href="#parameters-62">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to ban. Value must be a valid user snowflake ID.</li>
 <li><code>reason</code> : The ban reason to add in Audit Logs and Guild Bans. Reason must not exceed more than 512 characters.</li>
@@ -9585,7 +9627,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-78"><a class="header" href="#syntax-78">Syntax</a></h2>
 <pre><code class="language-js">createChannel(name, type)
 </code></pre>
-<h3 id="parameters-58"><a class="header" href="#parameters-58">Parameters</a></h3>
+<h3 id="parameters-63"><a class="header" href="#parameters-63">Parameters</a></h3>
 <ul>
 <li><code>name</code> : The name of the channel.</li>
 <li><code>type</code> : The type of the channel to create. Value must be either <em><strong>text</strong></em> or <em><strong>voice</strong></em>.</li>
@@ -9628,7 +9670,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-79"><a class="header" href="#syntax-79">Syntax</a></h2>
 <pre><code class="language-js">giveRole(userID, roleID)
 </code></pre>
-<h3 id="parameters-59"><a class="header" href="#parameters-59">Parameters</a></h3>
+<h3 id="parameters-64"><a class="header" href="#parameters-64">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to get the role. Value must be a valid user snowflake ID.</li>
 <li><code>roleID</code> : The role to assign to the user. Value must be a valid role snowflake ID.</li>
@@ -9670,7 +9712,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-80"><a class="header" href="#syntax-80">Syntax</a></h2>
 <pre><code class="language-js">kick(userID)
 </code></pre>
-<h3 id="parameters-60"><a class="header" href="#parameters-60">Parameters</a></h3>
+<h3 id="parameters-65"><a class="header" href="#parameters-65">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to kick. Value must be a valid user snowflake ID.</li>
 </ul>
@@ -9709,7 +9751,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-81"><a class="header" href="#syntax-81">Syntax</a></h2>
 <pre><code class="language-js">kickWithReason(userID, reason)
 </code></pre>
-<h3 id="parameters-61"><a class="header" href="#parameters-61">Parameters</a></h3>
+<h3 id="parameters-66"><a class="header" href="#parameters-66">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to kick. Value must be a valid user snowflake ID.</li>
 <li><code>reason</code> : The kick reason to add in Audit Logs. Reason must not exceed more than 512 characters.</li>
@@ -9757,7 +9799,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-82"><a class="header" href="#syntax-82">Syntax</a></h2>
 <pre><code class="language-js">pinMessage(channelID, messageID)
 </code></pre>
-<h3 id="parameters-62"><a class="header" href="#parameters-62">Parameters</a></h3>
+<h3 id="parameters-67"><a class="header" href="#parameters-67">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel where the message is located. Value must be a valid channel snowflake ID.</li>
 <li><code>messageID</code> : The ID of the message. Value must be a valid message snowflake ID.</li>
@@ -9796,7 +9838,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-83"><a class="header" href="#syntax-83">Syntax</a></h2>
 <pre><code class="language-js">removeChannel(channelID)
 </code></pre>
-<h3 id="parameters-63"><a class="header" href="#parameters-63">Parameters</a></h3>
+<h3 id="parameters-68"><a class="header" href="#parameters-68">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel to be removed. Value must be a valid channel snowflake ID.</li>
 </ul>
@@ -9834,7 +9876,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-84"><a class="header" href="#syntax-84">Syntax</a></h2>
 <pre><code class="language-js">sendChannelMessage(channelId, message)
 </code></pre>
-<h3 id="parameters-64"><a class="header" href="#parameters-64">Parameters</a></h3>
+<h3 id="parameters-69"><a class="header" href="#parameters-69">Parameters</a></h3>
 <ul>
 <li><code>channelId</code> : The channel to send the message. Value must be a valid channel snowflake ID.</li>
 <li><code>message</code> : The message to send to the provided channel ID.</li>
@@ -9880,7 +9922,7 @@ setResponse('Wow! I did type.');
 <h2 id="syntax-85"><a class="header" href="#syntax-85">Syntax</a></h2>
 <pre><code class="language-js">setEmbedImage(imageURL)
 </code></pre>
-<h3 id="parameters-65"><a class="header" href="#parameters-65">Parameters</a></h3>
+<h3 id="parameters-70"><a class="header" href="#parameters-70">Parameters</a></h3>
 <ul>
 <li><code>imageURL</code> : The image to set in the embed. Value must be a valid image link. (Optional)</li>
 </ul>
@@ -9894,7 +9936,7 @@ setEmbedResponse();
 <h2 id="syntax-86"><a class="header" href="#syntax-86">Syntax</a></h2>
 <pre><code class="language-js">setEmbedResponse(title, description, footer)
 </code></pre>
-<h3 id="parameters-66"><a class="header" href="#parameters-66">Parameters</a></h3>
+<h3 id="parameters-71"><a class="header" href="#parameters-71">Parameters</a></h3>
 <ul>
 <li><code>title</code> : Adds a title to the embed.</li>
 <li><code>description</code> : Adds a description to the embed.</li>
@@ -9921,7 +9963,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <h2 id="syntax-87"><a class="header" href="#syntax-87">Syntax</a></h2>
 <pre><code class="language-js">setResponse(replyText)
 </code></pre>
-<h3 id="parameters-67"><a class="header" href="#parameters-67">Parameters</a></h3>
+<h3 id="parameters-72"><a class="header" href="#parameters-72">Parameters</a></h3>
 <ul>
 <li><code>replyText</code> : The provided text to send. (Optional)</li>
 </ul>
@@ -9941,7 +9983,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <h2 id="syntax-88"><a class="header" href="#syntax-88">Syntax</a></h2>
 <pre><code class="language-js">takeRole(userID, roleID)
 </code></pre>
-<h3 id="parameters-68"><a class="header" href="#parameters-68">Parameters</a></h3>
+<h3 id="parameters-73"><a class="header" href="#parameters-73">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user of whose role is to get removed. Value must be a valid user snowflake ID.</li>
 <li><code>roleID</code> : The role to take from the user. Value must be a valid role snowflake ID.</li>
@@ -9983,7 +10025,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <h2 id="syntax-89"><a class="header" href="#syntax-89">Syntax</a></h2>
 <pre><code class="language-js">unban(userID)
 </code></pre>
-<h3 id="parameters-69"><a class="header" href="#parameters-69">Parameters</a></h3>
+<h3 id="parameters-74"><a class="header" href="#parameters-74">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to unban. Value must be a valid user snowflake ID.</li>
 </ul>
@@ -10022,7 +10064,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <h2 id="syntax-90"><a class="header" href="#syntax-90">Syntax</a></h2>
 <pre><code class="language-js">unpinMessage(channelID, messageID)
 </code></pre>
-<h3 id="parameters-70"><a class="header" href="#parameters-70">Parameters</a></h3>
+<h3 id="parameters-75"><a class="header" href="#parameters-75">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel where the message is located. Value must be a valid channel snowflake ID.</li>
 <li><code>messageID</code> : The ID of the message. Value must be a valid message snowflake ID.</li>

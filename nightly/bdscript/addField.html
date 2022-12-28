@@ -168,36 +168,36 @@
                         <h1 id="addfield"><a class="header" href="#addfield">$addField</a></h1>
 <p>Adds a field to an embed.</p>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$addField[name;value;(inline;index)]
+<pre><code>$addField[name;value;(inline?;index)]
 </code></pre>
 <blockquote>
-<p>📝 You can create up to a maximum of 25 fields per embed.</p>
+<p>You can create up to 25 fields per embed.</p>
 </blockquote>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>name</code> - The name of the field. It cannot exceed more than 256 characters.</li>
-<li><code>value</code> - The value of the field. It cannot exceed more than 1024 characters.</li>
-<li><code>inline</code> - If 'yes', fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to 'no' by default. (Optional)</li>
-<li><code>index</code> - Adds field to specified embed index number (Optional). Default is <code>1</code>. <a href="../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>name</code>: The name of the field. It cannot exceed more than 256 characters.</li>
+<li><code>value</code>: The value of the field. It cannot exceed more than 1024 characters.</li>
+<li><code>inline?</code>: If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default. (Optional)</li>
+<li><code>index</code>: Adds field to specified embed index number (Optional). Default is <code>1</code>. <a href="../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <blockquote>
-<p>📝 Inline fields may not appear inline on some mobile devices.</p>
+<p>Inline fields may not appear inline on some mobile devices.</p>
 </blockquote>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<h4 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h4>
+<h3 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h3>
 <pre><code>$nomention
 $addField[This is the field name! #1;This is the field value! #1]
 $addField[This is the field name! #2;This is the field value! #2]
 $addField[This is the field name! #3;This is the field value! #3]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125877161-79acfd73-94a8-43c8-96dc-e6b74a7d5a01.png" alt="example1" /></p>
-<h4 id="with-inline-fields"><a class="header" href="#with-inline-fields">With inline fields</a></h4>
+<p><img src="https://user-images.githubusercontent.com/113303649/209849131-47574fa5-ba65-4552-b30e-c71f7af980a9.png" alt="example" /></p>
+<h3 id="with-inline-fields"><a class="header" href="#with-inline-fields">With inline fields</a></h3>
 <pre><code>$nomention
 $addField[This is the field name! #1;This is the field value! #1;yes]
 $addField[This is the field name! #2;This is the field value! #2;yes]
 $addField[This is the field name! #3;This is the field value! #3;yes]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125877197-8ac0caff-fec4-487d-b342-e9aba781eb57.png" alt="example2" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209849351-0fb6875c-2bfa-4f14-9e01-84e6d31b0bee.png" alt="example" /></p>
 
                     </main>
 
