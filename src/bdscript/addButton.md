@@ -35,6 +35,7 @@ Here, are all possible values for `style` function argument.
 
 ## Example
 ```
+$nomention
 Hi
 $addButton[no;test;Say hello!;primary;no;]
 ```
