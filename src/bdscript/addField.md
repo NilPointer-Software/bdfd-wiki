@@ -5,7 +5,7 @@ Adds a field to an embed.
 ```
 $addField[name;value;(inline?;index)]
 ```
-> You can create up to a maximum of 25 fields per embed.
+> You can create up to 25 fields per embed.
 
 ### Parameters
 - `name`: The name of the field. It cannot exceed more than 256 characters.
