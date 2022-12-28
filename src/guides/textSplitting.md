@@ -7,12 +7,12 @@ There are 7 functions in this guide. One of them, `$textSplit`, is the main func
 ## $textSplit
 This function separates the text with a separator and saves the text for later use.
 
-### Usage
+### Syntax
 ```
 $textSplit[separatedText;separator]
 ```
 
-#### Breakdown
+#### Parameters
 - `separatedText` - The text separated by a separator.
 - `separator` - The separator that separates the text.
 
@@ -24,12 +24,12 @@ $textSplit[hello-world-!;-]
 ## $splitText
 Each separated text has a number, i.e. an index. `$splitText` is a function that returns one of the elements of the separated text by an index or the sign `<` - the very first element, or `>` - the very last element.
 
-### Usage
+### Syntax
 ```
 $splitText[index]
 ```
 
-#### Breakdown
+#### Parameters
 - `index` - The index of the element to be returned.
 
 ### Examples
@@ -60,7 +60,7 @@ The very last element: $splitText[>]
 ## $getTextSplitLength
 This function has a simple purpose: `$getTextSplitLength` returns the length of the separated text, that is, the number of words separated by a separator. The returned value is the maximum index for the given separated text.
 
-### Usage
+### Syntax
 ```
 $getTextSplitLength
 ```
@@ -78,12 +78,12 @@ The maximum index: $getTextSplitLength
 ## $getTextSplitIndex
 This function searches for the specified element in the separated text and returns its index. If the specified element wasn't found or doesn't exist, the function will return `-1`.
 
-### Usage
+### Syntax
 ```
 $getTextSplitIndex[value]
 ```
 
-#### Breakdown
+#### Parameters
 - `value` - The text, that is, the element whose index is should be returned.
 
 ### Example
@@ -101,12 +101,12 @@ The index of the specified element: $getTextSplitIndex[$message]
 ## $joinSplitText
 This function returns the current elements of the separated text with the specified (sometimes new) separator.
 
-### Usage
+### Syntax
 ```
 $joinSplitText[separator]
 ```
 
-#### Breakdown
+#### Parameters
 - `separator` - (The new) separator with which the elements should be returned.
 
 ### Example
@@ -116,12 +116,12 @@ See example below, using [$removeSplitTextElement](#removesplittextelement) or [
 ## $removeSplitTextElement
 This function removes an element from the separated text by the specified index.
 
-### Usage
+### Syntax
 ```
 $removeSplitTextElement[index]
 ```
 
-#### Breakdown
+#### Parameters
 - `index` - The index of the element to be removed.
 
 ### Example
@@ -141,12 +141,12 @@ Current elements: $joinSplitText[-]
 ## $editSplitText
 This function replaces the element at the specified index with a new element instead of the previous one.
 
-### Usage
+### Syntax
 ```
 $editSplitText[index;value]
 ```
 
-#### Breakdown
+#### Parameters
 - `index` - The index of the element to be replaced.
 - `value` - The text, that is, what will replace the specified element.
 
