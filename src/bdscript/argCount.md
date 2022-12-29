@@ -7,7 +7,7 @@ $argCount[text]
 ```
 
 ## Parameters
-- `text`: The text to get word count from.
+- `text`: The text to get word count for.
 
 ## Example
 ```
