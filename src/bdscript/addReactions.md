@@ -1,7 +1,7 @@
 # $addReactions
 Adds reactions to the bot's response.
 
-## Usage
+## Syntax
 ```
 $addReactions[emojis]
 ```
