@@ -168,8 +168,27 @@
                         <h1 id="addtextinput"><a class="header" href="#addtextinput">$addTextInput</a></h1>
 <p>Adds a new text input to a modal.</p>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$addTextInput[Text Input ID;Style;Label;(Minimum length;Maximum length;Required;Value;Placeholder)]
+<pre><code>$addTextInput[text input ID;style;Label;(minimum length;maximum length;required;value;placeholder)]
 </code></pre>
+<blockquote>
+<p>You can't add more than 5 text input fields.</p>
+</blockquote>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<ul>
+<li><code>text input ID</code>: ID that is used to retrieve the text input in the field. This value must be unique.</li>
+<li><code>style</code>: The text input field style, either <code>short</code> or <code>paragraph</code>.</li>
+<li><code>label</code>: Name of the text input field. This value must be less than or equal to 45 characters.</li>
+<li><code>minimum length</code>: Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>maximum length</code>.</li>
+<li><code>maximum length</code>: Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>minimum length</code>.</li>
+<li><code>required</code>: Whether a user must fill in the text input field, defaults to true.</li>
+<li><code>value</code>: The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>minimum length</code> and no more than <code>maximum length</code>.</li>
+<li><code>placeholder</code>: The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
+</ul>
+<h3 id="styles"><a class="header" href="#styles">Styles</a></h3>
+<ul>
+<li><code>short</code> and <code>paragraph</code>.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/113303649/209936324-5a9f1d2b-8eea-48d4-b3cb-749a6d68c2d2.png" alt="styles" /></p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $newModal[modal;User Bio]
@@ -177,7 +196,7 @@ $addTextInput[modalInput1;short;What is your name?;3;30;yes;;Mikołaj]
 $addTextInput[modalInput2;short;What are your pronouns?;2;30;yes;;He/Him]
 $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I am a Developer]
 </code></pre>
-<p><img src="https://imgur.com/0Vd3Ipq.png" alt="" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209936030-02352d16-a81f-486f-aa32-839c82f4fa6d.png" alt="example" /></p>
 <blockquote>
 <p>For more info, see the <a href="../guides/modals.html">Modals Guide</a>.</p>
 </blockquote>

@@ -167,15 +167,28 @@
                     <main>
                         <h1 id="addselectmenuoption"><a class="header" href="#addselectmenuoption">$addSelectMenuOption</a></h1>
 <p>Adds select menu option to a select menu.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$addSelectMenuOption[Menu option ID;Label;Value;Description;(Default;Emoji;Message ID)]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$addSelectMenuOption[menu option ID;label;value;description;(default?;emoji;message ID)]
 </code></pre>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<ul>
+<li><code>menu option ID</code>: The ID used in <code>$newSelectMenu[]</code>.</li>
+<li><code>label</code>: The name of the option.</li>
+<li><code>value</code>: It's the data that gets passed to <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
+<li><code>description</code>: It shows up under the <code>label</code>.</li>
+<li><code>default?</code>: Should the option be selected by default. (yes/no) <strong>There can be only one default option!</strong></li>
+<li><code>emoji</code>: It shows up next to the <code>label</code>.</li>
+<li><code>message ID</code>: ID of a message that should have select menu added to it. By default it's the bot's response.</li>
+</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<pre><code>$newSelectMenu[Example;1;1;Choose some option]
+<pre><code>$nomention
+$newSelectMenu[Example;1;1;Choose some option]
 $addSelectMenuOption[Example;First;first-option;The first option]
 $addSelectMenuOption[Example;Second;second-option;The second option]
 $addSelectMenuOption[Example;Third;third-option;The third option]
 </code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/209933666-9ec8ecfc-e666-4caa-b7cb-b0b3c4cdea02.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209933373-978c8ade-157f-4991-bb93-929430b4a4eb.png" alt="example" /></p>
 <blockquote>
 <p>For more info, see the <a href="../guides/selectmenu.html">Select Menu Guide</a>.</p>
 </blockquote>
