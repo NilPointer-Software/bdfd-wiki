@@ -10,7 +10,7 @@ $authorOfMessage[channel ID;message ID]
 - `channel ID`: The channel where the message was sent.
 - `message ID`: The message that the bot returns the author ID for.
 
->  [How get message/channel ID guide](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
+>  [How get message/channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 
 ## Example
 
