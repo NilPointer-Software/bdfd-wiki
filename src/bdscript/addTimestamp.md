@@ -1,18 +1,19 @@
 # $addTimestamp
 Adds a timestamp to an embed.
 
-## Usage
+## Syntax
 ```
 $addTimestamp[(index)]
 ```
 
-### Breakdown
-- `index` - What embed the timestamp should belong to. Default is `1`. [(learn more)](../resources/embedIndexes.md)
+## Parameter
+- `index`: What embed the timestamp should belong to. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
+$nomention
 $description[Hi!]
 $footer[That is the timestamp =>]
 $addTimestamp
 ```
-![example](https://user-images.githubusercontent.com/69215413/119733171-25bc8780-be47-11eb-9817-e5bb53d46af2.png)
+![example](https://user-images.githubusercontent.com/113303649/209937294-5cf68498-dcb9-4dcc-88b9-4da824f86e3e.png)
