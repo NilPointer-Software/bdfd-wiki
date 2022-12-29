@@ -6,7 +6,7 @@ Returns `true` if every provided condition is true, otherwise `false` is returne
 $and[conditions;...]
 ```
 ## Parameters
-- `conditions`: All checks that will be carried out to obtain the desired result. **( didn't know what to write, please change it )**
+- `conditions`: Checks that will be carried out. All conditions must be true for this function to return `true`. Separate conditions using `;`.
 
 ### Signs
 `==` - Equal
