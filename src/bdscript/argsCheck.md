@@ -13,6 +13,7 @@ $argsCheck[how-many;error message]
 
 ## Example
 ```
+$nomention
 $argsCheck[>1;❌ Please provide something for me to say!]
 $noMentionMessage
 ```
