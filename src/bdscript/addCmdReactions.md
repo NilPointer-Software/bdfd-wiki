@@ -3,7 +3,7 @@ Adds reactions to the message that triggered the command.
 
 ## Syntax
 ```
-$addCmdReactions[emojis;...]
+$addCmdReactions[emojis]
 ```
 
 ## Parameters
