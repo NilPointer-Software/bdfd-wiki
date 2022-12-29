@@ -171,10 +171,10 @@
 <p>There are 7 functions in this guide. One of them, <code>$textSplit</code>, is the main function that you start off.</p>
 <h2 id="textsplit"><a class="header" href="#textsplit">$textSplit</a></h2>
 <p>This function separates the text with a separator and saves the text for later use.</p>
-<h3 id="usage"><a class="header" href="#usage">Usage</a></h3>
+<h3 id="syntax"><a class="header" href="#syntax">Syntax</a></h3>
 <pre><code>$textSplit[separatedText;separator]
 </code></pre>
-<h4 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h4>
+<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
 <ul>
 <li><code>separatedText</code> - The text separated by a separator.</li>
 <li><code>separator</code> - The separator that separates the text.</li>
@@ -184,10 +184,10 @@
 </code></pre>
 <h2 id="splittext"><a class="header" href="#splittext">$splitText</a></h2>
 <p>Each separated text has a number, i.e. an index. <code>$splitText</code> is a function that returns one of the elements of the separated text by an index or the sign <code>&lt;</code> - the very first element, or <code>&gt;</code> - the very last element.</p>
-<h3 id="usage-1"><a class="header" href="#usage-1">Usage</a></h3>
+<h3 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h3>
 <pre><code>$splitText[index]
 </code></pre>
-<h4 id="breakdown-1"><a class="header" href="#breakdown-1">Breakdown</a></h4>
+<h4 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h4>
 <ul>
 <li><code>index</code> - The index of the element to be returned.</li>
 </ul>
@@ -209,7 +209,7 @@ The very last element: $splitText[&gt;]
 <p><img src="https://user-images.githubusercontent.com/70456337/209445550-a0a38b58-6722-4450-a4d6-ca14dbc03973.png" alt="$splitText-2" /></p>
 <h2 id="gettextsplitlength"><a class="header" href="#gettextsplitlength">$getTextSplitLength</a></h2>
 <p>This function has a simple purpose: <code>$getTextSplitLength</code> returns the length of the separated text, that is, the number of words separated by a separator. The returned value is the maximum index for the given separated text.</p>
-<h3 id="usage-2"><a class="header" href="#usage-2">Usage</a></h3>
+<h3 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h3>
 <pre><code>$getTextSplitLength
 </code></pre>
 <h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
@@ -220,10 +220,10 @@ The maximum index: $getTextSplitLength
 <p><img src="https://user-images.githubusercontent.com/70456337/209445774-edec9a26-892f-4028-906b-b7ec08f94df5.png" alt="$getTextSplitLength" /></p>
 <h2 id="gettextsplitindex"><a class="header" href="#gettextsplitindex">$getTextSplitIndex</a></h2>
 <p>This function searches for the specified element in the separated text and returns its index. If the specified element wasn't found or doesn't exist, the function will return <code>-1</code>.</p>
-<h3 id="usage-3"><a class="header" href="#usage-3">Usage</a></h3>
+<h3 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h3>
 <pre><code>$getTextSplitIndex[value]
 </code></pre>
-<h4 id="breakdown-2"><a class="header" href="#breakdown-2">Breakdown</a></h4>
+<h4 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h4>
 <ul>
 <li><code>value</code> - The text, that is, the element whose index is should be returned.</li>
 </ul>
@@ -237,10 +237,10 @@ The index of the specified element: $getTextSplitIndex[$message]
 <p><img src="https://user-images.githubusercontent.com/70456337/209445822-b46a7cd7-e724-471d-8c2b-e9da543cb3bc.png" alt="$getTextSplitIndex" /></p>
 <h2 id="joinsplittext"><a class="header" href="#joinsplittext">$joinSplitText</a></h2>
 <p>This function returns the current elements of the separated text with the specified (sometimes new) separator.</p>
-<h3 id="usage-4"><a class="header" href="#usage-4">Usage</a></h3>
+<h3 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h3>
 <pre><code>$joinSplitText[separator]
 </code></pre>
-<h4 id="breakdown-3"><a class="header" href="#breakdown-3">Breakdown</a></h4>
+<h4 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h4>
 <ul>
 <li><code>separator</code> - (The new) separator with which the elements should be returned.</li>
 </ul>
@@ -248,10 +248,10 @@ The index of the specified element: $getTextSplitIndex[$message]
 <p>See example below, using <a href="#removesplittextelement">$removeSplitTextElement</a> or <a href="#editsplittext">$editSplitText</a>.</p>
 <h2 id="removesplittextelement"><a class="header" href="#removesplittextelement">$removeSplitTextElement</a></h2>
 <p>This function removes an element from the separated text by the specified index.</p>
-<h3 id="usage-5"><a class="header" href="#usage-5">Usage</a></h3>
+<h3 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h3>
 <pre><code>$removeSplitTextElement[index]
 </code></pre>
-<h4 id="breakdown-4"><a class="header" href="#breakdown-4">Breakdown</a></h4>
+<h4 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h4>
 <ul>
 <li><code>index</code> - The index of the element to be removed.</li>
 </ul>
@@ -267,10 +267,10 @@ Current elements: $joinSplitText[-]
 <p><img src="https://user-images.githubusercontent.com/70456337/209445832-e8922a39-c311-4d20-bb19-cddc2db18ecc.png" alt="$removeSplitTextElement" /></p>
 <h2 id="editsplittext"><a class="header" href="#editsplittext">$editSplitText</a></h2>
 <p>This function replaces the element at the specified index with a new element instead of the previous one.</p>
-<h3 id="usage-6"><a class="header" href="#usage-6">Usage</a></h3>
+<h3 id="syntax-6"><a class="header" href="#syntax-6">Syntax</a></h3>
 <pre><code>$editSplitText[index;value]
 </code></pre>
-<h4 id="breakdown-5"><a class="header" href="#breakdown-5">Breakdown</a></h4>
+<h4 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h4>
 <ul>
 <li><code>index</code> - The index of the element to be replaced.</li>
 <li><code>value</code> - The text, that is, what will replace the specified element.</li>
