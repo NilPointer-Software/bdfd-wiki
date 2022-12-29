@@ -1,7 +1,7 @@
 # $addButton
 Adds button to the response.
 
-## Usage
+## Syntax
 ```
 $addButton[new row?;interaction ID/url;label;style;(disabled?;emoji;message ID)]
 ```
