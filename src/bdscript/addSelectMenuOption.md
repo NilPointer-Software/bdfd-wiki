@@ -16,6 +16,7 @@ $addSelectMenuOption[menu option ID;label;value;description;(default?;emoji;mess
 
 ## Example
 ```
+$nomention
 $newSelectMenu[Example;1;1;Choose some option]
 $addSelectMenuOption[Example;First;first-option;The first option]
 $addSelectMenuOption[Example;Second;second-option;The second option]
