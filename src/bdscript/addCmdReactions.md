@@ -1,7 +1,7 @@
 # $addCmdReactions
 Adds reactions to the message that triggered the command.
 
-## Usage
+## Syntax
 ```
 $addCmdReactions[emojis;...]
 ```
