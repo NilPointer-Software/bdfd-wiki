@@ -1,7 +1,7 @@
 # $addEmoji
 Adds an emoji to the server.
 
-## Usage
+## Syntax
 ```
 $addEmoji[name;image URL;return emoji?]
 ```
