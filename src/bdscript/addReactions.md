@@ -3,7 +3,7 @@ Adds reactions to the bot's response.
 
 ## Syntax
 ```
-$addReactions[emojis]
+$addReactions[emojis;...]
 ```
 
 ## Parameters
