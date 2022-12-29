@@ -1,7 +1,7 @@
 # $addCmdReactions
 Adds reactions to the message that triggered the command.
 
-## Usage
+## Syntax
 ```
 $addCmdReactions[emojis;...]
 ```
@@ -12,7 +12,14 @@ $addCmdReactions[emojis;...]
 > You can use Unicode emojis and emoji IDs, but not emoji names. For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
 > List of unicode emojis: [😋 Get Emoji](https://getemoji.com)
- 
+
+## Example
+```
+$nomention
+$addCmdReactions[$message]
+```
+![example](https://user-images.githubusercontent.com/113303649/209925658-f44e2ca3-e71f-426e-a2ed-66b6758be3a8.png)
+
 ### How to get emoji ID?
 
 > This method requires [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to be enabled! 

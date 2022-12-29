@@ -1,7 +1,7 @@
 # $addButton
 Adds button to the response.
 
-## Usage
+## Syntax
 ```
 $addButton[new row?;interaction ID/url;label;style;(disabled?;emoji;message ID)]
 ```
@@ -9,7 +9,7 @@ $addButton[new row?;interaction ID/url;label;style;(disabled?;emoji;message ID)]
 ## Parameters
 - `new row?`: If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
 
-    > 📝 A message can have a maximum of 25 buttons (5 rows of 5 buttons).
+    > A message can have a maximum of 25 buttons (5 rows of 5 buttons).
 
 - `interaction ID/url`: Depending on the button type, you either set it to `interaction ID` which is then used in `$onInteraction[ID]` callback or `URL` if it's a link button.
 - `label`: The text value visible on the button.
@@ -31,7 +31,7 @@ Here, are all possible values for `style` function argument.
 - danger
 - link
 
-> 📝 If `link` style is used, the button **won't send** any interactions!
+> If `link` style is used, the button **won't send** any interactions!
 
 ## Example
 ```
