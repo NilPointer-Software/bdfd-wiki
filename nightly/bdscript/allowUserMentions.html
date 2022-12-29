@@ -167,18 +167,19 @@
                     <main>
                         <h1 id="allowusermentions"><a class="header" href="#allowusermentions">$allowUserMentions</a></h1>
 <p>Enables user pings only for the provided user IDs, while the user not provided will be 'fake pinged' <em>(the user will be pinged, but user will not be notified)</em>.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$allowUserMentions[userIDs]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$allowUserMentions[userIDs;...]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li><code>userIDs</code> - The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using <code>;</code>.</li>
+<li><code>userIDs</code>: The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using <code>;</code>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $allowUserMentions[]
 Hi &lt;@696368083517964288&gt;! I mentioned you, but you didn't get pinged.
 </code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/209945188-a195cda5-9297-46ff-b882-0363f5b4ed28.png" alt="example" /></p>
 
                     </main>
 

@@ -167,19 +167,19 @@
                     <main>
                         <h1 id="allowrolementions"><a class="header" href="#allowrolementions">$allowRoleMentions</a></h1>
 <p>Enables role pings only for the provided role IDs, while the roles not provided will be 'fake pinged' <em>(the role will be pinged, but users will not be notified)</em>.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$allowRoleMentions[roleIDs]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$allowRoleMentions[roleIDs;...]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li><code>roleIDs</code> - The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using <code>;</code>.</li>
+<li><code>roleIDs</code>: The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using <code>;</code>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $allowRoleMentions[]
 I'm pinging &lt;@&amp;858376972303204362&gt;, but no one got notified; wow!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/128615927-d93f9e54-e8ad-4067-a363-eedb540d6b37.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209944631-72e05d4a-6f0f-4dce-aba0-db9f51a46205.png" alt="example" /></p>
 
                     </main>
 

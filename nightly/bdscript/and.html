@@ -166,17 +166,32 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="and"><a class="header" href="#and">$and</a></h1>
-<p>Returns 'true' if every provided condition is true, otherwise 'false' is returned.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$and[condition1;condition2;etc]
+<p>Returns <code>true</code> if every provided condition is true, otherwise <code>false</code> is returned.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$and[conditions;...]
 </code></pre>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<ul>
+<li><code>conditions</code>: Checks that will be carried out. All conditions must be true for this function to return <code>true</code>. Separate conditions using <code>;</code>.</li>
+</ul>
+<h3 id="signs"><a class="header" href="#signs">Signs</a></h3>
+<p><code>==</code> - Equal</p>
+<p><code>!=</code> - Not Equal</p>
+<p><code>&lt;</code> -  Less Than</p>
+<p><code>&gt;</code> - Greater Than</p>
+<p><code>&gt;=</code> - Greater Than Or Equal To</p>
+<p><code>&lt;=</code> - Less Than Or Equal To</p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$if[$and[$username==noituri;$message==update]==true]
+$if[$and[$username==noituri;$message==Update]==true]
 Noit said &quot;Update&quot;!
 $endif
-$c[The code in the if statement only executes if the user's username is 'noituri', and the message content is 'update'.]
+$c[The code in the if statement only executes if the user's username is 'noituri', and the message content is 'Update'.]
 </code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/209949010-d4131044-5d6e-4afd-839d-b28ed9ecaab7.png" alt="example" /></p>
+<blockquote>
+<p>For more info, see the <a href="..guides/ifStatements.html">If Guide</a></p>
+</blockquote>
 
                     </main>
 

@@ -167,22 +167,34 @@
                     <main>
                         <h1 id="alternativeparsing"><a class="header" href="#alternativeparsing">$alternativeParsing</a></h1>
 <p>Changes the way how triggers are read.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$alternativeParsing
 </code></pre>
+<blockquote>
+<p>This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. You should not use <code>$alternativeParsing</code> when making your bot.</p>
+</blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <ol>
 <li>Create two commands and set the trigger <code>hello</code> for one command and <code>helloworld</code> for the other.</li>
 <li>Add the <code>$alternativeParsing</code> function to the command code with the <code>hello</code> trigger.</li>
-<li>Execute commands
-<img src="https://user-images.githubusercontent.com/70456337/189479524-f534454d-b8b6-406f-8465-1d3b314f7449.png" alt="With" /></li>
 </ol>
-<h3 id="without-alternativeparsing"><a class="header" href="#without-alternativeparsing">Without <code>$alternativeParsing</code></a></h3>
-<p>What happens if we remove this function from the code?
-<img src="https://user-images.githubusercontent.com/70456337/189479541-ad8c6a5a-4f8d-4800-9007-986a3fee0b75.png" alt="Without" /></p>
-<blockquote>
-<p>⚠️ This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. You should not use <code>$alternativeParsing</code> when making your bot.</p>
-</blockquote>
+<p>Code with trigger <code>hello</code>:</p>
+<pre><code>$nomention
+$alternativeParsing
+$description[&quot;hello&quot;]
+</code></pre>
+<p>Code with trigger <code>helloworld</code>:</p>
+<pre><code>$nomention
+$description[&quot;helloworld&quot;]
+</code></pre>
+<ol start="3">
+<li>Execute commands</li>
+</ol>
+<h3 id="with-alternativeparsing"><a class="header" href="#with-alternativeparsing">With $alternativeParsing</a></h3>
+<p><img src="https://user-images.githubusercontent.com/113303649/209946250-ddf50d47-b8a7-48c2-8404-a2a58981c36d.png" alt="example" /></p>
+<h3 id="without-alternativeparsing"><a class="header" href="#without-alternativeparsing">Without $alternativeParsing</a></h3>
+<p>What happens if we remove this function from the code?</p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209946555-3b270854-0176-4492-bd1a-2ba81bf389c1.png" alt="example" /></p>
 
                     </main>
 
