@@ -2,7 +2,7 @@
 Gets the user's ban reason.
 
 
-## Usage
+## Syntax
 ```
 $getBanReason[User ID;(Guild ID)]
 ```
@@ -12,7 +12,7 @@ $getBanReason[User ID;(Guild ID)]
 - `Guild ID`: The server id from which to get the ban reason. Optional
 
 
-#### Example
+## Example
 ```
 $nomention
 Ban Reason: $getBanReason[154148273307910144]
