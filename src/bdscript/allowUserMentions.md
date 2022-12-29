@@ -6,7 +6,7 @@ Enables user pings only for the provided user IDs, while the user not provided w
 $allowUserMentions[userIDs;...]
 ```
 
-### Parameters
+## Parameters
 - `userIDs`: The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using `;`.
 
 ## Example
