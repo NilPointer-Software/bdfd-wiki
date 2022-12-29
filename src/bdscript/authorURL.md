@@ -1,15 +1,15 @@
 # $authorURL
 Adds a hyperlink to the author text.
 
-## Usage
+## Syntax
 ```
 $authorURL[url;(index)]
 ```
-> 🧙‍♂️ `$authorURL` will not work if there is no text provided in `$author`.
+> `$authorURL[]` will not work if there is no text provided in `$author[]`.
 
-### Breakdown
-- `url` - The link to set as the author hyperlink.
-- `index` - What embed the author url should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
+### Parameters
+- `url`: The link to set as the author hyperlink.
+- `index`: What embed the author url should belong to. (Optional) [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
@@ -17,6 +17,5 @@ $nomention
 $author[Click me to visit the BDFD website!]
 $authorURL[https://botdesignerdiscord.com]
 ```
-![example](https://user-images.githubusercontent.com/69215413/119854987-8bf4e900-bedf-11eb-8699-cb4afab578f8.png)
+![example](https://user-images.githubusercontent.com/113303649/209984969-3f5c56e6-5817-4acf-b2df-37bf237d00df.png)
 
-*(tap on the text to visit the URL)*
