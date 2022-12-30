@@ -22,4 +22,4 @@ $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
 ![example](https://user-images.githubusercontent.com/113303649/210044732-e0db835b-693d-483b-b4da-b57ae4e39081.png)
 
 
-> [How does the `$findUser[]` function work?](../findUser.md)
+> [How does the `$findUser[]` function work?](../bdscript/findUser.md)
