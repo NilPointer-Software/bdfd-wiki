@@ -10,7 +10,7 @@ $ban[(reason;user ID)]
 ## Parameters
 - `reason`: The reason for this action, which will be saved in the audit log. Can be left empty.
 > The reason for the ban can be viewed using `$getBanResaon[]`.
-- `user ID`: Gets the user to ban. _(Optional)_
+- `user ID`: The user to ban. _(Optional)_ Can be omitted, then the ID will be taken from the last part of the command message.
 > [How to get user ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 ## Example
 ```
