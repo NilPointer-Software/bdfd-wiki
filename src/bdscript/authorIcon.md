@@ -8,8 +8,8 @@ $authorIcon[image url;(index)]
 > `$authorIcon[]` will not work if there is no text provided in `$author[]`.
 > 
 ## Parameters
-- `image url`: The image that appears in the author icon. This must be a valid image URL.
-- `index`: What embed the author icon should belong to. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
+- `image url`: The image for the author icon. This must be a valid image URL.
+- `index`: To which embed the author icon will be added. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
