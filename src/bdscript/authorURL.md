@@ -9,7 +9,7 @@ $authorURL[url;(index)]
 
 ### Parameters
 - `url`: The link to set as the author hyperlink.
-- `index`: What embed the author url should belong to. (Optional) [(learn more)](../resources/embedIndexes.md)
+- `index`: To which embed the author URL will be added. (Optional) [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
