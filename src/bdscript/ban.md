@@ -8,6 +8,7 @@ $ban[(reason)]
 
 ## Parameters
 - `reason`: The reason for this action, which will be sent to the audit-log. _(Optional)_
+> The reason for the ban can be viewed using `$getBanResaon[]`.
 
 ## Example
 ### Without reason
