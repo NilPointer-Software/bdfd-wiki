@@ -167,17 +167,22 @@
                     <main>
                         <h1 id="authorofmessage"><a class="header" href="#authorofmessage">$authorOfMessage</a></h1>
 <p>Returns the ID of the provided message's author.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$authorOfMessage[channelID;messageID]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$authorOfMessage[channel ID;message ID]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li><code>channelID</code> - The channel where the message was sent.</li>
-<li><code>messageID</code> - The message that the bot returns the author ID for.</li>
+<li><code>channel ID</code>: The channel where the message was sent in.</li>
+<li><code>message ID</code>: The message for which the author ID will be returned.</li>
 </ul>
 <blockquote>
-<p>🧙‍♂️ <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Where do I find message/channel IDs? (click-me)</a></p>
+<p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get the message/channel ID guide.</a></p>
 </blockquote>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+Author of message: $username[$authorOfMessage[$message[1];$message[2]]]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/209977869-72e418ce-9666-447e-b2c8-d9942d0735b7.png" alt="example" /></p>
 
                     </main>
 
