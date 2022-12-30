@@ -8,7 +8,7 @@ $blackListRolesIDs[role IDs;...;error message]
 
 ### Parameters
 - `role IDs`: The roles that will be blacklisted. Separate role IDs using `;`.
-- `error message`: The message that sends if the user has a role in the blacklist.
+- `error message`: The message that will be sent if the user has a role from the blacklist.
 
 ## Example
 ```
