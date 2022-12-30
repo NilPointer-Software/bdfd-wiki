@@ -1,18 +1,19 @@
 # $author
 Adds author text to an embed.
 
-## Usage
+## Syntax
 ```
 $author[text;(index)]
 ```
 
-### Breakdown
-- `text` - The text that appears in the author text. It cannot exceed more than 256 characters.
-- `index` - What embed the author text should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
+## Parameters
+- `text`: The text that appears in the author text. It cannot exceed more than 256 characters.
+- `index`: To which embed the author text will be added. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
 $nomention
 $author[This is the author text!]
 ```
-![example](https://user-images.githubusercontent.com/69215413/119855770-32d98500-bee0-11eb-830c-bfb8b65fac7f.png)
+
+![example](https://user-images.githubusercontent.com/113303649/209974279-9aec899d-bd01-4238-9e51-916129f87f92.png)

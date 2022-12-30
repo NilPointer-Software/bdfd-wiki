@@ -1,7 +1,7 @@
 # $authorID
 Returns message's author ID. 
 
-## Usage
+## Syntax
 ```
 $authorID
 ```
@@ -11,7 +11,4 @@ $authorID
 $nomention
 This command was written by <@$authorID>!
 ```
-
-### Explanation
-Discord uses this format: `<@USER_ID>` to mention users. For example, let's say that `$authorID` is equal to `246604909451935745`. 
-If we use this: `<@$authorID>`, it will be replaced with `<@246604909451935745>` and discord will interpret this as a mention *(@Noituri)*.
+![example](https://user-images.githubusercontent.com/113303649/209975713-3b515d2a-4828-48d5-bb1a-530a0d71e059.png)
