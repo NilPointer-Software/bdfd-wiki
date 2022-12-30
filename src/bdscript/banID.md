@@ -4,7 +4,7 @@ Bans a user using their ID.
 
 ## Syntax
 ```
-$ban[(reason;user ID)]
+$banID[reason;(user ID)]
 ```
 
 ## Parameters
