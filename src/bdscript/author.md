@@ -8,7 +8,7 @@ $author[text;(index)]
 
 ## Parameters
 - `text`: The text that appears in the author text. It cannot exceed more than 256 characters.
-- `index`: What embed the author text should belong to. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
+- `index`: To which embed the author text will be added. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
