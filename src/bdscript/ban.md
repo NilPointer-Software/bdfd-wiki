@@ -1,17 +1,13 @@
 # $ban
 Bans the mentioned user.
-
-## Syntax
+> Please note that the page is divided into two parts. [Simple function](#simple-function) and [Complex function](#complex-function).
+## Simple function
+### Syntax
 ```
-$ban[(reason)]
+$ban
 ```
 
-## Parameters
-- `reason`: The reason for this action, which will be save in the audit log. Can be left empty.
-> The reason for the ban can be viewed using `$getBanResaon[]`.
-
-## Example
-### Without reason
+### Example
 ```
 $nomention
 $ban
@@ -19,8 +15,18 @@ $ban
 ```
 ![example](https://user-images.githubusercontent.com/113303649/210043445-54315ca5-570c-4870-9512-13c2bcf40260.png)
 
+## Complex function
 
-### With reason
+### Syntax
+```
+$ban[(reason)]
+```
+### Parameters
+- `reason`: The reason for this action, which will be save in the audit log. Can be left empty.
+> The reason for the ban can be viewed using `$getBanResaon[]`.
+
+
+### Example
 ```
 $nomention
 $ban[$noMentionMessage]
