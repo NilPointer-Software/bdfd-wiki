@@ -1,7 +1,7 @@
 # $reaction
 *(for premium users)*
 
-Is a [callback](../callbacks/introduction.html). It gets triggered whenever an awaited reaction occurs.
+Is a [callback](../callbacks/introduction.md). It gets triggered whenever an awaited reaction occurs.
 
 ## Syntax
 ```
