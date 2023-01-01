@@ -17,7 +17,7 @@ It's very simple! All functions start with `$`, so you'll never get confused wit
 ### Simple code
 ```
 $nomention
-Message: $messageID
+Message: $message
 ```
 ![example](https://user-images.githubusercontent.com/113303649/210155973-9531a7b7-ab71-4e82-9ddc-5c079bd36905.png)
 
