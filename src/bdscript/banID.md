@@ -1,25 +1,38 @@
 # $banID
 Bans a user using their ID.
 
+## Usages
+There are three usages of the `$banID` function.
 
-## Syntax
+### Usage #1
 ```
-$banID[reason;(user ID)]
+$banID
 ```
+Gets the user to ban from the author's message. No reason will be provided in audit logs for the ban.
 
-## Parameters
-- `reason`: The reason for this action, which will be saved in the audit log. Can be left empty.
-> The reason for the ban can be viewed using `$getBanResaon[]`.
-- `user ID`: The user to ban. _(Optional)_ Can be omitted, then the ID will be taken from the last part of the command message.
-> [How to get user ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
+### Usage #2
+```
+$banID[reason]
+```
+Gets the user to ban from the author's message. The 'reason' will show in audit logs.
+
+### Usage #3
+*(recommended)*
+
+```
+$banID[reason;userID]
+```
+Gets the user to ban from the 'userID' field. The 'reason' will show up in audit logs. You can also leave the 'reason' field empty to provide no reason.
+
 ## Example
 ```
 $nomention
+$argsCheck[>1;Please provide a 'user'. Usage: `!ban (user) <reason>`]
+$onlyIf[$findUser[$message[1];no]!=;Failed to find user!]
 $onlyPerms[ban;You need the 'ban' permission to use that command!]
 $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
 <@$findUser[$message[1];no]> was banned!
 ```
-![example](https://user-images.githubusercontent.com/113303649/210044732-e0db835b-693d-483b-b4da-b57ae4e39081.png)
+> 🧙‍♂️ The code above accepts both IDs or mentions to ban a user!
 
-
-> [How does the `$findUser[]` function work?](../bdscript/findUser.md)
+![example](https://user-images.githubusercontent.com/69215413/119884309-7ba03680-befe-11eb-80c7-93991297abf7.png)
