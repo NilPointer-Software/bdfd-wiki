@@ -26,6 +26,7 @@ Message: $messageID
 - [Android App](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
 - [iOS App](https://apps.apple.com/app/bot-designer-for-discord/id1495536477)
 - [Web App](https://botdesignerdiscord.com/app/) *(Alpha Version)*
+- [Nodes Status](https://botdesignerdiscord.com/status)
 
 
 > #### Want to contribute to the wiki?
