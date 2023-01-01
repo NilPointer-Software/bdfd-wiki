@@ -1,35 +1,29 @@
 # $ban
 Bans the mentioned user.
-> Please note that the page is divided into two parts. [Simple function](#simple-function) and [Complex function](#complex-function).
-## Simple function
-### Syntax
+
+## Usage
 ```
-$ban
+$ban[(optional) reason]
 ```
 
-### Example
+### Breakdown
+- `reason` - The reason for this action, which will be sent to the audit-log. *(Optional)*
+
+## Examples
+#### Example #1
+*(without optional fields)*
 ```
 $nomention
 $ban
 <@$mentioned[1]> was banned!
 ```
-![example](https://user-images.githubusercontent.com/113303649/210043445-54315ca5-570c-4870-9512-13c2bcf40260.png)
+![image](https://user-images.githubusercontent.com/69215413/119858159-32da8480-bee2-11eb-922d-0fb05a5aa7c9.png)
 
-## Complex function
-
-### Syntax
-```
-$ban[(reason)]
-```
-### Parameters
-- `reason`: The reason for this action, which will be save in the audit log. Can be left empty.
-> The reason for the ban can be viewed using `$getBanResaon[]`.
-
-
-### Example
+#### Example #2
+*(with optional fields)*
 ```
 $nomention
 $ban[$noMentionMessage]
 <@$mentioned[1]> was banned!
 ```
-![example](https://user-images.githubusercontent.com/113303649/210043547-4fc394e7-ecd4-4ef6-90b0-55dd7883c02f.png)
+![image](https://user-images.githubusercontent.com/69215413/119860514-661e1300-bee4-11eb-965e-e3c7fa78b5ca.png)
