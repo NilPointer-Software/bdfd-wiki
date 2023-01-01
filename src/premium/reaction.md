@@ -14,7 +14,7 @@ $reaction[name]
 #### Trigger `$reaction[click]`
 ```
 $nomention
-$username clicked on reaction
+$sendMessage[$username clicked on reaction]
 ```
 
 ![example](https://user-images.githubusercontent.com/113303649/210166708-3395a683-07ad-4f1b-b018-31f2a317de6f.png)
