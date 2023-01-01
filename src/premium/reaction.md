@@ -18,3 +18,5 @@ $username clicked on reaction
 ```
 
 ![example](https://user-images.githubusercontent.com/113303649/210166708-3395a683-07ad-4f1b-b018-31f2a317de6f.png)
+
+> For more info, see the [Awaited Reactions Guide](../premium/awaitedReactions.md).
