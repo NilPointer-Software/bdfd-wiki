@@ -548,6 +548,15 @@
     --chapter-hover-bg: var(--theme-hover);
 }
 
+.light blockquote {
+    border-left-style: inset;
+    border-color: #e6a700;
+    border-top-color: #4d3800;
+    border-bottom-color: #4d3800;
+    border-radius: 8px;
+    color: #FFF;
+}
+
 .light {
     --bg: hsl(0, 0%, 100%);
     --fg: #333333;
@@ -571,7 +580,7 @@
     --theme-popup-border: #cccccc;
     --theme-hover: #e6e6e6;
 
-    --quote-bg: hsl(197, 37%, 96%);
+    --quote-bg: #4d3800;
     --quote-border: hsl(197, 37%, 91%);
 
     --table-border-color: hsl(0, 0%, 95%);
