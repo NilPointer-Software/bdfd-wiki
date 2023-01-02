@@ -22,6 +22,15 @@
 
 /* Community Themes */
 /* BDFD */
+.bdfd blockquote
+    border-left-style: inset;
+    border-color: #e6a700;
+    border-top-color: #4d3800;
+    border-bottom-color: #4d3800;
+    border-radius: 8px;
+    color: #FFF;
+}
+
 .bdfd {
     --bg: hsl(200, 7%, 8%);
     --fg: #98a3ad;
@@ -45,7 +54,7 @@
     --theme-popup-border: #43484d;
     --theme-hover: #1f2124;
 
-    --quote-bg: hsl(234, 21%, 18%);
+    --quote-bg: #4d3800;
     --quote-border: hsl(234, 21%, 23%);
 
     --table-border-color: hsl(200, 7%, 13%);
@@ -66,6 +75,15 @@
 /* BDFD */
 
 /* IOS */
+.ios blockquote
+    border-left-style: inset;
+    border-color: #e6a700;
+    border-top-color: #4d3800;
+    border-bottom-color: #4d3800;
+    border-radius: 8px;
+    color: #FFF;
+}
+
 .ios code {
     color: #eadfff;
     background-color: #302638;
@@ -87,7 +105,7 @@
     --theme-popup-bg: #221c2a;
     --theme-popup-border: #fadfff;
     --theme-hover: #714991;
-    --quote-bg: #221c2a;
+    --quote-bg: #4d3800;
     --quote-border: #746bdd;
     --table-border-color: #2c2534;
     --table-header-bg: #211c2a;
@@ -105,12 +123,21 @@
 /* IOS */
 
 /* Green */
+.green blockquote {
+    border-left-style: inset;
+    border-color: #e6a700;
+    border-top-color: #4d3800;
+    border-bottom-color: #4d3800;
+    border-radius: 8px;
+    color: #FFF;
+}
+
 .green code {
     color: #D7FFE7;
     background-color: #2C332F;
 }
 
-.green {
+.green a:not(.blockquote) {
     text-shadow: 0 0 10px #316a43;
 }
 
@@ -130,7 +157,7 @@
     --theme-popup-bg: #17201B;
     --theme-popup-border: #245437;
     --theme-hover: #6DA282;
-    --quote-bg: #17201B;
+    --quote-bg: #4d3800;
     --quote-border: #D7FFE7;
     --table-border-color: #245437;
     --table-header-bg: #17201B;
