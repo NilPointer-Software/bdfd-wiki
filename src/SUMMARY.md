@@ -2,6 +2,7 @@
 
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
+[ToS](tos.md)
 
 ---
 
