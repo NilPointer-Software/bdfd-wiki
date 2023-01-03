@@ -1,24 +1,26 @@
 # Buttons
 In this section, you'll learn how to use the button components.
 
-![demonstration](https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png)
+## Content
+[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) >
+
+## Functions
+- [`$addButton[]`](../bdscript/addButton.md)
+- [`$editButton[]`](../bdscript/editButton.md)
+- [`$removeButtons`](../bdscript/removeButtons.md)
+- [`$removeButtons[]`](../bdscript/removeButtons.md)
+- [`$removeComponent[]`](../bdscript/removeComponent.md)
 
 ## Button Style
-Buttons can have different styles _(background colors)_.
-Here, are all possible values for `style` function argument.
-- primary
-- secondary
-- success
-- danger
-- link
+- `primary`: Blue button
+- `secondary`: Gray button
+- `success`: Green button
+- `danger`: Red button
+- `link`: Redirect button
 
-> 📝 If `link` style is used, the button **won't send** any interactions!
+> If `link` style is used, the button **won't send** any interactions!
 
-### Style examples
-![button styles](https://user-images.githubusercontent.com/16838075/120202615-19f60a00-c227-11eb-8e8e-5cd3c38f6c1b.png)\
-*The image was taken from [Discord Docs](https://discord.com/developers/docs/interactions/message-components#buttons-button-styles)*
-
-## Button types
+## Button type
 There are 2 types of buttons : `interactive` and `link`.
 
 When an interactive button is pressed, it sends an interaction which can be used together with `$onInteraction[ID]`.
@@ -29,35 +31,60 @@ Interactive buttons can use every `style` except `link`.
 Link buttons **don't send** any interactions. When they're pressed they forward the user to a website.
 Link buttons **have to** set their `style` argument value to `link`.
 
+# $addButton
+Adds button to the response.
 
-## Adding a button
-Buttons can be added to a new message or already existing message.
+## Syntax
 ```
-$addButton[New row;Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
+$addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
 
-### Function arguments breakdown
-- `new row` - If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button. Check [examples](#examples) below.
+## Parameters
+- `new row?`: If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
 
-    > 📝 A message can have a maximum of 25 buttons (5 rows of 5 buttons).
+    > A message can have a maximum of 25 buttons (5 rows of 5 buttons).
 
-- `button ID/url` - Depending on a button type, you either set it to `interactionID` which is then used in `$onInteraction[ID]` callback or `URL` if it's link button.
-- `label` - It's the text value visible on a button
-- `style` - It's used to specify the button's background color. If the button has a link/url you **have to** set this to `link`. Check [this section](#button-style) for more details.
-- `disabled` - If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
-- `emoji` - Adds an emoji inside the button. Emojis have to be either pasted as *unicode* or be in this format `<:emoji name:emoji ID>`. _(Optional)_
-- `message ID` - Adds a button to the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+- `interaction ID/url`: Depending on the button type, you either set it to `interaction ID` which is then used in `$onInteraction[ID]` callback or `URL` if it's a link button.
+- `label`: The text value visible on the button.
+- `style`: It's used to specify the button's background color. If the button has a link/url you **have to** set the value to `link`. Check [this section](#button-style) for more details.
+- `disable?`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
+- `emoji`: Adds an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
+- `message ID`: Adds a button to the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
 
->**Note:** Interactive buttons can't have duplicated `ID`'s in the same message. So for example, you can't have two buttons with the ID set to `test`\
-\
->**Note:** If `url` is used in `interaction ID or url` argument, it **has to** start with `http://` or `https://`
+> Interactive buttons can't have duplicated `ID`'s in the same message. So for example, you can't have two buttons with the ID set to `test`.
 
-## Editing a button
+> If `url` is used in `interaction ID/url` argument, it **has to** start with `http://` or `https://`
+
+## Example
 ```
-$editButton[Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
+$nomention
+Hi
+$addButton[no;test;Say hello!;primary;no;]
 ```
-Arguments work exactly the same way as in [$addButton](#adding-a-button) function. `Button ID/URL` is used for finding the button.
+![example](https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png)
 
+# $editButton
+Edits already existing button.
+
+## Syntax
+```
+$editButton[interaction ID/url;label;style;(disable?;emoji;message ID)]
+```
+
+## Parameters
+- `interaction ID/url`: Depending on the button type, you either set it to `interaction ID` which is then used in `$onInteraction[ID]` callback or `URL` if it's a link button.
+- `label`: The text value visible on the button.
+- `style`: It's used to specify the button's background color. If the button has a link/url you **have to** set the value to `link`. Check [this section](#button-style) for more details.
+- `disable?`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
+- `emoji`: Edits an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
+- `message ID`: Edits a button to the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+## Example
+#### Trigger: `$onInteraction[test]`
+```
+$nomention
+$username said hello!
+$editButton[test;Say hello!;danger;yes;]
+```
 ## Removing buttons
 Removing button from a message can be done using these three functions :
 - [`$removeButtons`](../bdscript/removeButtons.md)
