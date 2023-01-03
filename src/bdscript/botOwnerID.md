@@ -9,6 +9,6 @@ $botOwnerID
 ## Example
 ```
 $nomention
-My owner's ID is: $botOwnerID
+My owner's ID: $botOwnerID
 ```
-![example](https://user-images.githubusercontent.com/94063167/198900308-9dd205a7-59d8-4319-b750-3bea6bc21ff4.png)
+![example](https://user-images.githubusercontent.com/113303649/210353474-b094289c-3bec-4e6c-b8cc-c9ac79f0f43d.png)
