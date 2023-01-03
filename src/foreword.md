@@ -23,9 +23,10 @@ Message: $message
 
 ### Links
 - [Discord Support Server](https://botdesignerdiscord.com/discord)
+- [Bot Designer List](https://botdesignerlist.com)
 - [Android App](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
 - [iOS App](https://apps.apple.com/app/bot-designer-for-discord/id1495536477)
-- [Web App](https://botdesignerdiscord.com/app/) *(Alpha Version)*
+- [Web App](https://botdesignerdiscord.com/app) *(Alpha Version)*
 - [Nodes Status](https://botdesignerdiscord.com/status)
 
 
