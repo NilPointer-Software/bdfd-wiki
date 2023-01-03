@@ -16,8 +16,8 @@ $botLeave
 > 
 ❌ Not correct:
 ```
-$nomention
 $botLeave
+$nomention
 $sendMessage[I left this server!]
 ```
 ✅ Correct:
