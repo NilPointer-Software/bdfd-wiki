@@ -16,6 +16,9 @@ $botLeave[$message]
 ```
 
 ![example](https://user-images.githubusercontent.com/113303649/210335691-9d23cfd6-f7e8-4924-8afc-dd3b523ca071.png)
+
+![example](https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png)
+
 > If you are using **BDScript 2**, put `$botLeave[]` at the very bottom of the code so that the code works correctly.
 > 
 ❌ Not correct:
