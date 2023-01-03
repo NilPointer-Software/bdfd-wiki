@@ -1,11 +1,20 @@
 # $botTyping
-`$botTyping` tells Discord that the bot is typing. When you use a command with `$botTyping` in it, something like this:
+This tells Discord that the bot is typing.
 
-![image](https://user-images.githubusercontent.com/69215413/114784502-4de5a080-9d49-11eb-838d-7a42524a6365.png)
-
-should appear.
-
-## Usage
+## Syntax
 ```
 $botTyping
 ```
+## Example
+```
+$nomention
+$botTyping
+Hello $username!
+```
+### Command started:
+![example](https://user-images.githubusercontent.com/113303649/210356430-f642b91c-f742-457d-a5ce-b446f18b03ca.png)
+
+### Command completed:
+![example](https://user-images.githubusercontent.com/113303649/210356519-b0065abf-76a6-4e34-b058-fac9ee293cb4.png)
+
+
