@@ -3,7 +3,7 @@ Adds a new text input to a modal.
 
 ## Usage
 ```
-$addTextInput[text input ID;style;Label;(minimum length;maximum length;required;value;placeholder)]
+$addTextInput[text input ID;style;label;(minimum length;maximum length;required?;value;placeholder)]
 ```
 > You can't add more than 5 text input fields.
 
@@ -13,7 +13,7 @@ $addTextInput[text input ID;style;Label;(minimum length;maximum length;required;
 - `label`: Name of the text input field. This value must be less than or equal to 45 characters.
 - `minimum length`: Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the `maximum length`.
 - `maximum length`: Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the `minimum length`.  
-- `required`: Whether a user must fill in the text input field, defaults to true.
+- `required?`: Whether a user must fill in the text input field, defaults to true. (`yes`/`no`)
 - `value`: The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than `minimum length` and no more than `maximum length`.
 - `placeholder`: The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.
 

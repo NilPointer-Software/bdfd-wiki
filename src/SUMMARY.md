@@ -45,7 +45,7 @@
     - [Time Format](./resources/timeFormat.md)
     - [Troubleshooting](./resources/troubleshooting.md)
 
-- [BDScript]()
+- [Functions]()
     - [Introduction](./bdscript/introduction.md)
     - [$addButton](./bdscript/addButton.md)
     - [$addCmdReactions](./bdscript/addCmdReactions.md)
