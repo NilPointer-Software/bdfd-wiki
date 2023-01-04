@@ -167,19 +167,20 @@
                     <main>
                         <h1 id="blacklistrolesids"><a class="header" href="#blacklistrolesids">$blackListRolesIDs</a></h1>
 <p>Block users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$blackListRolesIDs[roleIDs;errorMessage]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$blackListRolesIDs[role IDs;...;error message]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>roleIDs</code> - The roles that will be blacklisted. Separate roleIDs using <code>;</code>.</li>
-<li><code>errorMessage</code> - The message that sends if the user has a role in the blacklist.</li>
+<li><code>role IDs</code>: The roles that will be blacklisted. Separate role IDs using <code>;</code>.</li>
+<li><code>error message</code>: The message that will be sent if the user has a role from the blacklist.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$blackListRolesIDs[730739881072132166;727999173600739398;❌ You aren't allowed to use this command!]
-$noMentionMessage
+$blackListRolesIDs[1009019299987476540;1014547313957539901;❌ You can't use this command!]
+Pong! $ping ms
 </code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/210046896-9e45b0c5-68f1-49b8-9bf0-90694df688cf.png" alt="example" /></p>
 
                     </main>
 

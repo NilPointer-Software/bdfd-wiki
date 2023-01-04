@@ -167,24 +167,25 @@
                     <main>
                         <h1 id="blacklistids"><a class="header" href="#blacklistids">$blackListIDs</a></h1>
 <p>Blocks certain users from using the command.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$blackListIDs[userIDs;errorMessage]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$blackListIDs[user IDs;...;error message]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li><code>userIDs</code> - The users to blacklist from using the command. Separate userIDs with <code>;</code>.</li>
+<li><code>user IDs</code>: The users to blacklist from using the command. Separate user IDs with <code>;</code>.</li>
 </ul>
 <blockquote>
-<p>🧙‍♂️ <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Please provide real userID(s). Click-me for more info!</a></p>
+<p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get user ID?</a></p>
 </blockquote>
 <ul>
-<li><code>errorMessage</code> - The message that appears when the user running the command is blacklisted.</li>
+<li><code>error message</code>: The message that will be sent when the user running the command is blacklisted.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$blackListIDs[566613317972394004;246604909451935745;❌ You can't use this command!]
+$blackListIDs[566613317972394004;437154602626973697;❌ You can't use this command!]
 Pong! $ping ms
 </code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/210045834-d83964d7-6d5f-4cba-b549-2373c1336e49.png" alt="example" /></p>
 
                     </main>
 
