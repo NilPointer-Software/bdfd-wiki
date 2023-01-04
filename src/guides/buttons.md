@@ -109,10 +109,11 @@ $removeButtons[message ID]
 ## Parameters
 - `message ID`: Removes buttons from the provided message ID. It's important to note that provided message ID author **has to** be the bot.
 ## Example
+#### Trigger: `$onInteraction[test]`
 ```
 $nomention
-$username removed all buttons from specified message id
-$removeButtons[$message]
+$username removed all buttons from the specified message id
+$removeButtons[1060287505104113764]
 ```
 - [`$removeButtons`](../bdscript/removeButtons.md)
 - [`$removeButtons[messageID]`](../bdscript/removeButtons.md)
