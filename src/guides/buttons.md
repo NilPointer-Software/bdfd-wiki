@@ -2,7 +2,7 @@
 In this section, you'll learn how to use the button components.
 
 ## Content
-[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) >
+[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons[]**](#removebuttons) >
 
 ## Functions
 - [`$addButton[]`](../bdscript/addButton.md)
@@ -85,7 +85,14 @@ $nomention
 $username said hello!
 $editButton[test;Say hello!;danger;yes;]
 ```
-## Removing buttons
+![example](https://user-images.githubusercontent.com/113303649/210611967-f15b8c9b-7bd9-4218-a89b-08e93ce7eeb3.png)
+
+# $removeButtons
+Removes all buttons from the triggered message
+## Syntax
+```
+$removeButtons
+```
 Removing button from a message can be done using these three functions :
 - [`$removeButtons`](../bdscript/removeButtons.md)
 - [`$removeButtons[messageID]`](../bdscript/removeButtons.md)
