@@ -127,9 +127,9 @@ window.search = window.search || {};
     
     function formatSearchMetric(count, searchterm) {
         if (count == 1) {
-            return count + " search result for '" + searchterm + "':";
+            return count + " search result";
         } else if (count == 0) {
-            return "No search results.";
+            return "No search results";
         } else {
             return count + " search results";
         }
