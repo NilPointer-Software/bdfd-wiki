@@ -22,10 +22,10 @@
         <link rel="icon" href="{{ path_to_root }}favicon.png">
         <link rel="apple-touch-icon" href="{{ path_to_root }}favicon.png">
 
-        <link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/general.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/chrome.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/print.css" media="print">
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/themes/index.css">
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/general.css">
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/chrome.css">
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/print.css" media="print">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css">
@@ -272,7 +272,7 @@
         {{#if search_js}}
         <script src="{{ path_to_root }}elasticlunr.min.js" charset="utf-8"></script>
         <script src="{{ path_to_root }}mark.min.js" charset="utf-8"></script>
-        <script src="{{ path_to_root }}searcher.js" charset="utf-8"></script>
+        <script src="./theme/searcher.js" charset="utf-8"></script>
         {{/if}}
 
         <script src="{{ path_to_root }}clipboard.min.js" charset="utf-8"></script>
