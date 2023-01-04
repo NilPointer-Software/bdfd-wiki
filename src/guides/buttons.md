@@ -2,7 +2,7 @@
 In this section, you'll learn how to use the button components.
 
 ## Content
-[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons[]**](#removebuttons) >
+[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) >
 
 ## Functions
 - [`$addButton[]`](../bdscript/addButton.md)
@@ -33,12 +33,10 @@ Link buttons **have to** set their `style` argument value to `link`.
 
 # $addButton
 Adds button to the response.
-
 ## Syntax
 ```
 $addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
-
 ## Parameters
 - `new row?`: If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
 
@@ -88,12 +86,34 @@ $editButton[test;Say hello!;danger;yes;]
 ![example](https://user-images.githubusercontent.com/113303649/210611967-f15b8c9b-7bd9-4218-a89b-08e93ce7eeb3.png)
 
 # $removeButtons
-Removes all buttons from the triggered message
+Removes all buttons from the triggered message.
 ## Syntax
 ```
 $removeButtons
 ```
-Removing button from a message can be done using these three functions :
+## Example
+#### Trigger: `$onInteraction[test]`
+```
+$nomention
+$username removed all buttons from this message
+$removeButtons
+```
+![example](https://user-images.githubusercontent.com/113303649/210621352-ae7334a6-a2de-4fbe-8749-7134f9a73af3.png)
+
+# $removeButtons
+Removes all buttons from the specified message id.
+## Syntax
+```
+$removeButtons[message ID]
+```
+## Parameters
+- `message ID`: Removes buttons from the provided message ID. It's important to note that provided message ID author **has to** be the bot.
+## Example
+```
+$nomention
+$username removed all buttons from specified message id
+$removeButtons[$message]
+```
 - [`$removeButtons`](../bdscript/removeButtons.md)
 - [`$removeButtons[messageID]`](../bdscript/removeButtons.md)
 - [`$removeComponent[Custom ID;(Message ID)]`](../bdscript/removeComponent.md)
