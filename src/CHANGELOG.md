@@ -15,7 +15,7 @@
 - Added `$jsonArrayCount[]`
 - Added `$jsonUnset[]`
 - Added `$disableInnerSpaceRemoval`
-- Fixed big numbers not working in leaderboard commands
+- Fixed big numbers not working in leaderboard functions
 
 # 2022
 
