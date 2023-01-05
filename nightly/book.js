@@ -50,7 +50,7 @@ if (window.playground_copyable) {
 	function showThemes() {
 		themePopup.style.display = 'block';
 		themeToggleButton.setAttribute('aria-expanded', true);
-		themePopup.querySelector("button#" + document.body.className).focus();
+		themePopup.querySelector("button" + document.body.className).focus();
 	}
 
 	function hideThemes() {
