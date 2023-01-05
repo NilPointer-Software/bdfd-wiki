@@ -293,7 +293,7 @@ mark.fade-out {
 .searchresults-header {
     font-weight: bold;
     font-size: 1em;
-    padding: 18px 0 0 5px;
+    padding: 18px 0 0 300px;
     color: var(--searchresults-header-fg);
 }
 
