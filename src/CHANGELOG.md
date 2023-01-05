@@ -1,5 +1,21 @@
 # Changelog
 
+# 2023
+
+## January
+- Added `$jsonParse[]`
+- Added `$jsonClear`
+- Added `$jsonStringify`
+- Added `$jsonPretty[]`
+- Added `$json[]`
+- Added `$jsonExists[]`
+- Added `$jsonSet[]`
+- Added `$jsonArray[]`
+- Added `$jsonArrayAppend[]`
+- Added `$jsonArrayCount[]`
+- Added `$jsonUnset[]`
+- Added `$disableInnerSpaceRemoval`
+
 # 2022
 
 ## December
