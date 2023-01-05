@@ -2,7 +2,7 @@
 In this section, you'll learn how to use the button components.
 
 ## Content
-[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) >
+[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent)
 
 ## Functions
 - [`$addButton[]`](../bdscript/addButton.md)
@@ -109,16 +109,29 @@ $removeButtons[message ID]
 ## Parameters
 - `message ID`: Removes buttons from the provided message ID. It's important to note that provided message ID author **has to** be the bot.
 ## Example
-#### Trigger: `$onInteraction[test]`
 ```
 $nomention
 $username removed all buttons from the specified message id
-$removeButtons[1060287505104113764]
+$removeButtons[$message]
 ```
-- [`$removeButtons`](../bdscript/removeButtons.md)
-- [`$removeButtons[messageID]`](../bdscript/removeButtons.md)
-- [`$removeComponent[Custom ID;(Message ID)]`](../bdscript/removeComponent.md)
+![example](https://user-images.githubusercontent.com/113303649/210875885-aa20517e-1c37-4206-8eee-eefa765eb40a.png)
 
+# $removeComponent
+Removes certain component from a message.
+## Syntax
+```
+$removeComponent[interaction ID;(message ID)]
+```
+> This function supports [select-menu](../guides/selectmenu.md) and [button](../guides/buttons.html).
+## Parameters
+- `interaction ID`: The button interaction ID to remove from the message. 
+- `message ID`: Removes the button from the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+## Example
+```
+$nomention
+$username successfully removed the button!
+$removeComponent[test;$message]
+```
 ## Examples
 #### Creating a simple interactive button
 ![code example](https://user-images.githubusercontent.com/16838075/120206814-f08bad00-c22b-11eb-872c-57dfa7243524.png)
