@@ -1,4 +1,4 @@
-# $ban
+# $ban[]
 Bans the mentioned user with a reason.
 
 ## Syntax
