@@ -7,8 +7,9 @@ This is a [callback](../callbacks/introduction.md). It gets triggered whenever a
 ```
 $reaction[name]
 ```
+
 ## Parameters
-- `name`: t is the value which is used in "command name" argument of `$awaitReactions[]`.
+- `name`: The value used in "command name" argument of `$awaitReactions[]`.
 
 ## Example
 #### Trigger `$reaction[click]`
