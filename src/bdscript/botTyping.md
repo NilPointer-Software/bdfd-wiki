@@ -1,5 +1,5 @@
 # $botTyping
-This tells Discord that the bot is typing.
+This function tells Discord that the bot is typing.
 
 ## Syntax
 ```
