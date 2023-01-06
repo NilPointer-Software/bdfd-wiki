@@ -1,7 +1,9 @@
 # $usedEmoji
 *(for premium bots)*
 
-This function is used to return the emoji which was triggered in `$reaction[]` command.
+This function is returns the emoji which triggered a `$reaction[]` callback.
+
+> This function can only be used inside a `$reaction[]` callback
 
 ## Syntax
 ```
