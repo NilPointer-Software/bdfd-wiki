@@ -59,7 +59,8 @@ $nomention
 Hi
 $addButton[no;test;Say hello!;primary;no;]
 ```
-![example](https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png)
+![git (2) (1)](https://user-images.githubusercontent.com/113303649/211102115-a68e32f0-9f91-4e7f-a565-36da0ee81813.png)
+
 
 # $editButton
 Edits already existing button.
@@ -83,7 +84,8 @@ $nomention
 $username said hello!
 $editButton[test;Say hello!;danger;yes;]
 ```
-![example](https://user-images.githubusercontent.com/113303649/210611967-f15b8c9b-7bd9-4218-a89b-08e93ce7eeb3.png)
+![git (2) (2)](https://user-images.githubusercontent.com/113303649/211102414-f402e668-a44f-4762-8dcf-9efd97b1a3ed.png)
+
 
 # $removeButtons
 Removes all buttons from the triggered message.
