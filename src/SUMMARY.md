@@ -83,6 +83,7 @@
     - [$botCommands](./bdscript/botCommands.md)
     - [$botID](./bdscript/botID.md)
     - [$botLeave](./bdscript/botLeave.md)
+    - [$botLeave[]](./bdscript/botLeaveComplex.md)
     - [$botListDescription](./bdscript/botListDescription.md)
     - [$botListHide](./bdscript/botListHide.md)
     - [$botNode](./bdscript/botNode.md)
