@@ -5,8 +5,9 @@
 ```
 $botLeave[guild ID]
 ````
+
 ## Parameters
-- `guild ID`: The guild id to leave.
+- `guild ID`: The ID of a guild to leave.
 
 ## Example
 ```
