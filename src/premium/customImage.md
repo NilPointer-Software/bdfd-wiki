@@ -1,7 +1,7 @@
 # $customImage
 *(for premium bots)*
 
-This function is used to return the uploaded image in the app.
+This function is used to return the URL of an image uploaded in the app.
 
 ## Syntax
 ```
