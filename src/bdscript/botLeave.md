@@ -1,5 +1,5 @@
 # $botLeave
-Forces the bot to leave a server.
+Forces the bot to leave the current server.
 
 ## Syntax
 ```
