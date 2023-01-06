@@ -7,9 +7,10 @@ This function is used to await a reaction.
 ```
 $awaitReactions[<command name;reaction>;...]
 ```
+
 ## Parameters
-- `command name`: It's the name which will be used inside `$reaction[]` callback.
-- `reaction`: It awaits the given emoji. Emoji must be either in Unicode or in discord emoji id format.
+- `command name`: The name which will be used inside the `$reaction[]` callback.
+- `reaction`: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.
 
 ## Example
 ```
