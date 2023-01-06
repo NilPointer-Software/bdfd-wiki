@@ -7,7 +7,7 @@ $authorURL[url;(index)]
 ```
 > `$authorURL[]` will not work if there is no text provided in `$author[]`.
 
-### Parameters
+## Parameters
 - `url`: The link to set as the author hyperlink.
 - `index`: To which embed the author URL will be added. (Optional) [(learn more)](../resources/embedIndexes.md)
 

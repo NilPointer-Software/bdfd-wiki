@@ -1,4 +1,4 @@
-# $boostCount
+# $boostCount[]
 Returns the guild's number of nitro boosts.
 
 ## Syntax
