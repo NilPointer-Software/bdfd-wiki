@@ -59,7 +59,7 @@ $nomention
 Hi
 $addButton[no;test;Say hello!;primary;no;]
 ```
-![git (2) (1)](https://user-images.githubusercontent.com/113303649/211102115-a68e32f0-9f91-4e7f-a565-36da0ee81813.png)
+![example](https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png)
 
 
 # $editButton
@@ -134,6 +134,8 @@ $nomention
 $username successfully removed the button!
 $removeComponent[test;$message]
 ```
+
+
 ## Examples
 #### Creating a simple interactive button
 ![code example](https://user-images.githubusercontent.com/16838075/120206814-f08bad00-c22b-11eb-872c-57dfa7243524.png)
