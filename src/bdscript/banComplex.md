@@ -1,5 +1,5 @@
 # $ban
-Bans the mentioned user with the reason.
+Bans the mentioned user with a reason.
 
 ## Syntax
 ```
