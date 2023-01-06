@@ -7,8 +7,10 @@ This function is used to return the uploaded image in the app.
 ```
 $customImage[Custom image tag]
 ```
+
 ## Parameters
-- `custom image tag`: The tag that you set the custom image to, previously.
+- `custom image tag`: The image tag you set in the app while uploading the image.
+
 ## Example
 ```
 $nomention
