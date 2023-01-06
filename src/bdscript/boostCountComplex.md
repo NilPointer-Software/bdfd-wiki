@@ -7,7 +7,7 @@ $boostCount[guild ID]
 ```
 
 ## Parameters
-- `guild ID`: The guild to get its boosts.
+- `guild ID`: The guild to get the number of boosts for.
 
 ## Example
 ```
