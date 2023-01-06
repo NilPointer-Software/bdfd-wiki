@@ -1,7 +1,7 @@
 # $awaitReactions
 *(for premium bots)*
 
-This function is used to await an reaction command.
+This function is used to await a reaction.
 
 ## Syntax
 ```
