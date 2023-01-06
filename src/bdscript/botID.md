@@ -1,7 +1,7 @@
 # $botID
 Returns the bot's ID.
 
-## Usage
+## Syntax
 ```
 $botID
 ```

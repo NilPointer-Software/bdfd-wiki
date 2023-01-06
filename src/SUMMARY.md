@@ -2,6 +2,7 @@
 
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
+[Terms of Service](tos.md)
 
 ---
 
@@ -70,6 +71,7 @@
     - [$authorOfMessage](./bdscript/authorOfMessage.md)
     - [$authorURL](./bdscript/authorURL.md)
     - [$ban](./bdscript/ban.md)
+    - [$ban[]](./bdscript/banComplex.md)
     - [$banID](./bdscript/banID.md)
     - [$blackListIDs](./bdscript/blackListIDs.md)
     - [$blackListRoles](./bdscript/blackListRoles.md)
@@ -77,6 +79,7 @@
     - [$blackListServers](./bdscript/blackListServers.md)
     - [$blackListUsers](./bdscript/blackListUsers.md)
     - [$boostCount](./bdscript/boostCount.md)
+    - [$boostCount[]](./bdscript/boostCountComplex.md)
     - [$botCommands](./bdscript/botCommands.md)
     - [$botID](./bdscript/botID.md)
     - [$botLeave](./bdscript/botLeave.md)
