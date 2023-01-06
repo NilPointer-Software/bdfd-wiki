@@ -7,7 +7,7 @@ $botListDescription[text]
 ```
 
 ## Parameters
-- `text`: The text that description is set to.
+- `text`: The text that the description will be set to.
 
 ## Example
 ```
