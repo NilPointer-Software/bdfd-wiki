@@ -5,7 +5,7 @@ This function is used to return the URL of an image uploaded in the app.
 
 ## Syntax
 ```
-$customImage[Custom image tag]
+$customImage[custom image tag]
 ```
 
 ## Parameters
