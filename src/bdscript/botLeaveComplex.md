@@ -1,5 +1,5 @@
-# $botLeave
- Makes the bot leave the server matching the [server ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID) provided.
+# $botLeave[]
+ Makes the bot leave the server matching the provided [server ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID).
 
 ## Syntax
 ```
