@@ -7,7 +7,7 @@ $ban[reason]
 ```
 
 ### Parameters
-- `reason`: The reason for this action, which will be sent to the audit-log.
+- `reason`: The reason for this action, which will be saved in the audit-log.
 
 ## Example
 ```
