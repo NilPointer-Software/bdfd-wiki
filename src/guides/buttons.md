@@ -127,7 +127,7 @@ Removes certain component from a message.
 ```
 $removeComponent[interaction ID;(message ID)]
 ```
-> This function supports [select-menu](../guides/selectmenu.md) and [button](../guides/buttons.html).
+> This function supports [select-menu](../guides/selectmenu.md) and [button](../guides/buttons.md).
 ## Parameters
 - `interaction ID`: The button interaction ID to remove from the message. 
 - `message ID`: Removes the button from the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
@@ -194,4 +194,4 @@ $endif
 
 ![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
 
-> [How `$onInteraction`/`$onInteraction[]` works?](./callbacks/onInteraction)
+> [How `$onInteraction`/`$onInteraction[]` works?](./callbacks/onInteraction.md)
