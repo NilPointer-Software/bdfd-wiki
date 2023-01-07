@@ -16,6 +16,7 @@
 - Added `$jsonUnset[]`
 - Added `$disableInnerSpaceRemoval`
 - Fixed big numbers not working in leaderboard functions
+- Added Emoji argument type
 
 # 2022
 
