@@ -2,7 +2,7 @@
 In this section, you'll learn how to use the button components.
 
 ## Content
-[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent)
+[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent) > [**Create Interaction**](#create-interaction)
 
 ## Functions
 - [`$addButton[]`](../bdscript/addButton.md)
@@ -134,13 +134,55 @@ $nomention
 $username successfully removed the button!
 $removeComponent[test;$message]
 ```
+![example](https://user-images.githubusercontent.com/113303649/211163378-2aaa540d-b0a1-4511-8f34-6a91260b079d.png)
 
+![example](https://user-images.githubusercontent.com/113303649/211163615-ecffddcf-1d2b-4065-8445-9ec7ed1eb2b4.png)
+
+# Create interaction
+### Example with callback `$onInteraction[]`:
+1. Create two commands and set the trigger `!example` for one command and `$onInteraction[test]` for the other.
+2. Paste these codes:
+Code with trigger `!example`:
+```
+$nomention
+Click the button below!
+$addButton[no;test;Click;primary]
+```
+Code with trigger `$onInteraction[test]`:
+```
+$nomention
+$editButton[test;Clicked;danger;yes]
+$sendMessage[$username hello!]
+```
+3. Execute command `!example`
+
+![example](https://user-images.githubusercontent.com/113303649/211164263-9d57e90d-859d-428b-aa98-9faa1769e292.png)
+### Example with callback `$onInteraction`:
+1. Create two commands and set the trigger `!example` for one command and `$onInteraction` for the other.
+
+2. Paste these codes:
+Code with trigger `!example`:
+```
+$nomention
+Click the button below!
+$addButton[no;test;Click;primary]
+```
+Code with trigger `$onInteraction`:
+```
+$nomention
+$if[$customID==test]
+    $editButton[test;Clicked;danger;yes]
+    $sendMessage[$username hello!]
+$endif
+```
+> Interaction ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]` from [this section](#addbutton)
+3. Execute command `!example`
+
+![example](https://user-images.githubusercontent.com/113303649/211164263-9d57e90d-859d-428b-aa98-9faa1769e292.png)
 
 ## Examples
 #### Creating a simple interactive button
 ![code example](https://user-images.githubusercontent.com/16838075/120206814-f08bad00-c22b-11eb-872c-57dfa7243524.png)
-
->**Note:** The last argument in `$addButton` is empty because we don't want emojis for this example
 
 #### Creating `$onInteraction[]` callback
 ![callback code example](https://user-images.githubusercontent.com/16838075/120206913-1022d580-c22c-11eb-9656-8bc9e7476f51.png)
