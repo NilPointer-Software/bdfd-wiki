@@ -10,6 +10,7 @@ In this section, you'll learn how to use the button components.
 - [`$removeButtons`](../bdscript/removeButtons.md)
 - [`$removeButtons[]`](../bdscript/removeButtons.md)
 - [`$removeComponent[]`](../bdscript/removeComponent.md)
+- [`$onInteraction[]`](../callbacks/onInteraction.md)
 
 ## Button Style
 - `primary`: Blue button
@@ -28,8 +29,9 @@ When an interactive button is pressed, it sends an interaction which can be used
 Every interactive button has an `ID`. If you create `$onInteraction[ID]` callback, it will get triggered when the button with the same `ID` is pressed.
 Interactive buttons can use every `style` except `link`.
 
-Link buttons **don't send** any interactions. When they're pressed they forward the user to a website.
-Link buttons **have to** set their `style` argument value to `link`.
+> Link buttons **don't send** any interactions. When they're pressed they forward the user to a website.
+> 
+> Link buttons **have to** set their `style` argument value to `link`.
 
 # $addButton
 Adds button to the response.
