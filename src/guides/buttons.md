@@ -84,7 +84,7 @@ $nomention
 $username said hello!
 $editButton[test;Say hello!;danger;yes;]
 ```
-![git (2) (2)](https://user-images.githubusercontent.com/113303649/211102414-f402e668-a44f-4762-8dcf-9efd97b1a3ed.png)
+![example](https://user-images.githubusercontent.com/113303649/210611967-f15b8c9b-7bd9-4218-a89b-08e93ce7eeb3.png)
 
 
 # $removeButtons
