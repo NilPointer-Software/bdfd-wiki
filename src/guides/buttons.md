@@ -147,6 +147,8 @@ Code with trigger `!example`:
 $nomention
 Click the button below!
 $addButton[no;test;Click;primary]
+$addButton[no;button;Button disabled;secondary;yes]
+$addButton[yes;https://botdesignerdiscord.com/;Link;link]
 ```
 Code with trigger `$onInteraction[test]`:
 ```
@@ -154,9 +156,13 @@ $nomention
 $editButton[test;Clicked;danger;yes]
 $sendMessage[$username hello!]
 ```
+
+> Interaction ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]` from [this section](#addbutton)
+> 
+> In `$addButton[]`, `yes` is being used for the `new row` argument so that the button would appear in the next row.
 3. Execute command `!example`
 
-![example](https://user-images.githubusercontent.com/113303649/211164263-9d57e90d-859d-428b-aa98-9faa1769e292.png)
+![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
 ### Example with callback `$onInteraction`:
 1. Create two commands and set the trigger `!example` for one command and `$onInteraction` for the other.
 
@@ -166,6 +172,8 @@ Code with trigger `!example`:
 $nomention
 Click the button below!
 $addButton[no;test;Click;primary]
+$addButton[no;button;Button disabled;secondary;yes]
+$addButton[yes;https://botdesignerdiscord.com/;Link;link]
 ```
 Code with trigger `$onInteraction`:
 ```
@@ -175,23 +183,12 @@ $if[$customID==test]
     $sendMessage[$username hello!]
 $endif
 ```
-> Interaction ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]` from [this section](#addbutton)
+> Interaction ID provided in `$onInteraction` is the same as the one provided in `$addButton[]` from [this section](#addbutton)
+> 
+> In `$addButton[]`, `yes` is being used for the `new row` argument so that the button would appear in the next row.
+> 
 3. Execute command `!example`
 
-![example](https://user-images.githubusercontent.com/113303649/211164263-9d57e90d-859d-428b-aa98-9faa1769e292.png)
+![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
 
-## Examples
-#### Creating a simple interactive button
-![code example](https://user-images.githubusercontent.com/16838075/120206814-f08bad00-c22b-11eb-872c-57dfa7243524.png)
-
-#### Creating `$onInteraction[]` callback
-![callback code example](https://user-images.githubusercontent.com/16838075/120206913-1022d580-c22c-11eb-9656-8bc9e7476f51.png)
-> **Note:** ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]` from [this section](#creating-a-simple-interactive-button)\
-\
-> **Note:** In `$addButton[]`, `yes` is being used for the `new row` argument so that the button would appear in the next row. Check the output below.
-
-### Output
-#### Command execution
-![demonstration](https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png)
-#### After pressing the button
-![demonstration pressed button](https://user-images.githubusercontent.com/16838075/120207246-7d366b00-c22c-11eb-8d04-9cf569ced8ae.png)
+> [How `$onInteraction`/`$onInteraction[]` works?](./callbacks/onInteraction)
