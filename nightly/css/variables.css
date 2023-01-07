@@ -22,7 +22,7 @@
 
 /* Community Themes */
 /* BDFD */
-.bdfd blockquote
+.bdfd blockquote {
     border-left-style: inset;
     border-color: #e6a700;
     border-top-color: #4d3800;
@@ -78,7 +78,7 @@
 /* BDFD */
 
 /* IOS */
-.ios blockquote
+.ios blockquote {
     border-left-style: inset;
     border-color: #e6a700;
     border-top-color: #4d3800;
