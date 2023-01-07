@@ -2,14 +2,15 @@
 In this section, you'll learn how to use the button components.
 
 ## Content
-[**Functions**](#functions) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent) > [**Create Interaction**](#create-interaction)
+[**Used**](#used) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent) > [**Create Interaction**](#create-interaction)
 
-## Functions
+## Used
 - [`$addButton[]`](../bdscript/addButton.md)
 - [`$editButton[]`](../bdscript/editButton.md)
 - [`$removeButtons`](../bdscript/removeButtons.md)
 - [`$removeButtons[]`](../bdscript/removeButtons.md)
 - [`$removeComponent[]`](../bdscript/removeComponent.md)
+- [`$onInteraction`](../callbacks/onInteraction.md)
 - [`$onInteraction[]`](../callbacks/onInteraction.md)
 
 ## Button Style
