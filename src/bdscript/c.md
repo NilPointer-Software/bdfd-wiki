@@ -1,10 +1,13 @@
 # $c
 Adds a comment to the code. Comments do not appear in the bot's response.
 
-## Usage
+## Syntax
 ```
 $c[comment]
 ```
+
+## Parameters
+- `comment`: yes ( please edit it )
 
 ## Example
 ```
