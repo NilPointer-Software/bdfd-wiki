@@ -22,7 +22,7 @@ In this section, you'll learn how to use the button components.
 
 > If `link` style is used, the button **won't send** any interactions!
 
-## Button type
+## Button Type
 There are 2 types of buttons : `interactive` and `link`.
 
 When an interactive button is pressed, it sends an interaction which can be used together with `$onInteraction[ID]`.
