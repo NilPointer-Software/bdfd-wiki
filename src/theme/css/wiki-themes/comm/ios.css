@@ -1,0 +1,48 @@
+.ios blockquote {
+    border-left-style: inset;
+    border-color: #e6a700;
+    border-top-color: #4d3800;
+    border-left-width: 7px;
+    border-bottom-color: #4d3800;
+    border-radius: 10px;
+    color: #e1e1e1;
+    --links: #0A95FF;
+    --inline-code-color: #bdbdbd;
+}
+
+.ios code {
+    color: #eadfff;
+    background-color: #302638;
+}
+
+.ios {
+    --bg: #221c2a;
+    --fg: #eadfff;
+    --sidebar-bg: #2f2534;
+    --sidebar-fg: #fadfff;
+    --sidebar-non-existant: #5c6773;
+    --sidebar-active: #d46bdd;
+    --sidebar-spacer: #854dc8;
+    --scrollbar: #7757b0;
+    --icons: #9b57b0;
+    --icons-hover: #f1e9f5;
+    --links: #ab4dc8;
+    --inline-code-color: #f6d7ff;
+    --theme-popup-bg: #221c2a;
+    --theme-popup-border: #fadfff;
+    --theme-hover: #714991;
+    --quote-bg: #4d3800;
+    --quote-border: #746bdd;
+    --table-border-color: #2c2534;
+    --table-header-bg: #211c2a;
+    --table-alternate-bg: #6b4dc8;
+    --searchbar-border-color: #e9dfff;
+    --searchbar-bg: #282534;
+    --searchbar-fg: #efdfff;
+    --searchbar-shadow-color: #1f1c2a;
+    --searchresults-header-fg: #eadfff;
+    --searchresults-border-color: #FFDFDF;
+    --searchresults-li-bg: #eadfff;
+    --search-mark-bg: #eadfff;
+    --chapter-hover-bg: #2f2534;
+}
