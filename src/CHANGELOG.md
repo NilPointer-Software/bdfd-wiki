@@ -17,6 +17,13 @@
 - Added `$disableInnerSpaceRemoval`
 - Fixed big numbers not working in leaderboard functions
 - Added Emoji argument type
+- Added `$isTicket[]`
+- Added `$userBanner[]`
+- Added `$randomGuildID`
+- Added `$randomRoleID[]`
+- Added `$randomCategoryID[]`
+- Added `$channelNames[]`
+- Added `$categoryChannels[]`
 
 # 2022
 
