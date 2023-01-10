@@ -24,6 +24,7 @@
 - Added `$randomCategoryID[]`
 - Added `$channelNames[]`
 - Added `$categoryChannels[]`
+- Fixed `$allowUserMentions[]` not working on slash commands
 
 # 2022
 
