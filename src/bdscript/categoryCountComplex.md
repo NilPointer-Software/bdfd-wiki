@@ -6,7 +6,7 @@ Returns the category count of the provided guild.
 $categoryCount[guild ID]
 ```
 ## Parameters
-- `guild ID`: The guild to get its category count.
+- `guild ID`: The guild to get the category count for.
 
 ## Example
 ```
