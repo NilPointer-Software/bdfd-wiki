@@ -3,12 +3,12 @@ Separates the thousands in a number.
 
 ## Usage
 ```
-$numberSeparator[number;(optional) customSeparator]
+$numberSeparator[number;(Separator)]
 ```
 
-### Breakdown
-- `number` - The number to apply the separator to.
-- `customSeparator` - The separator between each thousand. Default is `,`. Optional.
+### Parameters 
+- `number` `(Type : Integer || Flag : Required)` : The number to apply the separator to.
+- `Separator` `(Type : String || Flag : Vacantable)` : The separator between each thousand. Default is `,`.
 
 ## Example
 ```

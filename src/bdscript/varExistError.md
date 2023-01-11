@@ -7,8 +7,8 @@ $varExistError[Name;Error message]
 ```
 
 ### Parameters
-- `Name` : The variable that should exist.
-- `Error message` : The custom error message to return if the variable doesn't exist.
+- `Name` `(Type : String || Flag : Required)` : The variable that should exist.
+- `Error message` `(Type : String || Flag : Emptiable)` : The custom error message to return if the variable doesn't exist.
 
 ## Example
 ```

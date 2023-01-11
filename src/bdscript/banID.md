@@ -22,7 +22,12 @@ Gets the user to ban from the author's message. The 'reason' will show in audit 
 ```
 $banID[reason;userID]
 ```
-Gets the user to ban from the 'userID' field. The 'reason' will show up in audit logs. You can also leave the 'reason' field empty to provide no reason.
+
+## Parameters 
+- `reason` `(Type : String || Flag : Emptiable)` : The 'reason' will show up in audit logs. You can also leave the 'reason' field empty to provide no reason.
+- `userID` `(Type : Snowflake || Flag : Vacantable)` : user whose ID was provided will be banned.
+
+
 
 ## Example
 ```

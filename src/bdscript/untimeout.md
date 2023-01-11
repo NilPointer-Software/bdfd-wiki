@@ -7,7 +7,7 @@ $untimeout[(User ID)]
 ```
 
 ### Parameters
-- `User ID` : The ID of the user to untimeout. If this parameter is empty, untimeouts the mentioned users (Optional).
+- `User ID` `(Type : Snowflake || Flag : Optional)` : The ID of the user to untimeout. If this parameter is empty, untimeouts the mentioned users.
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly :

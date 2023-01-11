@@ -28,7 +28,7 @@ This function is used to return the uploaded image in the app.
 $customImage[Custom image tag]
 ```
 
-#### Breakdown
+#### Parameters
 - `custom image tag` - The tag that you set the custom image to, previously.
 
 #### Example

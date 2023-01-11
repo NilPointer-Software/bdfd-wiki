@@ -15,3 +15,6 @@ you amount of online members.
 - `idle`
 - `dnd`
 - `invisible`
+
+## Third Usage
+You can use `$membersCount` in bot status to display how many users in all servers of the bot

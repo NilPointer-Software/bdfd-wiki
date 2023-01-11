@@ -7,7 +7,7 @@ $getCustomStatus[User ID]
 ```
 
 ### Parameters
-- `User ID`: The user whose custom status to get.
+- `User ID` `(Type : Snowflake || Flag : Required)` : The user whose custom status to get.
 
 ## Example
 ```

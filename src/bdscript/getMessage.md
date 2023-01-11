@@ -3,13 +3,13 @@ Gets data from a message, with the provided message and channel IDs.
 
 ## Usage
 ```
-$getMessage[channelID;messageID;(optional) property]
+$getMessage[channelID;messageID;(property)]
 ```
 
-### Breakdown
-- `channelID` - The channel that this message belongs to.
-- `messageID` - The message to get the data from.
-- `property` - The message data to get. Default is `content`. Message properties:
+### Parameters
+- `channelID` `(Type : Snowflake || Flag : Required)` : The channel that this message belongs to.
+- `messageID` `(Type : Snowflake || Flag : Required)` : The message to get the data from.
+- `property` `(Type : Enum || Flag : Optional)` : The message data to get. Default is `content`. Message properties:
   - `content` - The content of this message.
   - `authorID` - The ID of the message author.
   - `username` - The username of the message author.

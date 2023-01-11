@@ -8,7 +8,7 @@
 $messageContains[word;...]
 ```
 
-### Breakdown
+### Parameters
 - `word` - The phrases/words the bot checks for. Separate phrases using `;`.
 
 ## Example

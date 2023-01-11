@@ -6,10 +6,10 @@ Crops the provided text. If text is cropped then the `ending` is added at the en
 $cropText[text;maxCharacters;ending]
 ```
 
-### Breakdown
-- `text` - The text to crop.
-- `maxCharacters` - The maxmium amount of characters, subsequent characters are removed.
-- `ending` - The text to end the cropped-text with (if the text was cropped).
+### Parameters
+- `text` `(Type : String || Flag : Emptiable)` : The text to crop.
+- `maxCharacters` `(Type : Integer || Flag : Required)` : The maxmium amount of characters, subsequent characters are removed.
+- `ending` `(Type : String || Flag : Emptiable)` : The text to end the cropped-text with (if the text was cropped).
 
 ## Example
 ```

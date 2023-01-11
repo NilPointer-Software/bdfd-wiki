@@ -7,8 +7,10 @@ $creationDate[ID;(Format)]
 ```
 
 ### Parameters
-- `ID`: The ID from which to get the creation date.
-- `Format`: Customize the default time format output (Optional).
+- `ID` `(Type : Snowflake || Flag : Required)` : The ID from which to get the creation date, The ID can be `UserID`,`RoleID`,`MessageID`,`ServerID`.
+- `Format` `(Type : String || Flag : Optional)` : Customize the default time format output.
+
+> Uses GoLang date format
 
    > 📌 Click [me](../resources/timeFormat.md) to check all supported time format values.
 

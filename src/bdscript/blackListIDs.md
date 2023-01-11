@@ -7,9 +7,9 @@ $blackListIDs[user IDs;...;error message]
 ```
 
 ## Parameters
-- `user IDs`: The users to blacklist from using the command. Separate user IDs with `;`.
+- `user IDs` `(Type : Snowflake || Flag : Emptiable)` : The users to blacklist from using the command. Separate user IDs with `;`.
 > [How to get user ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
-- `error message`: The message that will be sent when the user running the command is blacklisted.
+- `error message` `(Type : String || Flag : Emptiable)` : The message that will be sent when the user running the command is blacklisted.
 
 ## Example
 ```

@@ -10,6 +10,9 @@ There are two usages of the `$channelTopic` function.
 ### Usage #2
 `$channelTopic[channelID]` - Returns the channel topic of the provided 'channelID'.
 
+## Parameters 
+- `channelID` `(Type : Snowflake || Flag : Required)`
+
 ## Example
 ```
 $nomention

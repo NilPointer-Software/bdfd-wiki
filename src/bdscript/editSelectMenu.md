@@ -6,6 +6,12 @@ Edits select menu.
 $editSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
 ```
 
+## Parameters 
+- `Menu ID` `(Type : String || Flag : Required)` : the menu ID you want to edit
+- `Min` `(Type : Integer || Flag : Required)` : minimum amount of values that can be selected.
+- `Max` `(Type : Integer || Flag : Required)` : maximum amount of values that can be selected.
+- `Placeholder` `(Type : String || Flag : Vacantable)` : it's a text that appears if no option is selected.
+
 ## Example
 ### Interaction Code
 ```

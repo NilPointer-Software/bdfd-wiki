@@ -7,7 +7,7 @@ $toUppercase[Text]
 ```
 
 ### Parameters
-- `Text` : The text to convert.
+- `Text` `(Type : String || Flag : Emptiable)` : The text to convert.
 
 ## Example
 ```

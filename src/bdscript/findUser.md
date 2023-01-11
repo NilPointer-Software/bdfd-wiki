@@ -3,12 +3,12 @@ Finds a user's ID using username, ID, or mention.
 
 ## Usage
 ```
-$findUser[user;(optional) returnAuthorID (yes/no)]
+$findUser[user;(returnAuthorID)]
 ```
 
-## Breakdown
-- `user` - The user's username, ID, or mention to find.
-- `returnAuthorID` - Whether to return the author ID if no user was found. Default is `yes`. Optional.
+## Parameters
+- `user` `(Type : String || Flag : Emptiable)` : The user's username, ID, or mention to find.
+- `returnAuthorID` `(Type : Bool || Flag : Optional)` : Whether to return the author ID if no user was found. Default is `yes`.
 
 ## Example
 ```

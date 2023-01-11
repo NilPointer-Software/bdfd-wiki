@@ -6,8 +6,8 @@ Returns the server's name.
 $serverName[guildID]
 ```
 
-### Breakdown
-- `guildID` - The server to get the name of. Use `$guildID` for the current server.
+### Parameters 
+- `guildID` `(Type : Snowflake || Flag : Required)` : The server to get the name of. Use `$guildID` for the current server.
 
 > 🧙‍♂️ The bot must be present in the server to return it's name.
 

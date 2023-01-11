@@ -8,5 +8,11 @@ There are two usages of the `$guildID` function.
 `$guildID` - Returns the current server's ID.
 
 ### Usage #2
-`$guildID[serverName]` - Finds a server ID using the server name. 
+```
+$guildID[serverName]
+``` 
+
+## Parameters
+- `serverName` `(Type : String || Flag : Emptiable)` : Finds a server ID using the server name. 
+- 
 > 🧙‍♂️ *Note:* The bot can not find the ID of a server that it isn't in.

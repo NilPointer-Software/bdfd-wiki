@@ -7,10 +7,10 @@ $userReacted[Channel ID;Message ID;User ID;Emoji]
 ```
 
 ### Parameters
-- `Channel ID` : The channel where the message is located.
-- `Message ID` : The message to check the reactions for.
-- `User ID` : The user to check the reaction for.
-- `Emoji` : The emoji of the reaction to check.
+- `Channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message is located.
+- `Message ID` `(Type : Snowflake || Flag : Required)` : The message to check the reactions for.
+- `User ID` `(Type : Snowflake || Flag : Required)` : The user to check the reaction for.
+- `Emoji` `(Type : Emoji || Flag : Required)` : The emoji of the reaction to check.
 
 ## Example
 ```

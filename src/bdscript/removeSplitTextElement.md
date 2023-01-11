@@ -7,7 +7,7 @@ Removes a certain element from the [`$textSplit`](./textSplit.md) values.
 $removeSplitTextElement[index]
 ```
 
-### Breakdown
-- `index` - The index of the `$textSplit` value to remove.
+### Parameters
+- `index` `(Type : Integer || Flag : Required)` : The index of the `$textSplit` value to remove.
 
 [*See more in the Text Splitting guide...*](../guides/textSplitting.md)

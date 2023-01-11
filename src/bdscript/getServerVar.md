@@ -3,9 +3,9 @@ Returns the value of the provided server variable.
 
 ## Usage
 ```
-$getServerVar[variableName;(optional) guildID]
+$getServerVar[variableName;(guildID)]
 ```
 
-### Breakdown
-- `variableName` - The name of the variable to get.
-- `guildID` - The server to get the value for. If no guildID is inputted, then the current server is used.
+### Parameters
+- `variableName` `(Type : String || Flag : Required)` : The name of the variable to get.
+- `guildID` `(Type : Snowflake, String || Flag : Optional)` : The server to get the value for. If no guildID is inputted, then the current server is used.

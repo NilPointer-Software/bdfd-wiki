@@ -6,11 +6,11 @@ Creates a channel.
 $createChannel[name;type;(optional) categoryID]
 ```
 
-### Breakdown
-- `name` - The name to give this channel.
+### Parameters
+- `name` `(Type : String || Flag : Required)` : The name to give this channel.
 
     > 📝 Channel names can have a maximum of upto 100 characters.
-- `type` - The channel type. Channel types:
+- `type` `(Type : Enum || Flag : Required)` : The channel type. Channel types:
   - `category`
   - `text`
   - `voice`

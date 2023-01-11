@@ -5,6 +5,9 @@ Creates a new modal.
 ```
 $newModal[Modal ID;Title]
 ```
+### Parameters
+- `Modal ID` `(Type : String || Flag : Required)` : ID of the `$newModal[]` which will be used for `$onInteraction[]` callback.
+- `Title` `(Type : String || Flag : Required)` : title displayed in the modal.
 
 ## Example
 ```

@@ -27,7 +27,7 @@ $unregisterGuildCommands[Slash command name;...]
 Unregisters provided guild slash commands from the current guild.
 
 #### Parameters
-- `Slash command name` : Name of guild slash command to unregister. Use semicolons `;` as separator to separate multiple guild slash command names.
+- `Slash command name` `(Type : String || Flag : Required)` : Name of guild slash command to unregister. Use semicolons `;` as separator to separate multiple guild slash command names.
 
 #### Example
 ```

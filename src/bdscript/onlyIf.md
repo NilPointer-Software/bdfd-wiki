@@ -1,10 +1,14 @@
 # $onlyIf
-If *x* is related accordingly (based on the "sign") with *y* then the code runs. If not, the 'errorMessage' is returned.
+If *value1* is related accordingly (based on the "sign") with *value2* then the code runs. If not, the 'errorMessage' is returned.
 
 ## Usage
 ```
-$onlyIf[valuex(sign)valuey;errorMessage]
+$onlyIf[condition;errorMessage]
 ```
+
+### Parameters
+- `condition` `(Type : String || Flag : Required)` : value1!=value2 or value1>value2 or value1<value2.
+- `errorMessage` `(Type : String || Flag : Emptiable)`
 
 ### Signs
 - `==` - Equal

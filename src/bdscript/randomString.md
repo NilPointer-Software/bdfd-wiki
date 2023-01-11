@@ -6,8 +6,8 @@ Generates a random combination of letters/numbers.
 $randomString[length]
 ```
 
-### Breakdown
-- `length` - How long the string should be (max `10`).
+### Parameters
+- `length` `(Type : Integer || Flag : Required)` : How long the string should be (max `10`).
 
 ## Example
 ```

@@ -22,5 +22,9 @@ $dm[UserID;...]
 ```
 This will send the message to every user with given User ID.
 
+## Parameters 
+- `userID` `(Type : Snowflake || Flag : Emptiable)`
+
+
 ## Note
 If the command fails to send the message, make sure the user allows dm messages from everyone.

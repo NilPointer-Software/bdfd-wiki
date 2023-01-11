@@ -7,8 +7,8 @@ Returns whether or not the provided value is a number.
 $isNumber[value]
 ```
 
-### Breakdown
-- `value` - The text to check.
+### Parameters
+- `value` `(Type : String || Flag : Emptiable)` : The text to check.
 
 ## Example
 ```

@@ -7,7 +7,7 @@ $userAvatar[User ID]
 ```
 
 ### Parameters
-- `User ID` : The user to return the avatar for.
+- `User ID` `(Type : Snowflake || Flag : Required)` : The user to return the avatar for.
 
 ## Example
 ```

@@ -6,8 +6,8 @@ Returns a role's ID using its name.
 $roleID[roleName]
 ```
 
-### Breakdown
-- `roleName` - The role name to get the role ID for.
+### Parameters
+- `roleName` `(Type : String || Flag : Required)` : The role name to get the role ID for.
 
 ## Example
 ```

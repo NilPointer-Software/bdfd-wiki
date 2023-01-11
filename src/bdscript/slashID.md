@@ -10,6 +10,10 @@ $slashID
 $slashID[Slash command name]
 ```
 
+## Parameters 
+- `Slash command name ` `(Type : String || Flag : Required)`
+
+
 ### Examples
 
 #### Without an argument

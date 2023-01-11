@@ -7,10 +7,10 @@ Changes permission for mentioned users/roles in this particular channel.
 $editChannelPerms[channel ID;userID/RoleID;permission;...]
 ```
 
-### Breakdown
-- `channel ID` - place the ID of the channel to which the roles are modified.
-- `userID/RoleID` - place the ID of the role or user whose permissions will be modified.
-- `permission` - the permission(s) to be modified.
+### Parameters
+- `channel ID` `(Type : Snowflake || Flag : Required)` : place the ID of the channel to which the roles are modified.
+- `userID/RoleID` `(Type : Snowflake || Flag : Emptiable)` : place the ID of the role or user whose permissions will be modified.
+- `permission` `(Type : Permission || Flag : Required)` : the permission(s) to be modified.
   - `+` - set + to add permission.
   - `-` - set - to remove the permission.
 

@@ -7,8 +7,8 @@ Returns whether the provided channel is NSFW (not-safe-for-work) or not.
 $isNSFW[channelID]
 ```
 
-### Breakdown
-- `channelID` - The channel to check.
+### Parameters
+- `channelID` `(Type : Snowflake || Flag : Required)` : The channel to check.
 
 ## Example
 ```

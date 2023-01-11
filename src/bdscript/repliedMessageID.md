@@ -28,8 +28,8 @@ $repliedMessageID[Channel ID;Message ID]
 Returns the ID of the replied message form the given message.
 
 #### Parameters
-- `Channel ID` : The channel where the message is located.
-- `Message ID` : The message from which the ID of the replied message will be taken from.
+- `Channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message is located.
+- `Message ID` `(Type : Snowflake || Flag : Required)` : The message from which the ID of the replied message will be taken from.
 
 #### Example
 ```

@@ -7,14 +7,14 @@ Sorts provided numbers. Amount of numbers can be set to -1 if you'd like to retu
 $sort[numbers;...;direction;return amount;separator]
 ```
 
-### Breakdown
-- `numbers` - sets numbers separated by *;* (ex: 1;2;3)
-- `direction` - what order will be used (ascending or descending).
+### Parameters
+- `numbers` `(Type : Float,Integer || Flag : Required)` : sets numbers separated by *;* (ex: 1;2;3)
+- `direction` `(Type : Enum || Flag : Required)` : what order will be used (ascending or descending).
   - *`asc` - ascending*
   - *`desc` - descending*
-- `return amount` - how many numbers will be returned.
-  - *`-1` - Use* -1 *to generate all numbers* 
-- `separator` - the separator between each number.
+- `return amount` `(Type : Integer || Flag : Required)` :  how many numbers will be returned.
+  - Use `-1` to generate all numbers
+- `separator` `(Type : String || Flag : Required)` : the separator between each number.
 
 ## Example
 ```

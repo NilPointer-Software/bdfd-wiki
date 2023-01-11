@@ -6,6 +6,6 @@ The command can only executed by the provided roles.
 $onlyForRoleIDs[roleID;...;errorMessage]
 ```
 
-### Breakdown
-- `roleID` - The role IDs which are allowed to use the command, separate IDs using `;`.
-- `errorMessage` - The message to return when the user doesn't have the required roles.
+### Parameters 
+- `roleID` `(Type : Snowflake || Flag : Emptiable)` : The role IDs which are allowed to use the command, separate IDs using `;`.
+- `errorMessage` `(Type : String || Flag : Emptiable)` : The message to return when the user doesn't have the required roles.

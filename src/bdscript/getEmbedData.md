@@ -6,11 +6,11 @@ Fetches embed data from the provided message.
 $getEmbedData[channelID;messageID;embedIndex;embedProperty (title/description/footer/color/image/timestamp)]
 ```
 
-### Breakdown
-- `channelID` - The channel this message belongs to.
-- `messageID` - The message to get this embed data from.
-- `embedIndex` - The embed of this message to get data from. Use `1` for the first embed of this message.
-- `embedProperty` - The embed property to return.
+### Parameters
+- `channelID` `(Type : Snowflake || Flag : Required)` : The channel this message belongs to.
+- `messageID` `(Type : Snowflake || Flag : Required)` : The message to get this embed data from.
+- `embedIndex` `(Type : HowMany || Flag : Required)` : The embed of this message to get data from. Use `1` for the first embed of this message.
+- `embedProperty` `(Type : Enum || Flag : Required)` : The embed property to return.
 
 ## Example
 ```

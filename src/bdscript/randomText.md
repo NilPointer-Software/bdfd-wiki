@@ -6,8 +6,8 @@ Picks one value from the provided values randomly.
 $randomText[text1;text2;etc]
 ```
 
-### Breakdown
-- `text1`/`text2`/`etc` - The text which the bot can choose from.
+### Parameters
+- `text1`/`text2`/`etc` `(Type : String || Flag : Emptiable)` : The text which the bot can choose from.
 
 ## Example
 ```

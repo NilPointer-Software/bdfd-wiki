@@ -6,9 +6,9 @@ Adds a description to an embed.
 $description[message;(index)]
 ```
 
-### Breakdown
-- `message` - The text to set the description as. It cannot exceed more than 4096 characters.
-- `index` - What embed the description should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
+### Parameters
+- `message` `(Type : String || Flag : Emptiable)` : The text to set the description as. It cannot exceed more than 4096 characters.
+- `index` `(Type : Integer || Flag : Optional)` : What embed the description should belong to. Default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

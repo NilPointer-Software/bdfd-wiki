@@ -7,7 +7,7 @@ $addCmdReactions[emojis;...]
 ```
 
 ## Parameters
-- `emojis`: The emoji(s) the bot reacts with. Separate emojis using `;`.
+- `emojis` `(Type : Emoji || Flag : Required)` : The emoji(s) the bot reacts with. Separate emojis using `;`.
 
 > You can use Unicode emojis and emoji IDs, but not emoji names. For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
@@ -28,5 +28,7 @@ $addCmdReactions[$message]
 2. Send the message.
 3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
 4. Input the emoji ID into `$addCmdReactions[]`. (e.g `$addCmdReactions[<:hollyDab:828628880629825546>]`)
+
+![emoji-id](https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif)
 
 > If you're still having issues, check the [Troubleshooting page](https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions).

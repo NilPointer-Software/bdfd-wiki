@@ -7,7 +7,7 @@ $addTimestamp[(index)]
 ```
 
 ## Parameters
-- `index`: To which embed the timestamp should be added to. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
+- `index` `(Type : Integer || Flag : Optional)` : To which embed the timestamp should be added to. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

@@ -6,8 +6,8 @@ Changes the color of the mentioned role.
 $colorRole[colorHex]
 ```
 
-### Breakdown
-- `colorHex` - The [color hex](https://htmlcolorcodes.com/color-picker) to change the mentioned role color to.
+### Parameters
+- `colorHex` `(Type : Color || Flag : Required)` : The [color hex](https://htmlcolorcodes.com/color-picker) to change the mentioned role color to.
 
 ## Example
 ```

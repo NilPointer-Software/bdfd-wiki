@@ -7,8 +7,8 @@ $thumbnail[Image url;(Index)]
 ```
 
 ### Parameters
-- `Image url`: The image to set as the thumbnail.
-- `Index`: What [embed index](../resources/embedIndexes.md) the thumbnail should belong to, default to `1` (Optional).
+- `Image url` `(Type : URL || Flag : Emptiable)` : The image to set as the thumbnail.
+- `Index` `(Type : Integer || Flag : Optional)` : What [embed index](../resources/embedIndexes.md) the thumbnail should belong to, default to `1`.
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly:

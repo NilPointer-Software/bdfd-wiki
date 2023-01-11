@@ -13,7 +13,11 @@ There are two usages of  the ` $shardID ` function.
 
 ### Usage #2
 
-` $shardID[guildID] ` - Returns the shard id of the provided guild.
+```
+$shardID[guildID]
+```
+## Parameters 
+- `guildID ` `(Type : Snowflake || Flag : Required)` : Returns the shard id of the provided guild.
 
 ## Example
 

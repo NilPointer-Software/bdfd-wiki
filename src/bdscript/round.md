@@ -6,9 +6,9 @@ Rounds up the provided number.
 $round[number;(decimalPlace)]
 ```
 
-### Breakdown
-- `number` - The number to round.
-- `decimalPlace` - The decimal place to round the number to. Default as `0`. Optional.
+### Parameters
+- `number` `(Type : F2 || Flag : Required)` : The number to round.
+- `decimalPlace` `(Type : Integer || Flag : Vacantable)` : The decimal place to round the number to. Default as `0`. Optional.
 
 ## Example
 ```

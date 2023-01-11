@@ -1,0 +1,30 @@
+## Argument Flags :
+Function argument flags mark how arguments within a function may be used (or hence, not used at all), it will be displayed near or bleow the function argument as example :
+(- `userID` `(Flag : Required)`) etc
+
+- __Optional__ - The argument **can** be excluded but **cannot** be left empty, they show up as `(something)` and will **always** be after all required arguments.
+- __Required__ - The argument **must** be included and **cannot** be empty.
+- __Emptiable__ - The argument **must** be included but **can** be empty.
+- __Vacantable__ - The argument **can** be excluded and if included **can** be empty.
+
+
+## Argument Types :
+This section will explain the various argument types used for function arguments. Function arguments are anything that goes in the brackets `[]` of a function, it will be displayed near or bleow the function argument as example :
+(- `userID` `(Type : Snowflake || Flag : Required)`) and if it has more than one option it will be `(Type : String, Snowflake || Flag : Required)`etc
+
+- __String__ - This is the most generalized function, a string can be any character or text.
+- __Snowflake__ - A valid discord ID, can be of a role, channel, user, server, emoji and message.
+- __Integer__ - Any number without decimal (1, 5 10, etc).
+- __Float__ - A number with decimal (1.5, 5.2, 7.30, etc).
+- __URL__ - A valid domain link, **must** be prefixed by `http://` or `https://` and have a valid domain name.
+- __HowMany__ - A number that is prefixed or suffixed with < or >, or just a plain integer.
+- __Enum__ - Strings that match a certain type (case insensitive).
+- __Duration__ - A time based duration, an integer suffixed with a valid time format (s, m, h, d, w).
+- __Permission__ - Discord permission (case insensitive), see [this](../resources/permissions.md) for all.
+- __Bool__ - yes/no or true/false.
+- __Color__ - Color Hex Code you can get from [here](https://htmlcolorcodes.com/color-picker) as example
+
+
+## Pairs :
+- __Tuple__ - A tuple is a set of arguments that depend on others to function, they are shown with `<>` on either side.
+- __Ellipsis__ - Ellipsis notations (`...`) symbolize an argument that can be repeated multiple times. Ellipsis is denoted with `...` as the argument after the argument which can be repeated.

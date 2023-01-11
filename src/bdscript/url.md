@@ -9,8 +9,8 @@ $url[Mode;Text]
 ```
 
 ### Parameters
-- `Mode` : Whether to encode or decode the provided text. Accepts either `encode` or `decode` as input.
-- `Text` : The text to change.
+- `Mode` `(Type : Enum || Flag : Required)` : Whether to encode or decode the provided text. Accepts either `encode` or `decode` as input.
+- `Text` `(Type : String || Flag : Emptiable)` : The text to change.
 
 ## Example
 - Encoding

@@ -26,7 +26,7 @@ $categoryCount[Guild ID]
 Returns the category count of a provided guild.
 
 #### Parameters
-- `Guild ID`: The guild to get its category count.
+- `Guild ID` `(Type : Snowflake || Flag : Required)` : The guild to get its category count.
 
 #### Example
 ```

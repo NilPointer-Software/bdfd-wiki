@@ -1,14 +1,14 @@
 # $removeContains
-Deletes messages that contain the provided phrases.
+Removes messages that contains provided words. It will remove `amount` last messages (replace 'amount' with number) (max 100 messages) 
 
 ## Usage
 ```
-$removeContains[phrases;howMany]
+$removeContains[word;...;Amount]
 ```
 
-### Breakdown
-- `phrases` - The phrases/words to delete, separate phrases using `;`.
-- `howMany` - How many messages containing the provided phrases to delete. Max is 100.
+### Parameters
+- `word` `(Type : String || Flag : Emptiable)` : The phrases/words to delete, separate phrases using `;`.
+- `Amount` `(Type : Integer || Flag : Required)` : How many messages containing the provided phrases to delete. Max is 100.
 
 ## Example
 ```

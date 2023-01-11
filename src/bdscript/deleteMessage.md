@@ -6,9 +6,9 @@ Deletes a message
 ```
 $deleteMessage[channel ID;message ID]
 ```
-### Breakdown
-- `channel ID` - The channel ID where the message is.
-- `message ID` - The ID of the message which will be deleted.
+### Parameters
+- `channel ID` `(Type : Snowflake || Flag : Required)` : The channel ID where the message is.
+- `message ID` `(Type : Snowflake || Flag : Required)` : The ID of the message which will be deleted.
 
 ## Example
 ```

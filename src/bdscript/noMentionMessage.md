@@ -14,7 +14,10 @@ Returns the user's full message *(without mentions)*.
 ```
 $noMentionMessage[argumentNumber]
 ```
-Returns the argument matching the provided number *(excluding mentions)*.
+
+#### Parameters 
+
+-`argumentNumber` `(Type : HowMany || Flag : Required)` : Returns the argument matching the provided number *(excluding mentions)*.
 
 > 🧙‍♂️ For example, `$noMentionMessage[1]` would just return the first word of the message. You can also use `$noMentionessage[>]` to get the last argument/word of the user's message.
 

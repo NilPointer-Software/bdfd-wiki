@@ -6,8 +6,8 @@ Returns the highest role in the server that has all the provided permissions.
 $highestRoleWithPerms[permissions]
 ```
 
-### Breakdown
-- `permissions` - The permissions that the role needs to have.  [(see permissions list)](/src/resources/permissions.md)
+### Parameters
+- `permissions` `(Type : Permission || Flag : Required)` : The permissions that the role needs to have.  [(see permissions list)](/src/resources/permissions.md)
 
 ## Example
 ```

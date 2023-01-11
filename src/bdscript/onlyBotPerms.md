@@ -6,9 +6,9 @@ The command can be executed if bot has all of the provided permissions.
 $onlyBotPerms[permissions;...;errorMessage]
 ```
 
-### Breakdown
-- `permissions` - The [permissions](../resources/permissions.md) that the bot needs to run the command. Use `;` as separator for multiple permissions.
-- `errorMessage` - The message to return when the bot doesn't have all the provided permissions.
+### Parameters 
+- `permissions` `(Type : Permission || Flag : Emptiable)` : The [permissions](../resources/permissions.md) that the bot needs to run the command. Use `;` as separator for multiple permissions.
+- `errorMessage` `(Type : String || Flag : Emptiable)` : The message to return when the bot doesn't have all the provided permissions.
 
 ### Example
 ```

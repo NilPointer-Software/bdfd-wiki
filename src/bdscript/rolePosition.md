@@ -6,8 +6,8 @@ Returns a roles position *(1 being highest role)*.
 $rolePosition[roleID]
 ```
 
-### Breakdown
-- `roleID` - The role to get the position of.
+### Parameters
+- `roleID` `(Type : Snowflake || Flag : Required)` : The role to get the position of.
 
 ## Example
 ```

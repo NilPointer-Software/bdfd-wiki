@@ -6,6 +6,6 @@ Disables the command for users with usernames matching the ones provided.
 $blackListUsers[usernames;errorMessage]
 ```
 
-### Breakdown
-- `usernames` - The usernames to blacklist. Separate names using `;`.
-- `errorMessage` - Message when user's name is in the blacklist.
+### Parameters
+- `usernames` `(Type : String || Flag : Emptiable)` : The usernames to blacklist. Separate names using `;`.
+- `errorMessage` `(Type : String || Flag : Emptiable)` : Message when user's name is in the blacklist.

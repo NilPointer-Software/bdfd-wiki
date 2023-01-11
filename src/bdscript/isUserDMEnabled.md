@@ -7,8 +7,8 @@ Checks whether or not the bot can DM the user.
 $isUserDMEnabled[userID]
 ```
 
-### Breakdown
-- `userID` - The user to check the DM status for.
+### Parameters
+- `userID` `(Type : Snowflake || Flag : Required)` : The user to check the DM status for.
 
 ## Example
 ```

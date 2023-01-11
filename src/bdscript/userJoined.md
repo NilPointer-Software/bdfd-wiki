@@ -7,8 +7,8 @@ $userJoined[User ID;(Format)]
 ```
 
 ### Parameters
-- `User ID` : The user whose join date will be returned.
-- `Format` : Customize the default time format output (Optional).
+- `User ID` `(Type : Snowflake || Flag : Required)` : The user whose join date will be returned.
+- `Format` `(Type : String || Flag : Optional)` : Customize the default time format output.
 
     > 📌 Click [me](../resources/timeFormat.md) to check all supported time format values.
 

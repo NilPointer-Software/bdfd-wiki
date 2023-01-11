@@ -14,8 +14,8 @@ $var[Name;(Value)]
 ```
 
 ### Parameters
-- `Name` : The name of the temporary variable.
-- `Value` : The data to store (Optional).
+- `Name` `(Type : String || Flag : Required)` : The name of the temporary variable.
+- `Value` `(Type : String || Flag : Vacantable)` : The data to store
 
 > 📌 To retrieve the temporary stored value, type `$var[Name]`, where *"Name"* is the temporary variable name.
 

@@ -3,11 +3,11 @@ Changes the mentioned user's nickname.
 
 ## Usage
 ```
-$changeUsername[newNickname]
+$changeUsername[Username]
 ```
 
-### Breakdown
-- `newNickname` - The text to change the user's nickname to. It cannot exceed more than 32 characters.
+### Parameters
+- `Username` `(Type : String || Flag : Required)` : The text to change the user's nickname to. It cannot exceed more than 32 characters, using `%username%` will be replaced by real user's username.
 
 ## Example
 ```

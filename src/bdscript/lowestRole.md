@@ -14,7 +14,8 @@ Returns the lowest role in the server.
 ```
 $lowestRole[userID]
 ```
-Returns the user's lowest role.
+## Parameters
+- `UserID` `(Type : Snowflake || Flag : Required)` : Returns the user's lowest role.
 
 ## Example
 ```

@@ -6,6 +6,9 @@ Retrieves input from modal.
 $input[Text Input ID]
 ```
 
+## Parameters 
+- `Text Input ID` `(Type : String || Flag : Required)` : input ID in [$addTextInput](../bdscript/addTextInput.md)
+
 ## Example
 ### Interaction command code
 ```

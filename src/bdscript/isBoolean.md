@@ -15,8 +15,8 @@ enable | disable
 $isBoolean[text]
 ```
 
-### Breakdown
-- `text` - The text to check.
+### Parameters
+- `text` `(Type : String || Flag : Emptiable)` : The text to check.
 
 ## Example
 ```

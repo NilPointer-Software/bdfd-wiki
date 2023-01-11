@@ -7,8 +7,8 @@ Returns the provided user's status.
 $getUserStatus[userID]
 ```
 
-### Breakdown
-- `userID` - The user to get the status for.
+### Parameters
+- `userID` `(Type : Snowflake || Flag : Required)` : The user to get the status for.
 
 ### Statuses List
 - online

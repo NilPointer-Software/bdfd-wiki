@@ -7,13 +7,13 @@ $editEmbedIn[time;(title;description;footer;color)]
 ```
 > 📝 Optional fields can be left empty. At least one embed field (`title`, `description`, or `footer`) needs to be inputted.
 
-### Breakdown
-- `time` - The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max time is 40 minutes (for premium users, it's 120 minutes). Required.
+### Parameters
+- `time` `(Type : Duration || Flag : Required)` : The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max time is 40 minutes (for premium users, it's 120 minutes). Required.
 
-- `title` - The new embed title. Optional.
-- `description` - The new embed description. Optional.
-- `footer` - The new embed footer. Optional.
-- `color` - The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for default color. Optional.
+- `title` `(Type : String || Flag : Vacantable)` : The new embed title. Optional.
+- `description` `(Type : String || Flag : Vacantable)` : The new embed description. Optional.
+- `footer` `(Type : String || Flag : Vacantable)` : The new embed footer. Optional.
+- `color` `(Type : Color || Flag : Vacantable)` : The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for default color. Optional.
 
 ## Example
 ```

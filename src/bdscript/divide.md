@@ -6,8 +6,8 @@ Divides the provided numbers.
 $divide[numbers]
 ```
 
-### Breakdown
-- `numbers` - The numbers to divide. Separate numbers using `;`.
+### Parameters
+- `numbers` `(Type : Integer,(Big)Float|| Flag : Required)` : The numbers to divide. Separate numbers using `;`.
 
 ## Example
 ```

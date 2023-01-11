@@ -7,4 +7,4 @@ $resetChannelVar[Variable Name]
 ```
 
 ### Parameters
-- `Variable Name`: The name of the variable to reset.
+- `Variable Name` `(Type : String || Flag : Required)` : The name of the variable to reset.

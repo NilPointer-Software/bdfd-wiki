@@ -6,6 +6,9 @@ Returns 'true' if at least one of the provided conditions is true, otherwise 'fa
 $or[condition1;condition2;etc]
 ```
 
+### Parameters
+- `condition1,2, etc` `(Type : String || Flag : Required)`
+
 ## Example
 ```
 $nomention

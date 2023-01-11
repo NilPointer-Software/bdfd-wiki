@@ -27,6 +27,10 @@ $pinMessage[channelID;messageID]
 ```
 It pins a specific message using it's message ID & channel ID.
 
+#### Parameters 
+- `channelID` `(Type : Snowflake || Flag : Required)`
+- `messageID` `(Type : Snowflake || Flag : Required)`
+
 ##### Example
 ```
 $nomention

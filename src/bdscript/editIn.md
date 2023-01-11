@@ -6,9 +6,9 @@ Edits the bot's response after the given time.
 $editIn[time;newMessage]
 ```
 
-### Breakdown
-- `time` - The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max is `40m`.
-- `newMessage` - The text that appears when this message is edited.
+### Parameters
+- `time` `(Type : Duration || Flag : Required)` : The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max is `40m`.
+- `newMessage` `(Type : String || Flag : Required)` : The text that appears when this message is edited.
 
 ## Example
 ```

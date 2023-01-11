@@ -6,8 +6,8 @@ Returns how long is left on the cooldown, in seconds; can be used in the 'errorM
 $getCooldown[cooldownType (normal/server/global)]
 ```
 
-### Breakdown
-- `cooldownType` - The cooldown type *(normal - [$cooldown](./cooldown.md) | server - [$serverCooldown](./serverCooldown.md) | global - [$globalCooldown](./globalCooldown.md))*.
+### Parameters
+- `cooldownType` `(Type : Enum || Flag : Required)` : The cooldown type *(normal - [$cooldown](./cooldown.md) | server - [$serverCooldown](./serverCooldown.md) | global - [$globalCooldown](./globalCooldown.md))*.
 
 ## Example
 ```

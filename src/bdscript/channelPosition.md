@@ -23,7 +23,7 @@ $channelPosition
 ```
 $channelPosition[Channel ID]
 ````
-- `Channel ID`: The ID of a specific channel to get it's position.
+- `Channel ID` `(Type : Snowflake || Flag : Required)` : The ID of a specific channel to get it's position.
 
 Returns the position of a specified channel in the server using it's ID.
 

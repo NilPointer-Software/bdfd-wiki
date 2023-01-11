@@ -12,13 +12,13 @@ Kicks the user who ran the command.
 
 ### Usage #2
 ```
-$kick[userID;(optional) reason]
+$kick[userID;(reason)]
 ```
 Kicks the provided user.
 
-#### Breakdown
-- `userID` - The user to kick from the server.
-- `reason` - The audit-log reason for the kick. Optional.
+#### Parameters
+- `userID` `(Type : Snowflake || Flag : Required)` : The user to kick from the server.
+- `reason` `(Type : String || Flag : Vacantable)` : The audit-log reason for the kick. Optional.
 
 ## Example
 ```

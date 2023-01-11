@@ -7,6 +7,9 @@ Returns 'true' if user is banned, otherwise it returns 'false'. Requires 'BAN_ME
 $isBanned[user ID]
 ```
 
+## Parameters 
+- `user ID ` `(Type : Snowflake || Flag : Required)` :the ID to check if banned or no.
+
 ## Example
 ```
 $nomention

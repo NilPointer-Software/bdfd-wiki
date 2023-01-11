@@ -3,14 +3,14 @@ Replaces 'sample' with 'new' from 'text', you can choose how many 'sample' is re
 
 ## Usage
 ```
-$replaceText[text;sample;new;(optional) howMany]
+$replaceText[text;sample;new;(howMany)]
 ```
 
-### Breakdown
-- `text` - The text where the bot is searching for the 'sample'.
-- `sample` - The text to replace with 'new'.
-- `new` - The text to replace 'sample' with.
-- `how many` - How many times the bot should replace the sample *(if there is multiple arguments in 'text' that match 'sample')*.  Use `-1` to replace all 'sample' in 'text' with 'new' (this last argument is optional).
+### Parameters
+- `text` `(Type : String || Flag : Emptiable)` : The text where the bot is searching for the 'sample'.
+- `sample` `(Type : String || Flag : Emptiable)` : The text to replace with 'new'.
+- `new` `(Type : String || Flag : Emptiable)` : The text to replace 'sample' with.
+- `how many` `(Type : Integer || Flag : Optional)` : How many times the bot should replace the sample *(if there is multiple arguments in 'text' that match 'sample')*.  Use `-1` to replace all 'sample' in 'text' with 'new'.
 
 ## Examples
 

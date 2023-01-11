@@ -3,12 +3,12 @@ Sends a new message.
 
 ## Usage
 ```
-$sendMessage[text;(optional) returnMessageID (yes/no)]
+$sendMessage[text;(returnMessageID)]
 ```
 
-### Breakdown
-- `text` - The text to send in the new message.
-- `returnMessageID` - Whether to return the ID of the newly created message, in another message. Optional, default is `no`.
+### Parameters 
+- `text` `(Type : String || Flag : Required)` : The text to send in the new message.
+- `returnMessageID` `(Type : Bool || Flag : Optional)` : Whether to return the ID of the newly created message, in another message, default is `no`.
 
 ## Examples
 

@@ -9,7 +9,7 @@ $categoryID[Category Name]
 ```
 
 ### Parameters
-- `Category Name`: The name of the category from which to retrieve the category ID.
+- `Category Name` `(Type : String || Flag : Required)` : The name of the category from which to retrieve the category ID.
 
 ## Example
 ```

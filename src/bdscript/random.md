@@ -14,6 +14,8 @@ Returns a random number between 0 and 9.
 ```
 $random[minimum;maximum]
 ````
+#### Parameters 
+`minimum & maximum ` `(Type : Integer,Float|| Flag : Required)`
 Returns a random number between 'minimum' and 'maximum'.
 
 ## Example

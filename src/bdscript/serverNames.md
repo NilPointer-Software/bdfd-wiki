@@ -24,9 +24,9 @@ $serverNames[amount;separator]
 ```
 Returns *x* server names that the bot is in.
 
-#### Breakdown
-- `amount` - The *x* amount of server names you want. Use `-1` if you want to return all server names.
-- `separator` - A custom separator for separating server names.
+#### Parameters
+- `amount` `(Type : Integer || Flag : Required)` : The *x* amount of server names you want. Use `-1` if you want to return all server names.
+- `separator` `(Type : String || Flag : Emptiable)` : A custom separator for separating server names.
 
 #### Example
 ```

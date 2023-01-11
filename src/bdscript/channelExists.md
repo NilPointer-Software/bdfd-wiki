@@ -7,5 +7,5 @@ Checks if the provided channel exists in any server the bot is in.
 $channelExists[channelID]
 ```
 
-### Breakdown
-- `channelID` - The channel which the bot will check for.
+### Parameters
+- `channelID` `(Type : String,Snowflake || Flag : Emptiable)` : The channel which the bot will check for.

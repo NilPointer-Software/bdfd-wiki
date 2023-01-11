@@ -32,6 +32,7 @@
         - [Character Escaping](./guides/characterEscaping.md)
         - [Hyperlinks](./guides/hyperlinks.md)
         - [Share Code](./guides/sharecode.md)
+        - [Arguments flags and type](./guides/arguments.md)
 
 - [Resources]()
     - [Introduction](./resources/introduction.md)

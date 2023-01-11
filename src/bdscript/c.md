@@ -5,7 +5,10 @@ Adds a comment to the code. Comments do not appear in the bot's response.
 ```
 $c[comment]
 ```
+## Parameters 
+- `comment` `(Type : String || Flag : Emptiable)` : add a comment to your code
 
+ 
 ## Example
 ```
 $nomention

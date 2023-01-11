@@ -7,8 +7,8 @@ $unpinMessage[Channel ID;Message ID]
 ```
 
 ### Parameters
-- `Channel ID` : The channel where the message is located.
-- `Message ID` : The ID of the message to unpin.
+- `Channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message is located.
+- `Message ID` `(Type : Snowflake || Flag : Required)` : The ID of the message to unpin.
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly :

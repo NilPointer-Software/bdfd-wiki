@@ -8,5 +8,5 @@ Returns a channel's ID from it's name.
 $channelIDFromName[channel name]
 ```
 
-### Breakdown
-- `channel name` - The channel name that the bot will return the channel id for.
+### Parameters
+- `channel name` `(Type : String || Flag : Required)` : The channel name that the bot will return the channel id for.

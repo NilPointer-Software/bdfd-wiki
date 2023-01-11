@@ -10,19 +10,20 @@ There are two usages of the `$modifyChannel` function.
 $modifyChannel[channelID;channelName;topic;NSFW (yes/no);position]
 ```
 
-#### Breakdown
-- `channelID` - The channel the bot will edit.
-- `channelName` - The new channel name.
-- `topic` - The new channel topic/description.
-- `NSFW` - Whether the channel will be marked as NSFW or not.
-- `position` - The new channel position *(1 = top)*.
+#### Parameters 
+- `channelID` `(Type : Snowflake || Flag : Required)` : The channel the bot will edit.
+- `channelName` `(Type : String || Flag : Vacantable)` : The new channel name.
+- `topic` `(Type : String || Flag : Vacantable)` : The new channel topic/description.
+- `NSFW` `(Type : Bool || Flag : Vacantable)` : Whether the channel will be marked as NSFW or not.
+- `position` `(Type : Integer || Flag : Vacantable)` : The new channel position *(1 = top)*.
 
 ### Usage #2
 ```
 $modifyChannel[channelID;channelName;topic;NSFW (yes/no);position;categoryID]
 ```
 
-#### Breakdown
+#### Parameters 
+- `categoryID` `(Type : Snowflake || Flag : Vacantable)`
 Same usage as the first. The only new option is `categoryID`. This will choose what category the channel is put in.
 > 🧙‍♂️ You can use `$channelID[category/channelName]` to get the ID of a category or channel.
 

@@ -6,11 +6,11 @@ Changes the cooldown metrics for `%time-d%`, `%time-h%`, `%time-m%`, and `%time-
 $changeCooldownTime[days;hours;minutes;seconds]
 ```
 
-### Breakdown
-- `days` - The text to replace 'Days' with.
-- `hours` - The text to replace 'Hours' with.
-- `minutes` - The text to replace 'Minutes' with.
-- `seconds` - The text to replace 'Seconds' with.
+### Parameters
+- `days` `(Type : String || Flag : Required)` : The text to replace 'Days' with.
+- `hours` `(Type : String || Flag : Required)` : The text to replace 'Hours' with.
+- `minutes` `(Type : String || Flag : Required)` : The text to replace 'Minutes' with.
+- `seconds` `(Type : String || Flag : Required)` : The text to replace 'Seconds' with.
 
 ## Example
 ```

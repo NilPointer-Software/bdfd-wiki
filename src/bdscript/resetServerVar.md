@@ -8,5 +8,5 @@ Resets a server variable back to it's default value *(the one inputted in the ap
 $resetServerVar[variableName]
 ```
 
-### Breakdown
-- `variableName` - The name of the variable to reset.
+### Parameters
+- `variableName` `(Type : String || Flag : Required)` : The name of the variable to reset.

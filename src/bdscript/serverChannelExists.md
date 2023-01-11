@@ -7,9 +7,8 @@ Checks if the channel exists in the guild
 $serverChannelExists[channel ID]
 ```
 
-### Breakdown
-- `true` - If could find the channel.
-- `false` - If couldn't find the channel
+### Parameters 
+-`Channel ID` `(Type : Snowflake,String || Flag : Emptiable)` : Returns `true` If could find the channel and `false` If couldn't find the channel
 
 ## Example 1
 ```
