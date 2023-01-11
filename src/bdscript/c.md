@@ -7,7 +7,7 @@ $c[comment]
 ```
 
 ## Parameters
-- `comment`: yes ( please edit it )
+- `comment`: Any text. This text will not be taken into account during processing. Commonly used to add notes to the code.
 
 ## Example
 ```
