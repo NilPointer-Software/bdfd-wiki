@@ -3,11 +3,8 @@ Adds a timestamp to an embed.
 
 ## Syntax
 ```
-$addTimestamp[(index)]
+$addTimestamp
 ```
-
-## Parameters
-- `index`: To which embed the timestamp should be added to. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
