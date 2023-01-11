@@ -6,6 +6,7 @@ Your use of our service ("_**Bot Designer for Discord**_") implies that you agre
 - "_**Bot Designer for Discord**_" refers to "our service".
 ----
 - "our service" refers to the mobile application, "web app", and any other related product or service that _**Bot Designer for Discord**_ provides. It should be noted that _**Bot Designer for Discord**_ is a service provided by company _**NilPointer Software**_.
+----
 - "web app" refers to our web panel (the "web app" is accessible via most major web browsers) from which users may modify their bot(s) and/or account.
 ----
 - "template store" refers to the platform which _**Bot Designer for Discord**_'s mobile application provides. It serves as a way for users to share and use bot command code(s).
