@@ -1,5 +1,5 @@
 # $addTimestamp[]
-Adds a timestamp to an embed index.
+Adds a timestamp to a specific embed.
 
 ## Syntax
 ```
