@@ -37,7 +37,7 @@ if ($('#wikiBreadcrumb ol.breadcrumb')) {
 
         var link = '/' + here.slice(0, j + 1).join('/');
 
-        if (part == 'guides' || part == 'resources' || part == 'bdscript' || part == 'premiun' || part == 'javascript') {
+        if (part == 'guides' || part == 'resources' || part == 'bdscript' || part == 'premium' || part == 'javascript' || part == 'callbacks') {
             var appendElement = '<li><a href="' + link + '/introduction.html"> <span> ' + pageName + ' </span></a></li>';
         } else {
             var appendElement = '<li><a href="' + link + '"> <span> ' + pageName + ' </span></a></li>';
