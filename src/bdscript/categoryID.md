@@ -7,7 +7,7 @@ $categoryID[category name]
 ```
 
 ## Parameters
-- `category name`: The name of the category from which to retrieve the category ID.
+- `category name`: The name of the category for which to return the ID.
 
 ## Example
 ```
