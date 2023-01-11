@@ -6,7 +6,7 @@ Adds a timestamp to an embed index.
 $addTimestamp[index]
 ```
 ## Parameters
-- `index`: To which embed the timestamp should be added to. [learn more](../resources/embedIndexes.md)
+- `index`: To which embed the timestamp will be added. [learn more](../resources/embedIndexes.md)
 ## Example
 ```
 $nomention
