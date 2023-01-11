@@ -1,5 +1,5 @@
 # $categoryCount[]
-Returns the category count of a provided guild.
+Returns the category count of the provided guild.
 
 ## Syntax
 ```
