@@ -1,0 +1,58 @@
+.kneon {
+    --bg: #170312;
+    --fg: #c5c5c5;
+
+    --sidebar-bg: #170312;
+    --sidebar-fg: #c5c5c5;
+    --sidebar-non-existant: #5c6773;
+    --sidebar-active: #fe27c3;
+    --sidebar-spacer: #fe27c3;
+
+    --scrollbar: #91146f;
+
+    --icons: #f76ed1;
+    --icons-hover: #91146f;
+
+    --links: #fe275b;
+
+    --inline-code-color: #fe27c3;
+
+    --theme-popup-bg: #170312;
+    --theme-popup-border: #fe27c3;
+    --theme-hover: #91146f;
+
+    --quote-bg: #35112b;
+    --quote-border: #fe27c3;
+
+    --table-border-color: #91146f;
+    --table-header-bg: #2d0221;
+    --table-alternate-bg: #2d0221;
+
+    --searchbar-border-color: #fe27c3;
+    --searchbar-bg: #170312;
+    --searchbar-fg: #f76ed1;
+    --searchbar-shadow-color: #fe275b;
+    --searchresults-header-fg: #f76ed1;
+    --searchresults-border-color: #fe275b;
+    --searchresults-li-bg: #170312;
+    --search-mark-bg: #f76ed1;
+
+    --chapter-hover-bg: #170312
+}
+
+.kneon {
+    text-shadow: 0 0 10px #170312;
+}
+
+.kneon ::-webkit-scrollbar {
+    width: 15px;
+    height: 12px
+}
+
+.kneon code {
+    background: #35112b;
+}
+
+.kneon blockquote {
+    border-radius: 10px;
+}

@@ -1,0 +1,41 @@
+.discord {
+    --bg: #36393F;
+    --fg: #fff;
+
+    --sidebar-bg: #2f3136;
+    --sidebar-fg: #fff;
+    --sidebar-non-existant: #4b4b4b;
+    --sidebar-active: #fff;
+    --sidebar-spacer: 	#40444b;
+
+    --scrollbar: #292b2f;
+
+    --icons: #fff;
+    --icons-hover: #292b2f;
+
+    --links: #2b91f4;
+
+    --inline-code-color: #c5c8c6;
+
+    --theme-popup-bg: #36393F;
+    --theme-popup-border: #202225;
+    --theme-hover: #2f3136;
+
+    --quote-bg: #36393F;
+    --quote-border: #2f3136;
+
+    --table-border-color:#2f3136;
+    --table-header-bg:#2f3136;
+    --table-alternate-bg: #2f3136;
+
+    --searchbar-border-color: #292b2f;
+    --searchbar-bg: #2f3136;
+    --searchbar-fg: #b5b5b5;
+    --searchbar-shadow-color: #40444b;
+    --searchresults-header-fg: #a0a0a0;
+    --searchresults-border-color: #a0a0a0;
+    --searchresults-li-bg: #a0a0a0;
+    --search-mark-bg: #a0a0a0;
+
+    --chapter-hover-bg: var(--theme-hover);
+}
