@@ -26,4 +26,4 @@ Welcome to our humble abode. You're currrently viewing **Bot Designer for Discor
 
 
 #### Want to contribute to the wiki?
-Head over to the [GitHub repository contribution file](https://github.com/NilPointer-Software/bdfd-wiki/blob/dev/CONTRIBUTING.md) and learn how you can help out!
+Head over to the [GitHub repository contribution file](https://github.com/NilPointer-Software/bdfd-wiki/blob/dev/CONTRIBUTING.md) and learn how you can help out! HII
