@@ -4,7 +4,7 @@ Bans a user using their ID without reason.
 ```
 $banID
 ```
-## Parameters
+## Example
 ```
 $nomention
 $onlyPerms[ban;You need the `ban` permission to use that command!]
