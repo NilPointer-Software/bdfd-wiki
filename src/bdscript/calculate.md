@@ -1,13 +1,12 @@
 # $calculate
 Calculates a math expression.
 
-## Usage
+## Syntax
 ```
 $calculate[expression]
 ```
-
-### Breakdown
-- `expression` - The math expression to solve.
+## Parameters
+- `expression`: The math expression to solve.
 
 ## Signs
 - `+` - Addition.
@@ -20,7 +19,9 @@ $calculate[expression]
 ## Example
 ```
 $nomention
+$enableDecimals[yes]
 $calculate[$message] 🧠
 ```
+![example](https://user-images.githubusercontent.com/113303649/211189019-cb221556-9d2a-494a-a60f-abaf388dbf4b.png)
 
-![example](https://user-images.githubusercontent.com/69215413/124504526-ad29de80-dd95-11eb-8ffb-c0ee1209db80.png)
+> [How `$enableDecimals[]` works?](./bdscript/enableDecimals.md)
