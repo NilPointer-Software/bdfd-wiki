@@ -9,6 +9,7 @@
 @import './wiki-themes/comm/gluo.css';
 @import './wiki-themes/comm/kneon.css';
 @import './wiki-themes/comm/discord.css';
+@import './wiki-themes/comm/highcon.css';
 
 /* Initial Themes */
 @import './wiki-themes/init/ayu.css';

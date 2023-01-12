@@ -104,7 +104,6 @@
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
-
             <div class="page">
                 {{> header}}
                 <div id="menu-bar" class="menu-bar">
@@ -127,6 +126,7 @@
                                 <li role="none"><button role="menuitem" class="theme" id="light">{{ theme_option "Light" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">{{ theme_option "Navy" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="rust">{{ theme_option "Rust" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">{{ theme_option "High Contrast" }}</button></li>
                             </ul>
                             {{#if search_enabled}}
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -161,7 +161,6 @@
                     </div>
                 </div>
 
-
                 {{#if search_enabled}}
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
@@ -184,7 +183,6 @@
                     });
                 </script>
 
-
                 <div id="content" class="content">
                     <main>
                         <nav id="wikiBreadcrumb">
@@ -192,7 +190,6 @@
                             <ol class="breadcrumb">
                             </ol>
                         </nav>
-                        
                         {{{ content }}}
                     </main>
 
@@ -307,8 +304,8 @@
         {{/if}}
 
         <!-- Breadcrumbs & jQuery -->
-        <script src="{{ path_to_root}}theme/j.js"></script>
-        <script src="{{ path_to_root}}theme/breadcrumbs.js"></script>
+        <script src="{{ path_to_root }}theme/j.js"></script>
+        <script src="{{ path_to_root }}theme/breadcrumbs.js"></script>
 
     </body>
 </html>

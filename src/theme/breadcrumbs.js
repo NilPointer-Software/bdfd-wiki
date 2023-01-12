@@ -6,43 +6,33 @@ if ($('#wikiBreadcrumb ol.breadcrumb')) {
         link: "/"
     }];
 
-    for (var j = 0; j < here.length; j++) {
-        var part = here[j];
+    const map = {
+        bdscript: "Functions",
+        guides: "Guides",
+        resources: "Resources",
+        callbacks: "Callbacks",
+        premium: "Premium",
+        javascript: "JavaScript"
+    };
+    
+    const names = Object.keys(map);
 
-        switch (part.toLowerCase()) {
-            case 'bdscript':
-                var pageName = 'Functions';
-                break;
-            case 'guides':
-                var pageName = 'Guides';
-                break;
-            case 'resources':
-                var pageName = 'Resources';
-                break;
-            case 'callbacks':
-                var pageName = 'Callbacks';
-                break;
-            case 'premium':
-                var pageName = 'Premium';
-                break;
-            case 'javascript':
-                var pageName = 'JavaScript';
-                break;
-        };
+    here.forEach((part, j) => {
 
-        if (pageName == undefined) {
-            pageName = document.title.split('-')[0];
-        };
+        // Set the correct page names
+        let pageName = map[part.toLowerCase()] ?? document.title.split('-')[0];
 
-
+        // Construct links for pages
         var link = '/' + here.slice(0, j + 1).join('/');
 
-        if (part == 'guides' || part == 'resources' || part == 'bdscript' || part == 'premium' || part == 'javascript' || part == 'callbacks') {
+        // Construct the correct append elements
+        if (names.includes(part.toLowerCase())) {
             var appendElement = '<li><a href="' + link + '/introduction.html"> <span> ' + pageName + ' </span></a></li>';
         } else {
             var appendElement = '<li><a href="' + link + '"> <span> ' + pageName + ' </span></a></li>';
         };
 
+        // Push append elements
         $('#wikiBreadcrumb ol.breadcrumb').append(appendElement);
         parts.push({
             text: pageName,
@@ -50,5 +40,5 @@ if ($('#wikiBreadcrumb ol.breadcrumb')) {
         });
 
         pageName = document.title.split('-')[0];
-    }
+    })
 }
