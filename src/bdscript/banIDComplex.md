@@ -18,4 +18,4 @@ $onlyIf[$findUser[$message[1];no]!=;Failed to find user!]
 $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
 ```
 ![exsmple](https://user-images.githubusercontent.com/113303649/212003254-1573bdd3-6417-4dd1-afd0-23f5ed1fa297.png)
-> [How `$findUser[]` works?](./bdscript/findUser.md)
+> [How `$findUser[]` works?](./findUser.md)
