@@ -15,14 +15,16 @@ $changeCooldownTime[days;hours;minutes;seconds]
 
 Name        | Type
 ------------|---------
-`%time-d%`  | Days
-`%time-h%`  | Hours
-`%time-m%`  | Minutes
-`%time-s%`  | Seconds
+`%time-d%`  | Day
+`%time-h%`  | Hour
+`%time-m%`  | Minute
+`%time-s%`  | Second
 
 ## Example
 ```
-Hi!
+$nomention
+Hello $username!
 $changeCooldownTime[Days⏰;Hours⏰;Mins🕧;Secs🕧]
 $cooldown[10m;Please wait %time-m%!]
 ```
+![example](https://user-images.githubusercontent.com/113303649/212069278-c045a1e8-4dba-4a16-a1a5-732bcb5211f1.png)
