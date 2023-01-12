@@ -1,6 +1,7 @@
 # $blackListServers
 Disables this command for the provided servers.
 ## Syntax
+
 ```
 $blackListServers[guild IDs;..;error message]
 ```

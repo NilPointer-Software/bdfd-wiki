@@ -8,7 +8,7 @@ $c[comment]
 ## Parameters 
 - `comment` `(Type : String || Flag : Emptiable)` : Any text. This text will not be taken into account during processing. Commonly used to add notes to the code.
 
- 
+
 ## Example
 ```
 $nomention
