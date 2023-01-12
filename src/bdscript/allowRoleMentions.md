@@ -3,11 +3,11 @@ Enables role pings only for the provided role IDs, while the roles not provided 
 
 ## Syntax
 ```
-$allowRoleMentions[roleIDs;...]
+$allowRoleMentions[role IDs;...]
 ```
 
 ## Parameters
-- `roleIDs`: The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using `;`.
+- `role IDs`: The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using `;`.
 
 ## Example
 ```
