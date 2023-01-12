@@ -167,19 +167,27 @@
                     <main>
                         <h1 id="blacklistservers"><a class="header" href="#blacklistservers">$blackListServers</a></h1>
 <p>Disables this command for the provided servers.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$blackListServers[serverIDs;errorMessage]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$blackListServers[guild IDs;..;error message]
 </code></pre>
-<h3 id="breakdown"><a class="header" href="#breakdown">Breakdown</a></h3>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li><code>serverIDs</code> - The servers to blacklist. Separate server IDs using <code>;</code>.</li>
+<li><code>guild IDs</code>: The servers to blacklist. Separate server IDs using <code>;</code>.</li>
 </ul>
 <blockquote>
-<p>🧙‍♂️ <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Where do I find server IDs? (click-me)</a></p>
+<p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Where do I find server IDs? (click-me)</a></p>
 </blockquote>
 <ul>
-<li><code>errorMessage</code> - The error to display when the server is blacklisted.</li>
+<li><code>error message</code>: The error to display when the server is blacklisted.</li>
 </ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$blackListServers[1009018669982031912;❌ You can't use this command!]
+**Hello $username!**
+*Guild ID: $guildID*
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/211995843-0d9eba33-e36a-484f-ad97-eb6e67391af1.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/211996168-47ba94ff-e03d-40f9-8b33-5758454f5ce9.png" alt="example" /></p>
 
                     </main>
 
