@@ -9,7 +9,7 @@ $awaitedCommand[name;(filter)]
 - `name`: It is used to limit user input. _(Optional)_
 ### Supported filters
 - `<numeric>`: Accepts only number input.
-- `<word1/word2>` - Accepts only those specified words provided inside `<>`. Use `/` as separator for multiple words.
+- `<word1/word2>`: Accepts only those specified words provided inside `<>`. Use `/` as separator for multiple words.
 ## Example
 ### Without filter
 **Trigger: `$awaitedCommand[say;]`**
