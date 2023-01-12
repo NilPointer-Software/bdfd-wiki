@@ -19,7 +19,7 @@ This section will explain the various argument types used for function arguments
 - __URL__ - A valid domain link, **must** be prefixed by `http://` or `https://` and have a valid domain name.
 - __HowMany__ - A number that is prefixed or suffixed with < or >, or just a plain integer.
 - __Enum__ - Strings that match a certain type (case insensitive).
-- __Emoji__ - Emoji as 🌹or the discord custom emojis in form of `\<a:emoji_name:emoji-id>` for gif emojis and `\<:emoji_name:emoji-id>` and for how to get that, check [$addReactions](./src/bdscript/addReactions.md) as it has explanations for that
+- __Emoji__ - Emoji as 🌹or the discord custom emojis in form of `\<a:emoji_name:emoji-id>` for gif emojis and `\<:emoji_name:emoji-id>` and for how to get that, check [$addReactions](../bdscript/addReactions.md) as it has explanations for that
 - __Duration__ - A time based duration, an integer suffixed with a valid time format (s, m, h, d, w).
 - __Permission__ - Discord permission (case insensitive), see [this](../resources/permissions.md) for all.
 - __Bool__ - yes/no or true/false.
