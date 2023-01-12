@@ -74,6 +74,7 @@
     - [$ban](./bdscript/ban.md)
     - [$ban[]](./bdscript/banComplex.md)
     - [$banID](./bdscript/banID.md)
+    - [$banID[]](./bdscript/banIDComplex.md)
     - [$blackListIDs](./bdscript/blackListIDs.md)
     - [$blackListRoles](./bdscript/blackListRoles.md)
     - [$blackListRolesIDs](./bdscript/blackListRolesIDs.md)
