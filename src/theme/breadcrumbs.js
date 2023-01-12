@@ -1,5 +1,5 @@
 if ($('#wikiBreadcrumb ol.breadcrumb')) {
-    var here = location.href.replace(/(\?.*)$/,'').split('/').slice(3);
+    var here = location.href.replace(/(\?.*)$/,'').replace(/bdfd-wiki\/(?:nightly\/)?/, '').split('/').slice(3);
 
     var parts = [{
         text: "Foreword",
