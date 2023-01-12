@@ -16,10 +16,10 @@
         <link rel="icon" href="../favicon.png">
         <link rel="apple-touch-icon" href="../favicon.png">
 
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="stylesheet" href="../theme/css/variables.css">
+        <link rel="stylesheet" href="../theme/css/general.css">
+        <link rel="stylesheet" href="../theme/css/chrome.css">
+        <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
@@ -91,7 +91,6 @@
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
-
             <div class="page">
                                 <div id="menu-bar" class="menu-bar">
                     <div id="menu-bar-sticky-container">
@@ -105,18 +104,15 @@
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="bdfd">Bot Designer for Discord</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="discord">Discord</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="gluo">Gluo</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="green">Green</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ios">iOS</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="kneon">Kinda Neon</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="shiro">Shiro's Theme</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="terminal">Terminal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
                             </ul>
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search"></i>
@@ -165,6 +161,11 @@
 
                 <div id="content" class="content">
                     <main>
+                        <nav id="wikiBreadcrumb">
+                            <h2 class="breadcrumb-header">Location</h2>
+                            <ol class="breadcrumb">
+                            </ol>
+                        </nav>
                         <h1 id="randommention"><a class="header" href="#randommention">$randomMention</a></h1>
 <p>Mentions a random user from the server.</p>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
@@ -220,6 +221,10 @@ Random User: $randomMention
 
         <!-- Custom JS scripts -->
 
+
+        <!-- Breadcrumbs & jQuery -->
+        <script src="../theme/j.js"></script>
+        <script src="../theme/breadcrumbs.js"></script>
 
     </body>
 </html>

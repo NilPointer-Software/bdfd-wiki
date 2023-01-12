@@ -1,0 +1,52 @@
+.green blockquote {
+    border-left-style: inset;
+    border-color: #e6a700;
+    border-top-color: #4d3800;
+    border-left-width: 7px;
+    border-bottom-color: #4d3800;
+    border-radius: 10px;
+    color: #e1e1e1;
+    --links: #0A95FF;
+    --inline-code-color: #bdbdbd;
+}
+
+.green code {
+    color: #D7FFE7;
+    background-color: #2C332F;
+}
+
+.green a:not(.blockquote) {
+    text-shadow: 0 0 10px #316a43;
+}
+
+.green {
+    --bg: #161817;
+    --fg: #D1FFE3;
+    --sidebar-bg: #17201B;
+    --sidebar-fg: #D7FFE7;
+    --sidebar-non-existant: #5c6773;
+    --sidebar-active: #3F9762;
+    --sidebar-spacer: #245437;
+    --scrollbar: #50A371;
+    --icons: #50A371;
+    --icons-hover: #E9F5EE;
+    --links: #5BA277;
+    --inline-code-color: #D7FFE7;
+    --theme-popup-bg: #17201B;
+    --theme-popup-border: #245437;
+    --theme-hover: #6DA282;
+    --quote-bg: #4d3800;
+    --quote-border: #D7FFE7;
+    --table-border-color: #245437;
+    --table-header-bg: #17201B;
+    --table-alternate-bg: #245437;
+    --searchbar-border-color: #D1FFE3;
+    --searchbar-bg: #17201B;
+    --searchbar-fg: #D7FFE7;
+    --searchbar-shadow-color: #245437;
+    --searchresults-header-fg: #F7FCF9;
+    --searchresults-border-color: #F7FCF9;
+    --searchresults-li-bg: #5BA277;
+    --search-mark-bg: #F7FCF9;
+    --chapter-hover-bg: #172018;
+}
