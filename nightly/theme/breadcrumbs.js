@@ -1,5 +1,12 @@
 if ($('#wikiBreadcrumb ol.breadcrumb')) {
     var here = location.href.replace(/(\?.*)$/,'').replace(/bdfd-wiki\/(?:nightly\/)?/, '').split('/').slice(3);
+    var root = location.href.replace(/(\?.*)$/,'').split('/').slice(3);
+    if (root[1] == 'nightly') {
+        var pathToRoot = 'bdfd-wiki/nightly/'; 
+    } else {
+        var pathToRoot = 'bdfd-wiki/';
+    };
+
 
     var parts = [{
         text: "Foreword",
@@ -23,7 +30,7 @@ if ($('#wikiBreadcrumb ol.breadcrumb')) {
         let pageName = map[part.toLowerCase()] ?? document.title.split('-')[0];
 
         // Construct links for pages
-        var link = '/' + here.slice(0, j + 1).join('/');
+        var link = '/' + pathToRoot + here.slice(0, j + 1).join('/');
 
         // Construct the correct append elements
         if (names.includes(part.toLowerCase())) {
