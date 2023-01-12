@@ -1,18 +1,21 @@
 # $changeUsernameWithID
 Changes a user's nickname using their ID.
-
-## Usage
+## Syntax
 ```
-$changeUsernameWithID[userID;newNickname]
+$changeUsernameWithID[user ID;new nickname]
 ```
-
-### Breakdown
-- `userID` - The ID of the user whose nickname will be changed.
-- `newNickname` - The text to change the user's nickname to. It cannot exceed more than 32 characters.
-
+## Parameters
+- `user ID`: The ID of the user whose nickname will be changed.
+- `new nickname`: The text to change the user's nickname to. 
+> It cannot exceed more than 32 characters.
 ## Example
 ```
+$nomention
 $argsCheck[>1;Please provide text!]
-$changeUsernameWithID[$authorID;$message]
+$addCmdReactions[✅]
+$changeUsernameWithID[$mentioned[1];$noMentionMessage]
 ```
-> 🧙‍♂️ This changes the author's nickname.
+
+![example](https://user-images.githubusercontent.com/113303649/212071851-992a7c9a-e817-4fdc-9f45-a62b7fa11bee.png)
+
+
