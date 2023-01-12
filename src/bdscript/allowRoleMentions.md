@@ -3,11 +3,11 @@ Enables role pings only for the provided role IDs, while the roles not provided 
 
 ## Syntax
 ```
-$allowRoleMentions[roleIDs;...]
+$allowRoleMentions[role IDs;...]
 ```
 
 ## Parameters
-- `roleIDs` `(Type : Snowflake || Flag : Emptiable)` : The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using `;`.
+- `role IDs` `(Type : Snowflake || Flag : Emptiable)` : The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using `;`.
 
 ## Example
 ```
@@ -17,4 +17,3 @@ I'm pinging <@&858376972303204362>, but no one got notified; wow!
 ```
 
 ![example](https://user-images.githubusercontent.com/113303649/209944631-72e05d4a-6f0f-4dce-aba0-db9f51a46205.png)
-
