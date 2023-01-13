@@ -12,7 +12,7 @@ $awaitedCommand[name;(filter)]
 
 ### Supported filters
 - `<numeric>`: Accepts only number input.
-- `<word1/word2>`: Accepts only those specified words provided inside `<>`. Use `/` as separator for multiple words.
+- `<word1/word2>`: Accepts only specified words provided inside `<>`. Use `/` as a separator for multiple words.
 ## Example
 ### Without filter
 **Trigger: `$awaitedCommand[say;]`**
