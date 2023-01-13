@@ -7,8 +7,8 @@ $sendNotification[message;(image URL)]
 ```
 
 ### Parameters 
-- `message` `(Type : String || Flag : Required)` : The text that should be in the sent notification.
-- `image URL` `(Type : String || Flag : Optional)` : The URL for the image to be attached.
+- `message` `(Type: String || Flag: Required)`: The text that should be in the sent notification.
+- `image URL` `(Type: String || Flag: Optional)`: The URL for the image to be attached.
 
 ## Example
 ```
