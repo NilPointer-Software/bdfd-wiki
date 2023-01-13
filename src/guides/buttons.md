@@ -66,7 +66,7 @@ $addButton[no;test;Say hello!;primary;no;]
 
 
 # $editButton
-Edits already existing button.
+Edits an already existing button.
 
 ## Syntax
 ```
