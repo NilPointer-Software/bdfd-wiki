@@ -7,8 +7,9 @@ _Triggered when an awaited command gets initiated._
 $awaitedCommand[name;(filter)]
 ```
 ## Parameters
-- `name`: The name which is used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
-- `name`: It is used to limit user input. _(Optional)_
+- `name`: The name used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
+- `filter`: It is used to limit user input. _(Optional)_
+
 ### Supported filters
 - `<numeric>`: Accepts only number input.
 - `<word1/word2>`: Accepts only those specified words provided inside `<>`. Use `/` as separator for multiple words.
