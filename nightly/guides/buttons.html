@@ -165,96 +165,207 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="buttons"><a class="header" href="#buttons">Buttons</a></h1>
-<p>In this section, you'll learn how to use the button components.</p>
-<p><img src="https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png" alt="demonstration" /></p>
-<h2 id="button-style"><a class="header" href="#button-style">Button Style</a></h2>
-<p>Buttons can have different styles <em>(background colors)</em>.
-Here, are all possible values for <code>style</code> function argument.</p>
+<p>In this section, you'll learn how to use the button component.</p>
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p><a href="#used"><strong>Used</strong></a> &gt; <a href="#button-style"><strong>Button Style</strong></a> &gt; <a href="#button-type"><strong>Button Type</strong></a> &gt; <a href="#addbutton"><strong>$addButton[]</strong></a> &gt; <a href="#editbutton"><strong>$editButton[]</strong></a> &gt; <a href="#removebuttons"><strong>$removeButtons</strong></a> &gt; <a href="#removebuttons-1"><strong>$removeButtons[]</strong></a> &gt; <a href="#removecomponent"><strong>$removeComponent[]</strong></a> &gt; <a href="#create-interaction"><strong>Create Interaction</strong></a></p>
+<h2 id="used"><a class="header" href="#used">Used</a></h2>
 <ul>
-<li>primary</li>
-<li>secondary</li>
-<li>success</li>
-<li>danger</li>
-<li>link</li>
+<li><a href="../bdscript/addButton.html"><code>$addButton[]</code></a></li>
+<li><a href="../bdscript/editButton.html"><code>$editButton[]</code></a></li>
+<li><a href="../bdscript/removeButtons.html"><code>$removeButtons</code></a></li>
+<li><a href="../bdscript/removeButtons.html"><code>$removeButtons[]</code></a></li>
+<li><a href="../bdscript/removeComponent.html"><code>$removeComponent[]</code></a></li>
+<li><a href="../callbacks/onInteraction.html"><code>$onInteraction</code></a></li>
+<li><a href="../callbacks/onInteraction.html"><code>$onInteraction[]</code></a></li>
+</ul>
+<h2 id="button-style"><a class="header" href="#button-style">Button Style</a></h2>
+<ul>
+<li><code>primary</code>: Blue button</li>
+<li><code>secondary</code>: Gray button</li>
+<li><code>success</code>: Green button</li>
+<li><code>danger</code>: Red button</li>
+<li><code>link</code>: Redirect button</li>
 </ul>
 <blockquote>
-<p>📝 If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
+<p>If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
 </blockquote>
-<h3 id="style-examples"><a class="header" href="#style-examples">Style examples</a></h3>
-<p><img src="https://user-images.githubusercontent.com/16838075/120202615-19f60a00-c227-11eb-8e8e-5cd3c38f6c1b.png" alt="button styles" /><br />
-<em>The image was taken from <a href="https://discord.com/developers/docs/interactions/message-components#buttons-button-styles">Discord Docs</a></em></p>
-<h2 id="button-types"><a class="header" href="#button-types">Button types</a></h2>
+<h2 id="button-type"><a class="header" href="#button-type">Button Type</a></h2>
 <p>There are 2 types of buttons : <code>interactive</code> and <code>link</code>.</p>
 <p>When an interactive button is pressed, it sends an interaction which can be used together with <code>$onInteraction[ID]</code>.</p>
-<p>Every interactive button has an <code>ID</code>. If you create <code>$onInteraction[ID]</code> callback, it will get triggered when the button with the same <code>ID</code> is pressed.
+<p>Every interactive button has an <code>ID</code>. A <code>$onInteraction[ID]</code> callback, will only get triggered when the button with the same <code>ID</code> is pressed.
 Interactive buttons can use every <code>style</code> except <code>link</code>.</p>
-<p>Link buttons <strong>don't send</strong> any interactions. When they're pressed they forward the user to a website.
-Link buttons <strong>have to</strong> set their <code>style</code> argument value to <code>link</code>.</p>
-<h2 id="adding-a-button"><a class="header" href="#adding-a-button">Adding a button</a></h2>
-<p>Buttons can be added to a new message or already existing message.</p>
-<pre><code>$addButton[New row;Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
+<blockquote>
+<p>Link buttons <strong>don't send</strong> any interactions. When they're pressed they forward the user to a website.</p>
+<p>Link buttons <strong>need to</strong> set their <code>style</code> argument value to <code>link</code>.</p>
+</blockquote>
+<h1 id="addbutton"><a class="header" href="#addbutton">$addButton</a></h1>
+<p>Adds a button to the response message.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 </code></pre>
-<h3 id="function-arguments-breakdown"><a class="header" href="#function-arguments-breakdown">Function arguments breakdown</a></h3>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li>
-<p><code>new row</code> - If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button. Check <a href="#examples">examples</a> below.</p>
+<p><code>new row?</code>: If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button.</p>
 <blockquote>
-<p>📝 A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
+<p>A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
 </blockquote>
 </li>
 <li>
-<p><code>button ID/url</code> - Depending on a button type, you either set it to <code>interactionID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's link button.</p>
+<p><code>interaction ID/url</code>: Depending on the button type, you either set it to an <code>interaction ID</code> which is then used in the <code>$onInteraction[ID]</code> callback or a <code>URL</code> if it's a link button.</p>
 </li>
 <li>
-<p><code>label</code> - It's the text value visible on a button</p>
+<p><code>label</code>: The text visible on the button.</p>
 </li>
 <li>
-<p><code>style</code> - It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set this to <code>link</code>. Check <a href="#button-style">this section</a> for more details.</p>
+<p><code>style</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set this value to <code>link</code>. Check <a href="#button-style">this section</a> for more details.</p>
 </li>
 <li>
-<p><code>disabled</code> - If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>. <em>(Optional)</em></p>
+<p><code>disable?</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>. <em>(Optional)</em></p>
 </li>
 <li>
-<p><code>emoji</code> - Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in this format <code>&lt;:emoji name:emoji ID&gt;</code>. <em>(Optional)</em></p>
+<p><code>emoji</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>. <em>(Optional)</em></p>
 </li>
 <li>
-<p><code>message ID</code> - Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot. <em>(Optional)</em></p>
+<p><code>message ID</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot. <em>(Optional)</em></p>
 </li>
 </ul>
 <blockquote>
-<p><strong>Note:</strong> Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code><br />
-<br />
-<strong>Note:</strong> If <code>url</code> is used in <code>interaction ID or url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
+<p>Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
 </blockquote>
-<h2 id="editing-a-button"><a class="header" href="#editing-a-button">Editing a button</a></h2>
-<pre><code>$editButton[Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
+<blockquote>
+<p>If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
+</blockquote>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+Hi
+$addButton[no;test;Say hello!;primary;no;]
 </code></pre>
-<p>Arguments work exactly the same way as in <a href="#adding-a-button">$addButton</a> function. <code>Button ID/URL</code> is used for finding the button.</p>
-<h2 id="removing-buttons"><a class="header" href="#removing-buttons">Removing buttons</a></h2>
-<p>Removing button from a message can be done using these three functions :</p>
+<p><img src="https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png" alt="example" /></p>
+<h1 id="editbutton"><a class="header" href="#editbutton">$editButton</a></h1>
+<p>Edits an already existing button.</p>
+<h2 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h2>
+<pre><code>$editButton[interaction ID/url;label;style;(disable?;emoji;message ID)]
+</code></pre>
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
 <ul>
-<li><a href="../bdscript/removeButtons.html"><code>$removeButtons</code></a></li>
-<li><a href="../bdscript/removeButtons.html"><code>$removeButtons[messageID]</code></a></li>
-<li><a href="../bdscript/removeComponent.html"><code>$removeComponent[Custom ID;(Message ID)]</code></a></li>
+<li><code>interaction ID/url</code>: Depending on the button type, you either set it to an <code>interaction ID</code> which is then used in the <code>$onInteraction[ID]</code> callback or a <code>URL</code> if it's a link button.</li>
+<li><code>label</code>: The text visible on the button.</li>
+<li><code>style</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set this value to <code>link</code>. Check <a href="#button-style">this section</a> for more details.</li>
+<li><code>disable?</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>. <em>(Optional)</em></li>
+<li><code>emoji</code>: Edits an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>. <em>(Optional)</em></li>
+<li><code>message ID</code>: Edits a button in a message with the provided ID. It's important to note that provided message ID author <strong>has to</strong> be the bot. <em>(Optional)</em></li>
 </ul>
-<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<h4 id="creating-a-simple-interactive-button"><a class="header" href="#creating-a-simple-interactive-button">Creating a simple interactive button</a></h4>
-<p><img src="https://user-images.githubusercontent.com/16838075/120206814-f08bad00-c22b-11eb-872c-57dfa7243524.png" alt="code example" /></p>
+<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
+<h4 id="trigger-oninteractiontest"><a class="header" href="#trigger-oninteractiontest">Trigger: <code>$onInteraction[test]</code></a></h4>
+<pre><code>$nomention
+$username said hello!
+$editButton[test;Say hello!;danger;yes;]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/210611967-f15b8c9b-7bd9-4218-a89b-08e93ce7eeb3.png" alt="example" /></p>
+<h1 id="removebuttons"><a class="header" href="#removebuttons">$removeButtons</a></h1>
+<p>Removes all buttons from the triggered message.</p>
+<h2 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h2>
+<pre><code>$removeButtons
+</code></pre>
+<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<h4 id="trigger-oninteractiontest-1"><a class="header" href="#trigger-oninteractiontest-1">Trigger: <code>$onInteraction[test]</code></a></h4>
+<pre><code>$nomention
+$username removed all buttons from this message
+$removeButtons
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/210621352-ae7334a6-a2de-4fbe-8749-7134f9a73af3.png" alt="example" /></p>
+<h1 id="removebuttons-1"><a class="header" href="#removebuttons-1">$removeButtons</a></h1>
+<p>Removes all buttons from the specified message.</p>
+<h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
+<pre><code>$removeButtons[message ID]
+</code></pre>
+<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
+<ul>
+<li><code>message ID</code>: Removes buttons from the message with the provided ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</li>
+</ul>
+<h2 id="example-3"><a class="header" href="#example-3">Example</a></h2>
+<pre><code>$nomention
+$username removed all buttons from the specified message id
+$removeButtons[$message]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/210875885-aa20517e-1c37-4206-8eee-eefa765eb40a.png" alt="example" /></p>
+<h1 id="removecomponent"><a class="header" href="#removecomponent">$removeComponent</a></h1>
+<p>Removes a certain component from a message.</p>
+<h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
+<pre><code>$removeComponent[interaction ID;(message ID)]
+</code></pre>
 <blockquote>
-<p><strong>Note:</strong> The last argument in <code>$addButton</code> is empty because we don't want emojis for this example</p>
+<p>This function supports <a href="../guides/selectmenu.html">select-menu</a> and <a href="../guides/buttons.html">button</a>.</p>
 </blockquote>
-<h4 id="creating-oninteraction-callback"><a class="header" href="#creating-oninteraction-callback">Creating <code>$onInteraction[]</code> callback</a></h4>
-<p><img src="https://user-images.githubusercontent.com/16838075/120206913-1022d580-c22c-11eb-9656-8bc9e7476f51.png" alt="callback code example" /></p>
+<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
+<ul>
+<li><code>interaction ID</code>: The interaction ID of the button, to remove from the message. </li>
+<li><code>message ID</code>: Removes the button from the message with the provided ID. It's important to note that provided message ID author <strong>has to</strong> be the bot. <em>(Optional)</em></li>
+</ul>
+<h2 id="example-4"><a class="header" href="#example-4">Example</a></h2>
+<pre><code>$nomention
+$username successfully removed the button!
+$removeComponent[test;$message]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/211163378-2aaa540d-b0a1-4511-8f34-6a91260b079d.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/211163615-ecffddcf-1d2b-4065-8445-9ec7ed1eb2b4.png" alt="example" /></p>
+<h1 id="create-interaction"><a class="header" href="#create-interaction">Create interaction</a></h1>
+<h3 id="example-with-oninteraction-callback"><a class="header" href="#example-with-oninteraction-callback">Example with <code>$onInteraction[]</code> callback:</a></h3>
+<ol>
+<li>Create two commands with <code>!example</code> and <code>$onInteraction[test]</code> triggers.</li>
+<li>Paste the following code:
+Code for the command with the <code>!example</code> trigger:</li>
+</ol>
+<pre><code>$nomention
+Click the button below!
+$addButton[no;test;Click;primary]
+$addButton[no;button;Button disabled;secondary;yes]
+$addButton[yes;https://botdesignerdiscord.com/;Link;link]
+</code></pre>
+<p>Code for the command with the <code>$onInteraction[test]</code> trigger:</p>
+<pre><code>$nomention
+$editButton[test;Clicked;danger;yes]
+$sendMessage[$username hello!]
+</code></pre>
 <blockquote>
-<p><strong>Note:</strong> ID provided in <code>$onInteraction[]</code> is the same as the one provided in <code>$addButton[]</code> from <a href="#creating-a-simple-interactive-button">this section</a><br />
-<br />
-<strong>Note:</strong> In <code>$addButton[]</code>, <code>yes</code> is being used for the <code>new row</code> argument so that the button would appear in the next row. Check the output below.</p>
+<p>Note that the interaction ID provided in <code>$onInteraction[]</code> is the same as the one provided in <code>$addButton[]</code></p>
+<p>In <code>$addButton[]</code>, <code>yes</code> is being used for the <code>new row</code> argument so that the button would appear in the next row.</p>
 </blockquote>
-<h3 id="output"><a class="header" href="#output">Output</a></h3>
-<h4 id="command-execution"><a class="header" href="#command-execution">Command execution</a></h4>
-<p><img src="https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png" alt="demonstration" /></p>
-<h4 id="after-pressing-the-button"><a class="header" href="#after-pressing-the-button">After pressing the button</a></h4>
-<p><img src="https://user-images.githubusercontent.com/16838075/120207246-7d366b00-c22c-11eb-8d04-9cf569ced8ae.png" alt="demonstration pressed button" /></p>
+<ol start="3">
+<li>Execute command <code>!example</code></li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png" alt="example" /></p>
+<h3 id="example-with-oninteraction-callback-1"><a class="header" href="#example-with-oninteraction-callback-1">Example with <code>$onInteraction</code> callback:</a></h3>
+<ol>
+<li>Create two commands with <code>!example</code> and <code>$onInteraction</code> triggers.</li>
+<li>Paste the following code:
+Code for the command with the <code>!example</code> trigger:</li>
+</ol>
+<pre><code>$nomention
+Click the button below!
+$addButton[no;test;Click;primary]
+$addButton[no;button;Button disabled;secondary;yes]
+$addButton[yes;https://botdesignerdiscord.com/;Link;link]
+</code></pre>
+<p>Code for the command with the <code>$onInteraction</code> trigger:</p>
+<pre><code>$nomention
+$if[$customID==test]
+    $editButton[test;Clicked;danger;yes]
+    $sendMessage[$username hello!]
+$endif
+</code></pre>
+<blockquote>
+<p>Note that the interaction ID returned by <code>$customID</code> will be the same as the one provided in <code>$addButton[]</code></p>
+<p>In <code>$addButton[]</code>, <code>yes</code> is being used for the <code>new row</code> argument so that the button would appear in the next row.</p>
+</blockquote>
+<ol start="3">
+<li>Execute command <code>!example</code></li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png" alt="example" /></p>
+<blockquote>
+<p><a href="../callbacks/onInteraction.html">How <code>$onInteraction</code>/<code>$onInteraction[]</code> works?</a></p>
+</blockquote>
 
                     </main>
 
