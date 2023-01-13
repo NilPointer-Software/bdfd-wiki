@@ -40,7 +40,7 @@ Adds a button to the response message.
 ```
 $addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
-## Parameters
+### Parameters
 - `new row?`: If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
 
     > A message can have a maximum of 25 buttons (5 rows of 5 buttons).
@@ -73,7 +73,7 @@ Edits an already existing button.
 $editButton[interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
 
-## Parameters
+### Parameters
 - `interaction ID/url`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
 - `label`: The text visible on the button.
 - `style`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
@@ -111,7 +111,7 @@ Removes all buttons from the specified message.
 ```
 $removeButtons[message ID]
 ```
-## Parameters
+### Parameters
 - `message ID`: Removes buttons from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot.
 ## Example
 ```
@@ -128,7 +128,7 @@ Removes a certain component from a message.
 $removeComponent[interaction ID;(message ID)]
 ```
 > This function supports [select-menu](../guides/selectmenu.md) and [button](../guides/buttons.md).
-## Parameters
+### Parameters
 - `interaction ID`: The interaction ID of the button, to remove from the message. 
 - `message ID`: Removes the button from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
 ## Example
