@@ -1,5 +1,7 @@
 # $banID
 Bans a user using their ID without reason.
+The user ID will be taken from the last part of the author's message.
+
 ## Syntax
 ```
 $banID
