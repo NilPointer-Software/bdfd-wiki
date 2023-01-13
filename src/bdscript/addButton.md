@@ -11,7 +11,7 @@ $addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 
     > A message can have a maximum of 25 buttons (5 rows of 5 buttons).
 
-- `Interaction ID/url` `(Type : String, URL || Flag : Required)` : Depending on the button type, you either set it to `interaction ID` which is then used in `$onInteraction[ID]` callback or `URL` if it's a link button.
+- `interaction ID/url` `(Type : String, URL || Flag : Required)` : Depending on the button type, you either set it to `interaction ID` which is then used in `$onInteraction[ID]` callback or `URL` if it's a link button.
 - `label` `(Type : String || Flag : Emptiable)` : The text value visible on the button.
 - `style` `(Type : Enum || Flag : Required)` : It's used to specify the button's background color. If the button has a link/url you **have to** set the value to `link`. Check [this section](#button-style) for more details.
 - `disable?` `(Type : Bool || Flag : Vacantable)` : If set to `yes` the button can't be pressed. Defaults as `no`.
