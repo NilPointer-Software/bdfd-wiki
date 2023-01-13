@@ -45,7 +45,7 @@ Your use of our service ("_**Bot Designer for Discord**_") implies that you agre
 4. You agree not to spam or overuse our computing/storage resources.
 5. You agree not to resell your _**Bot Designer for Discord**_ account, "Premium Points", or "promo codes".
 6. You agree not to exploit a detected bug. It should be sent as a report to the developers instead.
-7. You agree to cope with any applicable limitations that _**Bot Designer for Discord**__ has. This includes the 2,399 guild limit per bot. We do not guarantee any amount of uptime (for non-premium hosted bots), however hosting is our best effort.
+7. You agree to cope with any applicable limitations that _**Bot Designer for Discord**_ has. This includes the 2,399 guild limit per bot. We do not guarantee any amount of uptime (for non-premium hosted bots), however hosting is our best effort.
 8. You understand that prices for Premium Points should, but may not include; sales and use taxes. If they do not, the user is responsible for the payment of such taxes related to the purchase.
 9. When submitting or using _**Bot Designer for Discord**_'s "Template store" feature, you are agreeing to the [Template Store Terms](https://botdesignerdiscord.com/template-store-tos).
 10. You agree to our [Privacy Policy](https://botdesignerdiscord.com/privacy-policy).

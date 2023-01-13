@@ -1,51 +1,38 @@
-if ($('#wikiBreadcrumb ol.breadcrumb')) {
-    var here = location.href.replace(/(\?.*)$/,'').replace(/bdfd-wiki\/(?:nightly\/)?/, '').split('/').slice(3);
-    var root = location.href.replace(/(\?.*)$/,'').split('/').slice(3);
-    if (root[1] == 'nightly') {
-        var pathToRoot = 'bdfd-wiki/nightly/'; 
-    } else {
-        var pathToRoot = 'bdfd-wiki/';
-    };
+const MAP = {
+    bdscript: "Functions",
+    guides: "Guides",
+    resources: "Resources",
+    callbacks: "Callbacks",
+    premium: "Premium",
+    javascript: "JavaScript"
+};
 
+const KEYS = Object.keys(MAP);
 
-    var parts = [{
-        text: "Foreword",
-        link: "/"
-    }];
-
-    const map = {
-        bdscript: "Functions",
-        guides: "Guides",
-        resources: "Resources",
-        callbacks: "Callbacks",
-        premium: "Premium",
-        javascript: "JavaScript"
-    };
-    
-    const names = Object.keys(map);
-
-    here.forEach((part, j) => {
-
-        // Set the correct page names
-        let pageName = map[part.toLowerCase()] ?? document.title.split('-')[0];
-
-        // Construct links for pages
-        var link = '/' + pathToRoot + here.slice(0, j + 1).join('/');
-
-        // Construct the correct append elements
-        if (names.includes(part.toLowerCase())) {
-            var appendElement = '<li><a href="' + link + '/introduction.html"> <span> ' + pageName + ' </span></a></li>';
-        } else {
-            var appendElement = '<li><a href="' + link + '"> <span> ' + pageName + ' </span></a></li>';
-        };
-
-        // Push append elements
-        $('#wikiBreadcrumb ol.breadcrumb').append(appendElement);
-        parts.push({
-            text: pageName,
-            link: link
-        });
-
-        pageName = document.title.split('-')[0];
-    })
+function getNameFromTitle() {
+    let index = document.title.indexOf('-');
+    return document.title.substring(0, index-1);
 }
+
+let root = "/bdfd-wiki/"
+let path = location.pathname.substring(11);
+
+if (path.startsWith("nightly")) {
+    path = path.substring(8);
+    root += "nightly/"
+}
+if (path.endsWith(".html"))
+    path = path.substring(0, path.length - 5);
+
+document.write(`<a href="${root}">Root</a>`);
+path.split('/').forEach((segment, i, segments) => {
+    let name = MAP[segment.toLocaleLowerCase()];
+    if (!name) {
+        name = segments.length == i + 1 ? getNameFromTitle() : segment;
+        if (segment != "")
+            segment += ".html";
+    } else {
+        segment = "introduction.html";
+    }
+    document.write(`<div><a href="${segment}">${name}</a></div>`)
+});

@@ -1,16 +1,16 @@
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    white-space: pre-wrap;
-    padding: 5px;
+    margin-top: 5px;
+    color: var(--links);
+}
+
+.breadcrumb :nth-child(n+3)::before {
+    content: "/";
+    margin: 0 5px;
 }
 
 .breadcrumb a {
-    display: flex;
-    border-style: solid;
-    border-radius: 100px;
-    margin: 5px 5px;
     text-decoration: none;
 }
 
@@ -22,11 +22,4 @@
 .breadcrumb :link:hover{
     color: var(--icons-hover);
     text-decoration: none;
-}
-
-.breadcrumb-header {
-    display: flex;
-    color: var(--links);
-    cursor: default;
-    padding: 5px;
 }
