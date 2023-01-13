@@ -1,43 +1,18 @@
 # $banID
-Bans a user using their ID.
+Bans a user using their ID without reason.
+The user ID will be taken from the last part of the author's message.
 
-## Usages
-There are three usages of the `$banID` function.
-
-### Usage #1
+## Syntax
 ```
 $banID
 ```
-Gets the user to ban from the author's message. No reason will be provided in audit logs for the ban.
-
-### Usage #2
-```
-$banID[reason]
-```
-Gets the user to ban from the author's message. The 'reason' will show in audit logs.
-
-### Usage #3
-*(recommended)*
-
-```
-$banID[reason;userID]
-```
-
-## Parameters 
-- `reason` `(Type : String || Flag : Emptiable)` : The 'reason' will show up in audit logs. You can also leave the 'reason' field empty to provide no reason.
-- `userID` `(Type : Snowflake || Flag : Vacantable)` : user whose ID was provided will be banned.
-
-
-
 ## Example
 ```
 $nomention
-$argsCheck[>1;Please provide a 'user'. Usage: `!ban (user) <reason>`]
-$onlyIf[$findUser[$message[1];no]!=;Failed to find user!]
-$onlyPerms[ban;You need the 'ban' permission to use that command!]
-$banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
-<@$findUser[$message[1];no]> was banned!
+$onlyPerms[ban;You need the `ban` permission to use that command!]
+<@$findUser[$message;no]> was banned!
+$banID
 ```
-> 🧙‍♂️ The code above accepts both IDs or mentions to ban a user!
 
-![example](https://user-images.githubusercontent.com/69215413/119884309-7ba03680-befe-11eb-80c7-93991297abf7.png)
+![example](https://user-images.githubusercontent.com/113303649/212000187-c49814b3-9eca-48a4-bf89-31a9c1d74c11.png)
+> [How `$findUser[]` works?](./findUser.md)
