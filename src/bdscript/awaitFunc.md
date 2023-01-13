@@ -1,5 +1,5 @@
 # $awaitFunc
-It's used to initiate an awaited command.
+Used to initiate an awaited command.
 
 ## Syntax
 ```
