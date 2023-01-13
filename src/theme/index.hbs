@@ -185,10 +185,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <nav id="wikiBreadcrumb">
-                            <h2 class="breadcrumb-header">Location</h2>
-                            <ol class="breadcrumb">
-                            </ol>
+                        <nav class="breadcrumb">
+                            <script src="{{ path_to_root }}theme/breadcrumbs.js"></script>
                         </nav>
                         {{{ content }}}
                     </main>
@@ -302,10 +300,6 @@
         </script>
         {{/if}}
         {{/if}}
-
-        <!-- Breadcrumbs & jQuery -->
-        <script src="{{ path_to_root }}theme/j.js"></script>
-        <script src="{{ path_to_root }}theme/breadcrumbs.js"></script>
 
     </body>
 </html>
