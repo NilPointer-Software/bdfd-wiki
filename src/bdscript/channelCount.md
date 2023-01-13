@@ -1,11 +1,11 @@
 # $channelCount
 Returns the amount of channels in the current server.
 
+
 ## Syntax
 ```
 $channelCount
 ```
-
 ## Example
 ```
 $nomention
