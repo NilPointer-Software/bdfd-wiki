@@ -168,10 +168,9 @@ $sendMessage[$username hello!]
 ![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
 
 ### Example with `$onInteraction` callback:
-1. Create two commands and set the trigger `!example` for one command and `$onInteraction` for the other.
-
-2. Paste these codes:
-Code with trigger `!example`:
+1. Create two commands with `!example` and `$onInteraction` triggers.
+2. Paste the following code:
+Code for the command with the `!example` trigger:
 ```
 $nomention
 Click the button below!
