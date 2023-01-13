@@ -29,10 +29,10 @@
         - [Text Splitting](./guides/textSplitting.md)
         - [Webhooks](./guides/webhooks.md)
     - [Other]()
+        - [Arguments Flags & Types](./guides/arguments.md)
         - [Character Escaping](./guides/characterEscaping.md)
         - [Hyperlinks](./guides/hyperlinks.md)
         - [Share Code](./guides/sharecode.md)
-        - [Arguments flags and types](./guides/arguments.md)
 
 - [Resources]()
     - [Introduction](./resources/introduction.md)
