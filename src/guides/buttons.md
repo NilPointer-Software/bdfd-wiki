@@ -122,7 +122,7 @@ $removeButtons[$message]
 ![example](https://user-images.githubusercontent.com/113303649/210875885-aa20517e-1c37-4206-8eee-eefa765eb40a.png)
 
 # $removeComponent
-Removes certain component from a message.
+Removes a certain component from a message.
 ## Syntax
 ```
 $removeComponent[interaction ID;(message ID)]
