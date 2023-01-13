@@ -112,7 +112,7 @@ Removes all buttons from the specified message.
 $removeButtons[message ID]
 ```
 ## Parameters
-- `message ID`: Removes buttons from the provided message ID. It's important to note that provided message ID author **has to** be the bot.
+- `message ID`: Removes buttons from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot.
 ## Example
 ```
 $nomention
