@@ -71,6 +71,7 @@
     - [$authorID](./bdscript/authorID.md)
     - [$authorOfMessage](./bdscript/authorOfMessage.md)
     - [$authorURL](./bdscript/authorURL.md)
+    - [$awaitFunc](./bdscript/awaitFunc.md)
     - [$ban](./bdscript/ban.md)
     - [$ban[]](./bdscript/banComplex.md)
     - [$banID](./bdscript/banID.md)
@@ -361,6 +362,8 @@
 
 - [Callbacks]()
     - [Introduction](./callbacks/introduction.md)
+    - [$awaitedCommand](./callbacks/awaitedCommand.md)
+    - [$awaitedCommandError](./callbacks/awaitedCommandError.md)
     - [$onJoined](./callbacks/onJoined.md)
     - [$onLeave](./callbacks/onLeave.md)
     - [$onBanAdd](./callbacks/onBanAdd.md)
