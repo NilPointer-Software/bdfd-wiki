@@ -30,6 +30,6 @@ $addReactions[✅;❌]
 3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
 4. Input the emoji ID into `$addReactions[]`. (e.g `$addReactions[<:hollyDab:828628880629825546>]`)
 
-![example](https://user-images.githubusercontent.com/70468667/212324884-0a48593c-6caf-4cc6-b99b-0ed558761394.gif)
+![example](https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif)
 
 > If you're still having issues, check the [Troubleshooting page](https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions).
