@@ -129,8 +129,8 @@ $removeComponent[interaction ID;(message ID)]
 ```
 > This function supports [select-menu](../guides/selectmenu.md) and [button](../guides/buttons.md).
 ## Parameters
-- `interaction ID`: The button interaction ID to remove from the message. 
-- `message ID`: Removes the button from the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+- `interaction ID`: The interaction ID of the button, to remove from the message. 
+- `message ID`: Removes the button from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
 ## Example
 ```
 $nomention
