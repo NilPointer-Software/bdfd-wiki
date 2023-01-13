@@ -14,8 +14,8 @@ Example: (- `userID` `(Type: Snowflake || Flag: Required)`) and if it has more t
 
 - __String__ - This is the most generalized function, a string can be any character or text.
 - __Snowflake__ - A valid discord ID, can be of a role, channel, user, server, emoji and message.
-- __Integer__ - Any number without decimal (1, 5 10, etc).
-- __Float__ - A number with decimal (1.5, 5.2, 7.30, etc).
+- __Integer__ - Any number without decimal (-5, -1, 1, 5 10, etc).
+- __Float__ - A number with decimal (-2.5, -0.5, 1.5, 5.2, 7.30, etc).
 - __URL__ - A valid domain link, **must** be prefixed by `http://` or `https://` and have a valid domain name.
 - __HowMany__ - A number that is prefixed or suffixed with < or >, or just a plain integer.
 - __Enum__ - Strings that match a certain type (case insensitive).
