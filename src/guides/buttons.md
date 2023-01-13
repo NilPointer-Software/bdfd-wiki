@@ -168,7 +168,7 @@ $sendMessage[$username hello!]
 ![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
 
 ### Example with `$onInteraction` callback:
-1. Create two commands with `!example` and `$onInteraction` triggers.
+1. Create two commands with `!example` and `$onInteraction[test]` triggers.
 2. Paste the following code:
 Code for the command with the `!example` trigger:
 ```
@@ -178,7 +178,7 @@ $addButton[no;test;Click;primary]
 $addButton[no;button;Button disabled;secondary;yes]
 $addButton[yes;https://botdesignerdiscord.com/;Link;link]
 ```
-Code for the command with the `$onInteraction` trigger:
+Code for the command with the `$onInteraction[test]` trigger:
 ```
 $nomention
 $if[$customID==test]
