@@ -186,7 +186,7 @@ $if[$customID==test]
     $sendMessage[$username hello!]
 $endif
 ```
-> Interaction ID provided in `$onInteraction` is the same as the one provided in `$addButton[]` from [this section](#addbutton)
+> Note that the interaction ID returned by `$customID` will be the same as the one provided in `$addButton[]`
 > 
 > In `$addButton[]`, `yes` is being used for the `new row` argument so that the button would appear in the next row.
 > 
