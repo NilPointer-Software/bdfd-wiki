@@ -27,7 +27,7 @@ There are 2 types of buttons : `interactive` and `link`.
 
 When an interactive button is pressed, it sends an interaction which can be used together with `$onInteraction[ID]`.
 
-Every interactive button has an `ID`. If you create `$onInteraction[ID]` callback, it will get triggered when the button with the same `ID` is pressed.
+Every interactive button has an `ID`. A `$onInteraction[ID]` callback, will only get triggered when the button with the same `ID` is pressed.
 Interactive buttons can use every `style` except `link`.
 
 > Link buttons **don't send** any interactions. When they're pressed they forward the user to a website.
