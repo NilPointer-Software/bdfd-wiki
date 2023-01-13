@@ -4,7 +4,7 @@ Bans a user using their ID.
 ```
 $banID[reason;(user ID)]
 ```
-## Parameters
+### Parameters
 - `reason`: The reason for this action, which will be saved in the audit-log.
 > Use `$getBanReason[]` to get the ban reason.
 - `user ID`: The user to ban. If empty, the ID will be taken from the last part of the author's message. _(Optional)_
