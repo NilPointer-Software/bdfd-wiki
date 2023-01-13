@@ -5,7 +5,7 @@ Changes the mentioned user's nickname.
 ```
 $changeUsername[new nickname]
 ```
-## Parameters
+### Parameters
 - `new nickname`: The text to change the user's nickname to. 
 > It cannot exceed more than 32 characters.
 
