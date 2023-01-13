@@ -21,7 +21,7 @@ This section will explain the various argument types used for function arguments
 - __Enum__ - Strings that match a certain type (case insensitive).
 - __Emoji__ - Emoji as 🌹or the discord custom emojis in form of `<a:emoji_name:emoji-id>` for gif emojis and `<:emoji_name:emoji-id>` for non gif emojis, for how to get that, check [$addReactions](../bdscript/addReactions.md) as it has explanations for that.
 - __Duration__ - A time based duration, an integer suffixed with a valid time format (s, m, h, d, w).
-- __Permission__ - Discord permission (case insensitive), see [this](../resources/permissions.md) for all.
+- __Permission__ - Discord permission (case insensitive), see [this](../resources/permissions.md) for all valid permissions.
 - __Bool__ - yes/no or true/false.
 - __Color__ - Color Hex Code you can get from [here](https://htmlcolorcodes.com/color-picker) as example
 
