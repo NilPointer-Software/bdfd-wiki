@@ -4,7 +4,7 @@ Returns the amount of channels in the current server.
 ```
 $channelCount
 ```
-## Parameters
+## Example
 ```
 $nomention
 There are $channelCount channels in this server!
