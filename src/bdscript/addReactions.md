@@ -7,7 +7,7 @@ $addReactions[emojis;...]
 ```
 
  ### Parameters
-- `emojis` `(Type : Emoji || Flag : Required)` : The emoji(s) the bot reacts with. Separate emojis using `;`.
+- `emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Separate emojis using `;`.
 
 > You can use Unicode emojis and emoji IDs, but not emoji names. For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
