@@ -7,9 +7,9 @@ $awaitFunc[name;(user ID;channel ID)]
 ```
 
 ## Parameters
-- `name`: The name which is used inside [`$awaitedCommand[]`](../callbacks/awaitedCommand.md) and [`$awaitedCommandError[]`](../callbacks/awaitedCommandError.md) callback.
-- `user ID`: The user the awaited command will trigger for. Uses command author, if user ID is not given. _(Optional)_
-- `channel ID`: The channel where the command should be awaited. Uses current channel, if `channel ID` is not given. _(Optional)_
+- `name`: The name used inside [`$awaitedCommand[]`](../callbacks/awaitedCommand.md) and [`$awaitedCommandError[]`](../callbacks/awaitedCommandError.md) callbacks.
+- `user ID`: The user the awaited command will trigger for. Uses command author, if `user ID` is not given. _(Optional)_
+- `channel ID`: The channel where the command will be awaited. Uses current channel, if `channel ID` is not given. _(Optional)_
 
 ## Example
 ```
