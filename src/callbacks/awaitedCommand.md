@@ -1,7 +1,7 @@
 # $awaitedCommand
-_Triggered when an awaited command doesn't match with provided filter._
+_Triggered when an awaited command gets initiated._
 
-`$awaitedCommand[]` is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command doesn't match with provided filter.
+`$awaitedCommand[]` is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command gets initiated.
 ## Syntax
 ```
 $awaitedCommand[name;(filter)]
