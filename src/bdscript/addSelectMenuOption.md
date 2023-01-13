@@ -6,12 +6,12 @@ Adds select menu option to a select menu.
 $addSelectMenuOption[menu option ID;label;value;description;(default?;emoji;message ID)]
 ```
 ### Parameters
-- `menu option ID` `(Type : String || Flag : Required)` : The ID used in `$newSelectMenu[]`.
-- `label` `(Type : String || Flag : Required)` : The name of the option.
-- `value` `(Type : String || Flag : Required)` : It's the data that gets passed to `$onInteraction[]` callback. **The value has to be unique in the select menu!**
-- `description` `(Type : String || Flag : Emptiable)` : It shows up under the `label`.
-- `default?` `(Type : Bool || Flag : Vacantable)`: Should the option be selected by default. (yes/no) **There can be only one default option!**
-- `emoji` `(Type : Emoji || Flag : Vacantable)`: It shows up next to the `label`.
+- `menu option ID` `(Type: String || Flag: Required)`: The ID used in `$newSelectMenu[]`.
+- `label` `(Type: String || Flag: Required)`: The name of the option.
+- `value` `(Type: String || Flag: Required)`: It's the data that gets passed to `$onInteraction[]` callback. **The value has to be unique in the select menu!**
+- `description` `(Type: String || Flag: Emptiable)`: A text which shows up under the `label`.
+- `default?` `(Type: Bool || Flag: Vacantable)`: Should the option be selected by default. (yes/no) **There can be only one default option!**
+- `emoji` `(Type: Emoji || Flag: Vacantable)`: It shows up next to the `label`.
 - `message ID` `(Type : String || Flag : Vacantable)`: ID of a message that should have select menu added to it. By default it's the bot's response.
 
 ## Example
