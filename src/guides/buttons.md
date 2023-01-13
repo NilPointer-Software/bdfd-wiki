@@ -74,9 +74,9 @@ $editButton[interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
 
 ## Parameters
-- `interaction ID/url`: Depending on the button type, you either set it to `interaction ID` which is then used in `$onInteraction[ID]` callback or `URL` if it's a link button.
-- `label`: The text value visible on the button.
-- `style`: It's used to specify the button's background color. If the button has a link/url you **have to** set the value to `link`. Check [this section](#button-style) for more details.
+- `interaction ID/url`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
+- `label`: The text visible on the button.
+- `style`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
 - `disable?`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
 - `emoji`: Edits an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
 - `message ID`: Edits a button to the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
