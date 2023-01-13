@@ -2,7 +2,7 @@
 Checks if the provided channel exists in any server the bot is in.
 ## Syntax
 ```
-$channelExists[channe lID]
+$channelExists[channel ID]
 ```
 ### Parameters
 - `channel ID`: The channel for which the bot will check for.
