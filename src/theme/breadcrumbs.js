@@ -29,7 +29,8 @@ path.split('/').forEach((segment, i, segments) => {
     let name = MAP[segment.toLocaleLowerCase()];
     if (!name) {
         name = segments.length == i + 1 ? getNameFromTitle() : segment;
-        segment += ".html";
+        if (segment != "")
+            segment += ".html";
     } else {
         segment = "introduction.html";
     }
