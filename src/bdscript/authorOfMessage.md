@@ -6,7 +6,7 @@ Returns the ID of the provided message's author.
 $authorOfMessage[channel ID;message ID]
 ```
 
-## Parameters
+ ### Parameters
 - `channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message was sent in.
 - `message ID` `(Type : Snowflake || Flag : Required)` : The message for which the author ID will be returned.
 
