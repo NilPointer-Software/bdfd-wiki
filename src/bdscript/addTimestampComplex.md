@@ -22,6 +22,3 @@ $addTimestamp[2]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/211189667-92fc90ff-0cca-4963-a649-8b39508d0968.png)
 
-
-
-
