@@ -41,5 +41,4 @@ $addButton[no;test;Say hello!;primary;no;]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png)
 
-
 > For more info, see the [Button Guide](../guides/buttons.md).
