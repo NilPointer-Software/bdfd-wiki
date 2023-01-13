@@ -178,7 +178,7 @@ $addButton[no;test;Click;primary]
 $addButton[no;button;Button disabled;secondary;yes]
 $addButton[yes;https://botdesignerdiscord.com/;Link;link]
 ```
-Code with trigger `$onInteraction`:
+Code for the command with the `$onInteraction` trigger:
 ```
 $nomention
 $if[$customID==test]
