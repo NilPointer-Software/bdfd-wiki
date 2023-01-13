@@ -6,7 +6,7 @@ _Triggered when an awaited command gets initiated._
 ```
 $awaitedCommand[name;(filter)]
 ```
-## Parameters
+### Parameters
 - `name`: The name used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
 - `filter`: It is used to limit user input. _(Optional)_
 
