@@ -143,9 +143,9 @@ $removeComponent[test;$message]
 
 # Create interaction
 ### Example with callback `$onInteraction[]`:
-1. Create two commands and set the trigger `!example` for one command and `$onInteraction[test]` for the other.
-2. Paste these codes:
-Code with trigger `!example`:
+1. Create two commands with `!example` and `$onInteraction[test]` triggers.
+2. Paste the following code:
+Code for the command with the `!example` trigger:
 ```
 $nomention
 Click the button below!
