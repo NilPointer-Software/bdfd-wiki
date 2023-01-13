@@ -7,8 +7,8 @@ $authorOfMessage[channel ID;message ID]
 ```
 
  ### Parameters
-- `channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message was sent in.
-- `message ID` `(Type : Snowflake || Flag : Required)` : The message for which the author ID will be returned.
+- `channel ID` `(Type: Snowflake || Flag: Required)`: The channel where the message was sent in.
+- `message ID` `(Type: Snowflake || Flag: Required)`: The message for which the author ID will be returned.
 
 >  [How to get the message/channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 
