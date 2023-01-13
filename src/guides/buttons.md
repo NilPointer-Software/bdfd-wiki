@@ -32,7 +32,7 @@ Interactive buttons can use every `style` except `link`.
 
 > Link buttons **don't send** any interactions. When they're pressed they forward the user to a website.
 > 
-> Link buttons **have to** set their `style` argument value to `link`.
+> Link buttons **need to** set their `style` argument value to `link`.
 
 # $addButton
 Adds button to the response.
