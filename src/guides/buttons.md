@@ -142,7 +142,7 @@ $removeComponent[test;$message]
 ![example](https://user-images.githubusercontent.com/113303649/211163615-ecffddcf-1d2b-4065-8445-9ec7ed1eb2b4.png)
 
 # Create interaction
-### Example with callback `$onInteraction[]`:
+### Example with `$onInteraction[]` callback:
 1. Create two commands with `!example` and `$onInteraction[test]` triggers.
 2. Paste the following code:
 Code for the command with the `!example` trigger:
