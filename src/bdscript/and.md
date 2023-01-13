@@ -6,7 +6,7 @@ Returns `true` if every provided condition is true, otherwise `false` is returne
 $and[conditions;...]
 ```
  ### Parameters
-- `conditions` `(Type : String || Flag : Required)` : Checks that will be carried out. All conditions must be true for this function to return `true`. Separate conditions using `;`.
+- `conditions` `(Type: String || Flag: Required)`: Checks that will be carried out. All conditions must be true for this function to return `true`. Separate conditions using `;`.
 
 ### Signs
 `==` - Equal
