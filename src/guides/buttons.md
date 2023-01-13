@@ -106,7 +106,7 @@ $removeButtons
 ![example](https://user-images.githubusercontent.com/113303649/210621352-ae7334a6-a2de-4fbe-8749-7134f9a73af3.png)
 
 # $removeButtons
-Removes all buttons from the specified message id.
+Removes all buttons from the specified message.
 ## Syntax
 ```
 $removeButtons[message ID]
