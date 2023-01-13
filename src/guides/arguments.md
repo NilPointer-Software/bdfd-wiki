@@ -8,9 +8,9 @@ Example: (- `userID` `(Flag: Required)`) etc.
 - __Vacantable__ - The argument **can** be excluded and if included **can** be empty.
 
 
-## Argument Types :
-This section will explain the various argument types used for function arguments. Function arguments are anything that goes in the brackets `[]` of a function, it will be displayed near or bleow the function argument as example :
-(- `userID` `(Type : Snowflake || Flag : Required)`) and if it has more than one option it will be `(Type : String, Snowflake || Flag : Required)`etc
+## Argument Types
+This section will explain the various argument types used for function arguments. Function arguments are anything that goes in the brackets `[]` of a function, it will be displayed near or below the function argument.
+Example: (- `userID` `(Type: Snowflake || Flag: Required)`) and if it has more than one option it will be `(Type: String, Snowflake || Flag: Required)` etc.
 
 - __String__ - This is the most generalized function, a string can be any character or text.
 - __Snowflake__ - A valid discord ID, can be of a role, channel, user, server, emoji and message.
