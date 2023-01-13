@@ -9,7 +9,7 @@ $awaitedCommandError[name]
 ```
 
 ## Parameters
-- `name`: The name which is used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
+- `name`: The name used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
 
 ## Example
 **Trigger: `$awaitedCommandError[number]`**
