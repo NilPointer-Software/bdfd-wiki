@@ -160,7 +160,7 @@ $editButton[test;Clicked;danger;yes]
 $sendMessage[$username hello!]
 ```
 
-> Interaction ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]` from [this section](#addbutton)
+> Note that the interaction ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]`
 > 
 > In `$addButton[]`, `yes` is being used for the `new row` argument so that the button would appear in the next row.
 3. Execute command `!example`
