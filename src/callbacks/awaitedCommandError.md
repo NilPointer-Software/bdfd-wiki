@@ -18,3 +18,4 @@ $nomention
 Invalid number!
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212291974-4efa0531-d896-4aa3-ac1a-b8fa7d6794d0.png)
+> For more info, see the [Awaited Commands Guide](../guides/awaitedCommands.md).
