@@ -35,7 +35,7 @@ Interactive buttons can use every `style` except `link`.
 > Link buttons **need to** set their `style` argument value to `link`.
 
 # $addButton
-Adds button to the response.
+Adds a button to the response message.
 ## Syntax
 ```
 $addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
