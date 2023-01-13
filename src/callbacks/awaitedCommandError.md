@@ -8,7 +8,7 @@ _Triggered when an awaited command doesn't match with provided filter._
 $awaitedCommandError[name]
 ```
 
-## Parameters
+### Parameters
 - `name`: The name used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
 
 ## Example
