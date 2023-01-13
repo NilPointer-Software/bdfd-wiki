@@ -26,6 +26,6 @@ Example: (- `userID` `(Type: Snowflake || Flag: Required)`) and if it has more t
 - __Color__ - Color Hex Code you can get from [here](https://htmlcolorcodes.com/color-picker) as example
 
 
-## Pairs :
+## Pairs
 - __Tuple__ - A tuple is a set of arguments that depend on others to function, they are shown with `<>` on either side.
 - __Ellipsis__ - Ellipsis notations (`...`) symbolize an argument that can be repeated multiple times. Ellipsis is denoted with `...` as the argument after the argument which can be repeated.
