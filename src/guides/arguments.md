@@ -23,7 +23,7 @@ Example: (- `userID` `(Type: Snowflake || Flag: Required)`) and if it has more t
 - __Duration__ - A time based duration, an integer suffixed with a valid time format (s, m, h, d, w).
 - __Permission__ - Discord permission (case insensitive), see [this](../resources/permissions.md) for all valid permissions.
 - __Bool__ - yes/no or true/false.
-- __Color__ - Color Hex Code you can get from [here](https://htmlcolorcodes.com/color-picker) as example
+- __Color__ - Color Hex Code you can get from [here](https://htmlcolorcodes.com/color-picker) as an example
 
 
 ## Pairs
