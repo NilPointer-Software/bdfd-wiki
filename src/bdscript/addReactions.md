@@ -32,4 +32,4 @@ $addReactions[✅;❌]
 
 ![example](https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif)
 
-> If you're still having issues, check the [Troubleshooting page](https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions).
+> If you're still having issues, check the [Troubleshooting](../resources/troubleshooting.md#the-bot-fails-to-add-reactions) page.
