@@ -14,14 +14,17 @@ function getNameFromTitle() {
     return document.title.substring(0, index-1);
 }
 
+let root = "/bdfd-wiki/"
 let path = location.pathname.substring(11);
 
-if (path.startsWith("nightly"))
+if (path.startsWith("nightly")) {
     path = path.substring(8);
+    root += "nightly/"
+}
 if (path.endsWith(".html"))
     path = path.substring(0, path.length - 5);
 
-document.write(`<a href="/">Root</a>`);
+document.write(`<a href="${root}">Root</a>`);
 path.split('/').forEach((segment, i, segments) => {
     let name = MAP[segment.toLocaleLowerCase()];
     if (!name) {
