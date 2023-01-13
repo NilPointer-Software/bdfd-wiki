@@ -7,7 +7,7 @@ $addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
 
  ### Parameters
-- `new row?` `(Type : Bool || Flag : Required)` : If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
+- `new row?` `(Type : Bool || Flag : Required)`: If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
 
     > A message can have a maximum of 25 buttons (5 rows of 5 buttons).
 
