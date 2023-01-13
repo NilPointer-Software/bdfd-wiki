@@ -9,7 +9,7 @@ $messageContains[word;...]
 ```
 
 ### Parameters
-- `word` - The phrases/words the bot checks for. Separate phrases using `;`.
+- `word` `(Type: String || Flag: Required)`: The phrases/words the bot checks for. Separate phrases using `;`.
 
 ## Example
 1. Create a new command with command trigger set as `$messageContains[]`.
