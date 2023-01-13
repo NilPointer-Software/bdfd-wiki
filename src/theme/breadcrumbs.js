@@ -24,7 +24,7 @@ if (path.startsWith("nightly")) {
 if (path.endsWith(".html"))
     path = path.substring(0, path.length - 5);
 
-document.write(`<a href="${root}">Root</a>`);
+document.write(`<a href="${root}">Home</a>`);
 path.split('/').forEach((segment, i, segments) => {
     let name = MAP[segment.toLocaleLowerCase()];
     if (!name) {
