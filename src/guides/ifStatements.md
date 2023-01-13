@@ -3,7 +3,7 @@ Interprets commands conditionally.
 Every **if statement** starts with `$if[condition]` and has to end with `$endif`.
 `$else` is optional.
 
-## Parameters
+## Basics
 - Use `$if[]` to specify a block of code to be executed, if a specified condition is true.
 - Use `$else` to specify a block of code to be executed, if the same condition is false.
 - Use `$elseif[]` to specify a new condition to check, if the first condition is false **(can be only used in BDScript 2)**
