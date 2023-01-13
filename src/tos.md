@@ -63,6 +63,7 @@ In case we change our Terms, if you don't agree with the new Terms, you are free
 > Registered users may withdraw their data through the mobile application, and request the deletion of data by contacting support.
 
 ## Contact 
+If you have questions/concerns about these Terms or our service, you may contact us via email.
 
-If you have questions/concerns about these Terms or our service, you may contact us via email. Support for regular users is available at `support@mail.botdesignerdiscord.com`, and for paying users at `premium-support@mail.botdesignerdiscord.com`.
-
+For regular users at <mailto:support@mail.botdesignerdiscord.com>.\
+For paying users at <mailto:premium-support@mail.botdesignerdiscord.com>.
