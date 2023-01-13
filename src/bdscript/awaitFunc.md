@@ -18,3 +18,4 @@ What do you want me to say?
 $awaitFunc[say]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png)
+> For more info, see the [Awaited Commands Guide](../guides/awaitedCommands.md).
