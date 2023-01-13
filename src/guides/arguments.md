@@ -1,6 +1,6 @@
-## Argument Flags :
-Function argument flags mark how arguments within a function may be used (or hence, not used at all), it will be displayed near or bleow the function argument as example :
-(- `userID` `(Flag : Required)`) etc
+## Argument Flags
+Function argument flags mark how arguments within a function may be used (or hence, not used at all), it will be displayed near or below the function argument.
+Example: (- `userID` `(Flag: Required)`) etc.
 
 - __Optional__ - The argument **can** be excluded but **cannot** be left empty, they show up as `(something)` and will **always** be after all required arguments.
 - __Required__ - The argument **must** be included and **cannot** be empty.
