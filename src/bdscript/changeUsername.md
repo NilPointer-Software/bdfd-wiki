@@ -1,16 +1,17 @@
 # $changeUsername
 Changes the mentioned user's nickname.
 
-## Usage
+## Syntax
 ```
-$changeUsername[newNickname]
+$changeUsername[new nickname]
 ```
-
-### Breakdown
-- `newNickname` - The text to change the user's nickname to. It cannot exceed more than 32 characters.
+### Parameters
+- `new nickname`: The text to change the user's nickname to. 
+> It cannot exceed more than 32 characters.
 
 ## Example
 ```
+$nomention
 $onlyPerms[managenicknames;Missing permission 'manage nicknames'!]
 $argsCheck[>2;Wrong usage! Correct Usage: `!nickname (user) (text)`]
 $changeUsername[$noMentionMessage]
