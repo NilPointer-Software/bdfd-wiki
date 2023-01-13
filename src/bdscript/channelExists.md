@@ -5,7 +5,7 @@ Checks if the provided channel exists in any server the bot is in.
 $channelExists[channe lID]
 ```
 ## Parameters
-- `channel ID`: The channel which the bot will check for.
+- `channel ID`: The channel for which the bot will check for.
 ## Example
 ```
 $nomention
