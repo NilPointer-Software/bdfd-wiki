@@ -5,7 +5,7 @@ Changes a user's nickname using their ID.
 $changeUsernameWithID[user ID;new nickname]
 ```
 ## Parameters
-- `user ID`: The ID of the user whose nickname will be changed.
+- `user ID`: The user whose nickname will be changed.
 - `new nickname`: The text to change the user's nickname to. 
 > It cannot exceed more than 32 characters.
 ## Example
