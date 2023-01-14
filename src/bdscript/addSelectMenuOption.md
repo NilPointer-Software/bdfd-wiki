@@ -12,7 +12,7 @@ $addSelectMenuOption[menu option ID;label;value;description;(default?;emoji;mess
 - `description` `(Type: String || Flag: Emptiable)`: A text which shows up under the `label`.
 - `default?` `(Type: Bool || Flag: Vacantable)`: Should the option be selected by default. (yes/no) **There can be only one default option!**
 - `emoji` `(Type: Emoji || Flag: Vacantable)`: It shows up next to the `label`.
-- `message ID` `(Type : String || Flag : Vacantable)`: ID of a message that should have select menu added to it. By default it's the bot's response.
+- `message ID` `(Type: String || Flag: Vacantable)`: ID of a message that should have select menu added to it. By default it's the bot's response.
 
 ## Example
 ```
