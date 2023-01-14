@@ -7,7 +7,7 @@ $botListDescription[text]
 ```
 
  ### Parameters
-- `text` `(Type : String || Flag : Required)` : The text that the description will be set to.
+- `text` `(Type: String || Flag: Required)`: The text that the description will be set to.
 
 ## Example
 ```
