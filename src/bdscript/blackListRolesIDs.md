@@ -7,8 +7,8 @@ $blackListRolesIDs[role IDs;...;error message]
 ```
 
  ### Parameters
-- `role IDs` `(Type : Snowflake || Flag : Emptiable)` : The roles that will be blacklisted. Separate role IDs using `;`.
-- `error message` `(Type : String || Flag : Emptiable)` : The message that will be sent if the user has a role from the blacklist.
+- `role IDs` `(Type: Snowflake || Flag: Emptiable)`: The roles that will be blacklisted. Separate role IDs using `;`.
+- `error message` `(Type: String || Flag: Emptiable)`: The message that will be sent if the user has a role from the blacklist.
 
 ## Example
 ```
