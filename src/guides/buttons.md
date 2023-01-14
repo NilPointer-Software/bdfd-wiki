@@ -112,7 +112,7 @@ Removes all buttons from the specified message.
 $removeButtons[message ID]
 ```
 ### Parameters
-- `message ID` `(Type : Snowflake || Flag : Required)`: Removes buttons from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot.
+- `message ID` `(Type: Snowflake || Flag: Required)`: Removes buttons from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot.
 ## Example
 ```
 $nomention
