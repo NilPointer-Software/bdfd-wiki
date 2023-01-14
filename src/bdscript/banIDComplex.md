@@ -5,8 +5,7 @@ Bans a user using their ID.
 $banID[reason;(user ID)]
 ```
 ### Parameters
-
-- `reason` `(Type: String || Flag: Emptiable)` : The reason for this action, which will be saved in the audit-log.
+- `reason` `(Type: String || Flag: Emptiable)`: The reason for this action, which will be saved in the audit-log.
 > Use `$getBanReason[]` to get the ban reason.
 - `user ID` `(Type: Snowflake || Flag: Vacantable)` : The user to ban. If empty, the ID will be taken from the last part of the author's message.
 
