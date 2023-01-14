@@ -5,9 +5,9 @@ Adds a comment to the code. Comments do not appear in the bot's response.
 ```
 $c[comment]
 ```
-## Parameters 
-- `comment` `(Type : String || Flag : Emptiable)` : Any text. This text will not be taken into account during processing. Commonly used to add notes to the code.
 
+### Parameters 
+- `comment` `(Type: String || Flag: Emptiable)`: Any text. This text will not be taken into account during processing. Commonly used to add notes to the code.
 
 ## Example
 ```
