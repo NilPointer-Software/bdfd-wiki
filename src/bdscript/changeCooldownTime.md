@@ -7,18 +7,14 @@ $changeCooldownTime[days;hours;minutes;seconds]
 ```
 
 ### Parameters
+- `days` `(Type: String || Flag: Required)`: The text to replace 'Days' with.
+- `hours` `(Type: String || Flag: Required)`: The text to replace 'Hours' with.
+- `minutes` `(Type: String || Flag: Required)`: The text to replace 'Minutes' with.
+- `seconds` `(Type: String || Flag: Required)`: The text to replace 'Seconds' with.
 
-- `days` `(Type: String || Flag: Required)` : The text to replace 'Days' with.
-- `hours` `(Type: String || Flag: Required)` : The text to replace 'Hours' with.
-- `minutes` `(Type: String || Flag: Required)` : The text to replace 'Minutes' with.
-- `seconds` `(Type: String || Flag: Required)` : The text to replace 'Seconds' with.
-
-
-
-### Subfunctions
-
-
-Name        | Type
+ ### Sub-functions
+ 
+ Name        | Type
 ------------|---------
 `%time-d%`  | Day
 `%time-h%`  | Hour
