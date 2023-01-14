@@ -5,6 +5,7 @@ Changes the cooldown metrics. These can be used in cooldown error messages. It c
 ```
 $changeCooldownTime[days;hours;minutes;seconds]
 ```
+
 ### Parameters
 
 - `days` `(Type: String || Flag: Required)` : The text to replace 'Days' with.
