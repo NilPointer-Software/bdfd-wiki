@@ -6,10 +6,8 @@ Calculates a math expression.
 $calculate[expression]
 ```
 
-
 ### Parameters
-- `expression` `(Type : String || Flag : Required)` : The math expression to solve.
-
+- `expression` `(Type: String || Flag: Required)`: The math expression to solve.
 
 ## Signs
 - `+` - Addition.
