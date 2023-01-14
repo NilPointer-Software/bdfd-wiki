@@ -4,7 +4,8 @@ Disables the command for users with usernames matching the ones provided.
 ```
 $blackListUsers[usernames;...;error message]
 ```
-## Parameters
+
+ ### Parameters
 
 - `usernames` `(Type : String || Flag : Emptiable)` : The usernames to blacklist. Separate names using `;`.
 - `error message` `(Type : String || Flag : Emptiable)` : Message when user's name is in the blacklist.
