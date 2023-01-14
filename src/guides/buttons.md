@@ -74,12 +74,12 @@ $editButton[interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
 
 ### Parameters
-- `interaction ID/url` `(Type : String,URL || Flag : Required)`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
-- `label` `(Type : String || Flag : Emptiable)`: The text visible on the button.
-- `style` `(Type : Enum || Flag : Required)`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
-- `disable?` `(Type : Bool || Flag : Vacantable)`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
-- `emoji` `(Type : Emoji || Flag : Vacantable)`: Edits an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
-- `message ID` `(Type : Snowflake || Flag : Vacantable)`: Edits a button in a message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+- `interaction ID/url` `(Type: String, URL || Flag: Required)`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
+- `label` `(Type: String || Flag: Emptiable)`: The text visible on the button.
+- `style` `(Type: Enum || Flag: Required)`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
+- `disable?` `(Type: Bool || Flag: Vacantable)`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
+- `emoji` `(Type: Emoji || Flag: Vacantable)`: Edits an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
+- `message ID` `(Type: Snowflake || Flag: Vacantable)`: Edits a button in a message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
 ## Example
 #### Trigger: `$onInteraction[test]`
 ```
