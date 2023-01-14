@@ -6,7 +6,7 @@
 $botLeave[guild ID]
 ````
 
-## Parameters
+ ### Parameters
 - `guild ID` `(Type : Snowflake || Flag : Required)` : The ID of a guild to leave.
 
 ## Example
