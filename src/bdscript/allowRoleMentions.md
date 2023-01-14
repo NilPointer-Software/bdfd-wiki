@@ -6,7 +6,7 @@ Enables role pings only for the provided role IDs, while the roles not provided 
 $allowRoleMentions[role IDs;...]
 ```
 
-## Parameters
+ ### Parameters
 - `role IDs` `(Type: Snowflake || Flag: Emptiable)`: The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using `;`.
 
 ## Example
