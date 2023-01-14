@@ -7,8 +7,8 @@ $blackListRoles[role names;...;error message]
 ```
 
  ### Parameters
-- `role names` `(Type : String || Flag : Emptiable)` : The name(s) of the role(s) to blacklist. Separate role names using `;`.
-- `error message` `(Type : String || Flag : Emptiable)` : The message that will be sent if the user has a role from the blacklist.
+- `role names` `(Type: String || Flag: Emptiable)`: The name(s) of the role(s) to blacklist. Separate role names using `;`.
+- `error message` `(Type: String || Flag: Emptiable)`: The message that will be sent if the user has a role from the blacklist.
 
 ## Example
 ```
