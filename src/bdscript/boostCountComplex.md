@@ -7,7 +7,7 @@ $boostCount[guild ID]
 ```
 
  ### Parameters
-- `guild ID` `(Type : Snowflake || Flag : Required)` : The guild to get the number of boosts for.
+- `guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get the number of boosts for.
 
 ## Example
 ```
