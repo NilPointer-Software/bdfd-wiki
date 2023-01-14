@@ -6,11 +6,8 @@ Returns category ID for given category name.
 $categoryID[category name]
 ```
 
-
 ### Parameters
-- `category name` `(Type : String || Flag : Required)` : The name of the category from which to return the ID.
-
-
+- `category name` `(Type: String || Flag: Required)`: The name of the category from which to return the ID.
 
 ## Example
 ```
