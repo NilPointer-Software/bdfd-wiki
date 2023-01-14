@@ -41,16 +41,16 @@ Adds a button to the response message.
 $addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
 ### Parameters
-- `new row?`: If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
+- `new row?` `(Type: Bool || Flag: Required)`: If set to `yes` the button will appear in a new row. If it's set to `no` the button will appear in the same row as a previous button.
 
     > A message can have a maximum of 25 buttons (5 rows of 5 buttons).
 
-- `interaction ID/url`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
-- `label`: The text visible on the button.
-- `style`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
-- `disable?`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
-- `emoji`: Adds an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
-- `message ID`: Adds a button to the provided message ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+- `interaction ID/url` `(Type: String, URL || Flag: Required)`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
+- `label` `(Type: String || Flag: Emptiable)`: The text visible on the button.
+- `style` `(Type: Enum || Flag: Required)`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
+- `disable?` `(Type: Bool || Flag: Vacantable)`:  If set to `yes` the button can't be pressed. Defaults as `no`.
+- `emoji` `(Type: Emoji || Flag: Vacantable)`: Adds an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`.
+- `message ID` `(Type: Snowflake || Flag: Vacantable)`: Adds a button to the provided message ID. It's important to note that provided message ID author **has to** be the bot.
 
 > Interactive buttons can't have duplicated `ID`'s in the same message. So for example, you can't have two buttons with the ID set to `test`.
 
@@ -74,12 +74,12 @@ $editButton[interaction ID/url;label;style;(disable?;emoji;message ID)]
 ```
 
 ### Parameters
-- `interaction ID/url`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
-- `label`: The text visible on the button.
-- `style`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
-- `disable?`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
-- `emoji`: Edits an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
-- `message ID`: Edits a button in a message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+- `interaction ID/url` `(Type: String, URL || Flag: Required)`: Depending on the button type, you either set it to an `interaction ID` which is then used in the `$onInteraction[ID]` callback or a `URL` if it's a link button.
+- `label` `(Type: String || Flag: Emptiable)`: The text visible on the button.
+- `style` `(Type: Enum || Flag: Required)`: It's used to specify the button's background color. If the button has a link/url you **have to** set this value to `link`. Check [this section](#button-style) for more details.
+- `disable?` `(Type: Bool || Flag: Vacantable)`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
+- `emoji` `(Type: Emoji || Flag: Vacantable)`: Edits an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
+- `message ID` `(Type: Snowflake || Flag: Vacantable)`: Edits a button in a message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
 ## Example
 #### Trigger: `$onInteraction[test]`
 ```
@@ -112,7 +112,7 @@ Removes all buttons from the specified message.
 $removeButtons[message ID]
 ```
 ### Parameters
-- `message ID`: Removes buttons from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot.
+- `message ID` `(Type: Snowflake || Flag: Required)`: Removes buttons from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot.
 ## Example
 ```
 $nomention
@@ -129,8 +129,8 @@ $removeComponent[interaction ID;(message ID)]
 ```
 > This function supports [select-menu](../guides/selectmenu.md) and [button](../guides/buttons.md).
 ### Parameters
-- `interaction ID`: The interaction ID of the button, to remove from the message. 
-- `message ID`: Removes the button from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+- `interaction ID` `(Type: String || Flag: Required)`: The interaction ID of the button, to remove from the message. 
+- `message ID` `(Type: Snowflake || Flag: Vacantable)`: Removes the button from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
 ## Example
 ```
 $nomention
