@@ -9,7 +9,7 @@ $argsCheck[how many?;error message]
  ### Parameters
 - `how many?` `(Type: HowMany || Flag: Required)`: How many arguments there should be in the user’s message.
 > If you want users to have 3 or more arguments in their message; you can use `>3`. If you want users to have less than 3 arguments in their message, you can use `<3`. If you want the users to have exactly 3 arguments in their message put `3`. 
-- `error message` `(Type: String || Flag: Emptiable)` : The message that the bot will send if the user has too many/little arguments.
+- `error message` `(Type: String || Flag: Emptiable)`: The message that the bot will send if the user has too many/little arguments.
 
 ## Example
 ```
