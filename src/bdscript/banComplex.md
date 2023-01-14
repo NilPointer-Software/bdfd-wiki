@@ -7,7 +7,7 @@ $ban[reason]
 ```
 
  ### Parameters
-- `reason` `(Type : String || Flag : Emptiable)` : The reason for this action, which will be saved in the audit-log.
+- `reason` `(Type: String || Flag: Emptiable)`: The reason for this action, which will be saved in the audit-log.
 
 ## Example
 ```
