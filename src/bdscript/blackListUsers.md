@@ -6,9 +6,8 @@ $blackListUsers[usernames;...;error message]
 ```
 
  ### Parameters
-
-- `usernames` `(Type : String || Flag : Emptiable)` : The usernames to blacklist. Separate names using `;`.
-- `error message` `(Type : String || Flag : Emptiable)` : Message when user's name is in the blacklist.
+- `usernames` `(Type: String || Flag: Emptiable)`: The usernames to blacklist. Separate names using `;`.
+- `error message` `(Type: String || Flag: Emptiable)`: Message when user's name is in the blacklist.
 
 ## Example
 ```
