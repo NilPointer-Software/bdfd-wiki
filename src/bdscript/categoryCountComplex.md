@@ -7,8 +7,7 @@ $categoryCount[guild ID]
 ```
 
 ### Parameters
-- `guild ID` `(Type : Snowflake || Flag : Required)` : The guild to get its category count.
-
+- `guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get its category count.
 
 ## Example
 ```
