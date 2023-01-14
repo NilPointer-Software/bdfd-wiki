@@ -65,5 +65,5 @@ In case we change our Terms, if you don't agree with the new Terms, you are free
 ## Contact 
 If you have questions/concerns about these Terms or our service, you may contact us via email.
 
-For regular users at <mailto:support@mail.botdesignerdiscord.com>.\
-For paying users at <mailto:premium-support@mail.botdesignerdiscord.com>.
+For regular users at [support@mail.botdesignerdiscord.com](mailto:support@mail.botdesignerdiscord.com).\
+For paying users at [premium-support@mail.botdesignerdiscord.com](mailto:premium-support@mail.botdesignerdiscord.com).
