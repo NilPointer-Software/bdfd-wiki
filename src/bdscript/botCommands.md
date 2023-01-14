@@ -7,7 +7,7 @@ $botCommands[separator]
 ```
 
  ### Parameters
-- `separator` `(Type : String || Flag : Required)` : Will be used to separate each command.
+- `separator` `(Type: String || Flag: Required)`: Will be used to separate each command.
 
 ## Example
 ```
