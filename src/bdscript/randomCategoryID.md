@@ -7,7 +7,6 @@ $randomCategoryID[(guild ID)]
 ```
 ### Parameters
 - `guild ID` `(Type: Snowflake || Flag: Optional)`: The server from which to get a random category ID. _(Defaults to the current server)_
-> Use `$randomCategoryID[]` to get the current guild id.
 
 ## Example
 ```
