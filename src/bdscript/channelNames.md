@@ -1,5 +1,5 @@
 # $channelNames
-List all channel names separated by given separator.
+List all channel names separated by a given separator.
 
 ## Syntax
 ```
