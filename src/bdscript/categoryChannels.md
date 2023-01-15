@@ -24,4 +24,6 @@ $nomention
 <#;id]>
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212550851-a3a87e0e-9393-4e38-9f87-921034ea69a7.png)
+
 > [How `$categoryID[]` works?](./categoryID.md)
+

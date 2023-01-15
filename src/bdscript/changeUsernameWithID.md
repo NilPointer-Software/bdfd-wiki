@@ -21,6 +21,5 @@ $changeUsernameWithID[$findUser[$message[1]];$message[2]]
 
 ![example](https://user-images.githubusercontent.com/113303649/212552342-49a8cd00-cf8c-40c7-abc6-08805d9fc9af.png)
 
+
 > [How `$findUser[]` works?](./findUser.md)
-
-
