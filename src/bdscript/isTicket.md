@@ -6,7 +6,7 @@ Check if the current or given channel is a ticket.
 $isTicket[(channel ID)]
 ```
 ### Parameters
-- `channel ID` `(Type: Snowflake || Flag: Optional)`: !update it please!
+- `channel ID` `(Type: Snowflake || Flag: Optional)`: The channel to check. _(Defaults to the current channel)_
 > Use `$isTicket[]` to get the current channel id.
 
 ## Example
