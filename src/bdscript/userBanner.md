@@ -5,7 +5,8 @@ Returns user banner if the given user has one.
 ```
 $userBanner[user ID]
 ```
- > It doesn't return the user's guild banner.
+> The function is unable to return the user's server banner.
+
 ### Parameters
 - `user ID` `(Type: Snowflake || Flag: Required)`: The user to get banner for.
 ## Example
