@@ -6,7 +6,7 @@ Returns a random category id from the current server or from the provided server
 $randomCategoryID[(guild ID)]
 ```
 ### Parameters
-- `guild ID` `(Type: Snowflake || Flag: Optional)`: The server to get a random catgeory ID.
+- `guild ID` `(Type: Snowflake || Flag: Optional)`: The server from which to get a random category ID. _(Defaults to the current server)_
 > Use `$randomCategoryID[]` to get the current guild id.
 
 ## Example
