@@ -1,5 +1,5 @@
 # $randomCategoryID
-Returns random category id from the current server or the provided server.
+Returns a random category id from the current server or from the provided server.
 
 ## Syntax
 ```
