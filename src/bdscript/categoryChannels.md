@@ -11,9 +11,9 @@ $categoryChannels[category ID;separator;(option)]
 - `option` `(Type: Enum || Flag: Optional)`: Which property to get from category channels. _(Default  is `name`)_
 
 ### Options
-- `name`: The name of the channel.
-- `id`: The id of the channel.
-- `mention`: The channel mention.
+- `name`: The name of the channels.
+- `id`: The id of the channels.
+- `mention`: The channel mentions.
 - `count`: The amount of channels in the category.
 > The `count` option does not list anything, instead it will return the number of channels under the given category.
 
