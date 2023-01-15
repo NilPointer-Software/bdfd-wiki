@@ -1,5 +1,5 @@
 # $randomRoleID
-Returns random role id from the current server or the provided server.
+Returns a random role id from the current server or from the provided server.
 
 ## Syntax
 ```
