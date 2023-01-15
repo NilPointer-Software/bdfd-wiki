@@ -6,9 +6,9 @@ List channel property under given category.
 $categoryChannels[category ID;separator;(option)]
 ```
 ### Parameters
-- `category ID` `(Type: Snowflake || Flag: Required)`: The category to getting the channels. 
-- `seperator` `(Type: String || Flag: Emptiable)`: The separator that separates each option.
-- `option` `(Type: Enum || Flag: Optional)`: The option to getting channels from the provided `category ID`. _(Default  is `name`)_
+- `category ID` `(Type: Snowflake || Flag: Required)`: The category from which to take the channels. 
+- `seperator` `(Type: String || Flag: Emptiable)`: The separator to use when separating channel properties.
+- `option` `(Type: Enum || Flag: Optional)`: Which property to get from category channels. _(Default  is `name`)_
 
 ### Options
 - `name`: The name of the channel.
