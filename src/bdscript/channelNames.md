@@ -6,8 +6,8 @@ List all channel names separated by given separator.
 $channelNames[separator;(guild ID)]
 ```
 ### Parameters
-- `seperator` `(Type: String || Flag: Emptiable)`: The separator to separate the channels with.
-- `guild ID` `(Type: Snowflake || Flag: Optional)`: The guild to return it's channels.
+- `seperator` `(Type: String || Flag: Emptiable)`: The separator used to separate the channel names.
+- `guild ID` `(Type: Snowflake || Flag: Optional)`: The guild for which to return the channel names. _(Defaults to the current guild)_
 ## Example
 ```
 $nomention
