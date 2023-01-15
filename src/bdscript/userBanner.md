@@ -1,5 +1,6 @@
 # $userBanner
-Returns a user banner if user has one.
+Returns user banner if the given user has one.
+
 ## Syntax
 ```
 $userBanner[user ID]
