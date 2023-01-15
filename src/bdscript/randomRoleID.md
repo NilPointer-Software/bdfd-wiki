@@ -6,7 +6,7 @@ Returns random role id from the current server or the provided server.
 $randomRoleID[(guild ID)]
 ```
 ### Parameters
-- `guild ID` `(Type: Snowflake || Flag: Optional)`: The server to get a random role id.
+- `guild ID` `(Type: Snowflake || Flag: Optional)`: The server from which to get a random role id. _(Defaults to the current server)_
 > Use `$randomRoleID[]` to get the current guild id.
 
 ## Example
