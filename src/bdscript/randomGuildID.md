@@ -1,5 +1,5 @@
 # $randomGuildID
-It's returns a random guild ID that the bot is in.
+Returns a random guild ID from servers the bot is in.
 
 ## Syntax
 ```
