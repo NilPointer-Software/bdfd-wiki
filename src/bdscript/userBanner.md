@@ -8,7 +8,8 @@ $userBanner[user ID]
 > The function is unable to return the user's server banner.
 
 ### Parameters
-- `user ID` `(Type: Snowflake || Flag: Required)`: The user to get banner for.
+- `user ID` `(Type: Snowflake || Flag: Required)`: The user to get the banner for.
+
 ## Example
 ```
 $nomention
