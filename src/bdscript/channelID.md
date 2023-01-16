@@ -1,7 +1,7 @@
 # $channelID
 Gets the ID of the current channel.
 
-## Sytnax
+## Syntax
 ```
 $channelID
 ```
