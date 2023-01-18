@@ -9,6 +9,7 @@ $channelName[channel ID]
 > [How to get a channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 ## Example
 ```
+$nomention
 Channel Name: `#$channelName[$channelID]`
 ```
 
