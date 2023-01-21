@@ -145,5 +145,5 @@ $nomention
 You have provided a number: $message
 ```
 3. Execute command `!number`
-4. 
+
 ![example](https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png)
