@@ -92,26 +92,56 @@ Invalid number!
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212291974-4efa0531-d896-4aa3-ac1a-b8fa7d6794d0.png)
 
-## Create Await
+# Create Await
+## Without filter
+1. Create two commands with `!say` and `$awaitedCommand[say;]` triggers.
+2. Paste the following code: Code for the command with the `!say` trigger:
+```
+$nomention
+What do you want me to say?
+$awaitFunc[say]
+```
+Code for the command with the `$awaitedCommand[say;]` trigger:
+```
+$nomention
+$message
+```
+3. Execute command `!say`
 
-- Empty Filter
-
-   ![Screenshot_20220812_204604](https://user-images.githubusercontent.com/95774950/184388068-2d182254-79ed-45b0-962a-1dd68dc7684a.png)
-   ![Screenshot_20220812_204552](https://user-images.githubusercontent.com/95774950/184388050-b9b7bdd8-1ee5-4ea4-919b-ed6dbc4849bd.png)
-   ![Screenshot_20220812_205309](https://user-images.githubusercontent.com/95774950/184388088-c6ce5d6b-cbfe-4374-889c-cb2d57cbf6c5.png)
-
-- Choice Filter
-
-   ![Screenshot_20220813_072224](https://user-images.githubusercontent.com/95774950/184464158-083019b0-821a-4683-a969-02293b44f86a.png)
-   ![Screenshot_20220813_072236](https://user-images.githubusercontent.com/95774950/184464161-62689486-928a-4aa1-900f-8ea295fc9437.png)
-   ![Screenshot_20220813_072322](https://user-images.githubusercontent.com/95774950/184464163-50eac8f9-6194-4763-ac20-e18a2c97d47d.png)
-   ![Screenshot_20220813_072131](https://user-images.githubusercontent.com/95774950/184464150-79857481-578f-4f4b-b725-126f35a88ad4.png)
-
-   > ⚠️ The above example requires **BDScript 2** since it contains `$elseif`.
-
-- Numeric Filter
-
-   ![Screenshot_20220812_211213](https://user-images.githubusercontent.com/95774950/184392300-5fe57ba0-1d6e-4488-af7f-82aa4a82d64f.png)
-   ![Screenshot_20220812_211252](https://user-images.githubusercontent.com/95774950/184392283-62ca15a3-0825-448e-bede-e8b1114af18e.png)
-   ![Screenshot_20220812_211311](https://user-images.githubusercontent.com/95774950/184392271-57fd1dd6-2ff7-47de-968e-846f2dd3b7ef.png)
-   ![Screenshot_20220812_211155](https://user-images.githubusercontent.com/95774950/184392254-323d07ef-7e17-4ef0-aced-852b7c3870ec.png)
+![example](https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png)
+## With choose filter
+1. Create two commands with `!odd` and `$awaitedCommand[odd;<yes/no/cancel>]` triggers.
+2. Paste the following code: Code for the command with the `!odd` trigger:
+```
+$nomention
+Is '19' an odd number?
+$awaitFunc[odd]
+```
+Code for the command with the `$awaitedCommand[say;]` trigger:
+```
+$nomention
+$if[$message==yes]
+   Your answer is correct!
+$elseif[$message==no]
+   Your answer is incorrect!
+$elseif[$message==cancel]
+   Command cancelled!
+$endif
+```
+3. Execute command `!odd`
+![example](https://user-images.githubusercontent.com/113303649/212088333-54a94584-f854-45cf-8b7e-6980aa370764.png)
+## With numeric filter
+1. Create two commands with `!number` and `$awaitedCommand[number;<numeric>]` triggers.
+2. Paste the following code: Code for the command with the `!number` trigger:
+```
+$nomention
+Provide a number!
+$awaitFunc[number]
+```
+Code for the command with the `$awaitedCommand[number;<numeric>]` trigger:
+```
+$nomention
+You have provided a number: $message
+```
+3. Execute command `!number`
+![example](https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png)
