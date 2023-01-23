@@ -135,6 +135,7 @@
     - [$deleteMessage](./bdscript/deleteMessage.md)
     - [$deleteRole](./bdscript/deleteRole.md)
     - [$description](./bdscript/description.md)
+    - [$disableInnerSpaceRemoval](./bdscript/disableInnerSpaceRemoval.md)
     - [$disableSpecialEscaping](./bdscript/disableSpecialEscaping.md)
     - [$discriminator](./bdscript/discriminator.md)
     - [$divide](./bdscript/divide.md)

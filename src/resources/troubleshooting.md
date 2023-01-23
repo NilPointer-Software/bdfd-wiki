@@ -35,6 +35,7 @@ This page contains a number of troubleshooting that can help you to solve proble
 8. **[App Issues](#app-issues)**
     - **[The Ad Button Doesn't Work](#the-ad-button-doesnt-work)**
     - **[Ghost Functions From The Changelog](#ghost-functions-from-the-changelog)**
+    - **[The Translation Feature Doesn't Work](#the-translation-feature-doesnt-work)**
 
 ---
 ### Let's Troubleshoot Everything!
@@ -762,6 +763,21 @@ In this section, the easiest way to explain everything is through dialogue:
 - `Shiro`: Usually, all nodes are updated by the end of the month. 
 - `Random Guy`: Allright, thank you! I will wait patiently!
 - `Shiro`: You're welcome, Random Guy.
+
+### The Translation Feature Doesn't Work
+**The 1st Reason**\
+There's no translation support for your language yet. You should wait patiently for it, or if you speak English well, you can translate our app yourself!\
+If you want to, go to our [support server](https://discord.gg/botdesigner) and create a ticket (using the `!new` command). You'll have to send your application for the Translator role there.
+
+**The 2nd Reason**\
+Our app's Translation Feature trying to find a translation by your main system language.\
+So, for example, if you have English as your main system language and Russian as your second system language, the app will stay in English.
+
+![](https://user-images.githubusercontent.com/70456337/213920960-ac0b45c4-0b65-41b1-ae47-4aead29ea675.png)
+
+In order to have the app in Russian, you should reorder your language settings and set Russian as the main one.
+
+![](https://user-images.githubusercontent.com/70456337/213920967-62c1ac3e-7f23-40d7-9dee-ac23b827af79.png)
 
 ---
 ## That's Where The List Of Troubleshootings Ends
