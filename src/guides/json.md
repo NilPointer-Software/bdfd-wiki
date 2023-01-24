@@ -1,5 +1,5 @@
 # JSON Functions
-Before starting reading this guide, first of all you already should know what JSON is and where and how it's being used.\
+Before you proceed to read this guide, first of all you already should know what JSON is and where and how it's being used.\
 Please learn what's JSON on [W3Schools](https://www.w3schools.com/whatis/whatis_json.asp).
 
 > This guide will contain the usage of the [Character Escaping](./characterEscaping.md) and the [`$optOff`](../bdscript/optOff.md) function in some cases.
@@ -14,13 +14,13 @@ $jsonParse[JSON string]
 ```
 
 ### Parameters
-- `JSON string` `(Type: String || Flag: Required)` - The JSON string which should be parsed.
+- `JSON string` `(Type: String || Flag: Required)` : The JSON string which should be parsed.
 
 ### Examples
 See examples in the further of the current guide.
 
 ## $json
-`$json` is the function which retrievers JSON values from a specified key after the JSON string being parsed.
+`$json` is the function which retrieves JSON values from a specified key after the JSON string being parsed.
 
 ### Syntax
 ```
@@ -28,7 +28,7 @@ $json[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` - The JSON key which should be retrieved.
+- `Key` `(Type: String || Flag: Required)` : The JSON key which should be retrieved.
 
 ### Examples
 
@@ -36,6 +36,7 @@ $json[Key;...]
 
 #### Without Arrays
 ```
+$nomention
 $jsonParse[{
     "username": "NightNutSky",
     "tag": "6700",
@@ -53,6 +54,7 @@ Name: $json[identity;age] years old
 
 #### With Arrays
 ```
+$nomention
 $jsonParse[{
     "computer": [{
         "apps": {
@@ -82,11 +84,12 @@ $jsonSet[Key;...;Value]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` - The JSON key where the value should be set or replaced.
-- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)` - The value which should be set or replaced.
+- `Key` `(Type: String || Flag: Required)` : The JSON key where the value should be set or replaced.
+- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)` : The value which should be set or replaced.
 
 ### Example
 ```
+$nomention
 $jsonParse[{
     "username": "NightNutSky",
     "tag": "6700",
@@ -119,10 +122,11 @@ $jsonUnset[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` - The JSON key which should be unset.
+- `Key` `(Type: String || Flag: Required)` : The JSON key which should be unset.
 
 ### Example
 ```
+$nomention
 $jsonParse[{
     "username": "NightNutSky",
     "tag": "6700",
@@ -157,7 +161,7 @@ $jsonExists[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` - The JSON key which should be checked.
+- `Key` `(Type: String || Flag: Required)` : The JSON key which should be checked.
 
 ### Examples
 See examples in the further of the current guide.
@@ -171,10 +175,11 @@ $jsonArrayCount[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` - The JSON key where the elememts should be counted.
+- `Key` `(Type: String || Flag: Required)` : The JSON key where the elememts should be counted.
 
 ### Example
 ```
+$nomention
 $jsonParse[{
     "computer": [{
         "apps": {
@@ -203,11 +208,12 @@ $jsonArrayAppend[Key;...;Value]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` - The JSON key where the value should be appended.
-- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)` - The value which should be appended.
+- `Key` `(Type: String || Flag: Required)` : The JSON key where the value should be appended.
+- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)` : The value which should be appended.
 
 ### Example
 ```
+$nomention
 $jsonParse[{
     "computer": [{
         "apps": {
@@ -245,6 +251,7 @@ $jsonStringify
 
 ### Example
 ```
+$nomention
 $jsonParse[{
     "computer": [{
         "apps": {
@@ -274,10 +281,11 @@ $jsonPretty[Indent length]
 ```
 
 #### Parameters
-- `Indent length` `(Type: Integer || Flag: Required)` - The length of the indentation. Usually it's `2` or `4`.
+- `Indent length` `(Type: Integer || Flag: Required)` : The length of the indentation. Usually it's `2` or `4`.
 
 ### Example
 ```
+$nomention
 $disableInnerSpaceRemoval
 $jsonParse[{"computer":[{"apps":{"software":["BlueStacks","Krita","Visual Studio Code"\],"games":["GTA 5","RDR 2","CS:GO","Cyberpunk 2077"\]}},{"cpu":"Intel","gpu":"NVIDIA","ram":"XPG"}\]
 }]
@@ -298,10 +306,11 @@ $jsonArray[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` - The JSON key which should be marked as an array.
+- `Key` `(Type: String || Flag: Required)` : The JSON key which should be marked as an array.
 
 ### Example
 ```
+$nomention
 $jsonParse[{
     "games": ""
 }]
@@ -315,7 +324,7 @@ Array `games` key:
 $optOff[$jsonPretty[4]]
 ```
 
-![Discord_wN5u0d6III](https://user-images.githubusercontent.com/70456337/214134895-216af646-c494-4328-a43d-a93e6c13859d.png)
+![](https://user-images.githubusercontent.com/70456337/214134895-216af646-c494-4328-a43d-a93e6c13859d.png)
 
 ## $jsonClear
 `$jsonClear` clears current parsed JSON.
@@ -324,3 +333,21 @@ $optOff[$jsonPretty[4]]
 ```
 $jsonClear
 ```
+
+### Example
+```
+$nomention
+$jsonParse[{
+    "username": "NightNutSky",
+    "tag": "6700",
+    "identity": {
+        "age": 16
+    }
+}]
+
+Username: $json[username]
+$jsonClear
+Username: $optOff[$json[username]]
+```
+
+![](https://user-images.githubusercontent.com/70456337/214381794-e94ba5e7-b90e-4c0e-971b-ca6b350928ee.png)
