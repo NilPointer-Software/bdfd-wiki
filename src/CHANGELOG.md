@@ -26,6 +26,8 @@
 - Added `$categoryChannels[]`
 - Fixed `$allowUserMentions[]` not working on slash commands
 - Fixed `$addTextInput[]` not working with empty values
+- Added `$jsonSetString[]`
+- Added `$jsonArrayIndex[]`
 
 # 2022
 
