@@ -14,7 +14,7 @@ $jsonParse[JSON string]
 ```
 
 ### Parameters
-- `JSON string` `(Type: String || Flag: Required)` : The JSON string which should be parsed.
+- `JSON string` `(Type: String || Flag: Required)`: The JSON string which should be parsed.
 
 ### Examples
 See examples in the further of the current guide.
@@ -28,7 +28,7 @@ $json[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` : The JSON key which should be retrieved.
+- `Key` `(Type: String || Flag: Required)`: The JSON key which should be retrieved.
 
 ### Examples
 
@@ -84,8 +84,8 @@ $jsonSet[Key;...;Value]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` : The JSON key where the value should be set or replaced.
-- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)` : The value which should be set or replaced.
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the value should be set or replaced.
+- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)`: The value which should be set or replaced.
 
 ### Example
 ```
@@ -122,7 +122,7 @@ $jsonUnset[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` : The JSON key which should be unset.
+- `Key` `(Type: String || Flag: Required)`: The JSON key which should be unset.
 
 ### Example
 ```
@@ -161,7 +161,7 @@ $jsonExists[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` : The JSON key which should be checked.
+- `Key` `(Type: String || Flag: Required)`: The JSON key which should be checked.
 
 ### Examples
 See examples in the further of the current guide.
@@ -175,7 +175,7 @@ $jsonArrayCount[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` : The JSON key where the elememts should be counted.
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the elememts should be counted.
 
 ### Example
 ```
@@ -208,7 +208,7 @@ $jsonArrayAppend[Key;...;Value]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` : The JSON key where the value should be appended.
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the value should be appended.
 - `Value` `(Type: Integer, Bool, Float, String || Flag: Required)` : The value which should be appended.
 
 ### Example
@@ -281,7 +281,7 @@ $jsonPretty[Indent length]
 ```
 
 #### Parameters
-- `Indent length` `(Type: Integer || Flag: Required)` : The length of the indentation. Usually it's `2` or `4`.
+- `Indent length` `(Type: Integer || Flag: Required)`: The length of the indentation. Usually it's `2` or `4`.
 
 ### Example
 ```
@@ -306,7 +306,7 @@ $jsonArray[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)` : The JSON key which should be marked as an array.
+- `Key` `(Type: String || Flag: Required)`: The JSON key which should be marked as an array.
 
 ### Example
 ```
