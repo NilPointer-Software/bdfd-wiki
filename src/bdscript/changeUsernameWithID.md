@@ -13,9 +13,9 @@ $changeUsernameWithID[user ID;new nickname]
 $nomention
 $argsCheck[>1;Please provide text!]
 $addCmdReactions[✅]
-$changeUsernameWithID[$mentioned[1];$noMentionMessage]
+$changeUsernameWithID[$findUser[$message[1]];$message[2]]
 ```
 
-![example](https://user-images.githubusercontent.com/113303649/212071851-992a7c9a-e817-4fdc-9f45-a62b7fa11bee.png)
+![example](https://user-images.githubusercontent.com/113303649/212552342-49a8cd00-cf8c-40c7-abc6-08805d9fc9af.png)
 
-
+> [How `$findUser[]` works?](./findUser.md)
