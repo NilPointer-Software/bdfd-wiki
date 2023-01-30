@@ -82,7 +82,7 @@ You have provided a number: $message
 # $awaitedCommandError
 _Triggered when an awaited command doesn't match with provided filter._
 
-`$awaitedCommandError[]` is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command doesn't match with provided filter.
+`$awaitedCommandError[]` is a callback, which means it's used in the command trigger (not the code). The command is only run when an awaited command doesn't match with provided filter.
 
 ## Syntax
 ```
