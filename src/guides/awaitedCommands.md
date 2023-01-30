@@ -100,7 +100,7 @@ Invalid number!
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212291974-4efa0531-d896-4aa3-ac1a-b8fa7d6794d0.png)
 
-# Create Await
+# Creating an awaited command
 ## Without filter
 1. Create two commands with `!say` and `$awaitedCommand[say;]` triggers.
 2. Paste the following code: Code for the command with the `!say` trigger:
