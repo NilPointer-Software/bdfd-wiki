@@ -134,7 +134,7 @@ Is '19' an odd number?
 $awaitFunc[odd]
 ```
 
-Code for the command with the `$awaitedCommand[say;]` trigger:
+Code for the command with the `$awaitedCommand[odd;<yes/no/cancel>]` trigger:
 ```
 $nomention
 $if[$message==yes]
