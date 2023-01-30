@@ -150,8 +150,11 @@ $endif
 
 ![example](https://user-images.githubusercontent.com/113303649/212088333-54a94584-f854-45cf-8b7e-6980aa370764.png)
 ## With numeric filter
+
 1. Create two commands with `!number` and `$awaitedCommand[number;<numeric>]` triggers.
-2. Paste the following code: Code for the command with the `!number` trigger:
+2. Paste the following code:
+
+Code for the `!number` command:
 ```
 $nomention
 Provide a number!
