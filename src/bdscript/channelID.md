@@ -1,5 +1,5 @@
 # $channelID
-Gets the ID of the current channel.
+Returns the ID of the current channel.
 
 ## Syntax
 ```
