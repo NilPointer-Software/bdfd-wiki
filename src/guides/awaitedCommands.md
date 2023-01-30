@@ -102,8 +102,11 @@ Invalid number!
 
 # Creating an awaited command
 ## Without filter
+
 1. Create two commands with `!say` and `$awaitedCommand[say;]` triggers.
-2. Paste the following code: Code for the command with the `!say` trigger:
+2. Paste the following code:
+
+Code for the `!say` command:
 ```
 $nomention
 What do you want me to say?
