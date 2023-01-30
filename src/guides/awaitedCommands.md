@@ -133,6 +133,7 @@ $nomention
 Is '19' an odd number?
 $awaitFunc[odd]
 ```
+
 Code for the command with the `$awaitedCommand[say;]` trigger:
 ```
 $nomention
