@@ -5,7 +5,7 @@ Returns the name for the provided channel ID.
 $channelName[channel ID]
 ```
 ### Parameters
-- `channel ID` `(Type: Snowflake || Flag: Required)`: The id of the channel whose name is to be returned.
+- `channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel whose name will be returned.
 > [How to get a channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 ## Example
 ```
