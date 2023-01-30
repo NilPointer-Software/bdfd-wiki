@@ -1,5 +1,6 @@
 # $channelPosition
-Returns the position of the current channel in the server where the command was triggered.
+Returns the position of the current channel.
+
 ## Syntax
 ```
 $channelPosition
