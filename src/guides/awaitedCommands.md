@@ -9,6 +9,7 @@ Awaited commands are a special type of command where the bot waits for the user'
 - [`$awaitFunc[]`](../bdscript/awaitFunc.md)
 - [`$awaitedCommand[]`](../callbacks/awaitedCommand.md)
 - [`$awaitedCommandError[]`](../callbacks/awaitedCommandError.md)
+
 ## Supported Filters
 - `<numeric>`: Accepts only number input.
 - `<word1/word2/...>`: Accepts only specified words provided inside `<>`. Use `/` as a separator for multiple words.
