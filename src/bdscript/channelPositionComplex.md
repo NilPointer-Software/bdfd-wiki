@@ -5,8 +5,9 @@ Returns the position of a given channel using its ID.
 ```
 $channelPosition[channel ID]
 ```
+
 ### Parameters
-- `channel ID` `(Type: Snowflake || Flag: Required)`: The ID of a specific channel to get it's position.
+- `channel ID` `(Type: Snowflake || Flag: Required)`: The ID of a channel whose position will be returned.
 > [How to get a channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 ## Example
 ```
