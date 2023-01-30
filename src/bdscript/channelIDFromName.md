@@ -1,6 +1,6 @@
 # $channelDFromName
 Returns a channel's ID from it's name.
-> **This function is deprecated. Use [`$channelID[]`](../channelIDComplex.md) instead.**
+> **This function is deprecated. Use [`$channelID[]`](./bdscript/channelIDComplex.md) instead.**
 ## Syntax
 ```
 $channelIDFromName[channel name]
