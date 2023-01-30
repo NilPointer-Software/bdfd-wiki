@@ -45,9 +45,11 @@ _Triggered when an awaited command gets responded to._
 ```
 $awaitedCommand[name;(filter)]
 ```
+
 ### Parameters
 - `name`: The name used in [`$awaitFunc[]`](#awaitfunc) function.
-- `filter`: It is used to limit user input. [Supported Filters](#supported-filters)
+- `filter`: Used to limit user input. [Supported Filters](#supported-filters)
+
 ## Example
 ### Without filter
 **Trigger: `$awaitedCommand[say;]`**
