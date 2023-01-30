@@ -118,6 +118,7 @@ Code for the command with the `$awaitedCommand[say;]` trigger:
 $nomention
 $message
 ```
+
 3. Execute command `!say`
 
 ![example](https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png)
