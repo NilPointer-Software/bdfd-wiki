@@ -1,5 +1,6 @@
 # $channelPosition[]
-Returns the position of a specified channel in the server using it's ID.
+Returns the position of a given channel using its ID.
+
 ## Syntax
 ```
 $channelPosition[channel ID]
