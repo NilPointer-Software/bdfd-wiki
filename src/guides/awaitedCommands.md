@@ -160,6 +160,7 @@ $nomention
 Provide a number!
 $awaitFunc[number]
 ```
+
 Code for the command with the `$awaitedCommand[number;<numeric>]` trigger:
 ```
 $nomention
