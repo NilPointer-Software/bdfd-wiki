@@ -123,8 +123,11 @@ $message
 
 ![example](https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png)
 ## With choose filter
+
 1. Create two commands with `!odd` and `$awaitedCommand[odd;<yes/no/cancel>]` triggers.
-2. Paste the following code: Code for the command with the `!odd` trigger:
+2. Paste the following code:
+
+Code for the `!odd` command:
 ```
 $nomention
 Is '19' an odd number?
