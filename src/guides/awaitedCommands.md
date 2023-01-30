@@ -16,6 +16,7 @@ Awaited commands are a special type of command where the bot waits for the user'
 
 # $awaitFunc
 Used to initiate an awaited command.
+
 ## Syntax
 ```
 $awaitFunc[name;(user ID;channel ID)]
