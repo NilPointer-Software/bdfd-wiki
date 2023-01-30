@@ -1,5 +1,5 @@
 # $channelName
-Returns a name of the provided channel ID.
+Returns the name for the provided channel ID.
 ## Syntax
 ```
 $channelName[channel ID]
