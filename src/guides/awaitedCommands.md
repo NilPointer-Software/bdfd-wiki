@@ -35,8 +35,9 @@ $awaitFunc[say]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png)
 
+
 # $awaitedCommand
-_Triggered when an awaited command gets initiated._
+_Triggered when an awaited command gets responded to._
 
 `$awaitedCommand[]` is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command gets initiated.
 ## Syntax
