@@ -112,6 +112,7 @@ $nomention
 What do you want me to say?
 $awaitFunc[say]
 ```
+
 Code for the command with the `$awaitedCommand[say;]` trigger:
 ```
 $nomention
