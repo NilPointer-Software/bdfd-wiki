@@ -153,7 +153,7 @@ Age: $json[identity;age] years old]
 ## $jsonExists
 `$jsonExists` checks if the specified JSON key exists in the parsed JSON.
 
-> Returns an empty string if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+> Returns an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
 ### Syntax
 ```
@@ -273,7 +273,7 @@ $jsonStringify
 ## $jsonPretty
 `$jsonPretty` turns parsed JSON into a pretty string value and then returns it.
 
-> The `$jsonPretty` function will return an empty string if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+> The `$jsonPretty` function will return an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
 ### Syntax
 ```
@@ -351,3 +351,100 @@ Username: $optOff[$json[username]]
 ```
 
 ![](https://user-images.githubusercontent.com/70456337/214381794-e94ba5e7-b90e-4c0e-971b-ca6b350928ee.png)
+
+## $jsonArrayIndex
+`$jsonArrayIndex` gets array index of a given value.
+
+> The `$jsonArrayIndex` function will return `-1` if value not found and will return an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+
+### Syntax
+```
+$jsonArrayIndex[Key;...;Value]
+```
+
+#### Parameters
+- `Key` `(Type: String || Flag: Required)`: The JSON key in which the index of the value should be found.
+- `Value` `(Type: String, Integer, Float || Flag: Required)`: The value of which an index should be found.
+
+### Example
+```
+$nomention
+$jsonParse[{
+    "computer": [{
+        "apps": {
+            "software": ["BlueStacks", "Krita", "Visual Studio Code"\],
+            "games": ["GTA 5", "RDR 2", "CS:GO", "Cyberpunk 2077"\]
+        }
+    },{
+        "cpu": "Intel",
+        "gpu": "NVIDIA",
+        "ram": "XPG"
+    }\]
+}]
+
+The $message's index in `apps/software` is $jsonArrayIndex[computer;0;apps;software;$message].
+```
+
+![](https://user-images.githubusercontent.com/70456337/216845225-6830bc2b-616c-4fc6-932e-ed38be86cd4b.png)
+
+## $jsonSetString
+The `$jsonSetString` function sets a JSON value at a specific key. Always sets this key to a string value.
+
+### Syntax
+```
+$jsonSetString[Key;...;Value]
+```
+
+#### Parameters
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the value should be set.
+- `Value` `(Type: String || Flag: Required)`: The value which should be set.
+
+### Example
+
+> This function is recommended to be used mostly in economic related commands. Why, the further example will explain it.
+
+- `$jsonSet`
+    ```
+    $nomention
+    $jsonParse[{}]
+
+    $jsonSet[balance;$message]
+
+    Balance key was set to: $json[balance]
+    ```
+    ![](https://user-images.githubusercontent.com/70456337/216845249-1ff900bd-ff1f-466d-bd60-b616aa90e334.png)
+- `$jsonSetString`
+    ```
+    $nomention
+    $jsonParse[{}]
+
+    $jsonSet[balance;$message]
+
+    Balance key was set to: $json[balance]
+    ```
+    ![Discord_QaUn8sArHA](https://user-images.githubusercontent.com/70456337/216845276-62748993-567a-4022-bf59-69a77a37bc32.png)
+
+Also, if we set this value manually as a number, we'll encounter issues.
+```
+$nomention
+$jsonParse[{
+    "balance": 788895455566645444567
+}]
+
+Balance key: $json[balance]
+```
+
+![](https://user-images.githubusercontent.com/70456337/216845297-44217351-0485-4249-a19d-edabbe9b71fb.png)
+
+```
+$nomention
+$jsonParse[{
+    "balance": "788895455566645444567"
+}]
+
+Balance key: $json[balance]
+```
+
+![](https://user-images.githubusercontent.com/70456337/216845304-07a48e0c-65e7-4229-90a8-f705201dfdd5.png)
+
+> Therefore, we should set such big numbers as strings.
