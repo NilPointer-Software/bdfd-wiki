@@ -47,10 +47,10 @@ $jsonParse[{
 
 Username: $json[username]
 Tag: $json[tag]
-Name: $json[identity;age] years old
+Age: $json[identity;age] years old
 ```
 
-![](https://user-images.githubusercontent.com/70456337/213921222-ee1f7205-a85b-4f64-8fea-341d25f49bf3.png)
+![](https://user-images.githubusercontent.com/70456337/217574893-2f962a57-f56c-49cd-8009-4dbeecbf7822.png)
 
 #### With Arrays
 ```
