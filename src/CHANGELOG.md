@@ -2,6 +2,9 @@
 
 # 2023
 
+## February
+- Fixed caching issues for leaderboards
+
 ## January
 - Added `$jsonParse[]`
 - Added `$jsonClear`
