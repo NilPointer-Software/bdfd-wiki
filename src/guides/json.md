@@ -1,6 +1,6 @@
 # JSON Functions
 Before you proceed to read this guide, first of all you already should know what JSON is and where and how it's being used.\
-Please learn what's JSON on [W3Schools](https://www.w3schools.com/whatis/whatis_json.asp).
+Please read a tutorial about JSON on [W3Schools](https://www.w3schools.com/js/js_json_intro.asp).
 
 > This guide will contain the usage of the [Character Escaping](./characterEscaping.md) and the [`$optOff`](../bdscript/optOff.md) function in some cases.
 
