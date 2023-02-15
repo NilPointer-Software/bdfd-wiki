@@ -14,7 +14,7 @@ $jsonParse[JSON string]
 ```
 
 ### Parameters
-- `JSON string` `(Type: String || Flag: Required)`: The JSON string which should be parsed.
+- `JSON string` `(Type: String || Flag: Required)`: The JSON string to parse into an object.
 
 ### Examples
 See examples in the further of the current guide.
