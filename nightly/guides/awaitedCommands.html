@@ -166,71 +166,149 @@
                         </nav>
                         <h1 id="awaited-commands"><a class="header" href="#awaited-commands">Awaited Commands</a></h1>
 <p>Awaited commands are a special type of command where the bot waits for the user's response.</p>
-<p><img src="https://i.imgur.com/rRRcIXA.jpg" alt="end result" /> </p>
-<blockquote>
-<p>In the above screenshot, the bot asks the user to provide a number and then checks, if provided value is a number.</p>
-</blockquote>
-<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
-<p>To create an awaited command, following function and callbacks are used -</p>
-<h3 id="awaitfunc"><a class="header" href="#awaitfunc">$awaitFunc[]</a></h3>
-<p><code>$awaitFunc</code> is a function. It's used to initiate an awaited command.</p>
-<h4 id="usage"><a class="header" href="#usage">Usage</a></h4>
-<pre><code>$awaitFunc[command name;(user ID;channel ID)]
-</code></pre>
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#supported-filters"><strong>Supported Filters</strong></a> &gt; <a href="#awaitfunc"><strong>$awaitFunc[]</strong></a> &gt; <a href="#awaitedcommand"><strong>$awaitedCommand[]</strong></a> &gt; <a href="#awaitedcommanderror"><strong>$awaitedCommandError[]</strong></a> &gt; <a href="#creating-an-awaited-command"><strong>Creating an awaited command</strong></a></p>
+<h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
-<li><code>command name</code> - The name which is used inside <a href="#awaitedcommand"><code>$awaitedCommand</code></a> and <a href="#awaitedcommanderror"><code>$awaitedCommandError</code></a> callback.</li>
-<li><code>user ID</code> - The user the awaited command will trigger for. Uses command author, if <code>user ID</code> is not given.</li>
-<li><code>channel ID</code> - The channel id where the command should be awaited. Uses current channel, if <code>channel ID</code> is not given.</li>
+<li><a href="../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a></li>
+<li><a href="../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a></li>
+<li><a href="../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a></li>
 </ul>
-<h3 id="awaitedcommand"><a class="header" href="#awaitedcommand">$awaitedCommand[]</a></h3>
-<p><code>$awaitedCommand</code> is a callback. It gets triggered when an awaited command gets initiated.</p>
-<h4 id="usage-1"><a class="header" href="#usage-1">Usage</a></h4>
+<h2 id="supported-filters"><a class="header" href="#supported-filters">Supported Filters</a></h2>
+<ul>
+<li><code>&lt;numeric&gt;</code>: Accepts only number input.</li>
+<li><code>&lt;word1/word2/...&gt;</code>: Accepts only specified words provided inside <code>&lt;&gt;</code>. Use <code>/</code> as a separator for multiple words.</li>
+</ul>
+<h1 id="awaitfunc"><a class="header" href="#awaitfunc">$awaitFunc</a></h1>
+<p>Used to initiate an awaited command.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$awaitFunc[name;(user ID;channel ID)]
+</code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>command name</code> <code>(Type: String || Flag: Required)</code>: The name used inside <a href="#awaitedcommand"><code>$awaitedCommand[]</code></a> and <a href="#awaitedcommanderror"><code>$awaitedCommandError[]</code></a> callbacks.</li>
+<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user the awaited command will trigger for. Uses command author, if <code>user ID</code> is not given.</li>
+<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel where the command will be awaited. Uses current channel, if <code>channel ID</code> is not given.</li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+What do you want me to say?
+$awaitFunc[say]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png" alt="example" /></p>
+<h1 id="awaitedcommand"><a class="header" href="#awaitedcommand">$awaitedCommand</a></h1>
+<p><em>Triggered when an awaited command gets responded to.</em></p>
+<p><code>$awaitedCommand[]</code> is a callback, which means it's used in the command trigger (not the code). The command is only run when an awaited command gets responded to.</p>
+<h2 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h2>
 <pre><code>$awaitedCommand[name;(filter)]
 </code></pre>
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
 <ul>
-<li><code>name</code> - The name which is used in <a href="#awaitfunc"><code>$awaitFunc</code></a> function.</li>
-<li><code>filter</code> - It is used to limit user input. Supported filters are 
-<ul>
-<li><code>&lt;numeric&gt;</code> - Accepts only number input.</li>
-<li><code>&lt;word1/word2&gt;</code> - Accepts only those specified words provided inside <code>&lt;&gt;</code>. Use <code>/</code> as separator for multiple words.</li>
-<li><code>empty</code> - Accepts any input from the user. To use this filter, keep <code>filter</code> argument empty.</li>
+<li><code>name</code>: The name used in <a href="#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
+<li><code>filter</code>: Used to limit user input. <a href="#supported-filters">Supported Filters</a></li>
 </ul>
-</li>
-</ul>
-<h3 id="awaitedcommanderror"><a class="header" href="#awaitedcommanderror">$awaitedCommandError[]</a></h3>
-<p><code>$awaitedCommandError[]</code> is a callback. It gets triggered when an awaited command doesn't match with provided filter.</p>
-<h4 id="usage-2"><a class="header" href="#usage-2">Usage</a></h4>
+<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
+<h3 id="without-filter"><a class="header" href="#without-filter">Without filter</a></h3>
+<p><strong>Trigger: <code>$awaitedCommand[say;]</code></strong></p>
+<pre><code>$nomention
+$message
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/212084980-10ab6f01-5595-454f-bfe6-a23f8fd64c1e.png" alt="example" /></p>
+<h3 id="with-choose-filter"><a class="header" href="#with-choose-filter">With choose filter</a></h3>
+<p><strong>Trigger: <code>$awaitedCommand[odd;&lt;yes/no/cancel&gt;]</code></strong></p>
+<pre><code>$nomention
+$if[$message==yes]
+   Your answer is correct!
+$elseif[$message==no]
+   Your answer is incorrect!
+$elseif[$message==cancel]
+   Command cancelled!
+$endif
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/212088333-54a94584-f854-45cf-8b7e-6980aa370764.png" alt="example" /></p>
+<h3 id="with-numeric-filter"><a class="header" href="#with-numeric-filter">With numeric filter</a></h3>
+<p><strong>Trigger: <code>$awaitedCommand[odd;&lt;numeric&gt;]</code></strong></p>
+<pre><code>$nomention
+You have provided a number: $message
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png" alt="example" /></p>
+<h1 id="awaitedcommanderror"><a class="header" href="#awaitedcommanderror">$awaitedCommandError</a></h1>
+<p><em>Triggered when an awaited command doesn't match with provided filter.</em></p>
+<p><code>$awaitedCommandError[]</code> is a callback, which means it's used in the command trigger (not the code). The command is only run when an awaited command doesn't match with provided filter.</p>
+<h2 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h2>
 <pre><code>$awaitedCommandError[name]
 </code></pre>
+<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
 <ul>
-<li><code>name</code> - The name which is used in <a href="#awaitfunc"><code>$awaitFunc</code></a> function.</li>
+<li><code>name</code>: The name used in <a href="#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
 </ul>
-<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<ul>
-<li>
-<p>Empty Filter</p>
-<p><img src="https://user-images.githubusercontent.com/95774950/184388068-2d182254-79ed-45b0-962a-1dd68dc7684a.png" alt="Screenshot_20220812_204604" />
-<img src="https://user-images.githubusercontent.com/95774950/184388050-b9b7bdd8-1ee5-4ea4-919b-ed6dbc4849bd.png" alt="Screenshot_20220812_204552" />
-<img src="https://user-images.githubusercontent.com/95774950/184388088-c6ce5d6b-cbfe-4374-889c-cb2d57cbf6c5.png" alt="Screenshot_20220812_205309" /></p>
-</li>
-<li>
-<p>Choice Filter</p>
-<p><img src="https://user-images.githubusercontent.com/95774950/184464158-083019b0-821a-4683-a969-02293b44f86a.png" alt="Screenshot_20220813_072224" />
-<img src="https://user-images.githubusercontent.com/95774950/184464161-62689486-928a-4aa1-900f-8ea295fc9437.png" alt="Screenshot_20220813_072236" />
-<img src="https://user-images.githubusercontent.com/95774950/184464163-50eac8f9-6194-4763-ac20-e18a2c97d47d.png" alt="Screenshot_20220813_072322" />
-<img src="https://user-images.githubusercontent.com/95774950/184464150-79857481-578f-4f4b-b725-126f35a88ad4.png" alt="Screenshot_20220813_072131" /></p>
-<blockquote>
-<p>⚠️ The above example requires <strong>BDScript 2</strong> since it contains <code>$elseif</code>.</p>
-</blockquote>
-</li>
-<li>
-<p>Numeric Filter</p>
-<p><img src="https://user-images.githubusercontent.com/95774950/184392300-5fe57ba0-1d6e-4488-af7f-82aa4a82d64f.png" alt="Screenshot_20220812_211213" />
-<img src="https://user-images.githubusercontent.com/95774950/184392283-62ca15a3-0825-448e-bede-e8b1114af18e.png" alt="Screenshot_20220812_211252" />
-<img src="https://user-images.githubusercontent.com/95774950/184392271-57fd1dd6-2ff7-47de-968e-846f2dd3b7ef.png" alt="Screenshot_20220812_211311" />
-<img src="https://user-images.githubusercontent.com/95774950/184392254-323d07ef-7e17-4ef0-aced-852b7c3870ec.png" alt="Screenshot_20220812_211155" /></p>
-</li>
-</ul>
+<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<p><strong>Trigger: <code>$awaitedCommandError[number]</code></strong></p>
+<pre><code>$nomention
+Invalid number!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/212291974-4efa0531-d896-4aa3-ac1a-b8fa7d6794d0.png" alt="example" /></p>
+<h1 id="creating-an-awaited-command"><a class="header" href="#creating-an-awaited-command">Creating an awaited command</a></h1>
+<h2 id="without-filter-1"><a class="header" href="#without-filter-1">Without filter</a></h2>
+<ol>
+<li>Create two commands with <code>!say</code> and <code>$awaitedCommand[say;]</code> triggers.</li>
+<li>Paste the following code:</li>
+</ol>
+<p>Code for the <code>!say</code> command:</p>
+<pre><code>$nomention
+What do you want me to say?
+$awaitFunc[say]
+</code></pre>
+<p>Code for the command with the <code>$awaitedCommand[say;]</code> trigger:</p>
+<pre><code>$nomention
+$message
+</code></pre>
+<ol start="3">
+<li>Execute command <code>!say</code></li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png" alt="example" /></p>
+<h2 id="with-choose-filter-1"><a class="header" href="#with-choose-filter-1">With choose filter</a></h2>
+<ol>
+<li>Create two commands with <code>!odd</code> and <code>$awaitedCommand[odd;&lt;yes/no/cancel&gt;]</code> triggers.</li>
+<li>Paste the following code:</li>
+</ol>
+<p>Code for the <code>!odd</code> command:</p>
+<pre><code>$nomention
+Is '19' an odd number?
+$awaitFunc[odd]
+</code></pre>
+<p>Code for the command with the <code>$awaitedCommand[odd;&lt;yes/no/cancel&gt;]</code> trigger:</p>
+<pre><code>$nomention
+$if[$message==yes]
+   Your answer is correct!
+$elseif[$message==no]
+   Your answer is incorrect!
+$elseif[$message==cancel]
+   Command cancelled!
+$endif
+</code></pre>
+<ol start="3">
+<li>Execute command <code>!odd</code></li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/113303649/212088333-54a94584-f854-45cf-8b7e-6980aa370764.png" alt="example" /></p>
+<h2 id="with-numeric-filter-1"><a class="header" href="#with-numeric-filter-1">With numeric filter</a></h2>
+<ol>
+<li>Create two commands with <code>!number</code> and <code>$awaitedCommand[number;&lt;numeric&gt;]</code> triggers.</li>
+<li>Paste the following code:</li>
+</ol>
+<p>Code for the <code>!number</code> command:</p>
+<pre><code>$nomention
+Provide a number!
+$awaitFunc[number]
+</code></pre>
+<p>Code for the command with the <code>$awaitedCommand[number;&lt;numeric&gt;]</code> trigger:</p>
+<pre><code>$nomention
+You have provided a number: $message
+</code></pre>
+<ol start="3">
+<li>Execute command <code>!number</code></li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png" alt="example" /></p>
 
                     </main>
 

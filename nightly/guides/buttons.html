@@ -167,8 +167,8 @@
                         <h1 id="buttons"><a class="header" href="#buttons">Buttons</a></h1>
 <p>In this section, you'll learn how to use the button component.</p>
 <h2 id="content"><a class="header" href="#content">Content</a></h2>
-<p><a href="#used"><strong>Used</strong></a> &gt; <a href="#button-style"><strong>Button Style</strong></a> &gt; <a href="#button-type"><strong>Button Type</strong></a> &gt; <a href="#addbutton"><strong>$addButton[]</strong></a> &gt; <a href="#editbutton"><strong>$editButton[]</strong></a> &gt; <a href="#removebuttons"><strong>$removeButtons</strong></a> &gt; <a href="#removebuttons-1"><strong>$removeButtons[]</strong></a> &gt; <a href="#removecomponent"><strong>$removeComponent[]</strong></a> &gt; <a href="#create-interaction"><strong>Create Interaction</strong></a></p>
-<h2 id="used"><a class="header" href="#used">Used</a></h2>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#button-style"><strong>Button Style</strong></a> &gt; <a href="#button-type"><strong>Button Type</strong></a> &gt; <a href="#addbutton"><strong>$addButton[]</strong></a> &gt; <a href="#editbutton"><strong>$editButton[]</strong></a> &gt; <a href="#removebuttons"><strong>$removeButtons</strong></a> &gt; <a href="#removebuttons-1"><strong>$removeButtons[]</strong></a> &gt; <a href="#removecomponent"><strong>$removeComponent[]</strong></a> &gt; <a href="#create-interaction"><strong>Create Interaction</strong></a></p>
+<h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
 <li><a href="../bdscript/addButton.html"><code>$addButton[]</code></a></li>
 <li><a href="../bdscript/editButton.html"><code>$editButton[]</code></a></li>
@@ -275,7 +275,7 @@ $username removed all buttons from this message
 $removeButtons
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/210621352-ae7334a6-a2de-4fbe-8749-7134f9a73af3.png" alt="example" /></p>
-<h1 id="removebuttons-1"><a class="header" href="#removebuttons-1">$removeButtons</a></h1>
+<h1 id="removebuttons-1"><a class="header" href="#removebuttons-1">$removeButtons[]</a></h1>
 <p>Removes all buttons from the specified message.</p>
 <h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
 <pre><code>$removeButtons[message ID]
@@ -330,7 +330,7 @@ $sendMessage[$username hello!]
 </code></pre>
 <blockquote>
 <p>Note that the interaction ID provided in <code>$onInteraction[]</code> is the same as the one provided in <code>$addButton[]</code></p>
-<p>In <code>$addButton[]</code>, <code>yes</code> is being used for the <code>new row</code> argument so that the button would appear in the next row.</p>
+<p>In <code>$addButton[]</code>, <code>yes</code> is being used for the <code>new row?</code> argument so that the button would appear in the next row.</p>
 </blockquote>
 <ol start="3">
 <li>Execute command <code>!example</code></li>
@@ -357,7 +357,7 @@ $endif
 </code></pre>
 <blockquote>
 <p>Note that the interaction ID returned by <code>$customID</code> will be the same as the one provided in <code>$addButton[]</code></p>
-<p>In <code>$addButton[]</code>, <code>yes</code> is being used for the <code>new row</code> argument so that the button would appear in the next row.</p>
+<p>In <code>$addButton[]</code>, <code>yes</code> is being used for the <code>new row?</code> argument so that the button would appear in the next row.</p>
 </blockquote>
 <ol start="3">
 <li>Execute command <code>!example</code></li>
