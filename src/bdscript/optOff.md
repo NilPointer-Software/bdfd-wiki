@@ -24,7 +24,7 @@ The 3rd random: $random[1;101]
 ```
 ![Example](https://user-images.githubusercontent.com/70456337/206849845-79dd7f5c-382f-43c6-a9b0-8918af260715.png)
 
-But what if we want to make only the 1st random different from others? In that case we shouldn't put all this code into `$optOff`, but only put a particular random into it - the 2st one:
+But what if we want to make only the 1st random different from others? In that case we shouldn't put all this code into `$optOff`, but only put a particular random into it - the 2nd one:
 ```
 The 1st random: $random[1;101]
 The 2nd random: $optOff[$random[1;101]]
