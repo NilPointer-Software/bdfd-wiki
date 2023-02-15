@@ -770,7 +770,8 @@ There's no translation support for your language yet. You should wait patiently 
 If you want to, go to our [support server](https://discord.gg/botdesigner) and create a ticket (using the `!new` command). You'll have to send your application for the Translator role there.
 
 **The 2nd Reason**\
-Our app's Translation Feature trying to find a translation by your main system language.\
+Your main system language is incorrect.\
+Our app uses the main system language for translations and it disregards any secondary languages.\
 So, for example, if you have English as your main system language and Russian as your second system language, the app will stay in English.
 
 ![](https://user-images.githubusercontent.com/70456337/213920960-ac0b45c4-0b65-41b1-ae47-4aead29ea675.png)
