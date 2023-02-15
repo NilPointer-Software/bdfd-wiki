@@ -17,7 +17,7 @@ $jsonParse[JSON string]
 - `JSON string` `(Type: String || Flag: Required)`: The JSON string to parse into an object.
 
 ### Examples
-See examples in the further of the current guide.
+See examples further down the guide.
 
 ## $json
 `$json` is the function which retrieves JSON values from a specified key after the JSON string being parsed.
