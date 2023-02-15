@@ -34,8 +34,6 @@ $json[Key;...]
 
 ### Examples
 
-> The `$json` function will return an empty string if the value is a null, or the key doesn't exist, or no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
-
 #### Without Arrays
 ```
 $nomention
