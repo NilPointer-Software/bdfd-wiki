@@ -152,7 +152,7 @@ Age: $json[identity;age] years old]
 ![](https://user-images.githubusercontent.com/70456337/213921355-924d2647-86ff-4fc8-ac76-8edff1f82b51.png)
 
 ## $jsonExists
-`$jsonExists` checks if the specified JSON key exists in the parsed JSON.
+`$jsonExists` checks if the specified JSON key exists in the current JSON object.
 
 > Returns an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
