@@ -47,8 +47,8 @@ $awaitedCommand[name;(filter)]
 ```
 
 ### Parameters
-- `name`: The name used in [`$awaitFunc[]`](#awaitfunc) function.
-- `filter`: Used to limit user input. [Supported Filters](#supported-filters)
+- `name` `(Type: String || Flag: Required)`: The name used in [`$awaitFunc[]`](#awaitfunc) function.
+- `filter` `(Type: String || Flag: Emptiable)`: Used to limit user input ([Supported filters](#supported-filters)). If no filter is provided, it accepts any input.
 
 ## Example
 ### Without filter
@@ -90,7 +90,7 @@ $awaitedCommandError[name]
 ```
 
 ### Parameters
-- `name`: The name used in [`$awaitFunc[]`](#awaitfunc) function.
+- `name` `(Type: String || Flag: Required)`: The name used in [`$awaitFunc[]`](#awaitfunc) function.
 
 ## Example
 **Trigger: `$awaitedCommandError[number]`**
