@@ -84,8 +84,8 @@ $jsonSet[Key;...;Value]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key where the value should be set or replaced.
-- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)`: The value which should be set or replaced.
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the value will be set or replaced.
+- `Value` `(Type: Integer, Bool, Float, String || Flag: Required)`: The value to set or replace with.
 
 ### Example
 ```
