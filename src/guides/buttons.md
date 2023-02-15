@@ -2,9 +2,9 @@
 In this section, you'll learn how to use the button component.
 
 ## Content
-[**Used**](#used) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent) > [**Create Interaction**](#create-interaction)
+[**Functions Used**](#functions-used) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent) > [**Create Interaction**](#create-interaction)
 
-## Used
+## Functions Used
 - [`$addButton[]`](../bdscript/addButton.md)
 - [`$editButton[]`](../bdscript/editButton.md)
 - [`$removeButtons`](../bdscript/removeButtons.md)
@@ -105,7 +105,7 @@ $removeButtons
 ```
 ![example](https://user-images.githubusercontent.com/113303649/210621352-ae7334a6-a2de-4fbe-8749-7134f9a73af3.png)
 
-# $removeButtons
+# $removeButtons[]
 Removes all buttons from the specified message.
 ## Syntax
 ```
@@ -162,7 +162,7 @@ $sendMessage[$username hello!]
 
 > Note that the interaction ID provided in `$onInteraction[]` is the same as the one provided in `$addButton[]`
 > 
-> In `$addButton[]`, `yes` is being used for the `new row` argument so that the button would appear in the next row.
+> In `$addButton[]`, `yes` is being used for the `new row?` argument so that the button would appear in the next row.
 3. Execute command `!example`
 
 ![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
@@ -188,7 +188,7 @@ $endif
 ```
 > Note that the interaction ID returned by `$customID` will be the same as the one provided in `$addButton[]`
 > 
-> In `$addButton[]`, `yes` is being used for the `new row` argument so that the button would appear in the next row.
+> In `$addButton[]`, `yes` is being used for the `new row?` argument so that the button would appear in the next row.
 > 
 3. Execute command `!example`
 
