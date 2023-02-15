@@ -114,7 +114,8 @@ Age: $json[identity;age] years old]
 ![](https://user-images.githubusercontent.com/70456337/214134724-9ea1a4fb-177e-473f-a5ca-a326829a135d.png)
 
 ## $jsonUnset
-The opposite of the [`$jsonSet`](#jsonset) function.
+`$jsonUnset` removes the value at the specified JSON key.\
+In short, the opposite of the [`$jsonSet`](#jsonset) function.
 
 ### Syntax
 ```
