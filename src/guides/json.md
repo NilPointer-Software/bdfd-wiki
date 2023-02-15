@@ -5,8 +5,8 @@ You can familiarize yourself with JSON by reading a tutorial on [W3Schools](http
 > This guide will utilize [Character Escaping](./characterEscaping.md) and the [`$optOff`](../bdscript/optOff.md) function.
 
 ## $jsonParse
-`$jsonParse` is the main function to start working with other JSON functions.\
-This function parses a JSON string into an object with which you can work further.
+`$jsonParse` is the primary function used when working with JSON data.\
+This function parses a JSON string into an object which can then be used by other JSON functions.
 
 ### Syntax
 ```
