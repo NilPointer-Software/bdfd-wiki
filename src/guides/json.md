@@ -20,7 +20,9 @@ $jsonParse[JSON string]
 See examples further down the guide.
 
 ## $json
-`$json` is the function which retrieves JSON values from a specified key after the JSON string being parsed.
+`$json` function retrieves JSON values from a specified key in the current JSON object.
+
+> The `$json` function will return an empty string if the value is null, the key doesn't exist, no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
 ### Syntax
 ```
