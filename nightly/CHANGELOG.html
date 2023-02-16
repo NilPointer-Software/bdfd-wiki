@@ -201,7 +201,7 @@
 <h1 id="2022"><a class="header" href="#2022">2022</a></h1>
 <h2 id="december"><a class="header" href="#december">December</a></h2>
 <ul>
-<li>Added limit on input numbers to 2^128 on the basic math functions</li>
+<li>Added limit on input numbers to 2<sup>128</sup> on the basic math functions</li>
 <li>Fixed BDScript 2 having problems with handling unicode characters</li>
 <li>Fixed <code>$stop</code> causing undefined behaviour</li>
 <li>Added <code>$getBanReason[]</code></li>
@@ -269,7 +269,7 @@
 <li>Fixed the app's max choices limit</li>
 <li>Fixed <code>$registerGuildCommands[]</code> removing previously registered commands</li>
 <li>Fixed <code>$reply</code> not working in DMs</li>
-<li>Made it possible to return milliseconds and nanoseconds in <code>$getTimestamp</code></li>
+<li>Made it possible to return milliseconds and nanoseconds in <code>$getTimestamp[]</code></li>
 <li>Fixed <code>$addTextInput[]</code> not verifying max length</li>
 <li>Fixed <code>$url[]</code> returning an error when no input was provided</li>
 <li>Added <code>$userServerAvatar[]</code></li>
@@ -304,7 +304,7 @@
 <li>Fixed escaping response in interactions</li>
 <li>Fixed cooldown error messages</li>
 <li>Fixed empty values in variables not getting saved</li>
-<li>Fixed userID being ignored when guildID was passed to <code>$getUserVar[]</code></li>
+<li>Fixed userID being ignored when guildID is passed to <code>$getUserVar[]</code></li>
 </ul>
 <h2 id="april"><a class="header" href="#april">April</a></h2>
 <ul>
@@ -313,7 +313,6 @@
 </ul>
 <h2 id="march"><a class="header" href="#march">March</a></h2>
 <ul>
-<li><strong>If you're getting Invalid permissions error on your invite link,  disable Stream and View guild insights permissions in the invite editor.</strong></li>
 <li>Added <code>$toTitleCase[]</code></li>
 <li>Fixed invite permission calculator</li>
 <li>Fixed <code>$suppressErrors[]</code> and <code>$embedSuppressErrors[]</code> getting ignored by components errors</li>
@@ -330,7 +329,7 @@
 <li>Optimized slash commands resynchronization</li>
 <li>Fixed custom images not working after saving a command</li>
 <li>Made it possible to escape <code>\</code> by using <code>\\</code></li>
-<li><strong>Removed user permission check for $ban[], $banID[], $unban[] and $unbanID[]</strong></li>
+<li>Removed user permission check for <code>$ban[]</code>, <code>$banID[]</code>, <code>$unban[]</code> and <code>$unbanID[]</code></li>
 <li>Added <code>$newModal[]</code></li>
 <li>Added <code>$addTextInput[]</code></li>
 <li>Added <code>$input[]</code></li>
@@ -413,7 +412,7 @@
 <li>Made it possible to use <code>https://youtu.be/</code> URL in the streaming statuses</li>
 <li>Added <code>$getTextSplitIndex[]</code></li>
 <li>Added <code>$serverChannelExists[]</code></li>
-<li>Fixed <code>$changeUsername[]</code> <code>$changeUsernameWithID[]</code> not working on the current bot</li>
+<li>Fixed <code>$changeUsername[]</code> and <code>$changeUsernameWithID[]</code> not working on the current bot</li>
 <li>Made <code>$ephemeral</code> work with the buttons</li>
 <li>Fixed global variables not getting saved</li>
 <li>Fixed <code>$deletecommand</code> not getting catched by <code>$try</code> block</li>
@@ -443,9 +442,9 @@
 <li>Added <code>$webhookUsername[]</code></li>
 <li>Added <code>$webhookAvatarURL[]</code></li>
 <li>Added <code>$webhookCreate[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$deleteChannelsByName[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$deleteChannels[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$createChannel[]</code></li>
+<li>Removed permission check from <code>$deleteChannelsByName[]</code></li>
+<li>Removed permission check from <code>$deleteChannels[]</code></li>
+<li>Removed permission check from <code>$createChannel[]</code></li>
 <li>Fixed the issue with bots not working in threads</li>
 <li>Added <code>$startThread[]</code></li>
 <li>Added <code>$webhookColor[]</code></li>
@@ -453,7 +452,7 @@
 <li>Fixed floating points in <code>$onlyIf[]</code> conditions</li>
 <li>Added <code>$webhookDelete[]</code></li>
 <li>Added <code>$webhookSend[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$modifyChannelPerms[]</code></li>
+<li>Removed permission check from <code>$modifyChannelPerms[]</code></li>
 <li>Made it possible to use multiple <code>$onInteraction[]</code>s</li>
 <li>Added <code>$onInteraction</code> callback (without <code>[]</code>)</li>
 <li>Added <code>$customID</code></li>
@@ -484,7 +483,7 @@
 <li>Added <code>$enableDecimals[]</code></li>
 <li>Added <code>$nickname</code></li>
 <li>Added row and column information in BDScript 2 errors</li>
-<li>Fixed the issue with BDScript 2 not requiring <code>]</code></li>
+<li>Fixed an issue with BDScript 2 not requiring <code>]</code></li>
 <li>Adjusted the optimizer in BDScript 2</li>
 <li>Added <code>$onlyForRoleIDs[]</code></li>
 <li>Added <code>$getCooldown[]</code></li>
@@ -506,12 +505,16 @@
 <ul>
 <li>Fixed <code>$sendMessage[]</code> not working in normal BDScript</li>
 <li>Fixed <code>$checkUserPerms[]</code></li>
-<li>Added <strong><a href="./guides/bdscript2.html">BDScript 2</a></strong></li>
-<li>Added <strong><a href="./guides/trycatch.html">$try, $catch and $error</a></strong></li>
-<li>Added <code>$eval[]</code> <strong>(can be only used in BDScript 2)</strong></li>
-<li>Added <code>$optOff[]</code> <strong>(can be only used in BDScript 2)</strong></li>
-<li>Added <code>$stop[]</code> <strong>(can be only used in BDScript 2)</strong></li>
-<li>Added <code>$var[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added BDScript 2 script language</li>
+<li>Added to BDScript 2
+<ul>
+<li><code>$try</code>, <code>$catch</code> and <code>$error</code></li>
+<li><code>$eval[]</code></li>
+<li><code>$optOff[]</code></li>
+<li><code>$stop[]</code></li>
+<li><code>$var[]</code></li>
+</ul>
+</li>
 <li>Added customizable code highlighting</li>
 <li>Fixed <code>$lowestRole</code> and <code>$highestRole</code></li>
 <li>Added <code>$isBoolean[]</code></li>
@@ -519,7 +522,7 @@
 <li>Added optional field <code>return type</code> to <code>$getLeaderboardValue[]</code></li>
 <li>Added <code>$deleteRole[]</code></li>
 <li>Added <code>$ephemeral</code></li>
-<li>Added <code>$elseif[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added <code>$elseif[]</code> to BDScript 2</li>
 <li>Fixed URL in buttons</li>
 <li>Fixed buttons in DMs</li>
 <li>Fixed problems with custom prefixes</li>
@@ -544,7 +547,7 @@
 <li>Added <code>$removeButtons</code> and <code>$removeButtons[]</code></li>
 <li>Added <code>$onInteraction[]</code> callback</li>
 <li>Fixed some issues with slash commands</li>
-<li>Added <code>$c[]</code> which can be used for commenting your code</li>
+<li>Added <code>$c[]</code></li>
 </ul>
 <h2 id="april-1"><a class="header" href="#april-1">April</a></h2>
 <ul>
@@ -569,9 +572,17 @@
 <li>Fixed caching for new members.</li>
 <li>Added <code>$slashCommandsCount</code></li>
 <li>Added <code>$botID</code></li>
-<li>Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis</li>
+<li>Added more permissions
+<ul>
+<li><code>AttachFiles</code></li>
+<li><code>TTS</code></li>
+<li><code>ManageWebhooks</code></li>
+<li><code>EmbedLinks</code></li>
+<li><code>ExternalEmojis</code></li>
+</ul>
+</li>
 <li>Added <code>$serverCooldown[]</code></li>
-<li>Fixed the issue with not expiring app bans</li>
+<li>Fixed an issue with not expiring app bans</li>
 <li>Fixed some issues with <code>[</code> and <code>]</code></li>
 <li>Fixed problems with slash commands and cooldowns</li>
 </ul>
@@ -589,12 +600,12 @@
 </ul>
 <h2 id="january-2"><a class="header" href="#january-2">January</a></h2>
 <ul>
-<li>Fixed the problem with statuses not showing up</li>
-<li>Fixed the issue with mentions not working</li>
+<li>Fixed a problem with statuses not showing up</li>
+<li>Fixed an issue with mentions not working</li>
 <li>Fixed loading bots from database</li>
 <li>Increased duration to 40 minutes for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn[]</code></li>
 <li>Added if statements (<code>$if[]</code>, <code>$else</code>, <code>$endif</code>)</li>
-<li>GuildID instead of <code>everyone</code> is now returned in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
+<li>GuildID is now returned instead of <code>everyone</code> in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
 <li>Space commands have been removed (you can still use <code>$alwaysReply</code>)</li>
 <li>Added <code>$channelTopic[]</code></li>
 <li>Fixed issues with streaming status</li>
@@ -606,12 +617,12 @@
 <h2 id="december-2"><a class="header" href="#december-2">December</a></h2>
 <ul>
 <li>Timezones in <code>$time[]</code> has been fixed</li>
-<li>Updated discord API version</li>
+<li>Updated Discord API version</li>
 <li>Added Competing presence</li>
 <li>Added <code>$botLeave[]</code></li>
 <li>Fix for <code>$getLeaderboardValue[]</code></li>
-<li>Added userID option to reset user var</li>
-<li>Added serverID option to <code>$serverOwner</code></li>
+<li>Added <code>userID</code> option to <code>$resetUserVar</code></li>
+<li>Added <code>serverID</code> option to <code>$serverOwner</code></li>
 <li>Added <code>$premiumExpireTime</code></li>
 </ul>
 <h2 id="november-2"><a class="header" href="#november-2">November</a></h2>
@@ -696,7 +707,7 @@
 <li>Disabled <code>$randomUserID</code>, <code>$'randomUserID</code>, <code>$deleteIn</code> and <code>$dm</code> in <code>$onMessageDelete</code></li>
 <li>Fixed <code>$addField[]</code></li>
 <li>Added error message in <code>$getServerVar[]</code> when provided variable does not exist</li>
-<li><code>$userID[]</code> does not stop code execution if user is not found</li>
+<li>Fixed <code>$userID[]</code> to not stop code execution, if user is not found</li>
 <li>Added <code>$botLeave</code></li>
 <li>Removed permission check from <code>$clear</code> command.</li>
 <li>Fixed <code>$isAdmin[]</code></li>
@@ -741,7 +752,7 @@
 <li>Added <code>$isHoisted[]</code></li>
 <li>Added <code>$serverIcon[]</code></li>
 <li>Fixed suppressing errors in some variable commands</li>
-<li>Fixed bug with <code>$replaceText[]()</code> inside <code>$description</code></li>
+<li>Fixed bug with <code>$replaceText[]</code> inside <code>$description</code></li>
 <li>Added <code>$isValidHex[]</code></li>
 <li>Added <code>$isAdmin[]</code></li>
 <li><code>$userID[]</code> does not require discriminator now</li>
@@ -750,7 +761,7 @@
 <li>Added <code>$modifyRolePerms[]</code></li>
 <li>Added <code>$isUserDMEnabled[]</code></li>
 <li>Added new option to <code>$mentioned[]</code></li>
-<li>When userID is not provided in <code>$discriminator[]</code>, the author's ID will be used</li>
+<li>When <code>userID</code> is not provided in <code>$discriminator[]</code>, the author's ID will be used</li>
 <li>Added <code>$argCount[]</code></li>
 <li>Added <code>$roleExists[]</code> and <code>$roleExists[]</code> </li>
 <li>Added <code>$varExistError[]</code></li>
@@ -778,15 +789,15 @@
 <li>Fixed problems with timezones</li>
 <li><code>@everyone</code> role shows up now when it's a highest/lowest role in <code>$highestRole/$lowestRole</code></li>
 <li><code>@everyone</code> role now works in <code>$rolePosition[]</code></li>
-<li>Multiline for <code>$replaceText[]</code></li>
+<li>Added multi-line support for <code>$replaceText[]</code></li>
 <li>Fixed no errors in <code>$roleID[]</code></li>
 <li>Added <code>$toUppercase[]</code> and <code>$toLowercase[]</code></li>
-<li>Added roleID and userID to <code>$modifyChannelPerms[]</code></li>
+<li>Added <code>roleID</code> and <code>userID</code> to <code>$modifyChannelPerms[]</code></li>
 <li>Added <code>$authorOfMessage[]</code></li>
 <li>Added <code>$userID[]</code></li>
 <li>Improved servers response time by over 10x</li>
 <li>Fixed issues with <code>$setServerVar[]</code> and <code>$setUserVar[]</code></li>
-<li>Added multiline support for <code>$textSplit[]</code></li>
+<li>Added multi-line support for <code>$textSplit[]</code></li>
 <li>Fixed brackets in <code>$username</code></li>
 </ul>
 <h1 id="2019"><a class="header" href="#2019">2019</a></h1>
@@ -794,7 +805,7 @@
 <ul>
 <li>Fixed high ping issues</li>
 <li>Fixed whole bunch of other issues</li>
-<li>To JS added:
+<li>Added to JS:
 <ul>
 <li>authorId,</li>
 <li>channelId,</li>
@@ -813,8 +824,8 @@
 <li>createRole()</li>
 </ul>
 </li>
-<li>Created status website https://status.botdesignerdiscord.com</li>
-<li>Web version of <em>Bot Designer for Discord</em> has been moved to new address https://botdesignerdiscord.com</li>
+<li>Created status website <a href="https://status.botdesignerdiscord.com">https://status.botdesignerdiscord.com</a></li>
+<li>Web version of <em>Bot Designer for Discord</em> has been moved to new address <a href="https://botdesignerdiscord.com">https://botdesignerdiscord.com</a></li>
 <li>Fixed some issues in web version</li>
 <li>Fixed <code>$banID[]</code></li>
 <li>Preparations for premium points</li>

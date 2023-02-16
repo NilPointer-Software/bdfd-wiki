@@ -226,7 +226,7 @@
 <h1 id="2022"><a class="header" href="#2022">2022</a></h1>
 <h2 id="december"><a class="header" href="#december">December</a></h2>
 <ul>
-<li>Added limit on input numbers to 2^128 on the basic math functions</li>
+<li>Added limit on input numbers to 2<sup>128</sup> on the basic math functions</li>
 <li>Fixed BDScript 2 having problems with handling unicode characters</li>
 <li>Fixed <code>$stop</code> causing undefined behaviour</li>
 <li>Added <code>$getBanReason[]</code></li>
@@ -294,7 +294,7 @@
 <li>Fixed the app's max choices limit</li>
 <li>Fixed <code>$registerGuildCommands[]</code> removing previously registered commands</li>
 <li>Fixed <code>$reply</code> not working in DMs</li>
-<li>Made it possible to return milliseconds and nanoseconds in <code>$getTimestamp</code></li>
+<li>Made it possible to return milliseconds and nanoseconds in <code>$getTimestamp[]</code></li>
 <li>Fixed <code>$addTextInput[]</code> not verifying max length</li>
 <li>Fixed <code>$url[]</code> returning an error when no input was provided</li>
 <li>Added <code>$userServerAvatar[]</code></li>
@@ -329,7 +329,7 @@
 <li>Fixed escaping response in interactions</li>
 <li>Fixed cooldown error messages</li>
 <li>Fixed empty values in variables not getting saved</li>
-<li>Fixed userID being ignored when guildID was passed to <code>$getUserVar[]</code></li>
+<li>Fixed userID being ignored when guildID is passed to <code>$getUserVar[]</code></li>
 </ul>
 <h2 id="april"><a class="header" href="#april">April</a></h2>
 <ul>
@@ -338,7 +338,6 @@
 </ul>
 <h2 id="march"><a class="header" href="#march">March</a></h2>
 <ul>
-<li><strong>If you're getting Invalid permissions error on your invite link,  disable Stream and View guild insights permissions in the invite editor.</strong></li>
 <li>Added <code>$toTitleCase[]</code></li>
 <li>Fixed invite permission calculator</li>
 <li>Fixed <code>$suppressErrors[]</code> and <code>$embedSuppressErrors[]</code> getting ignored by components errors</li>
@@ -355,7 +354,7 @@
 <li>Optimized slash commands resynchronization</li>
 <li>Fixed custom images not working after saving a command</li>
 <li>Made it possible to escape <code>\</code> by using <code>\\</code></li>
-<li><strong>Removed user permission check for $ban[], $banID[], $unban[] and $unbanID[]</strong></li>
+<li>Removed user permission check for <code>$ban[]</code>, <code>$banID[]</code>, <code>$unban[]</code> and <code>$unbanID[]</code></li>
 <li>Added <code>$newModal[]</code></li>
 <li>Added <code>$addTextInput[]</code></li>
 <li>Added <code>$input[]</code></li>
@@ -438,7 +437,7 @@
 <li>Made it possible to use <code>https://youtu.be/</code> URL in the streaming statuses</li>
 <li>Added <code>$getTextSplitIndex[]</code></li>
 <li>Added <code>$serverChannelExists[]</code></li>
-<li>Fixed <code>$changeUsername[]</code> <code>$changeUsernameWithID[]</code> not working on the current bot</li>
+<li>Fixed <code>$changeUsername[]</code> and <code>$changeUsernameWithID[]</code> not working on the current bot</li>
 <li>Made <code>$ephemeral</code> work with the buttons</li>
 <li>Fixed global variables not getting saved</li>
 <li>Fixed <code>$deletecommand</code> not getting catched by <code>$try</code> block</li>
@@ -468,9 +467,9 @@
 <li>Added <code>$webhookUsername[]</code></li>
 <li>Added <code>$webhookAvatarURL[]</code></li>
 <li>Added <code>$webhookCreate[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$deleteChannelsByName[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$deleteChannels[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$createChannel[]</code></li>
+<li>Removed permission check from <code>$deleteChannelsByName[]</code></li>
+<li>Removed permission check from <code>$deleteChannels[]</code></li>
+<li>Removed permission check from <code>$createChannel[]</code></li>
 <li>Fixed the issue with bots not working in threads</li>
 <li>Added <code>$startThread[]</code></li>
 <li>Added <code>$webhookColor[]</code></li>
@@ -478,7 +477,7 @@
 <li>Fixed floating points in <code>$onlyIf[]</code> conditions</li>
 <li>Added <code>$webhookDelete[]</code></li>
 <li>Added <code>$webhookSend[]</code></li>
-<li><strong>Removed permission check from</strong> <code>$modifyChannelPerms[]</code></li>
+<li>Removed permission check from <code>$modifyChannelPerms[]</code></li>
 <li>Made it possible to use multiple <code>$onInteraction[]</code>s</li>
 <li>Added <code>$onInteraction</code> callback (without <code>[]</code>)</li>
 <li>Added <code>$customID</code></li>
@@ -509,7 +508,7 @@
 <li>Added <code>$enableDecimals[]</code></li>
 <li>Added <code>$nickname</code></li>
 <li>Added row and column information in BDScript 2 errors</li>
-<li>Fixed the issue with BDScript 2 not requiring <code>]</code></li>
+<li>Fixed an issue with BDScript 2 not requiring <code>]</code></li>
 <li>Adjusted the optimizer in BDScript 2</li>
 <li>Added <code>$onlyForRoleIDs[]</code></li>
 <li>Added <code>$getCooldown[]</code></li>
@@ -531,12 +530,16 @@
 <ul>
 <li>Fixed <code>$sendMessage[]</code> not working in normal BDScript</li>
 <li>Fixed <code>$checkUserPerms[]</code></li>
-<li>Added <strong><a href="./guides/bdscript2.html">BDScript 2</a></strong></li>
-<li>Added <strong><a href="./guides/trycatch.html">$try, $catch and $error</a></strong></li>
-<li>Added <code>$eval[]</code> <strong>(can be only used in BDScript 2)</strong></li>
-<li>Added <code>$optOff[]</code> <strong>(can be only used in BDScript 2)</strong></li>
-<li>Added <code>$stop[]</code> <strong>(can be only used in BDScript 2)</strong></li>
-<li>Added <code>$var[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added BDScript 2 script language</li>
+<li>Added to BDScript 2
+<ul>
+<li><code>$try</code>, <code>$catch</code> and <code>$error</code></li>
+<li><code>$eval[]</code></li>
+<li><code>$optOff[]</code></li>
+<li><code>$stop[]</code></li>
+<li><code>$var[]</code></li>
+</ul>
+</li>
 <li>Added customizable code highlighting</li>
 <li>Fixed <code>$lowestRole</code> and <code>$highestRole</code></li>
 <li>Added <code>$isBoolean[]</code></li>
@@ -544,7 +547,7 @@
 <li>Added optional field <code>return type</code> to <code>$getLeaderboardValue[]</code></li>
 <li>Added <code>$deleteRole[]</code></li>
 <li>Added <code>$ephemeral</code></li>
-<li>Added <code>$elseif[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added <code>$elseif[]</code> to BDScript 2</li>
 <li>Fixed URL in buttons</li>
 <li>Fixed buttons in DMs</li>
 <li>Fixed problems with custom prefixes</li>
@@ -569,7 +572,7 @@
 <li>Added <code>$removeButtons</code> and <code>$removeButtons[]</code></li>
 <li>Added <code>$onInteraction[]</code> callback</li>
 <li>Fixed some issues with slash commands</li>
-<li>Added <code>$c[]</code> which can be used for commenting your code</li>
+<li>Added <code>$c[]</code></li>
 </ul>
 <h2 id="april-1"><a class="header" href="#april-1">April</a></h2>
 <ul>
@@ -594,9 +597,17 @@
 <li>Fixed caching for new members.</li>
 <li>Added <code>$slashCommandsCount</code></li>
 <li>Added <code>$botID</code></li>
-<li>Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis</li>
+<li>Added more permissions
+<ul>
+<li><code>AttachFiles</code></li>
+<li><code>TTS</code></li>
+<li><code>ManageWebhooks</code></li>
+<li><code>EmbedLinks</code></li>
+<li><code>ExternalEmojis</code></li>
+</ul>
+</li>
 <li>Added <code>$serverCooldown[]</code></li>
-<li>Fixed the issue with not expiring app bans</li>
+<li>Fixed an issue with not expiring app bans</li>
 <li>Fixed some issues with <code>[</code> and <code>]</code></li>
 <li>Fixed problems with slash commands and cooldowns</li>
 </ul>
@@ -614,12 +625,12 @@
 </ul>
 <h2 id="january-2"><a class="header" href="#january-2">January</a></h2>
 <ul>
-<li>Fixed the problem with statuses not showing up</li>
-<li>Fixed the issue with mentions not working</li>
+<li>Fixed a problem with statuses not showing up</li>
+<li>Fixed an issue with mentions not working</li>
 <li>Fixed loading bots from database</li>
 <li>Increased duration to 40 minutes for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn[]</code></li>
 <li>Added if statements (<code>$if[]</code>, <code>$else</code>, <code>$endif</code>)</li>
-<li>GuildID instead of <code>everyone</code> is now returned in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
+<li>GuildID is now returned instead of <code>everyone</code> in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
 <li>Space commands have been removed (you can still use <code>$alwaysReply</code>)</li>
 <li>Added <code>$channelTopic[]</code></li>
 <li>Fixed issues with streaming status</li>
@@ -631,12 +642,12 @@
 <h2 id="december-2"><a class="header" href="#december-2">December</a></h2>
 <ul>
 <li>Timezones in <code>$time[]</code> has been fixed</li>
-<li>Updated discord API version</li>
+<li>Updated Discord API version</li>
 <li>Added Competing presence</li>
 <li>Added <code>$botLeave[]</code></li>
 <li>Fix for <code>$getLeaderboardValue[]</code></li>
-<li>Added userID option to reset user var</li>
-<li>Added serverID option to <code>$serverOwner</code></li>
+<li>Added <code>userID</code> option to <code>$resetUserVar</code></li>
+<li>Added <code>serverID</code> option to <code>$serverOwner</code></li>
 <li>Added <code>$premiumExpireTime</code></li>
 </ul>
 <h2 id="november-2"><a class="header" href="#november-2">November</a></h2>
@@ -721,7 +732,7 @@
 <li>Disabled <code>$randomUserID</code>, <code>$'randomUserID</code>, <code>$deleteIn</code> and <code>$dm</code> in <code>$onMessageDelete</code></li>
 <li>Fixed <code>$addField[]</code></li>
 <li>Added error message in <code>$getServerVar[]</code> when provided variable does not exist</li>
-<li><code>$userID[]</code> does not stop code execution if user is not found</li>
+<li>Fixed <code>$userID[]</code> to not stop code execution, if user is not found</li>
 <li>Added <code>$botLeave</code></li>
 <li>Removed permission check from <code>$clear</code> command.</li>
 <li>Fixed <code>$isAdmin[]</code></li>
@@ -766,7 +777,7 @@
 <li>Added <code>$isHoisted[]</code></li>
 <li>Added <code>$serverIcon[]</code></li>
 <li>Fixed suppressing errors in some variable commands</li>
-<li>Fixed bug with <code>$replaceText[]()</code> inside <code>$description</code></li>
+<li>Fixed bug with <code>$replaceText[]</code> inside <code>$description</code></li>
 <li>Added <code>$isValidHex[]</code></li>
 <li>Added <code>$isAdmin[]</code></li>
 <li><code>$userID[]</code> does not require discriminator now</li>
@@ -775,7 +786,7 @@
 <li>Added <code>$modifyRolePerms[]</code></li>
 <li>Added <code>$isUserDMEnabled[]</code></li>
 <li>Added new option to <code>$mentioned[]</code></li>
-<li>When userID is not provided in <code>$discriminator[]</code>, the author's ID will be used</li>
+<li>When <code>userID</code> is not provided in <code>$discriminator[]</code>, the author's ID will be used</li>
 <li>Added <code>$argCount[]</code></li>
 <li>Added <code>$roleExists[]</code> and <code>$roleExists[]</code> </li>
 <li>Added <code>$varExistError[]</code></li>
@@ -803,15 +814,15 @@
 <li>Fixed problems with timezones</li>
 <li><code>@everyone</code> role shows up now when it's a highest/lowest role in <code>$highestRole/$lowestRole</code></li>
 <li><code>@everyone</code> role now works in <code>$rolePosition[]</code></li>
-<li>Multiline for <code>$replaceText[]</code></li>
+<li>Added multi-line support for <code>$replaceText[]</code></li>
 <li>Fixed no errors in <code>$roleID[]</code></li>
 <li>Added <code>$toUppercase[]</code> and <code>$toLowercase[]</code></li>
-<li>Added roleID and userID to <code>$modifyChannelPerms[]</code></li>
+<li>Added <code>roleID</code> and <code>userID</code> to <code>$modifyChannelPerms[]</code></li>
 <li>Added <code>$authorOfMessage[]</code></li>
 <li>Added <code>$userID[]</code></li>
 <li>Improved servers response time by over 10x</li>
 <li>Fixed issues with <code>$setServerVar[]</code> and <code>$setUserVar[]</code></li>
-<li>Added multiline support for <code>$textSplit[]</code></li>
+<li>Added multi-line support for <code>$textSplit[]</code></li>
 <li>Fixed brackets in <code>$username</code></li>
 </ul>
 <h1 id="2019"><a class="header" href="#2019">2019</a></h1>
@@ -819,7 +830,7 @@
 <ul>
 <li>Fixed high ping issues</li>
 <li>Fixed whole bunch of other issues</li>
-<li>To JS added:
+<li>Added to JS:
 <ul>
 <li>authorId,</li>
 <li>channelId,</li>
@@ -838,8 +849,8 @@
 <li>createRole()</li>
 </ul>
 </li>
-<li>Created status website https://status.botdesignerdiscord.com</li>
-<li>Web version of <em>Bot Designer for Discord</em> has been moved to new address https://botdesignerdiscord.com</li>
+<li>Created status website <a href="https://status.botdesignerdiscord.com">https://status.botdesignerdiscord.com</a></li>
+<li>Web version of <em>Bot Designer for Discord</em> has been moved to new address <a href="https://botdesignerdiscord.com">https://botdesignerdiscord.com</a></li>
 <li>Fixed some issues in web version</li>
 <li>Fixed <code>$banID[]</code></li>
 <li>Preparations for premium points</li>
@@ -855,59 +866,49 @@
 <p>Your use of our service (&quot;<em><strong>Bot Designer for Discord</strong></em>&quot;) implies that you agree to the Terms stated on this page, and these Terms will remain in effect while you use the service.</p>
 <h2 id="context-and-reference"><a class="header" href="#context-and-reference">Context and Reference</a></h2>
 <ul>
-<li>&quot;<em><strong>Bot Designer for Discord</strong></em>&quot; refers to &quot;our service&quot;.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;our service&quot; refers to the mobile application, &quot;web app&quot;, and any other related product or service that <em><strong>Bot Designer for Discord</strong></em> provides. It should be noted that <em><strong>Bot Designer for Discord</strong></em> is a service provided by company <em><strong>NilPointer Software</strong></em>.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;web app&quot; refers to our web panel (the &quot;web app&quot; is accessible via most major web browsers) from which users may modify their bot(s) and/or account.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;template store&quot; refers to the platform which <em><strong>Bot Designer for Discord</strong></em>'s mobile application provides. It serves as a way for users to share and use bot command code(s).</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;bot&quot; refers to a user's <a href="https://discord.com/developers">Discord Bot</a>. A &quot;(bot) command&quot; is a certain order which can be called by a user (a &quot;user&quot; referring to anyone that has access, not just a user of our service in this case) typically in a Discord text or DM channel.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;using our service&quot; refers to having the application installed on your device, being logged in to our web app, or accessing any related product or service. If you use our service, you are considered a &quot;user&quot;. When the phrase &quot;user&quot; is utilized in these Terms; it refers to an individual using our service (unless stated otherwise).</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;spam&quot; refers to an action that's repeated in mass form.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;Premium Points&quot; are our in-app currency which users can buy via the premium points store. A premium point grants the user one week of premium-hosting for a singular bot, which allows for some extra functionalities that the app provides for said amount of time. For premium-hosted bots, we do guarantee 90% of uptime per week. If it is less, the user (after contacting support), will receive some sort of compensation (e.g. Premium Points) if applicable.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;promo codes&quot; or &quot;promocodes&quot; are codes (randomized text) that transfer into bot hosting time. Promo codes can be earned by winning an event, giveaway, or <a href="https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ">Discord Nitro Boosting</a> our <a href="https://botdesignerdiscord.com/discord">Discord Server</a>.</li>
-</ul>
-<hr />
-<ul>
-<li>Users can get free bot hosting time by watching advertisements; using the one-time hosting without-AD button; using Premium Point(s); or by receiving a hosting time promo code.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;bug&quot; refers to unintended behavior happening, often these &quot;bugs&quot; can be observed by users.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;token&quot; refers to a Discord Bot Token, a token is essentially a password (and should be treated as such) which grants full access to the bot.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;ban&quot; refers to a user of our service being temporarily or permanently suspended from using our service.</li>
-</ul>
-<hr />
-<ul>
-<li>&quot;warn&quot;/&quot;warning&quot; refers to a user of our service being notified that they neglected to comply with one or more of our Terms.</li>
+<li>
+<p>&quot;<em><strong>Bot Designer for Discord</strong></em>&quot; refers to &quot;our service&quot;.</p>
+</li>
+<li>
+<p>&quot;our service&quot; refers to the mobile application, &quot;web app&quot;, and any other related product or service that <em><strong>Bot Designer for Discord</strong></em> provides.
+It should be noted that <em><strong>Bot Designer for Discord</strong></em> is a service provided by company <em><strong><a href="https://nilpointer.software">NilPointer Software</a></strong></em>.</p>
+</li>
+<li>
+<p>&quot;web app&quot; refers to our <a href="https://botdesignerdiscord.com/app">web panel</a> (the &quot;web app&quot; is accessible via most major web browsers) from which users may modify their bot(s) and/or account.</p>
+</li>
+<li>
+<p>&quot;template store&quot; refers to the platform which <em><strong>Bot Designer for Discord</strong></em>'s mobile application provides. It serves as a way for users to share and use bot command code(s).</p>
+</li>
+<li>
+<p>&quot;bot&quot; refers to a user's <a href="https://discord.com/developers">Discord Bot</a>. A &quot;(bot) command&quot; is a certain order which can be called by a user (a &quot;user&quot; referring to anyone that has access, not just a user of our service in this case) typically in a Discord text or DM channel.</p>
+</li>
+<li>
+<p>&quot;using our service&quot; refers to having the application installed on your device, being logged in to our web app, or accessing any related product or service. If you use our service, you are considered a &quot;user&quot;. When the phrase &quot;user&quot; is utilized in these Terms; it refers to an individual using our service (unless stated otherwise).</p>
+</li>
+<li>
+<p>&quot;spam&quot; refers to an action that's repeated in mass form.</p>
+</li>
+<li>
+<p>&quot;Premium Points&quot; are our in-app currency which users can buy via the premium points store. A premium point grants the user one week of premium-hosting for a singular bot, which allows for some extra functionalities that the app provides for said amount of time. For premium-hosted bots, we do guarantee 90% of uptime per week. If it is less, the user (after contacting support), will receive some sort of compensation (e.g. Premium Points) if applicable.</p>
+</li>
+<li>
+<p>&quot;promo codes&quot; or &quot;promocodes&quot; are codes (randomized text) that transfer into bot hosting time. Promo codes can be earned by winning an event, giveaway, or <a href="https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ">Discord Nitro Boosting</a> our <a href="https://botdesignerdiscord.com/discord">Discord Server</a>.</p>
+</li>
+<li>
+<p>Users can get free bot hosting time by watching advertisements; using the one-time hosting without-AD button; using Premium Point(s); or by receiving a hosting time promo code.</p>
+</li>
+<li>
+<p>&quot;bug&quot; refers to unintended behavior happening, often these &quot;bugs&quot; can be observed by users.</p>
+</li>
+<li>
+<p>&quot;token&quot; refers to a Discord Bot Token, a token is essentially a password (and should be treated as such) which grants full access to the bot.</p>
+</li>
+<li>
+<p>&quot;ban&quot; refers to a user of our service being temporarily or permanently suspended from using our service.</p>
+</li>
+<li>
+<p>&quot;warn&quot;/&quot;warning&quot; refers to a user of our service being notified that they neglected to comply with one or more of our Terms.</p>
+</li>
 </ul>
 <h2 id="terms"><a class="header" href="#terms">Terms</a></h2>
 <ol>
@@ -921,7 +922,8 @@
 <p>You agree to not decompile or modify our software in any way. We may take legal steps if we detect these actions.</p>
 </li>
 <li>
-<p>You understand that we reserve the right to warn/ban users of our service, for any reason and without previous notice; even if the user isn't directly violating our Terms. You also understand, we may ban any user that breaks <a href="https://discord.com/terms">Discord's Terms of Service</a> and/or <a href="https://discord.com/guidelines">Discord's Community Guidelines</a>.</p>
+<p>You understand that we reserve the right to warn/ban users of our service, for any reason and without previous notice; even if the user isn't directly violating our Terms.
+You also understand, we may ban any user that breaks <a href="https://discord.com/terms">Discord's Terms of Service</a> and/or <a href="https://discord.com/guidelines">Discord's Community Guidelines</a>.</p>
 </li>
 <li>
 <p>You agree not to spam or overuse our computing/storage resources.</p>
@@ -960,7 +962,9 @@
 <p>Registered users may withdraw their data through the mobile application, and request the deletion of data by contacting support.</p>
 </blockquote>
 <h2 id="contact"><a class="header" href="#contact">Contact</a></h2>
-<p>If you have questions/concerns about these Terms or our service, you may contact us via email. Support for regular users is available at <code>support@mail.botdesignerdiscord.com</code>, and for paying users at <code>premium-support@mail.botdesignerdiscord.com</code>.</p>
+<p>If you have questions/concerns about these Terms or our service, you may contact us via email.</p>
+<p>Support for regular users is available at <a href="mailto:support@mail.botdesignerdiscord.com"><code>support@mail.botdesignerdiscord.com</code></a>
+and for paying users at <a href="mailto:premium-support@mail.botdesignerdiscord.com"><code>premium-support@mail.botdesignerdiscord.com</code></a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="guides"><a class="header" href="#guides">Guides</a></h1>
 <p>Welcome to the BDFD wiki.<br />
 In this section, you'll find guides that contain helpful tutorials on certain elements of the app. These contain example codes and images to help explain functions and their usages.<br />
@@ -1479,8 +1483,8 @@ $awaitFunc[say]
 </code></pre>
 <h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The name used in <a href="guides/awaitedCommands.html#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
-<li><code>filter</code>: Used to limit user input. <a href="guides/awaitedCommands.html#supported-filters">Supported Filters</a></li>
+<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used in <a href="guides/awaitedCommands.html#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
+<li><code>filter</code> <code>(Type: String || Flag: Emptiable)</code>: Used to limit user input (<a href="guides/awaitedCommands.html#supported-filters">Supported filters</a>). If no filter is provided, it accepts any input.</li>
 </ul>
 <h2 id="example-4"><a class="header" href="#example-4">Example</a></h2>
 <h3 id="without-filter"><a class="header" href="#without-filter">Without filter</a></h3>
@@ -1515,7 +1519,7 @@ You have provided a number: $message
 </code></pre>
 <h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The name used in <a href="guides/awaitedCommands.html#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
+<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used in <a href="guides/awaitedCommands.html#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
 </ul>
 <h2 id="example-5"><a class="header" href="#example-5">Example</a></h2>
 <p><strong>Trigger: <code>$awaitedCommandError[number]</code></strong></p>

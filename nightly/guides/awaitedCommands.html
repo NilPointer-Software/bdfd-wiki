@@ -204,8 +204,8 @@ $awaitFunc[say]
 </code></pre>
 <h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The name used in <a href="#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
-<li><code>filter</code>: Used to limit user input. <a href="#supported-filters">Supported Filters</a></li>
+<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used in <a href="#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
+<li><code>filter</code> <code>(Type: String || Flag: Emptiable)</code>: Used to limit user input (<a href="#supported-filters">Supported filters</a>). If no filter is provided, it accepts any input.</li>
 </ul>
 <h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
 <h3 id="without-filter"><a class="header" href="#without-filter">Without filter</a></h3>
@@ -240,7 +240,7 @@ You have provided a number: $message
 </code></pre>
 <h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The name used in <a href="#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
+<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used in <a href="#awaitfunc"><code>$awaitFunc[]</code></a> function.</li>
 </ul>
 <h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
 <p><strong>Trigger: <code>$awaitedCommandError[number]</code></strong></p>
