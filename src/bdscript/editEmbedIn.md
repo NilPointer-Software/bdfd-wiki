@@ -8,7 +8,7 @@ $editEmbedIn[time;(title;description;footer;color)]
 > 📝 Optional fields can be left empty. At least one embed field (`title`, `description`, or `footer`) needs to be inputted.
 
 ### Parameters
-- `time` `(Type : Duration || Flag : Required)` : The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max time is 40 minutes (for premium users, it's 120 minutes). Required.
+- `time` `(Type: Duration || Flag: Required)`: The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max time is 40 minutes (for premium users, it's 120 minutes). Required.
 
 - `title` `(Type : String || Flag : Vacantable)` : The new embed title. Optional.
 - `description` `(Type : String || Flag : Vacantable)` : The new embed description. Optional.
