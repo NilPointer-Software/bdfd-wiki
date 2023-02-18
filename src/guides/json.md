@@ -425,7 +425,7 @@ $jsonSetString[Key;...;Value]
     ```
     ![Discord_QaUn8sArHA](https://user-images.githubusercontent.com/70456337/216845276-62748993-567a-4022-bf59-69a77a37bc32.png)
 
-Also, if we set this value manually as a number, we'll encounter issues.
+If we set this value as a number manually, we'll encounter issues.
 ```
 $nomention
 $jsonParse[{
