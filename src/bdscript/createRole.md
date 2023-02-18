@@ -7,9 +7,9 @@ $createRole[roleName;colorHex;hoist (yes/no);mentionable (yes/no)]
 ```
 
 ### Parameters
-- `roleName` `(Type : String || Flag : Required)` : The name to give the new role.
-- `colorHex` `(Type : Color || Flag : Required)` : The [color hex](https://htmlcolorcodes.com/color-picker) of the new role.
-- `hoist` `(Type : Bool || Flag : Vacantable)` : Whether the role should be displayed separately (hoisted) or not. `no` means the role won't be hoisted, `yes` means it will.
+- `roleName` `(Type: String || Flag: Required)`: The name to give the new role.
+- `colorHex` `(Type: Color || Flag: Required)`: The [color hex](https://htmlcolorcodes.com/color-picker) of the new role.
+- `hoist` `(Type: Bool || Flag: Vacantable)`: Whether the role should be displayed separately (hoisted) or not. `no` means the role won't be hoisted, `yes` means it will.
 
 ![Example1](https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png)
 
