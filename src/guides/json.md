@@ -389,7 +389,7 @@ The $message's index in `apps/software` is $jsonArrayIndex[computer;0;apps;softw
 ![](https://user-images.githubusercontent.com/70456337/216845225-6830bc2b-616c-4fc6-932e-ed38be86cd4b.png)
 
 ## $jsonSetString
-The `$jsonSetString` function sets a JSON value at a specific key. Always sets this key to a string value.
+`$jsonSetString` function sets or replaces the value at the specified JSON key. Always sets the value as a string.
 
 ### Syntax
 ```
