@@ -294,7 +294,7 @@ $jsonParse[{"computer":[{"apps":{"software":["BlueStacks","Krita","Visual Studio
 $jsonPretty[4]
 ```
 
-> To make an output really pretty, we have to use [`$disableInnerSpaceRemoval`](../bdscript/disableInnerSpaceRemoval.md) firstly.
+> For the output to really be pretty, we have to use the [`$disableInnerSpaceRemoval`](../bdscript/disableInnerSpaceRemoval.md) function.
 
 ![](https://user-images.githubusercontent.com/70456337/214135087-1ea9ed9c-40ab-4c29-b5c6-d0da83478487.png)
 
