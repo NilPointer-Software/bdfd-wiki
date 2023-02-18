@@ -7,8 +7,8 @@ $channelSendMessage[channelID;message]
 ```
 
 ### Parameters
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel to send the message in.
-- `message` `(Type : String || Flag : Required)` : The message that gets sent to the channel.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to send the message in.
+- `message` `(Type: String || Flag: Required)`: The message that gets sent to the channel.
 
 ## Example
 ```
