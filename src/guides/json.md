@@ -176,7 +176,7 @@ $jsonArrayCount[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key where the elememts should be counted.
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the elements will be counted.
 
 ### Example
 ```
