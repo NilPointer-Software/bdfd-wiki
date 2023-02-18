@@ -241,7 +241,7 @@ Current apps in the `$message[1]` category: $json[computer;0;apps;$message[1]]
 ![](https://user-images.githubusercontent.com/70456337/213921444-209dd14c-d1f2-4d8d-960d-5bc52fd18cb1.png)
 
 ## $jsonStringify
-`$jsonStringify` turns parsed JSON into a string value.
+`$jsonStringify` turns the current JSON object into a string value.
 
 > The `$jsonStringify` function will return an empty string if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
