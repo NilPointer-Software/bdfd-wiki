@@ -7,7 +7,7 @@ $deleteRole[roleID]
 ```
 
 ### Parameters
-- `roleID` `(Type : Snowflake || Flag : Required)` : The role to delete.
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role to delete.
 
 ## Example
 ```
