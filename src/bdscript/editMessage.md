@@ -8,13 +8,13 @@ $editMessage[channelID;messageID;content;(title;description;color;footer)]
 > 🧙‍♂️ [How Do I Get The Channel / Message ID? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
 
 ### Parameters
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel that this message belongs to.
-- `messageID` `(Type : Snowflake || Flag : Required)` : The ID of the message to edit (must be a message that the bot sent).
-- `Content` `(Type : String || Flag : Emptiable)` : The new message contents.
-- `title` `(Type : String || Flag : Vacantable)` : The new embed title.
-- `description` `(Type : String || Flag : Vacantable)` : The new embed description.
-- `color` `(Type : Color || Flag : Vacantable)` : The new embed color border hex.
-- `footer` `(Type : String || Flag : Vacantable)`:  The new embed footer text.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel that this message belongs to.
+- `messageID` `(Type: Snowflake || Flag: Required)`: The ID of the message to edit (must be a message that the bot sent).
+- `content` `(Type: String || Flag: Emptiable)`: The new message contents.
+- `title` `(Type: String || Flag: Vacantable)`: The new embed title.
+- `description` `(Type: String || Flag: Vacantable)`: The new embed description.
+- `color` `(Type: Color || Flag: Vacantable)`: The new embed color border hex.
+- `footer` `(Type: String || Flag: Vacantable)`:  The new embed footer text.
 
 ## Example
 ```
