@@ -7,7 +7,7 @@ $checkCondition[condition]
 ```
 
 ## Parameters 
-- `condition` `(Type : String || Flag : Required)`
+- `condition` `(Type: String || Flag: Required)`: The condition to check.
 
 ## Explanation
 Simply put, `$checkCondition` serves as a way to make a custom true or false statement. For example: `$checkCondition[$username==Spen]`, the bot would return "true" if someone named Spen used the command, otherwise it would return "false". However this: `$checkCondition[$username!=Spen]`, would return "false" if someone named Spen used the command, otherwise it would return "true".
