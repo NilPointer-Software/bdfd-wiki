@@ -5,7 +5,7 @@ Retrieves the DM channel ID for the provided user id.
 ```
 $dmChannelID[userID]
 ```
-- `userID` `(Type : Snowflake || Flag : Required)` : The user for whom to fetch the DM channel ID for
+- `userID` `(Type: Snowflake || Flag: Required)`: The user for whom to fetch the DM channel ID
 
 ## Example
 ![Screenshot_20220812_170857](https://user-images.githubusercontent.com/95774950/184350154-4e08f818-e1c6-483b-bfc0-f7741c1381da.png)
