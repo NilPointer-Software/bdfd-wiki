@@ -404,8 +404,6 @@ $jsonSetString[Key;...;Value]
 
 ### Example
 
-> This function is recommended to be used mostly in economic related commands. Why, the further example will explain it.
-
 - `$jsonSet`
     ```
     $nomention
