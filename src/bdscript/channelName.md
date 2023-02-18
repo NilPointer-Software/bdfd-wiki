@@ -7,7 +7,7 @@ $channelName[channel ID]
 
 
 ### Parameters
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel that the bot gets the channel name from.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel which name will be returned.
 
 > 🧙‍♂️ [How do I find channel IDs? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 
