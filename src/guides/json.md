@@ -364,8 +364,8 @@ $jsonArrayIndex[Key;...;Value]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key in which the index of the value should be found.
-- `Value` `(Type: String, Integer, Float || Flag: Required)`: The value of which an index should be found.
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the value will be searched for.
+- `Value` `(Type: String, Integer, Float || Flag: Required)`: The value to search for.
 
 ### Example
 ```
