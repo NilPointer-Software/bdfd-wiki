@@ -3,7 +3,7 @@ Edits select menu.
 
 ## Usage
 ```
-$editSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
+$editSelectMenu[menu ID;min;max;(placeholder;message ID)]
 ```
 
 ## Parameters 
