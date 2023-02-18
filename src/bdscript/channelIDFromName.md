@@ -17,6 +17,6 @@ Channel ID: $channelIDFromName[$mesaage]
 
 
 ### Parameters
-- `channel name` `(Type : String || Flag : Required)` : The channel name that the bot will return the channel id for.
+- `channel name` `(Type: String || Flag: Required)`: The channel name that the bot will return the channel id for.
 
 
