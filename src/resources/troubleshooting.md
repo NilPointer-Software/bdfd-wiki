@@ -766,8 +766,8 @@ In this section, the easiest way to explain everything is through dialogue:
 
 ### The Translation Feature Doesn't Work
 **The 1st Reason**\
-There's no translation support for your language yet. You should wait patiently for it, or if you speak English well, you can translate our app yourself!\
-If you want to, go to our [support server](https://discord.gg/botdesigner) and create a ticket (using the `!new` command). You'll have to send your application for the Translator role there.
+There's no translation support for your language yet. You should wait patiently for them, or if you speak English well, you can help to translate our app yourself!\
+If you would like to help, go to our [support server](https://discord.gg/botdesigner) and create a ticket (using the `!new` command). You can then apply for the Translator role there by asking support for it.
 
 **The 2nd Reason**\
 Your main system language is incorrect.\
