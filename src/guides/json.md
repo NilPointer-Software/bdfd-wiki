@@ -307,7 +307,7 @@ $jsonArray[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key which should be marked as an array.
+- `Key` `(Type: String || Flag: Required)`: The JSON key which will be marked as an array.
 
 ### Example
 ```
