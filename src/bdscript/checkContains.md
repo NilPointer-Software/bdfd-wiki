@@ -7,8 +7,8 @@ $checkContains[text;phrases]
 ```
 
 ### Parameters
-- `text` `(Type : String || Flag : Emptiable)` : The text that will be checked.
-- `phrases` `(Type : String || Flag : Emptiable)` : The phrases/words the bot will check for in 'text'. Separate phrases using `;`.
+- `text` `(Type: String || Flag: Emptiable)`: The text that will be checked.
+- `phrases` `(Type: String || Flag: Emptiable)`: The phrases/words the bot will check for in 'text'. Separate phrases using `;`.
 
 ## Example
 ```
