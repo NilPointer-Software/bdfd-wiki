@@ -7,10 +7,11 @@ $editSelectMenu[menu ID;min;max;(placeholder;message ID)]
 ```
 
 ## Parameters 
-- `Menu ID` `(Type : String || Flag : Required)` : the menu ID you want to edit
-- `Min` `(Type : Integer || Flag : Required)` : minimum amount of values that can be selected.
-- `Max` `(Type : Integer || Flag : Required)` : maximum amount of values that can be selected.
-- `Placeholder` `(Type : String || Flag : Vacantable)` : it's a text that appears if no option is selected.
+- `menu ID` `(Type : String || Flag : Required)` : The menu ID you want to edit
+- `min` `(Type: Integer || Flag: Required)`: The minimum amount of values that can be selected.
+- `max` `(Type: Integer || Flag: Required)`: The maximum amount of values that can be selected.
+- `placeholder` `(Type: String || Flag: Vacantable)`: It's a text that appears if no option is selected.
+- `message ID` `(Type: Snowflake || Flag: Optional)`: The message for which a select menu will be edited.
 
 ## Example
 ### Interaction Code
