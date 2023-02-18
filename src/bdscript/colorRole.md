@@ -7,7 +7,7 @@ $colorRole[colorHex]
 ```
 
 ### Parameters
-- `colorHex` `(Type : Color || Flag : Required)` : The [color hex](https://htmlcolorcodes.com/color-picker) to change the mentioned role color to.
+- `colorHex` `(Type: Color || Flag: Required)`: The [color hex](https://htmlcolorcodes.com/color-picker) to change the mentioned role color to.
 
 ## Example
 ```
