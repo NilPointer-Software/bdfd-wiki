@@ -165,7 +165,7 @@ $jsonExists[Key;...]
 - `Key` `(Type: String || Flag: Required)`: The JSON key which will be checked.
 
 ### Examples
-See examples in the further of the current guide.
+See examples further down the guide.
 
 ## $jsonArrayCount
 `$jsonArrayCount` counts the elements in the specified JSON key.
