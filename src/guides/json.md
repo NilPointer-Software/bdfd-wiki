@@ -354,7 +354,7 @@ Username: $optOff[$json[username]]
 ![](https://user-images.githubusercontent.com/70456337/214381794-e94ba5e7-b90e-4c0e-971b-ca6b350928ee.png)
 
 ## $jsonArrayIndex
-`$jsonArrayIndex` gets array index of a given value.
+`$jsonArrayIndex` gets the array index of a given value.
 
 > The `$jsonArrayIndex` function will return `-1` if value not found and will return an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
