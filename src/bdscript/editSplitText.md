@@ -7,8 +7,8 @@ $editSplitText[Index;Value]
 ```
 
 ### Parameters
-- `Index` `(Type : Integer || Flag : Required)` : The index of the element to edit.
-- `Value` `(Type : String || Flag : Required)` : The new value to assign to the provided index.
+- `Index` `(Type: Integer || Flag: Required)`: The index of the element to edit.
+- `Value` `(Type: String || Flag: Required)`: The new value to assign to the provided index.
 
 ## Example
 ```
