@@ -7,7 +7,7 @@ $divide[numbers]
 ```
 
 ### Parameters
-- `numbers` `(Type : Integer,(Big)Float|| Flag : Required)` : The numbers to divide. Separate numbers using `;`.
+- `numbers` `(Type: Integer,(Big)Float|| Flag: Required)`: The numbers to divide. Separate numbers using `;`.
 
 ## Example
 ```
