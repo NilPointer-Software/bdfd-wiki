@@ -7,7 +7,7 @@ $deleteChannels[channelIDs]
 ```
 
 ### Parameters
-- `channels` `(Type : Snowflake || Flag : Required)` : The channels to delete. Separate channel IDs using `;`.
+- `channels` `(Type: Snowflake || Flag: Required)`: The channels to delete. Separate channel IDs using `;`.
 
 ## Example
 ```
