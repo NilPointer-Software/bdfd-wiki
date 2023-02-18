@@ -162,7 +162,7 @@ $jsonExists[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key which should be checked.
+- `Key` `(Type: String || Flag: Required)`: The JSON key which will be checked.
 
 ### Examples
 See examples in the further of the current guide.
