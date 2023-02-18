@@ -7,7 +7,7 @@ $charCount[text]
 ```
 
 ### Parameters
-- `text` `(Type : String || Flag : Emptiable)` : The text to return the character count for.
+- `text` `(Type: String || Flag: Emptiable)`: The text to return the character count for.
 
 ## Example
 ```
