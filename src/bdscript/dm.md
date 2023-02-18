@@ -23,7 +23,8 @@ $dm[UserID;...]
 This will send the message to every user with given User ID.
 
 ## Parameters 
-- `userID` `(Type : Snowflake || Flag : Emptiable)`
+- `userID` `(Type: Snowflake || Flag: Emptiable)`: The user to whom to send the direct message. 
+
 
 
 ## Note
