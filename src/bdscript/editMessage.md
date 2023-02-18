@@ -3,7 +3,7 @@ Edits one of the bot's messages.
 
 ## Usage
 ```
-$editMessage[channelID;messageID;Content;(title;description;color;footer)]
+$editMessage[channelID;messageID;content;(title;description;color;footer)]
 ```
 > 🧙‍♂️ [How Do I Get The Channel / Message ID? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
 
