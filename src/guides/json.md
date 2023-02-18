@@ -448,4 +448,4 @@ Balance key: $json[balance]
 
 ![](https://user-images.githubusercontent.com/70456337/216845304-07a48e0c-65e7-4229-90a8-f705201dfdd5.png)
 
-> Therefore, we should set such big numbers as strings.
+> Therefore, we should set big numbers as strings.
