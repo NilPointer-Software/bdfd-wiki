@@ -10,7 +10,7 @@ $discriminator[userID]
 ```
 
 #### Parameters
-- `userID` `(Type : Snowflake || Flag : Emptiable)` : The user to get the discriminator from.
+- `userID` `(Type: Snowflake || Flag: Emptiable)`: The user to get the discriminator from.
 
 ### Usage #2
 ```
