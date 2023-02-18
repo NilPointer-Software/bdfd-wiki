@@ -328,7 +328,7 @@ $optOff[$jsonPretty[4]]
 ![](https://user-images.githubusercontent.com/70456337/214134895-216af646-c494-4328-a43d-a93e6c13859d.png)
 
 ## $jsonClear
-`$jsonClear` clears current parsed JSON.
+`$jsonClear` clears out the current JSON object.
 
 ### Syntax
 ```
