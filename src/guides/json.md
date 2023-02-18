@@ -272,7 +272,7 @@ $jsonStringify
 ![](https://user-images.githubusercontent.com/70456337/214134823-84ec207e-ab31-4ec1-8d80-ecab50701d96.png)
 
 ## $jsonPretty
-`$jsonPretty` turns parsed JSON into a pretty string value and then returns it.
+`$jsonPretty` turns the current JSON object into a pretty string value.
 
 > The `$jsonPretty` function will return an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
