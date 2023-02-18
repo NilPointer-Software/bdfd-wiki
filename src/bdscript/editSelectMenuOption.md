@@ -3,7 +3,7 @@ Edits select menu.
 
 ## Usage
 ```
-$editSelectMenuOption[Menu option ID;Label;Value;Description;(Default;Emoji;Message ID)]
+$editSelectMenuOption[menu option ID;label;value;description;(default;emoji;message ID)]
 ```
 ## Parameters 
 - `menu option ID` `(Type: String || Flag: Required)`: it has to be the same as the ID used in its `$newSelectMenu[]`.
