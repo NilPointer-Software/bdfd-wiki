@@ -7,7 +7,7 @@ $closeTicket[errorMessage]
 ```
 
 ### Parameters
-- `errorMessage` `(Type : String || Flag : Emptiable)` : The error to return if the channel isn't a ticket.
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The error to return if the channel isn't a ticket.
 
 ## Example
 ```
