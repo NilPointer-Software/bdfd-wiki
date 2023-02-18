@@ -7,8 +7,8 @@ $checkUserPerms[userID;permissions]
 ```
 
 ### Parameters
-- `userID` `(Type : Snowflake || Flag : Required)` : The user that the bot checks the permissions for.
-- `permissions` `(Type : Permission || Flag : Required)` : The [permissions](../resources/permissions.md) that the bot checks for. Separate permissions using `;`.
+- `userID` `(Type: Snowflake || Flag: Required)`: The user that the bot checks the permissions for.
+- `permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) that the bot checks for. Separate permissions using `;`.
 
 ## Example
 ```
