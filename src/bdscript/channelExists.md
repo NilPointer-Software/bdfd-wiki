@@ -9,7 +9,7 @@ $channelExists[channel ID]
 
 
 ### Parameters
-- `channel ID` `(Type: String,Snowflake || Flag: Emptiable)` : The channel which the bot will check for.
+- `channel ID` `(Type: String, Snowflake || Flag: Emptiable)`: The channel which the bot will check for.
 
 
 ## Example
