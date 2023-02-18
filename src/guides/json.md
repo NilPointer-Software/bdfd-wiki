@@ -397,8 +397,10 @@ $jsonSetString[Key;...;Value]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key where the value should be set.
-- `Value` `(Type: String || Flag: Required)`: The value which should be set.
+- `Key` `(Type: String || Flag: Required)`: The JSON key where the value will be set or replaced.
+- `Value` `(Type: String || Flag: Required)`: The value to set or replace with.
+
+> This function is recommended to be used mostly in economic-related commands. Why? The next example will explain it.
 
 ### Example
 
