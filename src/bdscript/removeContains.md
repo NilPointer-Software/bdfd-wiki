@@ -7,8 +7,8 @@ $removeContains[word;...;amount]
 ```
 
 ### Parameters
-- `word` `(Type : String || Flag : Emptiable)` : The phrases/words to delete, separate phrases using `;`.
-- `Amount` `(Type : Integer || Flag : Required)` : How many messages containing the provided phrases to delete. Max is 100.
+- `word` `(Type: String || Flag: Emptiable)`: The phrases/words to delete, separate phrases using `;`.
+- `amount` `(Type: Integer || Flag: Required)`: The number of messages containing given words to delete. Max is 100.
 
 ## Example
 ```
