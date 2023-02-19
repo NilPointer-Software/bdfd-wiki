@@ -8,7 +8,7 @@ $getUserStatus[userID]
 ```
 
 ### Parameters
-- `userID` `(Type : Snowflake || Flag : Required)` : The user to get the status for.
+- `userID` `(Type: Snowflake || Flag: Required)`: The user to get the status for.
 
 ### Statuses List
 - online
