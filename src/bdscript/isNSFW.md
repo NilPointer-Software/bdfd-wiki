@@ -8,7 +8,7 @@ $isNSFW[channelID]
 ```
 
 ### Parameters
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel to check.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to check.
 
 ## Example
 ```
