@@ -3,7 +3,7 @@ Returns the ID of the mentioned channel.
 
 ## Usage
 ```
-$mentionedChannels[mentionNumber;(returnCurrent(yes/no))]
+$mentionedChannels[mentionNumber;(returnCurrent)]
 ```
 
 ### Parameters 
