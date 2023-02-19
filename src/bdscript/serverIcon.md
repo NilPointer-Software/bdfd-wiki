@@ -19,7 +19,7 @@ $serverIcon[serverID]
 Returns the icon of the server provided.
 
 #### Parameters 
-- `serverID` `(Type: Snowflake || Flag: Required)`: The server to get the icon for *(bot must be in the server)*.
+- `serverID` `(Type: Snowflake || Flag: Required)`: The server from which to get the icon *(bot must be in the given server)*.
 
 ## Example
 ```

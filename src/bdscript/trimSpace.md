@@ -7,7 +7,7 @@ $trimSpace[Text]
 ```
 
 ### Parameters
-- `Text` `(Type: String || Flag: Emptiable)`: The text from which the white-space characters will be removed.
+- `Text` `(Type: String || Flag: Emptiable)`: The text from which white-space characters will be removed.
 
 ## Example
 ```

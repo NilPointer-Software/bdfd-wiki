@@ -9,7 +9,7 @@ $useChannel[Channel ID]
 ```
 
 ### Parameters
-- `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel to where the message will be redirected.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel to which the message will be redirected.
 
 ## Example
 ```

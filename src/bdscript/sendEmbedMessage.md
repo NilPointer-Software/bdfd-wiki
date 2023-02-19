@@ -13,12 +13,12 @@ $sendEmbedMessage[channel ID;content;(title;title URL;description;color;author;a
 - `title URL` `(Type: URL || Flag: Vacantable)`: URL that will be applied to the title.
 - `description` `(Type: String || Flag: Vacantable)`: Description that will be applied to the embed.
 - `color` `(Type: Color || Flag: Vacantable)`: The [color hex](https://htmlcolorcodes.com/color-picker/) or integer to set the embed border color as.
-- `author` `(Type: String || Flag: Vacantable )`: The text that appear at author 
+- `author` `(Type: String || Flag: Vacantable )`: The text that appear at author.
 - `author icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to author. This must be a valid image URL.
 - `footer` `(Type: String || Flag: Vacantable)`: The text to set the footer as.
 - `footer icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to footer. Must be a valid image URL.
 - `thumbnail` `(Type: URL || Flag: Vacantable)`: The image to set as the thumbnail.
-- `image` `(Type: URL || Flag: Vacantable)`: The URL of the image that appears. Must be a valid image URL.
+- `image` `(Type: URL || Flag: Vacantable)`: The image that appears above footer. Must be a valid image URL.
 - `add timestamp` `(Type: Bool || Flag: Vacantable)`: Adds time in footer (use yes or no).
 - `return ID` `(Type: Bool || Flag: Vacantable)`: Outputs the message ID outside the embed (use yes or no).
 

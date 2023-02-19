@@ -1,19 +1,17 @@
 # $sort
-
 Sorts provided numbers. Amount of numbers can be set to -1 if you'd like to return every number
 
-## Usage
+## Syntax
 ```
 $sort[numbers;...;direction;return amount;separator]
 ```
 
 ### Parameters
-- `numbers` `(Type: Float,Integer || Flag: Required)`: Sets numbers separated by *;* (ex: 1;2;3)
-- `direction` `(Type: Enum || Flag : Required)`: What order will be used (ascending or descending).
-  - *`asc` - ascending*
-  - *`desc` - descending*
-- `return amount` `(Type: Integer || Flag: Required)`:  How many numbers will be returned.
-  - Use `-1` to generate all numbers
+- `numbers` `(Type: Float, Integer || Flag: Required)`: Sorts numbers separated by *;* (ex: 1;2;3)
+- `direction` `(Type: Enum || Flag : Required)`: The direction in which to sort:
+  - `asc` - ascending
+  - `desc` - descending
+- `return amount` `(Type: Integer || Flag: Required)`:  How many numbers will be returned. Use `-1` to generate all numbers
 - `separator` `(Type: String || Flag: Required)`: The separator between each number.
 
 ## Example

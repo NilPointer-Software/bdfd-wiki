@@ -7,7 +7,7 @@ $serverEmojis[Guild ID;Separator]
 ```
 
 ### Parameters
-- `Guild ID` `(Type: Snowflake || Flag: Required)`: The guild to return it's emojis.
+- `Guild ID` `(Type: Snowflake || Flag: Required)`: The guild from which to return emojis.
 - `Separator` `(Type: String || Flag: Emptiable)`: The separator to separate the emojis with.
 
 ## Example

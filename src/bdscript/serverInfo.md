@@ -7,8 +7,8 @@ $serverInfo[message;(thumbnail)]
 ```
 
 ### Parameters 
-- `message` `(Type: String || Flag: Required)`: The text that is returned.
-- `thumbnail` `(Type: Bool || Flag: Optional)`: Whether or not to show the server icon as the thumbnail. Default is `yes`.
+- `message` `(Type: String || Flag: Required)`: The message format. Check below for more information.
+- `thumbnail` `(Type: Bool || Flag: Optional)`: Whether or not to show the server icon as the thumbnail. The default is `yes`.
 
 ⚠️ You can not include `$serverInfo[]` in a command with a `$description[]` (because it makes one automatically).
 

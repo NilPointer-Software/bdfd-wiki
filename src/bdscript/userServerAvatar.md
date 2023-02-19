@@ -7,7 +7,7 @@ $userServerAvatar[User ID]
 ```
 
 ### Parameters
-- `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the server avatar for. If the user doesn't have a server avatar, then the default user avatar will be returned instead.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user from whom to get the server avatar. If the user doesn't have a server avatar, then the default user avatar will be returned instead.
 
 ### Example
 ```

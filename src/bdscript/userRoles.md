@@ -7,7 +7,7 @@ $userRoles[User ID]
 ```
 
 ### Parameters
-- `User ID` `(Type: Snowflake || Flag: Required)`: The user to return the role names for.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user for whom to return the role names.
 
 ## Example
 ```

@@ -10,7 +10,7 @@ $textSplit[Text;Separator]
 
 ### Parameters
 - `Text` `(Type: String || Flag: Emptiable)`: The text to split.
-- `Separator` `(Type: String || Flag: Emptiable)`: The separator to split the text with. If this parameter is empty, it separates the text by each characters.
+- `Separator` `(Type: String || Flag: Emptiable)`: The separator to split the text with. If this parameter is empty, it separates the text by each character.
 
 ### Example
 ```

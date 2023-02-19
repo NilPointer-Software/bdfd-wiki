@@ -9,7 +9,7 @@ $splitText[index]
 ```
 
 ### Parameters
-- `index` `(Type: HowMany || Flag: Required)`: The split value to get (e.g 2 for the second split). You can also use `>` to return the last splitted value i.e `$splitText[>]`.
+- `index` `(Type: HowMany || Flag: Required)`: The split value to get (e.g 2 for the second split). You can also use `>` to return the last split value i.e `$splitText[>]`.
 
 ### Example
 ```

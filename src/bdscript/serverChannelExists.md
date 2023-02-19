@@ -7,7 +7,7 @@ $serverChannelExists[channel ID]
 ```
 
 ### Parameters 
-- `Channel ID` `(Type: Snowflake,String || Flag: Emptiable)`: Returns `true`, if it exists otherwise `false`.
+- `channel ID` `(Type: Snowflake, String || Flag: Emptiable)`: Returns `true` if the channel exists, otherwise `false`.
 
 ## Example
 ```
