@@ -3,7 +3,7 @@ Removes certain component from a message.
 
 ## Usage
 ```
-$removeComponent[customID;(optional) messageID]
+$removeComponent[customID;(messageID)]
 ```
 
 ### Parameters
