@@ -6,7 +6,7 @@
 $botLeave[guild ID]
 ````
 
- ### Parameters
+### Parameters
 - `guild ID` `(Type: Snowflake || Flag: Required)`: The ID of a guild to leave.
 
 ## Example
@@ -20,17 +20,18 @@ $botLeave[$message]
 
 ![example](https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png)
 
-> If you are using **BDScript 2**, put `$botLeave[]` at the very bottom of the code so that the code works correctly.
+> If you are using **BDScript 2**, put `$botLeave[]` at the very bottom of the code so that the code works correctly i.e:
 > 
-❌ Not correct:
-```
-$botLeave[$message]
-$nomention
-$sendMessage[I left this server!]
-```
-✅ Correct:
-```
-$nomention
-$sendMessage[I left this server!]
-$botLeave[$message]
-```
+> ❌ Not correct:
+> ```
+> $botLeave[$message]
+> $nomention
+> $sendMessage[I left this server!]
+> ```
+>
+> ✅ Correct:
+> ```
+> $nomention
+> $sendMessage[I left this server!]
+> $botLeave[$message]
+> ```
