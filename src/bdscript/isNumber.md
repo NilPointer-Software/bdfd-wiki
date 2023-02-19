@@ -8,7 +8,7 @@ $isNumber[value]
 ```
 
 ### Parameters
-- `value` `(Type : String || Flag : Emptiable)` : The text to check.
+- `value` `(Type: String || Flag: Emptiable)`: The text to check.
 
 ## Example
 ```
