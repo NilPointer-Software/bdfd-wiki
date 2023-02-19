@@ -11,9 +11,9 @@ $modifyChannelPerms[channelID;permissions;userID/roleID]
 ```
 
 ### Parameters 
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel to change the permissions for.
-- `permissions` `(Type : Permission || Flag : Required)` : The [permissions](../resources/permissions.md) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
-- `userID/roleID` `(Type : Snowflake || Flag : Required)` : The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to change the permissions for.
+- `permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
+- `userID/roleID` `(Type: Snowflake || Flag: Required)`: The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
 
 ## Example
 Lock:
