@@ -8,8 +8,8 @@ $embeddedURL[link;(index)]
 ```
 
 ### Parameters
-- `link` `(Type : URL || Flag : Emptiable)` : The link to set the title hyperlink to.
-- `index` `(Type : Integer || Flag : Optional)` : What embed the title hyperlink should belong to. Default is `1`. [(learn more)](../resources/embedIndexes.md)
+- `link` `(Type: URL || Flag: Emptiable)`: The link to set the title hyperlink to.
+- `index` `(Type: Integer || Flag: Optional)`: What embed the title hyperlink should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
