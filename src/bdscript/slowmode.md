@@ -8,8 +8,8 @@ $slowmode[channelID;slowmodeTime]
 ```
 
 ### Parameters 
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel in the which the slowmode is being modified in. Use `0`/`0s` to disable the slowmode.
-- `slowmodeTime` `(Type : Duration || Flag : Required)` : The new slowmode delay *(in seconds, e.g. 1s, 180s, 5s, 3s, etc)*.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel in the which the slowmode is being modified in. Use `0`/`0s` to disable the slowmode.
+- `slowmodeTime` `(Type: Duration || Flag: Required)`: The new slowmode delay *(in seconds, e.g. 1s, 180s, 5s, 3s, etc)*.
 
 ### Example
 ```

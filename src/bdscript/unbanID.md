@@ -29,7 +29,7 @@ $unbanID[User ID]
 Unbans a user by using the ID provided in the 'User ID' parameter.
 
 ##### Parameters
-- `User ID` `(Type : Snowflake || Flag : Required)` : The ID of the user to unban.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The ID of the user to unban.
 
 #### Example
 ```

@@ -7,7 +7,7 @@ $varExists[Name]
 ```
 
 ### Parameters
-- `Name` `(Type : String || Flag : Required)` : The variable's name to check.
+- `Name` `(Type: String || Flag: Required)`: The variable's name to check.
 
 ## Example
 ```

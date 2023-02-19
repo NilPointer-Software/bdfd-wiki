@@ -7,7 +7,7 @@ $unescape[Text]
 ```
 
 ### Parameters
-- `Text` `(Type : String || Flag : Emptiable)` : The text to unescape.
+- `Text` `(Type: String || Flag: Emptiable)`: The text to unescape.
 
 ## Example
 ```

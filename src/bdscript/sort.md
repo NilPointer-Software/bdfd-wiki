@@ -8,13 +8,13 @@ $sort[numbers;...;direction;return amount;separator]
 ```
 
 ### Parameters
-- `numbers` `(Type : Float,Integer || Flag : Required)` : sets numbers separated by *;* (ex: 1;2;3)
-- `direction` `(Type : Enum || Flag : Required)` : what order will be used (ascending or descending).
+- `numbers` `(Type: Float,Integer || Flag: Required)`: Sets numbers separated by *;* (ex: 1;2;3)
+- `direction` `(Type: Enum || Flag : Required)`: What order will be used (ascending or descending).
   - *`asc` - ascending*
   - *`desc` - descending*
-- `return amount` `(Type : Integer || Flag : Required)` :  how many numbers will be returned.
+- `return amount` `(Type: Integer || Flag: Required)`:  How many numbers will be returned.
   - Use `-1` to generate all numbers
-- `separator` `(Type : String || Flag : Required)` : the separator between each number.
+- `separator` `(Type: String || Flag: Required)`: The separator between each number.
 
 ## Example
 ```

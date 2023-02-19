@@ -7,8 +7,8 @@ $threadAddMember[Thread ID;User ID]
 ```
 
 ### Parameters
-- `Thread ID` `(Type : Snowflake || Flag : Required)` : The ID of the thread channel to add the user to.
-- `User ID` `(Type : Snowflake || Flag : Required)` : The user to add to the thread.
+- `Thread ID` `(Type: Snowflake || Flag: Required)`: The ID of the thread channel to add the user to.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to add to the thread.
 
 ## Example
 ```

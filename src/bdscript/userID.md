@@ -7,7 +7,7 @@ $userID[Username#Discriminator / Username]
 ```
 
 ### Parameters
-- `Username#Discriminator / Username` `(Type : String || Flag : Emptiable)` : The user's username (User) or user-tag (User#0000) to return the ID for.
+- `Username#Discriminator / Username` `(Type: String || Flag: Emptiable)`: The user's username (User) or user-tag (User#0000) to return the ID for.
 
 ## Example
 ```
