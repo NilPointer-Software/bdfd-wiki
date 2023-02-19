@@ -3,7 +3,7 @@ The command can't be executed in any of the provided channels. If the channel is
 
 ## Usage
 ```
-$ignoreChannels[channelIDs;errorMessage]
+$ignoreChannels[channelIDs;...;errorMessage]
 ```
 
 ### Parameters
