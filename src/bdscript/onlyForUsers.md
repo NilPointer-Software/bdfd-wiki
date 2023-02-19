@@ -3,7 +3,7 @@ The command can only be executed by users with certain 'usernames'.
 
 ## Usage
 ```
-$onlyForUsers[usernames;errorMessage]
+$onlyForUsers[usernames;...;errorMessage]
 ```
 
 ### Parameters 
