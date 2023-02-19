@@ -7,7 +7,8 @@ $modulo[A;B]
 ```
 
 ### Parameters 
-- `A,B` `(Type : Integer || Flag : Required)` : The numbers to return the remainder for. Separate numbers using `;`.
+- `A` `(Type: Integer || Flag: Required)`: The dividend.
+- `B` `(Type: Integer || Flag: Required)`: The divisor.
 
 ## Example
 ```
