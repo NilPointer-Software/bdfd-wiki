@@ -8,7 +8,7 @@ $eval[BDScript source code]
 ```
 
 ### Parameters 
-- `BDScript source code` `(Type : String || Flag : Emptiable)` : The code to be evaluated.
+- `BDScript source code` `(Type: String || Flag: Emptiable)`: The code to be evaluated.
 
 ## Example
 ```
