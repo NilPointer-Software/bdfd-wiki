@@ -7,8 +7,8 @@ $findUser[user;(returnAuthorID)]
 ```
 
 ## Parameters
-- `user` `(Type : String || Flag : Emptiable)` : The user's username, ID, or mention to find.
-- `returnAuthorID` `(Type : Bool || Flag : Optional)` : Whether to return the author ID if no user was found. Default is `yes`.
+- `user` `(Type: String || Flag: Emptiable)`: The user's username, ID, or mention to find.
+- `returnAuthorID` `(Type: Bool || Flag: Optional)`: Whether to return the author ID if no user was found. The default is `yes`.
 
 ## Example
 ```
