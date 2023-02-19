@@ -3,7 +3,7 @@ Separates the thousands in a number.
 
 ## Usage
 ```
-$numberSeparator[number;(Separator)]
+$numberSeparator[number;(separator)]
 ```
 
 ### Parameters 
