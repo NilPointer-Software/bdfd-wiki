@@ -3,7 +3,7 @@ Picks one value from the provided values randomly.
 
 ## Usage
 ```
-$randomText[text1;text2;etc]
+$randomText[text;...]
 ```
 
 ### Parameters
