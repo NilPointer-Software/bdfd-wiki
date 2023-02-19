@@ -7,9 +7,9 @@ $getMessage[channelID;messageID;(property)]
 ```
 
 ### Parameters
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel that this message belongs to.
-- `messageID` `(Type : Snowflake || Flag : Required)` : The message to get the data from.
-- `property` `(Type : Enum || Flag : Optional)` : The message data to get. Default is `content`. Message properties:
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel that this message belongs to.
+- `messageID` `(Type: Snowflake || Flag: Required)`: The message to get the data from.
+- `property` `(Type: Enum || Flag: Optional)`: The message data to get. The default is `content`. Message properties:
   - `content` - The content of this message.
   - `authorID` - The ID of the message author.
   - `username` - The username of the message author.
