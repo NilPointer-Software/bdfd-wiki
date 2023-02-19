@@ -7,8 +7,8 @@ $globalUserLeaderboard[variableName;sortType (asc/desc)]
 ```
 
 ### Parameters
-- `variableName` `(Type : String || Flag : Required)` : The variable to create the leaderboard for.
-- `sortType` `(Type : Enum || Flag : Optional)` : Whether to sort the leaderboard in ascending (`asc`) or descending (`desc`) order.
+- `variableName` `(Type: String || Flag: Required)`: The variable to create the leaderboard for.
+- `sortType` `(Type: Enum || Flag: Optional)`: Whether to sort the leaderboard in ascending (`asc`) or descending (`desc`) order.
 
 > 🧙‍♂️ `$globalUserLeaderboard` automatically generates a description. So, `$description` should not be used in the code.
 
