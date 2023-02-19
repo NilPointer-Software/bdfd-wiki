@@ -6,8 +6,8 @@ Creates a new modal.
 $newModal[Modal ID;Title]
 ```
 ### Parameters
-- `Modal ID` `(Type : String || Flag : Required)` : ID of the `$newModal[]` which will be used for `$onInteraction[]` callback.
-- `Title` `(Type : String || Flag : Required)` : title displayed in the modal.
+- `modal ID` `(Type: String || Flag: Required)`: ID of the `$newModal[]` which is used in `$onInteraction[]` callback.
+- `title` `(Type: String || Flag: Required)`: Title displayed in the modal.
 
 ## Example
 ```
