@@ -7,8 +7,8 @@ $onlyIf[condition;errorMessage]
 ```
 
 ### Parameters
-- `condition` `(Type : String || Flag : Required)` : value1!=value2 or value1>value2 or value1<value2.
-- `errorMessage` `(Type : String || Flag : Emptiable)`
+- `condition` `(Type: String || Flag: Required)`: The condition to check (e.g. value1!=value2).
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The message to return when the condition isn't true.
 
 ### Signs
 - `==` - Equal
