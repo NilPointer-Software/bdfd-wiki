@@ -3,7 +3,7 @@ The command can only executed by the provided roles.
 
 ## Usage
 ```
-$onlyForRoles[roleNames;errorMessage]
+$onlyForRoles[roleNames;...;errorMessage]
 ```
 
 ### Parameters 
