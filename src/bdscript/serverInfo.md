@@ -1,14 +1,14 @@
 # $serverInfo
 Allows you to make a 'server info' command without using a bunch of different functions at once. This function returns info about the current server.
 
-## Usage
+## Syntax
 ```
 $serverInfo[message;(thumbnail)]
 ```
 
 ### Parameters 
-- `message` `(Type : String || Flag : Required)` : The text that is returned.
-- `thumbnail` `(Type : Bool || Flag : Optional)` : Whether or not to show the server icon as the thumbnail. Default is `yes`.
+- `message` `(Type: String || Flag: Required)`: The text that is returned.
+- `thumbnail` `(Type: Bool || Flag: Optional)`: Whether or not to show the server icon as the thumbnail. Default is `yes`.
 
 ⚠️ You can not include `$serverInfo[]` in a command with a `$description[]` (because it makes one automatically).
 

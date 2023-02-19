@@ -1,23 +1,16 @@
 # $serverChannelExists
+Checks if the channel exists in the guild.
 
-Checks if the channel exists in the guild
-
-## Usage
+## Syntax
 ```
 $serverChannelExists[channel ID]
 ```
 
 ### Parameters 
--`Channel ID` `(Type : Snowflake,String || Flag : Emptiable)` : Returns `true` If could find the channel and `false` If couldn't find the channel
+- `Channel ID` `(Type: Snowflake,String || Flag: Emptiable)`: Returns `true`, if it exists otherwise `false`.
 
-## Example 1
+## Example
 ```
 $nomention
 $serverChannelExists[566370477967147018]
-```
-
-## Example 2
-```
-$nomention
-$serverChannelExists[$channelID[channelName]]
 ```

@@ -5,19 +5,21 @@ Returns the server's icon.
 There are two usages of the `$serverIcon` function.
 
 ### Usage #1
+#### Syntax
 ```
 $serverIcon
 ```
-Returns the icon of the server that this command was ran in.
+Returns the icon of the current server.
 
 ### Usage #2
+#### Syntax
 ```
 $serverIcon[serverID]
 ```
 Returns the icon of the server provided.
 
 #### Parameters 
-- `serverID` `(Type : Snowflake || Flag : Required)` : The server to get the icon for *(bot must be in the server)*.
+- `serverID` `(Type: Snowflake || Flag: Required)`: The server to get the icon for *(bot must be in the server)*.
 
 ## Example
 ```

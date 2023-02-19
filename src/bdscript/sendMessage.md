@@ -7,8 +7,8 @@ $sendMessage[text;(returnMessageID)]
 ```
 
 ### Parameters 
-- `text` `(Type : String || Flag : Required)` : The text to send in the new message.
-- `returnMessageID` `(Type : Bool || Flag : Optional)` : Whether to return the ID of the newly created message, in another message, default is `no`.
+- `text` `(Type: String || Flag: Required)`: The text to send in the new message.
+- `returnMessageID` `(Type: Bool || Flag: Optional)`: Whether to return the ID of the newly created message, in another message, default is `no`.
 
 ## Examples
 
