@@ -7,4 +7,4 @@ $guildExists[guildID]
 ```
 
 ### Parameters
-- `guildID` `(Type : Snowflake,String || Flag : Emptiable)` : The ID of the hypothetical server.
+- `guildID` `(Type: Snowflake, String || Flag: Emptiable)`: The ID of the hypothetical server.
