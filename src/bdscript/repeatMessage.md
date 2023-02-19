@@ -3,7 +3,7 @@ Repeats the provided text a certain amount of times.
 
 ## Usage
 ```
-$repeatMessage[Amount;Message]
+$repeatMessage[amount;message]
 ```
 
 ### Parameters
