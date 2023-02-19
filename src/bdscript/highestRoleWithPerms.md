@@ -7,7 +7,7 @@ $highestRoleWithPerms[permissions]
 ```
 
 ### Parameters
-- `permissions` `(Type : Permission || Flag : Required)` : The permissions that the role needs to have.  [(see permissions list)](/src/resources/permissions.md)
+- `permissions` `(Type: Permission || Flag: Required)`: The permissions that the role needs to have.  [(see permissions list)](/src/resources/permissions.md)
 
 ## Example
 ```
