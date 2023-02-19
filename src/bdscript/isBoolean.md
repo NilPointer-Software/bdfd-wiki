@@ -16,7 +16,7 @@ $isBoolean[text]
 ```
 
 ### Parameters
-- `text` `(Type : String || Flag : Emptiable)` : The text to check.
+- `text` `(Type: String || Flag: Emptiable)`: The text to check.
 
 ## Example
 ```
