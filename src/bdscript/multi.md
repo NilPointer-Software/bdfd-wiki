@@ -7,7 +7,7 @@ $multi[number;..]
 ```
 
 ### Parameters 
-- `number` `(Type : (Big)Float,Integer || Flag : Required)`  The numbers to multiply, separate numbers using `;`.
+- `number` `(Type: Float, Integer || Flag: Required)`: The numbers to multiply. Separate numbers using `;`.
 
 ## Example
 ```
