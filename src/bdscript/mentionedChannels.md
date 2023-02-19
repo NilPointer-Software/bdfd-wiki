@@ -7,8 +7,8 @@ $mentionedChannels[mentionNumber;(returnCurrent)]
 ```
 
 ### Parameters 
-- `mentionNumber` `(Type : HowMany || Flag : Required)` : The channel-mention to get from the author's message  (`1` = first channel-mention, `2` = second, etc).
-- `returnCurrent` `(Type : Bool || Flag : Optional)` : Whether to return the current channel ID if no channel is mentioned or not.
+- `mentionNumber` `(Type: HowMany || Flag: Required)`: The channel-mention to get from the author's message  (`1` = first channel-mention, `2` = second, etc).
+- `returnCurrent` `(Type: Bool || Flag: Optional)`: Whether to return the current channel ID if no channel is mentioned or not.
 
 ## Example
 ```
