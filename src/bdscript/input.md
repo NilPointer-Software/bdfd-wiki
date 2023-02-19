@@ -7,7 +7,7 @@ $input[Text Input ID]
 ```
 
 ## Parameters 
-- `Text Input ID` `(Type : String || Flag : Required)` : input ID in [$addTextInput](../bdscript/addTextInput.md)
+- `Text Input ID` `(Type: String || Flag: Required)`: input ID in [$addTextInput](../bdscript/addTextInput.md)
 
 ## Example
 ### Interaction command code
