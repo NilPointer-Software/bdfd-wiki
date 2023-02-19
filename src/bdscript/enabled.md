@@ -7,8 +7,8 @@ $enabled[enabled;errorMessage]
 ```
 
 ### Parameters
-- `enabled` `(Type : Bool || Flag : Required)` : 'yes' means the command is enabled, 'no' means it's disabled.
-- `errorMessage` `(Type : String || Flag : Emptiable)` : The message that is returned if the command is disabled.
+- `enabled` `(Type: Bool || Flag: Required)`: 'yes' means the command is enabled, 'no' means it's disabled.
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The message that is returned if the command is disabled.
 
 ## Example
 This section will explain how to disable/enable certain commands using server variables. 
