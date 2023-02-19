@@ -7,7 +7,7 @@ $rolePosition[roleID]
 ```
 
 ### Parameters
-- `roleID` `(Type : Snowflake || Flag : Required)` : The role to get the position of.
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role for which to get its position.
 
 ## Example
 ```
