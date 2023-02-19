@@ -7,7 +7,7 @@ Returns how long until premium expires.
 $premiumExpireTime[(unix timestamp)]
 ```
 ### Parameters 
-- `unix timestamp` `(Type : Bool || Flag : Optional)` : Accepts either "yes" or "no". If "yes" is written, it will return premium expiration value in UNIX timestamp and if "no", it will output as normal time format. Default as "no".
+- `unix timestamp` `(Type: Bool || Flag: Optional)`: If "yes" is written, it will return the premium expiration value in UNIX timestamp and if "no", it will output as normal time format. Defaults to "no".
 
 ## Example
 
