@@ -7,8 +7,8 @@ $image[image url;(index)]
 ```
 
 ### Parameters
-- `image url` `(Type : URL || Flag : Emptiable)` : The URL of the image that appears. Must be a valid image URL.
-- `index` `(Type : Integer || Flag : Optional)` : What embed the image should belong to. Default is `1`. [(learn more)](../resources/embedIndexes.md)
+- `image url` `(Type: URL || Flag: Emptiable)`: The URL of the image that appears. Must be a valid image URL.
+- `index` `(Type: Integer || Flag: Optional)`: What embed the image should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
