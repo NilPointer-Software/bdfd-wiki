@@ -3,7 +3,7 @@ Modifies a role's permissions.
 
 ## Usage
 ```
-$modifyRolePerms[roleID;permissions]
+$modifyRolePerms[roleID;permissions;...]
 ```
 
 ### Parameters 
