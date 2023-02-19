@@ -3,7 +3,7 @@ The command can only be executed by the provided users.
 
 ## Usage
 ```
-$onlyForIDs[userIDs;errorMessage]
+$onlyForIDs[userIDs;...;errorMessage]
 ```
 
 ### Parameters 
