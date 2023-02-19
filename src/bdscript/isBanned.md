@@ -8,7 +8,7 @@ $isBanned[user ID]
 ```
 
 ## Parameters 
-- `user ID ` `(Type : Snowflake || Flag : Required)` :the ID to check if banned or no.
+- `user ID ` `(Type: Snowflake || Flag: Required)`: The user to check its ban status.
 
 ## Example
 ```
