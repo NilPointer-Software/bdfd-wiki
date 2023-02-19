@@ -7,10 +7,10 @@ $getEmbedData[channelID;messageID;embedIndex;embedProperty (title/description/fo
 ```
 
 ### Parameters
-- `channelID` `(Type : Snowflake || Flag : Required)` : The channel this message belongs to.
-- `messageID` `(Type : Snowflake || Flag : Required)` : The message to get this embed data from.
-- `embedIndex` `(Type : HowMany || Flag : Required)` : The embed of this message to get data from. Use `1` for the first embed of this message.
-- `embedProperty` `(Type : Enum || Flag : Required)` : The embed property to return.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel this message belongs to.
+- `messageID` `(Type: Snowflake || Flag: Required)`: The message to get this embed data from.
+- `embedIndex` `(Type: HowMany || Flag: Required)`: The embed of this message to get data from. Use `1` for the first embed of this message.
+- `embedProperty` `(Type: Enum || Flag: Required)`: The embed property to return.
 
 ## Example
 ```
