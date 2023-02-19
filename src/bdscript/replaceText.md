@@ -7,10 +7,10 @@ $replaceText[text;sample;new;(howMany)]
 ```
 
 ### Parameters
-- `text` `(Type : String || Flag : Emptiable)` : The text where the bot is searching for the 'sample'.
-- `sample` `(Type : String || Flag : Emptiable)` : The text to replace with 'new'.
-- `new` `(Type : String || Flag : Emptiable)` : The text to replace 'sample' with.
-- `how many` `(Type : Integer || Flag : Optional)` : How many times the bot should replace the sample *(if there is multiple arguments in 'text' that match 'sample')*.  Use `-1` to replace all 'sample' in 'text' with 'new'.
+- `text` `(Type: String || Flag: Emptiable)`: The text where the bot is searching for the 'sample'.
+- `sample` `(Type: String || Flag: Emptiable)`: The text to replace with 'new'.
+- `new` `(Type: String || Flag: Emptiable)`: The text to replace 'sample' with.
+- `howMany` `(Type: Integer || Flag: Optional)`: The number of times, at most, the bot should replace the sample.  Use `-1` to replace all 'sample' in 'text' with 'new'.
 
 ## Examples
 
