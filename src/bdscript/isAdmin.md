@@ -8,7 +8,7 @@ $isAdmin[userID]
 ```
 
 ### Parameters
-- `userID` `(Type : Snowflake || Flag : Required)` : The user to check.
+- `userID` `(Type: Snowflake || Flag: Required)`: The user to check.
 
 ## Example
 ```
