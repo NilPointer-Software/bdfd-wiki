@@ -26,7 +26,7 @@ $parentID[Channel ID]
 Returns the parent category ID for given channel ID.
 
 #### Parameters
-- `Channel ID` `(Type : Snowflake || Flag : Required)` : The ID of the channel from which to retrieve the category ID.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel from which to retrieve the category ID.
 
 #### Example
 ```
