@@ -7,7 +7,7 @@ $findChannel[channel]
 ```
 
 ### Parameters
-- `channel` `(Type : String || Flag : Emptiable)` : The channel name/ID/mention to find.
+- `channel` `(Type: String || Flag: Emptiable)`: The channel name/ID/mention to find.
 
 ## Example
 ```
