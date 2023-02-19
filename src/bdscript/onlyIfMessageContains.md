@@ -3,7 +3,7 @@ The command can only be executed if the 'text' contains all the 'indexes', other
 
 ## Usage
 ```
-$onlyIfMessageContains[text;indexes;errorMessage]
+$onlyIfMessageContains[message;word;...;errorMessage]
 ```
 
 ### Parameters 
