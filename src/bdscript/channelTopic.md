@@ -1,17 +1,8 @@
 # $channelTopic
-Returns a channel's topic/description.
+Returns the topic of the channel that the command is being used in.
 
-## Usages
-There are two usages of the `$channelTopic` function.
-
-### Usage #1
-`$channelTopic` - Returns the topic of the channel that the command is being used in.
-
-### Usage #2
-`$channelTopic[channelID]` - Returns the channel topic of the provided 'channelID'.
-
-## Parameters 
-- `channelID` `(Type : Snowflake || Flag : Required)`
+### Syntax
+`$channelTopic`
 
 ## Example
 ```

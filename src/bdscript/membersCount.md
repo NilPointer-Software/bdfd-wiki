@@ -1,20 +1,11 @@
 # $membersCount
-This command returns number of members.
+returns amount of members in current guild
 
-## First usage of the command
-`$membersCount` - returns amount of members in current guild
+### Example 
+```
+$nomention
+This server has $membersCount members 
+```
 
-## Second usage
-`$membersCount[presence]` - returns amount of members that have their presences set
-to provided presence. For example if you will use `$membersCount[online]` it will show
-you amount of online members.
-
-### Available presences: 
-- `online` 
-- `offline`
-- `idle`
-- `dnd`
-- `invisible`
-
-## Third Usage
+## Note
 You can use `$membersCount` in bot status to display how many users in all servers of the bot
