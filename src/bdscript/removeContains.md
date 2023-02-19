@@ -1,5 +1,5 @@
 # $removeContains
-Removes messages that contains provided words. It will remove `amount` last messages (replace 'amount' with number) (max 100 messages) 
+Removes messages that contains provided words. Removes up to the given `amount` of latest messages (max 100) 
 
 ## Usage
 ```
