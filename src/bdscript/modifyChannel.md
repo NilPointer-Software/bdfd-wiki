@@ -7,7 +7,7 @@ There are two usages of the `$modifyChannel` function.
 
 ### Usage #1
 ```
-$modifyChannel[channelID;channelName;topic;NSFW (yes/no);position]
+$modifyChannel[channelID;(channelName;topic;NSFW;position;categoryID)]
 ```
 
 #### Parameters 
