@@ -268,7 +268,7 @@
     - [$parentID](./bdscript/parentID.md)
     - [$ping](./bdscript/ping.md)
     - [$pinMessage](./bdscript/pinMessage.md)
-    - [$pinMessage[]](./bdscript/pin MessageComplex.md)
+    - [$pinMessage[]](./bdscript/pinMessageComplex.md)
     - [$premiumExpireTime](./bdscript/premiumExpireTime.md)
     - [$publishMessage](./bdscript/publishMessage.md)
     - [$random](./bdscript/random.md)
