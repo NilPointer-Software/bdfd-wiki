@@ -17,7 +17,7 @@ $nickname[userID]
 ```
 
 #### Parameters 
-- `userID` `(Type : Snowflake || Flag : Required)` : Returns the provided user's display name.
+- `userID` `(Type: Snowflake || Flag: Required)`: Returns the provided user's display name.
 
 ## Example
 ```
