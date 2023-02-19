@@ -7,8 +7,8 @@ $numberSeparator[number;(separator)]
 ```
 
 ### Parameters 
-- `number` `(Type : Integer || Flag : Required)` : The number to apply the separator to.
-- `Separator` `(Type : String || Flag : Vacantable)` : The separator between each thousand. Default is `,`.
+- `number` `(Type: Integer || Flag: Required)`: The number to apply the separator to.
+- `separator` `(Type: String || Flag: Vacantable)`: The separator between each thousand. The default is `,`.
 
 ## Example
 ```
