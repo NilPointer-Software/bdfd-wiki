@@ -3,7 +3,7 @@ Creates a new ticket.
 
 ## Usage
 ```
-$newTicket[categoryID/name;No question message;In ticket message;Message to user;Error message;(Ticket number;(yes/no) return id of the ticket message)]
+$newTicket[categoryID/name;No question message;In ticket message;Message to user;Error message;(Ticket number;return id of the ticket message)]
 ```
 
 ### Parameters 
