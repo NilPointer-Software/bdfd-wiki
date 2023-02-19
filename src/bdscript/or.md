@@ -3,7 +3,7 @@ Returns 'true' if at least one of the provided conditions is true, otherwise 'fa
 
 ## Usage
 ```
-$or[condition1;condition2;etc]
+$or[confitions;...]
 ```
 
 ### Parameters
