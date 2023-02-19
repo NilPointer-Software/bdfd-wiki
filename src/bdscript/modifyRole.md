@@ -3,7 +3,7 @@ Modifies a role.
 
 ## Usage
 ```
-$modifyRole[roleID;(roleName;colorHex;hoisted (yes/no);mentionable (yes/no))]
+$modifyRole[roleID;(roleName;colorHex;hoisted;mentionable)]
 ```
 > 🧙‍♂️ You can use `!unchanged` as a argument to leave the setting as-is.
 
