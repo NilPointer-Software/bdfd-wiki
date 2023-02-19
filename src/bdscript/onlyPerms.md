@@ -7,5 +7,5 @@ $onlyPerms[permissions;...;errorMessage]
 ```
 
 ### Parameters 
-- `permissions` `(Type : Permission || Flag : Emptiable)` : The required permissions [(see permissions list)](../resources/permissions.md). Separate permissions using `;`.
-- `errorMessage` `(Type : String || Flag : Emptiable)` : The message that is returned when the user is missing the required permissions.
+- `permissions` `(Type: Permission || Flag: Emptiable)`: The required permissions [(see permissions list)](../resources/permissions.md). Separate permissions using `;`.
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The message that is returned when the user is missing the required permissions.
