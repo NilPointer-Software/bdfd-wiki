@@ -8,7 +8,7 @@ $isBot[userID]
 ```
 
 ### Parameters
-- `userID` `(Type : Snowflake || Flag : Emptiable)` : The user to check.
+- `userID` `(Type: Snowflake || Flag: Emptiable)`: The user to check.
 
 ## Example
 ```
