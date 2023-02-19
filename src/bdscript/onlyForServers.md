@@ -3,7 +3,7 @@ The command can only be executed in the provided servers.
 
 ## Usage
 ```
-$onlyForServers[serverIDs;errorMessage]
+$onlyForServers[serverIDs;...;errorMessage]
 ```
 
 ### Parameters 
