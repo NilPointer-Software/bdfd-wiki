@@ -7,7 +7,7 @@ $roleInfo[message]
 ```
 
 ### Parameters 
-- `message` `(Type : String || Flag : Required)` : check the commands below
+- `message` `(Type: String || Flag: Required)` : The message format. Check below for more information.
 
 ## Commands
 You can use the 'commands' below within `$roleInfo`:
