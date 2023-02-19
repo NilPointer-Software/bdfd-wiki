@@ -8,7 +8,7 @@ $isHoisted[roleID]
 ```
 
 ### Parameters
-- `roleID` `(Type : Snowflake || Flag : Required)` : The role which the bot checks is hoisted or not.
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role to check its hoisted status.
 
 ## Example
 ```
