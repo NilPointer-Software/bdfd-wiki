@@ -8,8 +8,8 @@ $hasRole[userID;roleID]
 ```
 
 ### Parameters
-- `userID` `(Type : Snowflake || Flag : Required)` : The user to check for the role.
-- `roleID` `(Type : Snowflake || Flag : Emptiable)` : The role that the bot is checking the user for.
+- `userID` `(Type: Snowflake || Flag: Required)`: The user to check for the role.
+- `roleID` `(Type: Snowflake || Flag: Emptiable)`: The role that the bot is checking the user for.
 
 ## Example
 ```
