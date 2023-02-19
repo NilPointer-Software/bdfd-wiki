@@ -9,8 +9,8 @@ $getLeaderboardValue[variableType (user/globalUser/server);variableName;sortType
 - `variableType` `(Type: Enum || Flag: Required)`: The variable type.
 - `variableName` `(Type: String || Flag: Required)`: The variable name to generate the leaderboard for.
 - `sortType` `(Type: Enum || Flag: Required)`: Whether to sort the values in ascending (asc) or descending (desc) order.
-- `position` `(Type : HowMany || Flag : Required)` : The leaderboard position to get, e.g `1`, `3`, etc.
-- `returnType` `(Type : Enum || Flag : Optional)` : The return type. Types:
+- `position` `(Type: HowMany || Flag: Required)`: The leaderboard position to get, e.g `1`, `3`, etc.
+- `returnType` `(Type: Enum || Flag: Optional)`: The return type. Types:
   - none - If this field is excluded, it will return `Username - Value`.
   - id - Returns the ID of the user belonging this position.
   - value - Returns the variable value of this position.
