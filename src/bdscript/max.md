@@ -7,7 +7,7 @@ $max[A;B;...]
 ```
 
 ### Parameters 
-- `A,B,...` `(Type : Integer || Flag : Required)` : The numbers to get the data from. Separate numbers using `;`.
+- `A,B,...` `(Type: Integer || Flag: Required)`: The numbers to get the maximum from. Separate numbers using `;`.
 
 ## Example
 ```
