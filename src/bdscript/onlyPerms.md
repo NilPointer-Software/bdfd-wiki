@@ -3,7 +3,7 @@ The command can only be executed if the user running the command has all the pro
 
 ## Usage
 ```
-$onlyPerms[permissions;errorMessage]
+$onlyPerms[permissions;...;errorMessage]
 ```
 
 ### Parameters 
