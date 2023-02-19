@@ -8,4 +8,4 @@ $isValidHex[colorHex]
 ```
 
 ### Parameters
-- `colorHex` `(Type : String || Flag : Emptiable)` : The [color hex](https://htmlcolorcodes.com/color-picker) to check.
+- `colorHex` `(Type: String || Flag: Emptiable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to check.
