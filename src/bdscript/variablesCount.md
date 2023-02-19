@@ -7,7 +7,7 @@ $variablesCount[Type]
 ```
 
 ### Parameters
-- `Type` `(Type : Enum || Flag : Required)` : The variable type to return the count for. Accepts either `user`, `server`, `channel`, or `globaluser` as input.
+- `Type` `(Type : Enum || Flag : Required)`: The variable type to return the count for. Accepts either `user`, `server`, `channel`, or `globaluser` as input.
 
 ## Example
 ```
