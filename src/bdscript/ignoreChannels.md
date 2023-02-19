@@ -7,5 +7,5 @@ $ignoreChannels[channelIDs;errorMessage]
 ```
 
 ### Parameters
-- `channelIDs` `(Type : Snowflake || Flag : Emptiable)` :  The channels to ignore. Separate IDs using `;`.
-- `errorMessage` `(Type : String || Flag : Emptiable)` :  The message that is returned when the channel is ignored.
+- `channelIDs` `(Type: Snowflake || Flag: Emptiable)`:  The channels to ignore. Separate IDs using `;`.
+- `errorMessage` `(Type: String || Flag: Emptiable)`:  The message that is returned when the channel is ignored.
