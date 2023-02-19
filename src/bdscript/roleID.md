@@ -7,7 +7,7 @@ $roleID[roleName]
 ```
 
 ### Parameters
-- `roleName` `(Type : String || Flag : Required)` : The role name to get the role ID for.
+- `roleName` `(Type: String || Flag: Required)`: The name of the role for which to get its ID.
 
 ## Example
 ```
