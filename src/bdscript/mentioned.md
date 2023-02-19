@@ -3,7 +3,7 @@ Returns the ID of the mentioned user.
 
 ## Usage
 ```
-$mentioned[mentionNumber;(returnAuthor(yes/no))]
+$mentioned[mentionNumber;(returnAuthor)]
 ```
 
 ### Parameters 
