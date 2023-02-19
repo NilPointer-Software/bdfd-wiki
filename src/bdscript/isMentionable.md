@@ -10,7 +10,7 @@ $isMentionable[roleID]
 ```
 
 ### Parameters
-- `roleID` `(Type : Snowflake || Flag : Required)` : The role which the bot checks is mentionable or not.
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role to check for its mentionable status.
 
 ## Example
 ```
