@@ -8,8 +8,8 @@ $footerIcon[icon url;(index)]
 ```
 
 ### Parameters
-- `icon url` `(Type : URL || Flag : Emptiable)` : The URL to set the footer icon as. Must be a valid image URL.
-- `index` `(Type : Integer || Flag : Vacantable)` : What embed the footer icon should belong to. Default is `1`. [(learn more)](../resources/embedIndexes.md)
+- `icon url` `(Type: URL || Flag: Emptiable)`: The URL to set the footer icon as. Must be a valid image URL.
+- `index` `(Type: Integer || Flag: Vacantable)`: What embed the footer icon should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
