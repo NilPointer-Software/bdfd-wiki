@@ -8,11 +8,11 @@ $newSelectMenu[menu ID;min;max;(placeholder;message ID)]
 ```
 
 ## Parameters 
-- `Menu ID` `(Type : String || Flag : Required)` : menu ID which will be used ine the `$onInteraction[]` callback and inside the first argument of `$addSelectMenuOption[]`
-- `Min` `(Type : Integer || Flag : Required)` : minimum amount of values that can be selected.
-- `Max` `(Type : Integer || Flag : Required)` : maximum amount of values that can be selected.
-- `Placeholder` `(Type : String || Flag : Vacantable)` : it's a text that appears if no option is selected.
-- `Message ID` `(Type : Snowflake || Flag : Vacantable)` : ID of a message that should have select menu added to it. By default it's the bot's response. 
+- `menu ID` `(Type: String || Flag: Required)`: Menu ID which is used in the `$onInteraction[]` callback and inside the first argument of `$addSelectMenuOption[]`
+- `min` `(Type: Integer || Flag: Required)`: The minimum amount of values that can be selected.
+- `max` `(Type: Integer || Flag: Required)`: The maximum amount of values that can be selected.
+- `placeholder` `(Type: String || Flag: Vacantable)`: It's a text that appears if no option is selected.
+- `message ID` `(Type: Snowflake || Flag: Vacantable)`: ID of a message that should have a select menu added to it. By default, it's the bot's response.
 
 ## Example
 ```
