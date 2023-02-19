@@ -12,7 +12,7 @@ $hypesquad[userID]
 
 ### Parameters
 
-- `userID` `(Type : Snowflake || Flag : Required)` : ID of the user whose hypesquad name should be returned
+- `userID` `(Type: Snowflake || Flag: Required)`: ID of the user whose hypesquad name should be returned
 
 ## Example
 
