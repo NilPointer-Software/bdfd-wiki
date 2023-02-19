@@ -3,7 +3,7 @@ Removes messages that contains provided words. Removes up to the given `amount` 
 
 ## Usage
 ```
-$removeContains[word;...;Amount]
+$removeContains[word;...;amount]
 ```
 
 ### Parameters
