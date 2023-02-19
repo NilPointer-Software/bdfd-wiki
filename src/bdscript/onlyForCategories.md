@@ -3,7 +3,7 @@ The command can only be executed in provided categories.
 
 # Usage
 ```
-$onlyForCategories[category IDs;error message]
+$onlyForCategories[category IDs;...;error message]
 ```
 
 # Parameters 
