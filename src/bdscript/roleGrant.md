@@ -8,9 +8,8 @@ $roleGrant[user ID;+/-Role ID;...]
 ```
 
 ### Parameters
-- `user ID` `(Type : Snowflake || Flag : Required)` : the user ID.
-- `+/-` `(Flag : Required)` : In front of RoleID use '+' to add the role or '-' to remove it.
-- `RoleID` `(Type : Snowflake || Flag : Required)` ID of the role to give or remove.
+- `user ID` `(Type: Snowflake || Flag: Required)`: The user to grant roles to.
+- `RoleID` `(Type: Snowflake || Flag: Required)`: The role to give or remove. Prepend `+` or `-` to the role ID to give or remove it.
 
 ## Example 1
 ```
