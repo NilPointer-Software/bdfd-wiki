@@ -7,8 +7,8 @@ $repeatMessage[amount;message]
 ```
 
 ### Parameters
-- `Amount` `(Type : Integer || Flag : Required)` : How many times the text is repeated *(max 10 times)*.
-- `Message` `(Type : String || Flag : Emptiable)` : The text to repeat.
+- `amount` `(Type: Integer || Flag: Required)`: The number of times to repeat the given text *(max 10 times)*.
+- `message` `(Type: String || Flag: Emptiable)`: The text to repeat.
 
 ## Examples
 
