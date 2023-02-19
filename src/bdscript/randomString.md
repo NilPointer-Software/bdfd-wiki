@@ -7,7 +7,7 @@ $randomString[length]
 ```
 
 ### Parameters
-- `length` `(Type : Integer || Flag : Required)` : How long the string should be (max `10`).
+- `length` `(Type: Integer || Flag: Required)`: How long the string should be (max `10`).
 
 ## Example
 ```
