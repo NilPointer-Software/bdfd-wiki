@@ -10,5 +10,5 @@ $resetUserVar[variableName;(userID)]
 ```
 
 ### Parameters
-- `variableName` `(Type : String || Flag : Required)` : The name of the variable to reset.
-- `userID` `(Type : Snowflake || Flag : Optional)` : The user to reset the variable for, if no user is provided, then the variable is reset for everyone!
+- `variableName` `(Type: String || Flag: Required)`: The name of the variable to reset.
+- `userID` `(Type: Snowflake || Flag: Optional)`: The user to reset the variable for. If no user is provided, the variable will be reset for **everyone**.
