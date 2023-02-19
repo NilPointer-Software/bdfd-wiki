@@ -7,7 +7,7 @@ $roleName[roleID]
 ```
 
 ### Parameters
-- `roleID` `(Type : Snowflake || Flag : Required)` : The role to get the name of.
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role for which to get its name.
 
 ## Example
 ```
