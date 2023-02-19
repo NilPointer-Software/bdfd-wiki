@@ -3,7 +3,7 @@ Publishes a message from an announcement channel to all following servers.
 
 ## Syntax
 ```
-$publishMessage[Channel ID;Message ID]
+$publishMessage[channel ID;message ID]
 ```
 
 ### Parameters 
