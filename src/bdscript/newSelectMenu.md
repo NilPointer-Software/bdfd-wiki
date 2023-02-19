@@ -3,7 +3,8 @@ Add select menu to a message.
 
 ## Usage
 ```
-$newSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
+$newSelectMenu[menu ID;min;max;(placeholder;message ID)]
+
 ```
 
 ## Parameters 
