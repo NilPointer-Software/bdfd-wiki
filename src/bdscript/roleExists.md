@@ -9,7 +9,7 @@ $roleExists[roleID]
 ```
 
 ### Parameters
-- `roleID` `(Type : Snowflake,String || Flag : Emptiable)` :  The "role" which the bot checks.
+- `roleID` `(Type: Snowflake, String || Flag: Emptiable)`:  The role to check for.
 
 ## Examples
 **Example #1:**
