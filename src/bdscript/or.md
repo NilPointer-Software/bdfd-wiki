@@ -7,7 +7,7 @@ $or[confitions;...]
 ```
 
 ### Parameters
-- `condition1,2, etc` `(Type : String || Flag : Required)`
+- `conditions `(Type: String || Flag: Required)`: Conditions to check. Separate conditions using `;`.
 
 ## Example
 ```
