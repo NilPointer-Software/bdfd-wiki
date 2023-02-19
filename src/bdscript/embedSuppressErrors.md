@@ -10,9 +10,9 @@ $embedSuppressErrors[title;description;(color;author;footerText;footerIcon)]
 > `$embedSuppressErrors[Error!;There was a error!;;;;]` - this is correct. `$embedSuppressErrors[Error!;There was a error!]` - this is incorrect.
 
 ### Parameters
-- `title` `(Type : String)` : The title of the embed.
-- `description` `(Type : String)` : The embed description.
-- `color` `(Type : Color)` : The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker).
-- `author` `(Type : String)` : The embed author text.
-- `footerText` `(Type : String)` : The embed footer text.
-- `footerIcon` `(Type : URL)` : The embed footer icon, must be a valid image URL.
+- `title` `(Type: String || Flag: Emptiable)`: The title of the embed.
+- `description` `(Type: String || Flag: Emptiable)`: The embed description.
+- `color` `(Type: Color || Flag: Vacantable)`: The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker).
+- `author` `(Type: String || Flag: Vacantable)`: The embed author text.
+- `footerText` `(Type: String || Flag: Vacantable)`: The embed footer text.
+- `footerIcon` `(Type: URL || Flag: Vacantable)`: The embed footer icon, must be a valid image URL.
