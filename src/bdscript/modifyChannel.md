@@ -22,9 +22,7 @@ $modifyChannel[channelID;channelName;topic;NSFW (yes/no);position]
 $modifyChannel[channelID;channelName;topic;NSFW (yes/no);position;categoryID]
 ```
 
-#### Parameters 
-- `categoryID` `(Type : Snowflake || Flag : Vacantable)`
-Same usage as the first. The only new option is `categoryID`. This will choose what category the channel is put in.
+- `categoryID` `(Type: Snowflake || Flag: Vacantable)`: The category to which the channel should belong to.
 > 🧙‍♂️ You can use `$channelID[category/channelName]` to get the ID of a category or channel.
 
 
