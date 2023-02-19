@@ -7,6 +7,6 @@ $onlyIfMessageContains[message;word;...;errorMessage]
 ```
 
 ### Parameters 
-- `text` `(Type : String || Flag : Emptiable)` : The text to check.
-- `indexes` `(Type : String || Flag : Emptiable)` : The phrases that the text must contain, separate phrases using `;`.
-- `errorMessage` `(Type : String || Flag : Emptiable)` : The message that is returned if the text doesn't contain all the provided indexes.
+- `message` `(Type: String || Flag: Emptiable)`: The text to check.
+- `word` `(Type: String || Flag: Emptiable)`: The words that the message must contain. Separate words using `;`.
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The message that is returned if the text doesn't contain all the provided words.
