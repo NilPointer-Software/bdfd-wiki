@@ -7,7 +7,7 @@ $getTextSplitIndex[value]
 ``` 
 
 ### Parameters 
-- `value` `(Type : String || Flag : Emptiable)` : The value to search in the text split.
+- `value` `(Type: String || Flag: Emptiable)`: The value to search in the text split.
 
 ## Example 
 ``` 
