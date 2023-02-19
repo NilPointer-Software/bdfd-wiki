@@ -7,7 +7,6 @@ $authorAvatar
 ```
 
 ## Example
-
 ```
 $nomention
 $image[$authorAvatar]

@@ -6,7 +6,7 @@ Returns how many words (aka arguments/args) are in the provided text.
 $argCount[text]
 ```
 
- ### Parameters
+### Parameters
 - `text` `(Type: String || Flag: Emptiable)`: The text to get word count for.
 
 ## Example

@@ -7,7 +7,7 @@ $addField[name;value;(inline?;index)]
 ```
 > You can create up to 25 fields per embed.
 
-## Parameters
+### Parameters
 - `name` `(Type: String || Flag: Required)`: The name of the field. It cannot exceed more than 256 characters.
 - `value` `(Type: String || Flag: Required)`: The value of the field. It cannot exceed more than 1024 characters.
 - `inline?` `(Type: Bool || Flag: Optional)`: If `yes`, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to `no` by default.
