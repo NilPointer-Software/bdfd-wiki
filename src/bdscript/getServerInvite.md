@@ -16,7 +16,7 @@ $getServerInvite[guildID]
 ```
 
 ## Parameters 
-- `guildID` `(Type : Snowflake || Flag : Required)` : Returns a invite URL for the server provided.
+- `guildID` `(Type: Snowflake || Flag: Required)`: Returns an invite URL for the server provided.
 
 > 🧙‍♂️ Note: The bot must be in the provided server for it to create a invite. 
 
