@@ -7,8 +7,8 @@ $publishMessage[channel ID;message ID]
 ```
 
 ### Parameters 
-- `Channel ID` `(Type : Snowflake || Flag : Required)` : The ID of the channel where the message is.
-- `Message ID` `(Type : Snowflake || Flag : Required)` : The ID of the message which will be published.
+- `channel ID` `(Type: Snowflake || Flag: Required)`: The channel where the message is.
+- `message ID` `(Type: Snowflake || Flag: Required)`: The message which will be published.
 
 ## Example
 ```
