@@ -5,19 +5,22 @@ Returns the ID of the server owner.
 There are two usages of the `$serverOwner` function.
 
 ### Usage #1
+#### Syntax
 ```
 $serverOwner
 ```
 Returns the current server's owner.
 
 ### Usage #2
+#### Syntax
 ```
 $serverOwner[serverID]
 ```
 Returns the owner ID of the provided server.
 
 #### Parameters 
-- `serverID` `(Type : Snowflake || Flag : Required)` : The server to get the owner ID for.
+- `serverID` `(Type: Snowflake || Flag: Required)`: The server to get the owner ID for.
+
 > 🧙‍♂️ Bot must be present in the server to get the server owner ID.
 
 ## Example

@@ -1,13 +1,13 @@
 # $addTextInput
 Adds a new text input to a modal.
 
-## Usage
+## Syntax
 ```
 $addTextInput[text input ID;style;label;(minimum length;maximum length;required?;value;placeholder)]
 ```
 > You can't add more than 5 text input fields.
 
-## Parameters
+### Parameters
 - `text input ID` `(Type: String || Flag: Required)`: ID that is used to retrieve the text input in the field. This value must be unique.
 - `style` `(Type: Enum || Flag: Required)`: The text input field style, either `short` or `paragraph`.
 - `label` `(Type: String || Flag: Required)`: Name of the text input field. This value must be less than or equal to 45 characters.

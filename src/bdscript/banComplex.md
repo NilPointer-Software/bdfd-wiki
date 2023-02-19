@@ -6,7 +6,7 @@ Bans the mentioned user with a reason.
 $ban[reason]
 ```
 
- ### Parameters
+### Parameters
 - `reason` `(Type: String || Flag: Emptiable)`: The reason for this action, which will be saved in the audit-log.
 
 ## Example

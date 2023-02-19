@@ -26,7 +26,7 @@ $username[User ID]
 Returns the username of a specific user given its ID.
 
 ##### Parameters
-- `User ID` `(Type : Snowflake || Flag : Required)` : The user to get the username for.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the username for.
 
 #### Example
 ```

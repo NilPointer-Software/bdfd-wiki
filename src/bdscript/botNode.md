@@ -1,6 +1,5 @@
 # $botNode
-
-Returns the bot's node ID
+Returns the bot's node ID.
 
 ## Syntax
 ```

@@ -11,8 +11,8 @@ $userJoinedDiscord[User ID;(Format)]
 ```
 
 ### Parameters
-- `User ID` `(Type : Snowflake || Flag : Required)` : The user whose account creation date will be returned. 
-- `Format` `(Type : String || Flag : Optional)` : Customize the default time format output.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user whose account creation date will be returned. 
+- `Format` `(Type: String || Flag: Optional)`: Customize the default time format output.
 
    > 📌 Click [me](../resources/timeFormat.md) to check all supported time format values.
 

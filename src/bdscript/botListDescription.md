@@ -6,7 +6,7 @@ Sets the description of this command, for the BDL command list (if the bot is on
 $botListDescription[text]
 ```
 
- ### Parameters
+### Parameters
 - `text` `(Type: String || Flag: Required)`: The text that the description will be set to.
 
 ## Example

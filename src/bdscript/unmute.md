@@ -9,7 +9,7 @@ $unmute[Muted]
 ```
 
 ### Parameters
-- `Muted` : The name of the 'Muted' role (Case sensitive).
+- `Muted` `(Type: String || Flag: Required)`: The name of the 'Muted' role (Case sensitive).
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly :

@@ -28,7 +28,7 @@ $suppressErrors[Error message]
 Sends a custom error message instead of the default error message.
 
 #### Parameters
-- `Error message` `(Type : String || Flag : Emptiable)` : The custom error message to send.
+- `Error message` `(Type: String || Flag: Emptiable)`: The custom error message to send.
 
 #### Example
 ```
