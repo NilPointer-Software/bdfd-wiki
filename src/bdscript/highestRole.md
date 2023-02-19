@@ -15,7 +15,7 @@ Returns the highest role in the server.
 $highestRole[userID]
 ```
 ## Parameters
-- `userID` `(Type : Snowflake || Flag : Required)` : Returns the user's highest role.
+- `userID` `(Type: Snowflake || Flag: Required)`: Returns the user's highest role.
 
 ## Example
 ```
