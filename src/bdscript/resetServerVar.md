@@ -9,4 +9,4 @@ $resetServerVar[variableName]
 ```
 
 ### Parameters
-- `variableName` `(Type : String || Flag : Required)` : The name of the variable to reset.
+- `variableName` `(Type: String || Flag: Required)`: The name of the variable to reset.
