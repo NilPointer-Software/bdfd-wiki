@@ -7,7 +7,7 @@ $randomText[text;...]
 ```
 
 ### Parameters
-- `text1`/`text2`/`etc` `(Type : String || Flag : Emptiable)` : The text which the bot can choose from.
+- `text` `(Type: String || Flag: Emptiable)`: The text to choose from. Separate different texts with ';'.
 
 ## Example
 ```
