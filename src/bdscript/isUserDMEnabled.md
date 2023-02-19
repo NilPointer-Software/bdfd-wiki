@@ -8,7 +8,7 @@ $isUserDMEnabled[userID]
 ```
 
 ### Parameters
-- `userID` `(Type : Snowflake || Flag : Required)` : The user to check the DM status for.
+- `userID` `(Type: Snowflake || Flag: Required)`: The user to check.
 
 ## Example
 ```
