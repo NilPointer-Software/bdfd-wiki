@@ -7,7 +7,7 @@ $findRole[role]
 ```
 
 ### Parameters
-- `role` `(Type : String || Flag : Emptiable)` : The role name, ID, or mention to find.
+- `role` `(Type: String || Flag: Emptiable)`: The role name, ID, or mention to find.
 
 ## Example
 ```
