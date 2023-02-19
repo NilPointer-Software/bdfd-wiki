@@ -7,7 +7,7 @@ $isTimedOut[User ID]
 ```
 
 ### Parameters
-- `User ID` `(Type : Snowflake || Flag : Required)` : The user to check for.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to check.
 
 ## Example
 ```
