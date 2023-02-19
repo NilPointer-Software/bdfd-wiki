@@ -11,7 +11,7 @@ $mute[mutedRoleName]
 ```
 
 ### Parameters
-- `mutedRoleName` - The name of the 'Muted' role (case sensitive).
+- `mutedRoleName` `(Type: String || Flag: Required)`: The name of the 'Muted' role (case sensitive).
 
 ## Example
 ```
