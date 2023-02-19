@@ -3,7 +3,7 @@ The command can only be executed in the provided channels.
 
 ## Usage
 ```
-$onlyForChannels[channelIDs;errorMessage]
+$onlyForChannels[channelIDs;...;errorMessage]
 ```
 
 ### Parameters 
