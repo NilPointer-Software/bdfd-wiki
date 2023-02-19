@@ -7,7 +7,7 @@ $kickMention[reason]
 ```
 
 ### Parameters
-- `reason` `(Type : String || Flag : Emptiable)` : The audit-log reason for the kick.
+- `reason` `(Type: String || Flag: Emptiable)`: The audit-log reason for the kick.
 
 ## Example
 ```
