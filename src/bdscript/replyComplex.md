@@ -7,8 +7,8 @@ $reply[Channel ID;Message ID]
 ```
 
 ### Parameters
-- `Channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message is.
-- `Message ID` `(Type : Snowflake || Flag : Required)` : The message to reply.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel where the message is.
+- `Message ID` `(Type: Snowflake || Flag: Required)`: The message to reply.
 
 ## Example
 ```
