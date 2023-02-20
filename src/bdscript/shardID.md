@@ -1,10 +1,10 @@
 # $shardID
+Returns the shard id of the current guild.
 
 ## Syntax
 ```
 $shardID
 ```
-Returns the shard id of the current guild.
 
 ## Example
 ```

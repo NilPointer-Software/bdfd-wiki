@@ -1,14 +1,14 @@
 # $reply[]
+Replies to a provided message.
 
 ## Syntax
 ```
 $reply[Channel ID;Message ID]
 ```
-Replies to a provided message.
 
 ### Parameters
-- `Channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message is.
-- `Message ID` `(Type : Snowflake || Flag : Required)` : The message to reply.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel where the message is.
+- `Message ID` `(Type: Snowflake || Flag: Required)`: The message to reply.
 
 ## Example
 ```

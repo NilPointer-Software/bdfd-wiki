@@ -1,10 +1,10 @@
 # $slashID
+Returns ID of the executed slash command.
 
 ## Syntax
 ```
 $slashID
 ```
-Returns ID of the executed slash command.
 
 ## Example
 ```
