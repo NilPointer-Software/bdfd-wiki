@@ -1,4 +1,5 @@
 # $membersCount[]
+Returns amount of members in the current guild with provided presence.
 
 ## Syntax 
 
