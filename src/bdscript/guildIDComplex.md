@@ -7,7 +7,7 @@ $guildID[serverName]
 ``` 
 
 ## Parameters
-- `serverName` `(Type : String || Flag : Emptiable)` : Finds a server ID using the server name.
+- `serverName` `(Type: String || Flag: Emptiable)`: Finds a server ID using a server's name.
 
 ### Example 
 ```
