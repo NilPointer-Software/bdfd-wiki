@@ -11,6 +11,7 @@ General guidelines to keep in mind when contributing :
 - Avoid using spaces or any special characters (e.g `$`) in file names.
 - Do not make duplicates or useless pull requests.
 - Do not make troll or NSFW pull requests.
+- Do not make huge pull requests. Keep them small.
 - Fact-check/verify information included in the pull request.
 - Make sure to follow [Proper Wiki Structure](#proper-wiki-structure).
 
