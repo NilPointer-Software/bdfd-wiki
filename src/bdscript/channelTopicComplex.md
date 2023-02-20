@@ -7,7 +7,7 @@ $channelTopic[channelID]
 ```
 
 ### Parameters
-- `channelID` `(Type : Snowflake || Flag : Required )` : the channel ID to return its topic.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to return its topic.
 
 ## Example
 ```
