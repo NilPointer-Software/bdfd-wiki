@@ -1,5 +1,6 @@
 # $membersCount
-returns amount of members in current guild
+Returns amount of members in the current guild
+
 
 ### Example 
 ```
