@@ -26,6 +26,6 @@ there are $membersCount[online] users in this server
 
 
 ### Note
-this requires the Presence Intent
+This function requires the Presence Intent
 
 ![example](https://user-images.githubusercontent.com/70468667/219971688-d8fc9a3c-a153-4073-bbef-49c8fd0a87bb.jpg)
