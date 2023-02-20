@@ -1,0 +1,18 @@
+:root {
+    --sidebar-width: 300px;
+    --page-padding: 15px;
+    --content-max-width: 750px;
+    --menu-bar-height: 50px;
+}
+
+:root code {
+    border-radius: 10px;
+}
+
+:root blockquote {
+    border-radius: 10px;
+}
+
+:root img {
+    border-radius: 10px;
+}

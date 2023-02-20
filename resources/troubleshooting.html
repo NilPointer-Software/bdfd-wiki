@@ -1,0 +1,961 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js bdfd">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Troubleshooting - Bot Designer for Discord - Wiki</title>
+
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A wiki page which explains BDFD functions, callbacks, features &amp; much more.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#748bd4">
+        <meta name="og:image" content="https://botdesignerdiscord.com/logo512.png">
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="apple-touch-icon" href="../favicon.png">
+
+        <link rel="stylesheet" href="../theme/css/variables.css">
+        <link rel="stylesheet" href="../theme/css/general.css">
+        <link rel="stylesheet" href="../theme/css/chrome.css">
+        <link rel="stylesheet" href="../theme/css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+  
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('bdfd')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../foreword.html">Foreword</a></li><li class="chapter-item affix "><a href="../CHANGELOG.html">Changelog</a></li><li class="chapter-item affix "><a href="../tos.html">Terms of Service</a></li><li class="spacer"></li><li class="chapter-item "><div><strong aria-hidden="true">1.</strong> Guides</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/introduction.html"><strong aria-hidden="true">1.1.</strong> Introduction</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/beginning.html"><strong aria-hidden="true">1.1.1.</strong> Beginning</a></li><li class="chapter-item "><a href="../guides/botStatus.html"><strong aria-hidden="true">1.1.2.</strong> Bot Status</a></li><li class="chapter-item "><a href="../guides/commandsAnatomy.html"><strong aria-hidden="true">1.1.3.</strong> Commands Anatomy</a></li><li class="chapter-item "><a href="../guides/gatewayIntents.html"><strong aria-hidden="true">1.1.4.</strong> Gateway Intents</a></li><li class="chapter-item "><a href="../guides/variables.html"><strong aria-hidden="true">1.1.5.</strong> Variables</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.2.</strong> General</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/awaitedCommands.html"><strong aria-hidden="true">1.2.1.</strong> Awaited Commands</a></li><li class="chapter-item "><a href="../guides/bdscript2.html"><strong aria-hidden="true">1.2.2.</strong> BDScript 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/async.html"><strong aria-hidden="true">1.2.2.1.</strong> Async</a></li><li class="chapter-item "><a href="../guides/trycatch.html"><strong aria-hidden="true">1.2.2.2.</strong> Error Handling</a></li></ol></li><li class="chapter-item "><a href="../guides/buttons.html"><strong aria-hidden="true">1.2.3.</strong> Buttons</a></li><li class="chapter-item "><a href="../guides/httpRequests.html"><strong aria-hidden="true">1.2.4.</strong> HTTP Requests</a></li><li class="chapter-item "><a href="../guides/ifStatements.html"><strong aria-hidden="true">1.2.5.</strong> If Statements</a></li><li class="chapter-item "><a href="../guides/modals.html"><strong aria-hidden="true">1.2.6.</strong> Modals</a></li><li class="chapter-item "><a href="../guides/selectmenu.html"><strong aria-hidden="true">1.2.7.</strong> Select Menu</a></li><li class="chapter-item "><a href="../guides/slashCommands.html"><strong aria-hidden="true">1.2.8.</strong> Slash Commands</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/autoComplete.html"><strong aria-hidden="true">1.2.8.1.</strong> Auto Complete</a></li></ol></li><li class="chapter-item "><a href="../guides/threads.html"><strong aria-hidden="true">1.2.9.</strong> Threads</a></li><li class="chapter-item "><a href="../guides/textSplitting.html"><strong aria-hidden="true">1.2.10.</strong> Text Splitting</a></li><li class="chapter-item "><a href="../guides/webhooks.html"><strong aria-hidden="true">1.2.11.</strong> Webhooks</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.3.</strong> Other</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../guides/arguments.html"><strong aria-hidden="true">1.3.1.</strong> Arguments Flags & Types</a></li><li class="chapter-item "><a href="../guides/characterEscaping.html"><strong aria-hidden="true">1.3.2.</strong> Character Escaping</a></li><li class="chapter-item "><a href="../guides/hyperlinks.html"><strong aria-hidden="true">1.3.3.</strong> Hyperlinks</a></li><li class="chapter-item "><a href="../guides/sharecode.html"><strong aria-hidden="true">1.3.4.</strong> Share Code</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Resources</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../resources/introduction.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li><li class="chapter-item "><a href="../resources/api.html"><strong aria-hidden="true">2.2.</strong> API</a></li><li class="chapter-item "><a href="../resources/bdfdCreation.html"><strong aria-hidden="true">2.3.</strong> BDFD's Creation</a></li><li class="chapter-item "><a href="../resources/discordIDSystem.html"><strong aria-hidden="true">2.4.</strong> Discord's ID System</a></li><li class="chapter-item "><a href="../resources/discordTimestamps.html"><strong aria-hidden="true">2.5.</strong> Discord Timestamps</a></li><li class="chapter-item "><a href="../resources/embedIndexes.html"><strong aria-hidden="true">2.6.</strong> Embed Indexes</a></li><li class="chapter-item "><a href="../resources/2FA.html"><strong aria-hidden="true">2.7.</strong> 2FA & Elevated Permissions</a></li><li class="chapter-item "><a href="../resources/permissions.html"><strong aria-hidden="true">2.8.</strong> Permissions</a></li><li class="chapter-item "><a href="../resources/security.html"><strong aria-hidden="true">2.9.</strong> Security</a></li><li class="chapter-item "><a href="../resources/timeFormat.html"><strong aria-hidden="true">2.10.</strong> Time Format</a></li><li class="chapter-item expanded "><a href="../resources/troubleshooting.html" class="active"><strong aria-hidden="true">2.11.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.</strong> Functions</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../bdscript/introduction.html"><strong aria-hidden="true">3.1.</strong> Introduction</a></li><li class="chapter-item "><a href="../bdscript/addButton.html"><strong aria-hidden="true">3.2.</strong> $addButton</a></li><li class="chapter-item "><a href="../bdscript/addCmdReactions.html"><strong aria-hidden="true">3.3.</strong> $addCmdReactions</a></li><li class="chapter-item "><a href="../bdscript/addEmoji.html"><strong aria-hidden="true">3.4.</strong> $addEmoji</a></li><li class="chapter-item "><a href="../bdscript/addField.html"><strong aria-hidden="true">3.5.</strong> $addField</a></li><li class="chapter-item "><a href="../bdscript/addReactions.html"><strong aria-hidden="true">3.6.</strong> $addReactions</a></li><li class="chapter-item "><a href="../bdscript/addSelectMenuOption.html"><strong aria-hidden="true">3.7.</strong> $addSelectMenuOption</a></li><li class="chapter-item "><a href="../bdscript/addTextInput.html"><strong aria-hidden="true">3.8.</strong> $addTextInput</a></li><li class="chapter-item "><a href="../bdscript/addTimestamp.html"><strong aria-hidden="true">3.9.</strong> $addTimestamp</a></li><li class="chapter-item "><a href="../bdscript/addTimestampComplex.html"><strong aria-hidden="true">3.10.</strong> $addTimestamp[]</a></li><li class="chapter-item "><a href="../bdscript/allMembersCount.html"><strong aria-hidden="true">3.11.</strong> $allMembersCount</a></li><li class="chapter-item "><a href="../bdscript/allowMention.html"><strong aria-hidden="true">3.12.</strong> $allowMention</a></li><li class="chapter-item "><a href="../bdscript/allowRoleMentions.html"><strong aria-hidden="true">3.13.</strong> $allowRoleMentions</a></li><li class="chapter-item "><a href="../bdscript/allowUserMentions.html"><strong aria-hidden="true">3.14.</strong> $allowUserMentions</a></li><li class="chapter-item "><a href="../bdscript/alternativeParsing.html"><strong aria-hidden="true">3.15.</strong> $alternativeParsing</a></li><li class="chapter-item "><a href="../bdscript/and.html"><strong aria-hidden="true">3.16.</strong> $and</a></li><li class="chapter-item "><a href="../bdscript/argCount.html"><strong aria-hidden="true">3.17.</strong> $argCount</a></li><li class="chapter-item "><a href="../bdscript/argsCheck.html"><strong aria-hidden="true">3.18.</strong> $argsCheck</a></li><li class="chapter-item "><a href="../bdscript/author.html"><strong aria-hidden="true">3.19.</strong> $author</a></li><li class="chapter-item "><a href="../bdscript/authorAvatar.html"><strong aria-hidden="true">3.20.</strong> $authorAvatar</a></li><li class="chapter-item "><a href="../bdscript/authorIcon.html"><strong aria-hidden="true">3.21.</strong> $authorIcon</a></li><li class="chapter-item "><a href="../bdscript/authorID.html"><strong aria-hidden="true">3.22.</strong> $authorID</a></li><li class="chapter-item "><a href="../bdscript/authorOfMessage.html"><strong aria-hidden="true">3.23.</strong> $authorOfMessage</a></li><li class="chapter-item "><a href="../bdscript/authorURL.html"><strong aria-hidden="true">3.24.</strong> $authorURL</a></li><li class="chapter-item "><a href="../bdscript/awaitFunc.html"><strong aria-hidden="true">3.25.</strong> $awaitFunc</a></li><li class="chapter-item "><a href="../bdscript/ban.html"><strong aria-hidden="true">3.26.</strong> $ban</a></li><li class="chapter-item "><a href="../bdscript/banComplex.html"><strong aria-hidden="true">3.27.</strong> $ban[]</a></li><li class="chapter-item "><a href="../bdscript/banID.html"><strong aria-hidden="true">3.28.</strong> $banID</a></li><li class="chapter-item "><a href="../bdscript/banIDComplex.html"><strong aria-hidden="true">3.29.</strong> $banID[]</a></li><li class="chapter-item "><a href="../bdscript/blackListIDs.html"><strong aria-hidden="true">3.30.</strong> $blackListIDs</a></li><li class="chapter-item "><a href="../bdscript/blackListRoles.html"><strong aria-hidden="true">3.31.</strong> $blackListRoles</a></li><li class="chapter-item "><a href="../bdscript/blackListRolesIDs.html"><strong aria-hidden="true">3.32.</strong> $blackListRolesIDs</a></li><li class="chapter-item "><a href="../bdscript/blackListServers.html"><strong aria-hidden="true">3.33.</strong> $blackListServers</a></li><li class="chapter-item "><a href="../bdscript/blackListUsers.html"><strong aria-hidden="true">3.34.</strong> $blackListUsers</a></li><li class="chapter-item "><a href="../bdscript/boostCount.html"><strong aria-hidden="true">3.35.</strong> $boostCount</a></li><li class="chapter-item "><a href="../bdscript/boostCountComplex.html"><strong aria-hidden="true">3.36.</strong> $boostCount[]</a></li><li class="chapter-item "><a href="../bdscript/botCommands.html"><strong aria-hidden="true">3.37.</strong> $botCommands</a></li><li class="chapter-item "><a href="../bdscript/botID.html"><strong aria-hidden="true">3.38.</strong> $botID</a></li><li class="chapter-item "><a href="../bdscript/botLeave.html"><strong aria-hidden="true">3.39.</strong> $botLeave</a></li><li class="chapter-item "><a href="../bdscript/botLeaveComplex.html"><strong aria-hidden="true">3.40.</strong> $botLeave[]</a></li><li class="chapter-item "><a href="../bdscript/botListDescription.html"><strong aria-hidden="true">3.41.</strong> $botListDescription</a></li><li class="chapter-item "><a href="../bdscript/botListHide.html"><strong aria-hidden="true">3.42.</strong> $botListHide</a></li><li class="chapter-item "><a href="../bdscript/botNode.html"><strong aria-hidden="true">3.43.</strong> $botNode</a></li><li class="chapter-item "><a href="../bdscript/botOwnerID.html"><strong aria-hidden="true">3.44.</strong> $botOwnerID</a></li><li class="chapter-item "><a href="../bdscript/botTyping.html"><strong aria-hidden="true">3.45.</strong> $botTyping</a></li><li class="chapter-item "><a href="../bdscript/c.html"><strong aria-hidden="true">3.46.</strong> $c</a></li><li class="chapter-item "><a href="../bdscript/calculate.html"><strong aria-hidden="true">3.47.</strong> $calculate</a></li><li class="chapter-item "><a href="../bdscript/categoryChannels.html"><strong aria-hidden="true">3.48.</strong> $categoryChannels</a></li><li class="chapter-item "><a href="../bdscript/categoryCount.html"><strong aria-hidden="true">3.49.</strong> $categoryCount</a></li><li class="chapter-item "><a href="../bdscript/categoryCountComplex.html"><strong aria-hidden="true">3.50.</strong> $categoryCount[]</a></li><li class="chapter-item "><a href="../bdscript/categoryID.html"><strong aria-hidden="true">3.51.</strong> $categoryID</a></li><li class="chapter-item "><a href="../bdscript/changeCooldownTime.html"><strong aria-hidden="true">3.52.</strong> $changeCooldownTime</a></li><li class="chapter-item "><a href="../bdscript/changeUsername.html"><strong aria-hidden="true">3.53.</strong> $changeUsername</a></li><li class="chapter-item "><a href="../bdscript/changeUsernameWithID.html"><strong aria-hidden="true">3.54.</strong> $changeUsernameWithID</a></li><li class="chapter-item "><a href="../bdscript/channelCount.html"><strong aria-hidden="true">3.55.</strong> $channelCount</a></li><li class="chapter-item "><a href="../bdscript/channelExists.html"><strong aria-hidden="true">3.56.</strong> $channelExists</a></li><li class="chapter-item "><a href="../bdscript/channelID.html"><strong aria-hidden="true">3.57.</strong> $channelID</a></li><li class="chapter-item "><a href="../bdscript/channelIDComplex.html"><strong aria-hidden="true">3.58.</strong> $channelID[]</a></li><li class="chapter-item "><a href="../bdscript/channelIDFromName.html"><strong aria-hidden="true">3.59.</strong> $channelIDFromName</a></li><li class="chapter-item "><a href="../bdscript/channelName.html"><strong aria-hidden="true">3.60.</strong> $channelName</a></li><li class="chapter-item "><a href="../bdscript/channelNames.html"><strong aria-hidden="true">3.61.</strong> $channelNames</a></li><li class="chapter-item "><a href="../bdscript/channelPosition.html"><strong aria-hidden="true">3.62.</strong> $channelPosition</a></li><li class="chapter-item "><a href="../bdscript/channelPositionComplex.html"><strong aria-hidden="true">3.63.</strong> $channelPosition[]</a></li><li class="chapter-item "><a href="../bdscript/channelSendMessage.html"><strong aria-hidden="true">3.64.</strong> $channelSendMessage</a></li><li class="chapter-item "><a href="../bdscript/channelTopic.html"><strong aria-hidden="true">3.65.</strong> $channelTopic</a></li><li class="chapter-item "><a href="../bdscript/channelTopicComplex.html"><strong aria-hidden="true">3.66.</strong> $channelTopic[]</a></li><li class="chapter-item "><a href="../bdscript/channelType.html"><strong aria-hidden="true">3.67.</strong> $channelType</a></li><li class="chapter-item "><a href="../bdscript/charCount.html"><strong aria-hidden="true">3.68.</strong> $charCount</a></li><li class="chapter-item "><a href="../bdscript/checkCondition.html"><strong aria-hidden="true">3.69.</strong> $checkCondition</a></li><li class="chapter-item "><a href="../bdscript/checkContains.html"><strong aria-hidden="true">3.70.</strong> $checkContains</a></li><li class="chapter-item "><a href="../bdscript/checkUserPerms.html"><strong aria-hidden="true">3.71.</strong> $checkUserPerms</a></li><li class="chapter-item "><a href="../bdscript/clear.html"><strong aria-hidden="true">3.72.</strong> $clear</a></li><li class="chapter-item "><a href="../bdscript/clearReactions.html"><strong aria-hidden="true">3.73.</strong> $clearReactions</a></li><li class="chapter-item "><a href="../bdscript/closeTicket.html"><strong aria-hidden="true">3.74.</strong> $closeTicket</a></li><li class="chapter-item "><a href="../bdscript/color.html"><strong aria-hidden="true">3.75.</strong> $color</a></li><li class="chapter-item "><a href="../bdscript/colorRole.html"><strong aria-hidden="true">3.76.</strong> $colorRole</a></li><li class="chapter-item "><a href="../bdscript/commandsCount.html"><strong aria-hidden="true">3.77.</strong> $commandsCount</a></li><li class="chapter-item "><a href="../bdscript/cooldown.html"><strong aria-hidden="true">3.78.</strong> $cooldown</a></li><li class="chapter-item "><a href="../bdscript/createChannel.html"><strong aria-hidden="true">3.79.</strong> $createChannel</a></li><li class="chapter-item "><a href="../bdscript/createRole.html"><strong aria-hidden="true">3.80.</strong> $createRole</a></li><li class="chapter-item "><a href="../bdscript/creationDate.html"><strong aria-hidden="true">3.81.</strong> $creationDate</a></li><li class="chapter-item "><a href="../bdscript/cropText.html"><strong aria-hidden="true">3.82.</strong> $cropText</a></li><li class="chapter-item "><a href="../bdscript/customEmoji.html"><strong aria-hidden="true">3.83.</strong> $customEmoji</a></li><li class="chapter-item "><a href="../bdscript/customID.html"><strong aria-hidden="true">3.84.</strong> $customID</a></li><li class="chapter-item "><a href="../bdscript/date.html"><strong aria-hidden="true">3.85.</strong> $date</a></li><li class="chapter-item "><a href="../bdscript/day.html"><strong aria-hidden="true">3.86.</strong> $day</a></li><li class="chapter-item "><a href="../bdscript/defer.html"><strong aria-hidden="true">3.87.</strong> $defer</a></li><li class="chapter-item "><a href="../bdscript/deleteChannels.html"><strong aria-hidden="true">3.88.</strong> $deleteChannels</a></li><li class="chapter-item "><a href="../bdscript/deleteChannelsByName.html"><strong aria-hidden="true">3.89.</strong> $deleteChannelsByName</a></li><li class="chapter-item "><a href="../bdscript/deletecommand.html"><strong aria-hidden="true">3.90.</strong> $deletecommand</a></li><li class="chapter-item "><a href="../bdscript/deleteIn.html"><strong aria-hidden="true">3.91.</strong> $deleteIn</a></li><li class="chapter-item "><a href="../bdscript/deleteMessage.html"><strong aria-hidden="true">3.92.</strong> $deleteMessage</a></li><li class="chapter-item "><a href="../bdscript/deleteRole.html"><strong aria-hidden="true">3.93.</strong> $deleteRole</a></li><li class="chapter-item "><a href="../bdscript/description.html"><strong aria-hidden="true">3.94.</strong> $description</a></li><li class="chapter-item "><a href="../bdscript/disableSpecialEscaping.html"><strong aria-hidden="true">3.95.</strong> $disableSpecialEscaping</a></li><li class="chapter-item "><a href="../bdscript/discriminator.html"><strong aria-hidden="true">3.96.</strong> $discriminator</a></li><li class="chapter-item "><a href="../bdscript/divide.html"><strong aria-hidden="true">3.97.</strong> $divide</a></li><li class="chapter-item "><a href="../bdscript/dm.html"><strong aria-hidden="true">3.98.</strong> $dm</a></li><li class="chapter-item "><a href="../bdscript/dmChannelID.html"><strong aria-hidden="true">3.99.</strong> $dmChannelID</a></li><li class="chapter-item "><a href="../bdscript/editButton.html"><strong aria-hidden="true">3.100.</strong> $editButton</a></li><li class="chapter-item "><a href="../bdscript/editChannelPerms.html"><strong aria-hidden="true">3.101.</strong> $editChannelPerms</a></li><li class="chapter-item "><a href="../bdscript/editEmbedIn.html"><strong aria-hidden="true">3.102.</strong> $editEmbedIn</a></li><li class="chapter-item "><a href="../bdscript/editIn.html"><strong aria-hidden="true">3.103.</strong> $editIn</a></li><li class="chapter-item "><a href="../bdscript/editMessage.html"><strong aria-hidden="true">3.104.</strong> $editMessage</a></li><li class="chapter-item "><a href="../bdscript/editSelectMenu.html"><strong aria-hidden="true">3.105.</strong> $editSelectMenu</a></li><li class="chapter-item "><a href="../bdscript/editSelectMenuOption.html"><strong aria-hidden="true">3.106.</strong> $editSelectMenuOption</a></li><li class="chapter-item "><a href="../bdscript/editSplitText.html"><strong aria-hidden="true">3.107.</strong> $editSplitText</a></li><li class="chapter-item "><a href="../bdscript/editThread.html"><strong aria-hidden="true">3.108.</strong> $editThread</a></li><li class="chapter-item "><a href="../bdscript/embeddedURL.html"><strong aria-hidden="true">3.109.</strong> $embeddedURL</a></li><li class="chapter-item "><a href="../bdscript/embedSuppressErrors.html"><strong aria-hidden="true">3.110.</strong> $embedSuppressErrors</a></li><li class="chapter-item "><a href="../bdscript/emoteCount.html"><strong aria-hidden="true">3.111.</strong> $emoteCount</a></li><li class="chapter-item "><a href="../bdscript/enabled.html"><strong aria-hidden="true">3.112.</strong> $enabled</a></li><li class="chapter-item "><a href="../bdscript/enableDecimals.html"><strong aria-hidden="true">3.113.</strong> $enableDecimals</a></li><li class="chapter-item "><a href="../bdscript/ephemeral.html"><strong aria-hidden="true">3.114.</strong> $ephemeral</a></li><li class="chapter-item "><a href="../bdscript/eval.html"><strong aria-hidden="true">3.115.</strong> $eval</a></li><li class="chapter-item "><a href="../bdscript/executionTime.html"><strong aria-hidden="true">3.116.</strong> $executionTime</a></li><li class="chapter-item "><a href="../bdscript/findChannel.html"><strong aria-hidden="true">3.117.</strong> $findChannel</a></li><li class="chapter-item "><a href="../bdscript/findRole.html"><strong aria-hidden="true">3.118.</strong> $findRole</a></li><li class="chapter-item "><a href="../bdscript/findUser.html"><strong aria-hidden="true">3.119.</strong> $findUser</a></li><li class="chapter-item "><a href="../bdscript/footer.html"><strong aria-hidden="true">3.120.</strong> $footer</a></li><li class="chapter-item "><a href="../bdscript/footerIcon.html"><strong aria-hidden="true">3.121.</strong> $footerIcon</a></li><li class="chapter-item "><a href="../bdscript/getBanReason.html"><strong aria-hidden="true">3.122.</strong> $getBanReason</a></li><li class="chapter-item "><a href="../bdscript/getBotInvite.html"><strong aria-hidden="true">3.123.</strong> $getBotInvite</a></li><li class="chapter-item "><a href="../bdscript/getChannelVar.html"><strong aria-hidden="true">3.124.</strong> $getChannelVar</a></li><li class="chapter-item "><a href="../bdscript/getCooldown.html"><strong aria-hidden="true">3.125.</strong> $getCooldown</a></li><li class="chapter-item "><a href="../bdscript/getCustomStatus.html"><strong aria-hidden="true">3.126.</strong> $getCustomStatus</a></li><li class="chapter-item "><a href="../bdscript/getEmbedData.html"><strong aria-hidden="true">3.127.</strong> $getEmbedData</a></li><li class="chapter-item "><a href="../bdscript/getInviteInfo.html"><strong aria-hidden="true">3.128.</strong> $getInviteInfo</a></li><li class="chapter-item "><a href="../bdscript/getLeaderboardValue.html"><strong aria-hidden="true">3.129.</strong> $getLeaderboardValue</a></li><li class="chapter-item "><a href="../bdscript/getMessage.html"><strong aria-hidden="true">3.130.</strong> $getMessage</a></li><li class="chapter-item "><a href="../bdscript/getReactions.html"><strong aria-hidden="true">3.131.</strong> $getReactions</a></li><li class="chapter-item "><a href="../bdscript/getRoleColor.html"><strong aria-hidden="true">3.132.</strong> $getRoleColor</a></li><li class="chapter-item "><a href="../bdscript/getServerInvite.html"><strong aria-hidden="true">3.133.</strong> $getServerInvite</a></li><li class="chapter-item "><a href="../bdscript/getServerVar.html"><strong aria-hidden="true">3.134.</strong> $getServerVar</a></li><li class="chapter-item "><a href="../bdscript/getTextSplitIndex.html"><strong aria-hidden="true">3.135.</strong> $getTextSplitIndex</a></li><li class="chapter-item "><a href="../bdscript/getTextSplitLength.html"><strong aria-hidden="true">3.136.</strong> $getTextSplitLength</a></li><li class="chapter-item "><a href="../bdscript/getTimestamp.html"><strong aria-hidden="true">3.137.</strong> $getTimestamp</a></li><li class="chapter-item "><a href="../bdscript/getUserStatus.html"><strong aria-hidden="true">3.138.</strong> $getUserStatus</a></li><li class="chapter-item "><a href="../bdscript/getUserVar.html"><strong aria-hidden="true">3.139.</strong> $getUserVar</a></li><li class="chapter-item "><a href="../bdscript/getVar.html"><strong aria-hidden="true">3.140.</strong> $getVar</a></li><li class="chapter-item "><a href="../bdscript/giveRole.html"><strong aria-hidden="true">3.141.</strong> $giveRole</a></li><li class="chapter-item "><a href="../bdscript/globalCooldown.html"><strong aria-hidden="true">3.142.</strong> $globalCooldown</a></li><li class="chapter-item "><a href="../bdscript/globalUserLeaderboard.html"><strong aria-hidden="true">3.143.</strong> $globalUserLeaderboard</a></li><li class="chapter-item "><a href="../bdscript/guildExists.html"><strong aria-hidden="true">3.144.</strong> $guildExists</a></li><li class="chapter-item "><a href="../bdscript/guildID.html"><strong aria-hidden="true">3.145.</strong> $guildID</a></li><li class="chapter-item "><a href="../bdscript/guildIDComplex.html"><strong aria-hidden="true">3.146.</strong> $guildID[]</a></li><li class="chapter-item "><a href="../bdscript/hasRole.html"><strong aria-hidden="true">3.147.</strong> $hasRole</a></li><li class="chapter-item "><a href="../bdscript/highestRole.html"><strong aria-hidden="true">3.148.</strong> $highestRole</a></li><li class="chapter-item "><a href="../bdscript/highestRoleWithPerms.html"><strong aria-hidden="true">3.149.</strong> $highestRoleWithPerms</a></li><li class="chapter-item "><a href="../bdscript/hostingExpireTime.html"><strong aria-hidden="true">3.150.</strong> $hostingExpireTime</a></li><li class="chapter-item "><a href="../bdscript/hour.html"><strong aria-hidden="true">3.151.</strong> $hour</a></li><li class="chapter-item "><a href="../bdscript/hypesquad.html"><strong aria-hidden="true">3.152.</strong> $hypesquad</a></li><li class="chapter-item "><a href="../bdscript/ignoreChannels.html"><strong aria-hidden="true">3.153.</strong> $ignoreChannels</a></li><li class="chapter-item "><a href="../bdscript/ignoreLinks.html"><strong aria-hidden="true">3.154.</strong> $ignoreLinks</a></li><li class="chapter-item "><a href="../bdscript/image.html"><strong aria-hidden="true">3.155.</strong> $image</a></li><li class="chapter-item "><a href="../bdscript/input.html"><strong aria-hidden="true">3.156.</strong> $input</a></li><li class="chapter-item "><a href="../bdscript/isAdmin.html"><strong aria-hidden="true">3.157.</strong> $isAdmin</a></li><li class="chapter-item "><a href="../bdscript/isBanned.html"><strong aria-hidden="true">3.158.</strong> $isBanned</a></li><li class="chapter-item "><a href="../bdscript/isBoolean.html"><strong aria-hidden="true">3.159.</strong> $isBoolean</a></li><li class="chapter-item "><a href="../bdscript/isBot.html"><strong aria-hidden="true">3.160.</strong> $isBot</a></li><li class="chapter-item "><a href="../bdscript/isHoisted.html"><strong aria-hidden="true">3.161.</strong> $isHoisted</a></li><li class="chapter-item "><a href="../bdscript/isMentionable.html"><strong aria-hidden="true">3.162.</strong> $isMentionable</a></li><li class="chapter-item "><a href="../bdscript/isNSFW.html"><strong aria-hidden="true">3.163.</strong> $isNSFW</a></li><li class="chapter-item "><a href="../bdscript/isNumber.html"><strong aria-hidden="true">3.164.</strong> $isNumber</a></li><li class="chapter-item "><a href="../bdscript/isSlash.html"><strong aria-hidden="true">3.165.</strong> $isSlash</a></li><li class="chapter-item "><a href="../bdscript/isTicket.html"><strong aria-hidden="true">3.166.</strong> $isTicket</a></li><li class="chapter-item "><a href="../bdscript/isTimedOut.html"><strong aria-hidden="true">3.167.</strong> $isTimedOut</a></li><li class="chapter-item "><a href="../bdscript/isUserDMEnabled.html"><strong aria-hidden="true">3.168.</strong> $isUserDMEnabled</a></li><li class="chapter-item "><a href="../bdscript/isValidHex.html"><strong aria-hidden="true">3.169.</strong> $isValidHex</a></li><li class="chapter-item "><a href="../bdscript/joinSplitText.html"><strong aria-hidden="true">3.170.</strong> $joinSplitText</a></li><li class="chapter-item "><a href="../bdscript/kick.html"><strong aria-hidden="true">3.171.</strong> $kick</a></li><li class="chapter-item "><a href="../bdscript/kickComplex.html"><strong aria-hidden="true">3.172.</strong> $kick[]</a></li><li class="chapter-item "><a href="../bdscript/kickMention.html"><strong aria-hidden="true">3.173.</strong> $kickMention</a></li><li class="chapter-item "><a href="../bdscript/lowestRole.html"><strong aria-hidden="true">3.174.</strong> $lowestRole</a></li><li class="chapter-item "><a href="../bdscript/lowestRoleWithPerms.html"><strong aria-hidden="true">3.175.</strong> $lowestRoleWithPerms</a></li><li class="chapter-item "><a href="../bdscript/max.html"><strong aria-hidden="true">3.176.</strong> $max</a></li><li class="chapter-item "><a href="../bdscript/membersCount.html"><strong aria-hidden="true">3.177.</strong> $membersCount</a></li><li class="chapter-item "><a href="../bdscript/membersCountComplex.html"><strong aria-hidden="true">3.178.</strong> $membersCount[]</a></li><li class="chapter-item "><a href="../bdscript/mentioned.html"><strong aria-hidden="true">3.179.</strong> $mentioned</a></li><li class="chapter-item "><a href="../bdscript/mentionedChannels.html"><strong aria-hidden="true">3.180.</strong> $mentionedChannels</a></li><li class="chapter-item "><a href="../bdscript/mentionedRoles.html"><strong aria-hidden="true">3.181.</strong> $mentionedRoles</a></li><li class="chapter-item "><a href="../bdscript/message.html"><strong aria-hidden="true">3.182.</strong> $message</a></li><li class="chapter-item "><a href="../bdscript/messageComplex.html"><strong aria-hidden="true">3.183.</strong> $message[]</a></li><li class="chapter-item "><a href="../bdscript/messageID.html"><strong aria-hidden="true">3.184.</strong> $messageID</a></li><li class="chapter-item "><a href="../bdscript/min.html"><strong aria-hidden="true">3.185.</strong> $min</a></li><li class="chapter-item "><a href="../bdscript/minute.html"><strong aria-hidden="true">3.186.</strong> $minute</a></li><li class="chapter-item "><a href="../bdscript/modifyChannel.html"><strong aria-hidden="true">3.187.</strong> $modifyChannel</a></li><li class="chapter-item "><a href="../bdscript/modifyChannelPerms.html"><strong aria-hidden="true">3.188.</strong> $modifyChannelPerms</a></li><li class="chapter-item "><a href="../bdscript/modifyRole.html"><strong aria-hidden="true">3.189.</strong> $modifyRole</a></li><li class="chapter-item "><a href="../bdscript/modifyRolePerms.html"><strong aria-hidden="true">3.190.</strong> $modifyRolePerms</a></li><li class="chapter-item "><a href="../bdscript/modulo.html"><strong aria-hidden="true">3.191.</strong> $modulo</a></li><li class="chapter-item "><a href="../bdscript/month.html"><strong aria-hidden="true">3.192.</strong> $month</a></li><li class="chapter-item "><a href="../bdscript/multi.html"><strong aria-hidden="true">3.193.</strong> $multi</a></li><li class="chapter-item "><a href="../bdscript/mute.html"><strong aria-hidden="true">3.194.</strong> $mute</a></li><li class="chapter-item "><a href="../bdscript/newModal.html"><strong aria-hidden="true">3.195.</strong> $newModal</a></li><li class="chapter-item "><a href="../bdscript/newSelectMenu.html"><strong aria-hidden="true">3.196.</strong> $newSelectMenu</a></li><li class="chapter-item "><a href="../bdscript/newTicket.html"><strong aria-hidden="true">3.197.</strong> $newTicket</a></li><li class="chapter-item "><a href="../bdscript/nickname.html"><strong aria-hidden="true">3.198.</strong> $nickname</a></li><li class="chapter-item "><a href="../bdscript/nomention.html"><strong aria-hidden="true">3.199.</strong> $nomention</a></li><li class="chapter-item "><a href="../bdscript/noMentionMessage.html"><strong aria-hidden="true">3.200.</strong> $noMentionMessage</a></li><li class="chapter-item "><a href="../bdscript/numberSeparator.html"><strong aria-hidden="true">3.201.</strong> $numberSeparator</a></li><li class="chapter-item "><a href="../bdscript/onlyAdmin.html"><strong aria-hidden="true">3.202.</strong> $onlyAdmin</a></li><li class="chapter-item "><a href="../bdscript/onlyBotChannelPerms.html"><strong aria-hidden="true">3.203.</strong> $onlyBotChannelPerms</a></li><li class="chapter-item "><a href="../bdscript/onlyBotPerms.html"><strong aria-hidden="true">3.204.</strong> $onlyBotPerms</a></li><li class="chapter-item "><a href="../bdscript/onlyForCategories.html"><strong aria-hidden="true">3.205.</strong> $onlyForCategories</a></li><li class="chapter-item "><a href="../bdscript/onlyForChannels.html"><strong aria-hidden="true">3.206.</strong> $onlyForChannels</a></li><li class="chapter-item "><a href="../bdscript/onlyForIDs.html"><strong aria-hidden="true">3.207.</strong> $onlyForIDs</a></li><li class="chapter-item "><a href="../bdscript/onlyForRoles.html"><strong aria-hidden="true">3.208.</strong> $onlyForRoles</a></li><li class="chapter-item "><a href="../bdscript/onlyForRoleIDs.html"><strong aria-hidden="true">3.209.</strong> $onlyForRoleIDs</a></li><li class="chapter-item "><a href="../bdscript/onlyForServers.html"><strong aria-hidden="true">3.210.</strong> $onlyForServers</a></li><li class="chapter-item "><a href="../bdscript/onlyForUsers.html"><strong aria-hidden="true">3.211.</strong> $onlyForUsers</a></li><li class="chapter-item "><a href="../bdscript/onlyIf.html"><strong aria-hidden="true">3.212.</strong> $onlyIf</a></li><li class="chapter-item "><a href="../bdscript/onlyIfMessageContains.html"><strong aria-hidden="true">3.213.</strong> $onlyIfMessageContains</a></li><li class="chapter-item "><a href="../bdscript/onlyNSFW.html"><strong aria-hidden="true">3.214.</strong> $onlyNSFW</a></li><li class="chapter-item "><a href="../bdscript/onlyPerms.html"><strong aria-hidden="true">3.215.</strong> $onlyPerms</a></li><li class="chapter-item "><a href="../bdscript/optOff.html"><strong aria-hidden="true">3.216.</strong> $optOff</a></li><li class="chapter-item "><a href="../bdscript/or.html"><strong aria-hidden="true">3.217.</strong> $or</a></li><li class="chapter-item "><a href="../bdscript/parentID.html"><strong aria-hidden="true">3.218.</strong> $parentID</a></li><li class="chapter-item "><a href="../bdscript/ping.html"><strong aria-hidden="true">3.219.</strong> $ping</a></li><li class="chapter-item "><a href="../bdscript/pinMessage.html"><strong aria-hidden="true">3.220.</strong> $pinMessage</a></li><li class="chapter-item "><a href="../bdscript/pinMessageComplex.html"><strong aria-hidden="true">3.221.</strong> $pinMessage[]</a></li><li class="chapter-item "><a href="../bdscript/premiumExpireTime.html"><strong aria-hidden="true">3.222.</strong> $premiumExpireTime</a></li><li class="chapter-item "><a href="../bdscript/publishMessage.html"><strong aria-hidden="true">3.223.</strong> $publishMessage</a></li><li class="chapter-item "><a href="../bdscript/random.html"><strong aria-hidden="true">3.224.</strong> $random</a></li><li class="chapter-item "><a href="../bdscript/randomCategoryID.html"><strong aria-hidden="true">3.225.</strong> $randomCategoryID</a></li><li class="chapter-item "><a href="../bdscript/randomChannelID.html"><strong aria-hidden="true">3.226.</strong> $randomChannelID</a></li><li class="chapter-item "><a href="../bdscript/randomGuildID.html"><strong aria-hidden="true">3.227.</strong> $randomGuildID</a></li><li class="chapter-item "><a href="../bdscript/randomMention.html"><strong aria-hidden="true">3.228.</strong> $randomMention</a></li><li class="chapter-item "><a href="../bdscript/randomRoleID.html"><strong aria-hidden="true">3.229.</strong> $randomRoleID</a></li><li class="chapter-item "><a href="../bdscript/randomString.html"><strong aria-hidden="true">3.230.</strong> $randomString</a></li><li class="chapter-item "><a href="../bdscript/randomText.html"><strong aria-hidden="true">3.231.</strong> $randomText</a></li><li class="chapter-item "><a href="../bdscript/randomUser.html"><strong aria-hidden="true">3.232.</strong> $randomUser</a></li><li class="chapter-item "><a href="../bdscript/randomUserID.html"><strong aria-hidden="true">3.233.</strong> $randomUserID</a></li><li class="chapter-item "><a href="../bdscript/removeButtons.html"><strong aria-hidden="true">3.234.</strong> $removeButtons</a></li><li class="chapter-item "><a href="../bdscript/removeComponent.html"><strong aria-hidden="true">3.235.</strong> $removeComponent</a></li><li class="chapter-item "><a href="../bdscript/removeContains.html"><strong aria-hidden="true">3.236.</strong> $removeContains</a></li><li class="chapter-item "><a href="../bdscript/removeLinks.html"><strong aria-hidden="true">3.237.</strong> $removeLinks</a></li><li class="chapter-item "><a href="../bdscript/removeSplitTextElement.html"><strong aria-hidden="true">3.238.</strong> $removeSplitTextElement</a></li><li class="chapter-item "><a href="../bdscript/repeatMessage.html"><strong aria-hidden="true">3.239.</strong> $repeatMessage</a></li><li class="chapter-item "><a href="../bdscript/replaceText.html"><strong aria-hidden="true">3.240.</strong> $replaceText</a></li><li class="chapter-item "><a href="../bdscript/repliedMessageID.html"><strong aria-hidden="true">3.241.</strong> $repliedMessageID</a></li><li class="chapter-item "><a href="../bdscript/repliedMessageIDComplex.html"><strong aria-hidden="true">3.242.</strong> $repliedMessageID[]</a></li><li class="chapter-item "><a href="../bdscript/reply.html"><strong aria-hidden="true">3.243.</strong> $reply</a></li><li class="chapter-item "><a href="../bdscript/replyComplex.html"><strong aria-hidden="true">3.244.</strong> $reply[]</a></li><li class="chapter-item "><a href="../bdscript/replyIn.html"><strong aria-hidden="true">3.245.</strong> $replyIn</a></li><li class="chapter-item "><a href="../bdscript/resetChannelVar.html"><strong aria-hidden="true">3.246.</strong> $resetChannelVar</a></li><li class="chapter-item "><a href="../bdscript/resetServerVar.html"><strong aria-hidden="true">3.247.</strong> $resetServerVar</a></li><li class="chapter-item "><a href="../bdscript/resetUserVar.html"><strong aria-hidden="true">3.248.</strong> $resetUserVar</a></li><li class="chapter-item "><a href="../bdscript/roleCount.html"><strong aria-hidden="true">3.249.</strong> $roleCount</a></li><li class="chapter-item "><a href="../bdscript/roleExists.html"><strong aria-hidden="true">3.250.</strong> $roleExists</a></li><li class="chapter-item "><a href="../bdscript/roleGrant.html"><strong aria-hidden="true">3.251.</strong> $roleGrant</a></li><li class="chapter-item "><a href="../bdscript/roleID.html"><strong aria-hidden="true">3.252.</strong> $roleID</a></li><li class="chapter-item "><a href="../bdscript/roleInfo.html"><strong aria-hidden="true">3.253.</strong> $roleInfo</a></li><li class="chapter-item "><a href="../bdscript/roleName.html"><strong aria-hidden="true">3.254.</strong> $roleName</a></li><li class="chapter-item "><a href="../bdscript/roleNames.html"><strong aria-hidden="true">3.255.</strong> $roleNames</a></li><li class="chapter-item "><a href="../bdscript/rolePosition.html"><strong aria-hidden="true">3.256.</strong> $rolePosition</a></li><li class="chapter-item "><a href="../bdscript/round.html"><strong aria-hidden="true">3.257.</strong> $round</a></li><li class="chapter-item "><a href="../bdscript/scriptLanguage.html"><strong aria-hidden="true">3.258.</strong> $scriptLanguage</a></li><li class="chapter-item "><a href="../bdscript/second.html"><strong aria-hidden="true">3.259.</strong> $second</a></li><li class="chapter-item "><a href="../bdscript/sendEmbedMessage.html"><strong aria-hidden="true">3.260.</strong> $sendEmbedMessage</a></li><li class="chapter-item "><a href="../bdscript/sendMessage.html"><strong aria-hidden="true">3.261.</strong> $sendMessage</a></li><li class="chapter-item "><a href="../bdscript/serverChannelExists.html"><strong aria-hidden="true">3.262.</strong> $serverChannelExists</a></li><li class="chapter-item "><a href="../bdscript/serverCooldown.html"><strong aria-hidden="true">3.263.</strong> $serverCooldown</a></li><li class="chapter-item "><a href="../bdscript/serverCount.html"><strong aria-hidden="true">3.264.</strong> $serverCount</a></li><li class="chapter-item "><a href="../bdscript/serverDescription.html"><strong aria-hidden="true">3.265.</strong> $serverDescription</a></li><li class="chapter-item "><a href="../bdscript/serverEmojis.html"><strong aria-hidden="true">3.266.</strong> $serverEmojis</a></li><li class="chapter-item "><a href="../bdscript/serverIcon.html"><strong aria-hidden="true">3.267.</strong> $serverIcon</a></li><li class="chapter-item "><a href="../bdscript/serverInfo.html"><strong aria-hidden="true">3.268.</strong> $serverInfo</a></li><li class="chapter-item "><a href="../bdscript/serverLeaderboard.html"><strong aria-hidden="true">3.269.</strong> $serverLeaderboard</a></li><li class="chapter-item "><a href="../bdscript/serverName.html"><strong aria-hidden="true">3.270.</strong> $serverName</a></li><li class="chapter-item "><a href="../bdscript/serverNames.html"><strong aria-hidden="true">3.271.</strong> $serverNames</a></li><li class="chapter-item "><a href="../bdscript/serverOwner.html"><strong aria-hidden="true">3.272.</strong> $serverOwner</a></li><li class="chapter-item "><a href="../bdscript/serverRegion.html"><strong aria-hidden="true">3.273.</strong> $serverRegion</a></li><li class="chapter-item "><a href="../bdscript/serverVerificationLvl.html"><strong aria-hidden="true">3.274.</strong> $serverVerificationLvl</a></li><li class="chapter-item "><a href="../bdscript/setChannelVar.html"><strong aria-hidden="true">3.275.</strong> $setChannelVar</a></li><li class="chapter-item "><a href="../bdscript/setServerVar.html"><strong aria-hidden="true">3.276.</strong> $setServerVar</a></li><li class="chapter-item "><a href="../bdscript/setUserVar.html"><strong aria-hidden="true">3.277.</strong> $setUserVar</a></li><li class="chapter-item "><a href="../bdscript/setVar.html"><strong aria-hidden="true">3.278.</strong> $setVar</a></li><li class="chapter-item "><a href="../bdscript/shardID.html"><strong aria-hidden="true">3.279.</strong> $shardID</a></li><li class="chapter-item "><a href="../bdscript/shardIDComplex.html"><strong aria-hidden="true">3.280.</strong> $shardID[]</a></li><li class="chapter-item "><a href="../bdscript/slashCommandsCount.html"><strong aria-hidden="true">3.281.</strong> $slashCommandsCount</a></li><li class="chapter-item "><a href="../bdscript/slashID.html"><strong aria-hidden="true">3.282.</strong> $slashID</a></li><li class="chapter-item "><a href="../bdscript/SlashIDComplex.html"><strong aria-hidden="true">3.283.</strong> $slashID[]</a></li><li class="chapter-item "><a href="../bdscript/slowmode.html"><strong aria-hidden="true">3.284.</strong> $slowmode</a></li><li class="chapter-item "><a href="../bdscript/sort.html"><strong aria-hidden="true">3.285.</strong> $sort</a></li><li class="chapter-item "><a href="../bdscript/splitText.html"><strong aria-hidden="true">3.286.</strong> $splitText</a></li><li class="chapter-item "><a href="../bdscript/startThread.html"><strong aria-hidden="true">3.287.</strong> $startThread</a></li><li class="chapter-item "><a href="../bdscript/sub.html"><strong aria-hidden="true">3.288.</strong> $sub</a></li><li class="chapter-item "><a href="../bdscript/sum.html"><strong aria-hidden="true">3.289.</strong> $sum</a></li><li class="chapter-item "><a href="../bdscript/suppressErrors.html"><strong aria-hidden="true">3.290.</strong> $suppressErrors</a></li><li class="chapter-item "><a href="../bdscript/takeRole.html"><strong aria-hidden="true">3.291.</strong> $takeRole</a></li><li class="chapter-item "><a href="../bdscript/textSplit.html"><strong aria-hidden="true">3.292.</strong> $textSplit</a></li><li class="chapter-item "><a href="../bdscript/threadAddMember.html"><strong aria-hidden="true">3.293.</strong> $threadAddMember</a></li><li class="chapter-item "><a href="../bdscript/threadRemoveMember.html"><strong aria-hidden="true">3.294.</strong> $threadRemoveMember</a></li><li class="chapter-item "><a href="../bdscript/thumbnail.html"><strong aria-hidden="true">3.295.</strong> $thumbnail</a></li><li class="chapter-item "><a href="../bdscript/time.html"><strong aria-hidden="true">3.296.</strong> $time</a></li><li class="chapter-item "><a href="../bdscript/timeout.html"><strong aria-hidden="true">3.297.</strong> $timeout</a></li><li class="chapter-item "><a href="../bdscript/title.html"><strong aria-hidden="true">3.298.</strong> $title</a></li><li class="chapter-item "><a href="../bdscript/toLowercase.html"><strong aria-hidden="true">3.299.</strong> $toLowercase</a></li><li class="chapter-item "><a href="../bdscript/toTitleCase.html"><strong aria-hidden="true">3.300.</strong> $toTitleCase</a></li><li class="chapter-item "><a href="../bdscript/toUppercase.html"><strong aria-hidden="true">3.301.</strong> $toUppercase</a></li><li class="chapter-item "><a href="../bdscript/trimContent.html"><strong aria-hidden="true">3.302.</strong> $trimContent</a></li><li class="chapter-item "><a href="../bdscript/trimSpace.html"><strong aria-hidden="true">3.303.</strong> $trimSpace</a></li><li class="chapter-item "><a href="../bdscript/tts.html"><strong aria-hidden="true">3.304.</strong> $tts</a></li><li class="chapter-item "><a href="../bdscript/unban.html"><strong aria-hidden="true">3.305.</strong> $unban</a></li><li class="chapter-item "><a href="../bdscript/unbanID.html"><strong aria-hidden="true">3.306.</strong> $unbanID</a></li><li class="chapter-item "><a href="../bdscript/unescape.html"><strong aria-hidden="true">3.307.</strong> $unescape</a></li><li class="chapter-item "><a href="../bdscript/unmute.html"><strong aria-hidden="true">3.308.</strong> $unmute</a></li><li class="chapter-item "><a href="../bdscript/unpinMessage.html"><strong aria-hidden="true">3.309.</strong> $unpinMessage</a></li><li class="chapter-item "><a href="../bdscript/unregisterGuildCommands.html"><strong aria-hidden="true">3.310.</strong> $unregisterGuildCommands</a></li><li class="chapter-item "><a href="../bdscript/untimeout.html"><strong aria-hidden="true">3.311.</strong> $untimeout</a></li><li class="chapter-item "><a href="../bdscript/uptime.html"><strong aria-hidden="true">3.312.</strong> $uptime</a></li><li class="chapter-item "><a href="../bdscript/url.html"><strong aria-hidden="true">3.313.</strong> $url</a></li><li class="chapter-item "><a href="../bdscript/useChannel.html"><strong aria-hidden="true">3.314.</strong> $useChannel</a></li><li class="chapter-item "><a href="../bdscript/userAvatar.html"><strong aria-hidden="true">3.315.</strong> $userAvatar</a></li><li class="chapter-item "><a href="../bdscript/userBanner.html"><strong aria-hidden="true">3.316.</strong> $userBanner</a></li><li class="chapter-item "><a href="../bdscript/userExists.html"><strong aria-hidden="true">3.317.</strong> $userExists</a></li><li class="chapter-item "><a href="../bdscript/userID.html"><strong aria-hidden="true">3.318.</strong> $userID</a></li><li class="chapter-item "><a href="../bdscript/userInfo.html"><strong aria-hidden="true">3.319.</strong> $userInfo</a></li><li class="chapter-item "><a href="../bdscript/userJoined.html"><strong aria-hidden="true">3.320.</strong> $userJoined</a></li><li class="chapter-item "><a href="../bdscript/userJoinedDiscord.html"><strong aria-hidden="true">3.321.</strong> $userJoinedDiscord</a></li><li class="chapter-item "><a href="../bdscript/userLeaderboard.html"><strong aria-hidden="true">3.322.</strong> $userLeaderboard</a></li><li class="chapter-item "><a href="../bdscript/username.html"><strong aria-hidden="true">3.323.</strong> $username</a></li><li class="chapter-item "><a href="../bdscript/userPerms.html"><strong aria-hidden="true">3.324.</strong> $userPerms</a></li><li class="chapter-item "><a href="../bdscript/userReacted.html"><strong aria-hidden="true">3.325.</strong> $userReacted</a></li><li class="chapter-item "><a href="../bdscript/userRoles.html"><strong aria-hidden="true">3.326.</strong> $userRoles</a></li><li class="chapter-item "><a href="../bdscript/userServerAvatar.html"><strong aria-hidden="true">3.327.</strong> $userServerAvatar</a></li><li class="chapter-item "><a href="../bdscript/var.html"><strong aria-hidden="true">3.328.</strong> $var</a></li><li class="chapter-item "><a href="../bdscript/varExistError.html"><strong aria-hidden="true">3.329.</strong> $varExistError</a></li><li class="chapter-item "><a href="../bdscript/varExists.html"><strong aria-hidden="true">3.330.</strong> $varExists</a></li><li class="chapter-item "><a href="../bdscript/variablesCount.html"><strong aria-hidden="true">3.331.</strong> $variablesCount</a></li><li class="chapter-item "><a href="../bdscript/year.html"><strong aria-hidden="true">3.332.</strong> $year</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">4.</strong> Callbacks</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../callbacks/introduction.html"><strong aria-hidden="true">4.1.</strong> Introduction</a></li><li class="chapter-item "><a href="../callbacks/awaitedCommand.html"><strong aria-hidden="true">4.2.</strong> $awaitedCommand</a></li><li class="chapter-item "><a href="../callbacks/awaitedCommandError.html"><strong aria-hidden="true">4.3.</strong> $awaitedCommandError</a></li><li class="chapter-item "><a href="../callbacks/onJoined.html"><strong aria-hidden="true">4.4.</strong> $onJoined</a></li><li class="chapter-item "><a href="../callbacks/onLeave.html"><strong aria-hidden="true">4.5.</strong> $onLeave</a></li><li class="chapter-item "><a href="../callbacks/onBanAdd.html"><strong aria-hidden="true">4.6.</strong> $onBanAdd</a></li><li class="chapter-item "><a href="../callbacks/onBanRemove.html"><strong aria-hidden="true">4.7.</strong> $onBanRemove</a></li><li class="chapter-item "><a href="../callbacks/onMessageDelete.html"><strong aria-hidden="true">4.8.</strong> $onMessageDelete</a></li><li class="chapter-item "><a href="../callbacks/onInteraction.html"><strong aria-hidden="true">4.9.</strong> $onInteraction</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> Premium</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../premium/introduction.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item "><div><strong aria-hidden="true">5.2.</strong> Callbacks</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../premium/alwaysReply.html"><strong aria-hidden="true">5.2.1.</strong> $alwaysReply</a></li><li class="chapter-item "><a href="../premium/messageContains.html"><strong aria-hidden="true">5.2.2.</strong> $messageContains</a></li><li class="chapter-item "><a href="../premium/reaction.html"><strong aria-hidden="true">5.2.3.</strong> $reaction</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.3.</strong> Functions</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../premium/awaitReactions.html"><strong aria-hidden="true">5.3.1.</strong> $awaitReactions</a></li><li class="chapter-item "><a href="../premium/customImage.html"><strong aria-hidden="true">5.3.2.</strong> $customImage</a></li><li class="chapter-item "><a href="../premium/usedEmoji.html"><strong aria-hidden="true">5.3.3.</strong> $usedEmoji</a></li><li class="chapter-item "><a href="../premium/ignoreTriggerCase.html"><strong aria-hidden="true">5.3.4.</strong> $ignoreTriggerCase</a></li><li class="chapter-item "><a href="../premium/sendNotification.html"><strong aria-hidden="true">5.3.5.</strong> $sendNotification</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.4.</strong> Features</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../premium/awaitedReactions.html"><strong aria-hidden="true">5.4.1.</strong> Awaited Reactions</a></li><li class="chapter-item "><a href="../premium/customImages.html"><strong aria-hidden="true">5.4.2.</strong> Custom Images</a></li><li class="chapter-item "><a href="../premium/customPrefixes.html"><strong aria-hidden="true">5.4.3.</strong> Custom Prefixes</a></li><li class="chapter-item "><a href="../premium/embedBuilder.html"><strong aria-hidden="true">5.4.4.</strong> Embed Builder</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.</strong> JavaScript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../javascript/introduction.html"><strong aria-hidden="true">6.1.</strong> Introduction</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../javascript/enablingJavaScript.html"><strong aria-hidden="true">6.1.1.</strong> Enabling JavaScript</a></li></ol></li><li class="chapter-item "><a href="../javascript/objects.html"><strong aria-hidden="true">6.2.</strong> Objects</a></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> Functions</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../javascript/ban.html"><strong aria-hidden="true">6.3.1.</strong> ban</a></li><li class="chapter-item "><a href="../javascript/banWithReason.html"><strong aria-hidden="true">6.3.2.</strong> banWithReason</a></li><li class="chapter-item "><a href="../javascript/channelTyping.html"><strong aria-hidden="true">6.3.3.</strong> channelTyping</a></li><li class="chapter-item "><a href="../javascript/createChannel.html"><strong aria-hidden="true">6.3.4.</strong> createChannel</a></li><li class="chapter-item "><a href="../javascript/giveRole.html"><strong aria-hidden="true">6.3.5.</strong> giveRole</a></li><li class="chapter-item "><a href="../javascript/kick.html"><strong aria-hidden="true">6.3.6.</strong> kick</a></li><li class="chapter-item "><a href="../javascript/kickWithReason.html"><strong aria-hidden="true">6.3.7.</strong> kickWithReason</a></li><li class="chapter-item "><a href="../javascript/pinMessage.html"><strong aria-hidden="true">6.3.8.</strong> pinMessage</a></li><li class="chapter-item "><a href="../javascript/removeChannel.html"><strong aria-hidden="true">6.3.9.</strong> removeChannel</a></li><li class="chapter-item "><a href="../javascript/sendChannelMessage.html"><strong aria-hidden="true">6.3.10.</strong> sendChannelMessage</a></li><li class="chapter-item "><a href="../javascript/setEmbedImage.html"><strong aria-hidden="true">6.3.11.</strong> setEmbedImage</a></li><li class="chapter-item "><a href="../javascript/setEmbedResponse.html"><strong aria-hidden="true">6.3.12.</strong> setEmbedResponse</a></li><li class="chapter-item "><a href="../javascript/setResponse.html"><strong aria-hidden="true">6.3.13.</strong> setResponse</a></li><li class="chapter-item "><a href="../javascript/takeRole.html"><strong aria-hidden="true">6.3.14.</strong> takeRole</a></li><li class="chapter-item "><a href="../javascript/unban.html"><strong aria-hidden="true">6.3.15.</strong> unban</a></li><li class="chapter-item "><a href="../javascript/unpinMessage.html"><strong aria-hidden="true">6.3.16.</strong> unpinMessage</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+            <div class="page">
+                                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="bdfd">Bot Designer for Discord</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="discord">Discord</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="gluo">Gluo</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="green">Green</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ios">iOS</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="kneon">Kinda Neon</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">High Contrast</button></li>
+                            </ul>
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+
+                        <h1 class="menu-title">Bot Designer for Discord - Wiki</h1>
+
+                        <div class="right-buttons">
+
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+
+                            <a href="https://github.com/NilPointer-Software/bdfd-wiki" title="Git repository" aria-label="Git repository">
+                                <i id="git-repository-button" class="fa fa-github"></i>
+                            </a>
+
+                           <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/resources/troubleshooting.md" title="Suggest an edit" aria-label="Suggest an edit">
+                               <i id="git-edit-button" class="fa fa-edit"></i>
+                           </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <nav class="breadcrumb">
+                            <script src="../theme/breadcrumbs.js"></script>
+                        </nav>
+                        <h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
+<p>This page contains a number of troubleshooting that can help you to solve problems that BDFD users often encounter.</p>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
+<h3 id="troubleshooting-for"><a class="header" href="#troubleshooting-for">Troubleshooting for...</a></h3>
+<ol>
+<li><strong><a href="#onjoined">$onJoined[]</a></strong>
+<ul>
+<li><strong><a href="#the-callback-doesnt-work">The Callback Doesn't Work</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#moderation-and-server-management-related-commands">Moderation And Server Management Related Commands</a></strong>
+<ul>
+<li><strong><a href="#the-bot-cant-assign-or-take-roles">The Bot Can't Assign Or Take Roles</a></strong></li>
+<li><strong><a href="#gives-an-error-when-trying-to-moderate-a-member">Gives an Error When Trying To Moderate a Member</a></strong></li>
+<li><strong><a href="#gives-an-error-when-trying-to-purge-messages">Gives an Error When Trying To Purge Messages</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#addreactions-and-addcmdreactions">$addReactions and $addCmdReactions</a></strong>
+<ul>
+<li><strong><a href="#the-bot-fails-to-add-reactions">The Bot Fails To Add Reactions</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#time">$time</a></strong>
+<ul>
+<li><strong><a href="#the-function-returns-an-error">The Function Returns an Error</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#economy-related-commands">Economy Related Commands</a></strong>
+<ul>
+<li><strong><a href="#negative-balance">Negative Balance</a></strong>
+<ul>
+<li><strong><a href="#pay-command">Pay Command</a></strong></li>
+<li><strong><a href="#roulette-command">Roulette Command</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#desynchronized-balance">Desynchronized Balance</a></strong>
+<ul>
+<li><strong><a href="#the-balance-is-different-on-different-servers">The Balance Is Different On Different Servers</a></strong></li>
+<li><strong><a href="#the-displayed-balance-is-different-for-different-commands">The Displayed Balance Is Different For Different Commands</a></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a href="#leaderboards">Leaderboards</a></strong>
+<ul>
+<li><strong><a href="#the-leaderboard-is-empty">The Leaderboard Is Empty</a></strong></li>
+<li><strong><a href="#the-users-value-isnt-updated">The User's Value Isn't Updated</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#bot-issues">Bot Issues</a></strong>
+<ul>
+<li><strong><a href="#the-bot-is-offline">The Bot Is Offline</a></strong></li>
+<li><strong><a href="#the-bot-doesnt-respond">The Bot Doesn't Respond</a></strong></li>
+<li><strong><a href="#the-bot-goes-offline-from-time-to-time">The Bot Goes Offline From Time To Time</a></strong></li>
+<li><strong><a href="#desynchronization-of-commands">Desynchronization of Commands</a></strong>
+<ul>
+<li><strong><a href="#ghost-command">Ghost Command</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#the-bot-takes-a-long-time-to-respond">The Bot Takes A Long Time To Respond</a></strong></li>
+<li><strong><a href="#the-slash-commands-doesnt-appear">The Slash Commands Doesn't Appear</a></strong></li>
+<li><strong><a href="#integration-requires-code-grant">Integration Requires Code Grant</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="#app-issues">App Issues</a></strong>
+<ul>
+<li><strong><a href="#the-ad-button-doesnt-work">The Ad Button Doesn't Work</a></strong></li>
+<li><strong><a href="#ghost-functions-from-the-changelog">Ghost Functions From The Changelog</a></strong></li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="lets-troubleshoot-everything"><a class="header" href="#lets-troubleshoot-everything">Let's Troubleshoot Everything!</a></h3>
+<hr />
+<h2 id="onjoined"><a class="header" href="#onjoined">$onJoined[]</a></h2>
+<h3 id="the-callback-doesnt-work"><a class="header" href="#the-callback-doesnt-work">The Callback Doesn't Work</a></h3>
+<p><strong>The Null Reason</strong><br />
+You misspelled the callback name. Make sure you don't make any mistakes in the callback name.<br />
+Also, remember that callbacks are case-sensitive: you can't write <code>$onjoined[Channel ID]</code>, you must write <code>$onJoined[Channel ID]</code>.</p>
+<p><strong>The 1st Reason</strong><br />
+You specified the wrong Channel ID.
+How to get the Channel ID correctly:</p>
+<details><summary>For Desktop</summary>
+<blockquote>
+<p>Before starting, make sure you have Developer Mode enabled on Discord.</p>
+<p><img src="https://user-images.githubusercontent.com/70456337/197304100-119ebf4d-5e77-450b-8677-9e3ee9a75308.gif" alt="dev-desktop" /></p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/70456337/197304139-1e1a410d-acae-4036-9012-6c1f20bbdec2.gif" alt="id-desktop" /></p>
+</details>
+<details><summary>For Mobile</summary>
+<blockquote>
+<p>Before starting, make sure you have Developer Mode enabled on Discord.</p>
+<p><img src="https://user-images.githubusercontent.com/70456337/197304114-82faf9ff-3a63-4599-91b4-823760d3cced.gif" alt="dev-mobile" /></p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/70456337/197304131-f814b260-3c2d-4ee9-9638-e5978ca63289.gif" alt="id-mobile" /></p>
+</details>
+<details><summary>Using a Function</summary>
+<p>Using the <code>$channelID</code>, <code>$mentionedChannels</code> or <code>$findChannel</code> functions, you can get the Channel ID of the desired channel.
+Check out these functions:</p>
+<ol>
+<li><a href="../bdscript/channelID.html">$channelID</a></li>
+<li><a href="../bdscript/mentionedChannels.html">$mentionedChannels</a></li>
+<li><a href="../bdscript/findChannel.html">$findChannel</a></li>
+</ol>
+</details>
+<p><strong>The 2nd Reason</strong><br />
+Your bot doesn't have the <code>sendmessages</code> and/or the <code>embedlinks</code> permission that allow the bot to send messages (or embed messages) in a given channel.<br />
+<em>Best Practice Solution</em><br />
+Grant both of these permissions to the bot in the desired channel through the channel's permissions settings:</p>
+<p><img src="https://user-images.githubusercontent.com/70456337/197336593-92116a39-4587-4c67-a682-830553fe4409.png" alt="edit-channel" /><br />
+<img src="https://user-images.githubusercontent.com/70456337/197336613-bd663cad-842b-4759-a0f9-938129362c13.png" alt="perms" /><br />
+<img src="https://user-images.githubusercontent.com/70456337/197336635-ff8d4338-8293-4b1a-b57d-bc3658705509.png" alt="add" /><br />
+<img src="https://user-images.githubusercontent.com/70456337/197336687-9412086c-60fd-4a4f-b3b1-c0ca5b2df192.png" alt="search" /><br />
+<img src="https://user-images.githubusercontent.com/70456337/197336704-cf9ce709-dd7f-4156-b1dc-756f76ccf690.png" alt="message" /><br />
+<img src="https://user-images.githubusercontent.com/70456337/197336720-d71688d1-195c-4481-a2d2-295265a3c64d.png" alt="embed" /><br />
+<img src="https://user-images.githubusercontent.com/70456337/197336732-8da2c6e5-ab6e-4588-8b94-d0b240c4bf5a.png" alt="save" /></p>
+<p><strong>The 3rd Reason</strong><br />
+There's a critical error in your code.<br />
+Callbacks can't return errors that occurred during code execution.
+Therefore, sometimes it's difficult to solve errors in the callback code.<br />
+<em>Best Practice Solution</em><br />
+Try debugging your command as a text command. In most cases, they're backward compatible with the <code>$onJoined</code> callback, since both, by default, process the actions of the command author (when a user joins the server, this user becomes the &quot;author&quot; of this callback).</p>
+<p><strong>The 4th Reason</strong><br />
+Members Intent isn't enabled.<br />
+This callback requires the Members Intent to be enabled.</p>
+<p>Read the <a href="../guides/gatewayIntents.html">Gateway Intents Guide</a> for more details.</p>
+<p><strong>The 5th Reason</strong><br />
+You have several commands with this callback.<br />
+You can only have one command with this callback. If you want to make a unique welcome message for multiple servers instead of just one, then check out <a href="../callbacks/onJoined.html#per-server-onjoined">Per-Server $onJoined</a>.</p>
+<hr />
+<h2 id="moderation-and-server-management-related-commands"><a class="header" href="#moderation-and-server-management-related-commands">Moderation And Server Management Related Commands</a></h2>
+<h3 id="the-bot-cant-assign-or-take-roles"><a class="header" href="#the-bot-cant-assign-or-take-roles">The Bot Can't Assign Or Take Roles</a></h3>
+<p><strong>The 1st Reason</strong><br />
+Your bot doesn't have the <code>manageroles</code> permission.
+Make sure that one of the roles that the bot has, has this permission enabled.</p>
+<p><img src="https://user-images.githubusercontent.com/70456337/197348144-3cfc97ec-c2c8-4805-b0b8-1691bf6b4d7d.png" alt="perm-mroles" /></p>
+<p><strong>The 2nd Reason</strong><br />
+You are trying to assign or take roles that are higher than the highest role your bot has.</p>
+<h3 id="gives-an-error-when-trying-to-moderate-a-member"><a class="header" href="#gives-an-error-when-trying-to-moderate-a-member">Gives an Error When Trying To Moderate a Member</a></h3>
+<p><strong>The 1st Reason</strong><br />
+Your bot has lower priority than the specified user.<br />
+This means that the highest role your bot has is lower in position than the highest role the specified user has.<br />
+Or, the specified user is the owner of the server.</p>
+<p><strong>The 2nd Reason</strong><br />
+Your bot doesn't have the required permissions.
+Make sure that the permission list of any role that the bot has, have these required permissions.</p>
+<ul>
+<li>If you're trying to ban a user.<br />
+<img src="https://user-images.githubusercontent.com/70456337/197348222-87b63505-d3a3-4842-8f29-0724454f83fe.png" alt="perm-ban" /></li>
+<li>If you're trying to kick a user.<br />
+<img src="https://user-images.githubusercontent.com/70456337/197348246-dec79a88-2ba1-4028-b117-c89f2813fd46.png" alt="perm-kick" /></li>
+<li>If you're trying to timeout a user.<br />
+<img src="https://user-images.githubusercontent.com/70456337/197348265-0716b0eb-4467-4ea5-bbd7-534d52ccde41.png" alt="perm-timeout" /></li>
+<li>If you're trying to change user's nickname.<br />
+<img src="https://user-images.githubusercontent.com/70456337/197348203-1c3ea02d-8182-4c5e-8e1c-65175602f500.png" alt="perm-nick" />
+<blockquote>
+<p><strong>⚠ Important note</strong>: bots <strong>can't</strong> change the owner's nickname!</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="gives-an-error-when-trying-to-purge-messages"><a class="header" href="#gives-an-error-when-trying-to-purge-messages">Gives an Error When Trying To Purge Messages</a></h3>
+<p><strong>The 1st Reason</strong><br />
+Your bot doesn't have the <code>managemessages</code> permission.
+Make sure that one of the roles that the bot has, has this permission enabled.</p>
+<p><img src="https://user-images.githubusercontent.com/70456337/197358582-dcb39545-ae01-4eb9-bbe2-34c0af6c4f02.png" alt="perm-mmesages" /></p>
+<p><strong>The 2nd Reason</strong><br />
+You are trying to purge messages that have been around for more than two weeks.<br />
+BDFD uses a bulk request to purge messages, and it can't process messages that are more than two weeks old.</p>
+<hr />
+<h2 id="addreactions-and-addcmdreactions"><a class="header" href="#addreactions-and-addcmdreactions">$addReactions and $addCmdReactions</a></h2>
+<h3 id="the-bot-fails-to-add-reactions"><a class="header" href="#the-bot-fails-to-add-reactions">The Bot Fails To Add Reactions</a></h3>
+<p><strong>The 1st Reason</strong><br />
+The user has blocked the bot, so the bot can't react to the user's messages. This works exactly the same if the user has blocked another user.</p>
+<p><strong>The 2nd Reason</strong><br />
+You're specifying the emoji in the function argument incorrectly.</p>
+<ul>
+<li>Default emojis.
+<pre><code class="language-diff">- $addCmdReactions[:joy:]
++ $addCmdReactions[😂]
+</code></pre>
+</li>
+<li>Custom emojis.
+<pre><code class="language-diff">- $addCmdReactions[:pikachu:]
+- $addCmdReactions[\:pikachu:]
++ $addCmdReactions[&lt;:pikachu:951437967711420456&gt;]
+</code></pre>
+You must use the Emoji ID form of the desired emoji.</li>
+</ul>
+<p><strong>The 3rd Reason</strong><br />
+<em>Case with custom emojis.</em><br />
+Your bot must share a server with the specified emoji in order to use it. It works like Discord Nitro.</p>
+<hr />
+<h2 id="time"><a class="header" href="#time">$time</a></h2>
+<h3 id="the-function-returns-an-error"><a class="header" href="#the-function-returns-an-error">The Function Returns an Error</a></h3>
+<p><strong>The 1st Reason</strong><br />
+Incorrect use of the function. The function doesn't return the current time or anything like that.<br />
+The function's role is to change the timezone for time-related functions (such as <a href="../bdscript/day.html"><code>$day</code></a>, <a href="../bdscript/hour.html"><code>$hour</code></a>, and so on)</p>
+<p><strong>The 2nd Reason</strong><br />
+Incorrect time zone or incorrect time zone format.<br />
+BDFD uses the official IANA time zone database for time zone information.<br />
+Please use the <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List">TZ Database name</a> from this list in the <code>$time</code> function.</p>
+<pre><code class="language-diff">- $time[America]
+- $time[New_York]
++ $time[America/New_York]
+</code></pre>
+<hr />
+<h2 id="economy-related-commands"><a class="header" href="#economy-related-commands">Economy Related Commands</a></h2>
+<ul>
+<li>This part will have fully working and quality code examples that you can use in your bot.</li>
+<li>In this part, examples and more will be based on the <a href="../guides/variables.html#local-economy"><em>local economy</em></a> and <a href="../guides/bdscript2.html">BDScript 2</a>.</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Variable Name</th><th style="text-align: center">Default Variable Value</th><th style="text-align: center"><em>Our</em> Variable Value</th><th style="text-align: center">Target's Variable Value</th></tr></thead><tbody>
+<tr><td style="text-align: center">Money</td><td style="text-align: center">0</td><td style="text-align: center">100</td><td style="text-align: center">120</td></tr>
+</tbody></table>
+</div>
+<h3 id="negative-balance"><a class="header" href="#negative-balance">Negative Balance</a></h3>
+<p><strong>The 1st Possible Solution</strong><br />
+Adding limiters or if statements that will prevent actions in which the executor's or target's balance becomes negative.<br />
+This solution can be an alternative to &quot;Prevent actions when the amount is greater than the user's balance&quot;.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Argument</th><th style="text-align: center">Content</th></tr></thead><tbody>
+<tr><td style="text-align: center">1st - Target</td><td style="text-align: center">Afternoon</td></tr>
+<tr><td style="text-align: center">2nd - Amount</td><td style="text-align: center">50</td></tr>
+<tr><td style="text-align: center">3rd - Comment</td><td style="text-align: center">Happy Birthday!</td></tr>
+</tbody></table>
+</div><details><summary>View Arguments Formatting In Code.</summary>
+<ul>
+<li>Target
+<pre><code>$var[target;$findUser[$message[1];no]]
+</code></pre>
+</li>
+<li>Amount
+<pre><code>$var[amount;$message[2]]
+</code></pre>
+</li>
+<li>Comment
+<pre><code>$var[comment;$trimSpace[$replaceText[$replaceText[$message;$message[1];];$message[2];]]]
+</code></pre>
+</li>
+</ul>
+</details>
+<br>
+<ul>
+<li>Limiters Method
+<pre><code>$var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
+
+$onlyIf[$var[ourNewBalance]&gt;0;Error Message]
+</code></pre>
+</li>
+<li>If Statements Method
+<pre><code>$var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
+
+$if[$var[ourNewBalance]&lt;0]
+    Error Message
+$else
+    Code
+$endif
+</code></pre>
+</li>
+</ul>
+<h4 id="pay-command"><a class="header" href="#pay-command">Pay Command</a></h4>
+<details><summary>Expand Code Example (67 lines)</summary>
+<pre><code>$nomention
+$allowMention
+
+$if[$argCount[$message]&lt;2]
+    $color[FF544C]
+    $title[Payment System]
+    $description[Missing Argumets! Example Command: `!pay &lt;user&gt; &lt;amount&gt; (comment)`]
+    $stop
+$endif
+
+$var[target;$findUser[$message[1];no]]
+$var[amount;$message[2]]
+$var[comment;$trimSpace[$replaceText[$replaceText[$message;$message[1];];$message[2];]]]
+
+$if[$var[target]==]
+    $color[FF544C]
+    $title[Payment System]
+    $description[User (1st argument) not found on the server!]
+    $stop
+$endif
+
+$if[$var[target]==$authorID]
+    $color[FF544C]
+    $title[Payment System]
+    $description[You cannot pay yourself!]
+    $stop
+$endif
+
+$if[$isNumber[$var[amount]]==false]
+    $color[FF544C]
+    $title[Payment System]
+    $description[Amount (2nd argument) must be a number!]
+    $stop
+$endif
+
+$if[$checkContains[$var[amount];.]==true]
+    $color[FF544C]
+    $title[Payment System]
+    $description[Amount (2nd argument) must be an integer!]
+    $stop
+$endif
+
+$if[$var[amount]&lt;0]
+    $color[FF544C]
+    $title[Payment System]
+    $description[Amount (2nd argument) cannot be less than 0!]
+    $stop
+$endif
+
+$if[$var[comment]==]
+    $var[comment;Not provided.]
+$endif
+
+$var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
+
+$if[$var[ourNewBalance]&lt;0]
+    $color[FF544C]
+    $title[Payment System]
+    $description[❌ Hey &lt;@$authorID&gt;! What are you left with if you try to make such a payment?]
+$else
+    $color[7EFF88]
+    $title[Payment System]
+    $description[✔ You have successfully paid &lt;@$var[target]&gt; $var[amount] money! **Comment**: $var[comment]]
+
+    $setUserVar[Money;$sum[$getUserVar[Money;$var[target]];$var[amount]];$var[target]]
+    $setUserVar[Money;$var[ourNewBalance]]
+
+    $if[$isUserDMEnabled[$var[target]]==true]
+        $sendEmbedMessage[$dmChannelID[$var[target]];;Payment System;;Good time! &lt;@$authorID&gt; paid you $var[amount] money and left a comment: $var[comment];7EFF88]
+    $endif
+$endif
+</code></pre>
+<details><summary>Expand Code Breakdown</summary>
+<ul>
+<li>
+<pre><code>  $if[$argCount[$message]&lt;2]
+      $color[FF544C]
+      $title[Payment System]
+      $description[Missing Argumets! Example Command: `!pay &lt;user&gt; &lt;amount&gt; (comment)`]
+      $stop
+  $endif
+</code></pre>
+Checks the number of arguments in the code.<br />
+If there are less than 2 arguments, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $var[target;$findUser[$message[1];no]]
+  $var[amount;$message[2]]
+  $var[comment;$trimSpace[$replaceText[$replaceText[$message;$message[1];];$message[2];]]]
+  &lt;...&gt;
+  $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
+</code></pre>
+Argument formatting. 
+<ul>
+<li>
+<pre><code>  $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
+</code></pre>
+Calculates the <em>our</em> future balance after making a payment.</li>
+</ul>
+</li>
+<li>
+<pre><code>  $if[$var[target]==]
+      $color[FF544C]
+      $title[Payment System]
+      $description[User (1st argument) not found on the server!]
+      $stop
+  $endif
+</code></pre>
+Checks if the target is present on the current server.<br />
+If not, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $if[$var[target]==$authorID]
+      $color[FF544C]
+      $title[Payment System]
+      $description[You cannot pay yourself!]
+      $stop
+  $endif
+</code></pre>
+Checks if the command author is the target.<br />
+If yes, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $if[$isNumber[$var[amount]]==false]
+      $color[FF544C]
+      $title[Payment System]
+      $description[Amount (2nd argument) must be a number!]
+      $stop
+  $endif
+</code></pre>
+Checks if the specified amount is a valid number.<br />
+If not, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $if[$checkContains[$var[amount];.]==true]
+      $color[FF544C]
+      $title[Payment System]
+      $description[Amount (2nd argument) must be an integer!]
+      $stop
+  $endif
+</code></pre>
+Checks if the specified amount is an integer.<br />
+If not, an embed error will be returned and code execution will be stopped.<br />
+Exists in order to avoid payments with floating (decimal) numbers.</li>
+<li>
+<pre><code>  $if[$var[amount]&lt;0]
+      $color[FF544C]
+      $title[Payment System]
+      $description[Amount (2nd argument) cannot be less than 0!]
+      $stop
+  $endif
+</code></pre>
+Checks if the specified amount is less than 0.<br />
+If yes, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $if[$var[comment]==]
+      $var[comment;Not provided.]
+  $endif
+</code></pre>
+Checks for a comment. If there is no comment (the argument is empty), &quot;Not provided.&quot; will be written as comment.</li>
+<li>
+<pre><code>  $if[$var[ourNewBalance]&lt;0]
+      $color[FF544C]
+      $title[Payment System]
+      $description[❌ Hey &lt;@$authorID&gt;! What are you left with if you try to make such a payment?]
+  $else
+      $color[7EFF88]
+      $title[Payment System]
+      $description[✔ You have successfully paid &lt;@$var[target]&gt; $var[amount] money! **Comment**: $var[comment]]
+
+      $setUserVar[Money;$sum[$getUserVar[Money;$var[target]];$var[amount]];$var[target]]
+      $setUserVar[Money;$var[ourNewBalance]]
+
+      $if[$isUserDMEnabled[$var[target]]==true]
+          $sendEmbedMessage[$dmChannelID[$var[target]];;Payment System;;Good time! &lt;@$authorID&gt; paid you $var[amount] money and left a comment: $var[comment];7EFF88]
+      $endif
+  $endif
+</code></pre>
+The main part of the command, where:
+<ol>
+<li>Checking whether our balance will be negative. If yes, an embed error will be returned.</li>
+<li>Changing <em>our</em> variable value (money withdrawal) and the target's variable value (money replenishment).
+<pre><code class="language-rb">$setUserVar[Money;$sum[$getUserVar[Money;$var[target]];$var[amount]];$var[target]]
+$setUserVar[Money;$var[ourNewBalance]]
+</code></pre>
+</li>
+<li>Sending an embed message to the target's DMs that we have made a payment.<br />
+The message will be sent only if the target's DMs are enabled.
+<pre><code class="language-rb">$if[$isUserDMEnabled[$var[target]]==true]
+    $sendEmbedMessage[$dmChannelID[$var[target]];;Payment System;;Good time! &lt;@$authorID&gt; paid you $var[amount] money and left a comment: $var[comment];7EFF88]
+$endif
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+</details>
+<details><summary>Expand Attachments</summary>
+<p><img src="https://user-images.githubusercontent.com/70456337/200176249-589b8db7-f7b3-41bb-8f58-65a1688bfb1a.png" alt="p-ex-1" />
+<img src="https://user-images.githubusercontent.com/70456337/200176262-f3850558-1f2e-4d97-aa2a-3a3dfce88bb1.png" alt="p-ex-2" />
+<img src="https://user-images.githubusercontent.com/70456337/200176275-28af50da-589d-424d-85c6-4ba6d64f32eb.png" alt="p-ex-3" />
+<img src="https://user-images.githubusercontent.com/70456337/200176279-75d7402a-cb26-45e4-903c-253da4c5f3d6.png" alt="p-ex-4" />
+<img src="https://user-images.githubusercontent.com/70456337/200176290-2ad03222-553f-4eb6-a928-7337fb96857b.png" alt="p-ex-5" />
+<img src="https://user-images.githubusercontent.com/70456337/200176297-f28a6467-1b4d-4edb-86e3-895e344d4d07.png" alt="p-ex-6" /></p>
+</details>
+<p><strong>The 2nd Possible Solution</strong><br />
+Setting the balance to 0 if the future balance becomes negative.<br />
+This solution may be suitable for gambling-related commands, if you do not want the user's balance to become negative in case of losses.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Argument</th><th style="text-align: center">Content</th></tr></thead><tbody>
+<tr><td style="text-align: center">1st - Bet</td><td style="text-align: center">60</td></tr>
+</tbody></table>
+</div><details><summary>View Arguments Formatting In Code.</summary>
+<ul>
+<li>Bet
+<pre><code>$var[bet;$message[1]]
+</code></pre>
+</li>
+</ul>
+</details>
+<br>
+<pre><code>$var[ourNewBalance;$sub[$getUserVar[Money];$var[bet]]]
+
+$if[$var[ourNewBalance]&lt;0]
+    $var[ourNewBalance;0]
+$endif
+</code></pre>
+<h4 id="roulette-command"><a class="header" href="#roulette-command">Roulette Command</a></h4>
+<details><summary>Expand Code Example (53 lines)</summary>
+<pre><code>$nomention
+
+$var[bet;$message[1]]
+
+$if[$isNumber[$var[bet]]==false]
+    $color[FF544C]
+    $title[Roulette]
+    $description[Bet must be a number!]
+    $stop
+$endif
+
+$if[$checkContains[$var[bet];.]==true]
+    $color[FF544C]
+    $title[Roulette]
+    $description[Bet must be an integer!]
+    $stop
+$endif
+
+$if[$var[bet]&gt;$getUserVar[Money]]
+    $color[FF544C]
+    $title[Roulette]
+    $description[The bet cannot be higher than your balance!]
+    $stop
+$endif
+
+$if[$var[bet]&lt;0]
+    $color[FF544C]
+    $title[Roulette]
+    $description[The bet cannot be less than 0!]
+    $stop
+$endif
+
+$var[bet;$multi[$var[bet];2]]
+
+$if[$random[1;3]==1]
+    $var[ourNewBalance;$sum[$getUserVar[Money];$var[bet]]]
+    
+    $color[7EFF88]
+    $title[Roulette]
+    $description[Wow, you are lucky! You have won $var[bet]!]
+$else
+    $var[ourNewBalance;$sub[$getUserVar[Money];$var[bet]]]
+    
+    $color[FF544C]
+    $title[Roulette]
+    $if[$var[ourNewBalance]&lt;0]
+        $var[ourNewBalance;0]
+        $description[What a pity! You lost and became bankrupt!]
+    $else
+        $description[What a pity! You have lost the $var[bet].]
+    $endif
+$endif
+
+$setUserVar[Money;$var[ourNewBalance]]
+</code></pre>
+<details><summary>Expand Code Breakdown</summary>
+<ul>
+<li>
+<pre><code>  $var[bet;$message[1]]
+</code></pre>
+Argument formatting.</li>
+<li>
+<pre><code>  $if[$isNumber[$var[bet]]==false]
+      $color[FF544C]
+      $title[Roulette]
+      $description[Bet must be a number!]
+      $stop
+  $endif
+</code></pre>
+Checks if the bet is a valid number.<br />
+If not, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $if[$checkContains[$var[bet];.]==true]
+      $color[FF544C]
+      $title[Roulette]
+      $description[Bet must be an integer!]
+      $stop
+  $endif
+</code></pre>
+Checks if the bet is an integer.<br />
+If not, an embed error will be returned and code execution will be stopped.<br />
+Exists in order to avoid bets with floating (decimal) numbers.</li>
+<li>
+<pre><code>  $if[$var[bet]&gt;$getUserVar[Money]]
+      $color[FF544C]
+      $title[Roulette]
+      $description[The bet cannot be higher than your balance!]
+      $stop
+  $endif
+</code></pre>
+Checks if the bet is higher than <em>our</em> balance.<br />
+If yes, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $if[$var[bet]&lt;0]
+      $color[FF544C]
+      $title[Roulette]
+      $description[The bet cannot be less than 0!]
+      $stop
+  $endif
+</code></pre>
+Checks if the bet is less than 0.<br />
+If yes, an embed error will be returned and code execution will be stopped.</li>
+<li>
+<pre><code>  $if[$random[1;3]==1]
+      $var[ourNewBalance;$sum[$getUserVar[Money];$var[bet]]]
+      &lt;...&gt;
+  $else
+      $var[ourNewBalance;$sub[$getUserVar[Money];$var[bet]]]
+      &lt;...&gt;
+      $if[$var[ourNewBalance]&lt;0]
+          $var[ourNewBalance;0]
+          &lt;...&gt;
+      $else
+          &lt;...&gt;
+      $endif
+  $endif
+
+  $setUserVar[Money;$var[ourNewBalance]]
+</code></pre>
+Manages roulette results. If <code>$random[1;3]</code> equals 1, then <em>we</em> win and the bet is added to the balance in the doubled amount. Otherwise, the bet will be taken away from the balance in doubled amount.<br />
+If the future balance in case of loss will be negative, it will be set to 0.</li>
+</ul>
+</details>
+</details>
+<details> <summary>Expand Attachments</summary>
+<p><img src="https://user-images.githubusercontent.com/70456337/200128118-0b5bb7bf-a73f-47c5-8e4a-d070d1b5ce5c.png" alt="r-ex-1" />
+<img src="https://user-images.githubusercontent.com/70456337/200128126-f40866cd-a58c-4510-983c-b331aa57fecb.png" alt="r-ex-2" /><br />
+<img src="https://user-images.githubusercontent.com/70456337/200128133-1938b7ad-f2b6-40fa-8efb-ee1d78a82922.png" alt="r-ex-3" /></p>
+</details>
+<h3 id="desynchronized-balance"><a class="header" href="#desynchronized-balance">Desynchronized Balance</a></h3>
+<h4 id="the-balance-is-different-on-different-servers"><a class="header" href="#the-balance-is-different-on-different-servers">The Balance Is Different On Different Servers</a></h4>
+<p>This is because you're probably using <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a> and <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> in your economy. But these functions are based as <a href="../guides/variables.html#local-economy">local variables</a>. Their values are unique for each server.<br />
+If you want the same balance on all servers, you should use <a href="../bdscript/setVar.html"><code>$setVar</code></a> and <a href="../bdscript/getVar.html"><code>$getVar</code></a> (with <code>userID</code> arguments). These functions are based on <a href="../guides/variables.html#globalglobal-user-variables">global user variables</a>.</p>
+<h4 id="the-displayed-balance-is-different-for-different-commands"><a class="header" href="#the-displayed-balance-is-different-for-different-commands">The Displayed Balance Is Different For Different Commands</a></h4>
+<p>Most often this is because you've mixed up the variable functions and you're using the wrong variable type.<br />
+For example, if you use <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a> and <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> in the Roulette command and <a href="../bdscript/getVar.html"><code>$getVar</code></a> in the Balance command, this will show different values. The solution to this is to replace <a href="../bdscript/getVar.html"><code>$getVar</code></a> with <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> in the Balance command, or vice versa, replace <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a> and <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> with <a href="../bdscript/setVar.html"><code>$setVar</code></a> and <a href="../bdscript/getVar.html"><code>$getVar</code></a> accordingly  in the Roulette command.<br />
+<strong>Note:</strong> don't forget that <a href="../guides/variables.html#globalglobal-user-variables">global user variables</a> require a <code>userID</code> argument.</p>
+<hr />
+<h2 id="leaderboards"><a class="header" href="#leaderboards">Leaderboards</a></h2>
+<h3 id="the-leaderboard-is-empty"><a class="header" href="#the-leaderboard-is-empty">The Leaderboard Is Empty</a></h3>
+<p><strong>The 1st Reason</strong><br />
+You've chosen the wrong leaderboard function.</p>
+<ul>
+<li>If you're using the <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a>/<a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> functions, you should use the <a href="../bdscript/userLeaderboard.html"><code>$userLeaderboard</code></a> function.</li>
+<li>If in your're using the <a href="../bdscript/setVar.html"><code>$setVar</code></a>/<a href="../bdscript/getVar.html"><code>$getVar</code></a> functions, you should use the <a href="../bdscript/globalUserLeaderboard.html"><code>$globalUserLeaderboard</code></a> function.</li>
+<li>If you're using the <a href="../bdscript/setServerVar.html"><code>$setServerVar</code></a>/<a href="../bdscript/getServerVar.html"><code>$getServerVar</code></a> functions, you should use the <a href="../bdscript/serverLeaderboard.html"><code>$serverLeaderboard</code></a> function.</li>
+</ul>
+<p><strong>The 2nd Reason</strong><br />
+<em>(In case you are using the <a href="../bdscript/getLeaderboardValue.html"><code>$getLeaderboardValue</code></a> function)</em><br />
+You specified the wrong variable type.</p>
+<ul>
+<li>If you're using the <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a>/<a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> functions, you should specify the <code>user</code> as type.</li>
+<li>If in your're using the <a href="../bdscript/setVar.html"><code>$setVar</code></a>/<a href="../bdscript/getVar.html"><code>$getVar</code></a> functions, you should specify the <code>globalUser</code> as type.</li>
+<li>If you're using the <a href="../bdscript/setServerVar.html"><code>$setServerVar</code></a>/<a href="../bdscript/getServerVar.html"><code>$getServerVar</code></a> functions, you should specify the <code>server</code> as type.</li>
+</ul>
+<p><strong>The 3rd Reason</strong><br />
+The leaderboard haven't generated yet.<br />
+Sometimes it takes a while to generate the leaderboard.</p>
+<h3 id="the-users-value-isnt-updated"><a class="header" href="#the-users-value-isnt-updated">The User's Value Isn't Updated</a></h3>
+<p>As with the generation of the leaderboard, updating it can also take a while.<br />
+This can be mainly due to the fact that the leaderboard has a large database (i.e. the total number of users with a modified variable value other than the default).</p>
+<hr />
+<h2 id="bot-issues"><a class="header" href="#bot-issues">Bot Issues</a></h2>
+<h3 id="the-bot-is-offline"><a class="header" href="#the-bot-is-offline">The Bot Is Offline</a></h3>
+<p><strong>The 1st Reason</strong><br />
+The node is restarting. While the node is restarting, logically, the bot can't work.<br />
+Usually restarting doesn't take more than 5-10 minutes.<br />
+So please wait a while and have a cup of tea or coffee while the node restarts.</p>
+<p><strong>The 2nd Reason</strong><br />
+For some reason, your bot's token is no longer valid or the BDFD app thinks so.<br />
+You can solve this problem by regenerating your bot's token on the developer portal and then replacing the old token with the new one in the BDFD app bot's Settings tab.</p>
+<p><strong>The 3rd Reason</strong><br />
+Not a common problem, but possible. The node your bot is running on is experiencing problems.<br />
+In this case, join the <a href="https://discord.gg/botdesigner">support server</a>, create a ticket using the <code>!new</code> command and tell the staff your bot's ID and node number, if you know it (node number can be found out using the <a href="../bdscript/botNode.html"><code>$botNode</code></a> function when your bot is online).<br />
+The staff will inform the developers of the current problems, providing the scale of the problem (affected bots and/or nodes).<br />
+<strong>Please don't regenerate your bot token in this case</strong>, as it leads to node change. If everyone starts changing their node because there is a problem on that node, then a healthy node can also be affected by this problem.</p>
+<h3 id="the-bot-doesnt-respond"><a class="header" href="#the-bot-doesnt-respond">The Bot Doesn't Respond</a></h3>
+<p><strong>The 1st Reason</strong><br />
+If your bot is based on text commands and you don't have the Message Content Intent enabled.<br />
+You must enable it in your bot's settings to use text commands.<br />
+Read the <a href="../guides/gatewayIntents.html">Gateway Intents Guide</a> for more details.</p>
+<p><strong>The 2nd Reason</strong><br />
+Your bot doesn't have the necessary permissions.<br />
+In order for your bot to respond correctly to a command, it must have permissions for <code>Send Messages</code>, <code>Embed Links</code> (if your code has embed functions), and <code>Read Messages</code> in order for the bot to have access to the channel.</p>
+<h3 id="the-bot-goes-offline-from-time-to-time"><a class="header" href="#the-bot-goes-offline-from-time-to-time">The Bot Goes Offline From Time To Time</a></h3>
+<p>This is due to the fact that nodes are restarted from time to time to maintain the stable operation of all the bots that also work on this node.</p>
+<h3 id="desynchronization-of-commands"><a class="header" href="#desynchronization-of-commands">Desynchronization of Commands</a></h3>
+<p>Desynchronization of commands means, for example, that you have deleted a command but the bot still responds to it (aka. Ghost Command), or you see different code of your command in the web app and another in the mobile app.</p>
+<h4 id="ghost-command"><a class="header" href="#ghost-command">Ghost Command</a></h4>
+<p>Not many people encounter this problem, but it's still worth mentioning.<br />
+This problem is related to database synchronization (between your application data and your bot's data in the database).<br />
+<strong>Solution Options</strong><br />
+<em>The 1st Solution</em><br />
+Restart the app.<br />
+Close the app from Recent apps and reopen it. This may result in a deleted command reappearing due to desync with the database. You can just delete that command again.</p>
+<p><em>The 2nd Solution</em><br />
+Attempting to forcibly restart the bot.<br />
+You can do this in the settings of your bot in the app. Restarting the bot can send a retransfer of data from the application to the database, and then the deleted command will be deleted for real.</p>
+<p><em>The Solution Options Didn't Help</em><br />
+In this case, join the <a href="https://discord.gg/botdesigner">support server</a>, create a ticket using the <code>!new</code> command and tell the staff your bot's ID.<br />
+The staff will mention one of the developers to take a look at this problem with your bot.</p>
+<h3 id="the-bot-takes-a-long-time-to-respond"><a class="header" href="#the-bot-takes-a-long-time-to-respond">The Bot Takes A Long Time To Respond</a></h3>
+<p><strong>The 1st Reason</strong><br />
+Your code is too long and/or complicated.<br />
+This may be the obvious reason if it is. Executing large and complex code takes more resources.<br />
+When writing code, you should think about how to make it more compact and less complex, but in a way that makes your idea come to fruition.</p>
+<p><strong>The 2nd Reason</strong><br />
+Your bot was rate limited. This can happen because of excessive requests to Discord API, performed by BDFD functions (such as <code>$addEmoji</code> and others).<br />
+You should not stack such functions and try to perform them all at once.</p>
+<p><strong>The 3rd Reason</strong><br />
+The node your bot is running on is experiencing some slight problems (such as a rate limits). If you're sure this is the case, you can regenerate the bot's token and replace it with a new one. This will cause your bot to change its node.</p>
+<h3 id="the-slash-commands-doesnt-appear"><a class="header" href="#the-slash-commands-doesnt-appear">The Slash Commands Doesn't Appear</a></h3>
+<p><strong>The 1st Reason</strong><br />
+Old version of the application. Make sure that you have a latest version of the application installed.<br />
+New versions of the application have been improved and updated, and new features have been added. In addition, errors with the validity check of the slash commands have been fixed. You will be warned if you set up your slash command incorrectly, in which case the application will not allow you to save the slash command.</p>
+<p><strong>The 2nd Reason</strong><br />
+Slash commands are cached by discord, so it takes time before they appear in discord.</p>
+<p>They're also cached on the client side, if they were successfully cached in discord. If other users have a new slash command and you don't, restart the discord client.<br />
+Restarting will cause existing slash commands to be cleared and new ones will cache.</p>
+<p><strong>The 3rd Reason</strong><br />
+Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands of same type have the same name, but one is created using a third-party service, and the other through the BDFD, this can cause a conflict and the slash command will not appear.<br />
+You can solve this problem by Syncing slash commands with discord in the bot's settings. This removes third-party service slash commands and leaves only those that were created in our application.</p>
+<p><img src="https://user-images.githubusercontent.com/70456337/200124426-6dbe69aa-1711-4838-9569-689b5e30f48f.gif" alt="sync" /></p>
+<h3 id="integration-requires-code-grant"><a class="header" href="#integration-requires-code-grant">Integration Requires Code Grant</a></h3>
+<p>You can only get this error when trying to invite a bot to any server.<br />
+Most likely, you have accidentally or unknowingly enabled the <code>Require OAuth2 Code Grant</code> option in your bot's settings in the <a href="https://discord.com/developers/applications">developer portal</a>.<br />
+This is the reason why you get this error.</p>
+<p>This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. But BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than <code>bot</code> and <code>application.commands</code>.</p>
+<hr />
+<h2 id="app-issues"><a class="header" href="#app-issues">App Issues</a></h2>
+<h3 id="the-ad-button-doesnt-work"><a class="header" href="#the-ad-button-doesnt-work">The Ad Button Doesn't Work</a></h3>
+<p><strong>The 1st Reason</strong><br />
+Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see &quot;Loading ad...&quot;.</p>
+<p><strong>The 2nd Reason</strong><br />
+There're no more ads for you. If that's the reason, there's nothing we can do about it, it's the provider who provides the ads, not us. Try to see the ad later. If the case persists, go to <a href="https://discord.gg/botdesigner">support server</a>, create a ticket using the <code>!new</code> command and inform the staff about your problem by providing a screen recording longer than 30 seconds.</p>
+<p><strong>The 3nd Reason</strong><br />
+The advertising provider we use is blocked in your country or region. There is nothing we can do in this case.</p>
+<h4 id="possible-solutions"><a class="header" href="#possible-solutions">Possible Solutions</a></h4>
+<ol>
+<li>Clearing the application cache and restarting it.</li>
+<li>Using VPN services. This may be the best solution for the 2nd and 3rd reasons, and in some cases for the 1st reason.</li>
+<li>In a desperate case, restart the smartphone and/or reinstall the app.
+<blockquote>
+<p>If you decide to reinstall the app, make sure that you are logged in to the app, otherwise you will lose access to your bots.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="ghost-functions-from-the-changelog"><a class="header" href="#ghost-functions-from-the-changelog">Ghost Functions From The Changelog</a></h3>
+<p>In this section, the easiest way to explain everything is through dialogue: </p>
+<ul>
+<li><code>Random Guy</code>: I was told by a friend that a new function, <code>$botOwnerID</code>, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:<br />
+<img src="https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png" alt="I5dLLUVB" /></li>
+<li><code>Shiro</code>: This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.</li>
+<li><code>Shiro</code>: Usually, all nodes are updated by the end of the month. </li>
+<li><code>Random Guy</code>: Allright, thank you! I will wait patiently!</li>
+<li><code>Shiro</code>: You're welcome, Random Guy.</li>
+</ul>
+<hr />
+<h2 id="thats-where-the-list-of-troubleshootings-ends"><a class="header" href="#thats-where-the-list-of-troubleshootings-ends">That's Where The List Of Troubleshootings Ends</a></h2>
+<p>If you know of other problems that users often encounter or have suggestions, feel free to let us know on the <a href="https://discord.gg/botdesigner">support server</a> or by <a href="https://github.com/NilPointer-Software/bdfd-wiki/blob/dev/CONTRIBUTING.md">contributing</a>!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../resources/timeFormat.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../bdscript/introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a href="../resources/timeFormat.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a href="../bdscript/introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../elasticlunr.min.js" charset="utf-8"></script>
+        <script src="../mark.min.js" charset="utf-8"></script>
+        <script src="../theme/searcher.js" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" charset="utf-8"></script>
+        <script src="../highlight.js" charset="utf-8"></script>
+        <script src="../book.js" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

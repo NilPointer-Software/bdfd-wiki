@@ -199,26 +199,51 @@ a:hover > .hljs {
 pre {
     position: relative;
 }
+.hljs {
+    padding: 10px;
+}
+
+pre:hover > .buttons {
+    visibility: visible;
+    opacity: 1;
+}
+
 pre > .buttons {
     position: absolute;
     z-index: 100;
     right: 5px;
-    top: 5px;
+    margin: 2px;
+    padding: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.1s linear, opacity 0.1s linear;
 
     color: var(--sidebar-fg);
     cursor: pointer;
 }
+
 pre > .buttons :hover {
     color: var(--sidebar-active);
+    border-color: var(--icons-hover);
+    background-color: var(--theme-hover);
 }
+
 pre > .buttons i {
     margin-left: 8px;
 }
 pre > .buttons button {
-    color: inherit;
-    background: transparent;
-    border: none;
+    color: var(--icons);
+    margin: 0px 5px;
+    padding: 3px 5px;
     cursor: inherit;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: var(--icons);
+    background-color: var(--theme-popup-bg);
+    transition: 100ms;
+    transition-property: color,border-color,background-color;
 }
 pre > .result {
     margin-top: 10px;
@@ -268,7 +293,7 @@ mark.fade-out {
 .searchresults-header {
     font-weight: bold;
     font-size: 1em;
-    padding: 18px 0 0 5px;
+    padding: 18px 0 0 300px;
     color: var(--searchresults-header-fg);
 }
 
