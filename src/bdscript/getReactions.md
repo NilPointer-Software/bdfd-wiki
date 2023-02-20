@@ -9,7 +9,7 @@ $getReactions[channelID;messageID;separator;emoji]
 ### Parameters
 - `channelID` `(Type: Snowflake || Flag: Required)`: The channel that the message belongs to.
 - `messageID` `(Type: Snowflake || Flag: Required)`: The message to get the user-reactions from.
-- `separator` `(Type: String || Flag : Required)`: The separator between each user.
+- `separator` `(Type: String || Flag: Required)`: The separator between each user.
 - `emoji` `(Type: Emoji || Flag: Required)`: The emoji to get the user's reactions for.
 
 ## Example
