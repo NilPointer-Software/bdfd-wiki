@@ -1,18 +1,18 @@
 # $pinMessage[]
+Pins a specific message using it's message ID & channel ID.
 
 > ⚠️ A channel can have a maximum of 50 pinned messages.
 
-### Syntax
+## Syntax
 ```
 $pinMessage[channelID;messageID]
 ```
-It pins a specific message using it's message ID & channel ID.
 
-#### Parameters 
-- `channelID` `(Type : Snowflake || Flag : Required)`
-- `messageID` `(Type : Snowflake || Flag : Required)`
+### Parameters 
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel where the message is located.
+- `messageID` `(Type: Snowflake || Flag: Required)`: The message to pin.
 
-##### Example
+## Example
 ```
 $nomention
 $pinMessage[$channelID;$messageID]
