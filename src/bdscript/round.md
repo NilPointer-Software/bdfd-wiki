@@ -1,7 +1,7 @@
 # $round
 Rounds up the provided number.
 
-## Usage
+## Syntax
 ```
 $round[number;(decimalPlace)]
 ```
