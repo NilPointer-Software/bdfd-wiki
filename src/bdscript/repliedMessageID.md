@@ -3,13 +3,13 @@ Returns the ID of the replied message.
 
 > 📌 If the message is not a reply, no response will be returned.
 
-#### Syntax
+## Syntax
 ```
 $repliedMessageID
 ```
 Returns the ID of the replied message from the author's message.
 
-#### Example
+## Example
 ```
 $nomention
 The message ID you replied to is: $repliedMessageID

@@ -1,9 +1,9 @@
 # $shardID[]
 
-#### Syntax
+## Syntax
 ```
 $shardID[guildID]
 ```
 
-#### Parameters 
+### Parameters 
 - `guildID` `(Type: Snowflake || Flag: Required)`: Returns the shard id of the provided guild.

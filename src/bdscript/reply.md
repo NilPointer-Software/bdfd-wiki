@@ -2,13 +2,13 @@
 Replies to the user's message.
 
 
-#### Syntax
+## Syntax
 ```
 $reply
 ```
 Replies to the author's message.
 
-#### Example
+## Example
 ```
 $nomention
 $reply

@@ -1,12 +1,12 @@
 # $slashID
 
-#### Syntax
+## Syntax
 ```
 $slashID
 ```
 Returns ID of the executed slash command.
 
-#### Example
+## Example
 ```
 $nomention
 ID of this slash command: $slashID

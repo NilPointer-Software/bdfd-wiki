@@ -1,16 +1,16 @@
 # $repliedMessageID[]
 
-#### Syntax
+## Syntax
 ```
 $repliedMessageID[Channel ID;Message ID]
 ```
 Returns the ID of the replied message form the given message.
 
-#### Parameters
+### Parameters
 - `Channel ID` `(Type : Snowflake || Flag : Required)` : The channel where the message is located.
 - `Message ID` `(Type : Snowflake || Flag : Required)` : The message from which the ID of the replied message will be taken from.
 
-#### Example
+## Example
 ```
 $nomention
 The message ID you replied to is: $repliedMessageID[$channelID;$messageID]

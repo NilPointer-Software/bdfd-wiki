@@ -1,15 +1,15 @@
 # $slashID[]
 
-#### Syntax
+## Syntax
 ```
 $slashID[Slash command name]
 ```
 Returns ID of the provided slash command.
 
-##### Parameters 
+### Parameters 
 - `Slash command name` `(Type: String || Flag: Required)`: Name of the global slash command.
 
-#### Example
+## Example
 ```
 $nomention
 ID of `$message` slash command: $slashID[$message]
