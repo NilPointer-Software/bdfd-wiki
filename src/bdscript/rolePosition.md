@@ -1,13 +1,13 @@
 # $rolePosition
 Returns a roles position *(1 being highest role)*.
 
-## Usage
+## Syntax
 ```
 $rolePosition[roleID]
 ```
 
-### Breakdown
-- `roleID` - The role to get the position of.
+### Parameters
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role for which to get its position.
 
 ## Example
 ```

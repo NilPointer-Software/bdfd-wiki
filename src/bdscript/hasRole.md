@@ -7,9 +7,9 @@ Returns whether or not a user has the provided role.
 $hasRole[userID;roleID]
 ```
 
-### Breakdown
-- `userID` - The user to check for the role.
-- `roleID` - The role that the bot is checking the user for.
+### Parameters
+- `userID` `(Type: Snowflake || Flag: Required)`: The user to check for the role.
+- `roleID` `(Type: Snowflake || Flag: Emptiable)`: The role that the bot is checking the user for.
 
 ## Example
 ```

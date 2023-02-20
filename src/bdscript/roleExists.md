@@ -8,8 +8,8 @@ Returns whether or not the provided ID is a actual role.
 $roleExists[roleID]
 ```
 
-### Breakdown
-- `roleID` -  The "role" which the bot checks.
+### Parameters
+- `roleID` `(Type: Snowflake, String || Flag: Emptiable)`:  The role to check for.
 
 ## Examples
 **Example #1:**

@@ -2,7 +2,7 @@
 Returns the current second of this minute.
 > 🧙‍♂️ You can use [$time](./time.md) to change the timezone.
 
-## Usage
+## Syntax
 ```
 $second
 ```

@@ -10,7 +10,6 @@ Character | Escaped
 --------- | --------
 ; | `%{-SEMICOL-}%` or `\;`
 $ | `%{DOL}%`
-[ | `\[`
 ] | `%ESCAPED%` or `\]`
 \ | `\\`
 

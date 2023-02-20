@@ -6,8 +6,8 @@ Returns a role's color hex.
 $getRoleColor[roleID]
 ```
 
-### Breakdown
-- `roleID` - The role to get the color hex from.
+### Parameters
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role to get the color hex from.
 
 ## Example
 ```

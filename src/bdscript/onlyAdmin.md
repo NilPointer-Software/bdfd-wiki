@@ -6,5 +6,5 @@ Makes the command only for users with the *administrator* permission.
 $onlyAdmin[errorMessage]
 ```
 
-### Breakdown
-- `errorMessage` - The error message that is returned when the user doesn't have administrator.
+### Parameters 
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The error message that is returned when the user isn't an administrator.

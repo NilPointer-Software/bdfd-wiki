@@ -6,8 +6,8 @@ Gets the amount of characters in the provided 'text'.
 $charCount[text]
 ```
 
-### Breakdown
-- `text` - The text to return the character count for.
+### Parameters
+- `text` `(Type: String || Flag: Emptiable)`: The text to return the character count for.
 
 ## Example
 ```

@@ -6,8 +6,8 @@ Deletes the provided channel(s).
 $deleteChannels[channelIDs]
 ```
 
-### Breakdown
-- `channels` - The channels to delete. Separate channel IDs using `;`.
+### Parameters
+- `channels` `(Type: Snowflake || Flag: Required)`: The channels to delete. Separate channel IDs using `;`.
 
 ## Example
 ```

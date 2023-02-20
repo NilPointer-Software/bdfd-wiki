@@ -41,6 +41,12 @@ $httpPatch[url;(body)]
 $httpAddHeader[header name;header value]
 ```
 
+## HTTP Statuses
+- If the API doesn't return anything after making a request, but you need to know the result, HTTP Statuses can help. You can read more about them [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+```
+$httpStatus
+```
+
 ## HTTP Results
 - To return the result of a HTTP method function, you can use `$httpResult`/`$httpResult[]`.
 

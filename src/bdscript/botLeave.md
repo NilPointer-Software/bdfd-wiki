@@ -1,11 +1,31 @@
 # $botLeave
-Forces the bot to leave a server.
+Forces the bot to leave the current server.
 
-## Usages
-- There are 2 usages for the `$botLeave` command.
+## Syntax
+```
+$botLeave
+```
 
-#### Usage #1
-`$botLeave` - Forces the bot to leave the server that the command is being ran in.
+## Example
+```
+$nomention
+$sendMessage[I left this server!]
+$botLeave
+```
+![example](https://user-images.githubusercontent.com/113303649/210329580-8237da8e-762c-422f-9408-f0e734a21657.png)
 
-#### Usage #2
-`$botLeave[SERVER ID]` - Makes the bot leave the server matching the [server ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID) provided.
+> If you are using **BDScript 2**, put `$botLeave` at the very bottom of the code so that the code works correctly i.e:
+> 
+> ❌ Not correct:
+> ```
+> $botLeave
+> $nomention
+> $sendMessage[I left this server!]
+> ```
+> 
+> ✅ Correct:
+> ```
+> $nomention
+> $sendMessage[I left this server!]
+> $botLeave
+> ```

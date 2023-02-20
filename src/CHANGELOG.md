@@ -1,6 +1,57 @@
 # Changelog
 
+# 2023
+
+## February
+- Fixed caching issues for leaderboards
+
+## January
+- Added `$jsonParse[]`
+- Added `$jsonClear`
+- Added `$jsonStringify`
+- Added `$jsonPretty[]`
+- Added `$json[]`
+- Added `$jsonExists[]`
+- Added `$jsonSet[]`
+- Added `$jsonArray[]`
+- Added `$jsonArrayAppend[]`
+- Added `$jsonArrayCount[]`
+- Added `$jsonUnset[]`
+- Added `$disableInnerSpaceRemoval`
+- Fixed big numbers not working in leaderboard functions
+- Added Emoji argument type
+- Added `$isTicket[]`
+- Added `$userBanner[]`
+- Added `$randomGuildID`
+- Added `$randomRoleID[]`
+- Added `$randomCategoryID[]`
+- Added `$channelNames[]`
+- Added `$categoryChannels[]`
+- Fixed `$allowUserMentions[]` not working on slash commands
+- Fixed `$addTextInput[]` not working with empty values
+- Added `$jsonSetString[]`
+- Added `$jsonArrayIndex[]`
+
 # 2022
+
+## December
+- Added limit on input numbers to 2<sup>128</sup> on the basic math functions
+- Fixed BDScript 2 having problems with handling unicode characters
+- Fixed `$stop` causing undefined behaviour
+- Added `$getBanReason[]`
+- Fixed caching issues for the text splitting functions
+- Fixed issues with custom images
+
+## November
+- Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
+- Added `Format` argument to `$creationDate[]`
+- Added `$editSplitText[]`
+- Added `$serverEmojis[]`
+- Added `$setChannelVar[]`
+- Added `$getChannelVar[]`
+- Added `$resetChannelVar[]`
+- Added `channel` option to `$variablesCount[]`
+- Fixed BDScript 2's escaping not working in some cases
 
 ## October
 - Added `$publishMessage[]`
@@ -14,11 +65,13 @@
 - Added `stage` and `forum` channel types to `$createChannel[]`
 - Added `stage`, `announcement`, and `forum` channel types to `$channelType[]`
 - `$enableDecimals[]` now works with `$calculate[]`
+- Added `$getCustomStatus[]`
 - Added `$httpStatus`
 - Added `$httpGetHeader[]`
 - Added `$botOwnerID`
 - Added `$repliedMessageID`
 - Fixed the guild list fetching issue
+- Added `$parentID`
 
 ## September
 - Added `channelID` field to `$awaitFunc[]`
@@ -46,7 +99,7 @@
 - Fixed the app's max choices limit
 - Fixed `$registerGuildCommands[]` removing previously registered commands
 - Fixed `$reply` not working in DMs
-- Made it possible to return milliseconds and nanoseconds in `$getTimestamp`
+- Made it possible to return milliseconds and nanoseconds in `$getTimestamp[]`
 - Fixed `$addTextInput[]` not verifying max length
 - Fixed `$url[]` returning an error when no input was provided
 - Added `$userServerAvatar[]`
@@ -78,14 +131,13 @@
 - Fixed escaping response in interactions
 - Fixed cooldown error messages
 - Fixed empty values in variables not getting saved
-- Fixed userID being ignored when guildID was passed to `$getUserVar[]`
+- Fixed userID being ignored when guildID is passed to `$getUserVar[]`
 
 ## April
 - Added `"return ID of the ticket message"` argument to `$newTicket[]`
 - Fixed disappearing slash commands from the app's state
 
 ## March
-- **If you're getting Invalid permissions error on your invite link,  disable Stream and View guild insights permissions in the invite editor.**
 - Added `$toTitleCase[]`
 - Fixed invite permission calculator
 - Fixed `$suppressErrors[]` and `$embedSuppressErrors[]` getting ignored by components errors
@@ -101,7 +153,7 @@
 - Optimized slash commands resynchronization
 - Fixed custom images not working after saving a command
 - Made it possible to escape `\` by using `\\`
-- **Removed user permission check for $ban[], $banID[], $unban[] and $unbanID[]**
+- Removed user permission check for `$ban[]`, `$banID[]`, `$unban[]` and `$unbanID[]`
 - Added `$newModal[]`
 - Added `$addTextInput[]`
 - Added `$input[]`
@@ -181,7 +233,7 @@
 - Made it possible to use `https://youtu.be/` URL in the streaming statuses
 - Added `$getTextSplitIndex[]`
 - Added `$serverChannelExists[]`
-- Fixed `$changeUsername[]` `$changeUsernameWithID[]` not working on the current bot
+- Fixed `$changeUsername[]` and `$changeUsernameWithID[]` not working on the current bot
 - Made `$ephemeral` work with the buttons
 - Fixed global variables not getting saved
 - Fixed `$deletecommand` not getting catched by `$try` block
@@ -209,9 +261,9 @@
 - Added `$webhookUsername[]`
 - Added `$webhookAvatarURL[]`
 - Added `$webhookCreate[]`
-- **Removed permission check from** `$deleteChannelsByName[]`
-- **Removed permission check from** `$deleteChannels[]`
-- **Removed permission check from** `$createChannel[]`
+- Removed permission check from `$deleteChannelsByName[]`
+- Removed permission check from `$deleteChannels[]`
+- Removed permission check from `$createChannel[]`
 - Fixed the issue with bots not working in threads
 - Added `$startThread[]`
 - Added `$webhookColor[]`
@@ -219,7 +271,7 @@
 - Fixed floating points in `$onlyIf[]` conditions
 - Added `$webhookDelete[]`
 - Added `$webhookSend[]`
-- **Removed permission check from** `$modifyChannelPerms[]`
+- Removed permission check from `$modifyChannelPerms[]`
 - Made it possible to use multiple `$onInteraction[]`s
 - Added `$onInteraction` callback (without `[]`)
 - Added `$customID`
@@ -249,7 +301,7 @@
 - Added `$enableDecimals[]`
 - Added `$nickname`
 - Added row and column information in BDScript 2 errors
-- Fixed the issue with BDScript 2 not requiring `]`
+- Fixed an issue with BDScript 2 not requiring `]`
 - Adjusted the optimizer in BDScript 2
 - Added `$onlyForRoleIDs[]`
 - Added `$getCooldown[]`
@@ -270,12 +322,13 @@
 ## June
 - Fixed `$sendMessage[]` not working in normal BDScript
 - Fixed `$checkUserPerms[]`
-- Added **[BDScript 2](./guides/bdscript2.md)**
-- Added **[$try, $catch and $error](./guides/trycatch.md)**
-- Added `$eval[]` **(can be only used in BDScript 2)**
-- Added `$optOff[]` **(can be only used in BDScript 2)**
-- Added `$stop[]` **(can be only used in BDScript 2)**
-- Added `$var[]` **(can be only used in BDScript 2)**
+- Added BDScript 2 script language
+- Added to BDScript 2
+   - `$try`, `$catch` and `$error`
+   - `$eval[]`
+   - `$optOff[]`
+   - `$stop[]`
+   - `$var[]`
 - Added customizable code highlighting
 - Fixed `$lowestRole` and `$highestRole`
 - Added `$isBoolean[]`
@@ -283,7 +336,7 @@
 - Added optional field `return type` to `$getLeaderboardValue[]`
 - Added `$deleteRole[]`
 - Added `$ephemeral`
-- Added `$elseif[]` **(can be only used in BDScript 2)**
+- Added `$elseif[]` to BDScript 2
 - Fixed URL in buttons
 - Fixed buttons in DMs
 - Fixed problems with custom prefixes
@@ -307,7 +360,7 @@
 - Added `$removeButtons` and `$removeButtons[]`
 - Added `$onInteraction[]` callback
 - Fixed some issues with slash commands
-- Added `$c[]` which can be used for commenting your code
+- Added `$c[]`
 
 ## April
 - Added `$httpGet[]`, `$httpPost[]`, `$httpPut[]`, `$httpDelete[]` and `$httpPatch[]`
@@ -330,9 +383,14 @@
 - Fixed caching for new members.
 - Added `$slashCommandsCount`
 - Added `$botID`
-- Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis
+- Added more permissions
+   - `AttachFiles`
+   - `TTS`
+   - `ManageWebhooks`
+   - `EmbedLinks`
+   - `ExternalEmojis`
 - Added `$serverCooldown[]`
-- Fixed the issue with not expiring app bans
+- Fixed an issue with not expiring app bans
 - Fixed some issues with `[` and `]`
 - Fixed problems with slash commands and cooldowns
 
@@ -348,12 +406,12 @@
 - Fixed semicolons in `$channelSendMessage[]`
 
 ## January
-- Fixed the problem with statuses not showing up
-- Fixed the issue with mentions not working
+- Fixed a problem with statuses not showing up
+- Fixed an issue with mentions not working
 - Fixed loading bots from database
 - Increased duration to 40 minutes for `$deleteIn[]`, `$editIn[]`, `$editEmbedIn[]`, `$replyIn[]`
 - Added if statements (`$if[]`, `$else`, `$endif`)
-- GuildID instead of `everyone` is now returned in `$lowestRole[]` and `$highestRole[]`
+- GuildID is now returned instead of `everyone` in `$lowestRole[]` and `$highestRole[]`
 - Space commands have been removed (you can still use `$alwaysReply`)
 - Added `$channelTopic[]`
 - Fixed issues with streaming status
@@ -365,12 +423,12 @@
 
 ## December
 - Timezones in `$time[]` has been fixed
-- Updated discord API version
+- Updated Discord API version
 - Added Competing presence
 - Added `$botLeave[]`
 - Fix for `$getLeaderboardValue[]`
-- Added userID option to reset user var
-- Added serverID option to `$serverOwner`
+- Added `userID` option to `$resetUserVar`
+- Added `serverID` option to `$serverOwner`
 - Added `$premiumExpireTime`
 
 ## November
@@ -447,7 +505,7 @@
 - Disabled `$randomUserID`, `$'randomUserID`, `$deleteIn` and `$dm` in `$onMessageDelete`
 - Fixed `$addField[]`
 - Added error message in `$getServerVar[]` when provided variable does not exist
-- `$userID[]` does not stop code execution if user is not found
+- Fixed `$userID[]` to not stop code execution, if user is not found
 - Added `$botLeave`
 - Removed permission check from `$clear` command.
 - Fixed `$isAdmin[]`
@@ -487,7 +545,7 @@
 - Added `$isHoisted[]`
 - Added `$serverIcon[]`
 - Fixed suppressing errors in some variable commands
-- Fixed bug with `$replaceText[]()` inside `$description`
+- Fixed bug with `$replaceText[]` inside `$description`
 - Added `$isValidHex[]`
 - Added `$isAdmin[]`
 - `$userID[]` does not require discriminator now
@@ -496,7 +554,7 @@
 - Added `$modifyRolePerms[]`
 - Added `$isUserDMEnabled[]`
 - Added new option to `$mentioned[]`
-- When userID is not provided in `$discriminator[]`, the author's ID will be used
+- When `userID` is not provided in `$discriminator[]`, the author's ID will be used
 - Added `$argCount[]`
 - Added `$roleExists[]` and `$roleExists[]` 
 - Added `$varExistError[]`
@@ -523,15 +581,15 @@
 - Fixed problems with timezones
 - `@everyone` role shows up now when it's a highest/lowest role in `$highestRole/$lowestRole`
 - `@everyone` role now works in `$rolePosition[]`
-- Multiline for `$replaceText[]`
+- Added multi-line support for `$replaceText[]`
 - Fixed no errors in `$roleID[]`
 - Added `$toUppercase[]` and `$toLowercase[]`
-- Added roleID and userID to `$modifyChannelPerms[]`
+- Added `roleID` and `userID` to `$modifyChannelPerms[]`
 - Added `$authorOfMessage[]`
 - Added `$userID[]`
 - Improved servers response time by over 10x
 - Fixed issues with `$setServerVar[]` and `$setUserVar[]`
-- Added multiline support for `$textSplit[]`
+- Added multi-line support for `$textSplit[]`
 - Fixed brackets in `$username`
 
 # 2019
@@ -539,7 +597,7 @@
 ## December
 - Fixed high ping issues
 - Fixed whole bunch of other issues
-- To JS added:
+- Added to JS:
     - authorId,
     - channelId,
     - userMentions,
@@ -555,8 +613,8 @@
     - kickWithReason(),
     - removeRole(),
     - createRole()
-- Created status website https://status.botdesignerdiscord.com
-- Web version of *Bot Designer for Discord* has been moved to new address https://botdesignerdiscord.com
+- Created status website <https://status.botdesignerdiscord.com>
+- Web version of *Bot Designer for Discord* has been moved to new address <https://botdesignerdiscord.com>
 - Fixed some issues in web version
 - Fixed `$banID[]`
 - Preparations for premium points

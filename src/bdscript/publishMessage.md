@@ -3,10 +3,12 @@ Publishes a message from an announcement channel to all following servers.
 
 ## Syntax
 ```
-$publishMessage[Channel ID;Message ID]
+$publishMessage[channel ID;message ID]
 ```
-- `Channel ID` : The ID of the channel where the message is.
-- `Message ID` : The ID of the message which will be published.
+
+### Parameters 
+- `channel ID` `(Type: Snowflake || Flag: Required)`: The channel where the message is.
+- `message ID` `(Type: Snowflake || Flag: Required)`: The message which will be published.
 
 ## Example
 ```

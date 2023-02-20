@@ -1,18 +1,20 @@
 # $blackListRolesIDs
 Block users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.
 
-## Usage
+## Syntax
 ```
-$blackListRolesIDs[roleIDs;errorMessage]
+$blackListRolesIDs[role IDs;...;error message]
 ```
 
-### Breakdown
-- `roleIDs` - The roles that will be blacklisted. Separate roleIDs using `;`.
-- `errorMessage` - The message that sends if the user has a role in the blacklist.
+### Parameters
+- `role IDs` `(Type: Snowflake || Flag: Emptiable)`: The roles that will be blacklisted. Separate role IDs using `;`.
+- `error message` `(Type: String || Flag: Emptiable)`: The message that will be sent if the user has a role from the blacklist.
 
 ## Example
 ```
 $nomention
-$blackListRolesIDs[730739881072132166;727999173600739398;❌ You aren't allowed to use this command!]
-$noMentionMessage
+$blackListRolesIDs[1009019299987476540;1014547313957539901;❌ You can't use this command!]
+Pong! $ping ms
 ```
+
+![example](https://user-images.githubusercontent.com/113303649/210046896-9e45b0c5-68f1-49b8-9bf0-90694df688cf.png)

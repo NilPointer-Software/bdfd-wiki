@@ -10,8 +10,8 @@ Mutes the mentioned user.
 $mute[mutedRoleName]
 ```
 
-### Breakdown
-- `mutedRoleName` - The name of the 'Muted' role (case sensitive).
+### Parameters
+- `mutedRoleName` `(Type: String || Flag: Required)`: The name of the 'Muted' role (case sensitive).
 
 ## Example
 ```

@@ -7,8 +7,8 @@ Returns whether or not the provided user is a bot.
 $isBot[userID]
 ```
 
-### Breakdown
-- `userID` - The user to check.
+### Parameters
+- `userID` `(Type: Snowflake || Flag: Emptiable)`: The user to check.
 
 ## Example
 ```

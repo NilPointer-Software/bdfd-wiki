@@ -1,13 +1,13 @@
 # $allowUserMentions
-Disables the pings for the users not provided, which means the user will be 'fake pinged' *(the user will be pinged, but the user will not get notified of the ping)*. While, the inputted allowed users are ones that can be pinged *(and it will work like a regular ping)*.
+Enables user pings only for the provided user IDs, while the user not provided will be 'fake pinged' *(the user will be pinged, but user will not be notified)*.
 
-## Usage
+## Syntax
 ```
-$allowUserMentions[userIDs]
+$allowUserMentions[user IDs;...]
 ```
 
-### Breakdown
-- `userIDs` - The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using `;`.
+### Parameters
+- `user IDs` `(Type: Snowflake || Flag: Emptiable)`: The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using `;`.
 
 ## Example
 ```
@@ -15,3 +15,5 @@ $nomention
 $allowUserMentions[]
 Hi <@696368083517964288>! I mentioned you, but you didn't get pinged.
 ```
+
+![example](https://user-images.githubusercontent.com/113303649/209945188-a195cda5-9297-46ff-b882-0363f5b4ed28.png)

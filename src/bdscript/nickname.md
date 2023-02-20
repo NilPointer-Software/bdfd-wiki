@@ -15,7 +15,9 @@ Returns the author's display name.
 ```
 $nickname[userID]
 ```
-Returns the provided user's display name.
+
+#### Parameters 
+- `userID` `(Type: Snowflake || Flag: Required)`: Returns the provided user's display name.
 
 ## Example
 ```

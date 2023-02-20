@@ -1,19 +1,30 @@
 # $alternativeParsing
 Changes the way how triggers are read.
 
-## Usage
+## Syntax
 ```
 $alternativeParsing
 ```
+> This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. You should not use `$alternativeParsing` when making your bot.
 
 ## Example
 1. Create two commands and set the trigger `hello` for one command and `helloworld` for the other.
-2. Add the `$alternativeParsing` function to the command code with the `hello` trigger.
+2.  Add the `$alternativeParsing` function to the command code with the `hello` trigger.
+
+Code with trigger `hello`:
+```
+$nomention
+$alternativeParsing
+$description["hello"]
+```
+Code with trigger `helloworld`:
+```
+$nomention
+$description["helloworld"]
+```
 3. Execute commands
-![With](https://user-images.githubusercontent.com/70456337/189479524-f534454d-b8b6-406f-8465-1d3b314f7449.png)
+   - With $alternativeParsing
+     ![example](https://user-images.githubusercontent.com/113303649/209946250-ddf50d47-b8a7-48c2-8404-a2a58981c36d.png)
 
-### Without `$alternativeParsing`
-What happens if we remove this function from the code?
-![Without](https://user-images.githubusercontent.com/70456337/189479541-ad8c6a5a-4f8d-4800-9007-986a3fee0b75.png)
-
-> ⚠️ This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. You should not use `$alternativeParsing` when making your bot.
+   - Without $alternativeParsing
+     ![example](https://user-images.githubusercontent.com/113303649/209946555-3b270854-0176-4492-bd1a-2ba81bf389c1.png)

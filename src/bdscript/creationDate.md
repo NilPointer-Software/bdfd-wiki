@@ -1,18 +1,31 @@
 # $creationDate
-Gets the creation date of a user, channel, role, etc.
-> 🧙‍♂️ Date Format of `$creationDate` is `yyyy-mm-dd`.
+Returns the creation date of any valid Discord Snowflake ID.
 
-## Usage
+## Syntax
 ```
-$creationDate[ID]
+$creationDate[ID;(Format)]
 ```
 
-### Breakdown
-- `ID` - The channelID/userID/roleID/messageID/serverID to get the creation date for.
+### Parameters
+- `ID` `(Type: Snowflake || Flag: Required)`: The ID from which to get the creation date. The ID can be a `UserID`, a `RoleID`, a `MessageID`, or a `ServerID`.
+- `Format` `(Type: String || Flag: Optional)`: Customize the default time format output.
+
+> Uses GoLang date format
+
+   > 📌 Click [me](../resources/timeFormat.md) to check all supported time format values.
 
 ## Example
-```
-$username[$mentioned[1;yes]]'s Creation Date: $creationDate[$mentioned[1;yes]]
-```
+- Default format
+   ```
+   $nomention
+   $creationDate[$authorID]
+   ```
 
-![example](https://user-images.githubusercontent.com/69215413/122796861-dd00be80-d28c-11eb-85f8-66a850e12809.png)
+   ![example](https://user-images.githubusercontent.com/69215413/127032089-ef8aa439-89c9-46b2-a2e4-cdf54ab7fa6b.png)
+- Custom format
+   ```
+   $nomention
+   $creationDate[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
+   ```
+
+   ![example](https://user-images.githubusercontent.com/95774950/197385800-92a434d2-e388-4067-8a78-d9357f6184bd.png)

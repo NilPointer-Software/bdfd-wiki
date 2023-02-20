@@ -7,5 +7,5 @@ Checks if given color hex is valid.
 $isValidHex[colorHex]
 ```
 
-### Breakdown
-- `colorHex` - The [color hex](https://htmlcolorcodes.com/color-picker) to check.
+### Parameters
+- `colorHex` `(Type: String || Flag: Emptiable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to check.

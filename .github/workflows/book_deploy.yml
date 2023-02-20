@@ -14,7 +14,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     - name: Install mdbook
-      uses: MineBartekSA/quick-mdbook@v1
+      uses: MineBartekSA/quick-mdbook@v1.1
     - name: Build book
       run: mdbook build
     - name: Upload book
@@ -83,6 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TYPE: Nightly
+      LINK: nightly
     steps:
     - name: Prepare notification
       env:
@@ -98,7 +99,9 @@ jobs:
         echo "EOF" >> $GITHUB_ENV
     - name: Set notification type
       if: github.ref == 'refs/heads/prod'
-      run: echo "TYPE=Production" >> $GITHUB_ENV
+      run: |
+        echo "TYPE=Production" >> $GITHUB_ENV
+        echo "LINK=" >> $GITHUB_ENV
     - name: Send wiki update notification
       uses: MineBartekSA/discord-webhook@v2.1
       with:
@@ -117,7 +120,11 @@ jobs:
 
             ${{ env.MESSAGE }}
         component: |
-          type: 2
-          style: 5
-          label: Jump to commit
-          url: ${{ github.event.head_commit.url }}
+          - type: 2
+            style: 5
+            label: Jump to commit
+            url: ${{ github.event.head_commit.url }}
+          - type: 2
+            style: 5
+            label: Jump to ${{ env.TYPE }} Wiki
+            url: https://nilpointer-software.github.io/bdfd-wiki/${{ env.LINK }}

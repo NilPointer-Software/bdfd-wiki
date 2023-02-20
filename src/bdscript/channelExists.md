@@ -1,11 +1,22 @@
 # $channelExists
-Checks if the channel provided actually exists.
-> 🧙‍♂️ 'true' means the channel does exist, 'false' means it doesn't.
+Checks if the provided channel exists in any server the bot is in.
 
-## Usage
+
+## Syntax
 ```
-$channelExists[channelID]
+$channelExists[channel ID]
 ```
 
-### Breakdown
-- `channelID` - The "channel" which the bot checks.
+
+### Parameters
+- `channel ID` `(Type: String, Snowflake || Flag: Emptiable)`: The channel which the bot will check for.
+
+
+## Example
+```
+$nomention
+$channelExists[$message]
+```
+
+![example](https://user-images.githubusercontent.com/113303649/212074836-53aacb9a-5745-4c4d-a25a-be4b98ad5a64.png)
+

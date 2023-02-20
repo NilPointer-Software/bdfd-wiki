@@ -1,5 +1,5 @@
 # Time Format
-Custom time formatting values for [`$userJoinedDiscord`](../bdscript/userJoinedDiscord.md) and [`$userJoined`](../bdscript/userJoined.md) functions.
+Custom time formatting values for [`$creationDate`](../bdscript/creationDate.md), [`$userJoinedDiscord`](../bdscript/userJoinedDiscord.md), and [`$userJoined`](../bdscript/userJoined.md) functions.
 
 ### Time Formats
 List of supported time format values :

@@ -11,6 +11,8 @@ It removes all buttons from the current message.
 ```
 $removeButtons[message id]
 ```
-It removes all buttons from a message using it's message id.
+
+#### Parameters 
+- `message id` `(Type: Snowflake || Flag: Required)`: The message from which all buttons will be removed.
 
 > 📝 When providing "message id", make sure the message author is the bot.

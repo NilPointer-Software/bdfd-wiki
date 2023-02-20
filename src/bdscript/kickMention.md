@@ -3,11 +3,11 @@ A simplified version of `$kick`. Kicks the mentioned user, the user running the 
 
 ## Usage
 ```
-$kickMention[(optional) reason]
+$kickMention[reason]
 ```
 
-### Breakdown
-- `reason` - The audit-log reason for the kick. Optional.
+### Parameters
+- `reason` `(Type: String || Flag: Emptiable)`: The audit-log reason for the kick.
 
 ## Example
 ```

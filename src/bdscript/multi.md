@@ -3,11 +3,11 @@ Muliplies the provided numbers.
 
 ## Usage
 ```
-$multi[numbers]
+$multi[number;..]
 ```
 
-### Breakdown
-- `numbers` - The numbers to multiply, separate numbers using `;`.
+### Parameters 
+- `number` `(Type: Float, Integer || Flag: Required)`: The numbers to multiply. Separate numbers using `;`.
 
 ## Example
 ```

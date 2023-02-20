@@ -9,8 +9,8 @@ There are two usages of the `$discriminator` function.
 $discriminator[userID]
 ```
 
-#### Breakdown
-- `userID` - The user to get the discriminator from.
+#### Parameters
+- `userID` `(Type: Snowflake || Flag: Emptiable)`: The user to get the discriminator from.
 
 ### Usage #2
 ```

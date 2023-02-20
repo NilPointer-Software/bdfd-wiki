@@ -6,8 +6,8 @@ Deletes the ticket channel (has to be created with `$newTicket`).
 $closeTicket[errorMessage]
 ```
 
-### Breakdown
-- `errorMessage` - The error to return if the channel isn't a ticket.
+### Parameters
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The error to return if the channel isn't a ticket.
 
 ## Example
 ```

@@ -6,9 +6,9 @@ Checks if the 'text' contains at least one of the provided 'phrases'.
 $checkContains[text;phrases]
 ```
 
-### Breakdown
-- `text` - The text that will be checked.
-- `phrases` - The phrases/words the bot will check for in 'text'. Separate phrases using `;`.
+### Parameters
+- `text` `(Type: String || Flag: Emptiable)`: The text that will be checked.
+- `phrases` `(Type: String || Flag: Emptiable)`: The phrases/words the bot will check for in 'text'. Separate phrases using `;`.
 
 ## Example
 ```

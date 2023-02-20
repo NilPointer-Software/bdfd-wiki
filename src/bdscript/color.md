@@ -6,9 +6,9 @@ Sets the embed border color.
 $color[colorHex;(index)]
 ```
 
-### Breakdown
-- `colorHex` - The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as. You can also use color integer number.
-- `index` - What embed the color border should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
+### Parameters
+- `colorHex` `(Type: Color || Flag: Emptiable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as. You can also use color integer number.
+- `index` `(Type: Integer || Flag: Optional)`: What embed the color border should belong to (Optional). The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

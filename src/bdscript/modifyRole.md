@@ -3,16 +3,16 @@ Modifies a role.
 
 ## Usage
 ```
-$modifyRole[roleID;roleName;colorHex;hoisted (yes/no);mentionable (yes/no)]
+$modifyRole[roleID;(roleName;colorHex;hoisted;mentionable)]
 ```
 > 🧙‍♂️ You can use `!unchanged` as a argument to leave the setting as-is.
 
-### Breakdown
-- `roleID` - The ID of the role to modify.
-- `roleName` - The new role name.
-- `colorHex` - The new role color.
-- `hoisted` - Whether the role should be displayed separately or not.
-- `mentionable` - Whether the role should be mentionable by everyone or not.
+### Parameters 
+- `roleID` `(Type: Snowflake || Flag: Required)`: The ID of the role to modify.
+- `roleName` `(Type: String || Flag: Optional)`: New role name.
+- `colorHex` `(Type: Color || Flag: Optional)`: New role color.
+- `hoisted` `(Type: Bool || Flag: Optional)`: Whether the role should be displayed separately or not.
+- `mentionable` `(Type: Bool || Flag: Optional)`: Whether the role should be mentionable by everyone or not.
 
 ## Example
 ```

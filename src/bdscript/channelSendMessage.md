@@ -6,9 +6,9 @@ Sends a message in the provided channel.
 $channelSendMessage[channelID;message]
 ```
 
-### Breakdown
-- `channelID` - The channel to send the message in.
-- `message` - The message that gets sent to the channel.
+### Parameters
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to send the message in.
+- `message` `(Type: String || Flag: Required)`: The message that gets sent to the channel.
 
 ## Example
 ```

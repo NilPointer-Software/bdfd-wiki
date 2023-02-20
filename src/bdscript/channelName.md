@@ -1,18 +1,21 @@
 # $channelName
-Returns a channel's name.
-
-## Usage
+Returns the name for the provided channel ID.
+## Syntax
 ```
-$channelName[channelID]
+$channelName[channel ID]
 ```
 
-### Breakdown
-- `channelID` - The channel that the bot gets the channel name from.
+
+### Parameters
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel which name will be returned.
 
 > 🧙‍♂️ [How do I find channel IDs? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 
+
 ## Example
 ```
-$channelName[$channelID]
+$nomention
+Channel Name: `#$channelName[$channelID]`
 ```
-> 🧙‍♂️ This example would return the name of the current channel.
+
+![example](https://user-images.githubusercontent.com/113303649/213229399-51d7fb27-7561-40a9-83cd-f3ea4943e4b7.png)

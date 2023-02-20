@@ -7,8 +7,8 @@ Returns whether or not the provided user has the administrator permission.
 $isAdmin[userID]
 ```
 
-### Breakdown
-- `userID` - The user to check.
+### Parameters
+- `userID` `(Type: Snowflake || Flag: Required)`: The user to check.
 
 ## Example
 ```

@@ -10,8 +10,8 @@
         {{/if}}
 
         {{#if base_url}}
-	         <base href="{{ base_url }}">
-	    {{/if}}
+           <base href="{{ base_url }}">
+        {{/if}}
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="{{ description }}">
@@ -19,17 +19,19 @@
         <meta name="theme-color" content="#748bd4">
         <meta name="og:image" content="https://botdesignerdiscord.com/logo512.png">
 
-        <link rel="shortcut icon" href="{{ path_to_root }}{{ favicon }}">
-        <link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/general.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/chrome.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/print.css" media="print">
+        <link rel="icon" href="{{ path_to_root }}favicon.png">
+        <link rel="apple-touch-icon" href="{{ path_to_root }}favicon.png">
+
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/variables.css">
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/general.css">
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/chrome.css">
+        <link rel="stylesheet" href="{{ path_to_root }}theme/css/print.css" media="print">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ path_to_root }}FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
-	    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
@@ -102,7 +104,6 @@
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
-
             <div class="page">
                 {{> header}}
                 <div id="menu-bar" class="menu-bar">
@@ -115,19 +116,17 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="bdfd">{{ theme_option "Bot Designer for Discord" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="shiro">{{ theme_option "Shiro's Theme" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="gluo">{{ theme_option "Gluo" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="kneon">{{ theme_option "Kinda Neon" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="light">{{ theme_option "Light" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">{{ theme_option "Rust" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">{{ theme_option "Coal" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">{{ theme_option "Navy" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">{{ theme_option "Ayu" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="highcon">{{ theme_option "High Contrast" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="bdfd">{{ theme_option "Bot Designer for Discord" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="discord">{{ theme_option "Discord" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="gluo">{{ theme_option "Gluo" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="green">{{ theme_option "Green" }}</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ios">{{ theme_option "iOS" }}</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="terminal">{{ theme_option "Terminal" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="kneon">{{ theme_option "Kinda Neon" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">{{ theme_option "Light" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">{{ theme_option "Navy" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">{{ theme_option "Rust" }}</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="highcon">{{ theme_option "High Contrast" }}</button></li>
                             </ul>
                             {{#if search_enabled}}
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -186,6 +185,9 @@
 
                 <div id="content" class="content">
                     <main>
+                        <nav class="breadcrumb">
+                            <script src="{{ path_to_root }}theme/breadcrumbs.js"></script>
+                        </nav>
                         {{{ content }}}
                     </main>
 
@@ -269,7 +271,7 @@
         {{#if search_js}}
         <script src="{{ path_to_root }}elasticlunr.min.js" charset="utf-8"></script>
         <script src="{{ path_to_root }}mark.min.js" charset="utf-8"></script>
-        <script src="{{ path_to_root }}searcher.js" charset="utf-8"></script>
+        <script src="{{ path_to_root }}theme/searcher.js" charset="utf-8"></script>
         {{/if}}
 
         <script src="{{ path_to_root }}clipboard.min.js" charset="utf-8"></script>

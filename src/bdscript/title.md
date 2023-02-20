@@ -7,8 +7,8 @@ $title[Text;(Index)]
 ```
 
 ### Parameters
-- `Text`: The text to set the title as. It cannot exceed more than 256 characters.
-- `Index`: What [embed index](../resources/embedIndexes.md) the title should belong to, defaults to `1` (Optional).
+- `Text` `(Type: String || Flag: Emptiable)`: The text to set the title as. It cannot exceed more than 256 characters.
+- `Index` `(Type: Integer || Flag: Optional)`: What [embed index](../resources/embedIndexes.md) the title should belong to, defaults to `1`.
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly:

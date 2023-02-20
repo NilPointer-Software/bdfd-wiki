@@ -9,8 +9,8 @@ $userLeaderboard[Variable name;(Sort)]
 ```
 
 ### Parameters
-- `Variable name` : The variable to create the leaderboard for.
-- `Sort` : Sorts the leaderboard values in ascending (`asc`) or descending (`desc`) order. Defaults to `desc` (Optional).
+- `Variable name` `(Type: String || Flag: Required)`: The variable to create the leaderboard for.
+- `Sort` `(Type: Enum || Flag: Optional)`: Sorts the leaderboard values in ascending (`asc`) or descending (`desc`) order. Defaults to `desc`.
 
 ## Example
 ```

@@ -6,8 +6,8 @@ Deletes a role.
 $deleteRole[roleID]
 ```
 
-### Breakdown
-- `roleID` - The role to delete.
+### Parameters
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role to delete.
 
 ## Example
 ```

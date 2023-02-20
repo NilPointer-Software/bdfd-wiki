@@ -9,8 +9,8 @@ Returns whether or not a role is mentionable by everyone.
 $isMentionable[roleID]
 ```
 
-### Breakdown
-- `roleID` - The role which the bot checks is mentionable or not.
+### Parameters
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role to check for its mentionable status.
 
 ## Example
 ```

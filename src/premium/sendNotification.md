@@ -6,9 +6,9 @@ Sends notification to your mobile phone
 $sendNotification[message;(image URL)]
 ```
 
-### Breakdown
-- `message` - The text that should be in the sent notification.
-- `image URL` - The URL for the image to be attached.
+### Parameters 
+- `message` `(Type: String || Flag: Required)`: The text that should be in the sent notification.
+- `image URL` `(Type: String || Flag: Optional)`: The URL for the image to be attached.
 
 ## Example
 ```

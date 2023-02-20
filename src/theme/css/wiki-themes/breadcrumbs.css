@@ -1,0 +1,25 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    color: var(--links);
+}
+
+.breadcrumb :nth-child(n+3)::before {
+    content: "/";
+    margin: 0 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a:hover{
+    color: var(--icons-hover);
+    text-decoration: none;
+}
+
+.breadcrumb :link:hover{
+    color: var(--icons-hover);
+    text-decoration: none;
+}

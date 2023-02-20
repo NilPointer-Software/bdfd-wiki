@@ -7,7 +7,7 @@ $userExists[User ID]
 ```
 
 ### Parameters
-- `User ID` : The ID of the user to check.
+- `User ID` `(Type: String, Snowflake || Flag: Required)`: The ID of the user to check.
 
 ## Example
 ```

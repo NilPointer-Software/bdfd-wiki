@@ -1,17 +1,15 @@
 # $botNode
+Returns the bot's node ID.
 
-Returns the bot's node ID
-
-
-## Usage
+## Syntax
 ```
 $botNode
 ```
+> See list of Nodes and Status, [Click here](https://botdesignerdiscord.com/status).
 
 ## Example
 ```
 $nomention
-$botNode
+The bot's node ID: $botNode
 ```
-
-> 🧙🏻‍♂️ See list of Nodes and Status, [Click here](https://botdesignerdiscord.com/status).
+![example](https://user-images.githubusercontent.com/113303649/210352219-2179d854-9063-45f6-9d6b-127185e6c746.png)
