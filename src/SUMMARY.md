@@ -327,6 +327,7 @@
     - [$setUserVar](./bdscript/setUserVar.md)
     - [$setVar](./bdscript/setVar.md)
     - [$shardID](./bdscript/shardID.md)
+    - [$shardID[]](./bdscript/shardIDComplex.md)
     - [$slashCommandsCount](./bdscript/slashCommandsCount.md)
     - [$slashID](./bdscript/slashID.md)
     - [$slashID[]](./bdscript/SlashIDComplex.md)
