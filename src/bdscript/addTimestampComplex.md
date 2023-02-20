@@ -5,8 +5,10 @@ Adds a timestamp to a specific embed.
 ```
 $addTimestamp[index]
 ```
-## Parameters
-- `index`: To which embed the timestamp will be added. [learn more](../resources/embedIndexes.md)
+
+### Parameters
+- `index` `(Type: Integer || Flag: Optional)`: To which embed the timestamp should be added to. [(learn more)](../resources/embedIndexes.md)
+
 ## Example
 ```
 $nomention

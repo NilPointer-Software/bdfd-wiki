@@ -6,8 +6,8 @@ Finds a role's ID using the given role name, ID, or mention.
 $findRole[role]
 ```
 
-### Breakdown
-- `role` - The role name, ID, or mention to find.
+### Parameters
+- `role` `(Type: String || Flag: Emptiable)`: The role name, ID, or mention to find.
 
 ## Example
 ```

@@ -6,8 +6,8 @@ Retrieves index from the provided value in [`$textSplit`](./textSplit.md). Retur
 $getTextSplitIndex[value]
 ``` 
 
-### Breakdown 
-- `value` - The value to search in the text split.
+### Parameters 
+- `value` `(Type: String || Flag: Emptiable)`: The value to search in the text split.
 
 ## Example 
 ``` 

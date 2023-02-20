@@ -6,8 +6,8 @@ Returns a list of the bot's commands.
 $botCommands[separator]
 ```
 
-## Parameters
-- `separator`: Will be used to separate each command.
+### Parameters
+- `separator` `(Type: String || Flag: Required)`: Will be used to separate each command.
 
 ## Example
 ```

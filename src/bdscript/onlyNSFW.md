@@ -6,8 +6,8 @@ Only allows the command to be executed in [NSFW channels](https://support.discor
 $onlyNSFW[errorMessage]
 ```
 
-### Breakdown
-- `errorMessage` - The message that is returned when the command is executed outside of a NSFW channel.
+### Parameters 
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The message that is returned when the command is executed outside of an NSFW channel.
 
 ## Example
 ```

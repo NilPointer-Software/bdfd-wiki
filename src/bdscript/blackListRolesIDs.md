@@ -6,9 +6,9 @@ Block users with certain roles from using the command. If the user has any role 
 $blackListRolesIDs[role IDs;...;error message]
 ```
 
-## Parameters
-- `role IDs`: The roles that will be blacklisted. Separate role IDs using `;`.
-- `error message`: The message that will be sent if the user has a role from the blacklist.
+### Parameters
+- `role IDs` `(Type: Snowflake || Flag: Emptiable)`: The roles that will be blacklisted. Separate role IDs using `;`.
+- `error message` `(Type: String || Flag: Emptiable)`: The message that will be sent if the user has a role from the blacklist.
 
 ## Example
 ```

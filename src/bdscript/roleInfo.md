@@ -1,8 +1,16 @@
 # $roleInfo
 `$roleInfo` allows you to make a 'role info' command without using a bunch of different functions at once. This function returns info about the mentioned role.
 
-## Commands
-You can use the 'commands' below within `$roleInfo`:
+## Usage
+```
+$roleInfo[message]
+```
+
+### Parameters 
+- `message` `(Type: String || Flag: Required)` : The message format. Check below for more information.
+
+## Message format
+You can use the following 'commands' within `$roleInfo[]`:
 
 - `{name}` - Returns the role name.
 - `{ID}` - Returns the role's ID.
@@ -10,11 +18,6 @@ You can use the 'commands' below within `$roleInfo`:
 - `{hoist}` - Returns if a role is hoisted (displayed separately).
 - `{color}` - Returns the role's color.
 - `{position}` - Returns the roles position on 'roles list'.
-
-## Usage
-```
-$roleInfo[code/text]
-```
 
 ⚠️ You can not include `$roleInfo[]` in a command with a `$description[]` (because it makes one automatically).
 

@@ -3,11 +3,11 @@ Picks one value from the provided values randomly.
 
 ## Usage
 ```
-$randomText[text1;text2;etc]
+$randomText[text;...]
 ```
 
-### Breakdown
-- `text1`/`text2`/`etc` - The text which the bot can choose from.
+### Parameters
+- `text` `(Type: String || Flag: Emptiable)`: The text to choose from. Separate different texts with ';'.
 
 ## Example
 ```

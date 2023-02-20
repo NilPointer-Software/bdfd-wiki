@@ -3,8 +3,16 @@ Add select menu to a message.
 
 ## Usage
 ```
-$newSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
+$newSelectMenu[menu ID;min;max;(placeholder;message ID)]
+
 ```
+
+## Parameters 
+- `menu ID` `(Type: String || Flag: Required)`: Menu ID which is used in the `$onInteraction[]` callback and inside the first argument of `$addSelectMenuOption[]`
+- `min` `(Type: Integer || Flag: Required)`: The minimum amount of values that can be selected.
+- `max` `(Type: Integer || Flag: Required)`: The maximum amount of values that can be selected.
+- `placeholder` `(Type: String || Flag: Vacantable)`: It's a text that appears if no option is selected.
+- `message ID` `(Type: Snowflake || Flag: Vacantable)`: ID of a message that should have a select menu added to it. By default, it's the bot's response.
 
 ## Example
 ```

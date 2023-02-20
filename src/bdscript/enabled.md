@@ -3,12 +3,12 @@ Allows you to enable/disable commands.
 
 ## Usage
 ```
-$enabled[enabled (yes/no);errorMessage]
+$enabled[enabled;errorMessage]
 ```
 
-### Breakdown
-- `enabled` - 'yes' means the command is enabled, 'no' means it's disabled.
-- `errorMessage` - The message that is returned if the command is disabled.
+### Parameters
+- `enabled` `(Type: Bool || Flag: Required)`: 'yes' means the command is enabled, 'no' means it's disabled.
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The message that is returned if the command is disabled.
 
 ## Example
 This section will explain how to disable/enable certain commands using server variables. 
@@ -21,14 +21,14 @@ This section will explain how to disable/enable certain commands using server va
       ```
      $onlyAdmin[❌ Only admins can enable commands!]
      $setServerVar[enabled;yes]
-     I successfully enabled the __ command!
+     I successfully enabled the command!
      ```
 
 3. Create a command for the disable code. Put this in the reply text/code section:
      ```
      $onlyAdmin[❌ Only admins can disable commands!]
      $setServerVar[enabled;no]
-     I successfully disabled __ command!
+     I successfully disabled the command!
      ```
 
 4. In the command(s) you want the enable/disable to affect, put:

@@ -5,9 +5,11 @@ Changes the mentioned user's nickname.
 ```
 $changeUsername[new nickname]
 ```
+
+
 ### Parameters
-- `new nickname`: The text to change the user's nickname to. 
-> It cannot exceed more than 32 characters.
+- `new nickname` `(Type: String || Flag: Required)`: The text to change the user's nickname to. It cannot exceed more than 32 characters, using `%username%` will be replaced by real user's username.
+
 
 ## Example
 ```

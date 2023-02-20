@@ -15,4 +15,6 @@ $nomention
 #]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212546110-0db7b143-f192-45df-9866-98d8c4f7913e.png)
+
 > It can return names of the `category`, `channel`, `forum`.
+

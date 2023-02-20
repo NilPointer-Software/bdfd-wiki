@@ -1,14 +1,14 @@
 # $round
 Rounds up the provided number.
 
-## Usage
+## Syntax
 ```
 $round[number;(decimalPlace)]
 ```
 
-### Breakdown
-- `number` - The number to round.
-- `decimalPlace` - The decimal place to round the number to. Default as `0`. Optional.
+### Parameters
+- `number` `(Type: Float || Flag: Required)`: The number to round.
+- `decimalPlace` `(Type: Integer || Flag: Vacantable)`: The number of decimal places to round the number to. Defaults to `0`.
 
 ## Example
 ```

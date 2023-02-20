@@ -9,7 +9,7 @@ $userInfo[Message]
 ```
 
 ### Parameters
-- `Message` : The message to include in the description.
+- `Message` `(Type: String || Flag: Required)`: The message format. Check below for more information.
 
    > 📌 Following are sub-functions which you can use inside [`$userInfo`](./userInfo.md) to return information of the mentioned user :
    > - `{username}` : Returns the user's username.

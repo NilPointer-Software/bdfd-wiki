@@ -3,8 +3,12 @@ Creates a new modal.
 
 ## Usage
 ```
-$newModal[Modal ID;Title]
+$newModal[modal ID;title]
+
 ```
+### Parameters
+- `modal ID` `(Type: String || Flag: Required)`: ID of the `$newModal[]` which is used in `$onInteraction[]` callback.
+- `title` `(Type: String || Flag: Required)`: Title displayed in the modal.
 
 ## Example
 ```

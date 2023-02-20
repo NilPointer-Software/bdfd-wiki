@@ -6,8 +6,8 @@ Returns a role's name.
 $roleName[roleID]
 ```
 
-### Breakdown
-- `roleID` - The role to get the name of.
+### Parameters
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role for which to get its name.
 
 ## Example
 ```

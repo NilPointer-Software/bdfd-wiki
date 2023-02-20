@@ -3,11 +3,11 @@ Returns the smallest number from the provided numbers.
 
 ## Usage
 ```
-$min[numbers]
+$min[A;B;...]
 ```
 
-### Breakdown
-- `numbers` - The numbers to get the data from. Separate numbers using `;`.
+### Parameters 
+- `A,B,...` `(Type: Integer || Flag: Required)`: The numbers to get the minimum from. Separate numbers using `;`.
 
 ## Example
 ```

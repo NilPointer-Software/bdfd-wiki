@@ -7,8 +7,8 @@ Returns a custom emoji.
 $customEmoji[emojiName]
 ```
 
-### Breakdown
-- `emojiName` - The name of the emoji to return.
+### Parameters
+- `emojiName` `(Type: String || Flag: Required)`: The name of the emoji to return.
 
 ## Example
 ```

@@ -7,8 +7,8 @@ $replyIn[delay]
 ```
 > 🧙‍♂️ Maximum 'delay' can be 40 minutes _(For premium users, it's 120 minutes)_ while minimum delay is 1 second.
 
-### Breakdown
-- `delay` - How long the command is delayed (e.g: 10s, 10m, 40m).
+### Parameters
+- `delay` `(Type: Duration || Flag: Required)`: How long the command is delayed for (e.g: 10s, 10m, 40m).
 
 ## Example
 ```

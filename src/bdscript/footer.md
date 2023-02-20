@@ -6,9 +6,9 @@ Sets the embed footer text.
 $footer[text;(index)]
 ```
 
-### Breakdown
-- `text` - The text to set the footer as. It cannot exceed more than 2048 characters.
-- `index` - What embed the footer text should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
+### Parameters
+- `text` `(Type: String || Flag: Emptiable)`: The text to set the footer as. It cannot exceed more than 2048 characters.
+- `index` `(Type: Integer || Flag: Optional)`: What embed the footer text should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

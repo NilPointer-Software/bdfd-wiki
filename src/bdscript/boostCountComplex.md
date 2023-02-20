@@ -6,8 +6,8 @@ Returns the guild's number of nitro boosts.
 $boostCount[guild ID]
 ```
 
-## Parameters
-- `guild ID`: The guild to get the number of boosts for.
+### Parameters
+- `guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get the number of boosts for.
 
 ## Example
 ```

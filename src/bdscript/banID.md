@@ -6,6 +6,7 @@ The user ID will be taken from the last part of the author's message.
 ```
 $banID
 ```
+
 ## Example
 ```
 $nomention
@@ -15,4 +16,5 @@ $banID
 ```
 
 ![example](https://user-images.githubusercontent.com/113303649/212000187-c49814b3-9eca-48a4-bf89-31a9c1d74c11.png)
+
 > [How `$findUser[]` works?](./findUser.md)

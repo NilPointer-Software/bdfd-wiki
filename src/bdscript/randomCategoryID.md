@@ -13,4 +13,6 @@ $randomCategoryID[(guild ID)]
 $nomention
 Random Category: $channelName[$randomCategoryID[]]
 ```
+
 ![example](https://user-images.githubusercontent.com/113303649/212499161-5878db9c-0a1a-412b-b34b-b04268f904fc.png)
+

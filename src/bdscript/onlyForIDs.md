@@ -3,12 +3,12 @@ The command can only be executed by the provided users.
 
 ## Usage
 ```
-$onlyForIDs[userIDs;errorMessage]
+$onlyForIDs[userIDs;...;errorMessage]
 ```
 
-### Breakdown
-- `userIDs` - The users that can use this command, separate IDs using `;`.
-- `errorMessage` - The error message that is returned, when the user running the command is not whitelisted.
+### Parameters 
+- `userIDs` `(Type: Snowflake || Flag: Emptiable)`: The users that can use this command. Separate IDs using `;`.
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The error message that is returned, when the user running the command is not whitelisted.
 
 ## Example
 ```

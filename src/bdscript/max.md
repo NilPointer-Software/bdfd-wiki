@@ -3,11 +3,11 @@ Returns the largest number from the provided numbers.
 
 ## Usage
 ```
-$max[numbers]
+$max[A;B;...]
 ```
 
-### Breakdown
-- `numbers` - The numbers to get the data from. Separate numbers using `;`.
+### Parameters 
+- `A,B,...` `(Type: Integer || Flag: Required)`: The numbers to get the maximum from. Separate numbers using `;`.
 
 ## Example
 ```

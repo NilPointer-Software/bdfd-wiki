@@ -3,12 +3,12 @@ Repeats the provided text a certain amount of times.
 
 ## Usage
 ```
-$repeatMessage[howMany;text]
+$repeatMessage[amount;message]
 ```
 
-### Breakdown
-- `howMany` - How many times the text is repeated *(max 10 times)*.
-- `text` - The text to repeat.
+### Parameters
+- `amount` `(Type: Integer || Flag: Required)`: The number of times to repeat the given text *(max 10 times)*.
+- `message` `(Type: String || Flag: Emptiable)`: The text to repeat.
 
 ## Examples
 

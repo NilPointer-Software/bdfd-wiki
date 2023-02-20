@@ -3,11 +3,12 @@ Returns remainder between numbers.
 
 ## Usage
 ```
-$modulo[numbers]
+$modulo[A;B]
 ```
 
-### Breakdown
-- `numbers` - The numbers to return the remainder for. Separate numbers using `;`.
+### Parameters 
+- `A` `(Type: Integer || Flag: Required)`: The dividend.
+- `B` `(Type: Integer || Flag: Required)`: The divisor.
 
 ## Example
 ```

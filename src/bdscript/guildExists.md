@@ -6,5 +6,5 @@ Returns 'true' if the provided server exists, otherwise 'false' is returned. Ret
 $guildExists[guildID]
 ```
 
-### Breakdown
-- `guildID` - The ID of the hypothetical server.
+### Parameters
+- `guildID` `(Type: Snowflake, String || Flag: Emptiable)`: The ID of the hypothetical server.

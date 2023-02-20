@@ -3,19 +3,19 @@ Creates a new ticket.
 
 ## Usage
 ```
-$newTicket[categoryID/name;messageWhenNoSubject;MessageInTicket;MessageToUser;errorMessage;(ticket number;(yes/no) return id of the ticket message)]
+$newTicket[categoryID/name;No question message;In ticket message;Message to user;Error message;(Ticket number;return id of the ticket message)]
 ```
 
-### Breakdown
-- `categoryID/name` - The category to put the ticket channels in. Can be a category ID or name.
+### Parameters 
+- `categoryID/name` `(Type: String || Flag: Emptiable)`: The category to put the ticket channels in. Can be a category ID or name.
 > 🧙‍♂️ Setup the ticket category permissions:
 > ![tickets](https://user-images.githubusercontent.com/69215413/123529975-b515be80-d6c3-11eb-8f2a-28c629533e52.png)
-- `messageWhenNoSubject` - The message that appears in `{subject}` when the user doesn't provide a subject.
-- `messageInTicket` - The message that is sent in the new ticket channel.
-- `messageToUser` - The message that gets sent in the current channel.
-- `errorMessage` - The message that gets returned when the ticket can't be created.
-- `ticket number` - For custom ticket number.
-- `return id of the ticket message` - (yes/no) Whether you want the ticket message to return it's id.
+- `No question message` `(Type: String || Flag: Emptiable)`: The message that appears in `{subject}` when the user doesn't provide a subject.
+- `In ticket message` `(Type: String || Flag: Emptiable)`: The message that is sent in the new ticket channel.
+- `message to user` `(Type: String || Flag: Emptiable)`: The message that gets sent in the current channel.
+- `Error message` `(Type: String || Flag: Emptiable)`: The message that gets returned when the ticket can't be created.
+- `Ticket number` `(Type: Integer || Flag: Optional)`: For custom ticket number.
+- `return id of the ticket message` `(Type: Bool || Flag: Optional)`: Whether you want the ticket message to return its id.
 
 ### Subset Functions
 You can use these subset functions in `$newTicket`.

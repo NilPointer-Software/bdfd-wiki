@@ -6,11 +6,11 @@ Returns a list of users separated by `separator` that reacted to a message.
 $getReactions[channelID;messageID;separator;emoji]
 ```
 
-### Breakdown
-- `channelID` - The channel that the message belongs to.
-- `messageID` - The message to get the user-reactions from.
-- `separator` - The separator between each user.
-- `emoji` - The emoji to get the user's reactions for.
+### Parameters
+- `channelID` `(Type: Snowflake || Flag: Required)`: The channel that the message belongs to.
+- `messageID` `(Type: Snowflake || Flag: Required)`: The message to get the user-reactions from.
+- `separator` `(Type: String || Flag: Required)`: The separator between each user.
+- `emoji` `(Type: Emoji || Flag: Required)`: The emoji to get the user's reactions for.
 
 ## Example
 ```

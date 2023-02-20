@@ -6,8 +6,8 @@ Returns the lowest role in the server that has all the provided permissions.
 $lowestRoleWithPerms[permissions;...]
 ```
 
-### Breakdown
-- `permissions` - The permissions that the role needs to have.  [(see permissions list)](/src/resources/permissions.md). Use `;` as separator for multiple permissions
+### Parameters
+- `permissions` `(Type: Permission || Flag: Required)`: The permissions that the role needs to have. [(see permissions list)](/src/resources/permissions.md). Use `;` as a separator for multiple permissions
 
 ## Example
 ```

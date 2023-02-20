@@ -41,4 +41,6 @@ $nomention
 You have provided a number: $message
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png)
+
 > For more info, see the [Awaited Commands Guide](../guides/awaitedCommands.md).
+

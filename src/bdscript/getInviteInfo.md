@@ -6,10 +6,10 @@ Returns information about a invite code.
 $getInviteInfo[inviteCode;inviteProperty]
 ```
 
-### Breakdown
-- `inviteCode` - The invite code to get info about.
+### Parameters
+- `inviteCode` `(Type: String || Flag: Required)`: The invite code to get info about.
 
-- `inviteProperty` - The information to get about this invite. Invite properties:
+- `inviteProperty` `(Type: Enum || Flag: Required)`: The information to get about this invite. Invite properties:
   - `channel` - The channel that this invite is for.
   - `creationDate` - The creation date of this invite.
   - `inviter` - The ID of the user who created this invite.

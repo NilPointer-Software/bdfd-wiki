@@ -7,7 +7,7 @@ $sum[Number;...]
 ```
 
 ### Parameters
-- `Number`: The numbers to add. Separate multiple values using `;`.
+- `Number` `(Type: Integer, Float || Flag: Required)`: The numbers to add. Separate multiple values using `;`.
 
 ## Example
 ```

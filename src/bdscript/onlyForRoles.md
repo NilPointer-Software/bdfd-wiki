@@ -3,9 +3,9 @@ The command can only executed by the provided roles.
 
 ## Usage
 ```
-$onlyForRoles[roleNames;errorMessage]
+$onlyForRoles[roleNames;...;errorMessage]
 ```
 
-### Breakdown
-- `roleNames` - The role names to allow.
-- `errorMessage` - The message to return when the user doesn't have the required roles.
+### Parameters 
+- `roleNames` `(Type: String || Flag: Emptiable)`: The role names to allow.
+- `errorMessage` `(Type: String || Flag: Emptiable)`: The message to return when the user doesn't have the required roles.

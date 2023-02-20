@@ -15,10 +15,10 @@ $clear
 $clear[howMany;(optional) userID;(optional) removePinnedMessages (yes/no)]
 ```
 
-#### Breakdown
-- `howMany` - How many messages to delete. (max 100)
-- `userID` - If a userID is provided, the bot will only delete messages from that user. Optional.
-- `removePinnedMessages` - Decides whether to delete pinned messages or not. Default is 'yes'. Optional.
+#### Parameters
+- `howMany` `(Type: Integer || Flag: Required)`: How many messages to delete. (max 100)
+- `userID` `(Type: Snowflake || Flag: Vacantable)`: If a userID is provided, the bot will only delete messages from that user.
+- `removePinnedMessages` `(Type: Bool || Flag: Optional)`: Decides whether to delete pinned messages or not. The default is 'yes'.
 
 > 📝 Discord doesn't allow deleting messages in bulk which are over 2 weeks old.
 

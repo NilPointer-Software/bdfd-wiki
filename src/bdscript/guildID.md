@@ -1,12 +1,14 @@
 # $guildID
-Returns a server/guild's ID.
+Returns the current server's ID.
 
-## Usages
-There are two usages of the `$guildID` function.
+### Syntax
+```
+$guildID
+```
 
-### Usage #1
-`$guildID` - Returns the current server's ID.
-
-### Usage #2
-`$guildID[serverName]` - Finds a server ID using the server name. 
-> 🧙‍♂️ *Note:* The bot can not find the ID of a server that it isn't in.
+## Example
+```
+$nomention 
+Server ID is : $guildID
+```
+![example](https://user-images.githubusercontent.com/70468667/219971308-f7d8d7dd-4d1d-4e82-9548-921bbd29e737.jpg)

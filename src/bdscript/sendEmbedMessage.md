@@ -1,30 +1,30 @@
 # $sendEmbedMessage
-
 Sends embed message to provided channel. Not needed fields can be left empty.
 
-## Usage
+## Syntax
 ```
-$sendEmbedMessage[channel ID;content;title;title URL;description;color;author;author icon;footer;footer icon;thumbnail;image;add timestamp;return ID]
+$sendEmbedMessage[channel ID;content;(title;title URL;description;color;author;author icon;footer;footer icon;thumbnail;image;add timestamp;return ID)]
 ```
 
-### Breakdown
-- `channel ID` - id of the channel where the message will be sent.
-- `content` - text to be sent before embed.
-- `title` - text that will be used as the title in the embed.
-- `title URL` - url that will be applied to the title.
-- `description` - description that will be applied to the embed.
-- `color` - the [color hex](https://htmlcolorcodes.com/color-picker/) to set the embed border color as.
-- `author icon` - the image that appears in the author icon. This must be a valid image URL.
-- `footer` - The text to set the footer as.
-- `footer icon` - the URL to set the footer icon as. Must be a valid image URL.
-- `thumbnail` - the image to set as the thumbnail.
-- `image` - the URL of the image that appears. Must be a valid image URL.
-- `add timestamp` - add the time to send (use yes or no).
-- `return ID` - output the message ID outside the embed (use yes or no).
+### Parameters 
+- `channel ID` `(Type: Snowflake || Flag: Required)`: ID of the channel where the message will be sent.
+- `content` `(Type: String || Flag: Emptiable)`: Text that is shown above the embed.
+- `title` `(Type: String || Flag: Vacantable)`: Text that will be used as the title in the embed.
+- `title URL` `(Type: URL || Flag: Vacantable)`: URL that will be applied to the title.
+- `description` `(Type: String || Flag: Vacantable)`: Description that will be applied to the embed.
+- `color` `(Type: Color || Flag: Vacantable)`: The [color hex](https://htmlcolorcodes.com/color-picker/) or integer to set the embed border color as.
+- `author` `(Type: String || Flag: Vacantable )`: The text that appear at author.
+- `author icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to author. This must be a valid image URL.
+- `footer` `(Type: String || Flag: Vacantable)`: The text to set the footer as.
+- `footer icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to footer. Must be a valid image URL.
+- `thumbnail` `(Type: URL || Flag: Vacantable)`: The image to set as the thumbnail.
+- `image` `(Type: URL || Flag: Vacantable)`: The image that appears above footer. Must be a valid image URL.
+- `add timestamp` `(Type: Bool || Flag: Vacantable)`: Adds time in footer (use yes or no).
+- `return ID` `(Type: Bool || Flag: Vacantable)`: Outputs the message ID outside the embed (use yes or no).
 
 ## Example
 ```
 $nomention
-$sendEmbedMessage[$channelID;;Title;https://discord.gg/;description;000000;author;$authorAvatar;footer;$authorAvatar;$authorAvatar;$authorAvatar;no;no]
+$sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;author;$authorAvatar;footer;$authorAvatar;$authorAvatar;$authorAvatar;no;no]
 ```
 ![image](https://user-images.githubusercontent.com/42785890/151873621-10b17532-93ee-421c-8eea-515f40f1a124.png)

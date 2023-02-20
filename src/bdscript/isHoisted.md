@@ -7,8 +7,8 @@ Returns if a role is displayed separately.
 $isHoisted[roleID]
 ```
 
-### Breakdown
-- `roleID` - The role which the bot checks is hoisted or not.
+### Parameters
+- `roleID` `(Type: Snowflake || Flag: Required)`: The role to check its hoisted status.
 
 ## Example
 ```

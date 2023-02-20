@@ -7,8 +7,8 @@ Evaluates the provided BDScript code.
 $eval[BDScript source code]
 ```
 
-### Breakdown 
-- `BDScript source code` - The code to be evaluated.
+### Parameters 
+- `BDScript source code` `(Type: String || Flag: Emptiable)`: The code to be evaluated.
 
 ## Example
 ```

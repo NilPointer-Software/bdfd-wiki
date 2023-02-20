@@ -6,10 +6,10 @@ Adds an icon to the author section in the embed.
 $authorIcon[image url;(index)]
 ```
 > `$authorIcon[]` will not work if there is no text provided in `$author[]`.
-> 
-## Parameters
-- `image url`: The image for the author icon. This must be a valid image URL.
-- `index`: To which embed the author icon will be added. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
+
+### Parameters
+- `image url` `(Type: URL || Flag: Emptiable)`: The image for the author icon. This must be a valid image URL.
+- `index` `(Type: Integer || Flag: Optional)`: To which embed the author icon will be added. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

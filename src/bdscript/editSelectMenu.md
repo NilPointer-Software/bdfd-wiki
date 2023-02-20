@@ -3,8 +3,16 @@ Edits select menu.
 
 ## Usage
 ```
-$editSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
+$editSelectMenu[menu ID;min;max;(placeholder;message ID)]
 ```
+
+## Parameters 
+- `menu ID` `(Type: String || Flag: Required)`: The menu ID you want to edit
+
+- `min` `(Type: Integer || Flag: Required)`: The minimum amount of values that can be selected.
+- `max` `(Type: Integer || Flag: Required)`: The maximum amount of values that can be selected.
+- `placeholder` `(Type: String || Flag: Vacantable)`: It's a text that appears if no option is selected.
+- `message ID` `(Type: Snowflake || Flag: Optional)`: The message for which a select menu will be edited.
 
 ## Example
 ### Interaction Code

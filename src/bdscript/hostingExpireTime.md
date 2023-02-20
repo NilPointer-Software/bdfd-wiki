@@ -3,11 +3,11 @@ Returns expire time for the hosting
 
 ## Usage
 ``` 
-$hostingExpireTime[(unix timestamp?)]
+$hostingExpireTime[unix timestamp?]
 ``` 
 
-### Breakdown
-- `unix timestamp` - Whether to return the expire time in Unix Timestamp or not.
+### Parameters
+- `unix timestamp` `(Type: Bool || Flag: Optional)`: Whether to return the expiration time in Unix Timestamp or not.
 
 ## Example #1
 ``` 

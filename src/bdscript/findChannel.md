@@ -6,8 +6,8 @@ Finds a channel's ID from the given channel name, ID, or mention.
 $findChannel[channel]
 ```
 
-### Breakdown
-- `channel` - The channel name/ID/mention to find.
+### Parameters
+- `channel` `(Type: String || Flag: Emptiable)`: The channel name/ID/mention to find.
 
 ## Example
 ```

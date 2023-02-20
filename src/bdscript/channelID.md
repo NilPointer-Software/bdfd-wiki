@@ -15,3 +15,4 @@ Channel ID: $channelID
 > It will return `none` if you use it in a DM.
 > 
 > ![example](https://user-images.githubusercontent.com/113303649/212714105-3fdc2811-b071-4c8f-8f0c-43b6207f5350.png)
+

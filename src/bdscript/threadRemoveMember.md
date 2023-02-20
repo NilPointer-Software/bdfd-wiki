@@ -7,8 +7,8 @@ $threadRemoveMember[Thread ID;User ID]
 ```
 
 ### Parameters
-- `Thread ID`: The ID of the thread channel to remove the user from.
-- `User ID`: The user to remove from the thread.
+- `Thread ID` `(Type: Snowflake || Flag: Required)`: The ID of the thread channel to remove the user from.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to remove from the thread.
 
 ## Example
 ```

@@ -3,13 +3,13 @@ Gets a global/global-user variable.
 
 ## Usage
 ```
-$getVar[variableName;(optional) userID]
+$getVar[variableName;(userID)]
 ```
 > 🧙‍♂️ For a global variable, a `userID` doesn't need to be provided. For a global-user variable, `userID` must be provided.
 
-### Breakdown
-- `variableName` - The name of the variable to get the value from.
-- `userID` - The user to get the value for (if global-user).
+### Parameters
+- `variableName` `(Type: String || Flag: Required)`: The name of the variable to get the value from.
+- `userID` `(Type: Snowflake, String || Flag: Vacantable)`: The user to get the value for (if global-user).
 
 ## Example
 ```

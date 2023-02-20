@@ -6,9 +6,9 @@ Adds a image to the embed.
 $image[image url;(index)]
 ```
 
-### Breakdown
-- `image url` - The URL of the image that appears. Must be a valid image URL.
-- `index` - What embed the image should belong to (Optional). Default is `1`. [(learn more)](../resources/embedIndexes.md)
+### Parameters
+- `image url` `(Type: URL || Flag: Emptiable)`: The URL of the image that appears. Must be a valid image URL.
+- `index` `(Type: Integer || Flag: Optional)`: What embed the image should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

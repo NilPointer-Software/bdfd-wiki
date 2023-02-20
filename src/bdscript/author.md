@@ -6,9 +6,9 @@ Adds author text to an embed.
 $author[text;(index)]
 ```
 
-## Parameters
-- `text`: The text that appears in the author text. It cannot exceed more than 256 characters.
-- `index`: To which embed the author text will be added. _(Optional)_ [(learn more)](../resources/embedIndexes.md)
+### Parameters
+- `text` `(Type: String || Flag: Emptiable)`: The text that appears in the author text. It cannot exceed more than 256 characters.
+- `index` `(Type: Integer || Flag: Optional)`: To which embed the author text will be added. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

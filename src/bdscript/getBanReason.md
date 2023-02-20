@@ -8,8 +8,8 @@ $getBanReason[User ID;(Guild ID)]
 ```
 
 ### Parameters
-- `User ID`: User to get the ban reason for
-- `Guild ID`: The server id from which to get the ban reason. Optional
+- `User ID` `(Type: Snowflake || Flag: Required)`: User to get the ban reason for
+- `Guild ID` `(Type: Snowflake || Flag: Optional)`: The server id from which to get the ban reason.
 
 
 ## Example

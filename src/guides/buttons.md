@@ -194,4 +194,6 @@ $endif
 
 ![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
 
+
 > [How `$onInteraction`/`$onInteraction[]` works?](../callbacks/onInteraction.md)
+

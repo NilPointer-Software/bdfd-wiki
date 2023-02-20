@@ -6,8 +6,8 @@ Adds reactions to the bot's response.
 $addReactions[emojis;...]
 ```
 
-## Parameters
-- `emojis`: The emoji(s) the bot reacts with. Separate emojis using `;`.
+### Parameters
+- `emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Separate emojis using `;`.
 
 > You can use Unicode emojis and emoji IDs, but not emoji names. For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
@@ -30,4 +30,6 @@ $addReactions[✅;❌]
 3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
 4. Input the emoji ID into `$addReactions[]`. (e.g `$addReactions[<:hollyDab:828628880629825546>]`)
 
-> If you're still having issues, check the [Troubleshooting page](https://nilpointer-software.github.io/bdfd-wiki/nightly/resources/troubleshooting.html#the-bot-fails-to-add-reactions).
+![example](https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif)
+
+> If you're still having issues, check the [Troubleshooting](../resources/troubleshooting.md#the-bot-fails-to-add-reactions) page.

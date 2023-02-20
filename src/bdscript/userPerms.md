@@ -7,9 +7,9 @@ $userPerms[User ID;Return amount;Separator]
 ```
 
 ### Parameters
-- `User ID` : The user to get permissions for.
-- `Return amount` : The no. of permissions to return. Use `-1` to return all.
-- `Separator` : A text/character which is used for separating each permission.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to get permissions for.
+- `Return amount` `(Type: Integer || Flag: Required)`: The number of permissions to return. Use `-1` to return all.
+- `Separator` `(Type: String || Flag: Required)`: A text/character which is used for separating each permission.
 
 ## Example
 ```
