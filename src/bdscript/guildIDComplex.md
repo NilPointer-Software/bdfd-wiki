@@ -1,5 +1,5 @@
 # $guildID[]
-Finds a server ID using the server name.
+Finds a server ID using a server's name.
 
 ### Syntax
 ```
