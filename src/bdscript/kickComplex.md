@@ -7,8 +7,8 @@ $kick[userID;(reason)]
 ```
 
 #### Parameters
-- `userID` `(Type : Snowflake || Flag : Required)` : The user to kick from the server.
-- `reason` `(Type : String || Flag : Vacantable)` : The audit-log reason for the kick. Optional.
+- `userID` `(Type: Snowflake || Flag: Required)`: The user to kick from the server.
+- `reason` `(Type: String || Flag: Vacantable)`: The audit-log reason for the kick.
 
 ## Example
 ```
