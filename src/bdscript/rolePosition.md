@@ -1,7 +1,7 @@
 # $rolePosition
 Returns a roles position *(1 being highest role)*.
 
-## Usage
+## Syntax
 ```
 $rolePosition[roleID]
 ```
