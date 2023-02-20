@@ -8,7 +8,8 @@ $editButton[Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
 
 ## Parameters 
 - `Button ID/URL` `(Type: String, URL || Flag: Required)`: the required button ID or URL, you want to be edited
-- `Label` `(Type : String || Flag : Emptiable)` : new label of displayed on the button 
+- `Label` `(Type: String || Flag: Emptiable)`: new label of displayed on the button 
+
 - `Style` `(Type: Enum || Flag: Required)`: Here, are all possible values for the `style` argument:
   - `primary`
   - `secondary`
