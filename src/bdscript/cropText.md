@@ -7,7 +7,7 @@ $cropText[text;maxCharacters;ending]
 ```
 
 ### Parameters
-- `text` `(Type : String || Flag : Emptiable)` : The text to crop.
+- `text` `(Type: String || Flag: Emptiable)`: The text to crop.
 - `maxCharacters` `(Type: Integer || Flag: Required)`: The maximum amount of characters. Subsequent characters are removed.
 - `ending` `(Type: String || Flag: Emptiable)`: The text to end the cropped text with (if the text was cropped).
 
