@@ -1,13 +1,13 @@
 # $kick[]
 Kicks the provided user. 
 
-### Syntax
+## Syntax
 ```
-$kick[userID;(reason)]
+$kick[user ID;(reason)]
 ```
 
-#### Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: The user to kick from the server.
+### Parameters
+- `user ID` `(Type: Snowflake || Flag: Required)`: The user to kick from the server.
 - `reason` `(Type: String || Flag: Vacantable)`: The audit-log reason for the kick.
 
 ## Example
