@@ -3,8 +3,9 @@ Returns the shard ID of the provided guild.
 
 ## Syntax
 ```
-$shardID[guildID]
+$shardID[guild ID]
 ```
 
 ### Parameters 
-- `guildID` `(Type: Snowflake || Flag: Required)`: The guild to get it's shard ID.
+- `guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get it's shard ID.
+
