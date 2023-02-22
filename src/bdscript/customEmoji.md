@@ -2,13 +2,13 @@
 Returns a custom emoji. 
 > 🧙‍♂️ **Note:** We recommend emoji IDs instead of `$customEmoji` for public bots.
 
-## Usage
+## Syntax
 ```
-$customEmoji[emojiName]
+$customEmoji[emoji name]
 ```
 
 ### Parameters
-- `emojiName` `(Type: String || Flag: Required)`: The name of the emoji to return.
+- `emoji name` `(Type: String || Flag: Required)`: The name of the emoji to return.
 
 ## Example
 ```
