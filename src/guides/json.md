@@ -356,7 +356,7 @@ Username: $optOff[$json[username]]
 ## $jsonArrayIndex
 `$jsonArrayIndex` gets the array index of a given value.
 
-> The `$jsonArrayIndex` function will return `-1` if value not found and will return an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+> The `$jsonArrayIndex` function will return `-1` if value not found and will return an empty result if no [`$jsonParse`](#jsonparse) or [`$jsonSet`](#jsonset) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
 ### Syntax
 ```
