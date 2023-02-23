@@ -234,11 +234,11 @@ $var[value;$replaceText[$message;$message[1] ;]]
 
 $jsonArrayAppend[computer;0;apps;$message[1];$var[value]]
 
-The new app was added to the `$message[1]` category!
+A new app was added to the `$message[1]` category!
 Current apps in the `$message[1]` category: $json[computer;0;apps;$message[1]]
 ```
 
-![](https://user-images.githubusercontent.com/70456337/213921444-209dd14c-d1f2-4d8d-960d-5bc52fd18cb1.png)
+![](https://user-images.githubusercontent.com/70456337/219880948-4e641b49-6f74-4b7d-939c-c1b30a96807c.png)
 
 ## $jsonStringify
 `$jsonStringify` turns the current JSON object into a string value.
@@ -423,7 +423,7 @@ $jsonSetString[Key;...;Value]
 
     Balance key was set to: $json[balance]
     ```
-    ![Discord_QaUn8sArHA](https://user-images.githubusercontent.com/70456337/216845276-62748993-567a-4022-bf59-69a77a37bc32.png)
+    ![](https://user-images.githubusercontent.com/70456337/216845276-62748993-567a-4022-bf59-69a77a37bc32.png)
 
 If we set this value as a number manually, we'll encounter issues.
 ```
