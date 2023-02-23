@@ -22,7 +22,7 @@ See examples further down the guide.
 ## $json
 `$json` function retrieves JSON values from a specified key in the current JSON object.
 
-> The `$json` function will return an empty string if the value is null, the key doesn't exist, no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+> The `$json` function will return an empty string if the value is null, the key doesn't exist, no [`$jsonParse`](#jsonparse) or [`$jsonSet`](#jsonset) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
 ### Syntax
 ```
