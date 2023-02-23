@@ -274,7 +274,7 @@ $jsonStringify
 ## $jsonPretty
 `$jsonPretty` turns the current JSON object into a pretty string value.
 
-> The `$jsonPretty` function will return an empty result if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+> The `$jsonPretty` function will return an empty result if no [`$jsonParse`](#jsonparse) or [`$jsonSet`](#jsonset) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
 ### Syntax
 ```
