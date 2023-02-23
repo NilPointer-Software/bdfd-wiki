@@ -21,6 +21,7 @@
         - [Buttons](./guides/buttons.md)
         - [HTTP Requests](./guides/httpRequests.md)
         - [If Statements](./guides/ifStatements.md)
+        - [JSON Functions](./guides/json.md)
         - [Modals](./guides/modals.md)
         - [Select Menu](./guides/selectmenu.md)
         - [Slash Commands](./guides/slashCommands.md)
@@ -44,6 +45,7 @@
     - [2FA & Elevated Permissions](./resources/2FA.md)
     - [Permissions](./resources/permissions.md)
     - [Security](./resources/security.md)
+    - [Sharding](./resources/sharding.md)
     - [Time Format](./resources/timeFormat.md)
     - [Troubleshooting](./resources/troubleshooting.md)
 
@@ -142,6 +144,7 @@
     - [$deleteMessage](./bdscript/deleteMessage.md)
     - [$deleteRole](./bdscript/deleteRole.md)
     - [$description](./bdscript/description.md)
+    - [$disableInnerSpaceRemoval](./bdscript/disableInnerSpaceRemoval.md)
     - [$disableSpecialEscaping](./bdscript/disableSpecialEscaping.md)
     - [$discriminator](./bdscript/discriminator.md)
     - [$divide](./bdscript/divide.md)
