@@ -243,7 +243,7 @@ Current apps in the `$message[1]` category: $json[computer;0;apps;$message[1]]
 ## $jsonStringify
 `$jsonStringify` turns the current JSON object into a string value.
 
-> The `$jsonStringify` function will return an empty string if no [`$jsonParse`](#jsonparse) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+> The `$jsonStringify` function will return an empty string if no [`$jsonParse`](#jsonparse) or [`$jsonSet`](#jsonset) function was executed, or [`$jsonClear`](#jsonclear) was executed.
 
 ### Syntax
 ```
