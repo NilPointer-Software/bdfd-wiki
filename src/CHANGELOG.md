@@ -4,6 +4,9 @@
 
 ## February
 - Fixed caching issues for leaderboards
+- Added `$jsonArrayShift[]`
+- Added `$jsonArrayUnshift[]`
+- Added `$jsonArrayPop[]`
 
 ## January
 - Added `$jsonParse[]`
