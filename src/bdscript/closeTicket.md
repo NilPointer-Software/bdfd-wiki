@@ -1,13 +1,13 @@
 # $closeTicket
 Deletes the ticket channel (has to be created with `$newTicket`).
 
-## Usage
+## Syntax
 ```
-$closeTicket[errorMessage]
+$closeTicket[error message]
 ```
 
 ### Parameters
-- `errorMessage` `(Type: String || Flag: Emptiable)`: The error to return if the channel isn't a ticket.
+- `error message` `(Type: String || Flag: Emptiable)`: The error to return if the channel isn't a ticket.
 
 ## Example
 ```
