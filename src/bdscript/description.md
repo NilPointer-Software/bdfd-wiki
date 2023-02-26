@@ -1,7 +1,7 @@
 # $description
 Adds a description to an embed.
 
-## Usage
+## Syntax
 ```
 $description[message;(index)]
 ```
