@@ -7,6 +7,7 @@
 - Added `$jsonArrayShift[]`
 - Added `$jsonArrayUnshift[]`
 - Added `$jsonArrayPop[]`
+- Added `$jsonJoinArray[]`
 
 ## January
 - Added `$jsonParse[]`
