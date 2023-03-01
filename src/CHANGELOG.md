@@ -2,6 +2,9 @@
 
 # 2023
 
+## March
+- Fixed callbacks not always getting detected
+
 ## February
 - Fixed caching issues for leaderboards
 - Added `$jsonArrayShift[]`
