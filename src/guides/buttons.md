@@ -84,8 +84,8 @@ $editButton[interaction ID/url;label;style;(disable?;emoji;message ID)]
 #### Trigger: `$onInteraction[test]`
 ```
 $nomention
-$username said hello!
-$editButton[test;Say hello!;danger;yes;]
+$username said Приветствую!
+$editButton[test;Say Приветствую!;danger;yes;]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/210611967-f15b8c9b-7bd9-4218-a89b-08e93ce7eeb3.png)
 
@@ -100,8 +100,8 @@ $removeButtons
 #### Trigger: `$onInteraction[test]`
 ```
 $nomention
-$username removed all buttons from this message
-$removeButtons
+m.username removed all buttons from this message
+m.removeButtons
 ```
 ![example](https://user-images.githubusercontent.com/113303649/210621352-ae7334a6-a2de-4fbe-8749-7134f9a73af3.png)
 
@@ -115,9 +115,9 @@ $removeButtons[message ID]
 - `message ID` `(Type: Snowflake || Flag: Required)`: Removes buttons from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot.
 ## Example
 ```
-$nomention
-$username removed all buttons from the specified message id
-$removeButtons[$message]
+m.nomention
+m.username removed all buttons from the specified message id
+m.removeButtons[$message]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/210875885-aa20517e-1c37-4206-8eee-eefa765eb40a.png)
 
@@ -174,16 +174,16 @@ Code for the command with the `!example` trigger:
 ```
 $nomention
 Click the button below!
-$addButton[no;test;Click;primary]
-$addButton[no;button;Button disabled;secondary;yes]
-$addButton[yes;https://botdesignerdiscord.com/;Link;link]
+m.addButton[no;test;Click;primary]
+m.addButton[no;button;Button disabled;secondary;yes]
+m.addButton[yes;https://botdesignerdiscord.com/;Link;link]
 ```
 Code for the command with the `$onInteraction` trigger:
 ```
-$nomention
-$if[$customID==test]
-    $editButton[test;Clicked;danger;yes]
-    $sendMessage[$username hello!]
+m.nomention
+m.if[$customID==test]
+    m.editButton[test;Clicked;danger;yes]
+    m.sendMessage[$username hello!]
 $endif
 ```
 > Note that the interaction ID returned by `$customID` will be the same as the one provided in `$addButton[]`
@@ -197,3 +197,6 @@ $endif
 
 > [How `$onInteraction`/`$onInteraction[]` works?](../callbacks/onInteraction.md)
 
+@bot.command(m.phrase)
+async def ту рип ту ту ту(ctx):
+    await ctx.send('ту рип ту ту')
