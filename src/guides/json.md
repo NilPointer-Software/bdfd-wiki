@@ -506,7 +506,7 @@ Current music:
 ![](https://user-images.githubusercontent.com/70456337/222919976-4e9d3110-7a5f-4653-bcdd-ceaa8bfa58db.png)
 
 ## $jsonArrayPop
-`$jsonArrayPop` function removes the last element of an array.
+`$jsonArrayPop` function removes the last element of an array and returns the removed element.
 
 ### Syntax
 ```
