@@ -8,7 +8,7 @@
 [![GitHub Repo Stars](https://img.shields.io/github/stars/NilPointer-Software/bdfd-wiki?style=flat&logo=Github&label=Stars)](https://github.com/NilPointer-Software/bdfd-wiki/stargazers)
 [![GitHub Watchers](https://img.shields.io/github/watchers/NilPointer-Software/bdfd-wiki?style=flat&logo=Github&label=Watchers)](https://github.com/NilPointer-Software/bdfd-wiki/watchers)
 \
-[![GitHub Contributors](https://img.shields.io/github/contributors/Nilpointer-Software/bdfd-wiki?style=flat&logo=Github&label=Contributers)](https://github.com/NilPointer-Software/bdfd-wiki/graphs/contributors)
+[![GitHub Contributors](https://img.shields.io/github/contributors/Nilpointer-Software/bdfd-wiki?style=flat&logo=Github&label=Contributors)](https://github.com/NilPointer-Software/bdfd-wiki/graphs/contributors)
 [![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/NilPointer-Software/bdfd-wiki?logo=GitHub&style=flat&label=Commit+activity)](https://github.com/NilPointer-Software/bdfd-wiki/graphs/commit-activity)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/NilPointer-Software/bdfd-wiki?style=flat&logo=Github&label=Last+commit)](https://github.com/NilPointer-Software/bdfd-wiki/commits)
 \
