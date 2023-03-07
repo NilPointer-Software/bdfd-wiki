@@ -5460,16 +5460,12 @@ Channel ID: $channelID[$message]
 Channel ID: $channelIDFromName[$mesaage]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/213234524-b2a9979d-9368-42ff-a4e7-428789e6bcde.png" alt="example" /></p>
-<h3 id="parameters-64"><a class="header" href="#parameters-64">Parameters</a></h3>
-<ul>
-<li><code>channel name</code> <code>(Type: String || Flag: Required)</code>: The channel name that the bot will return the channel id for.</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channelname"><a class="header" href="#channelname">$channelName</a></h1>
 <p>Returns the name for the provided channel ID.</p>
 <h2 id="syntax-88"><a class="header" href="#syntax-88">Syntax</a></h2>
 <pre><code>$channelName[channel ID]
 </code></pre>
-<h3 id="parameters-65"><a class="header" href="#parameters-65">Parameters</a></h3>
+<h3 id="parameters-64"><a class="header" href="#parameters-64">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel which name will be returned.</li>
 </ul>
@@ -5486,7 +5482,7 @@ Channel Name: `#$channelName[$channelID]`
 <h2 id="syntax-89"><a class="header" href="#syntax-89">Syntax</a></h2>
 <pre><code>$channelNames[separator;(guild ID)]
 </code></pre>
-<h3 id="parameters-66"><a class="header" href="#parameters-66">Parameters</a></h3>
+<h3 id="parameters-65"><a class="header" href="#parameters-65">Parameters</a></h3>
 <ul>
 <li><code>seperator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator used to separate the channel names.</li>
 <li><code>guild ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The guild for which to return the channel names. <em>(Defaults to the current guild)</em></li>
@@ -5515,7 +5511,7 @@ Channel Position: $channelPosition
 <h2 id="syntax-91"><a class="header" href="#syntax-91">Syntax</a></h2>
 <pre><code>$channelPosition[channel ID]
 </code></pre>
-<h3 id="parameters-67"><a class="header" href="#parameters-67">Parameters</a></h3>
+<h3 id="parameters-66"><a class="header" href="#parameters-66">Parameters</a></h3>
 <ul>
 <li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of a channel whose position will be returned.</li>
 </ul>
@@ -5530,23 +5526,24 @@ Channel Position: $channelPosition[$mentionedChannels[1;yes]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channelsendmessage"><a class="header" href="#channelsendmessage">$channelSendMessage</a></h1>
 <p>Sends a message in the provided channel.</p>
 <h2 id="usage-4"><a class="header" href="#usage-4">Usage</a></h2>
-<pre><code>$channelSendMessage[channelID;message]
+<pre><code>$channelSendMessage[channel ID;message]
 </code></pre>
-<h3 id="parameters-68"><a class="header" href="#parameters-68">Parameters</a></h3>
+<h3 id="parameters-67"><a class="header" href="#parameters-67">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to send the message in.</li>
+<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to send the message in.</li>
 <li><code>message</code> <code>(Type: String || Flag: Required)</code>: The message that gets sent to the channel.</li>
 </ul>
 <h2 id="example-102"><a class="header" href="#example-102">Example</a></h2>
 <pre><code>$nomention
 $channelSendMessage[835108724846493726;Hello!]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/120040288-4108cd80-bfd4-11eb-8a6f-d1a2f2f20829.png" alt="example1" /></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/120040270-3a7a5600-bfd4-11eb-9b12-b4ada7ac91df.png" alt="example2" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/120040288-4108cd80-bfd4-11eb-8a6f-d1a2f2f20829.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/120040270-3a7a5600-bfd4-11eb-9b12-b4ada7ac91df.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltopic"><a class="header" href="#channeltopic">$channelTopic</a></h1>
 <p>Returns the topic of the channel that the command is being used in.</p>
-<h3 id="syntax-92"><a class="header" href="#syntax-92">Syntax</a></h3>
-<p><code>$channelTopic</code></p>
+<h2 id="syntax-92"><a class="header" href="#syntax-92">Syntax</a></h2>
+<pre><code>$channelTopic
+</code></pre>
 <h2 id="example-103"><a class="header" href="#example-103">Example</a></h2>
 <pre><code>$nomention
 &lt;#$channelID&gt;'s channel topic is: $channelTopic
@@ -5555,28 +5552,28 @@ $channelSendMessage[835108724846493726;Hello!]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltopic-1"><a class="header" href="#channeltopic-1">$channelTopic[]</a></h1>
 <p>Returns the topic of a channel by it's ID.</p>
 <h2 id="syntax-93"><a class="header" href="#syntax-93">Syntax</a></h2>
-<pre><code>$channelTopic[channelID]
+<pre><code>$channelTopic[channel ID]
 </code></pre>
-<h3 id="parameters-69"><a class="header" href="#parameters-69">Parameters</a></h3>
+<h3 id="parameters-68"><a class="header" href="#parameters-68">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to return its topic.</li>
+<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to return its topic.</li>
 </ul>
 <h2 id="example-104"><a class="header" href="#example-104">Example</a></h2>
 <pre><code>$nomention
-&lt;#$noMentionMessage&gt; topic is : $channelTopic[$noMentionMessage]
+&lt;#$noMentionMessage&gt; topic: $channelTopic[$noMentionMessage]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70468667/219971438-d624efbc-d1ff-4519-8377-7744ededda4f.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltype"><a class="header" href="#channeltype">$channelType</a></h1>
 <p>Returns channel type. </p>
-<h2 id="usage-5"><a class="header" href="#usage-5">Usage</a></h2>
+<h2 id="syntax-94"><a class="header" href="#syntax-94">Syntax</a></h2>
 <pre><code>$channelType[channel ID]
 </code></pre>
 <blockquote>
 <p>The different channel types that the bot will return are: <code>text</code>, <code>voice</code>, <code>category</code>, <code>thread</code>, <code>dm</code>, <code>stage</code>, <code>announcement</code> and <code>forum</code>.</p>
 </blockquote>
-<h2 id="parameters-70"><a class="header" href="#parameters-70">Parameters</a></h2>
+<h3 id="parameters-69"><a class="header" href="#parameters-69">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel which type will be returned.</li>
+<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel which type will be returned.</li>
 </ul>
 <h2 id="example-105"><a class="header" href="#example-105">Example</a></h2>
 <pre><code>$nomention
@@ -5584,10 +5581,10 @@ $channelType[$channelID]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="charcount"><a class="header" href="#charcount">$charCount</a></h1>
 <p>Gets the amount of characters in the provided 'text'.</p>
-<h2 id="usage-6"><a class="header" href="#usage-6">Usage</a></h2>
+<h2 id="usage-5"><a class="header" href="#usage-5">Usage</a></h2>
 <pre><code>$charCount[text]
 </code></pre>
-<h3 id="parameters-71"><a class="header" href="#parameters-71">Parameters</a></h3>
+<h3 id="parameters-70"><a class="header" href="#parameters-70">Parameters</a></h3>
 <ul>
 <li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to return the character count for.</li>
 </ul>
@@ -5599,10 +5596,10 @@ $channelType[$channelID]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="checkcondition"><a class="header" href="#checkcondition">$checkCondition</a></h1>
 <p>Checks if a condition is <code>true</code> or <code>false</code>.</p>
-<h2 id="usage-7"><a class="header" href="#usage-7">Usage</a></h2>
+<h2 id="usage-6"><a class="header" href="#usage-6">Usage</a></h2>
 <pre><code>$checkCondition[condition]
 </code></pre>
-<h2 id="parameters-72"><a class="header" href="#parameters-72">Parameters</a></h2>
+<h2 id="parameters-71"><a class="header" href="#parameters-71">Parameters</a></h2>
 <ul>
 <li><code>condition</code> <code>(Type: String || Flag: Required)</code>: The condition to check.</li>
 </ul>
@@ -5628,10 +5625,10 @@ Replace (sign) with one of these.</p>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="checkcontains"><a class="header" href="#checkcontains">$checkContains</a></h1>
 <p>Checks if the 'text' contains at least one of the provided 'phrases'.</p>
-<h2 id="usage-8"><a class="header" href="#usage-8">Usage</a></h2>
+<h2 id="usage-7"><a class="header" href="#usage-7">Usage</a></h2>
 <pre><code>$checkContains[text;phrases]
 </code></pre>
-<h3 id="parameters-73"><a class="header" href="#parameters-73">Parameters</a></h3>
+<h3 id="parameters-72"><a class="header" href="#parameters-72">Parameters</a></h3>
 <ul>
 <li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text that will be checked.</li>
 <li><code>phrases</code> <code>(Type: String || Flag: Emptiable)</code>: The phrases/words the bot will check for in 'text'. Separate phrases using <code>;</code>.</li>
@@ -5643,12 +5640,12 @@ $checkContains[$message;hi;hello]
 <p><img src="https://user-images.githubusercontent.com/69215413/120049460-0741c200-bfe8-11eb-9dc7-3a584af2381e.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="checkuserperms"><a class="header" href="#checkuserperms">$checkUserPerms</a></h1>
 <p>Returns 'true' if a user has all of the provided permissions, otherwise 'false' is returned.</p>
-<h2 id="usage-9"><a class="header" href="#usage-9">Usage</a></h2>
-<pre><code>$checkUserPerms[userID;permissions]
+<h2 id="syntax-95"><a class="header" href="#syntax-95">Syntax</a></h2>
+<pre><code>$checkUserPerms[user ID;permissions]
 </code></pre>
-<h3 id="parameters-74"><a class="header" href="#parameters-74">Parameters</a></h3>
+<h3 id="parameters-73"><a class="header" href="#parameters-73">Parameters</a></h3>
 <ul>
-<li><code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user that the bot checks the permissions for.</li>
+<li><code>user ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user that the bot checks the permissions for.</li>
 <li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot checks for. Separate permissions using <code>;</code>.</li>
 </ul>
 <h2 id="example-108"><a class="header" href="#example-108">Example</a></h2>
@@ -5670,7 +5667,7 @@ You aren't a admin!
 <h3 id="usage-2-1"><a class="header" href="#usage-2-1">Usage #2</a></h3>
 <pre><code>$clear[howMany;(optional) userID;(optional) removePinnedMessages (yes/no)]
 </code></pre>
-<h4 id="parameters-75"><a class="header" href="#parameters-75">Parameters</a></h4>
+<h4 id="parameters-74"><a class="header" href="#parameters-74">Parameters</a></h4>
 <ul>
 <li><code>howMany</code> <code>(Type: Integer || Flag: Required)</code>: How many messages to delete. (max 100)</li>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: If a userID is provided, the bot will only delete messages from that user.</li>
@@ -5687,10 +5684,10 @@ $clear[$message]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="clearreactions"><a class="header" href="#clearreactions">$clearReactions</a></h1>
 <p>Removes reactions from the provided message.</p>
-<h2 id="usage-10"><a class="header" href="#usage-10">Usage</a></h2>
+<h2 id="usage-8"><a class="header" href="#usage-8">Usage</a></h2>
 <pre><code>$clearReactions[channelID;messageID;emoji/!all]
 </code></pre>
-<h3 id="parameters-76"><a class="header" href="#parameters-76">Parameters</a></h3>
+<h3 id="parameters-75"><a class="header" href="#parameters-75">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel that the message belongs to.</li>
 <li><code>messageID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message to remove the reaction from.</li>
@@ -5698,12 +5695,12 @@ $clear[$message]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="closeticket"><a class="header" href="#closeticket">$closeTicket</a></h1>
 <p>Deletes the ticket channel (has to be created with <code>$newTicket</code>).</p>
-<h2 id="usage-11"><a class="header" href="#usage-11">Usage</a></h2>
-<pre><code>$closeTicket[errorMessage]
+<h2 id="syntax-96"><a class="header" href="#syntax-96">Syntax</a></h2>
+<pre><code>$closeTicket[error message]
 </code></pre>
-<h3 id="parameters-77"><a class="header" href="#parameters-77">Parameters</a></h3>
+<h3 id="parameters-76"><a class="header" href="#parameters-76">Parameters</a></h3>
 <ul>
-<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The error to return if the channel isn't a ticket.</li>
+<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The error to return if the channel isn't a ticket.</li>
 </ul>
 <h2 id="example-110"><a class="header" href="#example-110">Example</a></h2>
 <pre><code>$nomention
@@ -5711,10 +5708,10 @@ $closeTicket[That channel isn't a ticket!]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="color"><a class="header" href="#color">$color</a></h1>
 <p>Sets the embed border color.</p>
-<h2 id="usage-12"><a class="header" href="#usage-12">Usage</a></h2>
+<h2 id="usage-9"><a class="header" href="#usage-9">Usage</a></h2>
 <pre><code>$color[colorHex;(index)]
 </code></pre>
-<h3 id="parameters-78"><a class="header" href="#parameters-78">Parameters</a></h3>
+<h3 id="parameters-77"><a class="header" href="#parameters-77">Parameters</a></h3>
 <ul>
 <li><code>colorHex</code> <code>(Type: Color || Flag: Emptiable)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> to set the embed border color as. You can also use color integer number.</li>
 <li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: What embed the color border should belong to (Optional). The default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -5727,10 +5724,10 @@ $color[#673ab7]
 <p><img src="https://user-images.githubusercontent.com/69215413/122653017-f16b7c80-d10f-11eb-9814-e65b38404fe1.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="colorrole"><a class="header" href="#colorrole">$colorRole</a></h1>
 <p>Changes the color of the mentioned role.</p>
-<h2 id="usage-13"><a class="header" href="#usage-13">Usage</a></h2>
+<h2 id="usage-10"><a class="header" href="#usage-10">Usage</a></h2>
 <pre><code>$colorRole[colorHex]
 </code></pre>
-<h3 id="parameters-79"><a class="header" href="#parameters-79">Parameters</a></h3>
+<h3 id="parameters-78"><a class="header" href="#parameters-78">Parameters</a></h3>
 <ul>
 <li><code>colorHex</code> <code>(Type: Color || Flag: Required)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> to change the mentioned role color to.</li>
 </ul>
@@ -5742,7 +5739,7 @@ $colorRole[$noMentionMessage]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="commandscount"><a class="header" href="#commandscount">$commandsCount</a></h1>
 <p>Returns how many commands the bot has total.</p>
-<h2 id="usage-14"><a class="header" href="#usage-14">Usage</a></h2>
+<h2 id="usage-11"><a class="header" href="#usage-11">Usage</a></h2>
 <pre><code>$commandsCount
 </code></pre>
 <h2 id="example-113"><a class="header" href="#example-113">Example</a></h2>
@@ -5752,10 +5749,10 @@ I have $commandsCount commands!
 <p><img src="https://user-images.githubusercontent.com/69215413/127034875-36c837fe-1982-43fb-b6e3-57c56a6bcdf7.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cooldown"><a class="header" href="#cooldown">$cooldown</a></h1>
 <p>Sets a cooldown. The user can not run the command again, until the 'duration' is up.</p>
-<h2 id="usage-15"><a class="header" href="#usage-15">Usage</a></h2>
+<h2 id="usage-12"><a class="header" href="#usage-12">Usage</a></h2>
 <pre><code>$cooldown[duration;errorMessage]
 </code></pre>
-<h3 id="parameters-80"><a class="header" href="#parameters-80">Parameters</a></h3>
+<h3 id="parameters-79"><a class="header" href="#parameters-79">Parameters</a></h3>
 <ul>
 <li>
 <p><code>duration</code> <code>(Type: Duration || Flag: Required)</code>: The duration of this cooldown. (e.g <code>30s</code>, <code>3m</code>, <code>3h</code>, <code>3d</code>, etc)</p>
@@ -5774,10 +5771,10 @@ Hi!
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createchannel"><a class="header" href="#createchannel">$createChannel</a></h1>
 <p>Creates a channel.</p>
-<h2 id="usage-16"><a class="header" href="#usage-16">Usage</a></h2>
+<h2 id="usage-13"><a class="header" href="#usage-13">Usage</a></h2>
 <pre><code>$createChannel[name;type;(optional) categoryID]
 </code></pre>
-<h3 id="parameters-81"><a class="header" href="#parameters-81">Parameters</a></h3>
+<h3 id="parameters-80"><a class="header" href="#parameters-80">Parameters</a></h3>
 <ul>
 <li>
 <p><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.</p>
@@ -5807,10 +5804,10 @@ $createChannel[cool-channel;text]
 <p><img src="https://user-images.githubusercontent.com/69215413/125972524-95307b17-bfcc-4525-a4fa-1d58a30a1fa9.png" alt="example1.5" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createrole"><a class="header" href="#createrole">$createRole</a></h1>
 <p>Creates a new role.</p>
-<h2 id="usage-17"><a class="header" href="#usage-17">Usage</a></h2>
+<h2 id="usage-14"><a class="header" href="#usage-14">Usage</a></h2>
 <pre><code>$createRole[roleName;colorHex;hoist (yes/no);mentionable (yes/no)]
 </code></pre>
-<h3 id="parameters-82"><a class="header" href="#parameters-82">Parameters</a></h3>
+<h3 id="parameters-81"><a class="header" href="#parameters-81">Parameters</a></h3>
 <ul>
 <li><code>roleName</code> <code>(Type: String || Flag: Required)</code>: The name to give the new role.</li>
 <li><code>colorHex</code> <code>(Type: Color || Flag: Required)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> of the new role.</li>
@@ -5830,10 +5827,10 @@ Created new role!
 <p><img src="https://user-images.githubusercontent.com/69215413/125973030-7c9b980c-cffb-4f8e-aacc-a644a6fa23c3.png" alt="example1.5" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creationdate"><a class="header" href="#creationdate">$creationDate</a></h1>
 <p>Returns the creation date of any valid Discord Snowflake ID.</p>
-<h2 id="syntax-94"><a class="header" href="#syntax-94">Syntax</a></h2>
+<h2 id="syntax-97"><a class="header" href="#syntax-97">Syntax</a></h2>
 <pre><code>$creationDate[ID;(Format)]
 </code></pre>
-<h3 id="parameters-83"><a class="header" href="#parameters-83">Parameters</a></h3>
+<h3 id="parameters-82"><a class="header" href="#parameters-82">Parameters</a></h3>
 <ul>
 <li><code>ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID from which to get the creation date. The ID can be a <code>UserID</code>, a <code>RoleID</code>, a <code>MessageID</code>, or a <code>ServerID</code>.</li>
 <li><code>Format</code> <code>(Type: String || Flag: Optional)</code>: Customize the default time format output.</li>
@@ -5863,10 +5860,10 @@ $creationDate[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="croptext"><a class="header" href="#croptext">$cropText</a></h1>
 <p>Crops the provided text. If text is cropped then the <code>ending</code> is added at the end of the text.</p>
-<h2 id="usage-18"><a class="header" href="#usage-18">Usage</a></h2>
+<h2 id="usage-15"><a class="header" href="#usage-15">Usage</a></h2>
 <pre><code>$cropText[text;maxCharacters;ending]
 </code></pre>
-<h3 id="parameters-84"><a class="header" href="#parameters-84">Parameters</a></h3>
+<h3 id="parameters-83"><a class="header" href="#parameters-83">Parameters</a></h3>
 <ul>
 <li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to crop.</li>
 <li><code>maxCharacters</code> <code>(Type: Integer || Flag: Required)</code>: The maximum amount of characters. Subsequent characters are removed.</li>
@@ -5882,10 +5879,10 @@ $cropText[$noMentionMessage;100;...]
 <blockquote>
 <p>🧙‍♂️ <strong>Note:</strong> We recommend emoji IDs instead of <code>$customEmoji</code> for public bots.</p>
 </blockquote>
-<h2 id="syntax-95"><a class="header" href="#syntax-95">Syntax</a></h2>
+<h2 id="syntax-98"><a class="header" href="#syntax-98">Syntax</a></h2>
 <pre><code>$customEmoji[emoji name]
 </code></pre>
-<h3 id="parameters-85"><a class="header" href="#parameters-85">Parameters</a></h3>
+<h3 id="parameters-84"><a class="header" href="#parameters-84">Parameters</a></h3>
 <ul>
 <li><code>emoji name</code> <code>(Type: String || Flag: Required)</code>: The name of the emoji to return.</li>
 </ul>
@@ -5933,7 +5930,7 @@ $endif
 <blockquote>
 <p>🧙‍♂️ You can use <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/time.html">$time</a> to change the timezone.</p>
 </blockquote>
-<h2 id="usage-19"><a class="header" href="#usage-19">Usage</a></h2>
+<h2 id="usage-16"><a class="header" href="#usage-16">Usage</a></h2>
 <pre><code>$date
 </code></pre>
 <h2 id="example-121"><a class="header" href="#example-121">Example</a></h2>
@@ -5946,7 +5943,7 @@ Today's Date: $date
 <blockquote>
 <p>🧙‍♂️ You can use <a href="bdscript/./time.html">$time</a> to change the timezone.</p>
 </blockquote>
-<h2 id="usage-20"><a class="header" href="#usage-20">Usage</a></h2>
+<h2 id="usage-17"><a class="header" href="#usage-17">Usage</a></h2>
 <pre><code>$day
 </code></pre>
 <h2 id="example-122"><a class="header" href="#example-122">Example</a></h2>
@@ -5956,7 +5953,7 @@ Today Is: $day
 <p><img src="https://user-images.githubusercontent.com/69215413/122829655-45fc2c80-d2b5-11eb-96ce-39a7baeaef52.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="defer"><a class="header" href="#defer">$defer</a></h1>
 <p>Defers response to an interaction from components and slash commands.</p>
-<h2 id="usage-21"><a class="header" href="#usage-21">Usage</a></h2>
+<h2 id="usage-18"><a class="header" href="#usage-18">Usage</a></h2>
 <pre><code>$defer
 </code></pre>
 <h3 id="example-123"><a class="header" href="#example-123">Example</a></h3>
@@ -5998,10 +5995,10 @@ $color[$getEmbedData[$channelID;$message[message-id];2;color];2]
 <p><img src="https://user-images.githubusercontent.com/70456337/189966702-1dafdaf5-f706-419a-a150-c7eead0c0e17.gif" alt="With" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deletechannels"><a class="header" href="#deletechannels">$deleteChannels</a></h1>
 <p>Deletes the provided channel(s).</p>
-<h2 id="usage-22"><a class="header" href="#usage-22">Usage</a></h2>
+<h2 id="usage-19"><a class="header" href="#usage-19">Usage</a></h2>
 <pre><code>$deleteChannels[channelIDs]
 </code></pre>
-<h3 id="parameters-86"><a class="header" href="#parameters-86">Parameters</a></h3>
+<h3 id="parameters-85"><a class="header" href="#parameters-85">Parameters</a></h3>
 <ul>
 <li><code>channels</code> <code>(Type: Snowflake || Flag: Required)</code>: The channels to delete. Separate channel IDs using <code>;</code>.</li>
 </ul>
@@ -6015,10 +6012,10 @@ $deleteChannels[$mentionedChannels[1]]
 <p><img src="https://user-images.githubusercontent.com/69215413/122830487-65478980-d2b6-11eb-948b-652dd3800ff2.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deletechannelsbyname"><a class="header" href="#deletechannelsbyname">$deleteChannelsByName</a></h1>
 <p>Deletes all channels matching the names provided.</p>
-<h2 id="usage-23"><a class="header" href="#usage-23">Usage</a></h2>
+<h2 id="usage-20"><a class="header" href="#usage-20">Usage</a></h2>
 <pre><code>$deleteChannelsByName[channelName;...]
 </code></pre>
-<h3 id="parameters-87"><a class="header" href="#parameters-87">Parameters</a></h3>
+<h3 id="parameters-86"><a class="header" href="#parameters-86">Parameters</a></h3>
 <ul>
 <li><code>channelName</code> <code>(Type: String || Flag: Required)</code>: The name(s) of the channel(s) to delete. Use <code>;</code> to separate channel names.</li>
 </ul>
@@ -6027,15 +6024,15 @@ $deleteChannels[$mentionedChannels[1]]
 <blockquote>
 <p>🧙‍♂️ The bot must have the <code>manage_messages</code> permission.</p>
 </blockquote>
-<h2 id="usage-24"><a class="header" href="#usage-24">Usage</a></h2>
+<h2 id="usage-21"><a class="header" href="#usage-21">Usage</a></h2>
 <pre><code>$deletecommand
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deletein"><a class="header" href="#deletein">$deleteIn</a></h1>
 <p>Deletes the bot's response in after the provided duration.</p>
-<h2 id="usage-25"><a class="header" href="#usage-25">Usage</a></h2>
+<h2 id="usage-22"><a class="header" href="#usage-22">Usage</a></h2>
 <pre><code>$deleteIn[duration]
 </code></pre>
-<h3 id="parameters-88"><a class="header" href="#parameters-88">Parameters</a></h3>
+<h3 id="parameters-87"><a class="header" href="#parameters-87">Parameters</a></h3>
 <ul>
 <li><code>duration</code> <code>(Type: Duration || Flag: Required)</code>: The time to wait before deleting the message (e.g <code>3s</code>, <code>30s</code>, <code>1m</code>, etc). Max duration is <code>40m</code>.</li>
 </ul>
@@ -6046,10 +6043,10 @@ $deleteIn[3s]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deletemessage"><a class="header" href="#deletemessage">$deleteMessage</a></h1>
 <p>Deletes a message</p>
-<h2 id="usage-26"><a class="header" href="#usage-26">Usage</a></h2>
+<h2 id="usage-23"><a class="header" href="#usage-23">Usage</a></h2>
 <pre><code>$deleteMessage[channel ID;message ID]
 </code></pre>
-<h3 id="parameters-89"><a class="header" href="#parameters-89">Parameters</a></h3>
+<h3 id="parameters-88"><a class="header" href="#parameters-88">Parameters</a></h3>
 <ul>
 <li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel ID where the message is.</li>
 <li><code>message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message which will be deleted.</li>
@@ -6061,10 +6058,10 @@ Hello $username!
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deleterole"><a class="header" href="#deleterole">$deleteRole</a></h1>
 <p>Deletes a role.</p>
-<h2 id="usage-27"><a class="header" href="#usage-27">Usage</a></h2>
+<h2 id="usage-24"><a class="header" href="#usage-24">Usage</a></h2>
 <pre><code>$deleteRole[roleID]
 </code></pre>
-<h3 id="parameters-90"><a class="header" href="#parameters-90">Parameters</a></h3>
+<h3 id="parameters-89"><a class="header" href="#parameters-89">Parameters</a></h3>
 <ul>
 <li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to delete.</li>
 </ul>
@@ -6080,10 +6077,10 @@ Deleted role!
 <p><img src="https://user-images.githubusercontent.com/69215413/125974818-25d5f88c-7683-4c7b-a5cc-b37d1bb672f1.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="description"><a class="header" href="#description">$description</a></h1>
 <p>Adds a description to an embed.</p>
-<h2 id="usage-28"><a class="header" href="#usage-28">Usage</a></h2>
+<h2 id="syntax-99"><a class="header" href="#syntax-99">Syntax</a></h2>
 <pre><code>$description[message;(index)]
 </code></pre>
-<h3 id="parameters-91"><a class="header" href="#parameters-91">Parameters</a></h3>
+<h3 id="parameters-90"><a class="header" href="#parameters-90">Parameters</a></h3>
 <ul>
 <li><code>message</code> <code>(Type: String || Flag: Emptiable)</code>: The text to set the description as. It cannot exceed more than 4096 characters.</li>
 <li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: What embed the description should belong to. The default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
@@ -6095,7 +6092,7 @@ $description[This is a description! 😎]
 <p><img src="https://user-images.githubusercontent.com/69215413/125975247-34376dd7-faa1-4426-a774-59294a3962c0.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="disableinnerspaceremoval"><a class="header" href="#disableinnerspaceremoval">$disableInnerSpaceRemoval</a></h1>
 <p>Disables the removal of multiple spaces from within the message</p>
-<h2 id="syntax-96"><a class="header" href="#syntax-96">Syntax</a></h2>
+<h2 id="syntax-100"><a class="header" href="#syntax-100">Syntax</a></h2>
 <pre><code>$disableInnerSpaceRemoval
 </code></pre>
 <h2 id="example-129"><a class="header" href="#example-129">Example</a></h2>
@@ -6110,7 +6107,7 @@ Hello               $username!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="disablespecialescaping"><a class="header" href="#disablespecialescaping">$disableSpecialEscaping</a></h1>
 <p><em>(for advanced users)</em></p>
 <p>Disables escaping for <code>;</code> and <code>$</code> (e.g. <code>%{-SEMICOL-}%</code> gets interpeted as a regular <code>;</code>).</p>
-<h2 id="usage-29"><a class="header" href="#usage-29">Usage</a></h2>
+<h2 id="usage-25"><a class="header" href="#usage-25">Usage</a></h2>
 <pre><code>$disableSpecialEscaping
 </code></pre>
 <h2 id="example-130"><a class="header" href="#example-130">Example</a></h2>
@@ -6126,7 +6123,7 @@ $disableSpecialEscaping
 <h3 id="usage-1-2"><a class="header" href="#usage-1-2">Usage #1</a></h3>
 <pre><code>$discriminator[userID]
 </code></pre>
-<h4 id="parameters-92"><a class="header" href="#parameters-92">Parameters</a></h4>
+<h4 id="parameters-91"><a class="header" href="#parameters-91">Parameters</a></h4>
 <ul>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user to get the discriminator from.</li>
 </ul>
@@ -6141,10 +6138,10 @@ Hello $username#$discriminator[]!
 <p><img src="https://user-images.githubusercontent.com/69215413/123010488-b5911b00-d38c-11eb-8aeb-a7453c3687c6.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="divide"><a class="header" href="#divide">$divide</a></h1>
 <p>Divides the provided numbers.</p>
-<h2 id="usage-30"><a class="header" href="#usage-30">Usage</a></h2>
+<h2 id="syntax-101"><a class="header" href="#syntax-101">Syntax</a></h2>
 <pre><code>$divide[numbers]
 </code></pre>
-<h3 id="parameters-93"><a class="header" href="#parameters-93">Parameters</a></h3>
+<h3 id="parameters-92"><a class="header" href="#parameters-92">Parameters</a></h3>
 <ul>
 <li><code>numbers</code> <code>(Type: Integer, Float || Flag: Required)</code>: The numbers to divide. Separate numbers using <code>;</code>.</li>
 </ul>
@@ -6170,7 +6167,7 @@ Answer: $divide[$message[1];$message[2]]
 <pre><code>$dm[UserID;...]
 </code></pre>
 <p>This will send the message to every user with given User ID.</p>
-<h2 id="parameters-94"><a class="header" href="#parameters-94">Parameters</a></h2>
+<h2 id="parameters-93"><a class="header" href="#parameters-93">Parameters</a></h2>
 <ul>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user to whom to send the direct message. </li>
 </ul>
@@ -6178,18 +6175,19 @@ Answer: $divide[$message[1];$message[2]]
 <p>If the command fails to send the message, make sure the user allows dm messages from everyone.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dmchannelid"><a class="header" href="#dmchannelid">$dmChannelID</a></h1>
 <p>Retrieves the DM channel ID for the provided user id.</p>
-<h2 id="usage-31"><a class="header" href="#usage-31">Usage</a></h2>
-<pre><code>$dmChannelID[userID]
+<h2 id="syntax-102"><a class="header" href="#syntax-102">Syntax</a></h2>
+<pre><code>$dmChannelID[user ID]
 </code></pre>
+<h3 id="parameters-94"><a class="header" href="#parameters-94">Parameters</a></h3>
 <ul>
-<li><code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user for whom to fetch the DM channel ID</li>
+<li><code>user ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user for whom to fetch the DM channel ID</li>
 </ul>
 <h2 id="example-133"><a class="header" href="#example-133">Example</a></h2>
-<p><img src="https://user-images.githubusercontent.com/95774950/184350154-4e08f818-e1c6-483b-bfc0-f7741c1381da.png" alt="Screenshot_20220812_170857" /></p>
-<p><img src="https://user-images.githubusercontent.com/95774950/184350174-776d0d09-de35-4f2a-bef8-7683135752ea.png" alt="Screenshot_20220812_171230" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/184350154-4e08f818-e1c6-483b-bfc0-f7741c1381da.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/184350174-776d0d09-de35-4f2a-bef8-7683135752ea.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editbutton-1"><a class="header" href="#editbutton-1">$editButton</a></h1>
 <p>Edits already existing button.</p>
-<h2 id="usage-32"><a class="header" href="#usage-32">Usage</a></h2>
+<h2 id="usage-26"><a class="header" href="#usage-26">Usage</a></h2>
 <pre><code>$editButton[Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
 </code></pre>
 <h2 id="parameters-95"><a class="header" href="#parameters-95">Parameters</a></h2>
@@ -6234,7 +6232,7 @@ $addButton[no;http://botdesignerdiscord.com;Check our website;link;no;👀]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editchannelperms"><a class="header" href="#editchannelperms">$editChannelPerms</a></h1>
 <p>Changes permission for mentioned users/roles in this particular channel.</p>
-<h2 id="usage-33"><a class="header" href="#usage-33">Usage</a></h2>
+<h2 id="usage-27"><a class="header" href="#usage-27">Usage</a></h2>
 <pre><code>$editChannelPerms[channel ID;userID/RoleID;permission;...]
 </code></pre>
 <h3 id="parameters-96"><a class="header" href="#parameters-96">Parameters</a></h3>
@@ -6261,7 +6259,7 @@ $editChannelPerms[$channelID;$mentionedRoles[1];-sendmessages]
 <p><img src="https://user-images.githubusercontent.com/42785890/153126133-42a80968-589a-4ff2-a871-19c614eceed9.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editembedin"><a class="header" href="#editembedin">$editEmbedIn</a></h1>
 <p>Edits the bot's message after the given time, as an embed.</p>
-<h2 id="usage-34"><a class="header" href="#usage-34">Usage</a></h2>
+<h2 id="usage-28"><a class="header" href="#usage-28">Usage</a></h2>
 <pre><code>$editEmbedIn[time;(title;description;footer;color)]
 </code></pre>
 <blockquote>
@@ -6299,7 +6297,7 @@ $editEmbedIn[5s;Epic Title;This is the edited description!;;#E46AFC]
 <p><img src="https://user-images.githubusercontent.com/69215413/123012680-b7f57400-d390-11eb-866c-6f0aa0fdf9f7.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editin"><a class="header" href="#editin">$editIn</a></h1>
 <p>Edits the bot's response after the given time.</p>
-<h2 id="usage-35"><a class="header" href="#usage-35">Usage</a></h2>
+<h2 id="usage-29"><a class="header" href="#usage-29">Usage</a></h2>
 <pre><code>$editIn[time;newMessage]
 </code></pre>
 <h3 id="parameters-98"><a class="header" href="#parameters-98">Parameters</a></h3>
@@ -6319,7 +6317,7 @@ $editIn[5s;This is the edited message!]
 <p><img src="https://user-images.githubusercontent.com/69215413/123013297-f7709000-d391-11eb-9b00-55cf1387b498.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editmessage"><a class="header" href="#editmessage">$editMessage</a></h1>
 <p>Edits one of the bot's messages.</p>
-<h2 id="usage-36"><a class="header" href="#usage-36">Usage</a></h2>
+<h2 id="usage-30"><a class="header" href="#usage-30">Usage</a></h2>
 <pre><code>$editMessage[channelID;messageID;content;(title;description;color;footer)]
 </code></pre>
 <blockquote>
@@ -6346,7 +6344,7 @@ $editMessage[853070225398693898;857040509549281292;This message has been edited!
 <p><img src="https://user-images.githubusercontent.com/69215413/125876457-cf834ed3-f57c-41f3-b862-20433ec21b83.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editselectmenu-1"><a class="header" href="#editselectmenu-1">$editSelectMenu</a></h1>
 <p>Edits select menu.</p>
-<h2 id="usage-37"><a class="header" href="#usage-37">Usage</a></h2>
+<h2 id="usage-31"><a class="header" href="#usage-31">Usage</a></h2>
 <pre><code>$editSelectMenu[menu ID;min;max;(placeholder;message ID)]
 </code></pre>
 <h2 id="parameters-100"><a class="header" href="#parameters-100">Parameters</a></h2>
@@ -6381,7 +6379,7 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editselectmenuoption-1"><a class="header" href="#editselectmenuoption-1">$editSelectMenuOption</a></h1>
 <p>Edits select menu.</p>
-<h2 id="usage-38"><a class="header" href="#usage-38">Usage</a></h2>
+<h2 id="usage-32"><a class="header" href="#usage-32">Usage</a></h2>
 <pre><code>$editSelectMenuOption[menu option ID;label;value;description;(default;emoji;message ID)]
 </code></pre>
 <h2 id="parameters-101"><a class="header" href="#parameters-101">Parameters</a></h2>
@@ -6408,7 +6406,7 @@ $editSelectMenuOption[Example;Third;third-option;The third option;no;3️⃣]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editsplittext-1"><a class="header" href="#editsplittext-1">$editSplitText</a></h1>
 <p>Edits a splitted text element using it's index.</p>
-<h2 id="syntax-97"><a class="header" href="#syntax-97">Syntax</a></h2>
+<h2 id="syntax-103"><a class="header" href="#syntax-103">Syntax</a></h2>
 <pre><code>$editSplitText[Index;Value]
 </code></pre>
 <h3 id="parameters-102"><a class="header" href="#parameters-102">Parameters</a></h3>
@@ -6436,7 +6434,7 @@ New Text: $joinSplitText[]
 <p><img src="https://user-images.githubusercontent.com/95774950/202880969-9ce5041a-cc6c-4bd2-a275-76e9d80be5b5.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editthread"><a class="header" href="#editthread">$editThread</a></h1>
 <p>Modifies a existing thread.</p>
-<h2 id="usage-39"><a class="header" href="#usage-39">Usage</a></h2>
+<h2 id="usage-33"><a class="header" href="#usage-33">Usage</a></h2>
 <pre><code>$editThread[threadID;(name;archived;archiveDuration;locked;slowmode)]
 </code></pre>
 <h3 id="parameters-103"><a class="header" href="#parameters-103">Parameters</a></h3>
@@ -6451,7 +6449,7 @@ New Text: $joinSplitText[]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="embeddedurl"><a class="header" href="#embeddedurl">$embeddedURL</a></h1>
 <p>Sets the title to be a hyperlink.
 &gt;📝 Only works if <code>$title</code> is also used.</p>
-<h2 id="usage-40"><a class="header" href="#usage-40">Usage</a></h2>
+<h2 id="usage-34"><a class="header" href="#usage-34">Usage</a></h2>
 <pre><code>$embeddedURL[link;(index)]
 </code></pre>
 <h3 id="parameters-104"><a class="header" href="#parameters-104">Parameters</a></h3>
@@ -6469,7 +6467,7 @@ $color[#683cb4]
 <p><img src="https://user-images.githubusercontent.com/69215413/125976626-45a94f29-cd9b-445f-a0ae-5dba6f49d2a6.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="embedsuppresserrors"><a class="header" href="#embedsuppresserrors">$embedSuppressErrors</a></h1>
 <p>Suppresses the error messages, responds with the embed if there is a error.</p>
-<h2 id="usage-41"><a class="header" href="#usage-41">Usage</a></h2>
+<h2 id="usage-35"><a class="header" href="#usage-35">Usage</a></h2>
 <pre><code>$embedSuppressErrors[title;description;(color;author;footerText;footerIcon)]
 </code></pre>
 <blockquote>
@@ -6489,7 +6487,7 @@ $color[#683cb4]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="emotecount"><a class="header" href="#emotecount">$emoteCount</a></h1>
 <p>Returns the number of emojis in the current server.</p>
-<h2 id="usage-42"><a class="header" href="#usage-42">Usage</a></h2>
+<h2 id="usage-36"><a class="header" href="#usage-36">Usage</a></h2>
 <pre><code>$emoteCount
 </code></pre>
 <h2 id="example-143"><a class="header" href="#example-143">Example</a></h2>
@@ -6499,7 +6497,7 @@ There are $emoteCount emojis in $serverName[$guildID]!
 <p><img src="https://user-images.githubusercontent.com/69215413/123016746-479f2080-d399-11eb-8e8f-f1d40fb588a4.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="enabled"><a class="header" href="#enabled">$enabled</a></h1>
 <p>Allows you to enable/disable commands.</p>
-<h2 id="usage-43"><a class="header" href="#usage-43">Usage</a></h2>
+<h2 id="usage-37"><a class="header" href="#usage-37">Usage</a></h2>
 <pre><code>$enabled[enabled;errorMessage]
 </code></pre>
 <h3 id="parameters-106"><a class="header" href="#parameters-106">Parameters</a></h3>
@@ -6542,7 +6540,7 @@ I successfully disabled the command!
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="enabledecimals"><a class="header" href="#enabledecimals">$enableDecimals</a></h1>
 <p>Enables/disables decimals in math functions.</p>
-<h2 id="usage-44"><a class="header" href="#usage-44">Usage</a></h2>
+<h2 id="usage-38"><a class="header" href="#usage-38">Usage</a></h2>
 <pre><code>$enableDecimals[enable]
 </code></pre>
 <h3 id="parameters-107"><a class="header" href="#parameters-107">Parameters</a></h3>
@@ -6562,7 +6560,7 @@ I successfully disabled the command!
 <blockquote>
 <p>🧙‍♂️ <a href="https://support.discord.com/hc/en-us/articles/1500000580222-Ephemeral-Messages-FAQ">What are ephemeral responses? (click-me)</a></p>
 </blockquote>
-<h2 id="usage-45"><a class="header" href="#usage-45">Usage</a></h2>
+<h2 id="usage-39"><a class="header" href="#usage-39">Usage</a></h2>
 <pre><code>$ephemeral
 </code></pre>
 <blockquote>
@@ -6576,7 +6574,7 @@ I successfully disabled the command!
 <blockquote>
 <p>⚠️ Can only be used in BDScript 2, this function should be used with caution.</p>
 </blockquote>
-<h2 id="usage-46"><a class="header" href="#usage-46">Usage</a></h2>
+<h2 id="usage-40"><a class="header" href="#usage-40">Usage</a></h2>
 <pre><code>$eval[BDScript source code]
 </code></pre>
 <h3 id="parameters-108"><a class="header" href="#parameters-108">Parameters</a></h3>
@@ -6593,12 +6591,12 @@ $eval[$message]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="executiontime"><a class="header" href="#executiontime">$executionTime</a></h1>
 <p>Returns how long the command took to execute, in milliseconds.</p>
-<h2 id="usage-47"><a class="header" href="#usage-47">Usage</a></h2>
+<h2 id="usage-41"><a class="header" href="#usage-41">Usage</a></h2>
 <pre><code>$executionTime
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="findchannel"><a class="header" href="#findchannel">$findChannel</a></h1>
 <p>Finds a channel's ID from the given channel name, ID, or mention.</p>
-<h2 id="usage-48"><a class="header" href="#usage-48">Usage</a></h2>
+<h2 id="usage-42"><a class="header" href="#usage-42">Usage</a></h2>
 <pre><code>$findChannel[channel]
 </code></pre>
 <h3 id="parameters-109"><a class="header" href="#parameters-109">Parameters</a></h3>
@@ -6612,7 +6610,7 @@ $findChannel[$message]
 <p><img src="https://user-images.githubusercontent.com/69215413/125977150-9e2ecfb6-8cd8-4934-a8b2-e869dd5a9592.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="findrole"><a class="header" href="#findrole">$findRole</a></h1>
 <p>Finds a role's ID using the given role name, ID, or mention.</p>
-<h2 id="usage-49"><a class="header" href="#usage-49">Usage</a></h2>
+<h2 id="usage-43"><a class="header" href="#usage-43">Usage</a></h2>
 <pre><code>$findRole[role]
 </code></pre>
 <h3 id="parameters-110"><a class="header" href="#parameters-110">Parameters</a></h3>
@@ -6626,7 +6624,7 @@ $findRole[$message]
 <p><img src="https://user-images.githubusercontent.com/69215413/125977360-1deeba9f-9350-4bbc-a69d-e56352a8d9aa.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="finduser"><a class="header" href="#finduser">$findUser</a></h1>
 <p>Finds a user's ID using username, ID, or mention.</p>
-<h2 id="usage-50"><a class="header" href="#usage-50">Usage</a></h2>
+<h2 id="usage-44"><a class="header" href="#usage-44">Usage</a></h2>
 <pre><code>$findUser[user;(returnAuthorID)]
 </code></pre>
 <h2 id="parameters-111"><a class="header" href="#parameters-111">Parameters</a></h2>
@@ -6641,7 +6639,7 @@ $findUser[$message]
 <p><img src="https://user-images.githubusercontent.com/69215413/125977542-dbb250bd-d91d-4fdd-85d7-26b511a7efa8.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="footer"><a class="header" href="#footer">$footer</a></h1>
 <p>Sets the embed footer text.</p>
-<h2 id="usage-51"><a class="header" href="#usage-51">Usage</a></h2>
+<h2 id="usage-45"><a class="header" href="#usage-45">Usage</a></h2>
 <pre><code>$footer[text;(index)]
 </code></pre>
 <h3 id="parameters-112"><a class="header" href="#parameters-112">Parameters</a></h3>
@@ -6659,7 +6657,7 @@ $footer[Hi! I'm a footer.]
 <blockquote>
 <p>🧙‍♂️ There must be footer text in order to set the footer icon.</p>
 </blockquote>
-<h2 id="usage-52"><a class="header" href="#usage-52">Usage</a></h2>
+<h2 id="usage-46"><a class="header" href="#usage-46">Usage</a></h2>
 <pre><code>$footerIcon[icon url;(index)]
 </code></pre>
 <h3 id="parameters-113"><a class="header" href="#parameters-113">Parameters</a></h3>
@@ -6675,7 +6673,7 @@ $footerIcon[$authorAvatar]
 <p><img src="https://user-images.githubusercontent.com/69215413/123020288-1544f180-d3a0-11eb-9378-3e83e1d1cb60.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getbanreason"><a class="header" href="#getbanreason">$getBanReason[]</a></h1>
 <p>Gets the user's ban reason.</p>
-<h2 id="syntax-98"><a class="header" href="#syntax-98">Syntax</a></h2>
+<h2 id="syntax-104"><a class="header" href="#syntax-104">Syntax</a></h2>
 <pre><code>$getBanReason[User ID;(Guild ID)]
 </code></pre>
 <h3 id="parameters-114"><a class="header" href="#parameters-114">Parameters</a></h3>
@@ -6690,7 +6688,7 @@ Ban Reason: $getBanReason[154148273307910144]
 <p><img src="https://user-images.githubusercontent.com/113303649/209688041-a4a229d1-9b7b-40bc-b85f-9acb5c8e0011.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getbotinvite"><a class="header" href="#getbotinvite">$getBotInvite</a></h1>
 <p>Returns the bot's invite URL.</p>
-<h2 id="usage-53"><a class="header" href="#usage-53">Usage</a></h2>
+<h2 id="usage-47"><a class="header" href="#usage-47">Usage</a></h2>
 <pre><code>$getBotInvite
 </code></pre>
 <h2 id="example-153"><a class="header" href="#example-153">Example</a></h2>
@@ -6700,7 +6698,7 @@ Invite Me! $getBotInvite
 <p><img src="https://user-images.githubusercontent.com/69215413/123173097-103d7c00-d44c-11eb-957d-ab79686e24fc.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getchannelvar"><a class="header" href="#getchannelvar">$getChannelVar</a></h1>
 <p>Returns the value of the provided channel variable.</p>
-<h2 id="syntax-99"><a class="header" href="#syntax-99">Syntax</a></h2>
+<h2 id="syntax-105"><a class="header" href="#syntax-105">Syntax</a></h2>
 <pre><code>$getChannelVar[Variable Name;(Channel ID)]
 </code></pre>
 <h3 id="parameters-115"><a class="header" href="#parameters-115">Parameters</a></h3>
@@ -6710,7 +6708,7 @@ Invite Me! $getBotInvite
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getcooldown"><a class="header" href="#getcooldown">$getCooldown</a></h1>
 <p>Returns how long is left on the cooldown, in seconds; can be used in the 'errorMessage' field of cooldown functions.</p>
-<h2 id="usage-54"><a class="header" href="#usage-54">Usage</a></h2>
+<h2 id="usage-48"><a class="header" href="#usage-48">Usage</a></h2>
 <pre><code>$getCooldown[cooldownType (normal/server/global)]
 </code></pre>
 <h3 id="parameters-116"><a class="header" href="#parameters-116">Parameters</a></h3>
@@ -6725,7 +6723,7 @@ $c[This example should be used in BDScript 2 only.]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getcustomstatus"><a class="header" href="#getcustomstatus">$getCustomStatus</a></h1>
 <p>Returns a user's custom status.</p>
-<h2 id="syntax-100"><a class="header" href="#syntax-100">Syntax</a></h2>
+<h2 id="syntax-106"><a class="header" href="#syntax-106">Syntax</a></h2>
 <pre><code>$getCustomStatus[User ID]
 </code></pre>
 <h3 id="parameters-117"><a class="header" href="#parameters-117">Parameters</a></h3>
@@ -6739,7 +6737,7 @@ Your custom status: $getCustomStatus[$authorID]
 <p><img src="https://user-images.githubusercontent.com/94063167/199255690-0c1a250f-7004-4605-8a0a-858a664f9a9d.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getembeddata"><a class="header" href="#getembeddata">$getEmbedData</a></h1>
 <p>Fetches embed data from the provided message.</p>
-<h2 id="usage-55"><a class="header" href="#usage-55">Usage</a></h2>
+<h2 id="usage-49"><a class="header" href="#usage-49">Usage</a></h2>
 <pre><code>$getEmbedData[channelID;messageID;embedIndex;embedProperty (title/description/footer/color/image/timestamp)]
 </code></pre>
 <h3 id="parameters-118"><a class="header" href="#parameters-118">Parameters</a></h3>
@@ -6758,7 +6756,7 @@ Footer: $getEmbedData[876920205526319144;878299081380876339;1;footer]
 <p><img src="https://user-images.githubusercontent.com/69215413/130266834-50421e8e-fe9f-4b2e-8937-c9b870f3296d.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getinviteinfo"><a class="header" href="#getinviteinfo">$getInviteInfo</a></h1>
 <p>Returns information about a invite code.</p>
-<h2 id="usage-56"><a class="header" href="#usage-56">Usage</a></h2>
+<h2 id="usage-50"><a class="header" href="#usage-50">Usage</a></h2>
 <pre><code>$getInviteInfo[inviteCode;inviteProperty]
 </code></pre>
 <h3 id="parameters-119"><a class="header" href="#parameters-119">Parameters</a></h3>
@@ -6791,7 +6789,7 @@ $color[#673ab7]
 <p><img src="https://user-images.githubusercontent.com/69215413/122654170-88880280-d117-11eb-9123-947b48354ab6.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getleaderboardvalue"><a class="header" href="#getleaderboardvalue">$getLeaderboardValue</a></h1>
 <p>Gets a leaderboard value.</p>
-<h2 id="usage-57"><a class="header" href="#usage-57">Usage</a></h2>
+<h2 id="usage-51"><a class="header" href="#usage-51">Usage</a></h2>
 <pre><code>$getLeaderboardValue[variableType (user/globalUser/server);variableName;sortType;position;(returnType (id/value))]
 </code></pre>
 <ul>
@@ -6825,7 +6823,7 @@ $c[This is for global-user variables.]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getmessage"><a class="header" href="#getmessage">$getMessage</a></h1>
 <p>Gets data from a message, with the provided message and channel IDs.</p>
-<h2 id="usage-58"><a class="header" href="#usage-58">Usage</a></h2>
+<h2 id="usage-52"><a class="header" href="#usage-52">Usage</a></h2>
 <pre><code>$getMessage[channelID;messageID;(property)]
 </code></pre>
 <h3 id="parameters-120"><a class="header" href="#parameters-120">Parameters</a></h3>
@@ -6852,7 +6850,7 @@ $author[$getMessage[$findChannel[$message[1]];$message[2];username]#$discriminat
 <p><img src="https://user-images.githubusercontent.com/69215413/122654424-3e078580-d119-11eb-9524-e68f08f787d7.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getreactions"><a class="header" href="#getreactions">$getReactions</a></h1>
 <p>Returns a list of users separated by <code>separator</code> that reacted to a message.</p>
-<h2 id="usage-59"><a class="header" href="#usage-59">Usage</a></h2>
+<h2 id="usage-53"><a class="header" href="#usage-53">Usage</a></h2>
 <pre><code>$getReactions[channelID;messageID;separator;emoji]
 </code></pre>
 <h3 id="parameters-121"><a class="header" href="#parameters-121">Parameters</a></h3>
@@ -6869,7 +6867,7 @@ $getReactions[2394734883474774;38483494328934989;, ;&lt;:tip:3943484884834848483
 <p><img src="https://user-images.githubusercontent.com/69215413/123293801-488f9980-d4e2-11eb-9a1b-241c4b51f845.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getrolecolor"><a class="header" href="#getrolecolor">$getRoleColor</a></h1>
 <p>Returns a role's color hex.</p>
-<h2 id="usage-60"><a class="header" href="#usage-60">Usage</a></h2>
+<h2 id="usage-54"><a class="header" href="#usage-54">Usage</a></h2>
 <pre><code>$getRoleColor[roleID]
 </code></pre>
 <h3 id="parameters-122"><a class="header" href="#parameters-122">Parameters</a></h3>
@@ -6905,7 +6903,7 @@ $color[$getRoleColor[$highestRole[$authorID]]]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getservervar"><a class="header" href="#getservervar">$getServerVar</a></h1>
 <p>Returns the value of the provided server variable.</p>
-<h2 id="usage-61"><a class="header" href="#usage-61">Usage</a></h2>
+<h2 id="usage-55"><a class="header" href="#usage-55">Usage</a></h2>
 <pre><code>$getServerVar[variableName;(guildID)]
 </code></pre>
 <h3 id="parameters-124"><a class="header" href="#parameters-124">Parameters</a></h3>
@@ -6915,7 +6913,7 @@ $color[$getRoleColor[$highestRole[$authorID]]]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="gettextsplitindex-1"><a class="header" href="#gettextsplitindex-1">$getTextSplitIndex</a></h1>
 <p>Retrieves index from the provided value in <a href="bdscript/./textSplit.html"><code>$textSplit</code></a>. Returns -1 if it couldn't find the value.</p>
-<h2 id="usage-62"><a class="header" href="#usage-62">Usage</a></h2>
+<h2 id="usage-56"><a class="header" href="#usage-56">Usage</a></h2>
 <pre><code>$getTextSplitIndex[value]
 </code></pre>
 <h3 id="parameters-125"><a class="header" href="#parameters-125">Parameters</a></h3>
@@ -6934,13 +6932,13 @@ $getTextSplitIndex[$message[1]]
 <blockquote>
 <p>🧙‍♂️ This function can't be used, if <code>$textSplit</code> isn't present in the code.</p>
 </blockquote>
-<h2 id="usage-63"><a class="header" href="#usage-63">Usage</a></h2>
+<h2 id="usage-57"><a class="header" href="#usage-57">Usage</a></h2>
 <pre><code>$getTextSplitLength
 </code></pre>
 <p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="gettimestamp"><a class="header" href="#gettimestamp">$getTimestamp</a></h1>
 <p>Returns current <a href="https://www.unixtimestamp.com/">unix timestamp</a>.</p>
-<h2 id="usage-64"><a class="header" href="#usage-64">Usage</a></h2>
+<h2 id="usage-58"><a class="header" href="#usage-58">Usage</a></h2>
 <p>There are two usages of <code>$getTimestamp</code> function :</p>
 <h3 id="usage-1-5"><a class="header" href="#usage-1-5">Usage #1</a></h3>
 <pre><code>$getTimestamp
@@ -6983,7 +6981,7 @@ Unix Timestamp
 <blockquote>
 <p>🧙‍♂️ The user must share atleast 1 server with the bot, for this function to work.</p>
 </blockquote>
-<h2 id="usage-65"><a class="header" href="#usage-65">Usage</a></h2>
+<h2 id="usage-59"><a class="header" href="#usage-59">Usage</a></h2>
 <pre><code>$getUserStatus[userID]
 </code></pre>
 <h3 id="parameters-126"><a class="header" href="#parameters-126">Parameters</a></h3>
@@ -7004,7 +7002,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <p><img src="https://user-images.githubusercontent.com/69215413/124503888-68517800-dd94-11eb-93e5-c0eea7d8b055.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getuservar"><a class="header" href="#getuservar">$getUserVar</a></h1>
 <p>Returns a local-user variable value.</p>
-<h2 id="usage-66"><a class="header" href="#usage-66">Usage</a></h2>
+<h2 id="usage-60"><a class="header" href="#usage-60">Usage</a></h2>
 <pre><code>$getUserVar[variableName;(userID;guildID)]
 </code></pre>
 <h3 id="parameters-127"><a class="header" href="#parameters-127">Parameters</a></h3>
@@ -7020,7 +7018,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <p><img src="https://user-images.githubusercontent.com/69215413/123357288-40157e00-d537-11eb-84bc-71f81764434f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="getvar"><a class="header" href="#getvar">$getVar</a></h1>
 <p>Gets a global/global-user variable.</p>
-<h2 id="usage-67"><a class="header" href="#usage-67">Usage</a></h2>
+<h2 id="usage-61"><a class="header" href="#usage-61">Usage</a></h2>
 <pre><code>$getVar[variableName;(userID)]
 </code></pre>
 <blockquote>
@@ -7071,7 +7069,7 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 <p><img src="https://user-images.githubusercontent.com/69215413/123468942-6e8b6b80-d5c0-11eb-9102-afc48b70f622.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="globalcooldown"><a class="header" href="#globalcooldown">$globalCooldown</a></h1>
 <p>Applies a cooldown to the command, the user can not run the command in any server until the 'duration' is up. (Unlike <code>$cooldown</code>, which only applies the cooldown to the user in the current server)</p>
-<h2 id="usage-68"><a class="header" href="#usage-68">Usage</a></h2>
+<h2 id="usage-62"><a class="header" href="#usage-62">Usage</a></h2>
 <pre><code>$globalCooldown[duration;errorMessage]
 </code></pre>
 <h3 id="parameters-129"><a class="header" href="#parameters-129">Parameters</a></h3>
@@ -7084,7 +7082,7 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="globaluserleaderboard"><a class="header" href="#globaluserleaderboard">$globalUserLeaderboard</a></h1>
 <p>Returns the top ten user's username and value for the given global-user variable.</p>
-<h2 id="usage-69"><a class="header" href="#usage-69">Usage</a></h2>
+<h2 id="usage-63"><a class="header" href="#usage-63">Usage</a></h2>
 <pre><code>$globalUserLeaderboard[variableName;sortType (asc/desc)]
 </code></pre>
 <h3 id="parameters-130"><a class="header" href="#parameters-130">Parameters</a></h3>
@@ -7101,7 +7099,7 @@ $globalUserLeaderboard[Money;asc]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="guildexists"><a class="header" href="#guildexists">$guildExists</a></h1>
 <p>Returns 'true' if the provided server exists, otherwise 'false' is returned. Returns 'false' if the bot isn't present in the server.</p>
-<h2 id="usage-70"><a class="header" href="#usage-70">Usage</a></h2>
+<h2 id="usage-64"><a class="header" href="#usage-64">Usage</a></h2>
 <pre><code>$guildExists[guildID]
 </code></pre>
 <h3 id="parameters-131"><a class="header" href="#parameters-131">Parameters</a></h3>
@@ -7110,7 +7108,7 @@ $globalUserLeaderboard[Money;asc]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="guildid"><a class="header" href="#guildid">$guildID</a></h1>
 <p>Returns the current server's ID.</p>
-<h3 id="syntax-101"><a class="header" href="#syntax-101">Syntax</a></h3>
+<h3 id="syntax-107"><a class="header" href="#syntax-107">Syntax</a></h3>
 <pre><code>$guildID
 </code></pre>
 <h2 id="example-170"><a class="header" href="#example-170">Example</a></h2>
@@ -7120,7 +7118,7 @@ Server ID is : $guildID
 <p><img src="https://user-images.githubusercontent.com/70468667/219971308-f7d8d7dd-4d1d-4e82-9548-921bbd29e737.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="guildid-1"><a class="header" href="#guildid-1">$guildID[]</a></h1>
 <p>Finds a server ID using a server's name.</p>
-<h3 id="syntax-102"><a class="header" href="#syntax-102">Syntax</a></h3>
+<h3 id="syntax-108"><a class="header" href="#syntax-108">Syntax</a></h3>
 <pre><code>$guildID[serverName]
 </code></pre>
 <h2 id="parameters-132"><a class="header" href="#parameters-132">Parameters</a></h2>
@@ -7140,7 +7138,7 @@ $noMentionMessage ID is : $guildID[$noMentionMessage]
 <blockquote>
 <p>🧙‍♂️ 'true' means the user has the role, 'false' means they don't.</p>
 </blockquote>
-<h2 id="usage-71"><a class="header" href="#usage-71">Usage</a></h2>
+<h2 id="usage-65"><a class="header" href="#usage-65">Usage</a></h2>
 <pre><code>$hasRole[userID;roleID]
 </code></pre>
 <h3 id="parameters-133"><a class="header" href="#parameters-133">Parameters</a></h3>
@@ -7175,7 +7173,7 @@ $username[$mentioned[1;yes]]'s highest role: $roleName[$highestRole[$mentioned[1
 <p><img src="https://user-images.githubusercontent.com/69215413/123514088-e90ac880-d65e-11eb-9e40-66dd3485b321.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="highestrolewithperms"><a class="header" href="#highestrolewithperms">$highestRoleWithPerms</a></h1>
 <p>Returns the highest role in the server that has all the provided permissions.</p>
-<h2 id="usage-72"><a class="header" href="#usage-72">Usage</a></h2>
+<h2 id="usage-66"><a class="header" href="#usage-66">Usage</a></h2>
 <pre><code>$highestRoleWithPerms[permissions]
 </code></pre>
 <h3 id="parameters-135"><a class="header" href="#parameters-135">Parameters</a></h3>
@@ -7189,7 +7187,7 @@ Highest Role with Administrator:  $roleName[$highestRoleWithPerms[admin]] ($high
 <p><img src="https://user-images.githubusercontent.com/69215413/123514351-a4802c80-d660-11eb-9ff1-3270e561982a.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hostingexpiretime"><a class="header" href="#hostingexpiretime">$hostingExpireTime</a></h1>
 <p>Returns expire time for the hosting </p>
-<h2 id="usage-73"><a class="header" href="#usage-73">Usage</a></h2>
+<h2 id="usage-67"><a class="header" href="#usage-67">Usage</a></h2>
 <pre><code>$hostingExpireTime[unix timestamp?]
 </code></pre>
 <h3 id="parameters-136"><a class="header" href="#parameters-136">Parameters</a></h3>
@@ -7214,7 +7212,7 @@ I will be offline &lt;t:$hostingExpireTime[yes]:R&gt;
 <blockquote>
 <p><em>Note:</em> The <code>$hour</code> function  uses the twenty-four-hour clock instead of two groups of twelve hours; this also known as, Military Time.</p>
 </blockquote>
-<h2 id="usage-74"><a class="header" href="#usage-74">Usage</a></h2>
+<h2 id="usage-68"><a class="header" href="#usage-68">Usage</a></h2>
 <pre><code>$hour
 </code></pre>
 <h2 id="example-175"><a class="header" href="#example-175">Example</a></h2>
@@ -7224,7 +7222,7 @@ Current Hour: $hour
 <p><img src="https://user-images.githubusercontent.com/69215413/122828499-c28e0b80-d2b3-11eb-82c9-941b758ec1ed.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hypesquad"><a class="header" href="#hypesquad">$hypesquad</a></h1>
 <p>Returns the hypesquad name of the provided user</p>
-<h2 id="usage-75"><a class="header" href="#usage-75">Usage</a></h2>
+<h2 id="usage-69"><a class="header" href="#usage-69">Usage</a></h2>
 <pre><code>
 $hypesquad[userID]
 
@@ -7240,7 +7238,7 @@ You are in $hypesquad[$authorID] house.
 <p><img src="https://user-images.githubusercontent.com/95774950/187594740-3eab54bf-1df1-4c4e-a2fe-372f8a45eb39.png" alt="Screenshot_20220831_101316" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignorechannels"><a class="header" href="#ignorechannels">$ignoreChannels</a></h1>
 <p>The command can't be executed in any of the provided channels. If the channel is ignored, then the 'errorMessage' is returned.</p>
-<h2 id="usage-76"><a class="header" href="#usage-76">Usage</a></h2>
+<h2 id="usage-70"><a class="header" href="#usage-70">Usage</a></h2>
 <pre><code>$ignoreChannels[channelIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-138"><a class="header" href="#parameters-138">Parameters</a></h3>
@@ -7250,7 +7248,7 @@ You are in $hypesquad[$authorID] house.
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignorelinks"><a class="header" href="#ignorelinks">$ignoreLinks</a></h1>
 <p>Ignores image links in the message</p>
-<h2 id="usage-77"><a class="header" href="#usage-77">Usage</a></h2>
+<h2 id="usage-71"><a class="header" href="#usage-71">Usage</a></h2>
 <pre><code>$ignoreLinks
 </code></pre>
 <h2 id="example-177"><a class="header" href="#example-177">Example</a></h2>
@@ -7264,7 +7262,7 @@ https://media.discordapp.net/attachments/1011682358031826994/1027580044928888832
 <p><img src="https://user-images.githubusercontent.com/70456337/194332519-9597cbba-fca5-4d96-8b9d-f7bcb61edffc.png" alt="Without" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="image"><a class="header" href="#image">$image</a></h1>
 <p>Adds a image to the embed.</p>
-<h2 id="usage-78"><a class="header" href="#usage-78">Usage</a></h2>
+<h2 id="usage-72"><a class="header" href="#usage-72">Usage</a></h2>
 <pre><code>$image[image url;(index)]
 </code></pre>
 <h3 id="parameters-139"><a class="header" href="#parameters-139">Parameters</a></h3>
@@ -7279,7 +7277,7 @@ $image[$userAvatar[$botID]]
 <p><img src="https://user-images.githubusercontent.com/69215413/123516701-76ecb080-d66b-11eb-9c65-fb7bbb5710b4.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="input"><a class="header" href="#input">$input</a></h1>
 <p>Retrieves input from modal.</p>
-<h2 id="usage-79"><a class="header" href="#usage-79">Usage</a></h2>
+<h2 id="usage-73"><a class="header" href="#usage-73">Usage</a></h2>
 <pre><code>$input[Text Input ID]
 </code></pre>
 <h2 id="parameters-140"><a class="header" href="#parameters-140">Parameters</a></h2>
@@ -7302,7 +7300,7 @@ About me : $input[modalInput3]
 <blockquote>
 <p>🧙‍♂️ 'true' means the user has the administrator permission, 'false' means they don't.</p>
 </blockquote>
-<h2 id="usage-80"><a class="header" href="#usage-80">Usage</a></h2>
+<h2 id="usage-74"><a class="header" href="#usage-74">Usage</a></h2>
 <pre><code>$isAdmin[userID]
 </code></pre>
 <h3 id="parameters-141"><a class="header" href="#parameters-141">Parameters</a></h3>
@@ -7316,7 +7314,7 @@ Are You A Admin?: `$isAdmin[$authorID]`
 <p><img src="https://user-images.githubusercontent.com/69215413/123517122-5e7d9580-d66d-11eb-82d2-fd2300b1ecdb.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="isbanned"><a class="header" href="#isbanned">$isBanned</a></h1>
 <p>Returns 'true' if user is banned, otherwise it returns 'false'. Requires 'BAN_MEMBERS' permission</p>
-<h2 id="usage-81"><a class="header" href="#usage-81">Usage</a></h2>
+<h2 id="usage-75"><a class="header" href="#usage-75">Usage</a></h2>
 <pre><code>$isBanned[user ID]
 </code></pre>
 <h2 id="parameters-142"><a class="header" href="#parameters-142">Parameters</a></h2>
@@ -7340,7 +7338,7 @@ $isBanned[$mentioned[1]]
 <tr><td>enable</td><td>disable</td></tr>
 </tbody></table>
 </div>
-<h2 id="usage-82"><a class="header" href="#usage-82">Usage</a></h2>
+<h2 id="usage-76"><a class="header" href="#usage-76">Usage</a></h2>
 <pre><code>$isBoolean[text]
 </code></pre>
 <h3 id="parameters-143"><a class="header" href="#parameters-143">Parameters</a></h3>
@@ -7357,7 +7355,7 @@ $isBoolean[$message]
 <blockquote>
 <p>🧙‍♂️ 'true' means the user is a bot, 'false' means the user is not a bot.</p>
 </blockquote>
-<h2 id="usage-83"><a class="header" href="#usage-83">Usage</a></h2>
+<h2 id="usage-77"><a class="header" href="#usage-77">Usage</a></h2>
 <pre><code>$isBot[userID]
 </code></pre>
 <h3 id="parameters-144"><a class="header" href="#parameters-144">Parameters</a></h3>
@@ -7374,7 +7372,7 @@ Bot? $isBot[$findUser[$message]]
 <blockquote>
 <p>🧙‍♂️ 'true' means the role is hoisted, 'false' means the role isn't hoisted.</p>
 </blockquote>
-<h2 id="usage-84"><a class="header" href="#usage-84">Usage</a></h2>
+<h2 id="usage-78"><a class="header" href="#usage-78">Usage</a></h2>
 <pre><code>$isHoisted[roleID]
 </code></pre>
 <h3 id="parameters-145"><a class="header" href="#parameters-145">Parameters</a></h3>
@@ -7392,7 +7390,7 @@ $isHoisted[$findRole[$message]]
 <p>🧙‍♂️ 'true' means the role is mentionable, 'false' means it isn't.</p>
 </blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/123517230-e5327280-d66d-11eb-8337-35dac5f276e7.png" alt="setting" /></p>
-<h2 id="usage-85"><a class="header" href="#usage-85">Usage</a></h2>
+<h2 id="usage-79"><a class="header" href="#usage-79">Usage</a></h2>
 <pre><code>$isMentionable[roleID]
 </code></pre>
 <h3 id="parameters-146"><a class="header" href="#parameters-146">Parameters</a></h3>
@@ -7409,7 +7407,7 @@ $isMentionable[$findRole[$message]]
 <blockquote>
 <p>🧙‍♂️ 'true' means the channel is NSFW, 'false' means it isn't.</p>
 </blockquote>
-<h2 id="usage-86"><a class="header" href="#usage-86">Usage</a></h2>
+<h2 id="usage-80"><a class="header" href="#usage-80">Usage</a></h2>
 <pre><code>$isNSFW[channelID]
 </code></pre>
 <h3 id="parameters-147"><a class="header" href="#parameters-147">Parameters</a></h3>
@@ -7426,7 +7424,7 @@ Is &lt;#$channelID&gt; NSFW?: `$isNSFW[$channelID]`
 <blockquote>
 <p>🧙‍♂️ 'true' means the value is a number, 'false' means it isn't.</p>
 </blockquote>
-<h2 id="usage-87"><a class="header" href="#usage-87">Usage</a></h2>
+<h2 id="usage-81"><a class="header" href="#usage-81">Usage</a></h2>
 <pre><code>$isNumber[value]
 </code></pre>
 <h3 id="parameters-148"><a class="header" href="#parameters-148">Parameters</a></h3>
@@ -7443,7 +7441,7 @@ $isNumber[$message]
 <blockquote>
 <p>🧙‍♂️ 'true' means the command was ran as a slash command, 'false' means it wasn't.</p>
 </blockquote>
-<h2 id="usage-88"><a class="header" href="#usage-88">Usage</a></h2>
+<h2 id="usage-82"><a class="header" href="#usage-82">Usage</a></h2>
 <pre><code>$isSlash
 </code></pre>
 <h2 id="example-188"><a class="header" href="#example-188">Example</a></h2>
@@ -7457,7 +7455,7 @@ $endif
 <p><img src="https://user-images.githubusercontent.com/69215413/123517923-b0c0b580-d671-11eb-8e10-ef56a4a5792e.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="isticket"><a class="header" href="#isticket">$isTicket</a></h1>
 <p>Check if the current or given channel is a ticket.</p>
-<h2 id="syntax-103"><a class="header" href="#syntax-103">Syntax</a></h2>
+<h2 id="syntax-109"><a class="header" href="#syntax-109">Syntax</a></h2>
 <pre><code>$isTicket[(channel ID)]
 </code></pre>
 <h3 id="parameters-149"><a class="header" href="#parameters-149">Parameters</a></h3>
@@ -7476,7 +7474,7 @@ This is a ticket!
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="istimedout"><a class="header" href="#istimedout">$isTimedOut</a></h1>
 <p>Returns &quot;true&quot; if the user is timed out, otherwise &quot;false&quot;.</p>
-<h2 id="syntax-104"><a class="header" href="#syntax-104">Syntax</a></h2>
+<h2 id="syntax-110"><a class="header" href="#syntax-110">Syntax</a></h2>
 <pre><code>$isTimedOut[User ID]
 </code></pre>
 <h3 id="parameters-150"><a class="header" href="#parameters-150">Parameters</a></h3>
@@ -7493,7 +7491,7 @@ User is timed out: $isTimedOut[$mentioned[1]]
 <blockquote>
 <p>🧙‍♂️ 'true' means the bot can DM the user, 'false' means it can't.</p>
 </blockquote>
-<h2 id="usage-89"><a class="header" href="#usage-89">Usage</a></h2>
+<h2 id="usage-83"><a class="header" href="#usage-83">Usage</a></h2>
 <pre><code>$isUserDMEnabled[userID]
 </code></pre>
 <h3 id="parameters-151"><a class="header" href="#parameters-151">Parameters</a></h3>
@@ -7512,7 +7510,7 @@ $message
 <blockquote>
 <p>🧙‍♂️ 'true' means the color hex is valid, 'false' means it isn't.</p>
 </blockquote>
-<h2 id="usage-90"><a class="header" href="#usage-90">Usage</a></h2>
+<h2 id="usage-84"><a class="header" href="#usage-84">Usage</a></h2>
 <pre><code>$isValidHex[colorHex]
 </code></pre>
 <h3 id="parameters-152"><a class="header" href="#parameters-152">Parameters</a></h3>
@@ -7521,7 +7519,7 @@ $message
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="joinsplittext-1"><a class="header" href="#joinsplittext-1">$joinSplitText</a></h1>
 <p>Joins <a href="bdscript/./textSplit.html"><code>$textSplit</code></a> values with provided separator.</p>
-<h2 id="usage-91"><a class="header" href="#usage-91">Usage</a></h2>
+<h2 id="usage-85"><a class="header" href="#usage-85">Usage</a></h2>
 <pre><code>$joinSplitText[separator]
 </code></pre>
 <h3 id="parameters-153"><a class="header" href="#parameters-153">Parameters</a></h3>
@@ -7531,13 +7529,13 @@ $message
 <p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kick"><a class="header" href="#kick">$kick</a></h1>
 <p>Kicks a user.</p>
-<h3 id="syntax-105"><a class="header" href="#syntax-105">Syntax</a></h3>
+<h3 id="syntax-111"><a class="header" href="#syntax-111">Syntax</a></h3>
 <pre><code>$kick
 </code></pre>
 <p>Kicks the user who ran the command.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kick-1"><a class="header" href="#kick-1">$kick[]</a></h1>
 <p>Kicks the provided user. </p>
-<h2 id="syntax-106"><a class="header" href="#syntax-106">Syntax</a></h2>
+<h2 id="syntax-112"><a class="header" href="#syntax-112">Syntax</a></h2>
 <pre><code>$kick[user ID;(reason)]
 </code></pre>
 <h3 id="parameters-154"><a class="header" href="#parameters-154">Parameters</a></h3>
@@ -7555,7 +7553,7 @@ $kick[$mentioned[1];$noMentionMessage]
 <p><img src="https://user-images.githubusercontent.com/69215413/123518740-4742a600-d675-11eb-8581-1707b6989203.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kickmention"><a class="header" href="#kickmention">$kickMention</a></h1>
 <p>A simplified version of <code>$kick</code>. Kicks the mentioned user, the user running the command must have the 'kick' permission.</p>
-<h2 id="usage-92"><a class="header" href="#usage-92">Usage</a></h2>
+<h2 id="usage-86"><a class="header" href="#usage-86">Usage</a></h2>
 <pre><code>$kickMention[reason]
 </code></pre>
 <h3 id="parameters-155"><a class="header" href="#parameters-155">Parameters</a></h3>
@@ -7590,7 +7588,7 @@ $username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;y
 <p><img src="https://user-images.githubusercontent.com/69215413/123518995-a523bd80-d676-11eb-94ce-3c08fa888464.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lowestrolewithperms"><a class="header" href="#lowestrolewithperms">$lowestRoleWithPerms</a></h1>
 <p>Returns the lowest role in the server that has all the provided permissions.</p>
-<h2 id="usage-93"><a class="header" href="#usage-93">Usage</a></h2>
+<h2 id="usage-87"><a class="header" href="#usage-87">Usage</a></h2>
 <pre><code>$lowestRoleWithPerms[permissions;...]
 </code></pre>
 <h3 id="parameters-157"><a class="header" href="#parameters-157">Parameters</a></h3>
@@ -7604,7 +7602,7 @@ Lowest Role with Administrator:  $roleName[$lowestRoleWithPerms[admin]] ($lowest
 <p><img src="https://user-images.githubusercontent.com/69215413/123529558-7c73e600-d6bf-11eb-9716-9f217ac1bac0.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="max"><a class="header" href="#max">$max</a></h1>
 <p>Returns the largest number from the provided numbers.</p>
-<h2 id="usage-94"><a class="header" href="#usage-94">Usage</a></h2>
+<h2 id="usage-88"><a class="header" href="#usage-88">Usage</a></h2>
 <pre><code>$max[A;B;...]
 </code></pre>
 <h3 id="parameters-158"><a class="header" href="#parameters-158">Parameters</a></h3>
@@ -7628,7 +7626,7 @@ This server has $membersCount members
 <p><img src="https://user-images.githubusercontent.com/70468667/219971617-d3cd270f-792a-415b-b9de-2651fc9d7f08.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="memberscount-1"><a class="header" href="#memberscount-1">$membersCount[]</a></h1>
 <p>Returns amount of members in the current guild with provided presence.</p>
-<h2 id="syntax-107"><a class="header" href="#syntax-107">Syntax</a></h2>
+<h2 id="syntax-113"><a class="header" href="#syntax-113">Syntax</a></h2>
 <p><code>$membersCount[presence]</code> - returns amount of members that have their presences set</p>
 <p>to provided presence. For example if you will use <code>$membersCount[online]</code> it will show
 you amount of online members.</p>
@@ -7650,7 +7648,7 @@ there are $membersCount[online] users in this server
 <p><img src="https://user-images.githubusercontent.com/70468667/219971688-d8fc9a3c-a153-4073-bbef-49c8fd0a87bb.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mentioned"><a class="header" href="#mentioned">$mentioned</a></h1>
 <p>Returns the ID of the mentioned user.</p>
-<h2 id="usage-95"><a class="header" href="#usage-95">Usage</a></h2>
+<h2 id="usage-89"><a class="header" href="#usage-89">Usage</a></h2>
 <pre><code>$mentioned[mentionNumber;(returnAuthor)]
 </code></pre>
 <h3 id="parameters-159"><a class="header" href="#parameters-159">Parameters</a></h3>
@@ -7665,7 +7663,7 @@ $mentioned[1]
 <p><img src="https://user-images.githubusercontent.com/69215413/126917181-5e4c71e3-6b8e-4d9d-96ef-2a9b8af7faf2.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mentionedchannels"><a class="header" href="#mentionedchannels">$mentionedChannels</a></h1>
 <p>Returns the ID of the mentioned channel.</p>
-<h2 id="usage-96"><a class="header" href="#usage-96">Usage</a></h2>
+<h2 id="usage-90"><a class="header" href="#usage-90">Usage</a></h2>
 <pre><code>$mentionedChannels[mentionNumber;(returnCurrent)]
 </code></pre>
 <h3 id="parameters-160"><a class="header" href="#parameters-160">Parameters</a></h3>
@@ -7680,7 +7678,7 @@ $mentionedChannels[1]
 <p><img src="https://user-images.githubusercontent.com/69215413/126917253-33db5d96-fdb3-43a3-b614-1ac061701fb1.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mentionedroles"><a class="header" href="#mentionedroles">$mentionedRoles</a></h1>
 <p>Returns the ID of the mentioned role.</p>
-<h2 id="usage-97"><a class="header" href="#usage-97">Usage</a></h2>
+<h2 id="usage-91"><a class="header" href="#usage-91">Usage</a></h2>
 <pre><code>$mentionedRoles[mentionNumber]
 </code></pre>
 <h3 id="parameters-161"><a class="header" href="#parameters-161">Parameters</a></h3>
@@ -7694,11 +7692,11 @@ $mentionedRoles[1]
 <p><img src="https://user-images.githubusercontent.com/69215413/126917307-96384c6f-ccfe-4117-927d-40ad87b5bf8f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message"><a class="header" href="#message">$message</a></h1>
 <p>Returns the user's message <em>(without the command trigger)</em>.</p>
-<h3 id="syntax-108"><a class="header" href="#syntax-108">Syntax</a></h3>
+<h3 id="syntax-114"><a class="header" href="#syntax-114">Syntax</a></h3>
 <pre><code>$message
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message-1"><a class="header" href="#message-1">$message[]</a></h1>
-<h2 id="syntax-109"><a class="header" href="#syntax-109">Syntax</a></h2>
+<h2 id="syntax-115"><a class="header" href="#syntax-115">Syntax</a></h2>
 <pre><code>$message[argument number]
 </code></pre>
 <h3 id="parameters-162"><a class="header" href="#parameters-162">Parameters</a></h3>
@@ -7714,7 +7712,7 @@ $mentionedRoles[1]
 <blockquote>
 <p>📝 If <code>$messageID</code> is written in <code>$onInteraction</code> commands, it will return bot's message ID.</p>
 </blockquote>
-<h2 id="usage-98"><a class="header" href="#usage-98">Usage</a></h2>
+<h2 id="usage-92"><a class="header" href="#usage-92">Usage</a></h2>
 <pre><code>$messageID
 </code></pre>
 <h2 id="example-202"><a class="header" href="#example-202">Example</a></h2>
@@ -7724,7 +7722,7 @@ $messageID
 <p><img src="https://user-images.githubusercontent.com/69215413/126917461-39754ee4-37dd-4a3e-9d72-258b514a8c7d.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="min"><a class="header" href="#min">$min</a></h1>
 <p>Returns the smallest number from the provided numbers.</p>
-<h2 id="usage-99"><a class="header" href="#usage-99">Usage</a></h2>
+<h2 id="usage-93"><a class="header" href="#usage-93">Usage</a></h2>
 <pre><code>$min[A;B;...]
 </code></pre>
 <h3 id="parameters-163"><a class="header" href="#parameters-163">Parameters</a></h3>
@@ -7741,7 +7739,7 @@ $min[3;5;1]
 <blockquote>
 <p>🧙‍♂️ You can use <a href="bdscript/./time.html">$time</a> to change the timezone.</p>
 </blockquote>
-<h2 id="usage-100"><a class="header" href="#usage-100">Usage</a></h2>
+<h2 id="usage-94"><a class="header" href="#usage-94">Usage</a></h2>
 <pre><code>$minute
 </code></pre>
 <h2 id="example-204"><a class="header" href="#example-204">Example</a></h2>
@@ -7782,7 +7780,7 @@ $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchange
 <p>🧙‍♂️ This command is deprecated instead better use <a href="bdscript/./editChannelPerms.html">$editChannelPerms</a>.</p>
 </blockquote>
 <p>Modifies a channel's permissions.</p>
-<h2 id="usage-101"><a class="header" href="#usage-101">Usage</a></h2>
+<h2 id="usage-95"><a class="header" href="#usage-95">Usage</a></h2>
 <pre><code>$modifyChannelPerms[channelID;permissions;userID/roleID]
 </code></pre>
 <h3 id="parameters-165"><a class="header" href="#parameters-165">Parameters</a></h3>
@@ -7808,7 +7806,7 @@ $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 <p><img src="https://user-images.githubusercontent.com/69215413/123529818-33716100-d6c2-11eb-99d9-c9f04399287a.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modifyrole"><a class="header" href="#modifyrole">$modifyRole</a></h1>
 <p>Modifies a role.</p>
-<h2 id="usage-102"><a class="header" href="#usage-102">Usage</a></h2>
+<h2 id="usage-96"><a class="header" href="#usage-96">Usage</a></h2>
 <pre><code>$modifyRole[roleID;(roleName;colorHex;hoisted;mentionable)]
 </code></pre>
 <blockquote>
@@ -7832,7 +7830,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 <p><img src="https://user-images.githubusercontent.com/69215413/123530371-771a9980-d6c7-11eb-987d-c4ba3bb40bd1.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modifyroleperms"><a class="header" href="#modifyroleperms">$modifyRolePerms</a></h1>
 <p>Modifies a role's permissions.</p>
-<h2 id="usage-103"><a class="header" href="#usage-103">Usage</a></h2>
+<h2 id="usage-97"><a class="header" href="#usage-97">Usage</a></h2>
 <pre><code>$modifyRolePerms[roleID;permissions;...]
 </code></pre>
 <h3 id="parameters-167"><a class="header" href="#parameters-167">Parameters</a></h3>
@@ -7842,7 +7840,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modulo"><a class="header" href="#modulo">$modulo</a></h1>
 <p>Returns remainder between numbers.</p>
-<h2 id="usage-104"><a class="header" href="#usage-104">Usage</a></h2>
+<h2 id="usage-98"><a class="header" href="#usage-98">Usage</a></h2>
 <pre><code>$modulo[A;B]
 </code></pre>
 <h3 id="parameters-168"><a class="header" href="#parameters-168">Parameters</a></h3>
@@ -7861,7 +7859,7 @@ $modulo[$message[1];$message[2]]
 <blockquote>
 <p>🧙‍♂️ You can use <a href="bdscript/./time.html">$time</a> to change the timezone.</p>
 </blockquote>
-<h2 id="usage-105"><a class="header" href="#usage-105">Usage</a></h2>
+<h2 id="usage-99"><a class="header" href="#usage-99">Usage</a></h2>
 <pre><code>$month
 </code></pre>
 <h2 id="example-209"><a class="header" href="#example-209">Example</a></h2>
@@ -7871,7 +7869,7 @@ Current Month: $month
 <p><img src="https://user-images.githubusercontent.com/69215413/122829373-edc52a80-d2b4-11eb-861c-e0a629f258ff.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="multi"><a class="header" href="#multi">$multi</a></h1>
 <p>Muliplies the provided numbers.</p>
-<h2 id="usage-106"><a class="header" href="#usage-106">Usage</a></h2>
+<h2 id="usage-100"><a class="header" href="#usage-100">Usage</a></h2>
 <pre><code>$multi[number;..]
 </code></pre>
 <h3 id="parameters-169"><a class="header" href="#parameters-169">Parameters</a></h3>
@@ -7890,7 +7888,7 @@ $multi[$message[1];$message[2]]
 <p>🧙‍♂️ This command is deprecated instead better use <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/timeout.html">$timeout</a>.</p>
 </blockquote>
 <p>Mutes the mentioned user.</p>
-<h2 id="usage-107"><a class="header" href="#usage-107">Usage</a></h2>
+<h2 id="usage-101"><a class="header" href="#usage-101">Usage</a></h2>
 <pre><code>$mute[mutedRoleName]
 </code></pre>
 <h3 id="parameters-170"><a class="header" href="#parameters-170">Parameters</a></h3>
@@ -7906,7 +7904,7 @@ $mute[Muted]
 <p><img src="https://user-images.githubusercontent.com/69215413/123551542-4aef2f00-d740-11eb-82ca-381f5c5efcb3.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="newmodal"><a class="header" href="#newmodal">$newModal</a></h1>
 <p>Creates a new modal.</p>
-<h2 id="usage-108"><a class="header" href="#usage-108">Usage</a></h2>
+<h2 id="usage-102"><a class="header" href="#usage-102">Usage</a></h2>
 <pre><code>$newModal[modal ID;title]
 
 </code></pre>
@@ -7928,7 +7926,7 @@ $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="newselectmenu"><a class="header" href="#newselectmenu">$newSelectMenu</a></h1>
 <p>Add select menu to a message.</p>
-<h2 id="usage-109"><a class="header" href="#usage-109">Usage</a></h2>
+<h2 id="usage-103"><a class="header" href="#usage-103">Usage</a></h2>
 <pre><code>$newSelectMenu[menu ID;min;max;(placeholder;message ID)]
 
 </code></pre>
@@ -7951,7 +7949,7 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="newticket"><a class="header" href="#newticket">$newTicket</a></h1>
 <p>Creates a new ticket.</p>
-<h2 id="usage-110"><a class="header" href="#usage-110">Usage</a></h2>
+<h2 id="usage-104"><a class="header" href="#usage-104">Usage</a></h2>
 <pre><code>$newTicket[categoryID/name;No question message;In ticket message;Message to user;Error message;(Ticket number;return id of the ticket message)]
 </code></pre>
 <h3 id="parameters-173"><a class="header" href="#parameters-173">Parameters</a></h3>
@@ -8007,7 +8005,7 @@ User: &lt;@$authorID&gt;;Created ticket! {channel};Failed to make ticket!]
 <p><img src="https://user-images.githubusercontent.com/69215413/124502356-53271a00-dd91-11eb-8d72-778c9141f296.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nomention"><a class="header" href="#nomention">$nomention</a></h1>
 <p>Disables the default author mention.</p>
-<h2 id="usage-111"><a class="header" href="#usage-111">Usage</a></h2>
+<h2 id="usage-105"><a class="header" href="#usage-105">Usage</a></h2>
 <pre><code>$nomention
 </code></pre>
 <h2 id="example-216"><a class="header" href="#example-216">Example</a></h2>
@@ -8038,7 +8036,7 @@ $noMentionMessage
 <p><img src="https://user-images.githubusercontent.com/69215413/123551762-2182d300-d741-11eb-8d98-1d2e4619dfb0.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="numberseparator"><a class="header" href="#numberseparator">$numberSeparator</a></h1>
 <p>Separates the thousands in a number.</p>
-<h2 id="usage-112"><a class="header" href="#usage-112">Usage</a></h2>
+<h2 id="usage-106"><a class="header" href="#usage-106">Usage</a></h2>
 <pre><code>$numberSeparator[number;(separator)]
 </code></pre>
 <h3 id="parameters-176"><a class="header" href="#parameters-176">Parameters</a></h3>
@@ -8053,7 +8051,7 @@ $numberSeparator[5000]
 <p><img src="https://user-images.githubusercontent.com/69215413/126918009-8f4ba7d1-875b-43da-a24b-5126464996b9.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyadmin"><a class="header" href="#onlyadmin">$onlyAdmin</a></h1>
 <p>Makes the command only for users with the <em>administrator</em> permission.</p>
-<h2 id="usage-113"><a class="header" href="#usage-113">Usage</a></h2>
+<h2 id="usage-107"><a class="header" href="#usage-107">Usage</a></h2>
 <pre><code>$onlyAdmin[errorMessage]
 </code></pre>
 <h3 id="parameters-177"><a class="header" href="#parameters-177">Parameters</a></h3>
@@ -8062,7 +8060,7 @@ $numberSeparator[5000]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlybotchannelperms"><a class="header" href="#onlybotchannelperms">$onlyBotChannelPerms</a></h1>
 <p>The command can only be executed if the bot has all of the provided permissions in a channel.</p>
-<h2 id="usage-114"><a class="header" href="#usage-114">Usage</a></h2>
+<h2 id="usage-108"><a class="header" href="#usage-108">Usage</a></h2>
 <pre><code>$onlyBotChannelPerms[channelID;permissions;...;errorMessage]
 </code></pre>
 <h3 id="parameters-178"><a class="header" href="#parameters-178">Parameters</a></h3>
@@ -8078,7 +8076,7 @@ $description[Hey! I have `embed links` permission in current channel.]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlybotperms"><a class="header" href="#onlybotperms">$onlyBotPerms</a></h1>
 <p>The command can be executed if bot has all of the provided permissions.</p>
-<h2 id="usage-115"><a class="header" href="#usage-115">Usage</a></h2>
+<h2 id="usage-109"><a class="header" href="#usage-109">Usage</a></h2>
 <pre><code>$onlyBotPerms[permissions;...;errorMessage]
 </code></pre>
 <h3 id="parameters-179"><a class="header" href="#parameters-179">Parameters</a></h3>
@@ -8093,7 +8091,7 @@ $description[Hey! I have `embed links` permission.]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforcategories"><a class="header" href="#onlyforcategories">$onlyForCategories</a></h1>
 <p>The command can only be executed in provided categories.</p>
-<h1 id="usage-116"><a class="header" href="#usage-116">Usage</a></h1>
+<h1 id="usage-110"><a class="header" href="#usage-110">Usage</a></h1>
 <pre><code>$onlyForCategories[category IDs;...;error message]
 </code></pre>
 <h1 id="parameters-180"><a class="header" href="#parameters-180">Parameters</a></h1>
@@ -8103,7 +8101,7 @@ $description[Hey! I have `embed links` permission.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforchannels"><a class="header" href="#onlyforchannels">$onlyForChannels</a></h1>
 <p>The command can only be executed in the provided channels.</p>
-<h2 id="usage-117"><a class="header" href="#usage-117">Usage</a></h2>
+<h2 id="usage-111"><a class="header" href="#usage-111">Usage</a></h2>
 <pre><code>$onlyForChannels[channelIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-181"><a class="header" href="#parameters-181">Parameters</a></h3>
@@ -8113,7 +8111,7 @@ $description[Hey! I have `embed links` permission.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforids"><a class="header" href="#onlyforids">$onlyForIDs</a></h1>
 <p>The command can only be executed by the provided users.</p>
-<h2 id="usage-118"><a class="header" href="#usage-118">Usage</a></h2>
+<h2 id="usage-112"><a class="header" href="#usage-112">Usage</a></h2>
 <pre><code>$onlyForIDs[userIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-182"><a class="header" href="#parameters-182">Parameters</a></h3>
@@ -8128,7 +8126,7 @@ $c[This can only be executed in BDScript 2.]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforroles"><a class="header" href="#onlyforroles">$onlyForRoles</a></h1>
 <p>The command can only executed by the provided roles.</p>
-<h2 id="usage-119"><a class="header" href="#usage-119">Usage</a></h2>
+<h2 id="usage-113"><a class="header" href="#usage-113">Usage</a></h2>
 <pre><code>$onlyForRoles[roleNames;...;errorMessage]
 </code></pre>
 <h3 id="parameters-183"><a class="header" href="#parameters-183">Parameters</a></h3>
@@ -8138,7 +8136,7 @@ $c[This can only be executed in BDScript 2.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforroleids"><a class="header" href="#onlyforroleids">$onlyForRoleIDs</a></h1>
 <p>The command can only executed by the provided roles.</p>
-<h2 id="usage-120"><a class="header" href="#usage-120">Usage</a></h2>
+<h2 id="usage-114"><a class="header" href="#usage-114">Usage</a></h2>
 <pre><code>$onlyForRoleIDs[roleID;...;errorMessage]
 </code></pre>
 <h3 id="parameters-184"><a class="header" href="#parameters-184">Parameters</a></h3>
@@ -8148,7 +8146,7 @@ $c[This can only be executed in BDScript 2.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforservers"><a class="header" href="#onlyforservers">$onlyForServers</a></h1>
 <p>The command can only be executed in the provided servers.</p>
-<h2 id="usage-121"><a class="header" href="#usage-121">Usage</a></h2>
+<h2 id="usage-115"><a class="header" href="#usage-115">Usage</a></h2>
 <pre><code>$onlyForServers[serverIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-185"><a class="header" href="#parameters-185">Parameters</a></h3>
@@ -8158,7 +8156,7 @@ $c[This can only be executed in BDScript 2.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforusers"><a class="header" href="#onlyforusers">$onlyForUsers</a></h1>
 <p>The command can only be executed by users with certain 'usernames'.</p>
-<h2 id="usage-122"><a class="header" href="#usage-122">Usage</a></h2>
+<h2 id="usage-116"><a class="header" href="#usage-116">Usage</a></h2>
 <pre><code>$onlyForUsers[usernames;...;errorMessage]
 </code></pre>
 <h3 id="parameters-186"><a class="header" href="#parameters-186">Parameters</a></h3>
@@ -8168,7 +8166,7 @@ $c[This can only be executed in BDScript 2.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyif"><a class="header" href="#onlyif">$onlyIf</a></h1>
 <p>If <em>value1</em> is related accordingly (based on the &quot;sign&quot;) with <em>value2</em> then the code runs. If not, the 'errorMessage' is returned.</p>
-<h2 id="usage-123"><a class="header" href="#usage-123">Usage</a></h2>
+<h2 id="usage-117"><a class="header" href="#usage-117">Usage</a></h2>
 <pre><code>$onlyIf[condition;errorMessage]
 </code></pre>
 <h3 id="parameters-187"><a class="header" href="#parameters-187">Parameters</a></h3>
@@ -8187,7 +8185,7 @@ $c[This can only be executed in BDScript 2.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyifmessagecontains"><a class="header" href="#onlyifmessagecontains">$onlyIfMessageContains</a></h1>
 <p>The command can only be executed if the 'text' contains all the 'indexes', otherwise the 'errorMessage' is returned.</p>
-<h2 id="usage-124"><a class="header" href="#usage-124">Usage</a></h2>
+<h2 id="usage-118"><a class="header" href="#usage-118">Usage</a></h2>
 <pre><code>$onlyIfMessageContains[message;word;...;errorMessage]
 </code></pre>
 <h3 id="parameters-188"><a class="header" href="#parameters-188">Parameters</a></h3>
@@ -8198,7 +8196,7 @@ $c[This can only be executed in BDScript 2.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlynsfw"><a class="header" href="#onlynsfw">$onlyNSFW</a></h1>
 <p>Only allows the command to be executed in <a href="https://support.discord.com/hc/en-us/articles/115000084051-NSFW-Channels-and-Content">NSFW channels</a>.</p>
-<h2 id="usage-125"><a class="header" href="#usage-125">Usage</a></h2>
+<h2 id="usage-119"><a class="header" href="#usage-119">Usage</a></h2>
 <pre><code>$onlyNSFW[errorMessage]
 </code></pre>
 <h3 id="parameters-189"><a class="header" href="#parameters-189">Parameters</a></h3>
@@ -8212,7 +8210,7 @@ $c[Put your code here.]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyperms"><a class="header" href="#onlyperms">$onlyPerms</a></h1>
 <p>The command can only be executed if the user running the command has all the provided 'permissions'. Otherwise, the 'errorMessage' is returned.</p>
-<h2 id="usage-126"><a class="header" href="#usage-126">Usage</a></h2>
+<h2 id="usage-120"><a class="header" href="#usage-120">Usage</a></h2>
 <pre><code>$onlyPerms[permissions;...;errorMessage]
 </code></pre>
 <h3 id="parameters-190"><a class="header" href="#parameters-190">Parameters</a></h3>
@@ -8222,7 +8220,7 @@ $c[Put your code here.]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="optoff-1"><a class="header" href="#optoff-1">$optOff</a></h1>
 <p>Can be only used in BDScript 2. Executes functions with turned off optimizations.</p>
-<h2 id="usage-127"><a class="header" href="#usage-127">Usage</a></h2>
+<h2 id="usage-121"><a class="header" href="#usage-121">Usage</a></h2>
 <p>As stated in the function description, <code>$optOff</code> disables the optimization of the functions in its arguments.<br />
 This means that functions such as <code>$random</code>, <code>$randomText</code> and others won't return the previous response, but instead a new response will be returned.</p>
 <h2 id="example-223"><a class="header" href="#example-223">Example</a></h2>
@@ -8251,7 +8249,7 @@ The 3rd random: $random[1;101]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="or"><a class="header" href="#or">$or</a></h1>
 <p>Returns 'true' if at least one of the provided conditions is true, otherwise 'false' is returned.</p>
-<h2 id="usage-128"><a class="header" href="#usage-128">Usage</a></h2>
+<h2 id="usage-122"><a class="header" href="#usage-122">Usage</a></h2>
 <pre><code>$or[confitions;...]
 </code></pre>
 <h3 id="parameters-191"><a class="header" href="#parameters-191">Parameters</a></h3>
@@ -8270,7 +8268,7 @@ $endif
 <h2 id="usages-10"><a class="header" href="#usages-10">Usages</a></h2>
 <p>There are two usages of this function :</p>
 <h3 id="usage-1-12"><a class="header" href="#usage-1-12">Usage #1</a></h3>
-<h4 id="syntax-110"><a class="header" href="#syntax-110">Syntax</a></h4>
+<h4 id="syntax-116"><a class="header" href="#syntax-116">Syntax</a></h4>
 <pre><code>$parentID
 </code></pre>
 <p>Returns the parent category ID of the current channel.</p>
@@ -8280,7 +8278,7 @@ Current category: $parentID
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/94063167/199015904-8c1635fc-ae14-40e6-9102-5f0a94a65cb7.png" alt="example" /></p>
 <h3 id="usage-2-11"><a class="header" href="#usage-2-11">Usage #2</a></h3>
-<h4 id="syntax-111"><a class="header" href="#syntax-111">Syntax</a></h4>
+<h4 id="syntax-117"><a class="header" href="#syntax-117">Syntax</a></h4>
 <pre><code>$parentID[Channel ID]
 </code></pre>
 <p>Returns the parent category ID for given channel ID.</p>
@@ -8308,7 +8306,7 @@ The value of <code>$ping</code> is expressed in miliseconds.</p>
 <blockquote>
 <p>⚠️ A channel can have a maximum of 50 pinned messages.</p>
 </blockquote>
-<h2 id="syntax-112"><a class="header" href="#syntax-112">Syntax</a></h2>
+<h2 id="syntax-118"><a class="header" href="#syntax-118">Syntax</a></h2>
 <pre><code>$pinMessage
 </code></pre>
 <h2 id="example-227"><a class="header" href="#example-227">Example</a></h2>
@@ -8322,7 +8320,7 @@ This is a cool pinned message! 😎
 <blockquote>
 <p>⚠️ A channel can have a maximum of 50 pinned messages.</p>
 </blockquote>
-<h2 id="syntax-113"><a class="header" href="#syntax-113">Syntax</a></h2>
+<h2 id="syntax-119"><a class="header" href="#syntax-119">Syntax</a></h2>
 <pre><code>$pinMessage[channelID;messageID]
 </code></pre>
 <h3 id="parameters-193"><a class="header" href="#parameters-193">Parameters</a></h3>
@@ -8341,7 +8339,7 @@ I have pinned your message!
 <blockquote>
 <p>🧙‍♂️ Returns 'expired' if the bot is not premium.</p>
 </blockquote>
-<h2 id="usage-129"><a class="header" href="#usage-129">Usage</a></h2>
+<h2 id="usage-123"><a class="header" href="#usage-123">Usage</a></h2>
 <pre><code>$premiumExpireTime[(unix timestamp)]
 </code></pre>
 <h3 id="parameters-194"><a class="header" href="#parameters-194">Parameters</a></h3>
@@ -8361,7 +8359,7 @@ My premium expires in: $premiumExpireTime (UNIX Timestamp : $premiumExpireTime[y
 <p><img src="https://user-images.githubusercontent.com/95774950/180188899-4a28bfcf-5180-4f35-9491-525c9a9c2c32.png" alt="Screenshot_20220721_153646" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="publishmessage"><a class="header" href="#publishmessage">$publishMessage</a></h1>
 <p>Publishes a message from an announcement channel to all following servers.</p>
-<h2 id="syntax-114"><a class="header" href="#syntax-114">Syntax</a></h2>
+<h2 id="syntax-120"><a class="header" href="#syntax-120">Syntax</a></h2>
 <pre><code>$publishMessage[channel ID;message ID]
 </code></pre>
 <h3 id="parameters-195"><a class="header" href="#parameters-195">Parameters</a></h3>
@@ -8403,7 +8401,7 @@ Returns a random number between 'minimum' and 'maximum'.</li>
 <p><img src="https://user-images.githubusercontent.com/69215413/123555172-0d939d00-d752-11eb-9d30-975bf6e8e99f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomcategoryid"><a class="header" href="#randomcategoryid">$randomCategoryID</a></h1>
 <p>Returns a random category id from the current server or from the provided server.</p>
-<h2 id="syntax-115"><a class="header" href="#syntax-115">Syntax</a></h2>
+<h2 id="syntax-121"><a class="header" href="#syntax-121">Syntax</a></h2>
 <pre><code>$randomCategoryID[(guild ID)]
 </code></pre>
 <h3 id="parameters-197"><a class="header" href="#parameters-197">Parameters</a></h3>
@@ -8417,7 +8415,7 @@ Random Category: $channelName[$randomCategoryID[]]
 <p><img src="https://user-images.githubusercontent.com/113303649/212499161-5878db9c-0a1a-412b-b34b-b04268f904fc.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomchannelid"><a class="header" href="#randomchannelid">$randomChannelID</a></h1>
 <p>Returns a random channel ID from the current server.</p>
-<h2 id="usage-130"><a class="header" href="#usage-130">Usage</a></h2>
+<h2 id="usage-124"><a class="header" href="#usage-124">Usage</a></h2>
 <pre><code>$randomChannelID
 </code></pre>
 <h2 id="example-233"><a class="header" href="#example-233">Example</a></h2>
@@ -8427,7 +8425,7 @@ Here's A Random Channel: &lt;#$randomChannelID&gt;
 <p><img src="https://user-images.githubusercontent.com/69215413/123358259-2aa15380-d539-11eb-995e-71d92bd9e67c.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomguildid"><a class="header" href="#randomguildid">$randomGuildID</a></h1>
 <p>Returns a random guild ID from servers the bot is in.</p>
-<h2 id="syntax-116"><a class="header" href="#syntax-116">Syntax</a></h2>
+<h2 id="syntax-122"><a class="header" href="#syntax-122">Syntax</a></h2>
 <pre><code>$randomGuildID
 </code></pre>
 <h2 id="example-234"><a class="header" href="#example-234">Example</a></h2>
@@ -8437,7 +8435,7 @@ Random Guild: $serverName[$randomGuildID]
 <p><img src="https://user-images.githubusercontent.com/113303649/212497834-1485cf9c-99de-40fb-bbaa-4aac582e897c.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randommention"><a class="header" href="#randommention">$randomMention</a></h1>
 <p>Mentions a random user from the server.</p>
-<h2 id="usage-131"><a class="header" href="#usage-131">Usage</a></h2>
+<h2 id="usage-125"><a class="header" href="#usage-125">Usage</a></h2>
 <pre><code>$randomMention
 </code></pre>
 <h2 id="example-235"><a class="header" href="#example-235">Example</a></h2>
@@ -8446,7 +8444,7 @@ Random User: $randomMention
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomroleid"><a class="header" href="#randomroleid">$randomRoleID</a></h1>
 <p>Returns a random role id from the current server or from the provided server.</p>
-<h2 id="syntax-117"><a class="header" href="#syntax-117">Syntax</a></h2>
+<h2 id="syntax-123"><a class="header" href="#syntax-123">Syntax</a></h2>
 <pre><code>$randomRoleID[(guild ID)]
 </code></pre>
 <h3 id="parameters-198"><a class="header" href="#parameters-198">Parameters</a></h3>
@@ -8466,7 +8464,7 @@ Random Role: $roleName[$randomRoleID[]]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomstring"><a class="header" href="#randomstring">$randomString</a></h1>
 <p>Generates a random combination of letters/numbers.</p>
-<h2 id="usage-132"><a class="header" href="#usage-132">Usage</a></h2>
+<h2 id="usage-126"><a class="header" href="#usage-126">Usage</a></h2>
 <pre><code>$randomString[length]
 </code></pre>
 <h3 id="parameters-199"><a class="header" href="#parameters-199">Parameters</a></h3>
@@ -8480,7 +8478,7 @@ String: `$randomString[$message]`
 <p><img src="https://user-images.githubusercontent.com/69215413/123555398-847d6580-d753-11eb-9da3-e238861ad989.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomtext"><a class="header" href="#randomtext">$randomText</a></h1>
 <p>Picks one value from the provided values randomly.</p>
-<h2 id="usage-133"><a class="header" href="#usage-133">Usage</a></h2>
+<h2 id="usage-127"><a class="header" href="#usage-127">Usage</a></h2>
 <pre><code>$randomText[text;...]
 </code></pre>
 <h3 id="parameters-200"><a class="header" href="#parameters-200">Parameters</a></h3>
@@ -8494,12 +8492,12 @@ $randomText[Hello;Hi;Hey]!
 <p><img src="https://user-images.githubusercontent.com/69215413/123556366-e42a3f80-d758-11eb-94fa-8836cccc882f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomuser"><a class="header" href="#randomuser">$randomUser</a></h1>
 <p>Returns a random user's username.</p>
-<h2 id="usage-134"><a class="header" href="#usage-134">Usage</a></h2>
+<h2 id="usage-128"><a class="header" href="#usage-128">Usage</a></h2>
 <pre><code>$randomUser
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="randomuserid"><a class="header" href="#randomuserid">$randomUserID</a></h1>
 <p>Returns a random user ID from the current server.</p>
-<h2 id="usage-135"><a class="header" href="#usage-135">Usage</a></h2>
+<h2 id="usage-129"><a class="header" href="#usage-129">Usage</a></h2>
 <pre><code>$randomUserID
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removebuttons-2"><a class="header" href="#removebuttons-2">$removeButtons</a></h1>
@@ -8520,7 +8518,7 @@ $randomText[Hello;Hi;Hey]!
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removecomponent-1"><a class="header" href="#removecomponent-1">$removeComponent</a></h1>
 <p>Removes certain component from a message.</p>
-<h2 id="usage-136"><a class="header" href="#usage-136">Usage</a></h2>
+<h2 id="usage-130"><a class="header" href="#usage-130">Usage</a></h2>
 <pre><code>$removeComponent[customID;(messageID)]
 </code></pre>
 <h3 id="parameters-202"><a class="header" href="#parameters-202">Parameters</a></h3>
@@ -8530,7 +8528,7 @@ $randomText[Hello;Hi;Hey]!
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removecontains"><a class="header" href="#removecontains">$removeContains</a></h1>
 <p>Removes messages that contains provided words. Removes up to the given <code>amount</code> of latest messages (max 100) </p>
-<h2 id="usage-137"><a class="header" href="#usage-137">Usage</a></h2>
+<h2 id="usage-131"><a class="header" href="#usage-131">Usage</a></h2>
 <pre><code>$removeContains[word;...;amount]
 </code></pre>
 <h3 id="parameters-203"><a class="header" href="#parameters-203">Parameters</a></h3>
@@ -8566,7 +8564,7 @@ $removeLinks[$noMentionMessage]
 <blockquote>
 <p>🧙‍♂️ This function is unneeded, if <code>$textSplit</code> isn't present in the code.</p>
 </blockquote>
-<h2 id="usage-138"><a class="header" href="#usage-138">Usage</a></h2>
+<h2 id="usage-132"><a class="header" href="#usage-132">Usage</a></h2>
 <pre><code>$removeSplitTextElement[index]
 </code></pre>
 <h3 id="parameters-204"><a class="header" href="#parameters-204">Parameters</a></h3>
@@ -8576,7 +8574,7 @@ $removeLinks[$noMentionMessage]
 <p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="repeatmessage"><a class="header" href="#repeatmessage">$repeatMessage</a></h1>
 <p>Repeats the provided text a certain amount of times.</p>
-<h2 id="usage-139"><a class="header" href="#usage-139">Usage</a></h2>
+<h2 id="usage-133"><a class="header" href="#usage-133">Usage</a></h2>
 <pre><code>$repeatMessage[amount;message]
 </code></pre>
 <h3 id="parameters-205"><a class="header" href="#parameters-205">Parameters</a></h3>
@@ -8600,7 +8598,7 @@ $repeatMessage[5;Hello World! ]
 <p><img src="https://user-images.githubusercontent.com/69215413/126245000-6bac6c11-39d2-40ec-a6d3-0d8123c6a2fd.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="replacetext"><a class="header" href="#replacetext">$replaceText</a></h1>
 <p>Replaces 'sample' with 'new' from 'text', you can choose how many 'sample' is replaced by inputting 'howMany'.</p>
-<h2 id="usage-140"><a class="header" href="#usage-140">Usage</a></h2>
+<h2 id="usage-134"><a class="header" href="#usage-134">Usage</a></h2>
 <pre><code>$replaceText[text;sample;new;(howMany)]
 </code></pre>
 <h3 id="parameters-206"><a class="header" href="#parameters-206">Parameters</a></h3>
@@ -8631,7 +8629,7 @@ $repeatMessage[5;Hello World! ]
 <blockquote>
 <p>📌 If the message is not a reply, no response will be returned.</p>
 </blockquote>
-<h2 id="syntax-118"><a class="header" href="#syntax-118">Syntax</a></h2>
+<h2 id="syntax-124"><a class="header" href="#syntax-124">Syntax</a></h2>
 <pre><code>$repliedMessageID
 </code></pre>
 <p>Returns the ID of the replied message from the author's message.</p>
@@ -8642,7 +8640,7 @@ The message ID you replied to is: $repliedMessageID
 <p><img src="https://user-images.githubusercontent.com/94063167/198900570-ad5b8a25-56ad-4e66-9c3e-6495406d7fda.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="repliedmessageid-1"><a class="header" href="#repliedmessageid-1">$repliedMessageID[]</a></h1>
 <p>Returns the ID of the replied message form the given message.</p>
-<h2 id="syntax-119"><a class="header" href="#syntax-119">Syntax</a></h2>
+<h2 id="syntax-125"><a class="header" href="#syntax-125">Syntax</a></h2>
 <pre><code>$repliedMessageID[Channel ID;Message ID]
 </code></pre>
 <h3 id="parameters-207"><a class="header" href="#parameters-207">Parameters</a></h3>
@@ -8657,7 +8655,7 @@ The message ID you replied to is: $repliedMessageID[$channelID;$messageID]
 <p><img src="https://user-images.githubusercontent.com/94063167/198900570-ad5b8a25-56ad-4e66-9c3e-6495406d7fda.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reply"><a class="header" href="#reply">$reply</a></h1>
 <p>Replies to the author's message.</p>
-<h2 id="syntax-120"><a class="header" href="#syntax-120">Syntax</a></h2>
+<h2 id="syntax-126"><a class="header" href="#syntax-126">Syntax</a></h2>
 <pre><code>$reply
 </code></pre>
 <h2 id="example-243"><a class="header" href="#example-243">Example</a></h2>
@@ -8669,7 +8667,7 @@ Hello $username 👋🏻
 <p><img src="https://user-images.githubusercontent.com/42785890/151721130-51524143-b136-4cfc-b028-694b1d09e84a.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reply-1"><a class="header" href="#reply-1">$reply[]</a></h1>
 <p>Replies to a provided message.</p>
-<h2 id="syntax-121"><a class="header" href="#syntax-121">Syntax</a></h2>
+<h2 id="syntax-127"><a class="header" href="#syntax-127">Syntax</a></h2>
 <pre><code>$reply[Channel ID;Message ID]
 </code></pre>
 <h3 id="parameters-208"><a class="header" href="#parameters-208">Parameters</a></h3>
@@ -8685,7 +8683,7 @@ Replied!
 <p><img src="https://user-images.githubusercontent.com/113247745/199210421-a7833741-34ff-4670-99d5-d756ef85629e.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="replyin"><a class="header" href="#replyin">$replyIn</a></h1>
 <p>The bot waits x <em>(amount of time)</em> before executing the code.</p>
-<h2 id="usage-141"><a class="header" href="#usage-141">Usage</a></h2>
+<h2 id="usage-135"><a class="header" href="#usage-135">Usage</a></h2>
 <pre><code>$replyIn[delay]
 </code></pre>
 <blockquote>
@@ -8701,7 +8699,7 @@ Hi $username!
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="resetchannelvar"><a class="header" href="#resetchannelvar">$resetChannelVar</a></h1>
 <p>Resets a channel variable back to its default value <em>(the one provided in the app)</em> <strong>for every channel in every server</strong>.</p>
-<h2 id="syntax-122"><a class="header" href="#syntax-122">Syntax</a></h2>
+<h2 id="syntax-128"><a class="header" href="#syntax-128">Syntax</a></h2>
 <pre><code>$resetChannelVar[Variable Name]
 </code></pre>
 <h3 id="parameters-210"><a class="header" href="#parameters-210">Parameters</a></h3>
@@ -8713,7 +8711,7 @@ Hi $username!
 <blockquote>
 <p>🧙‍♂️ Use this function wisely!</p>
 </blockquote>
-<h2 id="usage-142"><a class="header" href="#usage-142">Usage</a></h2>
+<h2 id="usage-136"><a class="header" href="#usage-136">Usage</a></h2>
 <pre><code>$resetServerVar[variableName]
 </code></pre>
 <h3 id="parameters-211"><a class="header" href="#parameters-211">Parameters</a></h3>
@@ -8725,7 +8723,7 @@ Hi $username!
 <blockquote>
 <p>🧙‍♂️ Use this function wisely!</p>
 </blockquote>
-<h2 id="usage-143"><a class="header" href="#usage-143">Usage</a></h2>
+<h2 id="usage-137"><a class="header" href="#usage-137">Usage</a></h2>
 <pre><code>$resetUserVar[variableName;(userID)]
 </code></pre>
 <h3 id="parameters-212"><a class="header" href="#parameters-212">Parameters</a></h3>
@@ -8735,7 +8733,7 @@ Hi $username!
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rolecount"><a class="header" href="#rolecount">$roleCount</a></h1>
 <p>Returns how many roles are in the current server.</p>
-<h2 id="usage-144"><a class="header" href="#usage-144">Usage</a></h2>
+<h2 id="usage-138"><a class="header" href="#usage-138">Usage</a></h2>
 <pre><code>$roleCount
 </code></pre>
 <h2 id="example-246"><a class="header" href="#example-246">Example</a></h2>
@@ -8748,7 +8746,7 @@ There are $roleCount roles in $serverName[$guildID]
 <blockquote>
 <p>🧙‍♂️ 'true' means the role exists, 'false' means it doesn't.</p>
 </blockquote>
-<h2 id="usage-145"><a class="header" href="#usage-145">Usage</a></h2>
+<h2 id="usage-139"><a class="header" href="#usage-139">Usage</a></h2>
 <pre><code>$roleExists[roleID]
 </code></pre>
 <h3 id="parameters-213"><a class="header" href="#parameters-213">Parameters</a></h3>
@@ -8768,7 +8766,7 @@ $c[This role exists!]
 <p><img src="https://user-images.githubusercontent.com/69215413/126244524-5d8ec2cb-2a6b-4ec7-abc4-bbb949f0e384.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rolegrant"><a class="header" href="#rolegrant">$roleGrant</a></h1>
 <p>Gives or removes roles from the provided user.</p>
-<h2 id="usage-146"><a class="header" href="#usage-146">Usage</a></h2>
+<h2 id="usage-140"><a class="header" href="#usage-140">Usage</a></h2>
 <pre><code>$roleGrant[user ID;+/-Role ID;...]
 </code></pre>
 <h3 id="parameters-214"><a class="header" href="#parameters-214">Parameters</a></h3>
@@ -8788,7 +8786,7 @@ $roleGrant[$mentioned[1];+$mentionedRoles[1]]
 <p><img src="https://user-images.githubusercontent.com/42785890/153126389-d8c9bf0d-4fee-49ce-8e16-7dd39987a368.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="roleid"><a class="header" href="#roleid">$roleID</a></h1>
 <p>Returns a role's ID using its name.</p>
-<h2 id="usage-147"><a class="header" href="#usage-147">Usage</a></h2>
+<h2 id="usage-141"><a class="header" href="#usage-141">Usage</a></h2>
 <pre><code>$roleID[roleName]
 </code></pre>
 <h3 id="parameters-215"><a class="header" href="#parameters-215">Parameters</a></h3>
@@ -8802,7 +8800,7 @@ Role ID For &quot;$message&quot;: $roleID[$message]
 <p><img src="https://user-images.githubusercontent.com/69215413/126243977-63a4ae68-2005-48b7-8560-31fc2397a872.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="roleinfo"><a class="header" href="#roleinfo">$roleInfo</a></h1>
 <p><code>$roleInfo</code> allows you to make a 'role info' command without using a bunch of different functions at once. This function returns info about the mentioned role.</p>
-<h2 id="usage-148"><a class="header" href="#usage-148">Usage</a></h2>
+<h2 id="usage-142"><a class="header" href="#usage-142">Usage</a></h2>
 <pre><code>$roleInfo[message]
 </code></pre>
 <h3 id="parameters-216"><a class="header" href="#parameters-216">Parameters</a></h3>
@@ -8833,7 +8831,7 @@ $title[Role Info]
 <p><img src="https://user-images.githubusercontent.com/69215413/122831224-8f4d7b80-d2b7-11eb-838a-fc2ba7cd7476.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rolename"><a class="header" href="#rolename">$roleName</a></h1>
 <p>Returns a role's name.</p>
-<h2 id="usage-149"><a class="header" href="#usage-149">Usage</a></h2>
+<h2 id="usage-143"><a class="header" href="#usage-143">Usage</a></h2>
 <pre><code>$roleName[roleID]
 </code></pre>
 <h3 id="parameters-217"><a class="header" href="#parameters-217">Parameters</a></h3>
@@ -8847,7 +8845,7 @@ $roleName[$highestRole[$authorID]]
 <p><img src="https://user-images.githubusercontent.com/69215413/126243723-36bf1e90-01bc-46af-bc81-2bbae05b0d01.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rolenames"><a class="header" href="#rolenames">$roleNames</a></h1>
 <p>Returns the name of every role in the current server.</p>
-<h2 id="usage-150"><a class="header" href="#usage-150">Usage</a></h2>
+<h2 id="usage-144"><a class="header" href="#usage-144">Usage</a></h2>
 <pre><code>$roleNames
 </code></pre>
 <h2 id="example-250"><a class="header" href="#example-250">Example</a></h2>
@@ -8857,7 +8855,7 @@ $description[Server Roles: $roleNames]
 <p><img src="https://user-images.githubusercontent.com/69215413/125832346-7f0914e3-64c3-435e-8438-6f216c0e5fbf.png" alt="exampel" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="roleposition"><a class="header" href="#roleposition">$rolePosition</a></h1>
 <p>Returns a roles position <em>(1 being highest role)</em>.</p>
-<h2 id="syntax-123"><a class="header" href="#syntax-123">Syntax</a></h2>
+<h2 id="syntax-129"><a class="header" href="#syntax-129">Syntax</a></h2>
 <pre><code>$rolePosition[roleID]
 </code></pre>
 <h3 id="parameters-218"><a class="header" href="#parameters-218">Parameters</a></h3>
@@ -8871,7 +8869,7 @@ $description[&lt;@&amp;$findRole[$message]&gt;'s Position: $rolePosition[$findRo
 <p><img src="https://user-images.githubusercontent.com/69215413/126246527-d3ca814d-8c7d-4acf-bb1e-ec7286c741f0.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="round"><a class="header" href="#round">$round</a></h1>
 <p>Rounds up the provided number.</p>
-<h2 id="syntax-124"><a class="header" href="#syntax-124">Syntax</a></h2>
+<h2 id="syntax-130"><a class="header" href="#syntax-130">Syntax</a></h2>
 <pre><code>$round[number;(decimalPlace)]
 </code></pre>
 <h3 id="parameters-219"><a class="header" href="#parameters-219">Parameters</a></h3>
@@ -8886,7 +8884,7 @@ $round[100.123;1]
 <p><img src="https://user-images.githubusercontent.com/69215413/125875437-417ae90b-c685-4aad-94b7-1767e153b7f3.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="scriptlanguage"><a class="header" href="#scriptlanguage">$scriptLanguage</a></h1>
 <p>Returns the name of scripting language used by the command.</p>
-<h2 id="syntax-125"><a class="header" href="#syntax-125">Syntax</a></h2>
+<h2 id="syntax-131"><a class="header" href="#syntax-131">Syntax</a></h2>
 <pre><code>$scriptLanguage
 </code></pre>
 <h2 id="example-253"><a class="header" href="#example-253">Example</a></h2>
@@ -8908,7 +8906,7 @@ This command uses `$scriptLanguage`.
 <blockquote>
 <p>🧙‍♂️ You can use <a href="bdscript/./time.html">$time</a> to change the timezone.</p>
 </blockquote>
-<h2 id="syntax-126"><a class="header" href="#syntax-126">Syntax</a></h2>
+<h2 id="syntax-132"><a class="header" href="#syntax-132">Syntax</a></h2>
 <pre><code>$second
 </code></pre>
 <h2 id="example-254"><a class="header" href="#example-254">Example</a></h2>
@@ -8918,7 +8916,7 @@ Current Second: $second
 <p><img src="https://user-images.githubusercontent.com/69215413/122828969-58c23180-d2b4-11eb-8b83-b20f6969fa6f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendembedmessage"><a class="header" href="#sendembedmessage">$sendEmbedMessage</a></h1>
 <p>Sends embed message to provided channel. Not needed fields can be left empty.</p>
-<h2 id="syntax-127"><a class="header" href="#syntax-127">Syntax</a></h2>
+<h2 id="syntax-133"><a class="header" href="#syntax-133">Syntax</a></h2>
 <pre><code>$sendEmbedMessage[channel ID;content;(title;title URL;description;color;author;author icon;footer;footer icon;thumbnail;image;add timestamp;return ID)]
 </code></pre>
 <h3 id="parameters-220"><a class="header" href="#parameters-220">Parameters</a></h3>
@@ -8945,7 +8943,7 @@ $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;auth
 <p><img src="https://user-images.githubusercontent.com/42785890/151873621-10b17532-93ee-421c-8eea-515f40f1a124.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendmessage"><a class="header" href="#sendmessage">$sendMessage</a></h1>
 <p>Sends a new message.</p>
-<h2 id="usage-151"><a class="header" href="#usage-151">Usage</a></h2>
+<h2 id="usage-145"><a class="header" href="#usage-145">Usage</a></h2>
 <pre><code>$sendMessage[text;(returnMessageID)]
 </code></pre>
 <h3 id="parameters-221"><a class="header" href="#parameters-221">Parameters</a></h3>
@@ -8969,7 +8967,7 @@ $sendMessage[This is message #2!;yes]
 <p><img src="https://user-images.githubusercontent.com/69215413/126246945-2fb29b3f-ab58-4de3-8341-a56a574db423.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serverchannelexists"><a class="header" href="#serverchannelexists">$serverChannelExists</a></h1>
 <p>Checks if the channel exists in the guild.</p>
-<h2 id="syntax-128"><a class="header" href="#syntax-128">Syntax</a></h2>
+<h2 id="syntax-134"><a class="header" href="#syntax-134">Syntax</a></h2>
 <pre><code>$serverChannelExists[channel ID]
 </code></pre>
 <h3 id="parameters-222"><a class="header" href="#parameters-222">Parameters</a></h3>
@@ -8982,7 +8980,7 @@ $serverChannelExists[566370477967147018]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="servercooldown"><a class="header" href="#servercooldown">$serverCooldown</a></h1>
 <p>Sets a server cooldown. After the command is used, no one in the server will be able to run the command until the 'duration' is up.</p>
-<h2 id="syntax-129"><a class="header" href="#syntax-129">Syntax</a></h2>
+<h2 id="syntax-135"><a class="header" href="#syntax-135">Syntax</a></h2>
 <pre><code>$serverCooldown[duration;errorMessage]
 </code></pre>
 <h3 id="parameters-223"><a class="header" href="#parameters-223">Parameters</a></h3>
@@ -8995,7 +8993,7 @@ $serverChannelExists[566370477967147018]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="servercount"><a class="header" href="#servercount">$serverCount</a></h1>
 <p>Returns how many servers the bot is in.</p>
-<h2 id="syntax-130"><a class="header" href="#syntax-130">Syntax</a></h2>
+<h2 id="syntax-136"><a class="header" href="#syntax-136">Syntax</a></h2>
 <pre><code>$serverCount
 </code></pre>
 <h2 id="example-257"><a class="header" href="#example-257">Example</a></h2>
@@ -9008,7 +9006,7 @@ I'm currently in $serverCount servers!
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serverdescription"><a class="header" href="#serverdescription">$serverDescription</a></h1>
 <p>Returns server description. Returns an empty result if the server has no description.</p>
-<h2 id="syntax-131"><a class="header" href="#syntax-131">Syntax</a></h2>
+<h2 id="syntax-137"><a class="header" href="#syntax-137">Syntax</a></h2>
 <pre><code>$serverDescription
 </code></pre>
 <h2 id="example-258"><a class="header" href="#example-258">Example</a></h2>
@@ -9018,7 +9016,7 @@ Hey, this server has a great description: $serverDescription
 <p><img src="https://user-images.githubusercontent.com/70456337/189480730-f72d6770-2e45-4f01-b73c-cec642ccf51f.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serveremojis"><a class="header" href="#serveremojis">$serverEmojis</a></h1>
 <p>Returns all emojis of the provided guild.</p>
-<h2 id="syntax-132"><a class="header" href="#syntax-132">Syntax</a></h2>
+<h2 id="syntax-138"><a class="header" href="#syntax-138">Syntax</a></h2>
 <pre><code>$serverEmojis[Guild ID;Separator]
 </code></pre>
 <h3 id="parameters-224"><a class="header" href="#parameters-224">Parameters</a></h3>
@@ -9036,12 +9034,12 @@ $serverEmojis[$guildID; ]
 <h2 id="usages-13"><a class="header" href="#usages-13">Usages</a></h2>
 <p>There are two usages of the <code>$serverIcon</code> function.</p>
 <h3 id="usage-1-16"><a class="header" href="#usage-1-16">Usage #1</a></h3>
-<h4 id="syntax-133"><a class="header" href="#syntax-133">Syntax</a></h4>
+<h4 id="syntax-139"><a class="header" href="#syntax-139">Syntax</a></h4>
 <pre><code>$serverIcon
 </code></pre>
 <p>Returns the icon of the current server.</p>
 <h3 id="usage-2-15"><a class="header" href="#usage-2-15">Usage #2</a></h3>
-<h4 id="syntax-134"><a class="header" href="#syntax-134">Syntax</a></h4>
+<h4 id="syntax-140"><a class="header" href="#syntax-140">Syntax</a></h4>
 <pre><code>$serverIcon[serverID]
 </code></pre>
 <p>Returns the icon of the server provided.</p>
@@ -9056,7 +9054,7 @@ $image[$serverIcon]
 <p><img src="https://user-images.githubusercontent.com/69215413/126366328-80246e22-4e8c-41f6-9cb0-c0b547236c66.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serverinfo"><a class="header" href="#serverinfo">$serverInfo</a></h1>
 <p>Allows you to make a 'server info' command without using a bunch of different functions at once. This function returns info about the current server.</p>
-<h2 id="syntax-135"><a class="header" href="#syntax-135">Syntax</a></h2>
+<h2 id="syntax-141"><a class="header" href="#syntax-141">Syntax</a></h2>
 <pre><code>$serverInfo[message;(thumbnail)]
 </code></pre>
 <h3 id="parameters-226"><a class="header" href="#parameters-226">Parameters</a></h3>
@@ -9090,7 +9088,7 @@ Large Server?: {large};no]
 <p><img src="https://user-images.githubusercontent.com/69215413/122832982-3206f980-d2ba-11eb-9a31-8f94cad26df7.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serverleaderboard"><a class="header" href="#serverleaderboard">$serverLeaderboard</a></h1>
 <p>Makes a server leaderboard (top-10).</p>
-<h2 id="syntax-136"><a class="header" href="#syntax-136">Syntax</a></h2>
+<h2 id="syntax-142"><a class="header" href="#syntax-142">Syntax</a></h2>
 <pre><code>$serverLeaderboard[variableName;(sortType)]
 </code></pre>
 <h3 id="parameters-227"><a class="header" href="#parameters-227">Parameters</a></h3>
@@ -9103,7 +9101,7 @@ Large Server?: {large};no]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="servername"><a class="header" href="#servername">$serverName</a></h1>
 <p>Returns the server's name.</p>
-<h2 id="syntax-137"><a class="header" href="#syntax-137">Syntax</a></h2>
+<h2 id="syntax-143"><a class="header" href="#syntax-143">Syntax</a></h2>
 <pre><code>$serverName[guildID]
 </code></pre>
 <h3 id="parameters-228"><a class="header" href="#parameters-228">Parameters</a></h3>
@@ -9123,7 +9121,7 @@ Server Name: $serverName[$guildID]
 <h2 id="usages-14"><a class="header" href="#usages-14">Usages</a></h2>
 <p>There are 2 usages of <code>$serverNames</code>:</p>
 <h3 id="usage-1-17"><a class="header" href="#usage-1-17">Usage #1</a></h3>
-<h4 id="syntax-138"><a class="header" href="#syntax-138">Syntax</a></h4>
+<h4 id="syntax-144"><a class="header" href="#syntax-144">Syntax</a></h4>
 <pre><code>$serverNames
 </code></pre>
 <p>Returns 10 servers names that the bot is in</p>
@@ -9136,7 +9134,7 @@ $serverNames
 <p>🧙‍♂️ Replace 'YOUR_ID' with your <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">user ID</a>.</p>
 </blockquote>
 <h3 id="usage-2-16"><a class="header" href="#usage-2-16">Usage #2</a></h3>
-<h4 id="syntax-139"><a class="header" href="#syntax-139">Syntax</a></h4>
+<h4 id="syntax-145"><a class="header" href="#syntax-145">Syntax</a></h4>
 <pre><code>$serverNames[amount;separator]
 </code></pre>
 <p>Returns <em>x</em> server names that the bot is in.</p>
@@ -9155,12 +9153,12 @@ $serverNames[5;
 <h2 id="usages-15"><a class="header" href="#usages-15">Usages</a></h2>
 <p>There are two usages of the <code>$serverOwner</code> function.</p>
 <h3 id="usage-1-18"><a class="header" href="#usage-1-18">Usage #1</a></h3>
-<h4 id="syntax-140"><a class="header" href="#syntax-140">Syntax</a></h4>
+<h4 id="syntax-146"><a class="header" href="#syntax-146">Syntax</a></h4>
 <pre><code>$serverOwner
 </code></pre>
 <p>Returns the current server's owner.</p>
 <h3 id="usage-2-17"><a class="header" href="#usage-2-17">Usage #2</a></h3>
-<h4 id="syntax-141"><a class="header" href="#syntax-141">Syntax</a></h4>
+<h4 id="syntax-147"><a class="header" href="#syntax-147">Syntax</a></h4>
 <pre><code>$serverOwner[serverID]
 </code></pre>
 <p>Returns the owner ID of the provided server.</p>
@@ -9182,12 +9180,12 @@ This server is owned by &lt;@$serverOwner&gt;!
 <blockquote>
 <p>🧙‍♂️ This function is deprecated, because Discord removed the server region setting. For more information, <a href="https://support.discord.com/hc/en-us/articles/360060570993">click here</a>.</p>
 </blockquote>
-<h2 id="usage-152"><a class="header" href="#usage-152">Usage</a></h2>
+<h2 id="usage-146"><a class="header" href="#usage-146">Usage</a></h2>
 <pre><code>$serverRegion
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serververificationlvl"><a class="header" href="#serververificationlvl">$serverVerificationLvl</a></h1>
 <p>The server's verification level. Returns <code>None</code>, <code>Low</code>, <code>Medium</code>, <code>High</code>, or <code>Very High</code>.</p>
-<h2 id="syntax-142"><a class="header" href="#syntax-142">Syntax</a></h2>
+<h2 id="syntax-148"><a class="header" href="#syntax-148">Syntax</a></h2>
 <pre><code>$serverVerificationLvl
 </code></pre>
 <h2 id="example-266"><a class="header" href="#example-266">Example</a></h2>
@@ -9197,7 +9195,7 @@ This server's verification level is $serverVerificationLvl
 <p><img src="https://user-images.githubusercontent.com/69215413/125875715-8de31a59-5033-42d0-9446-5c08eb65fc22.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setchannelvar"><a class="header" href="#setchannelvar">$setChannelVar</a></h1>
 <p>Updates a variable's value for a channel.</p>
-<h2 id="syntax-143"><a class="header" href="#syntax-143">Syntax</a></h2>
+<h2 id="syntax-149"><a class="header" href="#syntax-149">Syntax</a></h2>
 <pre><code>$setChannelVar[Variable Name;New Value;(Channel ID)]
 </code></pre>
 <h3 id="parameters-231"><a class="header" href="#parameters-231">Parameters</a></h3>
@@ -9212,7 +9210,7 @@ This server's verification level is $serverVerificationLvl
 <p><a href="bdscript/../guides/variables.html">See more in the Variables guide...</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setservervar"><a class="header" href="#setservervar">$setServerVar</a></h1>
 <p>Updates a variable value for a server.</p>
-<h2 id="syntax-144"><a class="header" href="#syntax-144">Syntax</a></h2>
+<h2 id="syntax-150"><a class="header" href="#syntax-150">Syntax</a></h2>
 <pre><code>$setServerVar[variableName;newValue;(serverID)]
 </code></pre>
 <h3 id="parameters-232"><a class="header" href="#parameters-232">Parameters</a></h3>
@@ -9227,7 +9225,7 @@ This server's verification level is $serverVerificationLvl
 <p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setuservar"><a class="header" href="#setuservar">$setUserVar</a></h1>
 <p>Updates a variable's value for a user.</p>
-<h2 id="syntax-145"><a class="header" href="#syntax-145">Syntax</a></h2>
+<h2 id="syntax-151"><a class="header" href="#syntax-151">Syntax</a></h2>
 <pre><code>$setUserVar[variableName;newValue;(userID;guildID)]
 </code></pre>
 <h3 id="parameters-233"><a class="header" href="#parameters-233">Parameters</a></h3>
@@ -9243,7 +9241,7 @@ This server's verification level is $serverVerificationLvl
 <p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setvar"><a class="header" href="#setvar">$setVar</a></h1>
 <p>Sets a variable's value globally, or for a user globally.</p>
-<h2 id="syntax-146"><a class="header" href="#syntax-146">Syntax</a></h2>
+<h2 id="syntax-152"><a class="header" href="#syntax-152">Syntax</a></h2>
 <pre><code>$setVar[variableName;newValue;(userID)]
 </code></pre>
 <h3 id="parameters-234"><a class="header" href="#parameters-234">Parameters</a></h3>
@@ -9258,7 +9256,7 @@ This server's verification level is $serverVerificationLvl
 <p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shardid"><a class="header" href="#shardid">$shardID</a></h1>
 <p>Returns the shard id of the current guild.</p>
-<h2 id="syntax-147"><a class="header" href="#syntax-147">Syntax</a></h2>
+<h2 id="syntax-153"><a class="header" href="#syntax-153">Syntax</a></h2>
 <pre><code>$shardID
 </code></pre>
 <h2 id="example-267"><a class="header" href="#example-267">Example</a></h2>
@@ -9268,7 +9266,7 @@ $shardID
 <p><img src="https://user-images.githubusercontent.com/95774950/162153099-4fb1bf14-44de-4f7c-b5d6-604f43ab76aa.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shardid-1"><a class="header" href="#shardid-1">$shardID[]</a></h1>
 <p>Returns the shard ID of the provided guild.</p>
-<h2 id="syntax-148"><a class="header" href="#syntax-148">Syntax</a></h2>
+<h2 id="syntax-154"><a class="header" href="#syntax-154">Syntax</a></h2>
 <pre><code>$shardID[guild ID]
 </code></pre>
 <h3 id="parameters-235"><a class="header" href="#parameters-235">Parameters</a></h3>
@@ -9277,7 +9275,7 @@ $shardID
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="slashcommandscount"><a class="header" href="#slashcommandscount">$slashCommandsCount</a></h1>
 <p>Returns the number of <a href="bdscript/../guides/slashCommands.html">slash commands</a> the bot has enabled.</p>
-<h2 id="syntax-149"><a class="header" href="#syntax-149">Syntax</a></h2>
+<h2 id="syntax-155"><a class="header" href="#syntax-155">Syntax</a></h2>
 <pre><code>$slashCommandsCount
 </code></pre>
 <h2 id="example-268"><a class="header" href="#example-268">Example</a></h2>
@@ -9287,7 +9285,7 @@ I have $slashCommandsCount slash commands!
 <p><img src="https://user-images.githubusercontent.com/69215413/126920314-1ad9374e-d19d-43f5-8939-f9abf48a62de.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="slashid"><a class="header" href="#slashid">$slashID</a></h1>
 <p>Returns ID of the executed slash command.</p>
-<h2 id="syntax-150"><a class="header" href="#syntax-150">Syntax</a></h2>
+<h2 id="syntax-156"><a class="header" href="#syntax-156">Syntax</a></h2>
 <pre><code>$slashID
 </code></pre>
 <h2 id="example-269"><a class="header" href="#example-269">Example</a></h2>
@@ -9301,7 +9299,7 @@ ID of this slash command: $slashID
 <blockquote>
 <p>🧙‍♂️ Slowmode time can't be set over 6 hours/21600 seconds. Also, in order for the bot to run <code>$slowmode[]</code> successfully, it needs the 'Manage Channels' permission.</p>
 </blockquote>
-<h2 id="usage-153"><a class="header" href="#usage-153">Usage</a></h2>
+<h2 id="usage-147"><a class="header" href="#usage-147">Usage</a></h2>
 <pre><code>$slowmode[channelID;slowmodeTime]
 </code></pre>
 <h3 id="parameters-236"><a class="header" href="#parameters-236">Parameters</a></h3>
@@ -9318,7 +9316,7 @@ Slowmode changed to $message[1]!
 <p><img src="https://user-images.githubusercontent.com/69215413/126920569-eef1a425-e57d-4062-ba1f-84a09c17ed84.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sort"><a class="header" href="#sort">$sort</a></h1>
 <p>Sorts provided numbers. Amount of numbers can be set to -1 if you'd like to return every number</p>
-<h2 id="syntax-151"><a class="header" href="#syntax-151">Syntax</a></h2>
+<h2 id="syntax-157"><a class="header" href="#syntax-157">Syntax</a></h2>
 <pre><code>$sort[numbers;...;direction;return amount;separator]
 </code></pre>
 <h3 id="parameters-237"><a class="header" href="#parameters-237">Parameters</a></h3>
@@ -9343,7 +9341,7 @@ $sort[8;5;9;1;3;asc;4; - ]
 <blockquote>
 <p>⚠️ This function is used with <code>$textSplit</code>.</p>
 </blockquote>
-<h2 id="usage-154"><a class="header" href="#usage-154">Usage</a></h2>
+<h2 id="usage-148"><a class="header" href="#usage-148">Usage</a></h2>
 <pre><code>$splitText[index]
 </code></pre>
 <h3 id="parameters-238"><a class="header" href="#parameters-238">Parameters</a></h3>
@@ -9361,7 +9359,7 @@ $splitText[2]
 <p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="startthread"><a class="header" href="#startthread">$startThread</a></h1>
 <p>Creates a new thread in the provided channel.</p>
-<h2 id="syntax-152"><a class="header" href="#syntax-152">Syntax</a></h2>
+<h2 id="syntax-158"><a class="header" href="#syntax-158">Syntax</a></h2>
 <pre><code>$startThread[Name;Channel ID;Message ID;(Archive duration;Return thread/channel ID)]
 </code></pre>
 <h3 id="parameters-239"><a class="header" href="#parameters-239">Parameters</a></h3>
@@ -9384,7 +9382,7 @@ I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 <p><img src="https://user-images.githubusercontent.com/69215413/128615731-c61c95c1-d1ec-42cf-9964-e8722df30dfe.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sub"><a class="header" href="#sub">$sub</a></h1>
 <p>Returns the subtraction of the provided numbers.</p>
-<h2 id="syntax-153"><a class="header" href="#syntax-153">Syntax</a></h2>
+<h2 id="syntax-159"><a class="header" href="#syntax-159">Syntax</a></h2>
 <pre><code>$sub[Number;...]
 </code></pre>
 <h3 id="parameters-240"><a class="header" href="#parameters-240">Parameters</a></h3>
@@ -9398,7 +9396,7 @@ $sub[20;10;5]
 <p><img src="https://user-images.githubusercontent.com/69215413/126549467-f13c397e-9749-4fe5-80bd-c31b720d41aa.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sum"><a class="header" href="#sum">$sum</a></h1>
 <p>Returns the addition of the provided numbers.</p>
-<h2 id="syntax-154"><a class="header" href="#syntax-154">Syntax</a></h2>
+<h2 id="syntax-160"><a class="header" href="#syntax-160">Syntax</a></h2>
 <pre><code>$sum[Number;...]
 </code></pre>
 <h3 id="parameters-241"><a class="header" href="#parameters-241">Parameters</a></h3>
@@ -9415,7 +9413,7 @@ $sum[5;5;5]
 <h2 id="usages-16"><a class="header" href="#usages-16">Usages</a></h2>
 <p>There are two usages of this function:</p>
 <h3 id="usage-1-19"><a class="header" href="#usage-1-19">Usage #1</a></h3>
-<h4 id="syntax-155"><a class="header" href="#syntax-155">Syntax</a></h4>
+<h4 id="syntax-161"><a class="header" href="#syntax-161">Syntax</a></h4>
 <pre><code>$suppressErrors
 </code></pre>
 <p>Prevents the default error message from being sent.</p>
@@ -9427,7 +9425,7 @@ $calculate[$message]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/198821156-3752e153-2289-4cd8-8bfb-07ae72455530.png" alt="Screenshot_20221029_133343" /></p>
 <h3 id="usage-2-18"><a class="header" href="#usage-2-18">Usage #2</a></h3>
-<h4 id="syntax-156"><a class="header" href="#syntax-156">Syntax</a></h4>
+<h4 id="syntax-162"><a class="header" href="#syntax-162">Syntax</a></h4>
 <pre><code>$suppressErrors[Error message]
 </code></pre>
 <p>Sends a custom error message instead of the default error message.</p>
@@ -9452,7 +9450,7 @@ $calculate[$message]
 <p>📌 As of December 2021, this function has been deprecated in favor of <a href="bdscript/./roleGrant.html">$roleGrant</a>.</p>
 <p>📌 In order to remove a role from a user, the bot must have the <code>manageroles</code> permission.</p>
 </blockquote>
-<h2 id="syntax-157"><a class="header" href="#syntax-157">Syntax</a></h2>
+<h2 id="syntax-163"><a class="header" href="#syntax-163">Syntax</a></h2>
 <pre><code>$takeRole[User/Role ID;(Role ID)]
 </code></pre>
 <h3 id="parameters-243"><a class="header" href="#parameters-243">Parameters</a></h3>
@@ -9478,7 +9476,7 @@ Removed &lt;@&amp;$mentionedRoles[1]&gt; from the mentioned users!
 <blockquote>
 <p>📌 To retrieve the split values, use <a href="bdscript/./splitText.html"><code>$splitText</code></a>.</p>
 </blockquote>
-<h2 id="syntax-158"><a class="header" href="#syntax-158">Syntax</a></h2>
+<h2 id="syntax-164"><a class="header" href="#syntax-164">Syntax</a></h2>
 <pre><code>$textSplit[Text;Separator]
 </code></pre>
 <h3 id="parameters-244"><a class="header" href="#parameters-244">Parameters</a></h3>
@@ -9504,7 +9502,7 @@ $splitText[1]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="threadaddmember"><a class="header" href="#threadaddmember">$threadAddMember</a></h1>
 <p>Adds a user to a thread.</p>
-<h2 id="syntax-159"><a class="header" href="#syntax-159">Syntax</a></h2>
+<h2 id="syntax-165"><a class="header" href="#syntax-165">Syntax</a></h2>
 <pre><code>$threadAddMember[Thread ID;User ID]
 </code></pre>
 <h3 id="parameters-245"><a class="header" href="#parameters-245">Parameters</a></h3>
@@ -9528,7 +9526,7 @@ $threadAddMember[$var[thread];$authorID]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="threadremovemember"><a class="header" href="#threadremovemember">$threadRemoveMember</a></h1>
 <p>Removes a user from a thread.</p>
-<h2 id="syntax-160"><a class="header" href="#syntax-160">Syntax</a></h2>
+<h2 id="syntax-166"><a class="header" href="#syntax-166">Syntax</a></h2>
 <pre><code>$threadRemoveMember[Thread ID;User ID]
 </code></pre>
 <h3 id="parameters-246"><a class="header" href="#parameters-246">Parameters</a></h3>
@@ -9550,7 +9548,7 @@ $threadRemoveMember[878305123707785218;$authorID]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="thumbnail"><a class="header" href="#thumbnail">$thumbnail</a></h1>
 <p>Adds an embedded thumbnail to bot's response message.</p>
-<h2 id="syntax-161"><a class="header" href="#syntax-161">Syntax</a></h2>
+<h2 id="syntax-167"><a class="header" href="#syntax-167">Syntax</a></h2>
 <pre><code>$thumbnail[Image url;(Index)]
 </code></pre>
 <h3 id="parameters-247"><a class="header" href="#parameters-247">Parameters</a></h3>
@@ -9573,7 +9571,7 @@ $thumbnail[$authorAvatar]
 <p><img src="https://user-images.githubusercontent.com/69215413/126551913-b3746b47-615a-48a3-9729-d07529e33f97.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="time-1"><a class="header" href="#time-1">$time</a></h1>
 <p>Changes the timezone for date/time functions.</p>
-<h2 id="syntax-162"><a class="header" href="#syntax-162">Syntax</a></h2>
+<h2 id="syntax-168"><a class="header" href="#syntax-168">Syntax</a></h2>
 <pre><code>$time[Timezone]
 </code></pre>
 <h3 id="parameters-248"><a class="header" href="#parameters-248">Parameters</a></h3>
@@ -9592,7 +9590,7 @@ Warsaw : $optOff[$hour:$minute:$second]
 <p><img src="https://user-images.githubusercontent.com/95774950/198847125-b093d143-7890-4478-a437-1c80c35c4c41.png" alt="Screenshot_20221029_234758" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="timeout"><a class="header" href="#timeout">$timeout</a></h1>
 <p>Timeouts a user for a certain duration.</p>
-<h2 id="syntax-163"><a class="header" href="#syntax-163">Syntax</a></h2>
+<h2 id="syntax-169"><a class="header" href="#syntax-169">Syntax</a></h2>
 <pre><code>$timeout[Duration;(User ID)]
 </code></pre>
 <h3 id="parameters-249"><a class="header" href="#parameters-249">Parameters</a></h3>
@@ -9630,7 +9628,7 @@ $timeout[$message[1];$findUser[$message[2];no]]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="title"><a class="header" href="#title">$title</a></h1>
 <p>Adds an embedded title to bot's response message.</p>
-<h2 id="syntax-164"><a class="header" href="#syntax-164">Syntax</a></h2>
+<h2 id="syntax-170"><a class="header" href="#syntax-170">Syntax</a></h2>
 <pre><code>$title[Text;(Index)]
 </code></pre>
 <h3 id="parameters-250"><a class="header" href="#parameters-250">Parameters</a></h3>
@@ -9653,7 +9651,7 @@ $description[⬆️ That is a nice title.]
 <p><img src="https://user-images.githubusercontent.com/69215413/123186040-4c310b00-d465-11eb-99b1-6c43828c8ddb.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tolowercase"><a class="header" href="#tolowercase">$toLowercase</a></h1>
 <p>Converts the provided text to lowercase format.</p>
-<h2 id="syntax-165"><a class="header" href="#syntax-165">Syntax</a></h2>
+<h2 id="syntax-171"><a class="header" href="#syntax-171">Syntax</a></h2>
 <pre><code>$toLowercase[Text]
 </code></pre>
 <h3 id="parameters-251"><a class="header" href="#parameters-251">Parameters</a></h3>
@@ -9667,7 +9665,7 @@ $toLowercase[THIS TEXT IS NOW lowercase]
 <p><img src="https://user-images.githubusercontent.com/69215413/125359116-d4ede900-e337-11eb-827b-5c0dcbe2ffbf.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="totitlecase"><a class="header" href="#totitlecase">$toTitleCase</a></h1>
 <p>Converts the first letter of each word to uppercase in the provided text.</p>
-<h2 id="syntax-166"><a class="header" href="#syntax-166">Syntax</a></h2>
+<h2 id="syntax-172"><a class="header" href="#syntax-172">Syntax</a></h2>
 <pre><code>$toTitleCase[Text]
 </code></pre>
 <h3 id="parameters-252"><a class="header" href="#parameters-252">Parameters</a></h3>
@@ -9681,7 +9679,7 @@ $toTitleCase[$message]
 <p><img src="https://user-images.githubusercontent.com/95774950/197995207-d7e45a80-88a8-4daa-918e-810efd84ce45.png" alt="Screenshot_20221026_151232" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="touppercase"><a class="header" href="#touppercase">$toUppercase</a></h1>
 <p>Converts the provided text to uppercase format.</p>
-<h2 id="syntax-167"><a class="header" href="#syntax-167">Syntax</a></h2>
+<h2 id="syntax-173"><a class="header" href="#syntax-173">Syntax</a></h2>
 <pre><code>$toUppercase[Text]
 </code></pre>
 <h3 id="parameters-253"><a class="header" href="#parameters-253">Parameters</a></h3>
@@ -9695,7 +9693,7 @@ $toUppercase[this text is now UPPERCASE]
 <p><img src="https://user-images.githubusercontent.com/69215413/125359304-154d6700-e338-11eb-94b9-f792bcbabef3.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="trimcontent"><a class="header" href="#trimcontent">$trimContent</a></h1>
 <p>Removes duplicate spaces from incoming message content.</p>
-<h2 id="syntax-168"><a class="header" href="#syntax-168">Syntax</a></h2>
+<h2 id="syntax-174"><a class="header" href="#syntax-174">Syntax</a></h2>
 <pre><code>$trimContent
 </code></pre>
 <h3 id="example-288"><a class="header" href="#example-288">Example</a></h3>
@@ -9713,7 +9711,7 @@ $trimContent
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="trimspace"><a class="header" href="#trimspace">$trimSpace</a></h1>
 <p>Removes all leading and trailing white-space characters from the provided text.</p>
-<h2 id="syntax-169"><a class="header" href="#syntax-169">Syntax</a></h2>
+<h2 id="syntax-175"><a class="header" href="#syntax-175">Syntax</a></h2>
 <pre><code>$trimSpace[Text]
 </code></pre>
 <h3 id="parameters-254"><a class="header" href="#parameters-254">Parameters</a></h3>
@@ -9731,7 +9729,7 @@ $trimContent
 <blockquote>
 <p>📌 <a href="https://support.discord.com/hc/en-us/articles/212517297-Text-to-Speech-101">TTS</a> feature is currently supported only in Discord Desktop and Webapp.</p>
 </blockquote>
-<h2 id="syntax-170"><a class="header" href="#syntax-170">Syntax</a></h2>
+<h2 id="syntax-176"><a class="header" href="#syntax-176">Syntax</a></h2>
 <pre><code>$tts
 </code></pre>
 <h3 id="permissions-5"><a class="header" href="#permissions-5">Permissions</a></h3>
@@ -9746,7 +9744,7 @@ Hello! Can you hear me?
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unban"><a class="header" href="#unban">$unban</a></h1>
 <p>Unbans a user by providing their username in the author's message.</p>
-<h2 id="syntax-171"><a class="header" href="#syntax-171">Syntax</a></h2>
+<h2 id="syntax-177"><a class="header" href="#syntax-177">Syntax</a></h2>
 <pre><code>$unban
 </code></pre>
 <h3 id="permissions-6"><a class="header" href="#permissions-6">Permissions</a></h3>
@@ -9769,7 +9767,7 @@ Successfully unbanned user!
 <h2 id="usages-17"><a class="header" href="#usages-17">Usages</a></h2>
 <p>There are two usages of this function :</p>
 <h3 id="usage-1-20"><a class="header" href="#usage-1-20">Usage #1</a></h3>
-<h4 id="syntax-172"><a class="header" href="#syntax-172">Syntax</a></h4>
+<h4 id="syntax-178"><a class="header" href="#syntax-178">Syntax</a></h4>
 <pre><code>$unbanID
 </code></pre>
 <p>Unbans a user by using their ID taken from the last argument of the author's message.</p>
@@ -9780,7 +9778,7 @@ Successfully unbanned user!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126553929-c30e6bd8-63ab-4e2a-9dc5-0ec1f23d6221.png" alt="example" /></p>
 <h3 id="usage-2-19"><a class="header" href="#usage-2-19">Usage #2</a></h3>
-<h4 id="syntax-173"><a class="header" href="#syntax-173">Syntax</a></h4>
+<h4 id="syntax-179"><a class="header" href="#syntax-179">Syntax</a></h4>
 <pre><code>$unbanID[User ID]
 </code></pre>
 <p>Unbans a user by using the ID provided in the 'User ID' parameter.</p>
@@ -9796,7 +9794,7 @@ Successfully unbanned user!
 <p><img src="https://user-images.githubusercontent.com/69215413/126553929-c30e6bd8-63ab-4e2a-9dc5-0ec1f23d6221.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unescape"><a class="header" href="#unescape">$unescape</a></h1>
 <p>Unescapes semicolons <code>;</code> from the provided text. It allows interpreting of escaped semicolons as unescaped ones.</p>
-<h2 id="syntax-174"><a class="header" href="#syntax-174">Syntax</a></h2>
+<h2 id="syntax-180"><a class="header" href="#syntax-180">Syntax</a></h2>
 <pre><code>$unescape[Text]
 </code></pre>
 <h3 id="parameters-256"><a class="header" href="#parameters-256">Parameters</a></h3>
@@ -9813,7 +9811,7 @@ $randomText[$unescape[$message]]
 <blockquote>
 <p>📌 As of December 2021, this function has been deprecated in favor of <a href="bdscript/./untimeout.html">$untimeout</a>.</p>
 </blockquote>
-<h2 id="syntax-175"><a class="header" href="#syntax-175">Syntax</a></h2>
+<h2 id="syntax-181"><a class="header" href="#syntax-181">Syntax</a></h2>
 <pre><code>$unmute[Muted]
 </code></pre>
 <h3 id="parameters-257"><a class="header" href="#parameters-257">Parameters</a></h3>
@@ -9834,7 +9832,7 @@ $unmute[Muted]
 <p><img src="https://user-images.githubusercontent.com/69215413/125666289-5aecf227-0ae0-455e-8779-8501307a0894.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unpinmessage"><a class="header" href="#unpinmessage">$unpinMessage</a></h1>
 <p>Unpins a pinned message from the channel.</p>
-<h2 id="syntax-176"><a class="header" href="#syntax-176">Syntax</a></h2>
+<h2 id="syntax-182"><a class="header" href="#syntax-182">Syntax</a></h2>
 <pre><code>$unpinMessage[Channel ID;Message ID]
 </code></pre>
 <h3 id="parameters-258"><a class="header" href="#parameters-258">Parameters</a></h3>
@@ -9859,7 +9857,7 @@ A message has been unpinned!
 <h2 id="usages-18"><a class="header" href="#usages-18">Usages</a></h2>
 <p>There are two usages of this function :</p>
 <h3 id="usage-1-21"><a class="header" href="#usage-1-21">Usage #1</a></h3>
-<h4 id="syntax-177"><a class="header" href="#syntax-177">Syntax</a></h4>
+<h4 id="syntax-183"><a class="header" href="#syntax-183">Syntax</a></h4>
 <pre><code>$unregisterGuildCommands
 </code></pre>
 <p>Unregisters all guild slash commands from the current guild.</p>
@@ -9870,7 +9868,7 @@ Successfully unregistered all guild slash commands!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/198040434-101a9391-7f93-457a-b59e-adb8a7eda6b3.png" alt="Screenshot_20221026_184650" /></p>
 <h3 id="usage-2-20"><a class="header" href="#usage-2-20">Usage #2</a></h3>
-<h4 id="syntax-178"><a class="header" href="#syntax-178">Syntax</a></h4>
+<h4 id="syntax-184"><a class="header" href="#syntax-184">Syntax</a></h4>
 <pre><code>$unregisterGuildCommands[Slash command name;...]
 </code></pre>
 <p>Unregisters provided guild slash commands from the current guild.</p>
@@ -9888,7 +9886,7 @@ Successfully unregistered the provided guild slash commands!
 <p><img src="https://user-images.githubusercontent.com/95774950/198040479-f19497a7-e93b-4695-95fb-d8b629be5a1d.png" alt="Screenshot_20221026_185535" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="untimeout"><a class="header" href="#untimeout">$untimeout</a></h1>
 <p>Untimeouts a timed out user.</p>
-<h2 id="syntax-179"><a class="header" href="#syntax-179">Syntax</a></h2>
+<h2 id="syntax-185"><a class="header" href="#syntax-185">Syntax</a></h2>
 <pre><code>$untimeout[(User ID)]
 </code></pre>
 <h3 id="parameters-260"><a class="header" href="#parameters-260">Parameters</a></h3>
@@ -9920,7 +9918,7 @@ $untimeout[$findUser[$message[1];no]]
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="uptime"><a class="header" href="#uptime">$uptime</a></h1>
 <p>Returns how long the bot has been online.</p>
-<h2 id="syntax-180"><a class="header" href="#syntax-180">Syntax</a></h2>
+<h2 id="syntax-186"><a class="header" href="#syntax-186">Syntax</a></h2>
 <pre><code>$uptime
 </code></pre>
 <h2 id="example-300"><a class="header" href="#example-300">Example</a></h2>
@@ -9931,7 +9929,7 @@ I've been online for `$uptime`!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="url"><a class="header" href="#url">$url</a></h1>
 <p>Encodes or decodes the provided text in the URL encoding format.</p>
 <p>URL encoding is a method of converting reserved, unsafe, or non-ASCII characters to a URL format that is universally accepted and understood by all web browsers and servers while URL decoding is the vice-versa of URL encoding.</p>
-<h2 id="syntax-181"><a class="header" href="#syntax-181">Syntax</a></h2>
+<h2 id="syntax-187"><a class="header" href="#syntax-187">Syntax</a></h2>
 <pre><code>$url[Mode;Text]
 </code></pre>
 <h3 id="parameters-261"><a class="header" href="#parameters-261">Parameters</a></h3>
@@ -9961,7 +9959,7 @@ $url[decode;https://example.url/decode?convert=Hello+world%21%21]
 <blockquote>
 <p>📌 <a href="bdscript/./useChannel.html"><code>$useChannel</code></a> cannot redirect the original slash command response.</p>
 </blockquote>
-<h2 id="syntax-182"><a class="header" href="#syntax-182">Syntax</a></h2>
+<h2 id="syntax-188"><a class="header" href="#syntax-188">Syntax</a></h2>
 <pre><code>$useChannel[Channel ID]
 </code></pre>
 <h3 id="parameters-262"><a class="header" href="#parameters-262">Parameters</a></h3>
@@ -9978,7 +9976,7 @@ $description[hi]
 <img src="https://user-images.githubusercontent.com/69215413/125665365-ade65a36-0c1e-4e1c-a5c5-ad9929f769bc.png" alt="ex2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="useravatar"><a class="header" href="#useravatar">$userAvatar</a></h1>
 <p>Returns user's avatar URL.</p>
-<h2 id="syntax-183"><a class="header" href="#syntax-183">Syntax</a></h2>
+<h2 id="syntax-189"><a class="header" href="#syntax-189">Syntax</a></h2>
 <pre><code>$userAvatar[User ID]
 </code></pre>
 <h3 id="parameters-263"><a class="header" href="#parameters-263">Parameters</a></h3>
@@ -9995,7 +9993,7 @@ $image[$userAvatar[$mentioned[1;yes]]]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userbanner"><a class="header" href="#userbanner">$userBanner</a></h1>
 <p>Returns user banner if the given user has one.</p>
-<h2 id="syntax-184"><a class="header" href="#syntax-184">Syntax</a></h2>
+<h2 id="syntax-190"><a class="header" href="#syntax-190">Syntax</a></h2>
 <pre><code>$userBanner[user ID]
 </code></pre>
 <blockquote>
@@ -10017,7 +10015,7 @@ $sendMessage[$userBanner[$findUser[$message]]?size=4096]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userexists"><a class="header" href="#userexists">$userExists</a></h1>
 <p>Checks if a user exists in Discord using it's ID. Returns &quot;true&quot;, if it exists otherwise &quot;false&quot;.</p>
-<h2 id="syntax-185"><a class="header" href="#syntax-185">Syntax</a></h2>
+<h2 id="syntax-191"><a class="header" href="#syntax-191">Syntax</a></h2>
 <pre><code>$userExists[User ID]
 </code></pre>
 <h3 id="parameters-265"><a class="header" href="#parameters-265">Parameters</a></h3>
@@ -10031,7 +10029,7 @@ $userExists[$mentioned[1]]
 <p><img src="https://user-images.githubusercontent.com/69215413/125201977-82310600-e23f-11eb-9b0b-72d77006e0c6.jpeg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userid"><a class="header" href="#userid">$userID</a></h1>
 <p>Fetches a user's ID using their username or user-tag.</p>
-<h2 id="syntax-186"><a class="header" href="#syntax-186">Syntax</a></h2>
+<h2 id="syntax-192"><a class="header" href="#syntax-192">Syntax</a></h2>
 <pre><code>$userID[Username#Discriminator / Username]
 </code></pre>
 <h3 id="parameters-266"><a class="header" href="#parameters-266">Parameters</a></h3>
@@ -10048,7 +10046,7 @@ $userID[$username]
 <blockquote>
 <p>📌 <a href="bdscript/./userInfo.html"><code>$userInfo</code></a> automatically generates a description. So, <a href="bdscript/./description.html"><code>$description</code></a> of index <code>1</code> should be avoided in the code.</p>
 </blockquote>
-<h2 id="syntax-187"><a class="header" href="#syntax-187">Syntax</a></h2>
+<h2 id="syntax-193"><a class="header" href="#syntax-193">Syntax</a></h2>
 <pre><code>$userInfo[Message]
 </code></pre>
 <h3 id="parameters-267"><a class="header" href="#parameters-267">Parameters</a></h3>
@@ -10080,7 +10078,7 @@ Discriminator: {discriminator}]
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userjoined"><a class="header" href="#userjoined">$userJoined</a></h1>
 <p>Returns the server joining date of a given user.</p>
-<h2 id="syntax-188"><a class="header" href="#syntax-188">Syntax</a></h2>
+<h2 id="syntax-194"><a class="header" href="#syntax-194">Syntax</a></h2>
 <pre><code>$userJoined[User ID;(Format)]
 </code></pre>
 <h3 id="parameters-268"><a class="header" href="#parameters-268">Parameters</a></h3>
@@ -10118,7 +10116,7 @@ $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <p>📌 As of November 2022, this function has been deprecated in favor of <a href="bdscript/./creationDate.html"><code>$creationDate</code></a>.</p>
 <p>📌 Besides user IDs, <a href="bdscript/./userJoinedDiscord.html"><code>$userJoinedDiscord</code></a> can also return creation date of any valid Discord Snowflake ID.</p>
 </blockquote>
-<h2 id="syntax-189"><a class="header" href="#syntax-189">Syntax</a></h2>
+<h2 id="syntax-195"><a class="header" href="#syntax-195">Syntax</a></h2>
 <pre><code>$userJoinedDiscord[User ID;(Format)]
 </code></pre>
 <h3 id="parameters-269"><a class="header" href="#parameters-269">Parameters</a></h3>
@@ -10155,7 +10153,7 @@ $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <blockquote>
 <p>📌 <a href="bdscript/./userLeaderboard.html"><code>$userLeaderboard</code></a> automatically generates a description. So, <a href="bdscript/./description.html"><code>$description</code></a> of index <code>1</code> should be avoided in the code.</p>
 </blockquote>
-<h2 id="syntax-190"><a class="header" href="#syntax-190">Syntax</a></h2>
+<h2 id="syntax-196"><a class="header" href="#syntax-196">Syntax</a></h2>
 <pre><code>$userLeaderboard[Variable name;(Sort)]
 </code></pre>
 <h3 id="parameters-270"><a class="header" href="#parameters-270">Parameters</a></h3>
@@ -10177,7 +10175,7 @@ Leaderboard values are not updated in real-time. The previous values are cached 
 <h2 id="usages-19"><a class="header" href="#usages-19">Usages</a></h2>
 <p>There are two usages of this function :</p>
 <h3 id="usage-1-22"><a class="header" href="#usage-1-22">Usage #1</a></h3>
-<h4 id="syntax-191"><a class="header" href="#syntax-191">Syntax</a></h4>
+<h4 id="syntax-197"><a class="header" href="#syntax-197">Syntax</a></h4>
 <pre><code>$username
 </code></pre>
 <p>Returns the username of the user who triggered the command.</p>
@@ -10187,7 +10185,7 @@ Hello $username!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/114783581-fc88e180-9d47-11eb-91a6-02e60b20fcf4.png" alt="example1" /></p>
 <h3 id="usage-2-21"><a class="header" href="#usage-2-21">Usage #2</a></h3>
-<h4 id="syntax-192"><a class="header" href="#syntax-192">Syntax</a></h4>
+<h4 id="syntax-198"><a class="header" href="#syntax-198">Syntax</a></h4>
 <pre><code>$username[User ID]
 </code></pre>
 <p>Returns the username of a specific user given its ID.</p>
@@ -10202,7 +10200,7 @@ $username just hugged $username[$mentioned[1]]!
 <p><img src="https://user-images.githubusercontent.com/69215413/114783383-f430a680-9d47-11eb-91e5-6ade1c6ef234.png" alt="example2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userperms"><a class="header" href="#userperms">$userPerms</a></h1>
 <p>Returns a user's permissions.</p>
-<h2 id="syntax-193"><a class="header" href="#syntax-193">Syntax</a></h2>
+<h2 id="syntax-199"><a class="header" href="#syntax-199">Syntax</a></h2>
 <pre><code>$userPerms[User ID;Return amount;Separator]
 </code></pre>
 <h3 id="parameters-272"><a class="header" href="#parameters-272">Parameters</a></h3>
@@ -10218,7 +10216,7 @@ $userPerms[$mentioned[1;yes];-1;-]
 <p><img src="https://user-images.githubusercontent.com/42785890/151909707-d8e093f2-1279-4754-88a5-51466270fde6.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userreacted"><a class="header" href="#userreacted">$userReacted</a></h1>
 <p>Checks if a user reacted to a message with the provided emoji. Returns &quot;true&quot; if the user did react otherwise, &quot;false&quot;.</p>
-<h2 id="syntax-194"><a class="header" href="#syntax-194">Syntax</a></h2>
+<h2 id="syntax-200"><a class="header" href="#syntax-200">Syntax</a></h2>
 <pre><code>$userReacted[Channel ID;Message ID;User ID;Emoji]
 </code></pre>
 <h3 id="parameters-273"><a class="header" href="#parameters-273">Parameters</a></h3>
@@ -10235,7 +10233,7 @@ $userReacted[$channelID;$message;$authorID;🍀]
 <p><img src="https://user-images.githubusercontent.com/95774950/197375576-dbe6fc17-68cb-44ed-802a-81a16db98ce9.png" alt="Screenshot_20221023_105811" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userroles"><a class="header" href="#userroles">$userRoles</a></h1>
 <p>Returns all role names given to the user.</p>
-<h2 id="syntax-195"><a class="header" href="#syntax-195">Syntax</a></h2>
+<h2 id="syntax-201"><a class="header" href="#syntax-201">Syntax</a></h2>
 <pre><code>$userRoles[User ID]
 </code></pre>
 <h3 id="parameters-274"><a class="header" href="#parameters-274">Parameters</a></h3>
@@ -10250,7 +10248,7 @@ $userRoles[$mentioned[1;yes]]]
 <p><img src="https://user-images.githubusercontent.com/69215413/125122358-4e30d600-e0c3-11eb-8930-07276f1bfbbd.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userserveravatar"><a class="header" href="#userserveravatar">$userServerAvatar</a></h1>
 <p>Returns the URL for the server avatar of a given user.</p>
-<h2 id="syntax-196"><a class="header" href="#syntax-196">Syntax</a></h2>
+<h2 id="syntax-202"><a class="header" href="#syntax-202">Syntax</a></h2>
 <pre><code>$userServerAvatar[User ID]
 </code></pre>
 <h3 id="parameters-275"><a class="header" href="#parameters-275">Parameters</a></h3>
@@ -10270,7 +10268,7 @@ Instead, it creates the variable automatically during it's runtime and gets dele
 <blockquote>
 <p>📌 This function can only be used in <code>BDScript 2</code> script language.</p>
 </blockquote>
-<h2 id="syntax-197"><a class="header" href="#syntax-197">Syntax</a></h2>
+<h2 id="syntax-203"><a class="header" href="#syntax-203">Syntax</a></h2>
 <pre><code>$var[Name;(Value)]
 </code></pre>
 <h3 id="parameters-276"><a class="header" href="#parameters-276">Parameters</a></h3>
@@ -10292,7 +10290,7 @@ $addButton[no;interactionID;Example;secondary;;;$var[ID]]
 <p><img src="https://user-images.githubusercontent.com/70456337/189480166-d37cbdb8-05ce-44e8-8f2e-14d030baa9a9.png" alt="Example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="varexisterror"><a class="header" href="#varexisterror">$varExistError</a></h1>
 <p>Returns a custom error if a certain variable doesn't exist in the app.</p>
-<h2 id="syntax-198"><a class="header" href="#syntax-198">Syntax</a></h2>
+<h2 id="syntax-204"><a class="header" href="#syntax-204">Syntax</a></h2>
 <pre><code>$varExistError[Name;Error message]
 </code></pre>
 <h3 id="parameters-277"><a class="header" href="#parameters-277">Parameters</a></h3>
@@ -10309,7 +10307,7 @@ You are now cool!
 <p><img src="https://user-images.githubusercontent.com/69215413/125121239-9a7b1680-e0c1-11eb-8ceb-b9b695f1b89f.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="varexists"><a class="header" href="#varexists">$varExists</a></h1>
 <p>Checks if a variable exists. Returns <code>true</code> if it exists, otherwise <code>false</code>.</p>
-<h2 id="syntax-199"><a class="header" href="#syntax-199">Syntax</a></h2>
+<h2 id="syntax-205"><a class="header" href="#syntax-205">Syntax</a></h2>
 <pre><code>$varExists[Name]
 </code></pre>
 <h3 id="parameters-278"><a class="header" href="#parameters-278">Parameters</a></h3>
@@ -10323,7 +10321,7 @@ $varExists[$message]
 <p><img src="https://user-images.githubusercontent.com/94063167/198907049-af572aa7-4dc7-4d89-8536-eb809ecabf41.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="variablescount"><a class="header" href="#variablescount">$variablesCount</a></h1>
 <p>Returns how many of a certain variable type the bot has.</p>
-<h2 id="syntax-200"><a class="header" href="#syntax-200">Syntax</a></h2>
+<h2 id="syntax-206"><a class="header" href="#syntax-206">Syntax</a></h2>
 <pre><code>$variablesCount[Type]
 </code></pre>
 <h3 id="parameters-279"><a class="header" href="#parameters-279">Parameters</a></h3>
@@ -10340,7 +10338,7 @@ $variablesCount[server]
 <blockquote>
 <p>📌 You can use <a href="bdscript/./time.html">$time</a> to change the timezone.</p>
 </blockquote>
-<h2 id="syntax-201"><a class="header" href="#syntax-201">Syntax</a></h2>
+<h2 id="syntax-207"><a class="header" href="#syntax-207">Syntax</a></h2>
 <pre><code>$year
 </code></pre>
 <h2 id="example-321"><a class="header" href="#example-321">Example</a></h2>
@@ -10354,7 +10352,7 @@ Current Year: $year
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitedcommand-1"><a class="header" href="#awaitedcommand-1">$awaitedCommand</a></h1>
 <p><em>Triggered when an awaited command gets initiated.</em></p>
 <p><code>$awaitedCommand[]</code> is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command gets initiated.</p>
-<h2 id="syntax-202"><a class="header" href="#syntax-202">Syntax</a></h2>
+<h2 id="syntax-208"><a class="header" href="#syntax-208">Syntax</a></h2>
 <pre><code>$awaitedCommand[name;(filter)]
 </code></pre>
 <h3 id="parameters-280"><a class="header" href="#parameters-280">Parameters</a></h3>
@@ -10398,7 +10396,7 @@ You have provided a number: $message
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitedcommanderror-1"><a class="header" href="#awaitedcommanderror-1">$awaitedCommandError</a></h1>
 <p><em>Triggered when an awaited command doesn't match with provided filter.</em></p>
 <p><code>$awaitedCommandError[]</code> is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command doesn't match with provided filter.</p>
-<h2 id="syntax-203"><a class="header" href="#syntax-203">Syntax</a></h2>
+<h2 id="syntax-209"><a class="header" href="#syntax-209">Syntax</a></h2>
 <pre><code>$awaitedCommandError[name]
 </code></pre>
 <h3 id="parameters-281"><a class="header" href="#parameters-281">Parameters</a></h3>
@@ -10730,7 +10728,7 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="messagecontains"><a class="header" href="#messagecontains">$messageContains</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$messageContains[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a> that allows you to create a trigger with multiple phrases. In addition, the bot also looks for those phrases anywhere in the author's message. This feature is great for creating an auto-response or auto-moderation system. </p>
-<h2 id="usage-155"><a class="header" href="#usage-155">Usage</a></h2>
+<h2 id="usage-149"><a class="header" href="#usage-149">Usage</a></h2>
 <pre><code>$messageContains[word;...]
 </code></pre>
 <h3 id="parameters-282"><a class="header" href="#parameters-282">Parameters</a></h3>
@@ -10751,7 +10749,7 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reaction"><a class="header" href="#reaction">$reaction</a></h1>
 <p><em>(for premium users)</em></p>
 <p>This is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
-<h2 id="syntax-204"><a class="header" href="#syntax-204">Syntax</a></h2>
+<h2 id="syntax-210"><a class="header" href="#syntax-210">Syntax</a></h2>
 <pre><code>$reaction[name]
 </code></pre>
 <h2 id="parameters-283"><a class="header" href="#parameters-283">Parameters</a></h2>
@@ -10770,7 +10768,7 @@ $sendMessage[$username clicked on reaction]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitreactions"><a class="header" href="#awaitreactions">$awaitReactions</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>This function is used to await a reaction.</p>
-<h2 id="syntax-205"><a class="header" href="#syntax-205">Syntax</a></h2>
+<h2 id="syntax-211"><a class="header" href="#syntax-211">Syntax</a></h2>
 <pre><code>$awaitReactions[&lt;command name;reaction&gt;;...]
 </code></pre>
 <h2 id="parameters-284"><a class="header" href="#parameters-284">Parameters</a></h2>
@@ -10791,7 +10789,7 @@ $addReactions[✅;❌]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="customimage"><a class="header" href="#customimage">$customImage</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>This function is used to return the URL of an image uploaded in the app.</p>
-<h2 id="syntax-206"><a class="header" href="#syntax-206">Syntax</a></h2>
+<h2 id="syntax-212"><a class="header" href="#syntax-212">Syntax</a></h2>
 <pre><code>$customImage[custom image tag]
 </code></pre>
 <h2 id="parameters-285"><a class="header" href="#parameters-285">Parameters</a></h2>
@@ -10812,7 +10810,7 @@ $customImage[NiceImage]
 <blockquote>
 <p>This function can only be used inside a <code>$reaction[]</code> callback</p>
 </blockquote>
-<h2 id="syntax-207"><a class="header" href="#syntax-207">Syntax</a></h2>
+<h2 id="syntax-213"><a class="header" href="#syntax-213">Syntax</a></h2>
 <pre><code>$usedEmoji
 </code></pre>
 <h2 id="example-333"><a class="header" href="#example-333">Example</a></h2>
@@ -10826,7 +10824,7 @@ $sendMessage[Emoji: $usedEmoji]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignoretriggercase"><a class="header" href="#ignoretriggercase">$ignoreTriggerCase</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$ignoreTriggerCase</code> is a function that makes the command trigger <strong>not</strong> case sensitive. For example, <code>!help</code> and <code>!HeLp</code> would both work.</p>
-<h2 id="usage-156"><a class="header" href="#usage-156">Usage</a></h2>
+<h2 id="usage-150"><a class="header" href="#usage-150">Usage</a></h2>
 <pre><code>$ignoreTriggerCase
 </code></pre>
 <h2 id="example-334"><a class="header" href="#example-334">Example</a></h2>
@@ -10836,7 +10834,7 @@ Hello World!
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendnotification"><a class="header" href="#sendnotification">$sendNotification</a></h1>
 <p>Sends notification to your mobile phone</p>
-<h2 id="usage-157"><a class="header" href="#usage-157">Usage</a></h2>
+<h2 id="usage-151"><a class="header" href="#usage-151">Usage</a></h2>
 <pre><code>$sendNotification[message;(image URL)]
 </code></pre>
 <h3 id="parameters-286"><a class="header" href="#parameters-286">Parameters</a></h3>
@@ -10859,7 +10857,7 @@ Hello World!
 <p>To create an awaited reaction command, following functions and callback are used :</p>
 <h3 id="awaitreactions-1"><a class="header" href="#awaitreactions-1">$awaitReactions[]</a></h3>
 <p>This function is used to await an reaction command.</p>
-<h4 id="usage-158"><a class="header" href="#usage-158">Usage</a></h4>
+<h4 id="usage-152"><a class="header" href="#usage-152">Usage</a></h4>
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
 <ul>
@@ -10873,7 +10871,7 @@ Hello World!
 </blockquote>
 <h3 id="reaction-1"><a class="header" href="#reaction-1">$reaction[]</a></h3>
 <p><code>$reaction[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
-<h4 id="usage-159"><a class="header" href="#usage-159">Usage</a></h4>
+<h4 id="usage-153"><a class="header" href="#usage-153">Usage</a></h4>
 <pre><code>$reaction[name]
 </code></pre>
 <ul>
@@ -10881,7 +10879,7 @@ Hello World!
 </ul>
 <h3 id="usedemoji-1"><a class="header" href="#usedemoji-1">$usedEmoji</a></h3>
 <p>This function is used to return the emoji which was triggered in <code>$reaction[]</code> command.</p>
-<h4 id="usage-160"><a class="header" href="#usage-160">Usage</a></h4>
+<h4 id="usage-154"><a class="header" href="#usage-154">Usage</a></h4>
 <pre><code>$usedEmoji
 </code></pre>
 <h2 id="example-336"><a class="header" href="#example-336">Example</a></h2>
@@ -10913,7 +10911,7 @@ Hello World!
 <h2 id="retrieving"><a class="header" href="#retrieving">Retrieving</a></h2>
 <h3 id="customimage-1"><a class="header" href="#customimage-1">$customImage[]</a></h3>
 <p>This function is used to return the uploaded image in the app.</p>
-<h4 id="usage-161"><a class="header" href="#usage-161">Usage</a></h4>
+<h4 id="usage-155"><a class="header" href="#usage-155">Usage</a></h4>
 <pre><code>$customImage[Custom image tag]
 </code></pre>
 <h4 id="parameters-287"><a class="header" href="#parameters-287">Parameters</a></h4>
@@ -11023,7 +11021,7 @@ Then, check out the following JavaScript learning resources :<br />
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="ban-2"><a class="header" href="#ban-2">ban</a></h1>
 <p>Bans an user from the current guild.</p>
-<h2 id="syntax-208"><a class="header" href="#syntax-208">Syntax</a></h2>
+<h2 id="syntax-214"><a class="header" href="#syntax-214">Syntax</a></h2>
 <pre><code class="language-js">ban(userID)
 </code></pre>
 <h3 id="parameters-288"><a class="header" href="#parameters-288">Parameters</a></h3>
@@ -11062,7 +11060,7 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/190855782-1aa5bf81-06d0-409d-bc06-2cf4aaecc1fb.jpg" alt="InShot_20220917_172017419" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="banwithreason"><a class="header" href="#banwithreason">banWithReason</a></h1>
 <p>Bans an user from the current guild with reason.</p>
-<h2 id="syntax-209"><a class="header" href="#syntax-209">Syntax</a></h2>
+<h2 id="syntax-215"><a class="header" href="#syntax-215">Syntax</a></h2>
 <pre><code class="language-js">banWithReason(userID, reason)
 </code></pre>
 <h3 id="parameters-289"><a class="header" href="#parameters-289">Parameters</a></h3>
@@ -11110,7 +11108,7 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/191721557-9301171b-3807-4fb5-a7a2-ec770844438f.jpg" alt="InShot_20220922_153537132" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltyping"><a class="header" href="#channeltyping">channelTyping</a></h1>
 <p>Emits the <code>TYPING_START</code> event. It shows <em>&quot;Bot is typing...&quot;</em> in the channel where the command was triggered.</p>
-<h2 id="syntax-210"><a class="header" href="#syntax-210">Syntax</a></h2>
+<h2 id="syntax-216"><a class="header" href="#syntax-216">Syntax</a></h2>
 <pre><code class="language-js">channelTyping()
 </code></pre>
 <h3 id="permissions-12"><a class="header" href="#permissions-12">Permissions</a></h3>
@@ -11127,7 +11125,7 @@ setResponse('Wow! I did type.');
 <p><img src="https://user-images.githubusercontent.com/95774950/191220685-2515dabf-626e-4709-9bf7-ec951aa35c44.gif" alt="ezgif com-gif-maker" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createchannel-1"><a class="header" href="#createchannel-1">createChannel</a></h1>
 <p>Creates a new channel in the current guild.</p>
-<h2 id="syntax-211"><a class="header" href="#syntax-211">Syntax</a></h2>
+<h2 id="syntax-217"><a class="header" href="#syntax-217">Syntax</a></h2>
 <pre><code class="language-js">createChannel(name, type)
 </code></pre>
 <h3 id="parameters-290"><a class="header" href="#parameters-290">Parameters</a></h3>
@@ -11170,7 +11168,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191656407-b2b61c57-ff3b-4259-b9f1-8ae92c0bf79b.jpg" alt="InShot_20220922_092945515" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="giverole-1"><a class="header" href="#giverole-1">giveRole</a></h1>
 <p>Assigns a role to a specified user.</p>
-<h2 id="syntax-212"><a class="header" href="#syntax-212">Syntax</a></h2>
+<h2 id="syntax-218"><a class="header" href="#syntax-218">Syntax</a></h2>
 <pre><code class="language-js">giveRole(userID, roleID)
 </code></pre>
 <h3 id="parameters-291"><a class="header" href="#parameters-291">Parameters</a></h3>
@@ -11212,7 +11210,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/190871625-9e676924-68b4-4189-9bba-44a7c3cf4488.jpg" alt="InShot_20220918_000019652" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kick-2"><a class="header" href="#kick-2">kick</a></h1>
 <p>Kicks an user from the current guild.</p>
-<h2 id="syntax-213"><a class="header" href="#syntax-213">Syntax</a></h2>
+<h2 id="syntax-219"><a class="header" href="#syntax-219">Syntax</a></h2>
 <pre><code class="language-js">kick(userID)
 </code></pre>
 <h3 id="parameters-292"><a class="header" href="#parameters-292">Parameters</a></h3>
@@ -11251,7 +11249,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191005572-538deebc-e660-4ce3-89ff-5929197c41ae.jpg" alt="InShot_20220919_164211838" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kickwithreason"><a class="header" href="#kickwithreason">kickWithReason</a></h1>
 <p>Kicks an user from the current guild with reason.</p>
-<h2 id="syntax-214"><a class="header" href="#syntax-214">Syntax</a></h2>
+<h2 id="syntax-220"><a class="header" href="#syntax-220">Syntax</a></h2>
 <pre><code class="language-js">kickWithReason(userID, reason)
 </code></pre>
 <h3 id="parameters-293"><a class="header" href="#parameters-293">Parameters</a></h3>
@@ -11299,7 +11297,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192129456-d5c1092f-dd4d-4bd5-a450-5534acc097d3.jpg" alt="InShot_20220925_104547037" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pinmessage-2"><a class="header" href="#pinmessage-2">pinMessage</a></h1>
 <p>Pins a message to the channel.</p>
-<h2 id="syntax-215"><a class="header" href="#syntax-215">Syntax</a></h2>
+<h2 id="syntax-221"><a class="header" href="#syntax-221">Syntax</a></h2>
 <pre><code class="language-js">pinMessage(channelID, messageID)
 </code></pre>
 <h3 id="parameters-294"><a class="header" href="#parameters-294">Parameters</a></h3>
@@ -11338,7 +11336,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192140467-786505ff-02e0-4443-82e4-03afcfdb2eed.png" alt="Screenshot_20220925_162938" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removechannel"><a class="header" href="#removechannel">removeChannel</a></h1>
 <p>Removes a specified channel from the current server.</p>
-<h2 id="syntax-216"><a class="header" href="#syntax-216">Syntax</a></h2>
+<h2 id="syntax-222"><a class="header" href="#syntax-222">Syntax</a></h2>
 <pre><code class="language-js">removeChannel(channelID)
 </code></pre>
 <h3 id="parameters-295"><a class="header" href="#parameters-295">Parameters</a></h3>
@@ -11376,7 +11374,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191010751-6e7bd8d8-00ef-4ca6-850d-4124254cc5a3.jpg" alt="InShot_20220919_171824516" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendchannelmessage"><a class="header" href="#sendchannelmessage">sendChannelMessage</a></h1>
 <p>Sends a message to the provided channel.</p>
-<h2 id="syntax-217"><a class="header" href="#syntax-217">Syntax</a></h2>
+<h2 id="syntax-223"><a class="header" href="#syntax-223">Syntax</a></h2>
 <pre><code class="language-js">sendChannelMessage(channelId, message)
 </code></pre>
 <h3 id="parameters-296"><a class="header" href="#parameters-296">Parameters</a></h3>
@@ -11422,7 +11420,7 @@ setResponse('Wow! I did type.');
 <p><img src="https://user-images.githubusercontent.com/95774950/190842663-13d63729-2008-4f7f-85ce-1aa52242fd8c.png" alt="Screenshot_20220917_102010" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedimage"><a class="header" href="#setembedimage">setEmbedImage</a></h1>
 <p>Adds an image to an embed.</p>
-<h2 id="syntax-218"><a class="header" href="#syntax-218">Syntax</a></h2>
+<h2 id="syntax-224"><a class="header" href="#syntax-224">Syntax</a></h2>
 <pre><code class="language-js">setEmbedImage(imageURL)
 </code></pre>
 <h3 id="parameters-297"><a class="header" href="#parameters-297">Parameters</a></h3>
@@ -11436,7 +11434,7 @@ setEmbedResponse();
 <p><img src="https://user-images.githubusercontent.com/95774950/190847481-06a7de9d-b1f2-44f2-9a4a-d167d69f5d20.png" alt="Screenshot_20220917_134716" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedresponse"><a class="header" href="#setembedresponse">setEmbedResponse</a></h1>
 <p>Sends an embedded message to the current channel.</p>
-<h2 id="syntax-219"><a class="header" href="#syntax-219">Syntax</a></h2>
+<h2 id="syntax-225"><a class="header" href="#syntax-225">Syntax</a></h2>
 <pre><code class="language-js">setEmbedResponse(title, description, footer)
 </code></pre>
 <h3 id="parameters-298"><a class="header" href="#parameters-298">Parameters</a></h3>
@@ -11463,7 +11461,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <p><img src="https://user-images.githubusercontent.com/95774950/190715616-324db8db-8e68-41db-9daa-73ad0d852fe4.png" alt="Screenshot_20220917_005110" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setresponse"><a class="header" href="#setresponse">setResponse</a></h1>
 <p>Sends a message to the current channel.</p>
-<h2 id="syntax-220"><a class="header" href="#syntax-220">Syntax</a></h2>
+<h2 id="syntax-226"><a class="header" href="#syntax-226">Syntax</a></h2>
 <pre><code class="language-js">setResponse(replyText)
 </code></pre>
 <h3 id="parameters-299"><a class="header" href="#parameters-299">Parameters</a></h3>
@@ -11483,7 +11481,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <p><img src="https://user-images.githubusercontent.com/95774950/190676703-2caf1838-0de1-4dc5-9d2d-85b7c9dc5dc1.png" alt="Screenshot_20220916_205326" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="takerole-1"><a class="header" href="#takerole-1">takeRole</a></h1>
 <p>Removes a role from a specified user.</p>
-<h2 id="syntax-221"><a class="header" href="#syntax-221">Syntax</a></h2>
+<h2 id="syntax-227"><a class="header" href="#syntax-227">Syntax</a></h2>
 <pre><code class="language-js">takeRole(userID, roleID)
 </code></pre>
 <h3 id="parameters-300"><a class="header" href="#parameters-300">Parameters</a></h3>
@@ -11525,7 +11523,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/190939183-d1666cdd-4079-4ee2-a5b2-587e0dd656ed.jpg" alt="InShot_20220919_023352223" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unban-1"><a class="header" href="#unban-1">unban</a></h1>
 <p>Unbans an user from the current guild.</p>
-<h2 id="syntax-222"><a class="header" href="#syntax-222">Syntax</a></h2>
+<h2 id="syntax-228"><a class="header" href="#syntax-228">Syntax</a></h2>
 <pre><code class="language-js">unban(userID)
 </code></pre>
 <h3 id="parameters-301"><a class="header" href="#parameters-301">Parameters</a></h3>
@@ -11564,7 +11562,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/191576471-5677053f-c375-4d96-8f22-e15b0c5502f0.jpg" alt="InShot_20220921_230931790" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unpinmessage-1"><a class="header" href="#unpinmessage-1">unpinMessage</a></h1>
 <p>Unpins a message from the channel.</p>
-<h2 id="syntax-223"><a class="header" href="#syntax-223">Syntax</a></h2>
+<h2 id="syntax-229"><a class="header" href="#syntax-229">Syntax</a></h2>
 <pre><code class="language-js">unpinMessage(channelID, messageID)
 </code></pre>
 <h3 id="parameters-302"><a class="header" href="#parameters-302">Parameters</a></h3>
