@@ -1,16 +1,35 @@
 # $onMessageDelete
-*Triggered when a user deletes a message.*
+Triggered when a user deletes a message.
 
-`$onMessageDelete[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user deletes a message. You must replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID (`$getServerVar[]`).
+## Syntax 
+```
+$onMessageDelete[channel ID]
+```
 
+### Parameters
+- `channel ID`: please edit it!!!
+
+> [How to get a channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 ## Example
-1. Make a new command, with the trigger `$onMessageDelete[channelID]`.
-    > 🧙‍♂️ Replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)!
+### With `$getServerVar[]`
+Make a new command, with the trigger `$onMessageDelete[$getServerVar[channel]]`
+```
+$nomention
+A massage was deleted!
+```
+![example](https://user-images.githubusercontent.com/113303649/223441552-4e699a36-3d77-40fa-bea8-f3752de1f749.png)
 
-    ![example1](https://user-images.githubusercontent.com/69215413/129492544-44511c6b-65f3-4cac-b5dd-76d8d1d9fdba.png)
+![example](https://user-images.githubusercontent.com/113303649/223442073-024364e6-17d9-4118-bcab-f12575a447d0.png)
+### Without `$getServerVar[]`
+Make a new command, with the trigger `$onMessageDelete[channel ID]` (You must replace `channel ID` with a valid channel ID)
+```
+$nomention
+A massage was deleted!
+```
+![example](https://user-images.githubusercontent.com/113303649/223441552-4e699a36-3d77-40fa-bea8-f3752de1f749.png)
 
-2. Set the code/reply text.\
-![example2](https://user-images.githubusercontent.com/69215413/129492399-8af2ca7f-32ef-4b21-ba98-1c2e53eb7266.png)
+![example](https://user-images.githubusercontent.com/113303649/223442073-024364e6-17d9-4118-bcab-f12575a447d0.png)
 
-3. Now, the bot will send a message when someone deletes a message! ✨\
-![example3](https://user-images.githubusercontent.com/69215413/129492390-f41754d3-bfc7-4d96-b057-e4a8d8019f26.png)
+> You can use `$channelID` to get the ID of the logs (`channel ID`).
+> 
+> You can use `$messageID` to get the ID of the deleted message.
