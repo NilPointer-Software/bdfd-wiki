@@ -1,8 +1,10 @@
 # $channelTopic
 Returns the topic of the channel that the command is being used in.
 
-### Syntax
-`$channelTopic`
+## Syntax
+```
+$channelTopic
+```
 
 ## Example
 ```

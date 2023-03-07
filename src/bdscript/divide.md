@@ -1,7 +1,7 @@
 # $divide
 Divides the provided numbers.
 
-## Usage
+## Syntax
 ```
 $divide[numbers]
 ```

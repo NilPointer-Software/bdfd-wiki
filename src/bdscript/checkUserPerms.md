@@ -1,13 +1,13 @@
 # $checkUserPerms
 Returns 'true' if a user has all of the provided permissions, otherwise 'false' is returned.
 
-## Usage
+## Syntax
 ```
-$checkUserPerms[userID;permissions]
+$checkUserPerms[user ID;permissions]
 ```
 
 ### Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: The user that the bot checks the permissions for.
+- `user ID` `(Type: Snowflake || Flag: Required)`: The user that the bot checks the permissions for.
 - `permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) that the bot checks for. Separate permissions using `;`.
 
 ## Example
