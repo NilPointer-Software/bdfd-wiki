@@ -1,27 +1,29 @@
 # $onInteraction
 Triggered upon an interaction being emitted (e.g. a button being clicked).
 
-## Usages
-- `$onInteraction` - Command runs upon any interaction being emitted.
-> **Note:** `$onInteraction` (without brackets) shall only be used once. As it replies directly to the Discord's interaction event--once it processes the data, such data becomes invalid.
-- `$onInteraction[customID]` - Command runs upon the provided 'customID' being clicked/selected/interacted with.
+## Syntax
+```
+$onInteraction
+```
+### Supports
+- **[Buttons](../guides/buttons.md)**
+- **[Select Menu](../guides/selectmenu.md)**
+- **[Modals](../guides/modals.md)**
 
-## Custom IDs
-Components (e.g. buttons and select menus), must have a custom ID. This property is defined by the developer when using [$addButton[]](./guides/buttons.md), [$newSelectMenu[]](./guides/selectmenu.md), etc. 
-For example, if you set customID to `click_me` on a button, in `$onInteraction[]` you'd put `click_me`: `$onInteraction[click_me]`. Alternatively, you can use `$onInteraction` (without brackets) with [if statements](./guides/ifStatements) and [$customID](./bdscript/customID.md):
-```php
-$if[$customID==click_me]
-Hello!
-$c[Bot replies with "Hello" when the 'click_me' button is clicked by a user.]
+## Example
+```
+$nomention
+$if[$customID==interaction]
+  $sendMessage[Hello!]
+$endif
+
+$if[$customID==onlyauthor-$authorID]
+  $sendMessage[Hello $username!]
 $endif
 ```
-> 🧙🏼‍♂️ Using `$onInteraction` (with brackets) can help save command space.
 
-Custom IDs must be unique per component, multiple buttons on the same message must not share the same custom ID. Custom ID is a string of max 100 characters.
-> Custom IDs may also be referred to as interaction IDs.
+![example](https://user-images.githubusercontent.com/113303649/223423803-2ffadb9e-61b0-432c-bc88-c6850ec564f5.png)
 
-## Examples
-- [Buttons](../guides/buttons.md)
-- [Author-Only Buttons](../bdscript/customID.md)
-- [Select Menu](../guides/selectmenu.md)
-- [Modals](../guides/modals.md)
+![example](https://user-images.githubusercontent.com/113303649/223426829-bbeca4d1-2e4c-44ef-a1ae-6458858d0ce0.png)
+
+> How [`$if[]`](../guides/ifStatements.md) or [`$customID[]`](../bdscript/customID.md) works?
