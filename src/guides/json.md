@@ -461,7 +461,7 @@ $jsonJoinArray[Key;...;Separator]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key which will be retrieved.
+- `Key` `(Type: String || Flag: Required)`: The JSON key to an array which will be retrieved.
 - `Separator` `(Type: String || Flag: Required)`: The separator which will separate the JSON keys.
 
 ### Example
