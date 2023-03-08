@@ -7,7 +7,7 @@ $onMessageDelete[channel ID]
 ```
 
 ### Parameters
-- `channel ID`: please edit it!!!
+- `channel ID`: The channel to which the resulting message will be sent.
 
 > [How to get a channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 ## Example
