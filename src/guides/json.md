@@ -488,7 +488,7 @@ $jsonArrayShift[Key;...]
 ```
 
 #### Parameters
-> `Key` `(Type: String || Flag: Required)`: The key of the element which will be removed.
+> `Key` `(Type: String || Flag: Required)`: The key of the array from which an element will be removed.
 
 ### Example
 ```
