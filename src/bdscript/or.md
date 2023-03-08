@@ -1,13 +1,13 @@
 # $or
 Returns 'true' if at least one of the provided conditions is true, otherwise 'false' is returned.
 
-## Usage
+## Syntax
 ```
-$or[confitions;...]
+$or[Condition;...]
 ```
 
 ### Parameters
-- `conditions `(Type: String || Flag: Required)`: Conditions to check. Separate conditions using `;`.
+- `Condition` `(Type: String || Flag: Required)`: Condition to check. Separate conditions using `;`.
 
 ## Example
 ```
