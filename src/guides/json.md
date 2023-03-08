@@ -540,7 +540,7 @@ $jsonArrayUnshift[Key;...;Value]
 ```
 
 #### Parameters
-> `Key` `(Type: String || Flag: Required)`: The JSON key where the value will be added.
+> `Key` `(Type: String || Flag: Required)`: The JSON key of the array to which the value will be added.
 > `Value` `(Type: Float, String, Bool, Integer || Flag: Required)`: The value to be added.
 
 ### Example
