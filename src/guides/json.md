@@ -30,7 +30,7 @@ $json[Key;...]
 ```
 
 #### Parameters
-- `Key` `(Type: String || Flag: Required)`: The JSON key which should be retrieved.
+- `Key` `(Type: String || Flag: Required)`: The JSON key which will be retrieved.
 
 ### Examples
 
@@ -449,3 +449,111 @@ Balance key: $json[balance]
 ![](https://user-images.githubusercontent.com/70456337/216845304-07a48e0c-65e7-4229-90a8-f705201dfdd5.png)
 
 > Therefore, we should set big numbers as strings.
+
+## $jsonJoinArray
+`$jsonJoinArray` function joins a JSON array under the specified key with the given separator.
+
+> The `$jsonJoinArray` function will return an empty string if the value is null, the key doesn't exist, no [`$jsonParse`](#jsonparse) or [`$jsonSet`](#jsonset) function was executed, or [`$jsonClear`](#jsonclear) was executed.
+
+### Syntax
+```
+$jsonJoinArray[Key;...;Separator]
+```
+
+#### Parameters
+- `Key` `(Type: String || Flag: Required)`: The JSON key to an array which will be retrieved.
+- `Separator` `(Type: String || Flag: Required)`: The separator which will separate the JSON keys.
+
+### Example
+```
+$nomention
+$jsonParse[{
+    "music": ["Paranoid - MADKID", "Ping! 2 - Exyl", "Tokyo - Leat'eq"\]
+}]
+
+Music:
+> $jsonJoinArray[music;, ]
+```
+
+> We separated the list with `, `.
+
+![](https://user-images.githubusercontent.com/70456337/222919940-4476268b-2e2c-4c2c-afab-e70fbb88c507.png)
+
+## $jsonArrayShift
+`$jsonArrayShift` function removes the first element of an array and returns the removed element.
+
+### Syntax
+```
+$jsonArrayShift[Key;...]
+```
+
+#### Parameters
+> `Key` `(Type: String || Flag: Required)`: The key of the array from which an element will be removed.
+
+### Example
+```
+$nomention
+$jsonParse[{
+    "music": ["Paranoid - MADKID", "Ping! 2 - Exyl", "Tokyo - Leat'eq"\]
+}]
+
+Removed: $jsonArrayShift[music]
+
+Current music:
+> $jsonJoinArray[music;, ]
+```
+
+![](https://user-images.githubusercontent.com/70456337/222919976-4e9d3110-7a5f-4653-bcdd-ceaa8bfa58db.png)
+
+## $jsonArrayPop
+`$jsonArrayPop` function removes the last element of an array and returns the removed element.
+
+### Syntax
+```
+$jsonArrayPop[Key;...]
+```
+
+#### Parameters
+> `Key` `(Type: String || Flag: Required)`:  The key of the array from which an element will be removed.
+
+### Example
+```
+$nomention
+$jsonParse[{
+    "music": ["Paranoid - MADKID", "Ping! 2 - Exyl", "Tokyo - Leat'eq"\]
+}]
+
+Removed: $jsonArrayPop[music]
+
+Current music:
+> $jsonJoinArray[music;, ]
+```
+
+![](https://user-images.githubusercontent.com/70456337/222919990-19229a8d-9e01-49bd-865a-7d5d8a243525.png)
+
+## $jsonArrayUnshift
+`$jsonArrayUnfhist` function adds the value in the front of the array.
+
+### Syntax
+```
+$jsonArrayUnshift[Key;...;Value]
+```
+
+#### Parameters
+> `Key` `(Type: String || Flag: Required)`: The JSON key of the array to which the value will be added.
+> `Value` `(Type: Float, String, Bool, Integer || Flag: Required)`: The value to be added.
+
+### Example
+```
+$nomention
+$jsonParse[{
+    "music": ["Paranoid - MADKID", "Ping! 2 - Exyl", "Tokyo - Leat'eq"\]
+}]
+
+$jsonArrayUnshift[music;Side Character - Cloudfodder]
+
+Music:
+> $jsonJoinArray[music;, ]
+```
+
+![](https://user-images.githubusercontent.com/70456337/222920006-b4547509-d0bd-49b8-b2cd-9d6510f61df1.png)
