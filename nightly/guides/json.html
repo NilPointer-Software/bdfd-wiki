@@ -192,7 +192,7 @@ This function parses a JSON string into an object which can then be used by othe
 </code></pre>
 <h4 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h4>
 <ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which should be retrieved.</li>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which will be retrieved.</li>
 </ul>
 <h3 id="examples-1"><a class="header" href="#examples-1">Examples</a></h3>
 <h4 id="without-arrays"><a class="header" href="#without-arrays">Without Arrays</a></h4>
@@ -552,6 +552,96 @@ Balance key: $json[balance]
 <blockquote>
 <p>Therefore, we should set big numbers as strings.</p>
 </blockquote>
+<h2 id="jsonjoinarray"><a class="header" href="#jsonjoinarray">$jsonJoinArray</a></h2>
+<p><code>$jsonJoinArray</code> function joins a JSON array under the specified key with the given separator.</p>
+<blockquote>
+<p>The <code>$jsonJoinArray</code> function will return an empty string if the value is null, the key doesn't exist, no <a href="#jsonparse"><code>$jsonParse</code></a> or <a href="#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="#jsonclear"><code>$jsonClear</code></a> was executed.</p>
+</blockquote>
+<h3 id="syntax-13"><a class="header" href="#syntax-13">Syntax</a></h3>
+<pre><code>$jsonJoinArray[Key;...;Separator]
+</code></pre>
+<h4 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key to an array which will be retrieved.</li>
+<li><code>Separator</code> <code>(Type: String || Flag: Required)</code>: The separator which will separate the JSON keys.</li>
+</ul>
+<h3 id="example-10"><a class="header" href="#example-10">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
+}]
+
+Music:
+&gt; $jsonJoinArray[music;, ]
+</code></pre>
+<blockquote>
+<p>We separated the list with <code>, </code>.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/70456337/222919940-4476268b-2e2c-4c2c-afab-e70fbb88c507.png" alt="" /></p>
+<h2 id="jsonarrayshift"><a class="header" href="#jsonarrayshift">$jsonArrayShift</a></h2>
+<p><code>$jsonArrayShift</code> function removes the first element of an array and returns the removed element.</p>
+<h3 id="syntax-14"><a class="header" href="#syntax-14">Syntax</a></h3>
+<pre><code>$jsonArrayShift[Key;...]
+</code></pre>
+<h4 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h4>
+<blockquote>
+<p><code>Key</code> <code>(Type: String || Flag: Required)</code>: The key of the array from which an element will be removed.</p>
+</blockquote>
+<h3 id="example-11"><a class="header" href="#example-11">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
+}]
+
+Removed: $jsonArrayShift[music]
+
+Current music:
+&gt; $jsonJoinArray[music;, ]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/222919976-4e9d3110-7a5f-4653-bcdd-ceaa8bfa58db.png" alt="" /></p>
+<h2 id="jsonarraypop"><a class="header" href="#jsonarraypop">$jsonArrayPop</a></h2>
+<p><code>$jsonArrayPop</code> function removes the last element of an array and returns the removed element.</p>
+<h3 id="syntax-15"><a class="header" href="#syntax-15">Syntax</a></h3>
+<pre><code>$jsonArrayPop[Key;...]
+</code></pre>
+<h4 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h4>
+<blockquote>
+<p><code>Key</code> <code>(Type: String || Flag: Required)</code>:  The key of the array from which an element will be removed.</p>
+</blockquote>
+<h3 id="example-12"><a class="header" href="#example-12">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
+}]
+
+Removed: $jsonArrayPop[music]
+
+Current music:
+&gt; $jsonJoinArray[music;, ]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/222919990-19229a8d-9e01-49bd-865a-7d5d8a243525.png" alt="" /></p>
+<h2 id="jsonarrayunshift"><a class="header" href="#jsonarrayunshift">$jsonArrayUnshift</a></h2>
+<p><code>$jsonArrayUnfhist</code> function adds the value in the front of the array.</p>
+<h3 id="syntax-16"><a class="header" href="#syntax-16">Syntax</a></h3>
+<pre><code>$jsonArrayUnshift[Key;...;Value]
+</code></pre>
+<h4 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h4>
+<blockquote>
+<p><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key of the array to which the value will be added.
+<code>Value</code> <code>(Type: Float, String, Bool, Integer || Flag: Required)</code>: The value to be added.</p>
+</blockquote>
+<h3 id="example-13"><a class="header" href="#example-13">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
+}]
+
+$jsonArrayUnshift[music;Side Character - Cloudfodder]
+
+Music:
+&gt; $jsonJoinArray[music;, ]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/222920006-b4547509-d0bd-49b8-b2cd-9d6510f61df1.png" alt="" /></p>
 
                     </main>
 
