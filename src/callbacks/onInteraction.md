@@ -9,6 +9,7 @@ $onInteraction
 - **[Buttons](../guides/buttons.md)**
 - **[Select Menu](../guides/selectmenu.md)**
 - **[Modals](../guides/modals.md)**
+- **[`$customID`](../bdscript/customID)**
 
 ## Example
 ```
