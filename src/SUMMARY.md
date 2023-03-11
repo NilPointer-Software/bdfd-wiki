@@ -394,6 +394,7 @@
     - [$onBanRemove](./callbacks/onBanRemove.md)
     - [$onMessageDelete](./callbacks/onMessageDelete.md)
     - [$onInteraction](./callbacks/onInteraction.md)
+    - [$onInteraction[]](./callbacks/onInteractionComplex.md)
 
 - [Premium]()
     - [Introduction](./premium/introduction.md)
