@@ -166,38 +166,31 @@
                         </nav>
                         <h1 id="oninteraction"><a class="header" href="#oninteraction">$onInteraction</a></h1>
 <p>Triggered upon an interaction being emitted (e.g. a button being clicked).</p>
-<h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$onInteraction
+</code></pre>
+<h3 id="supports"><a class="header" href="#supports">Supports</a></h3>
 <ul>
-<li><code>$onInteraction</code> - Command runs upon any interaction being emitted.</li>
+<li><strong><a href="../guides/buttons.html">Buttons</a></strong></li>
+<li><strong><a href="../guides/selectmenu.html">Select Menu</a></strong></li>
+<li><strong><a href="../guides/modals.html">Modals</a></strong></li>
+<li><strong><a href="../bdscript/customID.html"><code>$customID</code></a></strong></li>
 </ul>
-<blockquote>
-<p><strong>Note:</strong> <code>$onInteraction</code> (without brackets) shall only be used once. As it replies directly to the Discord's interaction event--once it processes the data, such data becomes invalid.</p>
-</blockquote>
-<ul>
-<li><code>$onInteraction[customID]</code> - Command runs upon the provided 'customID' being clicked/selected/interacted with.</li>
-</ul>
-<h2 id="custom-ids"><a class="header" href="#custom-ids">Custom IDs</a></h2>
-<p>Components (e.g. buttons and select menus), must have a custom ID. This property is defined by the developer when using <a href="./guides/buttons.html">$addButton[]</a>, <a href="./guides/selectmenu.html">$newSelectMenu[]</a>, etc. 
-For example, if you set customID to <code>click_me</code> on a button, in <code>$onInteraction[]</code> you'd put <code>click_me</code>: <code>$onInteraction[click_me]</code>. Alternatively, you can use <code>$onInteraction</code> (without brackets) with <a href="./guides/ifStatements">if statements</a> and <a href="./bdscript/customID.html">$customID</a>:</p>
-<pre><code class="language-php">$if[$customID==click_me]
-Hello!
-$c[Bot replies with &quot;Hello&quot; when the 'click_me' button is clicked by a user.]
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$if[$customID==interaction]
+  $sendMessage[Hello!]
+$endif
+
+$if[$customID==onlyauthor-$authorID]
+  $sendMessage[Hello $username!]
 $endif
 </code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/223423803-2ffadb9e-61b0-432c-bc88-c6850ec564f5.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/223426829-bbeca4d1-2e4c-44ef-a1ae-6458858d0ce0.png" alt="example" /></p>
 <blockquote>
-<p>🧙🏼‍♂️ Using <code>$onInteraction</code> (with brackets) can help save command space.</p>
+<p>How <a href="../guides/ifStatements.html"><code>$if[]</code></a> or <a href="../bdscript/customID.html"><code>$customID[]</code></a> works?</p>
 </blockquote>
-<p>Custom IDs must be unique per component, multiple buttons on the same message must not share the same custom ID. Custom ID is a string of max 100 characters.</p>
-<blockquote>
-<p>Custom IDs may also be referred to as interaction IDs.</p>
-</blockquote>
-<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<ul>
-<li><a href="../guides/buttons.html">Buttons</a></li>
-<li><a href="../bdscript/customID.html">Author-Only Buttons</a></li>
-<li><a href="../guides/selectmenu.html">Select Menu</a></li>
-<li><a href="../guides/modals.html">Modals</a></li>
-</ul>
 
                     </main>
 

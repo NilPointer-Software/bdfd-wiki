@@ -165,26 +165,36 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="onmessagedelete"><a class="header" href="#onmessagedelete">$onMessageDelete</a></h1>
-<p><em>Triggered when a user deletes a message.</em></p>
-<p><code>$onMessageDelete[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user deletes a message. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
-<ol>
-<li>
-<p>Make a new command, with the trigger <code>$onMessageDelete[channelID]</code>.</p>
+<p>Triggered when a user deletes a message.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$onMessageDelete[channel ID]
+</code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>channel ID</code>: The channel to which the resulting message will be sent.</li>
+</ul>
 <blockquote>
-<p>🧙‍♂️ Replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
+<p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get a channel ID guide.</a></p>
 </blockquote>
-<p><img src="https://user-images.githubusercontent.com/69215413/129492544-44511c6b-65f3-4cac-b5dd-76d8d1d9fdba.png" alt="example1" /></p>
-</li>
-<li>
-<p>Set the code/reply text.<br />
-<img src="https://user-images.githubusercontent.com/69215413/129492399-8af2ca7f-32ef-4b21-ba98-1c2e53eb7266.png" alt="example2" /></p>
-</li>
-<li>
-<p>Now, the bot will send a message when someone deletes a message! ✨<br />
-<img src="https://user-images.githubusercontent.com/69215413/129492390-f41754d3-bfc7-4d96-b057-e4a8d8019f26.png" alt="example3" /></p>
-</li>
-</ol>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h3 id="with-getservervar"><a class="header" href="#with-getservervar">With <code>$getServerVar[]</code></a></h3>
+<p>Make a new command, with the trigger <code>$onMessageDelete[$getServerVar[channel]]</code></p>
+<pre><code>$nomention
+A massage was deleted!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/223441552-4e699a36-3d77-40fa-bea8-f3752de1f749.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/223442073-024364e6-17d9-4118-bcab-f12575a447d0.png" alt="example" /></p>
+<h3 id="without-getservervar"><a class="header" href="#without-getservervar">Without <code>$getServerVar[]</code></a></h3>
+<p>Make a new command, with the trigger <code>$onMessageDelete[channel ID]</code> (You must replace <code>channel ID</code> with a valid channel ID)</p>
+<pre><code>$nomention
+A massage was deleted!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/113303649/223441552-4e699a36-3d77-40fa-bea8-f3752de1f749.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/223442073-024364e6-17d9-4118-bcab-f12575a447d0.png" alt="example" /></p>
+<blockquote>
+<p>You can use <code>$channelID</code> to get the ID of the logs (<code>channel ID</code>).</p>
+<p>You can use <code>$messageID</code> to get the ID of the deleted message.</p>
+</blockquote>
 
                     </main>
 
