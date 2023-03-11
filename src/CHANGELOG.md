@@ -4,6 +4,9 @@
 
 ## March
 - Fixed callbacks not always getting detected
+- Fixed JSON functions inability to correctly return an object
+- Fixed `$jsonArrayPop[]` and `$jsonArrayShift[]` only working once on a array
+- Fixed a bug where `$jsonArrayPop[]` an `$jsonArrayShift[]` would stop execution when trying to operate on an empty array
 
 ## February
 - Fixed caching issues for leaderboards
