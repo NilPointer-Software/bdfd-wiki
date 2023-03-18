@@ -1,7 +1,7 @@
 # $commandsCount
 Returns how many commands the bot has total.
 
-## Usage
+## Syntax
 ```
 $commandsCount
 ```
