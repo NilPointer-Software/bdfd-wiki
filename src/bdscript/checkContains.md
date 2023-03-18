@@ -1,7 +1,7 @@
 # $checkContains
 Checks if the 'text' contains at least one of the provided 'phrases'.
 
-## Usage
+## Syntax
 ```
 $checkContains[text;phrases]
 ```
