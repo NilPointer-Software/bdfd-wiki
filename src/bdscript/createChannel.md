@@ -1,7 +1,7 @@
 # $createChannel
 Creates a channel.
 
-## Usage
+## Syntax
 ```
 $createChannel[name;type;(category ID)]
 ```
