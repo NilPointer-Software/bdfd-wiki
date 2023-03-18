@@ -1,6 +1,6 @@
 # $date
 Returns the current date.
-> You can use [`$time[]`](.scr/time.md) to change the timezone.
+> You can use [`$time[]`](./scr/time.md) to change the timezone.
 
 ## Syntax
 ```
