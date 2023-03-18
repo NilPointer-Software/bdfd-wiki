@@ -1,13 +1,13 @@
 # $color
 Sets the embed border color.
 
-## Usage
+## Syntax
 ```
-$color[colorHex;(index)]
+$color[color hex;(index)]
 ```
 
 ### Parameters
-- `colorHex` `(Type: Color || Flag: Emptiable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as. You can also use color integer number.
+- `color hex` `(Type: Color || Flag: Emptiable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to set the embed border color as. You can also use color integer number.
 - `index` `(Type: Integer || Flag: Optional)`: What embed the color border should belong to (Optional). The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
