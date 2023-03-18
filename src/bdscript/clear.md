@@ -12,7 +12,7 @@ $clear
 
 ### Usage #2
 ```
-$clear[how many?;user ID;(remove pinned messages?)]
+$clear[how many?;(user ID;remove pinned messages?)]
 ```
 
 #### Parameters
