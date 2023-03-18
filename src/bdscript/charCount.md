@@ -1,7 +1,7 @@
 # $charCount
 Gets the amount of characters in the provided 'text'.
 
-## Usage
+## Syntax
 ```
 $charCount[text]
 ```
