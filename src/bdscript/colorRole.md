@@ -1,13 +1,13 @@
 # $colorRole
 Changes the color of the mentioned role.
 
-## Usage
+## Syntax
 ```
-$colorRole[colorHex]
+$colorRole[color hex]
 ```
 
 ### Parameters
-- `colorHex` `(Type: Color || Flag: Required)`: The [color hex](https://htmlcolorcodes.com/color-picker) to change the mentioned role color to.
+- `color hex` `(Type: Color || Flag: Required)`: The [color hex](https://htmlcolorcodes.com/color-picker) to change the mentioned role color to.
 
 ## Example
 ```
