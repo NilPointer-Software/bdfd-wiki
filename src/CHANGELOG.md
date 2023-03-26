@@ -8,6 +8,7 @@
 - Fixed `$jsonArrayPop[]` and `$jsonArrayShift[]` only working once on an array
 - Fixed a bug where `$jsonArrayPop[]` and `$jsonArrayShift[]` would stop execution when trying to operate on an empty array
 - Fixed `$round[]` adding trailing zeros
+- Added `$removeAllComponents`
 
 ## February
 - Fixed caching issues for leaderboards
