@@ -1,5 +1,5 @@
 # $customID
-Can only be used with the [`$onInteraction`](/src/callbacks/onInteractionComplex.md) callback. Returns the custom ID of this interaction.
+Can only be used with the [`$onInteraction`](../callbacks/onInteractionComplex.md) callback. Returns the custom ID of this interaction.
 
 ## Syntax
 ```
