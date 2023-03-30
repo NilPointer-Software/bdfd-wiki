@@ -1,9 +1,9 @@
 # $clearReactions
 Removes reactions from the provided message.
 
-## Usage
+## Syntax
 ```
-$clearReactions[channelID;messageID;emoji/!all]
+$clearReactions[channel ID;message ID;emoji]
 ```
 
 ### Parameters
