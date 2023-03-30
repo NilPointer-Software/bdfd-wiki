@@ -172,19 +172,19 @@
 <pre><code>$clear
 </code></pre>
 <blockquote>
-<p>📝 When using just <code>$clear</code>, the author's message must include a number.</p>
+<p>When using just <code>$clear</code>, the author's message must include a number.</p>
 </blockquote>
 <h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
-<pre><code>$clear[howMany;(optional) userID;(optional) removePinnedMessages (yes/no)]
+<pre><code>$clear[how many?;(user ID;remove pinned messages?)]
 </code></pre>
 <h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
 <ul>
-<li><code>howMany</code> <code>(Type: Integer || Flag: Required)</code>: How many messages to delete. (max 100)</li>
-<li><code>userID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: If a userID is provided, the bot will only delete messages from that user.</li>
-<li><code>removePinnedMessages</code> <code>(Type: Bool || Flag: Optional)</code>: Decides whether to delete pinned messages or not. The default is 'yes'.</li>
+<li><code>how many?</code> <code>(Type: Integer || Flag: Required)</code>: How many messages to delete. (max 100)</li>
+<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: If a userID is provided, the bot will only delete messages from that user.</li>
+<li><code>remove pinned messages?</code> <code>(Type: Bool || Flag: Optional)</code>: Decides whether to delete pinned messages or not. The default is <code>yes</code>.</li>
 </ul>
 <blockquote>
-<p>📝 Discord doesn't allow deleting messages in bulk which are over 2 weeks old.</p>
+<p>Discord doesn't allow deleting messages in bulk which are over 2 weeks old.</p>
 </blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

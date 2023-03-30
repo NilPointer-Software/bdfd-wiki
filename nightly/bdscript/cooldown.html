@@ -166,21 +166,17 @@
                         </nav>
                         <h1 id="cooldown"><a class="header" href="#cooldown">$cooldown</a></h1>
 <p>Sets a cooldown. The user can not run the command again, until the 'duration' is up.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$cooldown[duration;errorMessage]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$cooldown[duration;error message]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>duration</code> <code>(Type: Duration || Flag: Required)</code>: The duration of this cooldown. (e.g <code>30s</code>, <code>3m</code>, <code>3h</code>, <code>3d</code>, etc)</p>
-</li>
-<li>
-<p><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the cooldown duration is still ongoing. <code>%time%</code> and other related functions can be used here.</p>
-<blockquote>
-<p>📝 <code>%time%</code> returns how much time is left on the cooldown.</p>
-</blockquote>
-</li>
+<li><code>duration</code> <code>(Type: Duration || Flag: Required)</code>: The duration of this cooldown. (e.g <code>30s</code>, <code>3m</code>, <code>3h</code>, <code>3d</code>, etc)</li>
+<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the cooldown duration is still ongoing. <code>%time%</code> and other related functions can be used here.</li>
 </ul>
+<blockquote>
+<p><code>%time%</code> returns how much time is left on the cooldown.</p>
+</blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $cooldown[30s;Please wait %time%, then use that command again!]

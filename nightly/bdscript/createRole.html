@@ -166,27 +166,27 @@
                         </nav>
                         <h1 id="createrole"><a class="header" href="#createrole">$createRole</a></h1>
 <p>Creates a new role.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$createRole[roleName;colorHex;hoist (yes/no);mentionable (yes/no)]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$createRole[role name;color hex;hoist?;mentionable?]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>roleName</code> <code>(Type: String || Flag: Required)</code>: The name to give the new role.</li>
-<li><code>colorHex</code> <code>(Type: Color || Flag: Required)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> of the new role.</li>
-<li><code>hoist</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be displayed separately (hoisted) or not. <code>no</code> means the role won't be hoisted, <code>yes</code> means it will.</li>
+<li><code>role name</code> <code>(Type: String || Flag: Required)</code>: The name to give the new role.</li>
+<li><code>color hex</code> <code>(Type: Color || Flag: Required)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> of the new role.</li>
+<li><code>hoist?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be displayed separately (hoisted) or not. <code>no</code> means the role won't be hoisted, <code>yes</code> means it will.</li>
 </ul>
-<p><img src="https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png" alt="Example1" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png" alt="example" /></p>
 <ul>
-<li><code>mentionable</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be mentionable by everyone. <code>no</code> means the role won't be mentionable, <code>yes</code> means it will.</li>
+<li><code>mentionable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be mentionable by everyone. <code>no</code> means the role won't be mentionable, <code>yes</code> means it will.</li>
 </ul>
-<p><img src="https://user-images.githubusercontent.com/69215413/122795765-a37b8380-d28b-11eb-8f06-c23e01bafc11.png" alt="Example2" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/122795765-a37b8380-d28b-11eb-8f06-c23e01bafc11.png" alt="example" /></p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $createRole[Cool Role;#FFFF00;yes;no]
 Created new role!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125972939-7d2950a4-1831-4696-8a23-d07d45fa9456.png" alt="example1" /></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/125973030-7c9b980c-cffb-4f8e-aacc-a644a6fa23c3.png" alt="example1.5" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/125972939-7d2950a4-1831-4696-8a23-d07d45fa9456.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/125973030-7c9b980c-cffb-4f8e-aacc-a644a6fa23c3.png" alt="example" /></p>
 
                     </main>
 

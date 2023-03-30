@@ -166,19 +166,18 @@
                         </nav>
                         <h1 id="createchannel"><a class="header" href="#createchannel">$createChannel</a></h1>
 <p>Creates a channel.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$createChannel[name;type;(optional) categoryID]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$createChannel[name;type;(category ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.</p>
+<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.</li>
+</ul>
 <blockquote>
-<p>📝 Channel names can have a maximum of upto 100 characters.</p>
+<p>Channel names can have a maximum of upto 100 characters.</p>
 </blockquote>
-</li>
-<li>
-<p><code>type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:</p>
+<ul>
+<li><code>type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:
 <ul>
 <li><code>category</code></li>
 <li><code>text</code></li>
@@ -187,16 +186,14 @@
 <li><code>forum</code></li>
 </ul>
 </li>
-<li>
-<p><code>categoryID</code> - The category to put the channel in (if applicable).</p>
-</li>
+<li><code>category ID</code> - The category to put the channel in (if applicable).</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $createChannel[cool-channel;text]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125972519-26d1a5a1-f362-4101-abdd-6c3943e6811c.png" alt="example1" /></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/125972524-95307b17-bfcc-4525-a4fa-1d58a30a1fa9.png" alt="example1.5" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/125972519-26d1a5a1-f362-4101-abdd-6c3943e6811c.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/125972524-95307b17-bfcc-4525-a4fa-1d58a30a1fa9.png" alt="example" /></p>
 
                     </main>
 
