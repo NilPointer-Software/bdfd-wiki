@@ -7,12 +7,14 @@ Removes all components from a message.
 There are two usages of this function :
 
 ### Usage #1
+#### Syntax
 ```
 $removeAllComponents
 ```
 Removes all components from the current message.
 
 ### Usage #2
+#### Syntax
 ```
 $removeAllComponents[Message ID]
 ```
