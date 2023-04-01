@@ -10674,6 +10674,10 @@ $setServerVar[leave;$mentionedChannels[1]]
 <img src="https://user-images.githubusercontent.com/69215413/129491086-e6a96af6-edeb-4f2b-b226-0e49ed59f544.png" alt="example2" /></p>
 <p><strong>#3:</strong> Now you have a ban message! ✨<br />
 <img src="https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png" alt="example3" /></p>
+<blockquote>
+<p>You can use <code>$authorID</code> to get the ID of the banned user.
+You can use <a href="callbacks/../bdscript/getBanReason.html"><code>$getBanReason</code></a> to get the ban reason.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onbanremove"><a class="header" href="#onbanremove">$onBanRemove</a></h1>
 <p><em>Triggered when a user gets unbanned from the server.</em></p>
 <p><code>$onBanRemove[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is unbanned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
@@ -10687,6 +10691,9 @@ $setServerVar[leave;$mentionedChannels[1]]
 <img src="https://user-images.githubusercontent.com/69215413/129492022-8acd4877-638c-4855-8970-13dab37b032e.png" alt="example2" /></p>
 <p><strong>#3:</strong> Now you have a unban message! ✨<br />
 <img src="https://user-images.githubusercontent.com/69215413/129492076-8f6ec738-096d-4abf-af8b-678a50ad4c5b.png" alt="example3" /></p>
+<blockquote>
+<p>You can use <code>$authorID</code> to get the ID of the user who got unbanned.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onmessagedelete"><a class="header" href="#onmessagedelete">$onMessageDelete</a></h1>
 <p>Triggered when a user deletes a message.</p>
 <h2 id="syntax-227"><a class="header" href="#syntax-227">Syntax</a></h2>
