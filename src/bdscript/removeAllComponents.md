@@ -1,7 +1,7 @@
 # $removeAllComponents
 Removes all components from a message.
 
-> **Note:** Components are buttons and select menus.
+> **Note** : Components are buttons and select menus.
 
 ## Usages
 There are two usages of this function :
@@ -16,8 +16,9 @@ Removes all components from the current message.
 ```
 $removeAllComponents[Message ID]
 ```
+Removes all components from the given message ID.
 
 #### Parameters 
 - `Message ID` `(Type: Snowflake || Flag: Required)`: The message from which all components will be removed.
 
-> **Note:** When providing "Message ID", make sure the message author is the bot.
+> **Note** : When providing "Message ID", make sure the message author is the bot.
