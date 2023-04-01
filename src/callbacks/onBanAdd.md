@@ -14,3 +14,6 @@
 
 **#3:** Now you have a ban message! ✨\
 ![example3](https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png)
+
+> You can use `$authorID` to get the ID of the banned user.
+> You can use [`$getBanReason`](../bdscript/getBanReason.md) to get the ban reason.

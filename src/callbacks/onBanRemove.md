@@ -14,3 +14,5 @@
 
 **#3:** Now you have a unban message! ✨\
 ![example3](https://user-images.githubusercontent.com/69215413/129492076-8f6ec738-096d-4abf-af8b-678a50ad4c5b.png)
+
+> You can use `$authorID` to get the ID of the user who got unbanned.
