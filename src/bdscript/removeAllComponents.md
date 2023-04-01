@@ -14,7 +14,7 @@ $removeAllComponents
 Removes all components from the current message.
 
 ### Usage #2
-#### Syntax
+### Syntax
 ```
 $removeAllComponents[Message ID]
 ```
