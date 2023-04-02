@@ -1,7 +1,7 @@
 # $removeAllComponents
 Removes all components from a message.
 
-> **Note** : Components are buttons and select menus.
+> **Note** : Components are [buttons](../guides/buttons.md) and [select menus](../guides/selectmenu.md).
 
 ## Usages
 There are two usages of this function :
