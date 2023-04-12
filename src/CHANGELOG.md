@@ -2,6 +2,9 @@
 
 # 2023
 
+## April
+- Fixed caching timeout information
+
 ## March
 - Fixed callbacks not always getting detected
 - Fixed JSON functions inability to correctly return an object
