@@ -15,8 +15,7 @@ $removeButtons[Message ID]
 ```
 $nomention
 $removeButtons[$message[1]]
-
-✅ Removed all buttons from the message with ID `$message[1]`.
+Successfully removed all buttons from the message.
 ```
-<img width="613" alt="example" src="https://user-images.githubusercontent.com/111157596/231754810-a73e546c-39ca-4295-9bb5-00f9c512a47f.png">
-<img width="662" alt="example" src="https://user-images.githubusercontent.com/111157596/231754838-9e7145ff-1501-4a9c-87fe-95665916c651.png">
+![example](https://user-images.githubusercontent.com/111157596/231867111-33a39b32-3d41-469f-802e-c8fe0eb360c9.png)
+![example](https://user-images.githubusercontent.com/111157596/231867140-4e9a4917-4787-4caf-9aa6-9a4e88d51c95.png)
