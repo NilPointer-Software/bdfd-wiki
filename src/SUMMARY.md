@@ -287,6 +287,7 @@
     - [$removeAllComponents](./bdscript/removeAllComponents.md)
     - [$removeAllComponents[]](./bdscript/removeAllComponentsComplex.md)
     - [$removeButtons](./bdscript/removeButtons.md)
+    - [$removeButtons[]](./bdscript/removeButtonsComplex.md)
     - [$removeComponent](./bdscript/removeComponent.md)
     - [$removeContains](./bdscript/removeContains.md)
     - [$removeLinks](./bdscript/removeLinks.md)
