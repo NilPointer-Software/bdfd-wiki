@@ -1,14 +1,14 @@
 # $onlyIf
-If *value1* is related accordingly (based on the "sign") with *value2* then the code runs. If not, the 'errorMessage' is returned.
+If *value1* is related accordingly (based on the "sign") with *value2* then the code runs. If not, the provided error message is returned.
 
-## Usage
+## Syntax
 ```
-$onlyIf[condition;errorMessage]
+$onlyIf[Condition;Error message]
 ```
 
 ### Parameters
-- `condition` `(Type: String || Flag: Required)`: The condition to check (e.g. value1!=value2).
-- `errorMessage` `(Type: String || Flag: Emptiable)`: The message to return when the condition isn't true.
+- `Condition` `(Type: String || Flag: Required)`: The condition to check (e.g. value1!=value2).
+- `Error message` `(Type: String || Flag: Emptiable)`: The message to return when the condition isn't true.
 
 ### Signs
 - `==` - Equal
