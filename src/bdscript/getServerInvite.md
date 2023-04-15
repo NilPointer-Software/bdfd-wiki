@@ -1,23 +1,18 @@
 # $getServerInvite
-Gets a server's invite URL.
+Returns the current server's invite URL.
 
-## Usages
-There are two usages of the `$getServerInvite` function.
-
-### Usage #1
+## Syntax
 ```
 $getServerInvite
 ```
-Returns a invite to the current server.
 
-### Usage #2
+### Permissions
+Required permissions that the bot must have for this function to work properly :
+- `createinstantinvite`
+
+## Example
 ```
-$getServerInvite[guildID]
+$nomention
+$getServerInvite
 ```
-
-## Parameters 
-- `guildID` `(Type: Snowflake || Flag: Required)`: Returns an invite URL for the server provided.
-
-> 🧙‍♂️ Note: The bot must be in the provided server for it to create a invite. 
-
-> 🧙‍♂️ [How do I find a server/guild ID? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
+![example](https://user-images.githubusercontent.com/111157596/232096767-e57f40a3-08a3-4fd7-8594-5d20643a8bc0.png)
