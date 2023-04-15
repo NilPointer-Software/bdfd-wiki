@@ -1,26 +1,14 @@
 # $lowestRole
-Returns the ID of the users/servers lowest role (according to it's position).
+Returns the ID of the current server's lowest role (according to it's position).
 
-## Usages
-There are two usages of the `$lowestRole` function.
-
-### Usage #1
+## Syntax
 ```
 $lowestRole
 ```
-Returns the lowest role in the server.
-
-### Usage #2
-```
-$lowestRole[userID]
-```
-## Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: The user for which to return the lowest role.
 
 ## Example
 ```
 $nomention
-$username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;yes]]] ($lowestRole[$mentioned[1;yes]])
+The server's lowest role: <@&$lowestRole> ($lowestRole)
 ```
-
-![example](https://user-images.githubusercontent.com/69215413/123518995-a523bd80-d676-11eb-94ce-3c08fa888464.png)
+![example](https://user-images.githubusercontent.com/111157596/232103422-9c7ec995-adac-493d-8d2a-887d2b6dd2eb.png)
