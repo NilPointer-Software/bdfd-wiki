@@ -1,10 +1,18 @@
 # $onlyAdmin
-Makes the command only for users with the *administrator* permission.
+Makes the command only for users with the *administrator* permission executable.
 
-## Usage
+## Syntax
 ```
-$onlyAdmin[errorMessage]
+$onlyAdmin[Error message]
 ```
 
 ### Parameters 
-- `errorMessage` `(Type: String || Flag: Emptiable)`: The error message that is returned when the user isn't an administrator.
+- `Error message` `(Type: String || Flag: Emptiable)`: The error message that is returned when the user isn't an administrator.
+
+## Example
+```
+$nomention
+$onlyAdmin[❌ Only administrators can use this command!]
+
+$c[Put your code here.]
+```
