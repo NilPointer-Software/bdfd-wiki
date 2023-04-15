@@ -1,25 +1,23 @@
 # $removeLinks
-Removes links from a value.
+Removes all links from the bot's reply.
 
-## Usages
-There are two usages of the `$removeLinks` function.
-
-### Usage #1
+## Syntax
 ```
 $removeLinks
 ```
-Removes all links from the bot's reply.
-
-### Usage #2
-```
-$removeLinks[text]
-```
-Removes all links from the provided 'text'.
 
 ## Example
+### With `$removeLinks`
 ```
 $nomention
-$removeLinks[$noMentionMessage]
+$removeLinks
+A cool link: https://botdesignerdiscord.com/
 ```
+![image](https://user-images.githubusercontent.com/111157596/231875551-3c034f0a-b122-46b0-a495-e2c94afd5ca2.png)
 
-![example](https://user-images.githubusercontent.com/69215413/123530440-40914e80-d6c8-11eb-9fa1-e1aa488a1c80.png)
+### Without `$removeLinks`
+```
+$nomention
+A cool link: https://botdesignerdiscord.com/
+```
+![example](https://user-images.githubusercontent.com/111157596/231875367-4655873d-7b62-4e4f-9227-757b760fc00d.png)
