@@ -1,7 +1,7 @@
 # $onlyBotChannelPerms
 The command can only be executed if the bot has all of the provided permissions in a channel.
 
-## Usage
+## Syntax
 ```
 $onlyBotChannelPerms[Channel ID;Permissions;...;Error message]
 ```
