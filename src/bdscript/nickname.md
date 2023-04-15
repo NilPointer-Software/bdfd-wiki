@@ -1,28 +1,16 @@
 # $nickname
-Returns a user's display name.
->🧙‍♂️ 'display name' means the user's server nickname, but if the user doesn't have a nickname then their username is returned instead.
+Returns the nickname of the author of the message.
 
-## Usages
-There are two usages of the `$nickname` function.
+> 🧙‍♂️ Nickname means the user's server nickname. If the user doesn't have a nickname then their username is returned instead.
 
-### Usage #1
+## Syntax
 ```
 $nickname
 ```
-Returns the author's display name.
-
-### Usage #2
-```
-$nickname[userID]
-```
-
-#### Parameters 
-- `userID` `(Type: Snowflake || Flag: Required)`: Returns the provided user's display name.
 
 ## Example
 ```
 $nomention
-<@$mentioned[1;yes]>'s nickname is `$nickname[$mentioned[1;yes]]`
+Your nickname is `$nickname`
 ```
-
-![example](https://user-images.githubusercontent.com/69215413/124502356-53271a00-dd91-11eb-8d72-778c9141f296.png)
+![example](https://user-images.githubusercontent.com/111157596/231830656-9ea02db8-2245-4a33-ae21-e8c5b4eb7885.png)
