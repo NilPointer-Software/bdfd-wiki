@@ -11,15 +11,16 @@ $registerGuildCommands[Slash command name;...]
 ### Parameters
 - `Slash command name` `(Type: String || Flag: Required)`: Name of the guild slash command to register. Use semicolons `;` as a separator to separate multiple guild slash command names.
 
-## Example 1
+## Examples
+### Example #1:
 ```
 $nomention
 $registerGuildCommands[help]
 Successfully registered the guild slash command `/help`!
 ```
-![example](https://user-images.githubusercontent.com/111157596/231819571-1e42aa71-b661-4c7d-8d1f-c06d675f659a.png)
+![example1](https://user-images.githubusercontent.com/111157596/233842038-1477b1f9-2e82-4cfc-90d9-ba318a9e8856.png)
 
-## Example 2
+### Example #2:
 ```
 $nomention
 $argsCheck[>1;Provide guild slash command names!]
@@ -27,4 +28,4 @@ $argsCheck[>1;Provide guild slash command names!]
 $unregisterGuildCommands[$unescape[$toLowercase[$replaceText[$trimSpace[$message]; ;]]]]
 Successfully registered the provided guild slash commands!
 ```
-![example](https://user-images.githubusercontent.com/111157596/231820660-41ef683c-8410-484e-9db2-2bf1132cfcef.png)
+![example2](https://user-images.githubusercontent.com/111157596/233842084-413aec63-8cdd-4295-b3d3-0fe660b13792.png)
