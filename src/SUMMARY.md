@@ -351,7 +351,7 @@
     - [$shardID[]](./bdscript/shardIDComplex.md)
     - [$slashCommandsCount](./bdscript/slashCommandsCount.md)
     - [$slashID](./bdscript/slashID.md)
-    - [$slashID[]](./bdscript/SlashIDComplex.md)
+    - [$slashID[]](./bdscript/slashIDComplex.md)
     - [$slowmode](./bdscript/slowmode.md)
     - [$sort](./bdscript/sort.md)
     - [$splitText](./bdscript/splitText.md)
