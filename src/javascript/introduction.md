@@ -8,7 +8,7 @@ In this wiki page and the following sub-wikis, you will learn and explore more a
 ## Introduction
 **BDFD JavaScript** *(a.k.a BDJS)* is an another script language available in the app which can be used as alternative to BDScript for developing a Discord Bot. Unlike BDScript, BDJS executes a JavaScript code. It uses ECMAScript 2015 (ES6) JavaScript version. BDJS has limited Discord API functions support available.
 
-This script is powered by a JS engine made using [Go](https://go.dev) and is not an actual JavaScript.
+BDFD JavaScript provides a different runtime than Node.JS or Web Browser.
 
 > 📌 BDFD JavaScript is not recommended to be used by users who aren't familiar with JavaScript language. It's a language which is entirely different from BDScript and without any proper JS knowledge, the user would get confused whether be it in understanding or writing codes.
 
