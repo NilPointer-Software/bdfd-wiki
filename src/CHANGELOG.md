@@ -2,6 +2,9 @@
 
 # 2023
 
+## May
+- Fixed `$min[]` and `$max[]` not working with floats
+
 ## April
 - Fixed caching timeout information
 
