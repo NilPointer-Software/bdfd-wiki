@@ -5,12 +5,12 @@ This function is used to await a reaction.
 
 ## Syntax
 ```
-$awaitReactions[<command name;reaction>;...]
+$awaitReactions[<Command name;Reaction>;...]
 ```
 
-## Parameters
-- `command name`: The name which will be used inside the `$reaction[]` callback.
-- `reaction`: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.
+### Parameters
+- `Command name` `(Type: String || Flag: Required)`: The name which will be used inside the `$reaction[]` callback.
+- `Reaction` `(Type: Emoji || Flag: Required)`: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.
 
 ## Example
 ```
