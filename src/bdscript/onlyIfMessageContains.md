@@ -14,7 +14,7 @@ $onlyIfMessageContains[Message;Word;...;Error message]
 ## Example
 ```
 $nomention
-$onlyIfMessageContains[$message;Hello;Hi;❌ Your message must contain `Hello` or `Hi`!]
+$onlyIfMessageContains[$message;Hello;Hi;❌ Your message must contain `Hello` and `Hi`!]
 
 $c[Put your code here.]
 ```
