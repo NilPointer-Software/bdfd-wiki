@@ -1,5 +1,5 @@
 # $nickname[]
-Returns the nickname for the given user ID.
+Returns the nickname of the given user.
 
 > 🧙‍♂️ Nickname means the user's server nickname. If the user doesn't have a nickname then their username is returned instead.
 
