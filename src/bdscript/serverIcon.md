@@ -1,30 +1,14 @@
 # $serverIcon
-Returns the server's icon.
+Returns the current server's icon.
 
-## Usages
-There are two usages of the `$serverIcon` function.
-
-### Usage #1
-#### Syntax
+## Syntax
 ```
 $serverIcon
 ```
-Returns the icon of the current server.
-
-### Usage #2
-#### Syntax
-```
-$serverIcon[serverID]
-```
-Returns the icon of the server provided.
-
-#### Parameters 
-- `serverID` `(Type: Snowflake || Flag: Required)`: The server from which to get the icon *(bot must be in the given server)*.
 
 ## Example
 ```
 $nomention
 $image[$serverIcon]
 ```
-
-![example](https://user-images.githubusercontent.com/69215413/126366328-80246e22-4e8c-41f6-9cb0-c0b547236c66.png)
+![example](https://user-images.githubusercontent.com/111157596/231850327-e2d0f75b-4b80-49d4-8936-d43de69789e3.png)

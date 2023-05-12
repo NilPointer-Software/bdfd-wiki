@@ -1,11 +1,19 @@
 # $onlyForRoleIDs
-The command can only executed by the provided roles.
+The command can only be executed by users with any of the provided roles.
 
-## Usage
+## Syntax
 ```
-$onlyForRoleIDs[roleID;...;errorMessage]
+$onlyForRoleIDs[Role IDs;...;Error message]
 ```
 
 ### Parameters 
-- `roleID` `(Type: Snowflake || Flag: Emptiable)`: The role IDs which are allowed to use the command. Separate IDs using `;`.
-- `errorMessage` `(Type: String || Flag: Emptiable)`: The message to return when the user doesn't have the required roles.
+- `Role IDs` `(Type: Snowflake || Flag: Emptiable)`: The role IDs which are allowed to execute the command. Use semicolons `;` as a separator to separate multiple role IDs.
+- `Error message` `(Type: String || Flag: Emptiable)`: The message to return when the user doesn't have the required roles.
+
+## Example
+```
+$nomention
+$onlyForRoleIDs[790625761480146967;❌ You don't have any of the required roles to use this command!]
+
+$c[Put your code here.]
+```

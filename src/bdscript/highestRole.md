@@ -1,26 +1,14 @@
 # $highestRole
-Returns the ID of the users/servers highest role (according to it's position).
+Returns the ID of the current server's highest role (according to its position).
 
-## Usages
-There are two usages of the `$highestRole` function.
-
-### Usage #1
+## Syntax
 ```
 $highestRole
 ```
-Returns the highest role in the server.
-
-### Usage #2
-```
-$highestRole[userID]
-```
-## Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: Returns the user's highest role.
 
 ## Example
 ```
 $nomention
-$username[$mentioned[1;yes]]'s highest role: $roleName[$highestRole[$mentioned[1;yes]]] ($highestRole[$mentioned[1;yes]])
+The server's highest role: <@&$highestRole> ($highestRole)
 ```
-
-![example](https://user-images.githubusercontent.com/69215413/123514088-e90ac880-d65e-11eb-9e40-66dd3485b321.png)
+![example](https://user-images.githubusercontent.com/111157596/232101211-e3692eab-3df1-4906-a8cf-9f16ccef8ac0.png)

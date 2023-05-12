@@ -7,38 +7,41 @@
 
 > 📝 Reaction roles are not possible at the moment since awaited reactions can only be triggered by the author and they expire whenever the bot goes offline.
 
-## Getting Started
+# Getting Started
 To create an awaited reaction command, following functions and callback are used :
 
-### $awaitReactions[]
-This function is used to await an reaction command.
+## $awaitReactions[]
+This function is used to await a reaction command.
 
-#### Usage
+### Syntax
 ```
 $awaitReactions[<Command name;Reaction>;...]
 ```
-- `command name` - It's the name which will be used inside `$reaction[]` callback.
-- `reaction` - It awaits the given emoji. Emoji must be either in Unicode or in discord emoji id format.
 
+#### Parameters
+- `Command name` `(Type: String || Flag: Required)`: It's the name which will be used inside the `$reaction[]` callback.
+- `Reaction` `(Type: Emoji || Flag: Required)`: It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.
 
 
 > 📝 You can group reactions by specifying more *"command names"* and *"reactions"* in `$awaitReactions[]`.\
 \
 > ⚠️ In group reactions, when one reaction is used, the others stop working i.e let's say, a command awaits two reactions (✔️ & ❌). If the user reacts ✔️ then ❌ stops working.
 
-### $reaction[]
+## $reaction[]
 `$reaction[]` is a [callback](../callbacks/introduction.md). It gets triggered whenever an awaited reaction occurs.
 
-#### Usage
+### Syntax
 ```
-$reaction[name]
+$reaction[Name]
 ```
-- `name` - It is the value which is used in *"command name"* argument of `$awaitReactions[]`.
 
-### $usedEmoji
-This function is used to return the emoji which was triggered in `$reaction[]` command.
+#### Parameters
+- `Name` `(Type: String || Flag: Required)`: It's the value which is used in the *"command name"* argument of `$awaitReactions[]`.
 
-#### Usage
+## $usedEmoji
+This function is used to return the emoji which was triggered in the `$reaction[]` command.
+
+### Syntax
 ```
 $usedEmoji
 ```
