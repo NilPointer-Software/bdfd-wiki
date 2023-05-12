@@ -3,7 +3,7 @@
 
 This function returns the emoji which triggered a `$reaction[]` callback.
 
-> This function can only be used inside a `$reaction[]` callback
+> This function can only be used inside a `$reaction[]` callback.
 
 ## Syntax
 ```

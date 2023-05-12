@@ -1,14 +1,16 @@
 # $sendNotification
-Sends notification to your mobile phone
+*(for premium bots)*
 
-## Usage
+Sends a notification to your mobile phone.
+
+## Syntax
 ```
-$sendNotification[message;(image URL)]
+$sendNotification[Message;(Image URL)]
 ```
 
 ### Parameters 
-- `message` `(Type: String || Flag: Required)`: The text that should be in the sent notification.
-- `image URL` `(Type: String || Flag: Optional)`: The URL for the image to be attached.
+- `Message` `(Type: String || Flag: Required)`: The text that is displayed in the notification.
+- `Image URL` `(Type: String || Flag: Optional)`: The URL for the image to be attached.
 
 ## Example
 ```

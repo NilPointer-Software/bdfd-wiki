@@ -5,14 +5,14 @@ This is a [callback](../callbacks/introduction.md). It gets triggered whenever a
 
 ## Syntax
 ```
-$reaction[name]
+$reaction[Name]
 ```
 
-## Parameters
-- `name`: The value used in "command name" argument of `$awaitReactions[]`.
+### Parameters
+- `Name` `(Type: String || Flag: Required)`: The value used in "command name" argument of `$awaitReactions[]`.
 
 ## Example
-#### Trigger `$reaction[click]`
+### Trigger `$reaction[click]`
 ```
 $nomention
 $sendMessage[$username clicked on reaction]
