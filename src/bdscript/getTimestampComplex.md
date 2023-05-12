@@ -1,5 +1,5 @@
 # $getTimestamp[]
-Returns the current [unix timestamp](https://www.unixtimestamp.com/) in selected time unit.
+Returns the current [unix timestamp](https://www.unixtimestamp.com/) in the selected time unit.
 
 ## Syntax
 ```
