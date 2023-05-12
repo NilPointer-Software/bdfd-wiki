@@ -1,5 +1,5 @@
 # $noMentionMessage
-Returns the user's full message without any mentions.
+Returns the user's full message without any mentions *(without the command trigger)*.
 
 ## Syntax
 ```
