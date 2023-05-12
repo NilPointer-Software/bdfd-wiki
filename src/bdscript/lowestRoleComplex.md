@@ -1,5 +1,5 @@
 # $lowestRole[]
-Returns the ID of the provided user's lowest role (according to it's position).
+Returns the ID of the provided user's lowest role (according to its position).
 
 ## Syntax
 ```
