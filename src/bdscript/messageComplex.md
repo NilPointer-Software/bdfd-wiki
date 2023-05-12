@@ -47,9 +47,9 @@ $message[1;text]
 
 **Normal**
 
-![example4](https://github.com/xNickyDev/drafts/assets/111157596/d3166283-102d-4743-af35-94ab8ecfa826)
+![example4](https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/4d743aaa-0b86-4cdf-aa5f-32dbfdf4057e)
 
 **Slash**
 
-![example5](https://github.com/xNickyDev/drafts/assets/111157596/50997cea-ff1d-466c-87e0-e29f5413a8bb)
-![example6](https://github.com/xNickyDev/drafts/assets/111157596/5e707981-b35b-4da7-9cac-240a3193fc2d)
+![example5](https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/67f1202c-61d3-49f1-a055-91e21b90d934)
+![example6](https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/1e381e99-bc5b-4d02-8d09-35f397c5ff75)
