@@ -39,7 +39,7 @@ $message[message]
 ![example3](https://user-images.githubusercontent.com/95774950/179398327-6c1f1c00-205f-4dcf-a0ce-08cefed5c937.png)
 
 ### Normal and Slash command
-We retrieve the first argument of the message and the input of the slash command option named "text".
+We retrieve the first argument of the message or the input of the slash command option named "text".
 ```
 $nomention
 $message[1;text]
