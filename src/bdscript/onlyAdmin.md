@@ -1,5 +1,5 @@
 # $onlyAdmin
-Makes the command only for users with the *administrator* permission executable.
+Allows command execution only for users with *administrator* permission.
 
 ## Syntax
 ```
