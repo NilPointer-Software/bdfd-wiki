@@ -168,14 +168,14 @@
 <p><em>(for premium users)</em></p>
 <p>This is a <a href="../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$reaction[name]
+<pre><code>$reaction[Name]
 </code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The value used in &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The value used in &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<h4 id="trigger-reactionclick"><a class="header" href="#trigger-reactionclick">Trigger <code>$reaction[click]</code></a></h4>
+<h3 id="trigger-reactionclick"><a class="header" href="#trigger-reactionclick">Trigger <code>$reaction[click]</code></a></h3>
 <pre><code>$nomention
 $sendMessage[$username clicked on reaction]
 </code></pre>

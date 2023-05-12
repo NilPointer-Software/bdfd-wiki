@@ -165,14 +165,15 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="sendnotification"><a class="header" href="#sendnotification">$sendNotification</a></h1>
-<p>Sends notification to your mobile phone</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$sendNotification[message;(image URL)]
+<p><em>(for premium bots)</em></p>
+<p>Sends a notification to your mobile phone.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$sendNotification[Message;(Image URL)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>message</code> <code>(Type: String || Flag: Required)</code>: The text that should be in the sent notification.</li>
-<li><code>image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
+<li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The text that is displayed in the notification.</li>
+<li><code>Image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$sendNotification[Hello, I miss you!;$userAvatar[$botID]]

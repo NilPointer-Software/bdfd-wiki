@@ -10911,12 +10911,12 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="messagecontains"><a class="header" href="#messagecontains">$messageContains</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$messageContains[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a> that allows you to create a trigger with multiple phrases. In addition, the bot also looks for those phrases anywhere in the author's message. This feature is great for creating an auto-response or auto-moderation system. </p>
-<h2 id="usage-137"><a class="header" href="#usage-137">Usage</a></h2>
-<pre><code>$messageContains[word;...]
+<h2 id="syntax-234"><a class="header" href="#syntax-234">Syntax</a></h2>
+<pre><code>$messageContains[Word;...]
 </code></pre>
 <h3 id="parameters-289"><a class="header" href="#parameters-289">Parameters</a></h3>
 <ul>
-<li><code>word</code> <code>(Type: String || Flag: Required)</code>: The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
+<li><code>Word</code> <code>(Type: String || Flag: Required)</code>: The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
 </ul>
 <h2 id="example-337"><a class="header" href="#example-337">Example</a></h2>
 <ol>
@@ -10932,15 +10932,15 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reaction"><a class="header" href="#reaction">$reaction</a></h1>
 <p><em>(for premium users)</em></p>
 <p>This is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
-<h2 id="syntax-234"><a class="header" href="#syntax-234">Syntax</a></h2>
-<pre><code>$reaction[name]
+<h2 id="syntax-235"><a class="header" href="#syntax-235">Syntax</a></h2>
+<pre><code>$reaction[Name]
 </code></pre>
-<h2 id="parameters-290"><a class="header" href="#parameters-290">Parameters</a></h2>
+<h3 id="parameters-290"><a class="header" href="#parameters-290">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The value used in &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The value used in &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</li>
 </ul>
 <h2 id="example-338"><a class="header" href="#example-338">Example</a></h2>
-<h4 id="trigger-reactionclick"><a class="header" href="#trigger-reactionclick">Trigger <code>$reaction[click]</code></a></h4>
+<h3 id="trigger-reactionclick"><a class="header" href="#trigger-reactionclick">Trigger <code>$reaction[click]</code></a></h3>
 <pre><code>$nomention
 $sendMessage[$username clicked on reaction]
 </code></pre>
@@ -10951,7 +10951,7 @@ $sendMessage[$username clicked on reaction]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitreactions"><a class="header" href="#awaitreactions">$awaitReactions</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>This function is used to await a reaction.</p>
-<h2 id="syntax-235"><a class="header" href="#syntax-235">Syntax</a></h2>
+<h2 id="syntax-236"><a class="header" href="#syntax-236">Syntax</a></h2>
 <pre><code>$awaitReactions[&lt;command name;reaction&gt;;...]
 </code></pre>
 <h2 id="parameters-291"><a class="header" href="#parameters-291">Parameters</a></h2>
@@ -10972,12 +10972,12 @@ $addReactions[✅;❌]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="customimage"><a class="header" href="#customimage">$customImage</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>This function is used to return the URL of an image uploaded in the app.</p>
-<h2 id="syntax-236"><a class="header" href="#syntax-236">Syntax</a></h2>
-<pre><code>$customImage[custom image tag]
+<h2 id="syntax-237"><a class="header" href="#syntax-237">Syntax</a></h2>
+<pre><code>$customImage[Custom image tag]
 </code></pre>
-<h2 id="parameters-292"><a class="header" href="#parameters-292">Parameters</a></h2>
+<h3 id="parameters-292"><a class="header" href="#parameters-292">Parameters</a></h3>
 <ul>
-<li><code>custom image tag</code>: The image tag you set in the app while uploading the image.</li>
+<li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The image tag you set in the app while uploading the image.</li>
 </ul>
 <h2 id="example-340"><a class="header" href="#example-340">Example</a></h2>
 <pre><code>$nomention
@@ -10985,15 +10985,15 @@ $customImage[NiceImage]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126852524-dfcb237a-8283-43fd-9e17-8dd97bd9ed85.png" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="premium/../premium/customImages.html">Custom Images Guide</a></p>
+<p>For more info, see the <a href="premium/../premium/customImages.html">Custom Images Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="usedemoji"><a class="header" href="#usedemoji">$usedEmoji</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>This function returns the emoji which triggered a <code>$reaction[]</code> callback.</p>
 <blockquote>
-<p>This function can only be used inside a <code>$reaction[]</code> callback</p>
+<p>This function can only be used inside a <code>$reaction[]</code> callback.</p>
 </blockquote>
-<h2 id="syntax-237"><a class="header" href="#syntax-237">Syntax</a></h2>
+<h2 id="syntax-238"><a class="header" href="#syntax-238">Syntax</a></h2>
 <pre><code>$usedEmoji
 </code></pre>
 <h2 id="example-341"><a class="header" href="#example-341">Example</a></h2>
@@ -11007,7 +11007,7 @@ $sendMessage[Emoji: $usedEmoji]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignoretriggercase"><a class="header" href="#ignoretriggercase">$ignoreTriggerCase</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$ignoreTriggerCase</code> is a function that makes the command trigger <strong>not</strong> case sensitive. For example, <code>!help</code> and <code>!HeLp</code> would both work.</p>
-<h2 id="usage-138"><a class="header" href="#usage-138">Usage</a></h2>
+<h2 id="syntax-239"><a class="header" href="#syntax-239">Syntax</a></h2>
 <pre><code>$ignoreTriggerCase
 </code></pre>
 <h2 id="example-342"><a class="header" href="#example-342">Example</a></h2>
@@ -11016,14 +11016,15 @@ $ignoreTriggerCase
 Hello World!
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendnotification"><a class="header" href="#sendnotification">$sendNotification</a></h1>
-<p>Sends notification to your mobile phone</p>
-<h2 id="usage-139"><a class="header" href="#usage-139">Usage</a></h2>
-<pre><code>$sendNotification[message;(image URL)]
+<p><em>(for premium bots)</em></p>
+<p>Sends a notification to your mobile phone.</p>
+<h2 id="syntax-240"><a class="header" href="#syntax-240">Syntax</a></h2>
+<pre><code>$sendNotification[Message;(Image URL)]
 </code></pre>
 <h3 id="parameters-293"><a class="header" href="#parameters-293">Parameters</a></h3>
 <ul>
-<li><code>message</code> <code>(Type: String || Flag: Required)</code>: The text that should be in the sent notification.</li>
-<li><code>image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
+<li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The text that is displayed in the notification.</li>
+<li><code>Image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
 </ul>
 <h2 id="example-343"><a class="header" href="#example-343">Example</a></h2>
 <pre><code>$sendNotification[Hello, I miss you!;$userAvatar[$botID]]
@@ -11040,7 +11041,7 @@ Hello World!
 <p>To create an awaited reaction command, following functions and callback are used :</p>
 <h3 id="awaitreactions-1"><a class="header" href="#awaitreactions-1">$awaitReactions[]</a></h3>
 <p>This function is used to await an reaction command.</p>
-<h4 id="usage-140"><a class="header" href="#usage-140">Usage</a></h4>
+<h4 id="usage-137"><a class="header" href="#usage-137">Usage</a></h4>
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
 <ul>
@@ -11054,7 +11055,7 @@ Hello World!
 </blockquote>
 <h3 id="reaction-1"><a class="header" href="#reaction-1">$reaction[]</a></h3>
 <p><code>$reaction[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
-<h4 id="usage-141"><a class="header" href="#usage-141">Usage</a></h4>
+<h4 id="usage-138"><a class="header" href="#usage-138">Usage</a></h4>
 <pre><code>$reaction[name]
 </code></pre>
 <ul>
@@ -11062,7 +11063,7 @@ Hello World!
 </ul>
 <h3 id="usedemoji-1"><a class="header" href="#usedemoji-1">$usedEmoji</a></h3>
 <p>This function is used to return the emoji which was triggered in <code>$reaction[]</code> command.</p>
-<h4 id="usage-142"><a class="header" href="#usage-142">Usage</a></h4>
+<h4 id="usage-139"><a class="header" href="#usage-139">Usage</a></h4>
 <pre><code>$usedEmoji
 </code></pre>
 <h2 id="example-344"><a class="header" href="#example-344">Example</a></h2>
@@ -11077,15 +11078,15 @@ Hello World!
 <ol>
 <li>
 <p>Select your bot and click <em>&quot;Image functions&quot;</em> in dashboard tab.</p>
-<p><img src="https://user-images.githubusercontent.com/95774950/183711325-a47e97e9-133c-4456-b598-a70eb18795bf.jpeg" alt="Screenshot_20220809-223716-01" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/183711325-a47e97e9-133c-4456-b598-a70eb18795bf.jpeg" alt="example1" /></p>
 </li>
 <li>
 <p>Click the &quot;Add image&quot; button.</p>
-<p><img src="https://user-images.githubusercontent.com/69215413/126851897-314262e5-8f9c-459f-865a-88de836e703b.png" alt="example3" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/126851897-314262e5-8f9c-459f-865a-88de836e703b.png" alt="example2" /></p>
 </li>
 <li>
 <p>Provide an image name and tag. The tag is used in <code>$customImage[]</code> to get the image. The name can be anything.</p>
-<p><img src="https://user-images.githubusercontent.com/95774950/183711379-3fb0ae4b-1f65-426d-bcdc-ab7204b9e792.jpg" alt="Screenshot_20220809-223744" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/183711379-3fb0ae4b-1f65-426d-bcdc-ab7204b9e792.jpg" alt="example3" /></p>
 </li>
 <li>
 <p>Upload your image by clicking <em>&quot;Selected Image&quot;</em> and save the changes.</p>
@@ -11094,18 +11095,18 @@ Hello World!
 <h2 id="retrieving"><a class="header" href="#retrieving">Retrieving</a></h2>
 <h3 id="customimage-1"><a class="header" href="#customimage-1">$customImage[]</a></h3>
 <p>This function is used to return the uploaded image in the app.</p>
-<h4 id="usage-143"><a class="header" href="#usage-143">Usage</a></h4>
+<h4 id="syntax-241"><a class="header" href="#syntax-241">Syntax</a></h4>
 <pre><code>$customImage[Custom image tag]
 </code></pre>
 <h4 id="parameters-294"><a class="header" href="#parameters-294">Parameters</a></h4>
 <ul>
-<li><code>custom image tag</code> <code>(Type: String || Flag: Required)</code>: The tag that you set the custom image to, previously.</li>
+<li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The tag that you set the custom image to, previously.</li>
 </ul>
 <h4 id="example-345"><a class="header" href="#example-345">Example</a></h4>
 <pre><code>$nomention
 $customImage[NiceImage]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/126852524-dfcb237a-8283-43fd-9e17-8dd97bd9ed85.png" alt="ex" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/126852524-dfcb237a-8283-43fd-9e17-8dd97bd9ed85.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="custom-prefixes"><a class="header" href="#custom-prefixes">Custom Prefixes</a></h1>
 <p><em>(for premium bots)</em></p>
 <h2 id="explanation-2"><a class="header" href="#explanation-2">Explanation</a></h2>
@@ -11204,7 +11205,7 @@ Then, check out the following JavaScript learning resources :<br />
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="ban-2"><a class="header" href="#ban-2">ban</a></h1>
 <p>Bans an user from the current guild.</p>
-<h2 id="syntax-238"><a class="header" href="#syntax-238">Syntax</a></h2>
+<h2 id="syntax-242"><a class="header" href="#syntax-242">Syntax</a></h2>
 <pre><code class="language-js">ban(userID)
 </code></pre>
 <h3 id="parameters-295"><a class="header" href="#parameters-295">Parameters</a></h3>
@@ -11243,7 +11244,7 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/190855782-1aa5bf81-06d0-409d-bc06-2cf4aaecc1fb.jpg" alt="InShot_20220917_172017419" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="banwithreason"><a class="header" href="#banwithreason">banWithReason</a></h1>
 <p>Bans an user from the current guild with reason.</p>
-<h2 id="syntax-239"><a class="header" href="#syntax-239">Syntax</a></h2>
+<h2 id="syntax-243"><a class="header" href="#syntax-243">Syntax</a></h2>
 <pre><code class="language-js">banWithReason(userID, reason)
 </code></pre>
 <h3 id="parameters-296"><a class="header" href="#parameters-296">Parameters</a></h3>
@@ -11291,7 +11292,7 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/191721557-9301171b-3807-4fb5-a7a2-ec770844438f.jpg" alt="InShot_20220922_153537132" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltyping"><a class="header" href="#channeltyping">channelTyping</a></h1>
 <p>Emits the <code>TYPING_START</code> event. It shows <em>&quot;Bot is typing...&quot;</em> in the channel where the command was triggered.</p>
-<h2 id="syntax-240"><a class="header" href="#syntax-240">Syntax</a></h2>
+<h2 id="syntax-244"><a class="header" href="#syntax-244">Syntax</a></h2>
 <pre><code class="language-js">channelTyping()
 </code></pre>
 <h3 id="permissions-12"><a class="header" href="#permissions-12">Permissions</a></h3>
@@ -11308,7 +11309,7 @@ setResponse('Wow! I did type.');
 <p><img src="https://user-images.githubusercontent.com/95774950/191220685-2515dabf-626e-4709-9bf7-ec951aa35c44.gif" alt="ezgif com-gif-maker" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createchannel-1"><a class="header" href="#createchannel-1">createChannel</a></h1>
 <p>Creates a new channel in the current guild.</p>
-<h2 id="syntax-241"><a class="header" href="#syntax-241">Syntax</a></h2>
+<h2 id="syntax-245"><a class="header" href="#syntax-245">Syntax</a></h2>
 <pre><code class="language-js">createChannel(name, type)
 </code></pre>
 <h3 id="parameters-297"><a class="header" href="#parameters-297">Parameters</a></h3>
@@ -11351,7 +11352,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191656407-b2b61c57-ff3b-4259-b9f1-8ae92c0bf79b.jpg" alt="InShot_20220922_092945515" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="giverole-1"><a class="header" href="#giverole-1">giveRole</a></h1>
 <p>Assigns a role to a specified user.</p>
-<h2 id="syntax-242"><a class="header" href="#syntax-242">Syntax</a></h2>
+<h2 id="syntax-246"><a class="header" href="#syntax-246">Syntax</a></h2>
 <pre><code class="language-js">giveRole(userID, roleID)
 </code></pre>
 <h3 id="parameters-298"><a class="header" href="#parameters-298">Parameters</a></h3>
@@ -11393,7 +11394,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/190871625-9e676924-68b4-4189-9bba-44a7c3cf4488.jpg" alt="InShot_20220918_000019652" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kick-2"><a class="header" href="#kick-2">kick</a></h1>
 <p>Kicks an user from the current guild.</p>
-<h2 id="syntax-243"><a class="header" href="#syntax-243">Syntax</a></h2>
+<h2 id="syntax-247"><a class="header" href="#syntax-247">Syntax</a></h2>
 <pre><code class="language-js">kick(userID)
 </code></pre>
 <h3 id="parameters-299"><a class="header" href="#parameters-299">Parameters</a></h3>
@@ -11432,7 +11433,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191005572-538deebc-e660-4ce3-89ff-5929197c41ae.jpg" alt="InShot_20220919_164211838" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kickwithreason"><a class="header" href="#kickwithreason">kickWithReason</a></h1>
 <p>Kicks an user from the current guild with reason.</p>
-<h2 id="syntax-244"><a class="header" href="#syntax-244">Syntax</a></h2>
+<h2 id="syntax-248"><a class="header" href="#syntax-248">Syntax</a></h2>
 <pre><code class="language-js">kickWithReason(userID, reason)
 </code></pre>
 <h3 id="parameters-300"><a class="header" href="#parameters-300">Parameters</a></h3>
@@ -11480,7 +11481,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192129456-d5c1092f-dd4d-4bd5-a450-5534acc097d3.jpg" alt="InShot_20220925_104547037" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pinmessage-2"><a class="header" href="#pinmessage-2">pinMessage</a></h1>
 <p>Pins a message to the channel.</p>
-<h2 id="syntax-245"><a class="header" href="#syntax-245">Syntax</a></h2>
+<h2 id="syntax-249"><a class="header" href="#syntax-249">Syntax</a></h2>
 <pre><code class="language-js">pinMessage(channelID, messageID)
 </code></pre>
 <h3 id="parameters-301"><a class="header" href="#parameters-301">Parameters</a></h3>
@@ -11519,7 +11520,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192140467-786505ff-02e0-4443-82e4-03afcfdb2eed.png" alt="Screenshot_20220925_162938" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removechannel"><a class="header" href="#removechannel">removeChannel</a></h1>
 <p>Removes a specified channel from the current server.</p>
-<h2 id="syntax-246"><a class="header" href="#syntax-246">Syntax</a></h2>
+<h2 id="syntax-250"><a class="header" href="#syntax-250">Syntax</a></h2>
 <pre><code class="language-js">removeChannel(channelID)
 </code></pre>
 <h3 id="parameters-302"><a class="header" href="#parameters-302">Parameters</a></h3>
@@ -11557,7 +11558,7 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191010751-6e7bd8d8-00ef-4ca6-850d-4124254cc5a3.jpg" alt="InShot_20220919_171824516" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendchannelmessage"><a class="header" href="#sendchannelmessage">sendChannelMessage</a></h1>
 <p>Sends a message to the provided channel.</p>
-<h2 id="syntax-247"><a class="header" href="#syntax-247">Syntax</a></h2>
+<h2 id="syntax-251"><a class="header" href="#syntax-251">Syntax</a></h2>
 <pre><code class="language-js">sendChannelMessage(channelId, message)
 </code></pre>
 <h3 id="parameters-303"><a class="header" href="#parameters-303">Parameters</a></h3>
@@ -11603,7 +11604,7 @@ setResponse('Wow! I did type.');
 <p><img src="https://user-images.githubusercontent.com/95774950/190842663-13d63729-2008-4f7f-85ce-1aa52242fd8c.png" alt="Screenshot_20220917_102010" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedimage"><a class="header" href="#setembedimage">setEmbedImage</a></h1>
 <p>Adds an image to an embed.</p>
-<h2 id="syntax-248"><a class="header" href="#syntax-248">Syntax</a></h2>
+<h2 id="syntax-252"><a class="header" href="#syntax-252">Syntax</a></h2>
 <pre><code class="language-js">setEmbedImage(imageURL)
 </code></pre>
 <h3 id="parameters-304"><a class="header" href="#parameters-304">Parameters</a></h3>
@@ -11617,7 +11618,7 @@ setEmbedResponse();
 <p><img src="https://user-images.githubusercontent.com/95774950/190847481-06a7de9d-b1f2-44f2-9a4a-d167d69f5d20.png" alt="Screenshot_20220917_134716" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedresponse"><a class="header" href="#setembedresponse">setEmbedResponse</a></h1>
 <p>Sends an embedded message to the current channel.</p>
-<h2 id="syntax-249"><a class="header" href="#syntax-249">Syntax</a></h2>
+<h2 id="syntax-253"><a class="header" href="#syntax-253">Syntax</a></h2>
 <pre><code class="language-js">setEmbedResponse(title, description, footer)
 </code></pre>
 <h3 id="parameters-305"><a class="header" href="#parameters-305">Parameters</a></h3>
@@ -11644,7 +11645,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <p><img src="https://user-images.githubusercontent.com/95774950/190715616-324db8db-8e68-41db-9daa-73ad0d852fe4.png" alt="Screenshot_20220917_005110" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setresponse"><a class="header" href="#setresponse">setResponse</a></h1>
 <p>Sends a message to the current channel.</p>
-<h2 id="syntax-250"><a class="header" href="#syntax-250">Syntax</a></h2>
+<h2 id="syntax-254"><a class="header" href="#syntax-254">Syntax</a></h2>
 <pre><code class="language-js">setResponse(replyText)
 </code></pre>
 <h3 id="parameters-306"><a class="header" href="#parameters-306">Parameters</a></h3>
@@ -11664,7 +11665,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <p><img src="https://user-images.githubusercontent.com/95774950/190676703-2caf1838-0de1-4dc5-9d2d-85b7c9dc5dc1.png" alt="Screenshot_20220916_205326" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="takerole-1"><a class="header" href="#takerole-1">takeRole</a></h1>
 <p>Removes a role from a specified user.</p>
-<h2 id="syntax-251"><a class="header" href="#syntax-251">Syntax</a></h2>
+<h2 id="syntax-255"><a class="header" href="#syntax-255">Syntax</a></h2>
 <pre><code class="language-js">takeRole(userID, roleID)
 </code></pre>
 <h3 id="parameters-307"><a class="header" href="#parameters-307">Parameters</a></h3>
@@ -11706,7 +11707,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/190939183-d1666cdd-4079-4ee2-a5b2-587e0dd656ed.jpg" alt="InShot_20220919_023352223" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unban-1"><a class="header" href="#unban-1">unban</a></h1>
 <p>Unbans an user from the current guild.</p>
-<h2 id="syntax-252"><a class="header" href="#syntax-252">Syntax</a></h2>
+<h2 id="syntax-256"><a class="header" href="#syntax-256">Syntax</a></h2>
 <pre><code class="language-js">unban(userID)
 </code></pre>
 <h3 id="parameters-308"><a class="header" href="#parameters-308">Parameters</a></h3>
@@ -11745,7 +11746,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/191576471-5677053f-c375-4d96-8f22-e15b0c5502f0.jpg" alt="InShot_20220921_230931790" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unpinmessage-1"><a class="header" href="#unpinmessage-1">unpinMessage</a></h1>
 <p>Unpins a message from the channel.</p>
-<h2 id="syntax-253"><a class="header" href="#syntax-253">Syntax</a></h2>
+<h2 id="syntax-257"><a class="header" href="#syntax-257">Syntax</a></h2>
 <pre><code class="language-js">unpinMessage(channelID, messageID)
 </code></pre>
 <h3 id="parameters-309"><a class="header" href="#parameters-309">Parameters</a></h3>
