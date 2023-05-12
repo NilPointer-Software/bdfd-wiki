@@ -30,7 +30,7 @@ Third word: $message[3]
 ![example1](https://user-images.githubusercontent.com/111157596/231827506-1436330e-1231-4eb6-97df-e2218f29ac26.png)
 
 ### Slash command
-*We retrieve the input of the slash command option named "message".*
+We retrieve the input of the slash command option named "message".
 ```
 $nomention
 $message[message]
