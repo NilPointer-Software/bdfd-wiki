@@ -1,5 +1,5 @@
 # $noMentionMessage[]
-Returns an argument of the user's message without any mentions.
+Returns an argument from the user's message omitting any mentions.
 
 ## Syntax
 ```
