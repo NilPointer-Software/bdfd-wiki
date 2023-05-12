@@ -3,7 +3,7 @@
 
 `$ignoreTriggerCase` is a function that makes the command trigger __not__ case sensitive. For example, `!help` and `!HeLp` would both work.
 
-## Usage
+## Syntax
 ```
 $ignoreTriggerCase
 ```
