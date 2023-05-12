@@ -1,5 +1,5 @@
 # $serverNames
-Returns 10 server's names that the bot is in.
+Returns 10 server names in which the bot is in.
 
 ## Syntax
 ```
