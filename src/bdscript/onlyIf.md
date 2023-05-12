@@ -14,6 +14,45 @@ $onlyIf[Condition;Error message]
 - `==` - Equal
 - `!=` - Not Equal
 - `<` - Less Than
-- `>`- Greater Than
-- `>=` - Greater Than Or Equal To
+- `>` - Greater Than
 - `<=` - Less Than Or Equal To
+- `>=` - Greater Than Or Equal To
+
+> ⚠️ The signs `<`, `>`, `<=` and `>=` only work with numbers.
+
+## Examples
+#### Equal (`==`)
+```
+$nomention
+$onlyIf[$message[1]==BDFD;❌ The first argument of your message must be "BDFD"!]
+```
+
+#### Not Equal (`!=`)
+```
+$nomention
+$onlyIf[$message[1]!=BDFD;❌ The first argument of your message can't be "BDFD"!]
+```
+
+#### Less Than (`<`)
+```
+$nomention
+$onlyIf[$message[1]<3000;❌ The number must be less than 3000!]
+```
+
+#### Greater Than (`>`)
+```
+$nomention
+$onlyIf[$message[1]>3000;❌ The number must be greater than 3000!]
+```
+
+#### Less Than Or Equal To (`<=`)
+```
+$nomention
+$onlyIf[$message[1]<=50000;❌ The number must be less than or qual to 50000!]
+```
+
+#### Greater Than Or Equal To (`>=`)
+```
+$nomention
+$onlyIf[$message[1]>=50000;❌ The number must be greater than or qual to 50000!]
+```
