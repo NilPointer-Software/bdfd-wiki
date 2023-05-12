@@ -35,8 +35,8 @@ Third word: $message[3]
 $nomention
 $message[message]
 ```
-![example2](https://github.com/xNickyDev/drafts/assets/111157596/6d805352-6aaa-42c9-9f41-c8fc37afc8b9)
-![example3](https://github.com/xNickyDev/drafts/assets/111157596/f91202f6-f24e-4867-8bd6-18ae856734d3)
+![example2](https://user-images.githubusercontent.com/95774950/179398322-d9a27169-0030-458d-8abc-ed4462637862.png)
+![example3](https://user-images.githubusercontent.com/95774950/179398327-6c1f1c00-205f-4dcf-a0ce-08cefed5c937.png)
 
 ### Normal and Slash command
 We retrieve the first argument of the message and the input of the slash command option named "text".
