@@ -1,5 +1,5 @@
 # $serverNames[]
-Returns *x* server's names that the bot is in.
+Returns *x* server names in which the bot is in.
 
 ## Syntax
 ```
