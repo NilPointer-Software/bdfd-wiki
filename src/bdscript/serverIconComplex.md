@@ -1,5 +1,5 @@
 # $serverIcon[]
-Returns the server's icon for given server ID.
+Returns server icon for the given server ID.
 
 ## Syntax
 ```
