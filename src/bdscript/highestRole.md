@@ -1,5 +1,5 @@
 # $highestRole
-Returns the ID of the current server's highest role (according to it's position).
+Returns the ID of the current server's highest role (according to its position).
 
 ## Syntax
 ```
