@@ -17,7 +17,7 @@ If you want this function to work in a slash command **only**, then you can use 
 
 > 🧙‍♂️ For example, `$message[message]` would just return the input of the slash command option named "message". `$message[1;text]` would return the first word of the message **or** the input of the slash command option named "text". 
 
-Find more info about optimizing `$message[]` for slash commands [here](../guides/slashCommands.md#retrieving-value-from-options).
+Find more info about optimizing `$message[]` for slash commands [here](../guides/general/interactions/slashCommands/aboutSlashCommands.md#retrieving-value-from-options).
 
 ## Examples
 ### Normal command

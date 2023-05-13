@@ -10,9 +10,9 @@ $onIneraction[interaction ID]
 - `interaction ID`: The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.
 
 ### Supports
-- **[Buttons](../guides/buttons.md)**
-- **[Select Menu](../guides/selectmenu.md)**
-- **[Modals](../guides/modals.md)**
+- **[Buttons](../guides/interactions/buttons/aboutButtons.md)**
+- **[Select Menu](../guides/general/interactions/selectMenus/aboutSelectMenu.md)**
+- **[Modals](../guides/general/interactions/modals/aboutModals.md)**
 
 ## Example
 1. Create two commands and set the trigger `$onInteraction[example]` for one command and `!example` for the other.

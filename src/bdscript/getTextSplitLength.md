@@ -7,4 +7,4 @@ Returns the number of splits in [`$textSplit`](./textSplit.md).
 $getTextSplitLength
 ```
 
-[*See more in the Text Splitting guide...*](../guides/textSplitting.md)
+[*See more in the Text Splitting guide...*](../guides/general/textSplitting.md)

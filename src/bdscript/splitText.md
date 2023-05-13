@@ -19,4 +19,4 @@ $splitText[2]
 ```
 > The above example will return output as `Hello`.
 
-[*See more in the Text Splitting guide...*](../guides/textSplitting.md)
+[*See more in the Text Splitting guide...*](../guides/general/textSplitting.md)

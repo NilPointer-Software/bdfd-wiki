@@ -8,7 +8,7 @@ In this section you'll learn how to use the select menu component.
 ```
 $newSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
 ```
-- `Menu ID` - it's used for `$onInteraction[ID]` callback. It works the same way as [buttons](./buttons.md).
+- `Menu ID` - it's used for `$onInteraction[ID]` callback. It works the same way as [buttons](../buttons/aboutButtons.md).
 - `Min` - minimum amount of values that can be selected.
 - `Max` - maximum amount of values that can be selected.
 - `Placeholder` - it's a text that appears if no option is selected.

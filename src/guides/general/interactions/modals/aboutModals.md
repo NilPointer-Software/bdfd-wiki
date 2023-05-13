@@ -10,7 +10,7 @@ In this section, you'll learn how to use the modal message component.
 $newModal[Modal ID;Title]
 ```
 
-- `Modal ID` - Used in `$onInteraction[ID]` callback. It works same way as [buttons](./buttons.md) and [select menus](./selectmenu.md).
+- `Modal ID` - Used in `$onInteraction[ID]` callback. It works same way as [buttons](../buttons/aboutButtons.md) and [select menus](../selectMenus/aboutSelectMenu.md).
 - `Title` - The text which is displayed on top of a modal. This value must be less than or equal to 45 characters.
 
 ## Adding Input Fields
@@ -59,7 +59,7 @@ $addTextInput[modalInput2;short;What are your pronouns?;2;30;yes;;He/Him]
 $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I am a Developer]
 ```
 
-> 🤔 **Explanation:** The code above executes when the [button](./buttons.md) from the previous code gets clicked. So, when the user clicks the button the modal appears.
+> 🤔 **Explanation:** The code above executes when the [button](../buttons/aboutButtons.md) from the previous code gets clicked. So, when the user clicks the button the modal appears.
 
 Command Trigger: `$onInteraction[modal]` | Command Code:
 

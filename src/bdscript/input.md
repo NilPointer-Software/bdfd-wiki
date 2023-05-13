@@ -19,4 +19,4 @@ About me : $input[modalInput3]
 ```
 ![](https://user-images.githubusercontent.com/69215413/168921575-9c2e3106-4ac0-4388-8b41-46e640e6126a.png)
 
-> For more info, see the [Modals Guide](../guides/modals.md).
+> For more info, see the [Modals Guide](../guides/general/interactions/modals/aboutModals.md).

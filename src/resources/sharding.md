@@ -5,9 +5,9 @@ Sharding brings automatic separation of your bot between servers in order to spe
 
 Learn more about the sharding definition on [TechTarget](https://www.techtarget.com/searchoracle/definition/sharding?amp=1).
 
-As stated in our [Terms Of Service](../tos.md), we can't guarantee you stable operation of your bot when it has joined a large number of guilds unless your bot has premium hosting time.
+As stated in our [Terms Of Service](../terms.md), we can't guarantee you stable operation of your bot when it has joined a large number of guilds unless your bot has premium hosting time.
 
-It should be noted that sharding **doesn't** allow your bot to bypass the guild cap limit which is stated in our [Terms Of Service](../tos.md).\
+It should be noted that sharding **doesn't** allow your bot to bypass the guild cap limit which is stated in our [Terms Of Service](../terms.md).\
 Once your bot reaches the guild cap limit, the bot will no longer be able to be invited to any guild, unless the bot will leave other guilds.
 
 If you're wondering about if it's possible to increase a guild cap limit for your bot, yes it's possible.\
