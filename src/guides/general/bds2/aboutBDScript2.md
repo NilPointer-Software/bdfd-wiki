@@ -11,7 +11,7 @@ Besides that, **BDScript 2** has additional features like `$eval[]`, `$try` and 
 
 ## Features
 ### $eval[]
-Evaluates the provided BDScript code. Read [this](../bdscript/eval.md) for more information.
+Evaluates the provided BDScript code. Read [this](../../../bdscript/eval.md) for more information.
 
 ### $try, $catch and $error[]
 This works in a very similar way to the equivalents available in other programming languages.\
@@ -21,13 +21,13 @@ You can read more about it [here](./errorHandling.md).
 Runs functions asynchronously. Read [Async Guide](./asyncScopes.md) for more information.
 
 ### $elseif
-Read [If Statements Guide](./ifStatements.md) for more information.
+Read [If Statements Guide](../ifStatements.md) for more information.
 
 ### $var[]
-Creates a temporary variable. Read [this](../bdscript/var.md) for more information.
+Creates a temporary variable. Read [this](../../../bdscript/var.md) for more information.
 
 ### $stop
 It stops the command execution. It may seem like a useless function but it can come in handy with `$if`s or `$try`s.
 
 ### $optOff[]
-Executes functions with turned off optimizations. Read [this](../bdscript/optOff.md) for more information.
+Executes functions with turned off optimizations. Read [this](../../../bdscript/optOff.md) for more information.

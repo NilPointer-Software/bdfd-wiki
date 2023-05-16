@@ -37,7 +37,7 @@ $endtry
 ### Limiter Error
 As a way to use Error Handling with Limiter Errors, we'll use `$cooldown[]`. With the help of Error Handling, we can make a nice cooldown error message.
 
-To handle only the error of our limiter, we will use a [temporary variable](../bdscript/var.md) and [if statements](./ifStatements.md).
+To handle only the error of our limiter, we will use a [temporary variable](../../../bdscript/var.md) and [if statements](../ifStatements.md).
 If `$cooldown[]` returns an error, the value of the temporary variable will be set to `true` (in which case our nice error message will be sent).
 
 > **Note**: The `error message` argument in `$cooldown[]` must be left blank.
