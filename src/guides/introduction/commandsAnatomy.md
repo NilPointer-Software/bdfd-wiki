@@ -7,7 +7,7 @@ Think of this like a note. Command names don't impact your command at all, but t
 ![image](https://user-images.githubusercontent.com/69215413/120053425-14ff4380-bff8-11eb-9620-bb35694a4cfa.png)
 
 ### Command Triggers
-What the user types to run the command. Triggers should contain both a prefix (e.g `!`) and the actual command name (like `help`). This combines to `!help`. Do not include any spaces at the end of the trigger. Triggers are case sensitive (unless the premium function: [`$ignoreTriggerCase`](../premium/ignoreTriggerCase.md) is used in the command code). You can use [callbacks](../callbacks/introduction.md) in this field.
+What the user types to run the command. Triggers should contain both a prefix (e.g `!`) and the actual command name (like `help`). This combines to `!help`. Do not include any spaces at the end of the trigger. Triggers are case sensitive (unless the premium function: [`$ignoreTriggerCase`](../../premium/ignoreTriggerCase.md) is used in the command code). You can use [callbacks](../../callbacks/introduction.md) in this field.
 
 ![image](https://user-images.githubusercontent.com/69215413/120054343-665e0180-bffd-11eb-9f29-3d64191da988.png)
 
