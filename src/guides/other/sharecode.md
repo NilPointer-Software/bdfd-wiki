@@ -1,8 +1,10 @@
 # Share code
+
 *"Share code"* is a feature that lets users share a copy of their entire bot.
 
-## Creating a share code
-Here is how you can create a share code of your bot -
+## Creating a Share code
+
+Here is how you can create a share code of your bot:
 - Select your bot in BDFD app homepage.
 - Head over to *"Bot Settings"* tab.
 - In *"Share code"* section, click *"Create a share code"* button.

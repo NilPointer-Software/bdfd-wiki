@@ -127,7 +127,7 @@ Removes a certain component from a message.
 ```
 $removeComponent[interaction ID;(message ID)]
 ```
-> This function supports [select-menu](../guides/selectmenu.md) and [button](../guides/buttons.md).
+> This function supports [select-menu](../selectMenus/aboutSelectMenu.md) and [button](../buttons/aboutButtons.md).
 ### Parameters
 - `interaction ID` `(Type: String || Flag: Required)`: The interaction ID of the button, to remove from the message. 
 - `message ID` `(Type: Snowflake || Flag: Vacantable)`: Removes the button from the message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_

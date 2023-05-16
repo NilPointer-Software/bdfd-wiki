@@ -6,9 +6,9 @@ Triggered upon an interaction being emitted (e.g. a button being clicked).
 $onInteraction
 ```
 ### Supports
-- **[Buttons](../guides/buttons.md)**
-- **[Select Menu](../guides/selectmenu.md)**
-- **[Modals](../guides/modals.md)**
+- **[Buttons](../guides/interactions/buttons/aboutButtons.md)**
+- **[Select Menu](../guides/general/interactions/selectMenus/aboutSelectMenu.md)**
+- **[Modals](../guides/general/interactions/modals/aboutModals.md)**
 - **[`$customID`](../bdscript/customID.md)**
 
 ## Example

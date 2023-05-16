@@ -23,7 +23,7 @@ $splitText[1]
 ###### _In the above example, [`$textSplit`](#textsplit) splits the provided text using a comma (`,`) as the separator. After that, [`$splitText`](./splitText.md) is used to retrieve the first split value._
 
 ## Related Resources
-- [Text Splitting Guide](../guides/textSplitting.md)
+- [Text Splitting Guide](../guides/general/textSplitting.md)
 - [$getTextSplitIndex](./getTextSplitIndex.md)
 - [$getTextSplitLength](./getTextSplitLength.md)
 - [$joinSplitText](./joinSplitText.md)

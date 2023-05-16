@@ -33,4 +33,4 @@ $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I
 ```
 ![example](https://user-images.githubusercontent.com/113303649/209936030-02352d16-a81f-486f-aa32-839c82f4fa6d.png)
 
-> For more info, see the [Modals Guide](../guides/modals.md).
+> For more info, see the [Modals Guide](../guides/general/interactions/modals/aboutModals.md).

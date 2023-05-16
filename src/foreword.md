@@ -17,7 +17,7 @@ What are you waiting for? Create the bot of your dreams today!
 Welcome to our humble abode. You're currrently viewing **Bot Designer for Discord**'s wiki.
 
 ### 📂 Wiki Index
-- [Guides](./guides/introduction.md)
+- [Guides](./guides/introduction/aboutSection.md)
 - [Resources](./resources/introduction.md)
 - [BDScript](./bdscript/introduction.md)
 - [Premium](./premium/introduction.md)

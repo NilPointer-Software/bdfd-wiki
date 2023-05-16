@@ -13,4 +13,4 @@ $setChannelVar[Variable Name;New Value;(Channel ID)]
 
 > 📌 Channel variables value has a max character limit of 499 (4999, if premium).
 
-[See more in the Variables guide...](../guides/variables.md)
+[See more in the Variables guide...](../guides/introduction/variables.md)

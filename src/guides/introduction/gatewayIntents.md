@@ -49,7 +49,7 @@ Unlike the two intents above, Message Content Intent doesn't allow for any new e
 Instead, it allows the bot to receive message content data, which includes `content`, `attachments`, `embeds`, and `components`.
 
 If your bot is based on prefix-based commands, then this intent is required.
-Otherwise, you will need to use [slash commands](./slashCommands.md) instead.
+Otherwise, you will need to use [slash commands](./general/interactions/slashCommands/aboutSlashCommands.md) instead.
 
 > 📌 Without this intent, your bot can only read message content data in DMs, messages where your bot was mentioned, and it's own messages.
 

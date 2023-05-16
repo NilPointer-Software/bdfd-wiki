@@ -1,5 +1,5 @@
 # $slashCommandsCount
-Returns the number of [slash commands](../guides/slashCommands.md) the bot has enabled.
+Returns the number of [slash commands](../guides/general/interactions/slashCommands/aboutSlashCommands.md) the bot has enabled.
 
 ## Syntax
 ```

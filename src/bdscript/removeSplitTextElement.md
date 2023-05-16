@@ -10,4 +10,4 @@ $removeSplitTextElement[index]
 ### Parameters
 - `index` `(Type: Integer || Flag: Required)`: The index of the `$textSplit` value to remove.
 
-[*See more in the Text Splitting guide...*](../guides/textSplitting.md)
+[*See more in the Text Splitting guide...*](../guides/general/textSplitting.md)

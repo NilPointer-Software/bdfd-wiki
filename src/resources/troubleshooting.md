@@ -104,7 +104,7 @@ Try debugging your command as a text command. In most cases, they're backward co
 Members Intent isn't enabled.\
 This callback requires the Members Intent to be enabled.
 
-Read the [Gateway Intents Guide](../guides/gatewayIntents.md) for more details.
+Read the [Gateway Intents Guide](../guides/introduction/gatewayIntents.md) for more details.
 
 **The 5th Reason**\
 You have several commands with this callback.\
@@ -195,7 +195,7 @@ Please use the [TZ Database name](https://en.wikipedia.org/wiki/List_of_tz_datab
 ---
 ## Economy Related Commands
 - This part will have fully working and quality code examples that you can use in your bot.
-- In this part, examples and more will be based on the [*local economy*](../guides/variables.md#local-economy) and [BDScript 2](../guides/bdscript2.md).
+- In this part, examples and more will be based on the [*local economy*](../guides/introduction/introduction/variables.md#local-economy) and [BDScript 2](../guides/bdscript2.md).
 
 | Variable Name | Default Variable Value | *Our* Variable Value | Target's Variable Value |
 | :-------------: |  :--------------------: |  :------------------: |  :--------------------:  |
@@ -617,12 +617,12 @@ $setUserVar[Money;$var[ourNewBalance]]
 
 ### Desynchronized Balance
 #### The Balance Is Different On Different Servers
-This is because you're probably using [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in your economy. But these functions are based as [local variables](../guides/variables.md#local-economy). Their values are unique for each server.\
-If you want the same balance on all servers, you should use [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) (with `userID` arguments). These functions are based on [global user variables](../guides/variables.md#globalglobal-user-variables).
+This is because you're probably using [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in your economy. But these functions are based as [local variables](../guides/introduction/variables.md#local-economy). Their values are unique for each server.\
+If you want the same balance on all servers, you should use [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) (with `userID` arguments). These functions are based on [global user variables](../guides/introduction/variables.md#globalglobal-user-variables).
 #### The Displayed Balance Is Different For Different Commands
 Most often this is because you've mixed up the variable functions and you're using the wrong variable type.\
 For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in the Roulette command and [`$getVar`](../bdscript/getVar.md) in the Balance command, this will show different values. The solution to this is to replace [`$getVar`](../bdscript/getVar.md) with [`$getUserVar`](../bdscript/getUserVar.md) in the Balance command, or vice versa, replace [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) with [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) accordingly  in the Roulette command.\
-**Note:** don't forget that [global user variables](../guides/variables.md#globalglobal-user-variables) require a `userID` argument.
+**Note:** don't forget that [global user variables](../guides/introduction/variables.md#globalglobal-user-variables) require a `userID` argument.
 
 
 ---
@@ -673,7 +673,7 @@ The staff will inform the developers of the current problems, providing the scal
 **The 1st Reason**\
 If your bot is based on text commands and you don't have the Message Content Intent enabled.\
 You must enable it in your bot's settings to use text commands.\
-Read the [Gateway Intents Guide](../guides/gatewayIntents.md) for more details.
+Read the [Gateway Intents Guide](../guides/introduction/gatewayIntents.md) for more details.
 
 **The 2nd Reason**\
 Your bot doesn't have the necessary permissions.\

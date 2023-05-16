@@ -32,4 +32,4 @@ $addButton[no;http://botdesignerdiscord.com;Check our website;link;no;👀]
 ```
 ![](https://user-images.githubusercontent.com/16838075/120207246-7d366b00-c22c-11eb-8d04-9cf569ced8ae.png)
 
-> For more info, see the [Button Guide](../guides/buttons.md).
+> For more info, see the [Button Guide](../guides/general/interactions/buttons/aboutButtons.md).

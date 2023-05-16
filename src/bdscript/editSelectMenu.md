@@ -25,4 +25,4 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 ![Usage](https://user-images.githubusercontent.com/70456337/194151805-879cca9b-e970-4e32-bd70-fb5f9010fd97.png)
 ![Usage](https://user-images.githubusercontent.com/70456337/194151852-70c8d754-e6cd-4269-982c-af03c6c3ba3c.png)
 
-> For more info, see the [Select Menu Guide](../guides/selectmenu.md).
+> For more info, see the [Select Menu Guide](../guides/general/interactions/selectMenus/aboutSelectMenu.md).

@@ -22,4 +22,4 @@ $addSelectMenuOption[Example;Second;second-option;The second option]
 $addSelectMenuOption[Example;Third;third-option;The third option]
 ```
 
-> For more info, see the [Select Menu Guide](../guides/selectmenu.md).
+> For more info, see the [Select Menu Guide](../guides/general/interactions/selectMenus/aboutSelectMenu.md).

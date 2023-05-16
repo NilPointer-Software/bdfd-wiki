@@ -25,4 +25,4 @@ $editSelectMenuOption[Example;Third;third-option;The third option;no;3️⃣]
 ![Example 1](https://user-images.githubusercontent.com/70456337/194149283-42724349-84d1-4d70-b8e6-d4b58e8c365f.png)
 ![Example 1](https://user-images.githubusercontent.com/70456337/194149485-750c15e8-2a3c-46d0-857b-493178b9468c.png)
 
-> For more info, see the [Select Menu Guide](../guides/selectmenu.md).
+> For more info, see the [Select Menu Guide](../guides/general/interactions/selectMenus/aboutSelectMenu.md).

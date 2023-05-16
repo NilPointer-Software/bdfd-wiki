@@ -15,10 +15,10 @@ Evaluates the provided BDScript code. Read [this](../bdscript/eval.md) for more 
 
 ### $try, $catch and $error[]
 This works in a very similar way to the equivalents available in other programming languages.\
-You can read more about it [here](./trycatch.md).
+You can read more about it [here](./errorHandling.md).
 
 ### $async
-Runs functions asynchronously. Read [Async Guide](./async.md) for more information.
+Runs functions asynchronously. Read [Async Guide](./asyncScopes.md) for more information.
 
 ### $elseif
 Read [If Statements Guide](./ifStatements.md) for more information.
