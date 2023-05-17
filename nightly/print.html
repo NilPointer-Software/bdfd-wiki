@@ -1008,7 +1008,7 @@ Here you can learn how to create your first BDFD bot, as well as how to use func
 <li>
 <p>Once done, press the <em>&quot;Reset Token&quot;</em> button and copy your bot token.</p>
 <blockquote>
-<p>⚠️ Never share your Discord bot token with anyone. <em><a href="guides/introduction/../resources/security.html#sharing-tokens">Learn more</a></em></p>
+<p>⚠️ Never share your Discord bot token with anyone. <em><a href="guides/introduction/../../resources/security.html#sharing-tokens">Learn more</a></em></p>
 </blockquote>
 </li>
 <li>
@@ -1028,9 +1028,9 @@ Here you can learn how to create your first BDFD bot, as well as how to use func
 </li>
 </ul>
 <h3 id="inviting-the-bot"><a class="header" href="#inviting-the-bot">Inviting the bot</a></h3>
-<p>To add the bot into a server, <a href="guides/introduction/./general/interactions/slashCommands/aboutSlashCommands.html#inviting-the-bot">see this guide</a>.</p>
+<p>To add the bot into a server, <a href="guides/introduction/../general/interactions/slashCommands/aboutSlashCommands.html#inviting-the-bot">see this guide</a>.</p>
 <h3 id="hosting-the-bot"><a class="header" href="#hosting-the-bot">Hosting the bot</a></h3>
-<p>You can host your Discord bot in the app by either watching free ads or purchasing <a href="guides/introduction/../premium/introduction.html">premium</a>.</p>
+<p>You can host your Discord bot in the app by either watching free ads or purchasing <a href="guides/introduction/../../premium/introduction.html">premium</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="bot-status"><a class="header" href="#bot-status">Bot Status</a></h1>
 <p>Here, you will learn how to set-up a custom bot status &amp; activity.</p>
 <h2 id="status"><a class="header" href="#status">Status</a></h2>
@@ -1096,7 +1096,7 @@ Here you can learn how to create your first BDFD bot, as well as how to use func
 <p>Think of this like a note. Command names don't impact your command at all, but they can help you find commands within the app. You can leave this field empty if you choose.</p>
 <p><img src="https://user-images.githubusercontent.com/69215413/120053425-14ff4380-bff8-11eb-9620-bb35694a4cfa.png" alt="image" /></p>
 <h3 id="command-triggers"><a class="header" href="#command-triggers">Command Triggers</a></h3>
-<p>What the user types to run the command. Triggers should contain both a prefix (e.g <code>!</code>) and the actual command name (like <code>help</code>). This combines to <code>!help</code>. Do not include any spaces at the end of the trigger. Triggers are case sensitive (unless the premium function: <a href="guides/introduction/../premium/ignoreTriggerCase.html"><code>$ignoreTriggerCase</code></a> is used in the command code). You can use <a href="guides/introduction/../callbacks/introduction.html">callbacks</a> in this field.</p>
+<p>What the user types to run the command. Triggers should contain both a prefix (e.g <code>!</code>) and the actual command name (like <code>help</code>). This combines to <code>!help</code>. Do not include any spaces at the end of the trigger. Triggers are case sensitive (unless the premium function: <a href="guides/introduction/../../premium/ignoreTriggerCase.html"><code>$ignoreTriggerCase</code></a> is used in the command code). You can use <a href="guides/introduction/../../callbacks/introduction.html">callbacks</a> in this field.</p>
 <p><img src="https://user-images.githubusercontent.com/69215413/120054343-665e0180-bffd-11eb-9f29-3d64191da988.png" alt="image" /></p>
 <h3 id="command-code"><a class="header" href="#command-code">Command Code</a></h3>
 <p>The soul of your command. This is what the bot responds when the command is executed, you can use <a href="guides/introduction/../bdscript/introduction.html">functions</a> like <code>$ping</code> and <code>$message</code> here.</p>
@@ -1139,41 +1139,41 @@ This intent is primarily used to allow for retrieval of user presences data.
 For example, Activities (i.e PLAYING, LISTENING), Presence (i.e Online, Idle) and Custom status.</p>
 <p>The following functions require this intent:</p>
 <ul>
-<li><a href="guides/introduction/../bdscript/getCustomStatus.html"><code>$getCustomStatus[]</code></a></li>
-<li><a href="guides/introduction/../bdscript/getUserStatus.html"><code>$getUserStatus[]</code></a></li>
-<li><a href="guides/introduction/../bdscript/membersCount.html#second-usage"><code>$membersCount[]</code></a></li>
+<li><a href="guides/introduction/../../bdscript/getCustomStatus.html"><code>$getCustomStatus[]</code></a></li>
+<li><a href="guides/introduction/../../bdscript/getUserStatus.html"><code>$getUserStatus[]</code></a></li>
+<li><a href="guides/introduction/../../bdscript/membersCount.html#second-usage"><code>$membersCount[]</code></a></li>
 </ul>
 <h4 id="server-members-intent"><a class="header" href="#server-members-intent">Server Members Intent</a></h4>
 <p>Allows the bot to receive <code>GUILD_MEMBER_ADD</code>, <code>GUILD_MEMBER_UPDATE</code>, <code>GUILD_MEMBER_REMOVE</code>, and <code>THREAD_MEMBERS_UPDATE</code> events.
 This intent is primarily required to fetch the entire list of guild members, and to receive specific guild member info (like guild joining, leaving, profile update etc.).</p>
 <p>The following callbacks require this intent:</p>
 <ul>
-<li><a href="guides/introduction/../callbacks/onJoined.html"><code>$onJoined[]</code></a></li>
-<li><a href="guides/introduction/../callbacks/onLeave.html"><code>$onLeave[]</code></a></li>
+<li><a href="guides/introduction/../../callbacks/onJoined.html"><code>$onJoined[]</code></a></li>
+<li><a href="guides/introduction/../../callbacks/onLeave.html"><code>$onLeave[]</code></a></li>
 </ul>
 <h4 id="message-content-intent"><a class="header" href="#message-content-intent">Message Content Intent</a></h4>
 <p>Unlike the two intents above, Message Content Intent doesn't allow for any new events.
 Instead, it allows the bot to receive message content data, which includes <code>content</code>, <code>attachments</code>, <code>embeds</code>, and <code>components</code>.</p>
 <p>If your bot is based on prefix-based commands, then this intent is required.
-Otherwise, you will need to use <a href="guides/introduction/./general/interactions/slashCommands/aboutSlashCommands.html">slash commands</a> instead.</p>
+Otherwise, you will need to use <a href="guides/introduction/../general/interactions/slashCommands/aboutSlashCommands.html">slash commands</a> instead.</p>
 <blockquote>
 <p>📌 Without this intent, your bot can only read message content data in DMs, messages where your bot was mentioned, and it's own messages.</p>
 </blockquote>
 <p>The following functions/callbacks require this intent:</p>
 <ul>
-<li><a href="guides/introduction/../guides/awaitedCommands.html"><code>$awaitedCommand[]</code></a></li>
-<li><a href="guides/introduction/../premium/messageContains.html"><code>$messageContains[]</code></a></li>
-<li><a href="guides/introduction/../bdscript/argsCheck.html"><code>$argsCheck</code></a></li>
-<li><a href="guides/introduction/../bdscript/banID.html"><code>$banID</code></a> (First &amp; Second Usage)</li>
-<li><a href="guides/introduction/../bdscript/getEmbedData.html"><code>$getEmbedData</code></a></li>
-<li><a href="guides/introduction/../bdscript/getMessage.html"><code>$getMessage</code></a> (Only for <code>content</code> type)</li>
-<li><a href="guides/introduction/../premium/ignoreTriggerCase.html"><code>$ignoreTriggerCase</code></a></li>
-<li><a href="guides/introduction/../bdscript/message.html"><code>$message</code></a></li>
-<li><a href="guides/introduction/../bdscript/noMentionMessage.html"><code>$noMentionMessage</code></a></li>
-<li><a href="guides/introduction/../bdscript/removeContains.html"><code>$removeContains</code></a></li>
-<li><a href="guides/introduction/../bdscript/trimContent.html"><code>$trimContent</code></a></li>
-<li><a href="guides/introduction/../bdscript/unban.html"><code>$unban</code></a></li>
-<li><a href="guides/introduction/../bdscript/unbanID.html#usage-1"><code>$unbanID</code></a></li>
+<li><a href="guides/introduction/../general/awaitedCommands.html"><code>$awaitedCommand[]</code></a></li>
+<li><a href="guides/introduction/../../premium/messageContains.html"><code>$messageContains[]</code></a></li>
+<li><a href="guides/introduction/../../bdscript/argsCheck.html"><code>$argsCheck</code></a></li>
+<li><a href="guides/introduction/../../bdscript/banID.html"><code>$banID</code></a> (First &amp; Second Usage)</li>
+<li><a href="guides/introduction/../../bdscript/getEmbedData.html"><code>$getEmbedData</code></a></li>
+<li><a href="guides/introduction/../../bdscript/getMessage.html"><code>$getMessage</code></a> (Only for <code>content</code> type)</li>
+<li><a href="guides/introduction/../../premium/ignoreTriggerCase.html"><code>$ignoreTriggerCase</code></a></li>
+<li><a href="guides/introduction/../../bdscript/message.html"><code>$message</code></a></li>
+<li><a href="guides/introduction/../../bdscript/noMentionMessage.html"><code>$noMentionMessage</code></a></li>
+<li><a href="guides/introduction/../../bdscript/removeContains.html"><code>$removeContains</code></a></li>
+<li><a href="guides/introduction/../../bdscript/trimContent.html"><code>$trimContent</code></a></li>
+<li><a href="guides/introduction/../../bdscript/unban.html"><code>$unban</code></a></li>
+<li><a href="guides/introduction/../../bdscript/unbanID.html#usage-1"><code>$unbanID</code></a></li>
 </ul>
 <h2 id="enabling-privileged-gateway-intents"><a class="header" href="#enabling-privileged-gateway-intents">Enabling Privileged Gateway Intents</a></h2>
 <p>To enable Privileged Gateway Intents in your bot, follow these steps:</p>
@@ -1280,7 +1280,7 @@ Each variable has two elements, which we will breakdown in this section.</p>
 <p>📌 Deleting variables might return error message in those commands which were using the deleted variables.</p>
 </blockquote>
 <h2 id="globalglobal-user-variables"><a class="header" href="#globalglobal-user-variables">Global/Global-User Variables</a></h2>
-<p><a href="guides/introduction/../bdscript/setVar.html"><code>$setVar</code></a>/<a href="guides/introduction/../bdscript/getVar.html"><code>$getVar</code></a> are global variable functions, which means they apply universally <em>(i.e they don't change per-server, per-channel, or per-user)</em>.<br />
+<p><a href="guides/introduction/../../bdscript/setVar.html"><code>$setVar</code></a>/<a href="guides/introduction/../../bdscript/getVar.html"><code>$getVar</code></a> are global variable functions, which means they apply universally <em>(i.e they don't change per-server, per-channel, or per-user)</em>.<br />
 However, if you provide a user ID in the optional <code>User ID</code> parameter then it becomes a global-user variable.</p>
 <p>Global-user variables value stay same with the user in every server. The usage of global-user variables looks like this:</p>
 <ul>
@@ -1458,10 +1458,10 @@ Command used `$getChannelVar[Uses]` times in this channel
 <h2 id="leaderboards"><a class="header" href="#leaderboards">Leaderboards</a></h2>
 <p>You can generate variable leaderboards, using the functions below.</p>
 <ul>
-<li><a href="guides/introduction/../bdscript/globalUserLeaderboard.html">$globalUserLeaderboard</a> - Global-User Variables.</li>
-<li><a href="guides/introduction/../bdscript/userLeaderboard.html">$userLeaderboard</a> - User Variables.</li>
-<li><a href="guides/introduction/../bdscript/serverLeaderboard.html">$serverLeaderboard</a> - Server Variables.</li>
-<li><a href="guides/introduction/../bdscript/getLeaderboardValue.html">$getLeaderboardValue</a> - Fetchs leaderboard value.</li>
+<li><a href="guides/introduction/../../bdscript/globalUserLeaderboard.html">$globalUserLeaderboard</a> - Global-User Variables.</li>
+<li><a href="guides/introduction/../../bdscript/userLeaderboard.html">$userLeaderboard</a> - User Variables.</li>
+<li><a href="guides/introduction/../../bdscript/serverLeaderboard.html">$serverLeaderboard</a> - Server Variables.</li>
+<li><a href="guides/introduction/../../bdscript/getLeaderboardValue.html">$getLeaderboardValue</a> - Fetchs leaderboard value.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="bdscript-2"><a class="header" href="#bdscript-2">BDScript 2</a></h1>
 <h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
@@ -1472,20 +1472,20 @@ It fixes the issue, but the new edition has its quirks which could be problemati
 Besides that, <strong>BDScript 2</strong> has additional features like <code>$eval[]</code>, <code>$try</code> and <code>$catch</code> and more.</p>
 <h2 id="features"><a class="header" href="#features">Features</a></h2>
 <h3 id="eval"><a class="header" href="#eval">$eval[]</a></h3>
-<p>Evaluates the provided BDScript code. Read <a href="guides/general/bds2/../bdscript/eval.html">this</a> for more information.</p>
+<p>Evaluates the provided BDScript code. Read <a href="guides/general/bds2/../../../bdscript/eval.html">this</a> for more information.</p>
 <h3 id="try-catch-and-error"><a class="header" href="#try-catch-and-error">$try, $catch and $error[]</a></h3>
 <p>This works in a very similar way to the equivalents available in other programming languages.<br />
 You can read more about it <a href="guides/general/bds2/./errorHandling.html">here</a>.</p>
 <h3 id="async"><a class="header" href="#async">$async</a></h3>
 <p>Runs functions asynchronously. Read <a href="guides/general/bds2/./asyncScopes.html">Async Guide</a> for more information.</p>
 <h3 id="elseif"><a class="header" href="#elseif">$elseif</a></h3>
-<p>Read <a href="guides/general/bds2/./ifStatements.html">If Statements Guide</a> for more information.</p>
+<p>Read <a href="guides/general/bds2/../ifStatements.html">If Statements Guide</a> for more information.</p>
 <h3 id="var"><a class="header" href="#var">$var[]</a></h3>
-<p>Creates a temporary variable. Read <a href="guides/general/bds2/../bdscript/var.html">this</a> for more information.</p>
+<p>Creates a temporary variable. Read <a href="guides/general/bds2/../../../bdscript/var.html">this</a> for more information.</p>
 <h3 id="stop"><a class="header" href="#stop">$stop</a></h3>
 <p>It stops the command execution. It may seem like a useless function but it can come in handy with <code>$if</code>s or <code>$try</code>s.</p>
 <h3 id="optoff"><a class="header" href="#optoff">$optOff[]</a></h3>
-<p>Executes functions with turned off optimizations. Read <a href="guides/general/bds2/../bdscript/optOff.html">this</a> for more information.</p>
+<p>Executes functions with turned off optimizations. Read <a href="guides/general/bds2/../../../bdscript/optOff.html">this</a> for more information.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="async-1"><a class="header" href="#async-1">Async</a></h1>
 <p>Runs functions in the background. Using async features properly can optimize your code and make it faster!</p>
 <blockquote>
@@ -1557,7 +1557,7 @@ $endtry
 <p><img src="https://user-images.githubusercontent.com/70456337/194721708-b8062ac5-7ef3-48af-b412-1d66381add44.png" alt="Function Error" /></p>
 <h3 id="limiter-error"><a class="header" href="#limiter-error">Limiter Error</a></h3>
 <p>As a way to use Error Handling with Limiter Errors, we'll use <code>$cooldown[]</code>. With the help of Error Handling, we can make a nice cooldown error message.</p>
-<p>To handle only the error of our limiter, we will use a <a href="guides/general/bds2/../bdscript/var.html">temporary variable</a> and <a href="guides/general/bds2/./ifStatements.html">if statements</a>.
+<p>To handle only the error of our limiter, we will use a <a href="guides/general/bds2/../../../bdscript/var.html">temporary variable</a> and <a href="guides/general/bds2/../ifStatements.html">if statements</a>.
 If <code>$cooldown[]</code> returns an error, the value of the temporary variable will be set to <code>true</code> (in which case our nice error message will be sent).</p>
 <blockquote>
 <p><strong>Note</strong>: The <code>error message</code> argument in <code>$cooldown[]</code> must be left blank.</p>
@@ -1590,13 +1590,13 @@ $endif
 <p><a href="guides/general/interactions/buttons/aboutButtons.html#functions-used"><strong>Functions Used</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#button-style"><strong>Button Style</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#button-type"><strong>Button Type</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#addbutton"><strong>$addButton[]</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#editbutton"><strong>$editButton[]</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#removebuttons"><strong>$removeButtons</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#removebuttons-1"><strong>$removeButtons[]</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#removecomponent"><strong>$removeComponent[]</strong></a> &gt; <a href="guides/general/interactions/buttons/aboutButtons.html#create-interaction"><strong>Create Interaction</strong></a></p>
 <h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
-<li><a href="guides/general/interactions/buttons/../bdscript/addButton.html"><code>$addButton[]</code></a></li>
-<li><a href="guides/general/interactions/buttons/../bdscript/editButton.html"><code>$editButton[]</code></a></li>
-<li><a href="guides/general/interactions/buttons/../bdscript/removeButtons.html"><code>$removeButtons</code></a></li>
-<li><a href="guides/general/interactions/buttons/../bdscript/removeButtons.html"><code>$removeButtons[]</code></a></li>
-<li><a href="guides/general/interactions/buttons/../bdscript/removeComponent.html"><code>$removeComponent[]</code></a></li>
-<li><a href="guides/general/interactions/buttons/../callbacks/onInteraction.html"><code>$onInteraction</code></a></li>
-<li><a href="guides/general/interactions/buttons/../callbacks/onInteraction.html"><code>$onInteraction[]</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../bdscript/addButton.html"><code>$addButton[]</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../bdscript/editButton.html"><code>$editButton[]</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../bdscript/removeButtons.html"><code>$removeButtons</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../bdscript/removeButtons.html"><code>$removeButtons[]</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../bdscript/removeComponent.html"><code>$removeComponent[]</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../callbacks/onInteraction.html"><code>$onInteraction</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../callbacks/onInteractionComplex.html"><code>$onInteraction[]</code></a></li>
 </ul>
 <h2 id="button-style"><a class="header" href="#button-style">Button Style</a></h2>
 <ul>
@@ -1784,7 +1784,7 @@ $endif
 </ol>
 <p><img src="https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png" alt="example" /></p>
 <blockquote>
-<p>How <a href="guides/general/interactions/buttons/../callbacks/onInteraction.html"><code>$onInteraction</code></a> or <a href="guides/general/interactions/buttons/../callbacks/onInteractionComplex.html"><code>$onInteraction[]</code></a> works?</p>
+<p>How <a href="guides/general/interactions/buttons/../../../../callbacks/onInteraction.html"><code>$onInteraction</code></a> or <a href="guides/general/interactions/buttons/../../../..//callbacks/onInteractionComplex.html"><code>$onInteraction[]</code></a> works?</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modals"><a class="header" href="#modals">Modals</a></h1>
 <p>In this section, you'll learn how to use the modal message component.</p>
@@ -2157,9 +2157,9 @@ $appendOptionSuggestion[$autoCompleteOptionName-$autoCompleteOptionValue;$autoCo
 <p><a href="guides/general/awaitedCommands.html#functions-used"><strong>Functions Used</strong></a> &gt; <a href="guides/general/awaitedCommands.html#supported-filters"><strong>Supported Filters</strong></a> &gt; <a href="guides/general/awaitedCommands.html#awaitfunc"><strong>$awaitFunc[]</strong></a> &gt; <a href="guides/general/awaitedCommands.html#awaitedcommand"><strong>$awaitedCommand[]</strong></a> &gt; <a href="guides/general/awaitedCommands.html#awaitedcommanderror"><strong>$awaitedCommandError[]</strong></a> &gt; <a href="guides/general/awaitedCommands.html#creating-an-awaited-command"><strong>Creating an awaited command</strong></a></p>
 <h2 id="functions-used-1"><a class="header" href="#functions-used-1">Functions Used</a></h2>
 <ul>
-<li><a href="guides/general/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a></li>
-<li><a href="guides/general/../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a></li>
-<li><a href="guides/general/../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a></li>
+<li><a href="guides/general/../../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a></li>
+<li><a href="guides/general/../../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a></li>
+<li><a href="guides/general/../../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a></li>
 </ul>
 <h2 id="supported-filters"><a class="header" href="#supported-filters">Supported Filters</a></h2>
 <ul>
@@ -2487,7 +2487,7 @@ $endif
 <p>Before you read this guide, you should be familiar with what JSON is and where and how it's being used.<br />
 You can familiarize yourself with JSON by reading a tutorial on <a href="https://www.w3schools.com/js/js_json_intro.asp">W3Schools</a>.</p>
 <blockquote>
-<p>This guide will utilize <a href="guides/general/../other/characterEscaping.html">Character Escaping</a> and the <a href="guides/general/../bdscript/optOff.html"><code>$optOff</code></a> function.</p>
+<p>This guide will utilize <a href="guides/general/../other/characterEscaping.html">Character Escaping</a> and the <a href="guides/general/../../bdscript/optOff.html"><code>$optOff</code></a> function.</p>
 </blockquote>
 <h2 id="jsonparse"><a class="header" href="#jsonparse">$jsonParse</a></h2>
 <p><code>$jsonParse</code> is the primary function used when working with JSON data.<br />
@@ -2970,20 +2970,20 @@ Music:
 <h3 id="creating-a-thread"><a class="header" href="#creating-a-thread">Creating a Thread</a></h3>
 <pre><code>$startThread[name;channelID;messageID (canBeLeftEmpty);archiveDuration (60/1440/4320/10080);returnThreadID (yes/no)]
 </code></pre>
-<p>Starts a thread <a href="guides/general/../bdscript/startThread.html">(learn more)</a></p>
+<p>Starts a thread <a href="guides/general/../../bdscript/startThread.html">(learn more)</a></p>
 <h3 id="editing-a-thread"><a class="header" href="#editing-a-thread">Editing a Thread</a></h3>
 <pre><code>$editThread[threadID;name;archived (yes/no);archiveDuration (60/1440/4320/10080);locked (yes/no);slowmode (in seconds)]
 </code></pre>
-<p>Edits an existing thread. <a href="guides/general/../bdscript/editThread.html">(learn more)</a></p>
+<p>Edits an existing thread. <a href="guides/general/../../bdscript/editThread.html">(learn more)</a></p>
 <h3 id="member-thread-management"><a class="header" href="#member-thread-management">Member Thread Management</a></h3>
 <h4 id="adding-a-user-to-a-thread"><a class="header" href="#adding-a-user-to-a-thread">Adding a User to a Thread</a></h4>
 <pre><code>$threadAddMember[threadID;userID]
 </code></pre>
-<p>Adds a user to the thread. <a href="guides/general/../bdscript/threadAddMember.html">(learn more)</a></p>
+<p>Adds a user to the thread. <a href="guides/general/../../bdscript/threadAddMember.html">(learn more)</a></p>
 <h4 id="removing-a-user-from-a-thread"><a class="header" href="#removing-a-user-from-a-thread">Removing a User from a Thread</a></h4>
 <pre><code>$threadRemoveMember[threadID;userID]
 </code></pre>
-<p>Removes a user from the thread. <a href="guides/general/../bdscript/threadRemoveMember.html">(learn more)</a></p>
+<p>Removes a user from the thread. <a href="guides/general/../../bdscript/threadRemoveMember.html">(learn more)</a></p>
 <h3 id="example-33"><a class="header" href="#example-33">Example</a></h3>
 <pre><code>$var[threadID;$startThread[Cool Thread;$channelID;;1440;yes]]
 I created a new thread! &lt;#$var[threadID]&gt;
@@ -3180,9 +3180,9 @@ Example: (- <code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>
 <li><strong>URL</strong> - A valid domain link, <strong>must</strong> be prefixed by <code>http://</code> or <code>https://</code> and have a valid domain name.</li>
 <li><strong>HowMany</strong> - A number that is prefixed or suffixed with &lt; or &gt;, or just a plain integer.</li>
 <li><strong>Enum</strong> - Strings that match a certain key value (case insensitive).</li>
-<li><strong>Emoji</strong> - Emoji as 🌹 or the discord custom emojis in form of <code>&lt;a:emoji_name:emoji-id&gt;</code> for gif emojis and <code>&lt;:emoji_name:emoji-id&gt;</code> for non-gif emojis, for how to get that, check <a href="guides/other/../bdscript/addReactions.html">$addReactions</a> as it has explanations for that. Characters <code>&lt;&gt;</code> can be omitted from the discord custom emoji form.</li>
+<li><strong>Emoji</strong> - Emoji as 🌹 or the discord custom emojis in form of <code>&lt;a:emoji_name:emoji-id&gt;</code> for gif emojis and <code>&lt;:emoji_name:emoji-id&gt;</code> for non-gif emojis, for how to get that, check <a href="guides/other/../../bdscript/addReactions.html">$addReactions</a> as it has explanations for that. Characters <code>&lt;&gt;</code> can be omitted from the discord custom emoji form.</li>
 <li><strong>Duration</strong> - A time based duration, an integer suffixed with a valid time format (s, m, h, d, w).</li>
-<li><strong>Permission</strong> - Discord permission (case insensitive), see <a href="guides/other/../resources/permissions.html">this</a> for all valid permissions.</li>
+<li><strong>Permission</strong> - Discord permission (case insensitive), see <a href="guides/other/../../resources/permissions.html">this</a> for all valid permissions.</li>
 <li><strong>Bool</strong> - yes/no or true/false.</li>
 <li><strong>Color</strong> - Color Hex Code you can get from <a href="https://htmlcolorcodes.com/color-picker">here</a> as an example</li>
 </ul>
@@ -3210,7 +3210,7 @@ Example: (- <code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hyperlinks"><a class="header" href="#hyperlinks">Hyperlinks</a></h1>
 <p>A hyperlink is clickable-text. When the user clicks on the text, it directs them to a certain URL.</p>
 <h2 id="general-hyperlinks"><a class="header" href="#general-hyperlinks">General Hyperlinks</a></h2>
-<p>You can use hyperlinks inside <a href="guides/other/../bdscript/description.html"><code>$description[]</code></a>, <a href="guides/other/../bdscript/addField.html"><code>$addField[]</code></a>, <a href="guides/other/../guides/general/webhooks.html">webhook</a> content/description, <a href="guides/other/../guides/general/interactions/slashCommands/aboutSlashCommands.html">slash command</a> response content, and ephemeral <a href="guides/other/../callbacks/onInteraction.html"><code>$onInteraction</code></a> response content.</p>
+<p>You can use hyperlinks inside <a href="guides/other/../../bdscript/description.html"><code>$description[]</code></a>, <a href="guides/other/../../bdscript/addField.html"><code>$addField[]</code></a>, <a href="guides/other/../../guides/general/webhooks.html">webhook</a> content/description, <a href="guides/other/../../guides/general/interactions/slashCommands/aboutSlashCommands.html">slash command</a> response content, and ephemeral <a href="guides/other/../../callbacks/onInteraction.html"><code>$onInteraction</code></a> response content.</p>
 <h3 id="syntax-32"><a class="header" href="#syntax-32">Syntax</a></h3>
 <pre><code>[text\](link)
 </code></pre>
@@ -3226,9 +3226,9 @@ $description[This bot is made with [Bot Designer For Discord\](https://botdesign
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/127039004-e1a607b5-af0f-4761-9d33-954f7dcad155.png" alt="example" /></p>
 <h2 id="title-hyperlinks"><a class="header" href="#title-hyperlinks">Title Hyperlinks</a></h2>
-<p>Use the <a href="guides/other/../bdscript/embeddedURL.html">$embeddedURL</a> function to add a hyperlink in <a href="guides/other/../bdscript/title.html">$title</a>.</p>
+<p>Use the <a href="guides/other/../../bdscript/embeddedURL.html">$embeddedURL</a> function to add a hyperlink in <a href="guides/other/../../bdscript/title.html">$title</a>.</p>
 <h2 id="author-hyperlinks"><a class="header" href="#author-hyperlinks">Author Hyperlinks</a></h2>
-<p>Use the <a href="guides/other/../bdscript/authorURL.html">$authorURL</a> function to add a hyperlink in <a href="guides/other/../bdscript/author.html">$author</a>.</p>
+<p>Use the <a href="guides/other/../../bdscript/authorURL.html">$authorURL</a> function to add a hyperlink in <a href="guides/other/../../bdscript/author.html">$author</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="share-code"><a class="header" href="#share-code">Share code</a></h1>
 <p><em>&quot;Share code&quot;</em> is a feature that lets users share a copy of their entire bot.</p>
 <h2 id="creating-a-share-code"><a class="header" href="#creating-a-share-code">Creating a Share code</a></h2>
@@ -11022,7 +11022,7 @@ A massage was deleted!
 </code></pre>
 <h3 id="supports"><a class="header" href="#supports">Supports</a></h3>
 <ul>
-<li><strong><a href="callbacks/../guides/interactions/buttons/aboutButtons.html">Buttons</a></strong></li>
+<li><strong><a href="callbacks/../guides/general/interactions/buttons/aboutButtons.html">Buttons</a></strong></li>
 <li><strong><a href="callbacks/../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu</a></strong></li>
 <li><strong><a href="callbacks/../guides/general/interactions/modals/aboutModals.html">Modals</a></strong></li>
 <li><strong><a href="callbacks/../bdscript/customID.html"><code>$customID</code></a></strong></li>
@@ -11040,7 +11040,7 @@ $endif
 <p><img src="https://user-images.githubusercontent.com/113303649/223423803-2ffadb9e-61b0-432c-bc88-c6850ec564f5.png" alt="example" /></p>
 <p><img src="https://user-images.githubusercontent.com/113303649/223426829-bbeca4d1-2e4c-44ef-a1ae-6458858d0ce0.png" alt="example" /></p>
 <blockquote>
-<p>How <a href="callbacks/../guides/ifStatements.html"><code>$if[]</code></a> or <a href="callbacks/../bdscript/customID.html"><code>$customID[]</code></a> works?</p>
+<p>How <a href="callbacks/../guides/general/ifStatements.html"><code>$if[]</code></a> or <a href="callbacks/../bdscript/customID.html"><code>$customID[]</code></a> works?</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="oninteraction-1"><a class="header" href="#oninteraction-1">$onInteraction[]</a></h1>
 <p>Triggered upon an interaction being emitted (e.g. a button being clicked).</p>
@@ -11053,7 +11053,7 @@ $endif
 </ul>
 <h3 id="supports-1"><a class="header" href="#supports-1">Supports</a></h3>
 <ul>
-<li><strong><a href="callbacks/../guides/interactions/buttons/aboutButtons.html">Buttons</a></strong></li>
+<li><strong><a href="callbacks/../guides/general/interactions/buttons/aboutButtons.html">Buttons</a></strong></li>
 <li><strong><a href="callbacks/../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu</a></strong></li>
 <li><strong><a href="callbacks/../guides/general/interactions/modals/aboutModals.html">Modals</a></strong></li>
 </ul>

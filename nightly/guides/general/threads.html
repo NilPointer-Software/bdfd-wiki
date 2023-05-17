@@ -173,20 +173,20 @@
 <h3 id="creating-a-thread"><a class="header" href="#creating-a-thread">Creating a Thread</a></h3>
 <pre><code>$startThread[name;channelID;messageID (canBeLeftEmpty);archiveDuration (60/1440/4320/10080);returnThreadID (yes/no)]
 </code></pre>
-<p>Starts a thread <a href="../bdscript/startThread.html">(learn more)</a></p>
+<p>Starts a thread <a href="../../bdscript/startThread.html">(learn more)</a></p>
 <h3 id="editing-a-thread"><a class="header" href="#editing-a-thread">Editing a Thread</a></h3>
 <pre><code>$editThread[threadID;name;archived (yes/no);archiveDuration (60/1440/4320/10080);locked (yes/no);slowmode (in seconds)]
 </code></pre>
-<p>Edits an existing thread. <a href="../bdscript/editThread.html">(learn more)</a></p>
+<p>Edits an existing thread. <a href="../../bdscript/editThread.html">(learn more)</a></p>
 <h3 id="member-thread-management"><a class="header" href="#member-thread-management">Member Thread Management</a></h3>
 <h4 id="adding-a-user-to-a-thread"><a class="header" href="#adding-a-user-to-a-thread">Adding a User to a Thread</a></h4>
 <pre><code>$threadAddMember[threadID;userID]
 </code></pre>
-<p>Adds a user to the thread. <a href="../bdscript/threadAddMember.html">(learn more)</a></p>
+<p>Adds a user to the thread. <a href="../../bdscript/threadAddMember.html">(learn more)</a></p>
 <h4 id="removing-a-user-from-a-thread"><a class="header" href="#removing-a-user-from-a-thread">Removing a User from a Thread</a></h4>
 <pre><code>$threadRemoveMember[threadID;userID]
 </code></pre>
-<p>Removes a user from the thread. <a href="../bdscript/threadRemoveMember.html">(learn more)</a></p>
+<p>Removes a user from the thread. <a href="../../bdscript/threadRemoveMember.html">(learn more)</a></p>
 <h3 id="example"><a class="header" href="#example">Example</a></h3>
 <pre><code>$var[threadID;$startThread[Cool Thread;$channelID;;1440;yes]]
 I created a new thread! &lt;#$var[threadID]&gt;
