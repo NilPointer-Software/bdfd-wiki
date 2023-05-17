@@ -198,41 +198,41 @@ This intent is primarily used to allow for retrieval of user presences data.
 For example, Activities (i.e PLAYING, LISTENING), Presence (i.e Online, Idle) and Custom status.</p>
 <p>The following functions require this intent:</p>
 <ul>
-<li><a href="../bdscript/getCustomStatus.html"><code>$getCustomStatus[]</code></a></li>
-<li><a href="../bdscript/getUserStatus.html"><code>$getUserStatus[]</code></a></li>
-<li><a href="../bdscript/membersCount.html#second-usage"><code>$membersCount[]</code></a></li>
+<li><a href="../../bdscript/getCustomStatus.html"><code>$getCustomStatus[]</code></a></li>
+<li><a href="../../bdscript/getUserStatus.html"><code>$getUserStatus[]</code></a></li>
+<li><a href="../../bdscript/membersCount.html#second-usage"><code>$membersCount[]</code></a></li>
 </ul>
 <h4 id="server-members-intent"><a class="header" href="#server-members-intent">Server Members Intent</a></h4>
 <p>Allows the bot to receive <code>GUILD_MEMBER_ADD</code>, <code>GUILD_MEMBER_UPDATE</code>, <code>GUILD_MEMBER_REMOVE</code>, and <code>THREAD_MEMBERS_UPDATE</code> events.
 This intent is primarily required to fetch the entire list of guild members, and to receive specific guild member info (like guild joining, leaving, profile update etc.).</p>
 <p>The following callbacks require this intent:</p>
 <ul>
-<li><a href="../callbacks/onJoined.html"><code>$onJoined[]</code></a></li>
-<li><a href="../callbacks/onLeave.html"><code>$onLeave[]</code></a></li>
+<li><a href="../../callbacks/onJoined.html"><code>$onJoined[]</code></a></li>
+<li><a href="../../callbacks/onLeave.html"><code>$onLeave[]</code></a></li>
 </ul>
 <h4 id="message-content-intent"><a class="header" href="#message-content-intent">Message Content Intent</a></h4>
 <p>Unlike the two intents above, Message Content Intent doesn't allow for any new events.
 Instead, it allows the bot to receive message content data, which includes <code>content</code>, <code>attachments</code>, <code>embeds</code>, and <code>components</code>.</p>
 <p>If your bot is based on prefix-based commands, then this intent is required.
-Otherwise, you will need to use <a href="./general/interactions/slashCommands/aboutSlashCommands.html">slash commands</a> instead.</p>
+Otherwise, you will need to use <a href="../general/interactions/slashCommands/aboutSlashCommands.html">slash commands</a> instead.</p>
 <blockquote>
 <p>📌 Without this intent, your bot can only read message content data in DMs, messages where your bot was mentioned, and it's own messages.</p>
 </blockquote>
 <p>The following functions/callbacks require this intent:</p>
 <ul>
-<li><a href="../guides/awaitedCommands.html"><code>$awaitedCommand[]</code></a></li>
-<li><a href="../premium/messageContains.html"><code>$messageContains[]</code></a></li>
-<li><a href="../bdscript/argsCheck.html"><code>$argsCheck</code></a></li>
-<li><a href="../bdscript/banID.html"><code>$banID</code></a> (First &amp; Second Usage)</li>
-<li><a href="../bdscript/getEmbedData.html"><code>$getEmbedData</code></a></li>
-<li><a href="../bdscript/getMessage.html"><code>$getMessage</code></a> (Only for <code>content</code> type)</li>
-<li><a href="../premium/ignoreTriggerCase.html"><code>$ignoreTriggerCase</code></a></li>
-<li><a href="../bdscript/message.html"><code>$message</code></a></li>
-<li><a href="../bdscript/noMentionMessage.html"><code>$noMentionMessage</code></a></li>
-<li><a href="../bdscript/removeContains.html"><code>$removeContains</code></a></li>
-<li><a href="../bdscript/trimContent.html"><code>$trimContent</code></a></li>
-<li><a href="../bdscript/unban.html"><code>$unban</code></a></li>
-<li><a href="../bdscript/unbanID.html#usage-1"><code>$unbanID</code></a></li>
+<li><a href="../general/awaitedCommands.html"><code>$awaitedCommand[]</code></a></li>
+<li><a href="../../premium/messageContains.html"><code>$messageContains[]</code></a></li>
+<li><a href="../../bdscript/argsCheck.html"><code>$argsCheck</code></a></li>
+<li><a href="../../bdscript/banID.html"><code>$banID</code></a> (First &amp; Second Usage)</li>
+<li><a href="../../bdscript/getEmbedData.html"><code>$getEmbedData</code></a></li>
+<li><a href="../../bdscript/getMessage.html"><code>$getMessage</code></a> (Only for <code>content</code> type)</li>
+<li><a href="../../premium/ignoreTriggerCase.html"><code>$ignoreTriggerCase</code></a></li>
+<li><a href="../../bdscript/message.html"><code>$message</code></a></li>
+<li><a href="../../bdscript/noMentionMessage.html"><code>$noMentionMessage</code></a></li>
+<li><a href="../../bdscript/removeContains.html"><code>$removeContains</code></a></li>
+<li><a href="../../bdscript/trimContent.html"><code>$trimContent</code></a></li>
+<li><a href="../../bdscript/unban.html"><code>$unban</code></a></li>
+<li><a href="../../bdscript/unbanID.html#usage-1"><code>$unbanID</code></a></li>
 </ul>
 <h2 id="enabling-privileged-gateway-intents"><a class="header" href="#enabling-privileged-gateway-intents">Enabling Privileged Gateway Intents</a></h2>
 <p>To enable Privileged Gateway Intents in your bot, follow these steps:</p>
