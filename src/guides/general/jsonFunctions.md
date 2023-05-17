@@ -2,7 +2,7 @@
 Before you read this guide, you should be familiar with what JSON is and where and how it's being used.\
 You can familiarize yourself with JSON by reading a tutorial on [W3Schools](https://www.w3schools.com/js/js_json_intro.asp).
 
-> This guide will utilize [Character Escaping](../other/characterEscaping.md) and the [`$optOff`](../bdscript/optOff.md) function.
+> This guide will utilize [Character Escaping](../other/characterEscaping.md) and the [`$optOff`](../../bdscript/optOff.md) function.
 
 ## $jsonParse
 `$jsonParse` is the primary function used when working with JSON data.\

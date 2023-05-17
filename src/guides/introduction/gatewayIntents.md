@@ -32,41 +32,41 @@ This intent is primarily used to allow for retrieval of user presences data.
 For example, Activities (i.e PLAYING, LISTENING), Presence (i.e Online, Idle) and Custom status.
 
 The following functions require this intent:
-- [`$getCustomStatus[]`](../bdscript/getCustomStatus.md)
-- [`$getUserStatus[]`](../bdscript/getUserStatus.md)
-- [`$membersCount[]`](../bdscript/membersCount.md#second-usage)
+- [`$getCustomStatus[]`](../../bdscript/getCustomStatus.md)
+- [`$getUserStatus[]`](../../bdscript/getUserStatus.md)
+- [`$membersCount[]`](../../bdscript/membersCount.md#second-usage)
 
 #### Server Members Intent
 Allows the bot to receive `GUILD_MEMBER_ADD`, `GUILD_MEMBER_UPDATE`, `GUILD_MEMBER_REMOVE`, and `THREAD_MEMBERS_UPDATE` events.
 This intent is primarily required to fetch the entire list of guild members, and to receive specific guild member info (like guild joining, leaving, profile update etc.).
 
 The following callbacks require this intent:
-- [`$onJoined[]`](../callbacks/onJoined.md)
-- [`$onLeave[]`](../callbacks/onLeave.md)
+- [`$onJoined[]`](../../callbacks/onJoined.md)
+- [`$onLeave[]`](../../callbacks/onLeave.md)
 
 #### Message Content Intent
 Unlike the two intents above, Message Content Intent doesn't allow for any new events.
 Instead, it allows the bot to receive message content data, which includes `content`, `attachments`, `embeds`, and `components`.
 
 If your bot is based on prefix-based commands, then this intent is required.
-Otherwise, you will need to use [slash commands](./general/interactions/slashCommands/aboutSlashCommands.md) instead.
+Otherwise, you will need to use [slash commands](../general/interactions/slashCommands/aboutSlashCommands.md) instead.
 
 > 📌 Without this intent, your bot can only read message content data in DMs, messages where your bot was mentioned, and it's own messages.
 
 The following functions/callbacks require this intent:
-- [`$awaitedCommand[]`](../guides/awaitedCommands.md)
-- [`$messageContains[]`](../premium/messageContains.md)
-- [`$argsCheck`](../bdscript/argsCheck.md)
-- [`$banID`](../bdscript/banID.md) (First & Second Usage)
-- [`$getEmbedData`](../bdscript/getEmbedData.md)
-- [`$getMessage`](../bdscript/getMessage.md) (Only for `content` type)
-- [`$ignoreTriggerCase`](../premium/ignoreTriggerCase.md)
-- [`$message`](../bdscript/message.md)
-- [`$noMentionMessage`](../bdscript/noMentionMessage.md)
-- [`$removeContains`](../bdscript/removeContains.md)
-- [`$trimContent`](../bdscript/trimContent.md)
-- [`$unban`](../bdscript/unban.md)
-- [`$unbanID`](../bdscript/unbanID.md#usage-1)
+- [`$awaitedCommand[]`](../general/awaitedCommands.md)
+- [`$messageContains[]`](../../premium/messageContains.md)
+- [`$argsCheck`](../../bdscript/argsCheck.md)
+- [`$banID`](../../bdscript/banID.md) (First & Second Usage)
+- [`$getEmbedData`](../../bdscript/getEmbedData.md)
+- [`$getMessage`](../../bdscript/getMessage.md) (Only for `content` type)
+- [`$ignoreTriggerCase`](../../premium/ignoreTriggerCase.md)
+- [`$message`](../../bdscript/message.md)
+- [`$noMentionMessage`](../../bdscript/noMentionMessage.md)
+- [`$removeContains`](../../bdscript/removeContains.md)
+- [`$trimContent`](../../bdscript/trimContent.md)
+- [`$unban`](../../bdscript/unban.md)
+- [`$unbanID`](../../bdscript/unbanID.md#usage-1)
 
 ## Enabling Privileged Gateway Intents
 To enable Privileged Gateway Intents in your bot, follow these steps:

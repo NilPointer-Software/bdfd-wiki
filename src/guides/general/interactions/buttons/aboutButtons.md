@@ -5,13 +5,13 @@ In this section, you'll learn how to use the button component.
 [**Functions Used**](#functions-used) > [**Button Style**](#button-style) > [**Button Type**](#button-type) > [**$addButton[]**](#addbutton) > [**$editButton[]**](#editbutton) > [**$removeButtons**](#removebuttons) > [**$removeButtons[]**](#removebuttons-1) > [**$removeComponent[]**](#removecomponent) > [**Create Interaction**](#create-interaction)
 
 ## Functions Used
-- [`$addButton[]`](../bdscript/addButton.md)
-- [`$editButton[]`](../bdscript/editButton.md)
-- [`$removeButtons`](../bdscript/removeButtons.md)
-- [`$removeButtons[]`](../bdscript/removeButtons.md)
-- [`$removeComponent[]`](../bdscript/removeComponent.md)
-- [`$onInteraction`](../callbacks/onInteraction.md)
-- [`$onInteraction[]`](../callbacks/onInteraction.md)
+- [`$addButton[]`](../../../../bdscript/addButton.md)
+- [`$editButton[]`](../../../../bdscript/editButton.md)
+- [`$removeButtons`](../../../../bdscript/removeButtons.md)
+- [`$removeButtons[]`](../../../../bdscript/removeButtons.md)
+- [`$removeComponent[]`](../../../../bdscript/removeComponent.md)
+- [`$onInteraction`](../../../../callbacks/onInteraction.md)
+- [`$onInteraction[]`](../../../../callbacks/onInteractionComplex.md)
 
 ## Button Style
 - `primary`: Blue button
@@ -195,5 +195,5 @@ $endif
 ![example](https://user-images.githubusercontent.com/113303649/211164994-695cf7b6-b2fa-49e5-a78f-dc21db213a9a.png)
 
 
-> How [`$onInteraction`](../callbacks/onInteraction.md) or [`$onInteraction[]`](../callbacks/onInteractionComplex.md) works?
+> How [`$onInteraction`](../../../../callbacks/onInteraction.md) or [`$onInteraction[]`](../../../..//callbacks/onInteractionComplex.md) works?
 

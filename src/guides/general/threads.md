@@ -9,13 +9,13 @@ Threads are subset-channels within a channel. Threads are great for separating d
 ```
 $startThread[name;channelID;messageID (canBeLeftEmpty);archiveDuration (60/1440/4320/10080);returnThreadID (yes/no)]
 ```
-Starts a thread [(learn more)](../bdscript/startThread.md)
+Starts a thread [(learn more)](../../bdscript/startThread.md)
 
 ### Editing a Thread
 ```
 $editThread[threadID;name;archived (yes/no);archiveDuration (60/1440/4320/10080);locked (yes/no);slowmode (in seconds)]
 ```
-Edits an existing thread. [(learn more)](../bdscript/editThread.md)
+Edits an existing thread. [(learn more)](../../bdscript/editThread.md)
 
 ### Member Thread Management
 
@@ -23,13 +23,13 @@ Edits an existing thread. [(learn more)](../bdscript/editThread.md)
 ```
 $threadAddMember[threadID;userID]
 ```
-Adds a user to the thread. [(learn more)](../bdscript/threadAddMember.md)
+Adds a user to the thread. [(learn more)](../../bdscript/threadAddMember.md)
 
 #### Removing a User from a Thread
 ```
 $threadRemoveMember[threadID;userID]
 ```
-Removes a user from the thread. [(learn more)](../bdscript/threadRemoveMember.md)
+Removes a user from the thread. [(learn more)](../../bdscript/threadRemoveMember.md)
 
 ### Example
 ```
