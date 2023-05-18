@@ -11,7 +11,7 @@ takeRole(userID, roleID)
 - `roleID` : The role to take from the user. Value must be a valid role snowflake ID.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly:
 - `manageroles`
 
 ## Example
