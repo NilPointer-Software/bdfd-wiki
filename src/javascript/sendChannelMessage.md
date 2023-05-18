@@ -11,7 +11,7 @@ sendChannelMessage(channelId, message)
 - `message` : The message to send to the provided channel ID.
 
 ### Permissions
-Required permissions which the bot must have for this function to work properly.
+Required permissions which the bot must have for this function to work properly:
 - `sendmessages`
 - `sendmessagesinthreads`
 - `readmessages`
