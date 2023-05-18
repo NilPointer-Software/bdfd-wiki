@@ -2,17 +2,19 @@
 _Triggered when an awaited command gets initiated._
 
 `$awaitedCommand[]` is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command gets initiated.
+
 ## Syntax
 ```
-$awaitedCommand[name;(filter)]
+$awaitedCommand[Name;(Filter)]
 ```
 ### Parameters
-- `name`: The name used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
-- `filter`: It is used to limit user input. _(Optional)_
+- `Name` `(Type: String || Flag: Required)`: The name used in the [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
+- `Filter` `(Type: Filter || Flag: Optional)`: It is used to limit the user input.
 
 ### Supported filters
-- `<numeric>`: Accepts only number input.
-- `<word1/word2>`: Accepts only specified words provided inside `<>`. Use `/` as a separator for multiple words.
+- `<numeric>` - Accepts only number input.
+- `<word1/word2>` - Accepts only specified words provided inside `<>`. Use `/` as a separator for multiple words.
+
 ## Example
 ### Without filter
 **Trigger: `$awaitedCommand[say;]`**
@@ -21,6 +23,7 @@ $nomention
 $message
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212084980-10ab6f01-5595-454f-bfe6-a23f8fd64c1e.png)
+
 ### With choose filter
 **Trigger: `$awaitedCommand[odd;<yes/no/cancel>]`**
 ```
@@ -34,6 +37,7 @@ $elseif[$message==cancel]
 $endif
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212088333-54a94584-f854-45cf-8b7e-6980aa370764.png)
+
 ### With numeric filter
 **Trigger: `$awaitedCommand[odd;<numeric>]`**
 ```
@@ -42,5 +46,4 @@ You have provided a number: $message
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png)
 
-> For more info, see the [Awaited Commands Guide](../guides/awaitedCommands.md).
-
+> For more info, see the [Awaited Commands Guide](../guides/general/awaitedCommands.md).
