@@ -5,11 +5,11 @@ _Triggered when an awaited command doesn't match with provided filter._
 
 ## Syntax
 ```
-$awaitedCommandError[name]
+$awaitedCommandError[Name]
 ```
 
 ### Parameters
-- `name`: The name used in [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
+- `Name` `(Type: String || Flag: Required)`: The name used in the [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
 
 ## Example
 **Trigger: `$awaitedCommandError[number]`**
@@ -19,5 +19,4 @@ Invalid number!
 ```
 ![example](https://user-images.githubusercontent.com/113303649/212291974-4efa0531-d896-4aa3-ac1a-b8fa7d6794d0.png)
 
-> For more info, see the [Awaited Commands Guide](../guides/awaitedCommands.md).
-
+> For more info, see the [Awaited Commands Guide](../guides/general/awaitedCommands.md).
