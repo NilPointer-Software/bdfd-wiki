@@ -1,5 +1,5 @@
 # banWithReason
-Bans an user from the current guild with reason.
+Bans a user from the current guild with reason.
 
 ## Syntax
 ```js
@@ -11,7 +11,7 @@ banWithReason(userID, reason)
 - `reason` : The ban reason to add in Audit Logs and Guild Bans. Reason must not exceed more than 512 characters.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly:
 - `ban`
 
 ### Example

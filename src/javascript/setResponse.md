@@ -10,7 +10,7 @@ setResponse(replyText)
 - `replyText` : The provided text to send. (Optional)
 
 ### Permissions
-Required permissions which the bot must have for this function to work properly.
+Required permissions which the bot must have for this function to work properly:
 - `sendmessages`
 - `sendmessagesinthreads`
 - `readmessages`
