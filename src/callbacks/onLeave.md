@@ -14,7 +14,7 @@ $onLeave[channelID]
 - `channelID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
 
 ## Example
-1. Make the command trigger `$onLeave[channelID]`.
+1. Create a command with the trigger `$onLeave[channelID]`.
     > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID [*(See more here...)*](#advanced)!
     
     ![example1](https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png)
