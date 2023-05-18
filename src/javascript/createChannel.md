@@ -11,7 +11,7 @@ createChannel(name, type)
 - `type` : The type of the channel to create. Value must be either _**text**_ or _**voice**_.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly:
 - `managechannels`
 
 ## Example
