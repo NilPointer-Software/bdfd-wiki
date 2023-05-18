@@ -13,9 +13,9 @@ $onMessageDelete[channelID]
 
 ## Example
 1. Create a command with the trigger `$onMessageDelete[channelID]`.
-  > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
+    > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
   
-  ![example1](https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/b722b5b7-35f8-4682-a118-b17916978c2a)
+    ![example1](https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/b722b5b7-35f8-4682-a118-b17916978c2a)
 
 2. Input your code/reply text.
     > 🧙‍♂️ You can use functions like `$messageID`, `$getTimestamp` here.
