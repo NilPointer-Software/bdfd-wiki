@@ -39,7 +39,7 @@ If you own a public bot and want to make it so multiple different servers can us
     $onlyAdmin[You need the admin permission to use that!]
     $argsCheck[>1;Please mention a channel!]
     Logging channel updated!
-    $setServerVar[welcome;$mentionedChannels[1]]
+    $setServerVar[logs;$mentionedChannels[1]]
     ```
 
     > 📝 Servers will need to setup the channel they want the unban message to send to *(by running a command with the code above)*.
