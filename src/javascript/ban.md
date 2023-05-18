@@ -1,5 +1,5 @@
 # ban
-Bans an user from the current guild.
+Bans a user from the current guild.
 
 ## Syntax
 ```js
@@ -10,7 +10,7 @@ ban(userID)
 - `userID` : The user to ban. Value must be a valid user snowflake ID.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly:
 - `ban`
 
 ### Example
