@@ -1,5 +1,5 @@
 # kick
-Kicks an user from the current guild.
+Kicks a user from the current guild.
 
 ## Syntax
 ```js
@@ -10,7 +10,7 @@ kick(userID)
 - `userID` : The user to kick. Value must be a valid user snowflake ID.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly:
 - `kick`
 
 ## Example
