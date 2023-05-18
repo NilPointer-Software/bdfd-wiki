@@ -10,7 +10,7 @@ removeChannel(channelID)
 - `channelID` : The channel to be removed. Value must be a valid channel snowflake ID.
 
 ### Permissions
-Required permission which the bot must have for this function to work properly.
+Required permission which the bot must have for this function to work properly:
 - `managechannels`
 
 ## Example
