@@ -10734,17 +10734,17 @@ Current Year: $year
 <p><em>Triggered when an awaited command gets initiated.</em></p>
 <p><code>$awaitedCommand[]</code> is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command gets initiated.</p>
 <h2 id="syntax-264"><a class="header" href="#syntax-264">Syntax</a></h2>
-<pre><code>$awaitedCommand[name;(filter)]
+<pre><code>$awaitedCommand[Name;(Filter)]
 </code></pre>
 <h3 id="parameters-290"><a class="header" href="#parameters-290">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The name used in <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</li>
-<li><code>filter</code>: It is used to limit user input. <em>(Optional)</em></li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name used in the <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</li>
+<li><code>Filter</code> <code>(Type: String || Flag: Optional)</code>: It is used to limit the user input.</li>
 </ul>
 <h3 id="supported-filters-1"><a class="header" href="#supported-filters-1">Supported filters</a></h3>
 <ul>
-<li><code>&lt;numeric&gt;</code>: Accepts only number input.</li>
-<li><code>&lt;word1/word2&gt;</code>: Accepts only specified words provided inside <code>&lt;&gt;</code>. Use <code>/</code> as a separator for multiple words.</li>
+<li><code>&lt;numeric&gt;</code> - Accepts only number input.</li>
+<li><code>&lt;word1/word2&gt;</code> - Accepts only specified words provided inside <code>&lt;&gt;</code>. Use <code>/</code> as a separator for multiple words.</li>
 </ul>
 <h2 id="example-351"><a class="header" href="#example-351">Example</a></h2>
 <h3 id="without-filter-2"><a class="header" href="#without-filter-2">Without filter</a></h3>
@@ -10772,17 +10772,17 @@ You have provided a number: $message
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="callbacks/../guides/awaitedCommands.html">Awaited Commands Guide</a>.</p>
+<p>For more info, see the <a href="callbacks/../guides/general/awaitedCommands.html">Awaited Commands Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitedcommanderror-1"><a class="header" href="#awaitedcommanderror-1">$awaitedCommandError</a></h1>
 <p><em>Triggered when an awaited command doesn't match with provided filter.</em></p>
 <p><code>$awaitedCommandError[]</code> is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command doesn't match with provided filter.</p>
 <h2 id="syntax-265"><a class="header" href="#syntax-265">Syntax</a></h2>
-<pre><code>$awaitedCommandError[name]
+<pre><code>$awaitedCommandError[Name]
 </code></pre>
 <h3 id="parameters-291"><a class="header" href="#parameters-291">Parameters</a></h3>
 <ul>
-<li><code>name</code>: The name used in <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name used in the <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</li>
 </ul>
 <h2 id="example-352"><a class="header" href="#example-352">Example</a></h2>
 <p><strong>Trigger: <code>$awaitedCommandError[number]</code></strong></p>
@@ -10791,16 +10791,29 @@ Invalid number!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/212291974-4efa0531-d896-4aa3-ac1a-b8fa7d6794d0.png" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="callbacks/../guides/awaitedCommands.html">Awaited Commands Guide</a>.</p>
+<p>For more info, see the <a href="callbacks/../guides/general/awaitedCommands.html">Awaited Commands Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onjoined-1"><a class="header" href="#onjoined-1">$onJoined</a></h1>
-<p><em>When a user joins the server, the command is triggered.</em></p>
-<p><code>$onJoined[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user joins the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>.</p>
+<p><em>Triggered when a user joins the server.</em></p>
+<p><code>$onJoined[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user joins the server.</p>
+<blockquote>
+<p>📌 You can only have <strong>1</strong> single <code>$onJoined[]</code> per bot.</p>
+</blockquote>
+<h2 id="syntax-266"><a class="header" href="#syntax-266">Syntax</a></h2>
+<pre><code>$onJoined[channelID]
+</code></pre>
+<h3 id="parameters-292"><a class="header" href="#parameters-292">Parameters</a></h3>
+<ul>
+<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
+</ul>
 <h2 id="example-353"><a class="header" href="#example-353">Example</a></h2>
 <ol>
 <li>
-<p>Make the command trigger <code>$onJoined[channelID]</code>.<br />
-<img src="https://user-images.githubusercontent.com/69215413/129490506-c91a77b7-ed71-4dc5-9460-d4ec409b36d4.png" alt="example1" /></p>
+<p>Create a command with the trigger <code>$onJoined[channelID]</code>.</p>
+<blockquote>
+<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="callbacks/onJoined.html#advanced"><em>(See more here...)</em></a>!</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/69215413/129490506-c91a77b7-ed71-4dc5-9460-d4ec409b36d4.png" alt="example1" /></p>
 </li>
 <li>
 <p>Input your code/reply text.</p>
@@ -10816,7 +10829,7 @@ Invalid number!
 </ol>
 <p><em>Not Working? Check out the <a href="callbacks/onJoined.html#troubleshooting">Troubleshooting</a> section.</em></p>
 <h2 id="troubleshooting-1"><a class="header" href="#troubleshooting-1">Troubleshooting</a></h2>
-<h4 id="is-onjoined-bugged-or-not-working"><a class="header" href="#is-onjoined-bugged-or-not-working">Is $onJoined[] bugged or not working?</a></h4>
+<h4 id="is-onjoined-bugged-or-not-working"><a class="header" href="#is-onjoined-bugged-or-not-working">Is <code>$onJoined[]</code> bugged or not working?</a></h4>
 <ul>
 <li>
 <p>You must have at least version <code>1.17.9</code> of the app.</p>
@@ -10837,7 +10850,7 @@ enable them in the app <em>(unless you don't want to use them at all)</em>.</p>
 </blockquote>
 </li>
 <li>
-<p>Make sure <code>$onJoined[channelID]</code> is written in the 'command trigger' field and not in the code.<br />
+<p>Make sure <code>$onJoined[channelID]</code> is written in the &quot;command trigger&quot; field and not in the code.<br />
 <img src="https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png" alt="image" /></p>
 </li>
 <li>
@@ -10853,11 +10866,11 @@ enable them in the app <em>(unless you don't want to use them at all)</em>.</p>
 If you own a public bot and want to make it so multiple different servers can use <code>$onJoined[]</code> <em>(e.g. set their own welcome channel)</em>, follow these steps:</p>
 <ol>
 <li>
-<p>Make a variable named &quot;<code>welcome</code>&quot; and the value set to nothing.<br />
+<p>Create a variable named &quot;<code>welcome</code>&quot; and the value set to nothing.<br />
 <img src="https://user-images.githubusercontent.com/69215413/129489884-9338482c-ab9f-4847-ba01-c618ab746091.png" alt="image" /></p>
 </li>
 <li>
-<p>Make a command for setting the welcome channel, then put the following in your code:</p>
+<p>Create a command for setting the welcome channel, then put the following in your code:</p>
 <pre><code>$nomention
 $onlyAdmin[You need the admin permission to use that!]
 $argsCheck[&gt;1;Please mention a channel!]
@@ -10873,12 +10886,25 @@ $setServerVar[welcome;$mentionedChannels[1]]
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onleave"><a class="header" href="#onleave">$onLeave</a></h1>
-<p><em>When a user leaves the server, the command is triggered.</em></p>
-<p><code>$onLeave[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>.</p>
+<p><em>Triggered when a user leaves the server.</em></p>
+<p><code>$onLeave[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server.</p>
+<blockquote>
+<p>📌 You can only have <strong>1</strong> single <code>$onLeave[]</code> per bot.</p>
+</blockquote>
+<h2 id="syntax-267"><a class="header" href="#syntax-267">Syntax</a></h2>
+<pre><code>$onLeave[channelID]
+</code></pre>
+<h3 id="parameters-293"><a class="header" href="#parameters-293">Parameters</a></h3>
+<ul>
+<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
+</ul>
 <h2 id="example-354"><a class="header" href="#example-354">Example</a></h2>
 <ol>
 <li>
-<p>Make the command trigger <code>$onLeave[channelID]</code>.</p>
+<p>Create a command with the trigger <code>$onLeave[channelID]</code>.</p>
+<blockquote>
+<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID <a href="callbacks/onLeave.html#advanced"><em>(See more here...)</em></a>!</p>
+</blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png" alt="example1" /></p>
 </li>
 <li>
@@ -10895,7 +10921,7 @@ $setServerVar[welcome;$mentionedChannels[1]]
 </ol>
 <p><em>Not Working? Check out the <a href="callbacks/onLeave.html#troubleshooting">Troubleshooting</a> section.</em></p>
 <h2 id="troubleshooting-2"><a class="header" href="#troubleshooting-2">Troubleshooting</a></h2>
-<h4 id="is-onleave-bugged-or-not-working"><a class="header" href="#is-onleave-bugged-or-not-working">Is $onLeave[] bugged or not working?</a></h4>
+<h4 id="is-onleave-bugged-or-not-working"><a class="header" href="#is-onleave-bugged-or-not-working">Is <code>$onLeave[]</code> bugged or not working?</a></h4>
 <ul>
 <li>
 <p>You must have at least version <code>1.17.9</code> of the app.</p>
@@ -10916,7 +10942,7 @@ enable them in the app <em>(unless you don't want to use them at all)</em>.</p>
 </blockquote>
 </li>
 <li>
-<p>Make sure <code>$onLeave[channelID]</code> is written in the 'command trigger' field and not in the code.<br />
+<p>Make sure <code>$onLeave[channelID]</code> is written in the &quot;command trigger&quot; field and not in the code.<br />
 <img src="https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png" alt="image" /></p>
 </li>
 <li>
@@ -10932,11 +10958,11 @@ enable them in the app <em>(unless you don't want to use them at all)</em>.</p>
 If you own a public bot and want to make it so multiple different servers can use <code>$onLeave[]</code> <em>(e.g. set their own leave message channel)</em>, follow these steps:</p>
 <ol>
 <li>
-<p>Make a variable named &quot;<code>leave</code>&quot; and the value set to nothing.<br />
+<p>Create a variable named &quot;<code>leave</code>&quot; and the value set to nothing.<br />
 <img src="https://user-images.githubusercontent.com/69215413/129492681-5a50ca36-a76d-4add-a4d9-a64c29d0ed33.png" alt="image" /></p>
 </li>
 <li>
-<p>Make a command for setting the leave channel, then put the following in your code:</p>
+<p>Create a command for setting the leave channel, then put the following in your code:</p>
 <pre><code>$nomention
 $onlyAdmin[You need the admin permission to use that!]
 $argsCheck[&gt;1;Please mention a channel!]
@@ -10953,71 +10979,176 @@ $setServerVar[leave;$mentionedChannels[1]]
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onbanadd"><a class="header" href="#onbanadd">$onBanAdd</a></h1>
 <p><em>Triggered when a user gets banned from the server.</em></p>
-<p><code>$onBanAdd[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
+<p><code>$onBanAdd[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. </p>
+<h2 id="syntax-268"><a class="header" href="#syntax-268">Syntax</a></h2>
+<pre><code>$onBanAdd[channelID]
+</code></pre>
+<h3 id="parameters-294"><a class="header" href="#parameters-294">Parameters</a></h3>
+<ul>
+<li><code>channelID</code> <code>(Type: Snowflake || Type: Required)</code>: The ID of the channel where the message should be sent to.</li>
+</ul>
 <h2 id="example-355"><a class="header" href="#example-355">Example</a></h2>
-<p><strong>#1:</strong> Make a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
+<ol>
+<li>
+<p>Create a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
 <blockquote>
-<p>🧙‍♂️ You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
+<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="callbacks/onBanAdd.html#advanced"><em>(See more here...)</em></a>!</p>
 </blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/129491257-7fa6c9c4-e4b4-47c1-8df0-3f580ffa79bf.png" alt="example1" /></p>
-<p><strong>#2:</strong> Input your code/reply text.<br />
-<img src="https://user-images.githubusercontent.com/69215413/129491086-e6a96af6-edeb-4f2b-b226-0e49ed59f544.png" alt="example2" /></p>
-<p><strong>#3:</strong> Now you have a ban message! ✨<br />
-<img src="https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png" alt="example3" /></p>
+</li>
+<li>
+<p>Input your code/reply text.</p>
 <blockquote>
-<p>You can use <code>$authorID</code> to get the ID of the user who got banned.</p>
-<p>You can use <a href="callbacks/../bdscript/getBanReason.html"><code>$getBanReason</code></a> to get the ban reason.</p>
+<p>🧙‍♂️ You can use functions like <code>$username</code>, <code>$authorID</code>, <code>$authorAvatar</code>, <a href="callbacks/../bdscript/getBanReason.html"><code>$getBanReason[]</code></a> here.</p>
 </blockquote>
+<p><img src="https://user-images.githubusercontent.com/69215413/129491086-e6a96af6-edeb-4f2b-b226-0e49ed59f544.png" alt="example2" /></p>
+</li>
+<li>
+<p>Now you have a ban message! ✨<br />
+<img src="https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png" alt="example3" /></p>
+</li>
+</ol>
+<h2 id="advanced-2"><a class="header" href="#advanced-2">Advanced</a></h2>
+<h3 id="per-server-onbanadd"><a class="header" href="#per-server-onbanadd">Per-Server $onBanAdd</a></h3>
+<p>Both free and premium users can use <code>$onBanAdd[]</code>, and all users can put <code>$getServerVar[]</code> within <code>$onBanAdd[]</code>. However, non-premium users can not use <code>$getServerVar[]</code> outside of callbacks.<br />
+If you own a public bot and want to make it so multiple different servers can use <code>$onBanAdd[]</code> <em>(e.g. set their own logging channel)</em>, follow these steps:</p>
+<ol>
+<li>
+<p>Create a variable named &quot;<code>logs</code>&quot; and the value set to nothing.<br />
+<img src="https://user-images.githubusercontent.com/111157596/239278501-dae381e3-4fe0-4e5f-9cc8-e18d0f56215f.png" alt="image" /></p>
+</li>
+<li>
+<p>Create a command for setting the logging channel, then put the following in your code:</p>
+<pre><code>$nomention
+$onlyAdmin[You need the admin permission to use that!]
+$argsCheck[&gt;1;Please mention a channel!]
+Logging channel updated!
+$setServerVar[logs;$mentionedChannels[1]]
+</code></pre>
+<blockquote>
+<p>📝 Servers will need to setup the channel they want the ban message to send to <em>(by running a command with the code above)</em>.</p>
+</blockquote>
+</li>
+<li>
+<p>Now replace <code>$onBanAdd[channelID]</code> in your command trigger, with <code>$onBanAdd[$getServerVar[logs]]</code> and you're all set!</p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onbanremove"><a class="header" href="#onbanremove">$onBanRemove</a></h1>
 <p><em>Triggered when a user gets unbanned from the server.</em></p>
-<p><code>$onBanRemove[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is unbanned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
+<p><code>$onBanRemove[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is unbanned from the server. </p>
+<h2 id="syntax-269"><a class="header" href="#syntax-269">Syntax</a></h2>
+<pre><code>$onBanRemove[channelID]
+</code></pre>
+<h3 id="parameters-295"><a class="header" href="#parameters-295">Parameters</a></h3>
+<ul>
+<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
+</ul>
 <h2 id="example-356"><a class="header" href="#example-356">Example</a></h2>
-<p><strong>#1:</strong> Make a command with <code>$onBanRemove[channelID]</code> as the trigger.</p>
+<ol>
+<li>
+<p>Create a command with <code>$onBanRemove[channelID]</code> as the trigger.</p>
 <blockquote>
-<p>🧙‍♂️ You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
+<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="callbacks/onBanRemove.html#advanced"><em>(See more here...)</em></a>!</p>
 </blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/129492147-3d51dd5c-9628-43f7-a175-faed03442501.png" alt="example1" /></p>
-<p><strong>#2:</strong> Input your code/reply text.<br />
-<img src="https://user-images.githubusercontent.com/69215413/129492022-8acd4877-638c-4855-8970-13dab37b032e.png" alt="example2" /></p>
-<p><strong>#3:</strong> Now you have a unban message! ✨<br />
+</li>
+<li>
+<p>Input your code/reply text.</p>
+<blockquote>
+<p>🧙‍♂️ You can use functions like <code>$username</code>, <code>$authorID</code>, <code>$authorAvatar</code> here.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/69215413/129492022-8acd4877-638c-4855-8970-13dab37b032e.png" alt="example2" /></p>
+</li>
+<li>
+<p>Now you have an unban message! ✨<br />
 <img src="https://user-images.githubusercontent.com/69215413/129492076-8f6ec738-096d-4abf-af8b-678a50ad4c5b.png" alt="example3" /></p>
+</li>
+</ol>
+<h2 id="advanced-3"><a class="header" href="#advanced-3">Advanced</a></h2>
+<h3 id="per-server-onbanremove"><a class="header" href="#per-server-onbanremove">Per-Server $onBanRemove</a></h3>
+<p>Both free and premium users can use <code>$onBanRemove[]</code>, and all users can put <code>$getServerVar[]</code> within <code>$onBanRemove[]</code>. However, non-premium users can not use <code>$getServerVar[]</code> outside of callbacks.<br />
+If you own a public bot and want to make it so multiple different servers can use <code>$onBanRemove[]</code> <em>(e.g. set their own logging channel)</em>, follow these steps:</p>
+<ol>
+<li>
+<p>Create a variable named &quot;<code>logs</code>&quot; and the value set to nothing.<br />
+<img src="https://user-images.githubusercontent.com/111157596/239278501-dae381e3-4fe0-4e5f-9cc8-e18d0f56215f.png" alt="image" /></p>
+</li>
+<li>
+<p>Create a command for setting the logging channel, then put the following in your code:</p>
+<pre><code>$nomention
+$onlyAdmin[You need the admin permission to use that!]
+$argsCheck[&gt;1;Please mention a channel!]
+Logging channel updated!
+$setServerVar[logs;$mentionedChannels[1]]
+</code></pre>
 <blockquote>
-<p>You can use <code>$authorID</code> to get the ID of the user who got unbanned.</p>
+<p>📝 Servers will need to setup the channel they want the unban message to send to <em>(by running a command with the code above)</em>.</p>
 </blockquote>
+</li>
+<li>
+<p>Now replace <code>$onBanRemove[channelID]</code> in your command trigger, with <code>$onBanRemove[$getServerVar[logs]]</code> and you're all set!</p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onmessagedelete"><a class="header" href="#onmessagedelete">$onMessageDelete</a></h1>
-<p>Triggered when a user deletes a message.</p>
-<h2 id="syntax-266"><a class="header" href="#syntax-266">Syntax</a></h2>
-<pre><code>$onMessageDelete[channel ID]
+<p><em>Triggered when a user deletes a message.</em></p>
+<p><code>$onMessageDelete[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user deletes a message.</p>
+<h2 id="syntax-270"><a class="header" href="#syntax-270">Syntax</a></h2>
+<pre><code>$onMessageDelete[channelID]
 </code></pre>
-<h3 id="parameters-292"><a class="header" href="#parameters-292">Parameters</a></h3>
+<h3 id="parameters-296"><a class="header" href="#parameters-296">Parameters</a></h3>
 <ul>
-<li><code>channel ID</code>: The channel to which the resulting message will be sent.</li>
+<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to which the resulting message will be sent.</li>
 </ul>
-<blockquote>
-<p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get a channel ID guide.</a></p>
-</blockquote>
 <h2 id="example-357"><a class="header" href="#example-357">Example</a></h2>
-<h3 id="with-getservervar"><a class="header" href="#with-getservervar">With <code>$getServerVar[]</code></a></h3>
-<p>Make a new command, with the trigger <code>$onMessageDelete[$getServerVar[channel]]</code></p>
-<pre><code>$nomention
-A massage was deleted!
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/223441552-4e699a36-3d77-40fa-bea8-f3752de1f749.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/223442073-024364e6-17d9-4118-bcab-f12575a447d0.png" alt="example" /></p>
-<h3 id="without-getservervar"><a class="header" href="#without-getservervar">Without <code>$getServerVar[]</code></a></h3>
-<p>Make a new command, with the trigger <code>$onMessageDelete[channel ID]</code> (You must replace <code>channel ID</code> with a valid channel ID)</p>
-<pre><code>$nomention
-A massage was deleted!
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/223441552-4e699a36-3d77-40fa-bea8-f3752de1f749.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/223442073-024364e6-17d9-4118-bcab-f12575a447d0.png" alt="example" /></p>
+<ol>
+<li>
+<p>Create a command with the trigger <code>$onMessageDelete[channelID]</code>.</p>
 <blockquote>
-<p>You can use <code>$channelID</code> to get the ID of the logs (<code>channel ID</code>).</p>
-<p>You can use <code>$messageID</code> to get the ID of the deleted message.</p>
+<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="callbacks/onMessageDelete.html#advanced"><em>(See more here...)</em></a>!</p>
 </blockquote>
+<p><img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/b722b5b7-35f8-4682-a118-b17916978c2a" alt="example1" /></p>
+</li>
+<li>
+<p>Input your code/reply text.</p>
+<blockquote>
+<p>🧙‍♂️ You can use functions like <code>$messageID</code>, <code>$getTimestamp</code> here.</p>
+</blockquote>
+<p><img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/027aa71a-9051-4b78-bbc7-3149424fe91b" alt="example2" /></p>
+</li>
+<li>
+<p>Now, you have a logging message! ✨<br />
+<img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/a7552795-d8aa-4358-ac8f-17002d6603cf" alt="example3" /><br />
+<img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/18bbb08e-ca97-4fdf-b6e9-deee3d7f4b44" alt="example4" /></p>
+</li>
+</ol>
+<h2 id="advanced-4"><a class="header" href="#advanced-4">Advanced</a></h2>
+<h3 id="per-server-onmessagedelete"><a class="header" href="#per-server-onmessagedelete">Per-Server $onMessageDelete</a></h3>
+<p>Both free and premium users can use <code>$onMessageDelete[]</code>, and all users can put <code>$getServerVar[]</code> within <code>$onMessageDelete[]</code>. However, non-premium users can not use <code>$getServerVar[]</code> outside of callbacks.<br />
+If you own a public bot and want to make it so multiple different servers can use <code>$onMessageDelete[]</code> <em>(e.g. set their own message logging channel)</em>, follow these steps:</p>
+<ol>
+<li>
+<p>Create a variable named &quot;<code>logs</code>&quot; and the value set to nothing.<br />
+<img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/dae381e3-4fe0-4e5f-9cc8-e18d0f56215f" alt="image" /></p>
+</li>
+<li>
+<p>Create a command for setting the logging channel, then put the following in your code:</p>
+<pre><code>$nomention
+$onlyAdmin[You need the admin permission to use that!]
+$argsCheck[&gt;1;Please mention a channel!]
+Message logging channel updated!
+$setServerVar[logs;$mentionedChannels[1]]
+</code></pre>
+<blockquote>
+<p>📝 Servers will need to setup the channel they want the logging message to send to <em>(by running a command with the code above)</em>.</p>
+</blockquote>
+</li>
+<li>
+<p>Now replace <code>$onMessageDelete[channelID]</code> in your command trigger, with <code>$onMessageDelete[$getServerVar[logs]]</code> and you're all set!</p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="oninteraction"><a class="header" href="#oninteraction">$onInteraction</a></h1>
 <p>Triggered upon an interaction being emitted (e.g. a button being clicked).</p>
-<h2 id="syntax-267"><a class="header" href="#syntax-267">Syntax</a></h2>
+<h2 id="syntax-271"><a class="header" href="#syntax-271">Syntax</a></h2>
 <pre><code>$onInteraction
 </code></pre>
 <h3 id="supports"><a class="header" href="#supports">Supports</a></h3>
@@ -11037,19 +11168,19 @@ $if[$customID==onlyauthor-$authorID]
   $sendMessage[Hello $username!]
 $endif
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/223423803-2ffadb9e-61b0-432c-bc88-c6850ec564f5.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/223426829-bbeca4d1-2e4c-44ef-a1ae-6458858d0ce0.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/223423803-2ffadb9e-61b0-432c-bc88-c6850ec564f5.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/223426829-bbeca4d1-2e4c-44ef-a1ae-6458858d0ce0.png" alt="example" /></p>
 <blockquote>
 <p>How <a href="callbacks/../guides/general/ifStatements.html"><code>$if[]</code></a> or <a href="callbacks/../bdscript/customID.html"><code>$customID[]</code></a> works?</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="oninteraction-1"><a class="header" href="#oninteraction-1">$onInteraction[]</a></h1>
 <p>Triggered upon an interaction being emitted (e.g. a button being clicked).</p>
-<h2 id="syntax-268"><a class="header" href="#syntax-268">Syntax</a></h2>
-<pre><code>$onIneraction[interaction ID]
+<h2 id="syntax-272"><a class="header" href="#syntax-272">Syntax</a></h2>
+<pre><code>$onIneraction[Interaction ID]
 </code></pre>
-<h3 id="parameters-293"><a class="header" href="#parameters-293">Parameters</a></h3>
+<h3 id="parameters-297"><a class="header" href="#parameters-297">Parameters</a></h3>
 <ul>
-<li><code>interaction ID</code>: The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.</li>
+<li><code>Interaction ID</code> <code>(Type: String || Flag: Required)</code>: The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.</li>
 </ul>
 <h3 id="supports-1"><a class="header" href="#supports-1">Supports</a></h3>
 <ul>
@@ -11075,11 +11206,11 @@ $addButton[no;example;Click!;primary]
 $sendMessage[Hello $username!]
 </code></pre>
 <ol start="2">
-<li>Execute commands</li>
+<li>Execute commands<br />
+<img src="https://user-images.githubusercontent.com/113303649/223438800-7323f05e-77b5-464e-9385-4f287ba3bcba.png" alt="example" /></li>
 </ol>
-<p><img src="https://user-images.githubusercontent.com/113303649/223438800-7323f05e-77b5-464e-9385-4f287ba3bcba.png" alt="example" /></p>
 <blockquote>
-<p>How <a href="callbacks/../bdscript/addButton.html"><code>$addButton[]</code></a>  works?</p>
+<p>How <a href="callbacks/../bdscript/addButton.html"><code>$addButton[]</code></a> works?</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="premium"><a class="header" href="#premium">Premium</a></h1>
 <p><em>Bot Designer for Discord</em>'s premium points system allows you to support the developers financially and gain some sweet perks!</p>
@@ -11158,10 +11289,10 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="messagecontains"><a class="header" href="#messagecontains">$messageContains</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$messageContains[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a> that allows you to create a trigger with multiple phrases. In addition, the bot also looks for those phrases anywhere in the author's message. This feature is great for creating an auto-response or auto-moderation system. </p>
-<h2 id="syntax-269"><a class="header" href="#syntax-269">Syntax</a></h2>
+<h2 id="syntax-273"><a class="header" href="#syntax-273">Syntax</a></h2>
 <pre><code>$messageContains[Word;...]
 </code></pre>
-<h3 id="parameters-294"><a class="header" href="#parameters-294">Parameters</a></h3>
+<h3 id="parameters-298"><a class="header" href="#parameters-298">Parameters</a></h3>
 <ul>
 <li><code>Word</code> <code>(Type: String || Flag: Required)</code>: The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
 </ul>
@@ -11179,10 +11310,10 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reaction"><a class="header" href="#reaction">$reaction</a></h1>
 <p><em>(for premium users)</em></p>
 <p>This is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
-<h2 id="syntax-270"><a class="header" href="#syntax-270">Syntax</a></h2>
+<h2 id="syntax-274"><a class="header" href="#syntax-274">Syntax</a></h2>
 <pre><code>$reaction[Name]
 </code></pre>
-<h3 id="parameters-295"><a class="header" href="#parameters-295">Parameters</a></h3>
+<h3 id="parameters-299"><a class="header" href="#parameters-299">Parameters</a></h3>
 <ul>
 <li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The value used in &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</li>
 </ul>
@@ -11198,10 +11329,10 @@ $sendMessage[$username clicked on reaction]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitreactions"><a class="header" href="#awaitreactions">$awaitReactions</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>This function is used to await a reaction.</p>
-<h2 id="syntax-271"><a class="header" href="#syntax-271">Syntax</a></h2>
+<h2 id="syntax-275"><a class="header" href="#syntax-275">Syntax</a></h2>
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
-<h3 id="parameters-296"><a class="header" href="#parameters-296">Parameters</a></h3>
+<h3 id="parameters-300"><a class="header" href="#parameters-300">Parameters</a></h3>
 <ul>
 <li><code>Command name</code> <code>(Type: String || Flag: Required)</code>: The name which will be used inside the <code>$reaction[]</code> callback.</li>
 <li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.</li>
@@ -11219,10 +11350,10 @@ $addReactions[✅;❌]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="customimage"><a class="header" href="#customimage">$customImage</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>This function is used to return the URL of an image uploaded in the app.</p>
-<h2 id="syntax-272"><a class="header" href="#syntax-272">Syntax</a></h2>
+<h2 id="syntax-276"><a class="header" href="#syntax-276">Syntax</a></h2>
 <pre><code>$customImage[Custom image tag]
 </code></pre>
-<h3 id="parameters-297"><a class="header" href="#parameters-297">Parameters</a></h3>
+<h3 id="parameters-301"><a class="header" href="#parameters-301">Parameters</a></h3>
 <ul>
 <li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The image tag you set in the app while uploading the image.</li>
 </ul>
@@ -11240,7 +11371,7 @@ $customImage[NiceImage]
 <blockquote>
 <p>This function can only be used inside a <code>$reaction[]</code> callback.</p>
 </blockquote>
-<h2 id="syntax-273"><a class="header" href="#syntax-273">Syntax</a></h2>
+<h2 id="syntax-277"><a class="header" href="#syntax-277">Syntax</a></h2>
 <pre><code>$usedEmoji
 </code></pre>
 <h2 id="example-364"><a class="header" href="#example-364">Example</a></h2>
@@ -11254,7 +11385,7 @@ $sendMessage[Emoji: $usedEmoji]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignoretriggercase"><a class="header" href="#ignoretriggercase">$ignoreTriggerCase</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><code>$ignoreTriggerCase</code> is a function that makes the command trigger <strong>not</strong> case sensitive. For example, <code>!help</code> and <code>!HeLp</code> would both work.</p>
-<h2 id="syntax-274"><a class="header" href="#syntax-274">Syntax</a></h2>
+<h2 id="syntax-278"><a class="header" href="#syntax-278">Syntax</a></h2>
 <pre><code>$ignoreTriggerCase
 </code></pre>
 <h2 id="example-365"><a class="header" href="#example-365">Example</a></h2>
@@ -11265,10 +11396,10 @@ Hello World!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendnotification"><a class="header" href="#sendnotification">$sendNotification</a></h1>
 <p><em>(for premium bots)</em></p>
 <p>Sends a notification to your mobile phone.</p>
-<h2 id="syntax-275"><a class="header" href="#syntax-275">Syntax</a></h2>
+<h2 id="syntax-279"><a class="header" href="#syntax-279">Syntax</a></h2>
 <pre><code>$sendNotification[Message;(Image URL)]
 </code></pre>
-<h3 id="parameters-298"><a class="header" href="#parameters-298">Parameters</a></h3>
+<h3 id="parameters-302"><a class="header" href="#parameters-302">Parameters</a></h3>
 <ul>
 <li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The text that is displayed in the notification.</li>
 <li><code>Image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
@@ -11288,10 +11419,10 @@ Hello World!
 <p>To create an awaited reaction command, following functions and callback are used :</p>
 <h2 id="awaitreactions-1"><a class="header" href="#awaitreactions-1">$awaitReactions[]</a></h2>
 <p>This function is used to await a reaction command.</p>
-<h3 id="syntax-276"><a class="header" href="#syntax-276">Syntax</a></h3>
+<h3 id="syntax-280"><a class="header" href="#syntax-280">Syntax</a></h3>
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
-<h4 id="parameters-299"><a class="header" href="#parameters-299">Parameters</a></h4>
+<h4 id="parameters-303"><a class="header" href="#parameters-303">Parameters</a></h4>
 <ul>
 <li><code>Command name</code> <code>(Type: String || Flag: Required)</code>: It's the name which will be used inside the <code>$reaction[]</code> callback.</li>
 <li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</li>
@@ -11303,16 +11434,16 @@ Hello World!
 </blockquote>
 <h2 id="reaction-1"><a class="header" href="#reaction-1">$reaction[]</a></h2>
 <p><code>$reaction[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
-<h3 id="syntax-277"><a class="header" href="#syntax-277">Syntax</a></h3>
+<h3 id="syntax-281"><a class="header" href="#syntax-281">Syntax</a></h3>
 <pre><code>$reaction[Name]
 </code></pre>
-<h4 id="parameters-300"><a class="header" href="#parameters-300">Parameters</a></h4>
+<h4 id="parameters-304"><a class="header" href="#parameters-304">Parameters</a></h4>
 <ul>
 <li><code>Name</code> <code>(Type: String || Flag: Required)</code>: It's the value which is used in the <em>&quot;command name&quot;</em> argument of <code>$awaitReactions[]</code>.</li>
 </ul>
 <h2 id="usedemoji-1"><a class="header" href="#usedemoji-1">$usedEmoji</a></h2>
 <p>This function is used to return the emoji which was triggered in the <code>$reaction[]</code> command.</p>
-<h3 id="syntax-278"><a class="header" href="#syntax-278">Syntax</a></h3>
+<h3 id="syntax-282"><a class="header" href="#syntax-282">Syntax</a></h3>
 <pre><code>$usedEmoji
 </code></pre>
 <h2 id="example-367"><a class="header" href="#example-367">Example</a></h2>
@@ -11344,10 +11475,10 @@ Hello World!
 <h2 id="retrieving"><a class="header" href="#retrieving">Retrieving</a></h2>
 <h3 id="customimage-1"><a class="header" href="#customimage-1">$customImage[]</a></h3>
 <p>This function is used to return the uploaded image in the app.</p>
-<h4 id="syntax-279"><a class="header" href="#syntax-279">Syntax</a></h4>
+<h4 id="syntax-283"><a class="header" href="#syntax-283">Syntax</a></h4>
 <pre><code>$customImage[Custom image tag]
 </code></pre>
-<h4 id="parameters-301"><a class="header" href="#parameters-301">Parameters</a></h4>
+<h4 id="parameters-305"><a class="header" href="#parameters-305">Parameters</a></h4>
 <ul>
 <li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The tag that you set the custom image to, previously.</li>
 </ul>
@@ -11454,10 +11585,10 @@ Then, check out the following JavaScript learning resources :<br />
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="ban-2"><a class="header" href="#ban-2">ban</a></h1>
 <p>Bans a user from the current guild.</p>
-<h2 id="syntax-280"><a class="header" href="#syntax-280">Syntax</a></h2>
+<h2 id="syntax-284"><a class="header" href="#syntax-284">Syntax</a></h2>
 <pre><code class="language-js">ban(userID)
 </code></pre>
-<h3 id="parameters-302"><a class="header" href="#parameters-302">Parameters</a></h3>
+<h3 id="parameters-306"><a class="header" href="#parameters-306">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to ban. Value must be a valid user snowflake ID.</li>
 </ul>
@@ -11493,10 +11624,10 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/190855782-1aa5bf81-06d0-409d-bc06-2cf4aaecc1fb.jpg" alt="InShot_20220917_172017419" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="banwithreason"><a class="header" href="#banwithreason">banWithReason</a></h1>
 <p>Bans a user from the current guild with reason.</p>
-<h2 id="syntax-281"><a class="header" href="#syntax-281">Syntax</a></h2>
+<h2 id="syntax-285"><a class="header" href="#syntax-285">Syntax</a></h2>
 <pre><code class="language-js">banWithReason(userID, reason)
 </code></pre>
-<h3 id="parameters-303"><a class="header" href="#parameters-303">Parameters</a></h3>
+<h3 id="parameters-307"><a class="header" href="#parameters-307">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to ban. Value must be a valid user snowflake ID.</li>
 <li><code>reason</code> : The ban reason to add in Audit Logs and Guild Bans. Reason must not exceed more than 512 characters.</li>
@@ -11541,7 +11672,7 @@ Then, check out the following JavaScript learning resources :<br />
 <img src="https://user-images.githubusercontent.com/95774950/191721557-9301171b-3807-4fb5-a7a2-ec770844438f.jpg" alt="InShot_20220922_153537132" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltyping"><a class="header" href="#channeltyping">channelTyping</a></h1>
 <p>Emits the <code>TYPING_START</code> event. It shows <em>&quot;Bot is typing...&quot;</em> in the channel where the command was triggered.</p>
-<h2 id="syntax-282"><a class="header" href="#syntax-282">Syntax</a></h2>
+<h2 id="syntax-286"><a class="header" href="#syntax-286">Syntax</a></h2>
 <pre><code class="language-js">channelTyping()
 </code></pre>
 <h3 id="permissions-17"><a class="header" href="#permissions-17">Permissions</a></h3>
@@ -11558,10 +11689,10 @@ setResponse('Wow! I did type.');
 <p><img src="https://user-images.githubusercontent.com/95774950/191220685-2515dabf-626e-4709-9bf7-ec951aa35c44.gif" alt="ezgif com-gif-maker" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createchannel-1"><a class="header" href="#createchannel-1">createChannel</a></h1>
 <p>Creates a new channel in the current guild.</p>
-<h2 id="syntax-283"><a class="header" href="#syntax-283">Syntax</a></h2>
+<h2 id="syntax-287"><a class="header" href="#syntax-287">Syntax</a></h2>
 <pre><code class="language-js">createChannel(name, type)
 </code></pre>
-<h3 id="parameters-304"><a class="header" href="#parameters-304">Parameters</a></h3>
+<h3 id="parameters-308"><a class="header" href="#parameters-308">Parameters</a></h3>
 <ul>
 <li><code>name</code> : The name of the channel.</li>
 <li><code>type</code> : The type of the channel to create. Value must be either <em><strong>text</strong></em> or <em><strong>voice</strong></em>.</li>
@@ -11601,10 +11732,10 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191656407-b2b61c57-ff3b-4259-b9f1-8ae92c0bf79b.jpg" alt="InShot_20220922_092945515" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="giverole-1"><a class="header" href="#giverole-1">giveRole</a></h1>
 <p>Assigns a role to a specified user.</p>
-<h2 id="syntax-284"><a class="header" href="#syntax-284">Syntax</a></h2>
+<h2 id="syntax-288"><a class="header" href="#syntax-288">Syntax</a></h2>
 <pre><code class="language-js">giveRole(userID, roleID)
 </code></pre>
-<h3 id="parameters-305"><a class="header" href="#parameters-305">Parameters</a></h3>
+<h3 id="parameters-309"><a class="header" href="#parameters-309">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to get the role. Value must be a valid user snowflake ID.</li>
 <li><code>roleID</code> : The role to assign to the user. Value must be a valid role snowflake ID.</li>
@@ -11643,10 +11774,10 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/190871625-9e676924-68b4-4189-9bba-44a7c3cf4488.jpg" alt="InShot_20220918_000019652" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kick-2"><a class="header" href="#kick-2">kick</a></h1>
 <p>Kicks a user from the current guild.</p>
-<h2 id="syntax-285"><a class="header" href="#syntax-285">Syntax</a></h2>
+<h2 id="syntax-289"><a class="header" href="#syntax-289">Syntax</a></h2>
 <pre><code class="language-js">kick(userID)
 </code></pre>
-<h3 id="parameters-306"><a class="header" href="#parameters-306">Parameters</a></h3>
+<h3 id="parameters-310"><a class="header" href="#parameters-310">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to kick. Value must be a valid user snowflake ID.</li>
 </ul>
@@ -11682,10 +11813,10 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191005572-538deebc-e660-4ce3-89ff-5929197c41ae.jpg" alt="InShot_20220919_164211838" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kickwithreason"><a class="header" href="#kickwithreason">kickWithReason</a></h1>
 <p>Kicks a user from the current guild with reason.</p>
-<h2 id="syntax-286"><a class="header" href="#syntax-286">Syntax</a></h2>
+<h2 id="syntax-290"><a class="header" href="#syntax-290">Syntax</a></h2>
 <pre><code class="language-js">kickWithReason(userID, reason)
 </code></pre>
-<h3 id="parameters-307"><a class="header" href="#parameters-307">Parameters</a></h3>
+<h3 id="parameters-311"><a class="header" href="#parameters-311">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to kick. Value must be a valid user snowflake ID.</li>
 <li><code>reason</code> : The kick reason to add in Audit Logs. Reason must not exceed more than 512 characters.</li>
@@ -11730,10 +11861,10 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192129456-d5c1092f-dd4d-4bd5-a450-5534acc097d3.jpg" alt="InShot_20220925_104547037" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pinmessage-2"><a class="header" href="#pinmessage-2">pinMessage</a></h1>
 <p>Pins a message to the channel.</p>
-<h2 id="syntax-287"><a class="header" href="#syntax-287">Syntax</a></h2>
+<h2 id="syntax-291"><a class="header" href="#syntax-291">Syntax</a></h2>
 <pre><code class="language-js">pinMessage(channelID, messageID)
 </code></pre>
-<h3 id="parameters-308"><a class="header" href="#parameters-308">Parameters</a></h3>
+<h3 id="parameters-312"><a class="header" href="#parameters-312">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel where the message is located. Value must be a valid channel snowflake ID.</li>
 <li><code>messageID</code> : The ID of the message. Value must be a valid message snowflake ID.</li>
@@ -11769,10 +11900,10 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/192140467-786505ff-02e0-4443-82e4-03afcfdb2eed.png" alt="Screenshot_20220925_162938" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removechannel"><a class="header" href="#removechannel">removeChannel</a></h1>
 <p>Removes a specified channel from the current server.</p>
-<h2 id="syntax-288"><a class="header" href="#syntax-288">Syntax</a></h2>
+<h2 id="syntax-292"><a class="header" href="#syntax-292">Syntax</a></h2>
 <pre><code class="language-js">removeChannel(channelID)
 </code></pre>
-<h3 id="parameters-309"><a class="header" href="#parameters-309">Parameters</a></h3>
+<h3 id="parameters-313"><a class="header" href="#parameters-313">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel to be removed. Value must be a valid channel snowflake ID.</li>
 </ul>
@@ -11807,10 +11938,10 @@ setResponse('Wow! I did type.');
 <img src="https://user-images.githubusercontent.com/95774950/191010751-6e7bd8d8-00ef-4ca6-850d-4124254cc5a3.jpg" alt="InShot_20220919_171824516" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sendchannelmessage"><a class="header" href="#sendchannelmessage">sendChannelMessage</a></h1>
 <p>Sends a message to the provided channel.</p>
-<h2 id="syntax-289"><a class="header" href="#syntax-289">Syntax</a></h2>
+<h2 id="syntax-293"><a class="header" href="#syntax-293">Syntax</a></h2>
 <pre><code class="language-js">sendChannelMessage(channelId, message)
 </code></pre>
-<h3 id="parameters-310"><a class="header" href="#parameters-310">Parameters</a></h3>
+<h3 id="parameters-314"><a class="header" href="#parameters-314">Parameters</a></h3>
 <ul>
 <li><code>channelId</code> : The channel to send the message. Value must be a valid channel snowflake ID.</li>
 <li><code>message</code> : The message to send to the provided channel ID.</li>
@@ -11853,10 +11984,10 @@ setResponse('Wow! I did type.');
 <p><img src="https://user-images.githubusercontent.com/95774950/190842663-13d63729-2008-4f7f-85ce-1aa52242fd8c.png" alt="Screenshot_20220917_102010" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedimage"><a class="header" href="#setembedimage">setEmbedImage</a></h1>
 <p>Adds an image to an embed.</p>
-<h2 id="syntax-290"><a class="header" href="#syntax-290">Syntax</a></h2>
+<h2 id="syntax-294"><a class="header" href="#syntax-294">Syntax</a></h2>
 <pre><code class="language-js">setEmbedImage(imageURL)
 </code></pre>
-<h3 id="parameters-311"><a class="header" href="#parameters-311">Parameters</a></h3>
+<h3 id="parameters-315"><a class="header" href="#parameters-315">Parameters</a></h3>
 <ul>
 <li><code>imageURL</code> : The image to set in the embed. Value must be a valid image link. (Optional)</li>
 </ul>
@@ -11867,10 +11998,10 @@ setEmbedResponse();
 <p><img src="https://user-images.githubusercontent.com/95774950/190847481-06a7de9d-b1f2-44f2-9a4a-d167d69f5d20.png" alt="Screenshot_20220917_134716" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setembedresponse"><a class="header" href="#setembedresponse">setEmbedResponse</a></h1>
 <p>Sends an embedded message to the current channel.</p>
-<h2 id="syntax-291"><a class="header" href="#syntax-291">Syntax</a></h2>
+<h2 id="syntax-295"><a class="header" href="#syntax-295">Syntax</a></h2>
 <pre><code class="language-js">setEmbedResponse(title, description, footer)
 </code></pre>
-<h3 id="parameters-312"><a class="header" href="#parameters-312">Parameters</a></h3>
+<h3 id="parameters-316"><a class="header" href="#parameters-316">Parameters</a></h3>
 <ul>
 <li><code>title</code> : Adds a title to the embed.</li>
 <li><code>description</code> : Adds a description to the embed.</li>
@@ -11894,10 +12025,10 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <p><img src="https://user-images.githubusercontent.com/95774950/190715616-324db8db-8e68-41db-9daa-73ad0d852fe4.png" alt="Screenshot_20220917_005110" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setresponse"><a class="header" href="#setresponse">setResponse</a></h1>
 <p>Sends a message to the current channel.</p>
-<h2 id="syntax-292"><a class="header" href="#syntax-292">Syntax</a></h2>
+<h2 id="syntax-296"><a class="header" href="#syntax-296">Syntax</a></h2>
 <pre><code class="language-js">setResponse(replyText)
 </code></pre>
-<h3 id="parameters-313"><a class="header" href="#parameters-313">Parameters</a></h3>
+<h3 id="parameters-317"><a class="header" href="#parameters-317">Parameters</a></h3>
 <ul>
 <li><code>replyText</code> : The provided text to send. (Optional)</li>
 </ul>
@@ -11914,10 +12045,10 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <p><img src="https://user-images.githubusercontent.com/95774950/190676703-2caf1838-0de1-4dc5-9d2d-85b7c9dc5dc1.png" alt="Screenshot_20220916_205326" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="takerole-1"><a class="header" href="#takerole-1">takeRole</a></h1>
 <p>Removes a role from a specified user.</p>
-<h2 id="syntax-293"><a class="header" href="#syntax-293">Syntax</a></h2>
+<h2 id="syntax-297"><a class="header" href="#syntax-297">Syntax</a></h2>
 <pre><code class="language-js">takeRole(userID, roleID)
 </code></pre>
-<h3 id="parameters-314"><a class="header" href="#parameters-314">Parameters</a></h3>
+<h3 id="parameters-318"><a class="header" href="#parameters-318">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user of whose role is to get removed. Value must be a valid user snowflake ID.</li>
 <li><code>roleID</code> : The role to take from the user. Value must be a valid role snowflake ID.</li>
@@ -11956,10 +12087,10 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/190939183-d1666cdd-4079-4ee2-a5b2-587e0dd656ed.jpg" alt="InShot_20220919_023352223" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unban-1"><a class="header" href="#unban-1">unban</a></h1>
 <p>Unbans a user from the current guild.</p>
-<h2 id="syntax-294"><a class="header" href="#syntax-294">Syntax</a></h2>
+<h2 id="syntax-298"><a class="header" href="#syntax-298">Syntax</a></h2>
 <pre><code class="language-js">unban(userID)
 </code></pre>
-<h3 id="parameters-315"><a class="header" href="#parameters-315">Parameters</a></h3>
+<h3 id="parameters-319"><a class="header" href="#parameters-319">Parameters</a></h3>
 <ul>
 <li><code>userID</code> : The user to unban. Value must be a valid user snowflake ID.</li>
 </ul>
@@ -11995,10 +12126,10 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <img src="https://user-images.githubusercontent.com/95774950/191576471-5677053f-c375-4d96-8f22-e15b0c5502f0.jpg" alt="InShot_20220921_230931790" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unpinmessage-1"><a class="header" href="#unpinmessage-1">unpinMessage</a></h1>
 <p>Unpins a message from the channel.</p>
-<h2 id="syntax-295"><a class="header" href="#syntax-295">Syntax</a></h2>
+<h2 id="syntax-299"><a class="header" href="#syntax-299">Syntax</a></h2>
 <pre><code class="language-js">unpinMessage(channelID, messageID)
 </code></pre>
-<h3 id="parameters-316"><a class="header" href="#parameters-316">Parameters</a></h3>
+<h3 id="parameters-320"><a class="header" href="#parameters-320">Parameters</a></h3>
 <ul>
 <li><code>channelID</code> : The channel where the message is located. Value must be a valid channel snowflake ID.</li>
 <li><code>messageID</code> : The ID of the message. Value must be a valid message snowflake ID.</li>

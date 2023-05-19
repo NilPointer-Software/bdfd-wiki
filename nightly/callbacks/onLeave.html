@@ -165,12 +165,25 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="onleave"><a class="header" href="#onleave">$onLeave</a></h1>
-<p><em>When a user leaves the server, the command is triggered.</em></p>
-<p><code>$onLeave[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>.</p>
+<p><em>Triggered when a user leaves the server.</em></p>
+<p><code>$onLeave[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server.</p>
+<blockquote>
+<p>📌 You can only have <strong>1</strong> single <code>$onLeave[]</code> per bot.</p>
+</blockquote>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$onLeave[channelID]
+</code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
+</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <ol>
 <li>
-<p>Make the command trigger <code>$onLeave[channelID]</code>.</p>
+<p>Create a command with the trigger <code>$onLeave[channelID]</code>.</p>
+<blockquote>
+<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID <a href="#advanced"><em>(See more here...)</em></a>!</p>
+</blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png" alt="example1" /></p>
 </li>
 <li>
@@ -187,7 +200,7 @@
 </ol>
 <p><em>Not Working? Check out the <a href="#troubleshooting">Troubleshooting</a> section.</em></p>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
-<h4 id="is-onleave-bugged-or-not-working"><a class="header" href="#is-onleave-bugged-or-not-working">Is $onLeave[] bugged or not working?</a></h4>
+<h4 id="is-onleave-bugged-or-not-working"><a class="header" href="#is-onleave-bugged-or-not-working">Is <code>$onLeave[]</code> bugged or not working?</a></h4>
 <ul>
 <li>
 <p>You must have at least version <code>1.17.9</code> of the app.</p>
@@ -208,7 +221,7 @@ enable them in the app <em>(unless you don't want to use them at all)</em>.</p>
 </blockquote>
 </li>
 <li>
-<p>Make sure <code>$onLeave[channelID]</code> is written in the 'command trigger' field and not in the code.<br />
+<p>Make sure <code>$onLeave[channelID]</code> is written in the &quot;command trigger&quot; field and not in the code.<br />
 <img src="https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png" alt="image" /></p>
 </li>
 <li>
@@ -224,11 +237,11 @@ enable them in the app <em>(unless you don't want to use them at all)</em>.</p>
 If you own a public bot and want to make it so multiple different servers can use <code>$onLeave[]</code> <em>(e.g. set their own leave message channel)</em>, follow these steps:</p>
 <ol>
 <li>
-<p>Make a variable named &quot;<code>leave</code>&quot; and the value set to nothing.<br />
+<p>Create a variable named &quot;<code>leave</code>&quot; and the value set to nothing.<br />
 <img src="https://user-images.githubusercontent.com/69215413/129492681-5a50ca36-a76d-4add-a4d9-a64c29d0ed33.png" alt="image" /></p>
 </li>
 <li>
-<p>Make a command for setting the leave channel, then put the following in your code:</p>
+<p>Create a command for setting the leave channel, then put the following in your code:</p>
 <pre><code>$nomention
 $onlyAdmin[You need the admin permission to use that!]
 $argsCheck[&gt;1;Please mention a channel!]

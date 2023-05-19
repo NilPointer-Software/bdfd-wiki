@@ -166,21 +166,60 @@
                         </nav>
                         <h1 id="onbanadd"><a class="header" href="#onbanadd">$onBanAdd</a></h1>
 <p><em>Triggered when a user gets banned from the server.</em></p>
-<p><code>$onBanAdd[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID (<code>$getServerVar[]</code>).</p>
+<p><code>$onBanAdd[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. </p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$onBanAdd[channelID]
+</code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>channelID</code> <code>(Type: Snowflake || Type: Required)</code>: The ID of the channel where the message should be sent to.</li>
+</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<p><strong>#1:</strong> Make a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
+<ol>
+<li>
+<p>Create a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
 <blockquote>
-<p>🧙‍♂️ You must replace 'channelID' with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a>!</p>
+<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="#advanced"><em>(See more here...)</em></a>!</p>
 </blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/129491257-7fa6c9c4-e4b4-47c1-8df0-3f580ffa79bf.png" alt="example1" /></p>
-<p><strong>#2:</strong> Input your code/reply text.<br />
-<img src="https://user-images.githubusercontent.com/69215413/129491086-e6a96af6-edeb-4f2b-b226-0e49ed59f544.png" alt="example2" /></p>
-<p><strong>#3:</strong> Now you have a ban message! ✨<br />
-<img src="https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png" alt="example3" /></p>
+</li>
+<li>
+<p>Input your code/reply text.</p>
 <blockquote>
-<p>You can use <code>$authorID</code> to get the ID of the user who got banned.</p>
-<p>You can use <a href="../bdscript/getBanReason.html"><code>$getBanReason</code></a> to get the ban reason.</p>
+<p>🧙‍♂️ You can use functions like <code>$username</code>, <code>$authorID</code>, <code>$authorAvatar</code>, <a href="../bdscript/getBanReason.html"><code>$getBanReason[]</code></a> here.</p>
 </blockquote>
+<p><img src="https://user-images.githubusercontent.com/69215413/129491086-e6a96af6-edeb-4f2b-b226-0e49ed59f544.png" alt="example2" /></p>
+</li>
+<li>
+<p>Now you have a ban message! ✨<br />
+<img src="https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png" alt="example3" /></p>
+</li>
+</ol>
+<h2 id="advanced"><a class="header" href="#advanced">Advanced</a></h2>
+<h3 id="per-server-onbanadd"><a class="header" href="#per-server-onbanadd">Per-Server $onBanAdd</a></h3>
+<p>Both free and premium users can use <code>$onBanAdd[]</code>, and all users can put <code>$getServerVar[]</code> within <code>$onBanAdd[]</code>. However, non-premium users can not use <code>$getServerVar[]</code> outside of callbacks.<br />
+If you own a public bot and want to make it so multiple different servers can use <code>$onBanAdd[]</code> <em>(e.g. set their own logging channel)</em>, follow these steps:</p>
+<ol>
+<li>
+<p>Create a variable named &quot;<code>logs</code>&quot; and the value set to nothing.<br />
+<img src="https://user-images.githubusercontent.com/111157596/239278501-dae381e3-4fe0-4e5f-9cc8-e18d0f56215f.png" alt="image" /></p>
+</li>
+<li>
+<p>Create a command for setting the logging channel, then put the following in your code:</p>
+<pre><code>$nomention
+$onlyAdmin[You need the admin permission to use that!]
+$argsCheck[&gt;1;Please mention a channel!]
+Logging channel updated!
+$setServerVar[logs;$mentionedChannels[1]]
+</code></pre>
+<blockquote>
+<p>📝 Servers will need to setup the channel they want the ban message to send to <em>(by running a command with the code above)</em>.</p>
+</blockquote>
+</li>
+<li>
+<p>Now replace <code>$onBanAdd[channelID]</code> in your command trigger, with <code>$onBanAdd[$getServerVar[logs]]</code> and you're all set!</p>
+</li>
+</ol>
 
                     </main>
 
