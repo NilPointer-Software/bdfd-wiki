@@ -9,7 +9,7 @@ $awaitedCommand[Name;(Filter)]
 ```
 ### Parameters
 - `Name` `(Type: String || Flag: Required)`: The name used in the [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
-- `Filter` `(Type: Filter || Flag: Optional)`: It is used to limit the user input.
+- `Filter` `(Type: String || Flag: Optional)`: It is used to limit the user input.
 
 ### Supported filters
 - `<numeric>` - Accepts only number input.
