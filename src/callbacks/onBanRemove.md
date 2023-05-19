@@ -22,7 +22,7 @@ $onBanRemove[channelID]
 
     ![example2](https://user-images.githubusercontent.com/69215413/129492022-8acd4877-638c-4855-8970-13dab37b032e.png)
 
-3. Now you have a unban message! ✨\
+3. Now you have an unban message! ✨\
 ![example3](https://user-images.githubusercontent.com/69215413/129492076-8f6ec738-096d-4abf-af8b-678a50ad4c5b.png)
 
 ## Advanced
