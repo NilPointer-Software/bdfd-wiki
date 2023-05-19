@@ -1,11 +1,22 @@
 # $onLeave
-*When a user leaves the server, the command is triggered.*
+*Triggered when a user leaves the server.*
 
-`$onLeave[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server. You must replace 'channelID' with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
+`$onLeave[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server.
+
+> 📌 You can only have **1** single `$onLeave[]` per bot.
+
+## Syntax
+```
+$onLeave[channelID]
+```
+
+### Parameters
+- `channelID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
 
 ## Example
-1. Make the command trigger `$onLeave[channelID]`.
-
+1. Create a command with the trigger `$onLeave[channelID]`.
+    > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID [*(See more here...)*](#advanced)!
+    
     ![example1](https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png)
 
 2. Input your code/reply text.
@@ -19,7 +30,7 @@
 *Not Working? Check out the [Troubleshooting](#troubleshooting) section.*
 
 ## Troubleshooting
-#### Is $onLeave[] bugged or not working? 
+#### Is `$onLeave[]` bugged or not working? 
 
 - You must have at least version `1.17.9` of the app.
 
@@ -35,7 +46,7 @@
 **For example:** If you have `members intent` enabled in the Discord Developer Portal then you should respectively
 enable them in the app *(unless you don't want to use them at all)*.
 
-- Make sure `$onLeave[channelID]` is written in the 'command trigger' field and not in the code.\
+- Make sure `$onLeave[channelID]` is written in the "command trigger" field and not in the code.\
 ![image](https://user-images.githubusercontent.com/69215413/113423759-09e3ba80-939d-11eb-95c2-1fe7860f3887.png)
 
 - Make sure your bot has `VIEW_CHANNEL`, `EMBED_LINKS`, `SEND_MESSAGES` permission in the channel provided in `$onLeave[]`, and that you inputted a valid channel ID.
@@ -46,10 +57,10 @@ enable them in the app *(unless you don't want to use them at all)*.
 Both free and premium users can use `$onLeave[]`, and all users can put `$getServerVar[]` within `$onLeave[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks.\
 If you own a public bot and want to make it so multiple different servers can use `$onLeave[]` *(e.g. set their own leave message channel)*, follow these steps:
 
-1. Make a variable named "`leave`" and the value set to nothing.\
+1. Create a variable named "`leave`" and the value set to nothing.\
 ![image](https://user-images.githubusercontent.com/69215413/129492681-5a50ca36-a76d-4add-a4d9-a64c29d0ed33.png)
 
-2. Make a command for setting the leave channel, then put the following in your code:
+2. Create a command for setting the leave channel, then put the following in your code:
      ```
      $nomention
      $onlyAdmin[You need the admin permission to use that!]

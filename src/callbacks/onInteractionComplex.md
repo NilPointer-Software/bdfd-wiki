@@ -3,11 +3,11 @@ Triggered upon an interaction being emitted (e.g. a button being clicked).
 
 ## Syntax
 ```
-$onIneraction[interaction ID]
+$onIneraction[Interaction ID]
 ```
 
 ### Parameters
-- `interaction ID`: The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.
+- `Interaction ID` `(Type: String || Flag: Required)`: The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.
 
 ### Supports
 - **[Buttons](../guides/general/interactions/buttons/aboutButtons.md)**
@@ -28,8 +28,7 @@ $addButton[no;example;Click!;primary]
 $nomention
 $sendMessage[Hello $username!]
 ```
-2. Execute commands
-
+2. Execute commands\
 ![example](https://user-images.githubusercontent.com/113303649/223438800-7323f05e-77b5-464e-9385-4f287ba3bcba.png)
 
-> How [`$addButton[]`](../bdscript/addButton.md)  works?
+> How [`$addButton[]`](../bdscript/addButton.md) works?
