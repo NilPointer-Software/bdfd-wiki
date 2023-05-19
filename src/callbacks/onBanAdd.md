@@ -9,7 +9,7 @@ $onBanAdd[channelID]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Type: Required)`: The ID of the channel where the message should be sent to.
+- `channelID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
 
 ## Example
 1. Create a command with `$onBanAdd[channelID]` as the trigger.
