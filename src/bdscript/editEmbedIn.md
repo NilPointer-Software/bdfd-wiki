@@ -1,19 +1,19 @@
 # $editEmbedIn
 Edits the bot's message after the given time, as an embed.
 
-## Usage
+## Syntax
 ```
-$editEmbedIn[time;(title;description;footer;color)]
+$editEmbedIn[Time;(Title;Description;Footer;Color)]
 ```
-> 📝 Optional fields can be left empty. At least one embed field (`title`, `description`, or `footer`) needs to be inputted.
+
+> 📝 Optional fields can be left empty. At least one embed field (`Title`, `Description`, or `Footer`) needs to be inputted.
 
 ### Parameters
-- `time` `(Type: Duration || Flag: Required)`: The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max time is 40 minutes (for premium users, it's 120 minutes). Required.
-
-- `title` `(Type: String || Flag: Vacantable)`: The new embed title. Optional.
-- `description` `(Type: String || Flag: Vacantable)`: The new embed description. Optional.
-- `footer` `(Type: String || Flag: Vacantable)`: The new embed footer. Optional.
-- `color` `(Type: Color || Flag: Vacantable)`: The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for the default color. Optional.
+- `Time` `(Type: Duration || Flag: Required)`: The time to wait before editing the message (e.g `3s`, `30s`, `10m`). Max time is 40 minutes (for premium users, it's 120 minutes). Required.
+- `Title` `(Type: String || Flag: Vacantable)`: The new embed title. Optional.
+- `Description` `(Type: String || Flag: Vacantable)`: The new embed description. Optional.
+- `Footer` `(Type: String || Flag: Vacantable)`: The new embed footer. Optional.
+- `Color` `(Type: Color || Flag: Vacantable)`: The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for the default color. Optional.
 
 ## Example
 ```
