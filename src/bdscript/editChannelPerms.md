@@ -1,25 +1,22 @@
 # $editChannelPerms
+Changes permissions for the mentioned user/role in the provided channel.
 
-Changes permission for mentioned users/roles in this particular channel.
-
-## Usage
+## Syntax
 ```
-$editChannelPerms[channel ID;userID/RoleID;permission;...]
+$editChannelPerms[Channel ID;User/Role ID;Permission;...]
 ```
 
 ### Parameters
-- `channel ID` `(Type: Snowflake || Flag: Required)`: place the ID of the channel to which the roles are modified.
-- `userID/RoleID` `(Type: Snowflake || Flag: Emptiable)`: place the ID of the role or user whose permissions will be modified.
-- `permission` `(Type: Permission || Flag: Required)`: the permission(s) to be modified.
-  - `+` - set + to add permission.
-  - `-` - set - to remove the permission.
-
-> 🧙🏻‍♂️ You can see the available permissions here in [Permissions](../resources/permissions.md)
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the role/user is being modified.
+- `User/Role ID` `(Type: Snowflake || Flag: Emptiable)`: The ID of the role/user whose permissions will be modified.
+- `Permission` `(Type: Permission || Flag: Required)`: The [permission(s)](../resources/permissions.md) to be modified. (e.g. `-sendmessages`)
+  - `+` - set "+" to add the permission.
+  - `-` - set "-" to remove the permission.
 
 ## Example
 ```
 $nomention
-$onlyPerms[managechannels; ❌ You need the manage_channels permission to use that!]
+$onlyPerms[managechannels;❌ You need the `MANAGE_CHANNELS` permission to use that!]
 
 $editChannelPerms[$channelID;$mentionedRoles[1];-sendmessages]
 ✅ Now the role cannot send messages
