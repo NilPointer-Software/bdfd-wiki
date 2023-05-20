@@ -1,24 +1,26 @@
 # $deleteRole
 Deletes a role.
 
-## Usage
+## Syntax
 ```
-$deleteRole[roleID]
+$deleteRole[Role ID]
 ```
 
 ### Parameters
-- `roleID` `(Type: Snowflake || Flag: Required)`: The role to delete.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role to delete.
+
+### Permissions
+Required permissions that the bot must have for this function to work properly:
+- `manageroles`
 
 ## Example
 ```
 $nomention
-$onlyPerms[manageroles;You are missing permissions!]
+$onlyPerms[manageroles;❌ You are missing the `MANAGE_ROLES` permission!]
 $argsCheck[>1;Please provide a role to delete!]
 $onlyIf[$findRole[$message]!=;Invalid role!]
 $deleteRole[$findRole[$message]]
-Deleted role!
+Deleted the role!
 ```
-
-![example1](https://user-images.githubusercontent.com/69215413/125974782-09c332da-332b-4944-bb1c-b135fa6b5961.png)
-
-![example2](https://user-images.githubusercontent.com/69215413/125974818-25d5f88c-7683-4c7b-a5cc-b37d1bb672f1.png)
+![example](https://user-images.githubusercontent.com/111157596/239688806-0699dbf1-3684-4a4a-9cdf-f191ad0b90fd.png)\
+![example](https://user-images.githubusercontent.com/111157596/239688761-3bd88f60-8a5c-48e9-9b23-677b2e4ecd17.png)
