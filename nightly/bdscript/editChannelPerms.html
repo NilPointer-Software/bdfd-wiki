@@ -165,27 +165,24 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="editchannelperms"><a class="header" href="#editchannelperms">$editChannelPerms</a></h1>
-<p>Changes permission for mentioned users/roles in this particular channel.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$editChannelPerms[channel ID;userID/RoleID;permission;...]
+<p>Changes permissions for the mentioned user/role in the provided channel.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$editChannelPerms[Channel ID;User/Role ID;Permission;...]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: place the ID of the channel to which the roles are modified.</li>
-<li><code>userID/RoleID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: place the ID of the role or user whose permissions will be modified.</li>
-<li><code>permission</code> <code>(Type: Permission || Flag: Required)</code>: the permission(s) to be modified.
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the role/user is being modified.</li>
+<li><code>User/Role ID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The ID of the role/user whose permissions will be modified.</li>
+<li><code>Permission</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="../resources/permissions.html">permission(s)</a> to be modified. (e.g. <code>-sendmessages</code>)
 <ul>
-<li><code>+</code> - set + to add permission.</li>
-<li><code>-</code> - set - to remove the permission.</li>
+<li><code>+</code> - set &quot;+&quot; to add the permission.</li>
+<li><code>-</code> - set &quot;-&quot; to remove the permission.</li>
 </ul>
 </li>
 </ul>
-<blockquote>
-<p>🧙🏻‍♂️ You can see the available permissions here in <a href="../resources/permissions.html">Permissions</a></p>
-</blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$onlyPerms[managechannels; ❌ You need the manage_channels permission to use that!]
+$onlyPerms[managechannels;❌ You need the `MANAGE_CHANNELS` permission to use that!]
 
 $editChannelPerms[$channelID;$mentionedRoles[1];-sendmessages]
 ✅ Now the role cannot send messages

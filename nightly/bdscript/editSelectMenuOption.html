@@ -165,19 +165,19 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="editselectmenuoption"><a class="header" href="#editselectmenuoption">$editSelectMenuOption</a></h1>
-<p>Edits select menu.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$editSelectMenuOption[menu option ID;label;value;description;(default;emoji;message ID)]
+<p>Edits a select menu option.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$editSelectMenuOption[Menu option ID;Label;Value;Description;(Default;Emoji;Message ID)]
 </code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>menu option ID</code> <code>(Type: String || Flag: Required)</code>: it has to be the same as the ID used in its <code>$newSelectMenu[]</code>.</li>
-<li><code>label</code> <code>(Type: String || Flag: Required)</code>: the name of the option.</li>
-<li><code>value</code> <code>(Type: String || Flag: Required)</code>: it's the data that gets passed to the <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
-<li><code>description</code> <code>(Type: String || Flag: Vacantable)</code>: it shows up under the <code>label</code>.</li>
-<li><code>default</code> <code>(Type: Bool || Flag: Vacantable)</code>: should the option be selected by default. <strong>There can be only one default option!</strong></li>
-<li><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: it shows up next to the <code>label</code>.</li>
-<li><code>message ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: the message id, menu attached to it.</li>
+<li><code>Menu option ID</code> <code>(Type: String || Flag: Required)</code>: The select menu ID. It has to be the same as the ID used in its <code>$newSelectMenu[]</code>.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Required)</code>: The name of the option.</li>
+<li><code>Value</code> <code>(Type: String || Flag: Required)</code>: The value of the option. It's the data that gets passed to the <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
+<li><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The description of the option. It shows up under the <code>Label</code>.</li>
+<li><code>Default</code> <code>(Type: Bool || Flag: Vacantable)</code>: Decide if the option should be selected by default. <strong>There can be only one default option!</strong></li>
+<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: The emoji of the option. It shows up next to the <code>Label</code>.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The message ID, menu attached to it.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <h3 id="interaction-code"><a class="header" href="#interaction-code">Interaction Code</a></h3>
@@ -185,9 +185,12 @@
 $editSelectMenuOption[Example;Second;second-option;The second option;no;2️⃣]
 $editSelectMenuOption[Example;Third;third-option;The third option;no;3️⃣]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/194148923-a25962f8-544d-4744-8a5c-876d9455eaa3.png" alt="Example 1" />
-<img src="https://user-images.githubusercontent.com/70456337/194149283-42724349-84d1-4d70-b8e6-d4b58e8c365f.png" alt="Example 1" />
-<img src="https://user-images.githubusercontent.com/70456337/194149485-750c15e8-2a3c-46d0-857b-493178b9468c.png" alt="Example 1" /></p>
+<p><img src="https://user-images.githubusercontent.com/70456337/194148923-a25962f8-544d-4744-8a5c-876d9455eaa3.png" alt="example1" /></p>
+<h3 id="output"><a class="header" href="#output">Output</a></h3>
+<p><strong>Before</strong></p>
+<p><img src="https://user-images.githubusercontent.com/70456337/194149283-42724349-84d1-4d70-b8e6-d4b58e8c365f.png" alt="example2" /></p>
+<p><strong>After</strong></p>
+<p><img src="https://user-images.githubusercontent.com/70456337/194149485-750c15e8-2a3c-46d0-857b-493178b9468c.png" alt="example3" /></p>
 <blockquote>
 <p>For more info, see the <a href="../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu Guide</a>.</p>
 </blockquote>

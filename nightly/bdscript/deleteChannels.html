@@ -166,21 +166,26 @@
                         </nav>
                         <h1 id="deletechannels"><a class="header" href="#deletechannels">$deleteChannels</a></h1>
 <p>Deletes the provided channel(s).</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$deleteChannels[channelIDs]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$deleteChannels[Channel IDs;...]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channels</code> <code>(Type: Snowflake || Flag: Required)</code>: The channels to delete. Separate channel IDs using <code>;</code>.</li>
+<li><code>Channel IDs</code> <code>(Type: Snowflake || Flag: Required)</code>: The channels to delete. Use semicolons <code>;</code> as a separator to separate multiple channel IDs.</li>
+</ul>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>managechannels</code></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;Please mention a channel!]
-$onlyPerms[managechannels;You need the manage channels permission to use that!]
+$onlyPerms[managechannels;You need the `MANAGE_CHANNELS` permission to use that!]
 Successfully deleted $channelName[$mentionedChannels[1]]!
 $deleteChannels[$mentionedChannels[1]]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/122830487-65478980-d2b6-11eb-948b-652dd3800ff2.png" alt="Example" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/122830487-65478980-d2b6-11eb-948b-652dd3800ff2.png" alt="example" /></p>
 
                     </main>
 

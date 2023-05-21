@@ -165,49 +165,42 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="editbutton"><a class="header" href="#editbutton">$editButton</a></h1>
-<p>Edits already existing button.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>Edits an already existing button.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$editButton[Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
 </code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>Button ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: the required button ID or URL, you want to be edited</p>
-</li>
-<li>
-<p><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: new label of displayed on the button </p>
-</li>
-<li>
-<p><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: Here, are all possible values for the <code>style</code> argument:</p>
+<li><code>Button ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: The required button ID or URL, you want to be edited.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: The new label displayed on the button.</li>
+<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: The style of the button. All styles are listed <a href="#button-styles">below</a>.</li>
+<li><code>Disabled</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code>, the button can't be pressed. Default is <code>no</code>.</li>
+<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Edits / Adds an emoji inside the button. Emojis have to be either pasted as <em>Unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</li>
+</ul>
+<h3 id="button-styles"><a class="header" href="#button-styles">Button styles</a></h3>
 <ul>
-<li><code>primary</code></li>
-<li><code>secondary</code></li>
-<li><code>success</code></li>
-<li><code>danger</code></li>
-<li><code>link</code></li>
+<li><code>primary</code> - Blue button</li>
+<li><code>secondary</code> - Gray button</li>
+<li><code>success</code> - Green button</li>
+<li><code>danger</code> - Red button</li>
+<li><code>link</code> - Redirect button</li>
 </ul>
-</li>
-<li>
-<p><code>Disabled</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code></p>
-</li>
-<li>
-<p><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: edits / adds an emoji inside the button. Emojis have to be either pasted as <em>Unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</p>
-</li>
-<li>
-<p><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</p>
-</li>
-</ul>
+<blockquote>
+<p>If the <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
+</blockquote>
+<h4 id="preview"><a class="header" href="#preview">Preview</a></h4>
+<p><img src="https://user-images.githubusercontent.com/111157596/239689749-49244b9d-4539-4159-9f51-b09425d8b3ca.png" alt="preview" /></p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <h3 id="interaction-command-code"><a class="header" href="#interaction-command-code">Interaction command code</a></h3>
-<pre><code>$username said hello!
-
+<pre><code>$nomention
+$username said hello!
 $editButton[test;Say hello!;primary;yes;]
-
 $addButton[no;http://botdesignerdiscord.com;Check our website;link;no;👀]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/16838075/120207246-7d366b00-c22c-11eb-8d04-9cf569ced8ae.png" alt="" /></p>
 <blockquote>
-<p>For more info, see the <a href="../guides/general/interactions/buttons/aboutButtons.html">Button Guide</a>.</p>
+<p>For more info, see the <a href="../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
 </blockquote>
 
                     </main>

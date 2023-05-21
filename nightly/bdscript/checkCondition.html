@@ -166,28 +166,28 @@
                         </nav>
                         <h1 id="checkcondition"><a class="header" href="#checkcondition">$checkCondition</a></h1>
 <p>Checks if a condition is <code>true</code> or <code>false</code>.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$checkCondition[condition]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$checkCondition[Condition]
 </code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>condition</code> <code>(Type: String || Flag: Required)</code>: The condition to check.</li>
+<li><code>Condition</code> <code>(Type: String || Flag: Required)</code>: The condition to check.</li>
 </ul>
 <h2 id="explanation"><a class="header" href="#explanation">Explanation</a></h2>
 <p>Simply put, <code>$checkCondition</code> serves as a way to make a custom true or false statement. For example: <code>$checkCondition[$username==Spen]</code>, the bot would return &quot;true&quot; if someone named Spen used the command, otherwise it would return &quot;false&quot;. However this: <code>$checkCondition[$username!=Spen]</code>, would return &quot;false&quot; if someone named Spen used the command, otherwise it would return &quot;true&quot;.</p>
 <p>Base Usage: <code>$checkCondition[value1(sign)value2]</code></p>
-<p><strong>What's Sign?</strong>
+<p><strong>What's Sign?</strong><br />
 Replace (sign) with one of these.</p>
 <ul>
 <li><code>==</code> - Should be equal </li>
 <li><code>!=</code> - Should be not equal </li>
-<li><code>&lt;</code>- Should be less than (only numbers) </li>
-<li><code>&gt;</code>- Should be greater than (only numbers) </li>
+<li><code>&lt;</code> - Should be less than (only numbers) </li>
+<li><code>&gt;</code> - Should be greater than (only numbers) </li>
 <li><code>&gt;=</code> - Should be greater than or equal to (only numbers) </li>
 <li><code>&lt;=</code> - Should be less than or equal to (only numbers) </li>
 </ul>
-<p><strong>What Are Values?</strong></p>
-<p>The value is what the bot is checking. Like one of the examples above: <code>$checkCondition[$username==Spen]</code>.</p>
+<p><strong>What Are Values?</strong><br />
+The value is what the bot is checking. Like one of the examples above: <code>$checkCondition[$username==Spen]</code>.</p>
 <ul>
 <li>value1 is $username</li>
 <li>sign is ==</li>

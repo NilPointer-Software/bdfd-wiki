@@ -166,29 +166,19 @@
                         </nav>
                         <h1 id="editembedin"><a class="header" href="#editembedin">$editEmbedIn</a></h1>
 <p>Edits the bot's message after the given time, as an embed.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$editEmbedIn[time;(title;description;footer;color)]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$editEmbedIn[Time;(Title;Description;Footer;Color)]
 </code></pre>
 <blockquote>
-<p>📝 Optional fields can be left empty. At least one embed field (<code>title</code>, <code>description</code>, or <code>footer</code>) needs to be inputted.</p>
+<p>📝 Optional fields can be left empty. At least one embed field (<code>Title</code>, <code>Description</code>, or <code>Footer</code>) needs to be inputted.</p>
 </blockquote>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>time</code> <code>(Type: Duration || Flag: Required)</code>: The time to wait before editing the message (e.g <code>3s</code>, <code>30s</code>, <code>10m</code>). Max time is 40 minutes (for premium users, it's 120 minutes). Required.</p>
-</li>
-<li>
-<p><code>title</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed title. Optional.</p>
-</li>
-<li>
-<p><code>description</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed description. Optional.</p>
-</li>
-<li>
-<p><code>footer</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed footer. Optional.</p>
-</li>
-<li>
-<p><code>color</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a> or color integer number. Use <code>0</code> for the default color. Optional.</p>
-</li>
+<li><code>Time</code> <code>(Type: Duration || Flag: Required)</code>: The time to wait before editing the message (e.g <code>3s</code>, <code>30s</code>, <code>10m</code>). Max time is 40 minutes (for premium users, it's 120 minutes). Required.</li>
+<li><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed title. Optional.</li>
+<li><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed description. Optional.</li>
+<li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed footer. Optional.</li>
+<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a> or color integer number. Use <code>0</code> for the default color. Optional.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

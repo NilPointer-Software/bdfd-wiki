@@ -166,13 +166,26 @@
                         </nav>
                         <h1 id="deletechannelsbyname"><a class="header" href="#deletechannelsbyname">$deleteChannelsByName</a></h1>
 <p>Deletes all channels matching the names provided.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$deleteChannelsByName[channelName;...]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$deleteChannelsByName[Channel name;...]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channelName</code> <code>(Type: String || Flag: Required)</code>: The name(s) of the channel(s) to delete. Use <code>;</code> to separate channel names.</li>
+<li><code>Channel name</code> <code>(Type: String || Flag: Required)</code>: The name(s) of the channel(s) to delete. Use semicolons <code>;</code> as a separator to separate multiple channel names.</li>
 </ul>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>managechannels</code></li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$argsCheck[&gt;1;Please provide a channel name!]
+$onlyPerms[managechannels;❌ You need the `MANAGE_CHANNELS` permission to use that!]
+Successfully deleted the channel #$channelName[$channelID[$message]]!
+$deleteChannelsByName[$message]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/111157596/232805102-060e69c3-89e1-4008-bf71-8b62f5cb4d72.png" alt="example" /></p>
 
                     </main>
 

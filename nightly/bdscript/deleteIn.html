@@ -165,19 +165,21 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="deletein"><a class="header" href="#deletein">$deleteIn</a></h1>
-<p>Deletes the bot's response in after the provided duration.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$deleteIn[duration]
+<p>Deletes the bot's response after the provided duration.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$deleteIn[Duration]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>duration</code> <code>(Type: Duration || Flag: Required)</code>: The time to wait before deleting the message (e.g <code>3s</code>, <code>30s</code>, <code>1m</code>, etc). Max duration is <code>40m</code>.</li>
+<li><code>Duration</code> <code>(Type: Duration || Flag: Required)</code>: The time to wait before deleting the message (e.g <code>3s</code>, <code>30s</code>, <code>1m</code>, etc). Max duration is <code>40m</code> (<code>120m</code> for premium bots).</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p><em>The message deletes itself after 3 seconds.</em></p>
 <pre><code>$nomention
 Hello World!
 $deleteIn[3s]
 </code></pre>
+<p><img src="https://user-images.githubusercontent.com/111157596/232803197-f11780dd-754b-4203-8556-54629a677a65.gif" alt="example" /></p>
 
                     </main>
 

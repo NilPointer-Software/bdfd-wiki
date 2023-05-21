@@ -167,9 +167,9 @@
                         <h1 id="eval"><a class="header" href="#eval">$eval</a></h1>
 <p>Evaluates the provided BDScript code.</p>
 <blockquote>
-<p>⚠️ Can only be used in BDScript 2, this function should be used with caution.</p>
+<p>⚠️ Can only be used in BDScript 2. This function should be used with caution!</p>
 </blockquote>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$eval[BDScript source code]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
@@ -178,11 +178,12 @@
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
+$onlyForIDs[$botOwnerID;❌ Only the bot owner can use that!]
 $eval[$message]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/98183987/153739471-cb7a44ff-d0f1-40ac-8c26-ff2f58ffb008.jpg" alt="20220213_124659" /></p>
+<p><img src="https://user-images.githubusercontent.com/98183987/153739471-cb7a44ff-d0f1-40ac-8c26-ff2f58ffb008.jpg" alt="example" /></p>
 <blockquote>
-<p>It is recommended to restrict the command to be only used by the bot developers, this can be done with <a href="./onlyForIDs.html">$onlyForIDs</a>.</p>
+<p>It is recommended to restrict the command to be only used by the bot developers, this can be done with <a href="./onlyForIDs.html"><code>$onlyForIDs[]</code></a>.</p>
 </blockquote>
 
                     </main>

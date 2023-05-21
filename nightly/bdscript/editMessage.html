@@ -166,21 +166,21 @@
                         </nav>
                         <h1 id="editmessage"><a class="header" href="#editmessage">$editMessage</a></h1>
 <p>Edits one of the bot's messages.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$editMessage[channelID;messageID;content;(title;description;color;footer)]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$editMessage[Channel ID;Message ID;Content;(Title;Description;Color;Footer)]
 </code></pre>
 <blockquote>
 <p>🧙‍♂️ <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">How Do I Get The Channel / Message ID? (click-me)</a></p>
 </blockquote>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel that this message belongs to.</li>
-<li><code>messageID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message to edit (must be a message that the bot sent).</li>
-<li><code>content</code> <code>(Type: String || Flag: Emptiable)</code>: The new message contents.</li>
-<li><code>title</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed title.</li>
-<li><code>description</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed description.</li>
-<li><code>color</code> <code>(Type: Color || Flag: Vacantable)</code>: The new embed color border hex.</li>
-<li><code>footer</code> <code>(Type: String || Flag: Vacantable)</code>:  The new embed footer text.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel that this message belongs to.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message to edit (must be a message that the bot sent).</li>
+<li><code>Content</code> <code>(Type: String || Flag: Emptiable)</code>: The new message contents.</li>
+<li><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed title.</li>
+<li><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed description.</li>
+<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The new embed color border hex.</li>
+<li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>:  The new embed footer text.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

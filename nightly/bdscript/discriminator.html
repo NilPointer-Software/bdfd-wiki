@@ -166,24 +166,27 @@
                         </nav>
                         <h1 id="discriminator"><a class="header" href="#discriminator">$discriminator</a></h1>
 <p>Returns a user's discriminator (the 4 digit number at the end of their username).</p>
-<h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
-<p>There are two usages of the <code>$discriminator</code> function.</p>
-<h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
-<pre><code>$discriminator[userID]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$discriminator[User ID]
 </code></pre>
-<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>userID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user to get the discriminator from.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user to get the discriminator from.</li>
 </ul>
-<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
-<pre><code>$discriminator[]
-</code></pre>
-<p>Returns the author's discriminator.</p>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<blockquote>
+<p>🧙‍♂️ You can leave the <code>User ID</code> argument empty to get the discriminator of the author of the message. See <a href="#example-1">Example 1</a> below.</p>
+</blockquote>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<h3 id="example-1"><a class="header" href="#example-1">Example #1</a></h3>
 <pre><code>$nomention
 Hello $username#$discriminator[]!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/123010488-b5911b00-d38c-11eb-8aeb-a7453c3687c6.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/123010488-b5911b00-d38c-11eb-8aeb-a7453c3687c6.png" alt="example1" /></p>
+<h3 id="example-2"><a class="header" href="#example-2">Example #2</a></h3>
+<pre><code>$nomention
+Hello, I'm **$username[$botID]#$discriminator[$botID]**!
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/111157596/232813565-f300e328-35db-4c5b-b98d-839e5db4f428.png" alt="example2" /></p>
 
                     </main>
 

@@ -165,14 +165,19 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="deletemessage"><a class="header" href="#deletemessage">$deleteMessage</a></h1>
-<p>Deletes a message</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$deleteMessage[channel ID;message ID]
+<p>Deletes a message.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$deleteMessage[Channel ID;Message ID]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel ID where the message is.</li>
-<li><code>message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message which will be deleted.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel ID where the message is located.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message which will be deleted.</li>
+</ul>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>managemessages</code></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

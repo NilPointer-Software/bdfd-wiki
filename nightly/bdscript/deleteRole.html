@@ -166,23 +166,28 @@
                         </nav>
                         <h1 id="deleterole"><a class="header" href="#deleterole">$deleteRole</a></h1>
 <p>Deletes a role.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$deleteRole[roleID]
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$deleteRole[Role ID]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to delete.</li>
+<li><code>Role ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to delete.</li>
+</ul>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+<ul>
+<li><code>manageroles</code></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$onlyPerms[manageroles;You are missing permissions!]
+$onlyPerms[manageroles;❌ You are missing the `MANAGE_ROLES` permission!]
 $argsCheck[&gt;1;Please provide a role to delete!]
 $onlyIf[$findRole[$message]!=;Invalid role!]
 $deleteRole[$findRole[$message]]
-Deleted role!
+Deleted the role!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125974782-09c332da-332b-4944-bb1c-b135fa6b5961.png" alt="example1" /></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/125974818-25d5f88c-7683-4c7b-a5cc-b37d1bb672f1.png" alt="example2" /></p>
+<p><img src="https://user-images.githubusercontent.com/111157596/239688806-0699dbf1-3684-4a4a-9cdf-f191ad0b90fd.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/111157596/239688761-3bd88f60-8a5c-48e9-9b23-677b2e4ecd17.png" alt="example" /></p>
 
                     </main>
 

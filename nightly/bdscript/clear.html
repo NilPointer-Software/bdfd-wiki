@@ -166,31 +166,25 @@
                         </nav>
                         <h1 id="clear"><a class="header" href="#clear">$clear</a></h1>
 <p>Deletes a certain amount of messages.</p>
-<h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
-<p>There are two usages of the <code>$clear</code> function.</p>
-<h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
+<blockquote>
+<p>🧙‍♂️ When using just <code>$clear</code>, the author's message must include a number.</p>
+</blockquote>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$clear
 </code></pre>
 <blockquote>
-<p>When using just <code>$clear</code>, the author's message must include a number.</p>
+<p>📌 Discord doesn't allow deleting messages in bulk which are over 2 weeks old.</p>
 </blockquote>
-<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
-<pre><code>$clear[how many?;(user ID;remove pinned messages?)]
-</code></pre>
-<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
+<p>Required permissions that the bot must have for this function to work properly:</p>
 <ul>
-<li><code>how many?</code> <code>(Type: Integer || Flag: Required)</code>: How many messages to delete. (max 100)</li>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: If a userID is provided, the bot will only delete messages from that user.</li>
-<li><code>remove pinned messages?</code> <code>(Type: Bool || Flag: Optional)</code>: Decides whether to delete pinned messages or not. The default is <code>yes</code>.</li>
+<li><code>managemessages</code></li>
 </ul>
-<blockquote>
-<p>Discord doesn't allow deleting messages in bulk which are over 2 weeks old.</p>
-</blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[managemessages;You need the 'MANAGE_MESSAGES' permission to use that!]
 $argsCheck[&gt;1;Please provide how many messages to clear. Usage: !purge (number)]
-$clear[$message]
+$clear
 </code></pre>
 
                     </main>

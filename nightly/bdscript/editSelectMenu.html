@@ -165,27 +165,17 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="editselectmenu"><a class="header" href="#editselectmenu">$editSelectMenu</a></h1>
-<p>Edits select menu.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$editSelectMenu[menu ID;min;max;(placeholder;message ID)]
+<p>Edits a select menu.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$editSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
 </code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>menu ID</code> <code>(Type: String || Flag: Required)</code>: The menu ID you want to edit</p>
-</li>
-<li>
-<p><code>min</code> <code>(Type: Integer || Flag: Required)</code>: The minimum amount of values that can be selected.</p>
-</li>
-<li>
-<p><code>max</code> <code>(Type: Integer || Flag: Required)</code>: The maximum amount of values that can be selected.</p>
-</li>
-<li>
-<p><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: It's a text that appears if no option is selected.</p>
-</li>
-<li>
-<p><code>message ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The message for which a select menu will be edited.</p>
-</li>
+<li><code>Menu ID</code> <code>(Type: String || Flag: Required)</code>: The ID of the select menu you want to edit.</li>
+<li><code>Min</code> <code>(Type: Integer || Flag: Required)</code>: The minimum amount of values that can be selected.</li>
+<li><code>Max</code> <code>(Type: Integer || Flag: Required)</code>: The maximum amount of values that can be selected.</li>
+<li><code>Placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: The text that appears if no option is selected.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The message for which a select menu will be edited.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <h3 id="interaction-code"><a class="header" href="#interaction-code">Interaction Code</a></h3>
@@ -194,7 +184,7 @@ $addSelectMenuOption[Example;First;first-option;The first option]
 $addSelectMenuOption[Example;Second;second-option;The second option]
 $addSelectMenuOption[Example;Third;third-option;The third option]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/194151805-879cca9b-e970-4e32-bd70-fb5f9010fd97.png" alt="Usage" />
+<p><img src="https://user-images.githubusercontent.com/70456337/194151805-879cca9b-e970-4e32-bd70-fb5f9010fd97.png" alt="Usage" /><br />
 <img src="https://user-images.githubusercontent.com/70456337/194151852-70c8d754-e6cd-4269-982c-af03c6c3ba3c.png" alt="Usage" /></p>
 <blockquote>
 <p>For more info, see the <a href="../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu Guide</a>.</p>

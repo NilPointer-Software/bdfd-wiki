@@ -165,25 +165,28 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="embedsuppresserrors"><a class="header" href="#embedsuppresserrors">$embedSuppressErrors</a></h1>
-<p>Suppresses the error messages, responds with the embed if there is a error.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$embedSuppressErrors[title;description;(color;author;footerText;footerIcon)]
+<p>Suppresses the error messages, responds with the embed if there is an error.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$embedSuppressErrors[Title;Description;(Color;Author;Footer;Footer icon)]
 </code></pre>
 <blockquote>
-<p>🧙‍♂️ All fields are optional, leave the field empty to not include it. Atleast one field needs to be inputted, however.</p>
-</blockquote>
-<blockquote>
-<p><code>$embedSuppressErrors[Error!;There was a error!;;;;]</code> - this is correct. <code>$embedSuppressErrors[Error!;There was a error!]</code> - this is incorrect.</p>
+<p>🧙‍♂️ All fields are optional, leave the field empty to not include it. At least one field needs to be inputted, however.</p>
 </blockquote>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>title</code> <code>(Type: String || Flag: Emptiable)</code>: The title of the embed.</li>
-<li><code>description</code> <code>(Type: String || Flag: Emptiable)</code>: The embed description.</li>
-<li><code>color</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a>.</li>
-<li><code>author</code> <code>(Type: String || Flag: Vacantable)</code>: The embed author text.</li>
-<li><code>footerText</code> <code>(Type: String || Flag: Vacantable)</code>: The embed footer text.</li>
-<li><code>footerIcon</code> <code>(Type: URL || Flag: Vacantable)</code>: The embed footer icon, must be a valid image URL.</li>
+<li><code>Title</code> <code>(Type: String || Flag: Emptiable)</code>: The title of the embed.</li>
+<li><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: The embed description.</li>
+<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a>.</li>
+<li><code>Author</code> <code>(Type: String || Flag: Vacantable)</code>: The embed author text.</li>
+<li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The embed footer text.</li>
+<li><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The embed footer icon, must be a valid image URL.</li>
 </ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$embedSuppressErrors[Error!;❌ Invalid math expression!;#ff0000;;Calculator]
+
+Result: **$calculate[$message]**
+</code></pre>
 
                     </main>
 

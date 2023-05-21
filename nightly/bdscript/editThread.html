@@ -165,19 +165,26 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="editthread"><a class="header" href="#editthread">$editThread</a></h1>
-<p>Modifies a existing thread.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$editThread[threadID;(name;archived;archiveDuration;locked;slowmode)]
+<p>Modifies an existing thread.</p>
+<blockquote>
+<p>🧙‍♂️ You can use <code>!unchanged</code> as an argument for the option to remain in its current state.</p>
+</blockquote>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$editThread[Thread ID;(Name;Archived;Archive duration;Locked;Slowmode)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>threadID</code> <code>(Type: Snowflake || Flag: Required)</code>: The thread channel to edit.</li>
-<li><code>name</code> <code>(Type: String || Flag: Optional)</code>: The new name of the thread.</li>
-<li><code>archived</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to archive this thread or not.</li>
-<li><code>archiveDuration</code> <code>(Type: Integer || Flag: Optional)</code>: The archive duration of this thread in minutes. Only 60, 1440,4320, 10080 can be used. Note that for the 4320 archive duration option, the server needs to be level 1 boosted, and for 10080 the server needs level 2.</li>
-<li><code>locked</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to lock this thread or not. Note that archived threads can't be locked.</li>
-<li><code>slowmode</code> <code>(Type: Integer || Flag: Optional)</code>: The slowmode of this channel, expressed in seconds.</li>
+<li><code>Thread ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The thread channel to edit.</li>
+<li><code>Name</code> <code>(Type: String || Flag: Optional)</code>: The new name of the thread.</li>
+<li><code>Archived</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to archive this thread or not.</li>
+<li><code>Archive duration</code> <code>(Type: Integer || Flag: Optional)</code>: The archive duration of this thread in minutes. Only 60, 1440,4320, 10080 can be used. Note that for the 4320 archive duration option, the server needs to be level 1 boosted, and for 10080 the server needs level 2.</li>
+<li><code>Locked</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to lock this thread or not. Note that archived threads can't be locked.</li>
+<li><code>Slowmode</code> <code>(Type: Integer || Flag: Optional)</code>: The slowmode of this channel, expressed in seconds.</li>
 </ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
+</code></pre>
 
                     </main>
 
