@@ -1,12 +1,12 @@
 # $defer
 Defers response to an interaction from components and slash commands.
 
-## Usage
+## Syntax
 ```
 $defer
 ```
 
-### Example
+## Example
 Sometimes the code we write needs more time to execute fully.
 In normal commands, this isn't a problem, but interactions are different.
 Interactions have a 3-second long timeout in which our code needs to respond in.
@@ -29,11 +29,11 @@ $color[$getEmbedData[$channelID;$message[message-id];2;color];2]
 ```
 Let's execute it.
 
-#### Without `$defer`
+### Without `$defer`
 
 ![Without](https://user-images.githubusercontent.com/70456337/189966580-203e3626-02e5-47a6-a649-07ff55079414.gif)
 
-#### With `$defer`
+### With `$defer`
 ```
 $nomention
 $defer

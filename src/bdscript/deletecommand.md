@@ -1,8 +1,9 @@
 # $deletecommand
-Deletes the author's message.
+Deletes the author's command message.
+
 > 🧙‍♂️ The bot must have the `manage_messages` permission.
 
-## Usage
+## Syntax
 ```
 $deletecommand
 ```

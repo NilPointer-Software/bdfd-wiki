@@ -3,7 +3,7 @@
 
 Disables escaping for `;` and `$` (e.g. `%{-SEMICOL-}%` gets interpeted as a regular `;`).
 
-## Usage
+## Syntax
 ```
 $disableSpecialEscaping
 ```

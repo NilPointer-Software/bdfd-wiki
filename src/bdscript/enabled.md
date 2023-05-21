@@ -1,14 +1,14 @@
 # $enabled
 Allows you to enable/disable commands.
 
-## Usage
+## Syntax
 ```
-$enabled[enabled;errorMessage]
+$enabled[Enabled;Error message]
 ```
 
 ### Parameters
-- `enabled` `(Type: Bool || Flag: Required)`: 'yes' means the command is enabled, 'no' means it's disabled.
-- `errorMessage` `(Type: String || Flag: Emptiable)`: The message that is returned if the command is disabled.
+- `Enabled` `(Type: Bool || Flag: Required)`: If the command should be enabled or disabled. Use `yes` to enable the command, `no` to disable it.
+- `Error message` `(Type: String || Flag: Emptiable)`: The message that is returned if the command is disabled.
 
 ## Example
 This section will explain how to disable/enable certain commands using server variables. 

@@ -1,15 +1,16 @@
 # $embeddedURL
 Sets the title to be a hyperlink.
->📝 Only works if `$title` is also used.
 
-## Usage
+> 📝 Only works if `$title` is also used.
+
+## Syntax
 ```
-$embeddedURL[link;(index)]
+$embeddedURL[Link;(Index)]
 ```
 
 ### Parameters
-- `link` `(Type: URL || Flag: Emptiable)`: The link to set the title hyperlink to.
-- `index` `(Type: Integer || Flag: Optional)`: What embed the title hyperlink should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
+- `Link` `(Type: URL || Flag: Emptiable)`: The link to set the title hyperlink to.
+- `Index` `(Type: Integer || Flag: Optional)`: What embed the title hyperlink should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

@@ -1,5 +1,5 @@
 # $disableInnerSpaceRemoval
-Disables the removal of multiple spaces from within the message
+Disables the removal of multiple spaces from within the message.
 
 ## Syntax
 ```
@@ -8,6 +8,7 @@ $disableInnerSpaceRemoval
 
 ## Example
 ```
+$nomention
 $disableInnerSpaceRemoval
 
 Hello               $username!
