@@ -1,13 +1,18 @@
 # $getCooldown
-Returns how long is left on the cooldown, in seconds; can be used in the 'errorMessage' field of cooldown functions.
+Returns how long is left on the cooldown, in seconds.
 
-## Usage
+> 🧙‍♂️ This function can be used in the "Error message" field of cooldown functions.
+
+## Syntax
 ```
-$getCooldown[cooldownType (normal/server/global)]
+$getCooldown[Cooldown type]
 ```
 
 ### Parameters
-- `cooldownType` `(Type: Enum || Flag: Required)`: The cooldown type *(normal - [$cooldown](./cooldown.md) | server - [$serverCooldown](./serverCooldown.md) | global - [$globalCooldown](./globalCooldown.md))*.
+- `Cooldown type` `(Type: Enum || Flag: Required)`: The cooldown type. Cooldown types:
+  - `normal` - [$cooldown](./cooldown.md)
+  - `server` - [$serverCooldown](./serverCooldown.md)
+  - `global` - [$globalCooldown](./globalCooldown.md)
 
 ## Example
 ```
