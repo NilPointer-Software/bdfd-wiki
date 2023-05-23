@@ -5,11 +5,11 @@ Returns how long is left on the cooldown, in seconds.
 
 ## Syntax
 ```
-$getCooldown[Cooldown type]
+$getCooldown[Cooldown type (normal/server/global)]
 ```
 
 ### Parameters
-- `Cooldown type` `(Type: Enum || Flag: Required)`: The cooldown type. Cooldown types:
+- `Cooldown type` `(Type: Enum || Flag: Required)`: The type of the cooldown. Cooldown types:
   - `normal` - [$cooldown](./cooldown.md)
   - `server` - [$serverCooldown](./serverCooldown.md)
   - `global` - [$globalCooldown](./globalCooldown.md)
