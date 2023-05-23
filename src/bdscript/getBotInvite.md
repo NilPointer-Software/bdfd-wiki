@@ -1,7 +1,7 @@
 # $getBotInvite
 Returns the bot's invite URL.
 
-## Usage
+## Syntax
 ```
 $getBotInvite
 ```
