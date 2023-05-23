@@ -1,16 +1,16 @@
 # $getReactions
-Returns a list of users separated by `separator` that reacted to a message.
+Returns a list of users who reacted to a message.
 
-## Usage
+## Syntax
 ```
-$getReactions[channelID;messageID;separator;emoji]
+$getReactions[Channel ID;Message ID;Separator;Emoji]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The channel that the message belongs to.
-- `messageID` `(Type: Snowflake || Flag: Required)`: The message to get the user-reactions from.
-- `separator` `(Type: String || Flag: Required)`: The separator between each user.
-- `emoji` `(Type: Emoji || Flag: Required)`: The emoji to get the user's reactions for.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel that the message belongs to.
+- `Message ID` `(Type: Snowflake || Flag: Required)`: The message to get the user-reactions from.
+- `Separator` `(Type: String || Flag: Required)`: The separator between each user.
+- `Emoji` `(Type: Emoji || Flag: Required)`: The emoji to get the user's reactions for.
 
 ## Example
 ```
