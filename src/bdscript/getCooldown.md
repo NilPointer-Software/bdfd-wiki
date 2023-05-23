@@ -10,9 +10,9 @@ $getCooldown[Cooldown type (normal/server/global)]
 
 ### Parameters
 - `Cooldown type` `(Type: Enum || Flag: Required)`: The type of the cooldown. Cooldown types:
-  - `normal` - [$cooldown](./cooldown.md)
-  - `server` - [$serverCooldown](./serverCooldown.md)
-  - `global` - [$globalCooldown](./globalCooldown.md)
+  - `normal` - Normal cooldown ([`$cooldown`](./cooldown.md))
+  - `server` - Server cooldown ([`$serverCooldown`](./serverCooldown.md))
+  - `global` - Global cooldown ([`$globalCooldown`](./globalCooldown.md))
 
 ## Example
 ```
