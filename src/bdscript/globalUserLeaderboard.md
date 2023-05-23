@@ -17,5 +17,5 @@ $globalUserLeaderboard[Variable name;Sort type (asc/desc)]
 ## Example
 ```
 $nomention
-$globalUserLeaderboard[Money;asc]
+$globalUserLeaderboard[Money;desc]
 ```
