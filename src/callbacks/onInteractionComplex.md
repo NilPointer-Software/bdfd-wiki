@@ -7,7 +7,11 @@ $onIneraction[Interaction ID]
 ```
 
 ### Parameters
-- `Interaction ID` `(Type: String || Flag: Required)`: The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.
+
+| Argument       | Description                                                                                             | Type   | Flag     |
+|----------------|---------------------------------------------------------------------------------------------------------|--------|----------|
+| Interaction ID | The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components. | String | Required |
+
 
 ### Supports
 - **[Buttons](../guides/general/interactions/buttons/aboutButtons.md)**

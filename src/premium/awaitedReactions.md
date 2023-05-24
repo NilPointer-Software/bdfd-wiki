@@ -19,10 +19,13 @@ $awaitReactions[<Command name;Reaction>;...]
 ```
 
 #### Parameters
-- `Command name` `(Type: String || Flag: Required)`: It's the name which will be used inside the `$reaction[]` callback.
-- `Reaction` `(Type: Emoji || Flag: Required)`: It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.
 
+| Argument       | Description                                                                                      | Type    | Flag     |
+|----------------|--------------------------------------------------------------------------------------------------|---------|----------|
+| Command name   | It's the name which will be used inside the `$reaction[]` callback.                              | String  | Required |
+| Reaction       | It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.        | Emoji   | Required |
 
+### Note :
 > 📝 You can group reactions by specifying more *"command names"* and *"reactions"* in `$awaitReactions[]`.\
 \
 > ⚠️ In group reactions, when one reaction is used, the others stop working i.e let's say, a command awaits two reactions (✔️ & ❌). If the user reacts ✔️ then ❌ stops working.
@@ -36,7 +39,11 @@ $reaction[Name]
 ```
 
 #### Parameters
-- `Name` `(Type: String || Flag: Required)`: It's the value which is used in the *"command name"* argument of `$awaitReactions[]`.
+
+| Argument | Description                                                                   | Type   | Flag     |
+|----------|-------------------------------------------------------------------------------|--------|----------|
+| Name     | It's the value which is used in the "command name" argument of `$awaitReactions[]`. | String | Required |
+
 
 ## $usedEmoji
 This function is used to return the emoji which was triggered in the `$reaction[]` command.

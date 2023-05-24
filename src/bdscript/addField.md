@@ -5,15 +5,21 @@ Adds a field to an embed.
 ```
 $addField[name;value;(inline?;index)]
 ```
-> You can create up to 25 fields per embed.
 
 ### Parameters
-- `name` `(Type: String || Flag: Required)`: The name of the field. It cannot exceed more than 256 characters.
-- `value` `(Type: String || Flag: Required)`: The value of the field. It cannot exceed more than 1024 characters.
-- `inline?` `(Type: Bool || Flag: Optional)`: If `yes`, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to `no` by default.
-- `index` `(Type: Integer || Flag: Optional)`: Adds field to specified embed index number. [(learn more)](../resources/embedIndexes.md)
 
-> Inline fields may not appear inline on some mobile devices.
+| Argument | Description                                                                                                            | Type    | Flag     |
+|----------|------------------------------------------------------------------------------------------------------------------------|---------|----------|
+| name     | The name of the field. It cannot exceed more than 256 characters.                                                     | String  | Required |
+| value    | The value of the field. It cannot exceed more than 1024 characters.                                                    | String  | Required |
+| inline?  | If `yes`, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to `no` by default. | Bool    | Optional |
+| index    | Adds the field to the specified embed index number. [Learn more](../resources/embedIndexes.md).                         | Integer | Optional |
+
+
+### Note :
+1- You can create up to 25 fields per embed.
+
+2- Inline fields may not appear inline on some mobile devices.
 
 ## Examples
 

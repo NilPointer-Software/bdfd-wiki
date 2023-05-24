@@ -7,7 +7,11 @@ $argCount[text]
 ```
 
 ### Parameters
-- `text` `(Type: String || Flag: Emptiable)`: The text to get word count for.
+
+| Argument | Description                      | Type   | Flag     |
+|----------|----------------------------------|--------|----------|
+| text     | The text to get word count for.  | String | Emptiable |
+
 
 ## Example
 ```

@@ -7,8 +7,13 @@ $addCmdReactions[emojis;...]
 ```
 
 ### Parameters
-- `emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Separate emojis using `;`.
 
+| Argument | Description                                     | Type  | Flag     |
+|----------|-------------------------------------------------|-------|----------|
+| emojis   | The emoji(s) the bot reacts with. Separate emojis using `;`. | Emoji | Required |
+
+
+### Note :
 > You can use Unicode emojis and emoji IDs, but not emoji names. For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
 > List of unicode emojis: [😋 Get Emoji](https://getemoji.com)

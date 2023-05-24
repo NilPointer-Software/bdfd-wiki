@@ -9,7 +9,11 @@ $customImage[Custom image tag]
 ```
 
 ### Parameters
-- `Custom image tag` `(Type: String || Flag: Required)`: The image tag you set in the app while uploading the image.
+
+| Argument           | Description                                                              | Type   | Flag     |
+|--------------------|--------------------------------------------------------------------------|--------|----------|
+| Custom image tag   | The image tag you set in the app while uploading the image.               | String | Required |
+
 
 ## Example
 ```

@@ -7,8 +7,12 @@ $author[text;(index)]
 ```
 
 ### Parameters
-- `text` `(Type: String || Flag: Emptiable)`: The text that appears in the author text. It cannot exceed more than 256 characters.
-- `index` `(Type: Integer || Flag: Optional)`: To which embed the author text will be added. [(learn more)](../resources/embedIndexes.md)
+
+| Argument | Description                                                      | Type    | Flag     |
+|----------|------------------------------------------------------------------|---------|----------|
+| text     | The text that appears in the author text. It cannot exceed more than 256 characters. | String  | Emptiable |
+| index    | To which embed the author text will be added. [(learn more)](../resources/embedIndexes.md) | Integer | Optional |
+
 
 ## Example
 ```

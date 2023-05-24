@@ -7,9 +7,13 @@ $awaitFunc[name;(user ID;channel ID)]
 ```
 
 ### Parameters
-- `name` `(Type: String || Flag: Required)`: The name used inside [`$awaitedCommand[]`](../callbacks/awaitedCommand.md) and [`$awaitedCommandError[]`](../callbacks/awaitedCommandError.md) callbacks.
-- `user ID` `(Type: Snowflake || Flag: Vacantable)`: The user the awaited command will trigger for. Uses command author, if `user ID` is not given.
-- `channel ID` `(Type: Snowflake || Flag: Optional)`: The channel where the command will be awaited. Uses current channel, if `channel ID` is not given.
+
+| Argument   | Description                                                         | Type     | Flag       |
+|------------|---------------------------------------------------------------------|----------|------------|
+| name       | The name used inside `$awaitedCommand[]` and `$awaitedCommandError[]` callbacks. | String   | Required   |
+| user ID    | The user the awaited command will trigger for. Uses command author if `user ID` is not given. | Snowflake | Vacantable |
+| channel ID | The channel where the command will be awaited. Uses current channel if `channel ID` is not given. | Snowflake | Optional   |
+
 
 ## Example
 ```

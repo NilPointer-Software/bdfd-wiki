@@ -8,8 +8,12 @@ _Triggered when an awaited command gets initiated._
 $awaitedCommand[Name;(Filter)]
 ```
 ### Parameters
-- `Name` `(Type: String || Flag: Required)`: The name used in the [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
-- `Filter` `(Type: String || Flag: Optional)`: It is used to limit the user input.
+
+| Argument | Description                                                     | Type   | Flag     |
+|----------|-----------------------------------------------------------------|--------|----------|
+| Name     | The name used in the [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.                     | String | Required |
+| Filter   | It is used to limit the user input.                               | String | Optional |
+
 
 ### Supported filters
 - `<numeric>` - Accepts only number input.

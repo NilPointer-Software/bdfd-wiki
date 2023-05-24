@@ -9,8 +9,11 @@ $awaitReactions[<Command name;Reaction>;...]
 ```
 
 ### Parameters
-- `Command name` `(Type: String || Flag: Required)`: The name which will be used inside the `$reaction[]` callback.
-- `Reaction` `(Type: Emoji || Flag: Required)`: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.
+
+| Argument       | Description                                                                                      | Type    | Flag     |
+|----------------|--------------------------------------------------------------------------------------------------|---------|----------|
+| Command name   | It's the name which will be used inside the `$reaction[]` callback.                              | String  | Required |
+| Reaction       | It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.        | Emoji   | Required |
 
 ## Example
 ```

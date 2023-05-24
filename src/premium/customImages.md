@@ -29,7 +29,11 @@ $customImage[Custom image tag]
 ```
 
 #### Parameters
-- `Custom image tag` `(Type: String || Flag: Required)`: The tag that you set the custom image to, previously.
+
+| Argument           | Description                                                              | Type   | Flag     |
+|--------------------|--------------------------------------------------------------------------|--------|----------|
+| Custom image tag   | The tag that you set the custom image to, previously.               | String | Required |
+
 
 #### Example
 ```

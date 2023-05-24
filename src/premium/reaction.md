@@ -9,7 +9,10 @@ $reaction[Name]
 ```
 
 ### Parameters
-- `Name` `(Type: String || Flag: Required)`: The value used in "command name" argument of `$awaitReactions[]`.
+
+| Argument | Description                                                                   | Type   | Flag     |
+|----------|-------------------------------------------------------------------------------|--------|----------|
+| Name     | It's the value which is used in the "command name" argument of `$awaitReactions[]`. | String | Required |
 
 ## Example
 ### Trigger `$reaction[click]`

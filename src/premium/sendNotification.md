@@ -9,8 +9,12 @@ $sendNotification[Message;(Image URL)]
 ```
 
 ### Parameters 
-- `Message` `(Type: String || Flag: Required)`: The text that is displayed in the notification.
-- `Image URL` `(Type: String || Flag: Optional)`: The URL for the image to be attached.
+
+| Argument   | Description                                          | Type   | Flag     |
+|------------|------------------------------------------------------|--------|----------|
+| Message    | The text that is displayed in the notification.       | String | Required |
+| Image URL  | The URL for the image to be attached.                 | String | Optional |
+
 
 ## Example
 ```

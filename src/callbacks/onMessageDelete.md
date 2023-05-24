@@ -9,7 +9,9 @@ $onMessageDelete[channelID]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to which the resulting message will be sent.
+| Argument   | Description                                             | Type     | Flag     |
+|------------|---------------------------------------------------------|----------|----------|
+| channelID  | The channel to which the resulting message will be sent. | Snowflake | Required |
 
 ## Example
 1. Create a command with the trigger `$onMessageDelete[channelID]`.

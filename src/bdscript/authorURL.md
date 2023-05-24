@@ -5,11 +5,17 @@ Adds a hyperlink to the author text.
 ```
 $authorURL[url;(index)]
 ```
-> `$authorURL[]` will not work if there is no text provided in `$author[]`.
 
 ### Parameters
-- `url` `(Type: URL || Flag: Emptiable)`: The link to set as the author hyperlink.
-- `index` `(Type: Integer || Flag: Optional)`: To which embed the author URL will be added. [(learn more)](../resources/embedIndexes.md)
+
+| Argument | Description                                 | Type    | Flag     |
+|----------|---------------------------------------------|---------|----------|
+| url      | The link to set as the author hyperlink.    | URL     | Emptiable |
+| index    | To which embed the author URL will be added. | Integer | Optional |
+
+
+### Note :
+> `$authorURL[]` will not work if there is no text provided in `$author[]`.
 
 ## Example
 ```
