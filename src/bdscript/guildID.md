@@ -1,7 +1,7 @@
 # $guildID
 Returns the current server's ID.
 
-### Syntax
+## Syntax
 ```
 $guildID
 ```

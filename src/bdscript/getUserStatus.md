@@ -1,20 +1,21 @@
 # $getUserStatus
-Returns the provided user's status.
+Returns the provided user's status/presence.
+
 > 🧙‍♂️ The user must share atleast 1 server with the bot, for this function to work.
 
-## Usage
+## Syntax
 ```
-$getUserStatus[userID]
+$getUserStatus[User ID]
 ```
+
+> The different statuses this function will return are: `online`, `dnd`, `idle` and `offline`.
 
 ### Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: The user to get the status for.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the status for.
 
-### Statuses List
-- online
-- dnd
-- idle
-- offline
+### Privileged Intents
+This function requires the following privileged intents:
+- [`Presences Intent`](../guides/introduction/gatewayIntents.md#presence-intent)
 
 ## Example
 ```

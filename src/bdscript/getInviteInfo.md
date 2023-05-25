@@ -1,15 +1,14 @@
 # $getInviteInfo
-Returns information about a invite code.
+Returns information about the provided invite code.
 
-## Usage
+## Syntax
 ```
-$getInviteInfo[inviteCode;inviteProperty]
+$getInviteInfo[Invite code;Invite property]
 ```
 
 ### Parameters
-- `inviteCode` `(Type: String || Flag: Required)`: The invite code to get info about.
-
-- `inviteProperty` `(Type: Enum || Flag: Required)`: The information to get about this invite. Invite properties:
+- `Invite code` `(Type: String || Flag: Required)`: The invite code to get info about.
+- `Invite property` `(Type: Enum || Flag: Required)`: The information to get about this invite. Invite properties:
   - `channel` - The channel that this invite is for.
   - `creationDate` - The creation date of this invite.
   - `inviter` - The ID of the user who created this invite.

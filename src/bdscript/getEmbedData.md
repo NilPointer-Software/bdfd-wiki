@@ -1,16 +1,22 @@
 # $getEmbedData
 Fetches embed data from the provided message.
 
-## Usage
+## Syntax
 ```
-$getEmbedData[channelID;messageID;embedIndex;embedProperty (title/description/footer/color/image/timestamp)]
+$getEmbedData[Channel ID;Message ID;Embed index;Embed property (title/description/footer/color/image/timestamp)]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The channel this message belongs to.
-- `messageID` `(Type: Snowflake || Flag: Required)`: The message to get this embed data from.
-- `embedIndex` `(Type: HowMany || Flag: Required)`: The embed of this message to get data from. Use `1` for the first embed of this message.
-- `embedProperty` `(Type: Enum || Flag: Required)`: The embed property to return.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel this message belongs to.
+- `Message ID` `(Type: Snowflake || Flag: Required)`: The message to get this embed data from.
+- `Embed index` `(Type: HowMany || Flag: Required)`: The embed of this message to get data from. Use `1` for the first embed of this message. [(learn more)](../resources/embedIndexes.md)
+- `Embed property` `(Type: Enum || Flag: Required)`: The embed property to return. Embed properties:
+  - `title` - The title of the embed.
+  - `description` - The description of the embed.
+  - `footer` - The footer of the embed.
+  - `color` - The color border hex of the embed.
+  - `image` - The image of the embed.
+  - `timestamp` - The timestamp of the embed.
 
 ## Example
 ```
