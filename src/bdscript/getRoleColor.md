@@ -1,13 +1,13 @@
 # $getRoleColor
 Returns a role's color hex.
 
-## Usage
+## Syntax
 ```
-$getRoleColor[roleID]
+$getRoleColor[Role ID]
 ```
 
 ### Parameters
-- `roleID` `(Type: Snowflake || Flag: Required)`: The role to get the color hex from.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role to get the color hex from.
 
 ## Example
 ```

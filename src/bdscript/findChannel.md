@@ -1,13 +1,15 @@
 # $findChannel
 Finds a channel's ID from the given channel name, ID, or mention.
 
-## Usage
+> 📝 This function can only find channels of the current server.
+
+## Syntax
 ```
-$findChannel[channel]
+$findChannel[Channel]
 ```
 
 ### Parameters
-- `channel` `(Type: String || Flag: Emptiable)`: The channel name/ID/mention to find.
+- `Channel` `(Type: String || Flag: Emptiable)`: The channel name/ID/mention to find.
 
 ## Example
 ```

@@ -1,13 +1,22 @@
 # $globalCooldown
-Applies a cooldown to the command, the user can not run the command in any server until the 'duration' is up. (Unlike `$cooldown`, which only applies the cooldown to the user in the current server)
+Applies a cooldown to the command, the user can not run the command in any server until the "Duration" is up. (Unlike `$cooldown`, which only applies the cooldown to the user in the current server)
 
-## Usage
+## Syntax
 ```
-$globalCooldown[duration;errorMessage]
+$globalCooldown[Duration;Error message]
 ```
 
 ### Parameters
-- `duration` `(Type: Duration || Flag: Required)`: The duration until the user can use this command again.
-- `errorMessage` `(Type: String || Flag: Emptiable)`: The message to return when the cooldown duration is still ongoing.
+- `Duration` `(Type: Duration || Flag: Required)`: The duration until the user can use this command again.
+- `Error message` `(Type: String || Flag: Emptiable)`: The message to return when the cooldown duration is still ongoing.
 
-> 🧙‍♂️ You can use `%time%` to get how much time is left until the cooldown is over, in the 'errorMessage'.
+> 🧙‍♂️ You can use `%time%` in the "Error message" argument to get how much time is left until the cooldown is over.
+
+## Example
+```
+$nomention
+$globalCooldown[30s;$username, You are on cooldown for %time%!]
+
+Hello $username!
+```
+![example](https://user-images.githubusercontent.com/111157596/233700254-d0162c40-8870-4976-bceb-c18fc7b7c0d4.gif)

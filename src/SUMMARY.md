@@ -128,6 +128,7 @@
     - [$checkContains](./bdscript/checkContains.md)
     - [$checkUserPerms](./bdscript/checkUserPerms.md)
     - [$clear](./bdscript/clear.md)
+    - [$clear[]](./bdscript/clearComplex.md)
     - [$clearReactions](./bdscript/clearReactions.md)
     - [$closeTicket](./bdscript/closeTicket.md)
     - [$color](./bdscript/color.md)

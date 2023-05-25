@@ -1,10 +1,19 @@
 # $guildExists
-Returns 'true' if the provided server exists, otherwise 'false' is returned. Returns 'false' if the bot isn't present in the server.
+Checks if the provided guild/server exists.
 
-## Usage
+> Returns `true` if the server exists. Returns `false` if the server doesn't exist or the bot isn't present in the provided server.
+
+## Syntax
 ```
-$guildExists[guildID]
+$guildExists[Guild ID]
 ```
 
 ### Parameters
-- `guildID` `(Type: Snowflake, String || Flag: Emptiable)`: The ID of the hypothetical server.
+- `Guild ID` `(Type: Snowflake, String || Flag: Emptiable)`: The ID of the hypothetical server.
+
+## Example
+```
+$nomention
+$guildExists[$message[1]]
+```
+![example](https://user-images.githubusercontent.com/111157596/233702796-bdb3f9c5-1b3b-4cc1-b0cc-b85811675139.png)

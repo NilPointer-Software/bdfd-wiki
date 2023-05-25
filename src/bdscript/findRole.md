@@ -1,13 +1,15 @@
 # $findRole
 Finds a role's ID using the given role name, ID, or mention.
 
-## Usage
+> 📝 This function can only find roles of the current server.
+
+## Syntax
 ```
-$findRole[role]
+$findRole[Role]
 ```
 
 ### Parameters
-- `role` `(Type: String || Flag: Emptiable)`: The role name, ID, or mention to find.
+- `Role` `(Type: String || Flag: Emptiable)`: The role name, ID, or mention to find.
 
 ## Example
 ```

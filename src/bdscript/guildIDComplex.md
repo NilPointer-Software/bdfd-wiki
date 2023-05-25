@@ -1,21 +1,19 @@
 # $guildID[]
 Finds a server ID using a server's name.
 
-### Syntax
+> 🧙‍♂️ **Note:** The bot must be present in the server in order to get the server ID.
+
+## Syntax
 ```
-$guildID[serverName]
+$guildID[Server name]
 ``` 
 
-## Parameters
-- `serverName` `(Type: String || Flag: Emptiable)`: Finds a server ID using a server's name.
+### Parameters
+- `Server name` `(Type: String || Flag: Emptiable)`: The name of the server.
 
-### Example 
+## Example 
 ```
 $nomention
 $noMentionMessage ID is : $guildID[$noMentionMessage]
 ```
-
 ![example](https://user-images.githubusercontent.com/70468667/219971506-204ba3e1-0909-448c-bf3f-63361ffdc62e.jpg)
-
-
-> 🧙‍♂️ *Note:* The bot can not find the ID of a server that it isn't in.
