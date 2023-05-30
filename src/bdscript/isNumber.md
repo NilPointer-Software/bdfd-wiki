@@ -1,14 +1,15 @@
 # $isNumber
 Returns whether or not the provided value is a number.
+
 > 🧙‍♂️ 'true' means the value is a number, 'false' means it isn't.
 
-## Usage
+## Syntax
 ```
-$isNumber[value]
+$isNumber[Value]
 ```
 
 ### Parameters
-- `value` `(Type: String || Flag: Emptiable)`: The text to check.
+- `Value` `(Type: String || Flag: Emptiable)`: The text to check.
 
 ## Example
 ```
