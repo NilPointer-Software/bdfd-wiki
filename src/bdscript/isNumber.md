@@ -1,5 +1,5 @@
 # $isNumber
-Returns whether or not the provided value is a number.
+Returns whether the provided value is a number or not.
 
 > 🧙‍♂️ 'true' means the value is a number, 'false' means it isn't.
 
