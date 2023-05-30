@@ -1,14 +1,14 @@
 # $image
-Adds a image to the embed.
+Adds an image to the embed.
 
-## Usage
+## Syntax
 ```
-$image[image url;(index)]
+$image[Image URL;(Index)]
 ```
 
 ### Parameters
-- `image url` `(Type: URL || Flag: Emptiable)`: The URL of the image that appears. Must be a valid image URL.
-- `index` `(Type: Integer || Flag: Optional)`: What embed the image should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
+- `Image URL` `(Type: URL || Flag: Emptiable)`: The URL of the image that appears. Must be a valid image URL.
+- `Index` `(Type: Integer || Flag: Optional)`: What embed the image should belong to. The default is `1`. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```
