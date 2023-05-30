@@ -1,5 +1,5 @@
 # $isTicket
-Checks if the current or given channel is a ticket.
+Checks if the current or given channel is a ticket or not.
 
 > 🧙‍♂️ "true" means the channel is a ticket, "false" means it isn't.
 
