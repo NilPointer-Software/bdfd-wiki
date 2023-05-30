@@ -1,5 +1,5 @@
 # $isNSFW
-Returns whether the provided channel is NSFW (Not Safe For Work) or not.
+Returns whether or not the provided channel is NSFW (Not Safe For Work).
 
 > 🧙‍♂️ 'true' means the channel is NSFW, 'false' means it isn't.
 
