@@ -1,17 +1,17 @@
 # $isBanned
+Returns "true" if user is banned, otherwise it returns "false". Requires the `BAN_MEMBERS` permission.
 
-Returns 'true' if user is banned, otherwise it returns 'false'. Requires 'BAN_MEMBERS' permission
-
-## Usage
+## Syntax
 ```
-$isBanned[user ID]
+$isBanned[User ID]
 ```
 
-## Parameters 
-- `user ID ` `(Type: Snowflake || Flag: Required)`: The user to check its ban status.
+### Parameters 
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to check its ban status.
 
 ## Example
 ```
 $nomention
-$isBanned[$mentioned[1]]
+$isBanned[$message[1]]
 ```
+![example](https://user-images.githubusercontent.com/111157596/233709040-50d9987e-094d-4ddb-b85e-d01db865c840.png)
