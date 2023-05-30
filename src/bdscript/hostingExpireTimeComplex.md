@@ -7,7 +7,7 @@ $hostingExpireTime[Return unix timestamp]
 ``` 
 
 ### Parameters
-- `Return unix timestamp` `(Type: Bool || Flag: Optional)`: Whether to return the expiration time in UNIX Timestamp or not.
+- `Return unix timestamp` `(Type: Bool || Flag: Required)`: Whether to return the expiration time in UNIX Timestamp or not.
 
 ## Example
 ```
