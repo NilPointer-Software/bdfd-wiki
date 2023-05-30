@@ -1,14 +1,15 @@
 # $isBot
 Returns whether or not the provided user is a bot.
+
 > 🧙‍♂️ 'true' means the user is a bot, 'false' means the user is not a bot.
 
-## Usage
+## Syntax
 ```
-$isBot[userID]
+$isBot[User ID]
 ```
 
 ### Parameters
-- `userID` `(Type: Snowflake || Flag: Emptiable)`: The user to check.
+- `User ID` `(Type: Snowflake || Flag: Emptiable)`: The user to check.
 
 ## Example
 ```
