@@ -1,5 +1,7 @@
 # $isTimedOut
-Returns "true" if the user is timed out, otherwise "false".
+Checks if the given user is timed out or not.
+
+> 🧙‍♂️ "true" means the user is timed out, "false" means they aren't.
 
 ## Syntax
 ```
