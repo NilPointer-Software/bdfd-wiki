@@ -1,14 +1,15 @@
 # $isUserDMEnabled
-Checks whether or not the bot can DM the user.
-> 🧙‍♂️ 'true' means the bot can DM the user, 'false' means it can't.
+Checks whether the bot can DM the user or not.
 
-## Usage
+> 🧙‍♂️ "true" means the bot can DM the user, "false" means it can't.
+
+## Syntax
 ```
-$isUserDMEnabled[userID]
+$isUserDMEnabled[User ID]
 ```
 
 ### Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: The user to check.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to check.
 
 ## Example
 ```
