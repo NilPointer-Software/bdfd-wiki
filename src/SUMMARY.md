@@ -211,6 +211,7 @@
     - [$highestRole[]](./bdscript/highestRoleComplex.md)
     - [$highestRoleWithPerms](./bdscript/highestRoleWithPerms.md)
     - [$hostingExpireTime](./bdscript/hostingExpireTime.md)
+    - [$hostingExpireTime[]](./bdscript/hostingExpireTimeComplex.md)
     - [$hour](./bdscript/hour.md)
     - [$hypesquad](./bdscript/hypesquad.md)
     - [$ignoreChannels](./bdscript/ignoreChannels.md)
