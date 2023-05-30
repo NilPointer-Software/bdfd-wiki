@@ -1,5 +1,5 @@
 # $isBoolean
-Returns whether or not the provided text is a boolean.
+Returns whether the provided text is a boolean or not.
 
 > 🧙‍♂️ 'true' means the text is a boolean, 'false' means it isn't.
 
