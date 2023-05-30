@@ -1,5 +1,5 @@
 # $isBot
-Returns whether or not the provided user is a bot.
+Returns whether the provided user is a bot or not.
 
 > 🧙‍♂️ 'true' means the user is a bot, 'false' means the user is not a bot.
 
