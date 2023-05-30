@@ -1,5 +1,5 @@
 # $isMentionable
-Returns whether or not a role is mentionable by everyone.
+Returns whether a role is mentionable by everyone or not.
 
 > 🧙‍♂️ 'true' means the role is mentionable, 'false' means it isn't.
 
