@@ -1,7 +1,7 @@
 # $isBoolean
 Returns whether the provided text is a boolean or not.
 
-> 🧙‍♂️ 'true' means the text is a boolean, 'false' means it isn't.
+> 🧙‍♂️ "true" means the text is a boolean, "false" means it isn't.
 
 ## Syntax
 ```
