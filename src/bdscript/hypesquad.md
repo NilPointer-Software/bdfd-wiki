@@ -1,24 +1,17 @@
 # $hypesquad
+Returns the hypesquad house name of the provided user.
 
-Returns the hypesquad name of the provided user
-
-## Usage
-
+## Syntax
 ```
-
-$hypesquad[userID]
-
+$hypesquad[User ID]
 ```
 
 ### Parameters
-
-- `userID` `(Type: Snowflake || Flag: Required)`: ID of the user whose hypesquad name should be returned
+- `User ID` `(Type: Snowflake || Flag: Required)`: The ID of the user whose hypesquad house name should be returned.
 
 ## Example
-
 ```
 $nomention
 You are in $hypesquad[$authorID] house.
 ```
-
-![Screenshot_20220831_101316](https://user-images.githubusercontent.com/95774950/187594740-3eab54bf-1df1-4c4e-a2fe-372f8a45eb39.png)
+![example](https://user-images.githubusercontent.com/95774950/187594740-3eab54bf-1df1-4c4e-a2fe-372f8a45eb39.png)
