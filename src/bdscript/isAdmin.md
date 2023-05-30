@@ -1,19 +1,19 @@
 # $isAdmin
 Returns whether or not the provided user has the administrator permission.
+
 > 🧙‍♂️ 'true' means the user has the administrator permission, 'false' means they don't.
 
-## Usage
+## Syntax
 ```
-$isAdmin[userID]
+$isAdmin[User ID]
 ```
 
 ### Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: The user to check.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to check.
 
 ## Example
 ```
 $nomention
-Are You A Admin?: `$isAdmin[$authorID]`
+Are you an admin?: `$isAdmin[$authorID]`
 ```
-
-![example](https://user-images.githubusercontent.com/69215413/123517122-5e7d9580-d66d-11eb-82d2-fd2300b1ecdb.png)
+![example](https://user-images.githubusercontent.com/111157596/233708093-852277ce-50b7-4fd6-a7b1-01d55931d9d2.png)
