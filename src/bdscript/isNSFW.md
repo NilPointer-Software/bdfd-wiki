@@ -1,14 +1,15 @@
 # $isNSFW
-Returns whether the provided channel is NSFW (not-safe-for-work) or not.
+Returns whether the provided channel is NSFW (Not Safe For Work) or not.
+
 > 🧙‍♂️ 'true' means the channel is NSFW, 'false' means it isn't.
 
-## Usage
+## Syntax
 ```
-$isNSFW[channelID]
+$isNSFW[Channel ID]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to check.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel to check.
 
 ## Example
 ```
