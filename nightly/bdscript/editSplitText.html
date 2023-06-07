@@ -183,12 +183,14 @@ $var[Index;$splitText[$sub[$getTextSplitLength;1]]]
 $var[Value;$splitText[$getTextSplitLength]]
 
 $removeSplitTextElement[$getTextSplitLength]
-$removeSplitTextElement[$sub[$getTextSplitLength;1]]
+$removeSplitTextElement[$getTextSplitLength]
 
-$textSplit[$joinSplitText[ ];]
+$var[Text;$joinSplitText[ ]]
+
+$textSplit[$var[Text];]
 $editSplitText[$var[Index];$var[Value]]
 
-Original Text: $joinSplitText[ ]
+Original Text: $var[Text]
 New Text: $joinSplitText[]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/202880969-9ce5041a-cc6c-4bd2-a275-76e9d80be5b5.png" alt="example" /></p>
