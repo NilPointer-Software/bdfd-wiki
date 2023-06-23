@@ -2,6 +2,9 @@
 
 # 2023
 
+## June
+- Fixed custom images not always being displayed
+
 ## May
 - Fixed `$min[]` and `$max[]` not working with floats
 
