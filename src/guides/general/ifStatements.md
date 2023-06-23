@@ -49,7 +49,7 @@ $endif
 
 > **Note:** You can use multiple `$elseif`s
 
-## Explaination
+## Explanation
 `$if[]` uses the format of: if `x` is related accordingly (based on the "sign") with `y` then the code below runs.
 
 ### Signs
