@@ -181,12 +181,23 @@
 <li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The embed footer text.</li>
 <li><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The embed footer icon, must be a valid image URL.</li>
 </ul>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<h3 id="example-1"><a class="header" href="#example-1">Example #1</a></h3>
 <pre><code>$nomention
 $embedSuppressErrors[Error!;❌ Invalid math expression!;#ff0000;;Calculator]
 
 Result: **$calculate[$message]**
 </code></pre>
+<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/739e2996-62b2-43ad-8c93-783bf4adccce" alt="example" /></p>
+<h3 id="example-2"><a class="header" href="#example-2">Example #2</a></h3>
+<p>You can pass error from limiter functions into the embed by leaving the <code>Description</code> argument to be empty.</p>
+<pre><code>$nomention
+$embedSuppressErrors[Error!;;#ff0000]
+$argsCheck[&gt;1;You must type at least one word]
+
+You typed &quot;$message&quot;
+</code></pre>
+<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/f8bb4e3b-e87e-4d9e-83ce-f480363ea924" alt="example_2" /></p>
 
                     </main>
 

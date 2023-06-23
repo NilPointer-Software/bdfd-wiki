@@ -2455,7 +2455,7 @@ $endif
 <blockquote>
 <p><strong>Note:</strong> You can use multiple <code>$elseif</code>s</p>
 </blockquote>
-<h2 id="explaination"><a class="header" href="#explaination">Explaination</a></h2>
+<h2 id="explanation-1"><a class="header" href="#explanation-1">Explanation</a></h2>
 <p><code>$if[]</code> uses the format of: if <code>x</code> is related accordingly (based on the &quot;sign&quot;) with <code>y</code> then the code below runs.</p>
 <h3 id="signs"><a class="header" href="#signs">Signs</a></h3>
 <p><code>==</code> - Equal</p>
@@ -5346,6 +5346,7 @@ $c[This is a say command. You are reading a comment!]
 <li><code>/</code> - Division.</li>
 <li><code>*</code> - Multiplication.</li>
 <li><code>%</code> - Modulo.</li>
+<li><code>**</code> - Power.</li>
 <li><code>()</code> - Parentheses you can put equations in.</li>
 </ul>
 <h2 id="example-89"><a class="header" href="#example-89">Example</a></h2>
@@ -5709,7 +5710,7 @@ $channelType[$channelID]
 <ul>
 <li><code>Condition</code> <code>(Type: String || Flag: Required)</code>: The condition to check.</li>
 </ul>
-<h2 id="explanation-1"><a class="header" href="#explanation-1">Explanation</a></h2>
+<h2 id="explanation-2"><a class="header" href="#explanation-2">Explanation</a></h2>
 <p>Simply put, <code>$checkCondition</code> serves as a way to make a custom true or false statement. For example: <code>$checkCondition[$username==Spen]</code>, the bot would return &quot;true&quot; if someone named Spen used the command, otherwise it would return &quot;false&quot;. However this: <code>$checkCondition[$username!=Spen]</code>, would return &quot;false&quot; if someone named Spen used the command, otherwise it would return &quot;true&quot;.</p>
 <p>Base Usage: <code>$checkCondition[value1(sign)value2]</code></p>
 <p><strong>What's Sign?</strong><br />
@@ -6621,18 +6622,29 @@ $color[#683cb4]
 <li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The embed footer text.</li>
 <li><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The embed footer icon, must be a valid image URL.</li>
 </ul>
-<h2 id="example-149"><a class="header" href="#example-149">Example</a></h2>
+<h2 id="examples-10"><a class="header" href="#examples-10">Examples</a></h2>
+<h3 id="example-1-4"><a class="header" href="#example-1-4">Example #1</a></h3>
 <pre><code>$nomention
 $embedSuppressErrors[Error!;❌ Invalid math expression!;#ff0000;;Calculator]
 
 Result: **$calculate[$message]**
 </code></pre>
+<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/739e2996-62b2-43ad-8c93-783bf4adccce" alt="example" /></p>
+<h3 id="example-2-4"><a class="header" href="#example-2-4">Example #2</a></h3>
+<p>You can pass error from limiter functions into the embed by leaving the <code>Description</code> argument to be empty.</p>
+<pre><code>$nomention
+$embedSuppressErrors[Error!;;#ff0000]
+$argsCheck[&gt;1;You must type at least one word]
+
+You typed &quot;$message&quot;
+</code></pre>
+<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/f8bb4e3b-e87e-4d9e-83ce-f480363ea924" alt="example_2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="emotecount"><a class="header" href="#emotecount">$emoteCount</a></h1>
 <p>Returns the number of emojis in the current server.</p>
 <h2 id="syntax-144"><a class="header" href="#syntax-144">Syntax</a></h2>
 <pre><code>$emoteCount
 </code></pre>
-<h2 id="example-150"><a class="header" href="#example-150">Example</a></h2>
+<h2 id="example-149"><a class="header" href="#example-149">Example</a></h2>
 <pre><code>$nomention
 There are $emoteCount emojis in $serverName[$guildID]!
 </code></pre>
@@ -6647,7 +6659,7 @@ There are $emoteCount emojis in $serverName[$guildID]!
 <li><code>Enabled</code> <code>(Type: Bool || Flag: Required)</code>: If the command should be enabled or disabled. Use <code>yes</code> to enable the command, <code>no</code> to disable it.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned if the command is disabled.</li>
 </ul>
-<h2 id="example-151"><a class="header" href="#example-151">Example</a></h2>
+<h2 id="example-150"><a class="header" href="#example-150">Example</a></h2>
 <p>This section will explain how to disable/enable certain commands using server variables. </p>
 <ol>
 <li>
@@ -6689,7 +6701,7 @@ I successfully disabled the command!
 <ul>
 <li><code>Enable</code> <code>(Type: Bool || Flag: Required)</code>: Whether to enable decimals in math functions or not, <code>yes</code> means it's enabled and <code>no</code> means it's disabled.</li>
 </ul>
-<h2 id="explaination-1"><a class="header" href="#explaination-1">Explaination</a></h2>
+<h2 id="explaination"><a class="header" href="#explaination">Explaination</a></h2>
 <p>By default, decimals in math functions (e.g <code>$sum</code>, <code>$sub</code>, <code>$multi</code>, etc) are disabled. The only use for this function is to enable decimals, if you want decimals enabled for math functions in that command.</p>
 <p>Enabling decimals:</p>
 <pre><code>$enableDecimals[yes]
@@ -6705,7 +6717,7 @@ I successfully disabled the command!
 <blockquote>
 <p>⚠️ You can get an ephemeral response only through an interaction (slash commands, buttons, select menus, etc.)</p>
 </blockquote>
-<h2 id="example-152"><a class="header" href="#example-152">Example</a></h2>
+<h2 id="example-151"><a class="header" href="#example-151">Example</a></h2>
 <pre><code>$nomention
 $ephemeral
 hello!
@@ -6724,7 +6736,7 @@ hello!
 <ul>
 <li><code>BDScript source code</code> <code>(Type: String || Flag: Emptiable)</code>: The code to be evaluated.</li>
 </ul>
-<h2 id="example-153"><a class="header" href="#example-153">Example</a></h2>
+<h2 id="example-152"><a class="header" href="#example-152">Example</a></h2>
 <pre><code>$nomention
 $onlyForIDs[$botOwnerID;❌ Only the bot owner can use that!]
 $eval[$message]
@@ -6738,7 +6750,7 @@ $eval[$message]
 <h2 id="syntax-149"><a class="header" href="#syntax-149">Syntax</a></h2>
 <pre><code>$executionTime
 </code></pre>
-<h2 id="example-154"><a class="header" href="#example-154">Example</a></h2>
+<h2 id="example-153"><a class="header" href="#example-153">Example</a></h2>
 <pre><code>$nomention
 Pong! $executionTime ms
 </code></pre>
@@ -6755,7 +6767,7 @@ Pong! $executionTime ms
 <ul>
 <li><code>Channel</code> <code>(Type: String || Flag: Emptiable)</code>: The channel name/ID/mention to find.</li>
 </ul>
-<h2 id="example-155"><a class="header" href="#example-155">Example</a></h2>
+<h2 id="example-154"><a class="header" href="#example-154">Example</a></h2>
 <pre><code>$nomention
 $findChannel[$message]
 </code></pre>
@@ -6772,7 +6784,7 @@ $findChannel[$message]
 <ul>
 <li><code>Role</code> <code>(Type: String || Flag: Emptiable)</code>: The role name, ID, or mention to find.</li>
 </ul>
-<h2 id="example-156"><a class="header" href="#example-156">Example</a></h2>
+<h2 id="example-155"><a class="header" href="#example-155">Example</a></h2>
 <pre><code>$nomention
 $findRole[$message]
 </code></pre>
@@ -6790,7 +6802,7 @@ $findRole[$message]
 <li><code>User</code> <code>(Type: String || Flag: Emptiable)</code>: The user's username, ID, or mention to find.</li>
 <li><code>Return author ID?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the author ID if no user was found. The default is <code>yes</code>.</li>
 </ul>
-<h2 id="example-157"><a class="header" href="#example-157">Example</a></h2>
+<h2 id="example-156"><a class="header" href="#example-156">Example</a></h2>
 <pre><code>$nomention
 $findUser[$message]
 </code></pre>
@@ -6805,7 +6817,7 @@ $findUser[$message]
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to set the footer as. It cannot exceed more than 2048 characters.</li>
 <li><code>Index</code> <code>(Type: Integer || Flag: Optional)</code>: What embed the footer text should belong to. The default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-158"><a class="header" href="#example-158">Example</a></h2>
+<h2 id="example-157"><a class="header" href="#example-157">Example</a></h2>
 <pre><code>$nomention
 $footer[Hi! I'm a footer.]
 </code></pre>
@@ -6823,7 +6835,7 @@ $footer[Hi! I'm a footer.]
 <li><code>Icon URL</code> <code>(Type: URL || Flag: Emptiable)</code>: The URL to set the footer icon as. Must be a valid image URL.</li>
 <li><code>Index</code> <code>(Type: Integer || Flag: Vacantable)</code>: What embed the footer icon should belong to. The default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-159"><a class="header" href="#example-159">Example</a></h2>
+<h2 id="example-158"><a class="header" href="#example-158">Example</a></h2>
 <pre><code>$nomention
 $footer[⬅️ That is a footer icon!]
 $footerIcon[$authorAvatar]
@@ -6839,7 +6851,7 @@ $footerIcon[$authorAvatar]
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: User to get the ban reason for</li>
 <li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The server id from which to get the ban reason.</li>
 </ul>
-<h2 id="example-160"><a class="header" href="#example-160">Example</a></h2>
+<h2 id="example-159"><a class="header" href="#example-159">Example</a></h2>
 <pre><code>$nomention
 Ban Reason: $getBanReason[154148273307910144]
 </code></pre>
@@ -6849,7 +6861,7 @@ Ban Reason: $getBanReason[154148273307910144]
 <h2 id="syntax-156"><a class="header" href="#syntax-156">Syntax</a></h2>
 <pre><code>$getBotInvite
 </code></pre>
-<h2 id="example-161"><a class="header" href="#example-161">Example</a></h2>
+<h2 id="example-160"><a class="header" href="#example-160">Example</a></h2>
 <pre><code>$nomention
 Invite Me! $getBotInvite
 </code></pre>
@@ -6864,7 +6876,7 @@ Invite Me! $getBotInvite
 <li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The name of the variable to get.</li>
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel to get the value for. If no &quot;Channel ID&quot; is present, then the current channel will be used.</li>
 </ul>
-<h2 id="example-162"><a class="header" href="#example-162">Example</a></h2>
+<h2 id="example-161"><a class="header" href="#example-161">Example</a></h2>
 <pre><code>$nomention
 Command used `$getChannelVar[Uses]` times in this channel
 </code></pre>
@@ -6890,7 +6902,7 @@ Command used `$getChannelVar[Uses]` times in this channel
 </ul>
 </li>
 </ul>
-<h2 id="example-163"><a class="header" href="#example-163">Example</a></h2>
+<h2 id="example-162"><a class="header" href="#example-162">Example</a></h2>
 <pre><code>$nomention
 $cooldown[1h;You're on cooldown! (&lt;t:$sum[$getTimestamp;$getCooldown[normal]]&gt;)]
 Hello World!
@@ -6905,7 +6917,7 @@ $c[This example should be used in BDScript 2 only.]
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user whose custom status to get.</li>
 </ul>
-<h2 id="example-164"><a class="header" href="#example-164">Example</a></h2>
+<h2 id="example-163"><a class="header" href="#example-163">Example</a></h2>
 <pre><code>$nomention
 Your custom status: $getCustomStatus[$authorID]
 </code></pre>
@@ -6931,7 +6943,7 @@ Your custom status: $getCustomStatus[$authorID]
 </ul>
 </li>
 </ul>
-<h2 id="example-165"><a class="header" href="#example-165">Example</a></h2>
+<h2 id="example-164"><a class="header" href="#example-164">Example</a></h2>
 <pre><code>$nomention
 Title: $getEmbedData[876920205526319144;878299081380876339;1;title]
 Description: $getEmbedData[876920205526319144;878299081380876339;1;description]
@@ -6956,7 +6968,7 @@ Footer: $getEmbedData[876920205526319144;878299081380876339;1;footer]
 </ul>
 </li>
 </ul>
-<h2 id="example-166"><a class="header" href="#example-166">Example</a></h2>
+<h2 id="example-165"><a class="header" href="#example-165">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;Please provide a valid invite code!]
 $title[Invite Info]
@@ -6998,7 +7010,7 @@ $color[#673ab7]
 </ul>
 </li>
 </ul>
-<h2 id="example-167"><a class="header" href="#example-167">Example</a></h2>
+<h2 id="example-166"><a class="header" href="#example-166">Example</a></h2>
 <pre><code>$nomention
 $title[**Global Leaderboard**]
 $description[#1 - $getLeaderboardValue[globalUser;Money;asc;1]
@@ -7032,7 +7044,7 @@ $c[This is for global-user variables.]
 </ul>
 </li>
 </ul>
-<h2 id="example-168"><a class="header" href="#example-168">Example</a></h2>
+<h2 id="example-167"><a class="header" href="#example-167">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;Please provide a channel and message ID! Usage: `!quote (channel) (messageID)`]
 $description[$getMessage[$findChannel[$message[1]];$message[2]]]
@@ -7053,7 +7065,7 @@ $author[$getMessage[$findChannel[$message[1]];$message[2];username]#$discriminat
 <li><code>Separator</code> <code>(Type: String || Flag: Required)</code>: The separator between each user.</li>
 <li><code>Emoji</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji to get the user's reactions for.</li>
 </ul>
-<h2 id="example-169"><a class="header" href="#example-169">Example</a></h2>
+<h2 id="example-168"><a class="header" href="#example-168">Example</a></h2>
 <pre><code>$nomention
 $getReactions[2394734883474774;38483494328934989;, ;&lt;:tip:3943484884834848483&gt;]
 </code></pre>
@@ -7067,7 +7079,7 @@ $getReactions[2394734883474774;38483494328934989;, ;&lt;:tip:3943484884834848483
 <ul>
 <li><code>Role ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to get the color hex from.</li>
 </ul>
-<h2 id="example-170"><a class="header" href="#example-170">Example</a></h2>
+<h2 id="example-169"><a class="header" href="#example-169">Example</a></h2>
 <pre><code>$nomention
 $description[&lt;@$authorID&gt;'s color: `#$getRoleColor[$highestRole[$authorID]]`]
 $color[$getRoleColor[$highestRole[$authorID]]]
@@ -7083,7 +7095,7 @@ $color[$getRoleColor[$highestRole[$authorID]]]
 <ul>
 <li><code>createinstantinvite</code></li>
 </ul>
-<h2 id="example-171"><a class="header" href="#example-171">Example</a></h2>
+<h2 id="example-170"><a class="header" href="#example-170">Example</a></h2>
 <pre><code>$nomention
 $getServerInvite
 </code></pre>
@@ -7108,7 +7120,7 @@ $getServerInvite
 <ul>
 <li><code>createinstantinvite</code></li>
 </ul>
-<h2 id="example-172"><a class="header" href="#example-172">Example</a></h2>
+<h2 id="example-171"><a class="header" href="#example-171">Example</a></h2>
 <pre><code>$nomention
 $getServerInvite[$message[1]]
 </code></pre>
@@ -7135,7 +7147,7 @@ $getServerInvite[$message[1]]
 <ul>
 <li><code>Value</code> <code>(Type: String || Flag: Emptiable)</code>: The value to search in the text split.</li>
 </ul>
-<h2 id="example-173"><a class="header" href="#example-173">Example</a></h2>
+<h2 id="example-172"><a class="header" href="#example-172">Example</a></h2>
 <pre><code>$nomention 
 $textSplit[Cake-Bread;-] 
 $getTextSplitIndex[$message[1]] 
@@ -7152,7 +7164,7 @@ $getTextSplitIndex[$message[1]]
 <h2 id="syntax-170"><a class="header" href="#syntax-170">Syntax</a></h2>
 <pre><code>$getTextSplitLength
 </code></pre>
-<h2 id="example-174"><a class="header" href="#example-174">Example</a></h2>
+<h2 id="example-173"><a class="header" href="#example-173">Example</a></h2>
 <pre><code>$nomention
 $textSplit[Hello | Hi | Hey; | ]
 The text has been split into $getTextSplitLength elements!
@@ -7166,7 +7178,7 @@ The text has been split into $getTextSplitLength elements!
 <h2 id="syntax-171"><a class="header" href="#syntax-171">Syntax</a></h2>
 <pre><code>$getTimestamp
 </code></pre>
-<h2 id="example-175"><a class="header" href="#example-175">Example</a></h2>
+<h2 id="example-174"><a class="header" href="#example-174">Example</a></h2>
 <pre><code>$nomention
 Unix Timestamp: $getTimestamp
 </code></pre>
@@ -7191,7 +7203,7 @@ Unix Timestamp: $getTimestamp
 <li><code>ns</code> (nanoseconds)</li>
 </ul>
 </blockquote>
-<h2 id="example-176"><a class="header" href="#example-176">Example</a></h2>
+<h2 id="example-175"><a class="header" href="#example-175">Example</a></h2>
 <pre><code>$nomention
 Unix Timestamp
  In Seconds - $getTimestamp[s]
@@ -7222,7 +7234,7 @@ Unix Timestamp
 <ul>
 <li><a href="bdscript/../guides/introduction/gatewayIntents.html#presence-intent"><code>Presences Intent</code></a></li>
 </ul>
-<h2 id="example-177"><a class="header" href="#example-177">Example</a></h2>
+<h2 id="example-176"><a class="header" href="#example-176">Example</a></h2>
 <pre><code>$nomention
 $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 </code></pre>
@@ -7238,7 +7250,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <li><code>User ID</code> <code>(Type: String, Snowflake || Flag: Vacantable)</code>: The user to get the variable value for. If no user is provided, the author is used.</li>
 <li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The guild to get the variable value for. If no guild is provided, the current guild is used.</li>
 </ul>
-<h2 id="example-178"><a class="header" href="#example-178">Example</a></h2>
+<h2 id="example-177"><a class="header" href="#example-177">Example</a></h2>
 <pre><code>$nomention
 &lt;@$mentioned[1;yes]&gt; has $getUserVar[Money;$mentioned[1;yes]] coins.
 </code></pre>
@@ -7259,7 +7271,7 @@ $nickname[$mentioned[1;yes]]'s status is: $getUserStatus[$mentioned[1;yes]]
 <li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The name of the variable to get the value from.</li>
 <li><code>User ID</code> <code>(Type: Snowflake, String || Flag: Vacantable)</code>: The user to get the value for (if global-user).</li>
 </ul>
-<h2 id="example-179"><a class="header" href="#example-179">Example</a></h2>
+<h2 id="example-178"><a class="header" href="#example-178">Example</a></h2>
 <pre><code>$nomention
 You have $getVar[Money;$mentioned[1;yes]] coins!
 </code></pre>
@@ -7292,7 +7304,7 @@ You have $getVar[Money;$mentioned[1;yes]] coins!
 <ul>
 <li><code>roleID</code> - The role to give the mentioned user.</li>
 </ul>
-<h2 id="example-180"><a class="header" href="#example-180">Example</a></h2>
+<h2 id="example-179"><a class="header" href="#example-179">Example</a></h2>
 <pre><code>$onlyPerms[manageroles;Missing permissions!]
 $giveRole[807004801753284618]
 Added $roleName[807004801753284618] to $username[$mentioned[1]]!
@@ -7311,7 +7323,7 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 <blockquote>
 <p>🧙‍♂️ You can use <code>%time%</code> in the &quot;Error message&quot; argument to get how much time is left until the cooldown is over.</p>
 </blockquote>
-<h2 id="example-181"><a class="header" href="#example-181">Example</a></h2>
+<h2 id="example-180"><a class="header" href="#example-180">Example</a></h2>
 <pre><code>$nomention
 $globalCooldown[30s;$username, You are on cooldown for %time%!]
 
@@ -7336,7 +7348,7 @@ Hello $username!
 <blockquote>
 <p>🧙‍♂️ <code>$globalUserLeaderboard</code> automatically generates a description. So, <code>$description</code> should not be used in the code.</p>
 </blockquote>
-<h2 id="example-182"><a class="header" href="#example-182">Example</a></h2>
+<h2 id="example-181"><a class="header" href="#example-181">Example</a></h2>
 <pre><code>$nomention
 $globalUserLeaderboard[Money;desc]
 </code></pre>
@@ -7352,7 +7364,7 @@ $globalUserLeaderboard[Money;desc]
 <ul>
 <li><code>Guild ID</code> <code>(Type: Snowflake, String || Flag: Emptiable)</code>: The ID of the hypothetical server.</li>
 </ul>
-<h2 id="example-183"><a class="header" href="#example-183">Example</a></h2>
+<h2 id="example-182"><a class="header" href="#example-182">Example</a></h2>
 <pre><code>$nomention
 $guildExists[$message[1]]
 </code></pre>
@@ -7362,7 +7374,7 @@ $guildExists[$message[1]]
 <h2 id="syntax-179"><a class="header" href="#syntax-179">Syntax</a></h2>
 <pre><code>$guildID
 </code></pre>
-<h2 id="example-184"><a class="header" href="#example-184">Example</a></h2>
+<h2 id="example-183"><a class="header" href="#example-183">Example</a></h2>
 <pre><code>$nomention 
 Server ID is : $guildID
 </code></pre>
@@ -7379,7 +7391,7 @@ Server ID is : $guildID
 <ul>
 <li><code>Server name</code> <code>(Type: String || Flag: Emptiable)</code>: The name of the server.</li>
 </ul>
-<h2 id="example-185"><a class="header" href="#example-185">Example</a></h2>
+<h2 id="example-184"><a class="header" href="#example-184">Example</a></h2>
 <pre><code>$nomention
 $noMentionMessage ID is : $guildID[$noMentionMessage]
 </code></pre>
@@ -7397,7 +7409,7 @@ $noMentionMessage ID is : $guildID[$noMentionMessage]
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to check for the role.</li>
 <li><code>roleID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The role that the bot is checking the user for.</li>
 </ul>
-<h2 id="example-186"><a class="header" href="#example-186">Example</a></h2>
+<h2 id="example-185"><a class="header" href="#example-185">Example</a></h2>
 <pre><code>$nomention
 $hasRole[$authorID;858376972303204362]
 </code></pre>
@@ -7407,7 +7419,7 @@ $hasRole[$authorID;858376972303204362]
 <h2 id="syntax-181"><a class="header" href="#syntax-181">Syntax</a></h2>
 <pre><code>$highestRole
 </code></pre>
-<h2 id="example-187"><a class="header" href="#example-187">Example</a></h2>
+<h2 id="example-186"><a class="header" href="#example-186">Example</a></h2>
 <pre><code>$nomention
 The server's highest role: &lt;@&amp;$highestRole&gt; ($highestRole)
 </code></pre>
@@ -7421,7 +7433,7 @@ The server's highest role: &lt;@&amp;$highestRole&gt; ($highestRole)
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user for which to return the highest role.</li>
 </ul>
-<h2 id="example-188"><a class="header" href="#example-188">Example</a></h2>
+<h2 id="example-187"><a class="header" href="#example-187">Example</a></h2>
 <pre><code>$nomention
 $username[$mentioned[1;yes]]'s highest role: $roleName[$highestRole[$mentioned[1;yes]]] ($highestRole[$mentioned[1;yes]])
 </code></pre>
@@ -7435,7 +7447,7 @@ $username[$mentioned[1;yes]]'s highest role: $roleName[$highestRole[$mentioned[1
 <ul>
 <li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The permissions that the role needs to have.  <a href="bdscript//src/resources/permissions.html">(see permissions list)</a></li>
 </ul>
-<h2 id="example-189"><a class="header" href="#example-189">Example</a></h2>
+<h2 id="example-188"><a class="header" href="#example-188">Example</a></h2>
 <pre><code>$nomention
 Highest Role with Administrator:  $roleName[$highestRoleWithPerms[admin]] ($highestRoleWithPerms[admin])
 </code></pre>
@@ -7449,12 +7461,12 @@ Highest Role with Administrator:  $roleName[$highestRoleWithPerms[admin]] ($high
 <ul>
 <li><code>unix timestamp</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the expiration time in Unix Timestamp or not.</li>
 </ul>
-<h2 id="example-1-4"><a class="header" href="#example-1-4">Example #1</a></h2>
+<h2 id="example-1-5"><a class="header" href="#example-1-5">Example #1</a></h2>
 <pre><code>$nomention 
 $hostingExpireTime 
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/42785890/151823699-8a5fda67-b837-41df-9df4-51219a73e120.png" alt="image" /></p>
-<h2 id="example-2-4"><a class="header" href="#example-2-4">Example #2</a></h2>
+<h2 id="example-2-5"><a class="header" href="#example-2-5">Example #2</a></h2>
 <pre><code>$nomention
 I will be offline &lt;t:$hostingExpireTime[yes]:R&gt;
 </code></pre>
@@ -7470,7 +7482,7 @@ I will be offline &lt;t:$hostingExpireTime[yes]:R&gt;
 <h2 id="usage-7"><a class="header" href="#usage-7">Usage</a></h2>
 <pre><code>$hour
 </code></pre>
-<h2 id="example-190"><a class="header" href="#example-190">Example</a></h2>
+<h2 id="example-189"><a class="header" href="#example-189">Example</a></h2>
 <pre><code>$nomention
 Current Hour: $hour
 </code></pre>
@@ -7486,7 +7498,7 @@ $hypesquad[userID]
 <ul>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>: ID of the user whose hypesquad name should be returned</li>
 </ul>
-<h2 id="example-191"><a class="header" href="#example-191">Example</a></h2>
+<h2 id="example-190"><a class="header" href="#example-190">Example</a></h2>
 <pre><code>$nomention
 You are in $hypesquad[$authorID] house.
 </code></pre>
@@ -7506,7 +7518,7 @@ You are in $hypesquad[$authorID] house.
 <h2 id="usage-10"><a class="header" href="#usage-10">Usage</a></h2>
 <pre><code>$ignoreLinks
 </code></pre>
-<h2 id="example-192"><a class="header" href="#example-192">Example</a></h2>
+<h2 id="example-191"><a class="header" href="#example-191">Example</a></h2>
 <pre><code>$ignoreLinks
 Here's a toaster IRL:
 https://media.discordapp.net/attachments/1011682358031826994/1027580044928888832/856506821023629332.png
@@ -7525,7 +7537,7 @@ https://media.discordapp.net/attachments/1011682358031826994/1027580044928888832
 <li><code>image url</code> <code>(Type: URL || Flag: Emptiable)</code>: The URL of the image that appears. Must be a valid image URL.</li>
 <li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: What embed the image should belong to. The default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
-<h2 id="example-193"><a class="header" href="#example-193">Example</a></h2>
+<h2 id="example-192"><a class="header" href="#example-192">Example</a></h2>
 <pre><code>$nomention
 $image[$userAvatar[$botID]]
 </code></pre>
@@ -7539,7 +7551,7 @@ $image[$userAvatar[$botID]]
 <ul>
 <li><code>Text Input ID</code> <code>(Type: String || Flag: Required)</code>: input ID in <a href="bdscript/../bdscript/addTextInput.html">$addTextInput</a></li>
 </ul>
-<h2 id="example-194"><a class="header" href="#example-194">Example</a></h2>
+<h2 id="example-193"><a class="header" href="#example-193">Example</a></h2>
 <h3 id="interaction-command-code-1"><a class="header" href="#interaction-command-code-1">Interaction command code</a></h3>
 <pre><code>$nomention
 Name : $input[modalInput1]
@@ -7562,7 +7574,7 @@ About me : $input[modalInput3]
 <ul>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to check.</li>
 </ul>
-<h2 id="example-195"><a class="header" href="#example-195">Example</a></h2>
+<h2 id="example-194"><a class="header" href="#example-194">Example</a></h2>
 <pre><code>$nomention
 Are You A Admin?: `$isAdmin[$authorID]`
 </code></pre>
@@ -7576,7 +7588,7 @@ Are You A Admin?: `$isAdmin[$authorID]`
 <ul>
 <li><code>user ID </code> <code>(Type: Snowflake || Flag: Required)</code>: The user to check its ban status.</li>
 </ul>
-<h2 id="example-196"><a class="header" href="#example-196">Example</a></h2>
+<h2 id="example-195"><a class="header" href="#example-195">Example</a></h2>
 <pre><code>$nomention
 $isBanned[$mentioned[1]]
 </code></pre>
@@ -7600,7 +7612,7 @@ $isBanned[$mentioned[1]]
 <ul>
 <li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to check.</li>
 </ul>
-<h2 id="example-197"><a class="header" href="#example-197">Example</a></h2>
+<h2 id="example-196"><a class="header" href="#example-196">Example</a></h2>
 <pre><code>$nomention
 $isBoolean[$message]
 </code></pre>
@@ -7617,7 +7629,7 @@ $isBoolean[$message]
 <ul>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user to check.</li>
 </ul>
-<h2 id="example-198"><a class="header" href="#example-198">Example</a></h2>
+<h2 id="example-197"><a class="header" href="#example-197">Example</a></h2>
 <pre><code>$nomention
 Bot? $isBot[$findUser[$message]]
 </code></pre>
@@ -7634,7 +7646,7 @@ Bot? $isBot[$findUser[$message]]
 <ul>
 <li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to check its hoisted status.</li>
 </ul>
-<h2 id="example-199"><a class="header" href="#example-199">Example</a></h2>
+<h2 id="example-198"><a class="header" href="#example-198">Example</a></h2>
 <pre><code>$nomention
 $isHoisted[$findRole[$message]]
 </code></pre>
@@ -7652,7 +7664,7 @@ $isHoisted[$findRole[$message]]
 <ul>
 <li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to check for its mentionable status.</li>
 </ul>
-<h2 id="example-200"><a class="header" href="#example-200">Example</a></h2>
+<h2 id="example-199"><a class="header" href="#example-199">Example</a></h2>
 <pre><code>$nomention
 $isMentionable[$findRole[$message]]
 </code></pre>
@@ -7669,7 +7681,7 @@ $isMentionable[$findRole[$message]]
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to check.</li>
 </ul>
-<h2 id="example-201"><a class="header" href="#example-201">Example</a></h2>
+<h2 id="example-200"><a class="header" href="#example-200">Example</a></h2>
 <pre><code>$nomention
 Is &lt;#$channelID&gt; NSFW?: `$isNSFW[$channelID]`
 </code></pre>
@@ -7686,7 +7698,7 @@ Is &lt;#$channelID&gt; NSFW?: `$isNSFW[$channelID]`
 <ul>
 <li><code>value</code> <code>(Type: String || Flag: Emptiable)</code>: The text to check.</li>
 </ul>
-<h2 id="example-202"><a class="header" href="#example-202">Example</a></h2>
+<h2 id="example-201"><a class="header" href="#example-201">Example</a></h2>
 <pre><code>$nomention
 $isNumber[$message]
 </code></pre>
@@ -7699,7 +7711,7 @@ $isNumber[$message]
 <h2 id="usage-21"><a class="header" href="#usage-21">Usage</a></h2>
 <pre><code>$isSlash
 </code></pre>
-<h2 id="example-203"><a class="header" href="#example-203">Example</a></h2>
+<h2 id="example-202"><a class="header" href="#example-202">Example</a></h2>
 <pre><code>$nomention
 $if[$isSlash==true]
 $message[text]
@@ -7717,7 +7729,7 @@ $endif
 <ul>
 <li><code>channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel to check. <em>(Defaults to the current channel)</em></li>
 </ul>
-<h2 id="example-204"><a class="header" href="#example-204">Example</a></h2>
+<h2 id="example-203"><a class="header" href="#example-203">Example</a></h2>
 <pre><code>$nomention
 $onlyIf[$isTicket[]==true;This command can only be used in a ticket!]
 This is a ticket!
@@ -7736,7 +7748,7 @@ This is a ticket!
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to check.</li>
 </ul>
-<h2 id="example-205"><a class="header" href="#example-205">Example</a></h2>
+<h2 id="example-204"><a class="header" href="#example-204">Example</a></h2>
 <pre><code>$nomention
 User is timed out: $isTimedOut[$mentioned[1]]
 </code></pre>
@@ -7753,7 +7765,7 @@ User is timed out: $isTimedOut[$mentioned[1]]
 <ul>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to check.</li>
 </ul>
-<h2 id="example-206"><a class="header" href="#example-206">Example</a></h2>
+<h2 id="example-205"><a class="header" href="#example-205">Example</a></h2>
 <pre><code>$nomention
 $onlyIf[$isUserDMEnabled[$authorID]==true;❌ Failed to DM you. Make sure you have your DMs on!]
 $dm
@@ -7798,7 +7810,7 @@ $message
 <li><code>user ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to kick from the server.</li>
 <li><code>reason</code> <code>(Type: String || Flag: Vacantable)</code>: The audit-log reason for the kick.</li>
 </ul>
-<h2 id="example-207"><a class="header" href="#example-207">Example</a></h2>
+<h2 id="example-206"><a class="header" href="#example-206">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[kick;❌ You need the `kick` permission to use that!]
 $argsCheck[&gt;1;❌ Please provide a user to kick. Usage: `!kick (user) &lt;reason&gt;`.]
@@ -7815,7 +7827,7 @@ $kick[$mentioned[1];$noMentionMessage]
 <ul>
 <li><code>reason</code> <code>(Type: String || Flag: Emptiable)</code>: The audit-log reason for the kick.</li>
 </ul>
-<h2 id="example-208"><a class="header" href="#example-208">Example</a></h2>
+<h2 id="example-207"><a class="header" href="#example-207">Example</a></h2>
 <pre><code>$nomention
 $kickMention[$noMentionMessage]
 ✅ Kicked `$username[$mentioned[1]]#$discriminator[$mentioned[1]]`!
@@ -7826,7 +7838,7 @@ $kickMention[$noMentionMessage]
 <h2 id="syntax-187"><a class="header" href="#syntax-187">Syntax</a></h2>
 <pre><code>$lowestRole
 </code></pre>
-<h2 id="example-209"><a class="header" href="#example-209">Example</a></h2>
+<h2 id="example-208"><a class="header" href="#example-208">Example</a></h2>
 <pre><code>$nomention
 The server's lowest role: &lt;@&amp;$lowestRole&gt; ($lowestRole)
 </code></pre>
@@ -7840,7 +7852,7 @@ The server's lowest role: &lt;@&amp;$lowestRole&gt; ($lowestRole)
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user for which to return the lowest role.</li>
 </ul>
-<h2 id="example-210"><a class="header" href="#example-210">Example</a></h2>
+<h2 id="example-209"><a class="header" href="#example-209">Example</a></h2>
 <pre><code>$nomention
 $username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;yes]]] ($lowestRole[$mentioned[1;yes]])
 </code></pre>
@@ -7854,7 +7866,7 @@ $username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;y
 <ul>
 <li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The permissions that the role needs to have. <a href="bdscript//src/resources/permissions.html">(see permissions list)</a>. Use <code>;</code> as a separator for multiple permissions</li>
 </ul>
-<h2 id="example-211"><a class="header" href="#example-211">Example</a></h2>
+<h2 id="example-210"><a class="header" href="#example-210">Example</a></h2>
 <pre><code>$nomention
 Lowest Role with Administrator:  $roleName[$lowestRoleWithPerms[admin]] ($lowestRoleWithPerms[admin])
 </code></pre>
@@ -7868,14 +7880,14 @@ Lowest Role with Administrator:  $roleName[$lowestRoleWithPerms[admin]] ($lowest
 <ul>
 <li><code>A,B,...</code> <code>(Type: Integer || Flag: Required)</code>: The numbers to get the maximum from. Separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-212"><a class="header" href="#example-212">Example</a></h2>
+<h2 id="example-211"><a class="header" href="#example-211">Example</a></h2>
 <pre><code>$nomention
 $max[100;20;50]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/125180629-24160b80-e1ca-11eb-90f2-694bbe914498.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="memberscount"><a class="header" href="#memberscount">$membersCount</a></h1>
 <p>Returns amount of members in the current guild</p>
-<h3 id="example-213"><a class="header" href="#example-213">Example</a></h3>
+<h3 id="example-212"><a class="header" href="#example-212">Example</a></h3>
 <pre><code>$nomention
 This server has $membersCount members 
 </code></pre>
@@ -7897,7 +7909,7 @@ you amount of online members.</p>
 <li><code>dnd</code></li>
 <li><code>invisible</code></li>
 </ul>
-<h3 id="example-214"><a class="header" href="#example-214">Example</a></h3>
+<h3 id="example-213"><a class="header" href="#example-213">Example</a></h3>
 <pre><code>$nomention 
 there are $membersCount[online] users in this server
 </code></pre>
@@ -7915,7 +7927,7 @@ there are $membersCount[online] users in this server
 <li><code>mentionNumber</code> <code>(Type: HowMany || Flag: Required)</code>: The user-mention to get from the author's message  (<code>1</code> = first user-mention, <code>2</code> = second, etc).</li>
 <li><code>returnAuthor</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the author's ID if no user is mentioned or not.</li>
 </ul>
-<h2 id="example-215"><a class="header" href="#example-215">Example</a></h2>
+<h2 id="example-214"><a class="header" href="#example-214">Example</a></h2>
 <pre><code>$nomention
 $mentioned[1]
 </code></pre>
@@ -7930,7 +7942,7 @@ $mentioned[1]
 <li><code>mentionNumber</code> <code>(Type: HowMany || Flag: Required)</code>: The channel-mention to get from the author's message  (<code>1</code> = first channel-mention, <code>2</code> = second, etc).</li>
 <li><code>returnCurrent</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the current channel ID if no channel is mentioned or not.</li>
 </ul>
-<h2 id="example-216"><a class="header" href="#example-216">Example</a></h2>
+<h2 id="example-215"><a class="header" href="#example-215">Example</a></h2>
 <pre><code>$nomention
 $mentionedChannels[1]
 </code></pre>
@@ -7944,7 +7956,7 @@ $mentionedChannels[1]
 <ul>
 <li><code>mentionNumber</code> <code>(Type: HowMany || Flag: Required)</code>: The role-mention to get from the author's message  (<code>1</code> = first role-mention, <code>2</code> = second, etc).</li>
 </ul>
-<h2 id="example-217"><a class="header" href="#example-217">Example</a></h2>
+<h2 id="example-216"><a class="header" href="#example-216">Example</a></h2>
 <pre><code>$nomention
 $mentionedRoles[1]
 </code></pre>
@@ -7954,7 +7966,7 @@ $mentionedRoles[1]
 <h2 id="syntax-190"><a class="header" href="#syntax-190">Syntax</a></h2>
 <pre><code>$message
 </code></pre>
-<h2 id="example-218"><a class="header" href="#example-218">Example</a></h2>
+<h2 id="example-217"><a class="header" href="#example-217">Example</a></h2>
 <pre><code>$nomention
 $message
 </code></pre>
@@ -7978,7 +7990,7 @@ $message
 <p>🧙‍♂️ For example, <code>$message[message]</code> would just return the input of the slash command option named &quot;message&quot;. <code>$message[1;text]</code> would return the first word of the message <strong>or</strong> the input of the slash command option named &quot;text&quot;. </p>
 </blockquote>
 <p>Find more info about optimizing <code>$message[]</code> for slash commands <a href="bdscript/../guides/general/interactions/slashCommands/aboutSlashCommands.html#retrieving-value-from-options">here</a>.</p>
-<h2 id="examples-10"><a class="header" href="#examples-10">Examples</a></h2>
+<h2 id="examples-11"><a class="header" href="#examples-11">Examples</a></h2>
 <h3 id="normal-command"><a class="header" href="#normal-command">Normal command</a></h3>
 <pre><code>$nomention
 First word: $message[1]
@@ -8011,7 +8023,7 @@ $message[1;text]
 <h2 id="usage-31"><a class="header" href="#usage-31">Usage</a></h2>
 <pre><code>$messageID
 </code></pre>
-<h2 id="example-219"><a class="header" href="#example-219">Example</a></h2>
+<h2 id="example-218"><a class="header" href="#example-218">Example</a></h2>
 <pre><code>$nomention
 $messageID
 </code></pre>
@@ -8025,7 +8037,7 @@ $messageID
 <ul>
 <li><code>A,B,...</code> <code>(Type: Integer || Flag: Required)</code>: The numbers to get the minimum from. Separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-220"><a class="header" href="#example-220">Example</a></h2>
+<h2 id="example-219"><a class="header" href="#example-219">Example</a></h2>
 <pre><code>$nomention
 $min[3;5;1]
 </code></pre>
@@ -8038,7 +8050,7 @@ $min[3;5;1]
 <h2 id="usage-33"><a class="header" href="#usage-33">Usage</a></h2>
 <pre><code>$minute
 </code></pre>
-<h2 id="example-221"><a class="header" href="#example-221">Example</a></h2>
+<h2 id="example-220"><a class="header" href="#example-220">Example</a></h2>
 <pre><code>$nomention
 Current Minute: $minute
 </code></pre>
@@ -8068,7 +8080,7 @@ Current Minute: $minute
 <ul>
 <li><code>managechannels</code></li>
 </ul>
-<h2 id="example-222"><a class="header" href="#example-222">Example</a></h2>
+<h2 id="example-221"><a class="header" href="#example-221">Example</a></h2>
 <p><em>For this example, we will be changing the channel name from 'general' to 'chill-chat'. As well as changing the channel topic to 'A chill chat!'.</em></p>
 <pre><code>$nomention
 $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchanged]
@@ -8088,7 +8100,7 @@ $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchange
 <li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> to add/remove. <code>+</code> means allow, <code>-</code> means deny, <code>/</code> means neutral permission.</li>
 <li><code>userID/roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role or user to modify the permissions for. Use <code>$guildID</code> for <em>@everyone</em>.</li>
 </ul>
-<h2 id="example-223"><a class="header" href="#example-223">Example</a></h2>
+<h2 id="example-222"><a class="header" href="#example-222">Example</a></h2>
 <p>Lock:</p>
 <pre><code>$nomention
 $onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
@@ -8119,7 +8131,7 @@ $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 <li><code>hoisted</code> <code>(Type: Bool || Flag: Optional)</code>: Whether the role should be displayed separately or not.</li>
 <li><code>mentionable</code> <code>(Type: Bool || Flag: Optional)</code>: Whether the role should be mentionable by everyone or not.</li>
 </ul>
-<h2 id="example-224"><a class="header" href="#example-224">Example</a></h2>
+<h2 id="example-223"><a class="header" href="#example-223">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;❌ Please provide the needed arguments! Usage: `!role-name (role) (newRoleName)`]
 $onlyPerms[manageroles;❌ You are missing the manage_roles permission!]
@@ -8147,7 +8159,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 <li><code>A</code> <code>(Type: Integer || Flag: Required)</code>: The dividend.</li>
 <li><code>B</code> <code>(Type: Integer || Flag: Required)</code>: The divisor.</li>
 </ul>
-<h2 id="example-225"><a class="header" href="#example-225">Example</a></h2>
+<h2 id="example-224"><a class="header" href="#example-224">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;❌ Invalid usage. Usage: `!modulo (number1) (number2)`]
 $modulo[$message[1];$message[2]]
@@ -8161,7 +8173,7 @@ $modulo[$message[1];$message[2]]
 <h2 id="usage-38"><a class="header" href="#usage-38">Usage</a></h2>
 <pre><code>$month
 </code></pre>
-<h2 id="example-226"><a class="header" href="#example-226">Example</a></h2>
+<h2 id="example-225"><a class="header" href="#example-225">Example</a></h2>
 <pre><code>$nomention
 Current Month: $month
 </code></pre>
@@ -8175,7 +8187,7 @@ Current Month: $month
 <ul>
 <li><code>number</code> <code>(Type: Float, Integer || Flag: Required)</code>: The numbers to multiply. Separate numbers using <code>;</code>.</li>
 </ul>
-<h2 id="example-227"><a class="header" href="#example-227">Example</a></h2>
+<h2 id="example-226"><a class="header" href="#example-226">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;❌ Invalid usage. Usage: `!multiply (number1) (number2)`]
 $multi[$message[1];$message[2]]
@@ -8194,7 +8206,7 @@ $multi[$message[1];$message[2]]
 <ul>
 <li><code>mutedRoleName</code> <code>(Type: String || Flag: Required)</code>: The name of the 'Muted' role (case sensitive).</li>
 </ul>
-<h2 id="example-228"><a class="header" href="#example-228">Example</a></h2>
+<h2 id="example-227"><a class="header" href="#example-227">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[manageroles;❌ You are missing permission: `MANAGE_ROLES`.]
 $mute[Muted]
@@ -8212,7 +8224,7 @@ $mute[Muted]
 <li><code>modal ID</code> <code>(Type: String || Flag: Required)</code>: ID of the <code>$newModal[]</code> which is used in <code>$onInteraction[]</code> callback.</li>
 <li><code>title</code> <code>(Type: String || Flag: Required)</code>: Title displayed in the modal.</li>
 </ul>
-<h2 id="example-229"><a class="header" href="#example-229">Example</a></h2>
+<h2 id="example-228"><a class="header" href="#example-228">Example</a></h2>
 <pre><code>$nomention
 $newModal[modal;User Bio]
 $addTextInput[modalInput1;short;What is your name?;3;30;yes;;Mikołaj]
@@ -8237,7 +8249,7 @@ $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I
 <li><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: It's a text that appears if no option is selected.</li>
 <li><code>message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: ID of a message that should have a select menu added to it. By default, it's the bot's response.</li>
 </ul>
-<h2 id="example-230"><a class="header" href="#example-230">Example</a></h2>
+<h2 id="example-229"><a class="header" href="#example-229">Example</a></h2>
 <pre><code>$newSelectMenu[Example;1;1;Choose some option]
 $addSelectMenuOption[Example;First;first-option;The first option]
 $addSelectMenuOption[Example;Second;second-option;The second option]
@@ -8273,7 +8285,7 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 <li><code>{subject}</code> - Returns the ticket subject (user's message).</li>
 <li><code>{channel}</code> - Mentions the new ticket channel.</li>
 </ul>
-<h2 id="example-231"><a class="header" href="#example-231">Example</a></h2>
+<h2 id="example-230"><a class="header" href="#example-230">Example</a></h2>
 <pre><code>$nomention
 $newTicket[Tickets;No subject was provided.;Thanks for making a ticket. Please explain your issue in detail so we can help.
 Subject: {subject}
@@ -8289,7 +8301,7 @@ User: &lt;@$authorID&gt;;Created ticket! {channel};Failed to make ticket!]
 <h2 id="syntax-193"><a class="header" href="#syntax-193">Syntax</a></h2>
 <pre><code>$nickname
 </code></pre>
-<h2 id="example-232"><a class="header" href="#example-232">Example</a></h2>
+<h2 id="example-231"><a class="header" href="#example-231">Example</a></h2>
 <pre><code>$nomention
 Your nickname is `$nickname`
 </code></pre>
@@ -8306,7 +8318,7 @@ Your nickname is `$nickname`
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to get the nickname for.</li>
 </ul>
-<h2 id="example-233"><a class="header" href="#example-233">Example</a></h2>
+<h2 id="example-232"><a class="header" href="#example-232">Example</a></h2>
 <pre><code>$nomention
 &lt;@$mentioned[1;yes]&gt;'s nickname is `$nickname[$mentioned[1;yes]]`
 </code></pre>
@@ -8316,7 +8328,7 @@ Your nickname is `$nickname`
 <h2 id="usage-44"><a class="header" href="#usage-44">Usage</a></h2>
 <pre><code>$nomention
 </code></pre>
-<h2 id="example-234"><a class="header" href="#example-234">Example</a></h2>
+<h2 id="example-233"><a class="header" href="#example-233">Example</a></h2>
 <p>With <code>$nomention</code>:</p>
 <p><img src="https://user-images.githubusercontent.com/69215413/126917956-197108f9-7cd4-4e96-9a24-12d36b1886d8.png" alt="example" /></p>
 <p>Without <code>$nomention</code>:</p>
@@ -8326,7 +8338,7 @@ Your nickname is `$nickname`
 <h2 id="syntax-195"><a class="header" href="#syntax-195">Syntax</a></h2>
 <pre><code>$noMentionMessage
 </code></pre>
-<h2 id="example-235"><a class="header" href="#example-235">Example</a></h2>
+<h2 id="example-234"><a class="header" href="#example-234">Example</a></h2>
 <pre><code>$nomention
 $noMentionMessage
 </code></pre>
@@ -8343,7 +8355,7 @@ $noMentionMessage
 <blockquote>
 <p>🧙‍♂️ For example, <code>$noMentionMessage[1]</code> would just return the first word of the message, ignoring any possible mentions before. You can also use <code>$noMentionMessage[&gt;]</code> to get the last argument/word of the user's message.</p>
 </blockquote>
-<h2 id="example-236"><a class="header" href="#example-236">Example</a></h2>
+<h2 id="example-235"><a class="header" href="#example-235">Example</a></h2>
 <pre><code>$nomention
 1. $noMentionMessage[1]
 3. $noMentionMessage[3]
@@ -8360,7 +8372,7 @@ Last: $noMentionMessage[&gt;]
 <li><code>number</code> <code>(Type: Integer || Flag: Required)</code>: The number to apply the separator to.</li>
 <li><code>separator</code> <code>(Type: String || Flag: Vacantable)</code>: The separator between each thousand. The default is <code>,</code>.</li>
 </ul>
-<h2 id="example-237"><a class="header" href="#example-237">Example</a></h2>
+<h2 id="example-236"><a class="header" href="#example-236">Example</a></h2>
 <pre><code>$nomention
 $numberSeparator[5000]
 </code></pre>
@@ -8374,7 +8386,7 @@ $numberSeparator[5000]
 <ul>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The error message that is returned when the user isn't an administrator.</li>
 </ul>
-<h2 id="example-238"><a class="header" href="#example-238">Example</a></h2>
+<h2 id="example-237"><a class="header" href="#example-237">Example</a></h2>
 <pre><code>$nomention
 $onlyAdmin[❌ Only administrators can use this command!]
 
@@ -8397,7 +8409,7 @@ $c[Put your code here.]
 <p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the bot doesn't have the needed permissions.</p>
 </li>
 </ul>
-<h2 id="example-239"><a class="header" href="#example-239">Example</a></h2>
+<h2 id="example-238"><a class="header" href="#example-238">Example</a></h2>
 <pre><code>$nomention
 $onlyBotChannelPerms[$channelID;sendmessages;embedlinks;❌ Missing permissions!]
 $description[Hey! I have `Embed links` permission in the current channel.]
@@ -8416,7 +8428,7 @@ $description[Hey! I have `Embed links` permission in the current channel.]
 <p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the bot doesn't have all the provided permissions.</p>
 </li>
 </ul>
-<h3 id="example-240"><a class="header" href="#example-240">Example</a></h3>
+<h3 id="example-239"><a class="header" href="#example-239">Example</a></h3>
 <pre><code>$nomention
 $onlyBotPerms[sendmessages;embedlinks;❌ Missing permissions!]
 $description[Hey! I have `Embed links` permission.]
@@ -8431,7 +8443,7 @@ $description[Hey! I have `Embed links` permission.]
 <li><code>Category IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The categories where the command can be executed in. Use semicolons <code>;</code> as a separator to separate multiple category IDs.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is executed in non-whitelisted categories.</li>
 </ul>
-<h2 id="example-241"><a class="header" href="#example-241">Example</a></h2>
+<h2 id="example-240"><a class="header" href="#example-240">Example</a></h2>
 <pre><code>$nomention
 $onlyForCategories[790620501927526462;❌ This command can't be executed in this category!]
 
@@ -8447,7 +8459,7 @@ $c[Put your code here.]
 <li><code>Channel IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The channels that the command can be executed in. Use semicolons <code>;</code> as a separator to separate multiple channel IDs.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is used in a non-whitelisted channel.</li>
 </ul>
-<h2 id="example-242"><a class="header" href="#example-242">Example</a></h2>
+<h2 id="example-241"><a class="header" href="#example-241">Example</a></h2>
 <pre><code>$nomention
 $onlyForChannels[1050809741137412177;816767374610923601;❌ This command can't be executed in this channel!]
 
@@ -8463,7 +8475,7 @@ $c[Put your code here.]
 <li><code>User IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The users that can use this command. Use semicolons <code>;</code> as a separator to separate multiple user IDs.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The error message that is returned, when the user running the command is not whitelisted.</li>
 </ul>
-<h2 id="example-243"><a class="header" href="#example-243">Example</a></h2>
+<h2 id="example-242"><a class="header" href="#example-242">Example</a></h2>
 <pre><code>$nomention
 $onlyForIDs[$botOwnerID;❌ You are not my owner!]
 $eval[$message]
@@ -8480,7 +8492,7 @@ $c[This can only be executed in BDScript 2.]
 <li><code>Role names</code> <code>(Type: String || Flag: Emptiable)</code>: The roles that can use this command. Use semicolons <code>;</code> as a separator to separate multiple role names.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the user doesn't have the required roles.</li>
 </ul>
-<h2 id="example-244"><a class="header" href="#example-244">Example</a></h2>
+<h2 id="example-243"><a class="header" href="#example-243">Example</a></h2>
 <pre><code>$nomention
 $onlyForRoles[Moderator;Admin;❌ You don't have any of the required roles to use this command!]
 
@@ -8496,7 +8508,7 @@ $c[Put your code here.]
 <li><code>Role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The role IDs which are allowed to execute the command. Use semicolons <code>;</code> as a separator to separate multiple role IDs.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the user doesn't have the required roles.</li>
 </ul>
-<h2 id="example-245"><a class="header" href="#example-245">Example</a></h2>
+<h2 id="example-244"><a class="header" href="#example-244">Example</a></h2>
 <pre><code>$nomention
 $onlyForRoleIDs[790625761480146967;❌ You don't have any of the required roles to use this command!]
 
@@ -8512,7 +8524,7 @@ $c[Put your code here.]
 <li><code>Server IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The servers that the command can be executed in. Use semicolons <code>;</code> as a separator to separate multiple server IDs.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is used in a non-whitelisted server.</li>
 </ul>
-<h2 id="example-246"><a class="header" href="#example-246">Example</a></h2>
+<h2 id="example-245"><a class="header" href="#example-245">Example</a></h2>
 <pre><code>$nomention
 $onlyForServers[566363823137882154;❌ This command can't be executed in this server!]
 
@@ -8528,7 +8540,7 @@ $c[Put your code here.]
 <li><code>Usernames</code> <code>(Type: String || Flag: Emptiable)</code>: The names of the users that can execute this command. Use semicolons <code>;</code> as a separator to separate multiple usernames.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is used by a non-whitelisted user.</li>
 </ul>
-<h2 id="example-247"><a class="header" href="#example-247">Example</a></h2>
+<h2 id="example-246"><a class="header" href="#example-246">Example</a></h2>
 <pre><code>$nomention 
 $onlyForUsers[Nicky;❌ Only users with the username `Nicky` can execute this command!]
 
@@ -8556,7 +8568,7 @@ $c[Put your code here.]
 <blockquote>
 <p>⚠️ The signs <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code> only work with numbers.</p>
 </blockquote>
-<h2 id="examples-11"><a class="header" href="#examples-11">Examples</a></h2>
+<h2 id="examples-12"><a class="header" href="#examples-12">Examples</a></h2>
 <h4 id="equal-"><a class="header" href="#equal-">Equal (<code>==</code>)</a></h4>
 <pre><code>$nomention
 $onlyIf[$message[1]==BDFD;❌ The first argument of your message must be &quot;BDFD&quot;!]
@@ -8592,7 +8604,7 @@ $onlyIf[$message[1]&gt;=50000;❌ The number must be greater than or qual to 500
 <li><code>Word</code> <code>(Type: String || Flag: Emptiable)</code>: The words that the message must contain. Use semicolons <code>;</code> as a separator to separate multiple words.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned if the text doesn't contain all the provided words.</li>
 </ul>
-<h2 id="example-248"><a class="header" href="#example-248">Example</a></h2>
+<h2 id="example-247"><a class="header" href="#example-247">Example</a></h2>
 <pre><code>$nomention
 $onlyIfMessageContains[$message;Hello;Hi;❌ Your message must contain `Hello` and `Hi`!]
 
@@ -8607,7 +8619,7 @@ $c[Put your code here.]
 <ul>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is executed outside of an NSFW channel.</li>
 </ul>
-<h2 id="example-249"><a class="header" href="#example-249">Example</a></h2>
+<h2 id="example-248"><a class="header" href="#example-248">Example</a></h2>
 <pre><code>$nomention
 $onlyNSFW[❌ That command can only be executed in NSFW channels.]
 
@@ -8623,7 +8635,7 @@ $c[Put your code here.]
 <li><code>Permissions</code> <code>(Type: Permission || Flag: Emptiable)</code>: The required <a href="bdscript/../resources/permissions.html">permissions</a>. Use semicolons <code>;</code> as a separator to separate multiple permissions.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the user is missing the required permissions.</li>
 </ul>
-<h2 id="example-250"><a class="header" href="#example-250">Example</a></h2>
+<h2 id="example-249"><a class="header" href="#example-249">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[kick;❌ You need the `kick` permission to use this command!]
 $kickMention[$noMentionMessage]
@@ -8633,7 +8645,7 @@ $kickMention[$noMentionMessage]
 <h2 id="usage-46"><a class="header" href="#usage-46">Usage</a></h2>
 <p>As stated in the function description, <code>$optOff</code> disables the optimization of the functions in its arguments.<br />
 This means that functions such as <code>$random</code>, <code>$randomText</code> and others won't return the previous response, but instead a new response will be returned.</p>
-<h2 id="example-251"><a class="header" href="#example-251">Example</a></h2>
+<h2 id="example-250"><a class="header" href="#example-250">Example</a></h2>
 <p>Let's try to run this simple code without <code>$optOff</code>:</p>
 <pre><code>The 1st random: $random[1;101]
 The 2nd random: $random[1;101]
@@ -8666,7 +8678,7 @@ The 3rd random: $random[1;101]
 <ul>
 <li><code>Condition</code> <code>(Type: String || Flag: Required)</code>: Condition to check. Separate conditions using <code>;</code>.</li>
 </ul>
-<h2 id="example-252"><a class="header" href="#example-252">Example</a></h2>
+<h2 id="example-251"><a class="header" href="#example-251">Example</a></h2>
 <pre><code>$nomention
 $if[$or[$message==hi;$message==hey;$message==hello]==true]
 Hello $username!
@@ -8678,7 +8690,7 @@ $endif
 <h2 id="syntax-212"><a class="header" href="#syntax-212">Syntax</a></h2>
 <pre><code>$parentID
 </code></pre>
-<h2 id="example-253"><a class="header" href="#example-253">Example</a></h2>
+<h2 id="example-252"><a class="header" href="#example-252">Example</a></h2>
 <pre><code>$nomention
 Current category: $parentID
 </code></pre>
@@ -8692,7 +8704,7 @@ Current category: $parentID
 <ul>
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel from which to retrieve the category ID.</li>
 </ul>
-<h2 id="example-254"><a class="header" href="#example-254">Example</a></h2>
+<h2 id="example-253"><a class="header" href="#example-253">Example</a></h2>
 <pre><code>$nomention
 Category ID: $parentID[$mentionedChannels[1]]
 </code></pre>
@@ -8715,7 +8727,7 @@ The value of <code>$ping</code> is expressed in miliseconds.</p>
 <h2 id="syntax-214"><a class="header" href="#syntax-214">Syntax</a></h2>
 <pre><code>$pinMessage
 </code></pre>
-<h2 id="example-255"><a class="header" href="#example-255">Example</a></h2>
+<h2 id="example-254"><a class="header" href="#example-254">Example</a></h2>
 <pre><code>$nomention
 $pinMessage
 This is a cool pinned message! 😎
@@ -8734,7 +8746,7 @@ This is a cool pinned message! 😎
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is located.</li>
 <li><code>messageID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message to pin.</li>
 </ul>
-<h2 id="example-256"><a class="header" href="#example-256">Example</a></h2>
+<h2 id="example-255"><a class="header" href="#example-255">Example</a></h2>
 <pre><code>$nomention
 $pinMessage[$channelID;$messageID]
 I have pinned your message!
@@ -8752,7 +8764,7 @@ I have pinned your message!
 <ul>
 <li><code>unix timestamp</code> <code>(Type: Bool || Flag: Optional)</code>: If &quot;yes&quot; is written, it will return the premium expiration value in UNIX timestamp and if &quot;no&quot;, it will output as normal time format. Defaults to &quot;no&quot;.</li>
 </ul>
-<h2 id="example-257"><a class="header" href="#example-257">Example</a></h2>
+<h2 id="example-256"><a class="header" href="#example-256">Example</a></h2>
 <h4 id="when-no-premium"><a class="header" href="#when-no-premium">When no premium</a></h4>
 <pre><code>$nomention
 My premium expires in: $premiumExpireTime
@@ -8773,7 +8785,7 @@ My premium expires in: $premiumExpireTime (UNIX Timestamp : $premiumExpireTime[y
 <li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is.</li>
 <li><code>message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message which will be published.</li>
 </ul>
-<h2 id="example-258"><a class="header" href="#example-258">Example</a></h2>
+<h2 id="example-257"><a class="header" href="#example-257">Example</a></h2>
 <pre><code>$nomention
 $publishMessage[$mentionedChannels[1;no];$noMentionMessage]
 Message has been published!
@@ -8785,7 +8797,7 @@ Message has been published!
 <h2 id="syntax-217"><a class="header" href="#syntax-217">Syntax</a></h2>
 <pre><code>$random
 </code></pre>
-<h2 id="example-259"><a class="header" href="#example-259">Example</a></h2>
+<h2 id="example-258"><a class="header" href="#example-258">Example</a></h2>
 <pre><code>$nomention
 The random number is **$random**!
 </code></pre>
@@ -8803,7 +8815,7 @@ The random number is **$random**!
 <li><code>minimum</code> <code>(Type: Integer, Float || Flag: Required)</code>: The minimum value.</li>
 <li><code>maximum</code> <code>(Type: Integer, Float || Flag: Required)</code>: The maximum value.</li>
 </ul>
-<h2 id="example-260"><a class="header" href="#example-260">Example</a></h2>
+<h2 id="example-259"><a class="header" href="#example-259">Example</a></h2>
 <pre><code>$nomention
 🎲 You rolled `$random[1;7]`!
 </code></pre>
@@ -8817,7 +8829,7 @@ The random number is **$random**!
 <ul>
 <li><code>guild ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The server from which to get a random category ID. <em>(Defaults to the current server)</em></li>
 </ul>
-<h2 id="example-261"><a class="header" href="#example-261">Example</a></h2>
+<h2 id="example-260"><a class="header" href="#example-260">Example</a></h2>
 <pre><code>$nomention
 Random Category: $channelName[$randomCategoryID[]]
 </code></pre>
@@ -8827,7 +8839,7 @@ Random Category: $channelName[$randomCategoryID[]]
 <h2 id="usage-48"><a class="header" href="#usage-48">Usage</a></h2>
 <pre><code>$randomChannelID
 </code></pre>
-<h2 id="example-262"><a class="header" href="#example-262">Example</a></h2>
+<h2 id="example-261"><a class="header" href="#example-261">Example</a></h2>
 <pre><code>$nomention
 Here's A Random Channel: &lt;#$randomChannelID&gt;
 </code></pre>
@@ -8837,7 +8849,7 @@ Here's A Random Channel: &lt;#$randomChannelID&gt;
 <h2 id="syntax-220"><a class="header" href="#syntax-220">Syntax</a></h2>
 <pre><code>$randomGuildID
 </code></pre>
-<h2 id="example-263"><a class="header" href="#example-263">Example</a></h2>
+<h2 id="example-262"><a class="header" href="#example-262">Example</a></h2>
 <pre><code>$nomention
 Random Guild: $serverName[$randomGuildID]
 </code></pre>
@@ -8847,7 +8859,7 @@ Random Guild: $serverName[$randomGuildID]
 <h2 id="usage-49"><a class="header" href="#usage-49">Usage</a></h2>
 <pre><code>$randomMention
 </code></pre>
-<h2 id="example-264"><a class="header" href="#example-264">Example</a></h2>
+<h2 id="example-263"><a class="header" href="#example-263">Example</a></h2>
 <pre><code>$nomention
 Random User: $randomMention
 </code></pre>
@@ -8860,7 +8872,7 @@ Random User: $randomMention
 <ul>
 <li><code>guild ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The server from which to get a random role id. <em>(Defaults to the current server)</em></li>
 </ul>
-<h2 id="example-265"><a class="header" href="#example-265">Example</a></h2>
+<h2 id="example-264"><a class="header" href="#example-264">Example</a></h2>
 <pre><code>$nomention
 Random Role: $roleName[$randomRoleID[]]
 </code></pre>
@@ -8880,7 +8892,7 @@ Random Role: $roleName[$randomRoleID[]]
 <ul>
 <li><code>length</code> <code>(Type: Integer || Flag: Required)</code>: How long the string should be (max <code>10</code>).</li>
 </ul>
-<h2 id="example-266"><a class="header" href="#example-266">Example</a></h2>
+<h2 id="example-265"><a class="header" href="#example-265">Example</a></h2>
 <pre><code>$nomention
 String: `$randomString[$message]`
 </code></pre>
@@ -8894,7 +8906,7 @@ String: `$randomString[$message]`
 <ul>
 <li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to choose from. Separate different texts with ';'.</li>
 </ul>
-<h2 id="example-267"><a class="header" href="#example-267">Example</a></h2>
+<h2 id="example-266"><a class="header" href="#example-266">Example</a></h2>
 <pre><code>$nomention
 $randomText[Hello;Hi;Hey]!
 </code></pre>
@@ -8914,7 +8926,7 @@ $randomText[Hello;Hi;Hey]!
 <h2 id="syntax-222"><a class="header" href="#syntax-222">Syntax</a></h2>
 <pre><code>$registerGuildCommands
 </code></pre>
-<h2 id="example-268"><a class="header" href="#example-268">Example</a></h2>
+<h2 id="example-267"><a class="header" href="#example-267">Example</a></h2>
 <pre><code>$nomention
 $registerGuildCommands
 Successfully registered all guild slash commands!
@@ -8932,14 +8944,14 @@ Successfully registered all guild slash commands!
 <ul>
 <li><code>Slash command name</code> <code>(Type: String || Flag: Required)</code>: Name of the guild slash command to register. Use semicolons <code>;</code> as a separator to separate multiple guild slash command names.</li>
 </ul>
-<h2 id="examples-12"><a class="header" href="#examples-12">Examples</a></h2>
-<h3 id="example-1-5"><a class="header" href="#example-1-5">Example #1:</a></h3>
+<h2 id="examples-13"><a class="header" href="#examples-13">Examples</a></h2>
+<h3 id="example-1-6"><a class="header" href="#example-1-6">Example #1:</a></h3>
 <pre><code>$nomention
 $registerGuildCommands[help]
 Successfully registered the guild slash command `/help`!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/111157596/233842038-1477b1f9-2e82-4cfc-90d9-ba318a9e8856.png" alt="example1" /></p>
-<h3 id="example-2-5"><a class="header" href="#example-2-5">Example #2:</a></h3>
+<h3 id="example-2-6"><a class="header" href="#example-2-6">Example #2:</a></h3>
 <pre><code>$nomention
 $argsCheck[&gt;1;Provide guild slash command names!]
 
@@ -8967,7 +8979,7 @@ Successfully registered the provided guild slash commands!
 <ul>
 <li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message from which all components will be removed.</li>
 </ul>
-<h2 id="example-269"><a class="header" href="#example-269">Example</a></h2>
+<h2 id="example-268"><a class="header" href="#example-268">Example</a></h2>
 <pre><code>$nomention
 $removeAllComponents[1093603455320457307]
 </code></pre>
@@ -8991,7 +9003,7 @@ $removeAllComponents[1093603455320457307]
 <blockquote>
 <p>📝 When providing &quot;Message ID&quot;, make sure the message author is the bot.</p>
 </blockquote>
-<h2 id="example-270"><a class="header" href="#example-270">Example</a></h2>
+<h2 id="example-269"><a class="header" href="#example-269">Example</a></h2>
 <pre><code>$nomention
 $removeButtons[$message[1]]
 Successfully removed all buttons from the message.
@@ -9018,7 +9030,7 @@ Successfully removed all buttons from the message.
 <li><code>word</code> <code>(Type: String || Flag: Emptiable)</code>: The phrases/words to delete, separate phrases using <code>;</code>.</li>
 <li><code>amount</code> <code>(Type: Integer || Flag: Required)</code>: The number of messages containing given words to delete. Max is 100.</li>
 </ul>
-<h2 id="example-271"><a class="header" href="#example-271">Example</a></h2>
+<h2 id="example-270"><a class="header" href="#example-270">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[managemessages;❌ You are missing the `MANAGE_MESSAGES` permission!]
 $removeContains[https://discord.gg/;discord.gg/;https://discord.com/invite;$noMentionMessage]
@@ -9029,7 +9041,7 @@ Successful purged `$noMentionMessage` messages containing invites!
 <h2 id="syntax-228"><a class="header" href="#syntax-228">Syntax</a></h2>
 <pre><code>$removeLinks
 </code></pre>
-<h2 id="example-272"><a class="header" href="#example-272">Example</a></h2>
+<h2 id="example-271"><a class="header" href="#example-271">Example</a></h2>
 <h3 id="with-removelinks"><a class="header" href="#with-removelinks">With <code>$removeLinks</code></a></h3>
 <pre><code>$nomention
 $removeLinks
@@ -9050,7 +9062,7 @@ A cool link: https://botdesignerdiscord.com/
 <ul>
 <li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text from which all links will be removed.</li>
 </ul>
-<h2 id="example-273"><a class="header" href="#example-273">Example</a></h2>
+<h2 id="example-272"><a class="header" href="#example-272">Example</a></h2>
 <pre><code>$nomention
 $removeLinks[$noMentionMessage]
 </code></pre>
@@ -9078,7 +9090,7 @@ $removeLinks[$noMentionMessage]
 <li><code>amount</code> <code>(Type: Integer || Flag: Required)</code>: The number of times to repeat the given text <em>(max 10 times)</em>.</li>
 <li><code>message</code> <code>(Type: String || Flag: Emptiable)</code>: The text to repeat.</li>
 </ul>
-<h2 id="examples-13"><a class="header" href="#examples-13">Examples</a></h2>
+<h2 id="examples-14"><a class="header" href="#examples-14">Examples</a></h2>
 <p><strong>Example #1:</strong></p>
 <pre><code>$nomention
 $repeatMessage[5;Hello World]
@@ -9104,7 +9116,7 @@ $repeatMessage[5;Hello World! ]
 <li><code>new</code> <code>(Type: String || Flag: Emptiable)</code>: The text to replace 'sample' with.</li>
 <li><code>howMany</code> <code>(Type: Integer || Flag: Optional)</code>: The number of times, at most, the bot should replace the sample.  Use <code>-1</code> to replace all 'sample' in 'text' with 'new'.</li>
 </ul>
-<h2 id="examples-14"><a class="header" href="#examples-14">Examples</a></h2>
+<h2 id="examples-15"><a class="header" href="#examples-15">Examples</a></h2>
 <p><strong>Example #1:</strong></p>
 <ul>
 <li>Input: <code>$replaceText[Hello World! Hello Earth!;Hello;Hi;1]</code></li>
@@ -9129,7 +9141,7 @@ $repeatMessage[5;Hello World! ]
 <pre><code>$repliedMessageID
 </code></pre>
 <p>Returns the ID of the replied message from the author's message.</p>
-<h2 id="example-274"><a class="header" href="#example-274">Example</a></h2>
+<h2 id="example-273"><a class="header" href="#example-273">Example</a></h2>
 <pre><code>$nomention
 The message ID you replied to is: $repliedMessageID
 </code></pre>
@@ -9144,7 +9156,7 @@ The message ID you replied to is: $repliedMessageID
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is located.</li>
 <li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message from which the ID of the replied message will be taken from.</li>
 </ul>
-<h2 id="example-275"><a class="header" href="#example-275">Example</a></h2>
+<h2 id="example-274"><a class="header" href="#example-274">Example</a></h2>
 <pre><code>$nomention
 The message ID you replied to is: $repliedMessageID[$channelID;$messageID]
 </code></pre>
@@ -9154,7 +9166,7 @@ The message ID you replied to is: $repliedMessageID[$channelID;$messageID]
 <h2 id="syntax-232"><a class="header" href="#syntax-232">Syntax</a></h2>
 <pre><code>$reply
 </code></pre>
-<h2 id="example-276"><a class="header" href="#example-276">Example</a></h2>
+<h2 id="example-275"><a class="header" href="#example-275">Example</a></h2>
 <pre><code>$nomention
 $reply
 $allowUserMentions[]
@@ -9171,7 +9183,7 @@ Hello $username 👋🏻
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is.</li>
 <li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message to reply.</li>
 </ul>
-<h2 id="example-277"><a class="header" href="#example-277">Example</a></h2>
+<h2 id="example-276"><a class="header" href="#example-276">Example</a></h2>
 <pre><code>$nomention
 $reply[$mentionedChannels[1];$noMentionMessage]
 Replied!
@@ -9189,7 +9201,7 @@ Replied!
 <ul>
 <li><code>delay</code> <code>(Type: Duration || Flag: Required)</code>: How long the command is delayed for (e.g: 10s, 10m, 40m).</li>
 </ul>
-<h2 id="example-278"><a class="header" href="#example-278">Example</a></h2>
+<h2 id="example-277"><a class="header" href="#example-277">Example</a></h2>
 <pre><code>$replyIn[5s]
 Hi $username!
 </code></pre>
@@ -9232,7 +9244,7 @@ Hi $username!
 <h2 id="usage-62"><a class="header" href="#usage-62">Usage</a></h2>
 <pre><code>$roleCount
 </code></pre>
-<h2 id="example-279"><a class="header" href="#example-279">Example</a></h2>
+<h2 id="example-278"><a class="header" href="#example-278">Example</a></h2>
 <pre><code>$nomention
 There are $roleCount roles in $serverName[$guildID]
 </code></pre>
@@ -9249,7 +9261,7 @@ There are $roleCount roles in $serverName[$guildID]
 <ul>
 <li><code>roleID</code> <code>(Type: Snowflake, String || Flag: Emptiable)</code>:  The role to check for.</li>
 </ul>
-<h2 id="examples-15"><a class="header" href="#examples-15">Examples</a></h2>
+<h2 id="examples-16"><a class="header" href="#examples-16">Examples</a></h2>
 <p><strong>Example #1:</strong></p>
 <pre><code>$roleExists[1239039039030939]
 $c[This role doesn't exist!]
@@ -9270,11 +9282,11 @@ $c[This role exists!]
 <li><code>user ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to grant roles to.</li>
 <li><code>RoleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to give or remove. Prepend <code>+</code> or <code>-</code> to the role ID to give or remove it.</li>
 </ul>
-<h2 id="example-1-6"><a class="header" href="#example-1-6">Example 1</a></h2>
+<h2 id="example-1-7"><a class="header" href="#example-1-7">Example 1</a></h2>
 <pre><code>$nomention
 $roleGrant[3869969062509936;+9368562753613496]
 </code></pre>
-<h2 id="example-2-6"><a class="header" href="#example-2-6">Example 2</a></h2>
+<h2 id="example-2-7"><a class="header" href="#example-2-7">Example 2</a></h2>
 <pre><code>$nomention
 $roleGrant[$mentioned[1];+$mentionedRoles[1]]
 &lt;@$mentioned[1]&gt; user was given &lt;@&amp;$mentionedRoles[1]&gt; role
@@ -9289,7 +9301,7 @@ $roleGrant[$mentioned[1];+$mentionedRoles[1]]
 <ul>
 <li><code>roleName</code> <code>(Type: String || Flag: Required)</code>: The name of the role for which to get its ID.</li>
 </ul>
-<h2 id="example-280"><a class="header" href="#example-280">Example</a></h2>
+<h2 id="example-279"><a class="header" href="#example-279">Example</a></h2>
 <pre><code>$nomention
 Role ID For &quot;$message&quot;: $roleID[$message]
 </code></pre>
@@ -9314,7 +9326,7 @@ Role ID For &quot;$message&quot;: $roleID[$message]
 <li><code>{position}</code> - Returns the roles position on 'roles list'.</li>
 </ul>
 <p>⚠️ You can not include <code>$roleInfo[]</code> in a command with a <code>$description[]</code> (because it makes one automatically).</p>
-<h2 id="example-281"><a class="header" href="#example-281">Example</a></h2>
+<h2 id="example-280"><a class="header" href="#example-280">Example</a></h2>
 <pre><code>$nomention
 $roleInfo[Name: {name}
 ID: {ID}
@@ -9334,7 +9346,7 @@ $title[Role Info]
 <ul>
 <li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role for which to get its name.</li>
 </ul>
-<h2 id="example-282"><a class="header" href="#example-282">Example</a></h2>
+<h2 id="example-281"><a class="header" href="#example-281">Example</a></h2>
 <pre><code>$nomention
 $roleName[$highestRole[$authorID]]
 </code></pre>
@@ -9344,7 +9356,7 @@ $roleName[$highestRole[$authorID]]
 <h2 id="usage-68"><a class="header" href="#usage-68">Usage</a></h2>
 <pre><code>$roleNames
 </code></pre>
-<h2 id="example-283"><a class="header" href="#example-283">Example</a></h2>
+<h2 id="example-282"><a class="header" href="#example-282">Example</a></h2>
 <pre><code>$nomention
 $description[Server Roles: $roleNames]
 </code></pre>
@@ -9358,7 +9370,7 @@ $description[Server Roles: $roleNames]
 <ul>
 <li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role for which to get its position.</li>
 </ul>
-<h2 id="example-284"><a class="header" href="#example-284">Example</a></h2>
+<h2 id="example-283"><a class="header" href="#example-283">Example</a></h2>
 <pre><code>$nomention
 $description[&lt;@&amp;$findRole[$message]&gt;'s Position: $rolePosition[$findRole[$message]]]
 </code></pre>
@@ -9373,7 +9385,7 @@ $description[&lt;@&amp;$findRole[$message]&gt;'s Position: $rolePosition[$findRo
 <li><code>number</code> <code>(Type: Float || Flag: Required)</code>: The number to round.</li>
 <li><code>decimalPlace</code> <code>(Type: Integer || Flag: Vacantable)</code>: The number of decimal places to round the number to. Defaults to <code>0</code>.</li>
 </ul>
-<h2 id="example-285"><a class="header" href="#example-285">Example</a></h2>
+<h2 id="example-284"><a class="header" href="#example-284">Example</a></h2>
 <pre><code>$nomention
 $round[100.123;1]
 </code></pre>
@@ -9383,7 +9395,7 @@ $round[100.123;1]
 <h2 id="syntax-237"><a class="header" href="#syntax-237">Syntax</a></h2>
 <pre><code>$scriptLanguage
 </code></pre>
-<h2 id="example-286"><a class="header" href="#example-286">Example</a></h2>
+<h2 id="example-285"><a class="header" href="#example-285">Example</a></h2>
 <pre><code>$nomention
 This command uses `$scriptLanguage`.
 </code></pre>
@@ -9405,7 +9417,7 @@ This command uses `$scriptLanguage`.
 <h2 id="syntax-238"><a class="header" href="#syntax-238">Syntax</a></h2>
 <pre><code>$second
 </code></pre>
-<h2 id="example-287"><a class="header" href="#example-287">Example</a></h2>
+<h2 id="example-286"><a class="header" href="#example-286">Example</a></h2>
 <pre><code>$nomention
 Current Second: $second
 </code></pre>
@@ -9432,7 +9444,7 @@ Current Second: $second
 <li><code>add timestamp</code> <code>(Type: Bool || Flag: Vacantable)</code>: Adds time in footer (use yes or no).</li>
 <li><code>return ID</code> <code>(Type: Bool || Flag: Vacantable)</code>: Outputs the message ID outside the embed (use yes or no).</li>
 </ul>
-<h2 id="example-288"><a class="header" href="#example-288">Example</a></h2>
+<h2 id="example-287"><a class="header" href="#example-287">Example</a></h2>
 <pre><code>$nomention
 $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;author;$authorAvatar;footer;$authorAvatar;$authorAvatar;$authorAvatar;no;no]
 </code></pre>
@@ -9447,7 +9459,7 @@ $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;auth
 <li><code>text</code> <code>(Type: String || Flag: Required)</code>: The text to send in the new message.</li>
 <li><code>returnMessageID</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the ID of the newly created message, in another message. Defaults to <code>no</code>.</li>
 </ul>
-<h2 id="examples-16"><a class="header" href="#examples-16">Examples</a></h2>
+<h2 id="examples-17"><a class="header" href="#examples-17">Examples</a></h2>
 <p><strong>Example #1:</strong></p>
 <pre><code>$nomention
 $sendMessage[This is message #1!]
@@ -9470,7 +9482,7 @@ $sendMessage[This is message #2!;yes]
 <ul>
 <li><code>channel ID</code> <code>(Type: Snowflake, String || Flag: Emptiable)</code>: Returns <code>true</code> if the channel exists, otherwise <code>false</code>.</li>
 </ul>
-<h2 id="example-289"><a class="header" href="#example-289">Example</a></h2>
+<h2 id="example-288"><a class="header" href="#example-288">Example</a></h2>
 <pre><code>$nomention
 $serverChannelExists[566370477967147018]
 </code></pre>
@@ -9492,7 +9504,7 @@ $serverChannelExists[566370477967147018]
 <h2 id="syntax-242"><a class="header" href="#syntax-242">Syntax</a></h2>
 <pre><code>$serverCount
 </code></pre>
-<h2 id="example-290"><a class="header" href="#example-290">Example</a></h2>
+<h2 id="example-289"><a class="header" href="#example-289">Example</a></h2>
 <pre><code>$nomention
 I'm currently in $serverCount servers!
 </code></pre>
@@ -9505,7 +9517,7 @@ I'm currently in $serverCount servers!
 <h2 id="syntax-243"><a class="header" href="#syntax-243">Syntax</a></h2>
 <pre><code>$serverDescription
 </code></pre>
-<h2 id="example-291"><a class="header" href="#example-291">Example</a></h2>
+<h2 id="example-290"><a class="header" href="#example-290">Example</a></h2>
 <pre><code>$nomention
 Hey, this server has a great description: $serverDescription
 </code></pre>
@@ -9519,7 +9531,7 @@ Hey, this server has a great description: $serverDescription
 <ul>
 <li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The server from which to get the description.</li>
 </ul>
-<h2 id="example-292"><a class="header" href="#example-292">Example</a></h2>
+<h2 id="example-291"><a class="header" href="#example-291">Example</a></h2>
 <pre><code>$nomention
 Server description: $serverDescription[$message[1]]
 </code></pre>
@@ -9534,7 +9546,7 @@ Server description: $serverDescription[$message[1]]
 <li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The guild from which to return emojis.</li>
 <li><code>Separator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to separate the emojis with.</li>
 </ul>
-<h2 id="example-293"><a class="header" href="#example-293">Example</a></h2>
+<h2 id="example-292"><a class="header" href="#example-292">Example</a></h2>
 <pre><code>$nomention
 $serverEmojis[$guildID; ]
 </code></pre>
@@ -9544,7 +9556,7 @@ $serverEmojis[$guildID; ]
 <h2 id="syntax-246"><a class="header" href="#syntax-246">Syntax</a></h2>
 <pre><code>$serverIcon
 </code></pre>
-<h2 id="example-294"><a class="header" href="#example-294">Example</a></h2>
+<h2 id="example-293"><a class="header" href="#example-293">Example</a></h2>
 <pre><code>$nomention
 $image[$serverIcon]
 </code></pre>
@@ -9558,7 +9570,7 @@ $image[$serverIcon]
 <ul>
 <li><code>Server ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The server from which to get the icon.</li>
 </ul>
-<h2 id="example-295"><a class="header" href="#example-295">Example</a></h2>
+<h2 id="example-294"><a class="header" href="#example-294">Example</a></h2>
 <pre><code>$nomention
 $image[$serverIcon[566363823137882154]]
 </code></pre>
@@ -9585,7 +9597,7 @@ $image[$serverIcon[566363823137882154]]
 <li><code>{verificationLvl}</code> - Returns the server verification level.</li>
 <li><code>{large}</code> - Finds out if a server is considered 'large'.</li>
 </ul>
-<h2 id="example-296"><a class="header" href="#example-296">Example</a></h2>
+<h2 id="example-295"><a class="header" href="#example-295">Example</a></h2>
 <pre><code>$nomention
 $title[Server Info]
 $serverInfo[Server Name: {name}
@@ -9622,7 +9634,7 @@ Large Server?: {large};no]
 <blockquote>
 <p>🧙‍♂️ The bot must be present in the server to return it's name.</p>
 </blockquote>
-<h2 id="example-297"><a class="header" href="#example-297">Example</a></h2>
+<h2 id="example-296"><a class="header" href="#example-296">Example</a></h2>
 <pre><code>$nomention
 Server Name: $serverName[$guildID]
 </code></pre>
@@ -9632,7 +9644,7 @@ Server Name: $serverName[$guildID]
 <h2 id="syntax-251"><a class="header" href="#syntax-251">Syntax</a></h2>
 <pre><code>$serverNames
 </code></pre>
-<h2 id="example-298"><a class="header" href="#example-298">Example</a></h2>
+<h2 id="example-297"><a class="header" href="#example-297">Example</a></h2>
 <pre><code>$nomention
 $onlyForIDs[$botOwnerID;Only my owner can use that!]
 $serverNames
@@ -9647,7 +9659,7 @@ $serverNames
 <li><code>Amount</code> <code>(Type: Integer || Flag: Required)</code>: The amount of server names you want. Use <code>-1</code> if you want to return all server names.</li>
 <li><code>Separator</code> <code>(Type: String || Flag: Emptiable)</code>: A custom separator for separating the server names.</li>
 </ul>
-<h2 id="example-299"><a class="header" href="#example-299">Example</a></h2>
+<h2 id="example-298"><a class="header" href="#example-298">Example</a></h2>
 <pre><code>$nomention
 $serverNames[3;
 ]
@@ -9658,7 +9670,7 @@ $serverNames[3;
 <h2 id="syntax-253"><a class="header" href="#syntax-253">Syntax</a></h2>
 <pre><code>$serverOwner
 </code></pre>
-<h2 id="example-300"><a class="header" href="#example-300">Example</a></h2>
+<h2 id="example-299"><a class="header" href="#example-299">Example</a></h2>
 <pre><code>$nomention
 This server is owned by &lt;@$serverOwner&gt;!
 </code></pre>
@@ -9675,7 +9687,7 @@ This server is owned by &lt;@$serverOwner&gt;!
 <blockquote>
 <p>🧙‍♂️ The bot must be present in the server in order to get the server owner ID.</p>
 </blockquote>
-<h2 id="example-301"><a class="header" href="#example-301">Example</a></h2>
+<h2 id="example-300"><a class="header" href="#example-300">Example</a></h2>
 <pre><code>$nomention
 This server is owned by &lt;@$serverOwner[$guildID]&gt;!
 </code></pre>
@@ -9694,7 +9706,7 @@ This server is owned by &lt;@$serverOwner[$guildID]&gt;!
 <h2 id="syntax-255"><a class="header" href="#syntax-255">Syntax</a></h2>
 <pre><code>$serverVerificationLvl
 </code></pre>
-<h2 id="example-302"><a class="header" href="#example-302">Example</a></h2>
+<h2 id="example-301"><a class="header" href="#example-301">Example</a></h2>
 <pre><code>$nomention
 This server's verification level is $serverVerificationLvl
 </code></pre>
@@ -9765,7 +9777,7 @@ This server's verification level is $serverVerificationLvl
 <h2 id="syntax-260"><a class="header" href="#syntax-260">Syntax</a></h2>
 <pre><code>$shardID
 </code></pre>
-<h2 id="example-303"><a class="header" href="#example-303">Example</a></h2>
+<h2 id="example-302"><a class="header" href="#example-302">Example</a></h2>
 <pre><code>$nomention
 $shardID
 </code></pre>
@@ -9784,7 +9796,7 @@ $shardID
 <h2 id="syntax-262"><a class="header" href="#syntax-262">Syntax</a></h2>
 <pre><code>$slashCommandsCount
 </code></pre>
-<h2 id="example-304"><a class="header" href="#example-304">Example</a></h2>
+<h2 id="example-303"><a class="header" href="#example-303">Example</a></h2>
 <pre><code>$nomention
 I have $slashCommandsCount slash commands!
 </code></pre>
@@ -9794,7 +9806,7 @@ I have $slashCommandsCount slash commands!
 <h2 id="syntax-263"><a class="header" href="#syntax-263">Syntax</a></h2>
 <pre><code>$slashID
 </code></pre>
-<h2 id="example-305"><a class="header" href="#example-305">Example</a></h2>
+<h2 id="example-304"><a class="header" href="#example-304">Example</a></h2>
 <pre><code>$nomention
 ID of this slash command: $slashID
 </code></pre>
@@ -9808,7 +9820,7 @@ ID of this slash command: $slashID
 <ul>
 <li><code>Slash command name</code> <code>(Type: String || Flag: Required)</code>: Name of the global slash command.</li>
 </ul>
-<h2 id="example-306"><a class="header" href="#example-306">Example</a></h2>
+<h2 id="example-305"><a class="header" href="#example-305">Example</a></h2>
 <pre><code>$nomention
 ID of `$message` slash command: $slashID[$message]
 </code></pre>
@@ -9826,7 +9838,7 @@ ID of `$message` slash command: $slashID[$message]
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel in which the slowmode is being modified in. Use <code>0</code>/<code>0s</code> to disable the slowmode.</li>
 <li><code>slowmodeTime</code> <code>(Type: Duration || Flag: Required)</code>: The new slowmode delay <em>(in seconds, e.g. 1s, 180s, 5s, 3s, etc)</em>.</li>
 </ul>
-<h3 id="example-307"><a class="header" href="#example-307">Example</a></h3>
+<h3 id="example-306"><a class="header" href="#example-306">Example</a></h3>
 <pre><code>$nomention
 $argsCheck[&gt;1;:x: Incorrect Usage! Example: `!slowmode 5s`]
 $slowmode[$mentionedChannels[1;yes];$message[1]]
@@ -9850,7 +9862,7 @@ Slowmode changed to $message[1]!
 <li><code>return amount</code> <code>(Type: Integer || Flag: Required)</code>:  How many numbers will be returned. Use <code>-1</code> to generate all numbers</li>
 <li><code>separator</code> <code>(Type: String || Flag: Required)</code>: The separator between each number.</li>
 </ul>
-<h2 id="example-308"><a class="header" href="#example-308">Example</a></h2>
+<h2 id="example-307"><a class="header" href="#example-307">Example</a></h2>
 <pre><code>$nomention
 $sort[8;5;9;1;3;asc;4; - ]
 </code></pre>
@@ -9867,7 +9879,7 @@ $sort[8;5;9;1;3;asc;4; - ]
 <ul>
 <li><code>index</code> <code>(Type: HowMany || Flag: Required)</code>: The split value to get (e.g 2 for the second split). You can also use <code>&gt;</code> to return the last split value i.e <code>$splitText[&gt;]</code>.</li>
 </ul>
-<h3 id="example-309"><a class="header" href="#example-309">Example</a></h3>
+<h3 id="example-308"><a class="header" href="#example-308">Example</a></h3>
 <pre><code>$nomention
 $textSplit[Hi-Hello-Hey;-]
 $splitText[2]
@@ -9894,7 +9906,7 @@ $splitText[2]
 <ul>
 <li><code>createpublicthreads</code></li>
 </ul>
-<h2 id="example-310"><a class="header" href="#example-310">Example</a></h2>
+<h2 id="example-309"><a class="header" href="#example-309">Example</a></h2>
 <pre><code>$nomention
 I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 </code></pre>
@@ -9908,7 +9920,7 @@ I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 <ul>
 <li><code>Number</code> <code>(Type: Integer, Float || Flag: Required)</code>: The numbers to subtract. Separate multiple values using <code>;</code>.</li>
 </ul>
-<h2 id="example-311"><a class="header" href="#example-311">Example</a></h2>
+<h2 id="example-310"><a class="header" href="#example-310">Example</a></h2>
 <pre><code>$nomention
 $sub[20;10;5]
 </code></pre>
@@ -9922,7 +9934,7 @@ $sub[20;10;5]
 <ul>
 <li><code>Number</code> <code>(Type: Integer, Float || Flag: Required)</code>: The numbers to add. Separate multiple values using <code>;</code>.</li>
 </ul>
-<h2 id="example-312"><a class="header" href="#example-312">Example</a></h2>
+<h2 id="example-311"><a class="header" href="#example-311">Example</a></h2>
 <pre><code>$nomention
 $sum[5;5;5]
 </code></pre>
@@ -9932,7 +9944,7 @@ $sum[5;5;5]
 <h2 id="syntax-269"><a class="header" href="#syntax-269">Syntax</a></h2>
 <pre><code>$suppressErrors
 </code></pre>
-<h2 id="example-313"><a class="header" href="#example-313">Example</a></h2>
+<h2 id="example-312"><a class="header" href="#example-312">Example</a></h2>
 <pre><code>$nomention
 $suppressErrors
 $argsCheck[&gt;1;Usage : ` !command &lt;math expression&gt; `]
@@ -9952,7 +9964,7 @@ $calculate[$message]
 <ul>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The custom error message to send.</li>
 </ul>
-<h3 id="example-314"><a class="header" href="#example-314">Example</a></h3>
+<h3 id="example-313"><a class="header" href="#example-313">Example</a></h3>
 <pre><code>$nomention
 $suppressErrors[**Error** : ` Invalid math expression! `]
 $argsCheck[&gt;1;Usage : ` !command &lt;math expression&gt; `]
@@ -9977,7 +9989,7 @@ $calculate[$message]
 <li><code>User/Role ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to remove the role from or the role to remove from the mentioned users. If this parameter is only provided, it reads as &quot;Role ID&quot;.</li>
 <li><code>Role ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The role to remove from the user. If this parameter is used, it reads the first parameter as &quot;User ID&quot;.</li>
 </ul>
-<h2 id="example-315"><a class="header" href="#example-315">Example</a></h2>
+<h2 id="example-314"><a class="header" href="#example-314">Example</a></h2>
 <pre><code>$nomention
 $allowRoleMentions[]
 
@@ -10003,7 +10015,7 @@ Removed &lt;@&amp;$mentionedRoles[1]&gt; from the mentioned users!
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to split.</li>
 <li><code>Separator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to split the text with. If this parameter is empty, it separates the text by each character.</li>
 </ul>
-<h3 id="example-316"><a class="header" href="#example-316">Example</a></h3>
+<h3 id="example-315"><a class="header" href="#example-315">Example</a></h3>
 <pre><code>$nomention
 $textSplit[Coffee, Tea, Milk;,]
 $splitText[1]
@@ -10029,7 +10041,7 @@ $splitText[1]
 <li><code>Thread ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the thread channel to add the user to.</li>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to add to the thread.</li>
 </ul>
-<h2 id="example-317"><a class="header" href="#example-317">Example</a></h2>
+<h2 id="example-316"><a class="header" href="#example-316">Example</a></h2>
 <pre><code>$nomention
 $var[thread;$startThread[Cool Thread;$channelID;;60;yes]]
 $threadAddMember[$var[thread];$authorID]
@@ -10053,7 +10065,7 @@ $threadAddMember[$var[thread];$authorID]
 <li><code>Thread ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the thread channel to remove the user from.</li>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to remove from the thread.</li>
 </ul>
-<h2 id="example-318"><a class="header" href="#example-318">Example</a></h2>
+<h2 id="example-317"><a class="header" href="#example-317">Example</a></h2>
 <pre><code>$nomention
 $threadRemoveMember[878305123707785218;$authorID]
 </code></pre>
@@ -10082,7 +10094,7 @@ $threadRemoveMember[878305123707785218;$authorID]
 <li><code>sendmessagesinthreads</code></li>
 <li><code>embedlinks</code></li>
 </ul>
-<h2 id="example-319"><a class="header" href="#example-319">Example</a></h2>
+<h2 id="example-318"><a class="header" href="#example-318">Example</a></h2>
 <pre><code>$nomention
 $description[This is the thumbnail ↘️]
 $thumbnail[$authorAvatar]
@@ -10097,7 +10109,7 @@ $thumbnail[$authorAvatar]
 <ul>
 <li><code>Timezone</code> <code>(Type: String || Flag: Required)</code>: The timezone to use in the date/time functions. Accepts <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ database</a> timezone name as input.</li>
 </ul>
-<h2 id="example-320"><a class="header" href="#example-320">Example</a></h2>
+<h2 id="example-319"><a class="header" href="#example-319">Example</a></h2>
 <pre><code>$nomention
 
 $time[America/New_York]
@@ -10122,7 +10134,7 @@ Warsaw : $optOff[$hour:$minute:$second]
 <ul>
 <li><code>moderatemembers</code></li>
 </ul>
-<h2 id="examples-17"><a class="header" href="#examples-17">Examples</a></h2>
+<h2 id="examples-18"><a class="header" href="#examples-18">Examples</a></h2>
 <ul>
 <li>
 <p>Without ID</p>
@@ -10162,7 +10174,7 @@ $timeout[$message[1];$findUser[$message[2];no]]
 <li><code>sendmessagesinthreads</code></li>
 <li><code>embedlinks</code></li>
 </ul>
-<h2 id="example-321"><a class="header" href="#example-321">Example</a></h2>
+<h2 id="example-320"><a class="header" href="#example-320">Example</a></h2>
 <pre><code>$nomention
 $title[This is a title!]
 $description[⬆️ That is a nice title.]
@@ -10177,7 +10189,7 @@ $description[⬆️ That is a nice title.]
 <ul>
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to convert.</li>
 </ul>
-<h2 id="example-322"><a class="header" href="#example-322">Example</a></h2>
+<h2 id="example-321"><a class="header" href="#example-321">Example</a></h2>
 <pre><code>$nomention
 $toLowercase[THIS TEXT IS NOW lowercase]
 </code></pre>
@@ -10191,7 +10203,7 @@ $toLowercase[THIS TEXT IS NOW lowercase]
 <ul>
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to convert.</li>
 </ul>
-<h2 id="example-323"><a class="header" href="#example-323">Example</a></h2>
+<h2 id="example-322"><a class="header" href="#example-322">Example</a></h2>
 <pre><code>$nomention
 $toTitleCase[$message]
 </code></pre>
@@ -10205,7 +10217,7 @@ $toTitleCase[$message]
 <ul>
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to convert.</li>
 </ul>
-<h2 id="example-324"><a class="header" href="#example-324">Example</a></h2>
+<h2 id="example-323"><a class="header" href="#example-323">Example</a></h2>
 <pre><code>$nomention
 $toUppercase[this text is now UPPERCASE]
 </code></pre>
@@ -10215,7 +10227,7 @@ $toUppercase[this text is now UPPERCASE]
 <h2 id="syntax-282"><a class="header" href="#syntax-282">Syntax</a></h2>
 <pre><code>$trimContent
 </code></pre>
-<h3 id="example-325"><a class="header" href="#example-325">Example</a></h3>
+<h3 id="example-324"><a class="header" href="#example-324">Example</a></h3>
 <pre><code>$nomention
 $trimContent
 
@@ -10237,7 +10249,7 @@ $trimContent
 <ul>
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text from which white-space characters will be removed.</li>
 </ul>
-<h2 id="example-326"><a class="header" href="#example-326">Example</a></h2>
+<h2 id="example-325"><a class="header" href="#example-325">Example</a></h2>
 <pre><code>$nomention
 &gt;$trimSpace[        Hi
         ]&lt;
@@ -10256,7 +10268,7 @@ $trimContent
 <ul>
 <li><code>tts</code></li>
 </ul>
-<h2 id="example-327"><a class="header" href="#example-327">Example</a></h2>
+<h2 id="example-326"><a class="header" href="#example-326">Example</a></h2>
 <pre><code>$nomention
 $tts
 Hello! Can you hear me?
@@ -10271,7 +10283,7 @@ Hello! Can you hear me?
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h2 id="example-328"><a class="header" href="#example-328">Example</a></h2>
+<h2 id="example-327"><a class="header" href="#example-327">Example</a></h2>
 <pre><code>$nomention
 $unban
 Successfully unbanned user!
@@ -10288,7 +10300,7 @@ Successfully unbanned user!
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h2 id="example-329"><a class="header" href="#example-329">Example</a></h2>
+<h2 id="example-328"><a class="header" href="#example-328">Example</a></h2>
 <pre><code>$nomention
 $unbanID
 Successfully unbanned user!
@@ -10308,7 +10320,7 @@ Successfully unbanned user!
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h2 id="example-330"><a class="header" href="#example-330">Example</a></h2>
+<h2 id="example-329"><a class="header" href="#example-329">Example</a></h2>
 <pre><code>$nomention
 $unbanID[$message[1]]
 Successfully unbanned user!
@@ -10323,7 +10335,7 @@ Successfully unbanned user!
 <ul>
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to unescape.</li>
 </ul>
-<h2 id="example-331"><a class="header" href="#example-331">Example</a></h2>
+<h2 id="example-330"><a class="header" href="#example-330">Example</a></h2>
 <pre><code>$nomention
 $randomText[$unescape[$message]]
 </code></pre>
@@ -10345,7 +10357,7 @@ $randomText[$unescape[$message]]
 <ul>
 <li><code>manageroles</code></li>
 </ul>
-<h2 id="example-332"><a class="header" href="#example-332">Example</a></h2>
+<h2 id="example-331"><a class="header" href="#example-331">Example</a></h2>
 <pre><code>$nomention
 $onlyPerms[manageroles;❌ You are missing permission: `MANAGE_ROLES`.]
 $unmute[Muted]
@@ -10367,7 +10379,7 @@ $unmute[Muted]
 <ul>
 <li><code>managemessages</code></li>
 </ul>
-<h2 id="example-333"><a class="header" href="#example-333">Example</a></h2>
+<h2 id="example-332"><a class="header" href="#example-332">Example</a></h2>
 <pre><code>$nomention
 $unpinMessage[$mentionedChannels[1];$noMentionMessage]
 A message has been unpinned!
@@ -10379,7 +10391,7 @@ A message has been unpinned!
 <h2 id="syntax-291"><a class="header" href="#syntax-291">Syntax</a></h2>
 <pre><code>$unregisterGuildCommands
 </code></pre>
-<h2 id="example-334"><a class="header" href="#example-334">Example</a></h2>
+<h2 id="example-333"><a class="header" href="#example-333">Example</a></h2>
 <pre><code>$nomention
 $unregisterGuildCommands
 Successfully unregistered all guild slash commands!
@@ -10394,7 +10406,7 @@ Successfully unregistered all guild slash commands!
 <ul>
 <li><code>Slash command name</code> <code>(Type: String || Flag: Required)</code>: Name of the guild slash command to unregister. Use semicolons <code>;</code> as a separator to separate multiple guild slash command names.</li>
 </ul>
-<h2 id="example-335"><a class="header" href="#example-335">Example</a></h2>
+<h2 id="example-334"><a class="header" href="#example-334">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;Provide guild slash command names!]
 
@@ -10416,7 +10428,7 @@ Successfully unregistered the provided guild slash commands!
 <ul>
 <li><code>moderatemembers</code></li>
 </ul>
-<h2 id="example-336"><a class="header" href="#example-336">Example</a></h2>
+<h2 id="example-335"><a class="header" href="#example-335">Example</a></h2>
 <ul>
 <li>
 <p>Without ID</p>
@@ -10439,7 +10451,7 @@ $untimeout[$findUser[$message[1];no]]
 <h2 id="syntax-294"><a class="header" href="#syntax-294">Syntax</a></h2>
 <pre><code>$uptime
 </code></pre>
-<h2 id="example-337"><a class="header" href="#example-337">Example</a></h2>
+<h2 id="example-336"><a class="header" href="#example-336">Example</a></h2>
 <pre><code>$nomention
 I've been online for `$uptime`!
 </code></pre>
@@ -10455,7 +10467,7 @@ I've been online for `$uptime`!
 <li><code>Mode</code> <code>(Type: Enum || Flag: Required)</code>: Whether to encode or decode the provided text. Accepts either <code>encode</code> or <code>decode</code> as input.</li>
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to change.</li>
 </ul>
-<h2 id="example-338"><a class="header" href="#example-338">Example</a></h2>
+<h2 id="example-337"><a class="header" href="#example-337">Example</a></h2>
 <ul>
 <li>
 <p>Encoding</p>
@@ -10484,7 +10496,7 @@ $url[decode;https://example.url/decode?convert=Hello+world%21%21]
 <ul>
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel to which the message will be redirected.</li>
 </ul>
-<h2 id="example-339"><a class="header" href="#example-339">Example</a></h2>
+<h2 id="example-338"><a class="header" href="#example-338">Example</a></h2>
 <pre><code>$nomention
 $useChannel[$mentionedChannels[1]]
 $title[hello]
@@ -10501,7 +10513,7 @@ $description[hi]
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to return the avatar for.</li>
 </ul>
-<h2 id="example-340"><a class="header" href="#example-340">Example</a></h2>
+<h2 id="example-339"><a class="header" href="#example-339">Example</a></h2>
 <pre><code>$nomention
 $image[$userAvatar[$mentioned[1;yes]]]
 </code></pre>
@@ -10521,7 +10533,7 @@ $image[$userAvatar[$mentioned[1;yes]]]
 <ul>
 <li><code>user ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to get the banner for.</li>
 </ul>
-<h2 id="example-341"><a class="header" href="#example-341">Example</a></h2>
+<h2 id="example-340"><a class="header" href="#example-340">Example</a></h2>
 <pre><code>$nomention
 $sendMessage[$userBanner[$findUser[$message]]?size=4096]
 </code></pre>
@@ -10540,7 +10552,7 @@ $sendMessage[$userBanner[$findUser[$message]]?size=4096]
 <ul>
 <li><code>User ID</code> <code>(Type: String, Snowflake || Flag: Required)</code>: The ID of the user to check.</li>
 </ul>
-<h2 id="example-342"><a class="header" href="#example-342">Example</a></h2>
+<h2 id="example-341"><a class="header" href="#example-341">Example</a></h2>
 <pre><code>$nomention
 $userExists[$mentioned[1]]
 </code></pre>
@@ -10554,7 +10566,7 @@ $userExists[$mentioned[1]]
 <ul>
 <li><code>Username#Discriminator / Username</code> <code>(Type: String || Flag: Emptiable)</code>: The user's username or user-tag (User#0000) for whom to return the ID for.</li>
 </ul>
-<h2 id="example-343"><a class="header" href="#example-343">Example</a></h2>
+<h2 id="example-342"><a class="header" href="#example-342">Example</a></h2>
 <pre><code>$nomention
 $userID[$username]
 </code></pre>
@@ -10582,7 +10594,7 @@ $userID[$username]
 </blockquote>
 </li>
 </ul>
-<h2 id="example-344"><a class="header" href="#example-344">Example</a></h2>
+<h2 id="example-343"><a class="header" href="#example-343">Example</a></h2>
 <pre><code>$nomention
 $title[User Info]
 $userInfo[Username: {username}
@@ -10611,7 +10623,7 @@ Discriminator: {discriminator}]
 </blockquote>
 </li>
 </ul>
-<h2 id="example-345"><a class="header" href="#example-345">Example</a></h2>
+<h2 id="example-344"><a class="header" href="#example-344">Example</a></h2>
 <ul>
 <li>
 <p>Default format</p>
@@ -10649,7 +10661,7 @@ $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 </blockquote>
 </li>
 </ul>
-<h2 id="example-346"><a class="header" href="#example-346">Example</a></h2>
+<h2 id="example-345"><a class="header" href="#example-345">Example</a></h2>
 <ul>
 <li>
 <p>Default format</p>
@@ -10679,7 +10691,7 @@ $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 <li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The variable to create the leaderboard for.</li>
 <li><code>Sort</code> <code>(Type: Enum || Flag: Optional)</code>: Sorts the leaderboard values in ascending (<code>asc</code>) or descending (<code>desc</code>) order. Defaults to <code>desc</code>.</li>
 </ul>
-<h2 id="example-347"><a class="header" href="#example-347">Example</a></h2>
+<h2 id="example-346"><a class="header" href="#example-346">Example</a></h2>
 <pre><code>$nomention
 $userLeaderboard[Money;asc]
 </code></pre>
@@ -10693,7 +10705,7 @@ Leaderboard values are not updated in real-time. The previous values are cached 
 <h2 id="syntax-305"><a class="header" href="#syntax-305">Syntax</a></h2>
 <pre><code>$username
 </code></pre>
-<h2 id="example-348"><a class="header" href="#example-348">Example</a></h2>
+<h2 id="example-347"><a class="header" href="#example-347">Example</a></h2>
 <pre><code>$nomention
 Hello $username!
 </code></pre>
@@ -10707,7 +10719,7 @@ Hello $username!
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to get the username for.</li>
 </ul>
-<h2 id="example-349"><a class="header" href="#example-349">Example</a></h2>
+<h2 id="example-348"><a class="header" href="#example-348">Example</a></h2>
 <pre><code>$nomention
 $username just hugged $username[$mentioned[1]]!
 </code></pre>
@@ -10723,7 +10735,7 @@ $username just hugged $username[$mentioned[1]]!
 <li><code>Return amount</code> <code>(Type: Integer || Flag: Required)</code>: The number of permissions to return. Use <code>-1</code> to return all.</li>
 <li><code>Separator</code> <code>(Type: String || Flag: Required)</code>: A text/character which is used for separating each permission.</li>
 </ul>
-<h2 id="example-350"><a class="header" href="#example-350">Example</a></h2>
+<h2 id="example-349"><a class="header" href="#example-349">Example</a></h2>
 <pre><code>$nomention
 $userPerms[$mentioned[1;yes];-1;-]
 </code></pre>
@@ -10740,7 +10752,7 @@ $userPerms[$mentioned[1;yes];-1;-]
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to check the reaction for.</li>
 <li><code>Emoji</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji of the reaction to check.</li>
 </ul>
-<h2 id="example-351"><a class="header" href="#example-351">Example</a></h2>
+<h2 id="example-350"><a class="header" href="#example-350">Example</a></h2>
 <pre><code>$nomention
 $userReacted[$channelID;$message;$authorID;🍀]
 </code></pre>
@@ -10754,7 +10766,7 @@ $userReacted[$channelID;$message;$authorID;🍀]
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user for whom to return the role names.</li>
 </ul>
-<h2 id="example-352"><a class="header" href="#example-352">Example</a></h2>
+<h2 id="example-351"><a class="header" href="#example-351">Example</a></h2>
 <pre><code>$nomention
 $description[&lt;@$mentioned[1;yes]&gt;'s roles: 
 $userRoles[$mentioned[1;yes]]]
@@ -10769,7 +10781,7 @@ $userRoles[$mentioned[1;yes]]]
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user from whom to get the server avatar. If the user doesn't have a server avatar, then the default user avatar will be returned instead.</li>
 </ul>
-<h3 id="example-353"><a class="header" href="#example-353">Example</a></h3>
+<h3 id="example-352"><a class="header" href="#example-352">Example</a></h3>
 <pre><code>$nomention
 $image[$userServerAvatar[$authorID]?size=4096]
 </code></pre>
@@ -10793,7 +10805,7 @@ Instead, it creates the variable automatically during it's runtime and gets dele
 <blockquote>
 <p>📌 To retrieve the temporary stored value, type <code>$var[Name]</code>, where <em>&quot;Name&quot;</em> is the temporary variable name.</p>
 </blockquote>
-<h2 id="example-354"><a class="header" href="#example-354">Example</a></h2>
+<h2 id="example-353"><a class="header" href="#example-353">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;Type a message!]
 
@@ -10812,7 +10824,7 @@ $addButton[no;interactionID;Example;secondary;;;$var[ID]]
 <li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The variable that should exist.</li>
 <li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The custom error message to return if the variable doesn't exist.</li>
 </ul>
-<h2 id="example-355"><a class="header" href="#example-355">Example</a></h2>
+<h2 id="example-354"><a class="header" href="#example-354">Example</a></h2>
 <pre><code>$nomention
 $varExistError[Cool;Add the 'Cool' variable in the app.]
 $setUserVar[Cool;true]
@@ -10828,7 +10840,7 @@ You are now cool!
 <ul>
 <li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The variable's name to check.</li>
 </ul>
-<h2 id="example-356"><a class="header" href="#example-356">Example</a></h2>
+<h2 id="example-355"><a class="header" href="#example-355">Example</a></h2>
 <pre><code>$nomention
 $varExists[$message]
 </code></pre>
@@ -10842,7 +10854,7 @@ $varExists[$message]
 <ul>
 <li><code>Type</code> <code>(Type: Enum || Flag: Required)</code>: The variable type to return the count for. Accepts either <code>user</code>, <code>server</code>, <code>channel</code>, or <code>globaluser</code> as input.</li>
 </ul>
-<h2 id="example-357"><a class="header" href="#example-357">Example</a></h2>
+<h2 id="example-356"><a class="header" href="#example-356">Example</a></h2>
 <pre><code>$nomention
 $variablesCount[server]
 </code></pre>
@@ -10855,7 +10867,7 @@ $variablesCount[server]
 <h2 id="syntax-315"><a class="header" href="#syntax-315">Syntax</a></h2>
 <pre><code>$year
 </code></pre>
-<h2 id="example-358"><a class="header" href="#example-358">Example</a></h2>
+<h2 id="example-357"><a class="header" href="#example-357">Example</a></h2>
 <pre><code>$nomention
 Current Year: $year
 </code></pre>
@@ -10879,7 +10891,7 @@ Current Year: $year
 <li><code>&lt;numeric&gt;</code> - Accepts only number input.</li>
 <li><code>&lt;word1/word2&gt;</code> - Accepts only specified words provided inside <code>&lt;&gt;</code>. Use <code>/</code> as a separator for multiple words.</li>
 </ul>
-<h2 id="example-359"><a class="header" href="#example-359">Example</a></h2>
+<h2 id="example-358"><a class="header" href="#example-358">Example</a></h2>
 <h3 id="without-filter-2"><a class="header" href="#without-filter-2">Without filter</a></h3>
 <p><strong>Trigger: <code>$awaitedCommand[say;]</code></strong></p>
 <pre><code>$nomention
@@ -10917,7 +10929,7 @@ You have provided a number: $message
 <ul>
 <li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name used in the <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</li>
 </ul>
-<h2 id="example-360"><a class="header" href="#example-360">Example</a></h2>
+<h2 id="example-359"><a class="header" href="#example-359">Example</a></h2>
 <p><strong>Trigger: <code>$awaitedCommandError[number]</code></strong></p>
 <pre><code>$nomention
 Invalid number!
@@ -10939,7 +10951,7 @@ Invalid number!
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
 </ul>
-<h2 id="example-361"><a class="header" href="#example-361">Example</a></h2>
+<h2 id="example-360"><a class="header" href="#example-360">Example</a></h2>
 <ol>
 <li>
 <p>Create a command with the trigger <code>$onJoined[channelID]</code>.</p>
@@ -11031,7 +11043,7 @@ $setServerVar[welcome;$mentionedChannels[1]]
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
 </ul>
-<h2 id="example-362"><a class="header" href="#example-362">Example</a></h2>
+<h2 id="example-361"><a class="header" href="#example-361">Example</a></h2>
 <ol>
 <li>
 <p>Create a command with the trigger <code>$onLeave[channelID]</code>.</p>
@@ -11120,7 +11132,7 @@ $setServerVar[leave;$mentionedChannels[1]]
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
 </ul>
-<h2 id="example-363"><a class="header" href="#example-363">Example</a></h2>
+<h2 id="example-362"><a class="header" href="#example-362">Example</a></h2>
 <ol>
 <li>
 <p>Create a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
@@ -11176,7 +11188,7 @@ $setServerVar[logs;$mentionedChannels[1]]
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
 </ul>
-<h2 id="example-364"><a class="header" href="#example-364">Example</a></h2>
+<h2 id="example-363"><a class="header" href="#example-363">Example</a></h2>
 <ol>
 <li>
 <p>Create a command with <code>$onBanRemove[channelID]</code> as the trigger.</p>
@@ -11232,7 +11244,7 @@ $setServerVar[logs;$mentionedChannels[1]]
 <ul>
 <li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to which the resulting message will be sent.</li>
 </ul>
-<h2 id="example-365"><a class="header" href="#example-365">Example</a></h2>
+<h2 id="example-364"><a class="header" href="#example-364">Example</a></h2>
 <ol>
 <li>
 <p>Create a command with the trigger <code>$onMessageDelete[channelID]</code>.</p>
@@ -11291,7 +11303,7 @@ $setServerVar[logs;$mentionedChannels[1]]
 <li><strong><a href="callbacks/../guides/general/interactions/modals/aboutModals.html">Modals</a></strong></li>
 <li><strong><a href="callbacks/../bdscript/customID.html"><code>$customID</code></a></strong></li>
 </ul>
-<h2 id="example-366"><a class="header" href="#example-366">Example</a></h2>
+<h2 id="example-365"><a class="header" href="#example-365">Example</a></h2>
 <pre><code>$nomention
 $if[$customID==interaction]
   $sendMessage[Hello!]
@@ -11321,7 +11333,7 @@ $endif
 <li><strong><a href="callbacks/../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu</a></strong></li>
 <li><strong><a href="callbacks/../guides/general/interactions/modals/aboutModals.html">Modals</a></strong></li>
 </ul>
-<h2 id="example-367"><a class="header" href="#example-367">Example</a></h2>
+<h2 id="example-366"><a class="header" href="#example-366">Example</a></h2>
 <ol>
 <li>Create two commands and set the trigger <code>$onInteraction[example]</code> for one command and <code>!example</code> for the other.</li>
 </ol>
@@ -11429,7 +11441,7 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <ul>
 <li><code>Word</code> <code>(Type: String || Flag: Required)</code>: The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
 </ul>
-<h2 id="example-368"><a class="header" href="#example-368">Example</a></h2>
+<h2 id="example-367"><a class="header" href="#example-367">Example</a></h2>
 <ol>
 <li>
 <p>Create a new command with command trigger set as <code>$messageContains[]</code>.</p>
@@ -11450,7 +11462,7 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <ul>
 <li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The value used in &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</li>
 </ul>
-<h2 id="example-369"><a class="header" href="#example-369">Example</a></h2>
+<h2 id="example-368"><a class="header" href="#example-368">Example</a></h2>
 <h3 id="trigger-reactionclick"><a class="header" href="#trigger-reactionclick">Trigger <code>$reaction[click]</code></a></h3>
 <pre><code>$nomention
 $sendMessage[$username clicked on reaction]
@@ -11470,7 +11482,7 @@ $sendMessage[$username clicked on reaction]
 <li><code>Command name</code> <code>(Type: String || Flag: Required)</code>: The name which will be used inside the <code>$reaction[]</code> callback.</li>
 <li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.</li>
 </ul>
-<h2 id="example-370"><a class="header" href="#example-370">Example</a></h2>
+<h2 id="example-369"><a class="header" href="#example-369">Example</a></h2>
 <pre><code>$nomention
 Yes or no?
 $awaitReactions[✅;yes;❌;no]
@@ -11490,7 +11502,7 @@ $addReactions[✅;❌]
 <ul>
 <li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The image tag you set in the app while uploading the image.</li>
 </ul>
-<h2 id="example-371"><a class="header" href="#example-371">Example</a></h2>
+<h2 id="example-370"><a class="header" href="#example-370">Example</a></h2>
 <pre><code>$nomention
 $customImage[NiceImage]
 </code></pre>
@@ -11507,7 +11519,7 @@ $customImage[NiceImage]
 <h2 id="syntax-329"><a class="header" href="#syntax-329">Syntax</a></h2>
 <pre><code>$usedEmoji
 </code></pre>
-<h2 id="example-372"><a class="header" href="#example-372">Example</a></h2>
+<h2 id="example-371"><a class="header" href="#example-371">Example</a></h2>
 <pre><code>$nomention
 $sendMessage[Emoji: $usedEmoji]
 </code></pre>
@@ -11521,7 +11533,7 @@ $sendMessage[Emoji: $usedEmoji]
 <h2 id="syntax-330"><a class="header" href="#syntax-330">Syntax</a></h2>
 <pre><code>$ignoreTriggerCase
 </code></pre>
-<h2 id="example-373"><a class="header" href="#example-373">Example</a></h2>
+<h2 id="example-372"><a class="header" href="#example-372">Example</a></h2>
 <pre><code>$nomention
 $ignoreTriggerCase
 Hello World!
@@ -11537,7 +11549,7 @@ Hello World!
 <li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The text that is displayed in the notification.</li>
 <li><code>Image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
 </ul>
-<h2 id="example-374"><a class="header" href="#example-374">Example</a></h2>
+<h2 id="example-373"><a class="header" href="#example-373">Example</a></h2>
 <pre><code>$sendNotification[Hello, I miss you!;$userAvatar[$botID]]
 </code></pre>
 <p><img src="https://i.imgur.com/yfSTLVY.png" alt="example" /></p>
@@ -11579,7 +11591,7 @@ Hello World!
 <h3 id="syntax-334"><a class="header" href="#syntax-334">Syntax</a></h3>
 <pre><code>$usedEmoji
 </code></pre>
-<h2 id="example-375"><a class="header" href="#example-375">Example</a></h2>
+<h2 id="example-374"><a class="header" href="#example-374">Example</a></h2>
 <p><img src="https://user-images.githubusercontent.com/95774950/183701101-550bf56c-3cd2-4511-bc03-8f8398fe4d8b.png" alt="Screenshot_20220809_194823" />
 <img src="https://user-images.githubusercontent.com/95774950/183701030-c82a8744-9dff-4ad9-83b5-2aa64f45cc59.png" alt="Screenshot_20220809_194754" />
 <img src="https://user-images.githubusercontent.com/95774950/183701074-395c4770-8439-4441-a0ad-5c69ae9cded4.png" alt="Screenshot_20220809_194805" />
@@ -11615,14 +11627,14 @@ Hello World!
 <ul>
 <li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The tag that you set the custom image to, previously.</li>
 </ul>
-<h4 id="example-376"><a class="header" href="#example-376">Example</a></h4>
+<h4 id="example-375"><a class="header" href="#example-375">Example</a></h4>
 <pre><code>$nomention
 $customImage[NiceImage]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126852524-dfcb237a-8283-43fd-9e17-8dd97bd9ed85.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="custom-prefixes"><a class="header" href="#custom-prefixes">Custom Prefixes</a></h1>
 <p><em>(for premium bots)</em></p>
-<h2 id="explanation-2"><a class="header" href="#explanation-2">Explanation</a></h2>
+<h2 id="explanation-3"><a class="header" href="#explanation-3">Explanation</a></h2>
 <p>Premium gives you access to use <code>$getServerVar[]</code> in triggers. This makes it possible to make custom prefixes.</p>
 <h4 id="what-are-custom-prefixes"><a class="header" href="#what-are-custom-prefixes">What Are Custom Prefixes?</a></h4>
 <p>Custom prefixes allow the bot's prefix (like <code>!</code>) to be changed in different servers. For example, in one server the bot's prefix could be <code>!</code> and in the other it could be <code>?</code>.</p>
@@ -11730,7 +11742,7 @@ Then, check out the following JavaScript learning resources :<br />
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h3 id="example-377"><a class="header" href="#example-377">Example</a></h3>
+<h3 id="example-376"><a class="header" href="#example-376">Example</a></h3>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim();
 
@@ -11770,7 +11782,7 @@ Then, check out the following JavaScript learning resources :<br />
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h3 id="example-378"><a class="header" href="#example-378">Example</a></h3>
+<h3 id="example-377"><a class="header" href="#example-377">Example</a></h3>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().split(' ');
 
@@ -11815,7 +11827,7 @@ Then, check out the following JavaScript learning resources :<br />
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-379"><a class="header" href="#example-379">Example</a></h2>
+<h2 id="example-378"><a class="header" href="#example-378">Example</a></h2>
 <pre><code class="language-js">channelTyping();
 setResponse('Wow! I did type.');
 </code></pre>
@@ -11835,7 +11847,7 @@ setResponse('Wow! I did type.');
 <ul>
 <li><code>managechannels</code></li>
 </ul>
-<h2 id="example-380"><a class="header" href="#example-380">Example</a></h2>
+<h2 id="example-379"><a class="header" href="#example-379">Example</a></h2>
 <pre><code class="language-js">try {
   const
     msg = message.replace(commandPrefix, '').trim().replace(/  +/g, ' ').split(' '),
@@ -11878,7 +11890,7 @@ setResponse('Wow! I did type.');
 <ul>
 <li><code>manageroles</code></li>
 </ul>
-<h2 id="example-381"><a class="header" href="#example-381">Example</a></h2>
+<h2 id="example-380"><a class="header" href="#example-380">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().replace(/  +/g, ' ').split(' ', 2);
 
@@ -11919,7 +11931,7 @@ setResponse('Wow! I did type.');
 <ul>
 <li><code>kick</code></li>
 </ul>
-<h2 id="example-382"><a class="header" href="#example-382">Example</a></h2>
+<h2 id="example-381"><a class="header" href="#example-381">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim();
 
@@ -11959,7 +11971,7 @@ setResponse('Wow! I did type.');
 <ul>
 <li><code>kick</code></li>
 </ul>
-<h2 id="example-383"><a class="header" href="#example-383">Example</a></h2>
+<h2 id="example-382"><a class="header" href="#example-382">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().split(' ');
 
@@ -12007,7 +12019,7 @@ setResponse('Wow! I did type.');
 <ul>
 <li><code>managemessages</code></li>
 </ul>
-<h2 id="example-384"><a class="header" href="#example-384">Example</a></h2>
+<h2 id="example-383"><a class="header" href="#example-383">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 2);
 
@@ -12045,7 +12057,7 @@ setResponse('Wow! I did type.');
 <ul>
 <li><code>managechannels</code></li>
 </ul>
-<h2 id="example-385"><a class="header" href="#example-385">Example</a></h2>
+<h2 id="example-384"><a class="header" href="#example-384">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().split(' ');
 
@@ -12086,7 +12098,7 @@ setResponse('Wow! I did type.');
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-386"><a class="header" href="#example-386">Example</a></h2>
+<h2 id="example-385"><a class="header" href="#example-385">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 2);
 
@@ -12124,7 +12136,7 @@ setResponse('Wow! I did type.');
 <ul>
 <li><code>imageURL</code> : The image to set in the embed. Value must be a valid image link. (Optional)</li>
 </ul>
-<h2 id="example-387"><a class="header" href="#example-387">Example</a></h2>
+<h2 id="example-386"><a class="header" href="#example-386">Example</a></h2>
 <pre><code class="language-js">setEmbedImage('https://http.cat/200');
 setEmbedResponse();
 </code></pre>
@@ -12151,7 +12163,7 @@ setEmbedResponse();
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-388"><a class="header" href="#example-388">Example</a></h2>
+<h2 id="example-387"><a class="header" href="#example-387">Example</a></h2>
 <pre><code class="language-js">const date = new Date().toDateString();
 setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 </code></pre>
@@ -12172,7 +12184,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <li><code>sendmessagesinthreads</code></li>
 <li><code>readmessages</code></li>
 </ul>
-<h2 id="example-389"><a class="header" href="#example-389">Example</a></h2>
+<h2 id="example-388"><a class="header" href="#example-388">Example</a></h2>
 <pre><code class="language-js">setResponse(`Hi! &lt;@${authorId}&gt;`);
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/190676703-2caf1838-0de1-4dc5-9d2d-85b7c9dc5dc1.png" alt="Screenshot_20220916_205326" /></p>
@@ -12191,7 +12203,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <ul>
 <li><code>manageroles</code></li>
 </ul>
-<h2 id="example-390"><a class="header" href="#example-390">Example</a></h2>
+<h2 id="example-389"><a class="header" href="#example-389">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').trim().replace(/  +/g, ' ').split(' ', 2);
 
@@ -12232,7 +12244,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <ul>
 <li><code>ban</code></li>
 </ul>
-<h2 id="example-391"><a class="header" href="#example-391">Example</a></h2>
+<h2 id="example-390"><a class="header" href="#example-390">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 1);
 
@@ -12272,7 +12284,7 @@ setEmbedResponse('Hey' , 'This is an Embed!', 'Executed in ' + date);
 <ul>
 <li><code>managemessages</code></li>
 </ul>
-<h2 id="example-392"><a class="header" href="#example-392">Example</a></h2>
+<h2 id="example-391"><a class="header" href="#example-391">Example</a></h2>
 <pre><code class="language-js">try {
   const msg = message.replace(commandPrefix, '').replace(/  +/g, ' ').trim().split(' ', 2);
 
