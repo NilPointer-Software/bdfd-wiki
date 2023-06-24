@@ -4,6 +4,11 @@
 
 ## June
 - Fixed custom images not always being displayed
+- Allowed for empty string values in `$jsonSetString[]`
+- Added `$jsonArraySort[]`
+- Added `$jsonArrayReverse[]`
+- JSON Array function now can interact with JSON root
+- Emoji argument now allows for emoji aliases
 
 ## May
 - Fixed `$min[]` and `$max[]` not working with floats
