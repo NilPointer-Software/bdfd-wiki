@@ -14,7 +14,7 @@ $addReactions[emojis;...]
 > For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
 > List of unicode emojis: [😋 Get Emoji](https://getemoji.com) \
-> List of supported emoji aliases: [Emoji Aliases](https://github.com/enescakir/emoji/blob/master/map.go)
+> List of supported emoji aliases: [Emoji Aliases](https://botdesignerdiscord.com/public/emoji_alias_list)
 
 ## Example
 ```
