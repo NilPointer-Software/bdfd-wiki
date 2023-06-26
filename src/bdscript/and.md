@@ -25,12 +25,9 @@ $and[conditions;...]
 ## Example
 ```
 $nomention
-$if[$and[$username==noituri;$message==Update]==true]
-Noit said "Update"!
-$endif
-$c[The code in the if statement only executes if the user's username is 'noituri', and the message content is 'Update'.]
+`$and[$nickname==MineBartekSA;$message==Update]`
 ```
 
-![example](https://user-images.githubusercontent.com/113303649/209949010-d4131044-5d6e-4afd-839d-b28ed9ecaab7.png)
+![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/d277f043-6acd-418c-8695-ced1f2061c20)
 
 > For more info, see the [If Guide](..guides/ifStatements.md)
