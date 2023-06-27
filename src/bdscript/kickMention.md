@@ -1,13 +1,19 @@
 # $kickMention
-A simplified version of `$kick`. Kicks the mentioned user, the user running the command must have the 'kick' permission.
+A simplified version of `$kick`. Kicks the mentioned user.
 
-## Usage
+> **Note:** The user running the command must have the "kick" permission.
+
+## Syntax
 ```
-$kickMention[reason]
+$kickMention[Reason]
 ```
 
 ### Parameters
-- `reason` `(Type: String || Flag: Emptiable)`: The audit-log reason for the kick.
+- `Reason` `(Type: String || Flag: Emptiable)`: The audit-log reason for the kick.
+
+### Permissions
+Required permissions that the bot must have for this function to work properly:
+- `kick`
 
 ## Example
 ```
