@@ -29,5 +29,3 @@ Successfully removed the emoji.
 5. Input the Discord emoji ID into `$removeEmoji[]`. (e.g. `$removeEmoji[828628880629825546]`)
 
 ![example3](https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif)
-
-> If you're still having issues, check the [Troubleshooting](../resources/troubleshooting.md#the-bot-fails-to-add-reactions) page.
