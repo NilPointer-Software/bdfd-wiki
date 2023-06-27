@@ -1,13 +1,13 @@
 # $multi
 Muliplies the provided numbers.
 
-## Usage
+## Syntax
 ```
-$multi[number;..]
+$multi[Number;..]
 ```
 
 ### Parameters 
-- `number` `(Type: Float, Integer || Flag: Required)`: The numbers to multiply. Separate numbers using `;`.
+- `Number` `(Type: Float, Integer || Flag: Required)`: The numbers to multiply. Use semicolons `;` as a separator to separate multiple numbers.
 
 ## Example
 ```
