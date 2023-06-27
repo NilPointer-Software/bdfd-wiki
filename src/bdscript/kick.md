@@ -1,9 +1,11 @@
 # $kick
-Kicks a user.
+Kicks the user who ran the command.
 
-### Syntax
+## Syntax
 ```
 $kick
 ```
-Kicks the user who ran the command.
 
+### Permissions
+Required permissions that the bot must have for this function to work properly:
+- `kick`
