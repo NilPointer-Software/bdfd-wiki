@@ -1,13 +1,13 @@
 # $max
 Returns the largest number from the provided numbers.
 
-## Usage
+## Syntax
 ```
 $max[A;B;...]
 ```
 
 ### Parameters 
-- `A,B,...` `(Type: Integer || Flag: Required)`: The numbers to get the maximum from. Separate numbers using `;`.
+- `A,B,...` `(Type: Integer || Flag: Required)`: The numbers to get the maximum from. **At least two numbers must be provided!** Use semicolons `;` as a separator to separate multiple numbers.
 
 ## Example
 ```
