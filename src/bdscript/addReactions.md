@@ -9,15 +9,18 @@ $addReactions[emojis;...]
 ### Parameters
 - `emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Separate emojis using `;`.
 
-> You can use Unicode emojis and emoji IDs, but not emoji names. For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
+> You can use Unicode emojis, emoji IDs, and emoji aliases. \
+> For **emoji aliases**, make sure to put `:` in front and at the end of the alias. \
+> For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
-> List of unicode emojis: [😋 Get Emoji](https://getemoji.com)
+> List of unicode emojis: [😋 Get Emoji](https://getemoji.com) \
+> List of supported emoji aliases: [Emoji Aliases](https://botdesignerdiscord.com/public/emoji_alias_list)
 
 ## Example
 ```
 $nomention
 Yes or no?
-$addReactions[✅;❌]
+$addReactions[✅;:x:]
 ```
 ![example](https://user-images.githubusercontent.com/113303649/209927736-3090310a-ddbb-4712-a4c9-83969f7fc3b5.png)
 

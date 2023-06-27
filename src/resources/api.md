@@ -14,6 +14,9 @@ Returns an array of [function](#Function) tags
 - `:function` - function tag \
 Returns a [function](#Function)
 
+### GET `/emoji_alias_list`
+Returns a map, mapping emoji to a list of its aliases
+
 ## Data Structures
 - `Can be empty` means the field can be set to a default value.
 - `Can be omitted` means the field might not be included in the response.
