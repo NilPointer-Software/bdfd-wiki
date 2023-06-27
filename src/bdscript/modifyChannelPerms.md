@@ -1,22 +1,22 @@
 # $modifyChannelPerms
 *(deprecated)*
 
-> 🧙‍♂️ This command is deprecated instead better use [$editChannelPerms](./editChannelPerms.md).
+> 🧙‍♂️ This command is deprecated, instead better use [`$editChannelPerms[]`](./editChannelPerms.md).
 
 Modifies a channel's permissions.
 
-## Usage
+## Syntax
 ```
-$modifyChannelPerms[channelID;permissions;userID/roleID]
+$modifyChannelPerms[Channel ID;Permissions;User/Role ID]
 ```
 
 ### Parameters 
-- `channelID` `(Type: Snowflake || Flag: Required)`: The channel to change the permissions for.
-- `permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
-- `userID/roleID` `(Type: Snowflake || Flag: Required)`: The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel to change the permissions for.
+- `Permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) to add/remove. `+` means allow, `-` means deny, `/` means neutral permission.
+- `User/Role ID` `(Type: Snowflake || Flag: Required)`: The role or user to modify the permissions for. Use `$guildID` for *@everyone*.
 
 ## Example
-Lock:
+**Lock:**
 ```
 $nomention
 $onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
@@ -26,7 +26,7 @@ $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$guildID]
 
 ![example1](https://user-images.githubusercontent.com/69215413/123529809-19d01980-d6c2-11eb-9cc6-c9c9d559c5cb.png)
 
-Unlock:
+**Unlock:**
 ```
 $nomention
 $onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
