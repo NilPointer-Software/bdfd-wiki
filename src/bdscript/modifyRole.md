@@ -1,18 +1,23 @@
 # $modifyRole
-Modifies a role.
+Modifies an existing role.
 
-## Usage
+## Syntax
 ```
-$modifyRole[roleID;(roleName;colorHex;hoisted;mentionable)]
+$modifyRole[Role ID;(Role name;Color hex;Hoisted?;Mentionable?)]
 ```
-> 🧙‍♂️ You can use `!unchanged` as a argument to leave the setting as-is.
+
+> 🧙‍♂️ You can use `!unchanged` as an argument to leave the setting as-is.
 
 ### Parameters 
-- `roleID` `(Type: Snowflake || Flag: Required)`: The ID of the role to modify.
-- `roleName` `(Type: String || Flag: Optional)`: New role name.
-- `colorHex` `(Type: Color || Flag: Optional)`: New role color.
-- `hoisted` `(Type: Bool || Flag: Optional)`: Whether the role should be displayed separately or not.
-- `mentionable` `(Type: Bool || Flag: Optional)`: Whether the role should be mentionable by everyone or not.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The ID of the role to modify.
+- `Role name` `(Type: String || Flag: Optional)`: The new role name.
+- `Color hex` `(Type: Color || Flag: Optional)`: The new role color.
+- `Hoisted?` `(Type: Bool || Flag: Optional)`: Whether the role should be displayed separately or not.
+- `Mentionable?` `(Type: Bool || Flag: Optional)`: Whether the role should be mentionable by everyone or not.
+
+### Permissions
+Required permissions that the bot must have for this function to work properly:
+- `manageroles`
 
 ## Example
 ```
