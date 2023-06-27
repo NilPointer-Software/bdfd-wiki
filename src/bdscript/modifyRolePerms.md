@@ -1,11 +1,11 @@
 # $modifyRolePerms
 Modifies a role's permissions.
 
-## Usage
+## Syntax
 ```
-$modifyRolePerms[roleID;permissions;...]
+$modifyRolePerms[Role ID;Permissions;...]
 ```
 
 ### Parameters 
-- `roleID` `(Type: Snowflake || Flag: Required)`: The role to modify the permissions for. Use `$guildID` for the *@everyone* role.
-- `permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) to toggle, separate permissions using `;`.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role to modify the permissions for. Use `$guildID` for the *@everyone* role.
+- `Permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) to toggle. Use semicolons `;` as a separator to separate multiple permissions.
