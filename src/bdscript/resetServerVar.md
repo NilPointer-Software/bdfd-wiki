@@ -1,12 +1,12 @@
 # $resetServerVar
-Resets a server variable back to it's default value *(the one inputted in the app)* **for every server**.
+Resets a server variable back to its default value *(the one inputted in the app)* **for every server**.
 
 > 🧙‍♂️ Use this function wisely!
 
-## Usage
+## Syntax
 ```
-$resetServerVar[variableName]
+$resetServerVar[Variable name]
 ```
 
 ### Parameters
-- `variableName` `(Type: String || Flag: Required)`: The name of the variable to reset.
+- `Variable name` `(Type: String || Flag: Required)`: The name of the variable to reset.
