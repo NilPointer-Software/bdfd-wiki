@@ -1,14 +1,14 @@
 # $removeContains
-Removes messages that contains provided words. Removes up to the given `amount` of latest messages (max 100) 
+Removes messages that contains provided words. Removes up to the given `Amount` of latest messages.
 
-## Usage
+## Syntax
 ```
-$removeContains[word;...;amount]
+$removeContains[Word;...;Amount]
 ```
 
 ### Parameters
-- `word` `(Type: String || Flag: Emptiable)`: The phrases/words to delete, separate phrases using `;`.
-- `amount` `(Type: Integer || Flag: Required)`: The number of messages containing given words to delete. Max is 100.
+- `Word` `(Type: String || Flag: Emptiable)`: The words/phrases to delete. Use semicolons `;` as a separator to separate multiple words/phrases.
+- `Amount` `(Type: Integer || Flag: Required)`: The number of messages containing given words to delete (Max is `100`).
 
 ## Example
 ```
