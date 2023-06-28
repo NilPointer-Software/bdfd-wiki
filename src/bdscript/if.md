@@ -21,6 +21,8 @@ $if[Condition]
 `>=` - Greater Than Or Equal To
 
 `<=` - Less Than Or Equal To
+- These signs could vary in meaning based on the order or intent of the if statement.
+- If you are using text as your `x` and/or `y`, you can not use any other signs besides `==` and `!=`. However for numbers, you can use any sign shown in the above list.
 
 ## Example
 ```
