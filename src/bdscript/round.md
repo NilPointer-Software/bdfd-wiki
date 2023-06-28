@@ -3,12 +3,12 @@ Rounds up the provided number.
 
 ## Syntax
 ```
-$round[number;(decimalPlace)]
+$round[Number;(Decimal place)]
 ```
 
 ### Parameters
-- `number` `(Type: Float || Flag: Required)`: The number to round.
-- `decimalPlace` `(Type: Integer || Flag: Vacantable)`: The number of decimal places to round the number to. Defaults to `0`.
+- `Number` `(Type: Float || Flag: Required)`: The number to round.
+- `Decimal place` `(Type: Integer || Flag: Vacantable)`: The number of decimal places to round the number to. Defaults to `0`.
 
 ## Example
 ```
