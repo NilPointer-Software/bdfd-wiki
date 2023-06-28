@@ -7,7 +7,6 @@ Returns the ID of the replied message.
 ```
 $repliedMessageID
 ```
-Returns the ID of the replied message from the author's message.
 
 ## Example
 ```
