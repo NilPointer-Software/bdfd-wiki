@@ -1,14 +1,14 @@
 # $newModal
 Creates a new modal.
 
-## Usage
+## Syntax
 ```
-$newModal[modal ID;title]
+$newModal[Modal ID;Title]
+```
 
-```
 ### Parameters
-- `modal ID` `(Type: String || Flag: Required)`: ID of the `$newModal[]` which is used in `$onInteraction[]` callback.
-- `title` `(Type: String || Flag: Required)`: Title displayed in the modal.
+- `Modal ID` `(Type: String || Flag: Required)`: The ID of the `$newModal[]` which is used in `$onInteraction[]` callback.
+- `Title` `(Type: String || Flag: Required)`: The title displayed in the modal.
 
 ## Example
 ```
