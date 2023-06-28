@@ -1,13 +1,14 @@
 # $removeSplitTextElement
-Removes a certain element from the [`$textSplit`](./textSplit.md) values.
-> 🧙‍♂️ This function is unneeded, if `$textSplit` isn't present in the code.
+Removes a certain element from the [`$textSplit[]`](./textSplit.md) values.
 
-## Usage
+> 🧙‍♂️ This function is unneeded, if `$textSplit[]` isn't present in the code.
+
+## Syntax
 ```
-$removeSplitTextElement[index]
+$removeSplitTextElement[Index]
 ```
 
 ### Parameters
-- `index` `(Type: Integer || Flag: Required)`: The index of the `$textSplit` value to remove.
+- `Index` `(Type: Integer || Flag: Required)`: The index of the `$textSplit[]` value to remove.
 
-[*See more in the Text Splitting guide...*](../guides/general/textSplitting.md)
+> For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
