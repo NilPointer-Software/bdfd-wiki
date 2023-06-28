@@ -1,10 +1,12 @@
 # $resetChannelVar
 Resets a channel variable back to its default value *(the one provided in the app)* **for every channel in every server**.
 
+> 🧙‍♂️ Use this function wisely!
+
 ## Syntax
 ```
-$resetChannelVar[Variable Name]
+$resetChannelVar[Variable name]
 ```
 
 ### Parameters
-- `Variable Name` `(Type: String || Flag: Required)`: The name of the variable to reset.
+- `Variable name` `(Type: String || Flag: Required)`: The name of the variable to reset.
