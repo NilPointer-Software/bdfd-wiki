@@ -1,13 +1,13 @@
 # $randomText
 Picks one value from the provided values randomly.
 
-## Usage
+## Syntax
 ```
-$randomText[text;...]
+$randomText[Text;...]
 ```
 
 ### Parameters
-- `text` `(Type: String || Flag: Emptiable)`: The text to choose from. Separate different texts with ';'.
+- `Text` `(Type: String || Flag: Emptiable)`: The text to choose from. Separate different texts with `;`.
 
 ## Example
 ```
