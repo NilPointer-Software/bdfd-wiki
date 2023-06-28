@@ -29,8 +29,10 @@ $elseif[Condition]
 ```
 $nomention
 $if[$authorID==$botOwnerID]
-Developer
+  $sendMessage[Developer]
 $elseif[$authorID==$serverOwner]
-Server Owner
+  $sendMessage[Server Owner]
 $endif
 ```
+
+![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/a929d2ac-fcbe-4879-a70c-8e0433aa8177)
