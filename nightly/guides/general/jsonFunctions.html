@@ -584,9 +584,9 @@ Music:
 <pre><code>$jsonArrayShift[Key;...]
 </code></pre>
 <h4 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h4>
-<blockquote>
-<p><code>Key</code> <code>(Type: String || Flag: Required)</code>: The key of the array from which an element will be removed.</p>
-</blockquote>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The key of the array from which an element will be removed.</li>
+</ul>
 <h3 id="example-11"><a class="header" href="#example-11">Example</a></h3>
 <pre><code>$nomention
 $jsonParse[{
@@ -605,9 +605,9 @@ Current music:
 <pre><code>$jsonArrayPop[Key;...]
 </code></pre>
 <h4 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h4>
-<blockquote>
-<p><code>Key</code> <code>(Type: String || Flag: Required)</code>:  The key of the array from which an element will be removed.</p>
-</blockquote>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>:  The key of the array from which an element will be removed.</li>
+</ul>
 <h3 id="example-12"><a class="header" href="#example-12">Example</a></h3>
 <pre><code>$nomention
 $jsonParse[{
@@ -626,10 +626,10 @@ Current music:
 <pre><code>$jsonArrayUnshift[Key;...;Value]
 </code></pre>
 <h4 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h4>
-<blockquote>
-<p><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key of the array to which the value will be added.
-<code>Value</code> <code>(Type: Float, String, Bool, Integer || Flag: Required)</code>: The value to be added.</p>
-</blockquote>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key of the array to which the value will be added.</li>
+<li><code>Value</code> <code>(Type: Float, String, Bool, Integer || Flag: Required)</code>: The value to be added.</li>
+</ul>
 <h3 id="example-13"><a class="header" href="#example-13">Example</a></h3>
 <pre><code>$nomention
 $jsonParse[{
@@ -642,6 +642,51 @@ Music:
 &gt; $jsonJoinArray[music;, ]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/222920006-b4547509-d0bd-49b8-b2cd-9d6510f61df1.png" alt="" /></p>
+<h2 id="jsonarraysort"><a class="header" href="#jsonarraysort">$jsonArraySort</a></h2>
+<p><code>$jsonArraySort</code> sorts a specific JSON array in ascending order.</p>
+<blockquote>
+<p>The function sorts the elements in the order of integers from lowest to highest, and then strings based on their ASCII/Unicode values.</p>
+</blockquote>
+<h3 id="syntax-17"><a class="header" href="#syntax-17">Syntax</a></h3>
+<pre><code>$jsonArraySort[Key;...]
+</code></pre>
+<h4 id="parameters-15"><a class="header" href="#parameters-15">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Emptiable)</code>: The key of the JSON array to be sorted.</li>
+</ul>
+<h3 id="example-14"><a class="header" href="#example-14">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+  &quot;data&quot;: [&quot;Oranges&quot;, &quot;banana&quot;, 10, &quot;apple&quot;, &quot;Apples&quot;, 2, 30\]
+}]
+
+$jsonArraySort[data]
+
+After sorting:
+&gt; $json[data]
+</code></pre>
+<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/f2dbdac1-31bb-4c60-ba93-cf7239829e09" alt="" /></p>
+<h2 id="jsonarrayreverse"><a class="header" href="#jsonarrayreverse">$jsonArrayReverse</a></h2>
+<p><code>$jsonArrayReverse</code> reverses the order of a specific JSON array.</p>
+<h3 id="syntax-18"><a class="header" href="#syntax-18">Syntax</a></h3>
+<pre><code>$jsonArrayReverse[key;...]
+</code></pre>
+<h4 id="parameters-16"><a class="header" href="#parameters-16">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Emptiable)</code>: The key of the JSON array to be reversed.</li>
+</ul>
+<h3 id="example-15"><a class="header" href="#example-15">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+  &quot;fruits&quot;: [&quot;apple&quot;, &quot;orange&quot;, &quot;banana&quot;, &quot;grape&quot;\]
+}]
+
+$jsonArrayReverse[fruits]
+
+After reversing:
+&gt; $json[fruits]
+</code></pre>
+<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/25fe08af-ce52-4079-afb4-aa4c7537c25a" alt="20230625_112134" /></p>
 
                     </main>
 
