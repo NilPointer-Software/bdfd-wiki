@@ -1,13 +1,13 @@
 # $randomString
 Generates a random combination of letters/numbers.
 
-## Usage
+## Syntax
 ```
-$randomString[length]
+$randomString[Length]
 ```
 
 ### Parameters
-- `length` `(Type: Integer || Flag: Required)`: How long the string should be (max `10`).
+- `Length` `(Type: Integer || Flag: Required)`: How long the string should be (max `10`).
 
 ## Example
 ```
