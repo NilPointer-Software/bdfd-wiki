@@ -488,7 +488,7 @@ $jsonArrayShift[Key;...]
 ```
 
 #### Parameters
-> `Key` `(Type: String || Flag: Required)`: The key of the array from which an element will be removed.
+- `Key` `(Type: String || Flag: Required)`: The key of the array from which an element will be removed.
 
 ### Example
 ```
@@ -514,7 +514,7 @@ $jsonArrayPop[Key;...]
 ```
 
 #### Parameters
-> `Key` `(Type: String || Flag: Required)`:  The key of the array from which an element will be removed.
+- `Key` `(Type: String || Flag: Required)`:  The key of the array from which an element will be removed.
 
 ### Example
 ```
@@ -540,8 +540,8 @@ $jsonArrayUnshift[Key;...;Value]
 ```
 
 #### Parameters
-> `Key` `(Type: String || Flag: Required)`: The JSON key of the array to which the value will be added.
-> `Value` `(Type: Float, String, Bool, Integer || Flag: Required)`: The value to be added.
+- `Key` `(Type: String || Flag: Required)`: The JSON key of the array to which the value will be added.
+- `Value` `(Type: Float, String, Bool, Integer || Flag: Required)`: The value to be added.
 
 ### Example
 ```
@@ -557,3 +557,58 @@ Music:
 ```
 
 ![](https://user-images.githubusercontent.com/70456337/222920006-b4547509-d0bd-49b8-b2cd-9d6510f61df1.png)
+
+## $jsonArraySort
+`$jsonArraySort` sorts a specific JSON array in ascending order.
+
+> The function sorts the elements in the order of integers from lowest to highest, and then strings based on their ASCII/Unicode values.
+
+### Syntax
+```
+$jsonArraySort[Key;...]
+```
+
+#### Parameters
+- `Key` `(Type: String || Flag: Emptiable)`: The key of the JSON array to be sorted.
+
+### Example
+```
+$nomention
+$jsonParse[{
+  "data": ["Oranges", "banana", 10, "apple", "Apples", 2, 30\]
+}]
+
+$jsonArraySort[data]
+
+After sorting:
+> $json[data]
+```
+
+![](https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/f2dbdac1-31bb-4c60-ba93-cf7239829e09)
+
+
+## $jsonArrayReverse
+`$jsonArrayReverse` reverses the order of a specific JSON array.
+
+### Syntax
+```
+$jsonArrayReverse[key;...]
+```
+
+#### Parameters
+- `Key` `(Type: String || Flag: Emptiable)`: The key of the JSON array to be reversed.
+
+### Example
+```
+$nomention
+$jsonParse[{
+  "fruits": ["apple", "orange", "banana", "grape"\]
+}]
+
+$jsonArrayReverse[fruits]
+
+After reversing:
+> $json[fruits]
+```
+
+![20230625_112134](https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/25fe08af-ce52-4079-afb4-aa4c7537c25a)
