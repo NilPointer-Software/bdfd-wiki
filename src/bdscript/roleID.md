@@ -1,13 +1,13 @@
 # $roleID
 Returns a role's ID using its name.
 
-## Usage
+## Syntax
 ```
-$roleID[roleName]
+$roleID[Role name]
 ```
 
 ### Parameters
-- `roleName` `(Type: String || Flag: Required)`: The name of the role for which to get its ID.
+- `Role name` `(Type: String || Flag: Required)`: The name of the role for which to get its ID.
 
 ## Example
 ```
