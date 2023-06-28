@@ -10,9 +10,9 @@ $else
 ```
 $nomention
 $if[$authorID==$botOwnerID]
-You are the developer of this bot!
+  $sendMessage[You are the developer of this bot!]
 $else
-You are not the developer of this bot!
+  $sendMessage[You are not the developer of this bot!]
 $endif
 ```
 ![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/611aad1c-4f25-4212-ac80-a35a97ed9ecf)
