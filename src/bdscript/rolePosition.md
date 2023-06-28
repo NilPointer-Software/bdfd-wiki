@@ -1,13 +1,13 @@
 # $rolePosition
-Returns a roles position *(1 being highest role)*.
+Returns a role's position *(1 being the highest role)*.
 
 ## Syntax
 ```
-$rolePosition[roleID]
+$rolePosition[Role ID]
 ```
 
 ### Parameters
-- `roleID` `(Type: Snowflake || Flag: Required)`: The role for which to get its position.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role for which to get its position.
 
 ## Example
 ```
