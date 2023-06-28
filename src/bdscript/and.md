@@ -3,11 +3,11 @@ Returns `true` if every provided condition is true, otherwise `false` is returne
 
 ## Syntax
 ```
-$and[conditions;...]
+$and[Conditions;...]
 ```
 
 ### Parameters
-- `conditions` `(Type: String || Flag: Required)`: Checks that will be carried out. All conditions must be true for this function to return `true`. Separate conditions using `;`.
+- `Conditions` `(Type: String || Flag: Required)`: Checks that will be carried out. All conditions must be true for this function to return `true`. Separate conditions using `;`.
 
 ### Signs
 `==` - Equal
@@ -21,6 +21,8 @@ $and[conditions;...]
 `>=` - Greater Than Or Equal To
 
 `<=` - Less Than Or Equal To
+- These signs could vary in meaning based on the order or intent of the if statement.
+- If you are using text as your `x` and/or `y`, you can not use any other signs besides `==` and `!=`. However for numbers, you can use any sign shown in the above list.
 
 ## Example
 ```
