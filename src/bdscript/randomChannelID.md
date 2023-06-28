@@ -1,7 +1,7 @@
 # $randomChannelID
 Returns a random channel ID from the current server.
 
-## Usage
+## Syntax
 ```
 $randomChannelID
 ```
