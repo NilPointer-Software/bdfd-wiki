@@ -21,3 +21,66 @@ boost-title = 4
 [output.html.fold]
 enable = true
 level = 0
+
+[output.html.redirect]
+#(categories that still use the old /guides path, remove if the path is updated to the new one in app)
+#if statements
+"/guides/ifStatements.html" = "./general/ifStatements.html"
+#async 
+"/guides/async.html" = "./general/bds2/asyncScopes.html"
+#buttons
+"/guides/buttons.html" = "./general/interactions/buttons/aboutButtons.html"
+#select menu (based on my archived guides, the old path for errorHandling and selectMenus aren't in camelCase. ~Carmen)
+"/guides/selectmenu.html" = "./general/interactions/selectMenus/aboutSelectMenu.html"
+"/guides/selectMenu.html" = "./general/interactions/selectMenus/aboutSelectMenu.html"
+#error handling
+"/guides/trycatch.html" = "./general/bds2/errorHandling.html"
+"/guides/tryCatch.html" = "./general/bds2/errorHandling.html"
+#premium functions
+"/bdscript/awaitReactions.html" = "../premium/awaitReactions.html"
+"/bdscript/customImage.html" = "../premium/customImage.html"
+"/bdscript/ignoreTriggerCase.html" = "../premium/ignoreTriggerCase.html"
+#(categories that redirects to /bdscript in the app instead of /guides)
+#http requests
+"/bdscript/httpAddHeader.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpDelete.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpGet.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpGetHeader.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpPatch.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpPost.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpPut.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpRemoveHeader.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpResult.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpResultComplex.html" = "../guides/general/httpRequests.html"
+"/bdscript/httpStatus.html" = "../guides/general/httpRequests.html"
+#json functions
+"/bdscript/json.html" = "../guides/general/jsonFunctions.html#json"
+"/bdscript/jsonArray.html" = "../guides/general/jsonFunctions.html#jsonarray"
+"/bdscript/jsonArrayAppend.html" = "../guides/general/jsonFunctions.html#jsonarrayappend"
+"/bdscript/jsonArrayCount.html" = "../guides/general/jsonFunctions.html#jsonarraycount"
+"/bdscript/jsonArrayIndex.html" = "../guides/general/jsonFunctions.html#jsonarrayindex"
+"/bdscript/jsonArrayPop.html" = "../guides/general/jsonFunctions.html#jsonarraypop"
+"/bdscript/jsonArrayReverse.html" = "../guides/general/jsonFunctions.html#jsonarrayreverse"
+"/bdscript/jsonArrayShift.html" = "../guides/general/jsonFunctions.html#jsonarrayshift"
+"/bdscript/jsonArraySort.html" = "../guides/general/jsonFunctions.html#jsonarraysort"
+"/bdscript/jsonArrayUnshift.html" = "../guides/general/jsonFunctions.html#jsonarrayunshift"
+"/bdscript/jsonClear.html" = "../guides/general/jsonFunctions.html#jsonclear"
+"/bdscript/jsonExists.html" = "../guides/general/jsonFunctions.html#jsonexists"
+"/bdscript/jsonJoinArray.html" = "../guides/general/jsonFunctions.html#jsonjoinarray"
+"/bdscript/jsonParse.html" = "../guides/general/jsonFunctions.html#jsonparse"
+"/bdscript/jsonPretty.html" = "../guides/general/jsonFunctions.html#jsonpretty"
+"/bdscript/jsonSet.html" = "../guides/general/jsonFunctions.html#jsonset"
+"/bdscript/jsonSetString.html" = "../guides/general/jsonFunctions.html#jsonsetstring"
+"/bdscript/jsonStringify.html" = "../guides/general/jsonFunctions.html#jsonstringify"
+"/bdscript/jsonUnset.html" = "../guides/general/jsonFunctions.html#jsonunset"
+#webhooks
+"/bdscript/webhookAvatarURL.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookColor.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookContent.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookCreate.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookDelete.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookDescription.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookFooter.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookSend.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookTitle.html" = "../guides/general/webhooks.html"
+"/bdscript/webhookUsername.html" = "../guides/general/webhooks.html"
