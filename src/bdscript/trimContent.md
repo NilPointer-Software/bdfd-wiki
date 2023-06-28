@@ -6,7 +6,7 @@ Removes duplicate spaces from incoming message content.
 $trimContent
 ```
 
-### Example
+## Example
 ```
 $nomention
 $trimContent
