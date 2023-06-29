@@ -12,6 +12,10 @@
 - Added `$nodeVersion[]`
 - Added `$removeEmoji[]`
 - Added `$addMessageReactions[]`
+- Fixed `$nickname[]` to work with the new Discord username system
+- Added `$displayName[]`
+- Added `$userBadges[]`
+- Added `$userBannerColor[]`
 
 ## May
 - Fixed `$min[]` and `$max[]` not working with floats
