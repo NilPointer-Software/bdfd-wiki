@@ -11,4 +11,4 @@ $displayName
 $nomention
 Your display name is `$displayName`
 ```
-![example](https://github.com/xNickyDev/bdfd-wiki/assets/111157596/f89e590e-cdf2-4226-bdf5-082b52533329)
+![example](https://user-images.githubusercontent.com/111157596/249784142-f89e590e-cdf2-4226-bdf5-082b52533329.png)
