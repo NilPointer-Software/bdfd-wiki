@@ -2,11 +2,11 @@
 *How Bot Designer For Discord became what it is today.*
 
 ### Who Develops BDFD?
-| Name | Discord Tag | Position 
-| ------------- | ------------- | -------------
-Jakub Tomana | wiadr000#1947 (kubastick) | Owner/Developer
-Mikołaj Radkowski  | noituri#1111 | Developer
-Bartłomiej Skoczeń | MineBartekSA#4899 | Developer
+| Name             | Discord Nickname      | Position 
+| ---------------- | --------------------- | -------------
+Jakub Tomana       | kubastick             | Owner/Developer
+Mikołaj Radkowski  | _noit                 | Developer
+Bartłomiej Skoczeń | minebarteksa          | Developer
 
 ### The Company
 *[NilPointer Software](https://nilpointer.software/)* is the company that made *Bot Designer For Discord*. *NilPointer Software*, a start-up focused on providing fast and quality software.
@@ -18,4 +18,4 @@ By early 2019, the premature version of BDFD was created. Later on, Kubastick ac
 
 BDFD was slowly growing, until Discord's explosion during the COVID-19 pandemic, which caused a uproar of users coming to BDFD to create their very own bots... and the rest is history... The growth of BDFD isn't stopping though, as the developers are actively integrating new features; and the community is growing larger by the day.
 
-> 🧙‍♂️ *Have more questions? Ask in our [community server](https://discord.gg/ujBmvKS).*
+> *Have more questions? Ask in our [community server](https://discord.gg/botdesigner).*
