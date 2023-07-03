@@ -7,7 +7,7 @@ $nodeVersion[Node Number]
 ```
 
 ### Parameters
-- `Node Number` `(Type: Integer || Flag: Required)`: Which node version will be returned.
+- `Node Number` `(Type: Integer || Flag: Required)`: The number of the node for which to return its version.
 
 ## Example
 ```
