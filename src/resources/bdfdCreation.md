@@ -2,7 +2,7 @@
 *How Bot Designer For Discord became what it is today.*
 
 ### Who Develops BDFD?
-| Name             | Discord Nickname      | Position 
+| Name             | Discord Username      | Position 
 | ---------------- | --------------------- | -------------
 Jakub Tomana       | kubastick             | Owner/Developer
 Mikołaj Radkowski  | _noit                 | Developer
