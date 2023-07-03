@@ -1,5 +1,5 @@
 # $nodeVersion
-Returns the current version of the node.
+Returns the version of the current node.
 
 ## Syntax
 ```
