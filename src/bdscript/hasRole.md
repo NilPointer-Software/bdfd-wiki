@@ -1,15 +1,16 @@
 # $hasRole
 Returns whether or not a user has the provided role.
+
 > 🧙‍♂️ 'true' means the user has the role, 'false' means they don't.
 
-## Usage
+## Syntax
 ```
-$hasRole[userID;roleID]
+$hasRole[User ID;Role ID]
 ```
 
 ### Parameters
-- `userID` `(Type: Snowflake || Flag: Required)`: The user to check for the role.
-- `roleID` `(Type: Snowflake || Flag: Emptiable)`: The role that the bot is checking the user for.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to check for the role.
+- `Role ID` `(Type: Snowflake || Flag: Emptiable)`: The role that the bot is checking the user for.
 
 ## Example
 ```

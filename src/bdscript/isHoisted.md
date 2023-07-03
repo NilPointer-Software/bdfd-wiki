@@ -1,14 +1,15 @@
 # $isHoisted
-Returns if a role is displayed separately.
-> 🧙‍♂️ 'true' means the role is hoisted, 'false' means the role isn't hoisted.
+Returns whether a role is displayed separately or not.
 
-## Usage
+> 🧙‍♂️ "true" means the role is hoisted, "false" means it isn't.
+
+## Syntax
 ```
-$isHoisted[roleID]
+$isHoisted[Role ID]
 ```
 
 ### Parameters
-- `roleID` `(Type: Snowflake || Flag: Required)`: The role to check its hoisted status.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role to check its hoisted status.
 
 ## Example
 ```

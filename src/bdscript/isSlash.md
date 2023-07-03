@@ -1,8 +1,9 @@
 # $isSlash
 Returns whether the command was ran as a slash command or not.
-> 🧙‍♂️ 'true' means the command was ran as a slash command, 'false' means it wasn't.
 
-## Usage
+> 🧙‍♂️ "true" means the command was ran as a slash command, "false" means it wasn't.
+
+## Syntax
 ```
 $isSlash
 ```

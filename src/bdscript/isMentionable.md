@@ -1,16 +1,17 @@
 # $isMentionable
-Returns whether or not a role is mentionable by everyone.
-> 🧙‍♂️ 'true' means the role is mentionable, 'false' means it isn't.
+Returns whether a role is mentionable by everyone or not.
+
+> 🧙‍♂️ "true" means the role is mentionable, "false" means it isn't.
 
 ![setting](https://user-images.githubusercontent.com/69215413/123517230-e5327280-d66d-11eb-8337-35dac5f276e7.png)
 
-## Usage
+## Syntax
 ```
-$isMentionable[roleID]
+$isMentionable[Role ID]
 ```
 
 ### Parameters
-- `roleID` `(Type: Snowflake || Flag: Required)`: The role to check for its mentionable status.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role to check for its mentionable status.
 
 ## Example
 ```

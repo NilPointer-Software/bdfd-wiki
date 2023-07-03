@@ -1,22 +1,23 @@
 # $isBoolean
-Returns whether or not the provided 'text' is a boolean.
-> 🧙‍♂️ 'true' means the text is a boolean, 'false' means it isn't.
+Returns whether the provided text is a boolean or not.
+
+> 🧙‍♂️ "true" means the text is a boolean, "false" means it isn't.
+
+## Syntax
+```
+$isBoolean[Text]
+```
+
+### Parameters
+- `Text` `(Type: String || Flag: Emptiable)`: The text to check.
 
 ### Supported Booleans
-Positive |  Negative 
+Positive | Negative 
 -------- | --------
 true | false
 yes | no
 on | off
 enable | disable
-
-## Usage
-```
-$isBoolean[text]
-```
-
-### Parameters
-- `text` `(Type: String || Flag: Emptiable)`: The text to check.
 
 ## Example
 ```
