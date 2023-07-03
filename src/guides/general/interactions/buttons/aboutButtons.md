@@ -20,6 +20,8 @@ In this section, you'll learn how to use the button component.
 - `danger`: Red button
 - `link`: Redirect button
 
+![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/c5f831ea-0f09-426c-8e9d-f3e4a93a3c49)
+
 > If `link` style is used, the button **won't send** any interactions!
 
 ## Button Type

@@ -1,13 +1,13 @@
-# $and
-Returns `true` if every provided condition is true, otherwise `false` is returned.
+# $if
+Executes the following block of code if the provided condition is true.
 
 ## Syntax
 ```
-$and[Conditions;...]
+$if[Condition]
 ```
 
 ### Parameters
-- `Conditions` `(Type: String || Flag: Required)`: Checks that will be carried out. All conditions must be true for this function to return `true`. Separate conditions using `;`.
+- `Condition` `(Type: String || Flag: Required)`: Check that will be carried out.
 
 ### Signs
 `==` - Equal
@@ -27,9 +27,10 @@ $and[Conditions;...]
 ## Example
 ```
 $nomention
-$and[$nickname==MineBartekSA;$message==Update]
+$if[$authorID==$botOwnerID]
+  $sendMessage[You are the developer of this bot!]
+$endif
 ```
-
-![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/d277f043-6acd-418c-8695-ced1f2061c20)
+![example](https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e6c2da63-b36f-4dde-8436-6ce9e7e41385)
 
 > For more info, see the [If Guide](..guides/ifStatements.md)

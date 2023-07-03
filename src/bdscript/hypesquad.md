@@ -1,13 +1,11 @@
 # $hypesquad
 
-Returns the hypesquad name of the provided user
+Returns the name of the hypesquad the provided user is in.
 
-## Usage
+## Syntax
 
 ```
-
 $hypesquad[userID]
-
 ```
 
 ### Parameters
