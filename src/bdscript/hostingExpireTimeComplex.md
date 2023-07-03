@@ -1,5 +1,5 @@
 # $hostingExpireTime[]
-Returns expire time for the hosting. If "yes" is provided, the function returns the expire time in UNIX Timestamp.
+Returns your bot's hosting expiration date. If "yes" is provided, the function returns the expiration date in a UNIX timestamp.
 
 ## Syntax
 ``` 
