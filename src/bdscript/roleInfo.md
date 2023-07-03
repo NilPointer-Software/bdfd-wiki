@@ -1,25 +1,25 @@
 # $roleInfo
-`$roleInfo` allows you to make a 'role info' command without using a bunch of different functions at once. This function returns info about the mentioned role.
+Returns information about the mentioned role. `$roleInfo` allows you to create a role info command without using a bunch of different functions at once.
 
-## Usage
+## Syntax
 ```
-$roleInfo[message]
+$roleInfo[Message]
 ```
 
 ### Parameters 
-- `message` `(Type: String || Flag: Required)` : The message format. Check below for more information.
+- `Message` `(Type: String || Flag: Required)`: The message format. Check below for more information.
 
-## Message format
-You can use the following 'commands' within `$roleInfo[]`:
+### Message format
+You can use the following "commands" within `$roleInfo[]`:
 
-- `{name}` - Returns the role name.
+- `{name}` - Returns the role's name.
 - `{ID}` - Returns the role's ID.
 - `{mentionable}` - Returns if the role is mentionable by everyone.
-- `{hoist}` - Returns if a role is hoisted (displayed separately).
+- `{hoist}` - Returns if the role is hoisted (displayed separately).
 - `{color}` - Returns the role's color.
-- `{position}` - Returns the roles position on 'roles list'.
+- `{position}` - Returns the role's position on the "roles list".
 
-⚠️ You can not include `$roleInfo[]` in a command with a `$description[]` (because it makes one automatically).
+> 🧙‍♂️ `$roleInfo[]` automatically generates a description. So, `$description[]` should not be used in the code.
 
 ## Example
 ```

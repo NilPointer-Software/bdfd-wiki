@@ -1,7 +1,7 @@
 # $roleCount
 Returns how many roles are in the current server.
 
-## Usage
+## Syntax
 ```
 $roleCount
 ```

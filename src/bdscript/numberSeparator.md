@@ -1,14 +1,14 @@
 # $numberSeparator
 Separates the thousands in a number.
 
-## Usage
+## Syntax
 ```
-$numberSeparator[number;(separator)]
+$numberSeparator[Number;(Separator)]
 ```
 
 ### Parameters 
-- `number` `(Type: Integer || Flag: Required)`: The number to apply the separator to.
-- `separator` `(Type: String || Flag: Vacantable)`: The separator between each thousand. The default is `,`.
+- `Number` `(Type: Integer || Flag: Required)`: The number to apply the separator to.
+- `Separator` `(Type: String || Flag: Vacantable)`: The separator between each thousand. The default is `,`.
 
 ## Example
 ```

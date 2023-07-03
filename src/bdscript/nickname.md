@@ -1,7 +1,7 @@
 # $nickname
 Returns the nickname of the author of the message.
 
-> 🧙‍♂️ Nickname means the user's server nickname. If the user doesn't have a nickname then their username is returned instead.
+> 🧙‍♂️ Nickname means the user's server nickname. If the user doesn't have a nickname then their display name is returned instead.
 
 ## Syntax
 ```

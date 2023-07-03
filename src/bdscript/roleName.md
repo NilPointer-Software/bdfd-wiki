@@ -1,13 +1,13 @@
 # $roleName
-Returns a role's name.
+Returns a role's name using its ID.
 
-## Usage
+## Syntax
 ```
-$roleName[roleID]
+$roleName[Role ID]
 ```
 
 ### Parameters
-- `roleID` `(Type: Snowflake || Flag: Required)`: The role for which to get its name.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role for which to get its name.
 
 ## Example
 ```

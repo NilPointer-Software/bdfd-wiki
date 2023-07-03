@@ -1,11 +1,11 @@
 # $removeComponent
-Removes certain component from a message.
+Removes a certain component from a message.
 
-## Usage
+## Syntax
 ```
-$removeComponent[customID;(messageID)]
+$removeComponent[Custom ID;(Message ID)]
 ```
 
 ### Parameters
-- `customID` `(Type: String || Flag: Required)`: The select-menu/button custom ID to remove from the message.
-- `messageID` `(Type: Snowflake || Flag: Vacantable)`: The message to remove the component from, uses the bot's current message if no 'messageID' is provided.
+- `Custom ID` `(Type: String || Flag: Required)`: The select-menu/button custom ID to remove from the message.
+- `Message ID` `(Type: Snowflake || Flag: Vacantable)`: The message to remove the component from, uses the bot's current message if no `Message ID` is provided.
