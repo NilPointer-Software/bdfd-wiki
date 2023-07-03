@@ -1,7 +1,7 @@
 # $modulo
 Returns remainder between numbers.
 
-## Usage
+## Syntax
 ```
 $modulo[A;B]
 ```

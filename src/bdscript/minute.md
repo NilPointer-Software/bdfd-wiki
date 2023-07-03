@@ -1,8 +1,9 @@
 # $minute
 Returns the current minute of this hour.
-> 🧙‍♂️ You can use [$time](./time.md) to change the timezone.
 
-## Usage
+> 🧙‍♂️ You can use [`$time`](./time.md) to change the timezone.
+
+## Syntax
 ```
 $minute
 ```

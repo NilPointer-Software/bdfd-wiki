@@ -37,14 +37,16 @@ readmessages | Allows to view a channel. This permission is also known as *"View
 requesttospeak | Allows to request to speak in stage.
 sendmessages | Allows to send messages in channels.
 sendmessagesinthreads | Allows to send messages in threads.
+sendvoicemessages | Allows to send voice messages in channels.
 slashcommands | Allows to use application commands *(i.e slash commands, context-menus)* in channels. This permission is also known as *"Use Application Commands"*.
 speak | Allows to speak in voice/stage channel.
 stream | Allows to stream live in voice/stage channels.
 tts | Allows to send text-to-speech (tts) messages.
+usesoundboard | Allows to use sounds from the server soundboard in voice channels.
 usevad | Allows to use voice-activity detection. Members without this permission will have to use push-to-talk voice feature. This permission is also known as *"Use voice activity"*.
 viewauditlog | Allows to view server audit logs.
 viewguildinsights | Allows to view [insights](https://discord.com/developers/servers) of a server.
 voicedeafen | Allows to deafen a member in voice/stage channel.
 voicemute | Allows to mute a member from speaking in voice/stage channel.
 
-> 📝 All permissions are case insensitive (i.e both `BAN` and `Ban` will work).  
+> 📝 All permissions are case insensitive (i.e both `BAN` and `Ban` will work).

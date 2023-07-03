@@ -1,14 +1,14 @@
 # $mentioned
 Returns the ID of the mentioned user.
 
-## Usage
+## Syntax
 ```
-$mentioned[mentionNumber;(returnAuthor)]
+$mentioned[Mention number;(Return author?)]
 ```
 
 ### Parameters 
-- `mentionNumber` `(Type: HowMany || Flag: Required)`: The user-mention to get from the author's message  (`1` = first user-mention, `2` = second, etc).
-- `returnAuthor` `(Type: Bool || Flag: Optional)`: Whether to return the author's ID if no user is mentioned or not.
+- `Mention number` `(Type: HowMany || Flag: Required)`: The user-mention to get from the author's message (`1` = first user-mention, `2` = second, etc).
+- `Return author?` `(Type: Bool || Flag: Optional)`: Whether to return the author's ID if no user is mentioned or not.
 
 ## Example
 ```

@@ -1,8 +1,9 @@
 # $month
 Returns the current month of this year.
-> 🧙‍♂️ You can use [$time](./time.md) to change the timezone.
 
-## Usage
+> 🧙‍♂️ You can use [`$time`](./time.md) to change the timezone.
+
+## Syntax
 ```
 $month
 ```

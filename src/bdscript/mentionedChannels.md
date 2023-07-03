@@ -1,14 +1,14 @@
 # $mentionedChannels
 Returns the ID of the mentioned channel.
 
-## Usage
+## Syntax
 ```
-$mentionedChannels[mentionNumber;(returnCurrent)]
+$mentionedChannels[Mention number;(Return current?)]
 ```
 
 ### Parameters 
-- `mentionNumber` `(Type: HowMany || Flag: Required)`: The channel-mention to get from the author's message  (`1` = first channel-mention, `2` = second, etc).
-- `returnCurrent` `(Type: Bool || Flag: Optional)`: Whether to return the current channel ID if no channel is mentioned or not.
+- `Mention number` `(Type: HowMany || Flag: Required)`: The channel-mention to get from the author's message (`1` = first channel-mention, `2` = second, etc).
+- `Return current?` `(Type: Bool || Flag: Optional)`: Whether to return the current channel ID if no channel is mentioned or not.
 
 ## Example
 ```
