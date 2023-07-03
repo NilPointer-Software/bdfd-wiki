@@ -154,6 +154,8 @@
     - [$disableInnerSpaceRemoval](./bdscript/disableInnerSpaceRemoval.md)
     - [$disableSpecialEscaping](./bdscript/disableSpecialEscaping.md)
     - [$discriminator](./bdscript/discriminator.md)
+    - [$displayName](./bdscript/displayName.md)
+    - [$displayName[]](./bdscript/displayNameComplex.md)
     - [$divide](./bdscript/divide.md)
     - [$dm](./bdscript/dm.md)
     - [$dmChannelID](./bdscript/dmChannelID.md)
