@@ -1,5 +1,5 @@
 # $hostingExpireTime 
-Returns expire time for the hosting.
+Returns your bot's hosting expiration date.
 
 ## Syntax
 ``` 
