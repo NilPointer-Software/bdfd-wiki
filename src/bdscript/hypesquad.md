@@ -14,4 +14,5 @@ $hypesquad[User ID]
 $nomention
 You are in $hypesquad[$authorID] house.
 ```
+
 ![example](https://user-images.githubusercontent.com/95774950/187594740-3eab54bf-1df1-4c4e-a2fe-372f8a45eb39.png)
