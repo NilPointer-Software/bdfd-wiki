@@ -1,5 +1,5 @@
 # $if
-Returns `true` if provided condition is true, otherwise `false` is returned.
+Executes the following block of code if the provided condition is true.
 
 ## Syntax
 ```
