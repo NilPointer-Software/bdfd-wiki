@@ -1,13 +1,13 @@
 # $thumbnail
-Adds an embedded thumbnail to bot's response message.
+Adds an embedded thumbnail to the bot's response message.
 
 ## Syntax
 ```
-$thumbnail[Image url;(Index)]
+$thumbnail[Image URL;(Index)]
 ```
 
 ### Parameters
-- `Image url` `(Type: URL || Flag: Emptiable)`: The image to set as the thumbnail.
+- `Image URL` `(Type: URL || Flag: Emptiable)`: The image to set as the thumbnail.
 - `Index` `(Type: Integer || Flag: Optional)`: What [embed index](../resources/embedIndexes.md) the thumbnail should belong to, default to `1`.
 
 ### Permissions

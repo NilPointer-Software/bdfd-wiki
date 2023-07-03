@@ -1,17 +1,24 @@
 # $slowmode
-With slowmode enabled in a channel, it'll limit the number of messages a user is able to send in a channel based on a timed cooldown. `$slowmode[]` is used to change a channel's slowmode using a bot.
-> 🧙‍♂️ Slowmode time can't be set over 6 hours/21600 seconds. Also, in order for the bot to run `$slowmode[]` successfully, it needs the 'Manage Channels' permission.
+Sets a slowmode for the provided channel.
 
-## Usage
+> With slowmode enabled in a channel, it will limit the number of messages a user is able to send in a channel based on a timed cooldown. `$slowmode[]` is used to change a channel's slowmode using a bot.
+
+## Syntax
 ```
-$slowmode[channelID;slowmodeTime]
+$slowmode[Channel ID;Slowmode time]
 ```
 
 ### Parameters 
-- `channelID` `(Type: Snowflake || Flag: Required)`: The channel in which the slowmode is being modified in. Use `0`/`0s` to disable the slowmode.
-- `slowmodeTime` `(Type: Duration || Flag: Required)`: The new slowmode delay *(in seconds, e.g. 1s, 180s, 5s, 3s, etc)*.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel in which the slowmode is being modified in.
+- `Slowmode time` `(Type: Duration || Flag: Required)`: The new slowmode delay *(in seconds, e.g. `1s`, `180s`, `5s`, `3s`, etc)*. Use `0`/`0s` to disable the slowmode.
 
-### Example
+  > 🧙‍♂️ Slowmode time can't be set over 6 hours/21600 seconds.
+
+### Permissions
+Required permissions that the bot must have for this function to work properly:
+- `managechannels`
+
+## Example
 ```
 $nomention
 $argsCheck[>1;:x: Incorrect Usage! Example: `!slowmode 5s`]
