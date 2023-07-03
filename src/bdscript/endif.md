@@ -1,5 +1,5 @@
 # $endif
-End a if statement.
+End an if statement.
 
 ## Syntax
 ```
