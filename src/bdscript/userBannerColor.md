@@ -1,5 +1,5 @@
 # $userBannerColor
-Returns the banner color of the given user. Returns empty string if no banner color is set.
+Returns the color of the given user banner. Returns an empty string if no banner color is set.
 
 ## Syntax
 ```
