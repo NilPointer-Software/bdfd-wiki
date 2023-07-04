@@ -35,3 +35,7 @@ $giveRole[$mentioned[1];$message[2]]
 Added the role **$roleName[$message[2]]** to **$username[$mentioned[1]]**!
 ```
 ![example2](https://user-images.githubusercontent.com/111157596/250921826-a2a32410-a9da-4609-bee7-4076b8951e8b.png)
+
+## Related Resources
+- [`$roleGrant[]`](./roleGrant.md)
+- [`$takeRole[]`](./takeRole.md)
