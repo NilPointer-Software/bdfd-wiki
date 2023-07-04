@@ -19,8 +19,8 @@ $giveRole[User/Role ID;(Role ID)]
 ```
 $nomention
 $onlyPerms[manageroles;Missing permissions!]
-$giveRole[807004801753284618]
 
+$giveRole[807004801753284618]
 Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 ```
 ![example1](https://user-images.githubusercontent.com/69215413/123468942-6e8b6b80-d5c0-11eb-9102-afc48b70f622.png)
@@ -30,8 +30,8 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 $nomention
 $onlyPerms[manageroles;Missing permissions!]
 $trimContent
-$giveRole[$mentioned[1];$message[2]]
 
+$giveRole[$mentioned[1];$message[2]]
 Added the role **$roleName[$message[2]]** to **$username[$mentioned[1]]**!
 ```
 ![example2](https://user-images.githubusercontent.com/111157596/250921826-a2a32410-a9da-4609-bee7-4076b8951e8b.png)
