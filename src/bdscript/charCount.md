@@ -1,16 +1,17 @@
 # $charCount
-Gets the amount of characters in the provided 'text'.
+Returns the amount of characters in the provided "Text".
 
 ## Syntax
 ```
-$charCount[text]
+$charCount[Text]
 ```
 
 ### Parameters
-- `text` `(Type: String || Flag: Emptiable)`: The text to return the character count for.
+- `Text` `(Type: String || Flag: Emptiable)`: The text to return the character count for.
 
 ## Example
 ```
-$charCount[$message]
+$nomention
+Your message has **$charCount[$message]** characters.
 ```
-> 🧙‍♂️ This example would return how many characters were in the author's message.
+![example](https://user-images.githubusercontent.com/111157596/250920649-1ed2b250-8bcb-4c00-bff4-e3c06c1668ca.png)

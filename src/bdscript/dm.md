@@ -1,31 +1,19 @@
 # $dm
-Direct messages a user.
+Direct messages the user who runs the command.
 
-## Usages
-There are three possible usages of the `$dm` function.
-
-### Usage #1
+## Syntax
 ```
 $dm
 ```
-This will send the message to the user that runs the command.
 
-### Usage #2
+## Example
 ```
-$dm[]
+$nomention
+$dm
+Hello!
 ```
-This will send the message to the first mentioned user.
-
-### Usage #3
-```
-$dm[UserID;...]
-```
-This will send the message to every user with given User ID.
-
-## Parameters 
-- `userID` `(Type: Snowflake || Flag: Emptiable)`: The user to whom to send the direct message. 
-
-
+![example](https://user-images.githubusercontent.com/111157596/250920927-01f8c481-ab76-4810-a940-e060f7396003.png)\
+![example](https://user-images.githubusercontent.com/111157596/250920959-d1d8ecda-5a3a-4b65-9135-0502d13c6520.png)
 
 ## Note
-If the command fails to send the message, make sure the user allows dm messages from everyone.
+If the command fails to send the message, make sure you allow direct messages from everyone.

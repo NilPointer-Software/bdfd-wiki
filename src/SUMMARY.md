@@ -159,6 +159,7 @@
     - [$displayName[]](./bdscript/displayNameComplex.md)
     - [$divide](./bdscript/divide.md)
     - [$dm](./bdscript/dm.md)
+    - [$dm[]](./bdscript/dmComplex.md)
     - [$dmChannelID](./bdscript/dmChannelID.md)
     - [$editButton](./bdscript/editButton.md)
     - [$editChannelPerms](./bdscript/editChannelPerms.md)

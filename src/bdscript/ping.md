@@ -1,14 +1,14 @@
 # $ping
-Shows the delay between sent message and bot's response.
-The value of `$ping` is expressed in miliseconds.
+Returns the ping of the bot's node, in milliseconds.
 
-## Example command:
+## Syntax
 ```
-Ping: $ping ms
+$ping
 ```
 
-#### Expected output:
+## Example
 ```
-Ping: 50 ms
+$nomention
+Pong! `$pingms`
 ```
-⠀
+![example](https://user-images.githubusercontent.com/111157596/250922355-2b9717e6-e175-4feb-a218-f121f886a324.png)
