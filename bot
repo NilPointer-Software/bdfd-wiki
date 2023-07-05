@@ -1,0 +1,6 @@
+$nomention
+$cooldown[30s;Wacht nog %time%]
+$title[Xtc Plukken]
+$description[> U hebt $random[1;50] XTC in uw tas gestopt]
+$setUserVar[Xtc;$sum[$getUserVar[Xtc];$random[1;50]]]$thumbnail[
+https://cdn.discordapp.com/attachments/990730824225787905/1057335001752027156/symptomen-bij-xtc-768x512.jpg]
