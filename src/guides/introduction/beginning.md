@@ -2,11 +2,11 @@
 In this guide you will learn how to create your own bot with BDFD.
 
 ## Content
-[**Functions Used**](#functions-used) > [**Creating**](#step-1---creating) > [**Inviting**](#step-2---inviting) > [**First Code**](#step-3---first-code) > [**Bot Online**](#step-4---bot-online) > [**Test it!**](#step-5---test-it)
+[**Functions Used**](#functions-used) > [**Creating**](#step-1:-creating) > [**Inviting**](#step-2---inviting) > [**First Code**](#step-3---first-code) > [**Bot Online**](#step-4---bot-online) > [**Test it!**](#step-5---test-it)
 
 # Functions Used
 
-# Step 1 - Creating
+# Step 1: Creating
 - Go to [Discord Developer Portal](https://discord.com/developers/applications).
 - Click on the *"New Application"* button and provide a name for your application.
 - In top-left corner, click on the hamburger icon (`≡`) and select the *"Bots"* tab.
