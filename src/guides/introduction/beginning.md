@@ -4,7 +4,7 @@ In this guide you will learn how to create your own bot with BDFD.
 ## Content
 [**Functions Used**](#functions-used) > [**Creating**](#step-1-creating) > [**Inviting**](#step-2-inviting) > [**First Code**](#step-3-first-code) > [**Bot Online**](#step-4-bot-online) > [**Test it!**](#step-5-test-it)
 
-# Functions Used
+## Functions Used
 - [`$nomention`](../../bdscript/nomention.md)
 - [`$reply`](../../bdscript/reply.md)
 
