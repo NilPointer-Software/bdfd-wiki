@@ -5,6 +5,8 @@ In this guide you will learn how to create your own bot with BDFD.
 [**Functions Used**](#functions-used) > [**Creating**](#step-1-creating) > [**Inviting**](#step-2-inviting) > [**First Code**](#step-3-first-code) > [**Bot Online**](#step-4-bot-online) > [**Test it!**](#step-5-test-it)
 
 # Functions Used
+- [`$nomention`](../../../../bdscript/nomention.md)
+- [`$reply`](../../../../bdscript/reply.md)
 
 # Step 1: Creating
 - Go to [Discord Developer Portal](https://discord.com/developers/applications).
@@ -42,14 +44,16 @@ Pong!
 - Click on *"Save command"* to save the code.
 
 # Step 4: Bot Online
-## Method 1 - 30 Minutes
+### Method 1 - 30 Minutes
 - Click on *"Dashboard"* in the selected bot and press on the *"+ Add free hosting time"* button.
 - Enter the indicated numbers and click *"Confirm"*.
-## Method 2 - 140 Minutes
+### Method 2 - 140 Minutes
 - Press on *"Dashboard"* button in the selected bot and click on *"+ Watch ad for 90 minutes of free hosting time"*.
-## Method 3 - Premium
+### Method 3 - Premium
 - Use [premium](../../premium/introduction.md#purchasing-premium-points) points to get hosting time without ad.
 > If the bot is not online after these methods, then take a look at this page. [Why my bot is offline?](../../resources/troubleshooting.md#the-bot-is-offline)
 
 ## Step 5: Test it!
 Send a `!ping` command to the channel of the server you invited the bot to.
+
+![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/5a5eca33-6c2b-4e46-8283-a6312462f6f5)
