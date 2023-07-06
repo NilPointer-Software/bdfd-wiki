@@ -24,7 +24,7 @@ In this guide you will learn how to create your own bot with BDFD.
 ## Step 3 - First Code
 To create the first command, you must click on *"Commands"* in the selected bot and press on the *"+ Command creator"*.
 You will see 3 categories ("Command Name", "Command Trigger", "Template Functions").
-- Come up with a name for your command and paste it into the "Team Name" field. (You can leave it blank).
+- Come up with a name for your command and paste it into the "Command  Name" field. (You can leave it blank).
 - Now come up with a trigger for the command. (Example: `!ping`).
 > It is important that the trigger of the command matches its meaning.
 After completing the command setup, press the *"Create Command"* button. Now you can create your first code!
@@ -41,6 +41,7 @@ Pong!
 - Click on *"Dashboard"* in the selected bot and press on the *"+ Add free hosting time"* button.
 - Enter the indicated numbers and click *"Confirm"*.
 ### Method 2 - 140 Minutes
-- Click on *"Dashboard"* in the selected bot and press on the *"+ Add free hosting time"* button.
-- ### Method 3 - Premium
-You can host your Discord bot in the app by either watching free ads or purchasing [premium](../../premium/introduction.md).
+- Press on *"Dashboard"* button in the selected bot and click on *"+ Watch ad for 90 minutes of free hosting time"*.
+### Method 3 - Premium
+- Use [premium](../premium/introduction.md#purchasing-premium-points) points to get hosting time without ad.
+> If the bot is not online after these methods, then take a look at this page. [Why my bot is offline?](./resources/troubleshooting.html#the-bot-is-offline)
