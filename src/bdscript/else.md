@@ -17,4 +17,4 @@ $endif
 ```
 ![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/611aad1c-4f25-4212-ac80-a35a97ed9ecf)
 
-> For more info, see the [If Guide](..guides/ifStatements.md).
+> For more info, see the [If Guide](../guides/ifStatements.md).
