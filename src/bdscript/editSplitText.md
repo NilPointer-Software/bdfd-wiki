@@ -1,5 +1,5 @@
 # $editSplitText
-Edits a splitted text element using it's index.
+Edits a splitted text element using its index.
 
 ## Syntax
 ```
