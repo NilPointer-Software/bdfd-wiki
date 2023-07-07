@@ -9,10 +9,10 @@ $createRole[Role name;Color hex;Hoist?;Mentionable?]
 ### Parameters
 - `Role name` `(Type: String || Flag: Required)`: The name to give the new role.
 - `Color hex` `(Type: Color || Flag: Required)`: The [color hex](https://htmlcolorcodes.com/color-picker) of the new role.
-- `Hoist?` `(Type: Bool || Flag: Vacantable)`: Whether the role should be displayed separately (hoisted) or not. `no` means the role won't be hoisted, `yes` means it will.
-  > ![example](https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png)
-- `Mentionable?` `(Type: Bool || Flag: Vacantable)`: Whether the role should be mentionable by everyone. `no` means the role won't be mentionable, `yes` means it will.
-  > ![example](https://user-images.githubusercontent.com/69215413/122795765-a37b8380-d28b-11eb-8f06-c23e01bafc11.png)
+- `Hoist?` `(Type: Bool || Flag: Vacantable)`: Whether the role should be displayed separately (hoisted) or not. `no` means the role won't be hoisted, `yes` means it will.\
+  ![example](https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png)
+- `Mentionable?` `(Type: Bool || Flag: Vacantable)`: Whether the role should be mentionable by everyone. `no` means the role won't be mentionable, `yes` means it will.\
+  ![example](https://user-images.githubusercontent.com/69215413/122795765-a37b8380-d28b-11eb-8f06-c23e01bafc11.png)
 
 ## Example
 ```
