@@ -14,14 +14,13 @@ $membersCount[Presence]
   - `dnd`
   - `invisible`
 
-## Privileged Intents
+### Privileged Intents
 This function requires the following privileged intents:
 - [`Presences intent`](../guides/gatewayIntents.md#presence-intent)
 
 ## Example 
 ```
 $nomention 
-there are $membersCount[online] users in this server
+there are $membersCount[online] online users in this server
 ```
-
 ![example](https://user-images.githubusercontent.com/70468667/219971665-9185a0b7-52e8-44eb-8d43-e5e2455bcbe3.jpg)
