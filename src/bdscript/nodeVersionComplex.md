@@ -16,4 +16,4 @@ $nodeVersion[Node Number]
 $nomention
 13 Node Version: `$nodeVersion[13]`
 ```
-![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/320318b0-147c-430b-8533-7c5e5174f1fb)
+![example](https://user-images.githubusercontent.com/113303649/249157010-320318b0-147c-430b-8533-7c5e5174f1fb.png)
