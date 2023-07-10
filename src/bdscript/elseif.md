@@ -1,8 +1,7 @@
 # $elseif
-Checks provided condition only if previous `$if[]` or `$elseif[]` conditions returned false.
-If the provided condition is true, the following block of code will be executed.
+Checks provided condition only if previous `$if[]` or `$elseif[]` conditions returned false. If the provided condition is true, the following block of code will be executed.
 
-> Only for BDScript 2
+> 🧙‍♂️ Only for **BDScript 2**!
 
 ## Syntax
 ```
@@ -38,4 +37,5 @@ $endif
 ```
 
 ![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/a929d2ac-fcbe-4879-a70c-8e0433aa8177)
-> For more info, see the [If Guide](..guides/ifStatements.md)
+
+> For more info, see the [If Guide](../guides/ifStatements.md).

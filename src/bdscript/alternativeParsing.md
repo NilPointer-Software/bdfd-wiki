@@ -23,8 +23,8 @@ $nomention
 $description["helloworld"]
 ```
 3. Execute commands
-### With $alternativeParsing
+### With `$alternativeParsing`
 ![example](https://user-images.githubusercontent.com/113303649/209946250-ddf50d47-b8a7-48c2-8404-a2a58981c36d.png)
 
-### Without $alternativeParsing
+### Without `$alternativeParsing`
 ![example](https://user-images.githubusercontent.com/113303649/209946555-3b270854-0176-4492-bd1a-2ba81bf389c1.png)

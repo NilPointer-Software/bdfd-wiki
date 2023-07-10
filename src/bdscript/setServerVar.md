@@ -1,16 +1,16 @@
 # $setServerVar
-Updates a variable value for a server.
+Updates a variable's value for a server.
 
 ## Syntax
 ```
-$setServerVar[variableName;newValue;(serverID)]
+$setServerVar[Variable name;New value;(Server ID)]
 ```
 
 ### Parameters 
-- `variableName` `(Type: String || Flag: Required)`: The variable to update.
-- `newValue` `(Type: String || Flag: Emptiable)`: The newly assigned variable value.
-- `serverID` `(Type: Snowflake || Flag: Optional)`: The server to assign the new value to, uses current server if no 'serverID' is provided.
+- `Variable name` `(Type: String || Flag: Required)`: The variable to update.
+- `New value` `(Type: String || Flag: Emptiable)`: The new variable value.
+- `Server ID` `(Type: Snowflake || Flag: Optional)`: The server to assign the new value to. Uses the current server if no "Server ID" is provided.
 
-> 📝 Server variables values has a max character limit of 499 _(for premium users, it's 4999)_.
+> 📝 Server variable values have a max character limit of **499** _(for premium users, it's **4999**)_.
 
-[See more in the Variables guide...](https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html)
+> For more info, see the [Variables Guide](../guides/introduction/variables.md).

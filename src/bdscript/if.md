@@ -33,4 +33,4 @@ $endif
 ```
 ![example](https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e6c2da63-b36f-4dde-8436-6ce9e7e41385)
 
-> For more info, see the [If Guide](..guides/ifStatements.md)
+> For more info, see the [If Guide](../guides/ifStatements.md).

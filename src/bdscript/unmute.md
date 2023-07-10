@@ -1,7 +1,9 @@
 # $unmute
-Unmutes the mentioned user.
+*(deprecated)*
 
-> 📌 As of December 2021, this function has been deprecated in favor of [$untimeout](./untimeout.md).
+> 📌 As of December 2021, this function has been deprecated in favor of [`$untimeout[]`](./untimeout.md).
+
+Unmutes the mentioned user.
 
 ## Syntax
 ```
@@ -9,10 +11,10 @@ $unmute[Muted]
 ```
 
 ### Parameters
-- `Muted` `(Type: String || Flag: Required)`: The name of the 'Muted' role (Case sensitive).
+- `Muted` `(Type: String || Flag: Required)`: The name of the "Muted" role (case sensitive).
 
 ### Permissions
-Required permissions that the bot must have for this function to work properly :
+Required permissions that the bot must have for this function to work properly:
 - `manageroles`
 
 ## Example

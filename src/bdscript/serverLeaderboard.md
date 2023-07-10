@@ -1,13 +1,15 @@
 # $serverLeaderboard
-Makes a server leaderboard (top-10).
+Creates a server leaderboard (top-10).
+
+> 🧙‍♂️ `$serverLeadboard` automatically generates a description. So, `$description` should not be used in the code.
 
 ## Syntax
 ```
-$serverLeaderboard[variableName;(sortType)]
+$serverLeaderboard[Variable name;(Sort type)]
 ```
 
 ### Parameters 
-- `variableName` `(Type: String || Flag: Required)`: The variable to create the leaderboard for.
-- `sortType` `(Type: Enum || Flag: Optional)`: Whether to sort the leaderboard in ascending (asc) or descending (desc) order.
-
-> 🧙‍♂️ `$serverLeadboard` automatically generates a description. So, `$description` should not be used in the code.
+- `Variable name` `(Type: String || Flag: Required)`: The variable to create the leaderboard for.
+- `Sort type` `(Type: Enum || Flag: Optional)`: The sort type of the values (default is `desc`). Sort types:
+  - `asc` - Sorts the values in ascending order.
+  - `desc` - Sorts the values in descending order.
