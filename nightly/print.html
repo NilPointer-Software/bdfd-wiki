@@ -4807,9 +4807,9 @@ I'm serving $allMembersCount users!
 $allowMention
 $message
 </code></pre>
-<h3 id="with-allowmention"><a class="header" href="#with-allowmention">With $allowMention</a></h3>
+<h3 id="with-allowmention"><a class="header" href="#with-allowmention">With <code>$allowMention</code></a></h3>
 <p><img src="https://user-images.githubusercontent.com/113303649/209938280-bd18eeca-41f6-4193-ac65-665455c0b14a.png" alt="example" /></p>
-<h3 id="without-allowmention"><a class="header" href="#without-allowmention">Without $allowMention</a></h3>
+<h3 id="without-allowmention"><a class="header" href="#without-allowmention">Without <code>$allowMention</code></a></h3>
 <p><img src="https://user-images.githubusercontent.com/113303649/209938701-6c4bd976-ddb8-4a59-9522-b986313dde46.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="allowrolementions"><a class="header" href="#allowrolementions">$allowRoleMentions</a></h1>
 <p>Enables role pings only for the provided role IDs, while the roles not provided will be 'fake pinged' <em>(the role will be pinged, but users will not be notified)</em>.</p>
@@ -4866,9 +4866,9 @@ $description[&quot;helloworld&quot;]
 <ol start="3">
 <li>Execute commands</li>
 </ol>
-<h3 id="with-alternativeparsing"><a class="header" href="#with-alternativeparsing">With $alternativeParsing</a></h3>
+<h3 id="with-alternativeparsing"><a class="header" href="#with-alternativeparsing">With <code>$alternativeParsing</code></a></h3>
 <p><img src="https://user-images.githubusercontent.com/113303649/209946250-ddf50d47-b8a7-48c2-8404-a2a58981c36d.png" alt="example" /></p>
-<h3 id="without-alternativeparsing"><a class="header" href="#without-alternativeparsing">Without $alternativeParsing</a></h3>
+<h3 id="without-alternativeparsing"><a class="header" href="#without-alternativeparsing">Without <code>$alternativeParsing</code></a></h3>
 <p><img src="https://user-images.githubusercontent.com/113303649/209946555-3b270854-0176-4492-bd1a-2ba81bf389c1.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="and"><a class="header" href="#and">$and</a></h1>
 <p>Returns <code>true</code> if every provided condition is true, otherwise <code>false</code> is returned.</p>
@@ -4896,7 +4896,7 @@ $and[$nickname==MineBartekSA;$message==Update]
 </code></pre>
 <p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/d277f043-6acd-418c-8695-ced1f2061c20" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="bdscript/..guides/ifStatements.html">If Guide</a></p>
+<p>For more info, see the <a href="bdscript/../guides/ifStatements.html">If Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="argcount"><a class="header" href="#argcount">$argCount</a></h1>
 <p>Returns how many words (aka arguments/args) are in the provided text.</p>
@@ -5576,13 +5576,12 @@ Changed &lt;@$mentioned[1]&gt;'s nickname to `$noMentionMessage`.
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changeusernamewithid"><a class="header" href="#changeusernamewithid">$changeUsernameWithID</a></h1>
 <p>Changes a user's nickname using their ID.</p>
 <h2 id="syntax-89"><a class="header" href="#syntax-89">Syntax</a></h2>
-<pre><code>
-$changeUsernameWithID[user ID;new nickname]
+<pre><code>$changeUsernameWithID[User ID;New nickname]
 </code></pre>
 <h3 id="parameters-67"><a class="header" href="#parameters-67">Parameters</a></h3>
 <ul>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the user whose nickname will be changed.</li>
-<li><code>new nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user's nickname to. It cannot exceed more than 32 characters, using <code>%username%</code> will be replaced by real user's username.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the user whose nickname will be changed.</li>
+<li><code>New nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user's nickname to. It cannot exceed more than 32 characters, using <code>%username%</code> will be replaced by real user's username.</li>
 </ul>
 <h2 id="example-99"><a class="header" href="#example-99">Example</a></h2>
 <pre><code>$nomention
@@ -5651,16 +5650,17 @@ Channel ID: $channelID[$message]
 <p><img src="https://user-images.githubusercontent.com/113303649/212723060-6a914e0b-b32a-49d4-9ea2-495cef2cff1d.png" alt="example" /></p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeldfromname"><a class="header" href="#channeldfromname">$channelDFromName</a></h1>
-<p>Returns a channel's ID from it's name.</p>
+<p><em>(deprecated)</em></p>
 <blockquote>
-<p><strong>This function is deprecated. Use <a href="bdscript/./bdscript/channelIDComplex.html"><code>$channelID[]</code></a> instead.</strong></p>
+<p>🧙‍♂️ This function is deprecated, instead better use <a href="bdscript/./channelIDComplex.html"><code>$channelID[]</code></a>.</p>
 </blockquote>
+<p>Returns a channel's ID from its name.</p>
 <h2 id="syntax-94"><a class="header" href="#syntax-94">Syntax</a></h2>
-<pre><code>$channelIDFromName[channel name]
+<pre><code>$channelIDFromName[Channel name]
 </code></pre>
 <h3 id="parameters-70"><a class="header" href="#parameters-70">Parameters</a></h3>
 <ul>
-<li><code>channel name</code> <code>(Type: String || Flag: Required)</code>: The channel name that the bot will return the channel id for.</li>
+<li><code>Channel name</code> <code>(Type: String || Flag: Required)</code>: The channel name that the bot will return the channel ID for.</li>
 </ul>
 <h2 id="example-104"><a class="header" href="#example-104">Example</a></h2>
 <pre><code>$nomention
@@ -5757,17 +5757,17 @@ $channelSendMessage[835108724846493726;Hello!]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/127034232-384f3678-0010-4a97-bf89-9dd5963d8742.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltopic-1"><a class="header" href="#channeltopic-1">$channelTopic[]</a></h1>
-<p>Returns the topic of a channel by it's ID.</p>
+<p>Returns the topic of a channel by its ID.</p>
 <h2 id="syntax-101"><a class="header" href="#syntax-101">Syntax</a></h2>
-<pre><code>$channelTopic[channel ID]
+<pre><code>$channelTopic[Channel ID]
 </code></pre>
 <h3 id="parameters-75"><a class="header" href="#parameters-75">Parameters</a></h3>
 <ul>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to return its topic.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to return its topic.</li>
 </ul>
 <h2 id="example-111"><a class="header" href="#example-111">Example</a></h2>
 <pre><code>$nomention
-&lt;#$noMentionMessage&gt; topic: $channelTopic[$noMentionMessage]
+&lt;#$noMentionMessage&gt; topic is : $channelTopic[$noMentionMessage]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70468667/219971438-d624efbc-d1ff-4519-8377-7744ededda4f.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channeltype"><a class="header" href="#channeltype">$channelType</a></h1>
@@ -5995,19 +5995,18 @@ $cooldown[30s;Please wait %time%, then use that command again!]
 Hi!
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createchannel"><a class="header" href="#createchannel">$createChannel</a></h1>
-<p>Creates a channel.</p>
+<p>Creates a new channel.</p>
 <h2 id="syntax-115"><a class="header" href="#syntax-115">Syntax</a></h2>
-<pre><code>$createChannel[name;type;(category ID)]
+<pre><code>$createChannel[Name;Type;(Category ID)]
 </code></pre>
 <h3 id="parameters-87"><a class="header" href="#parameters-87">Parameters</a></h3>
 <ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.</li>
-</ul>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.
 <blockquote>
-<p>Channel names can have a maximum of upto 100 characters.</p>
+<p>Channel names can have a maximum of 100 characters.</p>
 </blockquote>
-<ul>
-<li><code>type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:
+</li>
+<li><code>Type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:
 <ul>
 <li><code>category</code></li>
 <li><code>text</code></li>
@@ -6016,37 +6015,35 @@ Hi!
 <li><code>forum</code></li>
 </ul>
 </li>
-<li><code>category ID</code> - The category to put the channel in (if applicable).</li>
+<li><code>Category ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The category to put the channel in (if applicable).</li>
 </ul>
 <h2 id="example-123"><a class="header" href="#example-123">Example</a></h2>
 <pre><code>$nomention
 $createChannel[cool-channel;text]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125972519-26d1a5a1-f362-4101-abdd-6c3943e6811c.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/125972524-95307b17-bfcc-4525-a4fa-1d58a30a1fa9.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/125972519-26d1a5a1-f362-4101-abdd-6c3943e6811c.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/69215413/125972524-95307b17-bfcc-4525-a4fa-1d58a30a1fa9.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="createrole"><a class="header" href="#createrole">$createRole</a></h1>
 <p>Creates a new role.</p>
 <h2 id="syntax-116"><a class="header" href="#syntax-116">Syntax</a></h2>
-<pre><code>$createRole[role name;color hex;hoist?;mentionable?]
+<pre><code>$createRole[Role name;Color hex;Hoist?;Mentionable?]
 </code></pre>
 <h3 id="parameters-88"><a class="header" href="#parameters-88">Parameters</a></h3>
 <ul>
-<li><code>role name</code> <code>(Type: String || Flag: Required)</code>: The name to give the new role.</li>
-<li><code>color hex</code> <code>(Type: Color || Flag: Required)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> of the new role.</li>
-<li><code>hoist?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be displayed separately (hoisted) or not. <code>no</code> means the role won't be hoisted, <code>yes</code> means it will.</li>
+<li><code>Role name</code> <code>(Type: String || Flag: Required)</code>: The name to give the new role.</li>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Required)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> of the new role.</li>
+<li><code>Hoist?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be displayed separately (hoisted) or not. <code>no</code> means the role won't be hoisted, <code>yes</code> means it will.<br />
+<img src="https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png" alt="example" /></li>
+<li><code>Mentionable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be mentionable by everyone. <code>no</code> means the role won't be mentionable, <code>yes</code> means it will.<br />
+<img src="https://user-images.githubusercontent.com/69215413/122795765-a37b8380-d28b-11eb-8f06-c23e01bafc11.png" alt="example" /></li>
 </ul>
-<p><img src="https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png" alt="example" /></p>
-<ul>
-<li><code>mentionable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be mentionable by everyone. <code>no</code> means the role won't be mentionable, <code>yes</code> means it will.</li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/69215413/122795765-a37b8380-d28b-11eb-8f06-c23e01bafc11.png" alt="example" /></p>
 <h2 id="example-124"><a class="header" href="#example-124">Example</a></h2>
 <pre><code>$nomention
 $createRole[Cool Role;#FFFF00;yes;no]
 Created new role!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/125972939-7d2950a4-1831-4696-8a23-d07d45fa9456.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/125973030-7c9b980c-cffb-4f8e-aacc-a644a6fa23c3.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/69215413/125972939-7d2950a4-1831-4696-8a23-d07d45fa9456.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/69215413/125973030-7c9b980c-cffb-4f8e-aacc-a644a6fa23c3.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creationdate"><a class="header" href="#creationdate">$creationDate</a></h1>
 <p>Returns the creation date of any valid Discord Snowflake ID.</p>
 <h2 id="syntax-117"><a class="header" href="#syntax-117">Syntax</a></h2>
@@ -6153,7 +6150,7 @@ $endif
 <div style="break-before: page; page-break-before: always;"></div><h1 id="date"><a class="header" href="#date">$date</a></h1>
 <p>Returns the current date.</p>
 <blockquote>
-<p>You can use <a href="bdscript/./time.html"><code>$time[]</code></a> to change the timezone.</p>
+<p>🧙‍♂️ You can use <a href="bdscript/./time.html"><code>$time</code></a> to change the timezone.</p>
 </blockquote>
 <h2 id="syntax-121"><a class="header" href="#syntax-121">Syntax</a></h2>
 <pre><code>$date
@@ -6682,7 +6679,7 @@ $editSelectMenuOption[Example;Third;third-option;The third option;no;3️⃣]
 <p>For more info, see the <a href="bdscript/../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editsplittext-1"><a class="header" href="#editsplittext-1">$editSplitText</a></h1>
-<p>Edits a splitted text element using it's index.</p>
+<p>Edits a splitted text element using its index.</p>
 <h2 id="syntax-147"><a class="header" href="#syntax-147">Syntax</a></h2>
 <pre><code>$editSplitText[Index;Value]
 </code></pre>
@@ -6747,13 +6744,12 @@ $endif
 </code></pre>
 <p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/611aad1c-4f25-4212-ac80-a35a97ed9ecf" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="bdscript/..guides/ifStatements.html">If Guide</a></p>
+<p>For more info, see the <a href="bdscript/../guides/ifStatements.html">If Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="elseif-1"><a class="header" href="#elseif-1">$elseif</a></h1>
-<p>Checks provided condition only if previous <code>$if[]</code> or <code>$elseif[]</code> conditions returned false.
-If the provided condition is true, the following block of code will be executed.</p>
+<p>Checks provided condition only if previous <code>$if[]</code> or <code>$elseif[]</code> conditions returned false. If the provided condition is true, the following block of code will be executed.</p>
 <blockquote>
-<p>Only for BDScript 2</p>
+<p>🧙‍♂️ Only for <strong>BDScript 2</strong>!</p>
 </blockquote>
 <h2 id="syntax-150"><a class="header" href="#syntax-150">Syntax</a></h2>
 <pre><code>$elseif[Condition]
@@ -6783,7 +6779,7 @@ $endif
 </code></pre>
 <p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/a929d2ac-fcbe-4879-a70c-8e0433aa8177" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="bdscript/..guides/ifStatements.html">If Guide</a></p>
+<p>For more info, see the <a href="bdscript/../guides/ifStatements.html">If Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="embeddedurl"><a class="header" href="#embeddedurl">$embeddedURL</a></h1>
 <p>Sets the title to be a hyperlink.</p>
@@ -6908,7 +6904,7 @@ I successfully disabled the command!
 <pre><code>$enableDecimals[yes]
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="endif"><a class="header" href="#endif">$endif</a></h1>
-<p>End an if statement.</p>
+<p>Ends an if statement.</p>
 <h2 id="syntax-156"><a class="header" href="#syntax-156">Syntax</a></h2>
 <pre><code>$endif
 </code></pre>
@@ -6918,16 +6914,12 @@ $if[$message==BDFD]
   $sendMessage[I love BDFD!]
 $endif
 </code></pre>
-<ul>
-<li>With <code>$endif</code>:</li>
-</ul>
+<h3 id="with-endif"><a class="header" href="#with-endif">With <code>$endif</code></a></h3>
 <p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/40bc25ff-7bd1-43f4-8c70-0fd52ad8dc02" alt="example" /></p>
-<ul>
-<li>Without <code>$endif</code>:</li>
-</ul>
+<h3 id="without-endif"><a class="header" href="#without-endif">Without <code>$endif</code></a></h3>
 <p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/468b635e-7879-4adc-a2c6-5b8ca641092d" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="bdscript/..guides/ifStatements.html">If Guide</a></p>
+<p>For more info, see the <a href="bdscript/../guides/ifStatements.html">If Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ephemeral"><a class="header" href="#ephemeral">$ephemeral</a></h1>
 <p>Makes the bot's response ephemeral.</p>
@@ -7628,7 +7620,7 @@ $noMentionMessage ID is : $guildID[$noMentionMessage]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hasrole"><a class="header" href="#hasrole">$hasRole</a></h1>
 <p>Returns whether or not a user has the provided role.</p>
 <blockquote>
-<p>🧙‍♂️ 'true' means the user has the role, 'false' means they don't.</p>
+<p>🧙‍♂️ &quot;true&quot; means the user has the role, &quot;false&quot; means they don't.</p>
 </blockquote>
 <h2 id="syntax-192"><a class="header" href="#syntax-192">Syntax</a></h2>
 <pre><code>$hasRole[User ID;Role ID]
@@ -7763,7 +7755,7 @@ $endif
 </code></pre>
 <p><img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e6c2da63-b36f-4dde-8436-6ce9e7e41385" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="bdscript/..guides/ifStatements.html">If Guide</a></p>
+<p>For more info, see the <a href="bdscript/../guides/ifStatements.html">If Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignorechannels"><a class="header" href="#ignorechannels">$ignoreChannels</a></h1>
 <p>The command can't be executed in any of the provided channels. If the channel is ignored, then the provided &quot;Error message&quot; is returned.</p>
@@ -8225,14 +8217,14 @@ This server has $membersCount members
 </ul>
 </li>
 </ul>
-<h2 id="privileged-intents-1"><a class="header" href="#privileged-intents-1">Privileged Intents</a></h2>
+<h3 id="privileged-intents-1"><a class="header" href="#privileged-intents-1">Privileged Intents</a></h3>
 <p>This function requires the following privileged intents:</p>
 <ul>
 <li><a href="bdscript/../guides/gatewayIntents.html#presence-intent"><code>Presences intent</code></a></li>
 </ul>
 <h2 id="example-227"><a class="header" href="#example-227">Example</a></h2>
 <pre><code>$nomention 
-there are $membersCount[online] users in this server
+there are $membersCount[online] online users in this server
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70468667/219971665-9185a0b7-52e8-44eb-8d43-e5e2455bcbe3.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mentioned"><a class="header" href="#mentioned">$mentioned</a></h1>
@@ -8694,9 +8686,9 @@ Last: $noMentionMessage[&gt;]
 <pre><code>$nomention
 Version node: `$nodeVersion`
 </code></pre>
-<p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/12aa223d-f909-4658-9d3e-cdeb95409cb4" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/249168395-12aa223d-f909-4658-9d3e-cdeb95409cb4.png" alt="example" /></p>
 <blockquote>
-<p>You can find out which node your bot is on using <a href="bdscript/.//botNode.html"><code>$botNode</code></a></p>
+<p>You can use <a href="bdscript/./botNode.html"><code>$botNode</code></a> to find out which node your bot is on.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nodeversion-1"><a class="header" href="#nodeversion-1">$nodeVersion[]</a></h1>
 <p>Returns the version of the specified node.</p>
@@ -8707,11 +8699,14 @@ Version node: `$nodeVersion`
 <ul>
 <li><code>Node Number</code> <code>(Type: Integer || Flag: Required)</code>: The number of the node for which to return its version.</li>
 </ul>
+<blockquote>
+<p>You can use <a href="bdscript/./botNode.html"><code>$botNode</code></a> to find out which node your bot is on.</p>
+</blockquote>
 <h2 id="example-251"><a class="header" href="#example-251">Example</a></h2>
 <pre><code>$nomention
 13 Node Version: `$nodeVersion[13]`
 </code></pre>
-<p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/320318b0-147c-430b-8533-7c5e5174f1fb" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/249157010-320318b0-147c-430b-8533-7c5e5174f1fb.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="numberseparator"><a class="header" href="#numberseparator">$numberSeparator</a></h1>
 <p>Separates the thousands in a number.</p>
 <h2 id="syntax-254"><a class="header" href="#syntax-254">Syntax</a></h2>
@@ -8749,15 +8744,9 @@ $c[Put your code here.]
 </code></pre>
 <h3 id="parameters-193"><a class="header" href="#parameters-193">Parameters</a></h3>
 <ul>
-<li>
-<p><code>Channel ID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The channel to check the permissions for. Use <code>$channelID</code> for the current channel.</p>
-</li>
-<li>
-<p><code>Permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to execute the command. Use semicolons <code>;</code> as a separator to separate multiple permissions.</p>
-</li>
-<li>
-<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the bot doesn't have the needed permissions.</p>
-</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The channel to check the permissions for. Use <code>$channelID</code> for the current channel.</li>
+<li><code>Permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to execute the command. Use semicolons <code>;</code> as a separator to separate multiple permissions.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the bot doesn't have the needed permissions.</li>
 </ul>
 <h2 id="example-254"><a class="header" href="#example-254">Example</a></h2>
 <pre><code>$nomention
@@ -8771,14 +8760,10 @@ $description[Hey! I have `Embed links` permission in the current channel.]
 </code></pre>
 <h3 id="parameters-194"><a class="header" href="#parameters-194">Parameters</a></h3>
 <ul>
-<li>
-<p><code>Permissions</code> <code>(Type: Permission || Flag: Emptiable)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to run the command. Use semicolons <code>;</code> as a separator to separate multiple permissions.</p>
-</li>
-<li>
-<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the bot doesn't have all the provided permissions.</p>
-</li>
+<li><code>Permissions</code> <code>(Type: Permission || Flag: Emptiable)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to run the command. Use semicolons <code>;</code> as a separator to separate multiple permissions.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the bot doesn't have all the provided permissions.</li>
 </ul>
-<h3 id="example-255"><a class="header" href="#example-255">Example</a></h3>
+<h2 id="example-255"><a class="header" href="#example-255">Example</a></h2>
 <pre><code>$nomention
 $onlyBotPerms[sendmessages;embedlinks;❌ Missing permissions!]
 $description[Hey! I have `Embed links` permission.]
@@ -9084,17 +9069,17 @@ This is a cool pinned message! 😎
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/123554940-97db0180-d750-11eb-95b5-2a995ff9c895.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pinmessage-1"><a class="header" href="#pinmessage-1">$pinMessage[]</a></h1>
-<p>Pins a specific message using it's message ID &amp; channel ID.</p>
+<p>Pins a specific message using its channel and message ID.</p>
 <blockquote>
 <p>⚠️ A channel can have a maximum of 50 pinned messages.</p>
 </blockquote>
 <h2 id="syntax-274"><a class="header" href="#syntax-274">Syntax</a></h2>
-<pre><code>$pinMessage[channelID;messageID]
+<pre><code>$pinMessage[Channel ID;Message ID]
 </code></pre>
 <h3 id="parameters-208"><a class="header" href="#parameters-208">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is located.</li>
-<li><code>messageID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message to pin.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message is located.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message to pin.</li>
 </ul>
 <h2 id="example-272"><a class="header" href="#example-272">Example</a></h2>
 <pre><code>$nomention
@@ -10009,18 +9994,23 @@ Large Server?: {large};no]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/122832982-3206f980-d2ba-11eb-9a31-8f94cad26df7.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serverleaderboard"><a class="header" href="#serverleaderboard">$serverLeaderboard</a></h1>
-<p>Makes a server leaderboard (top-10).</p>
-<h2 id="syntax-332"><a class="header" href="#syntax-332">Syntax</a></h2>
-<pre><code>$serverLeaderboard[variableName;(sortType)]
-</code></pre>
-<h3 id="parameters-247"><a class="header" href="#parameters-247">Parameters</a></h3>
-<ul>
-<li><code>variableName</code> <code>(Type: String || Flag: Required)</code>: The variable to create the leaderboard for.</li>
-<li><code>sortType</code> <code>(Type: Enum || Flag: Optional)</code>: Whether to sort the leaderboard in ascending (asc) or descending (desc) order.</li>
-</ul>
+<p>Creates a server leaderboard (top-10).</p>
 <blockquote>
 <p>🧙‍♂️ <code>$serverLeadboard</code> automatically generates a description. So, <code>$description</code> should not be used in the code.</p>
 </blockquote>
+<h2 id="syntax-332"><a class="header" href="#syntax-332">Syntax</a></h2>
+<pre><code>$serverLeaderboard[Variable name;(Sort type)]
+</code></pre>
+<h3 id="parameters-247"><a class="header" href="#parameters-247">Parameters</a></h3>
+<ul>
+<li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The variable to create the leaderboard for.</li>
+<li><code>Sort type</code> <code>(Type: Enum || Flag: Optional)</code>: The sort type of the values (default is <code>desc</code>). Sort types:
+<ul>
+<li><code>asc</code> - Sorts the values in ascending order.</li>
+<li><code>desc</code> - Sorts the values in descending order.</li>
+</ul>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="servername"><a class="header" href="#servername">$serverName</a></h1>
 <p>Returns the server's name.</p>
 <h2 id="syntax-333"><a class="header" href="#syntax-333">Syntax</a></h2>
@@ -10093,10 +10083,10 @@ This server is owned by &lt;@$serverOwner[$guildID]&gt;!
 <p><img src="https://user-images.githubusercontent.com/69215413/126378613-0ba28781-b199-4d8c-8117-cd050031ba09.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="serverregion"><a class="header" href="#serverregion">$serverRegion</a></h1>
 <p><em>(deprecated)</em></p>
-<p>Returns the server's region.</p>
 <blockquote>
 <p>🧙‍♂️ This function is deprecated, because Discord removed the server region setting. For more information, <a href="https://support.discord.com/hc/en-us/articles/360060570993">click here</a>.</p>
 </blockquote>
+<p>Returns the server's region.</p>
 <h2 id="syntax-338"><a class="header" href="#syntax-338">Syntax</a></h2>
 <pre><code>$serverRegion
 </code></pre>
@@ -10118,64 +10108,72 @@ This server's verification level is $serverVerificationLvl
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setchannelvar"><a class="header" href="#setchannelvar">$setChannelVar</a></h1>
 <p>Updates a variable's value for a channel.</p>
 <h2 id="syntax-340"><a class="header" href="#syntax-340">Syntax</a></h2>
-<pre><code>$setChannelVar[Variable Name;New Value;(Channel ID)]
+<pre><code>$setChannelVar[Variable name;New value;(Channel ID)]
 </code></pre>
 <h3 id="parameters-251"><a class="header" href="#parameters-251">Parameters</a></h3>
 <ul>
-<li><code>Variable Name</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
-<li><code>New Value</code> <code>(Type: String || Flag: Emptiable)</code>: The new variable value.</li>
-<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel to assign the new value to. If no 'Channel ID' is present, the current channel will be used.</li>
+<li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
+<li><code>New value</code> <code>(Type: String || Flag: Emptiable)</code>: The new variable value.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel to assign the new value to. If no &quot;Channel ID&quot; is present, the current channel will be used.</li>
 </ul>
 <blockquote>
-<p>📌 Channel variables value has a max character limit of 499 (4999, if premium).</p>
+<p>📝 Channel variable values have a max character limit of <strong>499</strong> <em>(for premium users, it's <strong>4999</strong>)</em>.</p>
 </blockquote>
-<p><a href="bdscript/../guides/introduction/variables.html">See more in the Variables guide...</a></p>
+<blockquote>
+<p>For more info, see the <a href="bdscript/../guides/introduction/variables.html">Variables Guide</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setservervar"><a class="header" href="#setservervar">$setServerVar</a></h1>
-<p>Updates a variable value for a server.</p>
+<p>Updates a variable's value for a server.</p>
 <h2 id="syntax-341"><a class="header" href="#syntax-341">Syntax</a></h2>
-<pre><code>$setServerVar[variableName;newValue;(serverID)]
+<pre><code>$setServerVar[Variable name;New value;(Server ID)]
 </code></pre>
 <h3 id="parameters-252"><a class="header" href="#parameters-252">Parameters</a></h3>
 <ul>
-<li><code>variableName</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
-<li><code>newValue</code> <code>(Type: String || Flag: Emptiable)</code>: The newly assigned variable value.</li>
-<li><code>serverID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The server to assign the new value to, uses current server if no 'serverID' is provided.</li>
+<li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
+<li><code>New value</code> <code>(Type: String || Flag: Emptiable)</code>: The new variable value.</li>
+<li><code>Server ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The server to assign the new value to. Uses the current server if no &quot;Server ID&quot; is provided.</li>
 </ul>
 <blockquote>
-<p>📝 Server variables values has a max character limit of 499 <em>(for premium users, it's 4999)</em>.</p>
+<p>📝 Server variable values have a max character limit of <strong>499</strong> <em>(for premium users, it's <strong>4999</strong>)</em>.</p>
 </blockquote>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
+<blockquote>
+<p>For more info, see the <a href="bdscript/../guides/introduction/variables.html">Variables Guide</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setuservar"><a class="header" href="#setuservar">$setUserVar</a></h1>
 <p>Updates a variable's value for a user.</p>
 <h2 id="syntax-342"><a class="header" href="#syntax-342">Syntax</a></h2>
-<pre><code>$setUserVar[variableName;newValue;(userID;guildID)]
+<pre><code>$setUserVar[Variable name;New value;(User ID;Guild ID)]
 </code></pre>
 <h3 id="parameters-253"><a class="header" href="#parameters-253">Parameters</a></h3>
 <ul>
-<li><code>variableName</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
-<li><code>newValue</code> <code>(Type: String || Flag: Emptiable)</code>: The newly assigned variable value.</li>
-<li><code>userID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The user to assign the new value to, uses the author if no 'userID' is provided.</li>
-<li><code>guildID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The guild to assign the new value to, uses current guild if no 'guildID' is provided.</li>
+<li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
+<li><code>New value</code> <code>(Type: String || Flag: Emptiable)</code>: The new variable value.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The user to assign the new value to. Uses the author if no &quot;User ID&quot; is provided.</li>
+<li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The guild to assign the new value to. Uses the current guild if no &quot;Guild ID&quot; is provided.</li>
 </ul>
 <blockquote>
-<p>📝 User variables value has a max character limit of 4999.</p>
+<p>📝 User variable values have a max character limit of <strong>4999</strong>.</p>
 </blockquote>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
+<blockquote>
+<p>For more info, see the <a href="bdscript/../guides/introduction/variables.html">Variables Guide</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="setvar"><a class="header" href="#setvar">$setVar</a></h1>
 <p>Sets a variable's value globally, or for a user globally.</p>
 <h2 id="syntax-343"><a class="header" href="#syntax-343">Syntax</a></h2>
-<pre><code>$setVar[variableName;newValue;(userID)]
+<pre><code>$setVar[Variable name;New value;(User ID)]
 </code></pre>
 <h3 id="parameters-254"><a class="header" href="#parameters-254">Parameters</a></h3>
 <ul>
-<li><code>variableName</code> <code>(Type: String || Flag: Required)</code>:  The variable to update.</li>
-<li><code>newValue</code> <code>(Type: String || Flag: Emptiable)</code>: The newly assigned variable value.</li>
-<li><code>userID</code> <code>(Type: Snowflake || Flag: Optional)</code>:  The user to globally assign the new value to. Sets the variable type as global-user, if 'userID' is present.</li>
+<li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
+<li><code>New value</code> <code>(Type: String || Flag: Emptiable)</code>: The new variable value.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The user to globally assign the new value to. Sets the variable type as global-user, if &quot;User ID&quot; is present.</li>
 </ul>
 <blockquote>
-<p>📝 Global variables has a max character limit of 499 (for premium users, it's 4999).</p>
+<p>📝 Global variable values have a max character limit of <strong>499</strong> <em>(for premium users, it's <strong>4999</strong>)</em>.</p>
 </blockquote>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
+<blockquote>
+<p>For more info, see the <a href="bdscript/../guides/introduction/variables.html">Variables Guide</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shardid"><a class="header" href="#shardid">$shardID</a></h1>
 <p>Returns the shard id of the current guild.</p>
 <h2 id="syntax-344"><a class="header" href="#syntax-344">Syntax</a></h2>
@@ -10771,19 +10769,20 @@ $randomText[$unescape[$message]]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/98183987/153597263-55796641-e0c2-4463-a52f-2bff93f071fb.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unmute"><a class="header" href="#unmute">$unmute</a></h1>
-<p>Unmutes the mentioned user.</p>
+<p><em>(deprecated)</em></p>
 <blockquote>
-<p>📌 As of December 2021, this function has been deprecated in favor of <a href="bdscript/./untimeout.html">$untimeout</a>.</p>
+<p>📌 As of December 2021, this function has been deprecated in favor of <a href="bdscript/./untimeout.html"><code>$untimeout[]</code></a>.</p>
 </blockquote>
+<p>Unmutes the mentioned user.</p>
 <h2 id="syntax-375"><a class="header" href="#syntax-375">Syntax</a></h2>
 <pre><code>$unmute[Muted]
 </code></pre>
 <h3 id="parameters-278"><a class="header" href="#parameters-278">Parameters</a></h3>
 <ul>
-<li><code>Muted</code> <code>(Type: String || Flag: Required)</code>: The name of the 'Muted' role (Case sensitive).</li>
+<li><code>Muted</code> <code>(Type: String || Flag: Required)</code>: The name of the &quot;Muted&quot; role (case sensitive).</li>
 </ul>
 <h3 id="permissions-22"><a class="header" href="#permissions-22">Permissions</a></h3>
-<p>Required permissions that the bot must have for this function to work properly :</p>
+<p>Required permissions that the bot must have for this function to work properly:</p>
 <ul>
 <li><code>manageroles</code></li>
 </ul>
@@ -10888,7 +10887,9 @@ I've been online for `$uptime`!
 <p><img src="https://user-images.githubusercontent.com/69215413/125665870-e4c6f082-262c-4db8-b844-043830ef7724.png" alt="ex" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="url"><a class="header" href="#url">$url</a></h1>
 <p>Encodes or decodes the provided text in the URL encoding format.</p>
+<blockquote>
 <p>URL encoding is a method of converting reserved, unsafe, or non-ASCII characters to a URL format that is universally accepted and understood by all web browsers and servers while URL decoding is the vice-versa of URL encoding.</p>
+</blockquote>
 <h2 id="syntax-381"><a class="header" href="#syntax-381">Syntax</a></h2>
 <pre><code>$url[Mode;Text]
 </code></pre>
@@ -10904,14 +10905,14 @@ I've been online for `$uptime`!
 <pre><code>$nomention
 https://example.url/encode?convert=$url[encode;Hello world!!]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/95774950/197517522-e7429268-dfcf-4289-bb48-1554e2d4ecfa.png" alt="Screenshot_20221024_170233" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/197517522-e7429268-dfcf-4289-bb48-1554e2d4ecfa.png" alt="example" /></p>
 </li>
 <li>
 <p>Decoding</p>
 <pre><code>$nomention
 $url[decode;https://example.url/decode?convert=Hello+world%21%21]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/95774950/197517477-758829ff-19f6-4134-885d-8a513104f099.png" alt="Screenshot_20221024_170437" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/197517477-758829ff-19f6-4134-885d-8a513104f099.png" alt="example" /></p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="usechannel"><a class="header" href="#usechannel">$useChannel</a></h1>
@@ -10935,7 +10936,7 @@ $description[hi]
 <p><img src="https://user-images.githubusercontent.com/69215413/125665386-b0458227-97d7-4aaa-9ca8-b1d869245bce.png" alt="ex1" /><br />
 <img src="https://user-images.githubusercontent.com/69215413/125665365-ade65a36-0c1e-4e1c-a5c5-ad9929f769bc.png" alt="ex2" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="useravatar"><a class="header" href="#useravatar">$userAvatar</a></h1>
-<p>Returns user's avatar URL.</p>
+<p>Returns a user's avatar URL.</p>
 <h2 id="syntax-383"><a class="header" href="#syntax-383">Syntax</a></h2>
 <pre><code>$userAvatar[User ID]
 </code></pre>
@@ -11119,25 +11120,19 @@ $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userjoineddiscord"><a class="header" href="#userjoineddiscord">$userJoinedDiscord</a></h1>
-<p>Returns the account creation date of a given user.</p>
+<p><em>(deprecated)</em></p>
 <blockquote>
-<p>📌 As of November 2022, this function has been deprecated in favor of <a href="bdscript/./creationDate.html"><code>$creationDate</code></a>.</p>
-<p>📌 Besides user IDs, <a href="bdscript/./userJoinedDiscord.html"><code>$userJoinedDiscord</code></a> can also return creation date of any valid Discord Snowflake ID.</p>
+<p>📌 As of November 2022, this function has been deprecated in favor of <a href="bdscript/./creationDate.html"><code>$creationDate[]</code></a>.</p>
+<p>📌 Besides user IDs, <code>$userJoinedDiscord[]</code> can also return the creation date of any valid Discord Snowflake ID.</p>
 </blockquote>
+<p>Returns the account creation date of a given user.</p>
 <h2 id="syntax-391"><a class="header" href="#syntax-391">Syntax</a></h2>
 <pre><code>$userJoinedDiscord[User ID;(Format)]
 </code></pre>
 <h3 id="parameters-292"><a class="header" href="#parameters-292">Parameters</a></h3>
 <ul>
-<li>
-<p><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user whose account creation date will be returned. </p>
-</li>
-<li>
-<p><code>Format</code> <code>(Type: String || Flag: Optional)</code>: Customize the default time format output.</p>
-<blockquote>
-<p>📌 Click <a href="bdscript/../resources/timeFormat.html">me</a> to check all supported time format values.</p>
-</blockquote>
-</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user whose account creation date will be returned. </li>
+<li><code>Format</code> <code>(Type: String || Flag: Optional)</code>: Customize the default <a href="bdscript/../resources/timeFormat.html">time format</a> output.</li>
 </ul>
 <h2 id="example-367"><a class="header" href="#example-367">Example</a></h2>
 <ul>
@@ -11153,7 +11148,7 @@ $userJoinedDiscord[$authorID]
 <pre><code>$nomention
 $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/95774950/197385800-92a434d2-e388-4067-8a78-d9357f6184bd.png" alt="Screenshot_20221023_152611" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/197385800-92a434d2-e388-4067-8a78-d9357f6184bd.png" alt="example" /></p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="userleaderboard"><a class="header" href="#userleaderboard">$userLeaderboard</a></h1>

@@ -166,7 +166,9 @@
                         </nav>
                         <h1 id="url"><a class="header" href="#url">$url</a></h1>
 <p>Encodes or decodes the provided text in the URL encoding format.</p>
+<blockquote>
 <p>URL encoding is a method of converting reserved, unsafe, or non-ASCII characters to a URL format that is universally accepted and understood by all web browsers and servers while URL decoding is the vice-versa of URL encoding.</p>
+</blockquote>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$url[Mode;Text]
 </code></pre>
@@ -182,14 +184,14 @@
 <pre><code>$nomention
 https://example.url/encode?convert=$url[encode;Hello world!!]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/95774950/197517522-e7429268-dfcf-4289-bb48-1554e2d4ecfa.png" alt="Screenshot_20221024_170233" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/197517522-e7429268-dfcf-4289-bb48-1554e2d4ecfa.png" alt="example" /></p>
 </li>
 <li>
 <p>Decoding</p>
 <pre><code>$nomention
 $url[decode;https://example.url/decode?convert=Hello+world%21%21]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/95774950/197517477-758829ff-19f6-4134-885d-8a513104f099.png" alt="Screenshot_20221024_170437" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/197517477-758829ff-19f6-4134-885d-8a513104f099.png" alt="example" /></p>
 </li>
 </ul>
 

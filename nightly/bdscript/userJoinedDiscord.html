@@ -165,25 +165,19 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="userjoineddiscord"><a class="header" href="#userjoineddiscord">$userJoinedDiscord</a></h1>
-<p>Returns the account creation date of a given user.</p>
+<p><em>(deprecated)</em></p>
 <blockquote>
-<p>📌 As of November 2022, this function has been deprecated in favor of <a href="./creationDate.html"><code>$creationDate</code></a>.</p>
-<p>📌 Besides user IDs, <a href="./userJoinedDiscord.html"><code>$userJoinedDiscord</code></a> can also return creation date of any valid Discord Snowflake ID.</p>
+<p>📌 As of November 2022, this function has been deprecated in favor of <a href="./creationDate.html"><code>$creationDate[]</code></a>.</p>
+<p>📌 Besides user IDs, <code>$userJoinedDiscord[]</code> can also return the creation date of any valid Discord Snowflake ID.</p>
 </blockquote>
+<p>Returns the account creation date of a given user.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$userJoinedDiscord[User ID;(Format)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user whose account creation date will be returned. </p>
-</li>
-<li>
-<p><code>Format</code> <code>(Type: String || Flag: Optional)</code>: Customize the default time format output.</p>
-<blockquote>
-<p>📌 Click <a href="../resources/timeFormat.html">me</a> to check all supported time format values.</p>
-</blockquote>
-</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user whose account creation date will be returned. </li>
+<li><code>Format</code> <code>(Type: String || Flag: Optional)</code>: Customize the default <a href="../resources/timeFormat.html">time format</a> output.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <ul>
@@ -199,7 +193,7 @@ $userJoinedDiscord[$authorID]
 <pre><code>$nomention
 $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/95774950/197385800-92a434d2-e388-4067-8a78-d9357f6184bd.png" alt="Screenshot_20221023_152611" /></p>
+<p><img src="https://user-images.githubusercontent.com/95774950/197385800-92a434d2-e388-4067-8a78-d9357f6184bd.png" alt="example" /></p>
 </li>
 </ul>
 

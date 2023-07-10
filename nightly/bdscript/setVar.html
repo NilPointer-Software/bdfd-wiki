@@ -167,18 +167,20 @@
                         <h1 id="setvar"><a class="header" href="#setvar">$setVar</a></h1>
 <p>Sets a variable's value globally, or for a user globally.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$setVar[variableName;newValue;(userID)]
+<pre><code>$setVar[Variable name;New value;(User ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>variableName</code> <code>(Type: String || Flag: Required)</code>:  The variable to update.</li>
-<li><code>newValue</code> <code>(Type: String || Flag: Emptiable)</code>: The newly assigned variable value.</li>
-<li><code>userID</code> <code>(Type: Snowflake || Flag: Optional)</code>:  The user to globally assign the new value to. Sets the variable type as global-user, if 'userID' is present.</li>
+<li><code>Variable name</code> <code>(Type: String || Flag: Required)</code>: The variable to update.</li>
+<li><code>New value</code> <code>(Type: String || Flag: Emptiable)</code>: The new variable value.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The user to globally assign the new value to. Sets the variable type as global-user, if &quot;User ID&quot; is present.</li>
 </ul>
 <blockquote>
-<p>📝 Global variables has a max character limit of 499 (for premium users, it's 4999).</p>
+<p>📝 Global variable values have a max character limit of <strong>499</strong> <em>(for premium users, it's <strong>4999</strong>)</em>.</p>
 </blockquote>
-<p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
+<blockquote>
+<p>For more info, see the <a href="../guides/introduction/variables.html">Variables Guide</a>.</p>
+</blockquote>
 
                     </main>
 

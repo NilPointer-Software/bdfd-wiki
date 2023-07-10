@@ -165,17 +165,17 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="pinmessage"><a class="header" href="#pinmessage">$pinMessage[]</a></h1>
-<p>Pins a specific message using it's message ID &amp; channel ID.</p>
+<p>Pins a specific message using its channel and message ID.</p>
 <blockquote>
 <p>⚠️ A channel can have a maximum of 50 pinned messages.</p>
 </blockquote>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$pinMessage[channelID;messageID]
+<pre><code>$pinMessage[Channel ID;Message ID]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is located.</li>
-<li><code>messageID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message to pin.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message is located.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message to pin.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
