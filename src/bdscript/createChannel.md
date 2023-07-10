@@ -8,7 +8,7 @@ $createChannel[Name;Type;(Category ID)]
 
 ### Parameters
 - `Name` `(Type: String || Flag: Required)`: The name of the new channel.
-  > Channel names can have a maximum of upto 100 characters.
+  > Channel names can have a maximum of 100 characters.
 - `Type` `(Type: Enum || Flag: Required)`: The channel type. Channel types:
   - `category`
   - `text`
