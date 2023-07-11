@@ -45,7 +45,7 @@ Pong!
 
 # Step 4: Bot Online
 ### Method 1 - 30 Minutes
-- Click on *"Dashboard"* in the selected bot and press on the *"+ Add free hosting time"* button.
+- Click on the *"Dashboard"* tab after selecting your bot and press on the *"+ Add free hosting time"* button.
 - Enter the indicated numbers and click *"Confirm"*.
 ### Method 2 - 140 Minutes
 - Press on *"Dashboard"* button in the selected bot and click on *"+ Watch ad for 90 minutes of free hosting time"*.
