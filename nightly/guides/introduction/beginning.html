@@ -165,47 +165,83 @@
                             <script src="../../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="beginning"><a class="header" href="#beginning">Beginning</a></h1>
-<p>In this guide, you will learn how to create a Discord bot in BDFD.</p>
-<h3 id="creating-a-bot"><a class="header" href="#creating-a-bot">Creating a Bot</a></h3>
+<p>In this guide, you will learn how to create your own bot using BDFD.</p>
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#step-1-creating"><strong>Creating</strong></a> &gt; <a href="#step-2-inviting"><strong>Inviting</strong></a> &gt; <a href="#step-3-first-code"><strong>First Code</strong></a> &gt; <a href="#step-4-bot-online"><strong>Bot Online</strong></a> &gt; <a href="#step-5-test-it"><strong>Test it!</strong></a></p>
+<h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
-<li>
-<p>Go to <a href="https://discord.com/developers/applications">Discord developer portal</a>.</p>
-</li>
-<li>
-<p>Click on the <em>&quot;New Application&quot;</em> button and provide a name for your application.</p>
-</li>
-<li>
-<p>In top-left corner, click on the hamburger icon (<code>≡</code>) and select the <em>&quot;Bots&quot;</em> tab.</p>
-</li>
-<li>
-<p>Then, press the <em>&quot;Add Bot&quot;</em> button to create a discord bot.</p>
-</li>
-<li>
-<p>Once done, press the <em>&quot;Reset Token&quot;</em> button and copy your bot token.</p>
-<blockquote>
-<p>⚠️ Never share your Discord bot token with anyone. <em><a href="../../resources/security.html#sharing-tokens">Learn more</a></em></p>
-</blockquote>
-</li>
-<li>
-<p>Now, open your BDFD app <em>(If you haven't installed the app yet, head over to <a href="https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger">Play Store</a>/<a href="https://apps.apple.com/app/bot-designer-for-discord/id1495536477">App Store</a> and download it)</em> and press <em>&quot;Create New Bot&quot;</em>.</p>
-<blockquote>
-<p>📝 Make sure that when you are creating a new bot, your Discord account is signed into the BDFD app. This is so that you don't lose access to your bot in the future.</p>
-</blockquote>
-</li>
-<li>
-<p>Enter your bot's name and its token <em>(the one that you copied earlier from the <a href="https://discord.com/developers/applications">Discord developer portal</a>)</em>.</p>
-</li>
-<li>
-<p>If you have a <a href="../other/sharecode.html">share code</a>, toggle on <em>&quot;Use share code&quot;</em> and put the code into the text field.</p>
-</li>
-<li>
-<p>After agreeing to the terms of service of both <a href="https://botdesignerdiscord.com/tos">BDFD</a> &amp; <a href="https://discord.com/terms">Discord</a>, press &quot;Create bot&quot; to create your Discord bot.</p>
-</li>
+<li><a href="../../bdscript/nomention.html"><code>$nomention</code></a></li>
+<li><a href="../../bdscript/reply.html"><code>$reply</code></a></li>
 </ul>
-<h3 id="inviting-the-bot"><a class="header" href="#inviting-the-bot">Inviting the bot</a></h3>
-<p>To add the bot into a server, <a href="../general/interactions/slashCommands/aboutSlashCommands.html#inviting-the-bot">see this guide</a>.</p>
-<h3 id="hosting-the-bot"><a class="header" href="#hosting-the-bot">Hosting the bot</a></h3>
-<p>You can host your Discord bot in the app by either watching free ads or purchasing <a href="../../premium/introduction.html">premium</a>.</p>
+<h1 id="step-1-creating"><a class="header" href="#step-1-creating">Step 1: Creating</a></h1>
+<ul>
+<li>Go to <a href="https://discord.com/developers/applications">Discord Developer Portal</a>.</li>
+<li>Click on the <em>&quot;New Application&quot;</em> button and provide a name for your application.</li>
+<li>In top-left corner, click on the hamburger icon (<code>≡</code>) and select the <em>&quot;Bots&quot;</em> tab.</li>
+<li>Once done, press the <em>&quot;Reset Token&quot;</em> button and copy your bot token.</li>
+</ul>
+<blockquote>
+<p>Never share your Discord bot token with anyone. <em><a href="../../resources/security.html#sharing-tokens">Learn more</a></em></p>
+</blockquote>
+<ul>
+<li>Now, open your BDFD app <em>(If you haven't installed the app yet, head over to <a href="https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger">Play Store</a>/<a href="https://apps.apple.com/app/bot-designer-for-discord/id1495536477">App Store</a> and download it)</em> and press <em>&quot;Create New Bot&quot;</em>.</li>
+</ul>
+<blockquote>
+<p>Make sure that when you are creating a new bot, your Discord account is signed into the BDFD app. This is so that you don't lose access to your bot in the future.</p>
+</blockquote>
+<ul>
+<li>Enter your bot's name and its token <em>(the one that you copied earlier from the <a href="https://discord.com/developers/applications">Discord Developer Portal</a>)</em>.</li>
+<li>If you have a <a href="../other/sharecode.html">share code</a>, toggle on <em>&quot;Use share code&quot;</em> and put the code into the text field.</li>
+<li>After agreeing to the Terms of Service of both <a href="../terms.html">BDFD</a> &amp; <a href="https://discord.com/terms">Discord</a>, press &quot;Create bot&quot; to create your Discord bot.</li>
+</ul>
+<h1 id="step-2-inviting"><a class="header" href="#step-2-inviting">Step 2: Inviting</a></h1>
+<ul>
+<li>Open the BDFD app and select your bot.</li>
+<li>Click on the <em>&quot;Invite bot to server&quot;</em> button.</li>
+<li>Press the <em>&quot;Edit invite link permissions&quot;</em> button and choose the permissions that the bot will have when joining a server.</li>
+<li>Then, click on <em>&quot;Add your bot to your server&quot;</em> and selected the server.</li>
+<li>Click on <em>the &quot;Continue&quot;</em> button and your bot will be added to the selected server.</li>
+</ul>
+<h1 id="step-3-first-code"><a class="header" href="#step-3-first-code">Step 3: First Code</a></h1>
+<p>To create the first command, you must click on the <em>&quot;Commands&quot;</em> tab after selecting your bot and press on the <em>&quot;+ Command creator&quot;</em>.
+You will see 3 categories (&quot;Command Name&quot;, &quot;Command Trigger&quot;, &quot;Template Functions&quot;).</p>
+<ul>
+<li>Come up with a name for your command and paste it into the &quot;Command  Name&quot; field. (You can leave it blank).</li>
+<li>Now come up with a trigger for the command. (Example: <code>!ping</code>).</li>
+</ul>
+<blockquote>
+<p>It is important that the trigger of the command matches its meaning.
+After completing the command setup, press the <em>&quot;Create Command&quot;</em> button. Now you can create your first code!
+In &quot;Reply Message&quot; you can paste this code:</p>
+</blockquote>
+<pre><code>$nomention
+$reply
+Pong!
+</code></pre>
+<ul>
+<li>Click on <em>&quot;Save command&quot;</em> to save the code.</li>
+</ul>
+<h1 id="step-4-bot-online"><a class="header" href="#step-4-bot-online">Step 4: Bot Online</a></h1>
+<h3 id="method-1---30-minutes"><a class="header" href="#method-1---30-minutes">Method 1 - 30 Minutes</a></h3>
+<ul>
+<li>Click on the <em>&quot;Dashboard&quot;</em> tab after selecting your bot and press on the <em>&quot;+ Add free hosting time&quot;</em> button.</li>
+<li>Enter the indicated numbers and click <em>&quot;Confirm&quot;</em>.</li>
+</ul>
+<h3 id="method-2---140-minutes"><a class="header" href="#method-2---140-minutes">Method 2 - 140 Minutes</a></h3>
+<ul>
+<li>Press on <em>&quot;Dashboard&quot;</em> tab after selecting your bot and click on <em>&quot;+ Watch ad for 140 minutes of free hosting time&quot;</em>.</li>
+<li>After watching the ad, your bot will receive 140 minutes of hosting time.</li>
+</ul>
+<h3 id="method-3---premium"><a class="header" href="#method-3---premium">Method 3 - Premium</a></h3>
+<ul>
+<li>Use <a href="../../premium/introduction.html#purchasing-premium-points">premium</a> points to get hosting time without watching ads.</li>
+</ul>
+<blockquote>
+<p>If the bot is not online after these methods, then take a look at this page: <a href="../../resources/troubleshooting.html#the-bot-is-offline">Why my bot is offline?</a></p>
+</blockquote>
+<h2 id="step-5-test-it"><a class="header" href="#step-5-test-it">Step 5: Test it!</a></h2>
+<p>Send a <code>!ping</code> command in a channel of the server you invited your bot to.</p>
+<p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/5a5eca33-6c2b-4e46-8283-a6312462f6f5" alt="example" /></p>
 
                     </main>
 
