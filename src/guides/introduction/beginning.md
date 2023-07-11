@@ -29,7 +29,7 @@ In this guide, you will learn how to create your own bot using BDFD.
 - Click on *the "Continue"* button and your bot will be added to the selected server.
 
 # Step 3: First Code
-To create the first command, you must click on *"Commands"* in the selected bot and press on the *"+ Command creator"*.
+To create the first command, you must click on the *"Commands"* tab after selecting your bot and press on the *"+ Command creator"*.
 You will see 3 categories ("Command Name", "Command Trigger", "Template Functions").
 - Come up with a name for your command and paste it into the "Command  Name" field. (You can leave it blank).
 - Now come up with a trigger for the command. (Example: `!ping`).
