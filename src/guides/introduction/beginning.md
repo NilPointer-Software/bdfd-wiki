@@ -55,6 +55,6 @@ Pong!
 > If the bot is not online after these methods, then take a look at this page: [Why my bot is offline?](../../resources/troubleshooting.md#the-bot-is-offline)
 
 ## Step 5: Test it!
-Send a `!ping` command to the channel of the server you invited the bot to.
+Send a `!ping` command in a channel of the server you invited your bot to.
 
 ![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/5a5eca33-6c2b-4e46-8283-a6312462f6f5)
