@@ -48,7 +48,8 @@ Pong!
 - Click on the *"Dashboard"* tab after selecting your bot and press on the *"+ Add free hosting time"* button.
 - Enter the indicated numbers and click *"Confirm"*.
 ### Method 2 - 140 Minutes
-- Press on *"Dashboard"* button in the selected bot and click on *"+ Watch ad for 90 minutes of free hosting time"*.
+- Press on *"Dashboard"* tab after selecting your bot and click on *"+ Watch ad for 140 minutes of free hosting time"*.
+- After watching the ad, your bot will receive 140 minutes of hosting time.
 ### Method 3 - Premium
 - Use [premium](../../premium/introduction.md#purchasing-premium-points) points to get hosting time without ad.
 > If the bot is not online after these methods, then take a look at this page. [Why my bot is offline?](../../resources/troubleshooting.md#the-bot-is-offline)
