@@ -26,7 +26,7 @@ In this guide, you will learn how to create your own bot using BDFD.
 - Click on the *"Invite bot to server"* button.
 - Press the *"Edit invite link permissions"* button and choose the permissions that the bot will have when joining a server.
 - Then, click on *"Add your bot to your server"* and selected the server.
-- Click on the *"Continue"* button and your bot will be added to the server.
+- Click on *the "Continue"* button and your bot will be added to the selected server.
 
 # Step 3: First Code
 To create the first command, you must click on *"Commands"* in the selected bot and press on the *"+ Command creator"*.
