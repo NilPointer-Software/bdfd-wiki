@@ -15,8 +15,8 @@ $globalCooldown[Duration;Error message]
 ## Example
 ```
 $nomention
-$globalCooldown[30s;$username, You are on cooldown for %time%!]
+$globalCooldown[30s;$displayName, You are on cooldown for %time%!]
 
-Hello $username!
+Hello $displayName!
 ```
 ![example](https://user-images.githubusercontent.com/111157596/233700254-d0162c40-8870-4976-bceb-c18fc7b7c0d4.gif)
