@@ -14,6 +14,6 @@ $replyIn[Time]
 ```
 $nomention
 $replyIn[3s]
-Hi $username!
+Hi $displayName!
 ```
 ![example](https://user-images.githubusercontent.com/111157596/234020126-ae36612d-11ae-4f36-80bd-69f771643603.gif)
