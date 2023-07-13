@@ -1,9 +1,16 @@
 # $optOff
-Can be only used in BDScript 2. Executes functions with turned off optimizations.
+Can only be used in **BDScript 2**. Executes functions with turned off optimizations.
 
-## Usage
-As stated in the function description, `$optOff` disables the optimization of the functions in its arguments.\
+> As stated in the function description, `$optOff` disables the optimization of the functions in its arguments.\
 This means that functions such as `$random`, `$randomText` and others won't return the previous response, but instead a new response will be returned.
+
+## Syntax
+```
+$optOff[Functions to be executed]
+```
+
+### Parameters
+- `Functions to be executed` `(Type: String || Flag: Emptiable)`: The functions to execute with turned off optimizations.
 
 ## Example
 Let's try to run this simple code without `$optOff`:

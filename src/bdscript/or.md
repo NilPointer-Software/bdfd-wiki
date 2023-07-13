@@ -1,5 +1,5 @@
 # $or
-Returns 'true' if at least one of the provided conditions is true, otherwise 'false' is returned.
+Returns "true" if at least one of the provided conditions is true, otherwise "false" is returned.
 
 ## Syntax
 ```
@@ -7,13 +7,13 @@ $or[Condition;...]
 ```
 
 ### Parameters
-- `Condition` `(Type: String || Flag: Required)`: Condition to check. Separate conditions using `;`.
+- `Condition` `(Type: String || Flag: Required)`: The condition to check. Separate conditions using `;`.
 
 ## Example
 ```
 $nomention
 $if[$or[$message==hi;$message==hey;$message==hello]==true]
-Hello $username!
+Hello $displayName!
 $endif
 ```
 
