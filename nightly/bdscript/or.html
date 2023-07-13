@@ -165,18 +165,18 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="or"><a class="header" href="#or">$or</a></h1>
-<p>Returns 'true' if at least one of the provided conditions is true, otherwise 'false' is returned.</p>
+<p>Returns &quot;true&quot; if at least one of the provided conditions is true, otherwise &quot;false&quot; is returned.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$or[Condition;...]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Condition</code> <code>(Type: String || Flag: Required)</code>: Condition to check. Separate conditions using <code>;</code>.</li>
+<li><code>Condition</code> <code>(Type: String || Flag: Required)</code>: The condition to check. Separate conditions using <code>;</code>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $if[$or[$message==hi;$message==hey;$message==hello]==true]
-Hello $username!
+Hello $displayName!
 $endif
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/128616191-44fad868-fdd2-460b-8c32-89e92f32cc7a.png" alt="example" /></p>

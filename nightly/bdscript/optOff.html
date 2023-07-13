@@ -165,10 +165,18 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="optoff"><a class="header" href="#optoff">$optOff</a></h1>
-<p>Can be only used in BDScript 2. Executes functions with turned off optimizations.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>Can only be used in <strong>BDScript 2</strong>. Executes functions with turned off optimizations.</p>
+<blockquote>
 <p>As stated in the function description, <code>$optOff</code> disables the optimization of the functions in its arguments.<br />
 This means that functions such as <code>$random</code>, <code>$randomText</code> and others won't return the previous response, but instead a new response will be returned.</p>
+</blockquote>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$optOff[Functions to be executed]
+</code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Functions to be executed</code> <code>(Type: String || Flag: Emptiable)</code>: The functions to execute with turned off optimizations.</li>
+</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p>Let's try to run this simple code without <code>$optOff</code>:</p>
 <pre><code>The 1st random: $random[1;101]

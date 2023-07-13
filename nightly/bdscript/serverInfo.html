@@ -165,26 +165,28 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="serverinfo"><a class="header" href="#serverinfo">$serverInfo</a></h1>
-<p>Allows you to make a 'server info' command without using a bunch of different functions at once. This function returns info about the current server.</p>
+<p>Allows you to make a server info command without using a bunch of different functions at once. This function returns info about the current server.</p>
+<blockquote>
+<p>⚠️ You can not include <code>$serverInfo[]</code> in a command with a <a href="./description.html"><code>$description[]</code></a> (because it makes one automatically).</p>
+</blockquote>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$serverInfo[message;(thumbnail)]
+<pre><code>$serverInfo[Message;(Thumbnail?)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>message</code> <code>(Type: String || Flag: Required)</code>: The message format. Check below for more information.</li>
-<li><code>thumbnail</code> <code>(Type: Bool || Flag: Optional)</code>: Whether or not to show the server icon as the thumbnail. The default is <code>yes</code>.</li>
+<li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The message format. Check <a href="#subset-functions">below</a> for more information.</li>
+<li><code>Thumbnail?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether or not to show the server icon as the thumbnail. The default is <code>yes</code>.</li>
 </ul>
-<p>⚠️ You can not include <code>$serverInfo[]</code> in a command with a <code>$description[]</code> (because it makes one automatically).</p>
 <h3 id="subset-functions"><a class="header" href="#subset-functions">Subset-Functions</a></h3>
-<p>You can use the 'subset-functions' below within <code>$serverInfo</code>:</p>
+<p>You can use the following &quot;subset-functions&quot; within <code>$serverInfo[]</code>:</p>
 <ul>
-<li><code>{name}</code> - Returns the server name</li>
-<li><code>{region}</code> - Returns the server region</li>
+<li><code>{name}</code> - Returns the server's name.</li>
+<li><code>{region}</code> - Returns the server's region.</li>
 <li><code>{emoji}</code> - Returns the server's emojis in a list.</li>
-<li><code>{owner}</code> - Returns the owner's username.</li>
-<li><code>{ID}</code> - Gets the guild ID.</li>
-<li><code>{verificationLvl}</code> - Returns the server verification level.</li>
-<li><code>{large}</code> - Finds out if a server is considered 'large'.</li>
+<li><code>{owner}</code> - Returns the server owner's username.</li>
+<li><code>{ID}</code> - Returns the server's ID.</li>
+<li><code>{verificationLvl}</code> - Returns the server's verification level.</li>
+<li><code>{large}</code> - Finds out if the server is considered &quot;large&quot;. Returns <code>true</code> or <code>false</code>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
