@@ -31,11 +31,9 @@ level = 0
 #buttons
 "/guides/buttons.html" = "./general/interactions/buttons/aboutButtons.html"
 #select menu (based on my archived guides, the old path for errorHandling and selectMenus aren't in camelCase. ~Carmen)
-"/guides/selectmenu.html" = "./general/interactions/selectMenus/aboutSelectMenu.html"
-"/guides/selectMenu.html" = "./general/interactions/selectMenus/aboutSelectMenu.html"
+"/selectmenu.html" = "./guides/general/interactions/selectMenus/aboutSelectMenu.html"
 #error handling
-"/guides/trycatch.html" = "./general/bds2/errorHandling.html"
-"/guides/tryCatch.html" = "./general/bds2/errorHandling.html"
+"/trycatch.html" = "./guides/general/bds2/errorHandling.html"
 #premium functions
 "/bdscript/awaitReactions.html" = "../premium/awaitReactions.html"
 "/bdscript/customImage.html" = "../premium/customImage.html"
