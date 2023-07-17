@@ -7,7 +7,7 @@ $addCmdReactions[Emojis;...]
 ```
 
 ### Parameters
-- `Emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Separate emojis using `;`.
+- `Emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Use semicolons `;` as a separator to separate multiple emojis.
 
 > You can use **unicode emojis**, **emoji IDs**, and **emoji aliases**.
 > > For **emoji aliases**, make sure to put `:` in front and at the end of the alias. \
