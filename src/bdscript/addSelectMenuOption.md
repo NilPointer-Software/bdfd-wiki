@@ -1,5 +1,5 @@
 # $addSelectMenuOption
-Adds a select menu option to an existing select menu.
+Adds a new select menu option to an existing select menu.
 
 ## Syntax
 ```
