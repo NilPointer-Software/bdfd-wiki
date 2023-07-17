@@ -29,7 +29,7 @@ Here, are all possible values for the `style` function argument.
 - `danger` - Red button
 - `link` - Redirect button
 
-![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/c92baa50-512d-4e85-883e-65ba40ae7ab4)
+![example](https://user-images.githubusercontent.com/113303649/248713011-c92baa50-512d-4e85-883e-65ba40ae7ab4.png)
 
 > If `link` style is used, the button **won't send** any interactions!
 
