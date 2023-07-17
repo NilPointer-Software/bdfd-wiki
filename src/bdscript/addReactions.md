@@ -3,15 +3,15 @@ Adds reactions to the bot's response.
 
 ## Syntax
 ```
-$addReactions[emojis;...]
+$addReactions[Emojis;...]
 ```
 
 ### Parameters
-- `emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Separate emojis using `;`.
+- `Emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) the bot reacts with. Use semicolons `;` as a separator to separate multiple emojis.
 
-> You can use Unicode emojis, emoji IDs, and emoji aliases. \
-> For **emoji aliases**, make sure to put `:` in front and at the end of the alias. \
-> For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
+> You can use **unicode emojis**, **emoji IDs**, and **emoji aliases**.
+> > For **emoji aliases**, make sure to put `:` in front and at the end of the alias. \
+> > For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
 > 
 > List of unicode emojis: [😋 Get Emoji](https://getemoji.com) \
 > List of supported emoji aliases: [Emoji Aliases](https://botdesignerdiscord.com/public/emoji_alias_list)
@@ -31,7 +31,7 @@ $addReactions[✅;:x:]
 1. Type `\:TheEmojiName:`
 2. Send the message.
 3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
-4. Input the emoji ID into `$addReactions[]`. (e.g `$addReactions[<:hollyDab:828628880629825546>]`)
+4. Input the emoji ID into `$addReactions[]`. (e.g. `$addReactions[<:hollyDab:828628880629825546>]`)
 
 ![example](https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif)
 
