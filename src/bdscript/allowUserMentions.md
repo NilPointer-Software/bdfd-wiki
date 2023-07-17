@@ -7,7 +7,7 @@ $allowUserMentions[User IDs;...]
 ```
 
 ### Parameters
-- `User IDs` `(Type: Snowflake || Flag: Emptiable)`: The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using `;`.
+- `User IDs` `(Type: Snowflake || Flag: Emptiable)`: The user(s) that can be pinged, leave empty to disable pings for every user. Separate user IDs using `;`.
 
 ## Example
 ```
