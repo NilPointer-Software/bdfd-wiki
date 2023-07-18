@@ -165,54 +165,41 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="addbutton"><a class="header" href="#addbutton">$addButton</a></h1>
-<p>Adds button to the response.</p>
+<p>Adds a button to a message.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
+<pre><code>$addButton[New row?;Interaction ID/URL;Label;Style;(Disable?;Emoji;Message ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>new row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button.</p>
+<li><code>New row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code>, the button will appear in a new row. If set to <code>no</code>, the button will appear in the same row as the previous button.
 <blockquote>
 <p>A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
 </blockquote>
 </li>
-<li>
-<p><code>interaction ID/url</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</p>
-</li>
-<li>
-<p><code>label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</p>
-</li>
-<li>
-<p><code>style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set the value to <code>link</code>. Check <a href="#button-style">this section</a> for more details.</p>
-</li>
-<li>
-<p><code>disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>.</p>
-</li>
-<li>
-<p><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</p>
-</li>
-<li>
-<p><code>message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</p>
-</li>
+<li><code>Interaction ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>Interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</li>
+<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/URL, you <strong>have to</strong> set the value to <code>link</code>. Check <a href="#button-style">this section</a> for more details.</li>
+<li><code>Disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code>, the button can't be pressed. Defaults to <code>no</code>.</li>
+<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em>, <em>alias</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds the button to the provided message ID. It's important to note that the provided message ID author <strong>has to</strong> be the bot.</li>
 </ul>
 <blockquote>
 <p>Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
 </blockquote>
 <blockquote>
-<p>If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
+<p>If <code>URL</code> is used in the <code>Interaction ID/URL</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code>.</p>
 </blockquote>
 <h2 id="button-style"><a class="header" href="#button-style">Button Style</a></h2>
 <p>Buttons can have different styles <em>(background colors)</em>.
-Here, are all possible values for <code>style</code> function argument.</p>
+Here, are all possible values for the <code>style</code> function argument.</p>
 <ul>
-<li><code>primary</code>: Blue button</li>
-<li><code>secondary</code>: Gray button</li>
-<li><code>success</code>: Green button</li>
-<li><code>danger</code>: Red button</li>
-<li><code>link</code>: Redirect button</li>
+<li><code>primary</code> - Blue button</li>
+<li><code>secondary</code> - Gray button</li>
+<li><code>success</code> - Green button</li>
+<li><code>danger</code> - Red button</li>
+<li><code>link</code> - Redirect button</li>
 </ul>
-<p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/c92baa50-512d-4e85-883e-65ba40ae7ab4" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/248713011-c92baa50-512d-4e85-883e-65ba40ae7ab4.png" alt="example" /></p>
 <blockquote>
 <p>If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
 </blockquote>
@@ -223,7 +210,7 @@ $addButton[no;test;Say hello!;primary;no;]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="../guides/general/interactions/buttons/aboutButtons.html">Button Guide</a>.</p>
+<p>For more info, see the <a href="../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
 </blockquote>
 
                     </main>

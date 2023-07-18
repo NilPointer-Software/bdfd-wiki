@@ -167,14 +167,23 @@
                         <h1 id="addmessagereactions"><a class="header" href="#addmessagereactions">$addMessageReactions</a></h1>
 <p>Adds reactions to the specified message.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addMessageReactions[Channel ID;Message ID;Emoji;...]
+<pre><code>$addMessageReactions[Channel ID;Message ID;Emojis;...]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message is located.</li>
 <li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message to which the reactions will be added.</li>
-<li><code>Emoji</code> <code>(Type: Emoji || Flag: Required )</code>: The emojis to add as reaction to the message. Use semicolons <code>;</code> as a separator to separate multiple emojis.</li>
+<li><code>Emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) to add as reaction to the message. Use semicolons <code>;</code> as a separator to separate multiple emojis.</li>
 </ul>
+<blockquote>
+<p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
+<blockquote>
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
+</blockquote>
+<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
+List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
+</blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $trimContent

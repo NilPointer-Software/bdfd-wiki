@@ -165,27 +165,28 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="addtextinput"><a class="header" href="#addtextinput">$addTextInput</a></h1>
-<p>Adds a new text input to a modal.</p>
+<p>Adds a new text input field to a modal.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addTextInput[text input ID;style;label;(minimum length;maximum length;required?;value;placeholder)]
+<pre><code>$addTextInput[Text input ID;Style;Label;(Minimum length;Maximum length;Required?;Value;Placeholder)]
 </code></pre>
 <blockquote>
-<p>You can't add more than 5 text input fields.</p>
+<p>📌 You can add up to 5 text input fields to a modal.</p>
 </blockquote>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>text input ID</code> <code>(Type: String || Flag: Required)</code>: ID that is used to retrieve the text input in the field. This value must be unique.</li>
-<li><code>style</code> <code>(Type: Enum || Flag: Required)</code>: The text input field style, either <code>short</code> or <code>paragraph</code>.</li>
-<li><code>label</code> <code>(Type: String || Flag: Required)</code>: Name of the text input field. This value must be less than or equal to 45 characters.</li>
-<li><code>minimum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>maximum length</code>.</li>
-<li><code>maximum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>minimum length</code>.</li>
-<li><code>required?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether a user must fill in the text input field, defaults to true. (<code>yes</code>/<code>no</code>)</li>
-<li><code>value</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>minimum length</code> and no more than <code>maximum length</code>.</li>
-<li><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
+<li><code>Text input ID</code> <code>(Type: String || Flag: Required)</code>: The ID that is used to retrieve the text input in the field. <strong>This value must be unique!</strong></li>
+<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: The text input field style, either <code>short</code> or <code>paragraph</code>.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Required)</code>: The name of the text input field. This value must be less than or equal to 45 characters.</li>
+<li><code>Minimum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>Maximum length</code>.</li>
+<li><code>Maximum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>Minimum length</code>.</li>
+<li><code>Required?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether a user must fill in the text input field or not. Defaults to <code>yes</code>. (<code>yes</code>/<code>no</code>)</li>
+<li><code>Value</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>Minimum length</code> and no more than <code>Maximum length</code>.</li>
+<li><code>Placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
 </ul>
 <h3 id="styles"><a class="header" href="#styles">Styles</a></h3>
 <ul>
-<li><code>short</code> and <code>paragraph</code>.</li>
+<li><code>short</code> - A small text input field.</li>
+<li><code>paragraph</code> - A big text input field.</li>
 </ul>
 <p><img src="https://user-images.githubusercontent.com/113303649/209936324-5a9f1d2b-8eea-48d4-b3cb-749a6d68c2d2.png" alt="styles" /></p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>

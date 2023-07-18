@@ -167,20 +167,20 @@
                         <h1 id="addfield"><a class="header" href="#addfield">$addField</a></h1>
 <p>Adds a field to an embed.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addField[name;value;(inline?;index)]
+<pre><code>$addField[Name;Value;(Inline?;Index)]
 </code></pre>
 <blockquote>
-<p>You can create up to 25 fields per embed.</p>
+<p>📌 You can add up to 25 fields per embed.</p>
 </blockquote>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the field. It cannot exceed more than 256 characters.</li>
-<li><code>value</code> <code>(Type: String || Flag: Required)</code>: The value of the field. It cannot exceed more than 1024 characters.</li>
-<li><code>inline?</code> <code>(Type: Bool || Flag: Optional)</code>: If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: Adds field to specified embed index number. <a href="../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the field. It cannot exceed more than 256 characters.</li>
+<li><code>Value</code> <code>(Type: String || Flag: Required)</code>: The value of the field. It cannot exceed more than 1024 characters.</li>
+<li><code>Inline?</code> <code>(Type: Bool || Flag: Optional)</code>: If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default.</li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Optional)</code>: Adds the field to a specified embed index number. <a href="../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <blockquote>
-<p>Inline fields may not appear inline on some mobile devices.</p>
+<p>💡 Inline fields may not appear inline on some mobile devices.</p>
 </blockquote>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h3>

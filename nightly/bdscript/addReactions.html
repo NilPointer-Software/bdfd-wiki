@@ -167,16 +167,18 @@
                         <h1 id="addreactions"><a class="header" href="#addreactions">$addReactions</a></h1>
 <p>Adds reactions to the bot's response.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addReactions[emojis;...]
+<pre><code>$addReactions[Emojis;...]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
+<li><code>Emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Use semicolons <code>;</code> as a separator to separate multiple emojis.</li>
 </ul>
 <blockquote>
-<p>You can use Unicode emojis, emoji IDs, and emoji aliases. <br />
-For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+<p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
+<blockquote>
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
 For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
+</blockquote>
 <p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
 List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
 </blockquote>
@@ -194,7 +196,7 @@ $addReactions[✅;:x:]
 <li>Type <code>\:TheEmojiName:</code></li>
 <li>Send the message.</li>
 <li>Copy the ID it returns. (The emoji ID should be in this format: <code>&lt;:emojiName:ID&gt;</code>. If the emoji is animated, it should look like this: <code>&lt;a:emojiName:ID&gt;</code>)</li>
-<li>Input the emoji ID into <code>$addReactions[]</code>. (e.g <code>$addReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
+<li>Input the emoji ID into <code>$addReactions[]</code>. (e.g. <code>$addReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
 </ol>
 <p><img src="https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif" alt="example" /></p>
 <blockquote>

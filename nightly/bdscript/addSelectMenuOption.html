@@ -165,19 +165,19 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="addselectmenuoption"><a class="header" href="#addselectmenuoption">$addSelectMenuOption</a></h1>
-<p>Adds select menu option to a select menu.</p>
+<p>Adds a new select menu option to an existing select menu.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addSelectMenuOption[menu option ID;label;value;description;(default?;emoji;message ID)]
+<pre><code>$addSelectMenuOption[Menu option ID;Label;Value;Description;(Default?;Emoji;Message ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>menu option ID</code> <code>(Type: String || Flag: Required)</code>: The ID used in <code>$newSelectMenu[]</code>.</li>
-<li><code>label</code> <code>(Type: String || Flag: Required)</code>: The name of the option.</li>
-<li><code>value</code> <code>(Type: String || Flag: Required)</code>: It's the data that gets passed to <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
-<li><code>description</code> <code>(Type: String || Flag: Emptiable)</code>: A text which shows up under the <code>label</code>.</li>
-<li><code>default?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Should the option be selected by default. (yes/no) <strong>There can be only one default option!</strong></li>
-<li><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: It shows up next to the <code>label</code>.</li>
-<li><code>message ID</code> <code>(Type: String || Flag: Vacantable)</code>: ID of a message that should have select menu added to it. By default it's the bot's response.</li>
+<li><code>Menu option ID</code> <code>(Type: String || Flag: Required)</code>: The ID used in <a href="./newSelectMenu.html"><code>$newSelectMenu[]</code></a>.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Required)</code>: The name of the option.</li>
+<li><code>Value</code> <code>(Type: String || Flag: Required)</code>: It's the data that gets passed to the <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
+<li><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: A text which shows up under the <code>Label</code>.</li>
+<li><code>Default?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the option should be selected by default or not. Defaults to <code>no</code>. (<code>yes</code>/<code>no</code>) <strong>There can be only one default option!</strong></li>
+<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: The emoji that shows up next to the <code>Label</code>.</li>
+<li><code>Message ID</code> <code>(Type: String || Flag: Vacantable)</code>: The ID of a message that should have a new select menu option added to an existing select menu. By default it's the bot's response.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
@@ -186,8 +186,8 @@ $addSelectMenuOption[Example;First;first-option;The first option]
 $addSelectMenuOption[Example;Second;second-option;The second option]
 $addSelectMenuOption[Example;Third;third-option;The third option]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/209933666-9ec8ecfc-e666-4caa-b7cb-b0b3c4cdea02.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/209933373-978c8ade-157f-4991-bb93-929430b4a4eb.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209933666-9ec8ecfc-e666-4caa-b7cb-b0b3c4cdea02.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/209933373-978c8ade-157f-4991-bb93-929430b4a4eb.png" alt="example" /></p>
 <blockquote>
 <p>For more info, see the <a href="../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu Guide</a>.</p>
 </blockquote>

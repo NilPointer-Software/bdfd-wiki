@@ -167,13 +167,13 @@
                         <h1 id="awaitfunc"><a class="header" href="#awaitfunc">$awaitFunc</a></h1>
 <p>Used to initiate an awaited command.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$awaitFunc[name;(user ID;channel ID)]
+<pre><code>$awaitFunc[Name;(User ID;Channel ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used inside <a href="../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a> and <a href="../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a> callbacks.</li>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user the awaited command will trigger for. Uses command author, if <code>user ID</code> is not given.</li>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel where the command will be awaited. Uses current channel, if <code>channel ID</code> is not given.</li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name used inside the <a href="../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a> and <a href="../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a> callbacks.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user the awaited command will trigger for. Uses command author, if <code>User ID</code> is not present.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel where the command will be awaited. Uses current channel, if <code>Channel ID</code> is not present.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
@@ -182,7 +182,7 @@ $awaitFunc[say]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="../guides/awaitedCommands.html">Awaited Commands Guide</a>.</p>
+<p>For more info, see the <a href="../guides/general/awaitedCommands.html">Awaited Commands Guide</a>.</p>
 </blockquote>
 
                     </main>

@@ -4521,54 +4521,41 @@ Using functions is an integral part of your bot, because thanks to them you will
 <p>Remember that any function starts with a <code>$</code> sign.
 For example, <code>$nomention</code> or <code>$ping</code>. It is also worth remembering that the name is case sensitive.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addbutton-1"><a class="header" href="#addbutton-1">$addButton</a></h1>
-<p>Adds button to the response.</p>
+<p>Adds a button to a message.</p>
 <h2 id="syntax-36"><a class="header" href="#syntax-36">Syntax</a></h2>
-<pre><code>$addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
+<pre><code>$addButton[New row?;Interaction ID/URL;Label;Style;(Disable?;Emoji;Message ID)]
 </code></pre>
 <h3 id="parameters-30"><a class="header" href="#parameters-30">Parameters</a></h3>
 <ul>
-<li>
-<p><code>new row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button.</p>
+<li><code>New row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code>, the button will appear in a new row. If set to <code>no</code>, the button will appear in the same row as the previous button.
 <blockquote>
 <p>A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
 </blockquote>
 </li>
-<li>
-<p><code>interaction ID/url</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</p>
-</li>
-<li>
-<p><code>label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</p>
-</li>
-<li>
-<p><code>style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set the value to <code>link</code>. Check <a href="bdscript/addButton.html#button-style">this section</a> for more details.</p>
-</li>
-<li>
-<p><code>disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>.</p>
-</li>
-<li>
-<p><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</p>
-</li>
-<li>
-<p><code>message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</p>
-</li>
+<li><code>Interaction ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>Interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</li>
+<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/URL, you <strong>have to</strong> set the value to <code>link</code>. Check <a href="bdscript/addButton.html#button-style">this section</a> for more details.</li>
+<li><code>Disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code>, the button can't be pressed. Defaults to <code>no</code>.</li>
+<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em>, <em>alias</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds the button to the provided message ID. It's important to note that the provided message ID author <strong>has to</strong> be the bot.</li>
 </ul>
 <blockquote>
 <p>Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
 </blockquote>
 <blockquote>
-<p>If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
+<p>If <code>URL</code> is used in the <code>Interaction ID/URL</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code>.</p>
 </blockquote>
 <h2 id="button-style-1"><a class="header" href="#button-style-1">Button Style</a></h2>
 <p>Buttons can have different styles <em>(background colors)</em>.
-Here, are all possible values for <code>style</code> function argument.</p>
+Here, are all possible values for the <code>style</code> function argument.</p>
 <ul>
-<li><code>primary</code>: Blue button</li>
-<li><code>secondary</code>: Gray button</li>
-<li><code>success</code>: Green button</li>
-<li><code>danger</code>: Red button</li>
-<li><code>link</code>: Redirect button</li>
+<li><code>primary</code> - Blue button</li>
+<li><code>secondary</code> - Gray button</li>
+<li><code>success</code> - Green button</li>
+<li><code>danger</code> - Red button</li>
+<li><code>link</code> - Redirect button</li>
 </ul>
-<p><img src="https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/c92baa50-512d-4e85-883e-65ba40ae7ab4" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/248713011-c92baa50-512d-4e85-883e-65ba40ae7ab4.png" alt="example" /></p>
 <blockquote>
 <p>If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
 </blockquote>
@@ -4579,20 +4566,25 @@ $addButton[no;test;Say hello!;primary;no;]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="bdscript/../guides/general/interactions/buttons/aboutButtons.html">Button Guide</a>.</p>
+<p>For more info, see the <a href="bdscript/../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addcmdreactions"><a class="header" href="#addcmdreactions">$addCmdReactions</a></h1>
 <p>Adds reactions to the message that triggered the command.</p>
 <h2 id="syntax-37"><a class="header" href="#syntax-37">Syntax</a></h2>
-<pre><code>$addCmdReactions[emojis;...]
+<pre><code>$addCmdReactions[Emojis;...]
 </code></pre>
 <h3 id="parameters-31"><a class="header" href="#parameters-31">Parameters</a></h3>
 <ul>
-<li><code>emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
+<li><code>Emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Use semicolons <code>;</code> as a separator to separate multiple emojis.</li>
 </ul>
 <blockquote>
-<p>You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
-<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a></p>
+<p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
+<blockquote>
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
+</blockquote>
+<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
+List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
 </blockquote>
 <h2 id="example-48"><a class="header" href="#example-48">Example</a></h2>
 <pre><code>$nomention
@@ -4607,7 +4599,7 @@ $addCmdReactions[$message]
 <li>Type <code>\:TheEmojiName:</code></li>
 <li>Send the message.</li>
 <li>Copy the ID it returns. (The emoji ID should be in this format: <code>&lt;:emojiName:ID&gt;</code>. If the emoji is animated, it should look like this: <code>&lt;a:emojiName:ID&gt;</code>)</li>
-<li>Input the emoji ID into <code>$addCmdReactions[]</code>. (e.g <code>$addCmdReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
+<li>Input the emoji ID into <code>$addCmdReactions[]</code>. (e.g. <code>$addCmdReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
 </ol>
 <p><img src="https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif" alt="example" /></p>
 <blockquote>
@@ -4616,13 +4608,13 @@ $addCmdReactions[$message]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addemoji"><a class="header" href="#addemoji">$addEmoji</a></h1>
 <p>Adds an emoji to the server.</p>
 <h2 id="syntax-38"><a class="header" href="#syntax-38">Syntax</a></h2>
-<pre><code>$addEmoji[name;image URL;return emoji?]
+<pre><code>$addEmoji[Name;Image URL;Return emoji?]
 </code></pre>
 <h3 id="parameters-32"><a class="header" href="#parameters-32">Parameters</a></h3>
 <ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the new emoji.</li>
-<li><code>image URL</code> <code>(Type: URL || Flag: Required)</code>: The image of the new emoji. The link needs to be a valid image URL.</li>
-<li><code>return emoji?</code> <code>(Type: Bool || Flag: Required)</code>: Whether to show the emoji in the bot's message or not. (<code>yes</code>/<code>no</code>)</li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the new emoji.</li>
+<li><code>Image URL</code> <code>(Type: URL || Flag: Required)</code>: The image of the new emoji. The link needs to be a valid image URL.</li>
+<li><code>Return emoji?</code> <code>(Type: Bool || Flag: Required)</code>: Whether to show the emoji in the bot's message or not. (<code>yes</code>/<code>no</code>)</li>
 </ul>
 <h2 id="example-49"><a class="header" href="#example-49">Example</a></h2>
 <pre><code>$nomention
@@ -4633,20 +4625,20 @@ Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addfield"><a class="header" href="#addfield">$addField</a></h1>
 <p>Adds a field to an embed.</p>
 <h2 id="syntax-39"><a class="header" href="#syntax-39">Syntax</a></h2>
-<pre><code>$addField[name;value;(inline?;index)]
+<pre><code>$addField[Name;Value;(Inline?;Index)]
 </code></pre>
 <blockquote>
-<p>You can create up to 25 fields per embed.</p>
+<p>📌 You can add up to 25 fields per embed.</p>
 </blockquote>
 <h3 id="parameters-33"><a class="header" href="#parameters-33">Parameters</a></h3>
 <ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the field. It cannot exceed more than 256 characters.</li>
-<li><code>value</code> <code>(Type: String || Flag: Required)</code>: The value of the field. It cannot exceed more than 1024 characters.</li>
-<li><code>inline?</code> <code>(Type: Bool || Flag: Optional)</code>: If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: Adds field to specified embed index number. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the field. It cannot exceed more than 256 characters.</li>
+<li><code>Value</code> <code>(Type: String || Flag: Required)</code>: The value of the field. It cannot exceed more than 1024 characters.</li>
+<li><code>Inline?</code> <code>(Type: Bool || Flag: Optional)</code>: If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default.</li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Optional)</code>: Adds the field to a specified embed index number. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <blockquote>
-<p>Inline fields may not appear inline on some mobile devices.</p>
+<p>💡 Inline fields may not appear inline on some mobile devices.</p>
 </blockquote>
 <h2 id="examples-8"><a class="header" href="#examples-8">Examples</a></h2>
 <h3 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h3>
@@ -4666,14 +4658,23 @@ $addField[This is the field name! #3;This is the field value! #3;yes]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addmessagereactions"><a class="header" href="#addmessagereactions">$addMessageReactions</a></h1>
 <p>Adds reactions to the specified message.</p>
 <h2 id="syntax-40"><a class="header" href="#syntax-40">Syntax</a></h2>
-<pre><code>$addMessageReactions[Channel ID;Message ID;Emoji;...]
+<pre><code>$addMessageReactions[Channel ID;Message ID;Emojis;...]
 </code></pre>
 <h3 id="parameters-34"><a class="header" href="#parameters-34">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message is located.</li>
 <li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the message to which the reactions will be added.</li>
-<li><code>Emoji</code> <code>(Type: Emoji || Flag: Required )</code>: The emojis to add as reaction to the message. Use semicolons <code>;</code> as a separator to separate multiple emojis.</li>
+<li><code>Emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) to add as reaction to the message. Use semicolons <code>;</code> as a separator to separate multiple emojis.</li>
 </ul>
+<blockquote>
+<p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
+<blockquote>
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
+</blockquote>
+<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
+List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
+</blockquote>
 <h2 id="example-50"><a class="header" href="#example-50">Example</a></h2>
 <pre><code>$nomention
 $trimContent
@@ -4699,16 +4700,18 @@ Successfully added the reactions to the message.
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addreactions"><a class="header" href="#addreactions">$addReactions</a></h1>
 <p>Adds reactions to the bot's response.</p>
 <h2 id="syntax-41"><a class="header" href="#syntax-41">Syntax</a></h2>
-<pre><code>$addReactions[emojis;...]
+<pre><code>$addReactions[Emojis;...]
 </code></pre>
 <h3 id="parameters-35"><a class="header" href="#parameters-35">Parameters</a></h3>
 <ul>
-<li><code>emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
+<li><code>Emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Use semicolons <code>;</code> as a separator to separate multiple emojis.</li>
 </ul>
 <blockquote>
-<p>You can use Unicode emojis, emoji IDs, and emoji aliases. <br />
-For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+<p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
+<blockquote>
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
 For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
+</blockquote>
 <p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
 List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
 </blockquote>
@@ -4726,26 +4729,26 @@ $addReactions[✅;:x:]
 <li>Type <code>\:TheEmojiName:</code></li>
 <li>Send the message.</li>
 <li>Copy the ID it returns. (The emoji ID should be in this format: <code>&lt;:emojiName:ID&gt;</code>. If the emoji is animated, it should look like this: <code>&lt;a:emojiName:ID&gt;</code>)</li>
-<li>Input the emoji ID into <code>$addReactions[]</code>. (e.g <code>$addReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
+<li>Input the emoji ID into <code>$addReactions[]</code>. (e.g. <code>$addReactions[&lt;:hollyDab:828628880629825546&gt;]</code>)</li>
 </ol>
 <p><img src="https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif" alt="example" /></p>
 <blockquote>
 <p>If you're still having issues, check the <a href="bdscript/../resources/troubleshooting.html#the-bot-fails-to-add-reactions">Troubleshooting</a> page.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addselectmenuoption"><a class="header" href="#addselectmenuoption">$addSelectMenuOption</a></h1>
-<p>Adds select menu option to a select menu.</p>
+<p>Adds a new select menu option to an existing select menu.</p>
 <h2 id="syntax-42"><a class="header" href="#syntax-42">Syntax</a></h2>
-<pre><code>$addSelectMenuOption[menu option ID;label;value;description;(default?;emoji;message ID)]
+<pre><code>$addSelectMenuOption[Menu option ID;Label;Value;Description;(Default?;Emoji;Message ID)]
 </code></pre>
 <h3 id="parameters-36"><a class="header" href="#parameters-36">Parameters</a></h3>
 <ul>
-<li><code>menu option ID</code> <code>(Type: String || Flag: Required)</code>: The ID used in <code>$newSelectMenu[]</code>.</li>
-<li><code>label</code> <code>(Type: String || Flag: Required)</code>: The name of the option.</li>
-<li><code>value</code> <code>(Type: String || Flag: Required)</code>: It's the data that gets passed to <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
-<li><code>description</code> <code>(Type: String || Flag: Emptiable)</code>: A text which shows up under the <code>label</code>.</li>
-<li><code>default?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Should the option be selected by default. (yes/no) <strong>There can be only one default option!</strong></li>
-<li><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: It shows up next to the <code>label</code>.</li>
-<li><code>message ID</code> <code>(Type: String || Flag: Vacantable)</code>: ID of a message that should have select menu added to it. By default it's the bot's response.</li>
+<li><code>Menu option ID</code> <code>(Type: String || Flag: Required)</code>: The ID used in <a href="bdscript/./newSelectMenu.html"><code>$newSelectMenu[]</code></a>.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Required)</code>: The name of the option.</li>
+<li><code>Value</code> <code>(Type: String || Flag: Required)</code>: It's the data that gets passed to the <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
+<li><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: A text which shows up under the <code>Label</code>.</li>
+<li><code>Default?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the option should be selected by default or not. Defaults to <code>no</code>. (<code>yes</code>/<code>no</code>) <strong>There can be only one default option!</strong></li>
+<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: The emoji that shows up next to the <code>Label</code>.</li>
+<li><code>Message ID</code> <code>(Type: String || Flag: Vacantable)</code>: The ID of a message that should have a new select menu option added to an existing select menu. By default it's the bot's response.</li>
 </ul>
 <h2 id="example-52"><a class="header" href="#example-52">Example</a></h2>
 <pre><code>$nomention
@@ -4754,33 +4757,34 @@ $addSelectMenuOption[Example;First;first-option;The first option]
 $addSelectMenuOption[Example;Second;second-option;The second option]
 $addSelectMenuOption[Example;Third;third-option;The third option]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/209933666-9ec8ecfc-e666-4caa-b7cb-b0b3c4cdea02.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/209933373-978c8ade-157f-4991-bb93-929430b4a4eb.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/209933666-9ec8ecfc-e666-4caa-b7cb-b0b3c4cdea02.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/209933373-978c8ade-157f-4991-bb93-929430b4a4eb.png" alt="example" /></p>
 <blockquote>
 <p>For more info, see the <a href="bdscript/../guides/general/interactions/selectMenus/aboutSelectMenu.html">Select Menu Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addtextinput"><a class="header" href="#addtextinput">$addTextInput</a></h1>
-<p>Adds a new text input to a modal.</p>
+<p>Adds a new text input field to a modal.</p>
 <h2 id="syntax-43"><a class="header" href="#syntax-43">Syntax</a></h2>
-<pre><code>$addTextInput[text input ID;style;label;(minimum length;maximum length;required?;value;placeholder)]
+<pre><code>$addTextInput[Text input ID;Style;Label;(Minimum length;Maximum length;Required?;Value;Placeholder)]
 </code></pre>
 <blockquote>
-<p>You can't add more than 5 text input fields.</p>
+<p>📌 You can add up to 5 text input fields to a modal.</p>
 </blockquote>
 <h3 id="parameters-37"><a class="header" href="#parameters-37">Parameters</a></h3>
 <ul>
-<li><code>text input ID</code> <code>(Type: String || Flag: Required)</code>: ID that is used to retrieve the text input in the field. This value must be unique.</li>
-<li><code>style</code> <code>(Type: Enum || Flag: Required)</code>: The text input field style, either <code>short</code> or <code>paragraph</code>.</li>
-<li><code>label</code> <code>(Type: String || Flag: Required)</code>: Name of the text input field. This value must be less than or equal to 45 characters.</li>
-<li><code>minimum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>maximum length</code>.</li>
-<li><code>maximum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>minimum length</code>.</li>
-<li><code>required?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether a user must fill in the text input field, defaults to true. (<code>yes</code>/<code>no</code>)</li>
-<li><code>value</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>minimum length</code> and no more than <code>maximum length</code>.</li>
-<li><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
+<li><code>Text input ID</code> <code>(Type: String || Flag: Required)</code>: The ID that is used to retrieve the text input in the field. <strong>This value must be unique!</strong></li>
+<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: The text input field style, either <code>short</code> or <code>paragraph</code>.</li>
+<li><code>Label</code> <code>(Type: String || Flag: Required)</code>: The name of the text input field. This value must be less than or equal to 45 characters.</li>
+<li><code>Minimum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>Maximum length</code>.</li>
+<li><code>Maximum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>Minimum length</code>.</li>
+<li><code>Required?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether a user must fill in the text input field or not. Defaults to <code>yes</code>. (<code>yes</code>/<code>no</code>)</li>
+<li><code>Value</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>Minimum length</code> and no more than <code>Maximum length</code>.</li>
+<li><code>Placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
 </ul>
 <h3 id="styles-1"><a class="header" href="#styles-1">Styles</a></h3>
 <ul>
-<li><code>short</code> and <code>paragraph</code>.</li>
+<li><code>short</code> - A small text input field.</li>
+<li><code>paragraph</code> - A big text input field.</li>
 </ul>
 <p><img src="https://user-images.githubusercontent.com/113303649/209936324-5a9f1d2b-8eea-48d4-b3cb-749a6d68c2d2.png" alt="styles" /></p>
 <h2 id="example-53"><a class="header" href="#example-53">Example</a></h2>
@@ -4809,11 +4813,11 @@ $addTimestamp
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addtimestamp-1"><a class="header" href="#addtimestamp-1">$addTimestamp[]</a></h1>
 <p>Adds a timestamp to a specific embed.</p>
 <h2 id="syntax-45"><a class="header" href="#syntax-45">Syntax</a></h2>
-<pre><code>$addTimestamp[index]
+<pre><code>$addTimestamp[Index]
 </code></pre>
 <h3 id="parameters-38"><a class="header" href="#parameters-38">Parameters</a></h3>
 <ul>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the timestamp should be added to. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the timestamp should be added to. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-55"><a class="header" href="#example-55">Example</a></h2>
 <pre><code>$nomention
@@ -4848,13 +4852,13 @@ $message
 <h3 id="without-allowmention"><a class="header" href="#without-allowmention">Without <code>$allowMention</code></a></h3>
 <p><img src="https://user-images.githubusercontent.com/113303649/209938701-6c4bd976-ddb8-4a59-9522-b986313dde46.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="allowrolementions"><a class="header" href="#allowrolementions">$allowRoleMentions</a></h1>
-<p>Enables role pings only for the provided role IDs, while the roles not provided will be 'fake pinged' <em>(the role will be pinged, but users will not be notified)</em>.</p>
+<p>Enables role pings only for the provided role IDs, while the roles not provided will be &quot;fake pinged&quot; <em>(the role will be pinged, but users will not be notified)</em>.</p>
 <h2 id="syntax-48"><a class="header" href="#syntax-48">Syntax</a></h2>
-<pre><code>$allowRoleMentions[role IDs;...]
+<pre><code>$allowRoleMentions[Role IDs;...]
 </code></pre>
 <h3 id="parameters-39"><a class="header" href="#parameters-39">Parameters</a></h3>
 <ul>
-<li><code>role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using <code>;</code>.</li>
+<li><code>Role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The role(s) that can be pinged, leave empty to disable pings for every role. Separate role IDs using <code>;</code>.</li>
 </ul>
 <h2 id="example-58"><a class="header" href="#example-58">Example</a></h2>
 <pre><code>$nomention
@@ -4863,13 +4867,13 @@ I'm pinging &lt;@&amp;858376972303204362&gt;, but no one got notified; wow!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/209944631-72e05d4a-6f0f-4dce-aba0-db9f51a46205.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="allowusermentions"><a class="header" href="#allowusermentions">$allowUserMentions</a></h1>
-<p>Enables user pings only for the provided user IDs, while the user not provided will be 'fake pinged' <em>(the user will be pinged, but user will not be notified)</em>.</p>
+<p>Enables user pings only for the provided user IDs, while the user not provided will be &quot;fake pinged&quot; <em>(the user will be pinged, but user will not be notified)</em>.</p>
 <h2 id="syntax-49"><a class="header" href="#syntax-49">Syntax</a></h2>
-<pre><code>$allowUserMentions[user IDs;...]
+<pre><code>$allowUserMentions[User IDs;...]
 </code></pre>
 <h3 id="parameters-40"><a class="header" href="#parameters-40">Parameters</a></h3>
 <ul>
-<li><code>user IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using <code>;</code>.</li>
+<li><code>User IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user(s) that can be pinged, leave empty to disable pings for every user. Separate user IDs using <code>;</code>.</li>
 </ul>
 <h2 id="example-59"><a class="header" href="#example-59">Example</a></h2>
 <pre><code>$nomention
@@ -4887,9 +4891,11 @@ Hi &lt;@696368083517964288&gt;! I mentioned you, but you didn't get pinged.
 </blockquote>
 <h2 id="example-60"><a class="header" href="#example-60">Example</a></h2>
 <ol>
-<li>Create two commands and set the trigger <code>hello</code> for one command and <code>helloworld</code> for the other.</li>
-<li>Add the <code>$alternativeParsing</code> function to the command code with the <code>hello</code> trigger.</li>
-</ol>
+<li>
+<p>Create two commands and set the trigger <code>hello</code> for one command and <code>helloworld</code> for the other.</p>
+</li>
+<li>
+<p>Add the <code>$alternativeParsing</code> function to the command code with the <code>hello</code> trigger.</p>
 <p>Code with trigger <code>hello</code>:</p>
 <pre><code>$nomention
 $alternativeParsing
@@ -4899,13 +4905,15 @@ $description[&quot;hello&quot;]
 <pre><code>$nomention
 $description[&quot;helloworld&quot;]
 </code></pre>
-<ol start="3">
-<li>Execute commands</li>
-</ol>
+</li>
+<li>
+<p>Execute commands.</p>
 <h3 id="with-alternativeparsing"><a class="header" href="#with-alternativeparsing">With <code>$alternativeParsing</code></a></h3>
 <p><img src="https://user-images.githubusercontent.com/113303649/209946250-ddf50d47-b8a7-48c2-8404-a2a58981c36d.png" alt="example" /></p>
 <h3 id="without-alternativeparsing"><a class="header" href="#without-alternativeparsing">Without <code>$alternativeParsing</code></a></h3>
 <p><img src="https://user-images.githubusercontent.com/113303649/209946555-3b270854-0176-4492-bd1a-2ba81bf389c1.png" alt="example" /></p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="and"><a class="header" href="#and">$and</a></h1>
 <p>Returns <code>true</code> if every provided condition is true, otherwise <code>false</code> is returned.</p>
 <h2 id="syntax-51"><a class="header" href="#syntax-51">Syntax</a></h2>
@@ -4937,11 +4945,11 @@ $and[$nickname==MineBartekSA;$message==Update]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="argcount"><a class="header" href="#argcount">$argCount</a></h1>
 <p>Returns how many words (aka arguments/args) are in the provided text.</p>
 <h2 id="syntax-52"><a class="header" href="#syntax-52">Syntax</a></h2>
-<pre><code>$argCount[text]
+<pre><code>$argCount[Text]
 </code></pre>
 <h3 id="parameters-42"><a class="header" href="#parameters-42">Parameters</a></h3>
 <ul>
-<li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to get word count for.</li>
+<li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to get the word count for.</li>
 </ul>
 <h2 id="example-62"><a class="header" href="#example-62">Example</a></h2>
 <pre><code>$nomention
@@ -4951,41 +4959,35 @@ Word count: $argCount[$message]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="argscheck"><a class="header" href="#argscheck">$argsCheck</a></h1>
 <p>When this function is used, the command can only be executed if the user’s message contains a certain amount of arguments (words).</p>
 <h2 id="syntax-53"><a class="header" href="#syntax-53">Syntax</a></h2>
-<pre><code>$argsCheck[how many?;error message]
+<pre><code>$argsCheck[How many?;Error message]
 </code></pre>
 <h3 id="parameters-43"><a class="header" href="#parameters-43">Parameters</a></h3>
 <ul>
-<li><code>how many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.
+<li><code>How many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.
 <blockquote>
-<p>If you want users to have 3 or more arguments in their message; you can use <code>&gt;3</code>. If you want users to have less than 3 arguments in their message, you can use <code>&lt;3</code>. If you want the users to have exactly 3 arguments in their message put <code>3</code>. </p>
+<p>If you want users to have <strong>3 or more arguments</strong> in their message, you can use <code>&gt;3</code>. If you want users to have <strong>less than 3 arguments</strong> in their message, you can use <code>&lt;3</code>. If you want the users to have <strong>exactly 3 arguments</strong> in their message, put <code>3</code>. </p>
 </blockquote>
 </li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/little arguments.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/few arguments.</li>
 </ul>
 <h2 id="example-63"><a class="header" href="#example-63">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;❌ Please provide something for me to say!]
 $noMentionMessage
 </code></pre>
-<ul>
-<li>
-<p>With arguments
-<img src="https://user-images.githubusercontent.com/113303649/209973658-2e392e0e-deef-483b-98a9-5597c9bce740.png" alt="example" /></p>
-</li>
-<li>
-<p>Without arguments
-<img src="https://user-images.githubusercontent.com/113303649/209973418-97663aac-9075-48f6-b241-3feb11a730f0.png" alt="example" /></p>
-</li>
-</ul>
+<h3 id="with-arguments"><a class="header" href="#with-arguments">With arguments</a></h3>
+<p><img src="https://user-images.githubusercontent.com/113303649/209973658-2e392e0e-deef-483b-98a9-5597c9bce740.png" alt="example" /></p>
+<h3 id="without-arguments"><a class="header" href="#without-arguments">Without arguments</a></h3>
+<p><img src="https://user-images.githubusercontent.com/113303649/209973418-97663aac-9075-48f6-b241-3feb11a730f0.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="author"><a class="header" href="#author">$author</a></h1>
 <p>Adds author text to an embed.</p>
 <h2 id="syntax-54"><a class="header" href="#syntax-54">Syntax</a></h2>
-<pre><code>$author[text;(index)]
+<pre><code>$author[Text;(Index)]
 </code></pre>
 <h3 id="parameters-44"><a class="header" href="#parameters-44">Parameters</a></h3>
 <ul>
-<li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text that appears in the author text. It cannot exceed more than 256 characters.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author text will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text that appears in the author text. It cannot exceed more than 256 characters.</li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author text will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-64"><a class="header" href="#example-64">Example</a></h2>
 <pre><code>$nomention
@@ -5009,15 +5011,15 @@ $image[$authorAvatar]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authoricon"><a class="header" href="#authoricon">$authorIcon</a></h1>
 <p>Adds an icon to the author section in the embed.</p>
 <h2 id="syntax-56"><a class="header" href="#syntax-56">Syntax</a></h2>
-<pre><code>$authorIcon[image url;(index)]
+<pre><code>$authorIcon[Image URL;(Index)]
 </code></pre>
 <blockquote>
-<p><code>$authorIcon[]</code> will not work if there is no text provided in <code>$author[]</code>.</p>
+<p><code>$authorIcon[]</code> will not work if there is no text provided in <a href="bdscript/./author.html"><code>$author[]</code></a>.</p>
 </blockquote>
 <h3 id="parameters-45"><a class="header" href="#parameters-45">Parameters</a></h3>
 <ul>
-<li><code>image url</code> <code>(Type: URL || Flag: Emptiable)</code>: The image for the author icon. This must be a valid image URL.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author icon will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>Image URL</code> <code>(Type: URL || Flag: Emptiable)</code>: The image for the author icon. This must be a valid image URL.</li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author icon will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-66"><a class="header" href="#example-66">Example</a></h2>
 <pre><code>$nomention
@@ -5038,12 +5040,12 @@ This command was written by &lt;@$authorID&gt;!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authorofmessage"><a class="header" href="#authorofmessage">$authorOfMessage</a></h1>
 <p>Returns the ID of the provided message's author.</p>
 <h2 id="syntax-58"><a class="header" href="#syntax-58">Syntax</a></h2>
-<pre><code>$authorOfMessage[channel ID;message ID]
+<pre><code>$authorOfMessage[Channel ID;Message ID]
 </code></pre>
 <h3 id="parameters-46"><a class="header" href="#parameters-46">Parameters</a></h3>
 <ul>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message was sent in.</li>
-<li><code>message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message for which the author ID will be returned.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is located.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message for which the author ID will be returned.</li>
 </ul>
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get the message/channel ID guide.</a></p>
@@ -5056,15 +5058,15 @@ Author of message: $username[$authorOfMessage[$message[1];$message[2]]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authorurl"><a class="header" href="#authorurl">$authorURL</a></h1>
 <p>Adds a hyperlink to the author text.</p>
 <h2 id="syntax-59"><a class="header" href="#syntax-59">Syntax</a></h2>
-<pre><code>$authorURL[url;(index)]
+<pre><code>$authorURL[URL;(Index)]
 </code></pre>
 <blockquote>
-<p><code>$authorURL[]</code> will not work if there is no text provided in <code>$author[]</code>.</p>
+<p><code>$authorURL[]</code> will not work if there is no text provided in <a href="bdscript/./author.html"><code>$author[]</code></a>.</p>
 </blockquote>
 <h3 id="parameters-47"><a class="header" href="#parameters-47">Parameters</a></h3>
 <ul>
-<li><code>url</code> <code>(Type: URL || Flag: Emptiable)</code>: The link to set as the author hyperlink.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author URL will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>URL</code> <code>(Type: URL || Flag: Emptiable)</code>: The link to set as the author hyperlink.</li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author URL will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-69"><a class="header" href="#example-69">Example</a></h2>
 <pre><code>$nomention
@@ -5075,13 +5077,13 @@ $authorURL[https://botdesignerdiscord.com]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitfunc-1"><a class="header" href="#awaitfunc-1">$awaitFunc</a></h1>
 <p>Used to initiate an awaited command.</p>
 <h2 id="syntax-60"><a class="header" href="#syntax-60">Syntax</a></h2>
-<pre><code>$awaitFunc[name;(user ID;channel ID)]
+<pre><code>$awaitFunc[Name;(User ID;Channel ID)]
 </code></pre>
 <h3 id="parameters-48"><a class="header" href="#parameters-48">Parameters</a></h3>
 <ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used inside <a href="bdscript/../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a> and <a href="bdscript/../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a> callbacks.</li>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user the awaited command will trigger for. Uses command author, if <code>user ID</code> is not given.</li>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel where the command will be awaited. Uses current channel, if <code>channel ID</code> is not given.</li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name used inside the <a href="bdscript/../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a> and <a href="bdscript/../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a> callbacks.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user the awaited command will trigger for. Uses command author, if <code>User ID</code> is not present.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel where the command will be awaited. Uses current channel, if <code>Channel ID</code> is not present.</li>
 </ul>
 <h2 id="example-70"><a class="header" href="#example-70">Example</a></h2>
 <pre><code>$nomention
@@ -5090,7 +5092,7 @@ $awaitFunc[say]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/212294420-acf01905-c9f5-4673-99f0-375f9d786f25.png" alt="example" /></p>
 <blockquote>
-<p>For more info, see the <a href="bdscript/../guides/awaitedCommands.html">Awaited Commands Guide</a>.</p>
+<p>For more info, see the <a href="bdscript/../guides/general/awaitedCommands.html">Awaited Commands Guide</a>.</p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ban"><a class="header" href="#ban">$ban</a></h1>
 <p>Bans the mentioned user.</p>
