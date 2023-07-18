@@ -3,17 +3,18 @@ Adds a field to an embed.
 
 ## Syntax
 ```
-$addField[name;value;(inline?;index)]
+$addField[Name;Value;(Inline?;Index)]
 ```
-> You can create up to 25 fields per embed.
+
+> 📌 You can add up to 25 fields per embed.
 
 ### Parameters
-- `name` `(Type: String || Flag: Required)`: The name of the field. It cannot exceed more than 256 characters.
-- `value` `(Type: String || Flag: Required)`: The value of the field. It cannot exceed more than 1024 characters.
-- `inline?` `(Type: Bool || Flag: Optional)`: If `yes`, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to `no` by default.
-- `index` `(Type: Integer || Flag: Optional)`: Adds field to specified embed index number. [(learn more)](../resources/embedIndexes.md)
+- `Name` `(Type: String || Flag: Required)`: The name of the field. It cannot exceed more than 256 characters.
+- `Value` `(Type: String || Flag: Required)`: The value of the field. It cannot exceed more than 1024 characters.
+- `Inline?` `(Type: Bool || Flag: Optional)`: If `yes`, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to `no` by default.
+- `Index` `(Type: Integer || Flag: Optional)`: Adds the field to a specified embed index number. [(learn more)](../resources/embedIndexes.md)
 
-> Inline fields may not appear inline on some mobile devices.
+> 💡 Inline fields may not appear inline on some mobile devices.
 
 ## Examples
 

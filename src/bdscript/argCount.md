@@ -3,11 +3,11 @@ Returns how many words (aka arguments/args) are in the provided text.
 
 ## Syntax
 ```
-$argCount[text]
+$argCount[Text]
 ```
 
 ### Parameters
-- `text` `(Type: String || Flag: Emptiable)`: The text to get word count for.
+- `Text` `(Type: String || Flag: Emptiable)`: The text to get the word count for.
 
 ## Example
 ```
