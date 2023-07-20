@@ -8,7 +8,7 @@ In this section, you'll learn how to use the button component.
 - [`$addButton[]`](../../../../bdscript/addButton.md)
 - [`$editButton[]`](../../../../bdscript/editButton.md)
 - [`$removeButtons`](../../../../bdscript/removeButtons.md)
-- [`$removeButtons[]`](../../../../bdscript/removeButtons.md)
+- [`$removeButtons[]`](../../../../bdscript/removeButtonsComplex.md)
 - [`$removeComponent[]`](../../../../bdscript/removeComponent.md)
 - [`$onInteraction`](../../../../callbacks/onInteraction.md)
 - [`$onInteraction[]`](../../../../callbacks/onInteractionComplex.md)
