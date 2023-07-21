@@ -1645,7 +1645,7 @@ $endif
 <li><a href="guides/general/interactions/buttons/../../../../bdscript/addButton.html"><code>$addButton[]</code></a></li>
 <li><a href="guides/general/interactions/buttons/../../../../bdscript/editButton.html"><code>$editButton[]</code></a></li>
 <li><a href="guides/general/interactions/buttons/../../../../bdscript/removeButtons.html"><code>$removeButtons</code></a></li>
-<li><a href="guides/general/interactions/buttons/../../../../bdscript/removeButtons.html"><code>$removeButtons[]</code></a></li>
+<li><a href="guides/general/interactions/buttons/../../../../bdscript/removeButtonsComplex.html"><code>$removeButtons[]</code></a></li>
 <li><a href="guides/general/interactions/buttons/../../../../bdscript/removeComponent.html"><code>$removeComponent[]</code></a></li>
 <li><a href="guides/general/interactions/buttons/../../../../callbacks/onInteraction.html"><code>$onInteraction</code></a></li>
 <li><a href="guides/general/interactions/buttons/../../../../callbacks/onInteractionComplex.html"><code>$onInteraction[]</code></a></li>
@@ -6746,6 +6746,9 @@ Original Text: $var[Text]
 New Text: $joinSplitText[]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/202880969-9ce5041a-cc6c-4bd2-a275-76e9d80be5b5.png" alt="example" /></p>
+<blockquote>
+<p>For more info, see the <a href="bdscript/../guides/general/textSplitting.html">Text Splitting Guide</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="editthread"><a class="header" href="#editthread">$editThread</a></h1>
 <p>Modifies an existing thread.</p>
 <blockquote>
@@ -9381,6 +9384,9 @@ $removeAllComponents[1093603455320457307]
 <h2 id="syntax-293"><a class="header" href="#syntax-293">Syntax</a></h2>
 <pre><code>$removeButtons
 </code></pre>
+<blockquote>
+<p>For more info, see the <a href="bdscript/../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removebuttons-3"><a class="header" href="#removebuttons-3">$removeButtons[]</a></h1>
 <p>Removes all buttons from a message.</p>
 <h2 id="syntax-294"><a class="header" href="#syntax-294">Syntax</a></h2>
@@ -9400,6 +9406,9 @@ Successfully removed all buttons from the message.
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/111157596/231867111-33a39b32-3d41-469f-802e-c8fe0eb360c9.png" alt="example" />
 <img src="https://user-images.githubusercontent.com/111157596/231867140-4e9a4917-4787-4caf-9aa6-9a4e88d51c95.png" alt="example" /></p>
+<blockquote>
+<p>For more info, see the <a href="bdscript/../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removecomponent-1"><a class="header" href="#removecomponent-1">$removeComponent</a></h1>
 <p>Removes a certain component from a message.</p>
 <h2 id="syntax-295"><a class="header" href="#syntax-295">Syntax</a></h2>
@@ -10287,7 +10296,7 @@ ID of `$message` slash command: $slashID[$message]
 <p><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel in which the slowmode is being modified in.</p>
 </li>
 <li>
-<p><code>Slowmode time</code> <code>(Type: Duration || Flag: Required)</code>: The new slowmode delay <em>(in seconds, e.g. <code>1s</code>, <code>180s</code>, <code>5s</code>, <code>3s</code>, etc)</em>. Use <code>0</code>/<code>0s</code> to disable the slowmode.</p>
+<p><code>Slowmode time</code> <code>(Type: Duration || Flag: Required)</code>: The new slowmode delay <em>(e.g. <code>5</code>, <code>10s</code>, <code>40m</code>, <code>1h</code>, etc)</em>. Use <code>0</code>/<code>0s</code> to disable the slowmode.</p>
 <blockquote>
 <p>🧙‍♂️ Slowmode time can't be set over 6 hours/21600 seconds.</p>
 </blockquote>
