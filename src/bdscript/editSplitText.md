@@ -31,3 +31,5 @@ Original Text: $var[Text]
 New Text: $joinSplitText[]
 ```
 ![example](https://user-images.githubusercontent.com/95774950/202880969-9ce5041a-cc6c-4bd2-a275-76e9d80be5b5.png)
+
+> For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
