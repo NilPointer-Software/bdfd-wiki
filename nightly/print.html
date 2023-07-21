@@ -2635,247 +2635,12 @@ Tag: $json[tag]
 Age: $json[identity;age] years old]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/214134724-9ea1a4fb-177e-473f-a5ca-a326829a135d.png" alt="" /></p>
-<h2 id="jsonunset"><a class="header" href="#jsonunset">$jsonUnset</a></h2>
-<p><code>$jsonUnset</code> removes the value at the specified JSON key.<br />
-In short, the opposite of the <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function.</p>
-<h3 id="syntax-11"><a class="header" href="#syntax-11">Syntax</a></h3>
-<pre><code>$jsonUnset[Key;...]
-</code></pre>
-<h4 id="parameters-10"><a class="header" href="#parameters-10">Parameters</a></h4>
-<ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which will be unset.</li>
-</ul>
-<h3 id="example-20"><a class="header" href="#example-20">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;username&quot;: &quot;NightNutSky&quot;,
-    &quot;tag&quot;: &quot;6700&quot;,
-    &quot;identity&quot;: {
-        &quot;age&quot;: 16
-    }
-}]
-
-Username: $json[username]
-Tag: $json[tag]
-Age: $json[identity;age] years old
-
-$jsonUnset[username]
-$jsonUnset[tag]
-$jsonUnset[identity;age]
-
-$optOff[Username: $json[username]
-Tag: $json[tag]
-Age: $json[identity;age] years old]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/213921355-924d2647-86ff-4fc8-ac76-8edff1f82b51.png" alt="" /></p>
-<h2 id="jsonexists"><a class="header" href="#jsonexists">$jsonExists</a></h2>
-<p><code>$jsonExists</code> checks if the specified JSON key exists in the current JSON object.</p>
-<blockquote>
-<p>Returns an empty result if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
-</blockquote>
-<h3 id="syntax-12"><a class="header" href="#syntax-12">Syntax</a></h3>
-<pre><code>$jsonExists[Key;...]
-</code></pre>
-<h4 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h4>
-<ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which will be checked.</li>
-</ul>
-<h3 id="examples-6"><a class="header" href="#examples-6">Examples</a></h3>
-<p>See examples further down the guide.</p>
-<h2 id="jsonarraycount"><a class="header" href="#jsonarraycount">$jsonArrayCount</a></h2>
-<p><code>$jsonArrayCount</code> counts the elements in the specified JSON key.</p>
-<h3 id="syntax-13"><a class="header" href="#syntax-13">Syntax</a></h3>
-<pre><code>$jsonArrayCount[Key;...]
-</code></pre>
-<h4 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h4>
-<ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key where the elements will be counted.</li>
-</ul>
-<h3 id="example-21"><a class="header" href="#example-21">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;computer&quot;: [{
-        &quot;apps&quot;: {
-            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
-            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
-        }
-    },{
-        &quot;cpu&quot;: &quot;Intel&quot;,
-        &quot;gpu&quot;: &quot;NVIDIA&quot;,
-        &quot;ram&quot;: &quot;XPG&quot;
-    }\]
-}]
-
-$onlyIf[$jsonExists[computer;0;apps;$message]==true;The specified category doesn't exist! Available categories are `software` and `games`]
-The count of the `$message` apps is $jsonArrayCount[computer;0;apps;$message]. 
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/213921410-502456f6-b2dc-4423-849f-40f7adecdc40.png" alt="" /></p>
-<h2 id="jsonarrayappend"><a class="header" href="#jsonarrayappend">$jsonArrayAppend</a></h2>
-<p><code>$jsonArrayAppend</code> appends the value at the end of the specified JSON key.</p>
-<h3 id="syntax-14"><a class="header" href="#syntax-14">Syntax</a></h3>
-<pre><code>$jsonArrayAppend[Key;...;Value]
-</code></pre>
-<h4 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h4>
-<ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key where the value will be appended.</li>
-<li><code>Value</code> <code>(Type: Integer, Bool, Float, String || Flag: Required)</code> : The value to append.</li>
-</ul>
-<h3 id="example-22"><a class="header" href="#example-22">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;computer&quot;: [{
-        &quot;apps&quot;: {
-            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
-            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
-        }
-    },{
-        &quot;cpu&quot;: &quot;Intel&quot;,
-        &quot;gpu&quot;: &quot;NVIDIA&quot;,
-        &quot;ram&quot;: &quot;XPG&quot;
-    }\]
-}]
-
-$onlyIf[$jsonExists[computer;0;apps;$message[1]]==true;The specified category doesn't exist! Available categories are `software` and `games`]
-
-$var[value;$replaceText[$message;$message[1] ;]]
-
-$jsonArrayAppend[computer;0;apps;$message[1];$var[value]]
-
-A new app was added to the `$message[1]` category!
-Current apps in the `$message[1]` category: $json[computer;0;apps;$message[1]]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/219880948-4e641b49-6f74-4b7d-939c-c1b30a96807c.png" alt="" /></p>
-<h2 id="jsonstringify"><a class="header" href="#jsonstringify">$jsonStringify</a></h2>
-<p><code>$jsonStringify</code> turns the current JSON object into a string value.</p>
-<blockquote>
-<p>The <code>$jsonStringify</code> function will return an empty string if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
-</blockquote>
-<h3 id="syntax-15"><a class="header" href="#syntax-15">Syntax</a></h3>
-<pre><code>$jsonStringify
-</code></pre>
-<h3 id="example-23"><a class="header" href="#example-23">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;computer&quot;: [{
-        &quot;apps&quot;: {
-            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
-            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
-        }
-    },{
-        &quot;cpu&quot;: &quot;Intel&quot;,
-        &quot;gpu&quot;: &quot;NVIDIA&quot;,
-        &quot;ram&quot;: &quot;XPG&quot;
-    }\]
-}]
-
-$jsonStringify
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/214134823-84ec207e-ab31-4ec1-8d80-ecab50701d96.png" alt="" /></p>
-<h2 id="jsonpretty"><a class="header" href="#jsonpretty">$jsonPretty</a></h2>
-<p><code>$jsonPretty</code> turns the current JSON object into a pretty string value.</p>
-<blockquote>
-<p>The <code>$jsonPretty</code> function will return an empty result if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
-</blockquote>
-<h3 id="syntax-16"><a class="header" href="#syntax-16">Syntax</a></h3>
-<pre><code>$jsonPretty[Indent length]
-</code></pre>
-<h4 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h4>
-<ul>
-<li><code>Indent length</code> <code>(Type: Integer || Flag: Required)</code>: The length of the indentation. Usually it's <code>2</code> or <code>4</code>.</li>
-</ul>
-<h3 id="example-24"><a class="header" href="#example-24">Example</a></h3>
-<pre><code>$nomention
-$disableInnerSpaceRemoval
-$jsonParse[{&quot;computer&quot;:[{&quot;apps&quot;:{&quot;software&quot;:[&quot;BlueStacks&quot;,&quot;Krita&quot;,&quot;Visual Studio Code&quot;\],&quot;games&quot;:[&quot;GTA 5&quot;,&quot;RDR 2&quot;,&quot;CS:GO&quot;,&quot;Cyberpunk 2077&quot;\]}},{&quot;cpu&quot;:&quot;Intel&quot;,&quot;gpu&quot;:&quot;NVIDIA&quot;,&quot;ram&quot;:&quot;XPG&quot;}\]
-}]
-
-$jsonPretty[4]
-</code></pre>
-<blockquote>
-<p>For the output to really be pretty, we have to use the <a href="guides/general/../bdscript/disableInnerSpaceRemoval.html"><code>$disableInnerSpaceRemoval</code></a> function.</p>
-</blockquote>
-<p><img src="https://user-images.githubusercontent.com/70456337/214135087-1ea9ed9c-40ab-4c29-b5c6-d0da83478487.png" alt="" /></p>
-<h2 id="jsonarray"><a class="header" href="#jsonarray">$jsonArray</a></h2>
-<p><code>$jsonArray</code> marks a specified JSON key as an array.</p>
-<h3 id="syntax-17"><a class="header" href="#syntax-17">Syntax</a></h3>
-<pre><code>$jsonArray[Key;...]
-</code></pre>
-<h4 id="parameters-15"><a class="header" href="#parameters-15">Parameters</a></h4>
-<ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which will be marked as an array.</li>
-</ul>
-<h3 id="example-25"><a class="header" href="#example-25">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;games&quot;: &quot;&quot;
-}]
-
-Non-array `games` key:
-$jsonPretty[4]
-
-$jsonArray[games]
-
-Array `games` key:
-$optOff[$jsonPretty[4]]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/214134895-216af646-c494-4328-a43d-a93e6c13859d.png" alt="" /></p>
-<h2 id="jsonclear"><a class="header" href="#jsonclear">$jsonClear</a></h2>
-<p><code>$jsonClear</code> clears out the current JSON object.</p>
-<h3 id="syntax-18"><a class="header" href="#syntax-18">Syntax</a></h3>
-<pre><code>$jsonClear
-</code></pre>
-<h3 id="example-26"><a class="header" href="#example-26">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;username&quot;: &quot;NightNutSky&quot;,
-    &quot;tag&quot;: &quot;6700&quot;,
-    &quot;identity&quot;: {
-        &quot;age&quot;: 16
-    }
-}]
-
-Username: $json[username]
-$jsonClear
-Username: $optOff[$json[username]]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/214381794-e94ba5e7-b90e-4c0e-971b-ca6b350928ee.png" alt="" /></p>
-<h2 id="jsonarrayindex"><a class="header" href="#jsonarrayindex">$jsonArrayIndex</a></h2>
-<p><code>$jsonArrayIndex</code> gets the array index of a given value.</p>
-<blockquote>
-<p>The <code>$jsonArrayIndex</code> function will return <code>-1</code> if value not found and will return an empty result if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
-</blockquote>
-<h3 id="syntax-19"><a class="header" href="#syntax-19">Syntax</a></h3>
-<pre><code>$jsonArrayIndex[Key;...;Value]
-</code></pre>
-<h4 id="parameters-16"><a class="header" href="#parameters-16">Parameters</a></h4>
-<ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key where the value will be searched for.</li>
-<li><code>Value</code> <code>(Type: String, Integer, Float || Flag: Required)</code>: The value to search for.</li>
-</ul>
-<h3 id="example-27"><a class="header" href="#example-27">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;computer&quot;: [{
-        &quot;apps&quot;: {
-            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
-            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
-        }
-    },{
-        &quot;cpu&quot;: &quot;Intel&quot;,
-        &quot;gpu&quot;: &quot;NVIDIA&quot;,
-        &quot;ram&quot;: &quot;XPG&quot;
-    }\]
-}]
-
-The $message's index in `apps/software` is $jsonArrayIndex[computer;0;apps;software;$message].
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/216845225-6830bc2b-616c-4fc6-932e-ed38be86cd4b.png" alt="" /></p>
 <h2 id="jsonsetstring"><a class="header" href="#jsonsetstring">$jsonSetString</a></h2>
 <p><code>$jsonSetString</code> function sets or replaces the value at the specified JSON key. Always sets the value as a string.</p>
-<h3 id="syntax-20"><a class="header" href="#syntax-20">Syntax</a></h3>
+<h3 id="syntax-11"><a class="header" href="#syntax-11">Syntax</a></h3>
 <pre><code>$jsonSetString[Key;...;Value]
 </code></pre>
-<h4 id="parameters-17"><a class="header" href="#parameters-17">Parameters</a></h4>
+<h4 id="parameters-10"><a class="header" href="#parameters-10">Parameters</a></h4>
 <ul>
 <li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key where the value will be set or replaced.</li>
 <li><code>Value</code> <code>(Type: String || Flag: Required)</code>: The value to set or replace with.</li>
@@ -2883,7 +2648,7 @@ The $message's index in `apps/software` is $jsonArrayIndex[computer;0;apps;softw
 <blockquote>
 <p>This function is recommended to be used mostly in economic-related commands. Why? The next example will explain it.</p>
 </blockquote>
-<h3 id="example-28"><a class="header" href="#example-28">Example</a></h3>
+<h3 id="example-20"><a class="header" href="#example-20">Example</a></h3>
 <ul>
 <li><code>$jsonSet</code>
 <pre><code>$nomention
@@ -2924,18 +2689,249 @@ Balance key: $json[balance]
 <blockquote>
 <p>Therefore, we should set big numbers as strings.</p>
 </blockquote>
-<h2 id="jsonjoinarray"><a class="header" href="#jsonjoinarray">$jsonJoinArray</a></h2>
-<p><code>$jsonJoinArray</code> function joins a JSON array under the specified key with the given separator.</p>
+<h2 id="jsonunset"><a class="header" href="#jsonunset">$jsonUnset</a></h2>
+<p><code>$jsonUnset</code> removes the value at the specified JSON key.<br />
+In short, the opposite of the <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function.</p>
+<h3 id="syntax-12"><a class="header" href="#syntax-12">Syntax</a></h3>
+<pre><code>$jsonUnset[Key;...]
+</code></pre>
+<h4 id="parameters-11"><a class="header" href="#parameters-11">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which will be unset.</li>
+</ul>
+<h3 id="example-21"><a class="header" href="#example-21">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;username&quot;: &quot;NightNutSky&quot;,
+    &quot;tag&quot;: &quot;6700&quot;,
+    &quot;identity&quot;: {
+        &quot;age&quot;: 16
+    }
+}]
+
+Username: $json[username]
+Tag: $json[tag]
+Age: $json[identity;age] years old
+
+$jsonUnset[username]
+$jsonUnset[tag]
+$jsonUnset[identity;age]
+
+$optOff[Username: $json[username]
+Tag: $json[tag]
+Age: $json[identity;age] years old]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/213921355-924d2647-86ff-4fc8-ac76-8edff1f82b51.png" alt="" /></p>
+<h2 id="jsonclear"><a class="header" href="#jsonclear">$jsonClear</a></h2>
+<p><code>$jsonClear</code> clears out the current JSON object.</p>
+<h3 id="syntax-13"><a class="header" href="#syntax-13">Syntax</a></h3>
+<pre><code>$jsonClear
+</code></pre>
+<h3 id="example-22"><a class="header" href="#example-22">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;username&quot;: &quot;NightNutSky&quot;,
+    &quot;tag&quot;: &quot;6700&quot;,
+    &quot;identity&quot;: {
+        &quot;age&quot;: 16
+    }
+}]
+
+Username: $json[username]
+$jsonClear
+Username: $optOff[$json[username]]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/214381794-e94ba5e7-b90e-4c0e-971b-ca6b350928ee.png" alt="" /></p>
+<h2 id="jsonexists"><a class="header" href="#jsonexists">$jsonExists</a></h2>
+<p><code>$jsonExists</code> checks if the specified JSON key exists in the current JSON object.</p>
 <blockquote>
-<p>The <code>$jsonJoinArray</code> function will return an empty string if the value is null, the key doesn't exist, no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
+<p>Returns an empty result if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
 </blockquote>
+<h3 id="syntax-14"><a class="header" href="#syntax-14">Syntax</a></h3>
+<pre><code>$jsonExists[Key;...]
+</code></pre>
+<h4 id="parameters-12"><a class="header" href="#parameters-12">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which will be checked.</li>
+</ul>
+<h3 id="examples-6"><a class="header" href="#examples-6">Examples</a></h3>
+<p>See examples further down the guide.</p>
+<h2 id="jsonstringify"><a class="header" href="#jsonstringify">$jsonStringify</a></h2>
+<p><code>$jsonStringify</code> turns the current JSON object into a string value.</p>
+<blockquote>
+<p>The <code>$jsonStringify</code> function will return an empty string if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
+</blockquote>
+<h3 id="syntax-15"><a class="header" href="#syntax-15">Syntax</a></h3>
+<pre><code>$jsonStringify
+</code></pre>
+<h3 id="example-23"><a class="header" href="#example-23">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;computer&quot;: [{
+        &quot;apps&quot;: {
+            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
+            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
+        }
+    },{
+        &quot;cpu&quot;: &quot;Intel&quot;,
+        &quot;gpu&quot;: &quot;NVIDIA&quot;,
+        &quot;ram&quot;: &quot;XPG&quot;
+    }\]
+}]
+
+$jsonStringify
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/214134823-84ec207e-ab31-4ec1-8d80-ecab50701d96.png" alt="" /></p>
+<h2 id="jsonpretty"><a class="header" href="#jsonpretty">$jsonPretty</a></h2>
+<p><code>$jsonPretty</code> turns the current JSON object into a pretty string value.</p>
+<blockquote>
+<p>The <code>$jsonPretty</code> function will return an empty result if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
+</blockquote>
+<h3 id="syntax-16"><a class="header" href="#syntax-16">Syntax</a></h3>
+<pre><code>$jsonPretty[Indent length]
+</code></pre>
+<h4 id="parameters-13"><a class="header" href="#parameters-13">Parameters</a></h4>
+<ul>
+<li><code>Indent length</code> <code>(Type: Integer || Flag: Required)</code>: The length of the indentation. Usually it's <code>2</code> or <code>4</code>.</li>
+</ul>
+<h3 id="example-24"><a class="header" href="#example-24">Example</a></h3>
+<pre><code>$nomention
+$disableInnerSpaceRemoval
+$jsonParse[{&quot;computer&quot;:[{&quot;apps&quot;:{&quot;software&quot;:[&quot;BlueStacks&quot;,&quot;Krita&quot;,&quot;Visual Studio Code&quot;\],&quot;games&quot;:[&quot;GTA 5&quot;,&quot;RDR 2&quot;,&quot;CS:GO&quot;,&quot;Cyberpunk 2077&quot;\]}},{&quot;cpu&quot;:&quot;Intel&quot;,&quot;gpu&quot;:&quot;NVIDIA&quot;,&quot;ram&quot;:&quot;XPG&quot;}\]
+}]
+
+$jsonPretty[4]
+</code></pre>
+<blockquote>
+<p>For the output to really be pretty, we have to use the <a href="guides/general/../bdscript/disableInnerSpaceRemoval.html"><code>$disableInnerSpaceRemoval</code></a> function.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/70456337/214135087-1ea9ed9c-40ab-4c29-b5c6-d0da83478487.png" alt="" /></p>
+<h2 id="jsonarray"><a class="header" href="#jsonarray">$jsonArray</a></h2>
+<p><code>$jsonArray</code> marks a specified JSON key as an array.</p>
+<h3 id="syntax-17"><a class="header" href="#syntax-17">Syntax</a></h3>
+<pre><code>$jsonArray[Key;...]
+</code></pre>
+<h4 id="parameters-14"><a class="header" href="#parameters-14">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key which will be marked as an array.</li>
+</ul>
+<h3 id="example-25"><a class="header" href="#example-25">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;games&quot;: &quot;&quot;
+}]
+
+Non-array `games` key:
+$jsonPretty[4]
+
+$jsonArray[games]
+
+Array `games` key:
+$optOff[$jsonPretty[4]]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/214134895-216af646-c494-4328-a43d-a93e6c13859d.png" alt="" /></p>
+<h2 id="jsonarraycount"><a class="header" href="#jsonarraycount">$jsonArrayCount</a></h2>
+<p><code>$jsonArrayCount</code> counts the elements in the specified JSON key.</p>
+<h3 id="syntax-18"><a class="header" href="#syntax-18">Syntax</a></h3>
+<pre><code>$jsonArrayCount[Key;...]
+</code></pre>
+<h4 id="parameters-15"><a class="header" href="#parameters-15">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key where the elements will be counted.</li>
+</ul>
+<h3 id="example-26"><a class="header" href="#example-26">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;computer&quot;: [{
+        &quot;apps&quot;: {
+            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
+            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
+        }
+    },{
+        &quot;cpu&quot;: &quot;Intel&quot;,
+        &quot;gpu&quot;: &quot;NVIDIA&quot;,
+        &quot;ram&quot;: &quot;XPG&quot;
+    }\]
+}]
+
+$onlyIf[$jsonExists[computer;0;apps;$message]==true;The specified category doesn't exist! Available categories are `software` and `games`]
+The count of the `$message` apps is $jsonArrayCount[computer;0;apps;$message]. 
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/213921410-502456f6-b2dc-4423-849f-40f7adecdc40.png" alt="" /></p>
+<h2 id="jsonarrayindex"><a class="header" href="#jsonarrayindex">$jsonArrayIndex</a></h2>
+<p><code>$jsonArrayIndex</code> gets the array index of a given value.</p>
+<blockquote>
+<p>The <code>$jsonArrayIndex</code> function will return <code>-1</code> if value not found and will return an empty result if no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
+</blockquote>
+<h3 id="syntax-19"><a class="header" href="#syntax-19">Syntax</a></h3>
+<pre><code>$jsonArrayIndex[Key;...;Value]
+</code></pre>
+<h4 id="parameters-16"><a class="header" href="#parameters-16">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key where the value will be searched for.</li>
+<li><code>Value</code> <code>(Type: String, Integer, Float || Flag: Required)</code>: The value to search for.</li>
+</ul>
+<h3 id="example-27"><a class="header" href="#example-27">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;computer&quot;: [{
+        &quot;apps&quot;: {
+            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
+            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
+        }
+    },{
+        &quot;cpu&quot;: &quot;Intel&quot;,
+        &quot;gpu&quot;: &quot;NVIDIA&quot;,
+        &quot;ram&quot;: &quot;XPG&quot;
+    }\]
+}]
+
+The $message's index in `apps/software` is $jsonArrayIndex[computer;0;apps;software;$message].
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/216845225-6830bc2b-616c-4fc6-932e-ed38be86cd4b.png" alt="" /></p>
+<h2 id="jsonarrayappend"><a class="header" href="#jsonarrayappend">$jsonArrayAppend</a></h2>
+<p><code>$jsonArrayAppend</code> appends the value at the end of the specified JSON key.</p>
+<h3 id="syntax-20"><a class="header" href="#syntax-20">Syntax</a></h3>
+<pre><code>$jsonArrayAppend[Key;...;Value]
+</code></pre>
+<h4 id="parameters-17"><a class="header" href="#parameters-17">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key where the value will be appended.</li>
+<li><code>Value</code> <code>(Type: Integer, Bool, Float, String || Flag: Required)</code> : The value to append.</li>
+</ul>
+<h3 id="example-28"><a class="header" href="#example-28">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;computer&quot;: [{
+        &quot;apps&quot;: {
+            &quot;software&quot;: [&quot;BlueStacks&quot;, &quot;Krita&quot;, &quot;Visual Studio Code&quot;\],
+            &quot;games&quot;: [&quot;GTA 5&quot;, &quot;RDR 2&quot;, &quot;CS:GO&quot;, &quot;Cyberpunk 2077&quot;\]
+        }
+    },{
+        &quot;cpu&quot;: &quot;Intel&quot;,
+        &quot;gpu&quot;: &quot;NVIDIA&quot;,
+        &quot;ram&quot;: &quot;XPG&quot;
+    }\]
+}]
+
+$onlyIf[$jsonExists[computer;0;apps;$message[1]]==true;The specified category doesn't exist! Available categories are `software` and `games`]
+
+$var[value;$replaceText[$message;$message[1] ;]]
+
+$jsonArrayAppend[computer;0;apps;$message[1];$var[value]]
+
+A new app was added to the `$message[1]` category!
+Current apps in the `$message[1]` category: $json[computer;0;apps;$message[1]]
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/70456337/219880948-4e641b49-6f74-4b7d-939c-c1b30a96807c.png" alt="" /></p>
+<h2 id="jsonarraypop"><a class="header" href="#jsonarraypop">$jsonArrayPop</a></h2>
+<p><code>$jsonArrayPop</code> function removes the last element of an array and returns the removed element.</p>
 <h3 id="syntax-21"><a class="header" href="#syntax-21">Syntax</a></h3>
-<pre><code>$jsonJoinArray[Key;...;Separator]
+<pre><code>$jsonArrayPop[Key;...]
 </code></pre>
 <h4 id="parameters-18"><a class="header" href="#parameters-18">Parameters</a></h4>
 <ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key to an array which will be retrieved.</li>
-<li><code>Separator</code> <code>(Type: String || Flag: Required)</code>: The separator which will separate the JSON keys.</li>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>:  The key of the array from which an element will be removed.</li>
 </ul>
 <h3 id="example-29"><a class="header" href="#example-29">Example</a></h3>
 <pre><code>$nomention
@@ -2943,13 +2939,12 @@ $jsonParse[{
     &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
 }]
 
-Music:
+Removed: $jsonArrayPop[music]
+
+Current music:
 &gt; $jsonJoinArray[music;, ]
 </code></pre>
-<blockquote>
-<p>We separated the list with <code>, </code>.</p>
-</blockquote>
-<p><img src="https://user-images.githubusercontent.com/70456337/222919940-4476268b-2e2c-4c2c-afab-e70fbb88c507.png" alt="" /></p>
+<p><img src="https://user-images.githubusercontent.com/70456337/222919990-19229a8d-9e01-49bd-865a-7d5d8a243525.png" alt="" /></p>
 <h2 id="jsonarrayshift"><a class="header" href="#jsonarrayshift">$jsonArrayShift</a></h2>
 <p><code>$jsonArrayShift</code> function removes the first element of an array and returns the removed element.</p>
 <h3 id="syntax-22"><a class="header" href="#syntax-22">Syntax</a></h3>
@@ -2971,38 +2966,17 @@ Current music:
 &gt; $jsonJoinArray[music;, ]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/222919976-4e9d3110-7a5f-4653-bcdd-ceaa8bfa58db.png" alt="" /></p>
-<h2 id="jsonarraypop"><a class="header" href="#jsonarraypop">$jsonArrayPop</a></h2>
-<p><code>$jsonArrayPop</code> function removes the last element of an array and returns the removed element.</p>
-<h3 id="syntax-23"><a class="header" href="#syntax-23">Syntax</a></h3>
-<pre><code>$jsonArrayPop[Key;...]
-</code></pre>
-<h4 id="parameters-20"><a class="header" href="#parameters-20">Parameters</a></h4>
-<ul>
-<li><code>Key</code> <code>(Type: String || Flag: Required)</code>:  The key of the array from which an element will be removed.</li>
-</ul>
-<h3 id="example-31"><a class="header" href="#example-31">Example</a></h3>
-<pre><code>$nomention
-$jsonParse[{
-    &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
-}]
-
-Removed: $jsonArrayPop[music]
-
-Current music:
-&gt; $jsonJoinArray[music;, ]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/222919990-19229a8d-9e01-49bd-865a-7d5d8a243525.png" alt="" /></p>
 <h2 id="jsonarrayunshift"><a class="header" href="#jsonarrayunshift">$jsonArrayUnshift</a></h2>
 <p><code>$jsonArrayUnfhist</code> function adds the value in the front of the array.</p>
-<h3 id="syntax-24"><a class="header" href="#syntax-24">Syntax</a></h3>
+<h3 id="syntax-23"><a class="header" href="#syntax-23">Syntax</a></h3>
 <pre><code>$jsonArrayUnshift[Key;...;Value]
 </code></pre>
-<h4 id="parameters-21"><a class="header" href="#parameters-21">Parameters</a></h4>
+<h4 id="parameters-20"><a class="header" href="#parameters-20">Parameters</a></h4>
 <ul>
 <li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key of the array to which the value will be added.</li>
 <li><code>Value</code> <code>(Type: Float, String, Bool, Integer || Flag: Required)</code>: The value to be added.</li>
 </ul>
-<h3 id="example-32"><a class="header" href="#example-32">Example</a></h3>
+<h3 id="example-31"><a class="header" href="#example-31">Example</a></h3>
 <pre><code>$nomention
 $jsonParse[{
     &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
@@ -3019,14 +2993,14 @@ Music:
 <blockquote>
 <p>The function sorts the elements in the order of integers from lowest to highest, and then strings based on their ASCII/Unicode values.</p>
 </blockquote>
-<h3 id="syntax-25"><a class="header" href="#syntax-25">Syntax</a></h3>
+<h3 id="syntax-24"><a class="header" href="#syntax-24">Syntax</a></h3>
 <pre><code>$jsonArraySort[Key;...]
 </code></pre>
-<h4 id="parameters-22"><a class="header" href="#parameters-22">Parameters</a></h4>
+<h4 id="parameters-21"><a class="header" href="#parameters-21">Parameters</a></h4>
 <ul>
 <li><code>Key</code> <code>(Type: String || Flag: Emptiable)</code>: The key of the JSON array to be sorted.</li>
 </ul>
-<h3 id="example-33"><a class="header" href="#example-33">Example</a></h3>
+<h3 id="example-32"><a class="header" href="#example-32">Example</a></h3>
 <pre><code>$nomention
 $jsonParse[{
   &quot;data&quot;: [&quot;Oranges&quot;, &quot;banana&quot;, 10, &quot;apple&quot;, &quot;Apples&quot;, 2, 30\]
@@ -3040,14 +3014,14 @@ After sorting:
 <p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/f2dbdac1-31bb-4c60-ba93-cf7239829e09" alt="" /></p>
 <h2 id="jsonarrayreverse"><a class="header" href="#jsonarrayreverse">$jsonArrayReverse</a></h2>
 <p><code>$jsonArrayReverse</code> reverses the order of a specific JSON array.</p>
-<h3 id="syntax-26"><a class="header" href="#syntax-26">Syntax</a></h3>
+<h3 id="syntax-25"><a class="header" href="#syntax-25">Syntax</a></h3>
 <pre><code>$jsonArrayReverse[key;...]
 </code></pre>
-<h4 id="parameters-23"><a class="header" href="#parameters-23">Parameters</a></h4>
+<h4 id="parameters-22"><a class="header" href="#parameters-22">Parameters</a></h4>
 <ul>
 <li><code>Key</code> <code>(Type: String || Flag: Emptiable)</code>: The key of the JSON array to be reversed.</li>
 </ul>
-<h3 id="example-34"><a class="header" href="#example-34">Example</a></h3>
+<h3 id="example-33"><a class="header" href="#example-33">Example</a></h3>
 <pre><code>$nomention
 $jsonParse[{
   &quot;fruits&quot;: [&quot;apple&quot;, &quot;orange&quot;, &quot;banana&quot;, &quot;grape&quot;\]
@@ -3058,7 +3032,33 @@ $jsonArrayReverse[fruits]
 After reversing:
 &gt; $json[fruits]
 </code></pre>
-<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/25fe08af-ce52-4079-afb4-aa4c7537c25a" alt="20230625_112134" /></p>
+<p><img src="https://github.com/caramellya-mei/bdfd-wiki/assets/115384748/25fe08af-ce52-4079-afb4-aa4c7537c25a" alt="" /></p>
+<h2 id="jsonjoinarray"><a class="header" href="#jsonjoinarray">$jsonJoinArray</a></h2>
+<p><code>$jsonJoinArray</code> function joins a JSON array under the specified key with the given separator.</p>
+<blockquote>
+<p>The <code>$jsonJoinArray</code> function will return an empty string if the value is null, the key doesn't exist, no <a href="guides/general/jsonFunctions.html#jsonparse"><code>$jsonParse</code></a> or <a href="guides/general/jsonFunctions.html#jsonset"><code>$jsonSet</code></a> function was executed, or <a href="guides/general/jsonFunctions.html#jsonclear"><code>$jsonClear</code></a> was executed.</p>
+</blockquote>
+<h3 id="syntax-26"><a class="header" href="#syntax-26">Syntax</a></h3>
+<pre><code>$jsonJoinArray[Key;...;Separator]
+</code></pre>
+<h4 id="parameters-23"><a class="header" href="#parameters-23">Parameters</a></h4>
+<ul>
+<li><code>Key</code> <code>(Type: String || Flag: Required)</code>: The JSON key to an array which will be retrieved.</li>
+<li><code>Separator</code> <code>(Type: String || Flag: Required)</code>: The separator which will separate the JSON keys.</li>
+</ul>
+<h3 id="example-34"><a class="header" href="#example-34">Example</a></h3>
+<pre><code>$nomention
+$jsonParse[{
+    &quot;music&quot;: [&quot;Paranoid - MADKID&quot;, &quot;Ping! 2 - Exyl&quot;, &quot;Tokyo - Leat'eq&quot;\]
+}]
+
+Music:
+&gt; $jsonJoinArray[music;, ]
+</code></pre>
+<blockquote>
+<p>We separated the list with <code>, </code>.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/70456337/222919940-4476268b-2e2c-4c2c-afab-e70fbb88c507.png" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="threads"><a class="header" href="#threads">Threads</a></h1>
 <p><img src="https://user-images.githubusercontent.com/69215413/130264464-d976d579-b480-46e5-8dab-abf26a2d4829.png" alt="example" /></p>
 <p>Threads are subset-channels within a channel. Threads are great for separating different conversations in one channel. This wiki will explain how you can integrate threads in your bot.</p>
