@@ -3,13 +3,13 @@ Calculates a math expression.
 
 ## Syntax
 ```
-$calculate[expression]
+$calculate[Expression]
 ```
 
 ### Parameters
-- `expression` `(Type: String || Flag: Required)`: The math expression to solve.
+- `Expression` `(Type: String || Flag: Required)`: The math expression to solve.
 
-## Signs
+### Signs
 - `+` - Addition.
 - `-` - Subtraction.
 - `/` - Division.
@@ -28,4 +28,3 @@ $calculate[$message] 🧠
 
 
 > [How `$enableDecimals[]` works?](./bdscript/enableDecimals.md)
-
