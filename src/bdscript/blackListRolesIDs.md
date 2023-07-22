@@ -1,5 +1,5 @@
 # $blackListRolesIDs
-Block users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.
+Blocks users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.
 
 ## Syntax
 ```
