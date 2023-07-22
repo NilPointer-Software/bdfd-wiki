@@ -1,5 +1,5 @@
 # $categoryID
-Returns category ID for the given category name.
+Returns the category ID of the given category name.
 
 ## Syntax
 ```
