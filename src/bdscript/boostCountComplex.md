@@ -1,13 +1,13 @@
 # $boostCount[]
-Returns the guild's number of nitro boosts.
+Returns a guild's number of nitro boosts.
 
 ## Syntax
 ```
-$boostCount[guild ID]
+$boostCount[Guild ID]
 ```
 
 ### Parameters
-- `guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get the number of boosts for.
+- `Guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get the number of boosts for.
 
 ## Example
 ```

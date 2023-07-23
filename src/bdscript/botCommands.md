@@ -3,11 +3,11 @@ Returns a list of the bot's commands.
 
 ## Syntax
 ```
-$botCommands[separator]
+$botCommands[Separator]
 ```
 
 ### Parameters
-- `separator` `(Type: String || Flag: Required)`: Will be used to separate each command.
+- `Separator` `(Type: String || Flag: Required)`: Will be used to separate each command.
 
 ## Example
 ```

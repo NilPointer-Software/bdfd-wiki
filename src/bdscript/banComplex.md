@@ -3,11 +3,11 @@ Bans the mentioned user with a reason.
 
 ## Syntax
 ```
-$ban[reason]
+$ban[Reason]
 ```
 
 ### Parameters
-- `reason` `(Type: String || Flag: Emptiable)`: The reason for this action, which will be saved in the audit-log.
+- `Reason` `(Type: String || Flag: Emptiable)`: The reason for the ban, which will be saved in the audit-log.
 
 ## Example
 ```

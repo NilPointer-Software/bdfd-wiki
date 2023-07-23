@@ -3,13 +3,13 @@ Bans a user using their ID.
 
 ## Syntax
 ```
-$banID[reason;(user ID)]
+$banID[Reason;(User ID)]
 ```
 
 ### Parameters
-- `reason` `(Type: String || Flag: Emptiable)`: The reason for this action, which will be saved in the audit-log.
+- `Reason` `(Type: String || Flag: Emptiable)`: The reason for the ban, which will be saved in the audit-log.
    > Use [`$getBanReason[]`](./getBanReason.md) to get the ban reason.
-- `user ID` `(Type: Snowflake || Flag: Vacantable)`: The user to ban. If empty, the ID will be taken from the last part of the author's message.
+- `User ID` `(Type: Snowflake || Flag: Vacantable)`: The user to ban. If empty, the ID will be taken from the last part of the author's message.
 
 ## Example
 ```

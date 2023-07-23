@@ -1,20 +1,22 @@
 # $categoryChannels
-List channel property under given category.
+Lists all channels of the given category.
 
 ## Syntax
 ```
-$categoryChannels[category ID;separator;(option)]
+$categoryChannels[Category ID;Separator;(Option)]
 ```
+
 ### Parameters
-- `category ID` `(Type: Snowflake || Flag: Required)`: The category from which to take the channels. 
-- `seperator` `(Type: String || Flag: Emptiable)`: The separator to use when separating channel properties.
-- `option` `(Type: Enum || Flag: Optional)`: Which property to get from category channels. _(Default  is `name`)_
+- `Category ID` `(Type: Snowflake || Flag: Required)`: The category from which to list the channels. 
+- `Seperator` `(Type: String || Flag: Emptiable)`: The separator to use when separating channel properties.
+- `Option` `(Type: Enum || Flag: Optional)`: Which property to get from category channels. Default  is `name`. See [below](#options) for more information.
 
 ### Options
-- `name`: The name of the channels.
-- `id`: The id of the channels.
-- `mention`: The channel mentions.
-- `count`: The amount of channels in the category.
+- `name` - The names of the channels.
+- `id` - The IDs of the channels.
+- `mention` - The mentions of the channels.
+- `count` - The amount of channels in the category.
+
 > The `count` option does not list anything, instead it will return the number of channels under the given category.
 
 ## Example
@@ -26,4 +28,3 @@ $nomention
 ![example](https://user-images.githubusercontent.com/113303649/212550851-a3a87e0e-9393-4e38-9f87-921034ea69a7.png)
 
 > [How `$categoryID[]` works?](./categoryID.md)
-

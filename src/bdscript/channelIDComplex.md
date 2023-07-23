@@ -1,12 +1,14 @@
 # $channelID[]
-Returns channel ID for the given channel name.
+Returns the channel ID for the given channel name.
 
 ## Syntax
 ```
-$channelID[channel name]
+$channelID[Channel name]
 ```
+
 ### Parameters
-- `channel name` `(Type: String || Flag: Required)`: The name of the channel.
+- `Channel name` `(Type: String || Flag: Required)`: The name of the channel.
+
 ## Example
 ```
 $nomention
