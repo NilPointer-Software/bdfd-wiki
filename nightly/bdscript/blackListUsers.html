@@ -165,14 +165,14 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="blacklistusers"><a class="header" href="#blacklistusers">$blackListUsers</a></h1>
-<p>Disables the command for users with usernames matching the ones provided.</p>
+<p>Blocks certain users from using the command. Uses usernames instead of user IDs.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$blackListUsers[usernames;...;error message]
+<pre><code>$blackListUsers[Usernames;...;Error message]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>usernames</code> <code>(Type: String || Flag: Emptiable)</code>: The usernames to blacklist. Separate names using <code>;</code>.</li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: Message when user's name is in the blacklist.</li>
+<li><code>Usernames</code> <code>(Type: String || Flag: Emptiable)</code>: The username(s) to blacklist. Use semicolons <code>;</code> as a separator to separate multiple usernames.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent when the username of the user running the command is blacklisted.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

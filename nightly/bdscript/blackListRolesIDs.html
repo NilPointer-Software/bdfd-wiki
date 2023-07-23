@@ -165,14 +165,14 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="blacklistrolesids"><a class="header" href="#blacklistrolesids">$blackListRolesIDs</a></h1>
-<p>Block users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.</p>
+<p>Blocks users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$blackListRolesIDs[role IDs;...;error message]
+<pre><code>$blackListRolesIDs[Role IDs;...;Error message]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The roles that will be blacklisted. Separate role IDs using <code>;</code>.</li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the user has a role from the blacklist.</li>
+<li><code>Role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The role(s) that will be blacklisted. Use semicolons <code>;</code> as a separator to separate multiple role IDs.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the user has a role from the blacklist.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

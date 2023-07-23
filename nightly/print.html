@@ -5108,11 +5108,11 @@ $ban
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ban-1"><a class="header" href="#ban-1">$ban[]</a></h1>
 <p>Bans the mentioned user with a reason.</p>
 <h2 id="syntax-62"><a class="header" href="#syntax-62">Syntax</a></h2>
-<pre><code>$ban[reason]
+<pre><code>$ban[Reason]
 </code></pre>
 <h3 id="parameters-49"><a class="header" href="#parameters-49">Parameters</a></h3>
 <ul>
-<li><code>reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for this action, which will be saved in the audit-log.</li>
+<li><code>Reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for the ban, which will be saved in the audit-log.</li>
 </ul>
 <h2 id="example-72"><a class="header" href="#example-72">Example</a></h2>
 <pre><code>$nomention
@@ -5139,16 +5139,16 @@ $banID
 <div style="break-before: page; page-break-before: always;"></div><h1 id="banid-1"><a class="header" href="#banid-1">$banID[]</a></h1>
 <p>Bans a user using their ID.</p>
 <h2 id="syntax-64"><a class="header" href="#syntax-64">Syntax</a></h2>
-<pre><code>$banID[reason;(user ID)]
+<pre><code>$banID[Reason;(User ID)]
 </code></pre>
 <h3 id="parameters-50"><a class="header" href="#parameters-50">Parameters</a></h3>
 <ul>
-<li><code>reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for this action, which will be saved in the audit-log.
+<li><code>Reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for the ban, which will be saved in the audit-log.
 <blockquote>
 <p>Use <a href="bdscript/./getBanReason.html"><code>$getBanReason[]</code></a> to get the ban reason.</p>
 </blockquote>
 </li>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</li>
 </ul>
 <h2 id="example-74"><a class="header" href="#example-74">Example</a></h2>
 <pre><code>$nomention
@@ -5165,16 +5165,16 @@ $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="blacklistids"><a class="header" href="#blacklistids">$blackListIDs</a></h1>
 <p>Blocks certain users from using the command.</p>
 <h2 id="syntax-65"><a class="header" href="#syntax-65">Syntax</a></h2>
-<pre><code>$blackListIDs[user IDs;...;error message]
+<pre><code>$blackListIDs[User IDs;...;Error message]
 </code></pre>
 <h3 id="parameters-51"><a class="header" href="#parameters-51">Parameters</a></h3>
 <ul>
-<li><code>user IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The users to blacklist from using the command. Separate user IDs with <code>;</code>.
+<li><code>User IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user(s) to blacklist from using the command. Use semicolons <code>;</code> as a separator to separate multiple user IDs.
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get user ID?</a></p>
 </blockquote>
 </li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent when the user running the command is blacklisted.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent when the user running the command is blacklisted.</li>
 </ul>
 <h2 id="example-75"><a class="header" href="#example-75">Example</a></h2>
 <pre><code>$nomention
@@ -5185,12 +5185,12 @@ Pong! $ping ms
 <div style="break-before: page; page-break-before: always;"></div><h1 id="blacklistroles"><a class="header" href="#blacklistroles">$blackListRoles</a></h1>
 <p>Blocks users with certain role(s) from using the command. If the user has any role in the blacklist, they will not be able to run the command. Uses role names instead of role IDs.</p>
 <h2 id="syntax-66"><a class="header" href="#syntax-66">Syntax</a></h2>
-<pre><code>$blackListRoles[role names;...;error message]
+<pre><code>$blackListRoles[Role names;...;Error message]
 </code></pre>
 <h3 id="parameters-52"><a class="header" href="#parameters-52">Parameters</a></h3>
 <ul>
-<li><code>role names</code> <code>(Type: String || Flag: Emptiable)</code>: The name(s) of the role(s) to blacklist. Separate role names using <code>;</code>.</li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the user has a role from the blacklist.</li>
+<li><code>Role names</code> <code>(Type: String || Flag: Emptiable)</code>: The name(s) of the role(s) to blacklist. Use semicolons <code>;</code> as a separator to separate multiple role names.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the user has a role from the blacklist.</li>
 </ul>
 <h2 id="example-76"><a class="header" href="#example-76">Example</a></h2>
 <pre><code>$nomention
@@ -5199,14 +5199,14 @@ Pong! $ping ms
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/210046896-9e45b0c5-68f1-49b8-9bf0-90694df688cf.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="blacklistrolesids"><a class="header" href="#blacklistrolesids">$blackListRolesIDs</a></h1>
-<p>Block users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.</p>
+<p>Blocks users with certain roles from using the command. If the user has any role in the blacklist, they will not be able to run the command.</p>
 <h2 id="syntax-67"><a class="header" href="#syntax-67">Syntax</a></h2>
-<pre><code>$blackListRolesIDs[role IDs;...;error message]
+<pre><code>$blackListRolesIDs[Role IDs;...;Error message]
 </code></pre>
 <h3 id="parameters-53"><a class="header" href="#parameters-53">Parameters</a></h3>
 <ul>
-<li><code>role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The roles that will be blacklisted. Separate role IDs using <code>;</code>.</li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the user has a role from the blacklist.</li>
+<li><code>Role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The role(s) that will be blacklisted. Use semicolons <code>;</code> as a separator to separate multiple role IDs.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the user has a role from the blacklist.</li>
 </ul>
 <h2 id="example-77"><a class="header" href="#example-77">Example</a></h2>
 <pre><code>$nomention
@@ -5215,18 +5215,18 @@ Pong! $ping ms
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/210046896-9e45b0c5-68f1-49b8-9bf0-90694df688cf.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="blacklistservers"><a class="header" href="#blacklistservers">$blackListServers</a></h1>
-<p>Disables this command for the provided servers.</p>
+<p>Blocks certain servers from using the command.</p>
 <h2 id="syntax-68"><a class="header" href="#syntax-68">Syntax</a></h2>
-<pre><code>$blackListServers[guild IDs;..;error message]
+<pre><code>$blackListServers[Guild IDs;...;Error message]
 </code></pre>
 <h3 id="parameters-54"><a class="header" href="#parameters-54">Parameters</a></h3>
 <ul>
-<li><code>guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The servers to blacklist. Separate server IDs using <code>;</code>.
+<li><code>Guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The server(s) to blacklist from using a command. Use semicolons <code>;</code> as a separator to separate multiple server IDs.
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Where do I find server IDs? (click-me)</a></p>
 </blockquote>
 </li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The error to display when the server is blacklisted.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the command is run in a blacklisted server.</li>
 </ul>
 <h2 id="example-78"><a class="header" href="#example-78">Example</a></h2>
 <pre><code>$nomention
@@ -5234,17 +5234,17 @@ $blackListServers[1009018669982031912;❌ You can't use this command!]
 **Hello $username!**
 *Guild ID: $guildID*
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/211995843-0d9eba33-e36a-484f-ad97-eb6e67391af1.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/211996168-47ba94ff-e03d-40f9-8b33-5758454f5ce9.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/211995843-0d9eba33-e36a-484f-ad97-eb6e67391af1.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/211996168-47ba94ff-e03d-40f9-8b33-5758454f5ce9.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="blacklistusers"><a class="header" href="#blacklistusers">$blackListUsers</a></h1>
-<p>Disables the command for users with usernames matching the ones provided.</p>
+<p>Blocks certain users from using the command. Uses usernames instead of user IDs.</p>
 <h2 id="syntax-69"><a class="header" href="#syntax-69">Syntax</a></h2>
-<pre><code>$blackListUsers[usernames;...;error message]
+<pre><code>$blackListUsers[Usernames;...;Error message]
 </code></pre>
 <h3 id="parameters-55"><a class="header" href="#parameters-55">Parameters</a></h3>
 <ul>
-<li><code>usernames</code> <code>(Type: String || Flag: Emptiable)</code>: The usernames to blacklist. Separate names using <code>;</code>.</li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: Message when user's name is in the blacklist.</li>
+<li><code>Usernames</code> <code>(Type: String || Flag: Emptiable)</code>: The username(s) to blacklist. Use semicolons <code>;</code> as a separator to separate multiple usernames.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent when the username of the user running the command is blacklisted.</li>
 </ul>
 <h2 id="example-79"><a class="header" href="#example-79">Example</a></h2>
 <pre><code>$nomention
@@ -5253,7 +5253,7 @@ Hello $username!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/211997181-4ad65536-9b54-4f15-bd1f-07eb0df92686.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="boostcount"><a class="header" href="#boostcount">$boostCount</a></h1>
-<p>Returns the guild's number of nitro boosts.</p>
+<p>Returns the current guild's number of nitro boosts.</p>
 <h2 id="syntax-70"><a class="header" href="#syntax-70">Syntax</a></h2>
 <pre><code>$boostCount
 </code></pre>
@@ -5263,13 +5263,13 @@ This server currently has $boostCount boost(s).
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/94063167/198900495-ed3261f1-b8cd-4a54-b6c5-71641108321c.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="boostcount-1"><a class="header" href="#boostcount-1">$boostCount[]</a></h1>
-<p>Returns the guild's number of nitro boosts.</p>
+<p>Returns a guild's number of nitro boosts.</p>
 <h2 id="syntax-71"><a class="header" href="#syntax-71">Syntax</a></h2>
-<pre><code>$boostCount[guild ID]
+<pre><code>$boostCount[Guild ID]
 </code></pre>
 <h3 id="parameters-56"><a class="header" href="#parameters-56">Parameters</a></h3>
 <ul>
-<li><code>guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The guild to get the number of boosts for.</li>
+<li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The guild to get the number of boosts for.</li>
 </ul>
 <h2 id="example-81"><a class="header" href="#example-81">Example</a></h2>
 <pre><code>$nomention
@@ -5279,11 +5279,11 @@ This server currently has $boostCount[$message[1]] boost(s).
 <div style="break-before: page; page-break-before: always;"></div><h1 id="botcommands"><a class="header" href="#botcommands">$botCommands</a></h1>
 <p>Returns a list of the bot's commands.</p>
 <h2 id="syntax-72"><a class="header" href="#syntax-72">Syntax</a></h2>
-<pre><code>$botCommands[separator]
+<pre><code>$botCommands[Separator]
 </code></pre>
 <h3 id="parameters-57"><a class="header" href="#parameters-57">Parameters</a></h3>
 <ul>
-<li><code>separator</code> <code>(Type: String || Flag: Required)</code>: Will be used to separate each command.</li>
+<li><code>Separator</code> <code>(Type: String || Flag: Required)</code>: Will be used to separate each command.</li>
 </ul>
 <h2 id="example-82"><a class="header" href="#example-82">Example</a></h2>
 <pre><code>$nomention
@@ -5325,21 +5325,21 @@ $botLeave
 </code></pre>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="botleave-1"><a class="header" href="#botleave-1">$botLeave[]</a></h1>
-<p>Makes the bot leave the server matching the provided <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">server ID</a>.</p>
+<p>Forces the bot to leave the server matching the provided <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">server ID</a>.</p>
 <h2 id="syntax-75"><a class="header" href="#syntax-75">Syntax</a></h2>
-<pre><code>$botLeave[guild ID]
+<pre><code>$botLeave[Guild ID]
 </code></pre>
 <h3 id="parameters-58"><a class="header" href="#parameters-58">Parameters</a></h3>
 <ul>
-<li><code>guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of a guild to leave.</li>
+<li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the guild to leave.</li>
 </ul>
 <h2 id="example-85"><a class="header" href="#example-85">Example</a></h2>
 <pre><code>$nomention
 $sendMessage[I left out `$serverName[$message]` server]
 $botLeave[$message]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/210335691-9d23cfd6-f7e8-4924-8afc-dd3b523ca071.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/210335691-9d23cfd6-f7e8-4924-8afc-dd3b523ca071.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png" alt="example" /></p>
 <blockquote>
 <p>If you are using <strong>BDScript 2</strong>, put <code>$botLeave[]</code> at the very bottom of the code so that the code works correctly i.e:</p>
 <p>❌ Not correct:</p>
@@ -5356,19 +5356,19 @@ $botLeave[$message]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="botlistdescription"><a class="header" href="#botlistdescription">$botListDescription</a></h1>
 <p>Sets the description of this command, for the BDL command list (if the bot is on <a href="https://botdesignerlist.com"><strong>Bot Designer List</strong></a>).</p>
 <h2 id="syntax-76"><a class="header" href="#syntax-76">Syntax</a></h2>
-<pre><code>$botListDescription[text]
+<pre><code>$botListDescription[Text]
 </code></pre>
 <h3 id="parameters-59"><a class="header" href="#parameters-59">Parameters</a></h3>
 <ul>
-<li><code>text</code> <code>(Type: String || Flag: Required)</code>: The text that the description will be set to.</li>
+<li><code>Text</code> <code>(Type: String || Flag: Required)</code>: The text that the description will be set to.</li>
 </ul>
 <h2 id="example-86"><a class="header" href="#example-86">Example</a></h2>
 <pre><code>$nomention
 Pong!
 $botListDescription[Ping? Pong!]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/210341764-10cf97fe-5a0e-429b-8e8f-dbfcb4819c93.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/210341495-bbda340a-3f30-4c6d-af7c-4445233ede37.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/210341764-10cf97fe-5a0e-429b-8e8f-dbfcb4819c93.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/210341495-bbda340a-3f30-4c6d-af7c-4445233ede37.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="botlisthide"><a class="header" href="#botlisthide">$botListHide</a></h1>
 <p>Hides this command from being shown on the BDL command list (if the bot is on <a href="https://botdesignerlist.com"><strong>Bot Designer List</strong></a>).</p>
 <h2 id="syntax-77"><a class="header" href="#syntax-77">Syntax</a></h2>
@@ -5456,11 +5456,11 @@ Hello $username!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="c"><a class="header" href="#c">$c</a></h1>
 <p>Adds a comment to the code. Comments do not appear in the bot's response.</p>
 <h2 id="syntax-81"><a class="header" href="#syntax-81">Syntax</a></h2>
-<pre><code>$c[comment]
+<pre><code>$c[Comment]
 </code></pre>
 <h3 id="parameters-60"><a class="header" href="#parameters-60">Parameters</a></h3>
 <ul>
-<li><code>comment</code> <code>(Type: String || Flag: Emptiable)</code>: Any text. This text will not be taken into account during processing. Commonly used to add notes to the code.</li>
+<li><code>Comment</code> <code>(Type: String || Flag: Emptiable)</code>: Any text. This text will not be taken into account during processing. Commonly used to add notes to the code.</li>
 </ul>
 <h2 id="example-91"><a class="header" href="#example-91">Example</a></h2>
 <pre><code>$nomention
@@ -5471,13 +5471,13 @@ $c[This is a say command. You are reading a comment!]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="calculate"><a class="header" href="#calculate">$calculate</a></h1>
 <p>Calculates a math expression.</p>
 <h2 id="syntax-82"><a class="header" href="#syntax-82">Syntax</a></h2>
-<pre><code>$calculate[expression]
+<pre><code>$calculate[Expression]
 </code></pre>
 <h3 id="parameters-61"><a class="header" href="#parameters-61">Parameters</a></h3>
 <ul>
-<li><code>expression</code> <code>(Type: String || Flag: Required)</code>: The math expression to solve.</li>
+<li><code>Expression</code> <code>(Type: String || Flag: Required)</code>: The math expression to solve.</li>
 </ul>
-<h2 id="signs-2"><a class="header" href="#signs-2">Signs</a></h2>
+<h3 id="signs-2"><a class="header" href="#signs-2">Signs</a></h3>
 <ul>
 <li><code>+</code> - Addition.</li>
 <li><code>-</code> - Subtraction.</li>
@@ -5497,22 +5497,22 @@ $calculate[$message] 🧠
 <p><a href="bdscript/./bdscript/enableDecimals.html">How <code>$enableDecimals[]</code> works?</a></p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="categorychannels"><a class="header" href="#categorychannels">$categoryChannels</a></h1>
-<p>List channel property under given category.</p>
+<p>Lists all channels of the given category.</p>
 <h2 id="syntax-83"><a class="header" href="#syntax-83">Syntax</a></h2>
-<pre><code>$categoryChannels[category ID;separator;(option)]
+<pre><code>$categoryChannels[Category ID;Separator;(Option)]
 </code></pre>
 <h3 id="parameters-62"><a class="header" href="#parameters-62">Parameters</a></h3>
 <ul>
-<li><code>category ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The category from which to take the channels. </li>
-<li><code>seperator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to use when separating channel properties.</li>
-<li><code>option</code> <code>(Type: Enum || Flag: Optional)</code>: Which property to get from category channels. <em>(Default  is <code>name</code>)</em></li>
+<li><code>Category ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The category from which to list the channels. </li>
+<li><code>Seperator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to use when separating channel properties.</li>
+<li><code>Option</code> <code>(Type: Enum || Flag: Optional)</code>: Which property to get from category channels. Default  is <code>name</code>. See <a href="bdscript/categoryChannels.html#options">below</a> for more information.</li>
 </ul>
 <h3 id="options"><a class="header" href="#options">Options</a></h3>
 <ul>
-<li><code>name</code>: The name of the channels.</li>
-<li><code>id</code>: The id of the channels.</li>
-<li><code>mention</code>: The channel mentions.</li>
-<li><code>count</code>: The amount of channels in the category.</li>
+<li><code>name</code> - The names of the channels.</li>
+<li><code>id</code> - The IDs of the channels.</li>
+<li><code>mention</code> - The mentions of the channels.</li>
+<li><code>count</code> - The amount of channels in the category.</li>
 </ul>
 <blockquote>
 <p>The <code>count</code> option does not list anything, instead it will return the number of channels under the given category.</p>
@@ -5539,11 +5539,11 @@ There are $categoryCount categories in this server!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="categorycount-1"><a class="header" href="#categorycount-1">$categoryCount[]</a></h1>
 <p>Returns the category count of the provided guild.</p>
 <h2 id="syntax-85"><a class="header" href="#syntax-85">Syntax</a></h2>
-<pre><code>$categoryCount[guild ID]
+<pre><code>$categoryCount[Guild ID]
 </code></pre>
 <h3 id="parameters-63"><a class="header" href="#parameters-63">Parameters</a></h3>
 <ul>
-<li><code>guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The guild to get its category count.</li>
+<li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The guild to get its category count.</li>
 </ul>
 <h2 id="example-95"><a class="header" href="#example-95">Example</a></h2>
 <pre><code>$nomention
@@ -5551,13 +5551,13 @@ There are $categoryCount[$message[1]] categories in the server!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/94063167/198900619-c3a3b71e-2d6e-4d6c-b1e0-d4b4449d6198.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="categoryid"><a class="header" href="#categoryid">$categoryID</a></h1>
-<p>Returns category ID for given category name.</p>
+<p>Returns the category ID of the given category name.</p>
 <h2 id="syntax-86"><a class="header" href="#syntax-86">Syntax</a></h2>
-<pre><code>$categoryID[category name]
+<pre><code>$categoryID[Category name]
 </code></pre>
 <h3 id="parameters-64"><a class="header" href="#parameters-64">Parameters</a></h3>
 <ul>
-<li><code>category name</code> <code>(Type: String || Flag: Required)</code>: The name of the category from which to return the ID.</li>
+<li><code>Category name</code> <code>(Type: String || Flag: Required)</code>: The name of the category from which to return the ID.</li>
 </ul>
 <h2 id="example-96"><a class="header" href="#example-96">Example</a></h2>
 <pre><code>$nomention
@@ -5570,14 +5570,14 @@ Category ID: $categoryID[$message]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changecooldowntime"><a class="header" href="#changecooldowntime">$changeCooldownTime</a></h1>
 <p>Changes the cooldown metrics. These can be used in cooldown error messages. It can be useful for translations.</p>
 <h2 id="syntax-87"><a class="header" href="#syntax-87">Syntax</a></h2>
-<pre><code>$changeCooldownTime[days;hours;minutes;seconds]
+<pre><code>$changeCooldownTime[Days;Hours;Minutes;Seconds]
 </code></pre>
 <h3 id="parameters-65"><a class="header" href="#parameters-65">Parameters</a></h3>
 <ul>
-<li><code>days</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Days' with.</li>
-<li><code>hours</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Hours' with.</li>
-<li><code>minutes</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Minutes' with.</li>
-<li><code>seconds</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Seconds' with.</li>
+<li><code>Days</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Days' with.</li>
+<li><code>Hours</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Hours' with.</li>
+<li><code>Minutes</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Minutes' with.</li>
+<li><code>Seconds</code> <code>(Type: String || Flag: Required)</code>: The text to replace 'Seconds' with.</li>
 </ul>
 <h3 id="sub-functions"><a class="header" href="#sub-functions">Sub-functions</a></h3>
 <div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th></tr></thead><tbody>
@@ -5597,11 +5597,11 @@ $cooldown[10m;Please wait %time-m%!]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changeusername"><a class="header" href="#changeusername">$changeUsername</a></h1>
 <p>Changes the mentioned user's nickname.</p>
 <h2 id="syntax-88"><a class="header" href="#syntax-88">Syntax</a></h2>
-<pre><code>$changeUsername[new nickname]
+<pre><code>$changeUsername[New nickname]
 </code></pre>
 <h3 id="parameters-66"><a class="header" href="#parameters-66">Parameters</a></h3>
 <ul>
-<li><code>new nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user's nickname to. It cannot exceed more than 32 characters, using <code>%username%</code> will be replaced by real user's username.</li>
+<li><code>New nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user's nickname to. It cannot exceed more than 32 characters. Using <code>%username%</code> will be replaced by the real user's username.</li>
 </ul>
 <h2 id="example-98"><a class="header" href="#example-98">Example</a></h2>
 <pre><code>$nomention
@@ -5644,11 +5644,11 @@ There are $channelCount channels in this server!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channelexists"><a class="header" href="#channelexists">$channelExists</a></h1>
 <p>Checks if the provided channel exists in any server the bot is in.</p>
 <h2 id="syntax-91"><a class="header" href="#syntax-91">Syntax</a></h2>
-<pre><code>$channelExists[channel ID]
+<pre><code>$channelExists[Channel ID]
 </code></pre>
 <h3 id="parameters-68"><a class="header" href="#parameters-68">Parameters</a></h3>
 <ul>
-<li><code>channel ID</code> <code>(Type: String, Snowflake || Flag: Emptiable)</code>: The channel which the bot will check for.</li>
+<li><code>Channel ID</code> <code>(Type: String, Snowflake || Flag: Emptiable)</code>: The channel which the bot will check for.</li>
 </ul>
 <h2 id="example-101"><a class="header" href="#example-101">Example</a></h2>
 <pre><code>$nomention
@@ -5670,13 +5670,13 @@ Channel ID: $channelID
 <p><img src="https://user-images.githubusercontent.com/113303649/212714105-3fdc2811-b071-4c8f-8f0c-43b6207f5350.png" alt="example" /></p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="channelid-1"><a class="header" href="#channelid-1">$channelID[]</a></h1>
-<p>Returns channel ID for the given channel name.</p>
+<p>Returns the channel ID for the given channel name.</p>
 <h2 id="syntax-93"><a class="header" href="#syntax-93">Syntax</a></h2>
-<pre><code>$channelID[channel name]
+<pre><code>$channelID[Channel name]
 </code></pre>
 <h3 id="parameters-69"><a class="header" href="#parameters-69">Parameters</a></h3>
 <ul>
-<li><code>channel name</code> <code>(Type: String || Flag: Required)</code>: The name of the channel.</li>
+<li><code>Channel name</code> <code>(Type: String || Flag: Required)</code>: The name of the channel.</li>
 </ul>
 <h2 id="example-103"><a class="header" href="#example-103">Example</a></h2>
 <pre><code>$nomention

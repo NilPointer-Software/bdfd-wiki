@@ -165,18 +165,18 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="blacklistservers"><a class="header" href="#blacklistservers">$blackListServers</a></h1>
-<p>Disables this command for the provided servers.</p>
+<p>Blocks certain servers from using the command.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$blackListServers[guild IDs;..;error message]
+<pre><code>$blackListServers[Guild IDs;...;Error message]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The servers to blacklist. Separate server IDs using <code>;</code>.
+<li><code>Guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The server(s) to blacklist from using a command. Use semicolons <code>;</code> as a separator to separate multiple server IDs.
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Where do I find server IDs? (click-me)</a></p>
 </blockquote>
 </li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The error to display when the server is blacklisted.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the command is run in a blacklisted server.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
@@ -184,8 +184,8 @@ $blackListServers[1009018669982031912;❌ You can't use this command!]
 **Hello $username!**
 *Guild ID: $guildID*
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/211995843-0d9eba33-e36a-484f-ad97-eb6e67391af1.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/211996168-47ba94ff-e03d-40f9-8b33-5758454f5ce9.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/211995843-0d9eba33-e36a-484f-ad97-eb6e67391af1.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/211996168-47ba94ff-e03d-40f9-8b33-5758454f5ce9.png" alt="example" /></p>
 
                     </main>
 

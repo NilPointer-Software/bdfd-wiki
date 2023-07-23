@@ -167,16 +167,16 @@
                         <h1 id="banid"><a class="header" href="#banid">$banID[]</a></h1>
 <p>Bans a user using their ID.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$banID[reason;(user ID)]
+<pre><code>$banID[Reason;(User ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for this action, which will be saved in the audit-log.
+<li><code>Reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for the ban, which will be saved in the audit-log.
 <blockquote>
 <p>Use <a href="./getBanReason.html"><code>$getBanReason[]</code></a> to get the ban reason.</p>
 </blockquote>
 </li>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

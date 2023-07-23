@@ -165,22 +165,22 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="categorychannels"><a class="header" href="#categorychannels">$categoryChannels</a></h1>
-<p>List channel property under given category.</p>
+<p>Lists all channels of the given category.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$categoryChannels[category ID;separator;(option)]
+<pre><code>$categoryChannels[Category ID;Separator;(Option)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>category ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The category from which to take the channels. </li>
-<li><code>seperator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to use when separating channel properties.</li>
-<li><code>option</code> <code>(Type: Enum || Flag: Optional)</code>: Which property to get from category channels. <em>(Default  is <code>name</code>)</em></li>
+<li><code>Category ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The category from which to list the channels. </li>
+<li><code>Seperator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to use when separating channel properties.</li>
+<li><code>Option</code> <code>(Type: Enum || Flag: Optional)</code>: Which property to get from category channels. Default  is <code>name</code>. See <a href="#options">below</a> for more information.</li>
 </ul>
 <h3 id="options"><a class="header" href="#options">Options</a></h3>
 <ul>
-<li><code>name</code>: The name of the channels.</li>
-<li><code>id</code>: The id of the channels.</li>
-<li><code>mention</code>: The channel mentions.</li>
-<li><code>count</code>: The amount of channels in the category.</li>
+<li><code>name</code> - The names of the channels.</li>
+<li><code>id</code> - The IDs of the channels.</li>
+<li><code>mention</code> - The mentions of the channels.</li>
+<li><code>count</code> - The amount of channels in the category.</li>
 </ul>
 <blockquote>
 <p>The <code>count</code> option does not list anything, instead it will return the number of channels under the given category.</p>

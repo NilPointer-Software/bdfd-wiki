@@ -165,21 +165,21 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="botleave"><a class="header" href="#botleave">$botLeave[]</a></h1>
-<p>Makes the bot leave the server matching the provided <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">server ID</a>.</p>
+<p>Forces the bot to leave the server matching the provided <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">server ID</a>.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$botLeave[guild ID]
+<pre><code>$botLeave[Guild ID]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of a guild to leave.</li>
+<li><code>Guild ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the guild to leave.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $sendMessage[I left out `$serverName[$message]` server]
 $botLeave[$message]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/210335691-9d23cfd6-f7e8-4924-8afc-dd3b523ca071.png" alt="example" /></p>
-<p><img src="https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png" alt="example" /></p>
+<p><img src="https://user-images.githubusercontent.com/113303649/210335691-9d23cfd6-f7e8-4924-8afc-dd3b523ca071.png" alt="example" /><br />
+<img src="https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png" alt="example" /></p>
 <blockquote>
 <p>If you are using <strong>BDScript 2</strong>, put <code>$botLeave[]</code> at the very bottom of the code so that the code works correctly i.e:</p>
 <p>❌ Not correct:</p>
