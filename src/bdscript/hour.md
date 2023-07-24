@@ -16,4 +16,16 @@ $nomention
 Current Hour: $hour
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/122828499-c28e0b80-d2b3-11eb-82c9-941b758ec1ed.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !hour
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  content: |
+    Current Hour: 21
+```
