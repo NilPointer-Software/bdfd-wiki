@@ -12,6 +12,19 @@ $charCount[Text]
 ## Example
 ```
 $nomention
-Your message has **$charCount[$message]** characters.
+Your message has $charCount[$message] characters.
 ```
-![example](https://user-images.githubusercontent.com/111157596/250920649-1ed2b250-8bcb-4c00-bff4-e3c06c1668ca.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example Hello World!
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    Your message has 12 characters.
+```
