@@ -46,6 +46,6 @@ $nomention
   color: "#b9a0e0"
   bot: true
   content: |
-    `hype_squad_balance` `partner`
+    <discord-inline-code>hype_squad_balance</discord-inline-code> <discord-inline-code>partner</discord-inline-code>
 ```
 
