@@ -29,5 +29,5 @@ Channel Name: `#$channelName[$channelID]`
   color: "#b9a0e0"
   bot: true
   content: |
-    Channel Name: `#main-chat`
+    Channel Name: <discord-inline-code>#main-chat</discord-inline-code>
 ```
