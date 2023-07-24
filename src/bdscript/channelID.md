@@ -10,9 +10,36 @@ $channelID
 $nomention
 Channel ID: $channelID
 ```
-![example](https://user-images.githubusercontent.com/113303649/212713697-a8576ccd-a8dc-4393-8197-1454950e4f23.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      Channel ID: 566370477967147018
+```
 
 > It will return `none` if you use it in a DM.
 > 
-> ![example](https://user-images.githubusercontent.com/113303649/212714105-3fdc2811-b071-4c8f-8f0c-43b6207f5350.png)
+> ```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  bot: true
+  verified: true
+  content: |
+      Channel ID: none
+```
 
