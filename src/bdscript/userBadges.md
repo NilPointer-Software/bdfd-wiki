@@ -35,5 +35,17 @@ $userBadges[User ID;(Separator)]
 $nomention
 `$userBadges[$authorID;` `]`
 ```
-![example](https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/f2c48097-895d-4d78-863c-8a4fef1d096b)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example main-chat
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    `hype_squad_balance` `partner`
+```
 
