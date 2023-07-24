@@ -27,7 +27,7 @@ $botLeave[$message]
   color: "#b9a0e0"
   bot: true
   content: |
-    I left out `BDFD Support` server.
+    I left out <discord-inline-code>BDFD Support</discord-inline-code> server.
 ```
 
 ![example](https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png)
