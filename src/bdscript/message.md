@@ -11,4 +11,17 @@ $message
 $nomention
 $message
 ```
-![example](https://user-images.githubusercontent.com/111157596/231825037-f323b81e-35db-4b71-a71f-73a5357ea7e0.png)
+
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !say Hello everyone 👋
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  content: |
+    Hello everyone 👋
+```
