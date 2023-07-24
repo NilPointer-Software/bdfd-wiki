@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="../theme/css/chrome.css">
         <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
+        <!-- Discord Components -->
+        <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
@@ -171,18 +174,31 @@
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Category ID/Name</code> <code>(Type: String || Flag: Emptiable)</code>: The category to put the ticket channels in. Can be a category ID or name.
+<li>
+<p><code>Category ID/Name</code> <code>(Type: String || Flag: Emptiable)</code>: The category to put the ticket channels in. Can be a category ID or name.</p>
 <blockquote>
 <p>🧙‍♂️ Setup the ticket category permissions:<br />
 <img src="https://user-images.githubusercontent.com/111157596/249498738-ba98d976-0315-4dbd-b398-632e710fd039.png" alt="tickets" /></p>
 </blockquote>
 </li>
-<li><code>No question message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that appears in <code>{subject}</code> when the user doesn't provide a subject.</li>
-<li><code>In ticket message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is sent in the new ticket channel.</li>
-<li><code>Message to user</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets sent in the current channel.</li>
-<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets returned when the ticket can't be created.</li>
-<li><code>Ticket number</code> <code>(Type: Integer || Flag: Optional)</code>: For custom ticket number.</li>
-<li><code>Return ID of the ticket message?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether you want the ticket message to return its ID.</li>
+<li>
+<p><code>No question message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that appears in <code>{subject}</code> when the user doesn't provide a subject.</p>
+</li>
+<li>
+<p><code>In ticket message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is sent in the new ticket channel.</p>
+</li>
+<li>
+<p><code>Message to user</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets sent in the current channel.</p>
+</li>
+<li>
+<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets returned when the ticket can't be created.</p>
+</li>
+<li>
+<p><code>Ticket number</code> <code>(Type: Integer || Flag: Optional)</code>: For custom ticket number.</p>
+</li>
+<li>
+<p><code>Return ID of the ticket message?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether you want the ticket message to return its ID.</p>
+</li>
 </ul>
 <h3 id="subset-functions"><a class="header" href="#subset-functions">Subset Functions</a></h3>
 <p>You can use these subset functions in <code>$newTicket</code> :</p>

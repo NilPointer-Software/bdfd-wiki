@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="../../../../theme/css/chrome.css">
         <link rel="stylesheet" href="../../../../theme/css/print.css" media="print">
 
+        <!-- Discord Components -->
+        <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
@@ -181,16 +184,31 @@
 <pre><code>$addTextInput[Text Input ID;Style;Label;(Minimum length;Maximum length;Required;Value;Placeholder)]
 </code></pre>
 <ul>
-<li><code>Text Input ID</code> - ID that is used to retrieve the text input in the field. This value must be unique. <em>(Used in <a href="#getting-input-from-a-modal-submission"><code>$input[Text Input ID]</code></a>)</em></li>
-<li><code>Style</code> - The text input field style, either <code>short</code> or <code>paragraph</code>.
-<br />
-<img src="https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png" alt="" /></li>
-<li><code>Label</code> - Name of the text input field. This value must be less than or equal to 45 characters.</li>
-<li><code>Minimum length</code> - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>Maximum length</code>.</li>
-<li><code>Maximum length</code> - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>Minimum length</code>.</li>
-<li><code>Required</code> - Whether a user must fill in the text input field, defaults to true.</li>
-<li><code>Value</code> - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>Minimum length</code> and no more than <code>Maximum length</code>.</li>
-<li><code>Placeholder</code> - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
+<li>
+<p><code>Text Input ID</code> - ID that is used to retrieve the text input in the field. This value must be unique. <em>(Used in <a href="#getting-input-from-a-modal-submission"><code>$input[Text Input ID]</code></a>)</em></p>
+</li>
+<li>
+<p><code>Style</code> - The text input field style, either <code>short</code> or <code>paragraph</code>.</p>
+<p><img src="https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png" alt="" /></p>
+</li>
+<li>
+<p><code>Label</code> - Name of the text input field. This value must be less than or equal to 45 characters.</p>
+</li>
+<li>
+<p><code>Minimum length</code> - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>Maximum length</code>.</p>
+</li>
+<li>
+<p><code>Maximum length</code> - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>Minimum length</code>.</p>
+</li>
+<li>
+<p><code>Required</code> - Whether a user must fill in the text input field, defaults to true.</p>
+</li>
+<li>
+<p><code>Value</code> - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>Minimum length</code> and no more than <code>Maximum length</code>.</p>
+</li>
+<li>
+<p><code>Placeholder</code> - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</p>
+</li>
 </ul>
 <blockquote>
 <p>🧙‍♂️ <strong>Note:</strong> You can't add more than 5 text input fields.</p>

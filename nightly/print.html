@@ -22,6 +22,9 @@
         <link rel="stylesheet" href="theme/css/chrome.css">
         <link rel="stylesheet" href="theme/css/print.css" media="print">
 
+        <!-- Discord Components -->
+        <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
@@ -1856,16 +1859,31 @@ $endif
 <pre><code>$addTextInput[Text Input ID;Style;Label;(Minimum length;Maximum length;Required;Value;Placeholder)]
 </code></pre>
 <ul>
-<li><code>Text Input ID</code> - ID that is used to retrieve the text input in the field. This value must be unique. <em>(Used in <a href="guides/general/interactions/modals/aboutModals.html#getting-input-from-a-modal-submission"><code>$input[Text Input ID]</code></a>)</em></li>
-<li><code>Style</code> - The text input field style, either <code>short</code> or <code>paragraph</code>.
-<br />
-<img src="https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png" alt="" /></li>
-<li><code>Label</code> - Name of the text input field. This value must be less than or equal to 45 characters.</li>
-<li><code>Minimum length</code> - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>Maximum length</code>.</li>
-<li><code>Maximum length</code> - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>Minimum length</code>.</li>
-<li><code>Required</code> - Whether a user must fill in the text input field, defaults to true.</li>
-<li><code>Value</code> - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>Minimum length</code> and no more than <code>Maximum length</code>.</li>
-<li><code>Placeholder</code> - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
+<li>
+<p><code>Text Input ID</code> - ID that is used to retrieve the text input in the field. This value must be unique. <em>(Used in <a href="guides/general/interactions/modals/aboutModals.html#getting-input-from-a-modal-submission"><code>$input[Text Input ID]</code></a>)</em></p>
+</li>
+<li>
+<p><code>Style</code> - The text input field style, either <code>short</code> or <code>paragraph</code>.</p>
+<p><img src="https://user-images.githubusercontent.com/95774950/168493815-9ab58410-f5ca-48af-baed-0f68aade3bc4.png" alt="" /></p>
+</li>
+<li>
+<p><code>Label</code> - Name of the text input field. This value must be less than or equal to 45 characters.</p>
+</li>
+<li>
+<p><code>Minimum length</code> - Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>Maximum length</code>.</p>
+</li>
+<li>
+<p><code>Maximum length</code> - Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>Minimum length</code>.</p>
+</li>
+<li>
+<p><code>Required</code> - Whether a user must fill in the text input field, defaults to true.</p>
+</li>
+<li>
+<p><code>Value</code> - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>Minimum length</code> and no more than <code>Maximum length</code>.</p>
+</li>
+<li>
+<p><code>Placeholder</code> - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</p>
+</li>
 </ul>
 <blockquote>
 <p>🧙‍♂️ <strong>Note:</strong> You can't add more than 5 text input fields.</p>
@@ -2650,7 +2668,8 @@ Age: $json[identity;age] years old]
 </blockquote>
 <h3 id="example-20"><a class="header" href="#example-20">Example</a></h3>
 <ul>
-<li><code>$jsonSet</code>
+<li>
+<p><code>$jsonSet</code></p>
 <pre><code>$nomention
 $jsonParse[{}]
 
@@ -2658,8 +2677,10 @@ $jsonSet[balance;$message]
 
 Balance key was set to: $json[balance]
 </code></pre>
-<img src="https://user-images.githubusercontent.com/70456337/216845249-1ff900bd-ff1f-466d-bd60-b616aa90e334.png" alt="" /></li>
-<li><code>$jsonSetString</code>
+<p><img src="https://user-images.githubusercontent.com/70456337/216845249-1ff900bd-ff1f-466d-bd60-b616aa90e334.png" alt="" /></p>
+</li>
+<li>
+<p><code>$jsonSetString</code></p>
 <pre><code>$nomention
 $jsonParse[{}]
 
@@ -2667,7 +2688,8 @@ $jsonSet[balance;$message]
 
 Balance key was set to: $json[balance]
 </code></pre>
-<img src="https://user-images.githubusercontent.com/70456337/216845276-62748993-567a-4022-bf59-69a77a37bc32.png" alt="" /></li>
+<p><img src="https://user-images.githubusercontent.com/70456337/216845276-62748993-567a-4022-bf59-69a77a37bc32.png" alt="" /></p>
+</li>
 </ul>
 <p>If we set this value as a number manually, we'll encounter issues.</p>
 <pre><code>$nomention
@@ -3353,7 +3375,7 @@ $description[This bot is made with [Bot Designer For Discord\](https://botdesign
 <p>Returns an array of <a href="resources/api.html#Function">function</a> tags</p>
 <h3 id="get-functionfunction"><a class="header" href="#get-functionfunction">GET <code>/function/:function</code></a></h3>
 <ul>
-<li><code>:function</code> - function tag <br />
+<li><code>:function</code> - function tag<br />
 Returns a <a href="resources/api.html#Function">function</a></li>
 </ul>
 <h3 id="get-emoji_alias_list"><a class="header" href="#get-emoji_alias_list">GET <code>/emoji_alias_list</code></a></h3>
@@ -3388,7 +3410,7 @@ Returns a <a href="resources/api.html#Function">function</a></li>
 </tbody></table>
 </div>
 <h3 id="argument-types-1"><a class="header" href="#argument-types-1">Argument Types</a></h3>
-<p>Multiple types can be merged together with <code>|</code> <em>(OR)</em>. <br />
+<p>Multiple types can be merged together with <code>|</code> <em>(OR)</em>.<br />
 Possible argument types:</p>
 <ul>
 <li><code>String</code></li>
@@ -3934,17 +3956,20 @@ The user has blocked the bot, so the bot can't react to the user's messages. Thi
 <p><strong>The 2nd Reason</strong><br />
 You're specifying the emoji in the function argument incorrectly.</p>
 <ul>
-<li>Default emojis.
+<li>
+<p>Default emojis.</p>
 <pre><code class="language-diff">- $addCmdReactions[:joy:]
 + $addCmdReactions[😂]
 </code></pre>
 </li>
-<li>Custom emojis.
+<li>
+<p>Custom emojis.</p>
 <pre><code class="language-diff">- $addCmdReactions[:pikachu:]
 - $addCmdReactions[\:pikachu:]
 + $addCmdReactions[&lt;:pikachu:951437967711420456&gt;]
 </code></pre>
-You must use the Emoji ID form of the desired emoji.</li>
+<p>You must use the Emoji ID form of the desired emoji.</p>
+</li>
 </ul>
 <p><strong>The 3rd Reason</strong><br />
 <em>Case with custom emojis.</em><br />
@@ -3984,15 +4009,18 @@ This solution can be an alternative to &quot;Prevent actions when the amount is 
 </tbody></table>
 </div><details><summary>View Arguments Formatting In Code.</summary>
 <ul>
-<li>Target
+<li>
+<p>Target</p>
 <pre><code>$var[target;$findUser[$message[1];no]]
 </code></pre>
 </li>
-<li>Amount
+<li>
+<p>Amount</p>
 <pre><code>$var[amount;$message[2]]
 </code></pre>
 </li>
-<li>Comment
+<li>
+<p>Comment</p>
 <pre><code>$var[comment;$trimSpace[$replaceText[$replaceText[$message;$message[1];];$message[2];]]]
 </code></pre>
 </li>
@@ -4000,13 +4028,15 @@ This solution can be an alternative to &quot;Prevent actions when the amount is 
 </details>
 <br>
 <ul>
-<li>Limiters Method
+<li>
+<p>Limiters Method</p>
 <pre><code>$var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
 
 $onlyIf[$var[ourNewBalance]&gt;0;Error Message]
 </code></pre>
 </li>
-<li>If Statements Method
+<li>
+<p>If Statements Method</p>
 <pre><code>$var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
 
 $if[$var[ourNewBalance]&lt;0]
@@ -4101,8 +4131,9 @@ $endif
       $stop
   $endif
 </code></pre>
-Checks the number of arguments in the code.<br />
-If there are less than 2 arguments, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks the number of arguments in the code.<br />
+If there are less than 2 arguments, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $var[target;$findUser[$message[1];no]]
   $var[amount;$message[2]]
@@ -4110,12 +4141,13 @@ If there are less than 2 arguments, an embed error will be returned and code exe
   &lt;...&gt;
   $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
 </code></pre>
-Argument formatting. 
+<p>Argument formatting. </p>
 <ul>
 <li>
 <pre><code>  $var[ourNewBalance;$sub[$getUserVar[Money];$var[amount]]]
 </code></pre>
-Calculates the <em>our</em> future balance after making a payment.</li>
+<p>Calculates the <em>our</em> future balance after making a payment.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -4126,8 +4158,9 @@ Calculates the <em>our</em> future balance after making a payment.</li>
       $stop
   $endif
 </code></pre>
-Checks if the target is present on the current server.<br />
-If not, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks if the target is present on the current server.<br />
+If not, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $if[$var[target]==$authorID]
       $color[FF544C]
@@ -4136,8 +4169,9 @@ If not, an embed error will be returned and code execution will be stopped.</li>
       $stop
   $endif
 </code></pre>
-Checks if the command author is the target.<br />
-If yes, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks if the command author is the target.<br />
+If yes, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $if[$isNumber[$var[amount]]==false]
       $color[FF544C]
@@ -4146,8 +4180,9 @@ If yes, an embed error will be returned and code execution will be stopped.</li>
       $stop
   $endif
 </code></pre>
-Checks if the specified amount is a valid number.<br />
-If not, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks if the specified amount is a valid number.<br />
+If not, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $if[$checkContains[$var[amount];.]==true]
       $color[FF544C]
@@ -4156,9 +4191,10 @@ If not, an embed error will be returned and code execution will be stopped.</li>
       $stop
   $endif
 </code></pre>
-Checks if the specified amount is an integer.<br />
+<p>Checks if the specified amount is an integer.<br />
 If not, an embed error will be returned and code execution will be stopped.<br />
-Exists in order to avoid payments with floating (decimal) numbers.</li>
+Exists in order to avoid payments with floating (decimal) numbers.</p>
+</li>
 <li>
 <pre><code>  $if[$var[amount]&lt;0]
       $color[FF544C]
@@ -4167,14 +4203,16 @@ Exists in order to avoid payments with floating (decimal) numbers.</li>
       $stop
   $endif
 </code></pre>
-Checks if the specified amount is less than 0.<br />
-If yes, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks if the specified amount is less than 0.<br />
+If yes, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $if[$var[comment]==]
       $var[comment;Not provided.]
   $endif
 </code></pre>
-Checks for a comment. If there is no comment (the argument is empty), &quot;Not provided.&quot; will be written as comment.</li>
+<p>Checks for a comment. If there is no comment (the argument is empty), &quot;Not provided.&quot; will be written as comment.</p>
+</li>
 <li>
 <pre><code>  $if[$var[ourNewBalance]&lt;0]
       $color[FF544C]
@@ -4193,16 +4231,20 @@ Checks for a comment. If there is no comment (the argument is empty), &quot;Not 
       $endif
   $endif
 </code></pre>
-The main part of the command, where:
+<p>The main part of the command, where:</p>
 <ol>
-<li>Checking whether our balance will be negative. If yes, an embed error will be returned.</li>
-<li>Changing <em>our</em> variable value (money withdrawal) and the target's variable value (money replenishment).
+<li>
+<p>Checking whether our balance will be negative. If yes, an embed error will be returned.</p>
+</li>
+<li>
+<p>Changing <em>our</em> variable value (money withdrawal) and the target's variable value (money replenishment).</p>
 <pre><code class="language-rb">$setUserVar[Money;$sum[$getUserVar[Money;$var[target]];$var[amount]];$var[target]]
 $setUserVar[Money;$var[ourNewBalance]]
 </code></pre>
 </li>
-<li>Sending an embed message to the target's DMs that we have made a payment.<br />
-The message will be sent only if the target's DMs are enabled.
+<li>
+<p>Sending an embed message to the target's DMs that we have made a payment.<br />
+The message will be sent only if the target's DMs are enabled.</p>
 <pre><code class="language-rb">$if[$isUserDMEnabled[$var[target]]==true]
     $sendEmbedMessage[$dmChannelID[$var[target]];;Payment System;;Good time! &lt;@$authorID&gt; paid you $var[amount] money and left a comment: $var[comment];7EFF88]
 $endif
@@ -4304,7 +4346,8 @@ $setUserVar[Money;$var[ourNewBalance]]
 <li>
 <pre><code>  $var[bet;$message[1]]
 </code></pre>
-Argument formatting.</li>
+<p>Argument formatting.</p>
+</li>
 <li>
 <pre><code>  $if[$isNumber[$var[bet]]==false]
       $color[FF544C]
@@ -4313,8 +4356,9 @@ Argument formatting.</li>
       $stop
   $endif
 </code></pre>
-Checks if the bet is a valid number.<br />
-If not, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks if the bet is a valid number.<br />
+If not, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $if[$checkContains[$var[bet];.]==true]
       $color[FF544C]
@@ -4323,9 +4367,10 @@ If not, an embed error will be returned and code execution will be stopped.</li>
       $stop
   $endif
 </code></pre>
-Checks if the bet is an integer.<br />
+<p>Checks if the bet is an integer.<br />
 If not, an embed error will be returned and code execution will be stopped.<br />
-Exists in order to avoid bets with floating (decimal) numbers.</li>
+Exists in order to avoid bets with floating (decimal) numbers.</p>
+</li>
 <li>
 <pre><code>  $if[$var[bet]&gt;$getUserVar[Money]]
       $color[FF544C]
@@ -4334,8 +4379,9 @@ Exists in order to avoid bets with floating (decimal) numbers.</li>
       $stop
   $endif
 </code></pre>
-Checks if the bet is higher than <em>our</em> balance.<br />
-If yes, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks if the bet is higher than <em>our</em> balance.<br />
+If yes, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $if[$var[bet]&lt;0]
       $color[FF544C]
@@ -4344,8 +4390,9 @@ If yes, an embed error will be returned and code execution will be stopped.</li>
       $stop
   $endif
 </code></pre>
-Checks if the bet is less than 0.<br />
-If yes, an embed error will be returned and code execution will be stopped.</li>
+<p>Checks if the bet is less than 0.<br />
+If yes, an embed error will be returned and code execution will be stopped.</p>
+</li>
 <li>
 <pre><code>  $if[$random[1;3]==1]
       $var[ourNewBalance;$sum[$getUserVar[Money];$var[bet]]]
@@ -4363,8 +4410,9 @@ If yes, an embed error will be returned and code execution will be stopped.</li>
 
   $setUserVar[Money;$var[ourNewBalance]]
 </code></pre>
-Manages roulette results. If <code>$random[1;3]</code> equals 1, then <em>we</em> win and the bet is added to the balance in the doubled amount. Otherwise, the bet will be taken away from the balance in doubled amount.<br />
-If the future balance in case of loss will be negative, it will be set to 0.</li>
+<p>Manages roulette results. If <code>$random[1;3]</code> equals 1, then <em>we</em> win and the bet is added to the balance in the doubled amount. Otherwise, the bet will be taken away from the balance in doubled amount.<br />
+If the future balance in case of loss will be negative, it will be set to 0.</p>
+</li>
 </ul>
 </details>
 </details>
@@ -4527,17 +4575,30 @@ For example, <code>$nomention</code> or <code>$ping</code>. It is also worth rem
 </code></pre>
 <h3 id="parameters-30"><a class="header" href="#parameters-30">Parameters</a></h3>
 <ul>
-<li><code>New row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code>, the button will appear in a new row. If set to <code>no</code>, the button will appear in the same row as the previous button.
+<li>
+<p><code>New row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code>, the button will appear in a new row. If set to <code>no</code>, the button will appear in the same row as the previous button.</p>
 <blockquote>
 <p>A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
 </blockquote>
 </li>
-<li><code>Interaction ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>Interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</li>
-<li><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</li>
-<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/URL, you <strong>have to</strong> set the value to <code>link</code>. Check <a href="bdscript/addButton.html#button-style">this section</a> for more details.</li>
-<li><code>Disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code>, the button can't be pressed. Defaults to <code>no</code>.</li>
-<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em>, <em>alias</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</li>
-<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds the button to the provided message ID. It's important to note that the provided message ID author <strong>has to</strong> be the bot.</li>
+<li>
+<p><code>Interaction ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>Interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</p>
+</li>
+<li>
+<p><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</p>
+</li>
+<li>
+<p><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/URL, you <strong>have to</strong> set the value to <code>link</code>. Check <a href="bdscript/addButton.html#button-style">this section</a> for more details.</p>
+</li>
+<li>
+<p><code>Disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code>, the button can't be pressed. Defaults to <code>no</code>.</p>
+</li>
+<li>
+<p><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em>, <em>alias</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</p>
+</li>
+<li>
+<p><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds the button to the provided message ID. It's important to note that the provided message ID author <strong>has to</strong> be the bot.</p>
+</li>
 </ul>
 <blockquote>
 <p>Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
@@ -4580,10 +4641,10 @@ $addButton[no;test;Say hello!;primary;no;]
 <blockquote>
 <p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
 <blockquote>
-<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias.<br />
 For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 </blockquote>
-<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
+<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a><br />
 List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
 </blockquote>
 <h2 id="example-48"><a class="header" href="#example-48">Example</a></h2>
@@ -4669,10 +4730,10 @@ $addField[This is the field name! #3;This is the field value! #3;yes]
 <blockquote>
 <p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
 <blockquote>
-<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias.<br />
 For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 </blockquote>
-<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
+<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a><br />
 List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
 </blockquote>
 <h2 id="example-50"><a class="header" href="#example-50">Example</a></h2>
@@ -4709,10 +4770,10 @@ Successfully added the reactions to the message.
 <blockquote>
 <p>You can use <strong>unicode emojis</strong>, <strong>emoji IDs</strong>, and <strong>emoji aliases</strong>.</p>
 <blockquote>
-<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias. <br />
+<p>For <strong>emoji aliases</strong>, make sure to put <code>:</code> in front and at the end of the alias.<br />
 For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 </blockquote>
-<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a> <br />
+<p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a><br />
 List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/emoji_alias_list">Emoji Aliases</a></p>
 </blockquote>
 <h2 id="example-51"><a class="header" href="#example-51">Example</a></h2>
@@ -4963,12 +5024,15 @@ Word count: $argCount[$message]
 </code></pre>
 <h3 id="parameters-43"><a class="header" href="#parameters-43">Parameters</a></h3>
 <ul>
-<li><code>How many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.
+<li>
+<p><code>How many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.</p>
 <blockquote>
 <p>If you want users to have <strong>3 or more arguments</strong> in their message, you can use <code>&gt;3</code>. If you want users to have <strong>less than 3 arguments</strong> in their message, you can use <code>&lt;3</code>. If you want the users to have <strong>exactly 3 arguments</strong> in their message, put <code>3</code>. </p>
 </blockquote>
 </li>
-<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/few arguments.</li>
+<li>
+<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/few arguments.</p>
+</li>
 </ul>
 <h2 id="example-63"><a class="header" href="#example-63">Example</a></h2>
 <pre><code>$nomention
@@ -5143,12 +5207,15 @@ $banID
 </code></pre>
 <h3 id="parameters-50"><a class="header" href="#parameters-50">Parameters</a></h3>
 <ul>
-<li><code>Reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for the ban, which will be saved in the audit-log.
+<li>
+<p><code>Reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for the ban, which will be saved in the audit-log.</p>
 <blockquote>
 <p>Use <a href="bdscript/./getBanReason.html"><code>$getBanReason[]</code></a> to get the ban reason.</p>
 </blockquote>
 </li>
-<li><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</li>
+<li>
+<p><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</p>
+</li>
 </ul>
 <h2 id="example-74"><a class="header" href="#example-74">Example</a></h2>
 <pre><code>$nomention
@@ -5169,12 +5236,15 @@ $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
 </code></pre>
 <h3 id="parameters-51"><a class="header" href="#parameters-51">Parameters</a></h3>
 <ul>
-<li><code>User IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user(s) to blacklist from using the command. Use semicolons <code>;</code> as a separator to separate multiple user IDs.
+<li>
+<p><code>User IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user(s) to blacklist from using the command. Use semicolons <code>;</code> as a separator to separate multiple user IDs.</p>
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get user ID?</a></p>
 </blockquote>
 </li>
-<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent when the user running the command is blacklisted.</li>
+<li>
+<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent when the user running the command is blacklisted.</p>
+</li>
 </ul>
 <h2 id="example-75"><a class="header" href="#example-75">Example</a></h2>
 <pre><code>$nomention
@@ -5221,12 +5291,15 @@ Pong! $ping ms
 </code></pre>
 <h3 id="parameters-54"><a class="header" href="#parameters-54">Parameters</a></h3>
 <ul>
-<li><code>Guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The server(s) to blacklist from using a command. Use semicolons <code>;</code> as a separator to separate multiple server IDs.
+<li>
+<p><code>Guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The server(s) to blacklist from using a command. Use semicolons <code>;</code> as a separator to separate multiple server IDs.</p>
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Where do I find server IDs? (click-me)</a></p>
 </blockquote>
 </li>
-<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the command is run in a blacklisted server.</li>
+<li>
+<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the command is run in a blacklisted server.</p>
+</li>
 </ul>
 <h2 id="example-78"><a class="header" href="#example-78">Example</a></h2>
 <pre><code>$nomention
@@ -6039,12 +6112,14 @@ Hi!
 </code></pre>
 <h3 id="parameters-87"><a class="header" href="#parameters-87">Parameters</a></h3>
 <ul>
-<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.
+<li>
+<p><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.</p>
 <blockquote>
 <p>Channel names can have a maximum of 100 characters.</p>
 </blockquote>
 </li>
-<li><code>Type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:
+<li>
+<p><code>Type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:</p>
 <ul>
 <li><code>category</code></li>
 <li><code>text</code></li>
@@ -6053,7 +6128,9 @@ Hi!
 <li><code>forum</code></li>
 </ul>
 </li>
-<li><code>Category ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The category to put the channel in (if applicable).</li>
+<li>
+<p><code>Category ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The category to put the channel in (if applicable).</p>
+</li>
 </ul>
 <h2 id="example-123"><a class="header" href="#example-123">Example</a></h2>
 <pre><code>$nomention
@@ -8622,18 +8699,31 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 </code></pre>
 <h3 id="parameters-187"><a class="header" href="#parameters-187">Parameters</a></h3>
 <ul>
-<li><code>Category ID/Name</code> <code>(Type: String || Flag: Emptiable)</code>: The category to put the ticket channels in. Can be a category ID or name.
+<li>
+<p><code>Category ID/Name</code> <code>(Type: String || Flag: Emptiable)</code>: The category to put the ticket channels in. Can be a category ID or name.</p>
 <blockquote>
 <p>🧙‍♂️ Setup the ticket category permissions:<br />
 <img src="https://user-images.githubusercontent.com/111157596/249498738-ba98d976-0315-4dbd-b398-632e710fd039.png" alt="tickets" /></p>
 </blockquote>
 </li>
-<li><code>No question message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that appears in <code>{subject}</code> when the user doesn't provide a subject.</li>
-<li><code>In ticket message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is sent in the new ticket channel.</li>
-<li><code>Message to user</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets sent in the current channel.</li>
-<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets returned when the ticket can't be created.</li>
-<li><code>Ticket number</code> <code>(Type: Integer || Flag: Optional)</code>: For custom ticket number.</li>
-<li><code>Return ID of the ticket message?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether you want the ticket message to return its ID.</li>
+<li>
+<p><code>No question message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that appears in <code>{subject}</code> when the user doesn't provide a subject.</p>
+</li>
+<li>
+<p><code>In ticket message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is sent in the new ticket channel.</p>
+</li>
+<li>
+<p><code>Message to user</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets sent in the current channel.</p>
+</li>
+<li>
+<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets returned when the ticket can't be created.</p>
+</li>
+<li>
+<p><code>Ticket number</code> <code>(Type: Integer || Flag: Optional)</code>: For custom ticket number.</p>
+</li>
+<li>
+<p><code>Return ID of the ticket message?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether you want the ticket message to return its ID.</p>
+</li>
 </ul>
 <h3 id="subset-functions"><a class="header" href="#subset-functions">Subset Functions</a></h3>
 <p>You can use these subset functions in <code>$newTicket</code> :</p>
@@ -11237,8 +11327,14 @@ Leaderboard values are not updated in real-time. The previous values are cached 
 <pre><code>$nomention
 Hello $username!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/114783581-fc88e180-9d47-11eb-91a6-02e60b20fcf4.png" alt="example1" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="username-1"><a class="header" href="#username-1">$username[]</a></h1>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/696368083517964288/817cd936fbfcb179f6bb52b3dbccadae.png" role-color="#b9a0e0" author="Spen">
+        !echo
+    </discord-message>
+    <discord-message author="Wiki Bot" role-color="#b9a0e0" bot>
+        Hello Spen!
+    </discord-message>
+</discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="username-1"><a class="header" href="#username-1">$username[]</a></h1>
 <p>Returns the username for the provided user ID.</p>
 <h2 id="syntax-395"><a class="header" href="#syntax-395">Syntax</a></h2>
 <pre><code>$username[User ID]
@@ -12101,9 +12197,8 @@ Hello World!
 <li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</li>
 </ul>
 <blockquote>
-<p>📝 You can group reactions by specifying more <em>&quot;command names&quot;</em> and <em>&quot;reactions&quot;</em> in <code>$awaitReactions[]</code>.<br />
-<br />
-⚠️ In group reactions, when one reaction is used, the others stop working i.e let's say, a command awaits two reactions (✔️ &amp; ❌). If the user reacts ✔️ then ❌ stops working.</p>
+<p>📝 You can group reactions by specifying more <em>&quot;command names&quot;</em> and <em>&quot;reactions&quot;</em> in <code>$awaitReactions[]</code>.</p>
+<p>⚠️ In group reactions, when one reaction is used, the others stop working i.e let's say, a command awaits two reactions (✔️ &amp; ❌). If the user reacts ✔️ then ❌ stops working.</p>
 </blockquote>
 <h2 id="reaction-1"><a class="header" href="#reaction-1">$reaction[]</a></h2>
 <p><code>$reaction[]</code> is a <a href="premium/../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
@@ -12223,9 +12318,8 @@ Set $serverName[$guildID]'s prefix to `$noMentionMessage`
 </blockquote>
 <blockquote>
 <p>📚 Want to learn JavaScript and don't know where to get started?<br />
-Then, check out the following JavaScript learning resources :<br />
-<br />
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"><img src="https://img.shields.io/badge/mdn_javascript_guide-black?style=for-the-badge&amp;logo=mdnwebdocs&amp;logoColor=white" alt="MDN Web Docs" /></a><br />
+Then, check out the following JavaScript learning resources :</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"><img src="https://img.shields.io/badge/mdn_javascript_guide-black?style=for-the-badge&amp;logo=mdnwebdocs&amp;logoColor=white" alt="MDN Web Docs" /></a><br />
 <a href="https://javascript.info"><img src="https://img.shields.io/badge/modern_javascript_tutorial-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E" alt="Modern JavaScript Tutorial" /></a></p>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="enabling-javascript"><a class="header" href="#enabling-javascript">Enabling JavaScript</a></h1>

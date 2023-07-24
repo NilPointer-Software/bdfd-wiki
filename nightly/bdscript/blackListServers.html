@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="../theme/css/chrome.css">
         <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
+        <!-- Discord Components -->
+        <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
@@ -171,12 +174,15 @@
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The server(s) to blacklist from using a command. Use semicolons <code>;</code> as a separator to separate multiple server IDs.
+<li>
+<p><code>Guild IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The server(s) to blacklist from using a command. Use semicolons <code>;</code> as a separator to separate multiple server IDs.</p>
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Where do I find server IDs? (click-me)</a></p>
 </blockquote>
 </li>
-<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the command is run in a blacklisted server.</li>
+<li>
+<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that will be sent if the command is run in a blacklisted server.</p>
+</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

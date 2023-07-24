@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="../theme/css/chrome.css">
         <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
+        <!-- Discord Components -->
+        <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
@@ -171,12 +174,15 @@
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for the ban, which will be saved in the audit-log.
+<li>
+<p><code>Reason</code> <code>(Type: String || Flag: Emptiable)</code>: The reason for the ban, which will be saved in the audit-log.</p>
 <blockquote>
 <p>Use <a href="./getBanReason.html"><code>$getBanReason[]</code></a> to get the ban reason.</p>
 </blockquote>
 </li>
-<li><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</li>
+<li>
+<p><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user to ban. If empty, the ID will be taken from the last part of the author's message.</p>
+</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

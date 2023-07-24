@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="../theme/css/chrome.css">
         <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
+        <!-- Discord Components -->
+        <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
@@ -184,9 +187,8 @@
 <li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</li>
 </ul>
 <blockquote>
-<p>📝 You can group reactions by specifying more <em>&quot;command names&quot;</em> and <em>&quot;reactions&quot;</em> in <code>$awaitReactions[]</code>.<br />
-<br />
-⚠️ In group reactions, when one reaction is used, the others stop working i.e let's say, a command awaits two reactions (✔️ &amp; ❌). If the user reacts ✔️ then ❌ stops working.</p>
+<p>📝 You can group reactions by specifying more <em>&quot;command names&quot;</em> and <em>&quot;reactions&quot;</em> in <code>$awaitReactions[]</code>.</p>
+<p>⚠️ In group reactions, when one reaction is used, the others stop working i.e let's say, a command awaits two reactions (✔️ &amp; ❌). If the user reacts ✔️ then ❌ stops working.</p>
 </blockquote>
 <h2 id="reaction"><a class="header" href="#reaction">$reaction[]</a></h2>
 <p><code>$reaction[]</code> is a <a href="../callbacks/introduction.html">callback</a>. It gets triggered whenever an awaited reaction occurs.</p>
