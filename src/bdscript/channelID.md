@@ -28,8 +28,7 @@ Channel ID: $channelID
 ```
 
 > It will return `none` if you use it in a DM.
-> 
-> ```discord yaml
+```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
   avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
