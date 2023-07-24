@@ -11,4 +11,17 @@ $username
 $nomention
 Hello $username!
 ```
-![example1](https://user-images.githubusercontent.com/69215413/114783581-fc88e180-9d47-11eb-91a6-02e60b20fcf4.png)
+
+``` discord yaml
+- user_id: 696368083517964288
+  username: Spen
+  color: "#b9a0e0"
+  content: |
+    !echo
+
+- username: Wiki Bot
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    Hello Spen!
+```

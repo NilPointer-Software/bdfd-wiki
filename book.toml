@@ -6,6 +6,11 @@ src = "src"
 title = "Bot Designer for Discord - Wiki"
 description = "A wiki page which explains BDFD functions, callbacks, features & much more."
 
+[preprocessor.mdbook-discord-components]
+after = ["links"]
+command = "./mdbook-discord-components"
+embed-script = false
+
 [output.html]
 theme = "src/theme"
 default-theme = "bdfd"

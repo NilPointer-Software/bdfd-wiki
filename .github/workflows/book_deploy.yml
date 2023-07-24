@@ -16,7 +16,13 @@ jobs:
     - name: Install mdbook
       uses: MineBartekSA/quick-mdbook@v1.1
     - name: Build book
-      run: mdbook build
+      env:
+        SCRIPT: https://gist.githubusercontent.com/MineBartekSA/5234f09c1048f9ba007d0a26a8fd654e/raw/github-release.sh
+        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+      run: |
+        curl -fsSL $SCRIPT | bash -s -- NilPointer-Software/mdbook-discord-components
+        tar xzf mdbook-discord-components-*.tar.gz
+        mdbook build
     - name: Upload book
       uses: actions/upload-artifact@v3
       with:

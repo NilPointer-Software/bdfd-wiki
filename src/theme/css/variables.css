@@ -1,6 +1,7 @@
 /* Main */
 @import './wiki-themes/root.css';
 @import './wiki-themes/breadcrumbs.css';
+@import './wiki-themes/discord-messages.css';
 
 /* Community Themes */
 @import './wiki-themes/comm/bdfd.css';
