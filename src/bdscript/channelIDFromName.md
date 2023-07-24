@@ -18,4 +18,17 @@ $channelIDFromName[Channel name]
 $nomention
 Channel ID: $channelIDFromName[$mesaage]
 ```
-![example](https://user-images.githubusercontent.com/113303649/213234524-b2a9979d-9368-42ff-a4e7-428789e6bcde.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example main-chat
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    Channel ID: 1014546423032860754
+```
