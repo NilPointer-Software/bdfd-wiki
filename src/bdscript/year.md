@@ -13,4 +13,17 @@ $year
 $nomention
 Current Year: $year
 ```
-![example](https://user-images.githubusercontent.com/69215413/122829181-ac347f80-d2b4-11eb-8327-0ff274921df6.png)
+
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !year
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  content: |
+    Current Year: 2023
+```
