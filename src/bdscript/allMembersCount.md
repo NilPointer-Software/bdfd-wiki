@@ -12,4 +12,16 @@ $nomention
 I'm serving $allMembersCount users!
 ```
 
-![example](https://user-images.githubusercontent.com/113303649/209937620-f48fdf7b-b369-4eda-9119-d5f8c503d3f3.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    I'm serving 8560 users!
+```
