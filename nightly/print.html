@@ -4898,7 +4898,7 @@ $addTimestamp[2]
 I'm serving $allMembersCount users!
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
         !example
     </discord-message>
     <discord-message role-color="#b9a0e0" author="BDFD Support" bot>
@@ -5511,8 +5511,14 @@ The bot's node ID: $botNode
 <pre><code>$nomention
 My owner's ID: $botOwnerID
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/210353474-b094289c-3bec-4e6c-b8cc-c9ac79f0f43d.png" alt="example" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="bottyping"><a class="header" href="#bottyping">$botTyping</a></h1>
+<discord-messages>
+    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        !botOwnerID
+    </discord-message>
+    <discord-message author="Wiki Bot" bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4">
+        My owner's ID: 729343563401265193
+    </discord-message>
+</discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="bottyping"><a class="header" href="#bottyping">$botTyping</a></h1>
 <p>This function tells Discord that the bot is typing.</p>
 <h2 id="syntax-80"><a class="header" href="#syntax-80">Syntax</a></h2>
 <pre><code>$botTyping
@@ -6280,8 +6286,14 @@ $endif
 <pre><code>$nomention
 Today's Date: $date
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/122827414-5232ba80-d2b2-11eb-8e0f-de15f7933660.png" alt="example" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="day"><a class="header" href="#day">$day</a></h1>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908" author="Nicky">
+        !date
+    </discord-message>
+    <discord-message author="Wiki Bot" bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4">
+        Today's Date: 2023-07-24
+    </discord-message>
+</discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="day"><a class="header" href="#day">$day</a></h1>
 <p>Returns the current day of the month.</p>
 <blockquote>
 <p>🧙‍♂️ You can use <a href="bdscript/./time.html"><code>$time</code></a> to change the timezone.</p>
@@ -7836,8 +7848,14 @@ I will be offline &lt;t:$hostingExpireTime[yes]:R&gt;
 <pre><code>$nomention
 Current Hour: $hour
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/122828499-c28e0b80-d2b3-11eb-82c9-941b758ec1ed.png" alt="example" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="hypesquad"><a class="header" href="#hypesquad">$hypesquad</a></h1>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky" role-color="#EE7908">
+        !hour
+    </discord-message>
+    <discord-message bot role-color="#748BD4" author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png">
+        Current Hour: 21
+    </discord-message>
+</discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="hypesquad"><a class="header" href="#hypesquad">$hypesquad</a></h1>
 <p>Returns the hypesquad house name of the provided user.</p>
 <h2 id="syntax-199"><a class="header" href="#syntax-199">Syntax</a></h2>
 <pre><code>$hypesquad[User ID]
@@ -8404,8 +8422,14 @@ $mentionedRoles[1]
 <pre><code>$nomention
 $message
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/111157596/231825037-f323b81e-35db-4b71-a71f-73a5357ea7e0.png" alt="example" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="message-1"><a class="header" href="#message-1">$message[]</a></h1>
+<discord-messages>
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
+        !say Hello everyone 👋
+    </discord-message>
+    <discord-message bot author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4">
+        Hello everyone 👋
+    </discord-message>
+</discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="message-1"><a class="header" href="#message-1">$message[]</a></h1>
 <p>Returns an argument from the message or the input of a slash command option.</p>
 <h2 id="syntax-232"><a class="header" href="#syntax-232">Syntax</a></h2>
 <pre><code>$message[Argument number;(Argument name)]
@@ -11334,10 +11358,10 @@ Leaderboard values are not updated in real-time. The previous values are cached 
 Hello $username!
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/696368083517964288/817cd936fbfcb179f6bb52b3dbccadae.png" role-color="#b9a0e0" author="Spen">
+    <discord-message author="Spen" role-color="#b9a0e0" avatar="https://cdn.discordapp.com/avatars/696368083517964288/817cd936fbfcb179f6bb52b3dbccadae.png">
         !echo
     </discord-message>
-    <discord-message bot role-color="#b9a0e0" author="Wiki Bot">
+    <discord-message author="Wiki Bot" bot role-color="#b9a0e0">
         Hello Spen!
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="username-1"><a class="header" href="#username-1">$username[]</a></h1>
@@ -11501,8 +11525,14 @@ $variablesCount[server]
 <pre><code>$nomention
 Current Year: $year
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/122829181-ac347f80-d2b4-11eb-8327-0ff274921df6.png" alt="example" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="callbacks"><a class="header" href="#callbacks">Callbacks</a></h1>
+<discord-messages>
+    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        !year
+    </discord-message>
+    <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot role-color="#748BD4">
+        Current Year: 2023
+    </discord-message>
+</discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="callbacks"><a class="header" href="#callbacks">Callbacks</a></h1>
 <p>Callbacks in BDFD are functions for triggers which are executed when a certain action is performed. These actions include banning, unbanning, user joining, user leaving, and more.</p>
 <p>Callbacks are not used in the command code, they are used in the command trigger. This section will explain the various callbacks you can use. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="awaitedcommand-1"><a class="header" href="#awaitedcommand-1">$awaitedCommand</a></h1>
