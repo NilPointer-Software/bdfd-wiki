@@ -1,27 +1,26 @@
 # $serverInfo
-Allows you to make a 'server info' command without using a bunch of different functions at once. This function returns info about the current server.
+Allows you to make a server info command without using a bunch of different functions at once. This function returns info about the current server.
+
+> ⚠️ You can not include `$serverInfo[]` in a command with a [`$description[]`](./description.md) (because it makes one automatically).
 
 ## Syntax
 ```
-$serverInfo[message;(thumbnail)]
+$serverInfo[Message;(Thumbnail?)]
 ```
 
 ### Parameters 
-- `message` `(Type: String || Flag: Required)`: The message format. Check below for more information.
-- `thumbnail` `(Type: Bool || Flag: Optional)`: Whether or not to show the server icon as the thumbnail. The default is `yes`.
-
-⚠️ You can not include `$serverInfo[]` in a command with a `$description[]` (because it makes one automatically).
+- `Message` `(Type: String || Flag: Required)`: The message format. Check [below](#subset-functions) for more information.
+- `Thumbnail?` `(Type: Bool || Flag: Optional)`: Whether or not to show the server icon as the thumbnail. The default is `yes`.
 
 ### Subset-Functions
-You can use the 'subset-functions' below within `$serverInfo`:
-
-- `{name}` - Returns the server name
-- `{region}` - Returns the server region
+You can use the following "subset-functions" within `$serverInfo[]`:
+- `{name}` - Returns the server's name.
+- `{region}` - Returns the server's region.
 - `{emoji}` - Returns the server's emojis in a list.
-- `{owner}` - Returns the owner's username.
-- `{ID}` - Gets the guild ID.
-- `{verificationLvl}` - Returns the server verification level.
-- `{large}` - Finds out if a server is considered 'large'.
+- `{owner}` - Returns the server owner's username.
+- `{ID}` - Returns the server's ID.
+- `{verificationLvl}` - Returns the server's verification level.
+- `{large}` - Finds out if the server is considered "large". Returns `true` or `false`.
 
 ## Example
 ```

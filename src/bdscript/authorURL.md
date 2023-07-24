@@ -3,13 +3,13 @@ Adds a hyperlink to the author text.
 
 ## Syntax
 ```
-$authorURL[url;(index)]
+$authorURL[URL;(Index)]
 ```
-> `$authorURL[]` will not work if there is no text provided in `$author[]`.
+> `$authorURL[]` will not work if there is no text provided in [`$author[]`](./author.md).
 
 ### Parameters
-- `url` `(Type: URL || Flag: Emptiable)`: The link to set as the author hyperlink.
-- `index` `(Type: Integer || Flag: Optional)`: To which embed the author URL will be added. [(learn more)](../resources/embedIndexes.md)
+- `URL` `(Type: URL || Flag: Emptiable)`: The link to set as the author hyperlink.
+- `Index` `(Type: Integer || Flag: Optional)`: To which embed the author URL will be added. [(learn more)](../resources/embedIndexes.md)
 
 ## Example
 ```

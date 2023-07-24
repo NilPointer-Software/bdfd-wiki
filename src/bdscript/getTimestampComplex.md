@@ -7,9 +7,9 @@ $getTimestamp[Time unit]
 ```
 
 ### Parameters
-- `Time unit` `(Type: Enum || Flag: Required)`: Sets timestamp time unit
+- `Time unit` `(Type: Enum || Flag: Required)`: Sets timestamp time unit.
 
-> :pencil: Time unit value can either be :
+> 📝 Time unit value can either be :
 > - `s` (seconds)
 > - `ms` (milliseconds)
 > - `ns` (nanoseconds)

@@ -1,12 +1,13 @@
 # $randomRoleID
-Returns a random role id from the current server or from the provided server.
+Returns a random role ID from the current server or from the provided server.
 
 ## Syntax
 ```
-$randomRoleID[(guild ID)]
+$randomRoleID[(Guild ID)]
 ```
+
 ### Parameters
-- `guild ID` `(Type: Snowflake || Flag: Optional)`: The server from which to get a random role id. _(Defaults to the current server)_
+- `Guild ID` `(Type: Snowflake || Flag: Optional)`: The server from which to get a random role ID. _(Defaults to the current server)_
 
 ## Example
 ```
@@ -17,6 +18,4 @@ Random Role: $roleName[$randomRoleID[]]
 
 > It can return the `@everyone` role ID!
 >
-
 > ![example](https://user-images.githubusercontent.com/113303649/212498371-1792ea9b-55f7-494c-8e09-24a20192e8cb.png)
-

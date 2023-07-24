@@ -3,13 +3,20 @@ Adds reactions to the specified message.
 
 ## Syntax
 ```
-$addMessageReactions[Channel ID;Message ID;Emoji;...]
+$addMessageReactions[Channel ID;Message ID;Emojis;...]
 ```
 
 ### Parameters
 - `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message is located.
 - `Message ID` `(Type: Snowflake || Flag: Required)`: The ID of the message to which the reactions will be added.
-- `Emoji` `(Type: Emoji || Flag: Required )`: The emojis to add as reaction to the message. Use semicolons `;` as a separator to separate multiple emojis.
+- `Emojis` `(Type: Emoji || Flag: Required)`: The emoji(s) to add as reaction to the message. Use semicolons `;` as a separator to separate multiple emojis.
+
+> You can use **unicode emojis**, **emoji IDs**, and **emoji aliases**.
+> > For **emoji aliases**, make sure to put `:` in front and at the end of the alias. \
+> > For **emoji IDs**, the bot must be present in the server that the emoji originates from. 
+> 
+> List of unicode emojis: [😋 Get Emoji](https://getemoji.com) \
+> List of supported emoji aliases: [Emoji Aliases](https://botdesignerdiscord.com/public/emoji_alias_list)
 
 ## Example
 ```

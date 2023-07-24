@@ -1,5 +1,5 @@
 # $boostCount
-Returns the guild's number of nitro boosts.
+Returns the current guild's number of nitro boosts.
 
 ## Syntax
 ```
