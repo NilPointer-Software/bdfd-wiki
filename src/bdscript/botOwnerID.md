@@ -11,4 +11,17 @@ $botOwnerID
 $nomention
 My owner's ID: $botOwnerID
 ```
-![example](https://user-images.githubusercontent.com/113303649/210353474-b094289c-3bec-4e6c-b8cc-c9ac79f0f43d.png)
+
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !botOwnerID
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  content: |
+    My owner's ID: 729343563401265193
+```
