@@ -14,6 +14,19 @@ $nodeVersion[Node Number]
 ## Example
 ```
 $nomention
-13 Node Version: `$nodeVersion[13]`
+13 Node Version: $nodeVersion[13]
 ```
-![example](https://user-images.githubusercontent.com/113303649/249157010-320318b0-147c-430b-8533-7c5e5174f1fb.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    13 Node Version: 05-07-2023-c8800d6
+```
