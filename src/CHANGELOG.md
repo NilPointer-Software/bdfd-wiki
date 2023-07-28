@@ -1,5 +1,7 @@
 # Changelog
 
+> If you want to access this changelog externally, we have a [JSON version](../external/CHANGELOG.json) of the changelog.
+
 # 2023
 
 ## June
@@ -199,18 +201,18 @@
 - Added `$appendOptionSuggestion[]`
 
 ## January
--  Added `$unescape[]`
--  Added a neutral permission (`/<perm>`) to `$modifyChannelPerms[]`
--  Added stop bot button in the app
--  Added restart bot button in the app
--  Added `$editChannelPerms[]` (replacement for the deprecated `$modifyChannelPerms[]`)
--  Added `$roleGrant[]` (replacement for the deprecated `$giveRole[]` and `$takeRole[]`)
--  Fixed component functions inside `$async[]` scope
--  Increased the limit of http functions in one command to `5`
--  Fixed `$userPerms[]`
--  Fixed some bugs regarding math commands
--  Added public BDFD API
--  Added `$serverDescription[]`
+- Added `$unescape[]`
+- Added a neutral permission (`/<perm>`) to `$modifyChannelPerms[]`
+- Added stop bot button in the app
+- Added restart bot button in the app
+- Added `$editChannelPerms[]` (replacement for the deprecated `$modifyChannelPerms[]`)
+- Added `$roleGrant[]` (replacement for the deprecated `$giveRole[]` and `$takeRole[]`)
+- Fixed component functions inside `$async[]` scope
+- Increased the limit of http functions in one command to `5`
+- Fixed `$userPerms[]`
+- Fixed some bugs regarding math commands
+- Added public BDFD API
+- Added `$serverDescription[]`
 
 # 2021
 
@@ -356,7 +358,7 @@
 - Fixed `$sendMessage[]` not working in normal BDScript
 - Fixed `$checkUserPerms[]`
 - Added BDScript 2 script language
-- Added to BDScript 2
+- Added to BDScript 2:
    - `$try`, `$catch` and `$error`
    - `$eval[]`
    - `$optOff[]`
@@ -416,7 +418,7 @@
 - Fixed caching for new members.
 - Added `$slashCommandsCount`
 - Added `$botID`
-- Added more permissions
+- Added more permissions:
    - `AttachFiles`
    - `TTS`
    - `ManageWebhooks`
