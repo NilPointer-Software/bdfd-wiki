@@ -1,6 +1,6 @@
 # Changelog
 
-> If you want to access this changelog externally, we have a [JSON version](../external/CHANGELOG.json) of the changelog.
+> If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with the gained JSON further.
 
 # 2023
 
