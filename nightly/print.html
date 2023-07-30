@@ -193,6 +193,9 @@
 <h4 id="want-to-contribute-to-the-wiki"><a class="header" href="#want-to-contribute-to-the-wiki">Want to contribute to the wiki?</a></h4>
 <p>Head over to the <a href="https://github.com/NilPointer-Software/bdfd-wiki/blob/dev/CONTRIBUTING.md">GitHub repository contribution file</a> and learn how you can help out!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
+<blockquote>
+<p>If you want to access this changelog externally, we have a <a href="https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json">JSON version</a> of the changelog to which you can send a GET request and work with a JSON document further.</p>
+</blockquote>
 <h1 id="2023"><a class="header" href="#2023">2023</a></h1>
 <h2 id="june"><a class="header" href="#june">June</a></h2>
 <ul>
@@ -571,7 +574,7 @@
 <li>Fixed <code>$sendMessage[]</code> not working in normal BDScript</li>
 <li>Fixed <code>$checkUserPerms[]</code></li>
 <li>Added BDScript 2 script language</li>
-<li>Added to BDScript 2
+<li>Added to BDScript 2:
 <ul>
 <li><code>$try</code>, <code>$catch</code> and <code>$error</code></li>
 <li><code>$eval[]</code></li>
@@ -637,7 +640,7 @@
 <li>Fixed caching for new members.</li>
 <li>Added <code>$slashCommandsCount</code></li>
 <li>Added <code>$botID</code></li>
-<li>Added more permissions
+<li>Added more permissions:
 <ul>
 <li><code>AttachFiles</code></li>
 <li><code>TTS</code></li>
@@ -1084,10 +1087,10 @@ Pong!
 <h2 id="step-5-test-it"><a class="header" href="#step-5-test-it">Step 5: Test it!</a></h2>
 <p>Send a <code>!ping</code> command in a channel of the server you invited your bot to.</p>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
         !ping
     </discord-message>
-    <discord-message verified author="BDFD Support" bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa">
+    <discord-message author="BDFD Support" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot role-color="#378afa">
         Pong!
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="bot-status"><a class="header" href="#bot-status">Bot Status</a></h1>
@@ -4621,7 +4624,7 @@ Here, are all possible values for the <code>style</code> function argument.</p>
 <li><code>link</code> - Redirect button</li>
 </ul>
 <discord-messages>
-    <discord-message bot verified role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support">
+    <discord-message bot author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified role-color="#378afa">
         Buttons:
         <discord-attachments slot="components">
             <discord-action-row>
@@ -4652,25 +4655,25 @@ Here, are all possible values for the <code>style</code> function argument.</p>
                 <discord-button type="secondary">
                     Secondary
                 </discord-button>
-                <discord-button type="secondary" disabled>
+                <discord-button disabled type="secondary">
                     Secondary
                 </discord-button>
             </discord-action-row>
         </discord-attachments>
     </discord-message>
-    <discord-message author="BDFD Support" bot verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa">
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified author="BDFD Support" role-color="#378afa" bot>
         Other Buttons:
         <discord-attachments slot="components">
             <discord-action-row>
-                <discord-button url="https://nilpointer-software.github.io/bdfd-wiki/nightly/" type="secondary">
+                <discord-button type="secondary" url="https://nilpointer-software.github.io/bdfd-wiki/nightly/">
                     Link
                 </discord-button>
-                <discord-button type="secondary" disabled url="https://nilpointer-software.github.io/bdfd-wiki/nightly/">
+                <discord-button url="https://nilpointer-software.github.io/bdfd-wiki/nightly/" disabled type="secondary">
                     Link
                 </discord-button>
             </discord-action-row>
             <discord-action-row>
-                <discord-button type="secondary" emoji="https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png">
+                <discord-button emoji="https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png" type="secondary">
                     Emoji
                 </discord-button>
             </discord-action-row>
@@ -4686,10 +4689,10 @@ Hello
 $addButton[no;test;Say hello!;primary;no;]
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot author="BDFD Support" verified role-color="#378afa">
+    <discord-message verified author="BDFD Support" bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa">
         Hello
         <discord-attachments slot="components">
             <discord-action-row>
@@ -4726,10 +4729,10 @@ List of supported emoji aliases: <a href="https://botdesignerdiscord.com/public/
 $addCmdReactions[$message]
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example ❤️
         <discord-reactions slot="reactions">
-            <discord-reaction count="1" emoji="https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png" name=":emoji:">
+            <discord-reaction emoji="https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png" name=":emoji:" count="1">
             </discord-reaction>
         </discord-reactions>
     </discord-message>
@@ -4980,10 +4983,10 @@ $addTimestamp[2]
 I'm serving $allMembersCount users!
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message bot verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" role-color="#378afa">
+    <discord-message verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" author="BDFD Support" bot>
         I'm serving 8560 users!
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="allowmention"><a class="header" href="#allowmention">$allowMention</a></h1>
@@ -4998,10 +5001,10 @@ $message
 </code></pre>
 <h3 id="with-allowmention"><a class="header" href="#with-allowmention">With <code>$allowMention</code></a></h3>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example <discord-mention>RainbowKey</discord-mention>
     </discord-message>
-    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot author="BDFD Support" role-color="#378afa" verified>
+    <discord-message role-color="#378afa" author="BDFD Support" bot verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
         <discord-mention>RainbowKey</discord-mention>
     </discord-message>
 </discord-messages>
@@ -5010,7 +5013,7 @@ $message
     <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example <discord-mention>RainbowKey</discord-mention>
     </discord-message>
-    <discord-message author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified>
+    <discord-message bot author="BDFD Support" role-color="#378afa" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
         @RainbowKey
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="allowrolementions"><a class="header" href="#allowrolementions">$allowRoleMentions</a></h1>
@@ -5118,10 +5121,10 @@ $and[$nickname==MineBartekSA;$message==Update]
 Word count: $argCount[$message]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example Hello noit!
     </discord-message>
-    <discord-message role-color="#378afa" author="BDFD Support" bot verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+    <discord-message verified bot author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa">
         Word count: 2
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="argscheck"><a class="header" href="#argscheck">$argsCheck</a></h1>
@@ -5276,10 +5279,10 @@ $ban
 &lt;@$mentioned[1]&gt; was banned!
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example <discord-mention>Spen</discord-mention>
     </discord-message>
-    <discord-message verified role-color="#378afa" bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support">
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" bot role-color="#378afa" verified>
         <discord-mention>Spen</discord-mention> was banned!
     </discord-message>
     <discord-system-message type="leave">
@@ -5454,10 +5457,10 @@ This server currently has $boostCount boost(s).
     <discord-system-message type="boost">
         RainbowKey just boosted the server!
     </discord-system-message>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example
     </discord-message>
-    <discord-message role-color="#378afa" author="BDFD Support" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot>
+    <discord-message author="BDFD Support" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" bot>
         This server currently has 12 boost(s).
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="boostcount-1"><a class="header" href="#boostcount-1">$boostCount[]</a></h1>
@@ -5498,10 +5501,10 @@ $botCommands[🔹]
 My ID is: $botID
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" bot role-color="#378afa" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+    <discord-message author="BDFD Support" bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified role-color="#378afa">
         My ID: 1009018156494368798
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="botleave"><a class="header" href="#botleave">$botLeave</a></h1>
@@ -5543,7 +5546,7 @@ $sendMessage[I left out `$serverName[$message]` server.]
 $botLeave[$message]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example 1009018156494368798
     </discord-message>
     <discord-message bot role-color="#b9a0e0" author="BDFD Support">
@@ -5634,10 +5637,10 @@ $botListDescription[Ping? Pong!]
 The bot's node ID: $botNode
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example
     </discord-message>
-    <discord-message bot role-color="#b9a0e0" author="BDFD Support">
+    <discord-message author="BDFD Support" role-color="#b9a0e0" bot>
         The bot's node ID: 21
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="botownerid"><a class="header" href="#botownerid">$botOwnerID</a></h1>
@@ -5650,10 +5653,10 @@ The bot's node ID: $botNode
 My owner's ID: $botOwnerID
 </code></pre>
 <discord-messages>
-    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908" author="Nicky">
         !botOwnerID
     </discord-message>
-    <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" bot>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" author="Wiki Bot" bot role-color="#748BD4">
         My owner's ID: 729343563401265193
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="bottyping"><a class="header" href="#bottyping">$botTyping</a></h1>
@@ -5714,10 +5717,10 @@ $enableDecimals[yes]
 $calculate[$message] 🧠
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
         !example 10+5.9-9
     </discord-message>
-    <discord-message bot author="BDFD Support" role-color="#b9a0e0">
+    <discord-message bot role-color="#b9a0e0" author="BDFD Support">
         6.9 🧠
     </discord-message>
 </discord-messages>
@@ -5869,10 +5872,10 @@ $changeUsernameWithID[$findUser[$message[1]];$message[2]]
 There are $channelCount channels in this server!
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example
     </discord-message>
-    <discord-message role-color="#378afa" bot verified author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+    <discord-message author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified>
         There are 19 channels in this server!
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="channelexists"><a class="header" href="#channelexists">$channelExists</a></h1>
@@ -5899,10 +5902,10 @@ $channelExists[$message]
 Channel ID: $channelID
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" role-color="#378afa" verified bot>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified role-color="#378afa" author="BDFD Support">
         Channel ID: 566370477967147018
     </discord-message>
 </discord-messages>
@@ -5910,10 +5913,10 @@ Channel ID: $channelID
 <p>It will return <code>none</code> if you use it in a DM.</p>
 </blockquote>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example
     </discord-message>
-    <discord-message bot verified author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+    <discord-message author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified>
         Channel ID: none
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="channelid-1"><a class="header" href="#channelid-1">$channelID[]</a></h1>
@@ -5952,10 +5955,10 @@ Channel ID: $channelID[$message]
 Channel ID: $channelIDFromName[$mesaage]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example main-chat
     </discord-message>
-    <discord-message bot author="BDFD Support" role-color="#b9a0e0">
+    <discord-message bot role-color="#b9a0e0" author="BDFD Support">
         Channel ID: 1014546423032860754
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="channelname"><a class="header" href="#channelname">$channelName</a></h1>
@@ -5975,10 +5978,10 @@ Channel ID: $channelIDFromName[$mesaage]
 Channel Name: `#$channelName[$channelID]`
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message role-color="#b9a0e0" author="BDFD Support" bot>
+    <discord-message author="BDFD Support" bot role-color="#b9a0e0">
         Channel Name: <discord-inline-code>#main-chat</discord-inline-code>
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="channelnames"><a class="header" href="#channelnames">$channelNames</a></h1>
@@ -6010,10 +6013,10 @@ Channel Name: `#$channelName[$channelID]`
 Channel Position: $channelPosition
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" bot role-color="#b9a0e0">
+    <discord-message bot role-color="#b9a0e0" author="BDFD Support">
         Channel Position: 1
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="channelposition-1"><a class="header" href="#channelposition-1">$channelPosition[]</a></h1>
@@ -6033,7 +6036,7 @@ Channel Position: $channelPosition
 Channel Position: $channelPosition[$mentionedChannels[1;yes]]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example <discord-mention type="channel">main-chat</discord-mention>
     </discord-message>
     <discord-message author="BDFD Support" bot role-color="#b9a0e0">
@@ -6113,7 +6116,7 @@ $channelType[$channelID]
 Your message has $charCount[$message] characters.
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example Hello World!
     </discord-message>
     <discord-message author="BDFD Support" bot role-color="#b9a0e0">
@@ -6482,7 +6485,7 @@ Today's Date: $date
     <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
         !date
     </discord-message>
-    <discord-message role-color="#748BD4" bot author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png">
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" author="Wiki Bot">
         Today's Date: 2023-07-24
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="day"><a class="header" href="#day">$day</a></h1>
@@ -7399,10 +7402,10 @@ $footerIcon[$authorAvatar]
 Ban Reason: $getBanReason[154148273307910144]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example
     </discord-message>
-    <discord-message bot author="BDFD Support" role-color="#b9a0e0">
+    <discord-message bot role-color="#b9a0e0" author="BDFD Support">
         Ban Reason: Too cute
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="getbotinvite"><a class="header" href="#getbotinvite">$getBotInvite</a></h1>
@@ -8047,7 +8050,7 @@ I will be offline &lt;t:$hostingExpireTime[yes]:R&gt;
 Current Hour: $hour
 </code></pre>
 <discord-messages>
-    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
         !hour
     </discord-message>
     <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot role-color="#748BD4">
@@ -8624,7 +8627,7 @@ $message
     <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
         !say Hello everyone 👋
     </discord-message>
-    <discord-message bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" author="Wiki Bot">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" author="Wiki Bot" bot role-color="#748BD4">
         Hello everyone 👋
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="message-1"><a class="header" href="#message-1">$message[]</a></h1>
@@ -9046,10 +9049,10 @@ Last: $noMentionMessage[&gt;]
 Version node: $nodeVersion
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" role-color="#b9a0e0" bot>
+    <discord-message role-color="#b9a0e0" author="BDFD Support" bot>
         Version node: 05-07-2023-c8800d6
     </discord-message>
 </discord-messages>
@@ -9076,7 +9079,7 @@ Version node: $nodeVersion
     <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" role-color="#b9a0e0" bot>
+    <discord-message role-color="#b9a0e0" author="BDFD Support" bot>
         13 Node Version: 05-07-2023-c8800d6
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="numberseparator"><a class="header" href="#numberseparator">$numberSeparator</a></h1>
@@ -10425,10 +10428,10 @@ $onlyForIDs[$botOwnerID;Only my owner can use that!]
 $serverNames
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example
     </discord-message>
-    <discord-message bot role-color="#b9a0e0" author="BDFD Support">
+    <discord-message role-color="#b9a0e0" author="BDFD Support" bot>
         BDFD Support, Best Guild, Wiki Server
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="servernames-1"><a class="header" href="#servernames-1">$serverNames[]</a></h1>
@@ -11378,10 +11381,10 @@ $image[$userAvatar[$mentioned[1;yes]]]
 `$userBadges[$authorID;` `]`
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example main-chat
     </discord-message>
-    <discord-message bot author="BDFD Support" role-color="#b9a0e0">
+    <discord-message role-color="#b9a0e0" author="BDFD Support" bot>
         <discord-inline-code>hype_squad_balance</discord-inline-code> <discord-inline-code>partner</discord-inline-code>
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="userbanner"><a class="header" href="#userbanner">$userBanner</a></h1>
@@ -11423,7 +11426,7 @@ $sendMessage[$userBanner[$findUser[$message]]?size=4096]
     <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message role-color="#b9a0e0" author="BDFD Support" bot>
+    <discord-message author="BDFD Support" role-color="#b9a0e0" bot>
         #32D167
     </discord-message>
 </discord-messages>
@@ -11588,10 +11591,10 @@ Leaderboard values are not updated in real-time. The previous values are cached 
 Hello $username!
 </code></pre>
 <discord-messages>
-    <discord-message author="Spen" role-color="#b9a0e0" avatar="https://cdn.discordapp.com/avatars/696368083517964288/817cd936fbfcb179f6bb52b3dbccadae.png">
+    <discord-message author="Spen" avatar="https://cdn.discordapp.com/avatars/696368083517964288/817cd936fbfcb179f6bb52b3dbccadae.png" role-color="#b9a0e0">
         !echo
     </discord-message>
-    <discord-message author="Wiki Bot" bot role-color="#b9a0e0">
+    <discord-message author="Wiki Bot" role-color="#b9a0e0" bot>
         Hello Spen!
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="username-1"><a class="header" href="#username-1">$username[]</a></h1>
@@ -11759,7 +11762,7 @@ Current Year: $year
     <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky" role-color="#EE7908">
         !year
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" author="Wiki Bot" bot>
+    <discord-message author="Wiki Bot" bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4">
         Current Year: 2023
     </discord-message>
 </discord-messages><div style="break-before: page; page-break-before: always;"></div><h1 id="callbacks"><a class="header" href="#callbacks">Callbacks</a></h1>
