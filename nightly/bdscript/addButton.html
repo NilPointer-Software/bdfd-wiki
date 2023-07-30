@@ -215,16 +215,86 @@ Here, are all possible values for the <code>style</code> function argument.</p>
 <li><code>danger</code> - Red button</li>
 <li><code>link</code> - Redirect button</li>
 </ul>
-<p><img src="https://user-images.githubusercontent.com/113303649/248713011-c92baa50-512d-4e85-883e-65ba40ae7ab4.png" alt="example" /></p>
+<discord-messages>
+    <discord-message author="BDFD Support" bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" verified>
+        Buttons:
+        <discord-attachments slot="components">
+            <discord-action-row>
+                <discord-button type="primary">
+                    Primary
+                </discord-button>
+                <discord-button type="primary" disabled>
+                    Primary
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button type="success">
+                    Success
+                </discord-button>
+                <discord-button type="success" disabled>
+                    Success
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button type="destructive">
+                    Danger
+                </discord-button>
+                <discord-button type="destructive" disabled>
+                    Danger
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button type="secondary">
+                    Secondary
+                </discord-button>
+                <discord-button type="secondary" disabled>
+                    Secondary
+                </discord-button>
+            </discord-action-row>
+        </discord-attachments>
+    </discord-message>
+    <discord-message verified bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" author="BDFD Support">
+        Other Buttons:
+        <discord-attachments slot="components">
+            <discord-action-row>
+                <discord-button type="secondary" url="https://nilpointer-software.github.io/bdfd-wiki/nightly/">
+                    Link
+                </discord-button>
+                <discord-button url="https://nilpointer-software.github.io/bdfd-wiki/nightly/" type="secondary" disabled>
+                    Link
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button emoji="https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png" type="secondary">
+                    Emoji
+                </discord-button>
+            </discord-action-row>
+        </discord-attachments>
+    </discord-message>
+</discord-messages>
 <blockquote>
 <p>If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
 </blockquote>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-Hi
+Hello
 $addButton[no;test;Say hello!;primary;no;]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png" alt="example" /></p>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message bot verified author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa">
+        Hello
+        <discord-attachments slot="components">
+            <discord-action-row>
+                <discord-button type="primary">
+                    Say hello!
+                </discord-button>
+            </discord-action-row>
+        </discord-attachments>
+    </discord-message>
+</discord-messages>
 <blockquote>
 <p>For more info, see the <a href="../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
 </blockquote>

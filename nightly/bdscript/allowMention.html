@@ -178,10 +178,23 @@ $allowMention
 $message
 </code></pre>
 <h3 id="with-allowmention"><a class="header" href="#with-allowmention">With <code>$allowMention</code></a></h3>
-<p><img src="https://user-images.githubusercontent.com/113303649/209938280-bd18eeca-41f6-4193-ac65-665455c0b14a.png" alt="example" /></p>
-<h3 id="without-allowmention"><a class="header" href="#without-allowmention">Without <code>$allowMention</code></a></h3>
-<p><img src="https://user-images.githubusercontent.com/113303649/209938701-6c4bd976-ddb8-4a59-9522-b986313dde46.png" alt="example" /></p>
-
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
+        !example <discord-mention>RainbowKey</discord-mention>
+    </discord-message>
+    <discord-message verified bot author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+        <discord-mention>RainbowKey</discord-mention>
+    </discord-message>
+</discord-messages>
+### Without `$allowMention`
+<discord-messages>
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
+        !example <discord-mention>RainbowKey</discord-mention>
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified bot role-color="#378afa" author="BDFD Support">
+        @RainbowKey
+    </discord-message>
+</discord-messages>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
