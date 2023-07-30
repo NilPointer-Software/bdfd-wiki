@@ -10,7 +10,19 @@ $channelPosition
 $nomention
 Channel Position: $channelPosition
 ```
-![example](https://user-images.githubusercontent.com/113303649/213230663-efa9cc91-1db8-4ef7-b824-e47dd0c22fef.png)
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    Channel Position: 1
+```
 
 

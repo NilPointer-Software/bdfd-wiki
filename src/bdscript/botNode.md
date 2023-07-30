@@ -12,4 +12,17 @@ $botNode
 $nomention
 The bot's node ID: $botNode
 ```
-![example](https://user-images.githubusercontent.com/113303649/210352219-2179d854-9063-45f6-9d6b-127185e6c746.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    The bot's node ID: 21
+```

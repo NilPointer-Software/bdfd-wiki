@@ -18,4 +18,15 @@ $nomention
 Ban Reason: $getBanReason[154148273307910144]
 ```
 
-![example](https://user-images.githubusercontent.com/113303649/209688041-a4a229d1-9b7b-40bc-b85f-9acb5c8e0011.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    Ban Reason: Too cute
+```

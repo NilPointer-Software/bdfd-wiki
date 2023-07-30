@@ -24,7 +24,19 @@ $nomention
 $enableDecimals[yes]
 $calculate[$message] 🧠
 ```
-![example](https://user-images.githubusercontent.com/113303649/211189019-cb221556-9d2a-494a-a60f-abaf388dbf4b.png)
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 10+5.9-9
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    6.9 🧠
+```
 
 > [How `$enableDecimals[]` works?](./bdscript/enableDecimals.md)

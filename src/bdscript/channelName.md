@@ -18,4 +18,16 @@ $nomention
 Channel Name: `#$channelName[$channelID]`
 ```
 
-![example](https://user-images.githubusercontent.com/113303649/213229399-51d7fb27-7561-40a9-83cd-f3ea4943e4b7.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+
+- username: BDFD Support
+  color: "#b9a0e0"
+  bot: true
+  content: |
+    Channel Name: <discord-inline-code>#main-chat</discord-inline-code>
+```
