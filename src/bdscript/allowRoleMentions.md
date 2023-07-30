@@ -15,4 +15,20 @@ $nomention
 $allowRoleMentions[]
 I'm pinging <@&858376972303204362>, but no one got notified; wow!
 ```
-![example](https://user-images.githubusercontent.com/113303649/209944631-72e05d4a-6f0f-4dce-aba0-db9f51a46205.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  roles:
+    Extremely Cool Role: "#FFD700"
+  content: |
+    I'm pinging <@Extremely Cool Role>, but no one got notified; wow!
+```
