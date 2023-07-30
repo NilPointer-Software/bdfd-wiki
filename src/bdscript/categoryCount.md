@@ -10,6 +10,18 @@ $categoryCount
 $nomention
 There are $categoryCount categories in this server!
 ```
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !categories
 
-![example](https://user-images.githubusercontent.com/94063167/198900353-1c47a4e9-19e5-4980-982c-e0cd955beb1e.png)
-
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    There are 3 categories in this server!
+```
