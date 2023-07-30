@@ -12,6 +12,20 @@ $channelTopic[Channel ID]
 ## Example
 ```
 $nomention
-<#$noMentionMessage> topic is : $channelTopic[$noMentionMessage]
+<#$noMentionMessage>'s channel topic is: $channelTopic[$noMentionMessage]
 ```
-![example](https://user-images.githubusercontent.com/70468667/219971438-d624efbc-d1ff-4519-8377-7744ededda4f.jpg)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example 860870690323300359
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    <#demo>'s channel topic is: Demos, examples and more!
+```
