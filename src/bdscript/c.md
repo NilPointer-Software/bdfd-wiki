@@ -15,4 +15,18 @@ $nomention
 $noMentionMessage
 $c[This is a say command. You are reading a comment!]
 ```
-![example](https://user-images.githubusercontent.com/69215413/127033510-b61a5806-c1b5-45f3-99d3-c4f932497322.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !say As you can see, the comment doesn't appear! Pretty cool; right?
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    As you can see, the comment doesn't appear! Pretty cool; right?
+```
