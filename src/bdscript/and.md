@@ -62,7 +62,7 @@ $and[$nickname==MineBartekSA;$message==Update]
   avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/1ecd3b3a-4bdf-441a-98ad-361254426a74
   color: "#f1bdee"
   content: |
-    !example Update
+    !example 
 - username: BDFD Support
   avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
@@ -75,14 +75,14 @@ $and[$nickname==MineBartekSA;$message==Update]
   avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/1ecd3b3a-4bdf-441a-98ad-361254426a74
   color: "#f1bdee"
   content: |
-    !example
+    !example Update
 - username: BDFD Support
   avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
   content: |
-    false
+    true
   ```
 
 > For more info, see the [If Guide](../guides/ifStatements.md).
