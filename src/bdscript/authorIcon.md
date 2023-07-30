@@ -18,4 +18,21 @@ $nomention
 $authorIcon[$authorAvatar]
 $author[⬅️ That is the author icon. This is the author text.]
 ```
-![example](https://user-images.githubusercontent.com/113303649/209976219-44583abf-be27-4874-bfff-331d51f45f1e.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: " "
+  embed:
+    author:
+      text: ⬅️ That is the author icon. This is the author text.
+      image: https://user-images.githubusercontent.com/111157596/257052136-4b8d5715-b381-4d5f-8c46-8ae0be53c8d8.png
+```
