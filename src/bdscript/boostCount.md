@@ -15,7 +15,7 @@ This server currently has $boostCount boost(s).
 ```discord yaml
 - type: boost
   content: |
-    RainbowKey just boosted the server!
+    <discord-bold>RainbowKey</discord-bold> just boosted the server!
 - user_id: 803569638084313098
   username: RainbowKey
   avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
