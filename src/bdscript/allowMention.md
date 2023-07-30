@@ -13,7 +13,7 @@ $allowMention
 $message
 ```
 
-### With `$allowMention`
+### With `$allowMention`:
 ```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
@@ -30,7 +30,8 @@ $message
     <@RainbowKey>
 ```
 
-### Without `$allowMention`
+
+### Without `$allowMention`:
 ```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
