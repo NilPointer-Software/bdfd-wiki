@@ -14,7 +14,24 @@ $nomention
 #$channelNames[ 
 #]
 ```
-![example](https://user-images.githubusercontent.com/113303649/212546110-0db7b143-f192-45df-9866-98d8c4f7913e.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example main-chat
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    #main-chat
+    #media
+    #suggestions
+    #Category
+```
 
 > It can return names of the `category`, `channel`, `forum`.
 
