@@ -28,6 +28,6 @@ $ban
   content: |
       <@Spen> was banned!
 - content: |
-      Spen left without pizza.
+      <discord-bold>Spen</discord-bold> left without pizza.
   type: leave
 ```
