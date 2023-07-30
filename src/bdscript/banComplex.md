@@ -15,4 +15,22 @@ $nomention
 $ban[$noMentionMessage]
 <@$mentioned[1]> was banned!
 ```
-![example](https://user-images.githubusercontent.com/69215413/119860514-661e1300-bee4-11eb-965e-e3c7fa78b5ca.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example <@Spen> Too cute
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      <@Spen> was banned!
+- content: |
+      <discord-bold>Spen</discord-bold> left without pizza.
+  type: leave
+```
