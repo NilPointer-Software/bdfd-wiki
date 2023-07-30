@@ -35,4 +35,4 @@ Result: $random[1;5]
     Result: 3.381
 ```
 
-> > [How `$random[]` works?](./randomComplex.md)
+> [How `$random[]` works?](./randomComplex.md)
