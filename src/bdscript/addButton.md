@@ -29,16 +29,88 @@ Here, are all possible values for the `style` function argument.
 - `danger` - Red button
 - `link` - Redirect button
 
-![example](https://user-images.githubusercontent.com/113303649/248713011-c92baa50-512d-4e85-883e-65ba40ae7ab4.png)
+```discord yaml
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Buttons:
+  components: 
+    - 
+      - type: primary
+        label: Primary
+      - type: primary
+        label: Primary
+        disabled: true
+    - 
+      - type: success
+        label: Success
+      - type: success
+        label: Success
+        disabled: true
+    - 
+      - type: destructive
+        label: Danger
+      - type: destructive
+        label: Danger
+        disabled: true
+    - 
+      - type: secondary
+        label: Secondary
+      - type: secondary
+        label: Secondary
+        disabled: true
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Other Buttons:
+  components: 
+    - 
+      - type: secondary
+        label: Link
+        url: https://nilpointer-software.github.io/bdfd-wiki/nightly/
+      - type: secondary
+        label: Link
+        disabled: true
+        url: https://nilpointer-software.github.io/bdfd-wiki/nightly/
+    - 
+      - type: secondary
+        label: Emoji
+        emoji: https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png
+```
 
 > If `link` style is used, the button **won't send** any interactions!
 
 ## Example
 ```
 $nomention
-Hi
+Hello
 $addButton[no;test;Say hello!;primary;no;]
 ```
-![example](https://user-images.githubusercontent.com/113303649/209844908-dd5b8166-e597-4823-87a3-25c51699bce5.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello
+  components:
+  - 
+     - type: primary
+       label: Say hello!
+```
 
 > For more info, see the [Buttons Guide](../guides/general/interactions/buttons/aboutButtons.md).

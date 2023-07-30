@@ -21,7 +21,18 @@ $addCmdReactions[Emojis;...]
 $nomention
 $addCmdReactions[$message]
 ```
-![example](https://user-images.githubusercontent.com/113303649/209925658-f44e2ca3-e71f-426e-a2ed-66b6758be3a8.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example ❤️
+  reactions:
+    - emoji: https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png
+      count: 1
+      reacted: false
+```
 
 ### How to get emoji ID?
 
