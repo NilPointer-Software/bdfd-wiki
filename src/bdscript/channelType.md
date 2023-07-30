@@ -19,8 +19,35 @@ $channelType[$channelID]
 ```
 **Text Channel**
 
-![example1](https://user-images.githubusercontent.com/111157596/250920367-a11b2e62-deb7-44ef-a3aa-1e7975c61020.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !channelType
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    text
+```
+
 
 **DM Channel**
 
-![example2](https://user-images.githubusercontent.com/111157596/250920478-108e1b24-dfdc-4609-aedc-9ea328ac33fb.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  content: |
+    !channelType
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  bot: true
+  verified: true
+  content: |
+    dm
+```
