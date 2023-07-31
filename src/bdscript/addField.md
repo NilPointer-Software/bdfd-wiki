@@ -47,8 +47,7 @@ $addField[The field name 3!;The field value 3!]
     - name: The field name 3!
       value: The field value 3!
 ```
-
-
+\
 ### With inline fields
 ```
 $nomention
