@@ -5,13 +5,13 @@ In this section, you'll learn how to use the text splitting.
 [**Functions Used**](#functions-used) > [**$textSplit[]**](#textsplit) > [**$splitText[]**](#splittext) > [**$getTextSplitLength**](#getextsplitlength) > [**$getTextSplitIndex[]**](#gettextsplitindex) > [**$joinSplitText[]**](#joinsplittext) > [**$removeSplitTextElement[]**](#removesplittextelement) > [**Simple Code**](#simple-code)
 
 ## Functions Used
-- [`$textSplit[]`](../../../../bdscript/textSplit.md)
-- [`$splitText[]`](../../../../bdscript/splitText.md)
-- [`$getTextSplitLength`](../../../../bdscript/getTextSplitLength.md)
-- [`$getTextSplitIndex[]`](../../../../bdscript/getTextSplitIndex.md)
-- [`$joinSplitText[]`](../../../../bdscript/joinSplitText.md)
+- [`$textSplit[]`](../../bdscript/textSplit.md)
+- [`$splitText[]`](../../bdscript/splitText.md)
+- [`$getTextSplitLength`](../../bdscript/getTextSplitLength.md)
+- [`$getTextSplitIndex[]`](../../bdscript/getTextSplitIndex.md)
+- [`$joinSplitText[]`](../../bdscript/joinSplitText.md)
 - [`$removeSplitTextElement[]`](../../../../bdscript/removeSplitTextElement.md)
-- [`$editSplitText[]`](../../../../bdscript/editSplitText.md)
+- [`$editSplitText[]`](../../bdscript/editSplitText.md)
 
 # $textSplit
 Splits the provided text by a given separator and saves the value temporarily.
