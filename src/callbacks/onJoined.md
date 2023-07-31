@@ -39,6 +39,7 @@ $onJoined[Channel ID]
      content: |
        <@Nicky>, welcome to Cool Server!
    ```
+   
 \
 *Not Working? Check out the [Troubleshooting](#troubleshooting) section.*
 
