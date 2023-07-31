@@ -15,6 +15,21 @@ $getChannelVar[Variable name;(Channel ID)]
 $nomention
 Command used `$getChannelVar[Uses]` times in this channel
 ```
-![example](https://user-images.githubusercontent.com/113303649/202900351-9c03ef8a-f4d1-417e-96a8-9da6b3fb9e16.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Command used <discord-inline-code>1</discord-inline-code> times in this channel
+```
 
 > For more info, see the [Variables Guide](../guides/introduction/variables.md).

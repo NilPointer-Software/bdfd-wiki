@@ -14,4 +14,19 @@ $channelExists[Channel ID]
 $nomention
 $channelExists[$message]
 ```
-![example](https://user-images.githubusercontent.com/113303649/212074836-53aacb9a-5745-4c4d-a25a-be4b98ad5a64.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example 566370477967147018
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    true
+```

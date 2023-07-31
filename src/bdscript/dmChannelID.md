@@ -3,12 +3,29 @@ Retrieves the DM channel ID for the provided user id.
 
 ## Syntax
 ```
-$dmChannelID[user ID]
+$dmChannelID[User ID]
 ```
 ### Parameters
 - `user ID` `(Type: Snowflake || Flag: Required)`: The user for whom to fetch the DM channel ID
 
 ## Example
-![example](https://user-images.githubusercontent.com/95774950/184350154-4e08f818-e1c6-483b-bfc0-f7741c1381da.png)
+```
+$nomention
+ID: $dmChannelID[$authorID]
+```
 
-![example](https://user-images.githubusercontent.com/95774950/184350174-776d0d09-de35-4f2a-bef8-7683135752ea.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    ID: 1011919618610311189
+```
