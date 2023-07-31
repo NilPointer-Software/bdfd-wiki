@@ -144,3 +144,84 @@ Large code block
    | Name | Value |
    | Name | Value |
    | Name | Value |
+
+## Discord Code Blocks
+
+Our wiki uses custom markdown code blocks to generate Discord message previews.
+In order to create them, wiki contributors write `discord` code blocks.
+
+Currently, only one variant is available, the `discord yaml` code block.
+It utilizes the YAML language to write these Discord messages.
+
+Example:
+``` yaml
+- user_id: 154148273307910144
+  username: MineBartekSA
+  color: "#E67E22"
+  content: |
+    Hi, this is an example of custom code blocks.
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This is another message
+- username: NilPointer Software
+  avatar: https://avatars.githubusercontent.com/u/63750675
+  bot: true
+  verified: true
+  content: |
+    For more information about supported features, please see <a href="https://github.com/NilPointer-Software/mdbook-discord-components/">this GitHub repository</a>
+```
+
+Like the last message in the example says, please check out the [NilPointer-Software/mdbook-discord-components](https://github.com/NilPointer-Software/mdbook-discord-components/) repository for more info about supported features.
+
+To test your custom code block, you can use the [official test site](https://nilpointer-software.github.io/mdbook-discord-components/)
+> Please note, that the `user_id` field will not work on the test site. This feature is disabled on it.
+
+### Things To Note
+
+- In order to format messages or embed content like you can on Discord, you need to use HTML tags instead of markdown.
+  Please look at the example below on the [test site](https://nilpointer-software.github.io/mdbook-discord-components/) to see how they will actually look.
+``` yaml
+- user_id: 154148273307910144
+  username: MineBartekSA
+  content: |
+    For <code>*Italics*</code> use the <code>i</code> HTML tag: <i>Italics</i>
+    For <code>**Bold**</code> use the <code>b</code> HTML tag: <b>Bold</b>
+    For <code>~~Line-Through~~</code> use the <code>del</code> HTML tag: <del>Line-Through</del>
+    For <code>`Code Snippet`</code> use the <code>code</code> HTML tag: <code>Code Snippet</code>
+    For <code>__Underline__</code> use the <code>u</code> HTML tag: <u>Underline</u>
+    For <code>> Quote</code> use the <code>discord-quote</code> HTML tag: <discord-quote>Quote</discord-quote>
+- user_id: 154148273307910144
+  username: MineBartekSA
+  content: |
+    You can make spoilers by using the <code>discord-spoiler</code> HTML tag: <discord-spoiler>Spoiler!</discord-spoiler>
+- user_id: 154148273307910144
+  username: MineBartekSA
+  content: |
+    You can embed links by using the <code>a</code> HTML tag with the <code>href</code> attrubute: <a href="https://nilpointer-software.github.io/mdbook-discord-components/">Test site</a>
+- user_id: 154148273307910144
+  username: MineBartekSA
+  content: " "
+  embed:
+    title: Embed Text Formatting
+    color: "#00FFFF"
+    description: |
+      <i>Italics</i>, <b>Bold</b>, <del>Line-Truough</del>, <u>Underline</u>, <a href="https://nilpointer-software.github.io/mdbook-discord-components/">Links</a>, and <code>Code Snippets</code> use the same HTML tags.
+      
+      Embeds can contain multiline code blocks.
+      Add a <code>multiline</code> class to a <code>code</code> HTML tag:
+      <code class="multiline">This is a large code block.
+      It supports multiple lines.
+      </code>
+      Quotes use the <code>blockquote</code> HTML tag: <blockquote>Quote</blockquote>
+      Spoiler use the <code>span</code> HTML tag with the <code>spoiler</code> class:
+      <span class="spoiler">Spoiler</span>
+```
+> Please note, that the empty `content` filed in the message with embed is a bug that will be resolved.
+
+- On our wiki, messages can use the `user_id` yaml field for automatic and up-to-date avatar and username.
+  When using `user_id`, the `username` field is no longer required and will overwrite the username fetched from Discord.
+  The same thing applies to the `avatar` field.

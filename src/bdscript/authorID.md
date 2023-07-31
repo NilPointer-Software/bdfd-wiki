@@ -9,6 +9,21 @@ $authorID
 ## Example
 ```
 $nomention
-This command was written by <@$authorID>!
+This command was executed by <@$authorID>!
 ```
-![example](https://user-images.githubusercontent.com/113303649/209975713-3b515d2a-4828-48d5-bb1a-530a0d71e059.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  highlight: true
+  content: |
+    This command was executed by <@Nicky>!
+```

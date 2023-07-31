@@ -18,10 +18,12 @@ My owner's ID: $botOwnerID
   color: "#EE7908"
   content: |
     !botOwnerID
+
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
   bot: true
+  verified: true
   content: |
     My owner's ID: 729343563401265193
 ```
