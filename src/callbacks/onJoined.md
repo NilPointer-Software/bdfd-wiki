@@ -1,21 +1,21 @@
 # $onJoined
 *Triggered when a user joins the server.*
 
-`$onJoined[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user joins the server.
+`$onJoined[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user joins the server.
 
 > 📌 You can only have **1** single `$onJoined[]` per bot.
 
 ## Syntax
 ```
-$onJoined[channelID]
+$onJoined[Channel ID]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
 
 ## Example
-1. Create a command with the trigger `$onJoined[channelID]`.
-    > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
+1. Create a command with the trigger `$onJoined[Channel ID]`.
+    > 🧙‍♂️ You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
     
     ![example1](https://user-images.githubusercontent.com/69215413/129490506-c91a77b7-ed71-4dc5-9460-d4ec409b36d4.png)
 
@@ -24,9 +24,22 @@ $onJoined[channelID]
     
     ![example2](https://user-images.githubusercontent.com/69215413/129490390-98471c1a-6d76-4543-96d1-1f428bfdd8bc.png)
 
-3. Now, you have a welcome message! ✨\
-![example3](https://user-images.githubusercontent.com/69215413/129490365-d995c6d6-bbfc-4e37-a726-31f505023988.png)
+3. Now, you have a welcome message! ✨
+   ``` discord yaml
+   - type: join
+     content: |
+       Welcome <font color="white">Nicky</font>. Say hi!
 
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     highlight: true
+     content: |
+       <@Nicky>, welcome to Cool Server!
+   ```
+\
 *Not Working? Check out the [Troubleshooting](#troubleshooting) section.*
 
 ## Troubleshooting
@@ -71,4 +84,4 @@ If you own a public bot and want to make it so multiple different servers can us
 
     > 📝 Servers will need to setup the channel they want the welcome message to send to *(by running a command with the code above)*.
 
-3. Now replace `$onJoined[channelID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
+3. Now replace `$onJoined[Channel ID]` in your welcome command trigger, with `$onJoined[$getServerVar[welcome]]` and you're all set!
