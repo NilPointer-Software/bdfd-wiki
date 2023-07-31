@@ -33,7 +33,7 @@ $onBanRemove[Channel ID]
        Carl-bot (235148962103951360) was unbanned!
    ```
 
-
+\
 ## Advanced
 ### Per-Server $onBanRemove
 Both free and premium users can use `$onBanRemove[]`, and all users can put `$getServerVar[]` within `$onBanRemove[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks.\
