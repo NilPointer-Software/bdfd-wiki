@@ -7,6 +7,7 @@ _Triggered when an awaited command gets initiated._
 ```
 $awaitedCommand[Name;(Filter)]
 ```
+
 ### Parameters
 - `Name` `(Type: String || Flag: Required)`: The name used in the [`$awaitFunc[]`](../bdscript/awaitFunc.md) function.
 - `Filter` `(Type: String || Flag: Optional)`: It is used to limit the user input.
@@ -22,7 +23,36 @@ $awaitedCommand[Name;(Filter)]
 $nomention
 $message
 ```
-![example](https://user-images.githubusercontent.com/113303649/212084980-10ab6f01-5595-454f-bfe6-a23f8fd64c1e.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !say
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    What do you want me to say?
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    I love BDFD!
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    I love BDFD!
+```
+
 
 ### With choose filter
 **Trigger: `$awaitedCommand[odd;<yes/no/cancel>]`**
@@ -36,7 +66,92 @@ $elseif[$message==cancel]
    Command cancelled!
 $endif
 ```
-![example](https://user-images.githubusercontent.com/113303649/212088333-54a94584-f854-45cf-8b7e-6980aa370764.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !odd
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Is "19" an odd number?
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    yes
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Your answer is correct!
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !odd
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Is "19" an odd number?
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    no
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Your answer is incorrect!
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !odd
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Is "19" an odd number?
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    cancel
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Command cancelled!
+```
+
 
 ### With numeric filter
 **Trigger: `$awaitedCommand[odd;<numeric>]`**
@@ -44,6 +159,34 @@ $endif
 $nomention
 You have provided a number: $message
 ```
-![example](https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !number
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Provide a number!
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    7
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    You have provided a number: 7
+```
 
 > For more info, see the [Awaited Commands Guide](../guides/general/awaitedCommands.md).
