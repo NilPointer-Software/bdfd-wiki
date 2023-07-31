@@ -736,7 +736,7 @@ You can only get this error when trying to invite a bot to any server.\
 Most likely, you have accidentally or unknowingly enabled the `Require OAuth2 Code Grant` option in your bot's settings in the [developer portal](https://discord.com/developers/applications).\
 This is the reason why you get this error.
 
-This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. But BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than `bot` and `applications.commands`.
+This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than `bot`.
 
 ---
 ## App Issues
@@ -796,8 +796,7 @@ In this section, the easiest way to explain everything is through dialogue:
   content: |
     You're welcome, Random Guy.
 ```
-
-
+\
 ### The Translation Feature Doesn't Work
 **The 1st Reason**\
 There's no translation support for your language yet. You should wait patiently for them, or if you speak English well, you can help to translate our app yourself!\
