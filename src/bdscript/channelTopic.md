@@ -11,5 +11,18 @@ $channelTopic
 $nomention
 <#$channelID>'s channel topic is: $channelTopic
 ```
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
 
-![example](https://user-images.githubusercontent.com/69215413/127034232-384f3678-0010-4a97-bf89-9dd5963d8742.png)
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    <#testing>'s channel topic is: A testing channel!
+```

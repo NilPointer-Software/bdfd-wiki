@@ -25,6 +25,24 @@ $nomention
 <#$categoryChannels[$categoryID[BDFD];>
 <#;id]>
 ```
-![example](https://user-images.githubusercontent.com/113303649/212550851-a3a87e0e-9393-4e38-9f87-921034ea69a7.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    <#rules>
+    <#news>
+    <#update-logs>
+    <#bots>
+    <#bdfd-forums>
+```
 
 > [How `$categoryID[]` works?](./categoryID.md)
