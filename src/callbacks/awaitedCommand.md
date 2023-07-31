@@ -52,8 +52,7 @@ $message
   content: |
     I love BDFD!
 ```
-
-
+\
 ### With choose filter
 **Trigger: `$awaitedCommand[odd;<yes/no/cancel>]`**
 ```
@@ -151,8 +150,7 @@ $endif
   content: |
     Command cancelled!
 ```
-
-
+\
 ### With numeric filter
 **Trigger: `$awaitedCommand[odd;<numeric>]`**
 ```
