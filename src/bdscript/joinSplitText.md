@@ -13,10 +13,24 @@ $joinSplitText[Separator]
 We are joining the text split value with a new line, replacing the provided separator in `$textSplit[]`.
 ```
 $nomention
-$textSplit[Hello-hi-hey;-]
-$joinSplitText[
-]
+$textSplit[$message;-]
+$joinSplitText[+]
 ```
-![example](https://user-images.githubusercontent.com/111157596/233783300-4fee89bc-0b5c-4b32-b4a1-b00778f9ec98.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example hello-world-!
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    hello+wolrd+!
+```
 
 > For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).

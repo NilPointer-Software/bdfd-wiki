@@ -17,4 +17,19 @@ $hasRole[User ID;Role ID]
 $nomention
 $hasRole[$authorID;858376972303204362]
 ```
-![example](https://user-images.githubusercontent.com/69215413/126073798-d4178684-6181-4130-9d9e-12a91010b80c.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    true
+```
