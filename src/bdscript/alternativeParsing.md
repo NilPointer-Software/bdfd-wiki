@@ -55,8 +55,7 @@ $alternativeParsing
       embed:
         description: "\"helloworld\""
     ```
-
-
+    \
     ### Without `$alternativeParsing`
     ``` discord yaml
     - user_id: 729343563401265193
