@@ -9,7 +9,7 @@ This page contains a number of troubleshooting that can help you to solve proble
     - **[The Bot Can't Assign Or Take Roles](#the-bot-cant-assign-or-take-roles)**
     - **[Gives an Error When Trying To Moderate a Member](#gives-an-error-when-trying-to-moderate-a-member)**
     - **[Gives an Error When Trying To Purge Messages](#gives-an-error-when-trying-to-purge-messages)**
-3. **[$addReactions and $addCmdReactions](#addreactions-and-addcmdreactions)**
+3. **[$addReactions, $addCmdReactions and $addMessageReactions](#addreactions-addcmdreactions-and-addmessagereactions)**
     - **[The Bot Fails To Add Reactions](#the-bot-fails-to-add-reactions)**
 4. **[$time](#time)**
     - **[The Function Returns an Error](#the-function-returns-an-error)**
@@ -30,7 +30,7 @@ This page contains a number of troubleshooting that can help you to solve proble
     - **[Desynchronization of Commands](#desynchronization-of-commands)**
         - **[Ghost Command](#ghost-command)**
     - **[The Bot Takes A Long Time To Respond](#the-bot-takes-a-long-time-to-respond)**
-    - **[The Slash Commands Doesn't Appear](#the-slash-commands-doesnt-appear)**
+    - **[The Slash Commands Don't Appear](#the-slash-commands-dont-appear)**
     - **[Integration Requires Code Grant](#integration-requires-code-grant)**
 8. **[App Issues](#app-issues)**
     - **[The Ad Button Doesn't Work](#the-ad-button-doesnt-work)**
@@ -151,7 +151,7 @@ You are trying to purge messages that have been around for more than two weeks.\
 BDFD uses a bulk request to purge messages, and it can't process messages that are more than two weeks old.
 
 ---
-## $addReactions and $addCmdReactions
+## $addReactions, $addCmdReactions and $addMessageReactions
 ### The Bot Fails To Add Reactions
 **The 1st Reason**\
 The user has blocked the bot, so the bot can't react to the user's messages. This works exactly the same if the user has blocked another user.
@@ -160,7 +160,8 @@ The user has blocked the bot, so the bot can't react to the user's messages. Thi
 You're specifying the emoji in the function argument incorrectly.
 - Default emojis.
     ```diff
-    - $addCmdReactions[:joy:]
+    - $addCmdReactions[joy]
+    + $addCmdReactions[:joy:]
     + $addCmdReactions[😂]
     ```
 - Custom emojis.
@@ -621,7 +622,7 @@ This is because you're probably using [`$setUserVar`](../bdscript/setUserVar.md)
 If you want the same balance on all servers, you should use [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) (with `userID` arguments). These functions are based on [global user variables](../guides/introduction/variables.md#globalglobal-user-variables).
 #### The Displayed Balance Is Different For Different Commands
 Most often this is because you've mixed up the variable functions and you're using the wrong variable type.\
-For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in the Roulette command and [`$getVar`](../bdscript/getVar.md) in the Balance command, this will show different values. The solution to this is to replace [`$getVar`](../bdscript/getVar.md) with [`$getUserVar`](../bdscript/getUserVar.md) in the Balance command, or vice versa, replace [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) with [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) accordingly  in the Roulette command.\
+For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) in the Roulette command and [`$getVar`](../bdscript/getVar.md) in the Balance command, this will show different values. The solution to this is to replace [`$getVar`](../bdscript/getVar.md) with [`$getUserVar`](../bdscript/getUserVar.md) in the Balance command, or vice versa, replace [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUserVar`](../bdscript/getUserVar.md) with [`$setVar`](../bdscript/setVar.md) and [`$getVar`](../bdscript/getVar.md) accordingly in the Roulette command.\
 **Note:** don't forget that [global user variables](../guides/introduction/variables.md#globalglobal-user-variables) require a `userID` argument.
 
 
@@ -631,14 +632,14 @@ For example, if you use [`$setUserVar`](../bdscript/setUserVar.md) and [`$getUse
 **The 1st Reason**\
 You've chosen the wrong leaderboard function.
 - If you're using the [`$setUserVar`](../bdscript/setUserVar.md)/[`$getUserVar`](../bdscript/getUserVar.md) functions, you should use the [`$userLeaderboard`](../bdscript/userLeaderboard.md) function.
-- If in your're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you should use the [`$globalUserLeaderboard`](../bdscript/globalUserLeaderboard.md) function.
+- If you're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you should use the [`$globalUserLeaderboard`](../bdscript/globalUserLeaderboard.md) function.
 - If you're using the [`$setServerVar`](../bdscript/setServerVar.md)/[`$getServerVar`](../bdscript/getServerVar.md) functions, you should use the [`$serverLeaderboard`](../bdscript/serverLeaderboard.md) function.
 
 **The 2nd Reason**\
 *(In case you are using the [`$getLeaderboardValue`](../bdscript/getLeaderboardValue.md) function)*\
 You specified the wrong variable type.
 - If you're using the [`$setUserVar`](../bdscript/setUserVar.md)/[`$getUserVar`](../bdscript/getUserVar.md) functions, you should specify the `user` as type.
-- If in your're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you should specify the `globalUser` as type.
+- If you're using the [`$setVar`](../bdscript/setVar.md)/[`$getVar`](../bdscript/getVar.md) functions, you should specify the `globalUser` as type.
 - If you're using the [`$setServerVar`](../bdscript/setServerVar.md)/[`$getServerVar`](../bdscript/getServerVar.md) functions, you should specify the `server` as type.
 
 **The 3rd Reason**\
@@ -683,7 +684,7 @@ In order for your bot to respond correctly to a command, it must have permission
 This is due to the fact that nodes are restarted from time to time to maintain the stable operation of all the bots that also work on this node.
 
 ### Desynchronization of Commands
-Desynchronization of commands means, for example, that you have deleted a command but the bot still responds to it (aka. Ghost Command), or you see different code of your command in the web app and another in the mobile app.
+Desynchronization of commands means, for example, that you have deleted a command but the bot still responds to it (aka. Ghost Command), or you see a different code of your command in the web app and another in the mobile app.
 #### Ghost Command
 Not many people encounter this problem, but it's still worth mentioning.\
 This problem is related to database synchronization (between your application data and your bot's data in the database).\
@@ -707,25 +708,25 @@ This may be the obvious reason if it is. Executing large and complex code takes 
 When writing code, you should think about how to make it more compact and less complex, but in a way that makes your idea come to fruition.
 
 **The 2nd Reason**\
-Your bot was rate limited. This can happen because of excessive requests to Discord API, performed by BDFD functions (such as `$addEmoji` and others).\
+Your bot was rate limited. This can happen because of excessive requests to the Discord API, performed by BDFD functions (such as `$addEmoji` and others).\
 You should not stack such functions and try to perform them all at once.
 
 **The 3rd Reason**\
-The node your bot is running on is experiencing some slight problems (such as a rate limits). If you're sure this is the case, you can regenerate the bot's token and replace it with a new one. This will cause your bot to change its node.
+The node your bot is running on is experiencing some slight problems (such as a rate limit). If you're sure this is the case, you can regenerate the bot's token and replace it with a new one. This will cause your bot to change its node.
 
-### The Slash Commands Doesn't Appear
+### The Slash Commands Don't Appear
 **The 1st Reason**\
-Old version of the application. Make sure that you have a latest version of the application installed.\
+Old version of the application. Make sure that you have the latest version of the application installed.\
 New versions of the application have been improved and updated, and new features have been added. In addition, errors with the validity check of the slash commands have been fixed. You will be warned if you set up your slash command incorrectly, in which case the application will not allow you to save the slash command.
 
 **The 2nd Reason**\
 Slash commands are cached by discord, so it takes time before they appear in discord.
 
-They're also cached on the client side, if they were successfully cached in discord. If other users have a new slash command and you don't, restart the discord client.\
+They're also cached on the client side, if they were successfully cached in discord. If other users have a new slash command and you don't, restart your discord client.\
 Restarting will cause existing slash commands to be cleared and new ones will cache.
 
 **The 3rd Reason**\
-Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands of same type have the same name, but one is created using a third-party service, and the other through the BDFD, this can cause a conflict and the slash command will not appear.\
+Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands of same type have the same name, but one is created using a third-party service, and the other through the BDFD App, this can cause a conflict and the slash command will not appear.\
 You can solve this problem by Syncing slash commands with discord in the bot's settings. This removes third-party service slash commands and leaves only those that were created in our application.
     
 ![sync](https://user-images.githubusercontent.com/70456337/200124426-6dbe69aa-1711-4838-9569-689b5e30f48f.gif)
@@ -735,7 +736,7 @@ You can only get this error when trying to invite a bot to any server.\
 Most likely, you have accidentally or unknowingly enabled the `Require OAuth2 Code Grant` option in your bot's settings in the [developer portal](https://discord.com/developers/applications).\
 This is the reason why you get this error.
 
-This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. But BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than `bot` and `application.commands`.
+This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. But BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than `bot` and `applications.commands`.
 
 ---
 ## App Issues
@@ -744,7 +745,7 @@ This option is required only for applications with scopes such as identify, emai
 Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see "Loading ad...".
 
 **The 2nd Reason**\
-There're no more ads for you. If that's the reason, there's nothing we can do about it, it's the provider who provides the ads, not us. Try to see the ad later. If the case persists, go to [support server](https://discord.gg/botdesigner), create a ticket using the `!new` command and inform the staff about your problem by providing a screen recording longer than 30 seconds.
+There're no more ads for you. If that's the reason, there's nothing we can do about it, it's the provider who provides the ads, not us. Try to see the ad later. If the case persists, go to our [support server](https://discord.gg/botdesigner), create a ticket using the `!new` command and inform the staff about your problem by providing a screen recording longer than 30 seconds.
 
 **The 3nd Reason**\
 The advertising provider we use is blocked in your country or region. There is nothing we can do in this case.
@@ -757,12 +758,45 @@ The advertising provider we use is blocked in your country or region. There is n
 
 ### Ghost Functions From The Changelog
 In this section, the easiest way to explain everything is through dialogue: 
-- `Random Guy`: I was told by a friend that a new function, `$botOwnerID`, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:\
-    ![I5dLLUVB](https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png)
-- `Shiro`: This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.
-- `Shiro`: Usually, all nodes are updated by the end of the month. 
-- `Random Guy`: Allright, thank you! I will wait patiently!
-- `Shiro`: You're welcome, Random Guy.
+``` discord yaml
+- username: Random Guy
+  avatar: https://user-images.githubusercontent.com/111157596/257246455-2cf542ce-27ef-4584-a91d-c6251b2a5711.png
+  color: "#FFFC2B"
+  timestamp: Today at 9:50 PM
+  content: |
+    I was told by a friend that a new function, <code>$botOwnerID</code>, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:
+  attachments:
+  - url: https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png
+
+- user_id: 437154602626973697
+  username: Nakidamiru
+  color: "#57CEE8"
+  timestamp: Today at 9:53 PM
+  content: |
+    This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.
+
+- user_id: 437154602626973697
+  username: Nakidamiru
+  color: "#57CEE8"
+  timestamp: Today at 9:53 PM
+  content: |
+    Usually, all nodes are updated by the end of the month.
+
+- username: Random Guy
+  avatar: https://user-images.githubusercontent.com/111157596/257246455-2cf542ce-27ef-4584-a91d-c6251b2a5711.png
+  color: "#FFFC2B"
+  timestamp: Today at 9:54 PM
+  content: |
+    Allright, thank you! I will wait patiently!
+
+- user_id: 437154602626973697
+  username: Nakidamiru
+  color: "#57CEE8"
+  timestamp: Today at 9:54 PM
+  content: |
+    You're welcome, Random Guy.
+```
+
 
 ### The Translation Feature Doesn't Work
 **The 1st Reason**\
