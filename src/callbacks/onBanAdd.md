@@ -31,6 +31,10 @@ $onBanAdd[Channel ID]
      verified: true
      content: |
        <@User> was struck with the ban hammer!
+
+   - type: leave
+     content: |
+       <font color="white">User</font> left.
    ```
    
 \
