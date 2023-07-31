@@ -181,14 +181,14 @@
 $onlyPerms[manageroles;❌ You need the `MANAGE_ROLES` permission to use that!]
 $argsCheck[&gt;2;Please provide the needed arguments! The `colorHex` and `role` arguments are needed.]
 $colorRole[$noMentionMessage]
-✅ Changed the role color!
+✅ Changed the role color of &lt;@$mentionedRoles[1]&gt; to `$noMentionMessage`!
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky" timestamp="Today at 4:20 PM">
-        !example #E11F0E
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky" role-color="#EE7908">
+        !example <discord-mention type="role" color="#E11F0E">cool role</discord-mention> #E11F0E
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" bot timestamp="Today at 4:20 PM" author="Wiki Bot" verified>
-        ✅ Changed the role color!
+    <discord-message role-color="#748BD4" author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot verified>
+        ✅ Changed the role color of <discord-mention type="role" color="#E11F0E">cool role</discord-mention> to <code>#E11F0E</code>!
     </discord-message>
 </discord-messages>
 ![example](https://user-images.githubusercontent.com/111157596/257056832-3040aa89-91ea-428e-b362-3ed075cf620e.png)
