@@ -10,7 +10,7 @@ In this section, you'll learn how to use the text splitting.
 - [`$getTextSplitLength`](../../../../bdscript/getTextSplitLength.md)
 - [`$getTextSplitIndex[]`](../../../../bdscript/getTextSplitIndex.md)
 - [`$joinSplitText[]`](../../../../bdscript/joinSplitText.md)
-- [`$removeSplitTextElement`](../../../../bdscript/removeSplitTextElement.md)
+- [`$removeSplitTextElement[]`](../../../../bdscript/removeSplitTextElement.md)
 - [`$editSplitText[]`](../../../../bdscript/editSplitText.md)
 
 # $textSplit
