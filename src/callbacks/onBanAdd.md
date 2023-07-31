@@ -25,12 +25,12 @@ $onBanAdd[Channel ID]
 3. Now you have a ban message! ✨
    ``` discord yaml
    - user_id: 566613317972394004
-      username: Wiki Bot
-      color: "#748BD4"
-      bot: true
-      verified: true
-      content: |
-        <@User> was struck with the ban hammer!
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       <@User> was struck with the ban hammer!
    ```
    
 
