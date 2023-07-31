@@ -17,6 +17,7 @@ $channelType[Channel ID]
 $nomention
 $channelType[$channelID]
 ```
+
 **Text Channel**
 
 ``` discord yaml
@@ -35,7 +36,7 @@ $channelType[$channelID]
     text
 ```
 
-
+\
 **DM Channel**
 
 ``` discord yaml
