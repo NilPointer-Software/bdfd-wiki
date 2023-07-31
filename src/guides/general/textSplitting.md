@@ -45,7 +45,7 @@ $textSplit[hello-world-!;-]
   content: |
     <discord-quote>world</discord-quote>
 ```
-
+\
 # $splitText
 Each separated text has a number, i.e. an index. `$splitText` is a function that returns one of the elements of the separated text by an index or the sign `<` - the very first element, or `>` - the very last element.
 
@@ -84,8 +84,7 @@ $textSplit[hello world !; ]
     world
     !</discord-quote>
 ```
-
-
+\
 # $getTextSplitLength
 Returns the number of splits.
 
@@ -116,8 +115,7 @@ $textSplit[hello%world%!;%]
   content: |
     <discord-quote>3</discord-quote>
 ```
-
-
+\
 # $getTextSplitIndex
 Retrieves index from the provided value. Returns `-1` if it couldn't find the value.
 
@@ -164,7 +162,7 @@ $textSplit[hello_world_!;_]
   content: |
     <discord-quote>-1</discord-quote>
 ```
-
+\
 # $joinSplitText
 This function returns the current elements of the separated text with the specified (sometimes new) separator.
 
@@ -201,7 +199,7 @@ $textSplit[hello#world#!;#]
     world
     !</discord-quote>
 ```
-
+\
 # $removeSplitTextElement
 This function removes an element from the separated text by the specified index.
 
@@ -236,8 +234,7 @@ $removeSplitTextElement[3]
   content: |
     <discord-quote>hello-world</discord-quote>
 ```
-
-
+\
 # $editSplitText
 This function replaces the element at the specified index with a new element instead of the previous one.
 
@@ -273,7 +270,7 @@ $editSplitText[2;bdfd]
   content: |
     <discord-quote>hello-bdfd-!</discord-quote>
 ```
-
+\
 # Simple Code
 ```
 $nomention
