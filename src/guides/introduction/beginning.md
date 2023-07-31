@@ -23,7 +23,7 @@ In this guide, you will learn how to create your own bot using BDFD.
 - Open the BDFD app and select your bot.
 - Click on the *"Invite bot to server"* button.
 - Press the *"Edit invite link permissions"* button and choose the permissions that the bot will have when joining a server.
-- Then, click on *"Add your bot to your server"* and selected the server.
+- Then, click on *"Add your bot to your server"* and select the server.
 - Click on *the "Continue"* button and your bot will be added to the selected server.
 
 # Step 3: First Code
@@ -45,6 +45,7 @@ Pong!
 ### Method 1 - 30 Minutes
 - Click on the *"Dashboard"* tab after selecting your bot and press on the *"+ Add free hosting time"* button.
 - Enter the indicated numbers and click *"Confirm"*.
+> Note: This method only works when your bot is offline.
 ### Method 2 - 140 Minutes
 - Press on *"Dashboard"* tab after selecting your bot and click on *"+ Watch ad for 140 minutes of free hosting time"*.
 - After watching the ad, your bot will receive 140 minutes of hosting time.

@@ -19,11 +19,32 @@ $addReactions[Emojis;...]
 ## Example
 ```
 $nomention
-Yes or no?
+Yes or No?
 $addReactions[✅;:x:]
 ```
-![example](https://user-images.githubusercontent.com/113303649/209927736-3090310a-ddbb-4712-a4c9-83969f7fc3b5.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !reactions
 
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Yes or No?
+  reactions:
+    - emoji: https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Twemoji12_2705.svg/640px-Twemoji12_2705.svg.png
+      name: ":white_check_mark:"
+      count: 1
+    - emoji: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Twemoji2_274c.svg/640px-Twemoji2_274c.svg.png
+      name: ":x:"
+      count: 1
+```
+\
 ### How to get emoji ID?
 
 > This method requires [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to be enabled! 

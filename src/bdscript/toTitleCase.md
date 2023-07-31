@@ -14,4 +14,19 @@ $toTitleCase[Text]
 $nomention
 $toTitleCase[$message]
 ```
-![Screenshot_20221026_151232](https://user-images.githubusercontent.com/95774950/197995207-d7e45a80-88a8-4daa-918e-810efd84ce45.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example bot designer for discord
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Bot Designer For Discord
+```

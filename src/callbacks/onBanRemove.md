@@ -1,19 +1,19 @@
 # $onBanRemove
 *Triggered when a user gets unbanned from the server.*
 
-`$onBanRemove[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user is unbanned from the server. 
+`$onBanRemove[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user is unbanned from the server. 
 
 ## Syntax
 ```
-$onBanRemove[channelID]
+$onBanRemove[Channel ID]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
 
 ## Example
-1. Create a command with `$onBanRemove[channelID]` as the trigger.
-    > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
+1. Create a command with `$onBanRemove[Channel ID]` as the trigger.
+    > 🧙‍♂️ You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
 
     ![example1](https://user-images.githubusercontent.com/69215413/129492147-3d51dd5c-9628-43f7-a175-faed03442501.png)
 
@@ -23,8 +23,17 @@ $onBanRemove[channelID]
     ![example2](https://user-images.githubusercontent.com/69215413/129492022-8acd4877-638c-4855-8970-13dab37b032e.png)
 
 3. Now you have an unban message! ✨\
-![example3](https://user-images.githubusercontent.com/69215413/129492076-8f6ec738-096d-4abf-af8b-678a50ad4c5b.png)
+   ``` discord yaml
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       Carl-bot (235148962103951360) was unbanned!
+   ```
 
+\
 ## Advanced
 ### Per-Server $onBanRemove
 Both free and premium users can use `$onBanRemove[]`, and all users can put `$getServerVar[]` within `$onBanRemove[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks.\
@@ -44,4 +53,4 @@ If you own a public bot and want to make it so multiple different servers can us
 
     > 📝 Servers will need to setup the channel they want the unban message to send to *(by running a command with the code above)*.
 
-3. Now replace `$onBanRemove[channelID]` in your command trigger, with `$onBanRemove[$getServerVar[logs]]` and you're all set!
+3. Now replace `$onBanRemove[Channel ID]` in your command trigger, with `$onBanRemove[$getServerVar[logs]]` and you're all set!

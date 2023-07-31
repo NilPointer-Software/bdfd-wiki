@@ -15,4 +15,20 @@ $author[Text;(Index)]
 $nomention
 $author[This is the author text!]
 ```
-![example](https://user-images.githubusercontent.com/113303649/209974279-9aec899d-bd01-4238-9e51-916129f87f92.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !author
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: " "
+  embed:
+    author:
+      text: This is the author text!
+```

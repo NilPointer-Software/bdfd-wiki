@@ -1,21 +1,21 @@
 # $onLeave
 *Triggered when a user leaves the server.*
 
-`$onLeave[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server.
+`$onLeave[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server.
 
 > 📌 You can only have **1** single `$onLeave[]` per bot.
 
 ## Syntax
 ```
-$onLeave[channelID]
+$onLeave[Channel ID]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
 
 ## Example
-1. Create a command with the trigger `$onLeave[channelID]`.
-    > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID [*(See more here...)*](#advanced)!
+1. Create a command with the trigger `$onLeave[Channel ID]`.
+    > 🧙‍♂️ You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID [*(See more here...)*](#advanced)!
     
     ![example1](https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png)
 
@@ -24,9 +24,22 @@ $onLeave[channelID]
 
      ![example2](https://user-images.githubusercontent.com/69215413/129492763-1261a971-4d4c-4f33-9e78-757595484672.png)
 
-3. Now, you have a leave message! ✨\
-![example3](https://user-images.githubusercontent.com/69215413/129492739-3019099d-e2d9-4c94-97b8-65190760cbf4.png)
+3. Now, you have a leave message! ✨
+   ``` discord yaml
+   - type: leave
+     content: |
+       Goodbye <font color="white">User</font>.
 
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       <@User> just left the server :c
+   ```
+   
+\
 *Not Working? Check out the [Troubleshooting](#troubleshooting) section.*
 
 ## Troubleshooting

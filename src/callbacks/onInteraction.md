@@ -23,8 +23,91 @@ $if[$customID==onlyauthor-$authorID]
   $sendMessage[Hello $username!]
 $endif
 ```
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
 
-![example](https://user-images.githubusercontent.com/113303649/223423803-2ffadb9e-61b0-432c-bc88-c6850ec564f5.png)\
-![example](https://user-images.githubusercontent.com/113303649/223426829-bbeca4d1-2e4c-44ef-a1ae-6458858d0ce0.png)
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Click
+  components:
+  -
+    - type: primary
+      label: Interaction ID&colon; interaction
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Hello!
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Click
+  components:
+  -
+    - type: primary
+      label: Interaction ID&colon; onlyauthor-$authorID
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Hello Nicky!
+```
+``` discord yaml
+- user_id: 154148273307910144
+  username: MineBartekSA
+  color: "#F1BDEE"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Click
+  components:
+  -
+    - type: primary
+      label: Interaction ID&colon; onlyauthor-$authorID
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Hello MineBartekSA!
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    I can't use the button
+```
 
 > How [`$if[]`](../guides/general/ifStatements.md) or [`$customID[]`](../bdscript/customID.md) works?

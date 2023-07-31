@@ -14,8 +14,38 @@ $randomRoleID[(Guild ID)]
 $nomention
 Random Role: $roleName[$randomRoleID[]]
 ```
-![example](https://user-images.githubusercontent.com/113303649/212498465-46ec2a48-0890-41a0-a57a-283a183d1144.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random Role: Owner
+```
 
 > It can return the `@everyone` role ID!
->
-> ![example](https://user-images.githubusercontent.com/113303649/212498371-1792ea9b-55f7-494c-8e09-24a20192e8cb.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random Role: <@everyone>
+  highlight: true
+```

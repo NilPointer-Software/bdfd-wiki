@@ -17,6 +17,34 @@ $awaitedCommandError[Name]
 $nomention
 Invalid number!
 ```
-![example](https://user-images.githubusercontent.com/113303649/212291974-4efa0531-d896-4aa3-ac1a-b8fa7d6794d0.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !number
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Provide a number!
+
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    abc
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Invalid number!
+```
 
 > For more info, see the [Awaited Commands Guide](../guides/general/awaitedCommands.md).

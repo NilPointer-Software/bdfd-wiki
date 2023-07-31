@@ -1,19 +1,33 @@
 # $checkUserPerms
-Returns 'true' if a user has all of the provided permissions, otherwise 'false' is returned.
+Returns "true" if a user has all of the provided permissions, otherwise "false" is returned.
 
 ## Syntax
 ```
-$checkUserPerms[user ID;permissions]
+$checkUserPerms[User ID;Permissions]
 ```
 
 ### Parameters
-- `user ID` `(Type: Snowflake || Flag: Required)`: The user that the bot checks the permissions for.
-- `permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) that the bot checks for. Separate permissions using `;`.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user that the bot checks the permissions for.
+- `Permissions` `(Type: Permission || Flag: Required)`: The [permissions](../resources/permissions.md) that the bot checks for. Separate permissions using `;`.
 
 ## Example
 ```
 $nomention
-$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are administrator. F in the chat!] 
-You aren't a admin!
+$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are an administrator.] 
+You aren't an admin!
 ```
-![example](https://user-images.githubusercontent.com/69215413/122832238-10594280-d2b9-11eb-9f79-a19f2f328239.png)
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    You can't use this command, because you are an administrator.
+```
