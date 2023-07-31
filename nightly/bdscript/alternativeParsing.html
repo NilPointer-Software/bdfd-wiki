@@ -199,17 +199,17 @@ $description[&quot;helloworld&quot;]
     <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky">
         hello
     </discord-message>
-    <discord-message verified role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot author="Wiki Bot">
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" author="Wiki Bot" role-color="#748BD4" verified>
 <pre><code>    &lt;discord-embed slot=&quot;embeds&quot;&gt;
         &lt;discord-embed-description slot=&quot;description&quot;&gt;
             &quot;hello&quot;
         &lt;/discord-embed-description&gt;
     &lt;/discord-embed&gt;
 &lt;/discord-message&gt;
-&lt;discord-message author=&quot;Nicky&quot; avatar=&quot;https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png&quot; role-color=&quot;#EE7908&quot;&gt;
+&lt;discord-message role-color=&quot;#EE7908&quot; author=&quot;Nicky&quot; avatar=&quot;https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png&quot;&gt;
     helloworld
 &lt;/discord-message&gt;
-&lt;discord-message author=&quot;Wiki Bot&quot; role-color=&quot;#748BD4&quot; avatar=&quot;https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png&quot; verified bot&gt;
+&lt;discord-message bot author=&quot;Wiki Bot&quot; verified role-color=&quot;#748BD4&quot; avatar=&quot;https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png&quot;&gt;
      
     &lt;discord-embed slot=&quot;embeds&quot;&gt;
         &lt;discord-embed-description slot=&quot;description&quot;&gt;
@@ -219,38 +219,38 @@ $description[&quot;helloworld&quot;]
 &lt;/discord-message&gt;
 </code></pre>
 </discord-messages>
-</li>
-</ol>
 <h3 id="without-alternativeparsing"><a class="header" href="#without-alternativeparsing">Without <code>$alternativeParsing</code></a></h3>
 <discord-messages>
-       <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky">
-           hello
-       </discord-message>
-       <discord-message role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot author="Wiki Bot" verified>
-<pre><code>       &lt;discord-embed slot=&quot;embeds&quot;&gt;
-           &lt;discord-embed-description slot=&quot;description&quot;&gt;
-               &quot;hello&quot;
-           &lt;/discord-embed-description&gt;
-       &lt;/discord-embed&gt;
-   &lt;/discord-message&gt;
-   &lt;discord-message role-color=&quot;#EE7908&quot; author=&quot;Nicky&quot; avatar=&quot;https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png&quot;&gt;
-       helloworld
-   &lt;/discord-message&gt;
-   &lt;discord-message author=&quot;Wiki Bot&quot; role-color=&quot;#748BD4&quot; verified avatar=&quot;https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png&quot; bot&gt;
-        
-       &lt;discord-embed slot=&quot;embeds&quot;&gt;
-           &lt;discord-embed-description slot=&quot;description&quot;&gt;
-               &quot;helloworld&quot;
-           &lt;/discord-embed-description&gt;
-       &lt;/discord-embed&gt;
-       &lt;discord-embed slot=&quot;embeds&quot;&gt;
-           &lt;discord-embed-description slot=&quot;description&quot;&gt;
-               &quot;hello&quot;
-           &lt;/discord-embed-description&gt;
-       &lt;/discord-embed&gt;
-   &lt;/discord-message&gt;
+    <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        hello
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" author="Wiki Bot" role-color="#748BD4" verified bot>
+<pre><code>    &lt;discord-embed slot=&quot;embeds&quot;&gt;
+        &lt;discord-embed-description slot=&quot;description&quot;&gt;
+            &quot;hello&quot;
+        &lt;/discord-embed-description&gt;
+    &lt;/discord-embed&gt;
+&lt;/discord-message&gt;
+&lt;discord-message author=&quot;Nicky&quot; avatar=&quot;https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png&quot; role-color=&quot;#EE7908&quot;&gt;
+    helloworld
+&lt;/discord-message&gt;
+&lt;discord-message avatar=&quot;https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png&quot; author=&quot;Wiki Bot&quot; role-color=&quot;#748BD4&quot; verified bot&gt;
+     
+    &lt;discord-embed slot=&quot;embeds&quot;&gt;
+        &lt;discord-embed-description slot=&quot;description&quot;&gt;
+            &quot;helloworld&quot;
+        &lt;/discord-embed-description&gt;
+    &lt;/discord-embed&gt;
+    &lt;discord-embed slot=&quot;embeds&quot;&gt;
+        &lt;discord-embed-description slot=&quot;description&quot;&gt;
+            &quot;hello&quot;
+        &lt;/discord-embed-description&gt;
+    &lt;/discord-embed&gt;
+&lt;/discord-message&gt;
 </code></pre>
-</discord-messages>
+</discord-messages></li>
+</ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
