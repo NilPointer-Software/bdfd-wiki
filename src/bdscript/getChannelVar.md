@@ -29,7 +29,7 @@ Command used `$getChannelVar[Uses]` times in this channel
   bot: true
   verified: true
   content: |
-    Command used `1` times in this channel
+    Command used <discord-inline-code>1</discord-inline-code> times in this channel
 ```
 
 > For more info, see the [Variables Guide](../guides/introduction/variables.md).
