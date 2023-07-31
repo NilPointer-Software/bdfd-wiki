@@ -29,7 +29,7 @@ $message
   content: |
     <@RainbowKey>
 ```
-
+\
 ### Without `$allowMention`
 ```discord yaml
 - user_id: 803569638084313098
