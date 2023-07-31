@@ -1,19 +1,19 @@
 # $onBanAdd
 *Triggered when a user gets banned from the server.*
 
-`$onBanAdd[channelID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user is banned from the server. 
+`$onBanAdd[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user is banned from the server. 
 
 ## Syntax
 ```
-$onBanAdd[channelID]
+$onBanAdd[Channel ID]
 ```
 
 ### Parameters
-- `channelID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The ID of the channel where the message should be sent to.
 
 ## Example
-1. Create a command with `$onBanAdd[channelID]` as the trigger.
-    > 🧙‍♂️ You must replace "channelID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
+1. Create a command with `$onBanAdd[Channel ID]` as the trigger.
+    > 🧙‍♂️ You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
 
     ![example1](https://user-images.githubusercontent.com/69215413/129491257-7fa6c9c4-e4b4-47c1-8df0-3f580ffa79bf.png)
 
@@ -22,8 +22,17 @@ $onBanAdd[channelID]
 
     ![example2](https://user-images.githubusercontent.com/69215413/129491086-e6a96af6-edeb-4f2b-b226-0e49ed59f544.png)
 
-3. Now you have a ban message! ✨\
-![example3](https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png)
+3. Now you have a ban message! ✨
+   ``` discord yaml
+   - user_id: 566613317972394004
+      username: Wiki Bot
+      color: "#748BD4"
+      bot: true
+      verified: true
+      content: |
+        <@User> was struck with the ban hammer!
+   ```
+   
 
 ## Advanced
 ### Per-Server $onBanAdd
@@ -44,4 +53,4 @@ If you own a public bot and want to make it so multiple different servers can us
 
     > 📝 Servers will need to setup the channel they want the ban message to send to *(by running a command with the code above)*.
 
-3. Now replace `$onBanAdd[channelID]` in your command trigger, with `$onBanAdd[$getServerVar[logs]]` and you're all set!
+3. Now replace `$onBanAdd[Channel ID]` in your command trigger, with `$onBanAdd[$getServerVar[logs]]` and you're all set!
