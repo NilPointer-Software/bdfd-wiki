@@ -33,7 +33,7 @@ $onBanAdd[Channel ID]
        <@User> was struck with the ban hammer!
    ```
    
-
+\
 ## Advanced
 ### Per-Server $onBanAdd
 Both free and premium users can use `$onBanAdd[]`, and all users can put `$getServerVar[]` within `$onBanAdd[]`. However, non-premium users can not use `$getServerVar[]` outside of callbacks.\
