@@ -34,6 +34,5 @@ $colorRole[$noMentionMessage]
   content: |
     ✅ Changed the role color of <@cool role> to <code>#E11F0E</code>!
 ```
-
-
+\
 ![example](https://user-images.githubusercontent.com/111157596/257056832-3040aa89-91ea-428e-b362-3ed075cf620e.png)
