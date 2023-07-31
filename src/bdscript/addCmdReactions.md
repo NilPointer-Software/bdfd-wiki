@@ -33,7 +33,7 @@ $addCmdReactions[$message]
       count: 1
       reacted: false
 ```
-
+\
 ### How to get emoji ID?
 
 > This method requires [Developer Mode](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to be enabled! 
