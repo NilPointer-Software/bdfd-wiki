@@ -168,22 +168,28 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="checkuserperms"><a class="header" href="#checkuserperms">$checkUserPerms</a></h1>
-<p>Returns 'true' if a user has all of the provided permissions, otherwise 'false' is returned.</p>
+<p>Returns &quot;true&quot; if a user has all of the provided permissions, otherwise &quot;false&quot; is returned.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$checkUserPerms[user ID;permissions]
+<pre><code>$checkUserPerms[User ID;Permissions]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user that the bot checks the permissions for.</li>
-<li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="../resources/permissions.html">permissions</a> that the bot checks for. Separate permissions using <code>;</code>.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user that the bot checks the permissions for.</li>
+<li><code>Permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="../resources/permissions.html">permissions</a> that the bot checks for. Separate permissions using <code>;</code>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are administrator. F in the chat!] 
-You aren't a admin!
+$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are an administrator.] 
+You aren't an admin!
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/122832238-10594280-d2b9-11eb-9f79-a19f2f328239.png" alt="example" /></p>
-
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908" author="Nicky">
+        !example
+    </discord-message>
+    <discord-message role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot author="Wiki Bot" verified>
+        You can't use this command, because you are an administrator.
+    </discord-message>
+</discord-messages>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

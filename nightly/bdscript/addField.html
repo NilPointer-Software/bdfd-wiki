@@ -188,19 +188,58 @@
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h3>
 <pre><code>$nomention
-$addField[This is the field name! #1;This is the field value! #1]
-$addField[This is the field name! #2;This is the field value! #2]
-$addField[This is the field name! #3;This is the field value! #3]
+$addField[The field name 1!;The field value 1!]
+$addField[The field name 2!;The field value 2!]
+$addField[The field name 3!;The field value 3!]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/209849131-47574fa5-ba65-4552-b30e-c71f7af980a9.png" alt="example" /></p>
-<h3 id="with-inline-fields"><a class="header" href="#with-inline-fields">With inline fields</a></h3>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908" author="Nicky">
+        !example
+    </discord-message>
+    <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" verified role-color="#748BD4" bot>
+<pre><code>    &lt;discord-embed slot=&quot;embeds&quot;&gt;
+        &lt;discord-embed-fields slot=&quot;fields&quot;&gt;
+            &lt;discord-embed-field field-title=&quot;The field name 1!&quot;&gt;
+                The field value 1!
+            &lt;/discord-embed-field&gt;
+            &lt;discord-embed-field field-title=&quot;The field name 2!&quot;&gt;
+                The field value 2!
+            &lt;/discord-embed-field&gt;
+            &lt;discord-embed-field field-title=&quot;The field name 3!&quot;&gt;
+                The field value 3!
+            &lt;/discord-embed-field&gt;
+        &lt;/discord-embed-fields&gt;
+    &lt;/discord-embed&gt;
+&lt;/discord-message&gt;
+</code></pre>
+</discord-messages>
+### With inline fields
 <pre><code>$nomention
-$addField[This is the field name! #1;This is the field value! #1;yes]
-$addField[This is the field name! #2;This is the field value! #2;yes]
-$addField[This is the field name! #3;This is the field value! #3;yes]
+$addField[The field name 1!;The field value 1!;yes]
+$addField[The field name 2!;The field value 2!;yes]
+$addField[The field name 3!;The field value 3!;yes]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/209849351-0fb6875c-2bfa-4f14-9e01-84e6d31b0bee.png" alt="example" /></p>
-
+<discord-messages>
+    <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        !example
+    </discord-message>
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" verified role-color="#748BD4" author="Wiki Bot">
+<pre><code>    &lt;discord-embed slot=&quot;embeds&quot;&gt;
+        &lt;discord-embed-fields slot=&quot;fields&quot;&gt;
+            &lt;discord-embed-field field-title=&quot;The field name 1!&quot; inline-index=&quot;1&quot; inline&gt;
+                The field value 1!
+            &lt;/discord-embed-field&gt;
+            &lt;discord-embed-field field-title=&quot;The field name 2!&quot; inline inline-index=&quot;2&quot;&gt;
+                The field value 2!
+            &lt;/discord-embed-field&gt;
+            &lt;discord-embed-field field-title=&quot;The field name 3!&quot; inline inline-index=&quot;3&quot;&gt;
+                The field value 3!
+            &lt;/discord-embed-field&gt;
+        &lt;/discord-embed-fields&gt;
+    &lt;/discord-embed&gt;
+&lt;/discord-message&gt;
+</code></pre>
+</discord-messages>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
