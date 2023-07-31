@@ -184,7 +184,7 @@
 <li><strong><a href="#gives-an-error-when-trying-to-purge-messages">Gives an Error When Trying To Purge Messages</a></strong></li>
 </ul>
 </li>
-<li><strong><a href="#addreactions-and-addcmdreactions">$addReactions and $addCmdReactions</a></strong>
+<li><strong><a href="#addreactions-addcmdreactions-and-addmessagereactions">$addReactions, $addCmdReactions and $addMessageReactions</a></strong>
 <ul>
 <li><strong><a href="#the-bot-fails-to-add-reactions">The Bot Fails To Add Reactions</a></strong></li>
 </ul>
@@ -227,7 +227,7 @@
 </ul>
 </li>
 <li><strong><a href="#the-bot-takes-a-long-time-to-respond">The Bot Takes A Long Time To Respond</a></strong></li>
-<li><strong><a href="#the-slash-commands-doesnt-appear">The Slash Commands Doesn't Appear</a></strong></li>
+<li><strong><a href="#the-slash-commands-dont-appear">The Slash Commands Don't Appear</a></strong></li>
 <li><strong><a href="#integration-requires-code-grant">Integration Requires Code Grant</a></strong></li>
 </ul>
 </li>
@@ -337,7 +337,7 @@ Make sure that one of the roles that the bot has, has this permission enabled.</
 You are trying to purge messages that have been around for more than two weeks.<br />
 BDFD uses a bulk request to purge messages, and it can't process messages that are more than two weeks old.</p>
 <hr />
-<h2 id="addreactions-and-addcmdreactions"><a class="header" href="#addreactions-and-addcmdreactions">$addReactions and $addCmdReactions</a></h2>
+<h2 id="addreactions-addcmdreactions-and-addmessagereactions"><a class="header" href="#addreactions-addcmdreactions-and-addmessagereactions">$addReactions, $addCmdReactions and $addMessageReactions</a></h2>
 <h3 id="the-bot-fails-to-add-reactions"><a class="header" href="#the-bot-fails-to-add-reactions">The Bot Fails To Add Reactions</a></h3>
 <p><strong>The 1st Reason</strong><br />
 The user has blocked the bot, so the bot can't react to the user's messages. This works exactly the same if the user has blocked another user.</p>
@@ -346,7 +346,8 @@ You're specifying the emoji in the function argument incorrectly.</p>
 <ul>
 <li>
 <p>Default emojis.</p>
-<pre><code class="language-diff">- $addCmdReactions[:joy:]
+<pre><code class="language-diff">- $addCmdReactions[joy]
++ $addCmdReactions[:joy:]
 + $addCmdReactions[😂]
 </code></pre>
 </li>
@@ -815,7 +816,7 @@ If the future balance in case of loss will be negative, it will be set to 0.</p>
 If you want the same balance on all servers, you should use <a href="../bdscript/setVar.html"><code>$setVar</code></a> and <a href="../bdscript/getVar.html"><code>$getVar</code></a> (with <code>userID</code> arguments). These functions are based on <a href="../guides/introduction/variables.html#globalglobal-user-variables">global user variables</a>.</p>
 <h4 id="the-displayed-balance-is-different-for-different-commands"><a class="header" href="#the-displayed-balance-is-different-for-different-commands">The Displayed Balance Is Different For Different Commands</a></h4>
 <p>Most often this is because you've mixed up the variable functions and you're using the wrong variable type.<br />
-For example, if you use <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a> and <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> in the Roulette command and <a href="../bdscript/getVar.html"><code>$getVar</code></a> in the Balance command, this will show different values. The solution to this is to replace <a href="../bdscript/getVar.html"><code>$getVar</code></a> with <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> in the Balance command, or vice versa, replace <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a> and <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> with <a href="../bdscript/setVar.html"><code>$setVar</code></a> and <a href="../bdscript/getVar.html"><code>$getVar</code></a> accordingly  in the Roulette command.<br />
+For example, if you use <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a> and <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> in the Roulette command and <a href="../bdscript/getVar.html"><code>$getVar</code></a> in the Balance command, this will show different values. The solution to this is to replace <a href="../bdscript/getVar.html"><code>$getVar</code></a> with <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> in the Balance command, or vice versa, replace <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a> and <a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> with <a href="../bdscript/setVar.html"><code>$setVar</code></a> and <a href="../bdscript/getVar.html"><code>$getVar</code></a> accordingly in the Roulette command.<br />
 <strong>Note:</strong> don't forget that <a href="../guides/introduction/variables.html#globalglobal-user-variables">global user variables</a> require a <code>userID</code> argument.</p>
 <hr />
 <h2 id="leaderboards"><a class="header" href="#leaderboards">Leaderboards</a></h2>
@@ -824,7 +825,7 @@ For example, if you use <a href="../bdscript/setUserVar.html"><code>$setUserVar<
 You've chosen the wrong leaderboard function.</p>
 <ul>
 <li>If you're using the <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a>/<a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> functions, you should use the <a href="../bdscript/userLeaderboard.html"><code>$userLeaderboard</code></a> function.</li>
-<li>If in your're using the <a href="../bdscript/setVar.html"><code>$setVar</code></a>/<a href="../bdscript/getVar.html"><code>$getVar</code></a> functions, you should use the <a href="../bdscript/globalUserLeaderboard.html"><code>$globalUserLeaderboard</code></a> function.</li>
+<li>If you're using the <a href="../bdscript/setVar.html"><code>$setVar</code></a>/<a href="../bdscript/getVar.html"><code>$getVar</code></a> functions, you should use the <a href="../bdscript/globalUserLeaderboard.html"><code>$globalUserLeaderboard</code></a> function.</li>
 <li>If you're using the <a href="../bdscript/setServerVar.html"><code>$setServerVar</code></a>/<a href="../bdscript/getServerVar.html"><code>$getServerVar</code></a> functions, you should use the <a href="../bdscript/serverLeaderboard.html"><code>$serverLeaderboard</code></a> function.</li>
 </ul>
 <p><strong>The 2nd Reason</strong><br />
@@ -832,7 +833,7 @@ You've chosen the wrong leaderboard function.</p>
 You specified the wrong variable type.</p>
 <ul>
 <li>If you're using the <a href="../bdscript/setUserVar.html"><code>$setUserVar</code></a>/<a href="../bdscript/getUserVar.html"><code>$getUserVar</code></a> functions, you should specify the <code>user</code> as type.</li>
-<li>If in your're using the <a href="../bdscript/setVar.html"><code>$setVar</code></a>/<a href="../bdscript/getVar.html"><code>$getVar</code></a> functions, you should specify the <code>globalUser</code> as type.</li>
+<li>If you're using the <a href="../bdscript/setVar.html"><code>$setVar</code></a>/<a href="../bdscript/getVar.html"><code>$getVar</code></a> functions, you should specify the <code>globalUser</code> as type.</li>
 <li>If you're using the <a href="../bdscript/setServerVar.html"><code>$setServerVar</code></a>/<a href="../bdscript/getServerVar.html"><code>$getServerVar</code></a> functions, you should specify the <code>server</code> as type.</li>
 </ul>
 <p><strong>The 3rd Reason</strong><br />
@@ -867,7 +868,7 @@ In order for your bot to respond correctly to a command, it must have permission
 <h3 id="the-bot-goes-offline-from-time-to-time"><a class="header" href="#the-bot-goes-offline-from-time-to-time">The Bot Goes Offline From Time To Time</a></h3>
 <p>This is due to the fact that nodes are restarted from time to time to maintain the stable operation of all the bots that also work on this node.</p>
 <h3 id="desynchronization-of-commands"><a class="header" href="#desynchronization-of-commands">Desynchronization of Commands</a></h3>
-<p>Desynchronization of commands means, for example, that you have deleted a command but the bot still responds to it (aka. Ghost Command), or you see different code of your command in the web app and another in the mobile app.</p>
+<p>Desynchronization of commands means, for example, that you have deleted a command but the bot still responds to it (aka. Ghost Command), or you see a different code of your command in the web app and another in the mobile app.</p>
 <h4 id="ghost-command"><a class="header" href="#ghost-command">Ghost Command</a></h4>
 <p>Not many people encounter this problem, but it's still worth mentioning.<br />
 This problem is related to database synchronization (between your application data and your bot's data in the database).<br />
@@ -887,34 +888,34 @@ Your code is too long and/or complicated.<br />
 This may be the obvious reason if it is. Executing large and complex code takes more resources.<br />
 When writing code, you should think about how to make it more compact and less complex, but in a way that makes your idea come to fruition.</p>
 <p><strong>The 2nd Reason</strong><br />
-Your bot was rate limited. This can happen because of excessive requests to Discord API, performed by BDFD functions (such as <code>$addEmoji</code> and others).<br />
+Your bot was rate limited. This can happen because of excessive requests to the Discord API, performed by BDFD functions (such as <code>$addEmoji</code> and others).<br />
 You should not stack such functions and try to perform them all at once.</p>
 <p><strong>The 3rd Reason</strong><br />
-The node your bot is running on is experiencing some slight problems (such as a rate limits). If you're sure this is the case, you can regenerate the bot's token and replace it with a new one. This will cause your bot to change its node.</p>
-<h3 id="the-slash-commands-doesnt-appear"><a class="header" href="#the-slash-commands-doesnt-appear">The Slash Commands Doesn't Appear</a></h3>
+The node your bot is running on is experiencing some slight problems (such as a rate limit). If you're sure this is the case, you can regenerate the bot's token and replace it with a new one. This will cause your bot to change its node.</p>
+<h3 id="the-slash-commands-dont-appear"><a class="header" href="#the-slash-commands-dont-appear">The Slash Commands Don't Appear</a></h3>
 <p><strong>The 1st Reason</strong><br />
-Old version of the application. Make sure that you have a latest version of the application installed.<br />
+Old version of the application. Make sure that you have the latest version of the application installed.<br />
 New versions of the application have been improved and updated, and new features have been added. In addition, errors with the validity check of the slash commands have been fixed. You will be warned if you set up your slash command incorrectly, in which case the application will not allow you to save the slash command.</p>
 <p><strong>The 2nd Reason</strong><br />
 Slash commands are cached by discord, so it takes time before they appear in discord.</p>
-<p>They're also cached on the client side, if they were successfully cached in discord. If other users have a new slash command and you don't, restart the discord client.<br />
+<p>They're also cached on the client side, if they were successfully cached in discord. If other users have a new slash command and you don't, restart your discord client.<br />
 Restarting will cause existing slash commands to be cleared and new ones will cache.</p>
 <p><strong>The 3rd Reason</strong><br />
-Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands of same type have the same name, but one is created using a third-party service, and the other through the BDFD, this can cause a conflict and the slash command will not appear.<br />
+Conflict of slash commands due to other services that you're no longer using. For example, if two slash commands of same type have the same name, but one is created using a third-party service, and the other through the BDFD App, this can cause a conflict and the slash command will not appear.<br />
 You can solve this problem by Syncing slash commands with discord in the bot's settings. This removes third-party service slash commands and leaves only those that were created in our application.</p>
 <p><img src="https://user-images.githubusercontent.com/70456337/200124426-6dbe69aa-1711-4838-9569-689b5e30f48f.gif" alt="sync" /></p>
 <h3 id="integration-requires-code-grant"><a class="header" href="#integration-requires-code-grant">Integration Requires Code Grant</a></h3>
 <p>You can only get this error when trying to invite a bot to any server.<br />
 Most likely, you have accidentally or unknowingly enabled the <code>Require OAuth2 Code Grant</code> option in your bot's settings in the <a href="https://discord.com/developers/applications">developer portal</a>.<br />
 This is the reason why you get this error.</p>
-<p>This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. But BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than <code>bot</code> and <code>application.commands</code>.</p>
+<p>This option is required only for applications with scopes such as identify, email, and others to work with the user account in Discord. But BDFD doesn't have such support, so you should not enable this option or choose any other scopes other than <code>bot</code> and <code>applications.commands</code>.</p>
 <hr />
 <h2 id="app-issues"><a class="header" href="#app-issues">App Issues</a></h2>
 <h3 id="the-ad-button-doesnt-work"><a class="header" href="#the-ad-button-doesnt-work">The Ad Button Doesn't Work</a></h3>
 <p><strong>The 1st Reason</strong><br />
 Unstable Internet connection. Make sure your Internet connection is stable and not too slow, because you have to load the ad first to watch it. This is why you see &quot;Loading ad...&quot;.</p>
 <p><strong>The 2nd Reason</strong><br />
-There're no more ads for you. If that's the reason, there's nothing we can do about it, it's the provider who provides the ads, not us. Try to see the ad later. If the case persists, go to <a href="https://discord.gg/botdesigner">support server</a>, create a ticket using the <code>!new</code> command and inform the staff about your problem by providing a screen recording longer than 30 seconds.</p>
+There're no more ads for you. If that's the reason, there's nothing we can do about it, it's the provider who provides the ads, not us. Try to see the ad later. If the case persists, go to our <a href="https://discord.gg/botdesigner">support server</a>, create a ticket using the <code>!new</code> command and inform the staff about your problem by providing a screen recording longer than 30 seconds.</p>
 <p><strong>The 3nd Reason</strong><br />
 The advertising provider we use is blocked in your country or region. There is nothing we can do in this case.</p>
 <h4 id="possible-solutions"><a class="header" href="#possible-solutions">Possible Solutions</a></h4>
@@ -929,15 +930,26 @@ The advertising provider we use is blocked in your country or region. There is n
 </ol>
 <h3 id="ghost-functions-from-the-changelog"><a class="header" href="#ghost-functions-from-the-changelog">Ghost Functions From The Changelog</a></h3>
 <p>In this section, the easiest way to explain everything is through dialogue: </p>
-<ul>
-<li><code>Random Guy</code>: I was told by a friend that a new function, <code>$botOwnerID</code>, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:<br />
-<img src="https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png" alt="I5dLLUVB" /></li>
-<li><code>Shiro</code>: This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.</li>
-<li><code>Shiro</code>: Usually, all nodes are updated by the end of the month. </li>
-<li><code>Random Guy</code>: Allright, thank you! I will wait patiently!</li>
-<li><code>Shiro</code>: You're welcome, Random Guy.</li>
-</ul>
-<h3 id="the-translation-feature-doesnt-work"><a class="header" href="#the-translation-feature-doesnt-work">The Translation Feature Doesn't Work</a></h3>
+<discord-messages>
+    <discord-message avatar="https://user-images.githubusercontent.com/111157596/257246455-2cf542ce-27ef-4584-a91d-c6251b2a5711.png" role-color="#FFFC2B" author="Random Guy" timestamp="Today at 9:50 PM">
+        I was told by a friend that a new function, <code>$botOwnerID</code>, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:
+        <discord-attachment slot="attachments" url="https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png">
+        </discord-attachment>
+    </discord-message>
+    <discord-message author="Nakidamiru" avatar="https://cdn.discordapp.com/embed/avatars/0.png" timestamp="Today at 9:53 PM" role-color="#57CEE8">
+        This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.
+    </discord-message>
+    <discord-message author="Nakidamiru" role-color="#57CEE8" timestamp="Today at 9:53 PM" avatar="https://cdn.discordapp.com/embed/avatars/0.png">
+        Usually, all nodes are updated by the end of the month.
+    </discord-message>
+    <discord-message author="Random Guy" avatar="https://user-images.githubusercontent.com/111157596/257246455-2cf542ce-27ef-4584-a91d-c6251b2a5711.png" timestamp="Today at 9:54 PM" role-color="#FFFC2B">
+        Allright, thank you! I will wait patiently!
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/embed/avatars/0.png" role-color="#57CEE8" author="Nakidamiru" timestamp="Today at 9:54 PM">
+        You're welcome, Random Guy.
+    </discord-message>
+</discord-messages>
+### The Translation Feature Doesn't Work
 <p><strong>The 1st Reason</strong><br />
 There's no translation support for your language yet. You should wait patiently for them, or if you speak English well, you can help to translate our app yourself!<br />
 If you would like to help, go to our <a href="https://discord.gg/botdesigner">support server</a> and create a ticket (using the <code>!new</code> command). You can then apply for the Translator role there by asking support for it.</p>
