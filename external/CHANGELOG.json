@@ -30,7 +30,7 @@
             "Added `$removeAllComponents`"
         ],
         "february": [
-            "- Fixed caching issues for leaderboards",
+            "Fixed caching issues for leaderboards",
             "Added `$jsonArrayShift[]`",
             "Added `$jsonArrayUnshift[]`",
             "Added `$jsonArrayPop[]`",
