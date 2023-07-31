@@ -17,18 +17,44 @@ $onIneraction[Interaction ID]
 ## Example
 1. Create two commands and set the trigger `$onInteraction[example]` for one command and `!example` for the other.
 
-- Code with trigger `!example`:
-```
-$nomention
-Click!
-$addButton[no;example;Click!;primary]
-```
-- Code with trigger `$onInteraction[example]`:
-```
-$nomention
-$sendMessage[Hello $username!]
-```
-2. Execute commands\
-![example](https://user-images.githubusercontent.com/113303649/223438800-7323f05e-77b5-464e-9385-4f287ba3bcba.png)
+    - Code with trigger `!example`:
+    ```
+    $nomention
+    Click!
+    $addButton[no;example;Click!;primary]
+    ```
+    - Code with trigger `$onInteraction[example]`:
+    ```
+    $nomention
+    $sendMessage[Hello $username!]
+    ```
+2. Execute commands
+   ``` discord yaml
+   - user_id: 729343563401265193
+     username: Nicky
+     color: "#EE7908"
+     content: |
+       !example
 
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       Click!
+     components:
+     -
+       - type: primary
+         label: Click Me!
+
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       Hello Nicky!
+   ```
+   
 > How [`$addButton[]`](../bdscript/addButton.md) works?
