@@ -145,7 +145,7 @@ Large code block
    | Name | Value |
    | Name | Value |
 
-## Discord code blocks
+## Discord Code Blocks
 
 Our wiki uses custom markdown code blocks to generate Discord message previews.
 In order to create them, wiki contributors write `discord` code blocks.
@@ -180,7 +180,7 @@ Like the last message in the example says, please check out the [NilPointer-Soft
 To test your custom code block, you can use the [official test site](https://nilpointer-software.github.io/mdbook-discord-components/)
 > Please note, that the `user_id` field will not work on the test site. This feature is disabled on it.
 
-### Things to note
+### Things To Note
 
 - In order to format messages or embed content like you can on Discord, you need to use HTML tags instead of markdown.
   Please look at the example below on the [test site](https://nilpointer-software.github.io/mdbook-discord-components/) to see how they will actually look.
