@@ -64,6 +64,7 @@ $alternativeParsing
       color: "#EE7908"
       content: |
         hello
+    
     - user_id: 566613317972394004
       username: Wiki Bot
       color: "#748BD4"
@@ -72,11 +73,13 @@ $alternativeParsing
       content: " "
       embed:
         description: "\"hello\""
+    
     - user_id: 729343563401265193
       username: Nicky
       color: "#EE7908"
       content: |
         helloworld
+    
     - user_id: 566613317972394004
       username: Wiki Bot
       color: "#748BD4"
