@@ -176,12 +176,14 @@
 <ul>
 <li><code>Button ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: The required button ID or URL, you want to be edited.</li>
 <li><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: The new label displayed on the button.</li>
-<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: The style of the button. All styles are listed <a href="#button-styles">below</a>.</li>
+<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: The style of the button. All styles are listed <a href="#button-style">below</a>.</li>
 <li><code>Disabled</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code>, the button can't be pressed. Default is <code>no</code>.</li>
 <li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Edits / Adds an emoji inside the button. Emojis have to be either pasted as <em>Unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</li>
 <li><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</li>
 </ul>
-<h3 id="button-styles"><a class="header" href="#button-styles">Button styles</a></h3>
+<h2 id="button-style"><a class="header" href="#button-style">Button Style</a></h2>
+<p>Buttons can have different styles <em>(background colors)</em>.
+Here, are all possible values for the <code>style</code> function argument.</p>
 <ul>
 <li><code>primary</code> - Blue button</li>
 <li><code>secondary</code> - Gray button</li>
@@ -189,12 +191,64 @@
 <li><code>danger</code> - Red button</li>
 <li><code>link</code> - Redirect button</li>
 </ul>
-<blockquote>
-<p>If the <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
-</blockquote>
-<h4 id="preview"><a class="header" href="#preview">Preview</a></h4>
-<p><img src="https://user-images.githubusercontent.com/111157596/239689749-49244b9d-4539-4159-9f51-b09425d8b3ca.png" alt="preview" /></p>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<discord-messages>
+    <discord-message verified author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" bot>
+        Buttons:
+        <discord-attachments slot="components">
+            <discord-action-row>
+                <discord-button type="primary">
+                    Primary
+                </discord-button>
+                <discord-button disabled type="primary">
+                    Primary
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button type="success">
+                    Success
+                </discord-button>
+                <discord-button disabled type="success">
+                    Success
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button type="destructive">
+                    Danger
+                </discord-button>
+                <discord-button disabled type="destructive">
+                    Danger
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button type="secondary">
+                    Secondary
+                </discord-button>
+                <discord-button disabled type="secondary">
+                    Secondary
+                </discord-button>
+            </discord-action-row>
+        </discord-attachments>
+    </discord-message>
+    <discord-message bot author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" verified>
+        Other Buttons:
+        <discord-attachments slot="components">
+            <discord-action-row>
+                <discord-button type="secondary" url="https://nilpointer-software.github.io/bdfd-wiki/nightly/">
+                    Link
+                </discord-button>
+                <discord-button type="secondary" disabled url="https://nilpointer-software.github.io/bdfd-wiki/nightly/">
+                    Link
+                </discord-button>
+            </discord-action-row>
+            <discord-action-row>
+                <discord-button emoji="https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png" type="secondary">
+                    Emoji
+                </discord-button>
+            </discord-action-row>
+        </discord-attachments>
+    </discord-message>
+</discord-messages>
+## Example
 <h3 id="interaction-command-code"><a class="header" href="#interaction-command-code">Interaction command code</a></h3>
 <pre><code>$nomention
 $username said hello!

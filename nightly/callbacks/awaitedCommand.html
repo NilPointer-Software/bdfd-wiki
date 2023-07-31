@@ -189,7 +189,20 @@
 <pre><code>$nomention
 $message
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/212084980-10ab6f01-5595-454f-bfe6-a23f8fd64c1e.png" alt="example" /></p>
+<discord-messages>
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
+        !say
+    </discord-message>
+    <discord-message bot author="Wiki Bot" role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" verified>
+        What do you want me to say?
+    </discord-message>
+    <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky">
+        I love BDFD!
+    </discord-message>
+    <discord-message bot author="Wiki Bot" role-color="#748BD4" verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png">
+        I love BDFD!
+    </discord-message>
+</discord-messages>
 <h3 id="with-choose-filter"><a class="header" href="#with-choose-filter">With choose filter</a></h3>
 <p><strong>Trigger: <code>$awaitedCommand[odd;&lt;yes/no/cancel&gt;]</code></strong></p>
 <pre><code>$nomention
@@ -201,13 +214,63 @@ $elseif[$message==cancel]
    Command cancelled!
 $endif
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/212088333-54a94584-f854-45cf-8b7e-6980aa370764.png" alt="example" /></p>
+<discord-messages>
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
+        !odd
+    </discord-message>
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" verified author="Wiki Bot">
+        Is "19" an odd number?
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky" role-color="#EE7908">
+        yes
+    </discord-message>
+    <discord-message role-color="#748BD4" verified author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot>
+        Your answer is correct!
+    </discord-message>
+    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        !odd
+    </discord-message>
+    <discord-message role-color="#748BD4" bot author="Wiki Bot" verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png">
+        Is "19" an odd number?
+    </discord-message>
+    <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        no
+    </discord-message>
+    <discord-message role-color="#748BD4" bot verified author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png">
+        Your answer is incorrect!
+    </discord-message>
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
+        !odd
+    </discord-message>
+    <discord-message bot role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" verified author="Wiki Bot">
+        Is "19" an odd number?
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908" author="Nicky">
+        cancel
+    </discord-message>
+    <discord-message role-color="#748BD4" author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" verified bot>
+        Command cancelled!
+    </discord-message>
+</discord-messages>
 <h3 id="with-numeric-filter"><a class="header" href="#with-numeric-filter">With numeric filter</a></h3>
 <p><strong>Trigger: <code>$awaitedCommand[odd;&lt;numeric&gt;]</code></strong></p>
 <pre><code>$nomention
 You have provided a number: $message
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/212089433-e998259a-0e74-4401-9140-a7ea4c6c3776.png" alt="example" /></p>
+<discord-messages>
+    <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        !number
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" author="Wiki Bot" verified bot>
+        Provide a number!
+    </discord-message>
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
+        7
+    </discord-message>
+    <discord-message verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" author="Wiki Bot" role-color="#748BD4" bot>
+        You have provided a number: 7
+    </discord-message>
+</discord-messages>
 <blockquote>
 <p>For more info, see the <a href="../guides/general/awaitedCommands.html">Awaited Commands Guide</a>.</p>
 </blockquote>

@@ -169,20 +169,20 @@
                         </nav>
                         <h1 id="onbanadd"><a class="header" href="#onbanadd">$onBanAdd</a></h1>
 <p><em>Triggered when a user gets banned from the server.</em></p>
-<p><code>$onBanAdd[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. </p>
+<p><code>$onBanAdd[Channel ID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user is banned from the server. </p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$onBanAdd[channelID]
+<pre><code>$onBanAdd[Channel ID]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <ol>
 <li>
-<p>Create a command with <code>$onBanAdd[channelID]</code> as the trigger.</p>
+<p>Create a command with <code>$onBanAdd[Channel ID]</code> as the trigger.</p>
 <blockquote>
-<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="#advanced"><em>(See more here...)</em></a>!</p>
+<p>🧙‍♂️ You must replace &quot;Channel ID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="#advanced"><em>(See more here...)</em></a>!</p>
 </blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/129491257-7fa6c9c4-e4b4-47c1-8df0-3f580ffa79bf.png" alt="example1" /></p>
 </li>
@@ -194,8 +194,15 @@
 <p><img src="https://user-images.githubusercontent.com/69215413/129491086-e6a96af6-edeb-4f2b-b226-0e49ed59f544.png" alt="example2" /></p>
 </li>
 <li>
-<p>Now you have a ban message! ✨<br />
-<img src="https://user-images.githubusercontent.com/69215413/129491043-f587388a-6de8-4c81-a2ef-95a9ef54acbc.png" alt="example3" /></p>
+<p>Now you have a ban message! ✨</p>
+<discord-messages>
+    <discord-message verified bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" author="Wiki Bot" role-color="#748BD4">
+        <discord-mention>User</discord-mention> was struck with the ban hammer!
+    </discord-message>
+    <discord-system-message type="leave">
+        <font color="white">User</font> left.
+    </discord-system-message>
+</discord-messages>
 </li>
 </ol>
 <h2 id="advanced"><a class="header" href="#advanced">Advanced</a></h2>
@@ -220,7 +227,7 @@ $setServerVar[logs;$mentionedChannels[1]]
 </blockquote>
 </li>
 <li>
-<p>Now replace <code>$onBanAdd[channelID]</code> in your command trigger, with <code>$onBanAdd[$getServerVar[logs]]</code> and you're all set!</p>
+<p>Now replace <code>$onBanAdd[Channel ID]</code> in your command trigger, with <code>$onBanAdd[$getServerVar[logs]]</code> and you're all set!</p>
 </li>
 </ol>
 

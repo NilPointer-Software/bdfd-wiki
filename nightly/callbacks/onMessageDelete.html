@@ -169,20 +169,20 @@
                         </nav>
                         <h1 id="onmessagedelete"><a class="header" href="#onmessagedelete">$onMessageDelete</a></h1>
 <p><em>Triggered when a user deletes a message.</em></p>
-<p><code>$onMessageDelete[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user deletes a message.</p>
+<p><code>$onMessageDelete[Channel ID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user deletes a message.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$onMessageDelete[channelID]
+<pre><code>$onMessageDelete[Channel ID]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to which the resulting message will be sent.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to which the resulting message will be sent.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <ol>
 <li>
-<p>Create a command with the trigger <code>$onMessageDelete[channelID]</code>.</p>
+<p>Create a command with the trigger <code>$onMessageDelete[Channel ID]</code>.</p>
 <blockquote>
-<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="#advanced"><em>(See more here...)</em></a>!</p>
+<p>🧙‍♂️ You must replace &quot;Channel ID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="#advanced"><em>(See more here...)</em></a>!</p>
 </blockquote>
 <p><img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/b722b5b7-35f8-4682-a118-b17916978c2a" alt="example1" /></p>
 </li>
@@ -194,9 +194,22 @@
 <p><img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/027aa71a-9051-4b78-bbc7-3149424fe91b" alt="example2" /></p>
 </li>
 <li>
-<p>Now, you have a logging message! ✨<br />
-<img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/a7552795-d8aa-4358-ac8f-17002d6603cf" alt="example3" /><br />
-<img src="https://github.com/NilPointer-Software/bdfd-wiki/assets/111157596/18bbb08e-ca97-4fdf-b6e9-deee3d7f4b44" alt="example4" /></p>
+<p>Now, you have a logging message! ✨</p>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908" author="Nicky">
+        Hey
+    </discord-message>
+    <discord-message author="MineBartekSA" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png" role-color="#F1BDEE">
+        Hello
+    </discord-message>
+</discord-messages><discord-messages>
+    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png">
+        Hey
+    </discord-message>
+    <discord-message role-color="#748BD4" verified author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot>
+        A message was deleted!<br />Message ID: 1133145902865985646
+    </discord-message>
+</discord-messages>
 </li>
 </ol>
 <h2 id="advanced"><a class="header" href="#advanced">Advanced</a></h2>
@@ -221,7 +234,7 @@ $setServerVar[logs;$mentionedChannels[1]]
 </blockquote>
 </li>
 <li>
-<p>Now replace <code>$onMessageDelete[channelID]</code> in your command trigger, with <code>$onMessageDelete[$getServerVar[logs]]</code> and you're all set!</p>
+<p>Now replace <code>$onMessageDelete[Channel ID]</code> in your command trigger, with <code>$onMessageDelete[$getServerVar[logs]]</code> and you're all set!</p>
 </li>
 </ol>
 

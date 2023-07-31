@@ -169,23 +169,23 @@
                         </nav>
                         <h1 id="onleave"><a class="header" href="#onleave">$onLeave</a></h1>
 <p><em>Triggered when a user leaves the server.</em></p>
-<p><code>$onLeave[channelID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server.</p>
+<p><code>$onLeave[Channel ID]</code> is a callback, which means it's used in the command trigger <em>(not the code)</em>. The command is ran when a user leaves the server.</p>
 <blockquote>
 <p>📌 You can only have <strong>1</strong> single <code>$onLeave[]</code> per bot.</p>
 </blockquote>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$onLeave[channelID]
+<pre><code>$onLeave[Channel ID]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <ol>
 <li>
-<p>Create a command with the trigger <code>$onLeave[channelID]</code>.</p>
+<p>Create a command with the trigger <code>$onLeave[Channel ID]</code>.</p>
 <blockquote>
-<p>🧙‍♂️ You must replace &quot;channelID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID <a href="#advanced"><em>(See more here...)</em></a>!</p>
+<p>🧙‍♂️ You must replace &quot;Channel ID&quot; with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channelID <a href="#advanced"><em>(See more here...)</em></a>!</p>
 </blockquote>
 <p><img src="https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png" alt="example1" /></p>
 </li>
@@ -197,8 +197,15 @@
 <p><img src="https://user-images.githubusercontent.com/69215413/129492763-1261a971-4d4c-4f33-9e78-757595484672.png" alt="example2" /></p>
 </li>
 <li>
-<p>Now, you have a leave message! ✨<br />
-<img src="https://user-images.githubusercontent.com/69215413/129492739-3019099d-e2d9-4c94-97b8-65190760cbf4.png" alt="example3" /></p>
+<p>Now, you have a leave message! ✨</p>
+<discord-messages>
+    <discord-system-message type="leave">
+        Goodbye <font color="white">User</font>.
+    </discord-system-message>
+    <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" verified bot>
+        <discord-mention>User</discord-mention> just left the server :c
+    </discord-message>
+</discord-messages>
 </li>
 </ol>
 <p><em>Not Working? Check out the <a href="#troubleshooting">Troubleshooting</a> section.</em></p>
