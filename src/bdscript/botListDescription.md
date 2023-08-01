@@ -31,5 +31,5 @@ $botListDescription[Ping? Pong!]
   content: |
     Pong!
 ```
-
+\
 ![example](https://user-images.githubusercontent.com/113303649/210341495-bbda340a-3f30-4c6d-af7c-4445233ede37.png)
