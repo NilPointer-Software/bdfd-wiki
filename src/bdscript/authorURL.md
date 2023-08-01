@@ -29,7 +29,7 @@ $authorURL[https://botdesignerdiscord.com]
   color: "#748BD4"
   bot: true
   verified: true
-  content: " "
+  content: <none>
   embed:
     author:
       text: Click me to visit the BDFD website!
