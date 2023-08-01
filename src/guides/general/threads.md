@@ -14,9 +14,9 @@ In this section, you'll learn how to integrate threads in your bot.
 - [`$threadRemoveMember[]`](../../bdscript/threadRemoveMember.md)
 
 ## Archive Duration
-`60` - 1 Hour
-`1440` - 1 Day
-`4320` - 3 Days (Only for servers with level 1 boosted)
+`60` - 1 Hour\
+`1440` - 1 Day\
+`4320` - 3 Days (Only for servers with level 1 boosted)\
 `10080` - 7 Days (Only for servers with level 2 boosted)
 
 # $startThread
