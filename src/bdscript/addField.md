@@ -37,7 +37,7 @@ $addField[The field name 3!;The field value 3!]
   color: "#748BD4"
   bot: true
   verified: true
-  content: " "
+  content: <none>
   embed:
     fields:
     - name: The field name 1!
@@ -67,7 +67,7 @@ $addField[The field name 3!;The field value 3!;yes]
   color: "#748BD4"
   bot: true
   verified: true
-  content: " "
+  content: <none>
   embed:
     fields:
     - name: The field name 1!
