@@ -189,8 +189,6 @@ $threadAddMember[$var[id];$authorID]
   content: |
     New thread - <#Cool Thread>
 ```
-
-``` discord yaml
 - In the thread:
 
 ``` discord yaml
