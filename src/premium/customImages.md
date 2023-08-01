@@ -36,5 +36,19 @@ $customImage[Custom image tag]
 $nomention
 $customImage[NiceImage]
 ```
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
 
-![example](https://user-images.githubusercontent.com/69215413/126852524-dfcb237a-8283-43fd-9e17-8dd97bd9ed85.png)
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: <none>
+  embed:
+    image: https://user-images.githubusercontent.com/111157596/257596077-9836bafb-1c2a-4e1e-9cb3-9ca7725dcbf3.png
+```
