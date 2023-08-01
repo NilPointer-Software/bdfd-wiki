@@ -168,127 +168,199 @@
                             <script src="../../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="text-splitting"><a class="header" href="#text-splitting">Text Splitting</a></h1>
-<p>Text splitting functions are useful for advanced codes that deal with multiple user arguments, or even adjusting function outputs <em>(for advanced users)</em>. This wiki includes information on how to use these functions.</p>
-<h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
-<p>There are 7 functions in this guide. One of them, <code>$textSplit</code>, is the main function that you start off.</p>
-<h2 id="textsplit"><a class="header" href="#textsplit">$textSplit</a></h2>
-<p>This function separates the text with a separator and saves the text for later use.</p>
-<h3 id="syntax"><a class="header" href="#syntax">Syntax</a></h3>
-<pre><code>$textSplit[separatedText;separator]
-</code></pre>
-<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<p>In this section, you'll learn how to use the text splitting.</p>
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#textsplit"><strong>$textSplit[]</strong></a> &gt; <a href="#splittext"><strong>$splitText[]</strong></a> &gt; <a href="#getextsplitlength"><strong>$getTextSplitLength</strong></a> &gt; <a href="#gettextsplitindex"><strong>$getTextSplitIndex[]</strong></a> &gt; <a href="#joinsplittext"><strong>$joinSplitText[]</strong></a> &gt; <a href="#removesplittextelement"><strong>$removeSplitTextElement[]</strong></a> &gt; <a href="#simple-code"><strong>Simple Code</strong></a></p>
+<h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
-<li><code>separatedText</code> - The text separated by a separator.</li>
-<li><code>separator</code> - The separator that separates the text.</li>
+<li><a href="../bdscript/textSplit.html"><code>$textSplit[]</code></a></li>
+<li><a href="../bdscript/splitText.html"><code>$splitText[]</code></a></li>
+<li><a href="../bdscript/getTextSplitLength.html"><code>$getTextSplitLength</code></a></li>
+<li><a href="../bdscript/getTextSplitIndex.html"><code>$getTextSplitIndex[]</code></a></li>
+<li><a href="../bdscript/joinSplitText.html"><code>$joinSplitText[]</code></a></li>
+<li><a href="../bdscript/removeSplitTextElement.html"><code>$removeSplitTextElement[]</code></a></li>
+<li><a href="../bdscript/editSplitText.html"><code>$editSplitText[]</code></a></li>
 </ul>
-<h3 id="example"><a class="header" href="#example">Example</a></h3>
-<pre><code>$textSplit[hello-world-!;-]
+<h1 id="textsplit"><a class="header" href="#textsplit">$textSplit</a></h1>
+<p>Splits the provided text by a given separator and saves the value temporarily.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$textSplit[Text;Separator]
 </code></pre>
-<h2 id="splittext"><a class="header" href="#splittext">$splitText</a></h2>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to split.</li>
+<li><code>Separator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to split the text with. If this parameter is empty, it separates the text by each character.</li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello-world-!;-]
+&gt; $splitText[2]
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot author="BDFD Support" role-color="#378afa" verified>
+        <discord-quote>world</discord-quote>
+    </discord-message>
+</discord-messages>
+<h1 id="splittext"><a class="header" href="#splittext">$splitText</a></h1>
 <p>Each separated text has a number, i.e. an index. <code>$splitText</code> is a function that returns one of the elements of the separated text by an index or the sign <code>&lt;</code> - the very first element, or <code>&gt;</code> - the very last element.</p>
-<h3 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h3>
-<pre><code>$splitText[index]
+<h2 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h2>
+<pre><code>$splitText[Index]
 </code></pre>
-<h4 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h4>
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
 <ul>
-<li><code>index</code> - The index of the element to be returned.</li>
+<li><code>Index</code> <code>(Type: HowMany || Flag: Required)</code>: The split value to get (e.g. <code>2</code> for the second split). You can also use <code>&gt;</code> to return the last split value i.e <code>$splitText[&gt;]</code>.</li>
 </ul>
-<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
-<h4 id="example-1"><a class="header" href="#example-1">Example #1</a></h4>
-<pre><code>$textSplit[hello-world-!;-]
-
-The 1st element: $splitText[1]
-The 2nd element: $splitText[2]
-The 3rd element: $splitText[3]
+<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello world !; ]
+&gt; $splitText[&lt;]
+&gt; $splitText[2]
+&gt; $splitText[&gt;]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/209445547-a808333c-9c9f-40b9-aad7-bfe1ea12aee3.png" alt="$splitText-1" /></p>
-<h4 id="example-2"><a class="header" href="#example-2">Example #2</a></h4>
-<pre><code>$textSplit[hello-world-!;-]
-
-The very first element: $splitText[&lt;]
-The very last element: $splitText[&gt;]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/209445550-a0a38b58-6722-4450-a4d6-ca14dbc03973.png" alt="$splitText-2" /></p>
-<h2 id="gettextsplitlength"><a class="header" href="#gettextsplitlength">$getTextSplitLength</a></h2>
-<p>This function has a simple purpose: <code>$getTextSplitLength</code> returns the length of the separated text, that is, the number of words separated by a separator. The returned value is the maximum index for the given separated text.</p>
-<h3 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h3>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message bot verified author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+        <discord-quote>hello<br />world<br />!</discord-quote>
+    </discord-message>
+</discord-messages>
+<h1 id="gettextsplitlength"><a class="header" href="#gettextsplitlength">$getTextSplitLength</a></h1>
+<p>Returns the number of splits.</p>
+<h2 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h2>
 <pre><code>$getTextSplitLength
 </code></pre>
-<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
-<pre><code>$textSplit[hello-world-!;-]
-
-The maximum index: $getTextSplitLength
+<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello%world%!;%]
+&gt; $getTextSplitLength
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/209445774-edec9a26-892f-4028-906b-b7ec08f94df5.png" alt="$getTextSplitLength" /></p>
-<h2 id="gettextsplitindex"><a class="header" href="#gettextsplitindex">$getTextSplitIndex</a></h2>
-<p>This function searches for the specified element in the separated text and returns its index. If the specified element wasn't found or doesn't exist, the function will return <code>-1</code>.</p>
-<h3 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h3>
-<pre><code>$getTextSplitIndex[value]
+<discord-messages>
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message verified author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot role-color="#378afa">
+        <discord-quote>3</discord-quote>
+    </discord-message>
+</discord-messages>
+<h1 id="gettextsplitindex"><a class="header" href="#gettextsplitindex">$getTextSplitIndex</a></h1>
+<p>Retrieves index from the provided value. Returns <code>-1</code> if it couldn't find the value.</p>
+<h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
+<pre><code>$getTextSplitIndex[Value]
 </code></pre>
-<h4 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h4>
+<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
 <ul>
-<li><code>value</code> - The text, that is, the element whose index is should be returned.</li>
+<li><code>Value</code> <code>(Type: String || Flag: Emptiable)</code>: The value to search in the text split.</li>
 </ul>
-<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
-<pre><code>$textSplit[hello-world-!;-]
-
-$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
-
-The index of the specified element: $getTextSplitIndex[$message]
+<h2 id="example-3"><a class="header" href="#example-3">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello_world_!;_]
+&gt; $getTextSplitIndex[$message]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/209445822-b46a7cd7-e724-471d-8c2b-e9da543cb3bc.png" alt="$getTextSplitIndex" /></p>
-<h2 id="joinsplittext"><a class="header" href="#joinsplittext">$joinSplitText</a></h2>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+        !example world
+    </discord-message>
+    <discord-message author="BDFD Support" bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified role-color="#378afa">
+        <discord-quote>2</discord-quote>
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
+        !example bdfd
+    </discord-message>
+    <discord-message verified role-color="#378afa" author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot>
+        <discord-quote>-1</discord-quote>
+    </discord-message>
+</discord-messages>
+<h1 id="joinsplittext"><a class="header" href="#joinsplittext">$joinSplitText</a></h1>
 <p>This function returns the current elements of the separated text with the specified (sometimes new) separator.</p>
-<h3 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h3>
-<pre><code>$joinSplitText[separator]
+<h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
+<pre><code>$joinSplitText[Separator]
 </code></pre>
-<h4 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h4>
+<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
 <ul>
-<li><code>separator</code> - (The new) separator with which the elements should be returned.</li>
+<li><code>Separator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to be put between the text split values.</li>
 </ul>
-<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
-<p>See example below, using <a href="#removesplittextelement">$removeSplitTextElement</a> or <a href="#editsplittext">$editSplitText</a>.</p>
-<h2 id="removesplittextelement"><a class="header" href="#removesplittextelement">$removeSplitTextElement</a></h2>
+<h2 id="example-4"><a class="header" href="#example-4">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello#world#!;#]
+&gt; $joinSplitText[
+&gt; ]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" bot role-color="#378afa" verified>
+        <discord-quote>hello<br />world<br />!</discord-quote>
+    </discord-message>
+</discord-messages>
+<h1 id="removesplittextelement"><a class="header" href="#removesplittextelement">$removeSplitTextElement</a></h1>
 <p>This function removes an element from the separated text by the specified index.</p>
-<h3 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h3>
-<pre><code>$removeSplitTextElement[index]
+<h2 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h2>
+<pre><code>$removeSplitTextElement[Index]
 </code></pre>
-<h4 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h4>
+<h3 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h3>
 <ul>
-<li><code>index</code> - The index of the element to be removed.</li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Required)</code>: The index of the <code>$textSplit[]</code> value to remove.</li>
 </ul>
-<h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
-<pre><code>$textSplit[hello-world-!;-]
-
-$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
-
-$removeSplitTextElement[$getTextSplitIndex[$message]]
-Successfully removed element with index $getTextSplitIndex[$message]!
-Current elements: $joinSplitText[-]
+<h2 id="example-5"><a class="header" href="#example-5">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello-world-!;-]
+$removeSplitTextElement[3]
+&gt; $joinSplitText[-]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/209445832-e8922a39-c311-4d20-bb19-cddc2db18ecc.png" alt="$removeSplitTextElement" /></p>
-<h2 id="editsplittext"><a class="header" href="#editsplittext">$editSplitText</a></h2>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+        !example
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified bot author="BDFD Support" role-color="#378afa">
+        <discord-quote>hello-world</discord-quote>
+    </discord-message>
+</discord-messages>
+<h1 id="editsplittext"><a class="header" href="#editsplittext">$editSplitText</a></h1>
 <p>This function replaces the element at the specified index with a new element instead of the previous one.</p>
-<h3 id="syntax-6"><a class="header" href="#syntax-6">Syntax</a></h3>
-<pre><code>$editSplitText[index;value]
+<h2 id="syntax-6"><a class="header" href="#syntax-6">Syntax</a></h2>
+<pre><code>$editSplitText[Index;Value]
 </code></pre>
-<h4 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h4>
+<h3 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h3>
 <ul>
-<li><code>index</code> - The index of the element to be replaced.</li>
-<li><code>value</code> - The text, that is, what will replace the specified element.</li>
+<li><code>Index</code> <code>(Type: Integer || Flag: Required)</code>: The index of the element to edit.</li>
+<li><code>Value</code> <code>(Type: String || Flag: Required)</code>: The new value to assign to the provided index.</li>
 </ul>
-<h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
-<pre><code>$textSplit[hello-world-!;-]
-
-$onlyIf[$getTextSplitIndex[$message[1]]!=-1;The specified element wasn't found or doesn't exist!]
-
-$editSplitText[$getTextSplitIndex[$message[1]];$message[2]]
-
-The element with index $getTextSplitIndex[$message[1]] has been replaced by $message[2]!
-Current elements: $joinSplitText[-]
+<h2 id="example-6"><a class="header" href="#example-6">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello-world-!;-]
+$editSplitText[2;bdfd]
+&gt; $joinSplitText[-]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/70456337/209445845-df23ab33-e4e5-4918-8c48-bcd8fd3b6fc8.png" alt="$editSplitText" /></p>
-
+<discord-messages>
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified role-color="#378afa">
+        <discord-quote>hello-bdfd-!</discord-quote>
+    </discord-message>
+</discord-messages>
+<h1 id="simple-code"><a class="header" href="#simple-code">Simple Code</a></h1>
+<pre><code>$nomention
+$textSplit[$message;]
+Characters: $getTextSplitLength
+$textSplit[$message; ]
+Words: $getTextSplitLength
+Random word: $splitText[$random[1;$sum[$getTextSplitLength;1]]]
+First word: $splitText[&lt;]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+        !example Hello world!
+    </discord-message>
+    <discord-message author="BDFD Support" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot role-color="#378afa">
+        Characters: 12<br />Words: 2<br />Random word: world!<br />First word: Hello
+    </discord-message>
+</discord-messages>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
