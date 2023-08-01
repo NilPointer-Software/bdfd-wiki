@@ -28,7 +28,7 @@ $color[#673ab7]
   color: "#748BD4"
   bot: true
   verified: true
-  content: " "
+  content: <none>
   embed:
     description: ⬅️ That is the embed color border!
     color: "#673ab7"
