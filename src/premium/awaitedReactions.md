@@ -15,7 +15,6 @@
   color: "#748BD4"
   bot: true
   verified: true
-  content: <none>
   embed:
     description: Do you accept?
   reactions:
@@ -46,7 +45,6 @@
   color: "#748BD4"
   bot: true
   verified: true
-  content: <none>
   embed:
     description: Do you accept?
   reactions:
@@ -125,7 +123,6 @@ $usedEmoji
   color: "#748BD4"
   bot: true
   verified: true
-  content: <none>
   embed:
     description: Do you accept?
   reactions:
