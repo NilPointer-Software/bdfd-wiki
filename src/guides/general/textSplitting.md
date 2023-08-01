@@ -1,165 +1,302 @@
 # Text Splitting
-Text splitting functions are useful for advanced codes that deal with multiple user arguments, or even adjusting function outputs *(for advanced users)*. This wiki includes information on how to use these functions.
+In this section, you'll learn how to use the text splitting.
 
-# Functions
-There are 7 functions in this guide. One of them, `$textSplit`, is the main function that you start off.
+## Content
+[**Functions Used**](#functions-used) > [**$textSplit[]**](#textsplit) > [**$splitText[]**](#splittext) > [**$getTextSplitLength**](#getextsplitlength) > [**$getTextSplitIndex[]**](#gettextsplitindex) > [**$joinSplitText[]**](#joinsplittext) > [**$removeSplitTextElement[]**](#removesplittextelement) > [**Simple Code**](#simple-code)
 
-## $textSplit
-This function separates the text with a separator and saves the text for later use.
+## Functions Used
+- [`$textSplit[]`](../bdscript/textSplit.md)
+- [`$splitText[]`](../bdscript/splitText.md)
+- [`$getTextSplitLength`](../bdscript/getTextSplitLength.md)
+- [`$getTextSplitIndex[]`](../bdscript/getTextSplitIndex.md)
+- [`$joinSplitText[]`](../bdscript/joinSplitText.md)
+- [`$removeSplitTextElement[]`](../bdscript/removeSplitTextElement.md)
+- [`$editSplitText[]`](../bdscript/editSplitText.md)
 
-### Syntax
+# $textSplit
+Splits the provided text by a given separator and saves the value temporarily.
+## Syntax
 ```
-$textSplit[separatedText;separator]
+$textSplit[Text;Separator]
 ```
+### Parameters
+- `Text` `(Type: String || Flag: Emptiable)`: The text to split.
+- `Separator` `(Type: String || Flag: Emptiable)`: The separator to split the text with. If this parameter is empty, it separates the text by each character.
 
-#### Parameters
-- `separatedText` - The text separated by a separator.
-- `separator` - The separator that separates the text.
-
-### Example
+## Example
 ```
+$nomention
 $textSplit[hello-world-!;-]
+> $splitText[2]
 ```
 
-## $splitText
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>world</discord-quote>
+```
+\
+# $splitText
 Each separated text has a number, i.e. an index. `$splitText` is a function that returns one of the elements of the separated text by an index or the sign `<` - the very first element, or `>` - the very last element.
 
-### Syntax
+## Syntax
 ```
-$splitText[index]
-```
-
-#### Parameters
-- `index` - The index of the element to be returned.
-
-### Examples
-
-#### Example #1
-```
-$textSplit[hello-world-!;-]
-
-The 1st element: $splitText[1]
-The 2nd element: $splitText[2]
-The 3rd element: $splitText[3]
+$splitText[Index]
 ```
 
-![$splitText-1](https://user-images.githubusercontent.com/70456337/209445547-a808333c-9c9f-40b9-aad7-bfe1ea12aee3.png)
+### Parameters
+- `Index` `(Type: HowMany || Flag: Required)`: The split value to get (e.g. `2` for the second split). You can also use `>` to return the last split value i.e `$splitText[>]`.
 
+## Example
 
-#### Example #2
 ```
-$textSplit[hello-world-!;-]
-
-The very first element: $splitText[<]
-The very last element: $splitText[>]
+$nomention
+$textSplit[hello world !; ]
+> $splitText[<]
+> $splitText[2]
+> $splitText[>]
 ```
 
-![$splitText-2](https://user-images.githubusercontent.com/70456337/209445550-a0a38b58-6722-4450-a4d6-ca14dbc03973.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>hello
+    world
+    !</discord-quote>
+```
+\
+# $getTextSplitLength
+Returns the number of splits.
 
-
-## $getTextSplitLength
-This function has a simple purpose: `$getTextSplitLength` returns the length of the separated text, that is, the number of words separated by a separator. The returned value is the maximum index for the given separated text.
-
-### Syntax
+## Syntax
 ```
 $getTextSplitLength
 ```
 
-### Example
+## Example
 ```
-$textSplit[hello-world-!;-]
-
-The maximum index: $getTextSplitLength
-```
-
-![$getTextSplitLength](https://user-images.githubusercontent.com/70456337/209445774-edec9a26-892f-4028-906b-b7ec08f94df5.png)
-
-
-## $getTextSplitIndex
-This function searches for the specified element in the separated text and returns its index. If the specified element wasn't found or doesn't exist, the function will return `-1`.
-
-### Syntax
-```
-$getTextSplitIndex[value]
+$nomention
+$textSplit[hello%world%!;%]
+> $getTextSplitLength
 ```
 
-#### Parameters
-- `value` - The text, that is, the element whose index is should be returned.
-
-### Example
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>3</discord-quote>
 ```
-$textSplit[hello-world-!;-]
+\
+# $getTextSplitIndex
+Retrieves index from the provided value. Returns `-1` if it couldn't find the value.
 
-$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
-
-The index of the specified element: $getTextSplitIndex[$message]
+## Syntax
+```
+$getTextSplitIndex[Value]
 ```
 
-![$getTextSplitIndex](https://user-images.githubusercontent.com/70456337/209445822-b46a7cd7-e724-471d-8c2b-e9da543cb3bc.png)
+### Parameters
+- `Value` `(Type: String || Flag: Emptiable)`: The value to search in the text split.
 
+## Example
+```
+$nomention
+$textSplit[hello_world_!;_]
+> $getTextSplitIndex[$message]
+```
 
-## $joinSplitText
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example world
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>2</discord-quote>
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example bdfd
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>-1</discord-quote>
+```
+\
+# $joinSplitText
 This function returns the current elements of the separated text with the specified (sometimes new) separator.
 
-### Syntax
+## Syntax
 ```
-$joinSplitText[separator]
+$joinSplitText[Separator]
 ```
 
-#### Parameters
-- `separator` - (The new) separator with which the elements should be returned.
+### Parameters
+- `Separator` `(Type: String || Flag: Emptiable)`: The separator to be put between the text split values.
 
-### Example
-See example below, using [$removeSplitTextElement](#removesplittextelement) or [$editSplitText](#editsplittext).
+## Example
+```
+$nomention
+$textSplit[hello#world#!;#]
+> $joinSplitText[
+> ]
+```
 
-
-## $removeSplitTextElement
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>hello
+    world
+    !</discord-quote>
+```
+\
+# $removeSplitTextElement
 This function removes an element from the separated text by the specified index.
 
-### Syntax
+## Syntax
 ```
-$removeSplitTextElement[index]
+$removeSplitTextElement[Index]
 ```
 
-#### Parameters
-- `index` - The index of the element to be removed.
+### Parameters
+- `Index` `(Type: Integer || Flag: Required)`: The index of the `$textSplit[]` value to remove.
 
-### Example
+## Example
 ```
+$nomention
 $textSplit[hello-world-!;-]
-
-$onlyIf[$getTextSplitIndex[$message]!=-1;The specified element wasn't found or doesn't exist!]
-
-$removeSplitTextElement[$getTextSplitIndex[$message]]
-Successfully removed element with index $getTextSplitIndex[$message]!
-Current elements: $joinSplitText[-]
+$removeSplitTextElement[3]
+> $joinSplitText[-]
 ```
 
-![$removeSplitTextElement](https://user-images.githubusercontent.com/70456337/209445832-e8922a39-c311-4d20-bb19-cddc2db18ecc.png)
-
-
-## $editSplitText
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>hello-world</discord-quote>
+```
+\
+# $editSplitText
 This function replaces the element at the specified index with a new element instead of the previous one.
 
-### Syntax
+## Syntax
 ```
-$editSplitText[index;value]
+$editSplitText[Index;Value]
 ```
 
-#### Parameters
-- `index` - The index of the element to be replaced.
-- `value` - The text, that is, what will replace the specified element.
+### Parameters
+- `Index` `(Type: Integer || Flag: Required)`: The index of the element to edit.
+- `Value` `(Type: String || Flag: Required)`: The new value to assign to the provided index.
 
-### Example
+## Example
 ```
+$nomention
 $textSplit[hello-world-!;-]
-
-$onlyIf[$getTextSplitIndex[$message[1]]!=-1;The specified element wasn't found or doesn't exist!]
-
-$editSplitText[$getTextSplitIndex[$message[1]];$message[2]]
-
-The element with index $getTextSplitIndex[$message[1]] has been replaced by $message[2]!
-Current elements: $joinSplitText[-]
+$editSplitText[2;bdfd]
+> $joinSplitText[-]
 ```
 
-![$editSplitText](https://user-images.githubusercontent.com/70456337/209445845-df23ab33-e4e5-4918-8c48-bcd8fd3b6fc8.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>hello-bdfd-!</discord-quote>
+```
+\
+# Simple Code
+```
+$nomention
+$textSplit[$message;]
+Characters: $getTextSplitLength
+$textSplit[$message; ]
+Words: $getTextSplitLength
+Random word: $splitText[$random[1;$sum[$getTextSplitLength;1]]]
+First word: $splitText[<]
+```
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example Hello world!
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Characters: 12
+    Words: 2
+    Random word: world!
+    First word: Hello
+```
