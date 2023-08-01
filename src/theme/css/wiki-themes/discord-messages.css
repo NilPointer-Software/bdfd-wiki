@@ -5,3 +5,8 @@
 .discord-messages {
     border-radius: 10px;
 }
+
+.discord-quote-container > blockquote {
+    background-color: transparent !important;
+    border: none !important;
+}
