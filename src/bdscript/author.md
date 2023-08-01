@@ -27,7 +27,7 @@ $author[This is the author text!]
   color: "#748BD4"
   bot: true
   verified: true
-  content: " "
+  content: <none>
   embed:
     author:
       text: This is the author text!

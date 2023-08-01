@@ -36,7 +36,7 @@ $alternativeParsing
       color: "#748BD4"
       bot: true
       verified: true
-      content: " "
+      content: <none>
       embed:
         description: "\"hello\""
     
@@ -51,7 +51,7 @@ $alternativeParsing
       color: "#748BD4"
       bot: true
       verified: true
-      content: " "
+      content: <none>
       embed:
         description: "\"helloworld\""
     ```
@@ -69,7 +69,7 @@ $alternativeParsing
       color: "#748BD4"
       bot: true
       verified: true
-      content: " "
+      content: <none>
       embed:
         description: "\"hello\""
     
@@ -84,7 +84,7 @@ $alternativeParsing
       color: "#748BD4"
       bot: true
       verified: true
-      content: " "
+      content: <none>
       embeds:
       - description: "\"helloworld\""
       - description: "\"hello\""
