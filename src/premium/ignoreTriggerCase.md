@@ -9,6 +9,7 @@ $ignoreTriggerCase
 ```
 
 ## Example
+**Trigger: `!hello`**
 ```
 $nomention
 $ignoreTriggerCase
