@@ -17,4 +17,32 @@ $nomention
 $blackListIDs[566613317972394004;437154602626973697;❌ You can't use this command!]
 Pong! $ping ms
 ```
-![example](https://user-images.githubusercontent.com/113303649/210045834-d83964d7-6d5f-4cba-b549-2373c1336e49.png)
+
+```discord yaml
+- user_id: 437154602626973697
+  username: Kito
+  avatar: https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/5d649ade-b7d9-471f-84d0-8cc36b4fa76e
+  color: "#4365ab"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      ❌ You can't use this command!
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      Pong! 1 ms
+```
