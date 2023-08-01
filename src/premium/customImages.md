@@ -48,7 +48,6 @@ $customImage[NiceImage]
   color: "#748BD4"
   bot: true
   verified: true
-  content: <none>
   embed:
     image: https://user-images.githubusercontent.com/111157596/257596077-9836bafb-1c2a-4e1e-9cb3-9ca7725dcbf3.png
 ```
