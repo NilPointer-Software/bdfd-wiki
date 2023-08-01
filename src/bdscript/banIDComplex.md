@@ -20,6 +20,24 @@ $onlyIf[$findUser[$message[1];no]!=;Failed to find user!]
 <@$findUser[$message;no]> was banned!
 $banID[$replaceText[$message;$message[1];;1];$findUser[$message[1];no]]
 ```
-![exsmple](https://user-images.githubusercontent.com/113303649/212003254-1573bdd3-6417-4dd1-afd0-23f5ed1fa297.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example 854665455527526421 Hello!
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <@Chilli> was banned!
+- content: |
+      <font color="white">Chilli</font> left without pizza.
+  type: leave
+```
 
 > [How `$findUser[]` works?](./findUser.md)
