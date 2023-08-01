@@ -30,7 +30,7 @@ $author[⬅️ That is the author icon. This is the author text.]
   color: "#748BD4"
   bot: true
   verified: true
-  content: " "
+  content: <none>
   embed:
     author:
       text: ⬅️ That is the author icon. This is the author text.
