@@ -169,7 +169,7 @@
                         </nav>
                         <h1 id="usedemoji"><a class="header" href="#usedemoji">$usedEmoji</a></h1>
 <p><em>(for premium bots)</em></p>
-<p>This function returns the emoji which triggered a <code>$reaction[]</code> callback.</p>
+<p>This function returns the emoji which triggered a <a href="./reaction.html"><code>$reaction[]</code></a> callback.</p>
 <blockquote>
 <p>This function can only be used inside a <code>$reaction[]</code> callback.</p>
 </blockquote>
@@ -180,9 +180,25 @@
 <pre><code>$nomention
 $sendMessage[Emoji: $usedEmoji]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/113303649/210167363-a6a51194-d330-458e-8d98-7c8651827034.png" alt="example" /></p>
+<discord-messages>
+    <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky">
+        !example
+    </discord-message>
+    <discord-message author="Wiki Bot" bot verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4">
+        Yes or No?
+        <discord-reactions slot="reactions">
+            <discord-reaction emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Twemoji12_2705.svg/640px-Twemoji12_2705.svg.png" count="2" name=":white_check_mark:" reacted>
+            </discord-reaction>
+            <discord-reaction count="1" emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Twemoji2_274c.svg/640px-Twemoji2_274c.svg.png" name=":x:">
+            </discord-reaction>
+        </discord-reactions>
+    </discord-message>
+    <discord-message role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" verified author="Wiki Bot" bot>
+        Emoji: ✅
+    </discord-message>
+</discord-messages>
 <blockquote>
-<p>For more info, see the <a href="../premium/awaitedReactions.html">Awaited Reactions Guide</a>.</p>
+<p>For more info, see the <a href="./awaitedReactions.html">Awaited Reactions Guide</a>.</p>
 </blockquote>
 
                     </main>

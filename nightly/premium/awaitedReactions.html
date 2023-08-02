@@ -170,7 +170,46 @@
                         <h1 id="awaited-reactions"><a class="header" href="#awaited-reactions">Awaited reactions</a></h1>
 <p><em>(for premium bots)</em></p>
 <p><strong>Awaited reactions</strong> are similar to <a href="../guides/awaitedCommands.html">awaited commands</a>. Unlike awaited commands which wait for a message, they wait for a reaction instead. </p>
-<p><img src="https://i.imgur.com/diskuyv.png" alt="end result" /></p>
+<discord-messages>
+    <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky">
+        accept
+    </discord-message>
+    <discord-message role-color="#748BD4" author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot verified>
+        <discord-embed slot="embeds">
+            <discord-embed-description slot="description">
+                Do you accept?
+            </discord-embed-description>
+        </discord-embed>
+        <discord-reactions slot="reactions">
+            <discord-reaction reacted count="2" name=":white_check_mark:" emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Twemoji12_2705.svg/640px-Twemoji12_2705.svg.png">
+            </discord-reaction>
+            <discord-reaction emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Twemoji2_274c.svg/640px-Twemoji2_274c.svg.png" name=":x:" count="1">
+            </discord-reaction>
+        </discord-reactions>
+    </discord-message>
+    <discord-message role-color="#748BD4" verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" author="Wiki Bot" bot>
+        Accepted
+    </discord-message>
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" role-color="#EE7908">
+        accept
+    </discord-message>
+    <discord-message role-color="#748BD4" bot verified author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png">
+        <discord-embed slot="embeds">
+            <discord-embed-description slot="description">
+                Do you accept?
+            </discord-embed-description>
+        </discord-embed>
+        <discord-reactions slot="reactions">
+            <discord-reaction name=":white_check_mark:" emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Twemoji12_2705.svg/640px-Twemoji12_2705.svg.png" count="1">
+            </discord-reaction>
+            <discord-reaction reacted emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Twemoji2_274c.svg/640px-Twemoji2_274c.svg.png" count="2" name=":x:">
+            </discord-reaction>
+        </discord-reactions>
+    </discord-message>
+    <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" role-color="#748BD4" verified bot>
+        Declined
+    </discord-message>
+</discord-messages>
 <blockquote>
 <p>📝 Reaction roles are not possible at the moment since awaited reactions can only be triggered by the author and they expire whenever the bot goes offline.</p>
 </blockquote>
@@ -207,8 +246,28 @@
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p><img src="https://user-images.githubusercontent.com/95774950/183701101-550bf56c-3cd2-4511-bc03-8f8398fe4d8b.png" alt="Screenshot_20220809_194823" />
 <img src="https://user-images.githubusercontent.com/95774950/183701030-c82a8744-9dff-4ad9-83b5-2aa64f45cc59.png" alt="Screenshot_20220809_194754" />
-<img src="https://user-images.githubusercontent.com/95774950/183701074-395c4770-8439-4441-a0ad-5c69ae9cded4.png" alt="Screenshot_20220809_194805" />
-<img src="https://user-images.githubusercontent.com/95774950/183700978-16ae78d2-a305-4f2b-8388-c55ecadd83cc.png" alt="Screenshot_20220809_194642" /></p>
+<img src="https://user-images.githubusercontent.com/95774950/183701074-395c4770-8439-4441-a0ad-5c69ae9cded4.png" alt="Screenshot_20220809_194805" /></p>
+<discord-messages>
+    <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/009ddbb31824dca131de2d433b1d2ddb.png" author="Nicky">
+        accept
+    </discord-message>
+    <discord-message bot author="Wiki Bot" role-color="#748BD4" verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png">
+        <discord-embed slot="embeds">
+            <discord-embed-description slot="description">
+                Do you accept?
+            </discord-embed-description>
+        </discord-embed>
+        <discord-reactions slot="reactions">
+            <discord-reaction reacted name=":white_check_mark:" count="2" emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Twemoji12_2705.svg/640px-Twemoji12_2705.svg.png">
+            </discord-reaction>
+            <discord-reaction name=":x:" emoji="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Twemoji2_274c.svg/640px-Twemoji2_274c.svg.png" count="1">
+            </discord-reaction>
+        </discord-reactions>
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/a6e3c8ebb561b7083d60d12a04210baf.png" bot author="Wiki Bot" verified role-color="#748BD4">
+        Accepted ✅
+    </discord-message>
+</discord-messages>
 
                     </main>
 
