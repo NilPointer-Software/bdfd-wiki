@@ -168,35 +168,166 @@
                             <script src="../../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="threads"><a class="header" href="#threads">Threads</a></h1>
-<p><img src="https://user-images.githubusercontent.com/69215413/130264464-d976d579-b480-46e5-8dab-abf26a2d4829.png" alt="example" /></p>
-<p>Threads are subset-channels within a channel. Threads are great for separating different conversations in one channel. This wiki will explain how you can integrate threads in your bot.</p>
+<p>In this section, you'll learn how to integrate threads in your bot.</p>
 <blockquote>
-<p>⚠️ In order to send a message in thread, make sure your bot has <code>SEND_MESSAGES_IN_THREADS</code> permission.</p>
+<p>Make sure your bot has <code>SEND_MESSAGES_IN_THREADS</code> permission.</p>
 </blockquote>
-<h3 id="creating-a-thread"><a class="header" href="#creating-a-thread">Creating a Thread</a></h3>
-<pre><code>$startThread[name;channelID;messageID (canBeLeftEmpty);archiveDuration (60/1440/4320/10080);returnThreadID (yes/no)]
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#archive-duration"><strong>Archive Duration</strong></a> &gt; <a href="#startthread"><strong>$startThread[]</strong></a> &gt; <a href="#editthread"><strong>$editThread[]</strong></a> &gt; <a href="#threadaddmember"><strong>$threadAddMember[]</strong></a> &gt; <a href="#threadremovemember"><strong>$threadRemoveMember[]</strong></a> &gt; <a href="#simple-code"><strong>Simple Code</strong></a></p>
+<h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
+<ul>
+<li><a href="../../bdscript/startThread.html"><code>$startThread[]</code></a></li>
+<li><a href="../../bdscript/editThread.html"><code>$editThread[]</code></a></li>
+<li><a href="../../bdscript/threadAddMember.html"><code>$threadAddMember</code></a></li>
+<li><a href="../../bdscript/threadRemoveMember.html"><code>$threadRemoveMember[]</code></a></li>
+</ul>
+<h2 id="archive-duration"><a class="header" href="#archive-duration">Archive Duration</a></h2>
+<p><code>60</code> - 1 Hour<br />
+<code>1440</code> - 1 Day<br />
+<code>4320</code> - 3 Days (Only for servers with level 1 boosted)<br />
+<code>10080</code> - 7 Days (Only for servers with level 2 boosted)</p>
+<h1 id="startthread"><a class="header" href="#startthread">$startThread</a></h1>
+<p>Creates a new thread in the provided channel.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$startThread[Thread name;Channel ID;Message ID;(Archive duration;Return thread ID?)]
 </code></pre>
-<p>Starts a thread <a href="../../bdscript/startThread.html">(learn more)</a></p>
-<h3 id="editing-a-thread"><a class="header" href="#editing-a-thread">Editing a Thread</a></h3>
-<pre><code>$editThread[threadID;name;archived (yes/no);archiveDuration (60/1440/4320/10080);locked (yes/no);slowmode (in seconds)]
+<blockquote>
+<p>Required permissions that the bot must have for this function to work properly:</p>
+</blockquote>
+<ul>
+<li><code>createpublicthreads</code></li>
+</ul>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Thread name</code> <code>(Type: String || Flag: Required)</code>: The name of the newly created thread.</li>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the thread will be created.</li>
+<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The message from which the thread will be created. Can be left empty.</li>
+<li><code>Archive duration</code> <code>(Type: Integer || Flag: Optional)</code>: The <a href="#archive-duration">archive duration</a> after which the thread will be auto-archived due to inactivity. Defaults to <code>60</code>.</li>
+<li><code>Return thread ID?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the thread channel ID or not. Defaults to <code>no</code>.</li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 </code></pre>
-<p>Edits an existing thread. <a href="../../bdscript/editThread.html">(learn more)</a></p>
-<h3 id="member-thread-management"><a class="header" href="#member-thread-management">Member Thread Management</a></h3>
-<h4 id="adding-a-user-to-a-thread"><a class="header" href="#adding-a-user-to-a-thread">Adding a User to a Thread</a></h4>
-<pre><code>$threadAddMember[threadID;userID]
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+        !example
+    </discord-message>
+    <discord-system-message type="thread">
+        <i style="color: #378afa">BDFD Support</i> Started a thread: <i style="color: white">Cool Thread</i>. See all <i style="color: white">threads</i>.
+    </discord-system-message>
+    <discord-message author="BDFD Support" role-color="#378afa" verified bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+        I created a new thread! <discord-mention type="channel">Cool Thread</discord-mention>
+    </discord-message>
+</discord-messages>
+<h1 id="editthread"><a class="header" href="#editthread">$editThread</a></h1>
+<p>Modifies an existing thread.</p>
+<h2 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h2>
+<pre><code>$editThread[Thread ID;(Thread name;Archived?;Archive duration;Locked?;Slowmode)]
 </code></pre>
-<p>Adds a user to the thread. <a href="../../bdscript/threadAddMember.html">(learn more)</a></p>
-<h4 id="removing-a-user-from-a-thread"><a class="header" href="#removing-a-user-from-a-thread">Removing a User from a Thread</a></h4>
-<pre><code>$threadRemoveMember[threadID;userID]
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
+<ul>
+<li><code>Thread ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The thread channel to edit.</li>
+<li><code>Thread name</code> <code>(Type: String || Flag: Optional)</code>: The new name of the thread.</li>
+<li><code>Archived?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to archive this thread or not.</li>
+<li><code>Archive duration</code> <code>(Type: Integer || Flag: Optional)</code>: The <a href="#archive-duration">archive duration</a> after which the thread will be auto-archived due to inactivity. Defaults to <code>60</code>.</li>
+<li><code>Locked?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to lock this thread or not. Note that archived threads can't be locked.</li>
+<li><code>Slowmode</code> <code>(Type: Integer || Flag: Optional)</code>: The slowmode of this channel, expressed in seconds.</li>
+</ul>
+<blockquote>
+<p>Use <code>!unchanged</code> as an argument for the option to remain in its current state.</p>
+</blockquote>
+<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
+<pre><code>$nomention
+$editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 </code></pre>
-<p>Removes a user from the thread. <a href="../../bdscript/threadRemoveMember.html">(learn more)</a></p>
-<h3 id="example"><a class="header" href="#example">Example</a></h3>
-<pre><code>$var[threadID;$startThread[Cool Thread;$channelID;;1440;yes]]
-I created a new thread! &lt;#$var[threadID]&gt;
-$c[❗️This example requires BDScript 2 enabled❗️]
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-system-message type="edit">
+        <i style="color: #378afa">BDFD Support</i> <i style="color: white">changed the channel name: <b>Cool Thread 😎</b></i>
+    </discord-system-message>
+</discord-messages>
+<h1 id="threadaddmember"><a class="header" href="#threadaddmember">$threadAddMember</a></h1>
+<p>Adds a user to a thread.</p>
+<h2 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h2>
+<pre><code>$threadAddMember[Thread ID;User ID]
 </code></pre>
-<h3 id="further-reading"><a class="header" href="#further-reading">Further Reading</a></h3>
+<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
+<ul>
+<li><code>Thread ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the thread channel to add the user to.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to add to the thread.</li>
+</ul>
+<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<pre><code>$nomention
+$threadAddMember[1021054508975009793;$authorID]
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
+        !example
+    </discord-message>
+</discord-messages>
+<ul>
+<li>In the thread:</li>
+</ul>
+<discord-messages>
+    <discord-system-message type="join">
+        <i style="color: #378afa">BDFD Support</i> added <i style="color: #E67E22">RainbowKey</i> to the thread.
+    </discord-system-message>
+</discord-messages>
+<h1 id="threadremovemember"><a class="header" href="#threadremovemember">$threadRemoveMember</a></h1>
+<p>Removes a user from a thread.</p>
+<h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
+<pre><code>$threadRemoveMember[Thread ID;User ID]
+</code></pre>
+<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
+<ul>
+<li><code>Thread ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the thread channel to remove the user from.</li>
+<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to remove from the thread.</li>
+</ul>
+<h2 id="example-3"><a class="header" href="#example-3">Example</a></h2>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+</discord-messages>
+<ul>
+<li>In the thread:</li>
+</ul>
+<discord-messages>
+    <discord-system-message type="leave">
+        <i style="color: #378afa">BDFD Support</i> removed <i style="color: #E67E22">RainbowKey</i> from the thread.
+    </discord-system-message>
+</discord-messages>
+<h1 id="simple-code"><a class="header" href="#simple-code">Simple Code</a></h1>
+<pre><code>$nomention
+$var[id;$startThread[Cool Thread;$channelID;;1440;yes]]
+New thread - &lt;#$var[id]&gt;
+$threadAddMember[$var[id];$authorID]
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-system-message type="thread">
+        <i style="color: #378afa">BDFD Support</i> Started a thread: <i style="color: white">Cool Thread</i>. See all <i style="color: white">threads</i>.
+    </discord-system-message>
+    <discord-message bot author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified>
+        New thread - <discord-mention type="channel">Cool Thread</discord-mention>
+    </discord-message>
+</discord-messages>
+<ul>
+<li>In the thread:</li>
+</ul>
+<discord-messages>
+    <discord-system-message type="join">
+        <i style="color: #378afa">BDFD Support</i> added <i style="color: #E67E22">RainbowKey</i> to the thread.
+    </discord-system-message>
+</discord-messages>
+<blockquote>
 <p>If you want to learn more about threads, read <a href="https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ">Discord's support article</a>.</p>
+</blockquote>
 
                     </main>
 

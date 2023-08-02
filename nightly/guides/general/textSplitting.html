@@ -173,13 +173,13 @@
 <p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#textsplit"><strong>$textSplit[]</strong></a> &gt; <a href="#splittext"><strong>$splitText[]</strong></a> &gt; <a href="#getextsplitlength"><strong>$getTextSplitLength</strong></a> &gt; <a href="#gettextsplitindex"><strong>$getTextSplitIndex[]</strong></a> &gt; <a href="#joinsplittext"><strong>$joinSplitText[]</strong></a> &gt; <a href="#removesplittextelement"><strong>$removeSplitTextElement[]</strong></a> &gt; <a href="#simple-code"><strong>Simple Code</strong></a></p>
 <h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
-<li><a href="../bdscript/textSplit.html"><code>$textSplit[]</code></a></li>
-<li><a href="../bdscript/splitText.html"><code>$splitText[]</code></a></li>
-<li><a href="../bdscript/getTextSplitLength.html"><code>$getTextSplitLength</code></a></li>
-<li><a href="../bdscript/getTextSplitIndex.html"><code>$getTextSplitIndex[]</code></a></li>
-<li><a href="../bdscript/joinSplitText.html"><code>$joinSplitText[]</code></a></li>
-<li><a href="../bdscript/removeSplitTextElement.html"><code>$removeSplitTextElement[]</code></a></li>
-<li><a href="../bdscript/editSplitText.html"><code>$editSplitText[]</code></a></li>
+<li><a href="../../bdscript/textSplit.html"><code>$textSplit[]</code></a></li>
+<li><a href="../../bdscript/splitText.html"><code>$splitText[]</code></a></li>
+<li><a href="../../bdscript/getTextSplitLength.html"><code>$getTextSplitLength</code></a></li>
+<li><a href="../../bdscript/getTextSplitIndex.html"><code>$getTextSplitIndex[]</code></a></li>
+<li><a href="../../bdscript/joinSplitText.html"><code>$joinSplitText[]</code></a></li>
+<li><a href="../../bdscript/removeSplitTextElement.html"><code>$removeSplitTextElement[]</code></a></li>
+<li><a href="../../bdscript/editSplitText.html"><code>$editSplitText[]</code></a></li>
 </ul>
 <h1 id="textsplit"><a class="header" href="#textsplit">$textSplit</a></h1>
 <p>Splits the provided text by a given separator and saves the value temporarily.</p>
@@ -200,7 +200,7 @@ $textSplit[hello-world-!;-]
     <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message bot verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" role-color="#378afa">
+    <discord-message role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" bot verified>
         <discord-quote>world</discord-quote>
     </discord-message>
 </discord-messages>
@@ -221,10 +221,10 @@ $textSplit[hello world !; ]
 &gt; $splitText[&gt;]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified>
+    <discord-message bot author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" verified>
         <discord-quote>hello<br />world<br />!</discord-quote>
     </discord-message>
 </discord-messages>
@@ -242,7 +242,7 @@ $textSplit[hello%world%!;%]
     <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message verified author="BDFD Support" bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa">
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" bot role-color="#378afa" verified>
         <discord-quote>3</discord-quote>
     </discord-message>
 </discord-messages>
@@ -261,16 +261,16 @@ $textSplit[hello_world_!;_]
 &gt; $getTextSplitIndex[$message]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
         !example world
     </discord-message>
-    <discord-message role-color="#378afa" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" bot>
+    <discord-message role-color="#378afa" author="BDFD Support" verified bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
         <discord-quote>2</discord-quote>
     </discord-message>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example bdfd
     </discord-message>
-    <discord-message bot role-color="#378afa" author="BDFD Support" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+    <discord-message author="BDFD Support" bot verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa">
         <discord-quote>-1</discord-quote>
     </discord-message>
 </discord-messages>
@@ -293,7 +293,7 @@ $textSplit[hello#world#!;#]
     <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot role-color="#378afa">
+    <discord-message author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified role-color="#378afa" bot>
         <discord-quote>hello<br />world<br />!</discord-quote>
     </discord-message>
 </discord-messages>
@@ -313,10 +313,10 @@ $removeSplitTextElement[3]
 &gt; $joinSplitText[-]
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" bot role-color="#378afa" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+    <discord-message verified role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot author="BDFD Support">
         <discord-quote>hello-world</discord-quote>
     </discord-message>
 </discord-messages>
@@ -337,10 +337,10 @@ $editSplitText[2;bdfd]
 &gt; $joinSplitText[-]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" verified author="BDFD Support">
+    <discord-message verified bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" role-color="#378afa" author="BDFD Support">
         <discord-quote>hello-bdfd-!</discord-quote>
     </discord-message>
 </discord-messages>
@@ -354,10 +354,10 @@ Random word: $splitText[$random[1;$sum[$getTextSplitLength;1]]]
 First word: $splitText[&lt;]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png" author="RainbowKey">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/edc8336046868ff006aa7fb6a91a3693.png">
         !example Hello world!
     </discord-message>
-    <discord-message author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot role-color="#378afa" verified>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified role-color="#378afa" author="BDFD Support">
         Characters: 12<br />Words: 2<br />Random word: world!<br />First word: Hello
     </discord-message>
 </discord-messages>
