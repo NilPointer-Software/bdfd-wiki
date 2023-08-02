@@ -24,5 +24,18 @@ Custom prefixes allow the bot's prefix (like `!`) to be changed in different ser
 3. Change all the command triggers to `$getServerVar[prefix]trigger-here`. For example, `!ping` would become `$getServerVar[prefix]ping`.
 
 4. You're all set, enjoy!
+   ``` discord yaml
+   - user_id: 729343563401265193
+     username: Nicky
+     color: "#EE7908"
+     content: |
+       !prefix .
 
-    ![image](https://user-images.githubusercontent.com/69215413/118340286-41d83480-b4e9-11eb-96f7-1d8dce2d0ec4.png)
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       Set Testing's prefix to <code>.</code>
+   ```

@@ -15,9 +15,34 @@ $reaction[Name]
 ### Trigger `$reaction[click]`
 ```
 $nomention
-$sendMessage[$username clicked on reaction]
+$sendMessage[$username clicked on the reaction]
 ```
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
 
-![example](https://user-images.githubusercontent.com/113303649/210166708-3395a683-07ad-4f1b-b018-31f2a317de6f.png)
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Click
+  reactions:
+    - emoji: https://cdn.discordapp.com/emojis/766607515445231637.webp
+      count: 2
+      reacted: true
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: |
+    Nicky clicked on the reaction
+```
 
 > For more info, see the [Awaited Reactions Guide](../premium/awaitedReactions.md).

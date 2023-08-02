@@ -14,6 +14,7 @@ $sendNotification[Message;(Image URL)]
 
 ## Example
 ```
+$nomention
 $sendNotification[Hello, I miss you!;$userAvatar[$botID]]
 ```
 

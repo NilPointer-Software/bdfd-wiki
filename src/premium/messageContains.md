@@ -17,4 +17,33 @@ $messageContains[Word;...]
 
     ![example](https://user-images.githubusercontent.com/69215413/114110028-8d714000-98a4-11eb-9e75-6d6ea5882756.png)
 
-Now, let's say in chat someone typed : `Hello Bot!`, `Hello`, `Hey Everyone!`, `Hi Noituri` etc. The bot would respond with "Hello there! How are you?".
+3. Now, let's say in chat someone types : `Hello Bot!`, `Hello`, `Hey Everyone!`, `Hi Noituri` etc. The bot will respond with "Hello there! How are you?".
+   ``` discord yaml
+   - user_id: 246604909451935745
+     username: noituri
+     color: "#F1BDEE"
+     content: |
+       Hello
+
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       Hello there! How are you?
+
+   - user_id: 729343563401265193
+     username: Nicky
+     color: "#EE7908"
+     content: |
+       Hi Noituri
+
+   - user_id: 566613317972394004
+     username: Wiki Bot
+     color: "#748BD4"
+     bot: true
+     verified: true
+     content: |
+       Hello there! How are you?
+    ```
