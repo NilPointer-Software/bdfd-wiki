@@ -69,6 +69,8 @@
 - Added `$jsonSetString[]`
 - Added `$jsonArrayIndex[]`
 
+</details>
+
 # 2022
 
 ## December
@@ -78,6 +80,8 @@
 - Added `$getBanReason[]`
 - Fixed caching issues for the text splitting functions
 - Fixed issues with custom images
+
+<details><summary>Previous Updates</summary>
 
 ## November
 - Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
