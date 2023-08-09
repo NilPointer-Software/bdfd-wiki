@@ -19,6 +19,8 @@
 - Added `$userBadges[]`
 - Added `$userBannerColor[]`
 
+<details><summary>Previous Updates</summary>
+
 ## May
 - Fixed `$min[]` and `$max[]` not working with floats
 
@@ -67,6 +69,8 @@
 - Added `$jsonSetString[]`
 - Added `$jsonArrayIndex[]`
 
+</details>
+
 # 2022
 
 ## December
@@ -76,6 +80,8 @@
 - Added `$getBanReason[]`
 - Fixed caching issues for the text splitting functions
 - Fixed issues with custom images
+
+<details><summary>Previous Updates</summary>
 
 ## November
 - Deprecated `$userJoinedDiscord[]` in favor of `$creationDate[]`
@@ -214,6 +220,8 @@
 - Added public BDFD API
 - Added `$serverDescription[]`
 
+</details>
+
 # 2021
 
 ## December
@@ -237,6 +245,8 @@
 - Added missing permissions
 - Fixed unintentional server restarts
 - The last argument in `$replaceText[]` is now optional
+
+<details><summary>Previous Updates</summary>
 
 ## November
 - Added `$reply[]`
@@ -627,6 +637,8 @@
 - Added multi-line support for `$textSplit[]`
 - Fixed brackets in `$username`
 
+</details>
+
 # 2019
 
 ## December
@@ -654,8 +666,12 @@
 - Fixed `$banID[]`
 - Preparations for premium points
 
+<details><summary>Previous Updates</summary>
+
 ## November
 - Added `$rolePosition[]`
 - Released translation strings to volunteers
 - Added `kick()` and `ban()` to JS
 - Released new stable version
+
+</details>
