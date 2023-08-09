@@ -28,4 +28,4 @@
 
 - Hosting and Premium time can only be transferred between bots owned by a single user.
 - Hosting and Premium time can not be transferred to a promocode.
-- Only premium time can be donated for a giveaway promotion on our official Discord server[2].
+- Only premium time can be donated for a giveaway promotion on our [official Discord server](https://discord.gg/botdesigner).
