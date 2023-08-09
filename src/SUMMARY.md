@@ -3,6 +3,7 @@
 [Foreword](foreword.md)
 [Changelog](CHANGELOG.md)
 [Terms of Service](terms.md)
+[Entity Transfer Policty](entityTransferPolicy.md)
 
 ---
 
