@@ -34,9 +34,9 @@ After a successful purchase of premium points, here's how to redeem them :
 - Access to [`$messageContains[]`](./messageContains.md) and [`$alwaysReply`](./alwaysReply.md) callbacks.
 - Custom images.
 - Access to [`$ignoreTriggerCase`](./ignoreTriggerCase.md) and [`$sendNotification`](./sendNotification.md) functions.
-- Unlimited commands/variables.
+- Unlimited commands and variables.
 - Ad-free hosting time.
-- Priority bot hosting/startup.
+- Priority bot hosting and startup.
 - Maximum 120 minutes duration in `$replyIn` & `$editEmbedIn`.
 - Increased server and global variable character limits.
 - Bot guild list.
