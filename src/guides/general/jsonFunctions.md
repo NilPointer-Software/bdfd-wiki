@@ -144,7 +144,7 @@ $jsonSetString[Key;...;Value]
     $nomention
     $jsonParse[{}]
 
-    $jsonSet[balance;$message]
+    $jsonSetString[balance;$message]
 
     Balance key was set to: $json[balance]
     ```
@@ -309,7 +309,7 @@ $jsonParse[{"computer":[{"apps":{"software":["BlueStacks","Krita","Visual Studio
 $jsonPretty[4]
 ```
 
-> For the output to really be pretty, we have to use the [`$disableInnerSpaceRemoval`](../bdscript/disableInnerSpaceRemoval.md) function.
+> For the output to really be pretty, we have to use the [`$disableInnerSpaceRemoval`](../../bdscript/disableInnerSpaceRemoval.md) function.
 
 ![](https://user-images.githubusercontent.com/70456337/214135087-1ea9ed9c-40ab-4c29-b5c6-d0da83478487.png)
 
@@ -503,7 +503,7 @@ Current music:
 ![](https://user-images.githubusercontent.com/70456337/222919976-4e9d3110-7a5f-4653-bcdd-ceaa8bfa58db.png)
 
 ## $jsonArrayUnshift
-`$jsonArrayUnfhist` function adds the value in the front of the array.
+`$jsonArrayUnshift` function adds the value in the front of the array.
 
 ### Syntax
 ```
