@@ -3,16 +3,16 @@ Returns the creation date of any valid Discord Snowflake ID.
 
 ## Syntax
 ```
-$creationDate[ID;(format)]
+$creationDate[ID;(Format)]
 ```
 
 ### Parameters
-- `ID` `(Type: Snowflake || Flag: Required)`: The ID from which to get the creation date. The ID can be a `UserID`, a `RoleID`, a `MessageID`, or a `ServerID`.
-- `format` `(Type: String || Flag: Optional)`: Customize the default time format output.
+- `ID` `(Type: Snowflake || Flag: Required)`: The ID from which to get the creation date. The ID can be a `User ID`, a `Role ID`, a `Message ID`, a `Emoji ID`, or a `Guild ID`. [(Learn more)](../resources/timeFormat.md)
+- `Format` `(Type: String || Flag: Optional)`: Customize the default time format output.
 
 > Uses GoLang date format
 
-   > Click [me](../resources/timeFormat.md) to check all supported time format values.
+> Click [me](../resources/timeFormat.md) to check all supported time format values.
 
 ## Example
 - Default format
