@@ -80,7 +80,7 @@ Large Code Block\
 \`\`\`
 ##### Output
 ```
-Large code block
+Large Code Block
 ```
 ---
 #### Quotes
@@ -225,3 +225,9 @@ To test your custom code block, you can use the [official test site](https://nil
 - On our wiki, messages can use the `user_id` yaml field for automatic and up-to-date avatar and username.
   When using `user_id`, the `username` field is no longer required and will overwrite the username fetched from Discord.
   The same thing applies to the `avatar` field.
+
+## Credits
+
+**Thanks to everyone who has already contributed!**
+
+[![Contributors](https://contrib.rocks/image?repo=NilPointer-Software/bdfd-wiki)](https://github.com/NilPointer-Software/bdfd-wiki/graphs/contributors)
