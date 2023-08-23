@@ -39,4 +39,4 @@ $calculate[$message] 🧠
     6.9 🧠
 ```
 
-> [How `$enableDecimals[]` works?](./bdscript/enableDecimals.md)
+> [How does `$enableDecimals[]` work?](./enableDecimals.md)
