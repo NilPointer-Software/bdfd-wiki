@@ -18,16 +18,16 @@ $onIneraction[Interaction ID]
 1. Create two commands and set the trigger `$onInteraction[example]` for one command and `!example` for the other.
 
     - Code with trigger `!example`:
-    ```
-    $nomention
-    Click!
-    $addButton[no;example;Click!;primary]
-    ```
+      ```
+      $nomention
+      Click!
+      $addButton[no;example;Click!;primary]
+      ```
     - Code with trigger `$onInteraction[example]`:
-    ```
-    $nomention
-    $sendMessage[Hello $displayName!]
-    ```
+      ```
+      $nomention
+      $sendMessage[Hello $displayName!]
+      ```
 2. Execute commands
    ``` discord yaml
    - user_id: 729343563401265193
