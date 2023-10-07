@@ -26,7 +26,7 @@ $onIneraction[Interaction ID]
     - Code with trigger `$onInteraction[example]`:
     ```
     $nomention
-    $sendMessage[Hello $username!]
+    $sendMessage[Hello $displayName!]
     ```
 2. Execute commands
    ``` discord yaml
