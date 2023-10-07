@@ -20,7 +20,7 @@ $if[$customID==interaction]
 $endif
 
 $if[$customID==onlyauthor-$authorID]
-  $sendMessage[Hello $username!]
+  $sendMessage[Hello $displayName!]
 $endif
 ```
 ``` discord yaml
