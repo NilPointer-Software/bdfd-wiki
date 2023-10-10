@@ -11,7 +11,7 @@ $disableInnerSpaceRemoval
 $nomention
 $disableInnerSpaceRemoval
 
-Hello               $username!
+Hello               $displayName!
 ```
 
 ### Output Without
