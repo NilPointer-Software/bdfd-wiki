@@ -177,15 +177,15 @@ Check <a href="#Example">example</a> to get started quickly.</p>
 <li>You need to enable autocomplete for the option</li>
 <li>You can't use option choices with autocomplete</li>
 </ul>
-<h2 id="onautocompletecommand-name-callback"><a class="header" href="#onautocompletecommand-name-callback"><code>$onAutoComplete[command name]</code> callback</a></h2>
+<h2 id="onautocompletename-callback"><a class="header" href="#onautocompletename-callback"><code>$onAutoComplete[Name]</code> callback</a></h2>
 <p>This callback receives information about current user input. It's used for adding suggestions.<br />
-<code>command name</code> is the name of a slash command.</p>
+<code>Name</code> is the name of a slash command.</p>
 <h2 id="avaliable-functions"><a class="header" href="#avaliable-functions">Avaliable functions</a></h2>
-<h3 id="appendoptionsuggestionnamesuggestion"><a class="header" href="#appendoptionsuggestionnamesuggestion"><code>$appendOptionSuggestion[name;suggestion]</code></a></h3>
+<h3 id="appendoptionsuggestionlabelvalue"><a class="header" href="#appendoptionsuggestionlabelvalue"><code>$appendOptionSuggestion[Label;Value]</code></a></h3>
 <p>Used for adding new suggestions.</p>
 <ul>
-<li><code>label</code> - text which will be displayed in the suggestion list (for example: <code>arg-ad</code> from the previous <a href="#Auto-Complete-for-Slash-Command-Options">example</a>)</li>
-<li><code>value</code> - data that can be accessed in a slash command by using <code>$message[]</code> function. <code>label</code> is only a display name but <code>value</code> holds the actual value for a suggestion.</li>
+<li><code>Label</code> - text which will be displayed in the suggestion list (for example: <code>arg-ad</code> from the previous <a href="#Auto-Complete-for-Slash-Command-Options">example</a>)</li>
+<li><code>Value</code> - data that can be accessed in a slash command by using <code>$message[]</code> function. <code>label</code> is only a display name but <code>value</code> holds the actual value for a suggestion.</li>
 </ul>
 <blockquote>
 <p><strong>Note:</strong> <code>value</code> must have the same type as the currently typed option! Meaning, if the option's type is <code>Integer</code>, <code>value</code> can't be set to <code>Hello</code> but it can be set to <code>123</code></p>
@@ -200,12 +200,12 @@ Check <a href="#Example">example</a> to get started quickly.</p>
 <h3 id="slash-option"><a class="header" href="#slash-option">Slash option:</a></h3>
 <p><img src="https://user-images.githubusercontent.com/16838075/177012795-c1ba74a8-01e6-4d84-abf5-6de91e47628c.jpg" alt="slash option" /></p>
 <h3 id="slash-command-code"><a class="header" href="#slash-command-code">Slash command code:</a></h3>
-<pre><code class="language-php">$message[arg]
+<pre><code>$message[arg]
 </code></pre>
 <h3 id="onautocomplete-callback"><a class="header" href="#onautocomplete-callback"><code>$onAutoComplete[]</code> callback:</a></h3>
 <p><img src="https://user-images.githubusercontent.com/16838075/177012879-d5628680-eac6-4d4a-a25a-5f04e887feb3.jpg" alt="autocompletetrigger" /></p>
 <h3 id="callback-code"><a class="header" href="#callback-code">Callback code</a></h3>
-<pre><code class="language-php">$nomention
+<pre><code>$nomention
 $appendOptionSuggestion[$autoCompleteOptionName-$autoCompleteOptionValue;$autoCompleteOptionValue]
 </code></pre>
 <h5 id="explanation"><a class="header" href="#explanation">Explanation</a></h5>
