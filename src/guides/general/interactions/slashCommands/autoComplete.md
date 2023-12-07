@@ -8,15 +8,15 @@ Check [example](#Example) to get started quickly.
 - You need to enable autocomplete for the option
 - You can't use option choices with autocomplete
 
-## `$onAutoComplete[command name]` callback
+## `$onAutoComplete[Name]` callback
 This callback receives information about current user input. It's used for adding suggestions.\
-`command name` is the name of a slash command.
+`Name` is the name of a slash command.
 
 ## Avaliable functions
-### `$appendOptionSuggestion[name;suggestion]`
+### `$appendOptionSuggestion[Label;Value]`
 Used for adding new suggestions.
-- `label` - text which will be displayed in the suggestion list (for example: `arg-ad` from the previous [example](#Auto-Complete-for-Slash-Command-Options))
-- `value` - data that can be accessed in a slash command by using `$message[]` function. `label` is only a display name but `value` holds the actual value for a suggestion.
+- `Label` - text which will be displayed in the suggestion list (for example: `arg-ad` from the previous [example](#Auto-Complete-for-Slash-Command-Options))
+- `Value` - data that can be accessed in a slash command by using `$message[]` function. `label` is only a display name but `value` holds the actual value for a suggestion.
 
 > **Note:** `value` must have the same type as the currently typed option! Meaning, if the option's type is `Integer`, `value` can't be set to `Hello` but it can be set to `123`
 
@@ -34,7 +34,7 @@ Returns the current user input. For example `ad` from the previous [example](#Au
 ![slash option](https://user-images.githubusercontent.com/16838075/177012795-c1ba74a8-01e6-4d84-abf5-6de91e47628c.jpg)
 
 ### Slash command code:
-```php
+```
 $message[arg]
 ```
 
@@ -42,7 +42,7 @@ $message[arg]
 ![autocompletetrigger](https://user-images.githubusercontent.com/16838075/177012879-d5628680-eac6-4d4a-a25a-5f04e887feb3.jpg)
 
 ### Callback code
-```php
+```
 $nomention
 $appendOptionSuggestion[$autoCompleteOptionName-$autoCompleteOptionValue;$autoCompleteOptionValue]
 ```
