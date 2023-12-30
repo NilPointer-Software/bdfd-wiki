@@ -1,14 +1,44 @@
 # If Statements
 Interprets commands conditionally.
-Every **if statement** starts with `$if[condition]` and has to end with `$endif`.
-`$else` is optional.
 
-## Basics
-- Use `$if[]` to specify a block of code to be executed, if a specified condition is true.
-- Use `$else` to specify a block of code to be executed, if the same condition is false.
-- Use `$elseif[]` to specify a new condition to check, if the first condition is false **(can be only used in BDScript 2)**
-- Use `$else` and `$if[]` to specify a new condition to check, if the first condition is false.
-- Use `$endif` to end a if statement.
+## Content
+[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif[]**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**Simple Example**](#simple-example)
+
+## Functions Used
+- [`$if[]`](../../../../bdscript/if.md)
+- [`$endif`](../../../../bdscript/endif.md)
+- [`$else`](../../../../bdscript/else.md)
+- [`$elseif[]`](../../../../bdscript/elseifComplex.md)
+
+### Signs
+`==` - Equal
+
+`!=` - Not Equal
+
+`<` -  Less Than
+
+`>` - Greater Than
+
+`>=` - Greater Than Or Equal To
+
+`<=` - Less Than Or Equal To
+
+# $if
+Executes the following block of code if the provided condition is `true`.
+
+## Syntax
+```
+$if[Condition]
+```
+### Parameters
+- `Condition` `(Type: String || Flag: Required)`: Check that will be carried out.
+## Example
+```
+$nomention
+$if[5>$random[0;10]]
+  5 is bigger than $random[0;10]
+$endif
+```
 
 ## Examples:
 
@@ -51,22 +81,6 @@ $endif
 
 ## Explanation
 `$if[]` uses the format of: if `x` is related accordingly (based on the "sign") with `y` then the code below runs.
-
-### Signs
-`==` - Equal
-
-`!=` - Not Equal
-
-`<` -  Less Than
-
-`>` - Greater Than
-
-`>=` - Greater Than Or Equal To
-
-`<=` - Less Than Or Equal To
-
-- These signs could vary in meaning based on the order or intent of the if statement.
-- If you are using text as your `x` and/or `y`, you can not use any other signs besides `==` and `!=`. However for numbers, you can use any sign shown in the above list.
 
 ### Base Usage
 ```
