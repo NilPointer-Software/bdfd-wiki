@@ -2,7 +2,7 @@
 Returns the name for the provided channel ID.
 ## Syntax
 ```
-$channelName[channel ID]
+$channelName[Channel ID]
 ```
 
 
