@@ -400,7 +400,7 @@ $endif
      I can't find this:(
    $else
    ```
-   3. Execute command `!example`
+3. Execute command `!example`
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
