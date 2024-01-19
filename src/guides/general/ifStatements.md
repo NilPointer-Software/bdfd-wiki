@@ -17,15 +17,15 @@ In this section, you'll learn how to use the if statement.
 ### Signs
 `==` - Equal
 
-`!=` - Not Equal
+`!=` - Not equal
 
-`<` -  Less Than
+`<` -  Less than
 
-`>` - Greater Than
+`>` - Greater than
 
-`>=` - Greater Than Or Equal To
+`>=` - Greater than or equal to
 
-`<=` - Less Than Or Equal To
+`<=` - Less than or equal to
 
 # $if
 Executes the following block of code if the provided condition is `true`.
