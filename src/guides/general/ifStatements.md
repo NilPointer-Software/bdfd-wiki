@@ -398,7 +398,7 @@ $endif
      Do you want to get premium?
    $else
      I can't find this:(
-   $else
+   $endif
    ```
 3. Execute command `!example`
 ``` discord yaml
