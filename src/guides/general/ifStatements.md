@@ -26,6 +26,8 @@ In this section, you'll learn how to use the if statement.
 `>=` - Greater than or equal to
 
 `<=` - Less than or equal to
+- These signs could vary in meaning based on the order or intent of the if statement.
+- If you are using text as your `x` and/or `y`, you can not use any other signs besides `==` and `!=`. However for numbers, you can use any sign shown in the above list.
 
 # $if
 Executes the following block of code if the provided condition is `true`.
