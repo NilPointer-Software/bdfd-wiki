@@ -1,7 +1,7 @@
 # $serverLeaderboard
 Creates a server leaderboard (top-10).
 
-> 🧙‍♂️ `$serverLeadboard` automatically generates a description. So, `$description` should not be used in the code.
+> 🧙‍♂️ `$serverLeaderboard` automatically generates a description. So, `$description` should not be used in the code.
 
 ## Syntax
 ```
