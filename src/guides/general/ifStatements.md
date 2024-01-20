@@ -317,10 +317,10 @@ Returns `true` if at least one of the provided conditions is `true`, otherwise `
 
 ## Syntax
 ```
-$or[Conditiona;...]
+$or[Conditions;...]
 ```
 ### Parameters
-- `Conditiona` `(Type: String || Flag: Required)`: The condition to check. Separate conditions using `;`. Use [Signs](#signs).
+- `Conditions` `(Type: String || Flag: Required)`: The condition to check. Separate conditions using `;`. Use [Signs](#signs).
 
 ## Example
 ```
