@@ -2,17 +2,17 @@
 In this section, you'll learn how to use the if statement.
 
 ## Content
-[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif[]**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and**](#and) > [**$or[]**](#or) > [**Simple Example**](#simple-example)
+[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif[]**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and[]**](#and) > [**$or[]**](#or) > [**Simple Example**](#simple-example)
 
 ## Functions Used
-- [`$if[]`](../../../../bdscript/if.md)
-- [`$endif`](../../../../bdscript/endif.md)
-- [`$else`](../../../../bdscript/else.md)
-- [`$elseif[]`](../../../../bdscript/elseifComplex.md)
+- [`$if[]`](../../../bdscript/if.md)
+- [`$endif`](../../../bdscript/endif.md)
+- [`$else`](../../../bdscript/else.md)
+- [`$elseif[]`](../../../bdscript/elseifComplex.md)
 
 ## Support Functions Used
-- [`$and`](../../../../bdscript/and.md)
-- [`$or`](../../../../bdscript/or.md)
+- [`$and[]`](../../../bdscript/and.md)
+- [`$or[]`](../../../bdscript/or.md)
 
 ### Signs
 `==` - Equal
@@ -457,4 +457,3 @@ $endif
   content: |
     I can't find this:(
 ```
-\
