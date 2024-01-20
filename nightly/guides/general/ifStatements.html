@@ -168,80 +168,301 @@
                             <script src="../../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="if-statements"><a class="header" href="#if-statements">If Statements</a></h1>
-<p>Interprets commands conditionally.
-Every <strong>if statement</strong> starts with <code>$if[condition]</code> and has to end with <code>$endif</code>.
-<code>$else</code> is optional.</p>
-<h2 id="basics"><a class="header" href="#basics">Basics</a></h2>
+<p>In this section, you'll learn how to use the if statement.</p>
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#signs"><strong>Signs</strong></a> &gt; <a href="#if"><strong>$if[]</strong></a> &gt; <a href="#endif"><strong>$endif[]</strong></a> &gt; <a href="#else"><strong>$else</strong></a> &gt; <a href="#elseif"><strong>$elseif[]</strong></a> &gt; <a href="#and"><strong>$and</strong></a> &gt; <a href="#or"><strong>$or[]</strong></a> &gt; <a href="#simple-example"><strong>Simple Example</strong></a></p>
+<h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
-<li>Use <code>$if[]</code> to specify a block of code to be executed, if a specified condition is true.</li>
-<li>Use <code>$else</code> to specify a block of code to be executed, if the same condition is false.</li>
-<li>Use <code>$elseif[]</code> to specify a new condition to check, if the first condition is false <strong>(can be only used in BDScript 2)</strong></li>
-<li>Use <code>$else</code> and <code>$if[]</code> to specify a new condition to check, if the first condition is false.</li>
-<li>Use <code>$endif</code> to end a if statement.</li>
+<li><a href="../../../../bdscript/if.html"><code>$if[]</code></a></li>
+<li><a href="../../../../bdscript/endif.html"><code>$endif</code></a></li>
+<li><a href="../../../../bdscript/else.html"><code>$else</code></a></li>
+<li><a href="../../../../bdscript/elseifComplex.html"><code>$elseif[]</code></a></li>
 </ul>
-<h2 id="examples"><a class="header" href="#examples">Examples:</a></h2>
-<pre><code>$if[$username==kubastick]
-  Hi Kuba!
-$else
-  Hi $username!
-$endif
-</code></pre>
-<pre><code>$if[$getUserVar[money]&gt;0]
-  You're not broke
-$endif
-</code></pre>
-<pre><code>$if[$username==noituri]
-  $if[$message[&lt;]==nice]
-    Noit said nice
-  $endif
-$endif
-</code></pre>
-<p><em>Only for BDScript 2:</em></p>
-<pre><code>$if[$message==test]
-  You said test
-$elseif[$message==BDFD]
-  Bot Designer for Discord
-$elseif[$username==noituri]
-  Hi Noituri!
-$else
-  I don't know what to say
-$endif
-</code></pre>
-<blockquote>
-<p><strong>Note:</strong> You can use multiple <code>$elseif</code>s</p>
-</blockquote>
-<h2 id="explanation"><a class="header" href="#explanation">Explanation</a></h2>
-<p><code>$if[]</code> uses the format of: if <code>x</code> is related accordingly (based on the &quot;sign&quot;) with <code>y</code> then the code below runs.</p>
+<h2 id="support-functions-used"><a class="header" href="#support-functions-used">Support Functions Used</a></h2>
+<ul>
+<li><a href="../../../../bdscript/and.html"><code>$and</code></a></li>
+<li><a href="../../../../bdscript/or.html"><code>$or</code></a></li>
+</ul>
 <h3 id="signs"><a class="header" href="#signs">Signs</a></h3>
 <p><code>==</code> - Equal</p>
-<p><code>!=</code> - Not Equal</p>
-<p><code>&lt;</code> -  Less Than</p>
-<p><code>&gt;</code> - Greater Than</p>
-<p><code>&gt;=</code> - Greater Than Or Equal To</p>
-<p><code>&lt;=</code> - Less Than Or Equal To</p>
+<p><code>!=</code> - Not equal</p>
+<p><code>&lt;</code> -  Less than</p>
+<p><code>&gt;</code> - Greater than</p>
+<p><code>&gt;=</code> - Greater than or equal to</p>
+<p><code>&lt;=</code> - Less than or equal to</p>
 <ul>
 <li>These signs could vary in meaning based on the order or intent of the if statement.</li>
 <li>If you are using text as your <code>x</code> and/or <code>y</code>, you can not use any other signs besides <code>==</code> and <code>!=</code>. However for numbers, you can use any sign shown in the above list.</li>
 </ul>
-<h3 id="base-usage"><a class="header" href="#base-usage">Base Usage</a></h3>
-<pre><code>$if[value-x(sign)value-y]
+<h1 id="if"><a class="header" href="#if">$if</a></h1>
+<p>Executes the following block of code if the provided condition is <code>true</code>.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$if[Condition]
 </code></pre>
-<h2 id="else-if"><a class="header" href="#else-if">Else If</a></h2>
-<p><code>$elseif</code> can be only used in <strong>BDScript 2</strong>. If you use different BDScript edition please read the note below.</p>
 <blockquote>
-<p><strong>Note:</strong> Normal BDScript and BDScript Unstable don't have a specific function for else if blocks, but you can still do them by using <code>$else</code> and <code>$if[]</code>. The difference between <code>$else</code> and <code>$elseif[]</code> is that <code>$else</code> doesn't need a condition. Where as <code>$elseif[]</code> is still an <code>$if[]</code> so it needs a condition. The main purpose for <code>$elseif[]</code> is to make it so only one if statement runs. Unlike regular if statements, the else if blocks should end with <code>$else</code> then start with another <code>$if[]</code>. Once you are done with your else if statements, close all of them with x number of <code>$endif</code>s (<code>x</code> = number of else if statements) at the bottom of the last else if statement.</p>
+<p><code>$if[]</code> uses the format of: if <code>x</code> is related accordingly (based on the &quot;sign&quot;) with <code>y</code> then the code below runs.</p>
 </blockquote>
-<h3 id="example-else-if-for-normal-bdscript-and-bdscript-unstable"><a class="header" href="#example-else-if-for-normal-bdscript-and-bdscript-unstable">Example Else If for <strong>Normal BDScript and BDScript Unstable</strong></a></h3>
-<pre><code>$if[$checkContains[$message;hi]==true]
-Hello
-
-$else
-$if[$checkContains[$message;yes]==true]
-Sure!
-
-$endif
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Condition</code> <code>(Type: String || Flag: Required)</code>: Check that will be carried out. Use <a href="#signs">Signs</a>.</li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$if[5&gt;$random[0;10]]
+  5 is bigger than $random[0;10]
 $endif
 </code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" bot role-color="#378afa" verified>
+        5 is bigger than 0
+    </discord-message>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22" author="RainbowKey">
+        No answer because $random[0;10] returned that the number are less than 5
+    </discord-message>
+</discord-messages>
+<h1 id="endif"><a class="header" href="#endif">$endif</a></h1>
+<p>Ends an if statement.</p>
+<h2 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h2>
+<pre><code>$endif
+</code></pre>
+<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
+<pre><code>$nomention
+$if[$message==abc]
+  Good work!
+$endif
+</code></pre>
+<h3 id="with-endif"><a class="header" href="#with-endif">With <code>$endif</code></a></h3>
+<discord-messages>
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" author="RainbowKey">
+        !example abc
+    </discord-message>
+    <discord-message verified author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot>
+        Good work!
+    </discord-message>
+</discord-messages>
+<h3 id="without-endif"><a class="header" href="#without-endif">Without <code>$endif</code></a></h3>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22" author="RainbowKey">
+        !example abc
+    </discord-message>
+    <discord-message verified bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" role-color="#378afa">
+        <code>$if</code> not closed with <code>$endif</code>
+    </discord-message>
+</discord-messages>
+<h1 id="else"><a class="header" href="#else">$else</a></h1>
+<p>A block of code to be executed, if the <code>$if[]</code> condition is <code>false</code>.</p>
+<h2 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h2>
+<pre><code>$else
+</code></pre>
+<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<pre><code>$if[5&gt;$random[0;10]]
+  5 is bigger than $random[0;10]
+$else
+  5 is less than $random[0;10]
+$endif
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png">
+        !example
+    </discord-message>
+    <discord-message role-color="#378afa" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" bot>
+        5 is bigger than 0
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified author="BDFD Support" bot role-color="#378afa">
+        5 is less than 8
+    </discord-message>
+</discord-messages>
+<h1 id="elseif"><a class="header" href="#elseif">$elseif</a></h1>
+<p>Checks provided condition only if previous <code>$if[]</code> or <code>$elseif[]</code> conditions returned <code>false</code>. If the provided condition is <code>true</code>, the following block of code will be executed.</p>
+<blockquote>
+<p>You can use multiple <code>$elseif</code>s.
+Only for <strong>BDScript 2</strong>!</p>
+</blockquote>
+<h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
+<pre><code>$elseif[Condition]
+</code></pre>
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
+<ul>
+<li><code>Condition</code> <code>(Type: String || Flag: Required)</code>: Check that will be carried out. Use <a href="#signs">Signs</a>.</li>
+</ul>
+<h2 id="example-3"><a class="header" href="#example-3">Example</a></h2>
+<p><strong>BDScript 2:</strong></p>
+<pre><code>$nomention
+$if[5&lt;$random[0;10]]
+  5 is less than $random[0;10]
+$elseif[5==$random[0;10]]
+  5 equals $random[0;10]
+$endif
+</code></pre>
+<p><strong>BDScrpt and BDScript Unstable:</strong></p>
+<pre><code>$nomention
+$if[5&lt;$random[0;10]]
+  5 is less than $random[0;10]
+$else
+  $if[5==$random[0;10]]
+    5 equals $random[0;10]
+  $endif
+$endif
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png">
+        !example
+    </discord-message>
+    <discord-message bot author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified>
+        5 is less than 6
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot author="BDFD Support" verified role-color="#378afa">
+        5 equals 5
+    </discord-message>
+</discord-messages>
+<h1 id="and"><a class="header" href="#and">$and</a></h1>
+<p>Returns <code>true</code> if every provided condition is <code>true</code>, otherwise <code>false</code> is returned.</p>
+<h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
+<pre><code>$and[Conditions;...]
+</code></pre>
+<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
+<ul>
+<li><code>Conditions</code> <code>(Type: String || Flag: Required)</code>: Checks that will be carried out. All conditions must be true for this function to return <code>true</code>. Separate conditions using <code>;</code>. Use <a href="#signs">Signs</a>.</li>
+</ul>
+<h2 id="example-4"><a class="header" href="#example-4">Example</a></h2>
+<pre><code>$nomention
+$if[$and[$nickname==MineBartekSA;$message==Update]==true]
+  Hi developer
+$else
+  Hi user
+$endif
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22" author="RainbowKey">
+        !example Update
+    </discord-message>
+    <discord-message bot role-color="#378afa" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support">
+        Hi user
+    </discord-message>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png">
+        !example
+    </discord-message>
+    <discord-message role-color="#378afa" bot author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified>
+        Hi user
+    </discord-message>
+    <discord-message author="MineBartekSA" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png" role-color="#f1bdee">
+        !example 
+    </discord-message>
+    <discord-message bot verified role-color="#378afa" author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+        Hi user
+    </discord-message>
+    <discord-message author="MineBartekSA" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png" role-color="#f1bdee">
+        !example Update
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified role-color="#378afa" bot author="BDFD Support">
+        Hi developer
+    </discord-message>
+</discord-messages>
+<h1 id="or"><a class="header" href="#or">$or</a></h1>
+<p>Returns <code>true</code> if at least one of the provided conditions is <code>true</code>, otherwise <code>false</code> is returned.</p>
+<h2 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h2>
+<pre><code>$or[Conditions;...]
+</code></pre>
+<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
+<ul>
+<li><code>Conditions</code> <code>(Type: String || Flag: Required)</code>: The condition to check. Separate conditions using <code>;</code>. Use <a href="#signs">Signs</a>.</li>
+</ul>
+<h2 id="example-5"><a class="header" href="#example-5">Example</a></h2>
+<pre><code>$nomention
+$if[$or[$nickname==MineBartekSA;$message==Update]==true]
+  Hi
+$else
+  Bye
+$endif
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22">
+        !example Update
+    </discord-message>
+    <discord-message avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot role-color="#378afa" verified author="BDFD Support">
+        Hi
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message role-color="#378afa" author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot verified>
+        Bye
+    </discord-message>
+    <discord-message author="MineBartekSA" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png" role-color="#f1bdee">
+        !example 
+    </discord-message>
+    <discord-message verified bot role-color="#378afa" author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+        Hi
+    </discord-message>
+    <discord-message role-color="#f1bdee" author="MineBartekSA" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png">
+        !example Update
+    </discord-message>
+    <discord-message bot avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" author="BDFD Support" role-color="#378afa" verified>
+        Hi
+    </discord-message>
+</discord-messages>
+<h1 id="simple-example"><a class="header" href="#simple-example">Simple Example</a></h1>
+<ol>
+<li>
+<p>Create command with <code>!example</code> trigger.</p>
+</li>
+<li>
+<p>Paste the following code:</p>
+<pre><code>$nomention
+$if[$message==BDFD]
+  Hi BDFD User!
+$elseif[$message==Bartek]
+  Are you Bartek?
+$elseif[$message==Premium]
+  Do you want to get premium?
+$else
+  I can't find this:(
+$endif
+</code></pre>
+</li>
+<li>
+<p>Execute command <code>!example</code></p>
+</li>
+</ol>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" author="RainbowKey" role-color="#E67E22">
+        !example BDFD
+    </discord-message>
+    <discord-message verified author="BDFD Support" role-color="#378afa" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" bot>
+        Hi BDFD User!
+    </discord-message>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png">
+        !example Bartek
+    </discord-message>
+    <discord-message author="BDFD Support" avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61" verified role-color="#378afa" bot>
+        Are you Bartek?
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" author="RainbowKey" role-color="#E67E22">
+        !example Premium
+    </discord-message>
+    <discord-message role-color="#378afa" author="BDFD Support" bot verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+        Do you want to get premium?
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/b589f6d0b79b608309ac14ecf8b363e6.png" role-color="#E67E22" author="RainbowKey">
+        !example Hello
+    </discord-message>
+    <discord-message author="BDFD Support" bot role-color="#378afa" verified avatar="https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61">
+        I can't find this:(
+    </discord-message>
+</discord-messages>
+<p>\</p>
 
                     </main>
 
