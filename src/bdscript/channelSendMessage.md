@@ -13,7 +13,35 @@ $channelSendMessage[Channel ID;Message]
 ## Example
 ```
 $nomention
+The message was sent to  the channel: <#835108724846493726>
 $channelSendMessage[835108724846493726;Hello!]
 ```
-![example](https://user-images.githubusercontent.com/69215413/120040288-4108cd80-bfd4-11eb-8a6f-d1a2f2f20829.png)\
-![example](https://user-images.githubusercontent.com/69215413/120040270-3a7a5600-bfd4-11eb-9b12-b4ada7ac91df.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    The message was sent to  the channel: <#fun>
+```
+\
+
+### in **#fun** channel:
+``` discord yaml
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello!
+```
+
