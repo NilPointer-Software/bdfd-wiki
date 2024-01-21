@@ -22,10 +22,11 @@ $botLeave[$message]
   color: "#E67E22"
   content: |
     !example 1009018156494368798
-
 - username: BDFD Support
-  color: "#b9a0e0"
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
   bot: true
+  verified: true
   content: |
     I left out <discord-inline-code>BDFD Support</discord-inline-code> server.
 ```
