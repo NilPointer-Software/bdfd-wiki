@@ -1,14 +1,14 @@
 # $clear
 Deletes a certain amount of messages.
 
-> 🧙‍♂️ When using just `$clear`, the author's message must include a number.
+> When using just `$clear`, the author's message must include a number.
 
 ## Syntax
 ```
 $clear
 ```
 
-> 📌 Discord doesn't allow deleting messages in bulk which are over 2 weeks old.
+> Discord doesn't allow deleting messages in bulk which are over 2 weeks old.
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly:
@@ -53,6 +53,12 @@ $clear
   avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/06e0dcd9-3668-4d51-ad7b-3e7d68e5021a
   content: |
     1
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  content: |
+    !example 3
 ```
 \
 ### After
