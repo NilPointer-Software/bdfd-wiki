@@ -9,24 +9,56 @@ $checkCondition[Condition]
 ### Parameters 
 - `Condition` `(Type: String || Flag: Required)`: The condition to check.
 
-## Explanation
-Simply put, `$checkCondition` serves as a way to make a custom true or false statement. For example: `$checkCondition[$username==Spen]`, the bot would return "true" if someone named Spen used the command, otherwise it would return "false". However this: `$checkCondition[$username!=Spen]`, would return "false" if someone named Spen used the command, otherwise it would return "true".
+### Signs
+`==` - Equal
 
-Base Usage: `$checkCondition[value1(sign)value2]`
+`!=` - Not Equal
 
-**What's Sign?**\
-Replace (sign) with one of these.
+`<` -  Less Than
 
-- `==` - Should be equal 
-- `!=` - Should be not equal 
-- `<` - Should be less than (only numbers) 
-- `>` - Should be greater than (only numbers) 
-- `>=` - Should be greater than or equal to (only numbers) 
-- `<=` - Should be less than or equal to (only numbers) 
+`>` - Greater Than
 
-**What Are Values?**\
-The value is what the bot is checking. Like one of the examples above: `$checkCondition[$username==Spen]`.
+`>=` - Greater Than Or Equal To
 
-- value1 is $username
-- sign is ==
-- value2 is Spen
+`<=` - Less Than Or Equal To
+
+## Example
+```
+$nomention
+$checkCondition[$message==hello]
+```
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example BDFD
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    false
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    !example hello
+- username: BDFD Support
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    true
+- user_id: 803569638084313098
+  username: RainbowKey
+  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
+  color: "#E67E22"
+  content: |
+    Because hello==hello.
+```
