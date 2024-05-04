@@ -46,7 +46,6 @@ I created a new thread! <#$startThread[Cool Thread;$channelID;;1440;yes]>
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
@@ -54,7 +53,6 @@ I created a new thread! <#$startThread[Cool Thread;$channelID;;1440;yes]>
   content: |
     <i style="color: #378afa">BDFD Support</i> Started a thread: <i style="color: white">Cool Thread</i>. See all <i style="color: white">threads</i>.
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -90,7 +88,6 @@ $editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
@@ -120,7 +117,6 @@ $threadAddMember[1021054508975009793;$authorID]
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
@@ -149,7 +145,6 @@ $threadRemoveMember[Thread ID;User ID]
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
@@ -174,7 +169,6 @@ $threadAddMember[$var[id];$authorID]
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
@@ -182,7 +176,6 @@ $threadAddMember[$var[id];$authorID]
   content: |
     <i style="color: #378afa">BDFD Support</i> Started a thread: <i style="color: white">Cool Thread</i>. See all <i style="color: white">threads</i>.
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
