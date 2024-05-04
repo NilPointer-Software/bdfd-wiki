@@ -51,12 +51,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -64,13 +62,11 @@ $endif
     5 is bigger than 0
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     No answer because $random[0;10] returned that the number are less than 5
@@ -96,12 +92,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example abc
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -113,12 +107,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example abc
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -146,12 +138,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -159,12 +149,10 @@ $endif
     5 is bigger than 0
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -210,12 +198,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -223,12 +209,10 @@ $endif
     5 is less than 6
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -260,12 +244,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example Update
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -273,12 +255,10 @@ $endif
     Hi user
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -286,12 +266,10 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/1ecd3b3a-4bdf-441a-98ad-361254426a74
   color: "#f1bdee"
   content: |
     !example 
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -299,12 +277,10 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/1ecd3b3a-4bdf-441a-98ad-361254426a74
   color: "#f1bdee"
   content: |
     !example Update
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -335,12 +311,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example Update
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -348,12 +322,10 @@ $endif
     Hi
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -361,12 +333,10 @@ $endif
     Bye
 - user_id: 154148273307910144
   username: MineBartekSA
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/1ecd3b3a-4bdf-441a-98ad-361254426a74
   color: "#f1bdee"
   content: |
     !example 
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -374,12 +344,10 @@ $endif
     Hi
 - user_id: 154148273307910144
   username: MineBartekSA
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/1ecd3b3a-4bdf-441a-98ad-361254426a74
   color: "#f1bdee"
   content: |
     !example Update
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -406,12 +374,10 @@ $endif
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example BDFD
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -419,12 +385,10 @@ $endif
     Hi BDFD User!
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example Bartek
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -432,12 +396,10 @@ $endif
     Are you Bartek?
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example Premium
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -445,12 +407,10 @@ $endif
     Do you want to get premium?
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example Hello
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
