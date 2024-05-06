@@ -14,13 +14,66 @@ In this section, you'll learn how to use the button component.
 - [`$onInteraction[]`](../../../../callbacks/onInteractionComplex.md)
 
 ## Button Style
-- `primary`: Blue button
-- `secondary`: Gray button
-- `success`: Green button
-- `danger`: Red button
-- `link`: Redirect button
+Buttons can have different styles _(background colors)_.
+Here, are all possible values for the `style` function argument.
+- `primary` - Blue button
+- `secondary` - Gray button
+- `success` - Green button
+- `danger` - Red button
+- `link` - Redirect button
 
-![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/c5f831ea-0f09-426c-8e9d-f3e4a93a3c49)
+```discord yaml
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Buttons:
+  components: 
+    - 
+      - type: primary
+        label: Primary
+      - type: primary
+        label: Primary
+        disabled: true
+    - 
+      - type: success
+        label: Success
+      - type: success
+        label: Success
+        disabled: true
+    - 
+      - type: destructive
+        label: Danger
+      - type: destructive
+        label: Danger
+        disabled: true
+    - 
+      - type: secondary
+        label: Secondary
+      - type: secondary
+        label: Secondary
+        disabled: true
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Other Buttons:
+  components: 
+    - 
+      - type: secondary
+        label: Link
+        url: https://nilpointer-software.github.io/bdfd-wiki/nightly/
+      - type: secondary
+        label: Link
+        disabled: true
+        url: https://nilpointer-software.github.io/bdfd-wiki/nightly/
+    - 
+      - type: secondary
+        label: Emoji
+        emoji: https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png
+```
 
 > If `link` style is used, the button **won't send** any interactions!
 
@@ -61,10 +114,27 @@ $addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
 ## Example
 ```
 $nomention
-Hi
+Hello
 $addButton[no;test;Say hello!;primary;no;]
 ```
-![example](https://user-images.githubusercontent.com/16838075/120199057-18c2de00-c223-11eb-9198-997227082a76.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello
+  components:
+  - 
+     - type: primary
+       label: Say hello!
+```
 
 
 # $editButton
