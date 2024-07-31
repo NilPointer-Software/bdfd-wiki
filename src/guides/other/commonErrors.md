@@ -11,7 +11,7 @@
 The function that is causing the error.
 
 **Function location:**
-![Location of function](https://media.discordapp.net/attachments/1265766896947429460/1265767183368327229/syntax_msg_error-function.png?ex=66a2b50d&is=66a1638d&hm=c6249b2089e328b096596aa858b4e2f0edf6176659ea1683791317f7177ba501&)
+![Location of function](https://raw.githubusercontent.com/MayBeKurito/kuri-storage/main/error_message_syntax-function.png)
 
 
 ### Row and Column
@@ -22,7 +22,7 @@ The row where the error is located.
 The column where the error is located.
 
 **Row and column location:**
-![Location of row and column](https://media.discordapp.net/attachments/1265766896947429460/1265767183863251015/syntax_msg_error-rowcolumn.png?ex=66a2b50d&is=66a1638d&hm=f87961792292ed4df21b5dce22a918d04d699f611fc366003f328500f7bde05d&)
+![Location of row and column](https://raw.githubusercontent.com/MayBeKurito/kuri-storage/main/syntax_msg_error-row%26column.png)
 
 
 *In this case, the row is '3' and the column '15'.*
