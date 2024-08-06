@@ -3,7 +3,7 @@
 # 2024
 
 ## August
-- **👋 Flowchart has joined to BDFD, say Hi!**
+- Flowchart bot type was added to Bot Designer For Discord.
 - Added `Entry point`
 - Added `Add numbers`
 - Added `Add response embed`
@@ -50,5 +50,5 @@
 - Added `To uppercase`
 
 ```admonish abstract title="BDScript Changelog"
-If you want to get a list of BDScript updates, then [click here](../CHANGELOG.md).
+If you want to see the BDScript changelog, [click here](./CHANGELOG.md).
 ```
