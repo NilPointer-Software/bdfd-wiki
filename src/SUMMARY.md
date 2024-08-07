@@ -1,10 +1,10 @@
 # Summary
 
-[Foreword](foreword.md)
-[Changelog](CHANGELOG.md)
-[Flowchart Changelog](FLOWCHART_CHANGELOG.md)
-[Terms of Service](terms.md)
-[Entity Transfer Policy](entityTransferPolicy.md)
+[Foreword](./foreword.md)
+[Changelog](./CHANGELOG.md)
+[Flowchart Changelog](./FLOWCHART_CHANGELOG.md)
+[Terms of Service](./terms.md)
+[Entity Transfer Policy](./entityTransferPolicy.md)
 
 ---
 
