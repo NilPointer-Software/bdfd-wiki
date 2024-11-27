@@ -69,7 +69,10 @@ We may warn/ban users if we discover they didn't comply with these Terms.
 All your usage and access to our service is subject to these stated Terms, if you do not agree with them, you shall not use the service.
 
 In case we change our Terms, if you don't agree with the new Terms, you are free to reject them by no longer using our service.
-> Registered users may withdraw their data through the mobile application, and request the deletion of data by contacting support.
+
+```admonish info
+Registered users may withdraw their data through the mobile application, and request the deletion of data by contacting support.
+```
 
 ## Contact 
 If you have questions/concerns about these Terms or our service, you may contact us via email.
