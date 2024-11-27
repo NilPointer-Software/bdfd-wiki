@@ -79,4 +79,4 @@ If you have questions/concerns about these Terms or our service, you may contact
 
 
 Support for regular users is available at [`support@mail.botdesignerdiscord.com`](mailto:support@mail.botdesignerdiscord.com)
-and for paying users at [`premium-support@mail.botdesignerdiscord.com`](mailto:premium-support@mail.botdesignerdiscord.com).
+and for premium-realted problems at [`premium-support@mail.botdesignerdiscord.com`](mailto:premium-support@mail.botdesignerdiscord.com).
