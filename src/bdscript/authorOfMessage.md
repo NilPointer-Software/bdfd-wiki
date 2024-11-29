@@ -37,3 +37,7 @@ Author of message: $username[$authorOfMessage[$message[1];$message[2]]]
   content: |
     Author of message: Kemi
 ```
+
+```admonish question title="What is this?"
+How [`$username`](./username.md) and [`$message[]`](./messageComplex.md) works?
+```
