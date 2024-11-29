@@ -93,7 +93,7 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
 
 <div class="settingembed">
   <h2>Effects</h2>
-  <p>It's only decoration for wiki. Events: Halloween, Winter</p>
+  <p>It's only decoration for wiki.</p>
   <div class="effectbuttons">
     <button id="manageEffect" class="ebutton" onClick="effectsSetting()">Disable</button>
   </div>
@@ -232,7 +232,7 @@ $try
   $endif
 $catch
   $sendMessage[Bye!]
-  $botLeave $c[Kicks the bot😉]
+  $botLeave $c[Magic😉]
 $endtry
 ```
 
