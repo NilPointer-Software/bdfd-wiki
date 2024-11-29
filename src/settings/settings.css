@@ -344,6 +344,16 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
     color: #000;
 }
 
+.ebutton.disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.ebutton.disabled:before {
+    content: '🚫 ';
+}
+
 .display-text {
     text-align: center;
     z-index: 1;
