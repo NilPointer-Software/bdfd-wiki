@@ -6,7 +6,7 @@ Blocks certain servers from using the command.
     margin-top: 1.5rem;
 }
 
-.discord-messages > .discord-message:before {
+.discord-messages > .discord-message:first-of-type:before {
     color: var(--color1);
     background: var(--color3);
     border-radius: 10px;
@@ -19,15 +19,15 @@ Blocks certain servers from using the command.
     z-index: 1000;
 }
 
-.discord-messages > .discord-message:before {
+.discord-messages > .discord-message:first-of-type:before {
     content: 'Discord Server';
 }
 
-.discord-messages:first-of-type > .discord-message:before {
+.discord-messages:first-of-type > .discord-message:first-of-type:before {
     content: 'BDFD Support Server';
 }
 
-.discord-messages > .discord-message:hover:before {
+.discord-messages > .discord-message:first-of-type:hover:before {
     transform: scale(1.025);
     transform: rotate(-2.5deg);
     border-radius: 12.5px;
