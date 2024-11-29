@@ -172,7 +172,7 @@ a > .hljs {
     text-decoration: underline;
 }
 
-a:link:not(.editPage, .mobile-nav-chapters, .chapter li a, .discord-button, .discord-embed-grid a, .discord-message-markup a)::before {
+a:link:not(.breadcrumb a, .editPage, .mobile-nav-chapters, .chapter li a, .discord-button, .discord-embed-grid a, .discord-message-markup a)::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -185,7 +185,7 @@ a:link:not(.editPage, .mobile-nav-chapters, .chapter li a, .discord-button, .dis
     transition: transform .3s ease-in-out;
 }
 
-a:link:not(.editPage, .mobile-nav-chapters, .chapter li a, .discord-button, .discord-embed-grid a, .discord-message-markup a):hover::before {
+a:link:not(.breadcrumb a, .editPage, .mobile-nav-chapters, .chapter li a, .discord-button, .discord-embed-grid a, .discord-message-markup a):hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
