@@ -27,7 +27,7 @@ Blocks certain servers from using the command.
     content: 'BDFD Support Server';
 }
 
-.discord-messages > .discord-message:first-of-type:hover:before {
+.discord-messages:hover > .discord-message:before {
     transform: scale(1.025);
     transform: rotate(-2.5deg);
     border-radius: 12.5px;
