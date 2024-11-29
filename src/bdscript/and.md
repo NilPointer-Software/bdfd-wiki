@@ -82,7 +82,7 @@ $and[$nickname==MineBartekSA;$message==Update]
 ```
 
 ```admonish question title="What is this?"
-How [`$message`](./message.md) works?
+How [`$message`](./message.md) and [`$nickname`](./nickname.md) works?
 ```
 
 ```admonish info title="Read more"
