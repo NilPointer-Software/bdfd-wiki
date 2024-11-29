@@ -610,7 +610,10 @@ function loadSettings() {
   const themeChangerRange = document.getElementById("themeSlider");
   const codeTextInput = document.getElementById('jsonhginput');
   const charCountElement = document.querySelector('.charCount');
-
+  const effectButton = document.getElementById("manageEffect");
+  
+  const currentMonth = new Date().getMonth() + 1;
+  
   let data
 
   try {
@@ -702,6 +705,11 @@ function loadSettings() {
   
   if (themeChangerRange) {
     themeChangerRange.value = parseInt(data['theme-main'].replace('%', ''));
+  }
+
+  if (!(currentMonth === 12 || currentMonth === 1 || currentMonth === 2)) {
+    effectButton.classList.add('disabled');
+    effectButton.textContent = "No effects available";
   }
   
   if (displaySize) {
