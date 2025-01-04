@@ -13,7 +13,7 @@ Total character length of the overall response should not exceed more than 6,000
 ```
 
 ```admonish tip title="Remember!"
-By default, the parameter `Index` is set to `1` *(The first embed)*.
+By default, the parameter `Index` is set to `1` *(The first embed)*.\
 ✅ `$title[Title]` == `$title[Title;1]`\
 ❌ `$title[Title]` == `$title[Title;2]`\
 ❌ `$title[Title]` == `$title[Title;1]` + `$title[Title;2]`
