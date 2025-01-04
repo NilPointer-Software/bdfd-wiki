@@ -795,14 +795,14 @@ ul#searchresults span.teaser em {
 
 /* Deprecated function tag */
 /* $ <- ITS IMPORTANT! */
-.chapter-item a[href$="mute.html"]:after,
-.chapter-item a[href$="unmute.html"]:after,
-.chapter-item a[href$="modifyChannelPerms.html"]:after,
-.chapter-item a[href$="channelIDFromName.html"]:after,
-.chapter-item a[href$="giveRole.html"]:after, 
-.chapter-item a[href$="takeRole.html"]:after, 
-.chapter-item a[href$="serverRegion.html"]:after,
-.chapter-item a[href$="userJoinedDiscord.html"]:after {
+.chapter-item a[href$="bdscript/mute.html"]:after,
+.chapter-item a[href$="bdscript/unmute.html"]:after,
+.chapter-item a[href$="bdscript/modifyChannelPerms.html"]:after,
+.chapter-item a[href$="bdscript/channelIDFromName.html"]:after,
+.chapter-item a[href$="bdscript/giveRole.html"]:after, 
+.chapter-item a[href$="bdscript/takeRole.html"]:after, 
+.chapter-item a[href$="bdscript/serverRegion.html"]:after,
+.chapter-item a[href$="bdscript/userJoinedDiscord.html"]:after {
     content: 'DEPRECATED';
     color: hsl(0deg 0% 100% / 75%);
     font-size: 60%;
