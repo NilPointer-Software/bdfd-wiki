@@ -1,18 +1,19 @@
 # Embed Indexes
-If you look around BDFD embed functions (eg. [`$title`](../bdscript/title.md), [`$footer`](../bdscript/footer.md), [`$addTimestamp`](../bdscript/addTimestamp.md) etc.). You'll see an argument called `index`. This argument is used to create multi-embeds.
+If you look around BDFD embed functions (eg. [`$title`](../bdscript/title.md), [`$footer`](../bdscript/footer.md), [`$addTimestamp`](../bdscript/addTimestamp.md) etc.). You'll see an parameter called `Index`. This parameter is used to create multi-embeds.
 
 ```admonish warning title="Limit"
 Discord supports creating upto a maximum of 10 embeds per bot message.
 ```
 
 ## Creating Multi-Embeds
-By default, the `index` is set to `1` *(the first embed)*. To create a second embed, you have to write `2` in `index` argument and so on. You can specify any number between `1` to `10` in `index` argument.
+By default, the `Index` is set to `1` *(the first embed)*. To create a second embed, you have to write `2` in `Index` parameter and so on. You can specify any number between `1` to `10` in `index` parameter.
 
 ```admonish warning title="Limit"
 Total character length of the overall response should not exceed more than 6,000. If it does, the bot won't send the message.
 ```
 
 ```admonish tip title="Remember!"
+By default, the parameter `Index` is set to `1` *(The first embed)*.
 ✅ `$title[Title]` == `$title[Title;1]`\
 ❌ `$title[Title]` == `$title[Title;2]`\
 ❌ `$title[Title]` == `$title[Title;1]` + `$title[Title;2]`
