@@ -2,7 +2,7 @@
 **Permissions** allow users to have specific privileges and access in the server. Some permissions can be as basic as allowing users the ability to add reactions to messages while other permissions grant users more administrative actions. These permissions are based on the roles assigned to users in a server and permissions can be assigned per role on both the server level and channel level.
 
 ## List of Permissions
-Following is the list of permissions which are currently (February, 2025) supported in BDFD :
+Following is the list of permissions which are currently (February, 2025) supported in BDFD:
 
 Permission | Description 
 ----- | -----  
