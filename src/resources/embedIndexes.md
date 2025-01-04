@@ -1,5 +1,5 @@
 # Embed Indexes
-If you look around [BDFD Embed Functions](#all-embed-functions). You'll see an parameter called `Index`. This parameter is used to create multi-embeds.
+If you look around [BDFD Embed Functions](#all-embed-functions). You'll see a parameter called `Index`. This parameter is used to create multi-embeds.
 
 ```admonish warning title="Limit"
 Discord supports creating upto a maximum of 10 embeds per bot message.
