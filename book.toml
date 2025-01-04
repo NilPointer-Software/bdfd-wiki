@@ -14,6 +14,8 @@ smart-punctuation = true
 git-repository-url = "https://github.com/NilPointer-Software/bdfd-wiki"
 edit-url-template = "https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/{path}"
 no-section-label = true
+input-404 = "404.md"
+site-url = "/bdfd-wiki/"
 
 [output.html.fold]
 enable = true
