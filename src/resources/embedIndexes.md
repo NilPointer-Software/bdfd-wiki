@@ -73,3 +73,24 @@ $addField[Second Field;Cat or dog?;yes;3]
         inline: true
         inline_index: 2
 ```
+
+### All Embed Functions
+
+- With `Index` parameter:\
+1. [`$color[]`](../bdscript/color.md) - Sets the embed border color.\
+2. [`$author[]`](../bdscript/author.md) - Adds author text to an embed.\
+3. [`$authorIcon[]`](../bdscript/authorIcon.md) - Adds an icon to the author section in the embed.\
+4. [`$authorURL[]`](../bdscript/authorURL.md) - Adds a hyperlink to the author text.\
+5. [`$title[]`](../bdscript/title.md) - Adds an embedded title to bot’s response message.\
+6. [`$embeddedURL[]`](../bdscript/embeddedURL.md) - Sets the title to be a hyperlink.\
+7. [`$thumbnail[]`](../bdscript/thumbnail.md) - Adds an embedded thumbnail to the bot’s response message.\
+8. [`$description[]`](../bdscript/description.md) - Adds a description to an embed.\
+9. [`$addField[]`](../bdscript/addField.md) - Adds a field to an embed.\
+10. [`$image[]`](../bdscript/image.md) - Adds an image to the embed.\
+11. [`$footer[]`](../bdscript/footer.md) - Sets the embed footer text.\
+12. [`$footerIcon[]`](../bdscript/footerIcon.md) - Sets the embed footer icon.\
+13. [`$addTimestamp`](../bdscript/addTimestamp.md) - Adds a timestamp to an embed.\
+14. [`$addTimestamp[]`](../bdscript/addTimestampComplex.md) - Adds a timestamp to a specific embed.\
+- Without `Index` parameter (You can't separate embeds):\
+1. [`$sendEmbedMessage[]`](../bdscript/sendEmbedMessage.md) - Sends an embed message to the provided channel.\
+2. [`$editMessage[]`](../bdscript/editMessage.md) - Edits one of the bot’s messages.
