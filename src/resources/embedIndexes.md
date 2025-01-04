@@ -13,9 +13,9 @@ Total character length of the overall response should not exceed more than 6,000
 ```
 
 ```admonish tip title="Remember!"
-✅ $title[Title] == $title[Title;1]
-❌ $title[Title] == $title[Title;2]
-❌ $title[Title] == $title[Title;1] + $title[Title;2]
+✅ `$title[Title]` == `$title[Title;1]`\
+❌ `$title[Title]` == `$title[Title;2]`\
+❌ `$title[Title]` == `$title[Title;1]` + `$title[Title;2]`
 ```
 
 ### Example
