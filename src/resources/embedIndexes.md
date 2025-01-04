@@ -1,5 +1,5 @@
 # Embed Indexes
-If you look around BDFD embed functions (eg. [`$title`](../bdscript/title.md), [`$footer`](../bdscript/footer.md), [`$addTimestamp`](../bdscript/addTimestamp.md) etc.). You'll see an parameter called `Index`. This parameter is used to create multi-embeds.
+If you look around [BDFD Embed Functions](#AllEmbedFunctions). You'll see an parameter called `Index`. This parameter is used to create multi-embeds.
 
 ```admonish warning title="Limit"
 Discord supports creating upto a maximum of 10 embeds per bot message.
