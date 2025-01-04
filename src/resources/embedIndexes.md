@@ -74,6 +74,10 @@ $addField[Second Field;Cat or dog?;yes;3]
         inline_index: 2
 ```
 
+```admonish question title="What is this?"
+How [`$color`](./color.md), [`$title[]`](./title.md), [`$description[]`](./description.md), [`$footer[]`](./footer.md) and [`$addField[]`](./addField.md) works?
+```
+
 ### All Embed Functions
 
 - With `Index` parameter:\
