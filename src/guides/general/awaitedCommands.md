@@ -7,6 +7,8 @@ Awaited commands are a special type of command where the bot waits for the user'
 
 ## Functions Used
 - [`$awaitFunc[]`](../../bdscript/awaitFunc.md)
+
+## Callbacks Used
 - [`$awaitedCommand[]`](../../callbacks/awaitedCommand.md)
 - [`$awaitedCommandError[]`](../../callbacks/awaitedCommandError.md)
 
