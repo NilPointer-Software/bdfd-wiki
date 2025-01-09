@@ -15,7 +15,8 @@ git-repository-url = "https://github.com/NilPointer-Software/bdfd-wiki"
 edit-url-template = "https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/{path}"
 no-section-label = true
 input-404 = "404.md"
-site-url = "/bdfd-wiki/"
+site-url = "/"
+additional-css = ["./src/theme/mdbook-admonish.css"]
 
 [output.html.fold]
 enable = true
@@ -33,6 +34,8 @@ embed-script = false
 
 [preprocessor.admonish]
 on_failure = "bail"
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 # Redirects old wiki URL paths used by the app to new ones.
 # TODO: Remove URLs when old paths gets updated in the app.

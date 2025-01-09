@@ -10,7 +10,7 @@
 ---
 
 - [Guides]()
-    - [Introduction](./guides/introduction/aboutSection.md)
+    - [Introduction](guides/introduction.md)
         - [Beginning](./guides/introduction/beginning.md)
         - [Commands Anatomy](./guides/introduction/commandsAnatomy.md)
         - [Bot Status](./guides/introduction/botStatus.md)

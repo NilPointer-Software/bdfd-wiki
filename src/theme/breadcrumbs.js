@@ -1,43 +1,25 @@
-const MAP = {
-    bdscript: "Functions",
-    guides: "Guides",
-    resources: "Resources",
-    callbacks: "Callbacks",
-    flowchart: "Flowchart",
-    premium: "Premium",
-    javascript: "JavaScript"
-};
-
-const KEYS = Object.keys(MAP);
-
-function getNameFromTitle() {
-    let index = document.title.indexOf('-');
-    return document.title.substring(0, index-1);
+const root = "/";
+const paths = location.pathname.split("/").filter(Boolean);
+const categories = {
+   introduction: 0,
+   callbacks: 0,
+   bdscript: 0,
+   javascript: 0,
+   guides: 0,
 }
 
-let root = "/";
-let path = location.pathname.substring(11);
-
-if (location.pathname.includes("bdfd-wiki")) {
-    root = "/bdfd-wiki/"; 
-}
-
-if (path.startsWith("nightly")) {
-    path = path.substring(8);
-    root += "nightly/"
-}
-if (path.endsWith(".html"))
-    path = path.substring(0, path.length - 5);
 
 document.write(`<a href="${root}">Home</a>`);
-path.split('/').forEach((segment, i, segments) => {
-    let name = MAP[segment.toLocaleLowerCase()];
-    if (!name) {
-        name = segments.length == i + 1 ? getNameFromTitle() : segment;
-        if (segment != "")
-            segment += ".html";
-    } else {
-        segment = "introduction.html";
-    }
-    document.write(`<div><a href="${segment}">${name}</a></div>`)
+
+let accumulatedPath = root;
+
+paths.forEach((path, index) => {
+   if (index === paths.length - 1) return;
+
+   if (Object.keys(categories).includes(path)) {
+      accumulatedPath += `${path}/introduction.html`;
+   } else {
+      accumulatedPath += `${path}/`;
+   }
+   document.write(`<a href="${accumulatedPath}">${path}</a>`);
 });

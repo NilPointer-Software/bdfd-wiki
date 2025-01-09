@@ -15,7 +15,7 @@ $alwaysReply
 ```
 
 ## Example
-```
+``` 
 $nomention
 Hello, $displayName!
 ```

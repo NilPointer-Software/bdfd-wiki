@@ -1,72 +1,3 @@
-const themes = {
-  'light': {
-    reactionColor: '#F2F3F5',
-    messageTextColor: '#313338',
-    background: '#FFF',
-  },
-  'dark': {
-    reactionColor: '#202226',
-    messageTextColor: '#C6C7CC',
-    background: '#1C1D22',
-  },
-  'redmoon': {
-    reactionColor: '#4e0505',
-    background: 'linear-gradient(-25deg, #240000, #740606)'
-  },
-  'nightsapphire': {
-    reactionColor: '#180052',
-    background: 'linear-gradient(-25deg, #000124, #260674)'
-  },
-  'emeraldearth': {
-    reactionColor: '#006d3f',
-    background: 'linear-gradient(-25deg, #0c2400, #067446)'
-  },
-  'nightviolet': {
-    reactionColor: '#390085',
-    background: 'linear-gradient(-25deg, #1d0024, #350674)'
-  },
-  'oldwood': {
-    reactionColor: '#714400',
-    background: 'linear-gradient(-25deg, #240f00, #744806)'
-  },
-  'azuresky': {
-    reactionColor: '#007162',
-    background: 'linear-gradient(-25deg, #001a24, #067465)'
-  },
-  'cherryvelvety': {
-    reactionColor: '#710049',
-    background: 'linear-gradient(-25deg, #240017, #74064d)'
-  },
-  'forestdepth': {
-    reactionColor: '#616d00',
-    background: 'linear-gradient(-25deg, #222400, #687406)'
-  },
-  'nightchestnut': {
-    reactionColor: '#4e0505',
-    background: 'linear-gradient(-25deg, #190024, #740606)'
-  },
-  'mosscovered': {
-    reactionColor: '#4b6d11',
-    background: 'linear-gradient(-25deg, #1c2400, #4c7406)'
-  },
-  'deepruby': {
-    reactionColor: '#74066e',
-    background: 'linear-gradient(-25deg, #1f0024, #74066e)'
-  },
-  'fernvalley': {
-    reactionColor: '#1e6d00',
-    background: 'linear-gradient(-25deg, #00240a, #247406)'
-  },
-  'forestshadows': {
-    reactionColor: '#086b00',
-    background: 'linear-gradient(-25deg, #000624, #086700 , #0a7f01)'
-  },
-  'autumnblaze': {
-    reactionColor: '#742006',
-    background: 'linear-gradient(-25deg, #240800, #742006)'
-  }
-}
-
 const codeScheme = {
   "defaultTextHighlight": {
     "color": 4288341353,
@@ -167,7 +98,7 @@ function resetFontSize() {
 
   // Save in Storage
   updateJsonFile("text-size", range.value + "%");
-};
+}
 
 function resetHGInput() {
   const codeInput = document.getElementById('jsonhginput');
@@ -260,7 +191,7 @@ function changeTextFont(fontId) {
 }
 
 function updateJsonFile(key, value) {
-  let data = JSON.parse(localStorage.getItem('json')) || {};
+  let data = JSON.parse(localStorage.getItem('json')) || {}
 
   data[key] = value;
 
@@ -271,13 +202,13 @@ function changeTextHigh(colorId) {
   const fonntHtml = document.querySelector('html');
   let color = textHighlights[colorId] || 'none';
 
-  if (colorId == 'sync') {
+  if (colorId === 'sync') {
     const originalShasowColor = document.body.style.color;
     const [r, g, b] = originalShasowColor.match(/\d+/g).map(Number);
     const darkerShadowColor = darkenRGB(r, g, b, 0.6);
     fonntHtml.style.textShadow = '0 0 10px ' + darkerShadowColor;
   } else {
-    if (color == 'none'){
+    if (color === 'none'){
       fonntHtml.style.textShadow = color;
     } else {
       fonntHtml.style.textShadow = '0 0 10px' + ' #' + color;
@@ -347,7 +278,7 @@ function updateColor() {
     });
     document.documentElement.style.scrollbarColor = `hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
     updateJsonFile("theme-text", document.body.style.color);
-  };
+  }
 
   // Updating design
   document.documentElement.style.setProperty('--color1', color1);
@@ -400,7 +331,7 @@ function useBackground() {
   document.body.style.background = backgroundColor;
   document.documentElement.style.scrollbarColor = `hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
   updateJsonFile("theme-bg", backgroundColor);
-};
+}
 
 function useFontColor() {
   const colorSlider = document.getElementById('themeSlider');
@@ -444,7 +375,7 @@ function resetTheme() {
   setStatusBar(colorSlider.value);
   updateColor()
   useBackground()
-};
+}
 
 function gradientBackground() {
   const colorSlider = document.getElementById('themeSlider');
@@ -459,7 +390,7 @@ function gradientBackground() {
   document.documentElement.style.scrollbarColor = `hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
 
   updateJsonFile("theme-bg", document.body.style.background);
-};
+}
 
 let timer;
 let time = 2000;
@@ -503,7 +434,7 @@ function resetAllHover() {
       } else {
         progress.style.width = '0%';
         clearInterval(interval);
-        if (button.disabled == false) {
+        if (button.disabled === false) {
           button.classList.add('pulsating');
         }
         setTimeout(() => {

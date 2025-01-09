@@ -63,10 +63,14 @@
         <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
+
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
                 }
-            } catch (e) { }
+
+            } catch (error) {
+                console.error(error);
+            }
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
@@ -156,9 +160,11 @@
                         <nav class="breadcrumb">
                             <script src="{{ path_to_root }}theme/breadcrumbs.js"></script>
                         </nav>
+
                         <a href="{{git_repository_edit_url}}" class="editPage">
                             <i class='fa fa-edit' id="editPageIcon"></i>
                         </a>
+
                         {{{ content }}}
                     </main>
 
@@ -182,19 +188,21 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
                 {{#previous}}
-                    <a href="{{ path_to_root }}{{link}}" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <a href="{{ path_to_root }}{{link}}" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                     <a href="{{ path_to_root }}{{link}}" class="nav-chapters previous" title="Previous page" aria-label="Previous page" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 {{/previous}}
 
                 {{#next}}
-                    <a href="{{ path_to_root }}{{link}}" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                <a href="{{ path_to_root }}{{link}}" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                     <a href="{{ path_to_root }}{{link}}" class="nav-chapters next" title="Next page" aria-label="Next page" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 {{/next}}
+
             </nav>
 
         </div>
