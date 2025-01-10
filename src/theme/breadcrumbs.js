@@ -13,7 +13,7 @@ const removePath = ["bdfd-wiki", "nightly"];
 
 paths = paths.filter(path => {
     if (removePath.includes(path)) {
-        root += `/${path}`;
+        root += `/${path}/`;
         return false;
     }
 
