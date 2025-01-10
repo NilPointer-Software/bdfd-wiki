@@ -16,9 +16,8 @@ paths = paths.filter(path => {
     return true;
 });
 
-document.write(`<a href="${root}">Let's go Home?</a>`);
-
 let accumulatedPath = root;
+let breadcrumbLinks = [];
 
 paths.forEach((path, index) => {
     if (path === "introduction.html") return;
@@ -27,8 +26,26 @@ paths.forEach((path, index) => {
     accumulatedPath += `${path}/`;
 
     if (index === 0) {
-        document.write(`<a href="${accumulatedPath}introduction.html">${name}</a>`);
+        let href = path === "settings"
+            ? accumulatedPath + "settings.html"
+            : accumulatedPath + "introduction.html"
+        breadcrumbLinks.push({
+            href: `${href}`,
+            name: name,
+        });
     } else if (index === paths.length - 1) {
-        document.write(`<a>${getNameFromTitle()}</a>`);
+        breadcrumbLinks.push({
+            href: null,
+            name: getNameFromTitle(),
+        });
+    }
+});
+
+document.write(`<a href="${root}">Let's go Home?</a>`);
+breadcrumbLinks.forEach(link => {
+    if (link.href) {
+        document.write(`<a href="${link.href}">${link.name}</a>`);
+    } else {
+        document.write(`<a>${link.name}</a>`);
     }
 });
