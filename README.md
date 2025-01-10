@@ -30,7 +30,7 @@ This is the official GitHub repository of BDFD Wiki which explains BDFD function
 - [Wiki (Nightly)](https://nilpointer-software.github.io/bdfd-wiki/nightly)
 - [Android App](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
 - [iOS App](https://apps.apple.com/us/app/bot-designer-for-discord/id1495536477)
-- [Web App](https://botdesignerdiscord.com/app)
+- [Web App](https://app.botdesignerdiscord.com/)
 - [Discord Server](https://discord.com/servers/bot-designer-for-discord-official-server-566363823137882154)
 
 ### Contribution
