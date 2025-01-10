@@ -25,12 +25,16 @@ paths.forEach((path, index) => {
     let name = path.charAt(0).toUpperCase() + path.slice(1);
     accumulatedPath += `${path}/`;
 
+    if (path.split(".")[1] === "html") {
+        return;
+    }
+
     if (index === 0) {
         let href = path === "settings"
-            ? accumulatedPath + "settings.html"
+            ? accumulatedPath + "/" + "settings.html"
             : accumulatedPath + "introduction.html"
         breadcrumbLinks.push({
-            href: `${href}`,
+            href: href,
             name: name,
         });
     } else if (index === paths.length - 1) {
