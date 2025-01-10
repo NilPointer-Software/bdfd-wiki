@@ -1,4 +1,4 @@
-# $addButton [ TEST ]
+# $addButton
 Adds a button to a message.
 
 ## Syntax
