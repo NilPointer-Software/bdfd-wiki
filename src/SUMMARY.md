@@ -453,7 +453,7 @@
     - [$onInteraction[]](./callbacks/onInteractionComplex.md)
 
 - [Flowcharts]()
-    - [Introduction[(./flowchart/introduction.md)
+    - [Introduction](./flowchart/introduction.md)
     - [Add Response Embed](./flowchart/addResponseEmbed.md)
     - [Set Response Message](./flowchart/setResponseMessage.md)
 
