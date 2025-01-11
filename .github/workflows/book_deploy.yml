@@ -137,7 +137,7 @@ jobs:
               url: https://github.com/${{ github.event.head_commit.author.username }}
               icon_url: https://github.com/${{ github.event.head_commit.author.username }}.png
             thumbnail:
-              url: https://botdesignerdiscord.com/logo512.png
+              url: https://app.botdesignerdiscord.com/icons/Icon-512.png
             description: |-
               **__Content__**
 
@@ -150,4 +150,4 @@ jobs:
             - type: 2
               style: 5
               label: Preview site
-              url: https://nilpointer-software.github.io/bdfd-wiki/${{ env.LINK }}
+              url: https://wiki.botdesignerdiscord.com/nightly/${{ env.LINK }}
