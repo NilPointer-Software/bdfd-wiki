@@ -40,7 +40,7 @@ paths.forEach((path, index) => {
                    href: null,
                    name: getNameFromTitle(),
                });
-           numLinks++;
+           numLinks++; // Increment counter for HTML pages as well.
           }
           return
      }
