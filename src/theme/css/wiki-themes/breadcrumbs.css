@@ -7,8 +7,7 @@
     transition: .3s;
 }
 
-.breadcrumb :nth-child(n+3)::before {
-    content: "/";
+.breadcrumb p {
     margin: 0 2px;
 }
 
