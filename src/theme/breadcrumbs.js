@@ -28,10 +28,10 @@ const breadcrumbConfig = {
 
 let accumulatedPath = root;
 let breadcrumbLinks = [];
+let numLinks = 0;
 
 paths.forEach((path, index) => {
-    
-    let name = breadcrumbConfig[path] || path.charAt(0).toUpperCase() + path.slice(1); // Apply config or capitalize
+    let name = breadcrumbConfig[path] || path.charAt(0).toUpperCase() + path.slice(1);
     accumulatedPath += `${path}/`;
 
      if(path.endsWith(".html")) {
@@ -40,29 +40,32 @@ paths.forEach((path, index) => {
                    href: null,
                    name: getNameFromTitle(),
                });
+           numLinks++;
           }
           return
-     } else if (index === 0) {
-          let href = path === "settings"
-            ? accumulatedPath + "settings.html"
-            : accumulatedPath + "introduction.html"
-            breadcrumbLinks.push({
-                href: href,
-                name: name,
-             });
-    } else {
+     }
+  
+    if (numLinks < 2) {
+         let href = path === "settings"
+           ? accumulatedPath + "settings.html"
+           : accumulatedPath + "introduction.html"
+           
         breadcrumbLinks.push({
-            href: accumulatedPath,
+            href: href,
             name: name,
         });
-    }
+      numLinks++;
+    } 
 });
 
 document.write(`<a href="${root}">Home</a><p>/</p>`);
-breadcrumbLinks.forEach(link => {
+breadcrumbLinks.forEach((link, index) => {
     if (link.href) {
-        document.write(`<a href="${link.href}">${link.name}</a><p>/</p>`);
-    } else {
-        document.write(`<a>${link.name}</a>`);
+       document.write(`<a href="${link.href}">${link.name}</a>`);
+       if(index < breadcrumbLinks.length - 1) { // Add separator if not last
+          document.write(`<p>/</p>`);
+        }
+    } else if(link.name !== "Introduction") { // Only render if it's not Introduction
+          document.write(`<a>${link.name}</a>`);
     }
 });
