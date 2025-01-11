@@ -23,49 +23,55 @@ const breadcrumbConfig = {
     "callbacks": "Callbacks",
     "premium": "Premium",
     "javascript": "JavaScript",
-    "flowchart": "Flowcharts"
+     "flowchart": "Flowcharts",
+    "general": null // explicitly tell to skip general
 };
 
 let accumulatedPath = root;
 let breadcrumbLinks = [];
 let numLinks = 0;
 
-paths.forEach((path, index) => {
-    let name = breadcrumbConfig[path] || path.charAt(0).toUpperCase() + path.slice(1);
-    accumulatedPath += `${path}/`;
+// Iterate with normal for loop for early exits
+for (let i = 0; i < paths.length; i++) {
+    let path = paths[i];
+     accumulatedPath += `${path}/`;
 
-     if(path.endsWith(".html")) {
-          if (index === paths.length - 1) { // Only include the last html if it's last
-               breadcrumbLinks.push({
-                   href: null,
-                   name: getNameFromTitle(),
-               });
-           numLinks++; // Increment counter for HTML pages as well.
-          }
-          return
-     }
-  
-    if (numLinks < 2) {
-         let href = path === "settings"
-           ? accumulatedPath + "settings.html"
-           : accumulatedPath + "introduction.html"
-           
-        breadcrumbLinks.push({
-            href: href,
-            name: name,
-        });
-      numLinks++;
-    } 
-});
+
+     if(path.endsWith(".html")) { // handle ending file names
+           if (i === paths.length - 1) { // Only include the last html if it's last
+                breadcrumbLinks.push({
+                    href: null,
+                    name: getNameFromTitle(),
+                });
+              numLinks++;
+            }
+           continue; // skip file name
+      }
+
+      if (numLinks < 2) {
+
+          if(breadcrumbConfig[path] == null) continue; // skip if config is null
+            let name = breadcrumbConfig[path] || path.charAt(0).toUpperCase() + path.slice(1);
+          
+            let href =  accumulatedPath + "introduction.html"; // default to introduction page
+            
+              breadcrumbLinks.push({
+                  href: href,
+                  name: name,
+              });
+            numLinks++;
+       }
+    
+}
 
 document.write(`<a href="${root}">Home</a><p>/</p>`);
 breadcrumbLinks.forEach((link, index) => {
     if (link.href) {
        document.write(`<a href="${link.href}">${link.name}</a>`);
-       if(index < breadcrumbLinks.length - 1) { // Add separator if not last
-          document.write(`<p>/</p>`);
+        if (index < breadcrumbLinks.length - 1) { // Add separator if not last
+            document.write(`<p>/</p>`);
         }
-    } else if(link.name !== "Introduction") { // Only render if it's not Introduction
-          document.write(`<a>${link.name}</a>`);
-    }
+     } else if(link.name !== "Introduction") {
+        document.write(`<a>${link.name}</a>`);
+      }
 });
