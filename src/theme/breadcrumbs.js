@@ -45,10 +45,10 @@ paths.forEach((path, index) => {
     }
 });
 
-document.write(`<a href="${root}">Let's go Home?</a>`);
+document.write(`<a href="${root}">Home</a><p>/</p>`);
 breadcrumbLinks.forEach(link => {
     if (link.href) {
-        document.write(`<a href="${link.href}">${link.name}</a>`);
+        document.write(`<a href="${link.href}">${link.name}</a><p>/</p>`);
     } else {
         document.write(`<a>${link.name}</a>`);
     }
