@@ -16,31 +16,44 @@ paths = paths.filter(path => {
     return true;
 });
 
+const breadcrumbConfig = {
+    "bdscript": "Functions",
+    "guides": "Guides",
+    "resources": "Resources",
+    "callbacks": "Callbacks",
+    "premium": "Premium",
+    "javascript": "JavaScript",
+    "flowchart": "Flowcharts"
+};
+
 let accumulatedPath = root;
 let breadcrumbLinks = [];
 
 paths.forEach((path, index) => {
-    if (path === "introduction.html") return;
-
-    let name = path.charAt(0).toUpperCase() + path.slice(1);
+    
+    let name = breadcrumbConfig[path] || path.charAt(0).toUpperCase() + path.slice(1); // Apply config or capitalize
     accumulatedPath += `${path}/`;
 
-    if (path.split(".")[1] === "html") {
-        return;
-    }
-
-    if (index === 0) {
-        let href = path === "settings"
-            ? accumulatedPath + "/" + "settings.html"
+     if(path.endsWith(".html")) {
+          if (index === paths.length - 1) { // Only include the last html if it's last
+               breadcrumbLinks.push({
+                   href: null,
+                   name: getNameFromTitle(),
+               });
+          }
+          return
+     } else if (index === 0) {
+          let href = path === "settings"
+            ? accumulatedPath + "settings.html"
             : accumulatedPath + "introduction.html"
+            breadcrumbLinks.push({
+                href: href,
+                name: name,
+             });
+    } else {
         breadcrumbLinks.push({
-            href: href,
+            href: accumulatedPath,
             name: name,
-        });
-    } else if (index === paths.length - 1) {
-        breadcrumbLinks.push({
-            href: null,
-            name: getNameFromTitle(),
         });
     }
 });
