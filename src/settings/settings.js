@@ -446,7 +446,7 @@ function resetAllHover() {
             const elapsedTime = Date.now() - buttonMouseDownTime;
             let progressPercent = (elapsedTime / time) * 100;
              
-            if (progressPercent < 55) {  // Limit percent to below 100
+            if (progressPercent < 100) {
                 progress.style.width = progressPercent + 45 + '%';
             } else {
                 resetState();
