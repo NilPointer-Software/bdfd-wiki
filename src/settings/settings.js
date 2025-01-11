@@ -403,15 +403,15 @@ function resetAllHover() {
     const progress = document.querySelector('.resetToDefault .progress');
 
     if (progress.style.width === '100%') {
-        return;
+      return;
     }
 
     const resetState = () => {
-        progress.style.width = '0%';
-        clearInterval(interval);
-        clearTimeout(timer);
-        isMouseDown = false;
-        buttonMouseDownTime = null;
+      progress.style.width = '0%';
+      clearInterval(interval);
+      clearTimeout(timer);
+      isMouseDown = false;
+      buttonMouseDownTime = null;
     }
 
     const handleStart = (e) => {
@@ -422,9 +422,10 @@ function resetAllHover() {
         clearTimeout(timer); // make sure timer is cleared if it exists
         timer = setTimeout(() => {
             if (isMouseDown) {
-                console.log("Settings Status: Reset");
-                localStorage.removeItem('json');
-                loadSettings();
+              console.log("Settings Status: Reset");
+              localStorage.removeItem('json');
+              loadSettings();
+              location.reload();
             }
         }, time);
 
