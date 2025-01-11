@@ -563,7 +563,7 @@ function loadSettings() {
     "language": "en",
     "text-hg": "none",
     "text-font": "Open Sans, sans-serif",
-    "effects": "visible",
+    "effects": "hidden",
     "code-hg": {
     "defaultTextHighlight":{
       "color":4288341353,
