@@ -165,7 +165,7 @@ function effectsSetting() {
   const manageEffectButton = document.getElementById("manageEffect");
   const snowflakes = document.querySelector('.snowflakes');
   
-  if (manageEffectButton.textContent === "Enable") {
+  if (JSON.stringify(effects) === "hidden") {
     // Enabled
     var effectStatus = "Disable";
     var boolEffectStatus = "visible";
