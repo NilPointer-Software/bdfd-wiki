@@ -406,89 +406,91 @@ function resetAllHover() {
     return;
   }
 
-  progress.style.width = '0%';
-
-  button.mousedownTime = Date.now();
-  isMouseDown = true;
-
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    if (isMouseDown) { 
-      console.log("Settings Status: Reset")
-      resetTheme();
-      changeTextHigh('none');
-      resetFontSize();
-      changeTextFont('font1');
-      changeDiscordTheme('dark');
-      resetHGInput();
+    const resetState = () => {
+       progress.style.width = '0%';
+       clearInterval(interval);
+       clearTimeout(timer);
+       isMouseDown = false;
+       buttonMouseDownTime = null;
     }
-  }, time);
+    
+    const handleStart = (e) => {
+      resetState();
+      buttonMouseDownTime = Date.now();
+      isMouseDown = true;
 
-  function updateProgress() {
-    if (isMouseDown) {
-      const elapsedTime = Date.now() - button.mousedownTime;
-      const progressPercent = (elapsedTime / time) * 100;
+      clearTimeout(timer); // make sure timer is cleared if it exists
+      timer = setTimeout(() => {
+          if (isMouseDown) {
+            console.log("Settings Status: Reset");
+            resetTheme();
+            changeTextHigh('none');
+            resetFontSize();
+            changeTextFont('font1');
+            changeDiscordTheme('dark');
+            resetHGInput();
+          }
+      }, time);
 
-      if (progressPercent < 100) {
-        progress.style.width = progressPercent + 45 + '%';
-      } else {
-        progress.style.width = '0%';
-        clearInterval(interval);
-        if (button.disabled === false) {
-          button.classList.add('pulsating');
+      updateProgress(); // Update progress
+        e.preventDefault(); // for mobile, to prevent double click issues
+
+    }
+
+    const handleEnd = () => {
+         resetState();
+    };
+
+    function updateProgress() {
+        if (isMouseDown) {
+            const elapsedTime = Date.now() - buttonMouseDownTime;
+            let progressPercent = (elapsedTime / time) * 100;
+             
+            if (progressPercent < 55) {  // Limit percent to below 100
+                progress.style.width = progressPercent + 45 + '%';
+            } else {
+                resetState();
+
+                  if (button.disabled === false) {
+                      button.classList.add('pulsating');
+                  }
+                setTimeout(() => {
+                 button.classList.remove('pulsating');
+              }, 100);
+            }
+            interval = requestAnimationFrame(updateProgress);
+
         }
-        setTimeout(() => {
-          button.classList.remove('pulsating');
-        }, 100);
-        isMouseDown = false;
-        buttonMouseDownTime = null;
-      }
-      interval = requestAnimationFrame(updateProgress);
-    }
-  }
+     }
+    
+    button.addEventListener('mousedown',  handleStart);
+     button.addEventListener('touchstart', handleStart, { passive: false });
 
-  function handleTouchStart() {
-    button.mousedownTime = Date.now();
-    isMouseDown = true;
-    updateProgress();
-  }
+    button.addEventListener('mouseup',  handleEnd);
+    button.addEventListener('mouseleave',  handleEnd);
 
-  function handleTouchEnd() {
-    clearTimeout(timer);
-    clearInterval(interval);
-    progress.style.width = '0%';
-    isMouseDown = false;
-    buttonMouseDownTime = null;
-  }
-
-  interval = requestAnimationFrame(updateProgress);
-
-  button.addEventListener('touchstart', handleTouchStart);
-  button.addEventListener('touchend', handleTouchEnd);
+    button.addEventListener('touchend', handleEnd);
+     button.addEventListener('touchcancel', handleEnd);
 }
 
 function resettAllNone() {
-  clearTimeout(timer);
-  clearInterval(interval);
   const progress = document.querySelector('.resetToDefault .progress');
   progress.style.width = '0%';
+  clearTimeout(timer);
+  clearInterval(interval);
   isMouseDown = false;
   buttonMouseDownTime = null;
 }
 
 function resetAllLeave() {
   if (isMouseDown) {
-    const progress = document.querySelector('.resetToDefault .progress');
-    progress.style.width = '0%';
-    clearInterval(interval);
-    clearTimeout(timer);
-    isMouseDown = false;
-    buttonMouseDownTime = null;
+      const progress = document.querySelector('.resetToDefault .progress');
+      progress.style.width = '0%';
+      clearTimeout(timer);
+      clearInterval(interval);
+       isMouseDown = false;
+       buttonMouseDownTime = null;
   }
-}
-
-function handleGlobalMouseUp() {
-  isMouseDown = false;
 }
 
 function updateCodeHG() {
