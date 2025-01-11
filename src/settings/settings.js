@@ -654,7 +654,6 @@ function loadSettings() {
   button.addEventListener('mousedown', resetAllHover);
   button.addEventListener('mouseup', resettAllNone);
   button.addEventListener('mouseleave', resetAllLeave);
-  document.addEventListener('mouseup', handleGlobalMouseUp);
 }
 
 loadSettings();
