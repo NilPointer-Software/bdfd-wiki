@@ -423,12 +423,8 @@ function resetAllHover() {
         timer = setTimeout(() => {
             if (isMouseDown) {
                 console.log("Settings Status: Reset");
-                resetTheme();
-                changeTextHigh('none');
-                resetFontSize();
-                changeTextFont('font1');
-                changeDiscordTheme('dark');
-                resetHGInput();
+                localStorage.removeItem('json');
+                loadSettings();
             }
         }, time);
 
