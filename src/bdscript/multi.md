@@ -15,12 +15,6 @@ $nomention
 $multi[5;2;9]
 ```
 
-## Example
-```
-$nomention
-Result: $sum[5;6;9]
-```
-
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
