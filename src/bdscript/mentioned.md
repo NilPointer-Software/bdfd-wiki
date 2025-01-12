@@ -1,6 +1,10 @@
 # $mentioned
 Returns the ID of the mentioned user.
 
+```admonish fail
+You can't use this function in slash command! Instead of this use [`$message[]`](./messageComplex.md).
+```
+
 ## Syntax
 ```
 $mentioned[Mention number;(Return author?)]
