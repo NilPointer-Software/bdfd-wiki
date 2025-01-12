@@ -456,8 +456,8 @@
     - [Introduction](./flowchart/introduction.md)
     - [Add Response Embed](./flowchart/addResponseEmbed.md)
     - [Set Response Message](./flowchart/setResponseMessage.md)
+    - [To lowercase](./flowchart/toLowercase.md)
     
-
 - [Premium]()
     - [Introduction](./premium/introduction.md)
     - [Callbacks](./callbacks/introduction.md)
