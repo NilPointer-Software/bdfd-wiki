@@ -547,8 +547,8 @@ function loadSettings() {
   const codeTextInput = document.getElementById('jsonhginput');
   const charCountElement = document.querySelector('.charCount');
   const effectButton = document.getElementById("manageEffect");
-  
-  const currentMonth = new Date().getMonth() + 1;
+  const manageEffectButton = document.getElementById("manageEffect");
+  const snowflakes = document.querySelector('.snowflakes');
   
   let data
 
@@ -642,17 +642,25 @@ function loadSettings() {
   if (themeChangerRange) {
     themeChangerRange.value = parseInt(data['theme-main'].replace('%', ''));
   }
-
-  if (!(currentMonth === 12 || currentMonth === 1 || currentMonth === 2)) {
-    effectButton.classList.add('disabled');
-    effectButton.textContent = "No effects available";
-  }
   
   if (displaySize) {
     displaySize.textContent = data['text-size'].replace('%', '');
     range.value = parseInt(data['text-size'].replace('%', ''));
   }
+  
+  if (data["effects"] === "hidden") {
+    // Enabled
+    var effectStatus = "Disable";
+    var boolEffectStatus = "visible";
+  } else {
+    // Disabled
+    var effectStatus = "Enable";
+    var boolEffectStatus = "hidden";
+  }
 
+  snowflakes.style.visibility = boolEffectStatus; 
+  manageEffectButton.textContent = effectStatus;
+  
   const button = document.querySelector('.resetToDefault');
   button.addEventListener('mousedown', resetAllHover);
   button.addEventListener('mouseup', resettAllNone);
