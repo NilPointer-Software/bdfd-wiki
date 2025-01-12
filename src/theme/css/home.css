@@ -164,35 +164,46 @@ bold {
     }
 }
 
-.hosting:hover {
-    transform: scale(1.05);
-    border: solid;
-    border-width: 0 2px 2px 0;
-    border-color: var(--color1);
-    transition: .3s;
+@media (min-width: 900px) {
+    .hosting:hover {
+        transform: scale(1.05);
+        border: solid;
+        border-width: 0 2px 2px 0;
+        border-color: var(--color1);
+        transition: .3s;
+    }
+
+    .anywhere:hover {
+        transform: scale(1.05);
+        border: solid;
+        border-width: 0 0 2px 2px;
+        border-color: var(--color1);
+        transition: .3s;
+    }
+
+    .alotfunctions:hover {
+        transform: scale(1.05);
+        border: solid;
+        border-width: 2px 2px 0 0;
+        border-color: var(--color1);
+        transition: .3s;
+    }
+
+    .community:hover {
+        transform: scale(1.05);
+        border: solid;
+        border-width: 2px 0 0 2px;
+        border-color: var(--color1);
+        transition: .3s;
+    }
 }
 
-.anywhere:hover {
-    transform: scale(1.05);
-    border: solid;
-    border-width: 0 0 2px 2px;
-    border-color: var(--color1);
-    transition: .3s;
+@media (max-width: 900px) {
+    .why-bdfd-embed > div:hover {
+        transform: scale(1.025);
+        border: solid;
+        border-width: 1px;
+        border-color: var(--color1);
+        transition: .3s;
+    }
 }
-
-.alotfunctions:hover {
-    transform: scale(1.05);
-    border: solid;
-    border-width: 2px 2px 0 0;
-    border-color: var(--color1);
-    transition: .3s;
-}
-
-.community:hover {
-    transform: scale(1.05);
-    border: solid;
-    border-width: 2px 0 0 2px;
-    border-color: var(--color1);
-    transition: .3s;
-}
-
