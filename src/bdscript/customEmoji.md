@@ -1,14 +1,17 @@
 # $customEmoji
 Returns a custom emoji. 
-> 🧙‍♂️ **Note:** We recommend emoji IDs instead of `$customEmoji` for public bots.
+
+```admonish danger title="Important"
+We recommend emoji IDs instead of `$customEmoji[]` **for public** bots.
+```
 
 ## Syntax
 ```
-$customEmoji[emoji name]
+$customEmoji[Emoji name]
 ```
 
 ### Parameters
-- `emoji name` `(Type: String || Flag: Required)`: The name of the emoji to return.
+- `Emoji name` `(Type: String || Flag: Required)`: The name of the emoji to return.
 
 ## Example
 ```

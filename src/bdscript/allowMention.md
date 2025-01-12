@@ -13,7 +13,6 @@ $allowMention
 $message
 ```
 
-### With `$allowMention`:
 ```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
@@ -28,8 +27,9 @@ $message
   content: |
     <@RainbowKey>
 ```
-\
-### Without `$allowMention`
+
+- Without `$allowMention`:
+
 ```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
@@ -43,4 +43,8 @@ $message
   verified: true
   content: |
     @RainbowKey
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
 ```

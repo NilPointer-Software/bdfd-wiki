@@ -11,12 +11,21 @@ $setUserRoles[User ID;Role ID;...]
 - `Role  ID` `(Type: Snowflake || Flag: Required)`: Roles to be given to the user. Separate roles using `;`.
 
 ## Example
+1. Create two commands and set the trigger `!example` for one command and `!roles` for the other. (`!roles` is not required)
+- Code with trigger `!example`:
+
 ```
 $nomention
 $setUserRoles[$authorID;$roleID[Support]]
 We've reset all your roles! Now you have "Support" role.
 ```
-*In this example, we will remove all roles and give one role with "Support" name*.
+
+- Code with trigger `!roles`:
+
+```
+$nomention
+$userRoles[$authorID]
+```
 
 ```discord yaml
 - user_id: 803569638084313098
@@ -25,6 +34,7 @@ We've reset all your roles! Now you have "Support" role.
     !roles
 - user_id: 1009018156494368798
   username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
@@ -37,6 +47,7 @@ We've reset all your roles! Now you have "Support" role.
     !example
 - user_id: 1009018156494368798
   username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
@@ -53,11 +64,8 @@ We've reset all your roles! Now you have "Support" role.
       Support
 ```
 
-> How [$roleID[]](./roleID.md) and [$authorID](./authorID.md) works?
+*In this example, we will remove all roles and give one role with "Support" name*.
 
-### Code for `!roles` command:
+```admonish question title="What is this?"
+How [`$roleID[]`](./roleID.md), [`$authorID`](./authorID.md) and [`$userRoled[]`](./userRoles.md) works?
 ```
-$nomention
-$userRoles[$authorID]
-```
-> [How $userRoles[] works?](./userRoles.md)

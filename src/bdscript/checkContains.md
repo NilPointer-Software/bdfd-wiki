@@ -23,7 +23,6 @@ $checkContains[$message;hi;hello]
   content: |
     !example bye
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -35,7 +34,6 @@ $checkContains[$message;hi;hello]
   content: |
     !example hello
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -47,10 +45,13 @@ $checkContains[$message;hi;hello]
   content: |
     !example hi bye
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
   content: |
     true
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
 ```

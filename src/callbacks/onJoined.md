@@ -1,4 +1,8 @@
 # $onJoined
+<div class="functionTags">
+  <span id="CallbackTag">Callback</span>
+</div>
+
 *Triggered when a user joins the server.*
 
 `$onJoined[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user joins the server.

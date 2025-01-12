@@ -30,3 +30,16 @@ Result: $round[100.123;1]
   content: |
     Result: 100.1
 ```
+
+<div class=function-playground>
+  <h3>🤖 Playground</h3>
+  <p>Here you can understand how this function works.</p>
+  <div class="function-input">
+    <p>Input:</p>
+    <span id="play-code">$round[<textarea id="play-input" rows="1" maxlength="20" oninput="roundPlayground(this.value)">1</textarea>]</span>
+  </div>
+  <div class="function-output">
+    <p>Output:</p>
+    <span id="play-output">Result: 1</span>
+  </div>
+</div>

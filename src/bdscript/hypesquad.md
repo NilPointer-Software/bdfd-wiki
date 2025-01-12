@@ -15,4 +15,17 @@ $nomention
 You are in $hypesquad[$authorID] house.
 ```
 
-![example](https://user-images.githubusercontent.com/95774950/187594740-3eab54bf-1df1-4c4e-a2fe-372f8a45eb39.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    You are in balance house.
+```

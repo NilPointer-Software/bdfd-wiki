@@ -1,4 +1,8 @@
 # $onLeave
+<div class="functionTags">
+  <span id="CallbackTag">Callback</span>
+</div>
+
 *Triggered when a user leaves the server.*
 
 `$onLeave[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server.

@@ -57,3 +57,7 @@ $creationDate[ID;(Format)]
   content: |
     January 26, 2021 at 10:18 AM (UTC +00:00)
 ```
+
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) works?
+```

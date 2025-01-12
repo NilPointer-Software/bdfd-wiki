@@ -13,8 +13,48 @@ $modulo[A;B]
 ## Example
 ```
 $nomention
-$argsCheck[>2;❌ Invalid usage. Usage: `!modulo (number1) (number2)`]
 $modulo[$message[1];$message[2]]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123551143-8d177100-d73e-11eb-811a-b72259c67edb.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 5 10
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Result: 5
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 10 100
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Result: 10
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 25 5
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Result: 0
+```
+
+```admonish question title="What is this?"
+How [`$message[]`](./messageComplex.md) works?
+```

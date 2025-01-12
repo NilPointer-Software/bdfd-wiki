@@ -12,7 +12,7 @@ $divide[Numbers]
 ## Example
 ```
 $nomention
-Answer: $divide[10;$message]
+Result: $divide[10;$message]
 ```
 
 ```discord yaml
@@ -27,5 +27,9 @@ Answer: $divide[10;$message]
   bot: true
   verified: true
   content: |
-    Answer: 2
+    Result: 2
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
 ```

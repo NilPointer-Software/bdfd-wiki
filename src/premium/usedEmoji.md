@@ -1,5 +1,7 @@
 # $usedEmoji
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 This function returns the emoji which triggered a [`$reaction[]`](./reaction.md) callback.
 

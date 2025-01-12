@@ -9,6 +9,19 @@ $random
 ## Example
 ```
 $nomention
-The random number is **$random**!
+The random number is **$random**
 ```
-![example](https://user-images.githubusercontent.com/111157596/231841104-5640d8c0-004b-45c1-8b23-2360596a17ae.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    The random number is <b>4</b>
+```

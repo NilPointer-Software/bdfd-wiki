@@ -1,4 +1,8 @@
 # $onBanAdd
+<div class="functionTags">
+  <span id="CallbackTag">Callback</span>
+</div>
+
 *Triggered when a user gets banned from the server.*
 
 `$onBanAdd[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user is banned from the server. 

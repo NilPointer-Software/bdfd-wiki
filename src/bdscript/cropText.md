@@ -31,3 +31,7 @@ $cropText[$message;50;...]
   content: |
     Hello everyone! This message is very cool. 😎 We ho...
 ```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

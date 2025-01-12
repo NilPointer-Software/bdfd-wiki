@@ -1,6 +1,40 @@
 # $channelSendMessage
 Sends a message in the provided channel.
 
+<style>
+.discord-messages {
+    margin-top: 1.5rem;
+}
+
+.discord-messages > .discord-message:before {
+    color: var(--color1);
+    background: var(--color3);
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1.8rem;
+    margin-top: -.9rem;
+    width: fit-content;
+    transition: .3s;
+    z-index: 1000;
+}
+
+.discord-messages > .discord-message:before {
+    content: '#secret-channel';
+}
+
+.discord-messages:first-of-type > .discord-message:before {
+    content: '#main-chat';
+}
+
+.discord-messages > .discord-message:hover:before {
+    transform: scale(1.025);
+    transform: rotate(-2.5deg);
+    border-radius: 12.5px;
+    transition: .3s;
+}
+</style>
+
 ## Syntax
 ```
 $channelSendMessage[Channel ID;Message]
@@ -13,31 +47,19 @@ $channelSendMessage[Channel ID;Message]
 ## Example
 ```
 $nomention
-The message was sent to  the channel: <#835108724846493726>
-$channelSendMessage[835108724846493726;Hello!]
+$channelSendMessage[$mentionedChannels[1];Hello!]
 ```
 
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
-    !example
-- username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
-  color: "#378afa"
-  bot: true
-  verified: true
-  content: |
-    The message was sent to  the channel: <#fun>
+    !example <#secret-channel>
 ```
-\
 
-### in **#fun** channel:
 ``` discord yaml
 - username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
   color: "#378afa"
   bot: true
   verified: true
@@ -45,3 +67,6 @@ $channelSendMessage[835108724846493726;Hello!]
     Hello!
 ```
 
+```admonish question title="What is this?"
+How [`$mentionedChannels[]`](./mentionedChannels.md) works?
+```

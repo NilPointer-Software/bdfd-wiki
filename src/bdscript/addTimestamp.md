@@ -9,8 +9,30 @@ $addTimestamp
 ## Example
 ```
 $nomention
-$description[Hi!]
 $footer[That is the timestamp =>]
 $addTimestamp
 ```
-![example](https://user-images.githubusercontent.com/113303649/209937294-5cf68498-dcb9-4dcc-88b9-4da824f86e3e.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  embed: 
+    footer:
+      text: That is the timestamp => <span class="discord-message-timestamp">Today at 00:00</span>
+```
+
+```admonish question title="What is this?"
+How [`$footer[]`](./footer.md) works?
+```
+
+```admonish note
+[`$footer[]`](./footer.md) is not required to use with `$addTimestamp`.
+```

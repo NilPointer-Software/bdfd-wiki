@@ -11,5 +11,17 @@ $slashID
 $nomention
 ID of this slash command: $slashID
 ```
-![Without](https://user-images.githubusercontent.com/70456337/191593122-4fd47d30-f108-4b4a-b44b-b1f3b5df9980.png)
+
+``` discord yaml
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  command:
+    author: RainbowKey
+    user_id: 803569638084313098
+    command: /example
+    color: "#E67E22"
+  content: |
+    ID of this slash command: 1199084158555787377
+```
 

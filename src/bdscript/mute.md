@@ -1,17 +1,19 @@
 # $mute
-*(deprecated)*
+<div class="functionTags">
+  <span id="DeprecatedTag">Deprecated</span>
+</div>
 
-> 🧙‍♂️ This command is deprecated, instead better use [`$timeout[]`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/timeout.html).
+> This function is deprecated, instead better use [`$timeout[]`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/timeout.html).
 
 Mutes the mentioned user.
 
 ## Syntax
 ```
-$mute[mutedRoleName]
+$mute[Muted Role Name]
 ```
 
 ### Parameters
-- `mutedRoleName` `(Type: String || Flag: Required)`: The name of the 'Muted' role (case sensitive).
+- `Muted Role Name` `(Type: String || Flag: Required)`: The name of the 'Muted' role (case sensitive).
 
 ## Example
 ```

@@ -9,6 +9,37 @@ $noMentionMessage
 ## Example
 ```
 $nomention
-$noMentionMessage
+Message: $noMentionMessage
 ```
-![example](https://user-images.githubusercontent.com/69215413/123551762-2182d300-d741-11eb-8d98-1d2e4619dfb0.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example Hello <@MineBartekSA>!
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello !
+```
+
+- Lets use [`$message`](./message.md) instead of `$noMentionMessage`:
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example Hello <@MineBartekSA>!
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello @MineBartekSA!
+```

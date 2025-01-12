@@ -32,4 +32,6 @@ Channel ID: $findChannel[$mentionedChannels[1]]
     Channel ID: 566370477967147018
 ```
 
-> [How `$mentionedChannels[]` works?](./mentionedChannels.md)
+```admonish question title="What is this?"
+How [`$mentionedChannels[]`](./mentionedChannels.md) works?
+```

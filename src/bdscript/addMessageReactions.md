@@ -34,9 +34,12 @@ Successfully added the reactions to the message.
 
 1. Type `\:TheEmojiName:`
 2. Send the message.
-3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:ID>`. If the emoji is animated, it should look like this: `<a:emojiName:ID>`)
-4. Input the emoji ID into `$addMessageReactions[]`. (e.g. `$addMessageReactions[$channelID;1123254137547653222;<:hollyDab:828628880629825546>]`)
+3. Copy the ID it returns. (The emoji ID should be in this format: `<:emojiName:emojiID>`. If the emoji is animated, it should look like this: `<a:emojiName:emojiID>`)
+4. Input the emoji ID into `$addMessageReactions[]`. Example:
 
-![example2](https://media.discordapp.net/attachments/609162277312266280/745309789491298415/My_Movie_0.gif)
+```
+$addMessageReactions[$channelID;1123254137547653222;<:hollyDab:828628880629825546>]
+```
+
 
 > If you're still having issues, check the [Troubleshooting](../resources/troubleshooting.md#the-bot-fails-to-add-reactions) page.

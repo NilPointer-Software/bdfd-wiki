@@ -2,7 +2,7 @@
 In this section, you'll learn how to use the if statement.
 
 ## Content
-[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif[]**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and[]**](#and) > [**$or[]**](#or) > [**$stop**](#stop) > [**Simple Example**](#simple-example)
+[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and[]**](#and) > [**$or[]**](#or) > [**$stop**](#stop) > [**Simple Example**](#simple-example)
 
 ## Functions Used
 - [`$if[]`](../../bdscript/if.md)

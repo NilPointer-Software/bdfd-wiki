@@ -10,19 +10,27 @@ $repeatMessage[Amount;Message]
 - `Amount` `(Type: Integer || Flag: Required)`: The number of times to repeat the given text (max `10` times).
 - `Message` `(Type: String || Flag: Emptiable)`: The text to repeat.
 
-## Examples
-### Example #1
+## Example
 ```
 $nomention
-$repeatMessage[5;Hello World]
+$repeatMessage[5;Hello World!]
 ```
-![example1](https://user-images.githubusercontent.com/69215413/126245014-85c3953b-ad54-4658-95df-fb83719dcfa0.png)
 
-### Example #2
-> 🧙‍♂️ You can use a space at the end of "text", so there are spaces in-between repeats.
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello World!Hello World!Hello World!Hello World!Hello World!
+```
 
+```admonish info
+You can use a space at the end of "text" in the `Message` parameter, so there are spaces in-between repeats.
 ```
-$nomention
-$repeatMessage[5;Hello World! ]
-```
-![example2](https://user-images.githubusercontent.com/69215413/126245000-6bac6c11-39d2-40ec-a6d3-0d8123c6a2fd.png)

@@ -1,12 +1,14 @@
 # $discriminator
 Returns a user's discriminator (the 4 digit number at the end of their username).
 
+```admonish fail
+Discord has updated the username system, removing discriminators for users. Discriminators will only work for bots. For user it will return `0000`.
+```
+
 ## Syntax
 ```
 $discriminator[User ID]
 ```
-
-> Discord has updated the username system, removing discriminators for users. Discriminators will only work for bots. For user it will return `0000`.
 
 ### Parameters
 - `User ID` `(Type: Snowflake || Flag: Emptiable)`: The user to get the discriminator from.
@@ -14,7 +16,7 @@ $discriminator[User ID]
 ## Example
 ```
 $nomention
-Discriminator: $discriminator[$mentioned[1]]
+Discriminator: #$discriminator[$mentioned[1]]
 ```
 
 ```discord yaml
@@ -32,5 +34,10 @@ Discriminator: $discriminator[$mentioned[1]]
     Discriminator: #7678
 ```
 
-> You can use `$discriminator[]` get the discriminator of the author.\
-> [How `$mentioned[]` works?](./mentioned.md))
+```admonish note
+You can use `$discriminator[]` get the discriminator of the author.
+```
+
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
+```

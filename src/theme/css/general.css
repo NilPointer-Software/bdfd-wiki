@@ -9,8 +9,8 @@
 
 html {
     font-family: "Open Sans", sans-serif;
-    color: var(--fg);
-    background-color: var(--bg);
+    color: #fff;
+    background-color: hsl(270, 80%, 8%);;
     text-size-adjust: none;
 }
 
@@ -18,11 +18,12 @@ body {
     margin: 0;
     font-size: 1.6rem;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 code {
     font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
-    font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+    font-size: 0.875em;
 }
 
 .left { float: left; }
@@ -54,18 +55,15 @@ h1 a.header:target,
 h2 a.header:target,
 h3 a.header:target,
 h4 a.header:target {
-    scroll-margin-top: calc(var(--menu-bar-height) + 0.5em);
+    scroll-margin-top: calc(45px + 0.5em);
 }
 
 .page {
     outline: 0;
-    padding: 0 var(--page-padding);
+    padding: 0 5px;
 }
 .page-wrapper {
     box-sizing: border-box;
-}
-.js:not(.sidebar-resizing) .page-wrapper {
-    transition: margin-left 0.3s ease, transform 0.3s ease; /* Animation: slide away */
 }
 
 .content {
@@ -73,17 +71,19 @@ h4 a.header:target {
     padding: 0 15px;
     padding-bottom: 50px;
 }
+
 .content main {
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--content-max-width);
+    max-width: 750px;
 }
+
 .content a { text-decoration: none; }
 .content a:hover { text-decoration: underline; }
 .content img { max-width: 100%; }
 .content .header:link,
 .content .header:visited {
-    color: var(--fg);
+    color: #fff;
 }
 .content .header:link,
 .content .header:visited:hover {
@@ -91,42 +91,74 @@ h4 a.header:target {
 }
 
 table {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    border-collapse: collapse;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px;
+    transition: .3s
 }
+
 table td {
-    padding: 3px 20px;
-    border: 1px var(--table-border-color) solid;
+    padding: 6px 25px;
+    border: 0;
+    border-radius: 0px !important;
 }
+
+table td:hover {
+    border: solid;
+    border-color: var(--color1);
+    border-width: 1px;
+    border-radius: 10px !important;
+    transition: .4s
+}
+
 table thead {
-    background: var(--table-header-bg);
+    background: var(--color3);
+    border-radius: 10px 10px 0 0;
 }
+
+table:hover {
+    box-shadow: 0 0 5px 2px var(--color1);
+    transition: .3s
+}
+
 table thead td {
-    font-weight: 700;
-    border: none;
+    font-weight: bold;
 }
+
 table thead th {
     padding: 3px 20px;
 }
+
 table thead tr {
-    border: 1px var(--table-header-bg) solid;
-}
-/* Alternate background colors for rows */
-table tbody tr:nth-child(2n) {
-    background: var(--table-alternate-bg);
+    border: 1px;
+    border-radius: 10px 10px 0 0;
 }
 
+table tbody tr:nth-child(2n) {
+    opacity: .9;
+    background: var(--color3);
+}
+
+table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+table tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
 
 blockquote {
     margin: 20px 0;
-    padding: 0 20px;
-    color: var(--fg);
-    background-color: var(--quote-bg);
-    border-top: .1em solid var(--quote-border);
-    border-bottom: .1em solid var(--quote-border);
+    padding: .1px 20px;
+    background-color: var(--color3);
+    border: solid !important;
+    border-radius: 0 10px 10px 0 !important;
+    border-width: 0 0 0 4px !important;
+    border-color: var(--color1) !important;
+    box-shadow: 2.5px 2.5px 10px rgb(0 0 0 / 50%);
 }
 
 
@@ -146,15 +178,15 @@ blockquote {
     position: absolute;
     visibility: hidden;
     color: #fff;
-    background-color: #333;
-    transform: translateX(-50%); /* Center by moving tooltip 50% of its width left */
-    left: 55px;
-    top: -35px;
-    font-size: .6em;
+    background-color: var(--color3);
+    transform: translateX(-50%);
+    left: 80%;
+    top: -122%;
+    font-size: 80%;
     font-style: normal;
     font-family: system-ui;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 5px 8px;
     margin: 5px;
     z-index: 1000;

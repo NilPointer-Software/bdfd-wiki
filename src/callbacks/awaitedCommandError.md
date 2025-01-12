@@ -1,4 +1,8 @@
 # $awaitedCommandError
+<div class="functionTags">
+  <span id="CallbackTag">Callback</span>
+</div>
+
 _Triggered when an awaited command doesn't match with provided filter._
 
 `$awaitedCommandError[]` is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command doesn't match with provided filter.

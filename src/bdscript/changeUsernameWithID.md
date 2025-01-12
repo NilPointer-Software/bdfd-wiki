@@ -13,10 +13,10 @@ $changeUsernameWithID[User ID;New nickname]
 ## Example
 ```
 $nomention
-$argsCheck[>1;Please provide text!]
 $addCmdReactions[❤️]
 $changeUsernameWithID[$message[1];$message[2]]
 ```
+
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
@@ -29,4 +29,6 @@ $changeUsernameWithID[$message[1];$message[2]]
       reacted: false
 ```
 
-> [How `$addCmdReactions[]` works?](./addCmdReactions.md)
+```admonish question title="What is this?"
+How [`$addCmdReactions[]`](./addCmdReactions.md) and [`$message[]`](./messageComplex.md) works?
+```

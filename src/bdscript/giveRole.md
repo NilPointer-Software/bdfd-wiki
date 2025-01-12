@@ -1,7 +1,9 @@
 # $giveRole 
-*(deprecated)*
+<div class="functionTags">
+  <span id="DeprecatedTag">Deprecated</span>
+</div>
 
-> 🧙‍♂️ This command is deprecated, instead better use [`$roleGrant[]`](./roleGrant.md).
+> This function is deprecated, instead better to use [`$roleGrant[]`](./roleGrant.md).
 
 Adds a role to the provided user.
 

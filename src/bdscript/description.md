@@ -13,7 +13,20 @@ $description[message;(index)]
 ## Example
 ```
 $nomention
-$description[This is a description! 😎]
+$description[This is a description!]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/125975247-34376dd7-faa1-4426-a774-59294a3962c0.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  embed:
+    description: This is a description!
+```

@@ -12,8 +12,26 @@ $multi[Number;..]
 ## Example
 ```
 $nomention
-$argsCheck[>2;❌ Invalid usage. Usage: `!multiply (number1) (number2)`]
-$multi[$message[1];$message[2]]
+$multi[5;2;9]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123551357-60178e00-d73f-11eb-9a21-578799084b88.png)
+## Example
+```
+$nomention
+Result: $sum[5;6;9]
+```
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Result: 90
+```

@@ -9,7 +9,20 @@ $roleCount
 ## Example
 ```
 $nomention
-There are $roleCount roles in $serverName[$guildID]
+This server currently has $roleCount role(s).
 ```
 
-![example](https://imgur.com/cyGQeVT.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This server currently has 14 boost(s).
+```

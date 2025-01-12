@@ -1,7 +1,9 @@
 # $modifyChannelPerms
-*(deprecated)*
+<div class="functionTags">
+  <span id="DeprecatedTag">Deprecated</span>
+</div>
 
-> 🧙‍♂️ This command is deprecated, instead better use [`$editChannelPerms[]`](./editChannelPerms.md).
+> This function is deprecated, instead better use [`$editChannelPerms[]`](./editChannelPerms.md).
 
 Modifies a channel's permissions.
 

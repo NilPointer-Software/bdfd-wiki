@@ -28,13 +28,13 @@ Hello $displayName!
 $changeCooldownTime[Days⏰;Hours⏰;Mins🕧;Secs🕧]
 $cooldown[10m;Please wait %time-m%!]
 ```
+
 ``` discord yaml
 - user_id: 729343563401265193
   username: Nicky
   color: "#EE7908"
   content: |
-    !hello
-
+    !example
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -42,13 +42,11 @@ $cooldown[10m;Please wait %time-m%!]
   verified: true
   content: |
     Hello Nicky!
-
 - user_id: 729343563401265193
   username: Nicky
   color: "#EE7908"
   content: |
-    !hello
-
+    !example
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -56,4 +54,8 @@ $cooldown[10m;Please wait %time-m%!]
   verified: true
   content: |
     Please wait 9.9 Mins🕧!
+```
+
+```admonish question title="What is this?"
+How [`$displayName`](./displayName.md) and [`$cooldown[]`](./cooldown.md) works?
 ```

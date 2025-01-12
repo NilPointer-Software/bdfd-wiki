@@ -29,3 +29,7 @@ $channelExists[$message]
   content: |
     true
 ```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

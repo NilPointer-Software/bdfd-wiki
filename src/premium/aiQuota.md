@@ -1,4 +1,8 @@
 # $aiQuota
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
+
 Returns the remaining tokens for a bot.
 
 ## Syntax

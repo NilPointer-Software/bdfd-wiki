@@ -1,9 +1,11 @@
 # $takeRole
-*(deprecated)*
+<div class="functionTags">
+  <span id="DeprecatedTag">Deprecated</span>
+</div>
 
-> 📌 As of December 2021, this function has been deprecated in favor of [`$roleGrant[]`](./roleGrant.md).
->
->  📌 In order to remove a role from a user, the bot must have the `manageroles` permission.
+> As of December 2021, this function has been deprecated in favor of [`$roleGrant[]`](./roleGrant.md).
+
+> In order to remove a role from a user, the bot must have the `manageroles` permission.
 
 Removes a role from the provided/mentioned user.
 

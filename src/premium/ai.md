@@ -1,4 +1,8 @@
 # $ai
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
+
 Allows you to communicate with AI.
 
 ## Syntax

@@ -1,0 +1,673 @@
+/* Settings */
+
+body {
+    background-color: hsl(270, 80%, 8%);
+    touch-action: manipulation;
+}
+
+.editPage {
+    visibility: hidden;
+}
+
+/* Tag Beta Feature */
+
+.tag-beta {
+    user-select: none;
+    -webkit-user-select: none;
+    border-style: solid;
+    margin: auto;
+    margin-top: 15px;
+    width: fit-content;
+    padding: 10px 10px;
+    border-width: 1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tag-beta .warn {
+    font-size: 2.25em;
+    margin-right: 7.5px;
+}
+
+.tag-beta .text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.tag-beta .head {
+    font-weight: bold;
+    margin-bottom: 2.5px;
+    font-size: 1.1em;
+}
+
+.tag-beta .desc {
+    font-size: 0.9em;
+}
+
+/* Discord Message Preview*/
+
+.discord-messages {
+    margin-top: 1.7rem;
+    margin-bottom: 2rem;
+    transition: .5s;
+}
+
+.discord-messages:hover {
+    transform: scale(1.025);
+    border-radius: 12.5px;
+    transition: .5s;
+}
+
+.discord-reaction {
+    transition: .1s;
+}
+
+/* Main Setting UI */
+.settingembed {
+    position: relative;
+    background-color: var(--color3);
+    border-radius: 10px;
+    margin-top: -4.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+}
+
+.settingembed:hover {
+    transform: scale(1.015);
+    border-radius: 12.5px;
+    transition: .3s;
+}
+
+.settingembed h2 {
+    padding-top: 15px;
+}
+
+.settingembed p {
+    margin-top: -15px;
+}
+
+/* Buttons */
+
+button {
+    touch-action: manipulation;
+}
+
+button:not(#menu-bar i, #menu-bar .icon-button) {
+    background: hsl(0deg 0% 100% / 7%);
+}
+
+.themebuttons, .texthighbuttons, .discordexamplebuttons {
+    user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.textfontbuttons, .folderbuttons, .effectbuttons {
+    user-select: none;
+    -webkit-user-select: none;
+    display: block;
+    margin-top: -20px;
+}
+
+.tbutton, .fbutton, .hgButton, .hbutton, .ebutton, .folderbutton {
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: .25%;
+    margin-top: 3%;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .2s;
+}
+
+.hbutton {
+    margin: .75%;
+}
+
+.hgButton {
+    margin-top: -1px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+.hgButton i {
+    margin-right: 5px;
+}
+
+.hgButton p {
+    text-align: center;
+    margin: 0;
+}
+
+.tbutton {
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+/* Json HG Input*/
+
+#jsonhginput {
+    width: 96%;
+    height: 40rem;
+    font-size: 1.5rem;
+    min-height: 1.3rem;
+    max-height: 35em;
+    border-radius: 10px;
+    border-width: 0;
+    color: #bbb;
+    background: hsl(0deg 0% 100% / 7%);
+    padding: 7px;
+    font-size: 1.5rem;
+    resize: vertical;
+    margin: 0 auto;
+    display: block;
+    outline: none;
+}
+
+.textsizebuttons input[type='range'] {
+    -webkit-appearance: none;
+    background-color: #828282;
+    height: 1px;
+    width: 100%;
+}
+
+.textsizebuttons input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 10px;
+    height: 25px;
+    width: 10px;
+}
+
+.textsizebuttons input[type='range']::-webkit-slider-thumb:hover {
+    -webkit-appearance: none;
+    cursor: e-resize;
+}
+
+.textsizebuttons label {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.textsizebuttons label:after {
+    content: " %";
+}
+
+#default-is {
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 0.8em;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: -2px;
+    margin-left: auto;
+    text-align: right;
+}
+
+#default-is:before {
+    content: "Default is ";
+}
+
+.display-color#light {
+    background-color: #F2F3F5;
+}
+
+.display-color#dark {
+    background-color: #1C1D22;
+}
+
+.display-color#midnight {
+    background-color: #000;
+}
+
+.display-color#redmoon {
+    background: linear-gradient(-25deg, #240000, #740606);
+}
+
+.display-color#nightsapphire {
+    background: linear-gradient(-25deg, #000124, #260674);
+}
+
+.display-color#emeraldearth {
+    background: linear-gradient(-25deg, #0c2400, #067446);
+}
+
+.display-color#nightviolet {
+    background: linear-gradient(-25deg, #1d0024, #350674);
+}
+
+.display-color#oldwood {
+    background: linear-gradient(-25deg, #240f00, #744806);
+}
+
+.display-color#azuresky {
+    background: linear-gradient(-25deg, #001a24, #067465);
+}
+
+.display-color#cherryvelvety {
+    background: linear-gradient(-25deg, #240017, #74064d);
+}
+
+.display-color#forestdepth {
+    background: linear-gradient(-25deg, #222400, #687406);
+}
+
+.display-color#nightchestnut {
+    background: linear-gradient(-25deg, #190024 25%, #740606);
+}
+
+.display-color#mosscovered {
+    background: linear-gradient(-25deg, #1c2400, #4c7406);
+}
+
+.display-color#deepruby {
+    background: linear-gradient(-25deg, #1f0024, #74066e);
+}
+
+.display-color#fernvalley {
+    background: linear-gradient(-25deg, #00240a, #247406);
+}
+
+.display-color#forestshadows {
+    background: linear-gradient(-25deg, #000624 25%, #0e7406);
+}
+
+.display-color#autumnblaze {
+    background: linear-gradient(-25deg, #240800, #742006);
+}
+
+.tbutton:hover, .fbutton:hover, .hgButton:hover, .hbutton:hover, .ebutton:hover, .folderbutton:hover {
+    transform: scale(1.1);
+    border-radius: 8px;
+    border-width: 1px;
+    transition: .4s;
+}
+
+.dbutton {
+    width: 10rem;
+    height: 10rem;
+    margin: .75%;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: .2s;
+}
+
+.dbutton:hover {
+    transform: scale(1.05);
+    transition: .4s;
+}
+
+.display-color {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin-top: 10%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    transition: .5s;
+}
+
+.dbutton:hover > .display-color {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transform: none; 
+    top: -10%;
+    left: 0;
+    transition: .4s;
+}
+
+.dbutton#light-button > .display-text {
+    color: #000;
+}
+
+.ebutton.disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.ebutton.disabled:before {
+    content: '🚫 ';
+}
+
+.display-text {
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+}
+
+.texthighbuttons .hbutton#high-blue {
+    text-shadow: 0 0 10px #257df0;
+}
+
+.texthighbuttons .hbutton#high-red {
+    text-shadow: 0 0 10px #f02525;
+}
+
+.texthighbuttons .hbutton#high-green {
+    text-shadow: 0 0 10px #25f03e;
+}
+
+.texthighbuttons .hbutton#high-yellow {
+    text-shadow: 0 0 10px #f0ea25;
+}
+
+.texthighbuttons .hbutton#high-purple {
+    text-shadow: 0 0 10px #8f25f0;
+}
+
+.texthighbuttons .hbutton#high-white {
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.texthighbuttons .hbutton#high-black {
+    text-shadow: 0 0 10px #000000;
+}
+
+.texthighbuttons .hbutton#high-pink {
+    text-shadow: 0 0 10px #f025d7;
+}
+
+.texthighbuttons .hbutton#high-orange {
+    text-shadow: 0 0 10px #f07025;
+}
+
+.texthighbuttons .hbutton#high-sync {
+    text-shadow: -9px -9px 15px red,
+    -6px -6px 10px orange,
+    -3px -3px 5px yellow,
+    0px 0px 5px green,
+    3px 3px 5px #4fadff,
+    6px 6px 5px blue,
+    9px 9px 15px purple;
+}
+
+.textfontbuttons .fbutton#font1 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.textfontbuttons .fbutton#font2 {
+    font-family: Georgia, serif;
+}
+
+.textfontbuttons .fbutton#font3 {
+    font-family: Montserrat;
+}
+
+.textfontbuttons .fbutton#font4 {
+    font-family: cursive;
+}
+
+.textfontbuttons .fbutton#font5 {
+    font-family: monospace;
+}
+
+.textfontbuttons .fbutton#font6 {
+    font-family: system-ui;
+}
+
+#themePreview {
+    width: 100%;
+    height: 75px;
+    border: none;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, var(--color1), var(--color2));
+}
+
+#themePreview::before {
+    content: "Bot Designer For Discord";
+    position: absolute;
+    box-shadow: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    top: 45%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#themePreview .lock-text {
+    -webkit-user-select: none;
+    user-select: none;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: .9rem;
+    color: #fff;
+    cursor: pointer;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 2.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#themePreview .lock-text:hover {
+    opacity: .7;
+    transition: .4s;
+}
+
+#themeSlider {
+    background: linear-gradient(to right, var(--color1), var(--color2));
+}
+
+#themeSlider::-webkit-slider-thumb {
+    background-color: #fff ;
+}
+
+#themeSlider::-moz-range-thumb {
+    background-color: #fff;
+}
+
+#colorThemeDisplay {
+    -webkit-user-select: none;
+    user-select: none;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: var(--color2);
+    padding-left: 5px;
+    padding-right: 5px;
+    width: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#hexColor {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 1.1rem;
+    color: white ;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #FFF;
+    background-color: #fff !important;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.resetSettingButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 4rem;
+    width: 4rem;
+    border-width: 0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+  }
+
+.resetSettingButton:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.codehighlighting {
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    margin-bottom: 1.2em;
+}
+
+.charCount {
+    -webkit-user-select: none;
+    user-select: none;
+    position: absolute;
+    bottom: -.5em; 
+    right: 15px;
+    font-size: .9em;
+}
+
+/* Reset to default settings */
+
+.resetToDefault {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    background: hsl(0deg 0% 100% / 5%) !important;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.1s ease;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--color1);
+    outline: none;
+}
+			
+.resetToDefault.pulsating {
+    transform: scale(1.1);
+}
+			
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color2);
+    transition: 0.5s ease;
+    z-index: 1;
+}
+			
+.resetToDefault span {
+    position: relative;
+    user-select: none;
+    z-index: 2;
+}
+
+
+.importantReset {
+    display: flex;
+    align-items: center; 
+}
+
+@media (max-width: 750px) {
+    .importantReset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+	
+    #instructionAndWarning {
+	margin-top: 1.5rem;
+	transition: .3s;
+	text-align: center;
+    }
+}
+
+@media (min-width: 750px) {
+    #instructionAndWarning {
+	margin-top: 1.5rem;
+	margin-left: 2rem;
+	transition: .3s;
+	width: 450px;
+    }
+}
+
+.importantReset:hover #instructionAndWarning {
+    color: #ff3d3d !important;
+    transition: .3s;
+}
+
+#instructionAndWarning {
+    user-select: none;
+    -webkit-user-select: none;
+}

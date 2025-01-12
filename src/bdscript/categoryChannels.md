@@ -41,8 +41,10 @@ $nomention
     <#rules>
     <#news>
     <#update-logs>
-    <#bots>
-    <#bdfd-forums>
+    <#main-chat>
+    <#secret-channel>
 ```
 
-> [How `$categoryID[]` works?](./categoryID.md)
+```admonish question title="What is this?"
+How [`$categoryID[]`](./categoryID.md) works?
+```

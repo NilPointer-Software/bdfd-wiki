@@ -1,5 +1,5 @@
 # $ban
-Bans the mentioned user.
+Bans the mentioned user without reason.
 
 ## Syntax
 ```
@@ -29,4 +29,8 @@ $ban
 - content: |
       <font color="white">Spen</font> left without pizza.
   type: leave
+```
+
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
 ```

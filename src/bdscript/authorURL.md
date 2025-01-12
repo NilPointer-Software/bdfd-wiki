@@ -5,7 +5,10 @@ Adds a hyperlink to the author text.
 ```
 $authorURL[URL;(Index)]
 ```
-> `$authorURL[]` will not work if there is no text provided in [`$author[]`](./author.md).
+
+```admonish failure
+`$authorURL[]` will not work if there is no text provided in [`$author[]`](./author.md).
+```
 
 ### Parameters
 - `URL` `(Type: URL || Flag: Emptiable)`: The link to set as the author hyperlink.
