@@ -1,4 +1,3 @@
-
 const scheme = {
   "defaultTextHighlight": {
     "color": 4288341353,
