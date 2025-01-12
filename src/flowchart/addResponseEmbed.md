@@ -16,7 +16,7 @@ Adds embed to the response message for the command.
 ## Example
 Entry Point ➤ - ➤ Add response embed (Title: `Meowing Title`, Description: `Meowing Description`, Footer: `Cats shall rule this footer!`)
 
-![image](https://github.com/user-attachments/assets/c99109d3-20df-44a8-be09-a7f5506e71f5)
+![example](https://github.com/user-attachments/assets/c99109d3-20df-44a8-be09-a7f5506e71f5)
 
 ```discord yaml
 - username: Flowchart
