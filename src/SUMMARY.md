@@ -1,7 +1,7 @@
 # Summary
 
 [Home](./foreword.md)
-[Settings](./settings/settings.md)
+[Settings](./settings.md)
 [Changelog](./CHANGELOG.md)
 [Flowchart Changelog](./FLOWCHART_CHANGELOG.md)
 [Terms of Service](./terms.md)
@@ -10,7 +10,7 @@
 ---
 
 - [Guides]()
-    - [Introduction](guides/introduction.md)
+    - [Introduction](./guides/introduction.md)
         - [Beginning](./guides/introduction/beginning.md)
         - [Commands Anatomy](./guides/introduction/commandsAnatomy.md)
         - [Bot Status](./guides/introduction/botStatus.md)
