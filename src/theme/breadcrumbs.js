@@ -31,6 +31,9 @@ let accumulatedPath = root;
 let breadcrumbLinks = [];
 let numLinks = 0;
 
+let isIntroductionPage = !paths.some(path => path.endsWith(".html"));
+let introCategoryName = null; // Used to store the name if introduction
+
 // Iterate with normal for loop for early exits
 for (let i = 0; i < paths.length; i++) {
     let path = paths[i];
@@ -42,32 +45,44 @@ for (let i = 0; i < paths.length; i++) {
                 href: null,
                 name: getNameFromTitle(),
             });
-            numLinks++;
+             numLinks++;
         }
         continue; // Skip breadcrumb name
     }
 
-    if (numLinks < 2) {
-        if(breadcrumbConfig[path] == null) continue; // Skip if config is null
-            let name = breadcrumbConfig[path] || path.charAt(0).toUpperCase() + path.slice(1);
-            let href =  accumulatedPath + "introduction.html"; // Default to introduction page
-            
+
+    if (numLinks < 1) { // Only get 1 name if it is introduction
+
+      if(breadcrumbConfig[path] == null) continue; // Skip if config is null
+      let name = breadcrumbConfig[path] || path.charAt(0).toUpperCase() + path.slice(1);
+       
+      if(isIntroductionPage) {
+        introCategoryName = name;
+      } else {
+           let href =  accumulatedPath + "introduction.html";
+        
             breadcrumbLinks.push({
                 href: href,
                 name: name,
             });
-            numLinks++;
-        }    
-    }
+       }
+       numLinks++;
+   }    
+}
 
 document.write(`<a href="${root}">Home</a><p>/</p>`);
-breadcrumbLinks.forEach((link, index) => {
+
+if (isIntroductionPage && introCategoryName) {
+    document.write(`<a>${introCategoryName}</a>`);
+} else {
+ breadcrumbLinks.forEach((link, index) => {
     if (link.href) {
-       document.write(`<a href="${link.href}">${link.name}</a>`);
-        if (index < breadcrumbLinks.length - 1) { // Add separator if not last
+        document.write(`<a href="${link.href}">${link.name}</a>`);
+        if (index < breadcrumbLinks.length - 1) {
             document.write(`<p>/</p>`);
-        }
-     } else if(link.name !== "Introduction") {
+         }
+        } else if(link.name !== "Introduction") {
         document.write(`<a>${link.name}</a>`);
       }
-});
+  });
+}
