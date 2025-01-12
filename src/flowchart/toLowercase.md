@@ -13,7 +13,7 @@ Converts the text to lowercase format.
 
 ## Example
 Entry Point ➤ - ➤ Set response message (Content - Set response message (Result)), To lowercase (Text: `Hello world!`)
-![eample](https://github.com/user-attachments/assets/a0cfa8d0-7a16-4461-b39f-896d93aa1866)
+![example](https://github.com/user-attachments/assets/a0cfa8d0-7a16-4461-b39f-896d93aa1866)
 
 
 ```discord yaml
