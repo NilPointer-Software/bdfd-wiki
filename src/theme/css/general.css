@@ -181,7 +181,7 @@ blockquote {
     background-color: var(--color3);
     transform: translateX(-50%);
     left: 80%;
-    top: -122%;
+    top: -90%;
     font-size: 80%;
     font-style: normal;
     font-family: system-ui;
