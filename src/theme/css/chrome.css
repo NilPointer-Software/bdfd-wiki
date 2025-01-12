@@ -855,7 +855,8 @@ ul#searchresults span.teaser em {
 
 .snowflakes {
     z-index: 1000;
-    width: 150%;
+    visibility: hidden;
+    width: 200%;
     height: 100%;
     position: fixed;
     top: -150px;
