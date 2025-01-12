@@ -146,8 +146,9 @@ function changeDiscordTheme(colorId) {
 
 function foldersSetting() {
   const manageFolderButton = document.getElementById("manageFolder");
+  let inv = JSON.parse(localStorage.getItem('json'));
   
-  if (manageFolderButton.textContent === "Enable") {
+  if (inv["folders"] === "Enable") {
     // Enabled
     var folderStatus = "Disable";
     var boolFolderStatus = true;
@@ -164,8 +165,9 @@ function foldersSetting() {
 function effectsSetting() {
   const manageEffectButton = document.getElementById("manageEffect");
   const snowflakes = document.querySelector('.snowflakes');
+  let inv = JSON.parse(localStorage.getItem('json'));
   
-  if (JSON.stringify(effects) === "hidden") {
+  if (inv["effects"] === "hidden") {
     // Enabled
     var effectStatus = "Disable";
     var boolEffectStatus = "visible";
