@@ -1,4 +1,4 @@
-# TO lowercasse
+# To lowercasse
 <div class="functionTags">
   <span id="FlowchartTag">Flowchart Bot</span>
 </div>
