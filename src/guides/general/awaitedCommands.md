@@ -499,4 +499,3 @@ You have provided a number: $message
   content: |
     You have provided a number: 28
 ```
-\
