@@ -131,7 +131,7 @@ jobs:
           webhook: ${{ secrets.WEBHOOK }}
           embed: |-
             title: "${{ env.TYPE }} Wiki Update"
-            color: 10001644
+            color: 6504371
             author:
               name: ${{ github.event.head_commit.author.username }}
               url: https://github.com/${{ github.event.head_commit.author.username }}
