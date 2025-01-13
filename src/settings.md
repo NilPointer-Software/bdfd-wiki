@@ -9,8 +9,8 @@
 # Settings
 Let's customize your experience in our Bot Designer For Discord wiki world!
 
-<link rel="stylesheet" href="./settings/style.css">
-<script src="./settings/index.js" defer></script>
+<link rel="stylesheet" href="./theme/settings/style.css">
+<script src="./theme/settings/index.js" defer></script>
 
 <div class="settingembed">
   <h2>Wiki Theme</h2>
