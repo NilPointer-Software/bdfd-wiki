@@ -5,7 +5,7 @@
 [Changelog](./CHANGELOG.md)
 [Flowchart Changelog](./FLOWCHART_CHANGELOG.md)
 [Terms of Service](./terms.md)
-[Entity Transfer Policy]({{ path_to_root }} entityTransferPolicy.md)
+[Entity Transfer Policy](./entityTransferPolicy.md)
 
 ---
 
