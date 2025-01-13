@@ -649,11 +649,9 @@ function loadSettings() {
   }
   
   if (data["effects"] === "hidden") {
-    // Enabled
-    var effectStatus = "Disable";
-  } else {
-    // Disabled
     var effectStatus = "Enable";
+  } else {
+    var effectStatus = "Disable";
   }
 
   uiSnowflakes.style.visibility = data["effects"]; 
