@@ -547,8 +547,8 @@ function loadSettings() {
   const codeTextInput = document.getElementById('jsonhginput');
   const charCountElement = document.querySelector('.charCount');
   const effectButton = document.getElementById("manageEffect");
-  const manageEffectButton = document.getElementById("manageEffect");
-  const snowflakes = document.querySelector('.snowflakes');
+  const uiManageEffectButton = document.getElementById("manageEffect");
+  const uiSnowflakes = document.querySelector('.snowflakes');
   
   let data
 
@@ -651,15 +651,13 @@ function loadSettings() {
   if (data["effects"] === "hidden") {
     // Enabled
     var effectStatus = "Disable";
-    var boolEffectStatus = "visible";
   } else {
     // Disabled
     var effectStatus = "Enable";
-    var boolEffectStatus = "hidden";
   }
 
-  snowflakes.style.visibility = boolEffectStatus; 
-  manageEffectButton.textContent = effectStatus;
+  uiSnowflakes.style.visibility = data["effects"]; 
+  uiManageEffectButton.textContent = effectStatus;
   
   const button = document.querySelector('.resetToDefault');
   button.addEventListener('mousedown', resetAllHover);
