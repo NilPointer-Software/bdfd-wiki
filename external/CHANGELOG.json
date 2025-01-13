@@ -1,4 +1,19 @@
 {
+    "2025": {
+        "january": [
+            "Added `$boostLevel`",
+            "Added `$systemChannelID`",
+            "Added `$afkChannelID`",
+            "Added `$lastMessageID`",
+            "Added `$lastPinTimestamp`",
+            "Added `$threadMessageCount`",
+            "Added `$threadUserCount`",
+            "Added `$voiceUserLimit[]`",
+            "Added `$emojiName[]`",
+            "Added `$isEmojiAnimated[]`",
+            "Added `$isEmojiExists[]`",
+        ]
+    },
     "2024": {
         "august": [
             "Added `$log[]`",
