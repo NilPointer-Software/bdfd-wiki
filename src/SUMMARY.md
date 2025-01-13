@@ -94,6 +94,7 @@
     - [$blackListUsers](./bdscript/blackListUsers.md)
     - [$boostCount](./bdscript/boostCount.md)
     - [$boostCount[]](./bdscript/boostCountComplex.md)
+    - [$boostLevel](./bdscript/boostLevel.md)
     - [$botCommands](./bdscript/botCommands.md)
     - [$botID](./bdscript/botID.md)
     - [$botLeave](./bdscript/botLeave.md)
