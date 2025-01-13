@@ -148,7 +148,7 @@ function foldersSetting() {
   const manageFolderButton = document.getElementById("manageFolder");
   let inv = JSON.parse(localStorage.getItem('json'));
   
-  if (inv["folders"] === "Enable") {
+  if (inv["folders"] === false) {
     // Enabled
     var folderStatus = "Disable";
     var boolFolderStatus = true;
@@ -549,7 +549,8 @@ function loadSettings() {
   const effectButton = document.getElementById("manageEffect");
   const uiManageEffectButton = document.getElementById("manageEffect");
   const uiSnowflakes = document.querySelector('.snowflakes');
-  
+  const uiManageFolderButton = document.getElementById("manageFolder");
+ 
   let data
 
   try {
@@ -656,6 +657,14 @@ function loadSettings() {
 
   uiSnowflakes.style.visibility = data["effects"]; 
   uiManageEffectButton.textContent = effectStatus;
+  
+  if (data["folders"] === true) {
+    var folderStatus = "Enable";
+  } else {
+    var folderStatus = "Disable";
+  }
+
+  uiManageFolderButton.textContent = folderStatus; 
   
   const button = document.querySelector('.resetToDefault');
   button.addEventListener('mousedown', resetAllHover);
