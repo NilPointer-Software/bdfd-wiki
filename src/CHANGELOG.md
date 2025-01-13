@@ -6,6 +6,21 @@
   }
 </style>
 
+# 2025
+
+## January
+- Added `$boostLevel`
+- Added `$systemChannelID`
+- Added `$afkChannelID`
+- Added `$lastMessageID`
+- Added `$lastPinTimestamp`
+- Added `$threadMessageCount`
+- Added `$threadUserCount`
+- Added `$voiceUserLimit[]`
+- Added `$emojiName[]`
+- Added `$isEmojiAnimated[]`
+- Added `$isEmojiExists[]`
+
 # 2024
    
 ## August
