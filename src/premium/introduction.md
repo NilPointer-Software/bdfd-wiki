@@ -46,7 +46,7 @@ Access to the "Bot guild (server) list" in the app.                             
 Access to the ["Embed builder"](./embedBuilder.md) in the app.                                                       | ❌  | ✅   |
 Sharding.                                                                                                            | ❌  | ✅   |
 Priority bot hosting and startup.                                                                                    | ❌  | ✅   |
-Ad-free hosting time.                                                                                                | ❌  | ✅   |
+Ad-free hosting time.                                                                                                | ✅  | ✅   |
 Character limit per code.                                                                                            | 65k  | 65k  |
 Variable limit.                                                                                                      | 100  | ∞    |
 Command limit.                                                                                                       | 230  | ∞    |
