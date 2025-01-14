@@ -658,7 +658,7 @@ function loadSettings() {
   uiSnowflakes.style.visibility = data["effects"]; 
   uiManageEffectButton.textContent = effectStatus;
   
-  if (data["folders"] === true) {
+  if (data["folders"] === false) {
     var folderStatus = "Enable";
   } else {
     var folderStatus = "Disable";
