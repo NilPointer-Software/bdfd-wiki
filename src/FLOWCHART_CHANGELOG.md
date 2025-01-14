@@ -4,6 +4,13 @@
 
 <div class="changelog">
   <div class="changePrev">
+    <h2>2024</h2>
+    <p>What new has been added?</p>
+  </div>
+</div>
+
+<div class="changelog">
+  <div class="changePrev">
     <h2>August</h2>
     <p>Let's start from scratch now</p>
     <span id="newUpdate">NEW</span>
