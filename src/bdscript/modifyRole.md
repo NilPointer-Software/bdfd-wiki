@@ -22,8 +22,6 @@ Required permissions that the bot must have for this function to work properly:
 ## Example
 ```
 $nomention
-$argsCheck[>2;❌ Please provide the needed arguments! Usage: `!role-name (role) (newRoleName)`]
-$onlyPerms[manageroles;❌ You are missing the manage_roles permission!]
 $modifyRole[$findRole[$message[1]];$replaceText[$message;$message[1];;1];!unchanged;!unchanged;!unchanged]
 $description[✅ Changed role name of <@&$findRole[$message[1]]>]
 ```
