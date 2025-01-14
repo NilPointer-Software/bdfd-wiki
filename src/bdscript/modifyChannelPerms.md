@@ -21,7 +21,6 @@ $modifyChannelPerms[Channel ID;Permissions;User/Role ID]
 **Lock:**
 ```
 $nomention
-$onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
 ✅ Successfully locked <#$mentionedChannels[1;yes]>!
 $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$guildID]
 ```
@@ -31,7 +30,6 @@ $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$guildID]
 **Unlock:**
 ```
 $nomention
-$onlyPerms[managechannels;❌ You need the manage_channels permission to use that!]
 ✅ Successfully unlocked <#$mentionedChannels[1;yes]>!
 $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 ```
