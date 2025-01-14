@@ -14,12 +14,12 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .discord-message .discord-message-timestamp {
+    .discord-message .discord-message-timestamp, .discord-system-message .discord-message-timestamp  {
         font-size: 10px;
     }
 }
 
-.discord-message .discord-message-timestamp {
+.discord-message .discord-message-timestamp, .discord-system-message .discord-message-timestamp  {
     user-select: none;
     -webkit-user-select: none;
     color: #999;
