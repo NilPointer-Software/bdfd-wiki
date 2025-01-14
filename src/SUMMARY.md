@@ -254,6 +254,7 @@
     - [$kick[]](./bdscript/kickComplex.md)
     - [$kickMention](./bdscript/kickMention.md)
     - [$lastMessageID](./bdscript/lastMessageID.md)
+    - [$lastPinTimestamp](./bdscript/lastPinTimestamp.md)
     - [$lowestRole](./bdscript/lowestRole.md)
     - [$lowestRole[]](./bdscript/lowestRoleComplex.md)
     - [$lowestRoleWithPerms](./bdscript/lowestRoleWithPerms.md)
