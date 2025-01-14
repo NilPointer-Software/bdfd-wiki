@@ -18,7 +18,6 @@ $mute[Muted Role Name]
 ## Example
 ```
 $nomention
-$onlyPerms[manageroles;❌ You are missing permission: `MANAGE_ROLES`.]
 $mute[Muted]
 ✅ Successfully muted $username[$mentioned[1]]#$discriminator[$mentioned[1]]!
 ```
