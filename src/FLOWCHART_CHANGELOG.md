@@ -1,4 +1,4 @@
-# FLowchart Changelog
+# Flowchart Changelog
 
 <link rel="stylesheet" href="./theme/css/changelog.css">
 
