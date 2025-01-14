@@ -22,7 +22,6 @@ Required permissions that the bot must have for this function to work properly:
 ## Example
 ```
 $nomention
-$onlyPerms[manageroles;❌ You are missing permission: `MANAGE_ROLES`.]
 $unmute[Muted]
 ✅ Successfully unmuted $username[$mentioned[1]]#$discriminator[$mentioned[1]]!
 ```
