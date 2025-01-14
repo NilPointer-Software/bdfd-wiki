@@ -276,6 +276,11 @@ a:link:not(.breadcrumb a, .editPage, .mobile-nav-chapters, .chapter li a, .disco
     -webkit-tap-highlight-color: transparent;
 }
 
+#sidebar-toggle {
+    height: 80%;
+    margin-top: 18%;
+}
+
 /* Hide sidebar button for PC & Add text in the menu bar */
 
 @media (min-width: 750px) {
