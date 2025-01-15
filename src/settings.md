@@ -7,6 +7,7 @@
 </div>
 
 # Settings
+
 Let's customize your experience in our Bot Designer For Discord wiki world!
 
 <link rel="stylesheet" href="./theme/settings/style.css">
@@ -243,4 +244,3 @@ $endtry
 	</button>
 	<span id="instructionAndWarning">Press and hold the button for 2 seconds to reset all settings to default. All settings will be permanently reset. This action cannot be undone.</span>
 </div>
- 

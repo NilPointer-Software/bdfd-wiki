@@ -90,7 +90,7 @@
   <p>Let’s see what we can do with BDFD! It’s time to dive deep into the world of this powerful tool and unlock its full potential!</p>
 </div>
 
-``` discord yaml
+```discord yaml
 - user_id: 390515191819010058
   username: kubastick
   color: "#FF0000"
@@ -115,8 +115,8 @@
     command: /work
   content: |
     You worked successfully and earned...
-  components: 
-    - 
+  components:
+    -
       - type: secondary
         label: 🪙 50 Coins!
 - user_id: 311808747141857292

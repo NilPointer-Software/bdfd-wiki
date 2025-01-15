@@ -18,6 +18,7 @@
 </div>
 
 ---
+
 ## About
 
 **Bot Designer For Discord** is a free-to-use Discord Bot maker available for Android, iOS and Web. It's capable of developing nearly all types of bots from simple "echo" bots to advanced multi-purpose administration ones.
@@ -25,13 +26,15 @@
 This is the official GitHub repository of BDFD Wiki which explains BDFD functions, callbacks, and features.
 
 ### Links
-- [Website](https://botdesignerdiscord.com)
-- [Wiki](https://nilpointer-software.github.io/bdfd-wiki)
-- [Wiki (Nightly)](https://nilpointer-software.github.io/bdfd-wiki/nightly)
-- [Android App](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
-- [iOS App](https://apps.apple.com/us/app/bot-designer-for-discord/id1495536477)
-- [Web App](https://app.botdesignerdiscord.com/)
-- [Discord Server](https://discord.com/servers/bot-designer-for-discord-official-server-566363823137882154)
+
+-   [Website](https://botdesignerdiscord.com)
+-   [Wiki](https://nilpointer-software.github.io/bdfd-wiki)
+-   [Wiki (Nightly)](https://nilpointer-software.github.io/bdfd-wiki/nightly)
+-   [Android App](https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger)
+-   [iOS App](https://apps.apple.com/us/app/bot-designer-for-discord/id1495536477)
+-   [Web App](https://app.botdesignerdiscord.com/)
+-   [Discord Server](https://discord.com/servers/bot-designer-for-discord-official-server-566363823137882154)
 
 ### Contribution
+
 If you would like to contribute in this repository, do checkout [CONTRIBUTING.md](CONTRIBUTING.md) for further information.
