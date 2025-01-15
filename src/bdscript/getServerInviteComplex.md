@@ -1,7 +1,7 @@
 # $getServerInvite[]
 Returns the provided server's invite URL.
 
-```admonish danger
+```admonish warning
 The bot must be present in the provided server (`Guild ID` parameter) for it to create an invite.
 ```
 
