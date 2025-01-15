@@ -26,3 +26,7 @@ AFK channel ID: $afkChannelID
   content: |
     AFK channel ID: 567428769766440962
 ```
+
+```admonish info title="What is this?"
+An AFK channel on Discord is a voice channel where inactive users are automatically moved after being idle for a set time. It keeps active channels clear of idle users.
+```
