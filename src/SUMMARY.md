@@ -395,6 +395,7 @@
     - [$sum](./bdscript/sum.md)
     - [$suppressErrors](./bdscript/suppressErrors.md)
     - [$suppressErrors[]](./bdscript/suppressErrorsComplex.md)
+    - [$systemChannelID](./bdscript/systemChannelID.md)
     - [$takeRole](./bdscript/takeRole.md)
     - [$textSplit](./bdscript/textSplit.md)
     - [$threadAddMember](./bdscript/threadAddMember.md)
