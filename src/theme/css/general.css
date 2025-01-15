@@ -1,197 +1,219 @@
 /* Base styles and content styles */
 
-@import 'variables.css';
+@import "variables.css";
 
 :root {
-    /* Browser default font-size is 16px, this way 1 rem = 10px */
-    font-size: 62.5%;
+	/* Browser default font-size is 16px, this way 1 rem = 10px */
+	font-size: 62.5%;
 }
 
 html {
-    font-family: "Open Sans", sans-serif;
-    color: #fff;
-    background-color: hsl(270, 80%, 8%);;
-    text-size-adjust: none;
+	font-family: "Open Sans", sans-serif;
+	color: #fff;
+	background-color: hsl(270, 80%, 8%);
+	text-size-adjust: none;
 }
 
 body {
-    margin: 0;
-    font-size: 1.6rem;
-    overflow-x: hidden;
-    min-height: 100vh;
+	margin: 0;
+	font-size: 1.6rem;
+	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 code {
-    font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
-    font-size: 0.875em;
+	font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo,
+		"DejaVu Sans Mono", monospace, monospace !important;
+	font-size: 0.875em;
 }
 
-.left { float: left; }
-.right { float: right; }
-.boring { opacity: 0.6; }
-.hide-boring .boring { display: none; }
-.hidden { display: none; }
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.boring {
+	opacity: 0.6;
+}
+.hide-boring .boring {
+	display: none;
+}
+.hidden {
+	display: none;
+}
 
-h2, h3 { margin-top: 2.5em; }
-h4, h5 { margin-top: 2em; }
+h2,
+h3 {
+	margin-top: 2.5em;
+}
+h4,
+h5 {
+	margin-top: 2em;
+}
 
 .header + .header h3,
 .header + .header h4,
 .header + .header h5 {
-    margin-top: 1em;
+	margin-top: 1em;
 }
 
 h1 a.header:target::before,
 h2 a.header:target::before,
 h3 a.header:target::before,
 h4 a.header:target::before {
-    display: inline-block;
-    content: "»";
-    margin-left: -30px;
-    width: 30px;
+	display: inline-block;
+	content: "»";
+	margin-left: -30px;
+	width: 30px;
 }
 
 h1 a.header:target,
 h2 a.header:target,
 h3 a.header:target,
 h4 a.header:target {
-    scroll-margin-top: calc(45px + 0.5em);
+	scroll-margin-top: calc(45px + 0.5em);
 }
 
 .page {
-    outline: 0;
-    padding: 0 5px;
+	outline: 0;
+	padding: 0 5px;
 }
 .page-wrapper {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .content {
-    overflow-y: auto;
-    padding: 0 15px;
-    padding-bottom: 50px;
+	overflow-y: auto;
+	padding: 0 15px;
+	padding-bottom: 50px;
 }
 
 .content main {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 750px;
 }
 
-.content a { text-decoration: none; }
-.content a:hover { text-decoration: underline; }
-.content img { max-width: 100%; }
+.content a {
+	text-decoration: none;
+}
+.content a:hover {
+	text-decoration: underline;
+}
+.content img {
+	max-width: 100%;
+}
 .content .header:link,
 .content .header:visited {
-    color: #fff;
+	color: #fff;
 }
 .content .header:link,
 .content .header:visited:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 table {
-    margin: auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 5px;
-    transition: .3s
+	margin: auto;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 5px;
+	transition: 0.3s;
 }
 
 table td {
-    padding: 6px 25px;
-    border: 0;
-    border-radius: 0px !important;
+	padding: 6px 25px;
+	border: 0;
+	border-radius: 0px !important;
 }
 
 table td:hover {
-    border: solid;
-    border-color: var(--color1);
-    border-width: 1px;
-    border-radius: 10px !important;
-    transition: .4s
+	border: solid;
+	border-color: var(--color1);
+	border-width: 1px;
+	border-radius: 10px !important;
+	transition: 0.4s;
 }
 
 table thead {
-    background: var(--color3);
-    border-radius: 10px 10px 0 0;
+	background: var(--color3);
+	border-radius: 10px 10px 0 0;
 }
 
 table:hover {
-    box-shadow: 0 0 5px 2px var(--color1);
-    transition: .3s
+	box-shadow: 0 0 5px 2px var(--color1);
+	transition: 0.3s;
 }
 
 table thead td {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 table thead th {
-    padding: 3px 20px;
+	padding: 3px 20px;
 }
 
 table thead tr {
-    border: 1px;
-    border-radius: 10px 10px 0 0;
+	border: 1px;
+	border-radius: 10px 10px 0 0;
 }
 
 table tbody tr:nth-child(2n) {
-    opacity: .9;
-    background: var(--color3);
+	opacity: 0.9;
+	background: var(--color3);
 }
 
 table tbody tr:last-child td:first-child {
-    border-radius: 0 0 0 10px;
+	border-radius: 0 0 0 10px;
 }
 
 table tbody tr:last-child td:last-child {
-    border-radius: 0 0 10px 0;
+	border-radius: 0 0 10px 0;
 }
 
 blockquote {
-    margin: 20px 0;
-    padding: .1px 20px;
-    background-color: var(--color3);
-    border: solid !important;
-    border-radius: 0 10px 10px 0 !important;
-    border-width: 0 0 0 4px !important;
-    border-color: var(--color1) !important;
-    box-shadow: 2.5px 2.5px 10px rgb(0 0 0 / 50%);
+	margin: 20px 0;
+	padding: 0.1px 20px;
+	background-color: var(--color3);
+	border: solid !important;
+	border-radius: 0 10px 10px 0 !important;
+	border-width: 0 0 0 4px !important;
+	border-color: var(--color1) !important;
+	box-shadow: 2.5px 2.5px 10px rgb(0 0 0 / 50%);
 }
-
 
 :not(.footnote-definition) + .footnote-definition,
 .footnote-definition + :not(.footnote-definition) {
-    margin-top: 2em;
+	margin-top: 2em;
 }
 .footnote-definition {
-    font-size: 0.9em;
-    margin: 0.5em 0;
+	font-size: 0.9em;
+	margin: 0.5em 0;
 }
 .footnote-definition p {
-    display: inline;
+	display: inline;
 }
 
 .tooltiptext {
-    position: absolute;
-    visibility: hidden;
-    color: #fff;
-    background-color: var(--color3);
-    transform: translateX(-50%);
-    left: 80%;
-    top: -90%;
-    font-size: 80%;
-    font-style: normal;
-    font-family: system-ui;
-    text-align: center;
-    border-radius: 10px;
-    padding: 5px 8px;
-    margin: 5px;
-    z-index: 1000;
+	position: absolute;
+	visibility: hidden;
+	color: #fff;
+	background-color: var(--color3);
+	transform: translateX(-50%);
+	left: 80%;
+	top: -90%;
+	font-size: 80%;
+	font-style: normal;
+	font-family: system-ui;
+	text-align: center;
+	border-radius: 10px;
+	padding: 5px 8px;
+	margin: 5px;
+	z-index: 1000;
 }
 
 .tooltipped .tooltiptext {
-    visibility: visible;
+	visibility: visible;
 }
