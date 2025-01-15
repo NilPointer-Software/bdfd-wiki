@@ -7,6 +7,7 @@
 }
 
 .discord-messages {
+    overflow: hidden;
     border-radius: 10px;
     background-color: #2e3035;
     border-width: 0px;
