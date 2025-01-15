@@ -29,3 +29,16 @@ Random String: `$randomString[5]`
   content: |
     Random String: <code>Nuxo5</code>
 ```
+
+<div class=function-playground>
+  <h3>🤖 Playground</h3>
+  <p>Here you can understand how this function works.</p>
+  <div class="function-input">
+    <p>Input:</p>
+    <span id="play-code">$randomString[<textarea id="play-input" rows="1" maxlength="2" oninput="randomStringPlayground(this.value)">5</textarea>]</span>
+  </div>
+  <div class="function-output">
+    <p>Output:</p>
+    <span id="play-output">Random String: Nuxo5</span>
+  </div>
+</div>
