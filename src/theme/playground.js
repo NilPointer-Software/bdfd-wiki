@@ -122,6 +122,36 @@ function toTitleCasePlayground(inputValue) {
   editInputHeight()
 }
 
+
+// $randomString[]
+function randomStringPlayground(inputValue) {
+  const playOutput = document.getElementById('play-output');
+  let functionName = '$randomString';
+
+  if (inputValue === "") {
+    outputEmptyValueError(functionName, 1, 1);
+  } else if (isNaN(inputValue)) {
+    let nonNumericIndex = inputValue.search(/[^0-9]/);
+    nonNumericIndex = nonNumericIndex === -1 ? inputValue.length : nonNumericIndex + functionName.length + 3;
+    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${nonNumericIndex}</p> returned an error: expected integer in position 1, got '${inputValue}'`;
+  } else if (parseInt(inputValue) < 1 || parseInt(inputValue) > 10) {
+    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: random string length must be between 1 and 10`;
+  } else {
+    let length = parseInt(inputValue);
+    playOutput.textContent = `Random string:` + generateRandomString(length);
+  }
+}
+
+function generateRandomString(length) {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
 // Empty value error
 function outputEmptyValueError(functionName, lineNumber, position) {
   const playOutput = document.getElementById('play-output');
