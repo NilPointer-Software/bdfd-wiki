@@ -43,10 +43,15 @@ code {
 	display: none;
 }
 
+h1 {
+	margin-top: 2%;
+}
+
 h2,
 h3 {
-	margin-top: 2.5em;
+	margin-top: 5%;
 }
+
 h4,
 h5 {
 	margin-top: 2em;
