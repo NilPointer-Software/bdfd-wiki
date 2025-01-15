@@ -253,6 +253,7 @@
     - [$kick](./bdscript/kick.md)
     - [$kick[]](./bdscript/kickComplex.md)
     - [$kickMention](./bdscript/kickMention.md)
+    - [$afkChannelID](./bdscript/afkChannelID.md)
     - [$lastMessageID](./bdscript/lastMessageID.md)
     - [$lastPinTimestamp](./bdscript/lastPinTimestamp.md)
     - [$lowestRole](./bdscript/lowestRole.md)
