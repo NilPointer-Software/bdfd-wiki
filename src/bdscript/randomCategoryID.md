@@ -29,3 +29,7 @@ Random Category: $channelName[$randomCategoryID[]]
   content: |
     Random Category: BDFD
 ```
+
+```admonish question title="What is this?"
+How [`$channelName`](./channelName.md) works?
+```
