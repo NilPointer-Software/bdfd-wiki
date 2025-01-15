@@ -47,3 +47,7 @@ Random Role: $roleName[$randomRoleID[]]
     Random Role: <@everyone>
   highlight: true
 ```
+
+```admonish question title="What is this?"
+How [`$roleName`](./roleName.md) works?
+```
