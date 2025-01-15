@@ -122,7 +122,6 @@ function toTitleCasePlayground(inputValue) {
   editInputHeight()
 }
 
-
 // $randomString[]
 function randomStringPlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
@@ -134,11 +133,13 @@ function randomStringPlayground(inputValue) {
     let nonNumericIndex = inputValue.search(/[^0-9]/);
     nonNumericIndex = nonNumericIndex === -1 ? inputValue.length : nonNumericIndex + functionName.length + 3;
     playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${nonNumericIndex}</p> returned an error: expected integer in position 1, got '${inputValue}'`;
-  } else if (parseInt(inputValue) < 1 || parseInt(inputValue) > 10) {
-    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: random string length must be between 1 and 10`;
+  } else if (parseInt(inputValue) > 10) {
+    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: String length has to be leser than 10`;
+   else if (parseInt(inputValue) < 1 || 
+    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: String length has to be bigger than 0`;
   } else {
     let length = parseInt(inputValue);
-    playOutput.textContent = `Random string:` + generateRandomString(length);
+    playOutput.textContent = `Random String:` + generateRandomString(length);
   }
 }
 
