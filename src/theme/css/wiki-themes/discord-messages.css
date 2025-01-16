@@ -1,4 +1,4 @@
-.discord-message .discord-message-markup {
+.discord-message .discord-message-markup, .discord-system-message {
     font-size: 16px !important;
 }
 
