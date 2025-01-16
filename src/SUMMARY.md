@@ -242,6 +242,7 @@
     - [$isBoolean](./bdscript/isBoolean.md)
     - [$isBooster](./bdscript/isBooster.md)
     - [$isBot](./bdscript/isBot.md)
+    - [$isEmojiAnimated](./bdscript/isEmojiAnimated.md)
     - [$isHoisted](./bdscript/isHoisted.md)
     - [$isInteger](./bdscript/isInteger.md)
     - [$isMentionable](./bdscript/isMentionable.md)
