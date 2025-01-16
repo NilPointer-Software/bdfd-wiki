@@ -6,7 +6,7 @@ The bot must be present in the provided server (`Guild ID` parameter) for it to 
 ```
 
 ```admonish danger
-You should not use this function to join a user's server unsolicited. This means that you aren't allowed to join a user's server without their consent, otherwise it may be considered as API abuse and result in a report against you and your bot.
+You should not use this function to join a user's server **unsolicited**. This means that you aren't allowed to join a user's server without their consent, otherwise it may be considered as API abuse and result in a report against you and your bot.
 ```
 
 ## Syntax
