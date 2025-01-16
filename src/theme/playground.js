@@ -139,7 +139,7 @@ function randomStringPlayground(inputValue) {
     playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: String length has to be bigger than 0`;
   } else {
     let length = parseInt(inputValue);
-    playOutput.textContent = `Random String:` + generateRandomString(length);
+    playOutput.textContent = `Random String: ` + generateRandomString(length);
   }
 }
 
