@@ -36,3 +36,7 @@ $addTimestamp[2]
     footer:
       text: It's a timestamp => <span class="discord-message-timestamp">Today at 00:00</span>
 ```
+
+```admonish question title="What is this?"
+How [`$description[]`](./description.md) and [`$footer[]`](./footer.md) works?
+```
