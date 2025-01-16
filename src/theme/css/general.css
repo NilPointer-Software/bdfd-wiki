@@ -124,8 +124,6 @@ table {
 	border-spacing: 0;
 	border-radius: 10px;
 	overflow: hidden;
-	box-shadow: 0 0 5px;
-	transition: 0.3s;
 }
 
 table td {
@@ -134,22 +132,9 @@ table td {
 	border-radius: 0px !important;
 }
 
-table td:hover {
-	border: solid;
-	border-color: var(--color1);
-	border-width: 1px;
-	border-radius: 10px !important;
-	transition: 0.4s;
-}
-
 table thead {
 	background: var(--color3);
 	border-radius: 10px 10px 0 0;
-}
-
-table:hover {
-	box-shadow: 0 0 5px 2px var(--color1);
-	transition: 0.3s;
 }
 
 table thead td {
