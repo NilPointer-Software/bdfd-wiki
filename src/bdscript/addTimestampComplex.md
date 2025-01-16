@@ -14,7 +14,7 @@ $addTimestamp[Index]
 $nomention
 $description[Hello world!]
 $description[Embed with timestamp.;2]
-$footer[That is the timestamp =>;2]
+$footer[It's a timestamp =>;2]
 $addTimestamp[2]
 ```
 
@@ -30,9 +30,9 @@ $addTimestamp[2]
   bot: true
   verified: true
   embed:
-- description: Hello world!
-    footer:
-      text: I love BDFD
+    description: Hello world!
   embeds:
   - description: Embed with timestamp.
+    footer:
+      text: It's a timestamp =>
 ```
