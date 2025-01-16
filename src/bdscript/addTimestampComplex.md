@@ -40,3 +40,7 @@ $addTimestamp[2]
 ```admonish question title="What is this?"
 How [`$description[]`](./description.md) and [`$footer[]`](./footer.md) works?
 ```
+
+```admonish note
+[`$footer[]`](./footer.md) and [`$description[]`](./description.md) are not required to use with `$addTimestamp[]`.
+```
