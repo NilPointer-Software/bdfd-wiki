@@ -1,6 +1,10 @@
 # $afkChannelID
 Returns the servers AFK channel ID (**returns an error if there isn't such a channel**).
 
+```admonish info title="What is this?"
+An AFK channel on Discord is a voice channel where inactive users are automatically moved after being idle for a set time. It keeps active channels clear of idle users.
+```
+
 ## Syntax
 ```
 $afkChannelID
@@ -27,18 +31,18 @@ AFK channel ID: $afkChannelID
     AFK channel ID: 567428769766440962
 ```
 
-## Tips
-### How to stop the error message?
+```admonish tip title="How to stop the error message?"
 The `$afkChannelID` function as said in above returns an error if there isn't any AFK channel set on the server and there is a way to stop that.
+```
 
 #### Example
 
 ```
 $nomention
 $try 
-AFK channel ID: $afkChannelID
+  AFK channel ID: $afkChannelID
 $catch
-No AFK channel found!
+  No AFK channel found!
 $endtry
 ```
 
@@ -77,8 +81,4 @@ With try block
 
 ```admonish question title="What is this?"
 How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
-```
-
-```admonish info title="What is this?"
-An AFK channel on Discord is a voice channel where inactive users are automatically moved after being idle for a set time. It keeps active channels clear of idle users.
 ```
