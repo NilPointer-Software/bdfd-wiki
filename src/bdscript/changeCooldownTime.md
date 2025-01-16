@@ -24,7 +24,7 @@ $changeCooldownTime[Days;Hours;Minutes;Seconds]
 ## Example
 ```
 $nomention
-Hello $displayName!
+Hello world!
 $changeCooldownTime[Days⏰;Hours⏰;Mins🕧;Secs🕧]
 $cooldown[10m;Please wait %time-m%!]
 ```
@@ -41,7 +41,7 @@ $cooldown[10m;Please wait %time-m%!]
   bot: true
   verified: true
   content: |
-    Hello Nicky!
+    Hello world!
 - user_id: 729343563401265193
   username: Nicky
   color: "#EE7908"
@@ -57,5 +57,5 @@ $cooldown[10m;Please wait %time-m%!]
 ```
 
 ```admonish question title="What is this?"
-How [`$displayName`](./displayName.md) and [`$cooldown[]`](./cooldown.md) works?
+How [`$cooldown[]`](./cooldown.md) works?
 ```
