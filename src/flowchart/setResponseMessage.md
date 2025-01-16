@@ -23,7 +23,7 @@ Entry Point ➤ - ➤ Set response message (Content: `Hello`)
   command:
     user_id: 803569638084313098
     author: RainbowKey
-    command: /test
+    command: /example
     color: "#E67E22"
   content: |
     Hello
