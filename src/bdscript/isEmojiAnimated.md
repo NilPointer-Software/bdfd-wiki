@@ -12,7 +12,7 @@ $isEmojiAnimated[Emoji ID]
 ## Example
 ```
 $nomention
-Is emoji animated: $isEmojiAnimated[$message]
+Is emoji animated?: $isEmojiAnimated[$message]
 ```
 
 ``` discord yaml
@@ -27,7 +27,7 @@ Is emoji animated: $isEmojiAnimated[$message]
   bot: true
   verified: true
   content: |
-    Is emoji animated: false
+    Is emoji animated?: false
 ```
 
 ```admonish question title="What is this?"
