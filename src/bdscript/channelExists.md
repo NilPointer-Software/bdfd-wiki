@@ -28,6 +28,35 @@ $channelExists[$message]
   verified: true
   content: |
     true
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example dthhdgettthttd
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    false
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#main-chat>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    false
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    Use <a href="./findChannel.md"><code>$findChannel[]</code></a> function to support channel mentions!
 ```
 
 ```admonish question title="What is this?"
