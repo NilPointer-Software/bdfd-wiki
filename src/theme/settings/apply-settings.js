@@ -89,9 +89,13 @@ function setDiscordTheme(colorId) {
 				const messageColors = document.querySelectorAll(
 					".discord-message .discord-message-markup"
 				);
+
+				const botToApp = 
+					document.querySelectorAll('.discord-application-tag');
+				
 				if (styles.background)
 					mutation.target.style.background = styles.background;
-				mutation.target.style.backgroundColor = styles.exampleColor;
+					mutation.target.style.backgroundColor = styles.exampleColor;
 				for (const reaction of reactions) {
 					// change the div which is the actual reaction
 					reaction.children.item(0).style.backgroundColor =
@@ -100,6 +104,13 @@ function setDiscordTheme(colorId) {
 				messageColors.forEach((text) => {
 					text.style.color = styles.messageTextColor;
 				});
+
+				botToApp.forEach(tag => {
+        				if (tag.textContent.includes("Bot")) {
+            					tag.textContent = tag.textContent.replace("Bot", "App");
+        				}
+    				});
+				
 				// Changes "00/00/0000" to "Today at 00:00".
 				const timestamps = document.querySelectorAll(
 					".discord-message-timestamp"
