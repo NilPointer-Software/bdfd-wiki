@@ -135,7 +135,7 @@ function randomStringPlayground(inputValue) {
     playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${nonNumericIndex}</p> returned an error: expected integer in position 1, got '${inputValue}'`;
   } else if (parseInt(inputValue) > 10) {
     playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: String length has to be leser than 10`;
-   else if (parseInt(inputValue) < 1 || 
+  } else if (parseInt(inputValue) < 1) { 
     playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: String length has to be bigger than 0`;
   } else {
     let length = parseInt(inputValue);
