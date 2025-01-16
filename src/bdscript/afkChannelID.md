@@ -42,6 +42,8 @@ No AFK channel found!
 $endtry
 ```
 
+----
+
 Without try block
 
 ```discord yaml
