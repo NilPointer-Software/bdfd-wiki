@@ -31,6 +31,7 @@ System channel ID: $systemChannelID
 ### How to stop the error message?
 The `$systemChannelID` function as said in above returns an error if there isn't any AFK channel set on the server and there is a way to stop that.
 
+#### Example
 
 ```
 $nomention
@@ -55,7 +56,7 @@ Without try block
   bot: true
   verified: true
   content: |
-    ❌ Function `$systemChannelID` at `2:35` returned an error: No system channel set in this server!
+    ❌ Function <code>$systemChannelID</code> at <code>2:35</code> returned an error: No system channel set in this server!
 ```
 
 With try block
