@@ -55,7 +55,7 @@ Without try block
   bot: true
   verified: true
   content: |
-    ❌ Function `$systemChannelID` at `2:35` returned an error: No AFK channel set in this server!
+    ❌ Function `$systemChannelID` at `2:35` returned an error: No system channel set in this server!
 ```
 
 With try block
