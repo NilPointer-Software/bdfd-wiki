@@ -9,6 +9,20 @@ $guildID
 ## Example
 ```
 $nomention 
-Server ID is : $guildID
+Server's ID: $guildID
 ```
-![example](https://user-images.githubusercontent.com/70468667/219971308-f7d8d7dd-4d1d-4e82-9548-921bbd29e737.jpg)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      Server's ID: 566363823137882154
+```
