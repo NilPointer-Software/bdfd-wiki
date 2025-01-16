@@ -26,7 +26,7 @@ Entry Point ➤ - ➤ Add response embed (Title: `Meowing Title`, Description: `
   command:
     user_id: 713752533763489893
     author: Fai-Kun
-    command: /meow
+    command: /example
     color: "#E67E22" 
   content: ""
   embed:
