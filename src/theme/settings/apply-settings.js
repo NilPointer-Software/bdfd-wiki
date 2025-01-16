@@ -108,6 +108,7 @@ function setDiscordTheme(colorId) {
 				botToApp.forEach(tag => {
         				if (tag.textContent.includes("Bot")) {
             					tag.textContent = tag.textContent.replace("Bot", "App");
+						tag.setAttribute("aria-label", "Verified App");
         				}
     				});
 				
