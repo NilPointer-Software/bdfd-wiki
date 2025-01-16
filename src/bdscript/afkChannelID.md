@@ -31,6 +31,8 @@ AFK channel ID: $afkChannelID
 ### How to stop the error message?
 The `$afkChannelID` function as said in above returns an error if there isn't any AFK channel set on the server and there is a way to stop that.
 
+#### Example
+
 ```
 $nomention
 $try 
@@ -54,7 +56,7 @@ Without try block
   bot: true
   verified: true
   content: |
-    ❌ Function `$afkChannelID` at `2:30` returned an error: No AFK channel set in this server!
+    ❌ Function <code>$afkChannelID</code> at <code>2:30</code> returned an error: No AFK channel set in this server!
 ```
 
 With try block
