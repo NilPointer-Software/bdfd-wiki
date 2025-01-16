@@ -179,6 +179,8 @@
     - [$elseif](./bdscript/elseif.md)
     - [$embeddedURL](./bdscript/embeddedURL.md)
     - [$embedSuppressErrors](./bdscript/embedSuppressErrors.md)
+    - [$emojiExists[]](./bdscript/emojiExists.md)
+    - [$emojiName[]](./bdscript/emojiName.md)
     - [$emoteCount](./bdscript/emoteCount.md)
     - [$enabled](./bdscript/enabled.md)
     - [$enableDecimals](./bdscript/enableDecimals.md)
