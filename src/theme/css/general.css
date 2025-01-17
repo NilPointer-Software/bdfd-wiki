@@ -119,11 +119,11 @@ h4 a.header:target {
 }
 
 table {
-	margin: auto;
 	border-collapse: separate;
 	border-spacing: 0;
 	border-radius: 10px;
 	overflow: hidden;
+	box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 table td {
