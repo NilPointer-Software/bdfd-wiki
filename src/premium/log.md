@@ -15,12 +15,10 @@ $log[Text;(Type)]
 - `Type` `(Type: Enum || Flag: Optional)`: The log type to be displayed. Default is `info`.
 
 #### Log Types
-Value (`Type`) | Color
----------------|--------
-success        | Green
-info           | Blue
-warning        | Yellow
-error          | Red
+- `success`: Green color
+- `info`: Blue color
+- `warning`: Yellow color
+- `error`: Red color
 - Default input for "`Type`" parameter is `info`.
 
 ## Example
