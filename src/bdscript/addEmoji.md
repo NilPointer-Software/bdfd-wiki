@@ -23,6 +23,8 @@ Added new emoji: $addEmoji[$message[2];$message[1];yes] `$message[2]`
   color: "#E67E22"
   content: |
     !example link BDFDCompany
+  attachments:
+  - url: https://avatars.githubusercontent.com/u/63750675?s=100
 - user_id: 1009018156494368798
   username: BDFD Support
   color: "#378afa"
