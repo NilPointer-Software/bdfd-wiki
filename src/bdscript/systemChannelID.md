@@ -38,10 +38,8 @@ $catch
   No system channel found!
 $endtry
 ```
-~~~
 
-Without try block
-
+- Without try block:
 ```discord yaml
 - user_id: 1262009115689881702
   username: GettingBeatenByKito
@@ -57,7 +55,7 @@ Without try block
     ❌ Function <code>$systemChannelID</code> at <code>2:35</code> returned an error: No system channel set in this server!
 ```
 
-With try block
+- With try block:
 ```discord yaml
 - user_id: 1262009115689881702
   username: GettingBeatenByKito
@@ -73,6 +71,6 @@ With try block
     No system channel found!
 ```
 
-```admonish question title="What is this?"
-How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
-```
+> How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
+
+~~~
