@@ -22,7 +22,7 @@ Added new emoji: $addEmoji[$message[2];$message[1];yes] with `$message[2]` name.
   username: RainbowKey
   color: "#E67E22"
   content: |
-    !example https://media.discordapp.net/attachments/566370477967147018/1329787837733928981/emoji.png BDFDCompany
+    !example <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">https://media.discordapp.net/attachments/566370477967147018/1329787837733928981/emoji.png</a> BDFDCompany
   attachments:
   - url: https://avatars.githubusercontent.com/u/63750675?s=100
 - user_id: 1009018156494368798
