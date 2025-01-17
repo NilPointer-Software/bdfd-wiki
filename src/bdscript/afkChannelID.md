@@ -55,7 +55,7 @@ $endtry
   bot: true
   verified: true
   content: |
-    ❌ Function <code>$afkChannelID</code> at <code>2:30</code> returned an error: No AFK channel set in this server!
+    ❌ Function <code>$afkChannelID</code> at <code>3:31</code> returned an error: No AFK channel set in this server!
 ```
 
 - With try block:
