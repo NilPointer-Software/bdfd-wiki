@@ -30,5 +30,5 @@ $suppressErrorLogging
   bot: true
   verified: true
   content: |
-    Hello world!
+    ❌ Command <code>$sum</code> is Invalid!
 ```
