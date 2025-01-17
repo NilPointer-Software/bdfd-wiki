@@ -28,9 +28,8 @@ Remaining log entries: $logQuota
   bot: true
   verified: true
   content: |
-    Remaining log entries: 2497
+    Remaining log entries: 1499
 ```
-\
 
 > New log entries will be awarded and summed up every 24 hours!
 > 
