@@ -1,4 +1,9 @@
 # $log
+
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
+
 Logs an error message to the bot logs upon encountering a specific issue (`Type` parameter).
 
 ## Syntax
