@@ -9,7 +9,7 @@ $addEmoji[Name;Image URL;Return emoji?]
 ### Parameters
 - `Name` `(Type: String || Flag: Required)`: The name of the new emoji.
 - `Image URL` `(Type: URL || Flag: Required)`: The image of the new emoji. The link needs to be a valid image URL.
-- `Return emoji?` `(Type: Bool || Flag: Required)`: Whether to show the emoji in the bot's message or not. (`yes`/`no`)
+- `Return emoji?` `(Type: Bool || Flag: Required)`: Whether to show the emoji in the bot's message or not.
 
 ## Example
 ```
