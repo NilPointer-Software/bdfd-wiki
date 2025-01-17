@@ -31,12 +31,8 @@ AFK channel ID: $afkChannelID
     AFK channel ID: 567428769766440962
 ```
 
-```admonish tip title="How to stop the error message?"
+~~~admonish tip title="How to stop the error message?"
 The `$afkChannelID` function as said in above returns an error if there isn't any AFK channel set on the server and there is a way to stop that.
-```
-
-#### Example
-
 ```
 $nomention
 $try 
@@ -45,6 +41,7 @@ $catch
   No AFK channel found!
 $endtry
 ```
+~~~
 
 Without try block
 
