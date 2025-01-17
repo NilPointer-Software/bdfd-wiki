@@ -27,10 +27,9 @@ System channel ID: $systemChannelID
     System channel ID: 566364581522440232
 ```
 
+
 ~~~admonish tip title="How to stop the error message?"
 The `$systemChannelID` function as said in above returns an error if there isn't any AFK channel set on the server and there is a way to stop that.
-```
-
 ```
 $nomention
 $try 
@@ -76,3 +75,4 @@ With try block
 
 ```admonish question title="What is this?"
 How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
+```
