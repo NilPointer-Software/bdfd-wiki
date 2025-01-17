@@ -14,7 +14,7 @@ $addEmoji[Name;Image URL;Return emoji?]
 ## Example
 ```
 $nomention
-Added new emoji: $addEmoji[$message[2];$message[1];yes] `$message[2]`
+Added new emoji: $addEmoji[$message[2];$message[1];yes] with `$message[2]` name.
 ```
 
 ``` discord yaml
@@ -31,7 +31,7 @@ Added new emoji: $addEmoji[$message[2];$message[1];yes] `$message[2]`
   bot: true
   verified: true
   content: |
-    Added new emoji: <e:https://avatars.githubusercontent.com/u/63750675> <code>BDFDCompany</code>
+    Added new emoji: <e:https://avatars.githubusercontent.com/u/63750675> with "<code>BDFDCompany</code>" name.
 ```
 
 ```admonish question title="What is this?"
