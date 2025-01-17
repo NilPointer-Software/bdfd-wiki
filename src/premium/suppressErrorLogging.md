@@ -19,8 +19,8 @@ $suppressErrorLogging
 ```
 
 ``` discord yaml
-- user_id: 1262009115689881702
-  username: GettingBeatenByKito
+- user_id: 803569638084313098
+  username: RainbowKey
   color: "#E67E22"
   content: |
     !example
