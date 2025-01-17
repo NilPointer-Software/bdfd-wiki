@@ -10,7 +10,9 @@ Returns the remaining tokens for the [`$ai[]`](./ai.md) function.
 $aiQuota
 ```
 
-> [4 characters](./ai.md) = 1 token
+```admonish tip title="Log Quota"
+[4 characters](./ai.md) = [1 token](./aiQuota.md)
+```
 
 ## Example
 ```
