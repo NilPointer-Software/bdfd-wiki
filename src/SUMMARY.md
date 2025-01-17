@@ -448,6 +448,7 @@
     - [$varExistError](./bdscript/varExistError.md)
     - [$varExists](./bdscript/varExists.md)
     - [$variablesCount](./bdscript/variablesCount.md)
+    - [$voiceUserLimit](./bdscript/voiceUserLimit.md)
     - [$year](./bdscript/year.md)
 
 - [Callbacks]()
