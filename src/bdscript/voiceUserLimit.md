@@ -7,7 +7,7 @@ $voiceUserLimit[(Voice Channnel ID)]
 ```
 
 ### Parameters
-- `Voice Channnel ID` `(Type: Snowflake || Flag: Optional)`: What is the voice channel to get the user limit?
+- `Voice Channnel ID` `(Type: Snowflake || Flag: Optional)`: What is the voice channel to get the user limit.
 
 ## Example
 ```
