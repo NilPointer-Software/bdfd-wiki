@@ -24,7 +24,7 @@ $messageContains[Word;...]
    ``` discord yaml
    - user_id: 246604909451935745
      username: noituri
-     color: "#F1BDEE"
+     color: "#FF0000"
      content: |
        Hello
 
