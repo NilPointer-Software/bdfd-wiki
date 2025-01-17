@@ -12,7 +12,7 @@ $log[Text;(Type)]
 
 ### Parameters
 - `Log Message` `(Type: String || Flag: Required)`: The text to be output to the logs.
-- `Type` `(Type: Enum || Flag: Optional)`: The log type to be displayed.
+- `Type` `(Type: Enum || Flag: Optional)`: The log type to be displayed. Default is `info`.
 
 #### Log Types
 Value (`Type`) | Color
@@ -21,6 +21,7 @@ success        | Green
 info           | Blue
 warning        | Yellow
 error          | Red
+- Default input for "`Type`" parameter is `info`.
 
 ## Example
 ```
