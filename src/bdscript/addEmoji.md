@@ -14,6 +14,20 @@ $addEmoji[Name;Image URL;Return emoji?]
 ## Example
 ```
 $nomention
-Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes]
+Added new emoji: $addEmoji[$message[2];$message[1];yes] `$message[2]`
 ```
-![example](https://user-images.githubusercontent.com/113303649/209926846-f957e945-64f8-4e05-b950-9dc20c683850.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example link BDFDCompany
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Added new emoji: <e:https://avatars.githubusercontent.com/u/63750675> <code>BDFDCompany</code>
+```
