@@ -484,6 +484,7 @@
         - [$log](./premium/log.md)
         - [$logQuota](./premium/logQuota.md)
         - [$sendNotification](./premium/sendNotification.md)
+        - [$suppressErrorLogging](./premium/suppressErrorLogging.md)
         - [$usedEmoji](./premium/usedEmoji.md)
     - [Features]()
         - [Awaited Reactions](./premium/awaitedReactions.md)
