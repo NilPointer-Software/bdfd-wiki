@@ -76,7 +76,6 @@ $endtry
     No AFK channel found!
 ```
 
-```admonish question title="What is this?"
-How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
-```
+> How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
+
 ~~~
