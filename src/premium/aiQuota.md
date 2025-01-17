@@ -3,7 +3,7 @@
   <span id="PremiumTag">Premium</span>
 </div>
 
-Returns the remaining tokens for a bot.
+Returns the remaining tokens for the [`$ai[]`](./ai.md) function.
 
 ## Syntax
 ```
