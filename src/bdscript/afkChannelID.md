@@ -43,7 +43,6 @@ $endtry
 ```
 
 - Without try block:
-
 ```discord yaml
 - user_id: 1262009115689881702
   username: GettingBeatenByKito
@@ -60,7 +59,6 @@ $endtry
 ```
 
 - With try block:
-
 ```discord yaml
 - user_id: 1262009115689881702
   username: GettingBeatenByKito
