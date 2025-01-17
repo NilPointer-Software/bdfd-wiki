@@ -726,7 +726,9 @@
 - Released new stable version
 </details>
 
-> If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
+```admonish tip
+If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
+```
 
 ```admonish abstract title="Flowchart Changelog"
 If you want to see the BDScript changelog, [click here](./FLOWCHART_CHANGELOG.md).
