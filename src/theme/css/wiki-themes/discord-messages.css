@@ -155,6 +155,11 @@
     margin-top: 1px;
 }
 
+.discord-custom-emoji-image {
+    width: 17px !important;
+    height: 17px !important;
+}
+
 .discord-message-markup .hydrated code, .discord-message-markup code {
     border-radius: 4.3px;
     padding-top: 1.5px;
