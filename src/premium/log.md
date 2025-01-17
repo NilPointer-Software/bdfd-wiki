@@ -42,3 +42,5 @@ $log[$username used secret command!]
   content: |
     Hello world!
 ```
+- In the **[BDFD web app](https://app.botdesignerdiscord.com/)**:
+![example](https://github.com/user-attachments/assets/3274de0c-5db3-4e68-8cb5-7a83bb6e7f1b)
