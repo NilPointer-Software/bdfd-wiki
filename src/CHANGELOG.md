@@ -19,7 +19,7 @@
 - Added `$voiceUserLimit[]`
 - Added `$emojiName[]`
 - Added `$isEmojiAnimated[]`
-- Added `$isEmojiExists[]`
+- Added `$emojiExists[]`
 
 # 2024
    
