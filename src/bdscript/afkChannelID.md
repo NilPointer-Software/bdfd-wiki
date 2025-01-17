@@ -41,9 +41,8 @@ $catch
   No AFK channel found!
 $endtry
 ```
-~~~
 
-Without try block
+- Without try block:
 
 ```discord yaml
 - user_id: 1262009115689881702
@@ -60,7 +59,8 @@ Without try block
     ❌ Function <code>$afkChannelID</code> at <code>2:30</code> returned an error: No AFK channel set in this server!
 ```
 
-With try block
+- With try block:
+
 ```discord yaml
 - user_id: 1262009115689881702
   username: GettingBeatenByKito
@@ -79,3 +79,4 @@ With try block
 ```admonish question title="What is this?"
 How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
 ```
+~~~
