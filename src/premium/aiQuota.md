@@ -11,7 +11,7 @@ $aiQuota
 ```
 
 ```admonish tip title="Log Quota"
-[4 characters](./ai.md) = [1 token](./aiQuota.md)
+[4 characters in the AI answer](./ai.md) = [1 token](./aiQuota.md)
 ```
 
 ## Example
