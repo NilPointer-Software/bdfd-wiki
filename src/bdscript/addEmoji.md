@@ -31,3 +31,7 @@ Added new emoji: $addEmoji[$message[2];$message[1];yes] `$message[2]`
   content: |
     Added new emoji: <e:https://avatars.githubusercontent.com/u/63750675> <code>BDFDCompany</code>
 ```
+
+```admonish question title="What is this?"
+How [`$message[]`](./messageComplex.md) works?
+```
