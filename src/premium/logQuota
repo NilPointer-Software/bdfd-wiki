@@ -3,7 +3,7 @@
   <span id="PremiumTag">Premium</span>
 </div>
 
-Returns the remaining log entries for the `$log` function.
+Returns the remaining log entries for the [`$log[]`](./log.md) function.
 
 ## Syntax
 ```
