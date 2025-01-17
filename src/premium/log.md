@@ -5,6 +5,10 @@
 
 Logs an error message to the bot logs upon encountering a specific issue (`Type` parameter).
 
+```admonish tip info
+You can use this function 1500 times per day.
+```
+
 ## Syntax
 ```
 $log[Text;(Type)]
