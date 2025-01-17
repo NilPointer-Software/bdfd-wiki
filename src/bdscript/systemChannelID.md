@@ -52,7 +52,7 @@ $endtry
   bot: true
   verified: true
   content: |
-    ❌ Function <code>$systemChannelID</code> at <code>2:35</code> returned an error: No system channel set in this server!
+    ❌ Function <code>$systemChannelID</code> at <code>3:37</code> returned an error: No system channel set in this server!
 ```
 
 - With try block:
