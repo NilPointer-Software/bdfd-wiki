@@ -13,7 +13,7 @@ $logQuota
 ## Example
 ```
 $nomention
-Remaining tokens: $logQuota
+Remaining log entries: $logQuota
 ```
 
 ``` discord yaml
@@ -28,10 +28,10 @@ Remaining tokens: $logQuota
   bot: true
   verified: true
   content: |
-    Remaining tokens: 2497
+    Remaining log entries: 2497
 ```
 \
 
 > New log entries will be awarded and summed up every 24 hours!
 > 
-> Token limit (per bot): 1500
+> Log entries limit (per bot): 1500
