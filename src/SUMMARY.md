@@ -481,6 +481,7 @@
         - [$awaitReactions](./premium/awaitReactions.md)
         - [$customImage](./premium/customImage.md)
         - [$ignoreTriggerCase](./premium/ignoreTriggerCase.md)
+        - [$logQuota](./premium/logQuota.md)
         - [$sendNotification](./premium/sendNotification.md)
         - [$usedEmoji](./premium/usedEmoji.md)
     - [Features]()
