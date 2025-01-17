@@ -1,5 +1,4 @@
 # $log
-
 <div class="functionTags">
   <span id="PremiumTag">Premium</span>
 </div>
