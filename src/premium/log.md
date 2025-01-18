@@ -52,5 +52,5 @@ $log[$username used secret command!]
 ![example](https://github.com/user-attachments/assets/3274de0c-5db3-4e68-8cb5-7a83bb6e7f1b)
 
 ```admonish question title="What is this?"
-How [`$username`](./username.md) works?
+How [`$username`](../bdscript/username.md) works?
 ```
