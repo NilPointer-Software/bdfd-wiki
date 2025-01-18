@@ -46,7 +46,7 @@ $endif
     You are the developer of this bot!
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example
 - user_id: 803569638084313098
