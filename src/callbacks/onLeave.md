@@ -7,7 +7,7 @@
 
 `$onLeave[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server.
 
-> 📌 You can only have **1** single `$onLeave[]` per bot.
+> You can only have **1** single `$onLeave[]` per bot.
 
 ## Syntax
 ```
@@ -19,12 +19,12 @@ $onLeave[Channel ID]
 
 ## Example
 1. Create a command with the trigger `$onLeave[Channel ID]`.
-    > 🧙‍♂️ You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID [*(See more here...)*](#advanced)!
+    > You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channelID [*(See more here...)*](#advanced)!
     
     ![example1](https://user-images.githubusercontent.com/69215413/129492818-7aca8563-baff-4ebb-b82b-5a1a368339e5.png)
 
 2. Input your code/reply text.
-     > 🧙‍♂️ You can use functions like `$username`, `$authorAvatar`, `$authorID`, `$membersCount`, `$serverName[$guildID]` here.
+     > You can use functions like `$username`, `$authorAvatar`, `$authorID`, `$membersCount`, `$serverName[$guildID]` here.
 
      ![example2](https://user-images.githubusercontent.com/69215413/129492763-1261a971-4d4c-4f33-9e78-757595484672.png)
 
