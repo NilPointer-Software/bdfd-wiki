@@ -105,6 +105,7 @@
     - [$botNode](./bdscript/botNode.md)
     - [$botOwnerID](./bdscript/botOwnerID.md)
     - [$botTyping](./bdscript/botTyping.md)
+    - [$byteCount](./bdscript/byteCount.md)
     - [$c](./bdscript/c.md)
     - [$calculate](./bdscript/calculate.md)
     - [$catch](./bdscript/catch.md)
