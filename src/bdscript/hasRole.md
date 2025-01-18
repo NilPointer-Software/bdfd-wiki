@@ -1,7 +1,7 @@
 # $hasRole
 Returns whether or not a user has the provided role.
 
-> 🧙‍♂️ "true" means the user has the role, "false" means they don't.
+> "true" means the user has the role, "false" means they don't.
 
 ## Syntax
 ```
