@@ -101,7 +101,7 @@ function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
     
     	// Check if the domain contains "javascript"
-    	if (window.location.hostname.includes("javascript")) {
+    	if (window.location.href.includes("javascript")) {
         	return;
     	}
 	
