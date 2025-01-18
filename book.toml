@@ -85,3 +85,19 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 "/bdscript/webhookSend.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookTitle.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookUsername.html" = "../guides/general/webhooks.html"
+
+"/bdscript/appendOptionSuggestion.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
+"/bdscript/autoCompleteOptionName.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
+"/bdscript/autoCompleteOptionValue.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
+
+# Premium functions - Don't touch!
+"/bdscript/ai.html" = "../premium/ai.html"
+"/bdscript/aiQuota.html" = "../premium/aiQuota.html"
+"/bdscript/awaitReactions.html" = "../premium/awaitReactions.html"
+"/bdscript/customImage.html" = "../premium/customImage.html"
+"/bdscript/ignoreTriggerCase.html" = "../premium/ignoreTriggerCase.html"
+"/bdscript/log.html" = "../premium/log.html"
+"/bdscript/logQuota.html" = "../premium/logQuota.html"
+"/bdscript/sendNotification.html" = "../premium/sendNotification.html"
+"/bdscript/suppressErrorLogging.html" = "../premium/suppressErrorLogging.html"
+"/bdscript/usedEmoji.html" = "../premium/usedEmoji.html"
