@@ -276,7 +276,7 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - user_id: 1009018156494368798
@@ -288,7 +288,7 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - user_id: 1009018156494368798
@@ -347,7 +347,7 @@ $endif
     Bye
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - user_id: 1009018156494368798
@@ -359,7 +359,7 @@ $endif
     Hi
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - user_id: 1009018156494368798
