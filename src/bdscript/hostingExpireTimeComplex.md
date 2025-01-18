@@ -26,5 +26,5 @@ I will be offline <t:$hostingExpireTime[yes]:R>
   bot: true
   verified: true
   content: |
-    I will be offline: San, 3 Sep 2029 23:59:00 UTC
+    I will be offline <div class="discord-time-mark">In 4 years</div>
 ```
