@@ -11,7 +11,8 @@
 			"Added `$voiceUserLimit[]`",
 			"Added `$emojiName[]`",
 			"Added `$isEmojiAnimated[]`",
-			"Added `$isEmojiExists[]`"
+			"Added `$isEmojiExists[]`",
+			"Added `$byteCount[]`"
 		]
 	},
 	"2024": {
