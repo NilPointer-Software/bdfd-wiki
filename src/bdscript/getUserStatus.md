@@ -11,8 +11,6 @@ This function requires the following privileged intents:
 $getUserStatus[User ID]
 ```
 
-> The different statuses this function will return are: `online`, `dnd`, `idle` and `offline`.
-
 ### Parameters
 - `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the status for.
 
