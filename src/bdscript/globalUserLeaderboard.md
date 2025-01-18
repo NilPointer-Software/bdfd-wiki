@@ -12,7 +12,7 @@ $globalUserLeaderboard[Variable name;Sort type (asc/desc)]
   - `asc` - Sorts the values in ascending order.
   - `desc` - Sorts the values in descending order.
 
-> 🧙‍♂️ `$globalUserLeaderboard` automatically generates a description. So, `$description` should not be used in the code.
+> `$globalUserLeaderboard` automatically generates a description. So, `$description` should not be used in the code.
 
 ## Example
 ```
