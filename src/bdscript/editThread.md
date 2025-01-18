@@ -15,7 +15,7 @@ $editThread[Thread ID;(Name;Archived;Archive duration;Locked;Slowmode)]
 - `Slowmode` `(Type: Integer || Flag: Optional)`: The slowmode of this channel, expressed in seconds.
 
 > You can use `!unchanged` as an parameter for the option to remain in its current state.
-> 
+
 ## Example
 ```
 $nomention
