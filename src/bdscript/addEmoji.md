@@ -38,6 +38,6 @@ Added new emoji: $addEmoji[$message[2];$message[1];yes] with `$message[2]` name.
 How [`$message[]`](./messageComplex.md) works?
 ```
 
-```admonish eample
+```admonish example
 In this example we used fake image link. Remember: The link needs to be a valid image URL!
 ```
