@@ -6,7 +6,7 @@ Modifies an existing role.
 $modifyRole[Role ID;(Role name;Color hex;Hoisted?;Mentionable?)]
 ```
 
-> 🧙‍♂️ You can use `!unchanged` as an argument to leave the setting as-is.
+> You can use `!unchanged` as an argument to leave the setting as-is.
 
 ### Parameters 
 - `Role ID` `(Type: Snowflake || Flag: Required)`: The ID of the role to modify.
