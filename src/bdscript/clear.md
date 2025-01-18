@@ -35,7 +35,7 @@ $clear
     4
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     3
 - user_id: 437154602626973697
@@ -69,7 +69,7 @@ $clear
     4
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     3
 ```
