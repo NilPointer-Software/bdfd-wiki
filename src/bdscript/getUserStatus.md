@@ -1,6 +1,11 @@
 # $getUserStatus
 Returns the provided user's status/presence.
 
+```admonish fail title="Privileged Intents"
+This function requires the following privileged intents:
+- [`Presences Intent`](../guides/introduction/gatewayIntents.md#presence-intent)
+```
+
 ## Syntax
 ```
 $getUserStatus[User ID]
@@ -11,10 +16,11 @@ $getUserStatus[User ID]
 ### Parameters
 - `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the status for.
 
-```admonish fail title="Privileged Intents"
-This function requires the following privileged intents:
-- [`Presences Intent`](../guides/introduction/gatewayIntents.md#presence-intent)
-```
+#### Possible Outoputs
+- `online`: 🟢 Online
+- `dnd`: 🔴 Do not disturb
+- `idle`: 🟡 Idle
+- `offline`: ⚫ Offline
 
 ## Example
 ```
