@@ -10,7 +10,7 @@ $byteCount[Text]
 We recommend using this function to add limits to variables instead of [`$charCount[]`](./charCount.md), since variables use bit limits, not characters!
 
 ```
-$nomenion
+$nomention
 $onlyIf[$byteCount[$message]<500;Character limit has reached!]
 New value for variable set!
 $setUserVar[Text;$message]
