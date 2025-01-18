@@ -1,7 +1,9 @@
 # $userInfo
 Allows you to make a 'user info' command without using a bunch of different functions at once. Returns information of the first mentioned user.
 
-> 📌 [`$userInfo`](./userInfo.md) automatically generates a description. So, [`$description`](./description.md) of index `1` should be avoided in the code.
+```admonish fail
+[`$userInfo`](./userInfo.md) automatically generates a description. So, [`$description`](./description.md) of index `1` should be avoided in the code.
+```
 
 ## Syntax
 ```
@@ -19,7 +21,7 @@ Name              | Description                                               | 
 `{username}`      | Returns the user's username.                              | [`$username[]`](./usernameComplex.md)
 `{ID}`            | Returns the ID of the user.                               | [`$findUser[]`](./findUser.md)
 `{BOT}`           | Returns `true` if the user is a bot otherwise, `false`.   | [`$isBot[]`](./isBot.md)
-`{discriminator}` | Returns the user's discriminator. *(Depreacted)*          | [`$discriminator[]`](./discriminator.md) *(Deprecated)*
+`{discriminator}` | Returns the user's discriminator. *(Depreacted)*          | [`$discriminator[]`](./discriminator.md) *(Only For Bots)*
 
 ## Example
 ```
@@ -51,4 +53,6 @@ Discriminator: {discriminator}]
       Discriminator: 0000"
 ```
 
-> 📌 [`$userInfo`](./userInfo.md) automatically generates a thumbnail of the mentioned user. If you want to remove it, put [`$thumbnail[]`](./thumbnail.md) (with empty argument) below [`$userInfo`](./userInfo.md) function.
+```admonish tip
+[`$userInfo`](./userInfo.md) automatically generates a thumbnail of the mentioned user. If you want to remove it, put [`$thumbnail[]`](./thumbnail.md) (with empty argument) below [`$userInfo`](./userInfo.md) function.
+```
