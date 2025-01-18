@@ -6,7 +6,7 @@ Gets the value of a global/global-user variable.
 $getVar[Variable name;(User ID)]
 ```
 
-> 🧙‍♂️ For a global variable, a `User ID` doesn't need to be provided. For a global-user variable, `User ID` must be provided.
+> For a global variable, a `User ID` doesn't need to be provided. For a global-user variable, `User ID` must be provided.
 
 ### Parameters
 - `Variable name` `(Type: String || Flag: Required)`: The name of the variable to get the value from.
