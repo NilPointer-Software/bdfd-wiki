@@ -7,7 +7,7 @@
 
 `$onJoined[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user joins the server.
 
-> 📌 You can only have **1** single `$onJoined[]` per bot.
+> You can only have **1** single `$onJoined[]` per bot.
 
 ## Syntax
 ```
@@ -19,12 +19,12 @@ $onJoined[Channel ID]
 
 ## Example
 1. Create a command with the trigger `$onJoined[Channel ID]`.
-    > 🧙‍♂️ You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
+    > You must replace "Channel ID" with a [valid channel ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) or a server variable that holds the channel ID [*(See more here...)*](#advanced)!
     
     ![example1](https://user-images.githubusercontent.com/69215413/129490506-c91a77b7-ed71-4dc5-9460-d4ec409b36d4.png)
 
 2. Input your code/reply text.
-    > 🧙‍♂️ You can use functions like `$username`, `$authorAvatar`, `$authorID`, `$membersCount`, `$serverName[$guildID]` here.
+    > You can use functions like `$username`, `$authorAvatar`, `$authorID`, `$membersCount`, `$serverName[$guildID]` here.
     
     ![example2](https://user-images.githubusercontent.com/69215413/129490390-98471c1a-6d76-4543-96d1-1f428bfdd8bc.png)
 
