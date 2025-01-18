@@ -6,6 +6,19 @@ Returns the amount of bytes in the provided "`Text`".
 $byteCount[Text]
 ```
 
+~~~admonish tip title="Recommendation"
+We recommend using this function to add limits to variables instead of [`$charCount[]`](./charCount.md), since variables use bit limits, not characters!
+
+```
+$nomenion
+$onlyIf[$byteCount[$message]<500;Character limit has reached!]
+New value for variable set!
+$setUserVar[Text;$message]
+```
+
+> How [`$onlyIf[]`](./onlyIf.md), [`$message`](./message.md) and [`$setUserVar[]`](./setUserVar.md) works?
+~~~
+
 ### Parameters
 - `Text` `(Type: String || Flag: Emptiable)`: The text to return the byte count for.
 
