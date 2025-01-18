@@ -20,6 +20,7 @@
 - Added `$emojiName[]`
 - Added `$isEmojiAnimated[]`
 - Added `$emojiExists[]`
+- Added `$byteCount[]`
 
 # 2024
    
