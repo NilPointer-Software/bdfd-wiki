@@ -1,7 +1,7 @@
 # $isHoisted
 Returns whether a role is displayed separately or not.
 
-> 🧙‍♂️ "true" means the role is hoisted, "false" means it isn't.
+> "true" means the role is hoisted, "false" means it isn't.
 
 ## Syntax
 ```
