@@ -29,3 +29,7 @@ You are in $hypesquad[$authorID] house.
   content: |
     You are in balance house.
 ```
+
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) works?
+```
