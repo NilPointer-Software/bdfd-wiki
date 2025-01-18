@@ -47,6 +47,13 @@ function charCountPlayground(inputValue) {
   playOutput.textContent = `Your message has ${charCount} characters.`;
 }
 
+// $byteCount[]
+function byteCountPlayground(inputValue) {
+  const playOutput = document.getElementById('play-output');
+  const byteCount = new TextEncoder().encode(inputValue).length;
+  playOutput.textContent = `Your message has ${byteCount} bytes.`;
+}
+
 // $argCount[]
 function argCountPlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
