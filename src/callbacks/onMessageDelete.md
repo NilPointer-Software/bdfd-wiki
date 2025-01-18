@@ -33,10 +33,9 @@ $onMessageDelete[Channel ID]
      color: "#EE7908"
      content: |
        Hey
-
    - user_id: 154148273307910144
      username: MineBartekSA
-     color: "#F1BDEE"
+     color: "#FF0000"
      content: |
        Hello
    ```
@@ -47,7 +46,6 @@ $onMessageDelete[Channel ID]
      color: "#EE7908"
      content: |
        Hey
-
    - user_id: 566613317972394004
      username: Wiki Bot
      color: "#748BD4"
