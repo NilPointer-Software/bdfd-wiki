@@ -14,7 +14,7 @@ $getUserStatus[User ID]
 ### Parameters
 - `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the status for.
 
-#### Possible Outoputs
+#### Possible Outputs
 - `online`: 🟢 Online
 - `dnd`: 🔴 Do not disturb
 - `idle`: 🟡 Idle
