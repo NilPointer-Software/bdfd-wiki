@@ -9,6 +9,19 @@ $hostingExpireTime
 ## Example
 ``` 
 $nomention 
-$hostingExpireTime 
+My hosting expiration date: $hostingExpireTime 
 ``` 
-![example1](https://user-images.githubusercontent.com/42785890/151823699-8a5fda67-b837-41df-9df4-51219a73e120.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    My hosting expiration date: San, 3 Sep 2029 23:59:00 UTC
+```
