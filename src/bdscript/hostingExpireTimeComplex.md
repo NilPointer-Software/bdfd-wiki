@@ -14,4 +14,17 @@ $hostingExpireTime[Return unix timestamp?]
 $nomention
 I will be offline <t:$hostingExpireTime[yes]:R>
 ```
-![example2](https://user-images.githubusercontent.com/98183987/153687914-221aa7f1-5134-47fe-87d9-c7ae75c4a91f.jpg)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    I will be offline: San, 3 Sep 2029 23:59:00 UTC
+```
