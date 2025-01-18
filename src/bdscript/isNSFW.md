@@ -1,7 +1,41 @@
 # $isNSFW
+<style>
+.discord-messages {
+    margin-top: 1.5rem;
+}
+
+.discord-messages > .discord-message:before {
+    color: var(--color1);
+    background: var(--color3);
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1.8rem;
+    margin-top: -.9rem;
+    width: fit-content;
+    transition: .3s;
+    z-index: 1000;
+}
+
+.discord-messages > .discord-message:before {
+    content: '#main-chat';
+}
+
+.discord-messages:first-of-type > .discord-message:before {
+    content: '#nsfw-channel-🤫';
+}
+
+.discord-messages > .discord-message:hover:before {
+    transform: scale(1.025);
+    transform: rotate(-2.5deg);
+    border-radius: 12.5px;
+    transition: .3s;
+}
+</style>
+
 Returns whether the provided channel is NSFW (Not Safe For Work) or not.
 
-> 🧙‍♂️ "true" means the channel is NSFW, "false" means it isn't.
+> "true" means the channel is NSFW, "false" means it isn't.
 
 ## Syntax
 ```
@@ -14,7 +48,39 @@ $isNSFW[Channel ID]
 ## Example
 ```
 $nomention
-Is <#$channelID> NSFW?: `$isNSFW[$channelID]`
+Is this channel NSFW?: `$isNSFW[$channelID]`
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123517430-dd270280-d66e-11eb-95cb-4edb5a9ed78c.png)
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Is this channel NSFW?: <code>false</code>
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Is this channel NSFW?: <code>true</code>
+```
+
+```admonish question title="What is this?"
+How [`$channelID`](./channelID.md) works?
+```
