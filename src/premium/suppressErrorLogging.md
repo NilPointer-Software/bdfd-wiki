@@ -37,7 +37,7 @@ $suppressErrorLogging
 - With `$suppressErrorLogging`:\
 ![example](https://github.com/user-attachments/assets/f8783361-38d7-4c9e-b4f4-3c6bf4249b34)\
 - Without `$suppressErrorLogging`:\
-![example](https://google.com)
+![example](https://github.com/user-attachments/assets/245a7bc3-5efa-4d01-86d3-f57b46e93db2)
 
 ```admonish tip
 You can use [`$suppressErrors`](../bdscript/suppressErrors.md) to disable error bot response.
