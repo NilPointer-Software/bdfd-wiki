@@ -11,11 +11,19 @@ $isSlash
 ## Example
 ```
 $nomention
-$if[$isSlash==true]
-$message[text]
-$else
-$message
-$endif
+Is slash?: `$isSlash`
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123517923-b0c0b580-d671-11eb-8e10-ef56a4a5792e.png)
+```discord yaml
+- username: Flowcharts
+  user_id: 566613317972394004
+  color: "#748bd4"
+  bot: true
+  command:
+    user_id: 803569638084313098
+    author: RainbowKey
+    command: /example
+    color: "#E67E22"
+  content: |
+    Is slash?: <code>true</code>
+```
