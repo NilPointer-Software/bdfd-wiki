@@ -49,7 +49,7 @@ $log[$username used secret command!]
 ```
 
 - In the **[BDFD Web App](https://app.botdesignerdiscord.com/)**:\
-![example](https://github.com/user-attachments/assets/3274de0c-5db3-4e68-8cb5-7a83bb6e7f1b)
+![example](https://github.com/user-attachments/assets/9f0ee749-ecd8-472c-bd65-75da5c09b902)
 
 ```admonish question title="What is this?"
 How [`$username`](../bdscript/username.md) works?
