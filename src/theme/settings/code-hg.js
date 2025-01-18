@@ -99,7 +99,12 @@ function escapeHtml(unsafe) {
 
 function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
-
+    
+    	// Check if the domain contains "javascript"
+    	if (window.location.hostname.includes("javascript")) {
+        	return;
+    	}
+	
 	try {
 		if (localStorage.getItem("code-hg"))
 			scheme = JSON.parse(localStorage.getItem("code-hg"));
