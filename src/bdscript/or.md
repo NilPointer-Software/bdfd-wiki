@@ -57,7 +57,7 @@ $or[$nickname==MineBartekSA;$message==Update]
     false
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - username: BDFD Support
@@ -69,7 +69,7 @@ $or[$nickname==MineBartekSA;$message==Update]
     true
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - username: BDFD Support
