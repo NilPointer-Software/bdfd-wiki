@@ -50,7 +50,7 @@ $endif
     Developer
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example
 - username: BDFD Support
@@ -60,7 +60,6 @@ $endif
   content: |
     Server Owner
 ```
-
 
 ```admonish info title="Read more"
 For more information, read the the [If Statements Guide](../guides/ifStatements.md).
