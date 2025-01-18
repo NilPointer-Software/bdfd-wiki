@@ -10,7 +10,7 @@ $globalCooldown[Duration;Error message]
 - `Duration` `(Type: Duration || Flag: Required)`: The duration until the user can use this command again.
 - `Error message` `(Type: String || Flag: Emptiable)`: The message to return when the cooldown duration is still ongoing.
 
-> 🧙‍♂️ You can use `%time%` in the "Error message" argument to get how much time is left until the cooldown is over.
+> You can use `%time%` in the "Error message" argument to get how much time is left until the cooldown is over.
 
 ## Example
 ```
