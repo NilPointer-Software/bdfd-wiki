@@ -1,7 +1,7 @@
 # $isSlash
 Returns whether the command was ran as a slash command or not.
 
-> 🧙‍♂️ "true" means the command was ran as a slash command, "false" means it wasn't.
+> "true" means the command was ran as a slash command, "false" means it wasn't.
 
 ## Syntax
 ```
@@ -26,4 +26,16 @@ Is slash?: `$isSlash`
     color: "#E67E22"
   content: |
     Is slash?: <code>true</code>
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Is slash?: <code>false</code>
 ```
