@@ -24,5 +24,5 @@ This server currently has $roleCount role(s).
   bot: true
   verified: true
   content: |
-    This server currently has 14 boost(s).
+    This server currently has 19 role(s).
 ```
