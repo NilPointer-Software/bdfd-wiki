@@ -14,7 +14,7 @@ $suppressErrorLogging
 ```
 $nomention
 Hello world!
-$sum[5;10
+$createChannel[;]
 $suppressErrorLogging
 ```
 
@@ -30,7 +30,7 @@ $suppressErrorLogging
   bot: true
   verified: true
   content: |
-    ❌ Command <code>$sum</code> is Invalid!
+    ❌ Function <code>$createChannel</code> at <code>3:17</code> returned an error: expected valid value in position 1, got empty value
 ```
 
 **In the [BDFD Web App](https://app.botdesignerdiscord.com):**\
