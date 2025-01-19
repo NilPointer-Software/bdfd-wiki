@@ -19,7 +19,7 @@ summary {
 
 .mainAPI h2 {
     padding-top: 1rem;
-    margin-top: 60px;
+    margin-top: 1rem;
 }
 
 .mainAPI code {
@@ -39,7 +39,7 @@ summary {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 1.25rem;
-    margin-top: -3rem;
+    margin-top: -1rem;
     transition: .3s;
 }
 
