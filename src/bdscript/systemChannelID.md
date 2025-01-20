@@ -73,7 +73,6 @@ $endtry
 
 > How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
 
-> admonish info title="Read more"
-For more information, read the [Error Handling guide](../guides/general/bds2/errorHandling.md).
+> For more information, read the [Error Handling guide](../guides/general/bds2/errorHandling.md).
 
 ~~~
