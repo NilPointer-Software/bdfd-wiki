@@ -9,18 +9,30 @@
 # 2025
 
 ## January
-- Added `$boostLevel`
-- Added `$systemChannelID`
 - Added `$afkChannelID`
+- Added `$afkTimeout[]`
+- Added `$boostLevel`
+- Added `$byteCount[]`
+- Added `$commandFolder`
+- Added `$commandName`
+- Added `$commandTrigger`
+- Added `$emojiExists[]`
+- Added `$emojiName[]`
+- Added `$getAttachments[]`
+- Added `$getSlowmode[]`
+- Added `$guildBanner[]`
+- Added `$isEmojiAnimated[]`
+- Added `$isMessageEdited[]`
 - Added `$lastMessageID`
 - Added `$lastPinTimestamp`
+- Added `$linesCount[]`
+- Added `$messageEditedTimestamp[]`
+- Added `$rolePerms[]`
+- Added `$rulesChannelID[]`
+- Added `$systemChannelID`
 - Added `$threadMessageCount`
 - Added `$threadUserCount`
 - Added `$voiceUserLimit[]`
-- Added `$emojiName[]`
-- Added `$isEmojiAnimated[]`
-- Added `$emojiExists[]`
-- Added `$byteCount[]`
 
 # 2024
    
