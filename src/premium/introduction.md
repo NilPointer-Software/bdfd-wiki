@@ -34,7 +34,7 @@ One premium point equals one week (7 days) of premium hosting.
 Feature                                                                                         | Without premium | With premium   |
 -------------------------------------------------------------------------------------------------------------------  | --- | ----- |
 Access to AI functions. ([`$ai[]`](./ai.md) and [`$aiQuota`](./aiQuota.md))                                          | ❌ | ✅    |
-AI Tokens (per month)                                                                                                | 0   | 5000  |
+AI Tokens (per day)                                                                                                  | 0   | 5000  |
 Access to Bot Logs and to Bot Logs functions. (`$log[]`, `$disableErrorLogging` and `$logQuota`)                     | ❌  | ✅   |
 Logs Quota (per day)                                                                                                 | 0   | 1500  |
 Access to [`$messageContains[]`](./messageContains.md) and [`$alwaysReply`](./alwaysReply.md) callbacks.             | ❌  | ✅   |
