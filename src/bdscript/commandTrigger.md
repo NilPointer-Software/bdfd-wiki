@@ -1,7 +1,7 @@
 # $commandTrigger
 Returns the current command trigger.
 
-```admonish question info
+```admonish info
 Returns empty value in the callbacks!
 ```
 
