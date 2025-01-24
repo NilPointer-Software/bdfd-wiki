@@ -140,6 +140,7 @@
     - [$closeTicket](./bdscript/closeTicket.md)
     - [$color](./bdscript/color.md)
     - [$colorRole](./bdscript/colorRole.md)
+    - [$commandFolder](./bdscript/commandFolder.md)
     - [$commandName](./bdscript/commandName.md)
     - [$commandTrigger](./bdscript/commandTrigger.md)
     - [$commandsCount](./bdscript/commandsCount.md)
