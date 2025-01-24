@@ -1,15 +1,15 @@
-# $commanName
+# $commandName
 Returns the current command name.
 
 ## Syntax
 ```
-$commanName
+$commandName
 ```
 
 ## Example
 ```
 $nomention
-Commmand name: $commanName
+Commmand name: $commandName
 ```
 
 ``` discord yaml
