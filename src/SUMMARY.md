@@ -358,6 +358,7 @@
     - [$roleNames](./bdscript/roleNames.md)
     - [$rolePosition](./bdscript/rolePosition.md)
     - [$round](./bdscript/round.md)
+    - [$ruleChannelID](./bdscript/rulesChannelID.md)
     - [$scriptLanguage](./bdscript/scriptLanguage.md)
     - [$second](./bdscript/second.md)
     - [$sendEmbedMessage](./bdscript/sendEmbedMessage.md)
