@@ -140,6 +140,8 @@
     - [$closeTicket](./bdscript/closeTicket.md)
     - [$color](./bdscript/color.md)
     - [$colorRole](./bdscript/colorRole.md)
+    - [$commandName](./bdscript/commandName.md)
+    - [$commandTrigger](./bdscript/commandTrigger.md)
     - [$commandsCount](./bdscript/commandsCount.md)
     - [$cooldown](./bdscript/cooldown.md)
     - [$createChannel](./bdscript/createChannel.md)
