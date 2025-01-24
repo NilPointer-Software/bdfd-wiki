@@ -73,8 +73,6 @@ $endtry
     No rule channel found!
 ```
 
-> How [`$try`](./try.md), [`$catch`](./catch.md), [`$endtry`](./endtry.md) and [`$guildID`](./guildID.md) works?
-
 > For more information, read the [Error Handling guide](../guides/general/bds2/errorHandling.md).
 
 ~~~
