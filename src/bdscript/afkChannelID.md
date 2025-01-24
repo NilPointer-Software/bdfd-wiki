@@ -74,8 +74,6 @@ $endtry
     No AFK channel found!
 ```
 
-> How [`$try`](./try.md), [`$catch`](./catch.md) and [`$endtry`](./endtry.md) works?
-
 > For more information, read the [Error Handling guide](../guides/general/bds2/errorHandling.md).
 
 ~~~
