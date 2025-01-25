@@ -78,6 +78,18 @@ body {
 	transition: 0.3s;
 }
 
+@media (max-width: 600px) {
+	.settingembed {
+		margin-top: -10%;
+	}
+}
+
+@media (max-width: 550px) {
+	.settingembed {
+		margin-top: -12%;
+	}
+}
+
 .settingembed:hover {
 	transform: scale(1.015);
 	border-radius: 12.5px;
