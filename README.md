@@ -2,7 +2,7 @@
 
 [![BDFD Logo](https://github.com/user-attachments/assets/789fb2a2-aa5b-4fe3-a521-4c30b8438519)](https://app.botdesignerdiscord.com/)
 
-## Bot Designer For Discord - Wiki
+### Bot Designer For Discord - Wiki
 
 [![GitHub Forks](https://img.shields.io/github/forks/NilPointer-Software/bdfd-wiki?style=flat&logo=Github&label=Forks)](https://github.com/NilPointer-Software/bdfd-wiki/network/members)
 [![GitHub Repo Stars](https://img.shields.io/github/stars/NilPointer-Software/bdfd-wiki?style=flat&logo=Github&label=Stars)](https://github.com/NilPointer-Software/bdfd-wiki/stargazers)
@@ -19,10 +19,10 @@
 
 ---
 
-## About
+### ℹ️ About
 **Bot Designer For Discord** is a free-to-use Discord Bot maker available for Android, iOS and Web. It's capable of developing nearly all types of bots from simple "echo" bots to advanced multi-purpose administration ones.
 
 This is the official GitHub repository of BDFD Wiki which explains BDFD functions, callbacks, and features.
 
-### Contribution
+#### 🛠️ Contribution
 If you would like to contribute in this repository, do checkout [CONTRIBUTING.md](CONTRIBUTING.md) for further information.
