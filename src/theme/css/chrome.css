@@ -296,11 +296,17 @@ a:link:not(
 #search-toggle {
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: transparent;
+	display: flex;
+    	align-items: center;
 }
 
 #sidebar-toggle {
-	height: 80%;
-	margin-top: 18%;
+	height: unset;
+	margin-top: unset;
+}
+
+#sidebar-toggle i {
+   	 font-size: 0.6em;
 }
 
 /* Hide sidebar button for PC & Add text in the menu bar */
