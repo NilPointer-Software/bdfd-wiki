@@ -1,5 +1,9 @@
 <div align="center">
 
+<a href='https://app.botdesignerdiscord.com/'>
+<img src="https://github.com/user-attachments/assets/29ed67cd-9f0f-4b44-9167-937aa3940f58" alt="BDFD Logo" style="border-radius:50%;">
+</a>
+
 [![BDFD Logo](https://github.com/user-attachments/assets/29ed67cd-9f0f-4b44-9167-937aa3940f58)](https://app.botdesignerdiscord.com/)
 
 ## Bot Designer For Discord - Wiki
