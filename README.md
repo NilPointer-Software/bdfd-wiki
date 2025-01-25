@@ -1,6 +1,6 @@
 <div align="center">
 
-[![BDFD Logo](https://github.com/user-attachments/assets/29ed67cd-9f0f-4b44-9167-937aa3940f58)](https://botdesignerdiscord.com)
+[![BDFD Logo](https://github.com/user-attachments/assets/29ed67cd-9f0f-4b44-9167-937aa3940f58)](https://app.botdesignerdiscord.com/)
 
 ## Bot Designer For Discord - Wiki
 
