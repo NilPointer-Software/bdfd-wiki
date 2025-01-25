@@ -108,6 +108,9 @@ function resetHGInput() {
 	const charJSONCount = inputcodedesign.length;
 
 	charCountElement.textContent = `${charJSONCount} / 10000`;
+	charCountElement.style.color = document.body.style.color;
+	
+	codeInput.style.boxShadow = "none";
 	codeInput.value = inputcodedesign;
 
 	localStorage.setItem("code-hg", inputcodedesign);
