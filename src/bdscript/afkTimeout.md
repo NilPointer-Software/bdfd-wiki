@@ -11,7 +11,7 @@ $afkTimeout[(Guild ID)]
 ```
 
 ### Parameters
-- `Guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get the AFK time-out.
+- `Guild ID` `(Type: Snowflake || Flag: Optional)`: The guild to get the AFK time-out.
 
 ## Example
 ```
