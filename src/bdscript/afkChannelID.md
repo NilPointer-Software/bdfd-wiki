@@ -2,7 +2,7 @@
 Returns the servers AFK channel ID (**returns an error if there isn't such a channel**).
 
 ```admonish info title="What is this?"
-An AFK channel on Discord is a voice channel where inactive users are automatically moved after being idle for a set time. It keeps active channels clear of idle users.
+An AFK channel on Discord is a voice channel where inactive users are automatically moved after being idle for a set time (Can be returned via [`$afkTimeout`](./afkTimeout.md)). It keeps active channels clear of idle users.
 ```
 
 ## Syntax
