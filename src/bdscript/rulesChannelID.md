@@ -7,7 +7,7 @@ $rulesChannelID[(Guild ID)]
 ```
 
 ### Parameters
-- `Guild ID` `(Type: Snowflake || Flag: Required)`: The guild to get the rule channel's ID.
+- `Guild ID` `(Type: Snowflake || Flag: Optional)`: The guild to get the rule channel's ID.
 
 ## Example
 ```
