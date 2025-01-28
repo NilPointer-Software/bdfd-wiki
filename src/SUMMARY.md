@@ -69,6 +69,7 @@
     - [$addTimestamp](./bdscript/addTimestamp.md)
     - [$addTimestamp[]](./bdscript/addTimestampComplex.md)
     - [$afkChannelID](./bdscript/afkChannelID.md)
+    - [$afkTimeout](./bdscript/afkTimeout.md)
     - [$allMembersCount](./bdscript/allMembersCount.md)
     - [$allowMention](./bdscript/allowMention.md)
     - [$allowRoleMentions](./bdscript/allowRoleMentions.md)
