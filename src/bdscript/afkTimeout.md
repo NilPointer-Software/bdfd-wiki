@@ -1,6 +1,10 @@
 # $afkTimeout
 Returns the AFK time-out (in seconds) for a provided guild.
 
+```admonish info title="Time-out"
+Discord automatically moves member to the specified (in the Server Settings / Can be returned via [`$afkChannelID`](./afkChannelID)) voice channel and mute them when they have been idle for longer then the inactive time-out ("inactive time-out" can be returned via `$afkTimeout[]` function).
+```
+
 ## Syntax
 ```
 $afkTimeout[(Guild ID)]
@@ -28,8 +32,4 @@ AFK Time-out: $afkTimeout[$guildID] seconds
   verified: true
   content: |
     AFK Time-out: 300 seconds
-```
-
-```admonish info title"Time-out"
-Discord automatically moves member to the specified (in the Server Settings / Can be returned via [`$afkChannelID`](./afkChannelID)) voice channel and mute them when they have been idle for longer then the inactive time-out ("inactive time-out" can be returned via `$afkTimeout[]` function).
 ```
