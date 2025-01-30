@@ -216,6 +216,7 @@
     - [$getServerInvite](./bdscript/getServerInvite.md)
     - [$getServerInvite[]](./bdscript/getServerInviteComplex.md)
     - [$getServerVar](./bdscript/getServerVar.md)
+    - [$getSlowmode](./bdscript/getSlowmode.md)
     - [$getTextSplitIndex](./bdscript/getTextSplitIndex.md)
     - [$getTextSplitLength](./bdscript/getTextSplitLength.md)
     - [$getTimestamp](./bdscript/getTimestamp.md)
