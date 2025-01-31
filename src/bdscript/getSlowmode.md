@@ -1,5 +1,5 @@
 # $getSlowmode
-Returns the channel's slowmode time.
+Returns the channel's slowmode time (In Seconds).
 
 ```admonish tip title="Change slowmode time"
 To change the slowmode time in the channel use [`$slowmode`](./slowmode).
@@ -16,7 +16,7 @@ $getSlowmode[(Channel ID)]
 ## Example
 ```
 $nomention
-Slowmode time: $getSlowmode[$channelID]
+Slowmode time: $getSlowmode[$channelID] seconds
 ```
 
 ```discord yaml
@@ -31,7 +31,7 @@ Slowmode time: $getSlowmode[$channelID]
   bot: true
   verified: true
   content: |
-    Slowmode time: 0
+    Slowmode time: 0 seconds
 - user_id: 1262009115689881702
   username: GettingBeatenByKito
   color: "#E67E22"
