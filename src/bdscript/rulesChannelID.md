@@ -31,7 +31,7 @@ Rule channel's ID: $rulesChannelID[$guildID]
 ```
 
 ~~~admonish tip title="How to stop the error message?"
-The `$rulesChannelID` function as said in above returns an error if there isn't any rule channel set on the server and there is a way to stop that.
+The `$rulesChannelID[]` function as said in above returns an error if there isn't any rule channel set on the server and there is a way to stop that.
 ```
 $nomention
 $try 
