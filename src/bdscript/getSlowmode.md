@@ -2,7 +2,7 @@
 Returns the channel's slowmode time (In Seconds).
 
 ```admonish tip title="Change slowmode time"
-To change the slowmode time in the channel use [`$slowmode`](./slowmode).
+To change the slowmode time in the channel use [`$slowmode[]`](./slowmode).
 ```
 
 ## Syntax
