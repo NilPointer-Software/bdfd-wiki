@@ -1,6 +1,10 @@
 # $getSlowmode
 Returns the channel's slowmode time.
 
+```admonish tip title="Change slowmode time"
+To change the slowmode time in the channel use [`$slowmode`](./slowmode).
+```
+
 ## Syntax
 ```
 $getSlowmode[(Channel ID)]
