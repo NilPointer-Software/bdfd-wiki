@@ -67,5 +67,5 @@ $userRoles[$authorID]
 *In this example, we will remove all roles and give one role with "Support" name*.
 
 ```admonish question title="What is this?"
-How [`$roleID[]`](./roleID.md), [`$authorID`](./authorID.md) and [`$userRoled[]`](./userRoles.md) works?
+How [`$roleID[]`](./roleID.md), [`$authorID`](./authorID.md) and [`$userRoles[]`](./userRoles.md) works?
 ```
