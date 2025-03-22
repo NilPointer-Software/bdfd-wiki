@@ -28,7 +28,7 @@ $joinSplitText[+]
   bot: true
   verified: true
   content: |
-    hello+wolrd+!
+    hello+world+!
 ```
 
 > For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
