@@ -12,6 +12,20 @@ $serverDescription[Guild ID]
 ## Example
 ```
 $nomention
-Server description: $serverDescription[$message[1]]
+Server description: $serverDescription[$message]
 ```
-![example](https://user-images.githubusercontent.com/111157596/231823496-12571db3-ba85-4e73-845c-bee765a4c4bc.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 1009018669982031912
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Server description: Welcome to the BDFD Support server! Enjoy stay with us!
+```

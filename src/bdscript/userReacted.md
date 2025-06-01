@@ -15,6 +15,59 @@ $userReacted[Channel ID;Message ID;User ID;Emoji]
 ## Example
 ```
 $nomention
-$userReacted[$channelID;$message;$authorID;🍀]
+$userReacted[$channelID;$message;$authorID;❤️]
 ```
-![Screenshot_20221023_105811](https://user-images.githubusercontent.com/95774950/197375576-dbe6fc17-68cb-44ed-802a-81a16db98ce9.png)
+
+``` discord yaml
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Reactions! Message ID: 1291801528054845451
+  reactions:
+    - emoji: https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png
+      name: ":heart:"
+      reacted: true
+      count: 2
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 1291801528054845451
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Reacted?: <code>true</code>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Reactions! Message ID: 1291802266793414717
+  reactions:
+    - emoji: https://em-content.zobj.net/thumbs/120/mozilla/36/heavy-black-heart_2764.png
+      name: ":heart:"
+      count: 1
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 1291802266793414717
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Reacted?: <code>false</code>
+```
+
+```admonish question title="What is this?"
+How [`$channelID`](./channelID.md), [`$message`](./message.md) and [`$authorID`](./authorID.md) works?
+```

@@ -1,5 +1,7 @@
 # $ignoreTriggerCase
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 `$ignoreTriggerCase` is a function that makes the command trigger __not__ case sensitive. For example, `!help` and `!HeLp` would both work.
 

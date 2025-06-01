@@ -12,6 +12,20 @@ $sub[Number;...]
 ## Example
 ```
 $nomention
-$sub[20;10;5]
+Result: $sub[20;10;6]
 ```
-![example](https://user-images.githubusercontent.com/69215413/126549467-f13c397e-9749-4fe5-80bd-c31b720d41aa.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Result: 4
+```

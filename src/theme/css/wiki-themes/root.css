@@ -1,12 +1,17 @@
 :root {
-    --sidebar-width: 300px;
-    --page-padding: 15px;
+    --sidebar-width: 320px;
+    --page-padding: 5px;
     --content-max-width: 750px;
-    --menu-bar-height: 50px;
+    --menu-bar-height: 45px;
+    --menu-bar-border-radius: 10px;
+    --color1: hsl(270, 80%, 50%);
+    --color2: hsl(270, 80%, 30%);
+    --color3: hsl(270, 80%, 15%);
 }
 
 :root code {
     border-radius: 10px;
+    box-shadow: 2.5px 2.5px 10px rgb(0 0 0 / 50%);
 }
 
 :root blockquote {

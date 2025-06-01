@@ -15,4 +15,17 @@ $nomention
 $min[3;5;1]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/125180608-e6b17e00-e1c9-11eb-98ff-e5a09e1d569d.png)
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    1
+```

@@ -6,11 +6,12 @@ Returns the bot's invite URL.
 $getBotInvite
 ```
 
-> **Invitation perms can be configured in the BDFD App**:
-> 1. Select the bot,
-> 2. Click "➤ Invite bot to server" button,
-> 3. Select "🔓 Edit invite link permissions",
-> 4. Pick permissions
+```admonish note title="Invitation perms can be configured in the BDFD App:"
+1. Select the bot,
+2. Click "➤ Invite bot to server" button,
+3. Select "🔓 Edit invite link permissions",
+4. Pick permissions
+```
 
 ## Example
 ```
@@ -24,12 +25,14 @@ Invite Me! $getBotInvite
   color: "#E67E22"
   content: |
     !example
-- user_id: 1009018156494368798
-  username: Invate this bot
+- user_id: 390515191819010058
+  username: kubastick
   color: "#378afa"
   bot: true
   content: |
     Invite Me! <a href="https://discordapp.com/oauth2/authorize?client_id=390515191819010058&scope=bot&permissions=2146958847">https://discordapp.com/oauth2/authorize?client_id=390515191819010058&scope=bot&permissions=2146958847</a>
 ```
 
-> *The invitation link in **this** example is fake, so it doesn’t work.*
+```admonish example
+The invitation link in **this** example is fake, so it doesn’t work.
+```

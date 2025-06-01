@@ -13,7 +13,6 @@ $removeContains[Word;...;Amount]
 ## Example
 ```
 $nomention
-$onlyPerms[managemessages;❌ You are missing the `MANAGE_MESSAGES` permission!]
 $removeContains[https://discord.gg/;discord.gg/;https://discord.com/invite;$noMentionMessage]
 Successful purged `$noMentionMessage` messages containing invites!
 ```

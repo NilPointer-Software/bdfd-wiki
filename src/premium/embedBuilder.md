@@ -1,5 +1,7 @@
 # Embed Builder
-*(for premium users)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 Embed Builder is a feature which allows creating embed easily and fast with live embed and code preview support.
 

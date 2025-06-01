@@ -3,14 +3,14 @@ Edits an already existing button.
 
 ## Syntax
 ```
-$editButton[Button ID/URL;Label;Style;(Disabled;Emoji;Message ID)]
+$editButton[Button ID/URL;Label;Style;(Disabled?;Emoji;Message ID)]
 ```
 
 ### Parameters 
 - `Button ID/URL` `(Type: String, URL || Flag: Required)`: The required button ID or URL, you want to be edited.
 - `Label` `(Type: String || Flag: Emptiable)`: The new label displayed on the button.
 - `Style` `(Type: Enum || Flag: Required)`: The style of the button. All styles are listed [below](#button-style).
-- `Disabled` `(Type: Bool || Flag: Vacantable)`: If set to `yes`, the button can't be pressed. Default is `no`.
+- `Disabled?` `(Type: Bool || Flag: Vacantable)`: If set to `yes`, the button can't be pressed. Default is `no`.
 - `Emoji` `(Type: Emoji || Flag: Vacantable)`: Edits / Adds an emoji inside the button. Emojis have to be either pasted as *Unicode* or be in the following format `<:emoji name:emoji ID>`.
 - `Message ID` `(Type: Snowflake || Flag: Vacantable)`: Adds a button to the provided message ID. It's important to note that provided message ID author **has to** be the bot.
 
@@ -24,8 +24,8 @@ Here, are all possible values for the `style` function argument.
 - `link` - Redirect button
 
 ```discord yaml
-- username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -56,8 +56,8 @@ Here, are all possible values for the `style` function argument.
       - type: secondary
         label: Secondary
         disabled: true
-- username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -89,4 +89,6 @@ $addButton[no;http://botdesignerdiscord.com;Check our website;link;no;👀]
 ```
 ![](https://user-images.githubusercontent.com/16838075/120207246-7d366b00-c22c-11eb-8d04-9cf569ced8ae.png)
 
-> For more info, see the [Buttons Guide](../guides/general/interactions/buttons/aboutButtons.md).
+```admonish info title="Read more"
+For more information, read the the [Buttons Guide](../guides/general/interactions/buttons/aboutButtons.md).
+```

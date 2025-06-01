@@ -13,7 +13,10 @@ preferred-dark-theme = "bdfd"
 smart-punctuation = true
 git-repository-url = "https://github.com/NilPointer-Software/bdfd-wiki"
 edit-url-template = "https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/{path}"
-site-url = "/bdfd-wiki/"
+no-section-label = true
+input-404 = "404.md"
+site-url = "/"
+additional-css = ["./src/theme/mdbook-admonish.css"]
 
 [output.html.fold]
 enable = true
@@ -31,19 +34,14 @@ embed-script = false
 
 [preprocessor.admonish]
 on_failure = "bail"
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 # Redirects old wiki URL paths used by the app to new ones.
 # TODO: Remove URLs when old paths gets updated in the app.
 [output.html.redirect]
 "/guides/ifStatements.html" = "./general/ifStatements.html"
 "/guides/async.html" = "./general/bds2/asyncScopes.html"
-"/guides/buttons.html" = "./general/interactions/buttons/aboutButtons.html"
-"/selectmenu.html" = "./guides/general/interactions/selectMenus/aboutSelectMenu.html"
-"/trycatch.html" = "./guides/general/bds2/errorHandling.html"
-
-"/bdscript/awaitReactions.html" = "../premium/awaitReactions.html"
-"/bdscript/customImage.html" = "../premium/customImage.html"
-"/bdscript/ignoreTriggerCase.html" = "../premium/ignoreTriggerCase.html"
 
 "/bdscript/httpAddHeader.html" = "../guides/general/httpRequests.html"
 "/bdscript/httpDelete.html" = "../guides/general/httpRequests.html"
@@ -87,3 +85,19 @@ on_failure = "bail"
 "/bdscript/webhookSend.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookTitle.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookUsername.html" = "../guides/general/webhooks.html"
+
+"/bdscript/appendOptionSuggestion.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
+"/bdscript/autoCompleteOptionName.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
+"/bdscript/autoCompleteOptionValue.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
+
+# Premium functions - Don't touch!
+"/bdscript/ai.html" = "../premium/ai.html"
+"/bdscript/aiQuota.html" = "../premium/aiQuota.html"
+"/bdscript/awaitReactions.html" = "../premium/awaitReactions.html"
+"/bdscript/customImage.html" = "../premium/customImage.html"
+"/bdscript/ignoreTriggerCase.html" = "../premium/ignoreTriggerCase.html"
+"/bdscript/log.html" = "../premium/log.html"
+"/bdscript/logQuota.html" = "../premium/logQuota.html"
+"/bdscript/sendNotification.html" = "../premium/sendNotification.html"
+"/bdscript/suppressErrorLogging.html" = "../premium/suppressErrorLogging.html"
+"/bdscript/usedEmoji.html" = "../premium/usedEmoji.html"

@@ -18,7 +18,6 @@ Channel ID: $channelID[$message]
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example main-chat
@@ -31,7 +30,9 @@ Channel ID: $channelID[$message]
     Channel ID: 566370477967147018
 ```
 
-> It supports category names.
+```admonish note
+It supports category names:
+```
 
 ``` discord yaml
 - user_id: 803569638084313098
@@ -46,4 +47,8 @@ Channel ID: $channelID[$message]
   verified: true
   content: |
     Channel ID: 1009019011545178132
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
 ```

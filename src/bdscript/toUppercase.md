@@ -18,15 +18,31 @@ $toUppercase[$message]
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/a9034fd5-40c2-4320-a408-2f2ee0071d9d
   color: "#E67E22"
   content: |
     !example bot designeR FOR DISCORD
-- username: BDFD Support
-  avatar: https://github.com/NilPointer-Software/bdfd-wiki/assets/113303649/e5fdc906-6c14-4e19-91c0-4ce95b852c61
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
   content: |
     BOT DESIGNER FOR DISCORD
 ```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
+
+<div class=function-playground>
+  <h3>🤖 Playground</h3>
+  <p>Here you can understand how this function works.</p>
+  <div class="function-input">
+    <p>Input:</p>
+    <span id="play-code">$toUppercase[<textarea id="play-input" rows="1" maxlength="150" oninput="toUppercasePlayground(this.value)">hello</textarea>]</span>
+  </div>
+  <div class="function-output">
+    <p>Output:</p>
+    <span id="play-output">HELLO</span>
+  </div>
+</div>

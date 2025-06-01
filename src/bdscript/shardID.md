@@ -9,6 +9,20 @@ $shardID
 ## Example
 ```
 $nomention
-$shardID
+Shard: $shardID
 ```
-![example](https://user-images.githubusercontent.com/95774950/162153099-4fb1bf14-44de-4f7c-b5d6-604f43ab76aa.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Shard: 1
+```

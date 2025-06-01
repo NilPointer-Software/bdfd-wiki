@@ -26,7 +26,10 @@ Channel ID: $channelID
       Channel ID: 566370477967147018
 ```
 
-> It will return `none` if you use it in a DM.
+```admonish note
+It will return `none` if you use it in a DM:
+```
+
 ```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey

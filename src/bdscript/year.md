@@ -1,8 +1,6 @@
 # $year
 Returns the current year.
 
-> 📌 You can use [`$time`](./time.md) to change the timezone.
-
 ## Syntax
 ```
 $year
@@ -14,16 +12,23 @@ $nomention
 Current Year: $year
 ```
 
-``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
-    !year
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+    !example 
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
+  verified: true
   content: |
-    Current Year: 2024
+    <div id="year-mark"></div>
 ```
+
+```admonish info title="Timezone"
+You can use [`$time[]`](./time.md) to change the timezone.
+```
+
+<script src="../theme/livetime.js"></script>

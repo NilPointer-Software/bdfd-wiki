@@ -9,6 +9,20 @@ $serverDescription
 ## Example
 ```
 $nomention
-Hey, this server has a great description: $serverDescription
+Server description: $serverDescription
 ```
-![Example](https://user-images.githubusercontent.com/70456337/189480730-f72d6770-2e45-4f01-b73c-cec642ccf51f.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Server description: Welcome to the Official Bot Designer For Discord community server!
+```

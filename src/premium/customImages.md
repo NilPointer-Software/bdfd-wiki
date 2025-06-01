@@ -1,5 +1,7 @@
 # Custom Images
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 Upload custom images in the app from your device, without any image links. You can use the custom image as an embed image using `$customImage[]`.
 

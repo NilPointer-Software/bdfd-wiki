@@ -20,7 +20,6 @@ $nomention
   color: "#EE7908"
   content: |
     !example 860870690323300359
-
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -28,4 +27,8 @@ $nomention
   verified: true
   content: |
     <#demo>'s channel topic is: Demos, examples and more!
+```
+
+```admonish question title="What is this?"
+How [`$noMentionMessage`](./noMentionMessage.md) works?
 ```

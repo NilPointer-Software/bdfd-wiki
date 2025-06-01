@@ -12,7 +12,7 @@ $slowmode[Channel ID;Slowmode time]
 - `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel in which the slowmode is being modified in.
 - `Slowmode time` `(Type: Duration || Flag: Required)`: The new slowmode delay *(e.g. `5`, `10s`, `40m`, `1h`, etc)*. Use `0`/`0s` to disable the slowmode.
 
-  > 🧙‍♂️ Slowmode time can't be set over 6 hours/21600 seconds.
+> Slowmode time can't be set over 6 hours/21600 seconds.
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly:

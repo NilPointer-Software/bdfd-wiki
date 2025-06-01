@@ -2,7 +2,7 @@
 In this section, you'll learn how to use the if statement.
 
 ## Content
-[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif[]**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and[]**](#and) > [**$or[]**](#or) > [**Simple Example**](#simple-example)
+[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and[]**](#and) > [**$or[]**](#or) > [**$stop**](#stop) > [**Simple Example**](#simple-example)
 
 ## Functions Used
 - [`$if[]`](../../bdscript/if.md)
@@ -13,6 +13,7 @@ In this section, you'll learn how to use the if statement.
 ## Support Functions Used
 - [`$and[]`](../../bdscript/and.md)
 - [`$or[]`](../../bdscript/or.md)
+- [`$stop`](../../bdscript/stop.md)
 
 ### Signs
 `==` - Equal
@@ -275,7 +276,7 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - user_id: 1009018156494368798
@@ -287,7 +288,7 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - user_id: 1009018156494368798
@@ -346,7 +347,7 @@ $endif
     Bye
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - user_id: 1009018156494368798
@@ -358,7 +359,7 @@ $endif
     Hi
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - user_id: 1009018156494368798
@@ -369,6 +370,59 @@ $endif
   content: |
     Hi
   ```
+
+# $stop
+Stops the command execution.
+
+```admonish danger title="BDScript 2"
+Can only be used in **[BDScript 2](./bds2/aboutBDScript2.md)**.
+```
+
+## Syntax
+```
+$stop
+```
+
+## Example
+```
+$nomention
+$if[$message==5]
+  Yes!
+$else
+  No!
+  $stop
+$endif
+$username is winner!
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 6
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    No!
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 5
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Yes!
+    RainbowKey is winner!
+```
+*As we can see, the bot did not send "RainbowKey is winner!" when we tried to use "`!example 6`".*
 
 # Simple Example
 1. Create command with `!example` trigger.

@@ -3,12 +3,12 @@ Returns user banner if the given user has one.
 
 ## Syntax
 ```
-$userBanner[user ID]
+$userBanner[User ID]
 ```
 > The function is unable to return the user's server banner.
 
 ### Parameters
-- `user ID` `(Type: Snowflake || Flag: Required)`: The user to get the banner for.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the banner for.
 
 ## Example
 ```

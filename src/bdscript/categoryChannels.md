@@ -22,9 +22,11 @@ $categoryChannels[Category ID;Separator;(Option)]
 ## Example
 ```
 $nomention
-<#$categoryChannels[$categoryID[BDFD];>
-<#;id]>
+Total $categoryChannels[$categoryID[BDFD];;count] channels!
+$categoryChannels[$categoryID[BDFD];
+;mention]
 ```
+
 ``` discord yaml
 - user_id: 729343563401265193
   username: Nicky
@@ -38,11 +40,14 @@ $nomention
   bot: true
   verified: true
   content: |
+    Total 5 channels!
     <#rules>
     <#news>
     <#update-logs>
-    <#bots>
-    <#bdfd-forums>
+    <#main-chat>
+    <#secret-channel>
 ```
 
-> [How `$categoryID[]` works?](./categoryID.md)
+```admonish question title="What is this?"
+How [`$categoryID[]`](./categoryID.md) works?
+```

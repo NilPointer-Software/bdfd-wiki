@@ -28,7 +28,7 @@ $clearReactions[$channelID;$message;✅]
   reactions:
     - emoji: https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Twemoji12_2705.svg/640px-Twemoji12_2705.svg.png
       name: ":white_check_mark:"
-      count: 179
+      count: 52
       reacted: true
 ```
 \

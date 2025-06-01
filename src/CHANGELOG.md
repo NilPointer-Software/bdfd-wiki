@@ -1,13 +1,56 @@
 # Changelog
 
+<style>
+  .editPage {
+      visibility: hidden;
+  }
+</style>
+
+# 2025
+
+## January
+- Added `$afkChannelID`
+- Added `$afkTimeout[]`
+- Added `$boostLevel`
+- Added `$byteCount[]`
+- Added `$commandFolder`
+- Added `$commandName`
+- Added `$commandTrigger`
+- Added `$emojiExists[]`
+- Added `$emojiName[]`
+- Added `$getAttachments[]`
+- Added `$getSlowmode[]`
+- Added `$guildBanner[]`
+- Added `$isEmojiAnimated[]`
+- Added `$isMessageEdited[]`
+- Added `$lastMessageID`
+- Added `$lastPinTimestamp`
+- Added `$linesCount[]`
+- Added `$messageEditedTimestamp[]`
+- Added `$rolePerms[]`
+- Added `$rulesChannelID[]`
+- Added `$systemChannelID`
+- Added `$threadMessageCount`
+- Added `$threadUserCount`
+- Added `$voiceUserLimit[]`
+
 # 2024
+   
+## August
+- Added `$log[]`
+- Added `$logQuota`
+- Added `$suppressErrorLogging`
+- Added `$ceil[]`
+- Added `$floor[]`
+- Added `$sqrt[]`
+- Added `$isInteger[]`
+
+<details><summary>Previous Updates</summary>
 
 ## July
 - Added `$setUserRoles[]`
 - Added `$getLeaderboardPosition[]`
 - Added `$isBooster[]`
-
-<details><summary>Previous Updates</summary>
 
 ## June
 - Added `$ai[]`
@@ -481,6 +524,8 @@
 - Added `$findChannel[]` and `$channelExists[]`
 - Added `$userJoined[]` and `$userJoinedDiscord[]`
 
+</details>
+
 # 2020
 
 ## December
@@ -492,6 +537,8 @@
 - Added `userID` option to `$resetUserVar`
 - Added `serverID` option to `$serverOwner`
 - Added `$premiumExpireTime`
+
+<details><summary>Previous Updates</summary>
 
 ## November
 - Fixed disappearing bot status
@@ -692,4 +739,10 @@
 - Released new stable version
 </details>
 
-> If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
+```admonish tip
+If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
+```
+
+```admonish abstract title="Flowchart Changelog"
+If you want to see the BDScript changelog, [click here](./FLOWCHART_CHANGELOG.md).
+```

@@ -1,12 +1,18 @@
 # $aiQuota
-Returns the remaining tokens for a bot.
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
+
+Returns the remaining tokens for the [`$ai[]`](./ai.md) function.
 
 ## Syntax
 ```
 $aiQuota
 ```
 
-> [4 characters](./ai.md) = 1 token
+```admonish tip title="Log Quota"
+[4 characters in the AI answer](./ai.md) = [1 token](./aiQuota.md)
+```
 
 ## Example
 ```
@@ -32,4 +38,4 @@ Remaining tokens: $aiQuota
 
 > New tokens will be awarded and summed up every 24 hours!
 > 
-> Token limit (per bot): 2500 (Can be expanded over time)
+> Token limit (per bot): 5000 *(20000 characters)*

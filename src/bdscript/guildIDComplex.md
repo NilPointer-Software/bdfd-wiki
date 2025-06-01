@@ -1,8 +1,6 @@
 # $guildID[]
 Finds a server ID using a server's name.
 
-> 🧙‍♂️ **Note:** The bot must be present in the server in order to get the server ID.
-
 ## Syntax
 ```
 $guildID[Server name]

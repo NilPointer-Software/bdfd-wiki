@@ -1,7 +1,9 @@
 # $giveRole 
-*(deprecated)*
+<div class="functionTags">
+  <span id="DeprecatedTag">Deprecated</span>
+</div>
 
-> 🧙‍♂️ This command is deprecated, instead better use [`$roleGrant[]`](./roleGrant.md).
+> This function is deprecated, instead better to use [`$roleGrant[]`](./roleGrant.md).
 
 Adds a role to the provided user.
 
@@ -18,8 +20,6 @@ $giveRole[User/Role ID;(Role ID)]
 ### Example #1
 ```
 $nomention
-$onlyPerms[manageroles;Missing permissions!]
-
 $giveRole[807004801753284618]
 Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 ```
@@ -28,7 +28,6 @@ Added $roleName[807004801753284618] to $username[$mentioned[1]]!
 ### Example #2
 ```
 $nomention
-$onlyPerms[manageroles;Missing permissions!]
 $trimContent
 
 $giveRole[$mentioned[1];$message[2]]

@@ -25,43 +25,43 @@ After a successful purchase of premium points, here's how to redeem them :
 
      ![IMG_20220809_152453](https://user-images.githubusercontent.com/95774950/183664582-2f2bbb33-819b-49c9-ab48-a4ec6500cd1e.jpg)
 
-    > One premium point equals one week (7 days) of premium hosting.
+```admonish note
+One premium point equals one week (7 days) of premium hosting.
+```
 
-### Premium Perks
-#### AI
-- Access to [`$ai[]`](./ai.md) and [`$aiQuota`](./aiQuota.md) functions.
-  
-#### Main
-- `$getServerVar[]` in triggers [(custom prefixes)](./customPrefixes.md).
-- Awaited reactions.
-- Access to [`$messageContains[]`](./messageContains.md) and [`$alwaysReply`](./alwaysReply.md) callbacks.
-- Custom images.
-- Access to [`$ignoreTriggerCase`](./ignoreTriggerCase.md) and [`$sendNotification`](./sendNotification.md) functions.
-- Unlimited commands and variables.
-- Ad-free hosting time.
-- Priority bot hosting and startup.
-- Maximum 120 minutes duration in `$replyIn` & `$editEmbedIn`.
-- Increased server and global variable character limits.
-- Bot guild list.
-- Embed builder.
-- Sharding.
+## Premium Perks
 
-#### [Discord Server](https://botdesignerdiscord.com/discord) Perks
-- The premium role. Run `!getPremiumRole`.
+Feature                                                                                         | Without premium | With premium   |
+-------------------------------------------------------------------------------------------------------------------  | --- | ----- |
+Access to AI functions. ([`$ai[]`](./ai.md) and [`$aiQuota`](./aiQuota.md))                                          | ❌ | ✅    |
+AI Tokens (per day)                                                                                                  | 0   | 5000  |
+Access to Bot Logs and to Bot Logs functions. (`$log[]`, `$disableErrorLogging` and `$logQuota`)                     | ❌  | ✅   |
+Logs Quota (per day)                                                                                                 | 0   | 1500  |
+Access to [`$messageContains[]`](./messageContains.md) and [`$alwaysReply`](./alwaysReply.md) callbacks.             | ❌  | ✅   |
+Access to [`$ignoreTriggerCase`](./ignoreTriggerCase.md) and [`$sendNotification`](./sendNotification.md) functions. | ❌  | ✅   | 
+Access to ["Awaited Reactions"](./awaitedReactions.md).                                                              | ❌  | ✅   |
+Access to ["Custom  Images"](./customImage.md).                                                                      | ❌  | ✅   |
+Access to use `$getServerVar[]` in triggers. [(Custom prefixes)](./customPrefixes.md)                                | ❌  | ✅   |
+Access to the "Bot guild (server) list" in the app.                                                                  | ❌  | ✅   |
+Access to the ["Embed builder"](./embedBuilder.md) in the app.                                                       | ❌  | ✅   |
+Sharding.                                                                                                            | ❌  | ✅   |
+Priority bot hosting and startup.                                                                                    | ❌  | ✅   |
+Ad-free hosting time.                                                                                                | ✅  | ✅   |
+Character limit per code.                                                                                            | 65k  | 65k  |
+Variable limit.                                                                                                      | 100  | ∞    |
+Command limit.                                                                                                       | 230  | ∞    |
+Maximum time in the "Time" parameter in  `$replyIn[]`, `$editIn[]`, `$deleteIn[]` and `$editEmbedIn[]` functions.    | 40m  | 120m |
+Server & Global variable value character limit.                                                                      | 499  | 4999 |
+User variable value character limit.                                                                                 | 4999 | 4999 |
+Channel variable value character limit.                                                                              | 499  | 499  |
+
+#### [Discord Server](https://discord.gg/bot-designer-for-discord-official-server-566363823137882154) Perks
+- The premium role. Run `/getPremiumRole`.
 - Access to the premium chat.
 - Additional role income in our server economy system.
 
-### Guides
-- [Awaited Reactions](./awaitedReactions.md)
-- [Custom Prefixes](./customPrefixes.md)
-- [Custom Images](./customImages.md)
-- [Embed Builder](./embedBuilder.md)
-- [$alwaysReply](./alwaysReply.md)
-- [$ignoreTriggerCase](./ignoreTriggerCase.md)
-- [$messageContains](./messageContains.md)
-- [$sendNotification](./sendNotification.md)
-
-### Support
-For any premium related issues/support, contact us at `premium-support@mail.botdesignerdiscord.com`.
-
-You can also ask questions about premium in our [Community Discord Server](https://botdesignerdiscord.com/discord).
+```admonish info title="Support"
+For any premium related issues/support, contact us at\
+`premium-support@mail.botdesignerdiscord.com`.\
+You can also ask questions about premium in our [Community Discord Server](https://discord.gg/bot-designer-for-discord-official-server-566363823137882154).
+```

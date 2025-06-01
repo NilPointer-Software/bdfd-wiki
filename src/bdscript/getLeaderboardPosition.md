@@ -1,5 +1,5 @@
 # $getLeaderboardPosition
-Get position in leaderboard for given variable.
+Get position in a leaderboard for a given variable.
 
 ## Syntax
 ```
@@ -7,19 +7,19 @@ $getLeaderboardPosition[Variable type;Variable name;Sort type;(User ID)]
 ```
 
 ### Parameters
-- `Variable type` `(Type: Enum || Flag: Required)`: The type of the variable. Variable types:
+- `Variable type` `(Type: Enum || Flag: Required)`: The variable type. Variable types:
   - `user` - [User variable](../guides/introduction/variables.md#user-variables)
   - `globalUser` - [Global-User variable](../guides/introduction/variables.md#globalglobal-user-variables)
-- `Variable name` `(Type: String || Flag: Required)`: The variable name to generate the leaderboard for.
+- `Variable name` `(Type: String || Flag: Required)`: The variable name to generate a leaderboard for.
 - `Sort type` `(Type: Enum || Flag: Required)`: The sort type. Sort types:
-  - `asc` - Sorts the values in ascending order.
-  - `desc` - Sorts the values in descending order.
-- `User ID`: `(Type: Snowflake  || Flag: Optional)`: ID of the user from whom you want to get a position in the leaderboard.
+  - `asc` - Sorts values in ascending order.
+  - `desc` - Sorts values in descending order.
+- `User ID`: `(Type: Snowflake  || Flag: Optional)`: The ID of a user from whom you want to get a position in a leaderboard.
 
 ## Example
 ```
 $nomention
-My position in leaderboards: $getLeaderboardPosition[user;Coins;desc]
+Your position in the leaderboard: $getLeaderboardPosition[user;Coins;desc]
 ```
 
 ``` discord yaml
@@ -34,5 +34,5 @@ My position in leaderboards: $getLeaderboardPosition[user;Coins;desc]
   bot: true
   verified: true
   content: |
-    My position in leaderboards: 2
+    Your position in the leaderboard: 2
 ```

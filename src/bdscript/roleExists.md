@@ -1,7 +1,7 @@
 # $roleExists
 Returns whether or not the provided ID is an actual role.
 
-> 🧙‍♂️ "true" means the role exists, "false" means it doesn't.
+> "true" means the role exists, "false" means it doesn't.
 
 ## Syntax
 ```

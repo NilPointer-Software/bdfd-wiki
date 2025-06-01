@@ -12,7 +12,7 @@ $boostCount[Guild ID]
 ## Example
 ```
 $nomention
-This server currently has $boostCount[$message[1]] boost(s).
+This server currently has $boostCount[$message] boost(s).
 ```
 
 ```discord yaml

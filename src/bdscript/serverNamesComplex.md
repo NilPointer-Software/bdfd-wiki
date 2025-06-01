@@ -1,5 +1,5 @@
 # $serverNames[]
-Returns *x* server names in which the bot is in.
+Returns *x* (`Amoount`) server names in which the bot is in.
 
 ## Syntax
 ```
@@ -16,4 +16,19 @@ $nomention
 $serverNames[3;
 ]
 ```
-![example](https://user-images.githubusercontent.com/111157596/232112782-0912f671-eb2b-4c5b-814d-df6544a710cd.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: "Bot Designer for Discord Official Server\n
+    B. Support\n
+    Bot Designer List"
+```

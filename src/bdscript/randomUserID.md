@@ -11,4 +11,18 @@ $randomUserID
 $nomention
 Random User ID: $randomUserID
 ```
-![example](https://user-images.githubusercontent.com/111157596/233841026-56d019d5-792c-4099-8b2d-3724dcdc6018.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random User ID: 154148273307910144
+```

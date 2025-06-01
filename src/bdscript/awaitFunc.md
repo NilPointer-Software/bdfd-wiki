@@ -17,13 +17,13 @@ $nomention
 What do you want me to say?
 $awaitFunc[say]
 ```
+
 ``` discord yaml
 - user_id: 729343563401265193
   username: Nicky
   color: "#EE7908"
   content: |
-    !say
-
+    !example
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -31,13 +31,11 @@ $awaitFunc[say]
   verified: true
   content: |
     What do you want me to say?
-
 - user_id: 729343563401265193
   username: Nicky
   color: "#EE7908"
   content: |
     I love BDFD!
-
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -47,5 +45,6 @@ $awaitFunc[say]
     I love BDFD!
 ```
 
-
-> For more info, see the [Awaited Commands Guide](../guides/general/awaitedCommands.md).
+```admonish info title="Read more"
+For more information, read the the [Awaited Commands Guide](../guides/general/awaitedCommands.md).
+```

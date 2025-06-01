@@ -1,5 +1,7 @@
 # $sendNotification
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 Sends a notification to your mobile phone.
 

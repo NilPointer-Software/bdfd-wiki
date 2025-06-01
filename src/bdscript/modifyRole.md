@@ -6,7 +6,7 @@ Modifies an existing role.
 $modifyRole[Role ID;(Role name;Color hex;Hoisted?;Mentionable?)]
 ```
 
-> 🧙‍♂️ You can use `!unchanged` as an argument to leave the setting as-is.
+> You can use `!unchanged` as an argument to leave the setting as-is.
 
 ### Parameters 
 - `Role ID` `(Type: Snowflake || Flag: Required)`: The ID of the role to modify.
@@ -22,8 +22,6 @@ Required permissions that the bot must have for this function to work properly:
 ## Example
 ```
 $nomention
-$argsCheck[>2;❌ Please provide the needed arguments! Usage: `!role-name (role) (newRoleName)`]
-$onlyPerms[manageroles;❌ You are missing the manage_roles permission!]
 $modifyRole[$findRole[$message[1]];$replaceText[$message;$message[1];;1];!unchanged;!unchanged;!unchanged]
 $description[✅ Changed role name of <@&$findRole[$message[1]]>]
 ```

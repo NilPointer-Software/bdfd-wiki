@@ -1,25 +1,31 @@
 .breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5px;
-    color: var(--links);
+    user-select: none;
+    -webkit-user-select: none;
+    display: -webkit-box;
+    color: var(--color1);
+    padding-top: 10px;
+    transition: .3s;
 }
 
-.breadcrumb :nth-child(n+3)::before {
-    content: "/";
-    margin: 0 5px;
+.breadcrumb p {
+    margin: 0 2px;
 }
 
 .breadcrumb a {
     text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    transition: .3s;
+    color: var(--color1) !important;
+    border-radius: 12px;
 }
 
 .breadcrumb a:hover{
-    color: var(--icons-hover);
+    padding: 6px;
+    font-size: 105%;
     text-decoration: none;
-}
-
-.breadcrumb :link:hover{
-    color: var(--icons-hover);
-    text-decoration: none;
+    transition: .3s;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }

@@ -1,8 +1,6 @@
 # $day
 Returns the current day of the month.
 
-> You can use [`$time`](./time.md) to change the timezone.
-
 ## Syntax
 ```
 $day
@@ -11,7 +9,7 @@ $day
 ## Example
 ```
 $nomention
-Today Is: $day
+Current Day: $day
 ```
 
 ``` discord yaml
@@ -25,5 +23,11 @@ Today Is: $day
   color: "#748BD4"
   bot: true
   content: |
-    Today Is: 22
+    <div id="day-mark"></div>
 ```
+
+```admonish info title="Timezone"
+You can use [`$time[]`](./time.md) to change the timezone.
+```
+
+<script src="../theme/livetime.js"></script>

@@ -7,10 +7,40 @@ $nomention
 ```
 
 ## Example
-**With `$nomention`:**
+```
+$nomention
+Hello World!
+```
 
-![example](https://user-images.githubusercontent.com/69215413/126917956-197108f9-7cd4-4e96-9a24-12d36b1886d8.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello world!
+```
 
-**Without `$nomention`:**
+-  Without `$nomention`:
 
-![example](https://user-images.githubusercontent.com/69215413/126917978-723c1a83-c95d-4517-b0fd-deb4d088558d.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  highlight: true
+  content: |
+    <@RainbowKey> Hello world!
+```

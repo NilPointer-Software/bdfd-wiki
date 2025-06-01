@@ -9,14 +9,38 @@ $time[Timezone]
 ### Parameters
 - `Timezone` `(Type: String || Flag: Required)`: The timezone to use in the date/time functions. Accepts [TZ database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) timezone name as input.
 
+#### Popular Timezons
+`Timezone`        | UTC
+------------------|-----
+`Europe/Moscow`   | +03:00
+`Europe/Athens`   | +03:00
+`Europe/Istanbul` | +03:00
+`Europe/Warsaw`   | +02:00
+`Europe/Paris`    | +02:00
+`Europe/Berlin`   | +02:00
+
 ## Example
 ```
 $nomention
-
 $time[America/New_York]
-New York : $hour:$minute:$second
-
-$time[Europe/Warsaw]
-Warsaw : $optOff[$hour:$minute:$second]
+New York Time: $hour:$minute, $day
+$time[Europe/Moscow]
+Moscow Time: $optOff[$hour:$minute, $day]
 ```
-![Screenshot_20221029_234758](https://user-images.githubusercontent.com/95774950/198847125-b093d143-7890-4478-a437-1c80c35c4c41.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <div id="time-mark"></div>
+```
+
+<script src="../theme/livetime.js"></script>

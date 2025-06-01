@@ -1,20 +1,42 @@
 # $random[]
-Returns a random number between 'minimum' and 'maximum'.
+Returns a random number between `min` and `max`.
 
-> 📌 `$random[]` never returns the 'maximum' value, as it's right side exclusive range. Basically, to get a random number between 1 and 10; you'd put 11 as the 'maximum' instead of 10 i.e `$random[1;11]`.
+```admonish warning
+`$random[]` never returns the 'max' value, as it's right side exclusive range. Basically, to get a random number between 1 and 5; you'd put 6 as the `Max` instead of 5 i.e `$random[1;6]` will return: 1, 2, 3, 4, 5.
+```
 
 ## Syntax
 ```
-$random[minimum;maximum]
+$random[Min;Max]
 ````
 
 ### Parameters 
-- `minimum` `(Type: Integer, Float || Flag: Required)`: The minimum value.
-- `maximum` `(Type: Integer, Float || Flag: Required)`: The maximum value.
+- `Min` `(Type: Integer, Float || Flag: Required)`: The minimum value.
+- `Max` `(Type: Integer, Float || Flag: Required)`: The maximum value.
+
+```admonish failure
+The `Max` value cannot be greater than or equal to the `Min` value.
+- ❌ `Max` <= `Min`
+- ✅ `Max` > `Min`
+```
 
 ## Example
 ```
 $nomention
-🎲 You rolled `$random[1;7]`!
+The random number is **$random[1;21]**
 ```
-![example](https://user-images.githubusercontent.com/69215413/123555172-0d939d00-d752-11eb-9d30-975bf6e8e99f.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    The random number is <b>16</b>
+```

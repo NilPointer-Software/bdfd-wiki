@@ -1,5 +1,13 @@
 # $eval
-Evaluates the provided BDScript code. **Can only be used in BDScript 2.**
+<div class="functionTags">
+  <span id="DangerousTag">Dangerous</span>
+</div>
+
+Evaluates the provided BDScript code.
+
+```admonish danger title="BDScript 2"
+Can only be used in **[BDScript 2](../guides/general/bds2/aboutBDScript2.md)**.
+```
 
 > ⚠️ **Should be used with caution!** ⚠️
 
@@ -23,7 +31,7 @@ $eval[$message]
   username: Nicky
   color: "#EE7908"
   content: |
-    !example $sendMessage[Hello! My username is $username]]
+    !example $sendMessage[Hello! My username is $username]
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"

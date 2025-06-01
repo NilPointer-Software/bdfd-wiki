@@ -12,8 +12,23 @@ $getRoleColor[Role ID]
 ## Example
 ```
 $nomention
-$description[<@$authorID>'s color: `#$getRoleColor[$highestRole[$authorID]]`]
-$color[$getRoleColor[$highestRole[$authorID]]]
+Color: #$getRoleColor[$highestRole[$authorID]]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123296726-e7b59080-d4e4-11eb-8b7d-4712af14faa6.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Color: #E67E22
+```
+
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) and [`$highestRole[]`](./highestRoleComplex.md) works?
+```

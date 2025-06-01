@@ -17,8 +17,7 @@ Hello $username!
   username: Spen
   color: "#b9a0e0"
   content: |
-    !echo
-
+    !example
 - username: Wiki Bot
   color: "#b9a0e0"
   bot: true

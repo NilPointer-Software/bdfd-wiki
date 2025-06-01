@@ -1,5 +1,8 @@
 # $messageContains
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+  <span id="CallbackTag">Callback</span>
+</div>
 
 `$messageContains[]` is a [callback](../callbacks/introduction.md) that allows you to create a trigger with multiple phrases. In addition, the bot also looks for those phrases anywhere in the author's message. This feature is great for creating an auto-response or auto-moderation system. 
 
@@ -21,7 +24,7 @@ $messageContains[Word;...]
    ``` discord yaml
    - user_id: 246604909451935745
      username: noituri
-     color: "#F1BDEE"
+     color: "#FF0000"
      content: |
        Hello
 

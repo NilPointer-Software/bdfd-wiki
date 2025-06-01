@@ -12,6 +12,19 @@ $nomention
 I'm currently in $serverCount servers!
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/126365568-9b9ced49-6955-4e74-934d-688f0fcda366.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    I'm currently in 203 servers!
+```
 
 > Can be used in bot status

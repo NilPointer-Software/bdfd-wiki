@@ -9,7 +9,7 @@ $getTimestamp[Time unit]
 ### Parameters
 - `Time unit` `(Type: Enum || Flag: Required)`: Sets timestamp time unit.
 
-> 📝 Time unit value can either be :
+> Time unit value can either be :
 > - `s` (seconds)
 > - `ms` (milliseconds)
 > - `ns` (nanoseconds)
@@ -18,10 +18,26 @@ $getTimestamp[Time unit]
 ```
 $nomention
 Unix Timestamp
- In Seconds - $getTimestamp[s]
- In Milliseconds - $getTimestamp[ms]
- In Nanoseconds - $getTimestamp[ns]
- ```
- ![example](https://user-images.githubusercontent.com/95774950/188307175-48845a0d-6229-46f3-80eb-f1f9d3fde974.png)
- 
-> 📄 For more info about UNIX timestamps on Discord click [here](../resources/discordTimestamps.md).
+In Seconds - $getTimestamp[s]
+In Milliseconds - $getTimestamp[ms]
+In Nanoseconds - $getTimestamp[ns]
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <div id="moreunix-mark"></div>
+```
+
+> For more info about UNIX timestamps on Discord click [here](../resources/discordTimestamps.md).
+
+<script src="../theme/livetime.js"></script>

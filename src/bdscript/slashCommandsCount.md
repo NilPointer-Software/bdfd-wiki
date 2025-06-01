@@ -11,4 +11,18 @@ $slashCommandsCount
 $nomention
 I have $slashCommandsCount slash commands!
 ```
-![example](https://user-images.githubusercontent.com/69215413/126920314-1ad9374e-d19d-43f5-8939-f9abf48a62de.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    I have 4 slash commands!
+```

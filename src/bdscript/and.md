@@ -57,7 +57,7 @@ $and[$nickname==MineBartekSA;$message==Update]
     false
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - user_id: 1009018156494368798
@@ -69,7 +69,7 @@ $and[$nickname==MineBartekSA;$message==Update]
     false
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - user_id: 1009018156494368798
@@ -79,6 +79,12 @@ $and[$nickname==MineBartekSA;$message==Update]
   verified: true
   content: |
     true
-  ```
+```
 
-> For more info, see the [If Guide](../guides/ifStatements.md).
+```admonish question title="What is this?"
+How [`$message`](./message.md) and [`$nickname`](./nickname.md) works?
+```
+
+```admonish info title="Read more"
+For more information, read the the [If Statements Guide](../guides/ifStatements.md).
+```

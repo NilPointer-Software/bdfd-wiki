@@ -40,4 +40,6 @@ $calculate[$message] 🧠
     6.9 🧠
 ```
 
-> [How does `$enableDecimals[]` work?](./enableDecimals.md)
+```admonish question title="What is this?"
+How [`$enableDecimals[]`](./enableDecimals.md) and [`$message`](./message.md) works?
+```

@@ -32,4 +32,6 @@ Role ID: $findRole[$message]
     Role ID: 568155071997542410
 ```
 
-> [How `$message` works?](./message.md)
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

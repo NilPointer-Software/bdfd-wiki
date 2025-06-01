@@ -9,7 +9,7 @@ $dm[User ID;...]
 ### Parameters 
 - `User ID` `(Type: Snowflake || Flag: Emptiable)`: The user to whom to send the direct message. Use semicolons `;` as a separator to separate multiple user IDs.
 
-> 🧙‍♂️ You can leave the `User ID` argument empty to direct message the mentioned user. See [Example #1](#example-1) below.
+> You can leave the `User ID` argument empty to direct message the mentioned user. See [Example #1](#example-1) below.
 
 ## Examples
 ### Example #1
