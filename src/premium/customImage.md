@@ -1,5 +1,7 @@
 # $customImage
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 This function is used to return the URL of an image uploaded in the app.
 

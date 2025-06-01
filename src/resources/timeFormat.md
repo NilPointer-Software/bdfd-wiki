@@ -35,6 +35,5 @@ MST                    |   Timezone name
 -070000[^1]      |  Timezone offset (±hhmmss)
 -07:00:00[^1]    |  Timezone offset (±hh:mm:ss)
 
-> 📌 All time format values are case-sensitive.
-
+> All time format values are case insensitive (i.e both `MOH` and `Mon` will work).
 [^1]: Replacing the sign in the format with a Z character triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC (+00:00) zone.

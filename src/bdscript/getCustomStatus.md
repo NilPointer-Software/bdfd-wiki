@@ -30,4 +30,6 @@ Custom status: $getCustomStatus[$authorID]
     Custom status: Hello! I'm RainbowKey
 ```
 
-> [How `$authorID` works?](./authorID.md)
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) works?
+```

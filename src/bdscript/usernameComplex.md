@@ -14,4 +14,22 @@ $username[User ID]
 $nomention
 $username just hugged $username[$mentioned[1]]!
 ```
-![example](https://user-images.githubusercontent.com/69215413/114783383-f430a680-9d47-11eb-91e5-6ade1c6ef234.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <@MineBartekSA>
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    RainbowKey just hugged <@MineBartekSA>!
+```
+
+```admonish question title="What is this?"
+How [`$username`](./username.md) and [`$mentioned[]`](./mentioned.md) works?
+```

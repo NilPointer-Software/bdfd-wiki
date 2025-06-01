@@ -8,7 +8,7 @@ $newTicket[Category ID/Name;No question message;In ticket message;Message to use
 
 ### Parameters 
 - `Category ID/Name` `(Type: String || Flag: Emptiable)`: The category to put the ticket channels in. Can be a category ID or name.
-  > 🧙‍♂️ Setup the ticket category permissions:\
+  > Setup the ticket category permissions:\
   > ![tickets](https://user-images.githubusercontent.com/111157596/249498738-ba98d976-0315-4dbd-b398-632e710fd039.png)
 - `No question message` `(Type: String || Flag: Emptiable)`: The message that appears in `{subject}` when the user doesn't provide a subject.
 - `In ticket message` `(Type: String || Flag: Emptiable)`: The message that is sent in the new ticket channel.

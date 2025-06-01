@@ -29,7 +29,7 @@ $addTextInput[Text Input ID;Style;Label;(Minimum length;Maximum length;Required;
 - `Value` - The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than `Minimum length` and no more than `Maximum length`.
 - `Placeholder` - The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.
 
-> 🧙‍♂️ **Note:** You can't add more than 5 text input fields.
+> **Note:** You can't add more than 5 text input fields.
 
 ## Getting Input from a Modal Submission
 _Use this function in response to the modal submission interaction:_

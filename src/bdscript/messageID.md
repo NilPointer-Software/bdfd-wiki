@@ -1,7 +1,9 @@
 # $messageID
 Returns the ID of the author's message.
 
-> 📝 If `$messageID` is written in `$onInteraction` commands, it will return the bot's message ID.
+```admonish info
+If this function is written in `$onInteraction`/`$onInteraction[]` commands, it will return the bot's message ID.
+```
 
 ## Syntax
 ```

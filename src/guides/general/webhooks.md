@@ -51,7 +51,7 @@ $c[❗️This example requires BDScript 2 enabled❗️]
 __Explaination:__
 
 This code is storing the newly created webhook URL returned from `$webhookCreate[]` *(using $var[])*. Then, in the rest of the code `$var[webhookURL]` was called to get the webhook URL, which allowed the webhook message to send using `$webhookContent[]`.
-> 🧙‍♂️ Remember, you need to be in BDScript 2 mode to use `$var[]`!
+> Remember, you need to be in BDScript 2 mode to use `$var[]`!
 
 __Output:__
 

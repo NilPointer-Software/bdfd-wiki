@@ -13,7 +13,21 @@ $footer[Text;(Index)]
 ## Example
 ```
 $nomention
-$footer[Hi! I'm a footer.]
+$footer[Hello! I'm footer👋]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/125977730-17b79b15-9b0d-494d-8d7b-39c50ccb2b0a.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  embed:
+    footer:
+      text: Hello! I'm footer👋
+```

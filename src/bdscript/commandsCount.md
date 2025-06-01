@@ -11,18 +11,18 @@ $commandsCount
 $nomention
 I have $commandsCount commands!
 ```
-``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
-  content: |
-    !example
 
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example Hello world!
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
   bot: true
   verified: true
   content: |
-    I have 174 commands!
+    I have 85 commands!
 ```

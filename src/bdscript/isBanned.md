@@ -1,7 +1,7 @@
 # $isBanned
 Returns whether a user is banned from the current server or not. Requires the `BAN_MEMBERS` permission.
 
-> 🧙‍♂️ "true" means the user is banned, "false" means they aren't.
+> "true" means the user is banned, "false" means they aren't.
 
 ## Syntax
 ```

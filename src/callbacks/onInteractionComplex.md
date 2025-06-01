@@ -1,4 +1,8 @@
 # $onInteraction[]
+<div class="functionTags">
+  <span id="CallbackTag">Callback</span>
+</div>
+
 Triggered upon an interaction being emitted (e.g. a button being clicked).
 
 ## Syntax

@@ -5,7 +5,10 @@ Adds a hyperlink to the author text.
 ```
 $authorURL[URL;(Index)]
 ```
-> `$authorURL[]` will not work if there is no text provided in [`$author[]`](./author.md).
+
+```admonish failure
+`$authorURL[]` will not work if there is no text provided in [`$author[]`](./author.md).
+```
 
 ### Parameters
 - `URL` `(Type: URL || Flag: Emptiable)`: The link to set as the author hyperlink.
@@ -14,8 +17,8 @@ $authorURL[URL;(Index)]
 ## Example
 ```
 $nomention
-$author[Click me to visit the BDFD website!]
-$authorURL[https://botdesignerdiscord.com]
+$author[Click me to visit the BDFD web app]
+$authorURL[https://app.botdesignerdiscord.com/]
 ```
 ``` discord yaml
 - user_id: 729343563401265193
@@ -32,6 +35,6 @@ $authorURL[https://botdesignerdiscord.com]
   content: <none>
   embed:
     author:
-      text: Click me to visit the BDFD website!
-      url: https://botdesignerdiscord.com
+      text: Click me to visit the BDFD web app
+      url: https://app.botdesignerdiscord.com/
 ```

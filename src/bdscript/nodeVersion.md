@@ -24,7 +24,7 @@ Node version: $nodeVersion
   bot: true
   verified: true
   content: |
-    Node version: 11-08-2024-44c8617
+    Node version: 06-09-2024-6c7eada
 ```
 
 > You can use [`$botNode`](./botNode.md) to find out which node your bot is on.

@@ -1,12 +1,18 @@
 # $ai
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
+
 Allows you to communicate with AI.
 
 ## Syntax
 ```
 $ai[Prompt;(System prompt;Response token limit)]
 ```
-  
-> 4 characters in the AI answer = [1 token](./aiQuota.md)
+
+```admonish tip title="Log Quota"
+[4 characters in the AI answer](./ai.md) = [1 token](./aiQuota.md)
+```
 
 ### Parameters
 - `Prompt` `(Type: String || Flag: Required)`: Prompt to the AI, for example: "Say something funny!".

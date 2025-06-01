@@ -1,7 +1,7 @@
 # $resetUserVar
 Resets a user variable back to its default value *(the one inputted in the app)* **for every user, or just the provided user**.
 
-> 🧙‍♂️ Use this function wisely!
+> Use this function wisely!
 
 ## Syntax
 ```

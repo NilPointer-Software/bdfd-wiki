@@ -1,20 +1,18 @@
 # $kick[]
-Kicks the provided user. 
+Kicks the provided user with specified reason. 
 
 ## Syntax
 ```
-$kick[user ID;(reason)]
+$kick[User ID;(Reason)]
 ```
 
 ### Parameters
-- `user ID` `(Type: Snowflake || Flag: Required)`: The user to kick from the server.
-- `reason` `(Type: String || Flag: Vacantable)`: The audit-log reason for the kick.
+- `User ID` `(Type: Snowflake || Flag: Required)`: The user to kick from the server.
+- `Reason` `(Type: String || Flag: Vacantable)`: The audit-log reason for the kick.
 
 ## Example
 ```
 $nomention
-$onlyPerms[kick;❌ You need the `kick` permission to use that!]
-$argsCheck[>1;❌ Please provide a user to kick. Usage: `!kick (user) <reason>`.]
 $kick[$mentioned[1];$noMentionMessage]
 ✅ Kicked `$username[$mentioned[1]]#$discriminator[$mentioned[1]]`!
 ```

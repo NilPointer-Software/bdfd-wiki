@@ -10,18 +10,28 @@ $replaceText[Text;Sample;New;(Amount)]
 - `Text` `(Type: String || Flag: Emptiable)`: The text where the bot is searching for the 'Sample'.
 - `Sample` `(Type: String || Flag: Emptiable)`: The text to replace with 'New'.
 - `New` `(Type: String || Flag: Emptiable)`: The text to replace 'Sample' with.
-- `Amount` `(Type: Integer || Flag: Optional)`: The number of times, at most, the bot should replace the sample. Use `-1` to replace all 'Sample' in 'Text' with 'New'.
+- `Amount` `(Type: Integer || Flag: Optional)`: The number of times, at most, the bot should replace the sample. Use `-1` to replace all 'Sample' in 'Text' with 'New'. Default is `1`.
 
-## Examples
+## Example
+```
+$nomention
+Result 1: $replaceText[Hello world!;Hello;Bye]
+Result 2: $replaceText[Hello world!;ll;o;-1]
+Result 3: $replaceText[Hello world!;!;]
+```
 
-**Example #1:**
-- Input: `$replaceText[Hello World! Hello Earth!;Hello;Hi;1]`
-- Output: `Hi World! Hello Earth!`
-
-**Example #2:**
-- Input: `$replaceText[Hello World! Hello Earth! Hello Dog!;Hello;Hi;-1]`
-- Output: `Hi World! Hi Earth! Hello Dog!`
-
-**Example #3:**
-- Input: `$replaceText[Hello World! Hello Earth! Hello Dog!;Hello;Hi;-1]` or `$replaceText[Hello World! Hello Earth! Hello Dog!;Hello;Hi]`
-- Output: `Hi World! Hi Earth! Hi Dog!`
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: "Result 1: Bye world!\n
+Result 2: Heoo world!\n
+Result 3: Hello world"
+```

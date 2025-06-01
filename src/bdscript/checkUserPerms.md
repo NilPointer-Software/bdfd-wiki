@@ -16,13 +16,13 @@ $nomention
 $onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are an administrator.] 
 You aren't an admin!
 ```
+
 ``` discord yaml
 - user_id: 729343563401265193
   username: Nicky
   color: "#EE7908"
   content: |
     !example
-
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -30,4 +30,8 @@ You aren't an admin!
   verified: true
   content: |
     You can't use this command, because you are an administrator.
+```
+
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) works?
 ```

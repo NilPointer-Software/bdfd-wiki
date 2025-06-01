@@ -18,11 +18,37 @@ $url[Mode;Text]
    $nomention
    https://example.url/encode?convert=$url[encode;Hello world!!]
    ```
-   ![example](https://user-images.githubusercontent.com/95774950/197517522-e7429268-dfcf-4289-bb48-1554e2d4ecfa.png)
+   
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: <a href="https://example.url/encode?convert=Hello+world%21%21">https://example.url/encode?convert=Hello+world%21%21</a>
+```
 
 - Decoding
    ```
    $nomention
    $url[decode;https://example.url/decode?convert=Hello+world%21%21]
    ```
-   ![example](https://user-images.githubusercontent.com/95774950/197517477-758829ff-19f6-4134-885d-8a513104f099.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: <a href="https://example.url/encode?convert=Hello world!!">https://example.url/encode?convert=Hello</a> world!!
+```

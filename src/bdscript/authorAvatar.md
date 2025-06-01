@@ -16,8 +16,7 @@ $image[$authorAvatar]
   username: Nicky
   color: "#EE7908"
   content: |
-    !authorAvatar
-
+    !example
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -28,7 +27,7 @@ $image[$authorAvatar]
     image: https://user-images.githubusercontent.com/111157596/257052136-4b8d5715-b381-4d5f-8c46-8ae0be53c8d8.png
 ```
 
-
-> You can use `?size=size` at the end of the avatar URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096. 
->
->  (e.g. `$image[$authorAvatar?size=4096]`)
+```admonish tip title="Image size"
+You can use `?size=size` at the end of the banner URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096.
+(e.g. `$image[$authorAvatar?size=4096]`)
+```

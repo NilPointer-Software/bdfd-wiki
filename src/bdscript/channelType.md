@@ -18,15 +18,12 @@ $nomention
 $channelType[$channelID]
 ```
 
-**Text Channel**
-
 ``` discord yaml
 - user_id: 729343563401265193
   username: Nicky
   color: "#EE7908"
   content: |
-    !channelType
-
+    !example
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -36,19 +33,6 @@ $channelType[$channelID]
     text
 ```
 
-\
-**DM Channel**
-
-``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  content: |
-    !channelType
-
-- user_id: 566613317972394004
-  username: Wiki Bot
-  bot: true
-  verified: true
-  content: |
-    dm
+```admonish question title="What is this?"
+How [`$channelID`](./channelID.md) works?
 ```

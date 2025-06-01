@@ -10,6 +10,8 @@ In this section, you'll learn how to use the button component.
 - [`$removeButtons`](../../../../bdscript/removeButtons.md)
 - [`$removeButtons[]`](../../../../bdscript/removeButtonsComplex.md)
 - [`$removeComponent[]`](../../../../bdscript/removeComponent.md)
+
+## Support Callbacks Used
 - [`$onInteraction`](../../../../callbacks/onInteraction.md)
 - [`$onInteraction[]`](../../../../callbacks/onInteractionComplex.md)
 
@@ -156,6 +158,7 @@ $editButton[Interaction ID/URL;Label;Style;(Disable?;Emoji;Message ID)]
 - `Disable?` `(Type: Bool || Flag: Vacantable)`: If set to `yes` the button can't be pressed. Defaults as `no`. _(Optional)_
 - `Emoji` `(Type: Emoji || Flag: Vacantable)`: Edits an emoji inside the button. Emojis have to be either pasted as *unicode* or be in the following format `<:emoji name:emoji ID>`. _(Optional)_
 - `Message ID` `(Type: Snowflake || Flag: Vacantable)`: Edits a button in a message with the provided ID. It's important to note that provided message ID author **has to** be the bot. _(Optional)_
+
 ## Example
 #### Trigger: `$onInteraction[test]`
 ```
@@ -163,7 +166,27 @@ $nomention
 $username said hello!
 $editButton[test;Say hello!;danger;yes;]
 ```
-![example](https://user-images.githubusercontent.com/113303649/210611967-f15b8c9b-7bd9-4218-a89b-08e93ce7eeb3.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  edited: true
+  content: |
+    rainbow_key said hello!
+  components:
+  - 
+     - type: destructive
+       label: Say hello!
+       disabled: true
+```
 
 
 # $removeButtons
@@ -176,10 +199,25 @@ $removeButtons
 #### Trigger: `$onInteraction[test]`
 ```
 $nomention
-$username removed all buttons from this message
+$username removed all buttons from this message.
 $removeButtons
 ```
-![example](https://user-images.githubusercontent.com/113303649/210621352-ae7334a6-a2de-4fbe-8749-7134f9a73af3.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  edited: true
+  content: |
+    rainbow_key removed all buttons from this message.
+```
 
 # $removeButtons[]
 Removes all buttons from the specified message.
@@ -192,10 +230,31 @@ $removeButtons[Message ID]
 ## Example
 ```
 $nomention
-$username removed all buttons from the specified message id
+$username removed all buttons from the specified message ID.
 $removeButtons[$message]
 ```
-![example](https://user-images.githubusercontent.com/113303649/210875885-aa20517e-1c37-4206-8eee-eefa765eb40a.png)
+
+```discord yaml
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Message ID: 1291982295888166974
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 1291982295888166974
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    rainbow_key removed all buttons from the specified message ID.
+```
 
 # $removeComponent
 Removes a certain component from a message.

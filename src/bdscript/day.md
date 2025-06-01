@@ -1,8 +1,6 @@
 # $day
 Returns the current day of the month.
 
-> You can use [`$time`](./time.md) to change the timezone.
-
 ## Syntax
 ```
 $day
@@ -26,6 +24,10 @@ Current Day: $day
   bot: true
   content: |
     <div id="day-mark"></div>
+```
+
+```admonish info title="Timezone"
+You can use [`$time[]`](./time.md) to change the timezone.
 ```
 
 <script src="../theme/livetime.js"></script>

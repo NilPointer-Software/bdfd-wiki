@@ -1,8 +1,6 @@
 # $month
 Returns the current month of this year.
 
-> 🧙‍♂️ You can use [`$time`](./time.md) to change the timezone.
-
 ## Syntax
 ```
 $month
@@ -14,4 +12,23 @@ $nomention
 Current Month: $month
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/122829373-edc52a80-d2b4-11eb-861c-e0a629f258ff.png)
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <div id="month-mark"></div>
+```
+
+```admonish info title="Timezone"
+You can use [`$time[]`](./time.md) to change the timezone.
+```
+
+<script src="../theme/livetime.js"></script>

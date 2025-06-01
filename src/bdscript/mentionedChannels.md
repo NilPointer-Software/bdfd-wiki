@@ -1,6 +1,10 @@
 # $mentionedChannels
 Returns the ID of the mentioned channel.
 
+```admonish fail
+You can't use this function in slash command! Instead of this use [`$message[]`](./messageComplex.md).
+```
+
 ## Syntax
 ```
 $mentionedChannels[Mention number;(Return current?)]

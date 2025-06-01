@@ -2,7 +2,7 @@
 In this section, you'll learn how to use the if statement.
 
 ## Content
-[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif[]**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and[]**](#and) > [**$or[]**](#or) > [**$stop**](#stop) > [**Simple Example**](#simple-example)
+[**Functions Used**](#functions-used) > [**Signs**](#signs) > [**$if[]**](#if) > [**$endif**](#endif) > [**$else**](#else) > [**$elseif[]**](#elseif) > [**$and[]**](#and) > [**$or[]**](#or) > [**$stop**](#stop) > [**Simple Example**](#simple-example)
 
 ## Functions Used
 - [`$if[]`](../../bdscript/if.md)
@@ -276,7 +276,7 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - user_id: 1009018156494368798
@@ -288,7 +288,7 @@ $endif
     Hi user
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - user_id: 1009018156494368798
@@ -347,7 +347,7 @@ $endif
     Bye
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example 
 - user_id: 1009018156494368798
@@ -359,7 +359,7 @@ $endif
     Hi
 - user_id: 154148273307910144
   username: MineBartekSA
-  color: "#f1bdee"
+  color: "#FF0000"
   content: |
     !example Update
 - user_id: 1009018156494368798

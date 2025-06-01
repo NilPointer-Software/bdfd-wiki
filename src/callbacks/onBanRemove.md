@@ -1,4 +1,8 @@
 # $onBanRemove
+<div class="functionTags">
+  <span id="CallbackTag">Callback</span>
+</div>
+
 *Triggered when a user gets unbanned from the server.*
 
 `$onBanRemove[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user is unbanned from the server. 
