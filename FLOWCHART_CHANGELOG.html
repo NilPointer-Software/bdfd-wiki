@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js bdfd">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Flowchart Changelog - Bot Designer For Discord - Wiki</title>
+
+
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="The official documentation of BDFD. It covers guides, examples related to BDScript, BDJS and as well features too.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#633fb3">
+    <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="stylesheet" href="theme/css/variables.css">
+    <link rel="stylesheet" href="theme/css/general.css">
+    <link rel="stylesheet" href="theme/css/chrome.css">
+    <link rel="stylesheet" href="theme/css/print.css" media="print">
+
+    <!-- Discord Components -->
+    <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="tomorrow-night.css">
+    <link rel="stylesheet" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="./src/theme/mdbook-admonish.css">
+
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script>
+        var path_to_root = "";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+    </script>
+    <!-- Start loading toc.js asap -->
+    <script src="toc.js"></script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script>
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        const html = document.documentElement;
+        html.classList.remove('bdfd')
+        html.classList.add(theme);
+        html.classList.add("js");
+    </script>
+
+    <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script>
+        var sidebar = null;
+        var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        } else {
+            sidebar = 'hidden';
+        }
+        sidebar_toggle.checked = sidebar === 'visible';
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <!-- populated by js -->
+        <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+        <noscript>
+            <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+        </noscript>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+            <div class="sidebar-resize-indicator"></div>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="page">
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="menu-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Bot Designer For Discord</h1>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script>
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div class="snowflakes">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i>
+            </div>
+
+            <div id="content" class="content">
+                <main>
+                    <nav class="breadcrumb">
+                        <script src="theme/breadcrumbs.js"></script>
+                    </nav>
+
+                    <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/FLOWCHART_CHANGELOG.md" class="editPage">
+                        <i class='fa fa-edit' id="editPageIcon"></i>
+                    </a>
+
+                    <h1 id="flowchart-changelog"><a class="header" href="#flowchart-changelog">Flowchart Changelog</a></h1>
+<link rel="stylesheet" href="./theme/css/changelog.css">
+<div class="changelog">
+  <div class="changePrev" id="year">
+    <h2 id="2024"><a class="header" href="#2024">2024</a></h2>
+    <p>What new has been added?</p>
+  </div>
+</div>
+<div class="changelog">
+  <div class="changePrev">
+    <h2 id="august"><a class="header" href="#august">August</a></h2>
+    <p>Let's start from scratch now</p>
+    <span id="newUpdate">NEW</span>
+  </div>
+  <ul>
+    <li>Flowchart bot type was added to Bot Designer For Discord.</li>
+    <li>Added <code class="hljs">Entry point</code></li>
+    <li>Added <code class="hljs">Add numbers</code></li>
+    <li>Added <code class="hljs">Add response embed</code></li>
+    <li>Added <code class="hljs">Add</code></li>
+    <li>Added <code class="hljs">Ban</code></li>
+    <li>Added <code class="hljs">Ceil number</code></li>
+    <li>Added <code class="hljs">Create Boolean</code></li>
+    <li>Added <code class="hljs">Create number</code></li>
+    <li>Added <code class="hljs">Create snowflake</code></li>
+    <li>Added <code class="hljs">Create text</code></li>
+    <li>Added <code class="hljs">Current Date</code></li>
+    <li>Added <code class="hljs">Delete global storage</code></li>
+    <li>Added <code class="hljs">Divide numbers</code></li>
+    <li>Added <code class="hljs">Equals</code></li>
+    <li>Added <code class="hljs">Floor number</code></li>
+    <li>Added <code class="hljs">Format date</code></li>
+    <li>Added <code class="hljs">Format text</code></li>
+    <li>Added <code class="hljs">Format text with multiple arguments</code></li>
+    <li>Added <code class="hljs">Generate random Boolean</code></li>
+    <li>Added <code class="hljs">Generate random number</code></li>
+    <li>Added <code class="hljs">Generate random text</code></li>
+    <li>Added <code class="hljs">Get command arg</code></li>
+    <li>Added <code class="hljs">Get author</code></li>
+    <li>Added <code class="hljs">Get channel ID</code></li>
+    <li>Added <code class="hljs">Get gloval value</code></li>
+    <li>Added <code class="hljs">Get guild ID</code></li>
+    <li>Added <code class="hljs">Global storage contains key</code></li>
+    <li>Added <code class="hljs">Greater</code></li>
+    <li>Added <code class="hljs">Greater or equal</code></li>
+    <li>Added <code class="hljs">If</code></li>
+    <li>Added <code class="hljs">Is number</code></li>
+    <li>Added <code class="hljs">Less</code></li>
+    <li>Added <code class="hljs">Less or equal</code></li>
+    <li>Added <code class="hljs">Multiply numbers</code></li>
+    <li>Added <code class="hljs">Not</code></li>
+    <li>Added <code class="hljs">Open direct message channel</code></li>
+    <li>Added <code class="hljs">Or</code></li>
+    <li>Added <code class="hljs">Parse number</code></li>
+    <li>Added <code class="hljs">Parse timestamp</code></li>
+    <li>Added <code class="hljs">Replace in text</code></li>
+    <li>Added <code class="hljs">Round number</code></li>
+    <li>Added <code class="hljs">Send message</code></li>
+    <li>Added <code class="hljs">Set global data</code></li>
+    <li>Added <code class="hljs">Set response message</code></li>
+    <li>Added <code class="hljs">Subtract numbers</code></li>
+    <li>Added <code class="hljs">To lowercase</code></li>
+    <li>Added <code class="hljs">To text</code></li>
+    <li>Added <code class="hljs">To uppercase</code></li>
+  </ul>
+</div>
+<div id="admonition-bdscript-changelog" class="admonition admonish-abstract" role="note" aria-labelledby="admonition-bdscript-changelog-title">
+<div class="admonition-title">
+<div id="admonition-bdscript-changelog-title">
+<p>BDScript Changelog</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-bdscript-changelog"></a>
+</div>
+<div>
+<p>If you want to see the BDScript changelog, <a href="./CHANGELOG.html">click here</a>.</p>
+</div>
+</div>
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="CHANGELOG.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="terms.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a href="CHANGELOG.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <a href="CHANGELOG.html" class="nav-chapters previous" title="Previous page"
+                    aria-label="Previous page" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a href="terms.html" class="nav-chapters next" title="Next chapter"
+                    aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="terms.html" class="nav-chapters next" title="Next page"
+                        aria-label="Next page" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+        </nav>
+
+    </div>
+
+
+
+    <script>
+        window.playground_copyable = true;
+    </script>
+
+    <script src="elasticlunr.min.js" charset="utf-8"></script>
+    <script src="mark.min.js" charset="utf-8"></script>
+    <script src="theme/searcher.js" charset="utf-8"></script>
+
+    <script src="clipboard.min.js" charset="utf-8"></script>
+    <script src="highlight.js" charset="utf-8"></script>
+    <script src="book.js" charset="utf-8"></script>
+    <script src="theme/playground.js"></script>
+
+    <!-- Custom JS scripts -->
+
+
+    <script src="theme/settings/code-hg.js" defer></script>
+
+    <!-- Override some theme attributes with the custom settings -->
+    <script src="theme/settings/apply-settings.js"></script>
+</body>
+
+</html>

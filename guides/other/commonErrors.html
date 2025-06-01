@@ -1,0 +1,577 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js bdfd">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Common BDFD Errors - Bot Designer For Discord - Wiki</title>
+
+
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="The official documentation of BDFD. It covers guides, examples related to BDScript, BDJS and as well features too.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#633fb3">
+    <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="../../favicon.png">
+    <link rel="apple-touch-icon" href="../../favicon.png">
+
+    <link rel="stylesheet" href="../../theme/css/variables.css">
+    <link rel="stylesheet" href="../../theme/css/general.css">
+    <link rel="stylesheet" href="../../theme/css/chrome.css">
+    <link rel="stylesheet" href="../../theme/css/print.css" media="print">
+
+    <!-- Discord Components -->
+    <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../../highlight.css">
+    <link rel="stylesheet" href="../../tomorrow-night.css">
+    <link rel="stylesheet" href="../../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+    <link rel="stylesheet" href="../.././src/theme/mdbook-admonish.css">
+
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script>
+        var path_to_root = "../../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+    </script>
+    <!-- Start loading toc.js asap -->
+    <script src="../../toc.js"></script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script>
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        const html = document.documentElement;
+        html.classList.remove('bdfd')
+        html.classList.add(theme);
+        html.classList.add("js");
+    </script>
+
+    <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script>
+        var sidebar = null;
+        var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        } else {
+            sidebar = 'hidden';
+        }
+        sidebar_toggle.checked = sidebar === 'visible';
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <!-- populated by js -->
+        <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+        <noscript>
+            <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+        </noscript>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+            <div class="sidebar-resize-indicator"></div>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="page">
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="menu-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+                            title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
+                            aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Bot Designer For Discord</h1>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script>
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div class="snowflakes">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i>
+            </div>
+
+            <div id="content" class="content">
+                <main>
+                    <nav class="breadcrumb">
+                        <script src="../../theme/breadcrumbs.js"></script>
+                    </nav>
+
+                    <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/guides/other/commonErrors.md" class="editPage">
+                        <i class='fa fa-edit' id="editPageIcon"></i>
+                    </a>
+
+                    <h1 id="common-bdfd-errors"><a class="header" href="#common-bdfd-errors">Common BDFD Errors</a></h1>
+<hr />
+<h1 id="error-messages-handling"><a class="header" href="#error-messages-handling">Error Messages Handling</a></h1>
+<h2 id="error-message-syntax"><a class="header" href="#error-message-syntax">Error message syntax</a></h2>
+<h3 id="error-function"><a class="header" href="#error-function">Error function</a></h3>
+<p>The function that is causing the error.</p>
+<p><strong>Function location:</strong>
+<img src="https://raw.githubusercontent.com/MayBeKurito/kuri-storage/main/wiki/error_message_syntax-function.png" alt="Location of function" /></p>
+<h3 id="row-and-column"><a class="header" href="#row-and-column">Row and Column</a></h3>
+<ul>
+<li><code>Row</code>:
+The row where the error is located.</li>
+<li><code>Column</code>:
+The column where the error is located.</li>
+</ul>
+<p><strong>Row and column location:</strong>
+<img src="https://raw.githubusercontent.com/MayBeKurito/kuri-storage/main/wiki/syntax_msg_error-row%26column.png" alt="Location of row and column" /></p>
+<p><em>In this case, the row is ‘3’ and the column ‘15’.</em></p>
+<h2 id="argument-types-and-flags"><a class="header" href="#argument-types-and-flags">Argument types and flags</a></h2>
+<h3 id="argument-types"><a class="header" href="#argument-types">Argument types</a></h3>
+<p>The argument type represent different values, which indicates what the argument value must be.</p>
+<blockquote>
+<p>You can check the argument type list <a href="https://nilpointer-software.github.io/bdfd-wiki/guides/other/arguments.html#argument-types">here</a>.</p>
+</blockquote>
+<h3 id="argument-flags"><a class="header" href="#argument-flags">Argument flags</a></h3>
+<p>The argument flags mark if arguments within a function may be used (or hence, not used at all).</p>
+<blockquote>
+<p>You can check the argument flags list <a href="https://nilpointer-software.github.io/bdfd-wiki/guides/other/arguments.html#argument-flags">here</a>.</p>
+</blockquote>
+<hr />
+<h1 id="expectations"><a class="header" href="#expectations">Expectations</a></h1>
+<h2 id="aclaration"><a class="header" href="#aclaration">Aclaration</a></h2>
+<p>All error messages that are under this section  are generic, which means that may come with any function with the same argument type.</p>
+<h2 id="expected-valid-value"><a class="header" href="#expected-valid-value">Expected valid value</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$sendMessage[]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$sendMessage' at '3:15' returned an error: expected valid value in position 1, got empty value </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>The function requires a valid value, which means that the mentioned argument (“1”) is empty and it requires a value.</li>
+</ul>
+<p><em>The value type depends on the function</em></p>
+<blockquote>
+<p>This message refers to the function <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/sendMessage.html">$sendMessage</a>.</p>
+</blockquote>
+<h2 id="expected-arguments"><a class="header" href="#expected-arguments">Expected arguments</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$addButton[no]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$addButton' at '2:14' returned an error: expected at least 4 arguments, got 1 </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>The function requires at least 4 arguments, but has only 1, which is “no”.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Add the expected arguments for the function.</li>
+</ul>
+<blockquote>
+<p>This message refers to the function <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/addButton.html">$addButton</a>.</p>
+</blockquote>
+<h2 id="expected-boolean"><a class="header" href="#expected-boolean">Expected boolean</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$addButton[no;Button ID;Label;danger;No Bool Text]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$addButton' at '2:41' returned an error: expected boolean in position 1, got 'No Bool Text' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>The function requires a boolean value, which refers to “true”/“false” or “yes”/“no”.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Replace the argument of the boolean with “true”/“false or “yes”/“no”.</li>
+</ul>
+<blockquote>
+<p>This message refers to the function <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/addButton.html">$addButton</a>.</p>
+</blockquote>
+<h2 id="expected-emoji"><a class="header" href="#expected-emoji">Expected emoji</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$addButton[no;Button ID;Label;danger;no;invalid emoji]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$addButton' at '2:47' returned an error: expected valid emoji in position 6, got 'invalid emoji' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>The function requires a valid emoji value, which means any text other than a emoji or discord emoji format.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Input an emoji in the valid formats.</li>
+</ul>
+<p><em><strong>The discord emoji formats are three:</strong></em></p>
+<ol>
+<li><code>:emoji_name:</code></li>
+<li><code>&lt;:emoji_name:emoji_id&gt;</code></li>
+<li><code>&lt;a:emoji_name:emoji_id&gt;</code> (For animated emojis)</li>
+</ol>
+<blockquote>
+<p>This message refers to the function <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/addButton.html">$addButton</a>.</p>
+</blockquote>
+<h2 id="expected-snowflake"><a class="header" href="#expected-snowflake">Expected snowflake</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$addButton[no;Button ID;Label;danger;no;;Invalid/no snowflake]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$addButton' at '2:59' returned an error: expected valid emoji in position 6, got 'Invalid/no snowflake' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This function requires a valid snowflake. A snowflake refers to a ID of any type, in this case, it’s a message ID.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Input a valid ID.</li>
+</ul>
+<p><em><strong>In other functions, this error may come refering to:</strong></em></p>
+<ul>
+<li>Server ID</li>
+<li>Category ID</li>
+<li>Channel ID</li>
+<li>Role ID</li>
+<li>User ID</li>
+</ul>
+<blockquote>
+<p>This message refers to the function <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/addButton.html">$addButton</a>.</p>
+</blockquote>
+<h2 id="expected-url"><a class="header" href="#expected-url">Expected URL</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$image[No/Invalid URL]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$image' at '2:22' returned an error: expected URL in position 1, got 'No/Invalid URL' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>The function requires a valid URL.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>
+<p><code>$image</code>: Input a valid image URL (It must be direct to the image).</p>
+</li>
+<li>
+<p><code>others</code>: In other functions, it will depend on the argument type.</p>
+</li>
+</ul>
+<blockquote>
+<p>This message refers to the function <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/image.html">$image</a>.</p>
+</blockquote>
+<h2 id="expected-integer"><a class="header" href="#expected-integer">Expected integer</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$description[Message;No integer]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$description' at '2:32' returned an error: expected integer in position 2, got 'No integer' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>The function requires a valid integer.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Input an entire number.</li>
+</ul>
+<p><em><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/other/arguments.html#argument-types">Integer</a> refers to an entire number.</em></p>
+<blockquote>
+<p>This message refers to the function <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/description.html">$description</a></p>
+</blockquote>
+<hr />
+<h2 id="max-value-smaller-than-min-value"><a class="header" href="#max-value-smaller-than-min-value">Max value smaller than min value</a></h2>
+<p><strong>Function code:</strong></p>
+<pre><code>$random[2;1]
+</code></pre>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$random' at '3:15' returned an error: Maximal value can't be smaller than or equal to minimal </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message tells that the maximum value is smaller than the minimum value.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Input a maximum value greater than the minimum value.</li>
+</ul>
+<p><em>In other commands that contains Min amd Max arguments, the error message may become inversed, but the meaning is the same.</em></p>
+<hr />
+<h1 id="exclusive-functions-error-messages"><a class="header" href="#exclusive-functions-error-messages">Exclusive function’s error messages</a></h1>
+<h2 id="addbutton-function-errors"><a class="header" href="#addbutton-function-errors">$addButton function errors</a></h2>
+<details><summary>$addButton</summary>
+<h3 id="invalid-enum-value"><a class="header" href="#invalid-enum-value">Invalid enum value</a></h3>
+<p><strong>Error Message:</strong></p>
+<p><code>❌ Function '$addButton' at '2:52' returned an error: expected valid enum value in position 4, got 'invalid style example' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message comes when the 4th argument doesn’t include a valid <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/addButton.html#button-style">button style</a>.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Input a valid button style.</li>
+</ul>
+<blockquote>
+<p><em>The text ‘invalid style example’ was used to generate this error message. It will return whatever you input in the 4th argument when this error occurs.</em></p>
+</blockquote>
+<h3 id="invalid-link-value"><a class="header" href="#invalid-link-value">Invalid link value</a></h3>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$addButton' at '2:39' returned an error: Url in the button has to be valid </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message comes when the button style is ‘link’ but the URL in the second position is invalid.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Replace the input of the second argument with a valid URL.</li>
+<li>Replace the input of the button style argument to any other button style than “link”.</li>
+</ol>
+</details>
+<h2 id="addselectmenuoption-function-errors"><a class="header" href="#addselectmenuoption-function-errors">$addSelectMenuOption function errors</a></h2>
+<details><summary>$addSelectMenuOption</summary>
+<h3 id="incorrectinvalid-select-menu-id"><a class="header" href="#incorrectinvalid-select-menu-id">Incorrect/Invalid Select menu ID</a></h3>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$addSelectMenuOption' at '3:68' returned an error: Select menu not found </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This error comes when the select menu ID doesn’t corresponds to any select menu from your code.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Replace the Menu ID argument with the Menu ID inputted in the <code>$newSelectMenu</code>.</li>
+<li>Add a <code>$newSelectMenu</code> with the same Menu ID inputted in the <code>$addSelectMenuOption</code>.</li>
+<li>Add a <code>$addSelectMenuOption</code> with the same Menu ID inputted in the <code>$newSelectMenu</code>.</li>
+</ol>
+<p><em>This message may also appear when there is no ‘$newSelectMenu’ in the code.</em></p>
+</details>
+<h2 id="addtextinput-function-errors"><a class="header" href="#addtextinput-function-errors">$addTextInput function errors</a></h2>
+<details><summary>$addTextInput</summary>
+<h3 id="invalid-style-input"><a class="header" href="#invalid-style-input">Invalid style input</a></h3>
+<p><strong>Error message:</strong></p>
+<p><code>❌ Function '$addTextInput' at '3:43' returned an error: expected valid enum value in position 2, got 'invalid style' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This error comes when the 2nd argument doesn’t include a valid <a href="https://nilpointer-software.github.io/bdfd-wiki/bdscript/addTextInput.html#styles">text input style</a>.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Input a valid text input style.</li>
+</ul>
+</details>
+<hr />
+<h1 id="discord-api-errors"><a class="header" href="#discord-api-errors">Discord API errors</a></h1>
+<h2 id="most-common-discords-api-errors"><a class="header" href="#most-common-discords-api-errors">Most common discord’s API errors.</a></h2>
+<details><summary><strong>Missing Permissions</strong></summary>
+<h3 id="missing-permissions"><a class="header" href="#missing-permissions">Missing permissions</a></h3>
+<p><strong>API error message:</strong></p>
+<p><code>❌ Could not create the channel: 'HTTP 403 Forbidden, {"message": "Missing Permissions", "code": 50013}' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This specific message refers to the failure while creating a channel, with the error message of “Missing permissions”, which means that the bot doesn’t have the required permissions to create a channel.</li>
+</ul>
+<p><em>All functions that manage external information require specific permissions, it depends on the function what the required permission is.</em></p>
+<blockquote>
+<p>API error <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=50013">reference</a>.</p>
+</blockquote>
+<blockquote>
+<p>HTTP response <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=403">reference</a>.</p>
+</blockquote>
+</details>
+<details><summary><strong>Cannot edit a message</strong></summary>
+<h3 id="cannot-edit-a-message"><a class="header" href="#cannot-edit-a-message">Cannot edit a message</a></h3>
+<p><strong>API error message:</strong></p>
+<p><code>HTTP 403 Forbidden, {"message": "Cannot edit a message authored by another user", "code": 50005}} </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message means that the bot cannot change someone else’s message. You may have entered the wrong message ID.</li>
+</ul>
+<blockquote>
+<p>API error <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=50005">reference</a>.</p>
+</blockquote>
+<blockquote>
+<p>HTTP response <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=403">reference</a>.</p>
+</blockquote>
+</details>
+<details><summary><strong>Unkown message</strong></summary>
+<h3 id="unknow-message"><a class="header" href="#unknow-message">Unknow message</a></h3>
+<p><strong>API error message</strong></p>
+<p><code>❌ Error occurred: 'HTTP 404 Not Found, {"message": "Unknown Message", "code": 10008}' </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message means that the message was not found from the provided ID or it is not a valid message ID.</li>
+</ul>
+<blockquote>
+<p>API error <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=10008">reference</a>.</p>
+</blockquote>
+<blockquote>
+<p>HTTP response <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=404">reference</a>.</p>
+</blockquote>
+</details>
+<details><summary><strong>Missing Access</strong></summary>
+<h3 id="missing-access"><a class="header" href="#missing-access">Missing Access</a></h3>
+<p><code>❌ HTTP 403 Forbidden, {"message": "Missing Access", "code": 50001} </code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message means that the bot cannot receive information from a server/channel where it does not have perms.</li>
+</ul>
+<blockquote>
+<p>API error <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=50001">reference</a>.</p>
+</blockquote>
+<blockquote>
+<p>HTTP response <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=403">reference</a>.</p>
+</blockquote>
+</details>
+<details><summary><strong>Cannot reply without permission</strong></summary>
+<h3 id="cannot-reply-without-permission"><a class="header" href="#cannot-reply-without-permission">Cannot reply without permission</a></h3>
+<pre><code>❌ HTTP 403 Forbidden, {"message": "Cannot reply without permission to read message history", "code": 160002}
+</code></pre>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message means that the bot does not have perms to use $reply[] in the channel without perm to read the channel history (<code>readmessagehistory</code>).</li>
+</ul>
+<blockquote>
+<p>API error <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=160002">reference</a>.</p>
+</blockquote>
+<blockquote>
+<p>HTTP response <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=403">reference</a>.</p>
+</blockquote>
+</details>
+<details><summary><strong>Duplicated component</strong></summary>
+<h3 id="duplicated-component-id"><a class="header" href="#duplicated-component-id">Duplicated component ID</a></h3>
+<p><code>Could not attach components to the response: Error: HTTP 400 Bad Request, {"message": "Invalid Form Body", "code": 50035, "errors": {"components": {"0": {"components": {"1": {"custom_id": {"_errors": [{"code": "COMPONENT_CUSTOM_ID_DUPLICATED", "message": "Component custom id cannot be duplicated"}]}}}}}}}</code></p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>This message means that the custom ID is duplicated and can’t be added.</li>
+</ul>
+<p><em>This message comes with any component (Button/Menu/Modal)</em></p>
+<blockquote>
+<p>API error <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=50035">reference</a></p>
+</blockquote>
+<blockquote>
+<p>HTTP response <a href="https://discord.com/developers/docs/topics/opcodes-and-status-codes#:~:text=400">reference</a>.</p>
+</blockquote>
+</details>
+
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../../guides/other/sharecode.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../resources/introduction.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a href="../../guides/other/sharecode.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <a href="../../guides/other/sharecode.html" class="nav-chapters previous" title="Previous page"
+                    aria-label="Previous page" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a href="../../resources/introduction.html" class="nav-chapters next" title="Next chapter"
+                    aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="../../resources/introduction.html" class="nav-chapters next" title="Next page"
+                        aria-label="Next page" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+        </nav>
+
+    </div>
+
+
+
+    <script>
+        window.playground_copyable = true;
+    </script>
+
+    <script src="../../elasticlunr.min.js" charset="utf-8"></script>
+    <script src="../../mark.min.js" charset="utf-8"></script>
+    <script src="../../theme/searcher.js" charset="utf-8"></script>
+
+    <script src="../../clipboard.min.js" charset="utf-8"></script>
+    <script src="../../highlight.js" charset="utf-8"></script>
+    <script src="../../book.js" charset="utf-8"></script>
+    <script src="../../theme/playground.js"></script>
+
+    <!-- Custom JS scripts -->
+
+
+    <script src="../../theme/settings/code-hg.js" defer></script>
+
+    <!-- Override some theme attributes with the custom settings -->
+    <script src="../../theme/settings/apply-settings.js"></script>
+</body>
+
+</html>
