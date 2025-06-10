@@ -201,6 +201,7 @@
     - [$floor](./bdscript/floor.md)
     - [$footer](./bdscript/footer.md)
     - [$footerIcon](./bdscript/footerIcon.md)
+    - [$getAttachments](./bdscript/getAttachments.md)
     - [$getBanReason](./bdscript/getBanReason.md)
     - [$getBotInvite](./bdscript/getBotInvite.md)
     - [$getChannelVar](./bdscript/getChannelVar.md)
