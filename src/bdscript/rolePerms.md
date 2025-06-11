@@ -49,6 +49,8 @@ $rolePerms[$guildID;$mentionedRoles[1];#]
     CreateInvite# KickMembers# BanMembers# ManageChannels
 ```
 
+>  [How to get the Server ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
+
 ```admonish question title="What is this?"
 How [`$mentionedRoles`](./mentionedRoles.md) works?
 ```

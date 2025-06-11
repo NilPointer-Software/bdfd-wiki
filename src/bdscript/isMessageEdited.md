@@ -3,12 +3,12 @@ Checks if the message is edited, if it's returns true if it's not it returns fal
 
 ## Syntax
 ```
-$isMessageEdited[ChannelID;MessageID]
+$isMessageEdited[Channel ID;Message ID]
 ```
 
 ### Parameters
-- `ChannelID` `(Type: Snowflake || Flag: Required)`: The channel ID where the message is.
-- `MessageID` `(Type: Snowflake || Flag: Required)`: The ID of the message.
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel ID where the message is.
+- `Message ID` `(Type: Snowflake || Flag: Required)`: The ID of the message.
 
 ## Example
 ```
@@ -35,6 +35,8 @@ $isMessageEdited[$channelID;$lastMessageID]
   content: |
     false
 ```
+
+>  [How to get the Message/Channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 
 ```admonish question title="What is this?"
 How [`$lastMessageID`](./lastMessageID.md) works?

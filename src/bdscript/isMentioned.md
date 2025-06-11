@@ -12,7 +12,7 @@ $isMentioned[User ID]
 ## Example
 ```
 $nomention
-$isMentioned[1059052363895287889]
+$isMentioned[$mentioned[1]]
 ```
 
 ``` discord yaml
