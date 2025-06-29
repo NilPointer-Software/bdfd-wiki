@@ -13,7 +13,36 @@ $numberSeparator[Number;(Separator)]
 ## Example
 ```
 $nomention
-$numberSeparator[5000]
+Result: $numberSeparator[$message]
 ```
 
-![image](https://user-images.githubusercontent.com/69215413/126918009-8f4ba7d1-875b-43da-a24b-5126464996b9.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 5000
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Result: 5,000
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 2536000
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Result: 2,536,000
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

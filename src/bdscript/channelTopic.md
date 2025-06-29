@@ -17,7 +17,6 @@ $nomention
   color: "#EE7908"
   content: |
     !example
-
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -25,4 +24,8 @@ $nomention
   verified: true
   content: |
     <#testing>'s channel topic is: A testing channel!
+```
+
+```admonish question title="What is this?"
+How [`$channelID`](./channelID.md) works?
 ```

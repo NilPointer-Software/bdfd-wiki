@@ -29,3 +29,7 @@ $userID[$username]
   content: |
     803569638084313098
 ```
+
+```admonish question title="What is this?"
+How [`$username`](./username.md) works?
+```

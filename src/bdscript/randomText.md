@@ -15,4 +15,53 @@ $nomention
 $randomText[Hello;Hi;Hey]!
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123556366-e42a3f80-d758-11eb-94fa-8836cccc882f.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random Text: Hello!
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random Text: Hey!
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random Text: Hello!
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random Text: Hi!
+```

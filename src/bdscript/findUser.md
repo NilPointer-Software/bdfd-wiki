@@ -31,4 +31,6 @@ User ID: $findUser[$message]
     User ID: 1009018156494368798
 ```
 
-> [How `$message` works?](./message.md)
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

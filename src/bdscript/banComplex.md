@@ -7,7 +7,11 @@ $ban[Reason]
 ```
 
 ### Parameters
-- `Reason` `(Type: String || Flag: Emptiable)`: The reason for the ban, which will be saved in the audit-log.
+- `Reason` `(Type: String || Flag: Emptiable)`: The reason for the ban, which will be saved in the audit-log. Reason must not exceed more than 512 characters.
+
+```admonish tip
+Use [`$getBanReason[]`](./getBanReason.md) to get the ban reason.
+```
 
 ## Example
 ```
@@ -32,4 +36,8 @@ $ban[$noMentionMessage]
 - content: |
       <font color="white">Spen</font> left without pizza.
   type: leave
+```
+
+```admonish question title="What is this?"
+How [`$noMentionMessage`](./noMentionMessage.md) and [`$mentioned[]`](./mentioned.md) works?
 ```

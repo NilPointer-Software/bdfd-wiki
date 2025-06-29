@@ -1,6 +1,10 @@
 # $mentionedRoles
 Returns the ID of the mentioned role.
 
+```admonish fail
+You can't use this function in slash command! Instead of this use [`$message[]`](./messageComplex.md).
+```
+
 ## Syntax
 ```
 $mentionedRoles[Mention number]

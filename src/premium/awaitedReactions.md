@@ -1,5 +1,7 @@
 # Awaited reactions
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 **Awaited reactions** are similar to [awaited commands](../guides/awaitedCommands.md). Unlike awaited commands which wait for a message, they wait for a reaction instead. 
 

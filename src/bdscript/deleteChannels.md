@@ -37,4 +37,6 @@ $deleteChannels[$mentionedChannels[1]]
 \
 ![example](https://github.com/Rainb0wKey/bdfd-wiki/assets/113303649/6479e1dd-da03-431a-85e8-1f8ff18bf84c)
 
-> How [`$channelName[]`](./channelName.md) and [`$mentionedChannels[]`](./mentionedChannels.md) works?
+```admonish question title="What is this?"
+How [`$channelName[]`](./channelName.md) and [`$mentionedChannels[]`](./mentionedChannels.md) works?
+```

@@ -29,3 +29,7 @@ Display name: $displayName[$mentioned[1]]
   content: |
     Display name: MineBartekSA
 ```
+
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
+```

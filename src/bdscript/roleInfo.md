@@ -19,7 +19,7 @@ You can use the following "commands" within `$roleInfo[]`:
 - `{color}` - Returns the role's color.
 - `{position}` - Returns the role's position on the "roles list".
 
-> 🧙‍♂️ `$roleInfo[]` automatically generates a description. So, `$description[]` should not be used in the code.
+> `$roleInfo[]` automatically generates a description. So, `$description[]` should not be used in the code.
 
 ## Example
 ```

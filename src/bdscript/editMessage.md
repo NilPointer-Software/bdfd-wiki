@@ -5,7 +5,7 @@ Edits one of the bot's messages.
 ```
 $editMessage[Channel ID;Message ID;Content;(Title;Description;Color;Footer)]
 ```
-> 🧙‍♂️ [How Do I Get The Channel / Message ID? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
+> [How Do I Get The Channel / Message ID? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
 
 ### Parameters
 - `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel that this message belongs to.

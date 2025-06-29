@@ -10,14 +10,41 @@ $disableInnerSpaceRemoval
 ```
 $nomention
 $disableInnerSpaceRemoval
-
 Hello               $displayName!
 ```
 
-### Output Without
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      Hello RainbowKey!
+```
 
-![](https://user-images.githubusercontent.com/70456337/214134396-560937db-efe6-40e9-b50d-2bd26faab03b.png)
+- Without `$disableInnerSpaceRemoval`:
 
-### Output With
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      HelloㅤㅤㅤㅤRainbowKey!
+  ```
 
-![](https://user-images.githubusercontent.com/70456337/214134431-5ac11979-20a4-45ef-b390-918cc4b01370.png)
+```admonish question title="What is this?"
+How [`$displayName`](./displayName.md) works?
+```

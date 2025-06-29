@@ -1,5 +1,7 @@
 # Custom Prefixes
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 ## Explanation
 Premium gives you access to use `$getServerVar[]` in triggers. This makes it possible to make custom prefixes.

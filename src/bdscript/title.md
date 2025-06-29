@@ -22,4 +22,20 @@ $nomention
 $title[This is a title!]
 $description[⬆️ That is a nice title.]
 ```
-![example](https://user-images.githubusercontent.com/69215413/123186040-4c310b00-d465-11eb-99b1-6c43828c8ddb.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+  embed:
+    title: This is a title!
+    description: ⬆️ That is a nice title.
+```

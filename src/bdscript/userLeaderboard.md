@@ -1,7 +1,9 @@
 # $userLeaderboard
 Returns the top 10 users' usernames and values for a given user variable.
 
-> 📌 [`$userLeaderboard`](./userLeaderboard.md) automatically generates a description. So, [`$description`](./description.md) of index `1` should be avoided in the code.
+```admonish warning
+`$userLeaderboard[]` automatically generates a description. So, [`$description[]`](./description.md) of index `1` **should be avoided** in the code.
+```
 
 ## Syntax
 ```
@@ -17,7 +19,25 @@ $userLeaderboard[Variable name;(Sort)]
 $nomention
 $userLeaderboard[Money;asc]
 ```
-![Screenshot_20221023_113048](https://user-images.githubusercontent.com/95774950/197376578-309895b3-4e37-44c8-8bcc-acb73578fe78.png)
 
-> 📌 Why is my leaderboard showing inaccurate values?\
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+  embed:
+    description: "1. RainbowKey - 2146\n
+2. MineBartekSA - 1987\n
+3. Menhera Bread - 863"
+```
+
+```admonish question title="Why is my leaderboard showing inaccurate values?"
 Leaderboard values are not updated in real-time. The previous values are cached for a short duration. It will take about 5 minutes to show the updated values.
+```

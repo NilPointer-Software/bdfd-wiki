@@ -44,3 +44,7 @@ Pong! $ping ms
   content: |
       Pong! 1 ms
 ```
+
+```admonish question title="What is this?"
+How [`$ping`](./ping.md) works?
+```

@@ -1,5 +1,7 @@
 # $awaitReactions
-*(for premium bots)*
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
+</div>
 
 This function is used to await a reaction.
 

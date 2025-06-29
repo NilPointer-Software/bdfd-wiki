@@ -6,7 +6,9 @@ Returns how long the command took to execute, in milliseconds.
 $executionTime
 ```
 
-> You cannot use this function in [`$sendMessage[]`](./sendMessage.md), [`$channelSendMessage[]`](./findUser.md), [`$sendEmbedMessage[]`](./sendEmbedMessage.md), [`$sum[]`](./sum.md), [`$sub[]`](./sub.md), [`$divide[]`](./divide.md), [`$multi[]`](./multi.md), [`$calculate[]`](./calculate.md), [`$random[]`](./randomComplex.md), [`$textSplit[]`](./textSplit.md), [`$splitText[]`](./splitText.md), etc...
+```admonish warning
+You cannot use this function in [`$sendMessage[]`](./sendMessage.md), [`$channelSendMessage[]`](./findUser.md), [`$sendEmbedMessage[]`](./sendEmbedMessage.md), [`$sum[]`](./sum.md), [`$sub[]`](./sub.md), [`$divide[]`](./divide.md), [`$multi[]`](./multi.md), [`$calculate[]`](./calculate.md), [`$random[]`](./randomComplex.md), [`$textSplit[]`](./textSplit.md), [`$splitText[]`](./splitText.md), etc...
+```
 
 ## Example
 ```

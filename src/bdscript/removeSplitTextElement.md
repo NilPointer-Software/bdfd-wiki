@@ -1,7 +1,7 @@
 # $removeSplitTextElement
 Removes a certain element from the [`$textSplit[]`](./textSplit.md) values.
 
-> 🧙‍♂️ This function is unneeded, if `$textSplit[]` isn't present in the code.
+> This function is unneeded, if `$textSplit[]` isn't present in the code.
 
 ## Syntax
 ```

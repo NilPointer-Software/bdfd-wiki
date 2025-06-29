@@ -29,6 +29,6 @@ $nomention
   bot: true
   verified: true
   content: |
-    13 Node Version: 05-07-2023-c8800d6
+    13 Node version: 06-09-2024-6c7eada
 ```
 

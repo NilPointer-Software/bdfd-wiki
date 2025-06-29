@@ -12,7 +12,7 @@ $channelPosition[Channel ID]
 ## Example
 ```
 $nomention
-Channel Position: $channelPosition[$mentionedChannels[1;yes]]
+Channel Position: $channelPosition[$mentionedChannels[1]]
 ```
 
 ```discord yaml
@@ -30,5 +30,6 @@ Channel Position: $channelPosition[$mentionedChannels[1;yes]]
     Channel Position: 2
 ```
 
-> How [`$mentionedChannels[]`](./mentionedChannels.md) works?
-
+```admonish question title="What is this?"
+How [`$mentionedChannels[]`](./mentionedChannels.md) works?
+```

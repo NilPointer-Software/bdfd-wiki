@@ -12,7 +12,31 @@ $userRoles[User ID]
 ## Example
 ```
 $nomention
-$description[<@$mentioned[1;yes]>'s roles: 
-$userRoles[$mentioned[1;yes]]]
+**My roles**:
+$userRoles[$authorID]
 ```
-![example](https://user-images.githubusercontent.com/69215413/125122358-4e30d600-e0c3-11eb-8930-07276f1bfbbd.png)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: "<b>My roles</b>:\n 
+    Support \n
+    Wiki Contributor \n
+    User"
+```
+
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) works?
+```
+
+```admonish tip
+You can use [`$textSplit[]`](./textSplit.md) to specify a different separator.
+```

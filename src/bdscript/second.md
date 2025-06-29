@@ -1,8 +1,6 @@
 # $second
 Returns the current second of this minute.
 
-> You can use [`$time`](./time.md) to change the timezone.
-
 ## Syntax
 ```
 $second
@@ -27,6 +25,10 @@ Current Second: $second
   verified: true
   content: |
     <div id="second-mark"></div>
+```
+
+```admonish info title="Timezone"
+You can use [`$time[]`](./time.md) to change the timezone.
 ```
 
 <script src="../theme/livetime.js"></script>
