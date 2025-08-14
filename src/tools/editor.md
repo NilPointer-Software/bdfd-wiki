@@ -18,5 +18,5 @@ Here you can use the basic editor features to write codes more conveniently.
 	<button id="highlightButton" onclick="toggleHighlight()">Highlighting found</button><br>
 </div>
 
-<p>[: <span id="openCount">0</span> | ]: <span id="openCount">0</span><p>
+<p>[: <span id="openCount">0</span> | ]: <span id="closeCount">0</span><p>
 <div id="highlightedText"></div>
