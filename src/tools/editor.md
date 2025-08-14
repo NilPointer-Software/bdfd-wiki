@@ -7,7 +7,7 @@ Here you can use the basic editor features to write codes more conveniently.
     <p>Lines: <span id="lineCount">0</span></p>
     <p>Characters: <span id="charCount">0</span></p>
 </div>
-
+<p id="error-message"></p>
 <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
 <label for="searchText">Find:</label>
 <input type="text" id="searchText"><br>
@@ -15,6 +15,5 @@ Here you can use the basic editor features to write codes more conveniently.
 <input type="text" id="replaceText"><br>
 <button onclick="replaceText()">Replcae all</button>
 <button id="highlightButton" onclick="toggleHighlight()">Highlighting found</button><br>
-<p id="error-message"></p>
 <p>[: <span id="openCount">0</span> | ]: <span id="openCount">0</span><p>
 <div id="highlightedText"></div>
