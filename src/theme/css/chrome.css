@@ -1035,3 +1035,21 @@ ul#searchresults span.teaser em {
 	margin-top: -2.5%;
     white-space: nowrap; 
 }
+
+#editor {
+	width: 96%;
+	height: 40rem;
+	font-size: 1.5rem;
+	min-height: 1.3rem;
+	max-height: 100em;
+	border-radius: 10px;
+	border-width: 0;
+	color: #bbb;
+	background: hsl(0deg 0% 100% / 7%);
+	padding: 7px;
+	font-size: 1.5rem;
+	resize: vertical;
+	margin: 0 auto;
+	display: block;
+	outline: none;
+}
