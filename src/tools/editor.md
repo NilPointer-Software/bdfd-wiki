@@ -1,46 +1,5 @@
 # Text Editor 
 Here you can use the basic editor features to write codes more conveniently.
-
-<style>
-	textarea {
-		width: 100%;
-		height: 100px;
-	    border-radius: 10px;
-		margin-bottom: 10px;
-	}
-
-	input {
-		width: 100%;
-		margin-bottom: 10px;
-	}
-
-	.highlight {
-		background-color: yellow;
-	}
-
-	#highlightedText {
-		white-space: pre-wrap;
-		word-break: break-word;
-	}
-
-	#error-message {
-		color: red;
-	}
-
-	#stats-container {
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: white;
-		padding: 10px;
-		border-bottom: 1px solid #ccc;
-		z-index: 100;
-	}
-
-	body {
-		padding-top: 60px;
-	}
-</style>
  
 <div id="stats-container">
 	<p>Words: <span id="wordCount">0</span> |
