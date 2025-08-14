@@ -1012,13 +1012,14 @@ ul#searchresults span.teaser em {
 
 /* Tools Editor */
 #stats-container p {
-	transition: .3s;
+	transition: .4s;
 	display: inline-block;
-	margin-right: 5px;
+	margin-right: 7.5px;
 	background-color: var(--color3);
 	padding: 5px;
 	font-size: 1.5rem;
 	border-radius: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 #stats-container span {
@@ -1026,9 +1027,10 @@ ul#searchresults span.teaser em {
 }
 
 #stats-container p:hover {
-	transition: .3s;
-    border-radius: 12px;
-	font-size: 1.7rem;
+	transform: scale(1.1);
+	border-radius: 8px;
+	border-width: 1px;
+	transition: .4s;
 }
 
 #stats-container {
@@ -1053,8 +1055,53 @@ ul#searchresults span.teaser em {
 	padding: 7px;
 	font-size: 1.5rem;
 	resize: vertical;
-	margin: 0 auto;
+	margin: -2rem auto;
 	display: block;
 	outline: none;
+}
+
+
+#text-editorui {
+	margin-top: 1rem;
+	background-color: var(--color3);
+	padding: 6px;
+	border-radius: 10px;
+}
+
+#searchText, #replaceText {
+	background: hsl(0deg 0% 100% / 7%);
+	color: #bbb;
+	font-size: 1.5rem;
+	display: block;
+	outline: none;
+	border-radius: 5px;
+	border-width: 0;
+	width: 99%;
+	height: 3rem;
+}
+
+#text-editorui button {
+	touch-action: manipulation;
+	-webkit-user-select: none;
+	user-select: none;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	height: 4rem;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.5rem;
+	margin: 0.25%;
+	color: #fff;
+	background: hsl(0deg 0% 100% / 7%);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	transition: 0.2s;
+}
+
+#text-editorui button:hover {
+	transform: scale(1.05);
+	border-radius: 8px;
+	border-width: 1px;
+	transition: 0.4s;
 }
 
