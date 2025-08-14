@@ -1010,3 +1010,28 @@ ul#searchresults span.teaser em {
 	-webkit-animation-timing-function: ease-in;
 }
 
+/* Tools Editor */
+#stats-container p {
+	transition: .3s;
+	display: inline-block;
+	margin-right: 5px;
+	background-color: var(--color3);
+	padding: 5px;
+	font-size: 1.5rem;
+	border-radius: 10px;
+}
+
+#stats-container span {
+	font-weight: bold;
+}
+
+#stats-container p:hover {
+	transition: .3s;
+    border-radius: 12px;
+	font-size: 1.7rem;
+}
+
+#stats-container {
+	margin-top: -2.5%;
+    white-space: nowrap; 
+}
