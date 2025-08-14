@@ -1089,6 +1089,7 @@ ul#searchresults span.teaser em {
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
+	margin-top: -1rem;
 	font-size: 1.5rem;
 	margin: 0.25%;
 	color: #fff;
@@ -1122,7 +1123,6 @@ ul#searchresults span.teaser em {
 	font-size: 1.5rem;
 	border-radius: 10px;
 	border-width: 0;
-	width: 100%;
 	padding: 10px;
 	height: 100%;
 	word-break: break-all;
@@ -1141,5 +1141,6 @@ ul#searchresults span.teaser em {
 	-webkit-user-select: none;
 	user-select: none;
 }
+
 
 
