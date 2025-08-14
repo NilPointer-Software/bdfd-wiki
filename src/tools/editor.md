@@ -14,7 +14,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<input type="text" id="searchText"><br>
 	<label for="replaceText">Replcae with:</label>
 	<input type="text" id="replaceText"><br>
-	<button onclick="replaceText()">Replcae all</button>
+	<button onclick="replaceText()">Replace all</button>
 	<button id="highlightButton" onclick="toggleHighlight()">Find</button><br>
 </div>
 
