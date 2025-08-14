@@ -1125,6 +1125,7 @@ ul#searchresults span.teaser em {
 	width: 100%;
 	padding: 10px;
 	height: 100%;
+	word-break: break-all;
 	background: hsl(0deg 0% 100% / 7%);
 }
 
@@ -1134,9 +1135,11 @@ ul#searchresults span.teaser em {
     border-color: hsl(0deg 0% 100% / 30%);
     border-right-style: solid;
     display: inline-block;
-    width: 1.5rem;
+    width: 4.2rem;
 	margin-right: 1rem;
+	white-space: nowrap;
 	-webkit-user-select: none;
 	user-select: none;
 }
+
 
