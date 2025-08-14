@@ -209,19 +209,37 @@ function checkBrackets() {
   const text = document.getElementById("editor").value;
   let openBrackets = 0;
   let closeBrackets = 0;
+  let i = 0;
 
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] === '[') { openBrackets++; }
-    else if (text[i] === ']') { closeBrackets++; }
+  while (i < text.length) {
+    if (text[i] === '[') {
+      openBrackets++;
+      i++;
+    } else if (text[i] === ']' && (i === 0 || text[i - 1] !== '\\')) {
+      closeBrackets++;
+      i++;
+    } else {
+      i++;
+    }
   }
 
   document.getElementById("openCount").textContent = openBrackets;
   document.getElementById("closeCount").textContent = closeBrackets;
+
   const errorMessageElement = document.getElementById("error-message");
 
-  if (openBrackets > closeBrackets) { errorMessageElement.textContent = "Error: Brackets are closed."; }
-  else if (openBrackets < closeBrackets) { errorMessageElement.textContent = "Error: empty"; }
-  else { errorMessageElement.textContent = ""; }
+  if (errorMessageElement) {
+    if (openBrackets > closeBrackets) {
+      errorMessageElement.textContent = "Error:  Brackets are not closed..";
+      errorMessageElement.style.color = "red";
+    } else if (openBrackets < closeBrackets) {
+      errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used";
+      errorMessageElement.style.color = "orange";
+    } else {
+      errorMessageElement.textContent = "";
+      errorMessageElement.style.color = "black";
+    }
+  }
 }
 
 function toggleHighlight() {
@@ -241,3 +259,4 @@ function toggleHighlight() {
     button.textContent = "Highlighting found";
   }
 }
+
