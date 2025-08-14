@@ -1089,7 +1089,7 @@ ul#searchresults span.teaser em {
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
-	margin-top: -1rem;
+	margin-top: -1rem !important;
 	font-size: 1.5rem;
 	margin: 0.25%;
 	color: #fff;
@@ -1129,6 +1129,11 @@ ul#searchresults span.teaser em {
 	background: hsl(0deg 0% 100% / 7%);
 }
 
+#highlightedText p {
+	margin-top: -.3rem;
+	margin-bottom: .5rem;
+}
+
 .line-number {
     border-right-width: 2px;
 	color: hsl(0deg 0% 100% / 30%) !important;
@@ -1141,6 +1146,7 @@ ul#searchresults span.teaser em {
 	-webkit-user-select: none;
 	user-select: none;
 }
+
 
 
 
