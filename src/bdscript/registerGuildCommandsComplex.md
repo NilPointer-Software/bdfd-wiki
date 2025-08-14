@@ -25,7 +25,8 @@ Successfully registered the guild slash command `/help`!
 $nomention
 $argsCheck[>1;Provide guild slash command names!]
 
-$unregisterGuildCommands[$unescape[$toLowercase[$replaceText[$trimSpace[$message]; ;]]]]
+$registerGuildCommands[$unescape[$toLowercase[$replaceText[$trimSpace[$message]; ;]]]]
 Successfully registered the provided guild slash commands!
 ```
 ![example2](https://user-images.githubusercontent.com/111157596/233842084-413aec63-8cdd-4295-b3d3-0fe660b13792.png)
+
