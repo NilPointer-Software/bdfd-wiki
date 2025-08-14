@@ -248,15 +248,32 @@ function toggleHighlight() {
   const text = document.getElementById("editor").value;
   const searchText = document.getElementById("searchText").value;
   let highlighted = text;
+  let matches = 0;
+
   if (button.textContent === "Highlighting found") {
     if (searchText) {
-      highlighted = highlighted.replaceAll(searchText, `<span class="highlight">${searchText}</span>`);
+      const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(escapedSearchText, 'gi');
+
+      highlighted = text.replace(regex, (match) => {
+        matches++;
+        return `<span class="highlight">${match}</span>`;
+      });
     }
-    highlightedTextDiv.innerHTML = highlighted;
+
+    const lines = highlighted.split('\n');
+    let numberedText = "";
+    for (let i = 0; i < lines.length; i++) {
+      numberedText += `<span class="line-number">${i + 1} </span>${lines[i]}<br>`;
+    }
+
+    highlightedTextDiv.innerHTML = numberedText + `<p>Results: ${matches}</p>`;
     button.textContent = "Hide";
   } else {
     highlightedTextDiv.innerHTML = "";
     button.textContent = "Highlighting found";
   }
 }
+
+
 
