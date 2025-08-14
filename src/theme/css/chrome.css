@@ -1128,3 +1128,15 @@ ul#searchresults span.teaser em {
 	background: hsl(0deg 0% 100% / 7%);
 }
 
+.line-number {
+    border-right-width: 2px;
+	color: hsl(0deg 0% 100% / 30%) !important;
+    border-color: hsl(0deg 0% 100% / 30%);
+    border-right-style: solid;
+    display: inline-block;
+    width: 1.5rem;
+	margin-right: 1rem;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
