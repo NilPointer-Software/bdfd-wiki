@@ -751,6 +751,7 @@ ul#searchresults span.teaser em {
 
 	.sidebar-hidden .page-wrapper {
 		transform: translateX(320px);
+		width: calc(100% - 320px);
 	}
 }
 
@@ -1008,3 +1009,4 @@ ul#searchresults span.teaser em {
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: ease-in;
 }
+
