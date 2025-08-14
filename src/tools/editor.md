@@ -9,7 +9,7 @@ Here you can use the basic editor features to write codes more conveniently.
 </div>
 <p id="error-message"></p>
 <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
-<div id="text-editor">
+<div id="text-editorui">
 	<label for="searchText">Find:</label>
 	<input type="text" id="searchText"><br>
 	<label for="replaceText">Replcae with:</label>
