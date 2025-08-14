@@ -1033,7 +1033,11 @@ ul#searchresults span.teaser em {
 
 #stats-container {
 	margin-top: -2.5%;
-    white-space: nowrap; 
+    white-space: nowrap;
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #editor {
@@ -1053,3 +1057,4 @@ ul#searchresults span.teaser em {
 	display: block;
 	outline: none;
 }
+
