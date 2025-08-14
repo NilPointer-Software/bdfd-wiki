@@ -1104,4 +1104,27 @@ ul#searchresults span.teaser em {
 	transition: 0.4s;
 }
 
+#error-message {
+	margin-top: -1rem;
+	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#highlightedText span {
+	color: var(--color1);
+}
+
+#highlightedText {
+	color: #bbb;
+	font-size: 1.5rem;
+	border-radius: 10px;
+	border-width: 0;
+	width: 100%;
+	padding: 10px;
+	height: 100%;
+	background: hsl(0deg 0% 100% / 7%);
+}
 
