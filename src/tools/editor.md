@@ -2,10 +2,10 @@
 Here you can use the basic editor features to write codes more conveniently.
  
 <div id="stats-container">
-	<p>Words: <span id="wordCount">0</span> |
-			Spaces: <span id="spaceCount">0</span> |
-			Lines: <span id="lineCount">0</span> |
-			Characters: <span id="charCount">0</span> 
+	<p>Words: <span id="wordCount">0</span></p>
+	<p>Spaces: <span id="spaceCount">0</span></p>
+    <p>Lines: <span id="lineCount">0</span></p>
+    <p>Characters: <span id="charCount">0</span></p>
 </div>
 
 <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
