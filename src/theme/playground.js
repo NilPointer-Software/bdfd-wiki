@@ -265,10 +265,6 @@ function toggleHighlight() {
   for (let i = 0; i < lines.length; i++) {
     numberedText += `<span class="line-number">${i + 1} </span>${lines[i]}<br>`;
   }
-
-  highlightedTextDiv.innerHTML = numberedText + `<p>Results: ${matches}</p>`;
+  const resultsString = `<p>Results: ${matches}</p>`;
+  highlightedTextDiv.innerHTML = resultsString + numberedText;
 }
-
-
-
-
