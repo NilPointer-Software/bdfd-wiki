@@ -42,6 +42,9 @@
         - [Share Code](./guides/other/sharecode.md)
         - [Common BDFD Errors](./guides/other/commonErrors.md)
 
+- [Tools]()
+    - [Editor](./tools/editor.md)
+
 - [Resources]()
     - [Introduction](./resources/introduction.md)
     - [BDFD API](./resources/api.md)
