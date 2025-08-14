@@ -1035,7 +1035,6 @@ ul#searchresults span.teaser em {
 
 #stats-container {
 	margin-top: -2.5%;
-    white-space: nowrap;
 	display: flex;
 	flex-direction: row;
     justify-content: center;
@@ -1064,7 +1063,7 @@ ul#searchresults span.teaser em {
 #text-editorui {
 	margin-top: 1rem;
 	background-color: var(--color3);
-	padding: 6px;
+	padding: 10px;
 	border-radius: 10px;
 }
 
@@ -1074,7 +1073,7 @@ ul#searchresults span.teaser em {
 	font-size: 1.5rem;
 	display: block;
 	outline: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	border-width: 0;
 	width: 99%;
 	height: 3rem;
@@ -1104,4 +1103,5 @@ ul#searchresults span.teaser em {
 	border-width: 1px;
 	transition: 0.4s;
 }
+
 
