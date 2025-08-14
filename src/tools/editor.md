@@ -1,6 +1,9 @@
 # Text Editor 
 Here you can use the basic editor features to write codes more conveniently.
 
+<html>
+
+<head>
 	<style>
 
 		textarea {
@@ -125,3 +128,6 @@ Here you can use the basic editor features to write codes more conveniently.
             }
         }
 	</script>
+</body>
+
+</html>
