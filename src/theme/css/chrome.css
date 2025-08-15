@@ -1119,7 +1119,7 @@ ul#searchresults span.teaser em {
 }
 
 #highlightedText a {
-	color: white;
+	color: white !important;
 }
 
 #highlightedText {
