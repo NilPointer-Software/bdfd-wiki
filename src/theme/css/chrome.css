@@ -1141,12 +1141,19 @@ ul#searchresults span.teaser em {
     border-right-style: solid;
     display: inline-block;
     width: 4.2rem;
-	margin-right: 1rem;
-	white-space: nowrap;
-	-webkit-user-select: none;
-	user-select: none;
+	   margin-right: 1rem;
+	   white-space: nowrap;
+	   -webkit-user-select: none;
+	   user-select: none;
 }
 
+.channel, .mention {
+    border-radius: 10px;
+    color: #D5D7F9;
+    background-color: #3B4085 !important;  
+    font-weight: bold;  
+    padding: 2px;
+}
 
 
 
