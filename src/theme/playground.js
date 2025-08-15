@@ -285,11 +285,37 @@ function toggleHighlight() {
     return `<i>${content}</i>`;
   });
 
-    // Обработка кода: `текст` -> <p id="hg-code">текст</p>
+  // Обработка кода: `текст` -> <p id="hg-code">текст</p>
   const codeRegex = /`(.*?)`/g;
   highlighted = highlighted.replace(codeRegex, (match, content) => {
     return `<p id="hg-code">${content}</p>`;
   });
+
+  // Преобразование ссылок: автоматически распознает и создает теги <a>
+  const linkRegex = /(https?:\/\/[^\s]+)/g;
+  highlighted = highlighted.replace(linkRegex, (url) => {
+    return `<a href="${url}" target="_blank">${url}</a>`;
+  });
+
+  // Обработка timestamp меток
+  const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
+  highlighted = highlighted.replace(timestampRegex, (match, timestamp, format) => {
+    const date = new Date(parseInt(timestamp) * 1000); // Преобразуем в миллисекунды
+    let formattedDate = "";
+
+    switch (format) {
+      case 't': formattedDate = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
+      case 'T': formattedDate = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }); break;
+      case 'd': formattedDate = date.toLocaleDateString(); break;
+      case 'D': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); break;
+      case 'f': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
+      case 'F': formattedDate = date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
+      case 'R': formattedDate = getRelativeTime(date); break; // Функция для относительного времени (см. ниже)
+      default: formattedDate = "Invalid format";
+    }
+    return formattedDate;
+  });
+
 
   // Добавление номеров строк
   const lines = highlighted.split('\n');
@@ -300,4 +326,30 @@ function toggleHighlight() {
 
   const resultsString = `<p>Results: ${matches}</p>`;
   highlightedTextDiv.innerHTML = resultsString + numberedText;
+}
+
+// Функция для получения относительного времени (например, "5 minutes ago")
+function getRelativeTime(date) {
+  const now = new Date();
+  const diffInSeconds = Math.round((now - date) / 1000);
+
+  const intervals = {
+    'year': 31536000,
+    'month': 2592000,
+    'day': 86400,
+    'hour': 3600,
+    'minute': 60,
+    'second': 1
+  };
+
+  for (const interval in intervals) {
+    const secondsInInterval = intervals[interval];
+    const quantity = Math.floor(diffInSeconds / secondsInInterval);
+
+    if (quantity >= 1) {
+      return quantity + ' ' + interval + (quantity > 1 ? 's' : '') + ' ago';
+    }
+  }
+
+  return 'Just now';
 }
