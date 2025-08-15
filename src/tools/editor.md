@@ -1,4 +1,4 @@
-# Text Editor 16:28 last update
+# Text Editor 22:03 last update
 Here you can use the basic editor features to write codes more conveniently.
  
 <div id="stats-container">
@@ -22,7 +22,7 @@ Here you can use the basic editor features to write codes more conveniently.
 <div id="another-info">
   <p>[<span id="openCount">0</span></p>
   <p>]<span id="closeCount">0</span></p>
-		<p>Escaped Characters: <span id="escaped">0</span></p>
+		<p>Escaped Characters: <span id="escapesCount">0</span></p>
 </div>
 
 <div id="highlightedText"></div>
