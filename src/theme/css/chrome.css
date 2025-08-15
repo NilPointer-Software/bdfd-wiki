@@ -1118,6 +1118,10 @@ ul#searchresults span.teaser em {
 	color: var(--color1);
 }
 
+#highlightedText a {
+	color: white;
+}
+
 #highlightedText {
 	color: #bbb;
 	font-size: 1.5rem;
