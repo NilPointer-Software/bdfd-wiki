@@ -183,20 +183,50 @@ function editInputHeight() {
 // Editor tools
 function updateStats() {
   const text = document.getElementById("editor").value;
+
+  // Подсчет слов
   const words = text.trim().split(/\s+/).filter(word => word !== "");
   const wordCount = words.length;
+
+  // Подсчет пробелов
   let spaceCount = 0;
-  for (let i = 0; i < text.length; i++) { if (text[i] === ' ') { spaceCount++; } }
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] === ' ') {
+      spaceCount++;
+    }
+  }
+
+  // Подсчет строк
   const lineCount = text.split('\n').length;
+
+  // Подсчет символов
   const charCount = text.length;
+
+  // Подсчет байт
   const byteCount = new TextEncoder().encode(text).length;
 
+  // Подсчет escape-последовательностей
+  const escapes = ["%{DOL}%", "%ESCAPED%", "\\]", "\\;", "%{-SEMICOL-}%"];
+  let escapesCount = 0;
+  escapes.forEach(escape => {
+    let count = 0;
+    let position = text.indexOf(escape);
+    while (position !== -1) {
+      count++;
+      position = text.indexOf(escape, position + escape.length);
+    }
+    escapesCount += count;
+  });
+
+  // Обновление элементов на странице
   document.getElementById("wordCount").textContent = wordCount;
   document.getElementById("spaceCount").textContent = spaceCount;
   document.getElementById("lineCount").textContent = lineCount;
   document.getElementById("charCount").textContent = charCount;
   document.getElementById("byteCount").textContent = byteCount;
+  document.getElementById("escapesCount").textContent = escapesCount;
 }
+
 
 function replaceText() {
   const searchText = document.getElementById("searchText").value;
