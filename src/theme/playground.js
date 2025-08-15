@@ -251,6 +251,7 @@ function toggleHighlight() {
   let highlighted = text;
   let matches = 0;
 
+  // Подсветка по поисковому запросу
   if (searchText) {
     const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(escapedSearchText, 'gi');
@@ -261,6 +262,7 @@ function toggleHighlight() {
     });
   }
 
+  // Подсветка <@…> и <#…>, убираем скобки
   const mentionRegex = /<@(.*?)>/g;
   highlighted = highlighted.replace(mentionRegex, (match, content) => {
     return `<span class="mention">@${content}</span>`;
@@ -271,11 +273,25 @@ function toggleHighlight() {
     return `<span class="channel">#${content}</span>`;
   });
 
+  // Обработка жирного текста: **текст** -> <b>текст</b>
   const boldRegex = /\*\*(.*?)\*\*/g;
   highlighted = highlighted.replace(boldRegex, (match, content) => {
     return `<b>${content}</b>`;
   });
 
+  // Обработка курсива: *текст* -> <i>текст</i>
+  const italicRegex = /\*(.*?)\*/g;
+  highlighted = highlighted.replace(italicRegex, (match, content) => {
+    return `<i>${content}</i>`;
+  });
+
+    // Обработка кода: `текст` -> <p id="hg-code">текст</p>
+  const codeRegex = /`(.*?)`/g;
+  highlighted = highlighted.replace(codeRegex, (match, content) => {
+    return `<p id="hg-code">${content}</p>`;
+  });
+
+  // Добавление номеров строк
   const lines = highlighted.split('\n');
   let numberedText = "";
   for (let i = 0; i < lines.length; i++) {
