@@ -4,8 +4,9 @@ Here you can use the basic editor features to write codes more conveniently.
 <div id="stats-container">
 	<p>Words: <span id="wordCount">0</span></p>
 	<p>Spaces: <span id="spaceCount">0</span></p>
-    <p>Lines: <span id="lineCount">0</span></p>
-    <p>Characters: <span id="charCount">0</span></p>
+ <p>Lines: <span id="lineCount">0</span></p>
+ <p>Characters: <span id="charCount">0</span></p>
+	<p>Bytes: <span id="byteCount">0</span></p>
 </div>
 <p id="error-message"></p>
 <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
@@ -18,5 +19,10 @@ Here you can use the basic editor features to write codes more conveniently.
 	<button id="highlightButton" onclick="toggleHighlight()">Find</button><br>
 </div>
 
-<p>[: <span id="openCount">0</span> | ]: <span id="closeCount">0</span><p>
+<div id="another-info">
+  <p>[<span id="openCount">0</span></p>
+  <p>]<span id="closeCount">0</span></p>
+		<p>Escaped Characters: <span id="escaped">0</span></p>
+</div>
+
 <div id="highlightedText"></div>
