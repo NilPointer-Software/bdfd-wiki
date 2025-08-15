@@ -1148,9 +1148,9 @@ ul#searchresults span.teaser em {
 }
 
 .channel, .mention {
-    border-radius: 10px;
-    color: #D5D7F9;
-    background-color: #3B4085 !important;  
+    border-radius: 5px;
+    color: hsl(0deg 0% 100% / 50%) !important;
+    background-color: hsl(0deg 0% 100% / 10%) !important;  
     font-weight: bold;  
     padding: 2px;
 }
