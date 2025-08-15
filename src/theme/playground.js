@@ -245,7 +245,6 @@ function checkBrackets() {
 }
 
 function toggleHighlight() {
-  const button = document.getElementById("highlightButton");
   const highlightedTextDiv = document.getElementById("highlightedText");
   const text = document.getElementById("editor").value;
   const searchText = document.getElementById("searchText").value;
@@ -262,11 +261,27 @@ function toggleHighlight() {
     });
   }
 
+  const mentionRegex = /<@(.*?)>/g;
+  highlighted = highlighted.replace(mentionRegex, (match, content) => {
+    return `<span class="mention">@${content}</span>`;
+  });
+
+  const channelRegex = /<#(.*?)>/g;
+  highlighted = highlighted.replace(channelRegex, (match, content) => {
+    return `<span class="channel">#${content}</span>`;
+  });
+
+  const boldRegex = /\*\*(.*?)\*\*/g;
+  highlighted = highlighted.replace(boldRegex, (match, content) => {
+    return `<b>${content}</b>`;
+  });
+
   const lines = highlighted.split('\n');
   let numberedText = "";
   for (let i = 0; i < lines.length; i++) {
     numberedText += `<span class="line-number">${i + 1} </span>${lines[i]}<br>`;
   }
+
   const resultsString = `<p>Results: ${matches}</p>`;
   highlightedTextDiv.innerHTML = resultsString + numberedText;
 }
