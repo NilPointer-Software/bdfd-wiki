@@ -1159,5 +1159,9 @@ ul#searchresults span.teaser em {
     padding: 2px;
 }
 
+.timestamp {
+	   color: #bbb !important;
+	   background-color: hsl(0deg 0% 100% / 5%) !important;  
+}
 
 
