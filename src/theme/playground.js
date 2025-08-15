@@ -189,11 +189,13 @@ function updateStats() {
   for (let i = 0; i < text.length; i++) { if (text[i] === ' ') { spaceCount++; } }
   const lineCount = text.split('\n').length;
   const charCount = text.length;
+  const byteCount = new TextEncoder().encode(text).length;
 
   document.getElementById("wordCount").textContent = wordCount;
   document.getElementById("spaceCount").textContent = spaceCount;
   document.getElementById("lineCount").textContent = lineCount;
   document.getElementById("charCount").textContent = charCount;
+  document.getElementById("byteCount").textContent = byteCount;
 }
 
 function replaceText() {
