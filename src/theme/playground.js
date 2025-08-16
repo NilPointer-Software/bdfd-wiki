@@ -243,16 +243,14 @@ function checkBrackets() {
   let closeBrackets = 0;
   let i = 0;
 
+  // Считаем скобки, но только если перед ними есть $
   while (i < text.length) {
-    if (text[i] === '[') {
+    if (text[i] === '[' && i > 0 && text[i - 1] === '$') { // Проверяем, что перед '[' есть '$'
       openBrackets++;
-      i++;
-    } else if (text[i] === ']' && (i === 0 || text[i - 1] !== '\\')) {
+    } else if (text[i] === ']' && i > 0 && (i === 1 || text[i - 1] !== '\\')) { // Проверяем ']' и экранирование
       closeBrackets++;
-      i++;
-    } else {
-      i++;
     }
+    i++;
   }
 
   document.getElementById("openCount").textContent = openBrackets;
@@ -260,19 +258,29 @@ function checkBrackets() {
 
   const errorMessageElement = document.getElementById("error-message");
 
-  if (errorMessageElement) {
-    if (openBrackets > closeBrackets) {
-      errorMessageElement.textContent = "Error:  Brackets are not closed..";
-      errorMessageElement.style.color = "red";
-    } else if (openBrackets < closeBrackets) {
-      errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used";
-      errorMessageElement.style.color = "orange";
-    } else {
+  // Проверяем баланс скобок и выводим ошибку, только если были найдены скобки с '$'
+  if (openBrackets > 0 || closeBrackets > 0) {
+    if (errorMessageElement) {
+      if (openBrackets > closeBrackets) {
+        errorMessageElement.textContent = "Error: Brackets are not closed.";
+        errorMessageElement.style.color = "red";
+      } else if (openBrackets < closeBrackets) {
+        errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used.";
+        errorMessageElement.style.color = "orange";
+      } else {
+        errorMessageElement.textContent = "";
+        errorMessageElement.style.color = "black";
+      }
+    }
+  } else {
+    // Если скобки с '$' не найдены, очищаем сообщение об ошибке
+    if (errorMessageElement) {
       errorMessageElement.textContent = "";
       errorMessageElement.style.color = "black";
     }
   }
 }
+
 
 
 function toggleHighlight() {
