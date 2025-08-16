@@ -242,12 +242,14 @@ function checkBrackets() {
   let openBrackets = 0;
   let closeBrackets = 0;
   let i = 0;
+  let dollarSignFound = false; // Флаг для отслеживания наличия '$'
 
-  // Считаем скобки, но только если перед ними есть $
+  // Проходим по тексту и считаем скобки, если перед ними есть '$'
   while (i < text.length) {
-    if (text[i] === '[' && i > 0 && text[i - 1] === '$') { // Проверяем, что перед '[' есть '$'
+    if (text[i] === '[' && i > 0 && text[i - 1] === '$') {
       openBrackets++;
-    } else if (text[i] === ']' && i > 0 && (i === 1 || text[i - 1] !== '\\')) { // Проверяем ']' и экранирование
+      dollarSignFound = true; // Отмечаем, что нашли '$' перед '['
+    } else if (text[i] === ']' && (i === 0 || text[i - 1] !== '\\')) {
       closeBrackets++;
     }
     i++;
@@ -258,8 +260,8 @@ function checkBrackets() {
 
   const errorMessageElement = document.getElementById("error-message");
 
-  // Проверяем баланс скобок и выводим ошибку, только если были найдены скобки с '$'
-  if (openBrackets > 0 || closeBrackets > 0) {
+  // Выводим сообщение об ошибке, только если были найдены '$'
+  if (dollarSignFound) {
     if (errorMessageElement) {
       if (openBrackets > closeBrackets) {
         errorMessageElement.textContent = "Error: Brackets are not closed.";
@@ -268,20 +270,18 @@ function checkBrackets() {
         errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used.";
         errorMessageElement.style.color = "orange";
       } else {
-        errorMessageElement.textContent = "";
+        errorMessageElement.textContent = ""; // Очищаем, если скобки сбалансированы
         errorMessageElement.style.color = "black";
       }
     }
   } else {
-    // Если скобки с '$' не найдены, очищаем сообщение об ошибке
+    // Если '$' не найден, очищаем сообщение
     if (errorMessageElement) {
       errorMessageElement.textContent = "";
       errorMessageElement.style.color = "black";
     }
   }
 }
-
-
 
 function toggleHighlight() {
   const highlightedTextDiv = document.getElementById("highlightedText");
