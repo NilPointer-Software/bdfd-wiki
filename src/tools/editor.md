@@ -7,6 +7,7 @@ Here you can use the basic editor features to write codes more conveniently.
  <p>Lines: <span id="lineCount">0</span></p>
  <p>Characters: <span id="charCount">0</span></p>
 	<p>Bytes: <span id="byteCount">0</span></p>
+	<button onclick="copyText()">Copy</button>
 </div>
 <p id="error-message"></p>
 <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
