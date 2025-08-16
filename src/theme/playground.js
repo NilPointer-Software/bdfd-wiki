@@ -242,13 +242,18 @@ function checkBrackets() {
   let openBrackets = 0;
   let closeBrackets = 0;
   let i = 0;
-  let dollarSignFound = false; // Флаг для отслеживания наличия '$'
+  let lastDollarIndex = -1;
+  let emptyParamsWarning = false; // Флаг для предупреждения о пустых параметрах
 
-  // Проходим по тексту и считаем скобки, если перед ними есть '$'
   while (i < text.length) {
-    if (text[i] === '[' && i > 0 && text[i - 1] === '$') {
+    if (text[i] === '$') {
+      lastDollarIndex = i;
+    } else if (text[i] === '[' && lastDollarIndex === i - 1) {
       openBrackets++;
-      dollarSignFound = true; // Отмечаем, что нашли '$' перед '['
+      // Проверка на пустые параметры: если сразу после '[' идет ']'
+      if (text[i + 1] === ']') {
+        emptyParamsWarning = true;
+      }
     } else if (text[i] === ']' && (i === 0 || text[i - 1] !== '\\')) {
       closeBrackets++;
     }
@@ -260,23 +265,17 @@ function checkBrackets() {
 
   const errorMessageElement = document.getElementById("error-message");
 
-  // Выводим сообщение об ошибке, только если были найдены '$'
-  if (dollarSignFound) {
-    if (errorMessageElement) {
-      if (openBrackets > closeBrackets) {
-        errorMessageElement.textContent = "Error: Brackets are not closed.";
-        errorMessageElement.style.color = "red";
-      } else if (openBrackets < closeBrackets) {
-        errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used.";
-        errorMessageElement.style.color = "orange";
-      } else {
-        errorMessageElement.textContent = ""; // Очищаем, если скобки сбалансированы
-        errorMessageElement.style.color = "black";
-      }
-    }
-  } else {
-    // Если '$' не найден, очищаем сообщение
-    if (errorMessageElement) {
+  if (errorMessageElement) {
+    if (openBrackets > closeBrackets) {
+      errorMessageElement.textContent = "Error: Brackets are not closed.";
+      errorMessageElement.style.color = "red";
+    } else if (openBrackets < closeBrackets) {
+      errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used.";
+      errorMessageElement.style.color = "orange";
+    } else if (emptyParamsWarning) {
+      errorMessageElement.textContent = "Warning: Empty parameters in brackets.";
+      errorMessageElement.style.color = "purple";
+    } else {
       errorMessageElement.textContent = "";
       errorMessageElement.style.color = "black";
     }
