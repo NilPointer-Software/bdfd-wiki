@@ -392,3 +392,16 @@ function getRelativeTime(date) {
 
     return 'Just now';
 }
+
+function copyText() {
+  const textarea = document.getElementById("editor");
+  textarea.select();
+
+  try {
+    document.execCommand("copy");
+  } catch (err) {
+    console.error("Unable to copy text: ", err);
+  }
+
+  window.getSelection().removeAllRanges();
+}
