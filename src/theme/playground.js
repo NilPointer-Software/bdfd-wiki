@@ -241,23 +241,22 @@ function checkBrackets() {
   const text = document.getElementById("editor").value;
   let openBrackets = 0;
   let closeBrackets = 0;
-  let i = 0;
   let lastDollarIndex = -1;
-  let emptyParamsWarning = false; // Флаг для предупреждения о пустых параметрах
+  let emptyParamsWarning = false;
+  let hasDollar = false; // Флаг для проверки, был ли вообще символ $
 
-  while (i < text.length) {
+  for (let i = 0; i < text.length; i++) {
     if (text[i] === '$') {
       lastDollarIndex = i;
+      hasDollar = true; // Отмечаем, что нашли $
     } else if (text[i] === '[' && lastDollarIndex === i - 1) {
       openBrackets++;
-      // Проверка на пустые параметры: если сразу после '[' идет ']'
       if (text[i + 1] === ']') {
         emptyParamsWarning = true;
       }
     } else if (text[i] === ']' && (i === 0 || text[i - 1] !== '\\')) {
       closeBrackets++;
     }
-    i++;
   }
 
   document.getElementById("openCount").textContent = openBrackets;
@@ -265,20 +264,23 @@ function checkBrackets() {
 
   const errorMessageElement = document.getElementById("error-message");
 
-  if (errorMessageElement) {
+  if (hasDollar) { // Проверяем, был ли вообще знак $
     if (openBrackets > closeBrackets) {
       errorMessageElement.textContent = "Error: Brackets are not closed.";
       errorMessageElement.style.color = "red";
     } else if (openBrackets < closeBrackets) {
       errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used.";
       errorMessageElement.style.color = "orange";
-    } else if (emptyParamsWarning) {
+    } else if (emptyParamsWarning && openBrackets > 0) { // Проверяем только если были открыты скобки после $
       errorMessageElement.textContent = "Warning: Empty parameters in brackets.";
-      errorMessageElement.style.color = "purple";
+      errorMessageElement.style.color = "orange";
     } else {
       errorMessageElement.textContent = "";
       errorMessageElement.style.color = "black";
     }
+  } else {
+    errorMessageElement.textContent = "";
+    errorMessageElement.style.color = "black";
   }
 }
 
