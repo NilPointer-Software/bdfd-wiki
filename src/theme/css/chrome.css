@@ -1164,12 +1164,14 @@ ul#searchresults span.teaser em {
 	   background-color: hsl(0deg 0% 100% / 5%) !important;  
 }
 
-#hg-code {
-	   border-radius: 5px;
+.hg-code {
+    border-radius: 5px;
     border-width: 2px;
     border-style: solid;
     border-color: hsl(0deg 0% 100% / 10%) !important;
     color: hsl(0deg 0% 100% / 40%) !important;
-    background-color: hsl(0deg 0% 100% / 5%) !important;  
+    background-color: hsl(0deg 0% 100% / 5%) !important;
     padding: 1px;
+    display: inline-block;
 }
+
