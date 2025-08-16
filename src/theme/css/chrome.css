@@ -1164,7 +1164,7 @@ ul#searchresults span.teaser em {
 	   background-color: hsl(0deg 0% 100% / 5%) !important;  
 }
 
-p #hg-code {
+#hg-code {
 	   border-radius: 5px;
     border-width: 2px;
     border-style: solid;
