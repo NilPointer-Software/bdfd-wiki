@@ -233,14 +233,18 @@ let isLocked = true;
 
 // Used in status bar (iPhone).
 function setStatusBar(HueInput) {
-	if (HueInput != "dark") {
-		document
-			.querySelector('meta[name="theme-color"]')
-			.setAttribute("content", `hsl(${HueInput}, 80%, 8%)`);
-	} else {
+	if (HueInput == "dark") {
 		document
 			.querySelector('meta[name="theme-color"]')
 			.setAttribute("content", `#000`);
+	} else if (HueInput) == "light") {
+		document
+			.querySelector('meta[name="theme-color"]')
+			.setAttribute("content", `#fff`);
+	} else {
+		document
+			.querySelector('meta[name="theme-color"]')
+			.setAttribute("content", `hsl(${HueInput}, 80%, 8%)`);
 	}
 }
 
@@ -382,6 +386,13 @@ function useDarkBackground() {
 	document.body.style.background = `#000`;
 	document.documentElement.style.scrollbarColor = `#fff` + `#000`;
 	setStatusBar("dark");
+	updateJsonFile("theme-bg", document.body.style.background);
+}
+
+function useLightBackground() {
+	document.body.style.background = `#fff`;
+	document.documentElement.style.scrollbarColor = `#000` + `#fff`;
+	setStatusBar("light");
 	updateJsonFile("theme-bg", document.body.style.background);
 }
 
