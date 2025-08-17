@@ -42,6 +42,8 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 [output.html.redirect]
 "/guides/ifStatements.html" = "./general/ifStatements.html"
 "/guides/async.html" = "./general/bds2/asyncScopes.html"
+"/guides/buttons.html" = "./general/interactions/buttons/aboutButtons.html"
+"/guides/selectmenu.html" = "./general/interactions/selectMenus/aboutSelectMenu.html"
 
 "/bdscript/httpAddHeader.html" = "../guides/general/httpRequests.html"
 "/bdscript/httpDelete.html" = "../guides/general/httpRequests.html"
