@@ -200,7 +200,7 @@ Here, are all possible values for the <code>style</code> function argument.</p>
 <li><code>link</code> - Redirect button</li>
 </ul>
 <discord-messages>
-    <discord-message verified role-color="#378afa" bot author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot verified author="BDFD Support" role-color="#378afa">
         Buttons:
         <discord-attachments slot="components">
             <discord-action-row>
@@ -215,7 +215,7 @@ Here, are all possible values for the <code>style</code> function argument.</p>
                 <discord-button type="success">
                     Success
                 </discord-button>
-                <discord-button disabled type="success">
+                <discord-button type="success" disabled>
                     Success
                 </discord-button>
             </discord-action-row>
@@ -223,7 +223,7 @@ Here, are all possible values for the <code>style</code> function argument.</p>
                 <discord-button type="destructive">
                     Danger
                 </discord-button>
-                <discord-button disabled type="destructive">
+                <discord-button type="destructive" disabled>
                     Danger
                 </discord-button>
             </discord-action-row>
@@ -237,14 +237,14 @@ Here, are all possible values for the <code>style</code> function argument.</p>
             </discord-action-row>
         </discord-attachments>
     </discord-message>
-    <discord-message bot verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" role-color="#378afa">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" bot role-color="#378afa" verified>
         Other Buttons:
         <discord-attachments slot="components">
             <discord-action-row>
                 <discord-button url="https://nilpointer-software.github.io/bdfd-wiki/nightly/" type="secondary">
                     Link
                 </discord-button>
-                <discord-button type="secondary" disabled url="https://nilpointer-software.github.io/bdfd-wiki/nightly/">
+                <discord-button type="secondary" url="https://nilpointer-software.github.io/bdfd-wiki/nightly/" disabled>
                     Link
                 </discord-button>
             </discord-action-row>
@@ -307,10 +307,10 @@ Hello
 $addButton[no;test;Say hello!;primary;no;]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/e23f69494b549f7c41a250c4f713b720.png" author="RainbowKey">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/e23f69494b549f7c41a250c4f713b720.png" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot author="BDFD Support" role-color="#378afa">
+    <discord-message bot verified author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa">
         Hello
         <discord-attachments slot="components">
             <discord-action-row>
@@ -345,7 +345,7 @@ $editButton[test;Say hello!;danger;yes;]
     <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/e23f69494b549f7c41a250c4f713b720.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" edited bot author="BDFD Support" role-color="#378afa">
+    <discord-message bot verified author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" edited role-color="#378afa">
         rainbow_key said hello!
         <discord-attachments slot="components">
             <discord-action-row>
@@ -371,7 +371,7 @@ $removeButtons
     <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/e23f69494b549f7c41a250c4f713b720.png">
         !example
     </discord-message>
-    <discord-message edited role-color="#378afa" verified bot author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
+    <discord-message edited author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" verified bot>
         rainbow_key removed all buttons from this message.
     </discord-message>
 </discord-messages>
@@ -390,13 +390,13 @@ $username removed all buttons from the specified message ID.
 $removeButtons[$message]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#378afa" author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot verified>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" role-color="#378afa" verified bot>
         Message ID: 1291982295888166974
     </discord-message>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/e23f69494b549f7c41a250c4f713b720.png" author="RainbowKey">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/e23f69494b549f7c41a250c4f713b720.png">
         !example 1291982295888166974
     </discord-message>
-    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified role-color="#378afa" bot>
+    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" bot verified>
         rainbow_key removed all buttons from the specified message ID.
     </discord-message>
 </discord-messages>
