@@ -184,11 +184,9 @@ function editInputHeight() {
 function updateStats() {
   const text = document.getElementById("editor").value;
 
-  // Подсчет слов
   const words = text.trim().split(/\s+/).filter(word => word !== "");
   const wordCount = words.length;
 
-  // Подсчет пробелов
   let spaceCount = 0;
   for (let i = 0; i < text.length; i++) {
     if (text[i] === ' ') {
@@ -196,16 +194,9 @@ function updateStats() {
     }
   }
 
-  // Подсчет строк
   const lineCount = text.split('\n').length;
-
-  // Подсчет символов
   const charCount = text.length;
-
-  // Подсчет байт
   const byteCount = new TextEncoder().encode(text).length;
-
-  // Подсчет escape-последовательностей
   const escapes = ["%{DOL}%", "%ESCAPED%", "\\]", "\\;", "%{-SEMICOL-}%"];
   let escapesCount = 0;
   escapes.forEach(escape => {
@@ -218,15 +209,16 @@ function updateStats() {
     escapesCount += count;
   });
 
-  // Обновление элементов на странице
+  const specialChars = text.replace(/[\w\s]/g, "").length;
+
   document.getElementById("wordCount").textContent = wordCount;
   document.getElementById("spaceCount").textContent = spaceCount;
   document.getElementById("lineCount").textContent = lineCount;
   document.getElementById("charCount").textContent = charCount;
   document.getElementById("byteCount").textContent = byteCount;
   document.getElementById("escapesCount").textContent = escapesCount;
+  document.getElementById("specialChars").textContent = specialChars;
 }
-
 
 function replaceText() {
   const searchText = document.getElementById("searchText").value;
