@@ -239,20 +239,29 @@ function replaceText() {
 
 function checkBrackets() {
   const text = document.getElementById("editor").value;
+  const textBytes = new TextEncoder().encode(text).length;
+  let dollarCount = 0;
   let openBrackets = 0;
   let closeBrackets = 0;
-  let lastDollarIndex = -1;
-  let emptyParamsWarning = false;
-  let hasDollar = false; // Флаг для проверки, был ли вообще символ $
+  const errors = [];
+
+  if (textBytes > 65000) {
+    errors.push({ message: "Text exceeds the allowed size (65000 bytes).", id: errors.length });
+  }
+
+  if (text.indexOf('$') === -1 && text.length > 2000) {
+    errors.push({ message: "Character limit exceeded (2000) for messages without $.", id: errors.length });
+  }
 
   for (let i = 0; i < text.length; i++) {
     if (text[i] === '$') {
-      lastDollarIndex = i;
-      hasDollar = true; // Отмечаем, что нашли $
-    } else if (text[i] === '[' && lastDollarIndex === i - 1) {
+      if (i + 1 < text.length && /[a-zA-Z]/.test(text[i + 1])) {
+        dollarCount++;
+      }
+    } else if (text[i] === '[') {
       openBrackets++;
-      if (text[i + 1] === ']') {
-        emptyParamsWarning = true;
+      if (i + 1 < text.length && text[i + 1] === ']') {
+        errors.push({ message: "Empty brackets [] detected.", id: errors.length });
       }
     } else if (text[i] === ']' && (i === 0 || text[i - 1] !== '\\')) {
       closeBrackets++;
@@ -263,25 +272,35 @@ function checkBrackets() {
   document.getElementById("closeCount").textContent = closeBrackets;
 
   const errorMessageElement = document.getElementById("error-message");
+  errorMessageElement.innerHTML = "";
 
-  if (hasDollar) { // Проверяем, был ли вообще знак $
-    if (openBrackets > closeBrackets) {
-      errorMessageElement.textContent = "Error: Brackets are not closed";
-      errorMessageElement.style.color = "red";
-    } else if (openBrackets < closeBrackets) {
-      errorMessageElement.textContent = "Warning: Different amounts of [ and ] are used";
-      errorMessageElement.style.color = "orange";
-    } else if (emptyParamsWarning && openBrackets > 0) { // Проверяем только если были открыты скобки после $
-      errorMessageElement.textContent = "Warning: Empty parameters in brackets";
-      errorMessageElement.style.color = "orange";
-    } else {
-      errorMessageElement.textContent = "";
-      errorMessageElement.style.color = "black";
+  if (openBrackets <= dollarCount) {
+    if (closeBrackets < openBrackets) {
+      errors.push({ message: "Not all open brackets are closed.", id: errors.length });
     }
+  }
+
+  if (errors.length > 0) {
+    errorMessageElement.style.color = "red";
+    errors.forEach(error => {
+      const errorDiv = document.createElement("div");
+      errorDiv.innerHTML = `${error.message} <span class="close-btn" data-id="${error.id}">×</span>`;
+      errorMessageElement.appendChild(errorDiv);
+    });
+
+    errorMessageElement.addEventListener("click", function(event) {
+      if (event.target.classList.contains("close-btn")) {
+        const errorId = parseInt(event.target.dataset.id);
+        const errorDiv = event.target.parentNode;
+        errorDiv.remove();
+      }
+    });
   } else {
     errorMessageElement.textContent = "";
     errorMessageElement.style.color = "black";
   }
+}
+
 }
 
 function toggleHighlight() {
