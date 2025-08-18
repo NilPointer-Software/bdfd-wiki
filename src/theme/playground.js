@@ -237,13 +237,14 @@ function replaceText() {
   checkBrackets();
 }
 
+
 function checkBrackets() {
-  const text = document.getElementById("editor").value;
-  const textBytes = new TextEncoder().encode(text).length;
-  let dollarCount = 0;
-  let openBrackets = 0;
-  let closeBrackets = 0;
-  const errors = [];
+  const text = document.getElementById("editor").value; // Получаем текст из поля ввода
+  const textBytes = new TextEncoder().encode(text).length; // Считаем размер текста в байтах
+  let dollarCount = 0; // Счетчик знаков доллара
+  let openBrackets = 0; // Счетчик открывающих скобок
+  let closeBrackets = 0; // Счетчик закрывающих скобок
+  const errors = []; // Массив для хранения ошибок
 
   if (textBytes > 65000) {
     errors.push({ message: "Text exceeds the allowed size (65000 bytes).", id: errors.length });
@@ -253,18 +254,22 @@ function checkBrackets() {
     errors.push({ message: "Character limit exceeded (2000) for messages without $.", id: errors.length });
   }
 
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] === '$') {
-      if (i + 1 < text.length && /[a-zA-Z]/.test(text[i + 1])) {
-        dollarCount++;
+  const lines = text.split('\n'); // Разбиваем текст на строки
+  for (let i = 0; i < lines.length; i++) { // Перебираем строки
+    const line = lines[i];
+    for (let j = 0; j < line.length; j++) { // Перебираем символы в строке
+      if (line[j] === '$') {
+        if (j + 1 < line.length && /[a-zA-Z]/.test(line[j + 1])) {
+          dollarCount++;
+        }
+      } else if (line[j] === '[') {
+        openBrackets++;
+        if (j + 1 < line.length && line[j + 1] === ']') {
+          errors.push({ message: `Empty brackets [] detected on line ${i + 1}.`, id: errors.length }); // Добавляем номер строки в сообщение об ошибке
+        }
+      } else if (line[j] === ']' && (j === 0 || line[j - 1] !== '\\')) {
+        closeBrackets++;
       }
-    } else if (text[i] === '[') {
-      openBrackets++;
-      if (i + 1 < text.length && text[i + 1] === ']') {
-        errors.push({ message: "Empty brackets [] detected.", id: errors.length });
-      }
-    } else if (text[i] === ']' && (i === 0 || text[i - 1] !== '\\')) {
-      closeBrackets++;
     }
   }
 
@@ -291,7 +296,6 @@ function checkBrackets() {
 
     errorMessageElement.addEventListener("click", function(event) {
       if (event.target.classList.contains("close-btn")) {
-        const errorId = parseInt(event.target.dataset.id);
         const errorDiv = event.target.parentNode;
         errorDiv.remove();
       }
