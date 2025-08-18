@@ -1175,3 +1175,13 @@ ul#searchresults span.teaser em {
     display: inline-block;
 }
 
+.close-btn {
+  background-color: hsl(0deg 0% 100% / 25%);
+  color: red ! important;
+  padding: 5px 10px 5px 10px;
+  width: 25px;
+		border-radius: 60px;
+  border-color: hsl(0deg 0% 100% / 30%);
+  border-style: solid;
+		border-width: 1px;
+}
