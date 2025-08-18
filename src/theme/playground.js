@@ -284,6 +284,7 @@ function checkBrackets() {
     errorMessageElement.style.color = "red";
     errors.forEach(error => {
       const errorDiv = document.createElement("div");
+      errorDiv.style.display = "block";
       errorDiv.innerHTML = `${error.message} <span class="close-btn" data-id="${error.id}">×</span>`;
       errorMessageElement.appendChild(errorDiv);
     });
