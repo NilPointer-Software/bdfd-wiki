@@ -301,8 +301,6 @@ function checkBrackets() {
   }
 }
 
-}
-
 function toggleHighlight() {
   const highlightedTextDiv = document.getElementById("highlightedText");
   const text = document.getElementById("editor").value;
