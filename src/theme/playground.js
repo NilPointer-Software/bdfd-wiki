@@ -286,10 +286,17 @@ function checkBrackets() {
   }
 
   if (errors.length > 0) {
-    errorMessageElement.style.color = "red";
+    errorMessageElement.style.color = "red"; // Цвет по умолчанию - красный
+
     errors.forEach(error => {
       const errorDiv = document.createElement("div");
       errorDiv.style.display = "block";
+
+      // Проверяем текст ошибки, чтобы применить оранжевый цвет
+      if (error.message.includes("Empty brackets") || error.message.includes("Character limit exceeded")) {
+        errorDiv.style.color = "orange"; // Устанавливаем оранжевый цвет
+      }
+
       errorDiv.innerHTML = `${error.message} <span class="close-btn" data-id="${error.id}">×</span>`;
       errorMessageElement.appendChild(errorDiv);
     });
