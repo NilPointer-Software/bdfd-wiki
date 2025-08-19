@@ -15,6 +15,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	 <textarea id="name"></textarea>
   <p id="error-message"></p>
   <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
+  <button onclick="saveFile()">Save as file</button>
 </div>
 
 <div id="text-editorui">
