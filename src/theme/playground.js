@@ -231,12 +231,12 @@ function replaceText() {
 
 
 function checkBrackets() {
-  const text = document.getElementById("editor").value; // Получаем текст из поля ввода
-  const textBytes = new TextEncoder().encode(text).length; // Считаем размер текста в байтах
-  let dollarCount = 0; // Счетчик знаков доллара
-  let openBrackets = 0; // Счетчик открывающих скобок
-  let closeBrackets = 0; // Счетчик закрывающих скобок
-  const errors = []; // Массив для хранения ошибок
+  const text = document.getElementById("editor").value;
+  const textBytes = new TextEncoder().encode(text).length; 
+  let dollarCount = 0;
+  let openBrackets = 0;
+  let closeBrackets = 0;
+  const errors = [];
 
   if (textBytes > 65000) {
     errors.push({ message: "Text exceeds the allowed size (65000 bytes).", id: errors.length });
@@ -246,10 +246,10 @@ function checkBrackets() {
     errors.push({ message: "Character limit exceeded (2000) for messages without $.", id: errors.length });
   }
 
-  const lines = text.split('\n'); // Разбиваем текст на строки
-  for (let i = 0; i < lines.length; i++) { // Перебираем строки
+  const lines = text.split('\n');
+  for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    for (let j = 0; j < line.length; j++) { // Перебираем символы в строке
+    for (let j = 0; j < line.length; j++) {
       if (line[j] === '$') {
         if (j + 1 < line.length && /[a-zA-Z]/.test(line[j + 1])) {
           dollarCount++;
@@ -257,7 +257,7 @@ function checkBrackets() {
       } else if (line[j] === '[') {
         openBrackets++;
         if (j + 1 < line.length && line[j + 1] === ']') {
-          errors.push({ message: `Empty brackets [] detected on line ${i + 1}.`, id: errors.length }); // Добавляем номер строки в сообщение об ошибке
+          errors.push({ message: `Empty brackets [] detected on line ${i + 1}.`, id: errors.length }); 
         }
       } else if (line[j] === ']' && (j === 0 || line[j - 1] !== '\\')) {
         closeBrackets++;
@@ -278,15 +278,14 @@ function checkBrackets() {
   }
 
   if (errors.length > 0) {
-    errorMessageElement.style.color = "red"; // Цвет по умолчанию - красный
+    errorMessageElement.style.color = "red";
 
     errors.forEach(error => {
       const errorDiv = document.createElement("div");
       errorDiv.style.display = "block";
 
-      // Проверяем текст ошибки, чтобы применить оранжевый цвет
       if (error.message.includes("Empty brackets") || error.message.includes("Character limit exceeded")) {
-        errorDiv.style.color = "orange"; // Устанавливаем оранжевый цвет
+        errorDiv.style.color = "orange";
       }
 
       errorDiv.innerHTML = `${error.message} <span class="close-btn" data-id="${error.id}">×</span>`;
@@ -305,6 +304,7 @@ function checkBrackets() {
   }
 }
 
+
 function toggleHighlight() {
   const highlightedTextDiv = document.getElementById("highlightedText");
   const text = document.getElementById("editor").value;
@@ -312,7 +312,6 @@ function toggleHighlight() {
   let highlighted = text;
   let matches = 0;
 
-  // Подсветка по поисковому запросу
   if (searchText) {
     const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(escapedSearchText, 'gi');
