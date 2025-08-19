@@ -1190,12 +1190,14 @@ ul#searchresults span.teaser em {
 
 
 .close-btn {
-    background-color: hsl(0deg 0% 100% / 25%);
-    color: red ! important;
-    padding: 5px 10px 5px 10px;
+    background-color: hsl(0deg 0% 100% / 10%);
+    color: hsl(0deg 0% 100% / 75%); ! important;
+    padding: 1px 7px;
     width: 25px;
+	cursor: pointer;
 	border-radius: 60px;
-    border-color: hsl(0deg 0% 100% / 30%);
+    border-color: hsl(0deg 0% 100% / 15%);
     border-style: solid;
 	border-width: 1px;
 }
+
