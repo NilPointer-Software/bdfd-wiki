@@ -9,8 +9,14 @@ Here you can use the basic editor features to write codes more conveniently.
 	<p>Bytes: <span id="byteCount">0</span></p>
 	<button onclick="copyText()">Copy</button>
 </div>
-<p id="error-message"></p>
-<textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
+
+<div id="command-editor">
+	 <p>Name</p>
+	 <textarea id="name"></textarea>
+  <p id="error-message"></p>
+  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
+</div>
+
 <div id="text-editorui">
 	<label for="searchText">Find:</label>
 	<input type="text" id="searchText"><br>
