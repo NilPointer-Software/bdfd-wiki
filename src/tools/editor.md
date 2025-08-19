@@ -35,3 +35,10 @@ Here you can use the basic editor features to write codes more conveniently.
 </div>
 
 <div id="highlightedText"></div>
+
+<div id="tips">
+	 <h2>Tips</h2>
+		<p>**</p>
+		<p>*</p>
+		<p>`</p>
+</div>
