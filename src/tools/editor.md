@@ -15,7 +15,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<p id="error-message"></p>
 	<div class="scriptdiv">
 	  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
-		<button onclick="copyText()">Copy</button>
+		<button class="fa fa-regular fa-paste clip-button" onclick="copyText() title="Copy" aria-label="Copy">">Copy</button>
 	</div>
 	<button onclick="saveFile()">Save as file</button>
 </div>
