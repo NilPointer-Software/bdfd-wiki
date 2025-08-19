@@ -1041,9 +1041,8 @@ ul#searchresults span.teaser em {
     align-items: center;
 }
 
-#editor {
+#editor, #name {
 	width: 96%;
-	height: 40rem;
 	font-size: 1.5rem;
 	min-height: 1.3rem;
 	max-height: 100em;
@@ -1053,12 +1052,26 @@ ul#searchresults span.teaser em {
 	background: hsl(0deg 0% 100% / 7%);
 	padding: 7px;
 	font-size: 1.5rem;
-	resize: vertical;
 	margin: -2rem auto;
 	display: block;
 	outline: none;
 }
 
+#editor {
+	height: 40rem;
+	resize: vertical;
+}
+
+#name {
+	white-space: nowrap;
+	overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+	height: 1.7rem;
+	margin-bottom: 2rem;
+	margin-top: -1rem;
+	resize: none;
+}
 
 #text-editorui {
 	margin-top: 1rem;
@@ -1145,10 +1158,10 @@ ul#searchresults span.teaser em {
     border-right-style: solid;
     display: inline-block;
     width: 4.2rem;
-	   margin-right: 1rem;
-	   white-space: nowrap;
-	   -webkit-user-select: none;
-	   user-select: none;
+	margin-right: 1rem;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .channel, .mention {
@@ -1160,8 +1173,8 @@ ul#searchresults span.teaser em {
 }
 
 .timestamp {
-	   color: #bbb !important;
-	   background-color: hsl(0deg 0% 100% / 5%) !important;  
+	color: #bbb !important;
+	background-color: hsl(0deg 0% 100% / 5%) !important;  
 }
 
 .hg-code {
@@ -1175,13 +1188,14 @@ ul#searchresults span.teaser em {
     display: inline-block;
 }
 
+
 .close-btn {
-  background-color: hsl(0deg 0% 100% / 25%);
-  color: red ! important;
-  padding: 5px 10px 5px 10px;
-  width: 25px;
-		border-radius: 60px;
-  border-color: hsl(0deg 0% 100% / 30%);
-  border-style: solid;
-		border-width: 1px;
+    background-color: hsl(0deg 0% 100% / 25%);
+    color: red ! important;
+    padding: 5px 10px 5px 10px;
+    width: 25px;
+	border-radius: 60px;
+    border-color: hsl(0deg 0% 100% / 30%);
+    border-style: solid;
+	border-width: 1px;
 }
