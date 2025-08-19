@@ -4,18 +4,20 @@ Here you can use the basic editor features to write codes more conveniently.
 <div id="stats-container">
 	<p>Words: <span id="wordCount">0</span></p>
 	<p>Spaces: <span id="spaceCount">0</span></p>
- <p>Lines: <span id="lineCount">0</span></p>
- <p>Characters: <span id="charCount">0</span></p>
+    <p>Lines: <span id="lineCount">0</span></p>
+    <p>Characters: <span id="charCount">0</span></p>
 	<p>Bytes: <span id="byteCount">0</span></p>
-	<button onclick="copyText()">Copy</button>
 </div>
 
 <div id="command-editor">
 	 <p>Name</p>
 	 <textarea id="name"></textarea>
-  <p id="error-message"></p>
-  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
-  <button onclick="saveFile()">Save as file</button>
+	<p id="error-message"></p>
+	<div class="scriptdiv">
+	  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
+		<button onclick="copyText()">Copy</button>
+	</div>
+	<button onclick="saveFile()">Save as file</button>
 </div>
 
 <div id="text-editorui">
