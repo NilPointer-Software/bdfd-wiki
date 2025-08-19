@@ -1201,3 +1201,17 @@ ul#searchresults span.teaser em {
 	border-width: 1px;
 }
 
+.scriptdiv {
+  position: relative;
+}
+
+.scriptdiv button {
+    position: absolute;
+    top: .5rem;
+    right: .7rem;
+    background-color: hsl(0deg 0% 100% / 10%);
+    border-radius: 10px;
+	border: none;
+    display: inline-block;
+    cursor: pointer;
+}
