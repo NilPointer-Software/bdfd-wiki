@@ -426,3 +426,25 @@ function copyText() {
 
   window.getSelection().removeAllRanges();
 }
+
+function saveFile() {
+  const fileName = document.getElementById('name').value;
+  const fileContent = document.getElementById('editor').value;
+
+  if (!fileName) {
+    document.getElementById('error-message').textContent = "Пожалуйста, введите имя файла.";
+    return;
+  } else {
+    document.getElementById('error-message').textContent = "";
+  }
+
+  const blob = new Blob([fileContent], { type: 'text/plain' });
+  const a = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  a.href = url;
+  a.download = fileName + '.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
