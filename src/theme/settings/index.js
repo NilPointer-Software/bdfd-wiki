@@ -237,7 +237,7 @@ function setStatusBar(HueInput) {
 		document
 			.querySelector('meta[name="theme-color"]')
 			.setAttribute("content", `#000`);
-	} else if (HueInput) == "light") {
+	} else if (HueInput == "light") {
 		document
 			.querySelector('meta[name="theme-color"]')
 			.setAttribute("content", `#fff`);
