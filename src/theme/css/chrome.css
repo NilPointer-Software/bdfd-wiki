@@ -1205,13 +1205,35 @@ ul#searchresults span.teaser em {
   position: relative;
 }
 
-.scriptdiv button {
-    position: absolute;
-    top: .5rem;
-    right: .7rem;
-    background-color: hsl(0deg 0% 100% / 10%);
-    border-radius: 10px;
-	border: none;
-    display: inline-block;
-    cursor: pointer;
+.scriptdiv button:hover {
+	color: var(--color1);
+	border-color: var(--color1);
+	border-radius: 9px;
+	opacity: 0.9;
+	transition: 0.2s;
 }
+
+.scriptdiv button {
+	position: absolute;
+    top: 0;
+    right: 0;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	outline: none;
+	color: #fff;
+	margin: 1.5px 5px;
+	padding: 5px;
+	cursor: pointer;
+	width: 3.2rem;
+	height: 3.2rem;
+	font-size: 1.5rem;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	border-color: #aeaeae;
+	background: rgb(255 255 255 / 10%);
+	opacity: 0.8;
+	transition: 0.2s;
+}
+
