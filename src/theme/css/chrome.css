@@ -1215,8 +1215,8 @@ ul#searchresults span.teaser em {
 
 .scriptdiv button {
 	position: absolute;
-    top: 0;
-    right: 0;
+    top: .3rem;
+    right: .3rem;
 	user-select: none;
 	-webkit-user-select: none;
 	touch-action: manipulation;
@@ -1241,3 +1241,4 @@ ul#searchresults span.teaser em {
     display: block !important;
 	text-align: center;
 }
+
