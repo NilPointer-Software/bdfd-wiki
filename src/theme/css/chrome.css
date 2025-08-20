@@ -1188,15 +1188,19 @@ ul#searchresults span.teaser em {
     display: inline-block;
 }
 
-
 .close-btn {
-    background-color: hsl(0deg 0% 100% / 10%);
+	transition: .3s;
     color: hsl(0deg 0% 100% / 75%); ! important;
     padding: 1px 7px;
+	border-color: hsl(0deg 0% 100% / 15%);
     width: 25px;
-	cursor: pointer;
 	border-radius: 60px;
-    border-color: hsl(0deg 0% 100% / 15%);
+	cursor: pointer;
+}
+
+.close-btn:hover {
+	transition: .3s;
+    background-color: hsl(0deg 0% 100% / 10%);
     border-style: solid;
 	border-width: 1px;
 }
@@ -1241,4 +1245,5 @@ ul#searchresults span.teaser em {
     display: block !important;
 	text-align: center;
 }
+
 
