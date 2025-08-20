@@ -229,21 +229,20 @@ function replaceText() {
   checkBrackets();
 }
 
-
 function checkBrackets() {
   const text = document.getElementById("editor").value;
-  const textBytes = new TextEncoder().encode(text).length; 
+  const textBytes = new TextEncoder().encode(text).length;
   let dollarCount = 0;
   let openBrackets = 0;
   let closeBrackets = 0;
   const errors = [];
 
-  if (textBytes > 65000) {
-    errors.push({ message: "Text exceeds the allowed size (65000 bytes).", id: errors.length });
+  if (textBytes > 65536) {
+    errors.push({ message: "Error: Text exceeds the allowed size (65536 bytes).", id: errors.length });
   }
 
   if (text.indexOf('$') === -1 && text.length > 2000) {
-    errors.push({ message: "Character limit exceeded (2000) for messages without $.", id: errors.length });
+    errors.push({ message: "Warning: Character limit exceeded (2000) for messages without functions.", id: errors.length });
   }
 
   const lines = text.split('\n');
@@ -257,7 +256,7 @@ function checkBrackets() {
       } else if (line[j] === '[') {
         openBrackets++;
         if (j + 1 < line.length && line[j + 1] === ']') {
-          errors.push({ message: `Empty brackets [] detected on line ${i + 1}.`, id: errors.length }); 
+          errors.push({ message: `Warning: Empty brackets [] detected on line ${i + 1}.`, id: errors.length });
         }
       } else if (line[j] === ']' && (j === 0 || line[j - 1] !== '\\')) {
         closeBrackets++;
@@ -273,7 +272,7 @@ function checkBrackets() {
 
   if (openBrackets <= dollarCount) {
     if (closeBrackets < openBrackets) {
-      errors.push({ message: "Not all open brackets are closed.", id: errors.length });
+      errors.push({ message: "Error: Not all open brackets are closed.", id: errors.length });
     }
   }
 
@@ -284,7 +283,7 @@ function checkBrackets() {
       const errorDiv = document.createElement("div");
       errorDiv.style.display = "block";
 
-      if (error.message.includes("Empty brackets") || error.message.includes("Character limit exceeded")) {
+      if (error.message.includes("Warning:")) {
         errorDiv.style.color = "orange";
       }
 
@@ -298,6 +297,15 @@ function checkBrackets() {
         errorDiv.remove();
       }
     });
+
+      if (errors.length > 3) {
+          const closeAllButton = document.createElement("button");
+          closeAllButton.textContent = "Close All";
+          closeAllButton.addEventListener("click", function() {
+              errorMessageElement.innerHTML = "";
+          });
+          errorMessageElement.appendChild(closeAllButton);
+      }
   } else {
     errorMessageElement.textContent = "";
     errorMessageElement.style.color = "black";
@@ -444,3 +452,4 @@ function saveFile() {
 
   URL.revokeObjectURL(url);
 }
+
