@@ -20,6 +20,13 @@ Here you can use the basic editor features to write codes more conveniently.
 	<button onclick="saveFile()">Save as file</button>
 </div>
 
+<div id="another-info">
+  <p>[<span id="openCount">0</span></p>
+  <p>]<span id="closeCount">0</span></p>
+		<p>Escaped Characters: <span id="escapesCount">0</span></p>
+		<p>Special Characters: <span id="specialChars">0</span></p>
+</div>
+
 <div id="text-editorui">
 	<label for="searchText">Find:</label>
 	<input type="text" id="searchText"><br>
@@ -27,13 +34,6 @@ Here you can use the basic editor features to write codes more conveniently.
 	<input type="text" id="replaceText"><br>
 	<button onclick="replaceText()">Replace all</button>
 	<button id="highlightButton" onclick="toggleHighlight()">Find</button><br>
-</div>
-
-<div id="another-info">
-  <p>[<span id="openCount">0</span></p>
-  <p>]<span id="closeCount">0</span></p>
-		<p>Escaped Characters: <span id="escapesCount">0</span></p>
-		<p>Special Characters: <span id="specialChars">0</span></p>
 </div>
 
 <div id="highlightedText"></div>
