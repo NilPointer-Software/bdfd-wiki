@@ -11,7 +11,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 <div id="command-editor">
 	 <p>Name</p>
-	 <textarea id="name"></textarea>
+	 <textarea id="name" oninput="nameScript()"></textarea>
 	<p id="error-message"></p>
 	<div class="scriptdiv">
 	  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
