@@ -12,6 +12,17 @@ Here you can use the basic editor features to write codes more conveniently.
 <div id="command-editor">
 	 <p>Name</p>
 	 <textarea id="name" oninput="nameScript()"></textarea>
+		<select name="type">
+			 <option selected value="auto">Auto</option>
+				<option value="command">Command</option>
+				<option value="slash">Slash Command</option>
+				<option value="interaction">Interaction</option>
+		</select>
+		<select name="language">
+			 <option selected value="bds2">BDScript 2</option>
+				<option value="bds">BDScript</option>
+				<option value="bdsu">BDScript Unstable</option>
+		</select>
 	<p id="error-message"></p>
 	<div class="scriptdiv">
 	  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
