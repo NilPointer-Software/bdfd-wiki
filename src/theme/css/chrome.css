@@ -1246,4 +1246,24 @@ ul#searchresults span.teaser em {
 	text-align: center;
 }
 
+#error-message button {
+	transition: .4s;
+	display: inline-block;
+	margin-right: 7.5px;
+	background-color: var(--color3);
+	padding: 1rem;
+	color: hsl(0deg 0% 100% / 70%);;
+	font-size: 1.5rem;
+	border-radius: 10px;
+	border: none;
+	border-width: .1px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#error-message button:hover {
+	transition: .4s;
+	color: var(--color1);
+	border-style: solid;
+}
+
 
