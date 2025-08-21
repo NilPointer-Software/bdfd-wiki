@@ -453,3 +453,12 @@ function saveFile() {
   URL.revokeObjectURL(url);
 }
 
+function nameScript() {
+  const textarea = document.getElementById('name');
+
+  textarea.value = textarea.value.replace(/[\r\n]+/g, '');
+
+  if (textarea.value.length > 30) {
+    textarea.value = textarea.value.substring(0, 30);
+  }
+}
