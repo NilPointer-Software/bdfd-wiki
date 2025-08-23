@@ -16,7 +16,7 @@ Here you can use the basic editor features to write codes more conveniently.
 			 <option selected value="auto">Auto</option>
 				<option value="command">Command</option>
 				<option value="slash">Slash Command</option>
-				<option value="interaction">Interaction</option>
+				<option value="callback">Callback</option>
 		</select>
 		<select name="language">
 			 <option selected value="bds2">BDScript 2</option>
