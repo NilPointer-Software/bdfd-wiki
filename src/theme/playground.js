@@ -468,7 +468,7 @@ function typeScript() {
   const nameValue = nameInput.value;
   const selectElement = document.querySelector('select[name="type"]');
   const selectedValue = selectElement.value;
-  const nameLabel = document.querySelector('p');
+  const nameLabel = document.getElementById('scriptType');
 
   let commandType = '';
 
@@ -480,7 +480,13 @@ function typeScript() {
     } else {
       commandType = ' • Command';
     }
-  }
+  } else if (selectedValue === 'command') {
+    commandType = ' • Command';
+  } else if (selectedValue === 'callback') {
+    commandType = ' • Callback';
+  } else if (selectedValue === 'slashcommand') {
+    commandType = ' • Slash Command';
+  } 
 
   nameLabel.textContent = 'Name' + commandType;
 }
