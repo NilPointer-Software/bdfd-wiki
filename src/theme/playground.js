@@ -421,7 +421,7 @@ function toggleHighlight() {
 
 function getRelativeTime(date) {
     const now = new Date();
-    const diffInSeconds = Math.round((now - date) / 1000);
+    const diffInSeconds = Math.round((date - now) / 1000);
 
     const intervals = {
         'year': 31536000,
@@ -432,16 +432,23 @@ function getRelativeTime(date) {
         'second': 1
     };
 
+    const isFuture = diffInSeconds > 0;
+
+    let prefix = isFuture ? 'in ' : '';
+    let suffix = isFuture ? '' : ' ago';
+
+    let absDiffInSeconds = Math.abs(diffInSeconds);
+
     for (const interval in intervals) {
         const secondsInInterval = intervals[interval];
-        const quantity = Math.floor(diffInSeconds / secondsInInterval);
+        const quantity = Math.floor(absDiffInSeconds / secondsInInterval);
 
         if (quantity >= 1) {
-            return quantity + ' ' + interval + (quantity > 1 ? 's' : '') + ' ago';
+            return prefix + quantity + ' ' + interval + (quantity > 1 ? 's' : '') + suffix;
         }
     }
 
-    return 'Just now';
+    return isFuture ? 'Soon' : 'Just now';
 }
 
 function copyText() {
