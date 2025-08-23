@@ -11,8 +11,11 @@ Here you can use the basic editor features to write codes more conveniently.
 
 <div id="command-editor">
 	 <p id="scriptType">Name</p>
-	 <textarea id="name" oninput="nameScript(); typeScript()"></textarea>
-		<select name="type" onchange="typeScript()">
+		<div id="nameScript">
+	   <textarea id="name" oninput="nameScript(); typeScript()"></textarea>
+		  <span>0/32</span>
+			</div>
+  <select name="type" onchange="typeScript()">
 			 <option selected value="auto">Auto</option>
 				<option value="command">Command</option>
 				<option value="slash">Slash Command</option>
