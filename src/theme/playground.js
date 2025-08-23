@@ -484,7 +484,7 @@ function typeScript() {
     commandType = ' • Command';
   } else if (selectedValue === 'callback') {
     commandType = ' • Callback';
-  } else if (selectedValue === 'slashcommand') {
+  } else if (selectedValue === 'slash') {
     commandType = ' • Slash Command';
   } 
 
