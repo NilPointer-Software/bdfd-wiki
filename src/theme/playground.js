@@ -224,10 +224,19 @@ function replaceText() {
   const searchText = document.getElementById("searchText").value;
   const replaceText = document.getElementById("replaceText").value;
   const editor = document.getElementById("editor");
-  editor.value = editor.value.replaceAll(searchText, replaceText);
+
+  try {
+    const regex = new RegExp(searchText, 'g');
+    editor.value = editor.value.replace(regex, replaceText);
+  } catch (e) {
+    const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    editor.value = editor.value.replaceAll(escapedSearchText, replaceText);
+  }
+
   updateStats();
   checkBrackets();
 }
+
 
 function checkBrackets() {
   const text = document.getElementById("editor").value;
