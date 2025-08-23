@@ -458,7 +458,29 @@ function nameScript() {
 
   textarea.value = textarea.value.replace(/[\r\n]+/g, '');
 
-  if (textarea.value.length > 30) {
-    textarea.value = textarea.value.substring(0, 30);
+  if (textarea.value.length > 32) {
+    textarea.value = textarea.value.substring(0, 32);
   }
+}
+
+function typeScript() {
+  const nameInput = document.getElementById('name');
+  const nameValue = nameInput.value;
+  const selectElement = document.querySelector('select[name="type"]');
+  const selectedValue = selectElement.value;
+  const nameLabel = document.querySelector('p');
+
+  let commandType = '';
+
+  if (selectedValue === 'auto') {
+    if (nameValue.startsWith('/')) {
+      commandType = ' • Slash Command';
+    } else if (nameValue.startsWith('$on')) {
+      commandType = ' • Callback';
+    } else {
+      commandType = ' • Command';
+    }
+  }
+
+  nameLabel.textContent = 'Name' + commandType;
 }
