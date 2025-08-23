@@ -321,16 +321,25 @@ function toggleHighlight() {
   let matches = 0;
 
   if (searchText) {
-    const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(escapedSearchText, 'gi');
+    try {
+      const regex = new RegExp(searchText, 'gi');
 
-    highlighted = text.replace(regex, (match) => {
-      matches++;
-      return `<span class="highlight">${match}</span>`;
-    });
+      highlighted = text.replace(regex, (match) => {
+        matches++;
+        return `<span class="highlight">${match}</span>`;
+      });
+    } catch (e) {
+      const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(escapedSearchText, 'gi');
+
+      highlighted = text.replace(regex, (match) => {
+        matches++;
+        return `<span class="highlight">${match}</span>`;
+      });
+    }
   }
 
-  // Подсветка <@…> и <#…>, убираем скобки
+  // Channel & User mentions
   const mentionRegex = /<@(.*?)>/g;
   highlighted = highlighted.replace(mentionRegex, (match, content) => {
     return `<span class="mention">@${content}</span>`;
@@ -341,31 +350,31 @@ function toggleHighlight() {
     return `<span class="channel">#${content}</span>`;
   });
 
-  // Обработка жирного текста: **текст** -> <b>текст</b>
+  // **
   const boldRegex = /\*\*(.*?)\*\*/g;
   highlighted = highlighted.replace(boldRegex, (match, content) => {
     return `<b>${content}</b>`;
   });
 
-  // Обработка курсива: *текст* -> <i>текст</i>
+  // *
   const italicRegex = /\*(.*?)\*/g;
   highlighted = highlighted.replace(italicRegex, (match, content) => {
     return `<i>${content}</i>`;
   });
 
-  // Обработка кода: `текст` -> <p id="hg-code">текст</p>
+  // Code
   const codeRegex = /`(.*?)`/g;
   highlighted = highlighted.replace(codeRegex, (match, content) => {
     return `<p id="hg-code">${content}</p>`;
   });
 
-    // Преобразование ссылок: автоматически распознает и создает теги <a>
+    // Link
   const linkRegex = /(https?:\/\/[^\s]+)/g;
   highlighted = highlighted.replace(linkRegex, (url) => {
     return `<a href="${url}" target="_blank">${url}</a>`;
   });
 
-    // Обработка timestamp меток
+    // Unixtime
   const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
   highlighted = highlighted.replace(timestampRegex, (match, timestamp, format) => {
       const date = new Date(parseInt(timestamp) * 1000); // Преобразуем в миллисекунды
@@ -384,7 +393,7 @@ function toggleHighlight() {
       return `<span class="timestamp">${formattedDate}</span>`; // Оборачиваем в span
   });
 
-  // Добавление номеров строк
+  // Lines
   const lines = highlighted.split('\n');
   let numberedText = "";
   for (let i = 0; i < lines.length; i++) {
@@ -395,7 +404,6 @@ function toggleHighlight() {
   highlightedTextDiv.innerHTML = resultsString + numberedText;
 }
 
-// Функция для получения относительного времени (например, "5 minutes ago")
 function getRelativeTime(date) {
     const now = new Date();
     const diffInSeconds = Math.round((now - date) / 1000);
