@@ -370,11 +370,17 @@ function toggleHighlight() {
   highlighted = highlighted.replace(italicRegex, (match, content) => {
     return `<i>${content}</i>`;
   });
+  
+  // ~~
+  const delRegex = /~~(.*?)~~/g;
+  highlighted = highlighted.replace(delRegex, (match, content) => {
+    return `<strike>${content}</strike>`;
+  });
 
-  // Code
-  const codeRegex = /`(.*?)`/g;
-  highlighted = highlighted.replace(codeRegex, (match, content) => {
-    return `<p id="hg-code">${content}</p>`;
+  // __
+  const underRegex = /__(.*?)__/g;
+  highlighted = highlighted.replace(underRegex, (match, content) => {
+    return `<u>${content}</u>`;
   });
 
     // Link
