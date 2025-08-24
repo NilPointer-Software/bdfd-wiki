@@ -238,6 +238,7 @@ function replaceText() {
 }
 
 function callError(message, type = 'error') {
+
   const errorMessageElement = document.getElementById("error-message");
   errorMessageElement.style.color = "red";
 
@@ -250,6 +251,40 @@ function callError(message, type = 'error') {
 
   errorDiv.innerHTML = `${message} <span class="close-btn" data-id="">×</span>`;
   errorMessageElement.appendChild(errorDiv);
+
+  const closeBtn = errorDiv.querySelector('.close-btn');
+
+  closeBtn.addEventListener('click', function() {
+    errorDiv.remove();
+    updateCloseAllButton();
+  });
+
+  updateCloseAllButton();
+
+  function updateCloseAllButton() {
+    const errorCount = errorMessageElement.children.length;
+    const closeAllButtonId = 'close-all-errors-btn';
+    let closeAllButton = document.getElementById(closeAllButtonId);
+
+    if (errorCount > 3) {
+      if (!closeAllButton) {
+        closeAllButton = document.createElement('button');
+        closeAllButton.id = closeAllButtonId;
+        closeAllButton.textContent = `Close all ${errorCount} notifications`;
+        closeAllButton.addEventListener('click', () => {
+          while (errorMessageElement.firstChild) {
+            errorMessageElement.removeChild(errorMessageElement.firstChild);
+          }
+          closeAllButton.remove();
+        });
+        document.body.appendChild(closeAllButton);
+      } else {
+        closeAllButton.textContent = `Close all ${errorCount} notifications`;
+      }
+    } else if (closeAllButton) {
+      closeAllButton.remove();
+    }
+  }
 }
 
 function checkBrackets() {
@@ -518,4 +553,5 @@ function typeScript() {
     }
   }
 }
+
 
