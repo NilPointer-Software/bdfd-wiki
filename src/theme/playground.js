@@ -473,6 +473,12 @@ function nameScript() {
   }
 
   count.textContent = textarea.value.length + '/50';
+
+  if (textarea.value.length >= 50) {
+    count.style.color = 'red'; 
+  } else {
+    count.style.color = '';
+  }
 }
 
 function typeScript() {
@@ -512,3 +518,4 @@ function typeScript() {
     }
   }
 }
+
