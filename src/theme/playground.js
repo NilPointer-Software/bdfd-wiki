@@ -238,7 +238,6 @@ function replaceText() {
 }
 
 function callError(message, type = 'error') {
-
   const errorMessageElement = document.getElementById("error-message");
   errorMessageElement.style.color = "red";
 
@@ -272,8 +271,8 @@ function callError(message, type = 'error') {
         closeAllButton.id = closeAllButtonId;
         closeAllButton.textContent = `Close all ${errorCount} notifications`;
         closeAllButton.addEventListener('click', () => {
-          while (errorMessageElement.firstChild) {
-            errorMessageElement.removeChild(errorMessageElement.firstChild);
+          for (let i = errorMessageElement.children.length - 1; i >= 0; i--) {
+            errorMessageElement.children[i].remove();
           }
           closeAllButton.remove();
         });
@@ -286,6 +285,7 @@ function callError(message, type = 'error') {
     }
   }
 }
+
 
 function checkBrackets() {
   const text = document.getElementById("editor").value;
@@ -562,6 +562,7 @@ function typeScript() {
   }
 
 }
+
 
 
 
