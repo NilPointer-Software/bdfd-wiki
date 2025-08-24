@@ -549,9 +549,15 @@ function typeScript() {
   const selectedValue = selectElement.value;
   const nameLabel = document.getElementById('scriptType');
 
+  const regexErrorText = "Error: Slash command name must contain only English letters and hyphens.";
+  const lengthErrorText = "Error: Slash command name exceeds 32 characters.";
+  const emptyErrorText = "Error: Name field cannot be empty.";
+  
   if (!nameValue) {
     callError("Error: Name field cannot be empty.", 'error', true);
     return;
+  } else {
+    deleteError(emptyErrorText);
   }
 
   let commandType = '';
@@ -584,9 +590,6 @@ function typeScript() {
       nameToCheck = "";
     }
 
-    const regexErrorText = "Error: Slash command name must contain only English letters and hyphens.";
-    const lengthErrorText = "Error: Slash command name exceeds 32 characters.";
-
     if (!regex.test(nameToCheck)) {
       callError(regexErrorText, 'error', true);
     } else {
@@ -600,14 +603,3 @@ function typeScript() {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
