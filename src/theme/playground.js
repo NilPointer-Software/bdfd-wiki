@@ -605,7 +605,7 @@ function typeScript() {
 }
 
 function autocomplete() {
-  if (window.location.href.includes("editor")) {
+  if (2 > 1) {
     const sectionList = document.querySelector('ol.section');
 
     if (!sectionList) {
@@ -659,3 +659,4 @@ function autocomplete() {
 }
 
 autocomplete();
+
