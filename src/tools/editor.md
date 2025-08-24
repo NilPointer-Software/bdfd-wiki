@@ -13,7 +13,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	 <p id="scriptType">Name</p>
 		<div id="nameScript">
 	   <textarea id="name" oninput="nameScript(); typeScript()"></textarea>
-		  <span>0/32</span>
+		  <span>0/50</span>
 			</div>
   <select name="type" onchange="typeScript()">
 			 <option selected value="auto">Auto</option>
