@@ -270,13 +270,15 @@ function callError(message, type = 'error') {
         closeAllButton = document.createElement('button');
         closeAllButton.id = closeAllButtonId;
         closeAllButton.textContent = `Close all ${errorCount} notifications`;
+
         closeAllButton.addEventListener('click', () => {
           for (let i = errorMessageElement.children.length - 1; i >= 0; i--) {
             errorMessageElement.children[i].remove();
           }
           closeAllButton.remove();
         });
-        document.body.appendChild(closeAllButton);
+
+        errorMessageElement.appendChild(closeAllButton);
       } else {
         closeAllButton.textContent = `Close all ${errorCount} notifications`;
       }
@@ -285,7 +287,6 @@ function callError(message, type = 'error') {
     }
   }
 }
-
 
 function checkBrackets() {
   const text = document.getElementById("editor").value;
@@ -562,6 +563,7 @@ function typeScript() {
   }
 
 }
+
 
 
 
