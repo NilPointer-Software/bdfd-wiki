@@ -27,6 +27,7 @@ Here you can use the basic editor features to write codes more conveniently.
 				<option value="bdsu">BDScript Unstable</option>
 		</select>
 	<p id="error-message"></p>
+	<p id="autocomplete"></p>
 	<div class="scriptdiv">
 	  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
 	 	<button class="fa fa-regular fa-paste clip-button" onclick="copyText() title="Copy" aria-label="Copy"></button>
