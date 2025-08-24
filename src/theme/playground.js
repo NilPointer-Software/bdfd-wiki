@@ -498,7 +498,17 @@ function typeScript() {
     commandType = ' • Callback';
   } else if (selectedValue === 'slash') {
     commandType = ' • Slash Command';
-  } 
+  }
 
   nameLabel.textContent = 'Name' + commandType;
+
+  if (commandType.includes('Slash Command')) {
+    const regex = /^[a-zA-Z-]+$/;
+    if (!regex.test(nameValue)) {
+      callError("Error: Slash command name must contain only English letters and hyphens.");
+    }
+    if (nameValue.length > 32) {
+      callError("Error: Slash command name exceeds 32 characters.");
+    }
+  }
 }
