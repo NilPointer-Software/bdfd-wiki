@@ -545,13 +545,23 @@ function typeScript() {
 
   if (commandType.includes('Slash Command')) {
     const regex = /^[a-zA-Z-]+$/;
-    if (!regex.test(nameValue)) {
-      callError("Error: Slash command name must contain only English letters and hyphens.");
+    let nameToCheck = nameValue;
+
+    if (nameValue.length > 0) {
+      nameToCheck = nameValue.substring(1);
+    } else {
+      nameToCheck = "";
+    }
+
+    if (!regex.test(nameToCheck)) {
+      callError("Error: Slash command name must contain only English letters and hyphens (excluding first character).");
     }
     if (nameValue.length > 32) {
       callError("Error: Slash command name exceeds 32 characters.");
     }
   }
+
 }
+
 
 
