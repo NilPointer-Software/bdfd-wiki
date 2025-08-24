@@ -240,7 +240,7 @@ function replaceText() {
 function callError(message, type = 'error') {
   const errorMessageElement = document.getElementById("error-message");
   errorMessageElement.style.color = "red";
-
+  let closeAllButton = document.getElementById('close-all-errors-btn');
   const errorDiv = document.createElement("div");
   errorDiv.style.display = "block";
 
@@ -249,7 +249,12 @@ function callError(message, type = 'error') {
   }
 
   errorDiv.innerHTML = `${message} <span class="close-btn" data-id="">×</span>`;
+
   errorMessageElement.appendChild(errorDiv);
+
+  if (closeAllButton) {
+    errorMessageElement.appendChild(closeAllButton);
+  }
 
   const closeBtn = errorDiv.querySelector('.close-btn');
 
@@ -261,9 +266,8 @@ function callError(message, type = 'error') {
   updateCloseAllButton();
 
   function updateCloseAllButton() {
-    const errorCount = errorMessageElement.children.length;
+    const errorCount = errorMessageElement.children.length - (closeAllButton ? 1 : 0);
     const closeAllButtonId = 'close-all-errors-btn';
-    let closeAllButton = document.getElementById(closeAllButtonId);
 
     if (errorCount > 3) {
       if (!closeAllButton) {
@@ -272,12 +276,10 @@ function callError(message, type = 'error') {
         closeAllButton.textContent = `Close all ${errorCount} notifications`;
 
         closeAllButton.addEventListener('click', () => {
-          for (let i = errorMessageElement.children.length - 1; i >= 0; i--) {
-            errorMessageElement.children[i].remove();
+          while (errorMessageElement.firstChild) {
+            errorMessageElement.removeChild(errorMessageElement.firstChild);
           }
-          closeAllButton.remove();
         });
-
         errorMessageElement.appendChild(closeAllButton);
       } else {
         closeAllButton.textContent = `Close all ${errorCount} notifications`;
@@ -563,6 +565,7 @@ function typeScript() {
   }
 
 }
+
 
 
 
