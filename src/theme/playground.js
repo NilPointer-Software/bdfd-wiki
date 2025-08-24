@@ -300,6 +300,19 @@ function callError(message, type = 'error', unique = false) {
   }
 }
 
+function deleteError(message) {
+  const errorMessageElement = document.getElementById("error-message");
+
+  for (let i = errorMessageElement.children.length - 1; i >= 0; i--) {
+    const child = errorMessageElement.children[i];
+
+    if (child.tagName === 'DIV' && child.textContent.startsWith(message)) {
+      child.remove();
+    }
+  }
+  updateCloseAllButton();
+}
+
 function checkBrackets() {
   const text = document.getElementById("editor").value;
   const textBytes = new TextEncoder().encode(text).length;
@@ -571,14 +584,24 @@ function typeScript() {
       nameToCheck = "";
     }
 
+    const regexErrorText = "Error: Slash command name must contain only English letters and hyphens.";
+    const lengthErrorText = "Error: Slash command name exceeds 32 characters.";
+
     if (!regex.test(nameToCheck)) {
-      callError("Error: Slash command name must contain only English letters and hyphens.", 'error', 'true');
+      callError(regexErrorText, 'error', true);
+    } else {
+      deleteError(regexErrorText);
     }
+
     if (nameValue.length > 32) {
-      callError("Error: Slash command name exceeds 32 characters.", 'error', 'true');
+      callError(lengthErrorText, 'error', true);
+    } else {
+      deleteError(lengthErrorText);
     }
   }
 }
+
+
 
 
 
