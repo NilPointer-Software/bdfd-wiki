@@ -605,38 +605,50 @@ function typeScript() {
 }
 
 function autocomplete() {
+  //Убедимся, что условие всегда выполняется
   if (2 > 1) {
+    // Получаем ссылку на список функций
     const sectionList = document.querySelector('ol.section');
 
+    // Проверяем, что список функций существует в DOM
     if (!sectionList) {
       console.error("Не найден элемент <ol class='section'>.");
-      return;
+      return; // Прерываем выполнение, если список не найден
     }
+    // Извлекаем HTML-код списка функций
     const html = sectionList.innerHTML;
+    // Извлекаем имена функций (текст ссылок, начинающихся с "$")
     const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
       .map(a => a.textContent)
       .filter(text => text.startsWith('$'));
 
+    // Получаем ссылку на текстовое поле и область для автокомплита
     const textarea = document.getElementById('editor');
     const autocompleteOutput = document.getElementById('autocomplete');
 
+    // Добавляем обработчик события ввода в текстовое поле
     textarea.addEventListener('input', function (event) {
       const inputText = event.target.value;
       const cursorPosition = textarea.selectionStart;
       let searchTerm = '';
 
+      // Находим индекс последнего символа "$" перед курсором
       let dollarIndex = inputText.lastIndexOf('$', cursorPosition);
 
+      // Если символ "$" не найден, очищаем область автокомплита и выходим
       if (dollarIndex === -1) {
         autocompleteOutput.innerHTML = '';
         return;
       }
 
+      // Извлекаем текст для поиска, начиная с символа "$"
       searchTerm = inputText.substring(dollarIndex).toLowerCase();
       autocompleteOutput.innerHTML = '';
 
+      // Фильтруем функции, которые соответствуют поисковому запросу
       const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
 
+      // Отображаем подходящие функции в области автокомплита
       matchingFunctions.forEach(func => {
         const span = document.createElement('span');
         span.textContent = func;
@@ -644,10 +656,15 @@ function autocomplete() {
         span.style.marginRight = '5px';
         span.style.cursor = 'pointer';
 
+        // Добавляем обработчик клика на функцию автокомплита
         span.addEventListener('click', function () {
+          // Заменяем текст от символа "$" до курсора выбранной функцией
           textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
+          // Устанавливаем позицию курсора после вставленной функции
           textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
+          // Очищаем область автокомплита
           autocompleteOutput.innerHTML = '';
+          // Возвращаем фокус в текстовое поле
           textarea.focus();
         });
 
@@ -658,5 +675,5 @@ function autocomplete() {
   }
 }
 
-autocomplete();
-
+// Вызываем функцию автокомплита после загрузки DOM
+document.addEventListener('DOMContentLoaded', autocomplete);
