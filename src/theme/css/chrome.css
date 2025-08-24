@@ -1266,4 +1266,17 @@ ul#searchresults span.teaser em {
 	border-style: solid;
 }
 
+#nameScript {
+    position: relative;
+}
 
+#nameScript span {
+	user-select: none;
+	-webkit-user-select: none;
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 0.8em;    
+}
