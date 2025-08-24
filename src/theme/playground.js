@@ -237,6 +237,20 @@ function replaceText() {
   checkBrackets();
 }
 
+function callError(message, type = 'error') {
+  const errorMessageElement = document.getElementById("error-message");
+  errorMessageElement.style.color = "red";
+
+  const errorDiv = document.createElement("div");
+  errorDiv.style.display = "block";
+
+  if (type === 'warn') {
+    errorDiv.style.color = "orange";
+  }
+
+  errorDiv.innerHTML = `${message} <span class="close-btn" data-id="">×</span>`;
+  errorMessageElement.appendChild(errorDiv);
+}
 
 function checkBrackets() {
   const text = document.getElementById("editor").value;
@@ -244,14 +258,17 @@ function checkBrackets() {
   let dollarCount = 0;
   let openBrackets = 0;
   let closeBrackets = 0;
-  const errors = [];
+
+  const errorMessageElement = document.getElementById("error-message");
+  errorMessageElement.innerHTML = "";
+  errorMessageElement.style.color = "black";
 
   if (textBytes > 65536) {
-    errors.push({ message: "Error: Text exceeds the allowed size (65536 bytes).", id: errors.length });
+    callError("Error: Text exceeds the allowed size (65536 bytes).");
   }
 
   if (text.indexOf('$') === -1 && text.length > 2000) {
-    errors.push({ message: "Warning: Character limit exceeded (2000) for messages without functions.", id: errors.length });
+    callError("Warning: Character limit exceeded (2000) for messages without functions.", 'warn');
   }
 
   const lines = text.split('\n');
@@ -265,7 +282,7 @@ function checkBrackets() {
       } else if (line[j] === '[') {
         openBrackets++;
         if (j + 1 < line.length && line[j + 1] === ']') {
-          errors.push({ message: `Warning: Empty brackets [] detected on line ${i + 1}.`, id: errors.length });
+          callError(`Warning: Empty brackets [] detected on line ${i + 1}.`, 'warn');
         }
       } else if (line[j] === ']' && (j === 0 || line[j - 1] !== '\\')) {
         closeBrackets++;
@@ -276,51 +293,12 @@ function checkBrackets() {
   document.getElementById("openCount").textContent = openBrackets;
   document.getElementById("closeCount").textContent = closeBrackets;
 
-  const errorMessageElement = document.getElementById("error-message");
-  errorMessageElement.innerHTML = "";
-
   if (openBrackets <= dollarCount) {
     if (closeBrackets < openBrackets) {
-      errors.push({ message: "Error: Not all open brackets are closed.", id: errors.length });
+      callError("Error: Not all open brackets are closed.");
     }
   }
-
-  if (errors.length > 0) {
-    errorMessageElement.style.color = "red";
-
-    errors.forEach(error => {
-      const errorDiv = document.createElement("div");
-      errorDiv.style.display = "block";
-
-      if (error.message.includes("Warning:")) {
-        errorDiv.style.color = "orange";
-      }
-
-      errorDiv.innerHTML = `${error.message} <span class="close-btn" data-id="${error.id}">×</span>`;
-      errorMessageElement.appendChild(errorDiv);
-    });
-
-    errorMessageElement.addEventListener("click", function(event) {
-      if (event.target.classList.contains("close-btn")) {
-        const errorDiv = event.target.parentNode;
-        errorDiv.remove();
-      }
-    });
-
-      if (errors.length > 3) {
-          const closeAllButton = document.createElement("button");
-          closeAllButton.textContent = "Close All";
-          closeAllButton.addEventListener("click", function() {
-              errorMessageElement.innerHTML = "";
-          });
-          errorMessageElement.appendChild(closeAllButton);
-      }
-  } else {
-    errorMessageElement.textContent = "";
-    errorMessageElement.style.color = "black";
-  }
 }
-
 
 function toggleHighlight() {
   const highlightedTextDiv = document.getElementById("highlightedText");
@@ -483,14 +461,18 @@ function saveFile() {
   URL.revokeObjectURL(url);
 }
 
+
 function nameScript() {
   const textarea = document.getElementById('name');
+  const count = textarea.parentNode.querySelector('span');
 
   textarea.value = textarea.value.replace(/[\r\n]+/g, '');
 
-  if (textarea.value.length > 32) {
-    textarea.value = textarea.value.substring(0, 32);
+  if (textarea.value.length > 50) {
+    textarea.value = textarea.value.substring(0, 50);
   }
+
+  count.textContent = textarea.value.length + '/50';
 }
 
 function typeScript() {
