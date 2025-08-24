@@ -536,6 +536,11 @@ function typeScript() {
   const selectedValue = selectElement.value;
   const nameLabel = document.getElementById('scriptType');
 
+  if (!nameValue) {
+    callError("Error: Name field cannot be empty.", 'error', true);
+    return;
+  }
+
   let commandType = '';
 
   if (selectedValue === 'auto') {
@@ -573,8 +578,9 @@ function typeScript() {
       callError("Error: Slash command name exceeds 32 characters.", 'error', 'true');
     }
   }
-
 }
+
+
 
 
 
