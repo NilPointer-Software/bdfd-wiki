@@ -562,7 +562,6 @@ function typeScript() {
 
   if (!nameInputVal) {
     callError(errorMessages.empty, 'error', true);
-    return;
   } else {
     deleteError(errorMessages.empty);
   }
@@ -598,7 +597,6 @@ function typeScript() {
       if (callbackKeywords.some(keyword => nameInputVal.startsWith(keyword))) {
           commandType = ' • Callback';
       } else if (nameInputVal.startsWith('/')) {
-
           commandType = ' • Slash Command';
         if (!regex.test(nameToCheck)) {
           callError(errorMessages.regex, 'error', true);
@@ -636,4 +634,5 @@ function bdscript2() {
     callError(`Function ${firstKeyword} is only available in BDScript2`);
   }
 }
+
 
