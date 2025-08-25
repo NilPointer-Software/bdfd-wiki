@@ -604,52 +604,41 @@ function typeScript() {
   }
 }
 
-// Функция автозаполнения, срабатывающая после загрузки DOM
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Получаем элемент <ol class="section">, содержащий список функций
   const sectionList = document.querySelector('ol.section');
 
-  // Если элемент не найден, выводим сообщение об ошибке и прекращаем выполнение
   if (!sectionList) {
     console.error("Элемент <ol class='section'> не найден!");
     return;
   }
 
-  // Извлекаем HTML содержимое sectionList и парсим его для поиска ссылок (<a>)
   const functions = Array.from(new DOMParser().parseFromString(sectionList.innerHTML, 'text/html').querySelectorAll('a'))
-    .map(a => a.textContent) // Извлекаем текст из каждой ссылки
-    .filter(text => text.startsWith('$')); // Фильтруем функции, начинающиеся с "$"
+    .map(a => a.textContent)
+    .filter(text => text.startsWith('$'));
 
-  // Получаем ссылку на текстовое поле (textarea) и контейнер для автозаполнения
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
 
-  // Добавляем обработчик события "input" к текстовому полю
   textarea.addEventListener('input', function(event) {
-    const inputText = event.target.value; // Получаем текущий текст из textarea
-    const cursorPosition = textarea.selectionStart; //  позиция курсора
-    let dollarIndex = inputText.lastIndexOf('$', cursorPosition); // Индекс последнего "$" перед курсором
+    const inputText = event.target.value;
+    const cursorPosition = textarea.selectionStart;
+    let dollarIndex = inputText.lastIndexOf('$', cursorPosition);
 
-    // Если "$" не найден, очищаем autocompleteOutput и выходим
     if (dollarIndex === -1) {
       autocompleteOutput.innerHTML = '';
       return;
     }
 
-    // Иначе, ищем функции, начинающиеся с текста после "$"
     const searchTerm = inputText.substring(dollarIndex).toLowerCase();
-    autocompleteOutput.innerHTML = ''; // Очищаем предыдущие предложения
+    autocompleteOutput.innerHTML = '';
 
-    // Фильтруем доступные функции на основе введенного текста
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
 
-    // Для каждой подходящей функции создаем span элемент и добавляем его в autocompleteOutput
     matchingFunctions.forEach(func => {
       const span = document.createElement('span');
       span.textContent = func;
       span.addEventListener('click', () => {
-        // Когда span кликнут, заменяем текст в textarea выбранной функцией
         textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
         textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
         autocompleteOutput.innerHTML = '';
@@ -659,4 +648,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
 
