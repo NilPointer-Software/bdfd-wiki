@@ -579,7 +579,7 @@ function typeScript() {
 
     nameLabel.textContent = 'Name' + commandType;
 
-    if (commandType.includes('Callback)) {
+    if (commandType.includes('Callback')) {
         if (!callbackKeywords.some(keyword => nameInput.startsWith(keyword))) {
             callError(errorMessages.invalidCallback, 'error', true);
             return;
@@ -621,5 +621,6 @@ function bdscript2() {
     callError(`Function ${firstKeyword} is only available in BDScript2`);
   }
 }
+
 
 
