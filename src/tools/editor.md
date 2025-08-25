@@ -55,6 +55,12 @@ Here you can use the basic editor features to write codes more conveniently.
 
 <div id="highlightedText"></div>
 
+<div id="settings">
+	<button onclick="editorAreaButtons()">Useful Buttons</button>
+	<button onclick="editorFindCase()">Sensitive Case</button>
+	<button onclick="editorBrokeLinks()">Broke All Links</button>
+</div>
+
 <div id="tips">
 	<h2>Tips</h2>
 	<p>**</p>
