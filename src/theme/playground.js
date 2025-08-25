@@ -428,10 +428,10 @@ function toggleHighlight() {
     return `<a href="${url}" target="_blank">${url}</a>`;
   });
 
-    // Unixtime
+  // Unixtime
   const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
   highlighted = highlighted.replace(timestampRegex, (match, timestamp, format) => {
-      const date = new Date(parseInt(timestamp) * 1000); // Преобразуем в миллисекунды
+      const date = new Date(parseInt(timestamp) * 1000);
       let formattedDate = "";
 
       switch (format) {
@@ -441,10 +441,10 @@ function toggleHighlight() {
           case 'D': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); break;
           case 'f': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
           case 'F': formattedDate = date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
-          case 'R': formattedDate = getRelativeTime(date); break; // Функция для относительного времени (см. ниже)
+          case 'R': formattedDate = getRelativeTime(date); break;
           default: formattedDate = "Invalid format";
       }
-      return `<span class="timestamp">${formattedDate}</span>`; // Оборачиваем в span
+      return `<span class="timestamp">${formattedDate}</span>`;
   });
 
   // Lines
@@ -604,76 +604,59 @@ function typeScript() {
   }
 }
 
-function autocomplete() {
-  //Убедимся, что условие всегда выполняется
-  if (2 > 1) {
-    // Получаем ссылку на список функций
-    const sectionList = document.querySelector('ol.section');
+// Функция автозаполнения, срабатывающая после загрузки DOM
+document.addEventListener('DOMContentLoaded', function() {
 
-    // Проверяем, что список функций существует в DOM
-    if (!sectionList) {
-      console.error("Не найден элемент <ol class='section'>.");
-      return; // Прерываем выполнение, если список не найден
-    }
-    // Извлекаем HTML-код списка функций
-    const html = sectionList.innerHTML;
-    // Извлекаем имена функций (текст ссылок, начинающихся с "$")
-    const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
-      .map(a => a.textContent)
-      .filter(text => text.startsWith('$'));
+  // Получаем элемент <ol class="section">, содержащий список функций
+  const sectionList = document.querySelector('ol.section');
 
-    // Получаем ссылку на текстовое поле и область для автокомплита
-    const textarea = document.getElementById('editor');
-    const autocompleteOutput = document.getElementById('autocomplete');
-
-    // Добавляем обработчик события ввода в текстовое поле
-    textarea.addEventListener('input', function (event) {
-      const inputText = event.target.value;
-      const cursorPosition = textarea.selectionStart;
-      let searchTerm = '';
-
-      // Находим индекс последнего символа "$" перед курсором
-      let dollarIndex = inputText.lastIndexOf('$', cursorPosition);
-
-      // Если символ "$" не найден, очищаем область автокомплита и выходим
-      if (dollarIndex === -1) {
-        autocompleteOutput.innerHTML = '';
-        return;
-      }
-
-      // Извлекаем текст для поиска, начиная с символа "$"
-      searchTerm = inputText.substring(dollarIndex).toLowerCase();
-      autocompleteOutput.innerHTML = '';
-
-      // Фильтруем функции, которые соответствуют поисковому запросу
-      const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
-
-      // Отображаем подходящие функции в области автокомплита
-      matchingFunctions.forEach(func => {
-        const span = document.createElement('span');
-        span.textContent = func;
-        span.style.backgroundColor = 'lightgray';
-        span.style.marginRight = '5px';
-        span.style.cursor = 'pointer';
-
-        // Добавляем обработчик клика на функцию автокомплита
-        span.addEventListener('click', function () {
-          // Заменяем текст от символа "$" до курсора выбранной функцией
-          textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
-          // Устанавливаем позицию курсора после вставленной функции
-          textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
-          // Очищаем область автокомплита
-          autocompleteOutput.innerHTML = '';
-          // Возвращаем фокус в текстовое поле
-          textarea.focus();
-        });
-
-        autocompleteOutput.appendChild(span);
-      });
-
-    });
+  // Если элемент не найден, выводим сообщение об ошибке и прекращаем выполнение
+  if (!sectionList) {
+    console.error("Элемент <ol class='section'> не найден!");
+    return;
   }
-}
 
-// Вызываем функцию автокомплита после загрузки DOM
-document.addEventListener('DOMContentLoaded', autocomplete);
+  // Извлекаем HTML содержимое sectionList и парсим его для поиска ссылок (<a>)
+  const functions = Array.from(new DOMParser().parseFromString(sectionList.innerHTML, 'text/html').querySelectorAll('a'))
+    .map(a => a.textContent) // Извлекаем текст из каждой ссылки
+    .filter(text => text.startsWith('$')); // Фильтруем функции, начинающиеся с "$"
+
+  // Получаем ссылку на текстовое поле (textarea) и контейнер для автозаполнения
+  const textarea = document.getElementById('editor');
+  const autocompleteOutput = document.getElementById('autocomplete');
+
+  // Добавляем обработчик события "input" к текстовому полю
+  textarea.addEventListener('input', function(event) {
+    const inputText = event.target.value; // Получаем текущий текст из textarea
+    const cursorPosition = textarea.selectionStart; //  позиция курсора
+    let dollarIndex = inputText.lastIndexOf('$', cursorPosition); // Индекс последнего "$" перед курсором
+
+    // Если "$" не найден, очищаем autocompleteOutput и выходим
+    if (dollarIndex === -1) {
+      autocompleteOutput.innerHTML = '';
+      return;
+    }
+
+    // Иначе, ищем функции, начинающиеся с текста после "$"
+    const searchTerm = inputText.substring(dollarIndex).toLowerCase();
+    autocompleteOutput.innerHTML = ''; // Очищаем предыдущие предложения
+
+    // Фильтруем доступные функции на основе введенного текста
+    const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
+
+    // Для каждой подходящей функции создаем span элемент и добавляем его в autocompleteOutput
+    matchingFunctions.forEach(func => {
+      const span = document.createElement('span');
+      span.textContent = func;
+      span.addEventListener('click', () => {
+        // Когда span кликнут, заменяем текст в textarea выбранной функцией
+        textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
+        textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
+        autocompleteOutput.innerHTML = '';
+        textarea.focus();
+      });
+      autocompleteOutput.appendChild(span);
+    });
+  });
+});
+
