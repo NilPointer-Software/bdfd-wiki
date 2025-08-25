@@ -1218,27 +1218,34 @@ ul#searchresults span.teaser em {
 }
 
 .scriptdiv button {
-	position: absolute;
-    top: .3rem;
-    right: .3rem;
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
-	outline: none;
-	color: #fff;
-	margin: 1.5px 5px;
-	padding: 5px;
-	cursor: pointer;
-	width: 3.2rem;
-	height: 3.2rem;
-	font-size: 1.5rem;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 10px;
-	border-color: #aeaeae;
-	background: rgb(255 255 255 / 10%);
-	opacity: 0.8;
-	transition: 0.2s;
+  position: absolute;
+  top: 0.3rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  outline: none;
+  color: #fff;
+  margin: 1.5px 5px;
+  padding: 5px;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 1.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #aeaeae;
+  background: rgb(255 255 255 / 10%);
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.scriptdiv button:nth-of-type(1) {
+  right: 4rem;
+}
+
+.scriptdiv button:nth-of-type(2) {
+  right: 0.3rem;
 }
 
 #error-message {
@@ -1309,3 +1316,4 @@ ul#searchresults span.teaser em {
 	color: #d3d3d3;
 	background-color: var(--color3);
 }
+
