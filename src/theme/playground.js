@@ -365,6 +365,19 @@ function checkBrackets() {
   }
 }
 
+function editorFindCase() {
+  caseSensitive = !caseSensitive;
+
+  const button = document.querySelector('#settings button');
+  if (caseSensitive) {
+    button.textContent = "Case Sensitive ON"; 
+  } else {
+    button.textContent = "Case Sensitive OFF";
+  }
+
+  toggleHighlight();
+}
+
 function toggleHighlight() {
   const highlightedTextDiv = document.getElementById("highlightedText");
   const text = document.getElementById("editor").value;
@@ -374,7 +387,8 @@ function toggleHighlight() {
 
   if (searchText) {
     try {
-      const regex = new RegExp(searchText, 'gi');
+      const flags = caseSensitive ? 'g' : 'gi';
+      const regex = new RegExp(searchText, flags);
 
       highlighted = text.replace(regex, (match) => {
         matches++;
@@ -382,7 +396,8 @@ function toggleHighlight() {
       });
     } catch (e) {
       const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(escapedSearchText, 'gi');
+      const flags = caseSensitive ? 'g' : 'gi';
+      const regex = new RegExp(escapedSearchText, flags);
 
       highlighted = text.replace(regex, (match) => {
         matches++;
