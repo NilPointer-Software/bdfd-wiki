@@ -1280,3 +1280,32 @@ ul#searchresults span.teaser em {
     color: #888;
     font-size: 0.8em;    
 }
+
+#selectors {
+	user-select: none;
+	-webkit-user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+	margin-top: -1.5rem;
+}
+
+#selectors select {
+	text-decoration: none;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+    width: auto;
+    padding: 8px 5px;
+	background: rgb(255 255 255 / 10%);
+	color: rgb(255 255 255 / 80%);
+    border-radius: 10px;
+    box-sizing: border-box;
+	border: 0;
+}
+
+#selectors select option {
+	color: #d3d3d3;
+	background-color: var(--color3);
+}
