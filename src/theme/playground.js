@@ -545,79 +545,79 @@ function nameScript() {
 }
 
 function typeScript() {
-    const nameInput: string = (document.getElementById('name') as HTMLInputElement).value;
-    const selectValue: string = (document.querySelector('select[name="type"]') as HTMLSelectElement).value;
-    const nameLabel: HTMLElement = document.getElementById('scriptType');
+  const nameInputVal = document.getElementById('name')?.value || '';
+  const selectValue = document.querySelector('select[name="type"]')?.value || '';
+  const nameLabel = document.getElementById('scriptType');
 
-    const errorMessages = {
-        empty: "Error: Name field cannot be empty.",
-        regex: "Error: Slash command name must contain only English letters and hyphens.",
-        length: "Error: Slash command name exceeds 32 characters.",
-        invalidCallback: "Error: Invalid callback name."
-    };
+  const errorMessages = {
+    empty: "Error: Name field cannot be empty.",
+    regex: "Error: Slash command name must contain only English letters and hyphens.",
+    length: "Error: Slash command name exceeds 32 characters.",
+    invalidCallback: "Error: Invalid callback name."
+  };
 
-    const callbackKeywords: string[] = ['$awaitedCommand', '$awaitedCommandError', '$onJoined', '$onLeave', '$onBanAdd', '$onBanRemove', '$onMessageDelete', '$onInteraction', '$alwaysReply', '$messageContains', '$reaction'];
+  const callbackKeywords = ['$awaitedCommand', '$awaitedCommandError', '$onJoined', '$onLeave', '$onBanAdd', '$onBanRemove', '$onMessageDelete', '$onInteraction', '$alwaysReply', '$messageContains', '$reaction'];
 
-    if (!nameInput) {
-        callError(errorMessages.empty, 'error', true);
-        return;
+  if (!nameInputVal) {
+    callError(errorMessages.empty, 'error', true);
+    return;
+  } else {
+    deleteError(errorMessages.empty);
+  }
+
+  let commandType = 'Command';
+
+  if (selectValue === 'callback') {
+    commandType = ' • Callback';
+
+    if (!callbackKeywords.some(keyword => nameInputVal.startsWith(keyword))) {
+      callError(errorMessages.invalidCallback, 'error', true);
+      return;
     } else {
-        deleteError(errorMessages.empty);
+      deleteError(errorMessages.invalidCallback);
     }
+  } else if (selectValue === 'slash') {
+    commandType = ' • Slash Command';
+    const nameToCheck = nameInputVal.substring(1);
+    const regex = /^[a-zA-Z-]+$/;
 
-    let commandType: string = 'Command';
-
-    if (selectValue === 'callback') {
-        commandType = ' • Callback';
-
-        if (!callbackKeywords.some(keyword => nameInput.startsWith(keyword))) {
-            callError(errorMessages.invalidCallback, 'error', true);
-            return;
-        } else {
-            deleteError(errorMessages.invalidCallback);
-        }
-    } else if (selectValue === 'slash') {
-        commandType = ' • Slash Command';
-         const nameToCheck: string = nameInput.substring(1);
-         const regex: RegExp = /^[a-zA-Z-]+$/;
-
-         if (!regex.test(nameToCheck)) {
-             callError(errorMessages.regex, 'error', true);
-         } else {
-             deleteError(errorMessages.regex);
-         }
-         if (nameInput.length > 32) {
-             callError(errorMessages.length, 'error', true);
-         } else {
-             deleteError(errorMessages.length);
-         }
+    if (!regex.test(nameToCheck)) {
+      callError(errorMessages.regex, 'error', true);
     } else {
-         if (selectValue === 'auto') {
-            if (callbackKeywords.some(keyword => nameInput.startsWith(keyword))) {
-                commandType = ' • Callback';
-            } else if (nameInput.startsWith('/')) {
-                commandType = ' • Slash Command';
-                 const nameToCheck: string = nameInput.substring(1);
-                const regex: RegExp = /^[a-zA-Z-]+$/;
-
-                if (!regex.test(nameToCheck)) {
-                    callError(errorMessages.regex, 'error', true);
-                } else {
-                    deleteError(errorMessages.regex);
-                }
-                if (nameInput.length > 32) {
-                    callError(errorMessages.length, 'error', true);
-                } else {
-                    deleteError(errorMessages.length);
-                }
-            } else {
-                commandType = ' • Command';
-            }
-        } else {
-        commandType = ' • Command';
-        }
+      deleteError(errorMessages.regex);
     }
+    if (nameInputVal.length > 32) {
+      callError(errorMessages.length, 'error', true);
+    } else {
+      deleteError(errorMessages.length);
+    }
+  } else if (selectValue === 'auto') {
+      const nameToCheck = nameInputVal.substring(1);
+      const regex = /^[a-zA-Z-]+$/;
 
+      if (callbackKeywords.some(keyword => nameInputVal.startsWith(keyword))) {
+          commandType = ' • Callback';
+      } else if (nameInputVal.startsWith('/')) {
+
+          commandType = ' • Slash Command';
+        if (!regex.test(nameToCheck)) {
+          callError(errorMessages.regex, 'error', true);
+        } else {
+          deleteError(errorMessages.regex);
+        }
+        if (nameInputVal.length > 32) {
+          callError(errorMessages.length, 'error', true);
+        } else {
+          deleteError(errorMessages.length);
+       }
+   } else {
+      commandType = ' • Command';
+   }
+
+  } else {
+    commandType = ' • Command';
+  }
+  if(nameLabel)
     nameLabel.textContent = 'Name' + commandType;
 }
 
@@ -636,6 +636,7 @@ function bdscript2() {
     callError(`Function ${firstKeyword} is only available in BDScript2`);
   }
 }
+
 
 
 
