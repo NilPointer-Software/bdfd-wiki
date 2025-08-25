@@ -21,7 +21,7 @@ Here you can use the basic editor features to write codes more conveniently.
 				<option value="slash">Slash Command</option>
 				<option value="callback">Callback</option>
 		</select>
-		<select name="language">
+		<select name="language" onchange="bdscript2()>
 			 <option selected value="bds2">BDScript 2</option>
 				<option value="bds">BDScript</option>
 				<option value="bdsu">BDScript Unstable</option>
