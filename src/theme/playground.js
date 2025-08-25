@@ -571,10 +571,8 @@ function typeScript() {
 
   if (selectValue === 'callback') {
     commandType = ' • Callback';
-
     if (!callbackKeywords.some(keyword => nameInputVal.startsWith(keyword))) {
       callError(errorMessages.invalidCallback, 'error', true);
-      return;
     } else {
       deleteError(errorMessages.invalidCallback);
     }
@@ -638,3 +636,4 @@ function bdscript2() {
     callError(`Function ${firstKeyword} is only available in BDScript2`);
   }
 }
+
