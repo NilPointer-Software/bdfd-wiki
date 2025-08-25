@@ -10,29 +10,31 @@ Here you can use the basic editor features to write codes more conveniently.
 </div>
 
 <div id="command-editor">
-	 <p id="scriptType">Name</p>
-		<div id="nameScript">
-	   <textarea id="name" oninput="nameScript(); typeScript()"></textarea>
-		  <span>0/50</span>
-			</div>
-  <select name="type" onchange="typeScript()">
-			 <option selected value="auto">Auto</option>
-				<option value="command">Command</option>
-				<option value="slash">Slash Command</option>
-				<option value="callback">Callback</option>
+	<p id="scriptType">Name</p>
+	<div id="nameScript">
+		<textarea id="name" oninput="nameScript(); typeScript()"></textarea>
+		<span>0/50</span>
+	</div>
+	<div id="selectors">
+  		<select name="type" onchange="typeScript()">
+			<option selected value="auto">Auto</option>
+			<option value="command">Command</option>
+			<option value="slash">Slash Command</option>
+			<option value="callback">Callback</option>
 		</select>
-		<select name="language" onchange="bdscript2()>
-			 <option selected value="bds2">BDScript 2</option>
-				<option value="bds">BDScript</option>
-				<option value="bdsu">BDScript Unstable</option>
+		<select name="language" onchange="bdscript2()">
+			<option selected value="bds2">BDScript 2</option>
+			<option value="bds">BDScript</option>
+			<option value="bdsu">BDScript Unstable</option>
 		</select>
+	</div>
 	<p id="error-message"></p>
 	<p id="autocomplete"></p>
 	<div class="scriptdiv">
-	  <textarea id="editor" oninput="updateStats(); checkBrackets(); bdscript2()"></textarea><br>
+		<textarea id="editor" oninput="updateStats(); checkBrackets(); bdscript2()"></textarea><br>
 	 	<button class="fa fa-regular fa-paste clip-button" onclick="copyText() title="Copy" aria-label="Copy"></button>
-	  <button onclick="saveFile()">Save as file</button>
-  </div>
+	  	<button onclick="saveFile()">Save as file</button>
+	</div>
 </div>
 
 <div id="another-info">
@@ -54,8 +56,8 @@ Here you can use the basic editor features to write codes more conveniently.
 <div id="highlightedText"></div>
 
 <div id="tips">
-	 <h2>Tips</h2>
-		<p>**</p>
-		<p>*</p>
-		<p>`</p>
+	<h2>Tips</h2>
+	<p>**</p>
+	<p>*</p>
+	<p>`</p>
 </div>
