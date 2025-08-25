@@ -343,7 +343,9 @@ function checkBrackets() {
       } else if (line[j] === '[') {
         openBrackets++;
         if (j + 1 < line.length && line[j + 1] === ']') {
-          callError(`Warning: Empty brackets [] detected on line ${i + 1}.`, 'warn');
+            if (openBrackets <= dollarCount) {
+               callError(`Warning: Empty brackets [] detected on line ${i + 1}.`, 'warn');
+            }
         }
       } else if (line[j] === ']' && (j === 0 || line[j - 1] !== '\\')) {
         closeBrackets++;
@@ -603,3 +605,4 @@ function typeScript() {
     }
   }
 }
+
