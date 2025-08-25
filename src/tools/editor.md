@@ -29,7 +29,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<p id="error-message"></p>
 	<p id="autocomplete"></p>
 	<div class="scriptdiv">
-	  <textarea id="editor" oninput="updateStats(); checkBrackets()"></textarea><br>
+	  <textarea id="editor" oninput="updateStats(); checkBrackets(); bdscript2()"></textarea><br>
 	 	<button class="fa fa-regular fa-paste clip-button" onclick="copyText() title="Copy" aria-label="Copy"></button>
 	  <button onclick="saveFile()">Save as file</button>
   </div>
