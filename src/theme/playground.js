@@ -565,17 +565,11 @@ function typeScript() {
         deleteError(errorMessages.empty);
     }
 
-    let commandType = '';
+    let commandType = 'Command';
 
     if (selectValue === 'auto') {
         commandType = callbackKeywords.some(keyword => nameInput.startsWith(keyword)) ? ' • Callback' : nameInput.startsWith('/') ? ' • Slash Command' : ' • Command';
     } else if (selectValue === 'callback') {
-        if (!callbackKeywords.some(keyword => nameInput.startsWith(keyword))) {
-            callError(errorMessages.invalidCallback, 'error', true);
-            return;
-        } else {
-            deleteError(errorMessages.invalidCallback);
-        }
         commandType = ' • Callback';
     } else if (selectValue === 'command') {
         commandType = ' • Command';
@@ -585,6 +579,15 @@ function typeScript() {
 
     nameLabel.textContent = 'Name' + commandType;
 
+    if (commandType.includes('Callback)) {
+        if (!callbackKeywords.some(keyword => nameInput.startsWith(keyword))) {
+            callError(errorMessages.invalidCallback, 'error', true);
+            return;
+        } else {
+            deleteError(errorMessages.invalidCallback);
+        }
+    }
+  
     if (commandType.includes('Slash Command')) {
         const nameToCheck = nameInput.substring(1);
         const regex = /^[a-zA-Z-]+$/;
@@ -618,4 +621,5 @@ function bdscript2() {
     callError(`Function ${firstKeyword} is only available in BDScript2`);
   }
 }
+
 
