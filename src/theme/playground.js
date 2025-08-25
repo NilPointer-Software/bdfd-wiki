@@ -274,8 +274,22 @@ function callError(message, type = 'error', unique = false) {
   });
 
   updateCloseAllButton();
+}
 
-  function updateCloseAllButton() {
+function deleteError(message) {
+  const errorMessageElement = document.getElementById("error-message");
+
+  for (let i = errorMessageElement.children.length - 1; i >= 0; i--) {
+    const child = errorMessageElement.children[i];
+
+    if (child.tagName === 'DIV' && child.textContent.startsWith(message)) {
+      child.remove();
+    }
+  }
+  updateCloseAllButton();
+}
+
+function updateCloseAllButton() {
     const errorCount = errorMessageElement.children.length - (closeAllButton ? 1 : 0);
     const closeAllButtonId = 'close-all-errors-btn';
 
@@ -297,20 +311,6 @@ function callError(message, type = 'error', unique = false) {
     } else if (closeAllButton) {
       closeAllButton.remove();
     }
-  }
-}
-
-function deleteError(message) {
-  const errorMessageElement = document.getElementById("error-message");
-
-  for (let i = errorMessageElement.children.length - 1; i >= 0; i--) {
-    const child = errorMessageElement.children[i];
-
-    if (child.tagName === 'DIV' && child.textContent.startsWith(message)) {
-      child.remove();
-    }
-  }
-  updateCloseAllButton();
 }
 
 function checkBrackets() {
@@ -636,6 +636,7 @@ function bdscript2() {
     callError(`Function ${firstKeyword} is only available in BDScript2`);
   }
 }
+
 
 
 
