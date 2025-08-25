@@ -635,4 +635,12 @@ function bdscript2() {
   }
 }
 
+function editorAreaButtons() {
+  const scriptDiv = document.querySelector('.scriptdiv');
+  const buttons = scriptDiv.querySelectorAll('button');
+  const isHidden = buttons[0].style.display === 'none';
 
+  buttons.forEach(button => {
+    button.style.display = isHidden ? 'inline-block' : 'none';
+  });
+}
