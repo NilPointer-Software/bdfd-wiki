@@ -606,3 +606,18 @@ function typeScript() {
   }
 }
 
+function bdscript2() {
+  const editor = document.getElementById("editor");
+  const languageSelect = document.querySelector('select[name="language"]');
+  const scriptLanguage = languageSelect.value;
+  const scriptText = editor.value;
+
+  const bdscript2Keywords = ["$try", "$endtry", "$catch", "$async", "$endasync", "$eval", "$error", "$optOff", "$elseif", "$stop", "$var"];
+
+  const containsBDScript2Keywords = bdscript2Keywords.some(keyword => scriptText.includes(keyword));
+
+  if (containsBDScript2Keywords && scriptLanguage !== "bds2") {
+    const firstKeyword = bdscript2Keywords.find(keyword => scriptText.includes(keyword));
+    callError(`Function ${firstKeyword} is only available in BDScript2`);
+  }
+}
