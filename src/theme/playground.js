@@ -290,8 +290,10 @@ function deleteError(message) {
 }
 
 function updateCloseAllButton() {
+    const errorMessageElement = document.getElementById("error-message");
     const errorCount = errorMessageElement.children.length - (closeAllButton ? 1 : 0);
     const closeAllButtonId = 'close-all-errors-btn';
+    let closeAllButton = document.getElementById('close-all-errors-btn');
 
     if (errorCount > 3) {
       if (!closeAllButton) {
@@ -636,6 +638,7 @@ function bdscript2() {
     callError(`Function ${firstKeyword} is only available in BDScript2`);
   }
 }
+
 
 
 
