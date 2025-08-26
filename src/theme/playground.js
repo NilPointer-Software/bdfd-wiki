@@ -365,6 +365,8 @@ function checkBrackets() {
   }
 }
 
+let caseSensitive = false;
+
 function editorFindCase() {
   caseSensitive = !caseSensitive;
 
@@ -659,4 +661,5 @@ function editorAreaButtons() {
     button.style.display = isHidden ? 'inline-block' : 'none';
   });
 }
+
 
