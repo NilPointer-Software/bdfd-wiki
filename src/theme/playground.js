@@ -370,7 +370,7 @@ let caseSensitive = false;
 function editorFindCase() {
   caseSensitive = !caseSensitive;
 
-  const button = document.querySelector('#settings button');
+  const button = document.getElementById("caseSensitiveButton");
   if (caseSensitive) {
     button.textContent = "Case Sensitive ON"; 
   } else {
@@ -660,6 +660,15 @@ function editorAreaButtons() {
   buttons.forEach(button => {
     button.style.display = isHidden ? 'inline-block' : 'none';
   });
+}
+
+function editorBrokeLinks() {
+  const links = document.getElementsByTagName('a');
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].setAttribute('href', '#');
+    links[i].style.pointerEvents = 'none';
+  }
 }
 
 
