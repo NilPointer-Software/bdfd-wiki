@@ -267,7 +267,8 @@ function updateErrorVisibility() {
 
       if (isWarning) {
         errorDiv.style.display = showWarnings ? "block" : "none";
-      } else if (isError) {
+      }
+      if (isError) {
         errorDiv.style.display = showErrors ? "block" : "none";
       }
     }
@@ -718,6 +719,7 @@ function editorWrapping() {
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
 
 
 
