@@ -659,3 +659,4 @@ function editorAreaButtons() {
     button.style.display = isHidden ? 'inline-block' : 'none';
   });
 }
+
