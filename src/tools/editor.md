@@ -51,6 +51,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<input type="text" id="replaceText"><br>
 	<button onclick="replaceText()">Replace all</button>
 	<button id="highlightButton" onclick="toggleHighlight()">Find</button><br>
+	<span><i class="fa fa-info" aria-hidden="true"></i> Regex is supported</span>
 </div>
 
 <div id="highlightedText"></div>
