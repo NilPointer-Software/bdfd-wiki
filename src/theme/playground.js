@@ -706,7 +706,7 @@ function editorBrokeLinks() {
 
 let isWrappingEnabled = true;
 
-function editorWrapping()() {
+function editorWrapping() {
   const textarea = document.getElementById('editor');
   isWrappingEnabled = !isWrappingEnabled;
 
@@ -715,3 +715,4 @@ function editorWrapping()() {
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
