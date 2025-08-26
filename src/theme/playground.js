@@ -306,6 +306,7 @@ function callError(message, type = 'error', unique = false) {
     updateCloseAllButton();
   });
 
+  updateErrorVisibility();
   updateCloseAllButton();
 }
 
@@ -717,5 +718,6 @@ function editorWrapping() {
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
 
 
