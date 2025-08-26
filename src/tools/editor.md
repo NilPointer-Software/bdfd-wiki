@@ -61,6 +61,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<button onclick="editorBrokeLinks()" id="brokeLinksButton">Broke All Links</button>
 	<button onclick="editorWarning()" id="changeWarningsButton">Warnings</button>
 	<button onclick="editorError()" id="changeErrorsButton">Errors</button>
+	<button onclick="editorWrapping()" id="textWrappingButton">Text Wrapping</button>
 </div>
 
 <div id="tips">
