@@ -704,6 +704,14 @@ function editorBrokeLinks() {
   }
 }
 
+let isWrappingEnabled = true;
 
+function editorWrapping()() {
+  const textarea = document.getElementById('editor');
+  isWrappingEnabled = !isWrappingEnabled;
 
+  textarea.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
 
+  const button = document.getElementById('textWrappingButton');
+  button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
+}
