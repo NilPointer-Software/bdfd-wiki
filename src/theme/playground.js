@@ -708,11 +708,14 @@ let isWrappingEnabled = true;
 
 function editorWrapping() {
   const textarea = document.getElementById('editor');
+  const findcode = document.getElementById('highlightedText');
   isWrappingEnabled = !isWrappingEnabled;
 
   textarea.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
+  findcode.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
 
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
 
