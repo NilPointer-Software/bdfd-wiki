@@ -237,10 +237,46 @@ function replaceText() {
   checkBrackets();
 }
 
+let showWarnings = true;
+let showErrors = true;
+
+function editorWarning() {
+  showWarnings = !showWarnings;
+  const button = document.getElementById('changeWarningsButton');
+  button.textContent = showWarnings ? 'Hide Warnings' : 'Show Warnings';
+  updateErrorVisibility();
+}
+
+function editorError() {
+  showErrors = !showErrors;
+  const button = document.getElementById('changeErrorsButton');
+  button.textContent = showErrors ? 'Hide Errors' : 'Show Errors';
+  updateErrorVisibility();
+}
+
+function updateErrorVisibility() {
+  const errorMessageElement = document.getElementById("error-message");
+  const errorDivs = errorMessageElement.children;
+
+  for (let i = 0; i < errorDivs.length; i++) {
+    const errorDiv = errorDivs[i];
+
+    if (errorDiv.style && errorDiv.style.color) {
+      const isWarning = errorDiv.style.color === "orange";
+      const isError = errorDiv.style.color === "red";
+
+      if (isWarning) {
+        errorDiv.style.display = showWarnings ? "block" : "none";
+      } else if (isError) {
+        errorDiv.style.display = showErrors ? "block" : "none";
+      }
+    }
+  }
+}
+
 function callError(message, type = 'error', unique = false) {
   const errorMessageElement = document.getElementById("error-message");
   errorMessageElement.style.color = "red";
-
   if (unique) {
     for (let i = 0; i < errorMessageElement.children.length; i++) {
       if (errorMessageElement.children[i].textContent.startsWith(message)) {
@@ -248,18 +284,16 @@ function callError(message, type = 'error', unique = false) {
       }
     }
   }
-
+  
   let closeAllButton = document.getElementById('close-all-errors-btn');
-
   const errorDiv = document.createElement("div");
   errorDiv.style.display = "block";
-
+  
   if (type === 'warn') {
     errorDiv.style.color = "orange";
   }
 
-  errorDiv.innerHTML = `${message} <span class="close-btn" data-id="">×</span>`;
-
+  errorDiv.innerHTML = ${message} <span class="close-btn" data-id="">×</span>;
   errorMessageElement.appendChild(errorDiv);
 
   if (closeAllButton) {
@@ -267,7 +301,6 @@ function callError(message, type = 'error', unique = false) {
   }
 
   const closeBtn = errorDiv.querySelector('.close-btn');
-
   closeBtn.addEventListener('click', function() {
     errorDiv.remove();
     updateCloseAllButton();
@@ -670,5 +703,6 @@ function editorBrokeLinks() {
     links[i].style.pointerEvents = 'none';
   }
 }
+
 
 
