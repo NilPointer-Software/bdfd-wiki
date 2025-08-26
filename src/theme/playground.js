@@ -579,7 +579,6 @@ function saveFile() {
   URL.revokeObjectURL(url);
 }
 
-
 function nameScript() {
   const textarea = document.getElementById('name');
   const count = textarea.parentNode.querySelector('span');
@@ -611,6 +610,11 @@ function typeScript() {
     invalidCallback: "Error: Invalid callback name."
   };
 
+  deleteError(errorMessages.regex);
+  deleteError(errorMessages.empty);
+  deleteError(errorMessages.length);
+  deleteError(errorMessages.invalidCallback);
+  
   const callbackKeywords = ['$awaitedCommand', '$awaitedCommandError', '$onJoined', '$onLeave', '$onBanAdd', '$onBanRemove', '$onMessageDelete', '$onInteraction', '$alwaysReply', '$messageContains', '$reaction'];
 
   if (!nameInputVal) {
