@@ -268,6 +268,7 @@ function updateErrorVisibility() {
       if (isWarning) {
         errorDiv.style.display = showWarnings ? "block" : "none";
       }
+
       if (isError) {
         errorDiv.style.display = showErrors ? "block" : "none";
       }
@@ -277,7 +278,7 @@ function updateErrorVisibility() {
 
 function callError(message, type = 'error', unique = false) {
   const errorMessageElement = document.getElementById("error-message");
-  errorMessageElement.style.color = "red";
+
   if (unique) {
     for (let i = 0; i < errorMessageElement.children.length; i++) {
       if (errorMessageElement.children[i].textContent.startsWith(message)) {
@@ -285,13 +286,15 @@ function callError(message, type = 'error', unique = false) {
       }
     }
   }
-  
+
   let closeAllButton = document.getElementById('close-all-errors-btn');
   const errorDiv = document.createElement("div");
   errorDiv.style.display = "block";
-  
+
   if (type === 'warn') {
     errorDiv.style.color = "orange";
+  } else {
+    errorDiv.style.color = "red"; // Устанавливаем цвет по умолчанию для ошибок
   }
 
   errorDiv.innerHTML = `${message} <span class="close-btn" data-id="">×</span>`;
@@ -304,11 +307,9 @@ function callError(message, type = 'error', unique = false) {
   const closeBtn = errorDiv.querySelector('.close-btn');
   closeBtn.addEventListener('click', function() {
     errorDiv.remove();
-    updateCloseAllButton();
   });
 
   updateErrorVisibility();
-  updateCloseAllButton();
 }
 
 function deleteError(message) {
@@ -719,6 +720,7 @@ function editorWrapping() {
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
 
 
 
