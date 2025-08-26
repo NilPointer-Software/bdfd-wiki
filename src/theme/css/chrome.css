@@ -1041,6 +1041,11 @@ ul#searchresults span.teaser em {
     align-items: center;
 }
 
+#another-info  {
+	margin-top: -1rem;
+	margin-bottom: -1rem;
+}
+
 #editor, #name {
 	width: 96%;
 	font-size: 1.5rem;
@@ -1321,6 +1326,7 @@ ul#searchresults span.teaser em {
 	color: #d3d3d3;
 	background-color: var(--color3);
 }
+
 
 
 
