@@ -1140,6 +1140,7 @@ ul#searchresults span.teaser em {
 }
 
 #highlightedText {
+	overflow-x: auto;
 	color: #bbb;
 	font-size: 1.5rem;
 	border-radius: 10px;
@@ -1320,5 +1321,6 @@ ul#searchresults span.teaser em {
 	color: #d3d3d3;
 	background-color: var(--color3);
 }
+
 
 
