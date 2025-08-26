@@ -293,7 +293,7 @@ function callError(message, type = 'error', unique = false) {
     errorDiv.style.color = "orange";
   }
 
-  errorDiv.innerHTML = ${message} <span class="close-btn" data-id="">×</span>;
+  errorDiv.innerHTML = `${message} <span class="close-btn" data-id="">×</span>`;
   errorMessageElement.appendChild(errorDiv);
 
   if (closeAllButton) {
@@ -703,6 +703,7 @@ function editorBrokeLinks() {
     links[i].style.pointerEvents = 'none';
   }
 }
+
 
 
 
