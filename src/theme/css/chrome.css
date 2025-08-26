@@ -1073,6 +1073,10 @@ ul#searchresults span.teaser em {
 	resize: none;
 }
 
+#scriptType {
+	margin-top: -1.5rem;
+}
+
 #text-editorui {
 	margin-top: 1rem;
 	background-color: var(--color3);
@@ -1316,4 +1320,5 @@ ul#searchresults span.teaser em {
 	color: #d3d3d3;
 	background-color: var(--color3);
 }
+
 
