@@ -714,12 +714,12 @@ function editorAreaButtons() {
 
   buttons.forEach(button => {
     button.style.display = isHidden ? 'inline-block' : 'none';
-
-    button.style.background = isHidden 
-      ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' 
-      : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
   });
+  
+  const changebutton = document.getElementById('usefulButtonsButton');
+  changebutton.style.background = isHidden ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
 }
+
 
 function editorBrokeLinks() {
   const links = document.getElementsByTagName('a');
@@ -729,7 +729,8 @@ function editorBrokeLinks() {
     links[i].style.pointerEvents = 'none';
   }
 
-  button.style.background = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
+  const changebutton = document.getElementById('brokeLinksButton');
+  changebutton.style.background = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
 }
 
 let isWrappingEnabled = false;
