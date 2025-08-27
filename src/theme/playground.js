@@ -737,8 +737,11 @@ function editorWrapping() {
   findcode.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
 
   const button = document.getElementById('textWrappingButton');
-  button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
+
+  button.style.background = isWrappingEnabled ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
 }
+
+
 
 
 
