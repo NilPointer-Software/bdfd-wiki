@@ -714,6 +714,10 @@ function editorAreaButtons() {
 
   buttons.forEach(button => {
     button.style.display = isHidden ? 'inline-block' : 'none';
+
+    button.style.background = isHidden 
+      ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' 
+      : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
   });
 }
 
@@ -724,6 +728,8 @@ function editorBrokeLinks() {
     links[i].setAttribute('href', '#');
     links[i].style.pointerEvents = 'none';
   }
+
+  button.style.background = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
 }
 
 let isWrappingEnabled = true;
@@ -740,6 +746,7 @@ function editorWrapping() {
 
   button.style.background = isWrappingEnabled ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
 }
+
 
 
 
