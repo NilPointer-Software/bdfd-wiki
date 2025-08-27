@@ -1335,6 +1335,33 @@ ul#searchresults span.teaser em {
 	background-color: var(--color3);
 }
 
+.setting-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.setting-item p {
+  flex: 1;
+  margin-right: 10px;
+  text-align: left;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.setting-item button {
+    width: 150px;
+	padding: .75rem;
+	border-radius: 10px;
+    box-sizing: border-box;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 5px 0;
+}
 
 
 
