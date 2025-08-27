@@ -1084,9 +1084,17 @@ ul#searchresults span.teaser em {
 
 #text-editorui {
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 	background-color: var(--color3);
 	padding: 10px;
 	border-radius: 10px;
+}
+
+#text-editorui p {
+	margin-bottom: -.5rem;
+	margin-top: .5rem;
+	font-size: 1rem;
+	color: #9e9e9e;
 }
 
 #searchText, #replaceText {
@@ -1326,6 +1334,7 @@ ul#searchresults span.teaser em {
 	color: #d3d3d3;
 	background-color: var(--color3);
 }
+
 
 
 
