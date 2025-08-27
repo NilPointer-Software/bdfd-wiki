@@ -643,7 +643,7 @@ function typeScript() {
       deleteError(errorMessages.slashStart);
 
         const nameToCheck = nameInputVal.substring(1);
-        const regex = /^[a-zA-Z-]+$/;
+        const regex = /^[a-z-]+$/;
 
         if (!regex.test(nameToCheck)) {
           callError(errorMessages.regex, 'error', true);
@@ -733,6 +733,7 @@ function editorWrapping() {
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
 
 
 
