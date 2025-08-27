@@ -732,39 +732,17 @@ function editorBrokeLinks() {
   button.style.background = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
 }
 
-let isWrappingEnabled = true;
+let isWrappingEnabled = false;
 
-function editorAreaButtons() {
-  const scriptDiv = document.querySelector('.scriptdiv');
-  const buttons = scriptDiv.querySelectorAll('button');
-  const isHidden = buttons[0].style.display === 'none';
+function editorWrapping() {
+  const textarea = document.getElementById('editor');
+  const findcode = document.getElementById('highlightedText');
+  isWrappingEnabled = !isWrappingEnabled;
 
-  buttons.forEach(button => {
-    button.style.display = isHidden ? 'inline-block' : 'none';
+  textarea.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
+  findcode.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
 
-    button.classList.add('color-transition');
+  const button = document.getElementById('textWrappingButton');
 
-    setTimeout(() => {
-      button.style.background = isHidden 
-        ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' 
-        : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
-    }, 10);
-
-    button.addEventListener('transitionend', () => {
-      button.classList.remove('color-transition');
-    }, { once: true });
-  });
+  button.style.background = isWrappingEnabled ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
