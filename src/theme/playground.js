@@ -604,16 +604,18 @@ function typeScript() {
   const nameLabel = document.getElementById('scriptType');
 
   const errorMessages = {
-    empty: "Error: Name field cannot be empty.",
-    regex: "Error: Slash command name must contain only English letters and hyphens.",
+    empty: "Error: Name cannot be empty.",
+    regex: "Error: Slash command name must contain only English letters.",
     length: "Error: Slash command name exceeds 32 characters.",
-    invalidCallback: "Error: Invalid callback name."
+    invalidCallback: "Error: Invalid callback name.",
+    slashStart: "Error: Slash command name must start with /"
   };
 
   deleteError(errorMessages.regex);
   deleteError(errorMessages.empty);
   deleteError(errorMessages.length);
   deleteError(errorMessages.invalidCallback);
+  deleteError(errorMessages.slashStart);
   
   const callbackKeywords = ['$awaitedCommand', '$awaitedCommandError', '$onJoined', '$onLeave', '$onBanAdd', '$onBanRemove', '$onMessageDelete', '$onInteraction', '$alwaysReply', '$messageContains', '$reaction'];
 
@@ -634,19 +636,26 @@ function typeScript() {
     }
   } else if (selectValue === 'slash') {
     commandType = ' • Slash Command';
-    const nameToCheck = nameInputVal.substring(1);
-    const regex = /^[a-zA-Z-]+$/;
 
-    if (!regex.test(nameToCheck)) {
-      callError(errorMessages.regex, 'error', true);
+    if (!nameInputVal.startsWith('/')) {
+      callError(errorMessages.slashStart, 'error', true);
     } else {
-      deleteError(errorMessages.regex);
-    }
-    if (nameInputVal.length > 32) {
-      callError(errorMessages.length, 'error', true);
-    } else {
-      deleteError(errorMessages.length);
-    }
+      deleteError(errorMessages.slashStart);
+
+        const nameToCheck = nameInputVal.substring(1);
+        const regex = /^[a-zA-Z-]+$/;
+
+        if (!regex.test(nameToCheck)) {
+          callError(errorMessages.regex, 'error', true);
+        } else {
+          deleteError(errorMessages.regex);
+        }
+        if (nameInputVal.length > 32) {
+          callError(errorMessages.length, 'error', true);
+        } else {
+          deleteError(errorMessages.length);
+        }
+     }
   } else if (selectValue === 'auto') {
       const nameToCheck = nameInputVal.substring(1);
       const regex = /^[a-zA-Z-]+$/;
@@ -724,6 +733,7 @@ function editorWrapping() {
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
 
 
 
