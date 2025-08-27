@@ -734,18 +734,29 @@ function editorBrokeLinks() {
 
 let isWrappingEnabled = true;
 
-function editorWrapping() {
-  const textarea = document.getElementById('editor');
-  const findcode = document.getElementById('highlightedText');
-  isWrappingEnabled = !isWrappingEnabled;
+function editorAreaButtons() {
+  const scriptDiv = document.querySelector('.scriptdiv');
+  const buttons = scriptDiv.querySelectorAll('button');
+  const isHidden = buttons[0].style.display === 'none';
 
-  textarea.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
-  findcode.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
+  buttons.forEach(button => {
+    button.style.display = isHidden ? 'inline-block' : 'none';
 
-  const button = document.getElementById('textWrappingButton');
+    button.classList.add('color-transition');
 
-  button.style.background = isWrappingEnabled ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
+    setTimeout(() => {
+      button.style.background = isHidden 
+        ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' 
+        : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
+    }, 10);
+
+    button.addEventListener('transitionend', () => {
+      button.classList.remove('color-transition');
+    }, { once: true });
+  });
 }
+
+
 
 
 
