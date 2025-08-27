@@ -60,17 +60,17 @@ Here you can use the basic editor features to write codes more conveniently.
   <h3>Settings</h3>
   <div class="setting-item">
     <p>Show or hide a set of useful formatting buttons above the editor.</p>
-    <button onclick="editorAreaButtons()" id="usefulButtonsButton">Useful Buttons</button>
+    <button onclick="editorAreaButtons()" id="usefulButtonsButton">Useful buttons</button>
   </div>
   <hr>
   <div class="setting-item">
     <p>Toggles case sensitivity for the find function in the editor.</p>
-    <button onclick="editorFindCase()" id="caseSensitiveButton">Sensitive Case</button>
+    <button onclick="editorFindCase()" id="caseSensitiveButton">Sensitive case</button>
   </div>
   <hr>
   <div class="setting-item">
     <p>Intentionally breaks all links in the editor content (for testing purposes).</p>
-    <button onclick="editorBrokeLinks()" id="brokeLinksButton">Broke All Links</button>
+    <button onclick="editorBrokeLinks()" id="brokeLinksButton">Break all links</button>
   </div>
   <hr>
   <div class="setting-item">
