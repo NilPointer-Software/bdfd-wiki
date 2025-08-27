@@ -549,15 +549,21 @@ function getRelativeTime(date) {
 
 function copyText() {
   const textarea = document.getElementById("editor");
+
+  if (!textarea) {
+    console.error("Textarea element with ID 'editor' not found.");
+    return;
+  }
+
   textarea.select();
 
   try {
     document.execCommand("copy");
   } catch (err) {
     console.error("Unable to copy text: ", err);
+  } finally {
+    window.getSelection().removeAllRanges();
   }
-
-  window.getSelection().removeAllRanges();
 }
 
 function saveFile() {
@@ -733,6 +739,7 @@ function editorWrapping() {
   const button = document.getElementById('textWrappingButton');
   button.textContent = isWrappingEnabled ? 'Disable Wrapping' : 'Enable Wrapping';
 }
+
 
 
 
