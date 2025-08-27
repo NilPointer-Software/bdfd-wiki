@@ -87,7 +87,6 @@ Here you can use the basic editor features to write codes more conveniently.
     <p>Turns text wrapping on or off in the editor.</p>
     <button onclick="editorWrapping()" id="textWrappingButton">Text Wrapping</button>
   </div>
-  <hr>
 </div>
 
 <div id="tips">
