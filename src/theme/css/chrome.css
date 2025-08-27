@@ -1374,7 +1374,7 @@ ul#searchresults span.teaser em {
 	color: rgb(255 255 255 / 90%);
 }
 
-#settings .setting-item #textWrappingButton {
+#settings .setting-item #textWrappingButton, #brokeLinksButton  {
 	background: linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%));
 }
 
