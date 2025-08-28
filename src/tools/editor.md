@@ -103,6 +103,9 @@ Here you can use the basic editor features to write codes more conveniently.
     <p>Suggest functions as you type.</p>
     <button id="findHighlightingButton">Autocomplete</button>
   </div>
+  <div class="setting-item">
+    <p id="internetConnection">Loading...</p>
+  </div>
 </details>
 
 <div id="tips">
