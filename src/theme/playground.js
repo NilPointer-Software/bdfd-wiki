@@ -541,7 +541,7 @@ function getRelativeTime(date) {
     return isFuture ? 'Soon' : 'Just now';
 }
 
-function copyText() {
+function copyCodeText() {
   const textarea = document.getElementById("editor");
 
   if (!textarea) {
@@ -756,5 +756,6 @@ function callButtonChange(buttonName, status) {
     button.style.background = status ? activeGradient : inactiveGradient;
   }
 }
+
 
 
