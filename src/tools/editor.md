@@ -1,6 +1,12 @@
 # Text Editor
 Here you can use the basic editor features to write codes more conveniently.
- 
+
+<style>
+.editPage {
+	visibility: hidden;
+}
+</style>
+
 <div id="stats-container">
 	<p>Words: <span id="wordCount">0</span></p>
 	<p>Spaces: <span id="spaceCount">0</span></p>
