@@ -53,6 +53,12 @@ function autocomplete() {
 autocomplete();
 
 window.addEventListener('beforeunload', function (event) {
+  const textarea = document.getElementById('editor');
+
+  if (textarea.value.trim() === '') {
+    return;
+  }
+
   event.preventDefault();
   event.returnValue = '';
   const confirmationMessage = 'Are you sure you want to leave the page?';
