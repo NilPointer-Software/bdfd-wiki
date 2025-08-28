@@ -93,6 +93,16 @@ Here you can use the basic editor features to write codes more conveniently.
     <p>Text wrapping in text editor.</p>
     <button onclick="editorWrapping()" id="textWrappingButton">Text Wrapping</button>
   </div>
+  <hr>
+  <div class="setting-item">
+    <p>Highlighting in  text editor.</p>
+    <button id="findHighlightingButton">Highlighting</button>
+  </div>
+  <hr>
+  <div class="setting-item">
+    <p>Suggest functions as you type.</p>
+    <button id="findHighlightingButton">Autocomplete</button>
+  </div>
 </details>
 
 <div id="tips">
