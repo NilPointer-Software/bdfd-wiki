@@ -60,32 +60,32 @@ Here you can use the basic editor features to write codes more conveniently.
   <summary>Settings</summary>
   <div class="setting-item">
     <p>Show or hide a set of useful formatting buttons above the editor.</p>
-    <button id="usefulButtonsButton">Useful buttons</button>
+    <button onclick="editorAreaButtons()" id="usefulButtonsButton">Useful buttons</button>
   </div>
   <hr>
   <div class="setting-item">
     <p>Toggles case sensitivity for the find function in the editor.</p>
-    <button id="caseSensitiveButton">Sensitive case</button>
+    <button onclick="editorFindCase()" id="caseSensitiveButton">Sensitive case</button>
   </div>
   <hr>
   <div class="setting-item">
     <p>Intentionally breaks all links in the editor content (for testing purposes).</p>
-    <button id="brokeLinksButton">Break all links</button>
+    <button onclick="editorBrokeLinks()" id="brokeLinksButton">Break all links</button>
   </div>
   <hr>
   <div class="setting-item">
     <p>Enable or disable change warnings in the editor.</p>
-    <button id="changeWarningsButton">Warnings</button>
+    <button onclick="editorWarning()" id="changeWarningsButton">Warnings</button>
   </div>
   <hr>
   <div class="setting-item">
     <p>Enable or disable displaying errors in the editor.</p>
-    <button id="changeErrorsButton">Errors</button>
+    <button onclick="editorError()" id="changeErrorsButton">Errors</button>
   </div>
   <hr>
   <div class="setting-item">
     <p>Turns text wrapping on or off in the editor.</p>
-    <button id="textWrappingButton">Text Wrapping</button>
+    <button onclick="editorWrapping()" id="textWrappingButton">Text Wrapping</button>
   </div>
 </details>
 
