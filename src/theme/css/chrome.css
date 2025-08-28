@@ -1374,7 +1374,7 @@ ul#searchresults span.teaser em {
 	color: rgb(255 255 255 / 90%);
 }
 
-#settings .setting-item #textWrappingButton, #brokeLinksButton  {
+#settings .setting-item #textWrappingButton, #settings .setting-item #brokeLinksButton, #settings .setting-item #caseSensitiveButton  {
 	background: linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%));
 }
 
@@ -1391,4 +1391,5 @@ ul#searchresults span.teaser em {
 	border-radius: 10px;
 	margin: 5px 0;
 }
+
 
