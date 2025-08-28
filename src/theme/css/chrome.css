@@ -1312,6 +1312,12 @@ ul#searchresults span.teaser em {
     font-size: 0.8em;    
 }
 
+@media (max-width: 950px) {
+	#nameScript span {
+		top: -45%;
+	}
+}
+
 #selectors {
 	outline: none;
 	user-select: none;
@@ -1408,6 +1414,7 @@ ul#searchresults span.teaser em {
 	border-radius: 10px;
 	margin: 5px 0;
 }
+
 
 
 
