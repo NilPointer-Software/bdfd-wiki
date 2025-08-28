@@ -242,15 +242,15 @@ let showErrors = true;
 
 function editorWarning() {
   showWarnings = !showWarnings;
-  const button = document.getElementById('changeWarningsButton');
-  button.textContent = showWarnings ? 'Hide Warnings' : 'Show Warnings';
+
+  callButtonChange('changeWarningsButton', showWarnings);
   updateErrorVisibility();
 }
 
 function editorError() {
   showErrors = !showErrors;
-  const button = document.getElementById('changeErrorsButton');
-  button.textContent = showErrors ? 'Hide Errors' : 'Show Errors';
+
+  callButtonChange('changeErrorsButton', showErrors);
   updateErrorVisibility();
 }
 
@@ -294,7 +294,7 @@ function callError(message, type = 'error', unique = false) {
   if (type === 'warn') {
     errorDiv.style.color = "orange";
   } else {
-    errorDiv.style.color = "red"; // Устанавливаем цвет по умолчанию для ошибок
+    errorDiv.style.color = "red";
   }
 
   errorDiv.innerHTML = `${message} <span class="close-btn" data-id="">×</span>`;
@@ -406,13 +406,7 @@ let caseSensitive = false;
 function editorFindCase() {
   caseSensitive = !caseSensitive;
 
-  const button = document.getElementById("caseSensitiveButton");
-  if (caseSensitive) {
-    button.textContent = "Case Sensitive ON"; 
-  } else {
-    button.textContent = "Case Sensitive OFF";
-  }
-
+  callButtonChange('caseSensitiveButton', caseSensitive);
   toggleHighlight();
 }
 
@@ -716,8 +710,7 @@ function editorAreaButtons() {
     button.style.display = isHidden ? 'inline-block' : 'none';
   });
   
-  const changebutton = document.getElementById('usefulButtonsButton');
-  changebutton.style.background = isHidden ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
+  callButtonChange('usefulButtonsButton', isHidden);
 }
 
 
@@ -729,8 +722,7 @@ function editorBrokeLinks() {
     links[i].style.pointerEvents = 'none';
   }
 
-  const changebutton = document.getElementById('brokeLinksButton');
-  changebutton.style.background = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
+  callButtonChange('brokeLinksButton', 'true');
 }
 
 let isWrappingEnabled = false;
@@ -743,7 +735,19 @@ function editorWrapping() {
   textarea.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
   findcode.style.whiteSpace = isWrappingEnabled ? 'pre-wrap' : 'nowrap';
 
-  const button = document.getElementById('textWrappingButton');
+  callButtonChange('textWrappingButton', isWrappingEnabled);
+}
 
-  button.style.background = isWrappingEnabled ? 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))' : 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
+function callButtonChange(buttonName, status) {
+  const button = document.getElementById(buttonName);
+
+  if (!button) {
+    console.error(`Failed to find "${buttonName}" button.`);
+    return;
+  }
+
+  const activeGradient = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
+  const inactiveGradient = 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
+
+  button.style.background = status ? activeGradient : inactiveGradient;
 }
