@@ -1,11 +1,6 @@
 function autocomplete() {
   if (2 > 1) {
     const sectionList = document.querySelector('ol.section');
-
-    if (!sectionList) {
-      console.error("Не найден элемент <ol class='section'>.");
-      return;
-    }
     const html = sectionList.innerHTML;
     const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
       .map(a => a.textContent)
@@ -50,7 +45,9 @@ function autocomplete() {
   }
 }
 
-autocomplete();
+document.addEventListener("DOMContentLoaded", function() {
+  autocomplete();
+});
 
 window.addEventListener('beforeunload', function (event) {
   const textarea = document.getElementById('editor');
