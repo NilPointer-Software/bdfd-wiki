@@ -26,7 +26,7 @@ function autocomplete() {
       }
 
       searchTerm = inputText.substring(dollarIndex).toLowerCase();
-      autocompleteOutput.innerHTML = '';
+      autocompleteOutput.textContent = 'Hello';
 
       const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
 
