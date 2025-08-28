@@ -55,7 +55,7 @@ autocomplete();
 window.addEventListener('beforeunload', function (event) {
   event.preventDefault();
   event.returnValue = '';
-  const confirmationMessage = 'Are you sure you want to leave the page? All unsaved changes will be lost.';
+  const confirmationMessage = 'Are you sure you want to leave the page?';
   return confirmationMessage;
 });
 
