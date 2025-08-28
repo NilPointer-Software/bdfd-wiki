@@ -1083,6 +1083,8 @@ ul#searchresults span.teaser em {
 }
 
 #text-editorui {
+	user-select: none;
+	-webkit-user-select: none;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	background-color: var(--color3);
@@ -1210,6 +1212,8 @@ ul#searchresults span.teaser em {
 }
 
 .close-btn {
+	user-select: none;
+	-webkit-user-select: none;
 	outline: none;
 	transition: .3s;
     color: hsl(0deg 0% 100% / 75%); ! important;
@@ -1433,6 +1437,7 @@ ul#searchresults span.teaser em {
 	border-radius: 10px;
 	margin: 5px 0;
 }
+
 
 
 
