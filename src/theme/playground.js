@@ -499,7 +499,7 @@ function toggleHighlight() {
   highlightedTextDiv.innerHTML = resultsString + highlighted;
 }
 
-function TextHighlighting {
+function textHighlighting() {
   highlightEnabled = !highlightEnabled;
   callButtonChange('findHighlightingButton', highlightEnabled);
   toggleHighlight();
@@ -753,6 +753,7 @@ function callButtonChange(buttonName, status) {
     button.style.background = status ? activeGradient : inactiveGradient;
   }
 }
+
 
 
 
