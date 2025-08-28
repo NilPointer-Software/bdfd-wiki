@@ -1110,6 +1110,7 @@ ul#searchresults span.teaser em {
 }
 
 #text-editorui button {
+	outline: none;
 	touch-action: manipulation;
 	-webkit-user-select: none;
 	user-select: none;
@@ -1207,6 +1208,7 @@ ul#searchresults span.teaser em {
 }
 
 .close-btn {
+	outline: none;
 	transition: .3s;
     color: hsl(0deg 0% 100% / 75%); ! important;
     padding: 1px 7px;
@@ -1224,7 +1226,7 @@ ul#searchresults span.teaser em {
 }
 
 .scriptdiv {
-  position: relative;
+    position: relative;
 }
 
 .scriptdiv button:hover {
@@ -1236,34 +1238,35 @@ ul#searchresults span.teaser em {
 }
 
 .scriptdiv button {
-  position: absolute;
-  top: 0.3rem;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  outline: none;
-  color: #fff;
-  margin: 1.5px 5px;
-  padding: 5px;
-  cursor: pointer;
-  width: 3.2rem;
-  height: 3.2rem;
-  font-size: 1.5rem;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
-  border-color: #aeaeae;
-  background: rgb(255 255 255 / 10%);
-  opacity: 0.8;
-  transition: 0.2s;
+	outline: none;
+  	position: absolute;
+  	top: 0.3rem;
+ 	user-select: none;
+    -webkit-user-select: none;
+	touch-action: manipulation;
+ 	outline: none;
+ 	color: #fff;
+ 	margin: 1.5px 5px;
+	padding: 5px;
+	cursor: pointer;
+ 	width: 3.2rem;
+    height: 3.2rem;
+	font-size: 1.5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #aeaeae;
+    background: rgb(255 255 255 / 10%);
+    opacity: 0.8;
+    transition: 0.2s;
 }
 
 .scriptdiv button:nth-of-type(1) {
-  right: 4rem;
+	right: 4rem;
 }
 
 .scriptdiv button:nth-of-type(2) {
-  right: 0.3rem;
+  	right: 0.3rem;
 }
 
 #error-message {
@@ -1272,6 +1275,7 @@ ul#searchresults span.teaser em {
 }
 
 #error-message button {
+	outline: none;
 	transition: .4s;
 	display: inline-block;
 	margin-right: 7.5px;
@@ -1307,6 +1311,7 @@ ul#searchresults span.teaser em {
 }
 
 #selectors {
+	outline: none;
 	user-select: none;
 	-webkit-user-select: none;
     display: flex;
@@ -1318,6 +1323,7 @@ ul#searchresults span.teaser em {
 }
 
 #selectors select {
+	outline: none;
 	text-decoration: none;
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: transparent;
@@ -1331,6 +1337,7 @@ ul#searchresults span.teaser em {
 }
 
 #selectors select option {
+	outline: none;
 	color: #d3d3d3;
 	background-color: var(--color3);
 }
@@ -1357,20 +1364,21 @@ ul#searchresults span.teaser em {
 }
 
 .setting-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 #settings .setting-item p {
-  flex: 1;
-  margin-right: 10px;
-  text-align: left;
-  word-wrap: break-word;
-  line-height: 1.4;
+    flex: 1;
+    margin-right: 10px;
+    text-align: left;
+    word-wrap: break-word;
+    line-height: 1.4;
 }
 
 #settings .setting-item button {
+	outline: none;
 	transition: 0.2s;
     width: 15rem;
 	padding: .75rem;
@@ -1398,6 +1406,7 @@ ul#searchresults span.teaser em {
 	border-radius: 10px;
 	margin: 5px 0;
 }
+
 
 
 
