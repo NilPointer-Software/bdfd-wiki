@@ -421,10 +421,11 @@ function toggleHighlight() {
   let highlighted = text;
   let matches = 0;
 
-  if (highlightEnabled && searchText) {
+  if (searchText) {
     try {
       const flags = caseSensitive ? 'g' : 'gi';
       const regex = new RegExp(searchText, flags);
+
       highlighted = text.replace(regex, (match) => {
         matches++;
         return `<span class="highlight">${match}</span>`;
@@ -433,70 +434,85 @@ function toggleHighlight() {
       const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const flags = caseSensitive ? 'g' : 'gi';
       const regex = new RegExp(escapedSearchText, flags);
+
       highlighted = text.replace(regex, (match) => {
         matches++;
         return `<span class="highlight">${match}</span>`;
       });
     }
-  } else if (!highlightEnabled) {
-    highlighted = text;
   }
 
-  const mentionRegex = /<@(.*?)>/g;
-  highlighted = highlighted.replace(mentionRegex, (match, content) => {
-    return `<span class="mention">@${content}</span>`;
-  });
+  if (highlightEnabled) {
+    // Channel & User mentions
+    const mentionRegex = /<@(.*?)>/g;
+    highlighted = highlighted.replace(mentionRegex, (match, content) => {
+      return `<span class="mention">@${content}</span>`;
+    });
 
-  const channelRegex = /<#(.*?)>/g;
-  highlighted = highlighted.replace(channelRegex, (match, content) => {
-    return `<span class="channel">#${content}</span>`;
-  });
+    const channelRegex = /<#(.*?)>/g;
+    highlighted = highlighted.replace(channelRegex, (match, content) => {
+      return `<span class="channel">#${content}</span>`;
+    });
 
-  const boldRegex = /\*\*(.*?)\*\*/g;
-  highlighted = highlighted.replace(boldRegex, (match, content) => {
-    return `<b>${content}</b>`;
-  });
+    // **
+    const boldRegex = /\*\*(.*?)\*\*/g;
+    highlighted = highlighted.replace(boldRegex, (match, content) => {
+      return `<b>${content}</b>`;
+    });
 
-  const italicRegex = /\*(.*?)\*/g;
-  highlighted = highlighted.replace(italicRegex, (match, content) => {
-    return `<i>${content}</i>`;
-  });
+    // *
+    const italicRegex = /\*(.*?)\*/g;
+    highlighted = highlighted.replace(italicRegex, (match, content) => {
+      return `<i>${content}</i>`;
+    });
+  
+    // ~~
+    const delRegex = /~~(.*?)~~/g;
+    highlighted = highlighted.replace(delRegex, (match, content) => {
+      return `<strike>${content}</strike>`;
+    });
 
-  const delRegex = /~~(.*?)~~/g;
-  highlighted = highlighted.replace(delRegex, (match, content) => {
-    return `<strike>${content}</strike>`;
-  });
+    // __
+    const underRegex = /__(.*?)__/g;
+    highlighted = highlighted.replace(underRegex, (match, content) => {
+      return `<u>${content}</u>`;
+    });
 
-  const underRegex = /__(.*?)__/g;
-  highlighted = highlighted.replace(underRegex, (match, content) => {
-    return `<u>${content}</u>`;
-  });
+    // Unixtime
+    const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
+    highlighted = highlighted.replace(timestampRegex, (match, timestamp, format) => {
+      const date = new Date(parseInt(timestamp) * 1000);
+      let formattedDate = "";
 
+      switch (format) {
+          case 't': formattedDate = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
+          case 'T': formattedDate = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }); break;
+          case 'd': formattedDate = date.toLocaleDateString(); break;
+          case 'D': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); break;
+          case 'f': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
+          case 'F': formattedDate = date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
+          case 'R': formattedDate = getRelativeTime(date); break;
+          default: formattedDate = "Invalid format";
+      }
+      return `<span class="timestamp">${formattedDate}</span>`;
+    });
+  }
+
+  // Link
   const linkRegex = /(https?:\/\/[^\s]+)/g;
   highlighted = highlighted.replace(linkRegex, (url) => {
     return `<a href="${url}" target="_blank">${url}</a>`;
   });
-
-  const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
-  highlighted = highlighted.replace(timestampRegex, (match, timestamp, format) => {
-    const date = new Date(parseInt(timestamp) * 1000);
-    let formattedDate = "";
-
-    switch (format) {
-      case 't': formattedDate = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
-      case 'T': formattedDate = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }); break;
-      case 'd': formattedDate = date.toLocaleDateString(); break;
-      case 'D': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); break;
-      case 'f': formattedDate = date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
-      case 'F': formattedDate = date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); break;
-      case 'R': formattedDate = getRelativeTime(date); break;
-      default: formattedDate = "Invalid format";
-    }
-    return `<span class="timestamp">${formattedDate}</span>`;
-  });
+    
+  // Lines
+  const lines = highlighted.split('\n');
+  let numberedText = "";
+  for (let i = 0; i < lines.length; i++) {
+    numberedText += `<span class="line-number">${i + 1} </span>${lines[i]}<br>`;
+  }
 
   const resultsString = `<p>Results: ${matches}</p>`;
-  highlightedTextDiv.innerHTML = resultsString + highlighted;
+  highlightedTextDiv.innerHTML = resultsString + numberedText;
 }
 
 function textHighlighting() {
