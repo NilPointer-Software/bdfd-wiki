@@ -357,13 +357,14 @@ function checkBrackets() {
   let dollarCount = 0;
   let openBrackets = 0;
   let closeBrackets = 0;
+  let lastOpenBracketLine = -1;
 
   const errorMessageElement = document.getElementById("error-message");
   errorMessageElement.innerHTML = "";
   errorMessageElement.style.color = "black";
 
   if (textBytes > 65536) {
-    callError("Error: Text exceeds the allowed size (65536 bytes).");
+    callError("Error: Text exceeds allowed size (65536 bytes).");
   }
 
   if (text.indexOf('$') === -1 && text.length > 2000) {
@@ -380,6 +381,7 @@ function checkBrackets() {
         }
       } else if (line[j] === '[') {
         openBrackets++;
+        lastOpenBracketLine = i + 1;
         if (j + 1 < line.length && line[j + 1] === ']') {
             if (openBrackets <= dollarCount) {
                callError(`Warning: Empty brackets [] detected on line ${i + 1}.`, 'warn');
@@ -396,7 +398,7 @@ function checkBrackets() {
 
   if (openBrackets <= dollarCount) {
     if (closeBrackets < openBrackets) {
-      callError("Error: Not all open brackets are closed.");
+       callError(`Error: Not all open brackets are closed. Last opened on line ${lastOpenBracketLine}.`);
     }
   }
 }
@@ -756,6 +758,7 @@ function callButtonChange(buttonName, status) {
     button.style.background = status ? activeGradient : inactiveGradient;
   }
 }
+
 
 
 
