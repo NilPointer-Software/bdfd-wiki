@@ -748,6 +748,12 @@ function callButtonChange(buttonName, status) {
 
   const activeGradient = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
   const inactiveGradient = 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
+  const extraGradient = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(0 0 0 / 50%))';
 
-  button.style.background = status ? activeGradient : inactiveGradient;
+  if (button === 'brokeLinksButton') {
+    button.style.background = extraGradient;
+  } else {
+    button.style.background = status ? activeGradient : inactiveGradient;
+  }
 }
+
