@@ -1404,10 +1404,11 @@ ul#searchresults span.teaser em {
 #settings hr {
     border: 0;
     height: 1px;
-    background: #ccc;
+    background: hsl(0deg 0% 100% / 20%);
 	border-radius: 10px;
 	margin: 5px 0;
 }
+
 
 
 
