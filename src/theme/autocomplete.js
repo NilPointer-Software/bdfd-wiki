@@ -59,3 +59,17 @@ window.addEventListener('beforeunload', function (event) {
   return confirmationMessage;
 });
 
+function updateInternetConnection() {
+  const text = document.getElementById('internetConnection');
+
+  if (window.navigator.onLine) {
+    text.textContent = '👍 All services work stably.';
+    text.style.color = 'green';
+  } else {
+    text.textContent = '🛜 Check your internet connection! It may affect some services...';
+    text.style.color = 'red';
+  }
+}
+
+setInterval(updateInternetConnection, 1000);
+
