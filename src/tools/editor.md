@@ -96,7 +96,7 @@ Here you can use the basic editor features to write codes more conveniently.
   <hr>
   <div class="setting-item">
     <p>Highlighting in  text editor.</p>
-    <button id="findHighlightingButton">Highlighting</button>
+    <button onclick="TextHighlighting()" id="findHighlightingButton">Highlighting</button>
   </div>
   <hr>
   <div class="setting-item">
