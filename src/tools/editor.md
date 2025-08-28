@@ -65,7 +65,7 @@ Here you can use the basic editor features to write codes more conveniently.
 <details id="settings">
   <summary>Settings</summary>
   <div class="setting-item">
-    <p>Show or hide a set of useful formatting buttons above the editor.</p>
+    <p>Toggles the visibility of the editor's useful buttons panel (save as file, copy text).</p>
     <button onclick="editorAreaButtons()" id="usefulButtonsButton">Useful buttons</button>
   </div>
   <hr>
@@ -75,22 +75,22 @@ Here you can use the basic editor features to write codes more conveniently.
   </div>
   <hr>
   <div class="setting-item">
-    <p>Intentionally breaks all links in the editor content (for testing purposes).</p>
+    <p>Disables all links on the page to avoid misclicking.</p>
     <button onclick="editorBrokeLinks()" id="brokeLinksButton">Break all links</button>
   </div>
   <hr>
   <div class="setting-item">
-    <p>Enable or disable change warnings in the editor.</p>
+    <p>Displaying warnings.</p>
     <button onclick="editorWarning()" id="changeWarningsButton">Warnings</button>
   </div>
   <hr>
   <div class="setting-item">
-    <p>Enable or disable displaying errors in the editor.</p>
+    <p>Displaying errors.</p>
     <button onclick="editorError()" id="changeErrorsButton">Errors</button>
   </div>
   <hr>
   <div class="setting-item">
-    <p>Turns text wrapping on or off in the editor.</p>
+    <p>Text wrapping in text editor.</p>
     <button onclick="editorWrapping()" id="textWrappingButton">Text Wrapping</button>
   </div>
 </details>
