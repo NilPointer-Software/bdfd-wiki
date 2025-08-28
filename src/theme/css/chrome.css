@@ -1438,12 +1438,13 @@ ul#searchresults span.teaser em {
 	margin: 5px 0;
 }
 
-
-
-
-
-
-
-
-
-
+.setting-item:last-child {
+	user-select: none;
+	-webkit-user-select: none;
+	margin-top: -2.25rem;
+    margin-bottom: -1.25rem;
+    display: flex;
+    justify-content: center;
+	text-align: center;
+	font-size: 1.3rem;
+}
