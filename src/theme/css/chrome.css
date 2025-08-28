@@ -1342,8 +1342,15 @@ ul#searchresults span.teaser em {
 	padding: 1rem;
 }
 
-#settings h3 {
+#settings summary {
+	user-select: none;
+	-webkit-user-select: none;
+	outline: none;
+	background-color: var(--color3);
+	border-radius: 10px;
+	cursor: pointer;
 	padding: 0rem;
+	padding-bottom: .75rem;
 	margin-bottom: -.5rem;
 	margin-top: -.1rem;
 	font-size: 2.5rem;
@@ -1391,5 +1398,6 @@ ul#searchresults span.teaser em {
 	border-radius: 10px;
 	margin: 5px 0;
 }
+
 
 
