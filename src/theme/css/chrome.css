@@ -1331,6 +1331,7 @@ ul#searchresults span.teaser em {
 }
 
 #selectors select {
+	cursor: pointer;
 	outline: none;
 	text-decoration: none;
 	touch-action: manipulation;
@@ -1386,6 +1387,7 @@ ul#searchresults span.teaser em {
 }
 
 #settings .setting-item button {
+	cursor: pointer;
 	outline: none;
 	transition: 0.2s;
     width: 15rem;
@@ -1431,6 +1433,7 @@ ul#searchresults span.teaser em {
 	border-radius: 10px;
 	margin: 5px 0;
 }
+
 
 
 
