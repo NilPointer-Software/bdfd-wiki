@@ -777,9 +777,10 @@ function changeAutocomplete() {
   const autocompleteElement = document.getElementById('autocomplete');
 
   if (autocompleteEnabled) {
-    autocompleteElement.style.visibility = 'visible';
+    autocompleteElement.style.display = 'none';
   } else {
-    autocompleteElement.style.visibility = 'hidden';
+    autocompleteElement.style.display = 'flex';
   }
-  callButtonChange('findHighlightingButton', autocompleteEnabled);
+  callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
