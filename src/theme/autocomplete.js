@@ -18,7 +18,6 @@ function autocomplete() {
   }
 
   const html = sectionList.innerHTML;
-
   const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
     .map(a => a.textContent)
     .filter(text => text.startsWith('$'));
@@ -43,19 +42,19 @@ function autocomplete() {
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
     const displayedFunctions = matchingFunctions.slice(0, 5);
 
-    const { left, top, height } = textarea.getBoundingClientRect();
-    const cursorRect = textarea.getBoundingClientRect();
+    const { left, top } = textarea.getBoundingClientRect();
     const textareaStyle = window.getComputedStyle(textarea);
-    const lineHeight = parseInt(textareaStyle.lineHeight);
-    const paddingTop = parseInt(textareaStyle.paddingTop);
-    const borderTopWidth = parseInt(textareaStyle.borderTopWidth);
+    let lineHeight = parseInt(textareaStyle.lineHeight);
+    lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
+    const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
+    const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
 
     const x = left + textarea.selectionStart * 8;
-    const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight - 45;
+    let y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight - 20;
 
     autocompleteOutput.style.position = 'absolute';
     autocompleteOutput.style.left = `${x}px`;
-    autocompleteOutput.style.top = `${y + lineHeight}px`;
+    autocompleteOutput.style.top = `${y}px`;
     autocompleteOutput.style.zIndex = '1000';
 
     displayedFunctions.forEach(func => {
