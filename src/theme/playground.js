@@ -770,8 +770,16 @@ function callButtonChange(buttonName, status) {
   }
 }
 
+let autocompleteEnabled = true;
+function changeAutocomplete() {
+  autocompleteEnabled = !autocompleteEnabled;
 
+  const autocompleteElement = document.getElementById('autocomplete');
 
-
-
-
+  if (autocompleteEnabled) {
+    autocompleteElement.style.visibility = 'visible';
+  } else {
+    autocompleteElement.style.visibility = 'hidden';
+  }
+  callButtonChange('findHighlightingButton', autocompleteEnabled);
+}
