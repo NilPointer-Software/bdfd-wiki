@@ -43,13 +43,21 @@ function autocomplete() {
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
     const displayedFunctions = matchingFunctions.slice(0, 5);
 
+    // Получаем координаты курсора относительно textarea (более точный расчет)
     const { left, top, height } = textarea.getBoundingClientRect();
-    const x = left + textarea.selectionStart * 8; 
-    const y = top + height - 30;
+    const cursorRect = textarea.getBoundingClientRect();
+    const textareaStyle = window.getComputedStyle(textarea);
+    const lineHeight = parseInt(textareaStyle.lineHeight);
+    const paddingTop = parseInt(textareaStyle.paddingTop);
+    const borderTopWidth = parseInt(textareaStyle.borderTopWidth);
 
+    const x = left + textarea.selectionStart * 8;
+    const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight; //Исправлено: учет высоты строки
+
+    // Устанавливаем позицию панели автозаполнения
     autocompleteOutput.style.position = 'absolute';
     autocompleteOutput.style.left = `${x}px`;
-    autocompleteOutput.style.top = `${y}px`;
+    autocompleteOutput.style.top = `${y + lineHeight}px`; // Отображаем ниже строки.
     autocompleteOutput.style.zIndex = '1000';
     autocompleteOutput.style.backgroundColor = 'white';
     autocompleteOutput.style.border = '1px solid #ccc';
