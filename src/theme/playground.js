@@ -777,10 +777,11 @@ function changeAutocomplete() {
   const autocompleteElement = document.getElementById('autocomplete');
 
   if (autocompleteEnabled) {
-    autocompleteElement.style.display = 'none';
-  } else {
     autocompleteElement.style.display = 'flex';
+  } else {
+    autocompleteElement.style.display = 'none';
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
