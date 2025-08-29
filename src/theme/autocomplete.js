@@ -51,7 +51,7 @@ function autocomplete() {
     const borderTopWidth = parseInt(textareaStyle.borderTopWidth);
 
     const x = left + textarea.selectionStart * 8;
-    const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight; //Исправлено: учет высоты строки
+    const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 5;
 
     autocompleteOutput.style.position = 'absolute';
     autocompleteOutput.style.left = `${x}px`;
@@ -75,6 +75,7 @@ function autocomplete() {
   textarea.addEventListener('mouseup', updateAutocomplete);
   textarea.addEventListener('keyup', updateAutocomplete);
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   autocomplete();
