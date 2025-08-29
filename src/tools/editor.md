@@ -101,7 +101,7 @@ Here you can use the basic editor features to write codes more conveniently.
   <hr>
   <div class="setting-item">
     <p>Suggest functions as you type.</p>
-    <button onclick="changeAutocomplete()" id="findHighlightingButton">Autocomplete</button>
+    <button onclick="changeAutocomplete()" id="changeAutocompleteButton">Autocomplete</button>
   </div>
   <div class="setting-item">
     <p id="internetConnection">Loading...</p>
