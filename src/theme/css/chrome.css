@@ -1451,7 +1451,7 @@ ul#searchresults span.teaser em {
 
 #autocomplete {
     white-space: normal;
-    width: 20%;
+    width: auto;
     margin-bottom: 3rem;
     margin-top: -1.75rem;
     display: block !important;
@@ -1476,3 +1476,4 @@ ul#searchresults span.teaser em {
 	color: hsl(0deg 0% 100% / 75%);
     transition: 0.2s;
 }
+
