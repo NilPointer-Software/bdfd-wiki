@@ -1449,19 +1449,30 @@ ul#searchresults span.teaser em {
 	font-size: 1.3rem;
 }
 
-#autocomplete span {
-	display: inline-block;
-	color: var(--color1);
-	background: hsl(0deg 0% 100% / 10%) !important;
-	border-radius: 10px;
-	margin-bottom: .5rem;
-	cursor: pointer;
-	padding: .5rem;
+#autocomplete {
+    white-space: normal;
+    width: 100%;
+    margin-bottom: 3rem;
+	margin-top: -1.75rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#autocomplete {
-	white-space: normal;
-	width: 100%;
-	margin-bottom: 3.5rem;
-	margin-top: -1rem;
+#autocomplete span {
+    display: inline-block;
+    color: var(--color1);
+    background: hsl(0deg 0% 100% / 10%) !important;
+    border-radius: 10px;
+    margin-bottom: .5rem; 
+    cursor: pointer;
+    padding: .5rem;
+    margin-right: .75rem;
+	transition: 0.2s;
 }
+
+#autocomplete span:hover {
+    transform: scale(1.025);
+	transition: 0.2s;
+}
+
