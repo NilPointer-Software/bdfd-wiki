@@ -29,7 +29,6 @@ function autocomplete() {
   const autocompleteOutput = document.getElementById('autocomplete');
 
   textarea.addEventListener('input', function (event) {
-    console.log("Loaded 2")
     const inputText = event.target.value;
     const cursorPosition = textarea.selectionStart;
     let searchTerm = '';
@@ -48,9 +47,6 @@ function autocomplete() {
     matchingFunctions.forEach(func => {
       const span = document.createElement('span');
       span.textContent = func;
-      span.style.backgroundColor = 'lightgray';
-      span.style.marginRight = '5px';
-      span.style.cursor = 'pointer';
       span.addEventListener('click', function () {
         textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
         textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
