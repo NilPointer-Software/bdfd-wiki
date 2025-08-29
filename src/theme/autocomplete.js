@@ -1,72 +1,61 @@
-let autocompleteEnabled = true;
-
-function changeAutocomplete() {
-  autocompleteEnabled = !autocompleteEnabled;
-
-  const textarea = document.getElementById('editor');
-
-  if (!textarea) {
-    console.error('Textarea element with id "editor" not found.');
-    return;
-  }
-
-  if (autocompleteEnabled) {
-    textarea.addEventListener('input', handleInput);
-  } else {
-    textarea.removeEventListener('input', handleInput);
-    document.getElementById('autocomplete').innerHTML = '';
-  }
-}
-
-function handleInput(event) {
-  if (autocompleteEnabled) {
-    autocomplete(event);
-  }
-}
-
-function autocomplete(event) {
+function autocomplete() {
   const functionsHeader = Array.from(document.querySelectorAll('li.chapter-item'))
     .find(li => {
-      const div = li.querySelector('div');
+      const div = li.querySelector('div'); 
       return div && div.textContent.trim() === 'Functions';
     });
 
-  if (!functionsHeader) return console.warn('Element not found.');
+  if (!functionsHeader) {
+    console.warn('Element not found.');
+    return;
+  }
 
   const sectionList = functionsHeader.nextElementSibling;
-  if (!sectionList) return console.warn('Functions arent found.');
+
+  if (!sectionList) {
+    console.warn('Functions arent found.');
+    return;
+  }
 
   const html = sectionList.innerHTML;
+
   const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
     .map(a => a.textContent)
     .filter(text => text.startsWith('$'));
 
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
-  const inputText = event.target.value;
-  const cursorPosition = textarea.selectionStart;
-  let searchTerm = '';
-  let dollarIndex = inputText.lastIndexOf('$', cursorPosition);
 
-  if (dollarIndex === -1) return autocompleteOutput.innerHTML = '';
+  textarea.addEventListener('input', function (event) {
+    const inputText = event.target.value;
+    const cursorPosition = textarea.selectionStart;
+    let searchTerm = '';
+    let dollarIndex = inputText.lastIndexOf('$', cursorPosition);
 
-  searchTerm = inputText.substring(dollarIndex).toLowerCase();
-  autocompleteOutput.innerHTML = '';
-
-  const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
-  const displayedFunctions = matchingFunctions.slice(0, 5);
-
-  displayedFunctions.forEach(func => {
-    const span = document.createElement('span');
-    span.textContent = func;
-    span.addEventListener('click', function () {
-      textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
-      textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
+    if (dollarIndex === -1) {
       autocompleteOutput.innerHTML = '';
-      textarea.focus();
-    });
+      return;
+    }
 
-    autocompleteOutput.appendChild(span);
+    searchTerm = inputText.substring(dollarIndex).toLowerCase();
+    autocompleteOutput.innerHTML = '';
+
+    const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
+
+    const displayedFunctions = matchingFunctions.slice(0, 5);
+
+    displayedFunctions.forEach(func => {
+      const span = document.createElement('span');
+      span.textContent = func;
+      span.addEventListener('click', function () {
+        textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
+        textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
+        autocompleteOutput.innerHTML = '';
+        textarea.focus();
+      });
+
+      autocompleteOutput.appendChild(span);
+    });
   });
 }
 
