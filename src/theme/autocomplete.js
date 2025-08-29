@@ -6,14 +6,14 @@ function autocomplete() {
     });
 
   if (!functionsHeader) {
-    console.warn('Не найден элемент списка (li.chapter-item), содержащий <div>Functions</div>.');
+    console.warn('Element not found.');
     return;
   }
 
   const sectionList = functionsHeader.nextElementSibling;
 
   if (!sectionList) {
-    console.warn('Не найден список (ol) после заголовка Functions.');
+    console.warn('Functions arent found.');
     return;
   }
 
@@ -22,8 +22,6 @@ function autocomplete() {
   const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
     .map(a => a.textContent)
     .filter(text => text.startsWith('$'));
-
-  console.log(`Найдено функций (начинаются с $): ${functions.length}`);
 
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
@@ -44,7 +42,9 @@ function autocomplete() {
 
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
 
-    matchingFunctions.forEach(func => {
+    const displayedFunctions = matchingFunctions.slice(0, 5);
+
+    displayedFunctions.forEach(func => {
       const span = document.createElement('span');
       span.textContent = func;
       span.addEventListener('click', function () {
