@@ -1,7 +1,7 @@
 function autocomplete() {
   const functionsHeader = Array.from(document.querySelectorAll('li.chapter-item'))
     .find(li => {
-      const div = li.querySelector('div'); 
+      const div = li.querySelector('div');
       return div && div.textContent.trim() === 'Functions';
     });
 
@@ -22,26 +22,24 @@ function autocomplete() {
   const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
     .map(a => a.textContent)
     .filter(text => text.startsWith('$'));
-
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
 
-  textarea.addEventListener('input', function (event) {
-    const inputText = event.target.value;
+  function updateAutocomplete() {
+    const inputText = textarea.value;
     const cursorPosition = textarea.selectionStart;
-    let searchTerm = '';
-    let dollarIndex = inputText.lastIndexOf('$', cursorPosition);
+
+    let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
 
     if (dollarIndex === -1) {
       autocompleteOutput.innerHTML = '';
       return;
     }
 
-    searchTerm = inputText.substring(dollarIndex).toLowerCase();
+    const searchTerm = inputText.substring(dollarIndex, cursorPosition).toLowerCase();
     autocompleteOutput.innerHTML = '';
 
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
-
     const displayedFunctions = matchingFunctions.slice(0, 5);
 
     displayedFunctions.forEach(func => {
@@ -53,10 +51,14 @@ function autocomplete() {
         autocompleteOutput.innerHTML = '';
         textarea.focus();
       });
-
       autocompleteOutput.appendChild(span);
     });
-  });
+  }
+
+  textarea.addEventListener('input', updateAutocomplete);
+
+  textarea.addEventListener('mouseup', updateAutocomplete);
+  textarea.addEventListener('keyup', updateAutocomplete);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
