@@ -18,16 +18,20 @@ function autocomplete() {
 
     if (dollarIndex === -1) {
       autocompleteOutput.innerHTML = '';
+      console.log("idk")
       return;
     }
 
     searchTerm = inputText.substring(dollarIndex).toLowerCase();
-    autocompleteOutput.textContent = 'Hello';
+    autocompleteOutput.innerHTML = '';
 
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
-
+   
+    console.log("45656556856")
     matchingFunctions.forEach(func => {
       const span = document.createElement('span');
+      console.log("Found!!!!!")
+      console.log(func)
       span.textContent = func;
       span.style.backgroundColor = 'lightgray';
       span.style.marginRight = '5px';
