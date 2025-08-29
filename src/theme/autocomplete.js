@@ -22,6 +22,7 @@ function autocomplete() {
   const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
     .map(a => a.textContent)
     .filter(text => text.startsWith('$'));
+
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
 
@@ -42,6 +43,17 @@ function autocomplete() {
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
     const displayedFunctions = matchingFunctions.slice(0, 5);
 
+    const { left, top, height } = textarea.getBoundingClientRect();
+    const x = left + textarea.selectionStart * 8; 
+    const y = top + height - 25;
+
+    autocompleteOutput.style.position = 'absolute';
+    autocompleteOutput.style.left = `${x}px`;
+    autocompleteOutput.style.top = `${y}px`;
+    autocompleteOutput.style.zIndex = '1000';
+    autocompleteOutput.style.backgroundColor = 'white';
+    autocompleteOutput.style.border = '1px solid #ccc';
+
     displayedFunctions.forEach(func => {
       const span = document.createElement('span');
       span.textContent = func;
@@ -56,7 +68,6 @@ function autocomplete() {
   }
 
   textarea.addEventListener('input', updateAutocomplete);
-
   textarea.addEventListener('mouseup', updateAutocomplete);
   textarea.addEventListener('keyup', updateAutocomplete);
 }
