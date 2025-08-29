@@ -1,10 +1,29 @@
 function autocomplete() {
-  console.log("Loaded 1")
-  const sectionList = document.querySelector('ol.section');
+  const functionsHeader = Array.from(document.querySelectorAll('li.chapter-item'))
+    .find(li => {
+      const div = li.querySelector('div'); 
+      return div && div.textContent.trim() === 'Functions';
+    });
+
+  if (!functionsHeader) {
+    console.warn('Не найден элемент списка (li.chapter-item), содержащий <div>Functions</div>.');
+    return;
+  }
+
+  const sectionList = functionsHeader.nextElementSibling;
+
+  if (!sectionList) {
+    console.warn('Не найден список (ol) после заголовка Functions.');
+    return;
+  }
+
   const html = sectionList.innerHTML;
+
   const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a'))
     .map(a => a.textContent)
     .filter(text => text.startsWith('$'));
+
+  console.log(`Найдено функций (начинаются с $): ${functions.length}`);
 
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
@@ -18,7 +37,6 @@ function autocomplete() {
 
     if (dollarIndex === -1) {
       autocompleteOutput.innerHTML = '';
-      console.log("idk")
       return;
     }
 
@@ -26,12 +44,9 @@ function autocomplete() {
     autocompleteOutput.innerHTML = '';
 
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
-   
-    console.log("45656556856")
+
     matchingFunctions.forEach(func => {
       const span = document.createElement('span');
-      console.log("Found!!!!!")
-      console.log(func)
       span.textContent = func;
       span.style.backgroundColor = 'lightgray';
       span.style.marginRight = '5px';
