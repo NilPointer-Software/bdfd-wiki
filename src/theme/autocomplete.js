@@ -50,7 +50,7 @@ function autocomplete() {
     const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
 
     const x = left + textarea.selectionStart * 8;
-    let y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 35;
+    let y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
 
     autocompleteOutput.style.position = 'absolute';
     autocompleteOutput.style.left = `${x}px`;
