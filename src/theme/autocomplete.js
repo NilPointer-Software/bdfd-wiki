@@ -45,7 +45,7 @@ function autocomplete() {
 
     const { left, top, height } = textarea.getBoundingClientRect();
     const x = left + textarea.selectionStart * 8; 
-    const y = top + height - 60;
+    const y = top + height - 30;
 
     autocompleteOutput.style.position = 'absolute';
     autocompleteOutput.style.left = `${x}px`;
