@@ -1451,29 +1451,28 @@ ul#searchresults span.teaser em {
 
 #autocomplete {
     white-space: normal;
-    width: 100%;
+    width: auto;
     margin-bottom: 3rem;
-	margin-top: -1.75rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: -1.75rem;
+    display: block !important;
+	border-radius: 10px;
+	background: var(--color3) !important;
+	border-color: hsl(0deg 0% 100% / 10%) !important;
 }
 
 #autocomplete span {
-    display: inline-block;
-    color: var(--color1);
-    background: hsl(0deg 0% 100% / 10%) !important;
+    display: block;
+    color: hsl(0deg 0% 100% / 65%);
     border-radius: 10px;
-    margin-bottom: .5rem; 
+    margin-bottom: .5rem;
     cursor: pointer;
     padding: .5rem;
-    margin-right: .75rem;
-	transition: 0.2s;
+    width: fit-content;
+    transition: 0.2s;
 }
 
 #autocomplete span:hover {
-    transform: scale(1.025);
-	transition: 0.2s;
+    transform: scale(1.015);
+	color: hsl(0deg 0% 100% / 75%);
+    transition: 0.2s;
 }
-
-
