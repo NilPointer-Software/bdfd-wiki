@@ -465,7 +465,7 @@ function toggleHighlight() {
     highlighted = highlighted.replace(italicRegex, (match, content) => {
       return `<i>${content}</i>`;
     });
-  
+
     // ~~
     const delRegex = /~~(.*?)~~/g;
     highlighted = highlighted.replace(delRegex, (match, content) => {
@@ -496,6 +496,11 @@ function toggleHighlight() {
       }
       return `<span class="timestamp">${formattedDate}</span>`;
     });
+    
+    // Headers
+    highlighted = highlighted.replace(/^# (.*)$/gm, '<h1>$1</h1>');
+    highlighted = highlighted.replace(/^## (.*)$/gm, '<h2>$1</h2>');
+    highlighted = highlighted.replace(/^### (.*)$/gm, '<h3>$1</h3>');
   }
 
   // Link
@@ -503,7 +508,7 @@ function toggleHighlight() {
   highlighted = highlighted.replace(linkRegex, (url) => {
     return `<a href="${url}" target="_blank">${url}</a>`;
   });
-    
+
   // Lines
   const lines = highlighted.split('\n');
   let numberedText = "";
