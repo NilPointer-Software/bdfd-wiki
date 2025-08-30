@@ -113,4 +113,5 @@ Here you can use the basic editor features to write codes more conveniently.
 	<p>**</p>
 	<p>*</p>
 	<p>`</p>
+	<p>~~</p>
 </div>
