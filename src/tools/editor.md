@@ -50,7 +50,8 @@ Here you can use the basic editor features to write codes more conveniently.
 		<p>Special Characters: <span id="specialChars">0</span></p>
 </div>
 
-<div id="text-editorui">
+<details id="text-editorui">
+  <summary>Editor</summary>
 	<label for="searchText">Find:</label>
 	<input type="text" id="searchText"><br>
 	<label for="replaceText">Replace:</label>
@@ -58,7 +59,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<button onclick="replaceText()">Replace all</button>
 	<button id="highlightButton" onclick="toggleHighlight()">Find</button><br>
 	<p><i class="fa fa-info" aria-hidden="true"></i> Regex is supported</p>
-</div>
+</details>
 
 <div id="highlightedText"></div>
 
