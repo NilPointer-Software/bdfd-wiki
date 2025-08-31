@@ -637,8 +637,12 @@ function typeScript() {
   
   const callbackKeywords = ['$awaitedCommand', '$awaitedCommandError', '$onJoined', '$onLeave', '$onBanAdd', '$onBanRemove', '$onMessageDelete', '$onInteraction', '$alwaysReply', '$messageContains', '$reaction'];
 
-  if (!nameInputVal) {
-    callError(errorMessages.empty, 'error', true);
+  if (selectValue !== 'file') {
+    if (!nameInputVal) {
+      callError(errorMessages.empty, 'error', true);
+    } else {
+      deleteError(errorMessages.empty);
+    }
   } else {
     deleteError(errorMessages.empty);
   }
@@ -788,6 +792,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
