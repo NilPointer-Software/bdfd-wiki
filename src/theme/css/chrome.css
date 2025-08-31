@@ -1174,6 +1174,18 @@ ul#searchresults span.teaser em {
 	margin-bottom: .5rem;
 }
 
+#highlightedText h1 {
+  display: inline;
+}
+
+#highlightedText h2 {
+  display: inline;
+}
+
+#highlightedText h3 {
+  display: inline;
+}
+
 .line-number {
     border-right-width: 2px;
 	color: hsl(0deg 0% 100% / 30%) !important;
@@ -1476,4 +1488,5 @@ ul#searchresults span.teaser em {
 	color: hsl(0deg 0% 100% / 75%);
     transition: 0.2s;
 }
+
 
