@@ -75,9 +75,65 @@ function autocomplete() {
   textarea.addEventListener('keyup', updateAutocomplete);
 }
 
+function addTooltips() {
+  const textarea = document.getElementById('editor');
+  const tooltip = document.createElement('div');
+  tooltip.id = 'tooltip';
+  tooltip.style.position = 'absolute';
+  tooltip.style.display = 'none';
+  tooltip.style.zIndex = '1001';
+  document.body.appendChild(tooltip);
+
+  textarea.addEventListener('keyup', updateTooltip);
+  textarea.addEventListener('mouseup', updateTooltip);
+
+  function updateTooltip() {
+    const text = textarea.value;
+    const cursor = textarea.selectionStart;
+    const commandTrigger = '$commandTrigger';
+    const isSlashTrigger = '$isSlash';
+    const timestampTrigger = '$getTimestamp';
+
+    let tooltipText = '';
+
+    //  $commandTrigger
+    if (text.substring(cursor - commandTrigger.length, cursor) === commandTrigger) {
+      const name = document.getElementById('name').value || 'trigger';
+      tooltipText = `Returns '${name}'`;
+    }
+    //  $isSlash
+    else if (text.substring(cursor - isSlashTrigger.length, cursor) === isSlashTrigger) {
+      const slash = document.getElementById('scriptType').textContent.includes('Slash Command') ? 'true' : 'false';
+      tooltipText = `Returns '${slash}'`;
+    }
+    //  $getTimestamp
+    else if (text.substring(cursor - timestampTrigger.length, cursor).startsWith(timestampTrigger)) {
+      const timestamp = Math.floor(Date.now() / 1000);
+      tooltipText = `Returns '${timestamp}'`;
+    }
+    if (tooltipText) {
+      const { left, top } = textarea.getBoundingClientRect();
+      const textareaStyle = window.getComputedStyle(textarea);
+      let lineHeight = parseInt(textareaStyle.lineHeight);
+      lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
+      const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
+      const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
+
+      const x = left + cursor * 8;
+      const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
+      tooltip.style.left = `${x}px`;
+      tooltip.style.top = `${y}px`;
+      tooltip.textContent = tooltipText;
+      tooltip.style.display = 'block';
+    } else {
+      tooltip.style.display = 'none';
+    }
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function() {
   autocomplete();
+  addTooltips();
 });
 
 window.addEventListener('beforeunload', function (event) {
