@@ -649,7 +649,9 @@ function typeScript() {
 
   let commandType = 'Command';
 
-  if (selectValue === 'callback') {
+  if (selectValue === 'file') {
+    commandType = ' • File';
+  } else if (selectValue === 'callback') {
     commandType = ' • Callback';
     if (!callbackKeywords.some(keyword => nameInputVal.startsWith(keyword))) {
       callError(errorMessages.invalidCallback, 'error', true);
@@ -792,6 +794,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
