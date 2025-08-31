@@ -1341,30 +1341,37 @@ ul#searchresults span.teaser em {
 }
 
 #selectors {
-	outline: none;
-	user-select: none;
-	-webkit-user-select: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-	margin-top: -1.5rem;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+  flex-wrap: wrap;
 }
 
 #selectors select {
-	cursor: pointer;
-	outline: none;
-	text-decoration: none;
-	touch-action: manipulation;
-	-webkit-tap-highlight-color: transparent;
-    width: auto;
-    padding: 8px 5px;
-	background: rgb(255 255 255 / 10%);
-	color: rgb(255 255 255 / 80%);
-    border-radius: 10px;
-    box-sizing: border-box;
-	border: 0;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  width: 15rem;
+  padding: 8px 5px;
+  background: rgb(255 255 255 / 10%);
+  color: rgb(255 255 255 / 80%);
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 0;
+}
+
+@media (max-width: 350px) {
+	#selectors select {
+		width: 85%;
+	}
 }
 
 #selectors select option {
@@ -1494,6 +1501,7 @@ ul#searchresults span.teaser em {
 	color: hsl(0deg 0% 100% / 75%);
     transition: 0.2s;
 }
+
 
 
 
