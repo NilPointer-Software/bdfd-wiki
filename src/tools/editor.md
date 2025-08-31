@@ -16,7 +16,7 @@ Here you can use the basic editor features to write codes more conveniently.
 </div>
 
 <div id="command-editor">
-	<p id="scriptType">Name</p>
+	<p id="scriptType">Name • Command</p>
 	<div id="nameScript">
 		<textarea id="name" oninput="nameScript(); typeScript()"></textarea>
 		<span>0/50</span>
