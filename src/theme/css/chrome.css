@@ -1387,7 +1387,7 @@ ul#searchresults span.teaser em {
 	padding: 1rem;
 }
 
-#settings summary {
+#settings summary, #text-editorui summary {
 	user-select: none;
 	-webkit-user-select: none;
 	outline: none;
@@ -1501,6 +1501,7 @@ ul#searchresults span.teaser em {
 	color: hsl(0deg 0% 100% / 75%);
     transition: 0.2s;
 }
+
 
 
 
