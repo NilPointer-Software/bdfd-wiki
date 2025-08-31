@@ -1012,37 +1012,43 @@ ul#searchresults span.teaser em {
 
 /* Tools Editor */
 #stats-container p, #another-info p {
-	transition: .4s;
-	display: inline-block;
-	margin-right: 7.5px;
-	background-color: var(--color3);
-	padding: 5px;
-	font-size: 1.5rem;
-	border-radius: 10px;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .4s;
+    display: inline-block;
+    margin-right: 7.5px;
+    background-color: var(--color3);
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+	margin-top:  -.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 #stats-container span {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 #stats-container p:hover, #another-info p:hover {
-	transform: scale(1.1);
-	border-radius: 8px;
-	border-width: 1px;
-	transition: .4s;
+    transform: scale(1.1);
+    border-radius: 8px;
+    border-width: 1px;
+    transition: .4s;
 }
 
 #stats-container, #another-info {
-	margin-top: -2.5%;
-	display: flex;
-	flex-direction: row;
+    margin-top: 2rem; 
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+#stats-container {
+	margin-bottom: 1rem;
 }
 
 #another-info  {
-	margin-top: -1rem;
+	margin-top: 1.25rem;
 	margin-bottom: -1rem;
 }
 
@@ -1488,5 +1494,6 @@ ul#searchresults span.teaser em {
 	color: hsl(0deg 0% 100% / 75%);
     transition: 0.2s;
 }
+
 
 
