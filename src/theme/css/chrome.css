@@ -1496,13 +1496,12 @@ ul#searchresults span.teaser em {
     transition: 0.2s;
 }
 
-#autocomplete span:hover {
-    transform: scale(1.015);
-	color: hsl(0deg 0% 100% / 75%);
-    transition: 0.2s;
+#autocomplete span.selected, #autocomplete span:hover {
+    margin-left: .5rem;
+	border-left-color: var(--color1);
+	border-left-width: 2.5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-left-style: solid;
+	transition: 0.2s;
 }
-
-
-
-
-
