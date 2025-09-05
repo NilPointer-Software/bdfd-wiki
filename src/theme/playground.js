@@ -237,6 +237,24 @@ function replaceText() {
   checkBrackets();
 }
 
+function replaceOneText() {
+  const searchText = document.getElementById("searchText").value;
+  const replaceText = document.getElementById("replaceText").value;
+  const editor = document.getElementById("editor");
+
+  try {
+    const regex = new RegExp(searchText);
+    editor.value = editor.value.replace(regex, replaceText);
+  } catch (e) {
+    const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    editor.value = editor.value.replace(escapedSearchText, replaceText);
+  }
+
+  updateStats();
+  checkBrackets();
+}
+
+
 let showWarnings = true;
 let showErrors = true;
 
@@ -794,6 +812,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
