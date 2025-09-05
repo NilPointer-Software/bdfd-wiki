@@ -58,7 +58,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<label for="replaceText">Replace:</label>
 	<input type="text" id="replaceText"><br>
 	<button id="highlightButton" onclick="toggleHighlight()">Find</button><br>
-	<button onclick="replaceFirstText()">Replace</button>
+	<button onclick="replaceOneText()">Replace</button>
 	<button onclick="replaceText()">Replace all</button>
 	<p><i class="fa fa-info" aria-hidden="true"></i> Regex is supported</p>
 </details>
