@@ -110,10 +110,14 @@ Here you can use the basic editor features to write codes more conveniently.
   </div>
 </details>
 
-<div id="tips">
-	<h2>Tips</h2>
-	<p>**</p>
-	<p>*</p>
-	<p>`</p>
-	<p>~~</p>
-</div>
+<details id="tips">
+  <summary>Tips</summary>
+	<em>*Italics*</em>
+	<strong>**Bold**</strong>
+	<del>~~Line Through~~</del>
+	<h3>### Small Header</h3>
+	<h2>## Header</h2>
+	<h1># Big Header</h1>
+	<a>[Hyperlink Text](Link)</a>
+	<a>[BDScript 2 Hyperlink Text\](Link)</a>
+</details>
