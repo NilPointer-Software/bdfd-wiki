@@ -511,8 +511,16 @@ function toggleHighlight() {
     // ||
     const spoilerRegex = /\|\|(.*?)\|\|/g;
     highlighted = highlighted.replace(spoilerRegex, (match, content) => {
-      return `<spoiler>${content}</spoiler>`;
+      const spoiler = document.createElement('spoiler');
+      spoiler.textContent = content;
+
+      spoiler.addEventListener('click', () => {
+        spoiler.classList.toggle('active-spoiler');
+      });
+
+      return spoiler.outerHTML;
     });
+
 
     // Unixtime
     const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
@@ -836,6 +844,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
