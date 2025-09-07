@@ -511,16 +511,21 @@ function toggleHighlight() {
     // ||
     const spoilerRegex = /\|\|(.*?)\|\|/g;
     highlighted = highlighted.replace(spoilerRegex, (match, content) => {
-      const spoiler = document.createElement('spoiler');
-      spoiler.textContent = content;
-
-      spoiler.addEventListener('click', () => {
-        spoiler.classList.toggle('active-spoiler');
-      });
-
-      return spoiler.outerHTML;
+      return `<spoiler class="spoiler-inactive">${content}</spoiler>`;
     });
 
+    const highlightedText = document.getElementById('highlightedText');
+
+    if (highlightedText) {
+      highlightedText.innerHTML = highlighted;
+
+      highlightedText.addEventListener('click', (event) => {
+        if (event.target.tagName === 'SPOILER') {
+          event.target.classList.toggle('spoiler-inactive');
+          event.target.classList.toggle('spoiler-active');
+        }
+      });
+    }
 
     // Unixtime
     const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
@@ -844,6 +849,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
