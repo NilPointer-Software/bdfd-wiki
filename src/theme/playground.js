@@ -496,6 +496,24 @@ function toggleHighlight() {
       return `<u>${content}</u>`;
     });
 
+    // `
+    const hgsCodeRegex = /`(.*?)`/g;
+    highlighted = highlighted.replace(hgsCodeRegex, (match, content) => {
+      return `<hgSCode>${content}</hgSCode>`;
+    });
+
+    // ```
+    const hgbCodeRegex = /```(.*?)```/g;
+    highlighted = highlighted.replace(hgbCodeRegex, (match, content) => {
+      return `<hgBCode>${content}</hgBCode>`;
+    });
+
+    // ||
+    const spoilerRegex = /\|\|(.*?)\|\|/g;
+    highlighted = highlighted.replace(spoilerRegex, (match, content) => {
+      return `<spoiler>${content}</spoiler>`;
+    });
+
     // Unixtime
     const timestampRegex = /<t:(\d+):([tTdDfFR])>/g;
     highlighted = highlighted.replace(timestampRegex, (match, timestamp, format) => {
@@ -520,6 +538,12 @@ function toggleHighlight() {
     highlighted = highlighted.replace(/^## (.*)$/gm, '<h2>$1</h2>');
     highlighted = highlighted.replace(/^### (.*)$/gm, '<h3>$1</h3>');
   }
+
+  // >
+  const quoteRegex = /^> (.*)$/gm;
+  highlighted = highlighted.replace(quoteRegex, (match, content) => {
+    return `<quote>${content}</quote>`;
+  });
 
   // Link
   const linkRegex = /(https?:\/\/[^\s]+)/g;
@@ -812,6 +836,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
