@@ -1192,6 +1192,36 @@ ul#searchresults span.teaser em {
   display: inline;
 }
 
+#highlightedText spoiler {
+	user-select: none;
+	-webkit-user-select: none;
+	background: #111111;
+	color: #111111;
+	padding-left: .25rem;
+	padding-right: .25rem;
+	cursor: pointer !important;
+}
+
+#highlightedText quote::before {
+	content: "";
+	margin-right: 5px;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #535353;
+}
+
+#highlightedText hgSCode {
+	background: #2a2a2a;
+	color: #919191;
+	padding-left: .3rem;
+	padding-right: .3rem;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #4b4b4b;
+	border-radius: 5px;
+}
+
 .line-number {
     border-right-width: 2px;
 	color: hsl(0deg 0% 100% / 30%) !important;
@@ -1525,5 +1555,6 @@ ul#searchresults span.teaser em {
 	border-left-style: solid;
 	transition: 0.2s;
 }
+
 
 
