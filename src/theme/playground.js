@@ -521,8 +521,7 @@ function toggleHighlight() {
 
       highlightedText.addEventListener('click', (event) => {
         if (event.target.tagName === 'SPOILER') {
-          event.target.classList.toggle('spoiler-inactive');
-          event.target.classList.toggle('spoiler-active');
+          event.target.classList.add('spoiler-active');
         }
       });
     }
@@ -849,6 +848,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
