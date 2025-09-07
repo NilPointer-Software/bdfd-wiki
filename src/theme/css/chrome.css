@@ -1202,6 +1202,14 @@ ul#searchresults span.teaser em {
 	cursor: pointer !important;
 }
 
+#highlightedText spoiler.spoiler-active {
+  background: #2e2e2e94;
+  color: #ababab;
+  cursor: text !important;
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
 #highlightedText quote::before {
 	content: "";
 	margin-right: 5px;
@@ -1555,6 +1563,7 @@ ul#searchresults span.teaser em {
 	border-left-style: solid;
 	transition: 0.2s;
 }
+
 
 
 
