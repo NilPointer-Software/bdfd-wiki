@@ -496,16 +496,16 @@ function toggleHighlight() {
       return `<u>${content}</u>`;
     });
 
-    // `
-    const hgsCodeRegex = /`(.*?)`/g;
-    highlighted = highlighted.replace(hgsCodeRegex, (match, content) => {
-      return `<hgSCode>${content}</hgSCode>`;
-    });
-
     // ```
     const hgbCodeRegex = /```(.*?)```/g;
     highlighted = highlighted.replace(hgbCodeRegex, (match, content) => {
       return `<hgBCode>${content}</hgBCode>`;
+    });
+
+    // `
+    const hgsCodeRegex = /`(.*?)`/g;
+    highlighted = highlighted.replace(hgsCodeRegex, (match, content) => {
+      return `<hgSCode>${content}</hgSCode>`;
     });
 
     // ||
@@ -836,6 +836,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
