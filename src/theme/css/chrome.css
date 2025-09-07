@@ -1380,14 +1380,14 @@ ul#searchresults span.teaser em {
 	background-color: var(--color3);
 }
 
-#settings {
+#settings, #tips {
 	margin-top: 1rem;
 	background-color: var(--color3);
 	border-radius: 10px;
 	padding: 1rem;
 }
 
-#settings summary, #text-editorui summary {
+#settings summary, #text-editorui summary, #tips summary {
 	user-select: none;
 	-webkit-user-select: none;
 	outline: none;
@@ -1505,3 +1505,4 @@ ul#searchresults span.teaser em {
 	border-left-style: solid;
 	transition: 0.2s;
 }
+
