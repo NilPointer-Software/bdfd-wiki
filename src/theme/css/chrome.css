@@ -1387,6 +1387,26 @@ ul#searchresults span.teaser em {
 	padding: 1rem;
 }
 
+#tips em, #tips strong, #tips a {
+  display: block;
+}
+
+#tips h1 {
+	margin-top: -2.25rem;
+}
+
+#tips h2 {
+	margin-top: -1.9rem;
+}
+
+#tips h3 {
+	margin-top: .1rem;
+}
+
+#tips h3:hover {
+	border: 0;
+}
+
 #settings summary, #text-editorui summary, #tips summary {
 	user-select: none;
 	-webkit-user-select: none;
@@ -1505,4 +1525,5 @@ ul#searchresults span.teaser em {
 	border-left-style: solid;
 	transition: 0.2s;
 }
+
 
