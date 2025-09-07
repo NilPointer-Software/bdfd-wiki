@@ -106,6 +106,11 @@ Here you can use the basic editor features to write codes more conveniently.
     <p>Suggest functions as you type.</p>
     <button onclick="changeAutocomplete()" id="changeAutocompleteButton">Autocomplete</button>
   </div>
+  <hr>
+  <div class="setting-item">
+    <p>Number each line.</p>
+    <button onclick="changeCodeLines()" id="changeCodeLines">Line Number</button>
+  </div>
   <div class="setting-item">
     <p id="internetConnection">Loading...</p>
   </div>
