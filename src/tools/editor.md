@@ -116,9 +116,9 @@ Here you can use the basic editor features to write codes more conveniently.
 	<em>*Italics*</em>
 	<strong>**Bold**</strong>
 	<del>~~Line Through~~</del>
+	<a>[Hyperlink Text](Link)</a>
+	<a>[BDScript 2 Hyperlink Text\](Link)</a>
 	<h3>### Small Header</h3>
 	<h2>## Header</h2>
 	<h1># Big Header</h1>
-	<a>[Hyperlink Text](Link)</a>
-	<a>[BDScript 2 Hyperlink Text\](Link)</a>
 </details>
