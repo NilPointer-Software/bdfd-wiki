@@ -8,6 +8,12 @@
 
 # 2025
 
+## September
+- Reworked bot list
+
+
+<details><summary>Previous Updates</summary>
+
 ## January
 - Added `$afkChannelID`
 - Added `$afkTimeout[]`
@@ -33,6 +39,8 @@
 - Added `$threadMessageCount`
 - Added `$threadUserCount`
 - Added `$voiceUserLimit[]`
+
+</details>
 
 # 2024
    
