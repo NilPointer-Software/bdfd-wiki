@@ -1374,7 +1374,13 @@ ul#searchresults span.teaser em {
 
 @media (max-width: 950px) {
 	#nameScript span {
-		top: -45%;
+		top: -35%;
+	}
+	
+	#nameScript textarea {
+		border-radius: 15px;
+		font-size: 2rem;
+	    height: 2.75rem;
 	}
 }
 
@@ -1563,6 +1569,7 @@ ul#searchresults span.teaser em {
 	border-left-style: solid;
 	transition: 0.2s;
 }
+
 
 
 
