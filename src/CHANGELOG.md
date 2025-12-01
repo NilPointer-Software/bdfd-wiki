@@ -8,11 +8,29 @@
 
 # 2025
 
-## September
-- Reworked bot list
+### Upcoming
+- Components v2 (A lot of new functions!)
+- Cheaper premium points for iOS Users
 
+## December
+- HTTP Awaiting Limit: 5s > 35s
+- Fixed `$ceil[]`
+- Fixed `$floor[]`
+- Fixed `$getLeaderboardPosition[]`
 
 <details><summary>Previous Updates</summary>
+
+## November
+- Major improvements to hosting infrastructure 
+- Reworked bot status preview
+- HTTP Awaiting Limit: 15s > 5s
+
+## October
+- Added setting to disable code highlighting in the command editor
+
+## September
+- Updated BDFD App icon for iOS 26
+- Reworked bot list
 
 ## January
 - Added `$afkChannelID`
