@@ -1374,13 +1374,7 @@ ul#searchresults span.teaser em {
 
 @media (max-width: 950px) {
 	#nameScript span {
-		top: -35%;
-	}
-	
-	#nameScript textarea {
-		border-radius: 15px;
-		font-size: 2rem;
-	    height: 2.75rem;
+		top: -45%;
 	}
 }
 
