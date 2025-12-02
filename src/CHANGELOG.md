@@ -32,6 +32,9 @@
 - Updated BDFD App icon for iOS 26
 - Reworked bot list
 
+## February
+- Fixed app crashing during premium points purchases
+
 ## January
 - Added `$afkChannelID`
 - Added `$afkTimeout[]`
