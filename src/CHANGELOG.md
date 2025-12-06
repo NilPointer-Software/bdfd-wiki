@@ -10,9 +10,13 @@
 
 ### Upcoming
 - Components v2 (A lot of new functions!)
-- Cheaper premium points for iOS Users
+- Removing the "Translation Endpoints" setting
+- Now the text in the app is automatically translated using AI
 
 ## December
+- Added "Sign out other sessions"
+- Redesigned Premium Points shop 
+- A lot of app bug fixes
 - HTTP Awaiting Limit: 5s > 35s
 - Fixed `$ceil[]`
 - Fixed `$floor[]`
