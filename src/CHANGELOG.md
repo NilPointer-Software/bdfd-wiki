@@ -37,6 +37,9 @@
 - Updated BDFD App icon for iOS 26
 - Reworked bot list
 
+## July
+- BDScript bug fixes
+
 ## February
 - Fixed app crashing during premium points purchases
 
