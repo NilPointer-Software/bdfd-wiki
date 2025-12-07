@@ -11,7 +11,7 @@
 ### Upcoming
 - Components v2 (A lot of new functions!)
 - Removing the "Translation Endpoints" setting
-- Now the text in the app is automatically translated using AI
+- Text in the app is automatically translated using AI
 - Ability to change app icon — New app icons!
 
 ## December
