@@ -16,6 +16,7 @@
 
 ## December
 - Added "Sign out other sessions" button
+- Smoother animations in the app
 - Redesigned Premium Points shop 
 - A lot of app bug fixes
 - HTTP Awaiting Limit: 5s > 35s
