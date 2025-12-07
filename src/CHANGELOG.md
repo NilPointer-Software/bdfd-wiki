@@ -12,9 +12,10 @@
 - Components v2 (A lot of new functions!)
 - Removing the "Translation Endpoints" setting
 - Now the text in the app is automatically translated using AI
+- Ability to change app icon — New app icons!
 
 ## December
-- Added "Sign out other sessions"
+- Added "Sign out other sessions" button
 - Redesigned Premium Points shop 
 - A lot of app bug fixes
 - HTTP Awaiting Limit: 5s > 35s
