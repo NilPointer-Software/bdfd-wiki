@@ -18,7 +18,7 @@ $awaitReactions[<Command name;Reaction>;...]
 ```
 $nomention
 Yes or no?
-$awaitReactions[✅;yes;❌;no]
+$awaitReactions[yes;✅;no;❌]
 $addReactions[✅;❌]
 ```
 ``` discord yaml
