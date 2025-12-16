@@ -46,7 +46,7 @@
     - [Character Escaping](./tools/escape.md)
     - [Timestamp Converter](./tools/timestamp.md)
     - [Editor](./tools/editor.md)
-    - [Embed Builder[(./tools/embed.md)
+    - [Embed Builder](./tools/embed.md)
 
 - [Resources]()
     - [Introduction](./resources/introduction.md)
