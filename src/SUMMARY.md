@@ -43,7 +43,7 @@
         - [Common BDFD Errors](./guides/other/commonErrors.md)
 
 - [Tools]()
-    - [Character Escaping](./tools/escapes.md)
+    - [Character Escaping](./tools/escape.md)
     - [Timestamp Converter](./tools/timestamp.md)
     - [Editor](./tools/editor.md)
     - [Embed Builder[(./tools/embed.md)
