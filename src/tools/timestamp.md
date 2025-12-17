@@ -7,13 +7,6 @@
             border-radius: 8px;
             background-color: #f8f9fa;
         }
-        .converter-section h2 {
-            color: #3498db;
-            margin-top: 0;
-            font-size: 1.3em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
         label {
             font-weight: bold;
             display: block;
@@ -74,7 +67,6 @@
         <h2><span class="icon">📅</span> Date to Unix Time</h2>
         <label for="datetimepicker">Select date and time:</label>
         <input type="datetime-local" id="datetimepicker">
-            
         <label>Unix Timestamp (seconds):</label>
         <div class="result">
                 <span id="unixtime-display">0</span>
@@ -86,7 +78,6 @@
     <h2><span class="icon">⏰</span> Unix Time to Date</h2>
     <label for="unix-input">Enter Unix Timestamp (seconds):</label>
     <input type="number" id="unix-input" placeholder="e.g., 1704067200">
-            
     <label>Date and Time:</label>
     <div class="result">
         <span id="date-display">Not set</span>
