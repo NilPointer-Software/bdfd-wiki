@@ -86,7 +86,6 @@
             color: #2c3e50;
         }
 </style>
-<body>
     <div class="container">
         <h1>📅 Unix Time Converter</h1>
         
@@ -281,4 +280,3 @@
             unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
         });
     </script>
-</body>
