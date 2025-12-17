@@ -1,23 +1,11 @@
 # Timestamp Converter
 
 <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f5f7fa;
-        }
-        .container {
+        .block-time {
             background-color: white;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
         }
         .converter-section {
             margin-bottom: 30px;
@@ -88,7 +76,7 @@
         }
 </style>
 
-<div class="container">
+<div class="block-time">
         <h1>📅 Unix Time Converter</h1>
         
         <div class="converter-section">
