@@ -43,6 +43,7 @@
         - [Common BDFD Errors](./guides/other/commonErrors.md)
 
 - [Tools]()
+    - [Color](./tools/color.md)
     - [Character Escaping](./tools/escape.md)
     - [Code Editor](./tools/editor.md)
     - [Color](./toold/color.md)
