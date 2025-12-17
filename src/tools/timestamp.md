@@ -1,4 +1,5 @@
 # Timestamp Converter
+
 <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -86,7 +87,8 @@
             color: #2c3e50;
         }
 </style>
-    <div class="container">
+
+<div class="container">
         <h1>📅 Unix Time Converter</h1>
         
         <div class="converter-section">
@@ -116,9 +118,9 @@
         <div class="current-time">
             <span id="current-time"></span>
         </div>
-    </div>
+</div>
 
-    <script>
+<script>
         // Элементы для конвертации из даты в Unix Time
         const datetimePicker = document.getElementById('datetimepicker');
         const unixTimeDisplay = document.getElementById('unixtime-display');
@@ -279,4 +281,4 @@
             // Вставляем кнопки после поля ввода Unix Time
             unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
         });
-    </script>
+</script>
