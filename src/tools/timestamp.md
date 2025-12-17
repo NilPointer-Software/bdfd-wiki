@@ -1,12 +1,6 @@
 # Timestamp Converter
 
 <style>
-        .block-time {
-            background-color: white;
-            border-radius: 10px;
-            padding: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
         .converter-section {
             margin-bottom: 30px;
             padding: 20px;
@@ -77,18 +71,18 @@
 </style>
 
 <div class="converter-section">
-            <h2><span class="icon">📅</span> Date to Unix Time</h2>
-            <label for="datetimepicker">Select date and time:</label>
-            <input type="datetime-local" id="datetimepicker">
+        <h2><span class="icon">📅</span> Date to Unix Time</h2>
+        <label for="datetimepicker">Select date and time:</label>
+        <input type="datetime-local" id="datetimepicker">
             
-            <label>Unix Timestamp (seconds):</label>
-            <div class="result">
+        <label>Unix Timestamp (seconds):</label>
+        <div class="result">
                 <span id="unixtime-display">0</span>
                 <div class="timestamp" id="timestamp-info"></div>
-            </div>
         </div>
+</div>
         
-    <div class="converter-section">
+<div class="converter-section">
     <h2><span class="icon">⏰</span> Unix Time to Date</h2>
     <label for="unix-input">Enter Unix Timestamp (seconds):</label>
     <input type="number" id="unix-input" placeholder="e.g., 1704067200">
