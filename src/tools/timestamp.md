@@ -76,10 +76,7 @@
         }
 </style>
 
-<div class="block-time">
-        <h1>📅 Unix Time Converter</h1>
-        
-        <div class="converter-section">
+<div class="converter-section">
             <h2><span class="icon">📅</span> Date to Unix Time</h2>
             <label for="datetimepicker">Select date and time:</label>
             <input type="datetime-local" id="datetimepicker">
@@ -91,21 +88,20 @@
             </div>
         </div>
         
-        <div class="converter-section">
-            <h2><span class="icon">⏰</span> Unix Time to Date</h2>
-            <label for="unix-input">Enter Unix Timestamp (seconds):</label>
-            <input type="number" id="unix-input" placeholder="e.g., 1704067200">
+    <div class="converter-section">
+    <h2><span class="icon">⏰</span> Unix Time to Date</h2>
+    <label for="unix-input">Enter Unix Timestamp (seconds):</label>
+    <input type="number" id="unix-input" placeholder="e.g., 1704067200">
             
-            <label>Date and Time:</label>
-            <div class="result">
-                <span id="date-display">Not set</span>
-                <div class="timestamp" id="date-info"></div>
-            </div>
-        </div>
+    <label>Date and Time:</label>
+    <div class="result">
+        <span id="date-display">Not set</span>
+        <div class="timestamp" id="date-info"></div>
+    </div>
+</div>
         
-        <div class="current-time">
-            <span id="current-time"></span>
-        </div>
+<div class="current-time">
+    <span id="current-time"></span>
 </div>
 
 <script>
