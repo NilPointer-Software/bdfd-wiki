@@ -852,7 +852,137 @@ function changeAutocomplete() {
 
 
 
+// Timestamp
 
+const datetimePicker = document.getElementById('datetimepicker');
+const unixTimeDisplay = document.getElementById('unixtime-display');
+const timestampInfo = document.getElementById('timestamp-info');
+const unixInput = document.getElementById('unix-input');
+const dateDisplay = document.getElementById('date-display');
+const dateInfo = document.getElementById('date-info');
+const currentTimeEl = document.getElementById('current-time');
+
+const now = new Date();
+const year = now.getFullYear();
+const month = String(now.getMonth() + 1).padStart(2, '0');
+const day = String(now.getDate()).padStart(2, '0');
+const hours = String(now.getHours()).padStart(2, '0');
+const minutes = String(now.getMinutes()).padStart(2, '0');
+
+datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+const currentUnixTime = Math.floor(now.getTime() / 1000);
+unixInput.value = currentUnixTime;
+
+updateUnixTime();
+updateDateFromUnix();
+
+function updateCurrentTime() {
+    const now = new Date();
+    const timeString = now.toLocaleString();
+    const unixTime = Math.floor(now.getTime() / 1000);
+    currentTimeEl.textContent = `Current time: ${timeString} (Unix: ${unixTime})`;
+}
+
+window.updateUnixTime = function() {
+    const selectedDate = new Date(datetimePicker.value);
+    
+    if (!isNaN(selectedDate.getTime())) {
+        const unixTime = Math.floor(selectedDate.getTime() / 1000);
+        const dateString = selectedDate.toLocaleString();
+        
+        unixTimeDisplay.textContent = unixTime;
+        timestampInfo.textContent = `Selected: ${dateString}`;
+        
+        if (parseInt(unixInput.value) !== unixTime) {
+            unixInput.value = unixTime;
+            updateDateFromUnix();
+        }
+    }
+}
+
+window.updateDateFromUnix = function() {
+    const unixTime = parseInt(unixInput.value);
+    
+    if (!isNaN(unixTime) && unixTime >= 0) {
+        const date = new Date(unixTime * 1000);
+        
+        if (!isNaN(date.getTime())) {
+            const dateString = date.toLocaleString();
+            const isoString = date.toISOString().replace('T', ' ').substring(0, 19);
+            
+            dateDisplay.textContent = dateString;
+            dateInfo.textContent = `ISO: ${isoString}`;
+            
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            
+            const datetimeLocalValue = `${year}-${month}-${day}T${hours}:${minutes}`;
+            
+            if (datetimePicker.value !== datetimeLocalValue) {
+                datetimePicker.value = datetimeLocalValue;
+            }
+        }
+    } else if (unixInput.value === '') {
+        dateDisplay.textContent = 'Not set';
+        dateInfo.textContent = '';
+    } else {
+        dateDisplay.textContent = 'Invalid timestamp';
+        dateInfo.textContent = 'Please enter a valid Unix timestamp';
+    }
+}
+
+updateCurrentTime();
+setInterval(updateCurrentTime, 1000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const quickButtons = document.createElement('div');
+    quickButtons.style.marginTop = '10px';
+    quickButtons.style.display = 'flex';
+    quickButtons.style.gap = '10px';
+    quickButtons.style.flexWrap = 'wrap';
+    
+    const times = [
+        {label: 'Now', seconds: 0},
+        {label: '1 hour ago', seconds: -3600},
+        {label: '1 day ago', seconds: -86400},
+        {label: '1 week ago', seconds: -604800},
+        {label: 'New Year 2024', seconds: 1704067200}
+    ];
+    
+    times.forEach(time => {
+        const button = document.createElement('button');
+        button.textContent = time.label;
+        button.style.padding = '8px 12px';
+        button.style.border = 'none';
+        button.style.borderRadius = '4px';
+        button.style.backgroundColor = '#3498db';
+        button.style.color = 'white';
+        button.style.cursor = 'pointer';
+        button.style.fontSize = '14px';
+        
+        button.onclick = function() {
+            let unixTime;
+            if (time.seconds === 0) {
+                unixTime = Math.floor(Date.now() / 1000);
+            } else if (time.seconds > 0) {
+                unixTime = time.seconds;
+            } else {
+                unixTime = Math.floor(Date.now() / 1000) + time.seconds;
+            }
+            
+            unixInput.value = unixTime;
+            updateDateFromUnix();
+        };
+        
+        quickButtons.appendChild(button);
+    });
+    
+    unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
+});
 
 
 
