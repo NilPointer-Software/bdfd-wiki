@@ -874,9 +874,6 @@ datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
 const currentUnixTime = Math.floor(now.getTime() / 1000);
 unixInput.value = currentUnixTime;
 
-updateUnixTime();
-updateDateFromUnix();
-
 function updateCurrentTime() {
     const now = new Date();
     const timeString = now.toLocaleString();
