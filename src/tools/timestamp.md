@@ -65,7 +65,7 @@
 
 <div class="converter-section">
     <h2><span class="icon">📅</span> Date to Unix Time</h2>
-    <label for="datetimepicker">Select date and time:</label>
+    <label for="datetimepicker">Date and time:</label>
     <input type="datetime-local" id="datetimepicker" oninput="updateUnixTime()">
     <label>Unix Timestamp:</label>
     <div class="result">
