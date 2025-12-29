@@ -877,7 +877,7 @@ function updateCurrentTime() {
     const dateString = now.toLocaleDateString();
     const unixTime = Math.floor(now.getTime() / 1000);
     
-    currentTimeEl.textContent = `${dateString}\n${unixTime}`;
+    currentTimeEl.innerHTML = `${dateString}<br>${unixTime}`;
 }
 
 window.updateUnixTime = function() {
