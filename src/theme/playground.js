@@ -907,7 +907,6 @@ window.updateDateFromUnix = function() {
             const isoString = date.toISOString().replace('T', ' ').substring(0, 19);
             
             dateDisplay.textContent = dateString;
-            dateInfo.textContent = `ISO: ${isoString}`;
             
             const year = date.getFullYear();
             const month = String(date.getMonth() + 1).padStart(2, '0');
