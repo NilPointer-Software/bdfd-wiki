@@ -67,7 +67,7 @@
 
 <div class="converter-section">
     <h2>Date to Unix Time</h2>
-    <label for="datetimepicker">Date</label>
+    <p>Date</p>
     <input type="datetime-local" id="datetimepicker" oninput="updateUnixTime()">
     <p>Unix Timestamp:</p>
     <div class="result">
@@ -78,7 +78,7 @@
 
 <div class="converter-section">
     <h2>Unix Time to Date</h2>
-    <label for="unix-input">Unix Timestamp:</label>
+    <p>Unix Timestamp:</p>
     <input type="number" id="unix-input" placeholder="e.g., 1704067200" oninput="updateDateFromUnix()" onkeypress="if(event.key === 'Enter') updateDateFromUnix()">
     <p>Date and Time:</p>
     <div class="result">
