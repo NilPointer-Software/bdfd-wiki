@@ -34,7 +34,7 @@
         .result {
             margin-top: 15px;
             padding: 15px;
-            background-color: var(--color2);
+            background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
             font-weight: bold;
             word-break: break-all;
