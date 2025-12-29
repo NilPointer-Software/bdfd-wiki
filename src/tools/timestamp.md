@@ -5,7 +5,7 @@
             margin-bottom: 30px;
             padding: 20px;
             border-radius: 8px;
-            background-color: #f8f9fa;
+            background-color: var(--color3);
         }
         label {
             font-weight: bold;
