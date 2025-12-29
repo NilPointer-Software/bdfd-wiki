@@ -850,8 +850,6 @@ function changeAutocomplete() {
 }
 
 
-
-
 // Timestamp
 
 const datetimePicker = document.getElementById('datetimepicker');
@@ -876,9 +874,10 @@ unixInput.value = currentUnixTime;
 
 function updateCurrentTime() {
     const now = new Date();
-    const timeString = now.toLocaleString();
+    const dateString = now.toLocaleDateString();
     const unixTime = Math.floor(now.getTime() / 1000);
-    currentTimeEl.textContent = `Current time: ${timeString} (Unix: ${unixTime})`;
+    
+    currentTimeEl.textContent = `${dateString}\n${unixTime}`;
 }
 
 window.updateUnixTime = function() {
