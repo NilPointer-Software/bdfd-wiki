@@ -30,9 +30,7 @@
             margin-top: 15px;
             padding: 15px;
             background-color: var(--color2);
-            color: white;
-            border-radius: 6px;
-            font-size: 18px;
+            border-radius: 10px;
             font-weight: bold;
             word-break: break-all;
             min-height: 50px;
