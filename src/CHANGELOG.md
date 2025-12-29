@@ -10,7 +10,7 @@
 
 ### Upcoming
 - Components v2 (A lot of new functions!)
-- Channel select menu
+- Channel & Role select menu
 - AI tool to generate BDScript codes 
 - Removing the "Translation Endpoints" setting
 - Text in the app is automatically translated using AI
