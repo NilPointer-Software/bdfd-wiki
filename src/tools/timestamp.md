@@ -56,10 +56,8 @@
             text-align: center;
             padding: 15px;
             background-color: var(--color3);
-            border-radius: 6px;
+            border-radius: 10px;
             margin-top: 20px;
-            font-weight: bold;
-            color: #2c3e50;
         }
 </style>
 
