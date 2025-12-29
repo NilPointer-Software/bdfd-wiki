@@ -10,6 +10,8 @@
 
 ### Upcoming
 - Components v2 (A lot of new functions!)
+- Channel select menu
+- AI tool to generate BDScript codes 
 - Removing the "Translation Endpoints" setting
 - Text in the app is automatically translated using AI
 - Ability to change app icon — New app icons!
@@ -23,6 +25,8 @@
 - Fixed `$ceil[]`
 - Fixed `$floor[]`
 - Fixed `$getLeaderboardPosition[]`
+- AI Quota: 5000 > 10000
+- Log Quota: 1500 > 3000
 
 <details><summary>Previous Updates</summary>
 
