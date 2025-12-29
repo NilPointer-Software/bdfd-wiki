@@ -31,12 +31,13 @@
             color: #34495e;
         }
         input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            box-sizing: border-box;
-            transition: border-color 0.3s;
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #ddd;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                transition: border-color 0.3s;
         }
         input:focus {
             outline: none;
