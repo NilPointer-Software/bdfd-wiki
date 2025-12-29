@@ -21,7 +21,6 @@
         input {
             width: 100%;
             padding: 12px;
-            font-size: 16px;
             border: 2px solid #ddd;
             border-radius: 6px;
             box-sizing: border-box;
@@ -33,7 +32,7 @@
         }
         .result {
             margin-top: 15px;
-            padding: 15px;
+            padding: 5px;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
             font-weight: bold;
@@ -48,7 +47,6 @@
             font-size: 20px;
         }
         .timestamp {
-            font-size: 14px;
             color: #7f8c8d;
             margin-top: 5px;
         }
