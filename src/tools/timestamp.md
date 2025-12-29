@@ -12,6 +12,13 @@
         	border-radius: 12.5px;
         	transition: 0.3s;
         }
+        .converter-section h2 {
+        	margin-top: 60px;
+        	padding-top: 15px;
+        }
+        .converter-section p {
+        	margin-top: -15px;
+        }
         label {
             font-weight: bold;
             display: block;
@@ -57,7 +64,7 @@
     <h2>Date to Unix Time</h2>
     <label for="datetimepicker">Date</label>
     <input type="datetime-local" id="datetimepicker" oninput="updateUnixTime()">
-    <label>Unix Timestamp:</label>
+    <p>Unix Timestamp:</p>
     <div class="result">
         <span id="unixtime-display">0</span>
         <div class="timestamp" id="timestamp-info"></div>
@@ -68,7 +75,7 @@
     <h2>Unix Time to Date</h2>
     <label for="unix-input">Unix Timestamp:</label>
     <input type="number" id="unix-input" placeholder="e.g., 1704067200" oninput="updateDateFromUnix()" onkeypress="if(event.key === 'Enter') updateDateFromUnix()">
-    <label>Date and Time:</label>
+    <p>Date and Time:</p>
     <div class="result">
         <span id="date-display">Not set</span>
         <div class="timestamp" id="date-info"></div>
