@@ -27,6 +27,7 @@
 - Fixed `$getLeaderboardPosition[]`
 - AI Quota: 5000 > 10000
 - Log Quota: 1500 > 3000
+- Updated BDFD App icon for Android
 
 <details><summary>Previous Updates</summary>
 
