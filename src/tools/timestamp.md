@@ -40,11 +40,6 @@
             display: flex;
             align-items: center;
         }
-        .icon {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 20px;
-        }
         .timestamp {
             color: #7f8c8d;
             margin-top: 5px;
