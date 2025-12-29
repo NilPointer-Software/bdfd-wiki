@@ -888,7 +888,6 @@ window.updateUnixTime = function() {
         const dateString = selectedDate.toLocaleString();
         
         unixTimeDisplay.textContent = unixTime;
-        timestampInfo.textContent = `Selected: ${dateString}`;
         
         if (parseInt(unixInput.value) !== unixTime) {
             unixInput.value = unixTime;
