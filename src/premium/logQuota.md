@@ -33,4 +33,4 @@ Remaining log entries: $logQuota
 
 > New log entries will be awarded and summed up every 24 hours!
 > 
-> Log entries limit (per bot): 1500
+> Log entries limit (per bot): 3000
