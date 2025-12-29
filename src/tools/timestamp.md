@@ -29,7 +29,7 @@
         .result {
             margin-top: 15px;
             padding: 15px;
-            background-color: #2c3e50;
+            background-color: var(--color2);
             color: white;
             border-radius: 6px;
             font-size: 18px;
