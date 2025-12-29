@@ -22,7 +22,7 @@
             width: 100%;
             padding: 12px;
             border: 2px solid #ddd;
-            border-radius: 6px;
+            border-radius: 10px;
             box-sizing: border-box;
             transition: border-color 0.3s;
         }
@@ -37,7 +37,6 @@
             border-radius: 10px;
             font-weight: bold;
             word-break: break-all;
-            min-height: 50px;
             display: flex;
             align-items: center;
         }
@@ -52,7 +51,7 @@
         }
         .current-time {
             text-align: center;
-            padding: 15px;
+            padding: 10px;
             background-color: var(--color3);
             border-radius: 10px;
             margin-top: 20px;
