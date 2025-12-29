@@ -39,9 +39,6 @@
             display: flex;
             align-items: center;
         }
-        .result span {
-            color: #1abc9c;
-        }
         .icon {
             display: inline-block;
             margin-right: 10px;
