@@ -55,7 +55,7 @@
         .current-time {
             text-align: center;
             padding: 15px;
-            background-color: #ecf0f1;
+            background-color: var(--color3);
             border-radius: 6px;
             margin-top: 20px;
             font-weight: bold;
