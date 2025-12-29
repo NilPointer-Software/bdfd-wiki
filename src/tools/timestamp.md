@@ -2,10 +2,15 @@
 
 <style>
         .converter-section {
-                margin-bottom: 30px;
-                padding: 20px;
-                border-radius: 8px;
-                background-color: var(--color3);
+                position: relative;
+        	background-color: var(--color3);
+        	border-radius: 10px;
+        	margin-top: -6%;
+        	padding-bottom: 1.5rem;
+        	padding-left: 15px;
+        	padding-right: 15px;
+        	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        	transition: 0.3s;
         }
         .converter-section:hover {
         	transform: scale(1.015);
