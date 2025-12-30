@@ -15,7 +15,7 @@ $log[Text;(Type)]
 ```
 
 ### Parameters
-- `Log Message` `(Type: String || Flag: Required)`: The text to be output to the logs.
+- `Text` `(Type: String || Flag: Required)`: The text to be output to the logs.
 - `Type` `(Type: Enum || Flag: Optional)`: The log type to be displayed. Default is `info`.
 
 #### Log Types
