@@ -6,6 +6,15 @@
   }
 </style>
 
+# 2026
+
+## January
+- Added `$isJson[]`
+- Added `$pi`
+- Added Components v2
+- Added `$startsWith[]`
+- Added `$endsWith[]`
+
 # 2025
 
 ### Upcoming
