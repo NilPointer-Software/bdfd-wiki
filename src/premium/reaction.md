@@ -48,4 +48,6 @@ $sendMessage[$username clicked on the reaction]
     Nicky clicked on the reaction
 ```
 
-> For more info, see the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+```admonish info title="Read more"
+For more information, read the the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+```
