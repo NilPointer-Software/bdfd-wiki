@@ -35,5 +35,5 @@ $customImage[NiceImage]
 ```
 
 ```admonish info title="Read more"
-For more information, read the the  [Custom Images Guide](../premium/customImages.md).
+For more information, read the the [Custom Images Guide](../premium/customImages.md).
 ```
