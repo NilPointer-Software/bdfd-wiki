@@ -23,7 +23,7 @@ $log[Text;(Type)]
 - `info`: Blue color
 - `warning`: Yellow color
 - `error`: Red color
-- `bdscript`: Can't be used in `$log[]` function. Appears automatically when an error is made in the code. Can be disabled by [`$suppressErrorLogging`](./suppressErrorLogging.md).
+- `bdscript`: **Can't be used** in `$log[]` function. Appears automatically when an error is made in the code. Can be disabled by [`$suppressErrorLogging`](./suppressErrorLogging.md).
 - Default input for "`Type`" parameter is `info`.
 
 ## Example
