@@ -51,6 +51,10 @@ $sendMessage[Emoji: $usedEmoji]
     Emoji: ✅
 ```
 
+```admonish question title="What is this?"
+How [`$sendMessage[]`](../bdscript/sendMessage.md) works?
+```
+
 ```admonish info title="Read more"
 For more information, read the the  [Awaited Reactions Guide](./awaitedReactions.md).
 ```
