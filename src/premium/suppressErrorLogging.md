@@ -39,6 +39,10 @@ $suppressErrorLogging
 - Without `$suppressErrorLogging`:\
 ![example](https://github.com/user-attachments/assets/245a7bc3-5efa-4d01-86d3-f57b46e93db2)
 
+```admonish question title="What is this?"
+How [`$createChannel[]`](../bdscript/createChannel.md) works?
+```
+
 ```admonish tip
 You can use [`$suppressErrors`](../bdscript/suppressErrors.md) to disable error bot response.
 ```
