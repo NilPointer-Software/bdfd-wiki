@@ -25,3 +25,7 @@ $sendNotification[Hello world!;$authorAvatar]
 ```
 
 ![example](https://i.imgur.com/yfSTLVY.png)
+
+```admonish question title="What is this?"
+How [`$authorAvatar`](../bdscript/authorAvatar.md) works?
+```
