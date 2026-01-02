@@ -2,7 +2,7 @@
 This wiki explains how to create and use webhooks in BDFD.
 
 ## Content
-[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#$webhookCreate) 
+[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) 
 
 ## Functions Used
 - [`$webhookCreate[]`](../../bdscript/webhookCreate.md)
