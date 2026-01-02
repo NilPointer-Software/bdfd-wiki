@@ -1,12 +1,25 @@
 # Webhooks
 This wiki explains how to create and use webhooks in BDFD.
 
-## $webhookCreate
+## Content
+[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookCreate) 
+
+## Functions Used
+- [`$webhookCreate[]`](../../bdscript/webhookCreate.md)
+
+## Support Functions Used
+- [`$var[]`](../../bdscript/var.md)
+
+# $webhookCreate
 Creates and returns the URL of the newly created webhook **(webhook URLs should be kept private, treat them like a password)**.
 > **Note:** Only ten webhooks can be created per channel.
+
+## Syntax
 ```
 $webhookCreate[Channel ID;Username;(Avatar URL)]
 ```
+
+### Parameters
 
 ## Editing A Webhook
 ```
