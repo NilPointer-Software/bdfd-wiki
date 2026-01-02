@@ -12,7 +12,7 @@ $reaction[Name]
 ```
 
 ### Parameters
-- `Name` `(Type: String || Flag: Required)`: The value used in "command name" argument of `$awaitReactions[]`.
+- `Name` `(Type: String || Flag: Required)`: The value used in "Command name" parameter of `$awaitReactions[]`.
 
 ## Example
 ### Trigger `$reaction[click]`
