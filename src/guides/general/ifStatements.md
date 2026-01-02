@@ -173,7 +173,7 @@ $endif
 # $elseif
 Checks provided condition only if previous `$if[]` or `$elseif[]` conditions returned `false`. If the provided condition is `true`, the following block of code will be executed.
 ```admonish tip
-You can use multiple `$elseif`s.
+You can use multiple `$elseif`'s.
 ```
 
 ```admonish danger title="BDScript 2"
