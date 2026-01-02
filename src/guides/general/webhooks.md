@@ -27,6 +27,15 @@ $webhookCreate[Channel ID;Username;(Avatar URL)]
 ```
 
 ### Parameters
+- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel in which the webhook will be created.
+- `Username` `(Type: String || Flag: Required)`: Name of the webhook that will be displayed in the channel.
+- `Avatar URL` `(Type: String || Flag: Vacantable)`: Avatar of the webhook that will be displayed in the channel.
+
+## Example
+```
+$nomention
+$webhookCreate[$channelID;BDFD Webhook 🤖]
+```
 
 ## Editing A Webhook
 ```
