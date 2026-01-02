@@ -2,7 +2,7 @@
 Runs functions in the background. Using async features properly can optimize your code and make it faster!
 
 ```admonish danger title="BDScript 2"
-Can only be used in **[BDScript 2](././bds2/aboutBDScript2.md)**.
+Can only be used in **[BDScript 2](./aboutBDScript2.md)**.
 ```
 
 ### Basics
