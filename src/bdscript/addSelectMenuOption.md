@@ -3,11 +3,11 @@ Adds a new select menu option to an existing select menu.
 
 ## Syntax
 ```
-$addSelectMenuOption[Menu option ID;Label;Value;Description;(Default?;Emoji;Message ID)]
+$addSelectMenuOption[Menu ID;Label;Value;Description;(Default?;Emoji;Message ID)]
 ```
 
 ### Parameters
-- `Menu option ID` `(Type: String || Flag: Required)`: The ID used in [`$newSelectMenu[]`](./newSelectMenu.md).
+- `Menu ID` `(Type: String || Flag: Required)`: The ID used in [`$newSelectMenu[]`](./newSelectMenu.md).
 - `Label` `(Type: String || Flag: Required)`: The name of the option.
 - `Value` `(Type: String || Flag: Required)`: It's the data that gets passed to the `$onInteraction[]` callback. **The value has to be unique in the select menu!**
 - `Description` `(Type: String || Flag: Emptiable)`: A text which shows up under the `Label`.
