@@ -5,7 +5,9 @@
 
 This function returns the emoji which triggered a [`$reaction[]`](./reaction.md) callback.
 
-> This function can only be used inside a `$reaction[]` callback.
+```admonish warning
+This function can only be used inside a `$reaction[]` callback.
+```
 
 ## Syntax
 ```
@@ -49,4 +51,6 @@ $sendMessage[Emoji: $usedEmoji]
     Emoji: ✅
 ```
 
-> For more info, see the [Awaited Reactions Guide](./awaitedReactions.md).
+```admonish info title="Read more"
+For more information, read the the  [Awaited Reactions Guide](./awaitedReactions.md).
+```
