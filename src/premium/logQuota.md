@@ -31,6 +31,7 @@ Remaining log entries: $logQuota
     Remaining log entries: 1499
 ```
 
-> New log entries will be awarded and summed up every 24 hours!
-> 
-> Log entries limit (per bot): 3000
+```admonish info
+New log entries will be awarded and summed up every 24 hours!
+- Log entries limit (per bot): 3000
+```
