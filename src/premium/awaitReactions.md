@@ -44,4 +44,7 @@ $addReactions[✅;❌]
       count: 1
 ```
 
-> For more info, see the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+
+```admonish info title="Read more"
+For more information, read the the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+```
