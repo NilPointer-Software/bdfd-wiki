@@ -17,7 +17,7 @@ Creates and returns the URL of the newly created webhook.
 Webhook URLs should be kept private, don't share them!
 ```
 
-```admonish warn
+```admonish warning
 Only 10 webhooks can be created per channel.
 ```
 
