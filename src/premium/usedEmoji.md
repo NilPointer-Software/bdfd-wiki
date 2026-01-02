@@ -6,7 +6,7 @@
 This function returns the emoji which triggered a [`$reaction[]`](./reaction.md) callback.
 
 ```admonish warning
-This function can only be used inside a `$reaction[]` callback.
+This function can only be used inside a [`$reaction[]`](./reaction.md) callback.
 ```
 
 ## Syntax
