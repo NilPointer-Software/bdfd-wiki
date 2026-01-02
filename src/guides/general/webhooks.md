@@ -11,8 +11,15 @@ This wiki explains how to create and use webhooks in BDFD.
 - [`$var[]`](../../bdscript/var.md)
 
 # $webhookCreate
-Creates and returns the URL of the newly created webhook **(webhook URLs should be kept private, treat them like a password)**.
-> **Note:** Only ten webhooks can be created per channel.
+Creates and returns the URL of the newly created webhook.
+
+```admonish danger
+Webhook URLs should be kept private, don't share them!
+```
+
+```admonish warn
+Only 10 webhooks can be created per channel.
+```
 
 ## Syntax
 ```
