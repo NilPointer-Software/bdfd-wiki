@@ -5,6 +5,10 @@
 
 Sends a notification to your mobile phone.
 
+```admonish warning title="Limit"
+Can be used every 20 minutes.
+```
+
 ## Syntax
 ```
 $sendNotification[Message;(Image URL)]
