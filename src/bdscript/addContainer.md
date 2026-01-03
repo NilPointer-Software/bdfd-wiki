@@ -24,7 +24,7 @@ You can't have multiple containers **with the same name** in one message. So for
 - `Spoiler?` `(Type: Bool || Flag: Optional)`: Will the container have a spoiler effect?
 
 ## Container Components
-- `$addTextDisplay[]`
+- [`$addTextDisplay[]`](./addTextDisplay.md)
 - `$addSeparator[]`
 
 ## Example
