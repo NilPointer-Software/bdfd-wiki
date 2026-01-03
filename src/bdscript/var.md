@@ -26,10 +26,7 @@ To retrieve the temporary stored value, type `$var[Name]`, where *"Name"* is the
 ## Example
 ```
 $nomention
-$argsCheck[>1;Type a message!]
-
 $var[ID;$sendMessage[$toLowercase[$message];yes]]
-
 $addButton[no;interactionID;Example;secondary;;;$var[ID]]
 ```
 ![Example](https://user-images.githubusercontent.com/70456337/189480166-d37cbdb8-05ce-44e8-8f2e-14d030baa9a9.png)
