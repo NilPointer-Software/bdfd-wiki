@@ -12,7 +12,6 @@ $unregisterGuildCommands[Slash command name;...]
 ## Example
 ```
 $nomention
-$argsCheck[>1;Provide guild slash command names!]
 
 $unregisterGuildCommands[$unescape[$toLowercase[$replaceText[$trimSpace[$message]; ;]]]]
 Successfully unregistered the provided guild slash commands!
