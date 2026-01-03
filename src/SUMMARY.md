@@ -67,6 +67,7 @@
     - [Introduction](./bdscript/introduction.md)
     - [$addButton](./bdscript/addButton.md)
     - [$addCmdReactions](./bdscript/addCmdReactions.md)
+    - [$addContainer](./bdscript/addContainer.md)
     - [$addEmoji](./bdscript/addEmoji.md)
     - [$addField](./bdscript/addField.md)
     - [$addMessageReactions](./bdscript/addMessageReactions.md)
