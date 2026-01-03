@@ -7,11 +7,11 @@ $addContainer[Container name;(Color hex;Spoiler?)]
 ```
 
 ```admonish warning title="Limit"
-A message can have a maximum of 40 containers.
+A message can have a maximum of 20 containers (40 container components).
 ```
 
 ### Parameters
-- `Container name` `(Type: String || Flag: Required)`: Name for attaching other container elements to container.
+- `Container name` `(Type: String || Flag: Required)`: Name for attaching other container components to container.
 ```admonish warning
 You can't have multiple containers **with the same name** in one message.
 ```
