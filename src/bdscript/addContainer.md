@@ -10,6 +10,10 @@ $addContainer[Container name;(Color hex;Spoiler?)]
 A message can have a maximum of 20 container bodies (40 container components).
 ```
 
+```admonish danger title="It's important!"
+The container body must contain [container components](#container-components), otherwise the function will not work!
+```
+
 ### Parameters
 - `Container name` `(Type: String || Flag: Required)`: Name for attaching other container components to the container body.
 ```admonish warning
@@ -18,6 +22,10 @@ You can't have multiple containers **with the same name** in one message. So for
 
 - `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to set the container border color as. You can also use color integer number.
 - `Spoiler?` `(Type: Bool || Flag: Optional)`: Will the container have a spoiler effect?
+
+## Container Components
+- `$addTextDisplay[]`
+- `$addSeparator[]`
 
 ## Example
 ```
