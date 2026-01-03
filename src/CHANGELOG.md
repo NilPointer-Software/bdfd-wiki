@@ -9,9 +9,11 @@
 # 2026
 
 ## January
+- Added `$addTextDisplay[]`
+- Added `$addSeparator[]`
+- Added `$addContainer[]`
 - Added `$isJson[]`
 - Added `$pi`
-- Added Components v2
 - Added `$startsWith[]`
 - Added `$endsWith[]`
 
