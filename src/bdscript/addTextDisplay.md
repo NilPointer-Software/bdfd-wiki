@@ -13,7 +13,7 @@ This function counts as a container component. A message can have a maximum of 4
 ### Parameters
 - `Content` `(Type: String || Flag: Required)`: The text that will be displayed. The total number of characters in the message and container bodies cannot exceed 4000 characters. 
 ```admonish info
-Supports highlighting.
+Supports discord highlighting.
 ```
 
 - `Container name` `(Type: String || Flag: Optional)`: The name of the container body to which the component will be attached. If nothing is specified, it will be attached to the message.
