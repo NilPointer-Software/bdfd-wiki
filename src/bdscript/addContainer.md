@@ -17,3 +17,7 @@ $nomention
 $addContainer[Container1;#673ab7;false]
 $addTextDisplay[Hello world!;Container1]
 ```
+
+```admonish question title="What is this?"
+How [`$addTextDisplay[]`](./addTextDisplay.md) works?
+```
