@@ -10,7 +10,7 @@ $addContainer[Container name;(Color hex;Spoiler?)]
 A message can have a maximum of 20 container bodies (40 container components).
 ```
 
-```admonish danger title="It's important!"
+```admonish fail title="It's important!"
 The container body must contain [container components](#container-components), otherwise the function will not work!
 ```
 
