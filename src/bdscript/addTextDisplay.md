@@ -1,9 +1,9 @@
-# $addDisplayText
+# $addTextDisplay
 Adds a text display component to the container body or message.
 
 ## Syntax
 ```
-$addDisplayText[Content;(Container name)]
+$addTextDisplay[Content;(Container name)]
 ```
 
 ```admonish warning title="Limit"
