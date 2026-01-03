@@ -11,7 +11,7 @@ A message can have a maximum of 20 container bodies (40 container components).
 ```
 
 ### Parameters
-- `Container name` `(Type: String || Flag: Required)`: Name for attaching other container components to container body.
+- `Container name` `(Type: String || Flag: Required)`: Name for attaching other container components to the container body.
 ```admonish warning
 You can't have multiple containers **with the same name** in one message.
 ```
