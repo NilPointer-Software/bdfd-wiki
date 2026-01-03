@@ -1,6 +1,10 @@
 # $slashCommandsCount
 Returns the number of [slash commands](../guides/general/interactions/slashCommands/aboutSlashCommands.md) the bot has enabled.
 
+```admonish info
+Counts only global slash commands.
+```
+
 ## Syntax
 ```
 $slashCommandsCount
