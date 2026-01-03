@@ -12,4 +12,5 @@ $addContainer[Container ID;(Color hex;Spoiler?)]
 ## Example
 ```
 $nomention
+$addContainer[Container1;#673ab7;false]
 ```
