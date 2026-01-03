@@ -5,17 +5,19 @@
 
 > As of November 2022, this function has been deprecated in favor of [`$creationDate[]`](./creationDate.md).
 
-> Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of any valid Discord Snowflake ID.
+```admonish info
+Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of any valid Discord Snowflake ID.
+```
 
 Returns the account creation date of a given user.
 
 ## Syntax
 ```
-$userJoinedDiscord[User ID;(Format)]
+$userJoinedDiscord[ID;(Format)]
 ```
 
 ### Parameters
-- `User ID` `(Type: Snowflake || Flag: Required)`: The user whose account creation date will be returned. 
+- `ID` `(Type: Snowflake || Flag: Required)`: The user/channel/role/guild/message id whose creation date will be returned. 
 - `Format` `(Type: String || Flag: Optional)`: Customize the default [time format](../resources/timeFormat.md) output.
 
 ## Example
