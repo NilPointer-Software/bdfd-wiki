@@ -7,7 +7,7 @@ $addContainer[Container name;(Color hex;Spoiler?)]
 ```
 
 ```admonish warning title="Limit"
-You can have only 40 containers in one message.
+A message can have a maximum of 40 containers.
 ```
 
 ### Parameters
