@@ -73,6 +73,7 @@
     - [$addMessageReactions](./bdscript/addMessageReactions.md)
     - [$addReactions](./bdscript/addReactions.md)
     - [$addSelectMenuOption](./bdscript/addSelectMenuOption.md)
+    - [$addTextDisplay](./bdscript/addTextDisplay.md)
     - [$addTextInput](./bdscript/addTextInput.md)
     - [$addTimestamp](./bdscript/addTimestamp.md)
     - [$addTimestamp[]](./bdscript/addTimestampComplex.md)
