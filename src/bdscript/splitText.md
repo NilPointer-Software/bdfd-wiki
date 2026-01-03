@@ -35,3 +35,7 @@ $textSplit[hello world !; ]
     world
     !</discord-quote>
 ```
+
+```admonish question title="What is this?"
+How [`$textSplit[]`](./textSplit.md) works?
+```
