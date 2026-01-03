@@ -6,7 +6,9 @@ Instead, it creates the variable automatically during it's runtime and gets dele
 
 The data stored in the temporary variable can only be retrieved during its execution period and is removed once it's finished.
 
-> 📌 This function can only be used in `BDScript 2` script language.
+```admonish danger title="BDScript 2"
+Can only be used in **[BDScript 2](../guides/general/bds2/aboutBDScript2.md)**.
+```
 
 ## Syntax
 ```
