@@ -3,10 +3,8 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
-> As of November 2022, this function has been deprecated in favor of [`$creationDate[]`](./creationDate.md).
-
-```admonish info
-Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of any valid Discord Snowflake ID.
+```admonish warning
+As of November 2022, this function has been deprecated in favor of [`$creationDate[]`](./creationDate.md).
 ```
 
 Returns the account creation date of a given user.
@@ -14,6 +12,10 @@ Returns the account creation date of a given user.
 ## Syntax
 ```
 $userJoinedDiscord[ID;(Format)]
+```
+
+```admonish info
+Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of any valid Discord Snowflake ID.
 ```
 
 ### Parameters
