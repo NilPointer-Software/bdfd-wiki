@@ -29,3 +29,7 @@ $variablesCount[server]
   content: |
     4
 ```
+
+```admonish info title="Read more"
+For more information, read the the [Variables Guide](../guides/introduction/variables.md).
+```
