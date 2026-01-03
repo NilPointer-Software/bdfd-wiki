@@ -1,5 +1,5 @@
 # $addContainer
-Adds a container component to the message.
+Adds a container body to the message.
 
 ## Syntax
 ```
@@ -7,7 +7,7 @@ $addContainer[Container name;(Color hex;Spoiler?)]
 ```
 
 ```admonish warning title="Limit"
-A message can have a maximum of 20 containers (40 container components).
+A message can have a maximum of 20 container bodies (40 container components).
 ```
 
 ### Parameters
