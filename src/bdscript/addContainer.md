@@ -26,6 +26,24 @@ $addContainer[Container1;#673ab7;false]
 $addTextDisplay[Hello world!;Container1]
 ```
 
+```discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: <none>
+  embed:
+    description: Hello world!
+    color: "#673ab7"
+```
+
 ```admonish question title="What is this?"
 How [`$addTextDisplay[]`](./addTextDisplay.md) works?
 ```
