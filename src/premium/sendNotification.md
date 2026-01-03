@@ -9,7 +9,7 @@ Sends a notification to your mobile phone.
 Can be used every 20 minutes.
 ```
 
-```admonish danger
+```admonish danger title="Important"
 Only for Android. Can't be used on iOS.
 ```
 
