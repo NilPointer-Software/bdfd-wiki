@@ -6,6 +6,10 @@ Adds a container component to the message.
 $addContainer[Container name;(Color hex;Spoiler?)]
 ```
 
+```admonish warning title="Limit"
+You can have only 40 containers in one message.
+```
+
 ### Parameters
 - `Container name` `(Type: String || Flag: Required)`: Name for attaching other container elements to container.
 ```admonish warning
