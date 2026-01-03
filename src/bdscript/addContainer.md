@@ -13,7 +13,7 @@ A message can have a maximum of 20 container bodies (40 container components).
 ### Parameters
 - `Container name` `(Type: String || Flag: Required)`: Name for attaching other container components to the container body.
 ```admonish warning
-You can't have multiple containers **with the same name** in one message.
+You can't have multiple containers **with the same name** in one message. So for example, you can’t have two containers with the ID set to `Container1`.
 ```
 
 - `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to set the container border color as. You can also use color integer number.
