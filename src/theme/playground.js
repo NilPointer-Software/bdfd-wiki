@@ -984,54 +984,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Color
 
-function initColorPicker() {
+function colorPickerChange() {
   const colorPicker = document.getElementById('colorPicker');
   const hexInput = document.getElementById('hexInput');
   const preview = document.getElementById('colorPreview');
   const errorText = document.getElementById('errorText');
   
-  colorPicker.oninput = function() {
-    const color = this.value;
-    hexInput.value = color;
-    preview.style.backgroundColor = color;
+  const color = colorPicker.value;
+  hexInput.value = color;
+  preview.style.backgroundColor = color;
+  errorText.textContent = '';
+}
+
+function hexInputChange() {
+  const colorPicker = document.getElementById('colorPicker');
+  const hexInput = document.getElementById('hexInput');
+  const preview = document.getElementById('colorPreview');
+  const errorText = document.getElementById('errorText');
+  
+  let val = hexInput.value.trim();
+  
+  if (val === '') {
+    preview.style.backgroundColor = '#ffffff';
     errorText.textContent = '';
-  };
-  
-  hexInput.oninput = function() {
-    let val = this.value.trim();
-    
-    if (val === '') {
-      preview.style.backgroundColor = '#ffffff';
-      errorText.textContent = '';
-      return;
-    }
-    
-    if (val[0] !== '#') {
-      val = '#' + val;
-      this.value = val;
-    }
-    
-    const isValid = /^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val);
-    
-    if (isValid) {
-      preview.style.backgroundColor = val;
-      colorPicker.value = val.length === 4 ? expandHex(val) : val;
-      errorText.textContent = '';
-    } else {
-      preview.style.backgroundColor = '#ffffff';
-      errorText.textContent = 'Неверный формат цвета';
-    }
-  };
-  
-  function expandHex(short) {
-    if (short.length === 4 && short[0] === '#') {
-      return '#' + short[1] + short[1] + short[2] + short[2] + short[3] + short[3];
-    }
-    return short;
+    return;
   }
+  
+  if (val[0] !== '#') {
+    val = '#' + val;
+    hexInput.value = val;
+  }
+  
+  const isValid = /^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val);
+  
+  if (isValid) {
+    preview.style.backgroundColor = val;
+    colorPicker.value = val.length === 4 ? expandHex(val) : val;
+    errorText.textContent = '';
+  } else {
+    preview.style.backgroundColor = '#ffffff';
+    errorText.textContent = 'Неверный формат цвета';
+  }
+}
+
+function expandHex(short) {
+  if (short.length === 4 && short[0] === '#') {
+    return '#' + short[1] + short[1] + short[2] + short[2] + short[3] + short[3];
+  }
+  return short;
+}
+
+window.onload = function() {
+  const colorPicker = document.getElementById('colorPicker');
+  const hexInput = document.getElementById('hexInput');
+  const preview = document.getElementById('colorPreview');
   
   hexInput.value = colorPicker.value;
   preview.style.backgroundColor = colorPicker.value;
-}
-
-window.onload = initColorPicker;
+};
