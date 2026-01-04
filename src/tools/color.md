@@ -31,7 +31,7 @@
     border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
-    height: 4rem;
+    height: 3.5rem;
     width: 80%;
 }
 .color-input {
@@ -42,7 +42,7 @@
 	outline: none;
 	border-radius: 10px;
 	border-width: 0;
-	height: 3.5rem;
+	height: 4rem;
     padding: 0;
 }
 .error {
