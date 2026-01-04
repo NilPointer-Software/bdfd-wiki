@@ -33,7 +33,7 @@
         input {
             color: #bbb;
             padding: 10px;
-            width: 92%;
+            width: 93.5%;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
             border-width: 0;
@@ -51,7 +51,7 @@
             margin-bottom: 0.5rem;
         }
         .result {
-            margin-top: 15px;
+            margin-top: 20px;
             padding: 5px;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
