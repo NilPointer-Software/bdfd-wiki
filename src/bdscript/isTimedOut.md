@@ -1,7 +1,9 @@
 # $isTimedOut
 Checks whether the specified user is timed out or not.
 
-> "true" means the user is timed out, "false" means they aren't.
+```admonish info
+"true" means the user is timed out, "false" means they aren't.
+```
 
 ## Syntax
 ```
