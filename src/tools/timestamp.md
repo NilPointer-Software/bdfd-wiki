@@ -33,7 +33,7 @@
         input {
             color: #bbb;
             padding: 10px;
-            width: 95%;
+            width: 94%;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
             border-width: 0;
@@ -59,7 +59,7 @@
         }
         .timestamp {
             color: #7f8c8d;
-            width: 2rem;
+            width: 3.5rem !important;
         }
         .time-buttons {
             user-select: none;
