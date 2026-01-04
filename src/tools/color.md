@@ -2,11 +2,15 @@
 
 <style>
 .picker-container {
-    width: 250px;
-    padding: 20px;
-    background: #f8f9fa;
+    position: relative;
+    background-color: var(--color3);
     border-radius: 10px;
-    font-family: sans-serif;
+    margin-top: -6%;
+    padding-bottom: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
 }
 .input-row {
     display: flex;
