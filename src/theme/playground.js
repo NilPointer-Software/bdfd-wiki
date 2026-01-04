@@ -986,33 +986,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initColorPicker() {
   const colorPicker = document.getElementById('colorPicker');
-  const openBtn = document.getElementById('openPicker');
   const hexInput = document.getElementById('hexInput');
   const preview = document.getElementById('colorPreview');
-  
-  openBtn.onclick = function() {
-    colorPicker.click();
-  };
+  const errorText = document.getElementById('errorText');
   
   colorPicker.oninput = function() {
     const color = this.value;
     hexInput.value = color;
     preview.style.backgroundColor = color;
+    errorText.textContent = '';
   };
   
   hexInput.oninput = function() {
-    let val = this.value;
-    if (val && val[0] !== '#') {
-      val = '#' + val;
+    let val = this.value.trim();
+    
+    if (val === '') {
+      preview.style.backgroundColor = '#ffffff';
+      errorText.textContent = '';
+      return;
     }
-    if (/^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val)) {
+    
+    if (val[0] !== '#') {
+      val = '#' + val;
+      this.value = val;
+    }
+    
+    const isValid = /^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val);
+    
+    if (isValid) {
       preview.style.backgroundColor = val;
       colorPicker.value = val.length === 4 ? expandHex(val) : val;
+      errorText.textContent = '';
+    } else {
+      preview.style.backgroundColor = '#ffffff';
+      errorText.textContent = 'Неверный формат цвета';
     }
-  };
-  
-  preview.onclick = function() {
-    colorPicker.click();
   };
   
   function expandHex(short) {
@@ -1022,7 +1030,8 @@ function initColorPicker() {
     return short;
   }
   
-  preview.style.backgroundColor = hexInput.value || '#000000';
+  hexInput.value = colorPicker.value;
+  preview.style.backgroundColor = colorPicker.value;
 }
 
 window.onload = initColorPicker;
