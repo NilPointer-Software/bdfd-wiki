@@ -66,6 +66,10 @@
         }
 </style>
 
+```admonish info
+The timezone selected on your device is used.
+```
+
 <div class="converter-section">
     <h2>Date to Unix Time</h2>
     <p>Date</p>
