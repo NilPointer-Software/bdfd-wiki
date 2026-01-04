@@ -9,7 +9,9 @@ $noMentionMessage[Argument number]
 ### Parameters 
 - `Argument number` `(Type: HowMany || Flag: Required)`: Returns the argument matching the provided number *(excluding mentions)*.
 
-> For example, `$noMentionMessage[1]` would just return the first word of the message, ignoring any possible mentions before. You can also use `$noMentionMessage[>]` to get the last argument/word of the user's message.
+```admonish tip
+For example, `$noMentionMessage[1]` would just return the first word of the message, ignoring any possible mentions before. You can also use `$noMentionMessage[>]` to get the last argument/word of the user's message.
+```
 
 ## Example
 ```
