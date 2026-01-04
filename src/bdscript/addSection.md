@@ -20,10 +20,11 @@ The section body must contain all [section components](#section-components), oth
 You can't have multiple sections and [containers](./addContainer.md) **with the same name** in one message. So for example, you can’t have two sections with the name set to `section`.
 ```
 
-## Container Components
+## Section Components
 ```admonish warning title="Limit" 
 Only 3 components can be added to the section.
 ```
+
 - [`$addTextDisplay[]`](./addTextDisplay.md)
 - [`$addThumbnail[]`](./addThumbnail.md)
 
