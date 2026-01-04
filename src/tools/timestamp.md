@@ -63,8 +63,8 @@
 	    display: flex;
 	    justify-content: center;
 	    flex-wrap: wrap;
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+            margin-top: -1rem;
         }
         .converter-section button {
 	    outline: none;
@@ -78,6 +78,7 @@
 	    border-radius: 10px;
 	    cursor: pointer;
 	    margin-top: 1rem !important;
+            margin-right: 0.5rem;
 	    font-size: 1.5rem;
 	    margin: 0.25%;
 	    color: #fff;
