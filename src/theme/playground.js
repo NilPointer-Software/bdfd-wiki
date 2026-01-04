@@ -856,6 +856,7 @@ function changeAutocomplete() {
 // Timestamp
 
 
+
 const datetimePicker = document.getElementById('datetimepicker');
 const unixTimeDisplay = document.getElementById('unixtime-display');
 const timestampInfo = document.getElementById('timestamp-info');
@@ -863,7 +864,7 @@ const unixInput = document.getElementById('unix-input');
 const dateDisplay = document.getElementById('date-display');
 const dateInfo = document.getElementById('date-info');
 const currentTimeEl = document.getElementById('current-time');
-const timezoneInput = document.getElementById('timezone-input');
+const timezoneInput = document.getElementById('timezone');
 
 let currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let isTimezoneValid = true;
@@ -887,6 +888,7 @@ function updateTimezone() {
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         isTimezoneValid = true;
         updateDateFromUnix();
+        updateCurrentTime();
         return;
     }
     
@@ -901,11 +903,13 @@ function updateTimezone() {
         currentTimezone = timezoneValue;
         isTimezoneValid = true;
         updateDateFromUnix();
+        updateCurrentTime();
     } catch (error) {
         console.log('invalid timezone');
         isTimezoneValid = false;
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         updateDateFromUnix();
+        updateCurrentTime();
     }
 }
 
@@ -1034,12 +1038,11 @@ function updateDateFromUnix() {
     }
 }
 
-updateTimezone();
+window.updateTimezone = updateTimezone;
+window.updateUnixTime = updateUnixTime;
+window.updateDateFromUnix = updateDateFromUnix;
 
-updateCurrentTime();
-setInterval(updateCurrentTime, 1000);
-
-document.addEventListener('DOMContentLoaded', function() {
+function createQuickButtons() {
     const quickButtons = document.createElement('div');
     quickButtons.className = 'time-buttons';
     
@@ -1073,6 +1076,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
+}
+
+updateCurrentTime();
+setInterval(updateCurrentTime, 1000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    createQuickButtons();
+    updateDateFromUnix();
+    updateUnixTime();
 });
 
 // Color
