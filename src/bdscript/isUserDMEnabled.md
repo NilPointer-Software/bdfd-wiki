@@ -2,7 +2,7 @@
 Checks whether the bot can DM the user or not.
 
 ```admonish info
-> "true" means the bot can DM the user, "false" means it can't.
+"true" means the bot can DM the user, "false" means it can't.
 ```
 
 ## Syntax
