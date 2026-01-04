@@ -75,7 +75,7 @@
 	    border: none;
 	    border-radius: 10px;
 	    cursor: pointer;
-	    margin-top: 0 !important;
+	    margin-top: 1rem !important;
 	    font-size: 1.5rem;
 	    margin: 0.25%;
 	    color: #fff;
