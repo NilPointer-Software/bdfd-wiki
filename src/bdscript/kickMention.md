@@ -1,7 +1,9 @@
 # $kickMention
-A simplified version of `$kick`. Kicks the mentioned user.
+A simplified version of [`$kick`](./kick.md). Kicks the mentioned user.
 
-> **Note:** The user running the command must have the "kick" permission.
+```admonish warning
+The user running the command must have the "kick" permission.
+```
 
 ## Syntax
 ```
