@@ -25,10 +25,13 @@
 .hex-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
+    background: hsl(0deg 0% 100% / 7%);
+    border-radius: 10px;
+	border-width: 0;
+    border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
+    height: 5rem;
 }
 .color-input {
     background: hsl(0deg 0% 100% / 7%);
@@ -38,8 +41,8 @@
 	outline: none;
 	border-radius: 10px;
 	border-width: 0;
-	width: 70%;
-	height: 7rem;
+	width: 10%;
+	height: 5rem;
 }
 .error {
     color: #dc3545;
