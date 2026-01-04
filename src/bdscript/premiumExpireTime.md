@@ -1,7 +1,9 @@
 # $premiumExpireTime
 Returns how long until premium expires.
 
-> Returns "expired" if the bot is not premium.
+```admonish info
+Returns `expired` if the bot is not premium.
+```
 
 ## Syntax
 ```
