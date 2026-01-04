@@ -16,7 +16,7 @@ $guildExists[Guild ID]
 ## Example
 ```
 $nomention
-$guildExists[$message[1]]
+$guildExists[$message]
 ```
 
 ``` discord yaml
