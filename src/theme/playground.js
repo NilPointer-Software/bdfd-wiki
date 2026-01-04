@@ -982,4 +982,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// Color
 
+function initColorPicker() {
+  const colorPicker = document.getElementById('colorPicker');
+  const openBtn = document.getElementById('openPicker');
+  const hexInput = document.getElementById('hexInput');
+  const preview = document.getElementById('colorPreview');
+  
+  openBtn.onclick = function() {
+    colorPicker.click();
+  };
+  
+  colorPicker.oninput = function() {
+    const color = this.value;
+    hexInput.value = color;
+    preview.style.backgroundColor = color;
+  };
+  
+  hexInput.oninput = function() {
+    let val = this.value;
+    if (val && val[0] !== '#') {
+      val = '#' + val;
+    }
+    if (/^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val)) {
+      preview.style.backgroundColor = val;
+      colorPicker.value = val.length === 4 ? expandHex(val) : val;
+    }
+  };
+  
+  preview.onclick = function() {
+    colorPicker.click();
+  };
+  
+  function expandHex(short) {
+    if (short.length === 4 && short[0] === '#') {
+      return '#' + short[1] + short[1] + short[2] + short[2] + short[3] + short[3];
+    }
+    return short;
+  }
+  
+  preview.style.backgroundColor = hexInput.value || '#000000';
+}
+
+window.onload = initColorPicker;
