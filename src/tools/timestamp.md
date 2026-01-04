@@ -57,6 +57,13 @@
             color: #7f8c8d;
             margin-top: 5px;
         }
+        button {
+            touch-action: manipulation;
+        }
+
+        button:not(#menu-bar i, #menu-bar .icon-button) {
+	    background: hsl(0deg 0% 100% / 7%);
+        }
         .current-time {
             text-align: center;
             padding: 10px;
