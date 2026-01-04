@@ -32,6 +32,7 @@
     font-family: monospace;
     font-size: 14px;
     height: 4rem;
+    width: 80%;
 }
 .color-input {
     background: hsl(0deg 0% 100% / 7%);
@@ -41,7 +42,6 @@
 	outline: none;
 	border-radius: 10px;
 	border-width: 0;
-	width: 10%;
 	height: 3.5rem;
     padding: 0;
 }
