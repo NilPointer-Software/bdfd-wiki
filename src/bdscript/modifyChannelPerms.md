@@ -3,8 +3,9 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
-> This function is deprecated, instead better use [`$editChannelPerms[]`](./editChannelPerms.md).
-
+```admonish warning
+This function has been deprecated in favor of [`$editChannelPerms[]`](./editChannelPerms.md).
+```
 Modifies a channel's permissions.
 
 ## Syntax
