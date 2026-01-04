@@ -33,6 +33,7 @@
         input {
             color: #bbb;
             padding: 10px;
+            width: 100%;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
             border-width: 0;
