@@ -47,10 +47,10 @@ input[type="text"] {
 </style>
 
 <div class="picker-container">
-  <input type="color" id="colorPicker" class="color-input" value="#000000">
+  <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
   
   <div class="input-group">
-    <input type="text" id="hexInput" maxlength="7" placeholder="#000000">
+    <input type="text" id="hexInput" maxlength="7" placeholder="#000000" oninput="hexInputChange()">
     <div class="preview" id="colorPreview"></div>
   </div>
   <div class="error" id="errorText"></div>
