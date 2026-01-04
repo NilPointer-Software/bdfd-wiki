@@ -55,7 +55,7 @@
         }
         .timestamp {
             color: #7f8c8d;
-            margin-top: 5px;
+            width: 2rem;
         }
         .time-buttons {
             user-select: none;
