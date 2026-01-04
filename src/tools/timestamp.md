@@ -144,4 +144,3 @@ The timezone selected on your device is used.
 ## Functions
 - `$getTimestamp`
 - `$getTimestamp[]`
-- `$premiumExpireTime`
