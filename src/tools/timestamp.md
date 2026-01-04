@@ -48,7 +48,7 @@
 	    user-select: none;
         }
         #datetimepicker {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem !important;
         }
         .result {
             margin-top: 10px;
