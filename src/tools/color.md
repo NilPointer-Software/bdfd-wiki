@@ -8,32 +8,19 @@
     border-radius: 10px;
     font-family: sans-serif;
 }
-.color-btn {
-    width: 100%;
-    padding: 12px;
-    background: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 15px;
-    transition: background 0.3s;
-}
-.color-btn:hover {
-    background: #5a6268;
-}
 .color-input {
-    display: none;
     width: 100%;
-    height: 40px;
+    height: 50px;
     cursor: pointer;
     border: none;
     outline: none;
+    padding: 0;
+    margin-bottom: 15px;
 }
 .input-group {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 input[type="text"] {
     flex: 1;
@@ -50,16 +37,21 @@ input[type="text"] {
     border-left: none;
     border-radius: 0 6px 6px 0;
     background: #ffffff;
-    cursor: pointer;
+}
+.error {
+    color: #dc3545;
+    font-size: 12px;
+    min-height: 16px;
+    margin-top: 2px;
 }
 </style>
 
 <div class="picker-container">
-  <input type="color" id="colorPicker" class="color-input">
-  <button class="color-btn" id="openPicker">Color</button>
+  <input type="color" id="colorPicker" class="color-input" value="#000000">
   
   <div class="input-group">
     <input type="text" id="hexInput" maxlength="7" placeholder="#000000">
     <div class="preview" id="colorPreview"></div>
   </div>
+  <div class="error" id="errorText"></div>
 </div>
