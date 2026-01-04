@@ -1,4 +1,8 @@
 # $addTextDisplay
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+
 Adds a text display component to the container body or message.
 
 ## Syntax
