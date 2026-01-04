@@ -855,6 +855,7 @@ function changeAutocomplete() {
 
 // Timestamp
 
+
 const datetimePicker = document.getElementById('datetimepicker');
 const unixTimeDisplay = document.getElementById('unixtime-display');
 const timestampInfo = document.getElementById('timestamp-info');
@@ -879,7 +880,7 @@ datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
 const currentUnixTime = Math.floor(now.getTime() / 1000);
 unixInput.value = currentUnixTime;
 
-window.updateTimezone = function() {
+function updateTimezone() {
     const timezoneValue = timezoneInput.value.trim();
     
     if (!timezoneValue) {
@@ -986,7 +987,7 @@ function updateCurrentTime() {
     currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}`;
 }
 
-window.updateUnixTime = function() {
+function updateUnixTime() {
     const selectedDate = new Date(datetimePicker.value);
     
     if (!isNaN(selectedDate.getTime())) {
@@ -1002,7 +1003,7 @@ window.updateUnixTime = function() {
     }
 }
 
-window.updateDateFromUnix = function() {
+function updateDateFromUnix() {
     const unixTime = parseInt(unixInput.value);
     
     if (!isNaN(unixTime) && unixTime >= 0) {
@@ -1073,7 +1074,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
 });
-
 
 // Color
 
