@@ -6,7 +6,6 @@
     background-color: var(--color3);
     border-radius: 10px;
     margin-top: -10%;
-    padding-bottom: 0.5rem;
     padding-left: 15px;
     padding-right: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -28,7 +27,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 2.5px;
 }
 .hex-input {
     flex: 1;
