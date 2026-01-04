@@ -37,4 +37,6 @@ Booster? $isBooster[$mentioned[1]]
 You can use empty `$isBooster[]` to get the information about author.\
 ```
 
-> [How `$mentioned[]` works?](./mentioned.md)
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
+```
