@@ -6,7 +6,7 @@
     background-color: var(--color3);
     border-radius: 10px;
     margin-top: -10%;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
     padding-left: 15px;
     padding-right: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
