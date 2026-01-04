@@ -1,7 +1,9 @@
 # $pinMessage
 Pins the bot's response message in the current channel.
 
-> ⚠️ A channel can have a maximum of 250 pinned messages.
+```admonish warning title="Limit"
+A channel can have a maximum of 250 pinned messages.
+```
 
 ## Syntax
 ```
