@@ -12,7 +12,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 }
-.picker-container {
+.picker-container:hover {
     transform: scale(1.015);
     border-radius: 12.5px;
     transition: 0.3s;
