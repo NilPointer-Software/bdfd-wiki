@@ -139,3 +139,4 @@ The timezone selected on your device is used.
 </div>
 
 ## Functions
+- `$getTimestamp`
