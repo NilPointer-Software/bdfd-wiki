@@ -65,6 +65,7 @@
     font-size: 12px;
     min-height: 16px;
     margin-top: 2px;
+    margin-bottom: 2.5px;
 }
 </style>
 
