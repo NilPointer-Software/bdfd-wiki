@@ -1004,6 +1004,7 @@ function hexInputChange() {
   
   if (val[0] !== '#') {
     val = '#' + val;
+    hexInput.value = val;
   }
   
   const isValid = /^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val);
@@ -1011,7 +1012,6 @@ function hexInputChange() {
   if (isValid) {
     const finalColor = val.length === 4 ? expandHex(val) : val;
     colorPicker.value = finalColor;
-    hexInput.value = finalColor;
     errorText.textContent = '';
   } else {
     errorText.textContent = 'Invalid color';
@@ -1024,13 +1024,3 @@ function expandHex(short) {
   }
   return short;
 }
-
-window.onload = function() {
-  const colorPicker = document.getElementById('colorPicker');
-  const hexInput = document.getElementById('hexInput');
-  
-  hexInput.value = colorPicker.value;
-  
-  colorPicker.setAttribute('oninput', 'colorPickerChange()');
-  hexInput.setAttribute('oninput', 'hexInputChange()');
-};
