@@ -940,19 +940,12 @@ document.addEventListener('DOMContentLoaded', function() {
         {label: '1 hour ago', seconds: -3600},
         {label: '1 day ago', seconds: -86400},
         {label: '1 week ago', seconds: -604800},
-        {label: 'New Year 2024', seconds: 1704067200}
+        {label: 'New Year 2027', seconds: 1798761600}
     ];
     
     times.forEach(time => {
         const button = document.createElement('button');
         button.textContent = time.label;
-        button.style.padding = '8px 12px';
-        button.style.border = 'none';
-        button.style.borderRadius = '4px';
-        button.style.backgroundColor = '#3498db';
-        button.style.color = 'white';
-        button.style.cursor = 'pointer';
-        button.style.fontSize = '14px';
         
         button.onclick = function() {
             let unixTime;
@@ -973,9 +966,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
 });
-
-
-
 
 
 // Color
