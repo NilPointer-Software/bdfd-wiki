@@ -119,6 +119,7 @@ The timezone selected on your device is used.
     <h2>Timezone</h2>
     <p>Specify the timezone you want to use for calculating time.</p>
     <input type="timestamp" id="timezone" placeholder="e.g., Europe/London" oninput="updateTimezone()" onkeypress="if(event.key === 'Enter') updateTimezone()">
+        <label class="timezone-error"></label>
 </div>
 
 <div class="converter-section">
