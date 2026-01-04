@@ -21,7 +21,7 @@ The container body must contain [container components](#container-components), o
 ### Parameters
 - `Container name` `(Type: String || Flag: Required)`: Name for attaching other container components to the container body.
 ```admonish warning
-You can't have multiple containers **with the same name** in one message. So for example, you can’t have two containers with the name set to `Container1`.
+You can't have multiple containers and [sections](./addSection.md) **with the same name** in one message. So for example, you can’t have two containers with the name set to `Container1`.
 ```
 
 - `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to set the container border color as. You can also use color integer number.
