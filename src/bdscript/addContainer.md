@@ -1,4 +1,8 @@
 # $addContainer
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+
 Adds a container body to the message.
 
 ## Syntax
