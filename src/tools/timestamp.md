@@ -51,7 +51,7 @@
             margin-bottom: 0.5rem;
         }
         .result {
-            margin-top: 20px;
+            margin-top: 40px;
             padding: 5px;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
@@ -144,3 +144,4 @@ The timezone selected on your device is used.
 ## Functions
 - `$getTimestamp`
 - `$getTimestamp[]`
+- `$premiumExpireTime`
