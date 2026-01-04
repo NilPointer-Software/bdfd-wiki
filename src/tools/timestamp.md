@@ -56,28 +56,31 @@
         .timestamp {
             color: #7f8c8d;
             margin-top: 5px;
-        }
-        button {
-            touch-action: manipulation;
-        }
-
-        button:not(#menu-bar i, #menu-bar .icon-button) {
-	    background: hsl(0deg 0% 100% / 7%);
-            -webkit-user-select: none;
-	    user-select: none;
+        }       
+        .converter-section button {
+	    outline: none;
 	    touch-action: manipulation;
+	    -webkit-user-select: none;
+	    user-select: none;
 	    padding-left: 1rem;
 	    padding-right: 1rem;
 	    height: 4rem;
 	    border: none;
 	    border-radius: 10px;
 	    cursor: pointer;
+	    margin-top: -1rem !important;
 	    font-size: 1.5rem;
 	    margin: 0.25%;
-	    margin-top: 3%;
 	    color: #fff;
+	    background: hsl(0deg 0% 100% / 7%);
 	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	    transition: 0.2s;
+        }
+        .converter-section button:hover {
+	    transform: scale(1.05);
+	    border-radius: 8px;
+            border-width: 1px;
+	    transition: 0.4s;
         }
         .current-time {
             text-align: center;
