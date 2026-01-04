@@ -3,7 +3,7 @@
   <span id="ComponentTag">Components v2</span>
 </div>
 
-Adds a separator component to the container body or message.
+Adds a separator component to [the container body](./addContainer.md) or message.
 
 ## Syntax
 ```
