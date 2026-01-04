@@ -44,6 +44,7 @@
 	border-width: 0;
 	height: 4rem;
     padding: 0;
+    width: 4rem;
 }
 .error {
     color: #dc3545;
