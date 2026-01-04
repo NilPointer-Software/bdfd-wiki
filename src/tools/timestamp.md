@@ -47,6 +47,9 @@
 	    -webkit-user-select: none;
 	    user-select: none;
         }
+        #datetimepicker {
+            margin-bottom: 0.5rem;
+        }
         .result {
             margin-top: 15px;
             padding: 5px;
