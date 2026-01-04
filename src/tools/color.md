@@ -61,6 +61,8 @@
 }
 </style>
 
+Here you can choose a color to use in your command.
+
 <div class="picker-container">
   <h2>Color picker</h2>
   <p>Select a color in hex format</p>
