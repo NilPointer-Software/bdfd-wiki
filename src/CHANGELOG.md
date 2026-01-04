@@ -12,6 +12,8 @@
 - Added `$addTextDisplay[]`
 - Added `$addSeparator[]`
 - Added `$addContainer[]`
+- Added `$addSection[]`
+- Added `$addThumbnail[]`
 - Added `$isJson[]`
 - Added `$pi`
 - Added `$startsWith[]`
