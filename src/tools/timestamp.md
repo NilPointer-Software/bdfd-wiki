@@ -5,7 +5,7 @@
                 position: relative;
         	background-color: var(--color3);
         	border-radius: 10px;
-        	margin-top: -6%;
+        	margin-top: -3%;
         	padding-bottom: 1.5rem;
         	padding-left: 15px;
         	padding-right: 15px;
