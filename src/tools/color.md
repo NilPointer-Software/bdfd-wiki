@@ -83,19 +83,19 @@ Here you can choose a color to use in your command.
 
 ## Functions
 Here are all the functions related to hex colors.
-- **SET**:
-- [`$color[]`](../bdscript/color.md)
-- [`$sendEmbedMessage[]`](../bdscript/sendEmbedMessage.md)
+**SET**:
 - [`$addContainer[]`](../bdscript/addContainer.md)
+- [`$color[]`](../bdscript/color.md)
 - [`$colorRole[]`](../bdscript/colorRole.md)
-- [`$editEmbedIn[]`](../bdscript/editEmbedIn.md)
-- [`$modifyRole[]`](../bdscript/modifyRole.md)
 - [`$createRole[]`](../bdscript/createRole.md)
+- [`$editEmbedIn[]`](../bdscript/editEmbedIn.md)
 - [`$editMessage[]`](../bdscript/editMessage.md)
 - [`$embedSuppressErrors[]`](../bdscript/embedSuppressErrors.md)
-- **GET**:
+- [`$modifyRole[]`](../bdscript/modifyRole.md)
+- [`$sendEmbedMessage[]`](../bdscript/sendEmbedMessage.md)
+**GET**:
 - [`$getRoleColor[]`](../bdscript/getRoleColor.md)
 - [`$roleInfo[]`](../bdscript/roleInfo.md)
 - [`$userBannerColor[]`](../bdscript/userBannerColor.md)
-- **CHECK**:
+**CHECK**:
 - [`$isValidHex[]`](../bdscript/isValidHex.md)
