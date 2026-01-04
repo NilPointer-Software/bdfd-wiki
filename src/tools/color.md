@@ -1,4 +1,4 @@
-# Color hex
+# Color
 
 <style>
 .picker-container {
