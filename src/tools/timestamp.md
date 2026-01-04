@@ -33,7 +33,7 @@
         input {
             color: #bbb;
             padding: 10px;
-            width: 94%;
+            width: 92%;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
             border-width: 0;
@@ -143,3 +143,4 @@ The timezone selected on your device is used.
 
 ## Functions
 - `$getTimestamp`
+- `$getTimestamp[]`
