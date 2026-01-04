@@ -12,6 +12,10 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 }
+.picker-container h2 {
+    margin-top: 60px;
+    padding-top: 15px;
+}
 .input-row {
     display: flex;
     gap: 10px;
