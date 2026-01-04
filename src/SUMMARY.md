@@ -71,6 +71,7 @@
     - [$addField](./bdscript/addField.md)
     - [$addMessageReactions](./bdscript/addMessageReactions.md)
     - [$addReactions](./bdscript/addReactions.md)
+    - [$addSection](./bdscript/addSection.md)
     - [$addSelectMenuOption](./bdscript/addSelectMenuOption.md)
     - [$addSeparator](./bdscript/addSeparator.md)
     - [$addTextDisplay](./bdscript/addTextDisplay.md)
