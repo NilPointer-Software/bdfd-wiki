@@ -31,7 +31,7 @@
     border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
-    height: 3.5rem;
+    height: 4rem;
 }
 .color-input {
     background: hsl(0deg 0% 100% / 7%);
@@ -42,7 +42,8 @@
 	border-radius: 10px;
 	border-width: 0;
 	width: 10%;
-	height: 4rem;
+	height: 3.5rem;
+    padding: 0;
 }
 .error {
     color: #dc3545;
@@ -53,6 +54,7 @@
 </style>
 
 <div class="picker-container">
+  <h2>Color picker</h2>
   <div class="input-row">
     <input type="text" id="hexInput" class="hex-input" maxlength="7" placeholder="#000000" oninput="hexInputChange()">
     <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
