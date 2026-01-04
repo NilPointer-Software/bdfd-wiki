@@ -58,7 +58,7 @@
             font-weight: bold;
             word-break: break-all;
             display: flex;
-            width: 3.5rem !important;
+            height: 3.5rem !important;
             align-items: center;
         }
         .timestamp {
