@@ -44,10 +44,15 @@
     min-height: 16px;
     margin-top: 2px;
 }
+.hex-input:invalid {
+    border-color: #dc3545;
+}
+.hex-input:valid {
+    border-color: #28a745;
+}
 </style>
 
 <div class="picker-container">
-  <h2>Color Picker</h2>
   <div class="input-row">
     <input type="text" id="hexInput" class="hex-input" maxlength="7" placeholder="#000000">
     <input type="color" id="colorPicker" class="color-input" value="#000000">
