@@ -59,10 +59,9 @@
 </style>
 
 <div class="picker-container">
-  <h2>Color Picker</h2>
   <div class="input-row">
-    <input type="text" id="hexInput" class="hex-input" maxlength="7" placeholder="#000000">
-    <input type="color" id="colorPicker" class="color-input" value="#000000">
+    <input type="text" id="hexInput" class="hex-input" maxlength="7" placeholder="#000000" oninput="hexInputChange()">
+    <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
   </div>
   <div class="error" id="errorText"></div>
 </div>
