@@ -9,7 +9,9 @@ $nodeVersion[Node Number]
 ### Parameters
 - `Node Number` `(Type: Integer || Flag: Required)`: The number of the node for which to return its version.
 
-> You can use [`$botNode`](./botNode.md) to find out which node your bot is on.
+```admonish tip
+You can use [`$botNode`](./botNode.md) to find out which node your bot is on.
+```
 
 ## Example
 ```
