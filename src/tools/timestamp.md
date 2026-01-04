@@ -12,7 +12,7 @@
         	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         	transition: 0.3s;
         }
-        .converter-section:hover {
+        .converter-section:hover, .current-time:hover {
         	transform: scale(1.015);
         	border-radius: 12.5px;
         	transition: 0.3s;
@@ -94,7 +94,7 @@
 	    transform: scale(1.05);
 	    border-radius: 8px;
             border-width: 1px;
-	    transition: 0.4s;
+	    transition: 0.2s;
         }
         .current-time {
             text-align: center;
@@ -102,6 +102,7 @@
             background-color: var(--color3);
             border-radius: 10px;
             margin-top: 20px;
+            transition: 0.3s;
         }
 </style>
 
