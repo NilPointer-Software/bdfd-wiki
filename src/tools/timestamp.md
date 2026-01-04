@@ -113,7 +113,7 @@ The timezone selected on your device is used.
 
 <div class="converter-section">
     <h2>Date to Unix Time</h2>
-    <p>Date</p>
+    <p>Date:</p>
     <input type="datetime-local" id="datetimepicker" oninput="updateUnixTime()">
     <p>Unix Timestamp:</p>
     <div class="result">
@@ -136,3 +136,5 @@ The timezone selected on your device is used.
 <div class="current-time">
     <span id="current-time"></span>
 </div>
+
+## Functions
