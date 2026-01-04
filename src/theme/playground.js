@@ -934,10 +934,6 @@ setInterval(updateCurrentTime, 1000);
 
 document.addEventListener('DOMContentLoaded', function() {
     const quickButtons = document.createElement('div');
-    quickButtons.style.marginTop = '10px';
-    quickButtons.style.display = 'flex';
-    quickButtons.style.gap = '10px';
-    quickButtons.style.flexWrap = 'wrap';
     
     const times = [
         {label: 'Now', seconds: 0},
