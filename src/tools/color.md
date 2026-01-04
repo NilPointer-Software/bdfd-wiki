@@ -72,7 +72,7 @@
 </div>
 
 ### Functions
-`$color[]`
-`$isValidHex[]`
-`$sendEmbedMessage[]`
-`$addContainer[]`
+- `$color[]`
+- `$isValidHex[]`
+- `$sendEmbedMessage[]`
+- `$addContainer[]`
