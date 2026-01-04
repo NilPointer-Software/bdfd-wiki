@@ -29,7 +29,7 @@ You can't have multiple containers **with the same name** in one message. So for
 
 ## Container Components
 - [`$addTextDisplay[]`](./addTextDisplay.md)
-- `$addSeparator[]`
+- [`$addSeparator[]`](./addSeparator.md)
 
 ## Example
 ```
