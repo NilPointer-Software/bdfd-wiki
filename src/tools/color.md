@@ -31,7 +31,7 @@
     border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
-    height: 5rem;
+    height: 3.5rem;
 }
 .color-input {
     background: hsl(0deg 0% 100% / 7%);
@@ -42,7 +42,7 @@
 	border-radius: 10px;
 	border-width: 0;
 	width: 10%;
-	height: 5rem;
+	height: 4rem;
 }
 .error {
     color: #dc3545;
