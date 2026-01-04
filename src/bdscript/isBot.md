@@ -1,7 +1,9 @@
 # $isBot
 Returns whether the provided user is a bot or not.
 
-> "true" means the user is a bot, "false" means they aren't.
+```admonish info
+"true" means the user is a bot, "false" means they aren't.
+```
 
 ## Syntax
 ```
