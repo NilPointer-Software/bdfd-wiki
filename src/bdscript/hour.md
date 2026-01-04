@@ -1,7 +1,9 @@
 # $hour
 Returns the current hour.
 
-> The `$hour` function uses the twenty-four-hour clock instead of two groups of twelve hours; this is also known as "Military Time".
+```admonish note
+The `$hour` function uses the twenty-four-hour clock instead of two groups of twelve hours; this is also known as "Military Time".
+```
 
 ## Syntax
 ```
