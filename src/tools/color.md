@@ -83,6 +83,7 @@ Here you can choose a color to use in your command.
 
 ## Functions
 Here are all the functions related to hex colors.
+
 **SET**:
 - [`$addContainer[]`](../bdscript/addContainer.md)
 - [`$color[]`](../bdscript/color.md)
