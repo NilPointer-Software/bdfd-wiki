@@ -63,6 +63,21 @@
 
         button:not(#menu-bar i, #menu-bar .icon-button) {
 	    background: hsl(0deg 0% 100% / 7%);
+            -webkit-user-select: none;
+	    user-select: none;
+	    touch-action: manipulation;
+	    padding-left: 1rem;
+	    padding-right: 1rem;
+	    height: 4rem;
+	    border: none;
+	    border-radius: 10px;
+	    cursor: pointer;
+	    font-size: 1.5rem;
+	    margin: 0.25%;
+	    margin-top: 3%;
+	    color: #fff;
+	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	    transition: 0.2s;
         }
         .current-time {
             text-align: center;
