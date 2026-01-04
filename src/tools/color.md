@@ -32,8 +32,8 @@
     border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
-    height: 3.5rem;
-    width: 70%;
+    height: 3rem;
+    width: 65%;
     outline: none;
 	touch-action: manipulation;
 	-webkit-user-select: none;
@@ -46,9 +46,9 @@
 	outline: none;
 	border-radius: 10px;
 	border-width: 0;
-	height: 5rem;
+	height: 5.5rem;
     padding: 0;
-    width: 5rem;
+    width: 5.5rem;
     touch-action: manipulation;
 	-webkit-user-select: none;
 	user-select: none;
@@ -74,6 +74,7 @@ Here you can choose a color to use in your command.
 </div>
 
 ### Functions
+Here are all the functions related to hex colors.
 - **SET**:
 - `$color[]`
 - `$sendEmbedMessage[]`
@@ -81,7 +82,7 @@ Here you can choose a color to use in your command.
 - `$colorRole[]`
 - `$editEmbedIn[]`
 - `$modifyRole[]`
-- `$createRole[]
+- `$createRole[]`
 - `$editMessage[]`
 - `$embedSuppressErrors[]`
 - **GET**:
