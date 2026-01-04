@@ -983,25 +983,21 @@ document.addEventListener('DOMContentLoaded', function() {
 function colorPickerChange() {
   const colorPicker = document.getElementById('colorPicker');
   const hexInput = document.getElementById('hexInput');
-  const preview = document.getElementById('colorPreview');
   const errorText = document.getElementById('errorText');
   
   const color = colorPicker.value;
   hexInput.value = color;
-  preview.style.backgroundColor = color;
   errorText.textContent = '';
 }
 
 function hexInputChange() {
   const colorPicker = document.getElementById('colorPicker');
   const hexInput = document.getElementById('hexInput');
-  const preview = document.getElementById('colorPreview');
   const errorText = document.getElementById('errorText');
   
   let val = hexInput.value.trim();
   
   if (val === '') {
-    preview.style.backgroundColor = '#ffffff';
     errorText.textContent = '';
     return;
   }
@@ -1014,11 +1010,9 @@ function hexInputChange() {
   const isValid = /^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val);
   
   if (isValid) {
-    preview.style.backgroundColor = val;
     colorPicker.value = val.length === 4 ? expandHex(val) : val;
     errorText.textContent = '';
   } else {
-    preview.style.backgroundColor = '#ffffff';
     errorText.textContent = 'Неверный формат цвета';
   }
 }
@@ -1033,8 +1027,6 @@ function expandHex(short) {
 window.onload = function() {
   const colorPicker = document.getElementById('colorPicker');
   const hexInput = document.getElementById('hexInput');
-  const preview = document.getElementById('colorPreview');
   
   hexInput.value = colorPicker.value;
-  preview.style.backgroundColor = colorPicker.value;
 };
