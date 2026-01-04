@@ -1004,16 +1004,17 @@ function hexInputChange() {
   
   if (val[0] !== '#') {
     val = '#' + val;
-    hexInput.value = val;
   }
   
   const isValid = /^#[0-9A-Fa-f]{6}$/.test(val) || /^#[0-9A-Fa-f]{3}$/.test(val);
   
   if (isValid) {
-    colorPicker.value = val.length === 4 ? expandHex(val) : val;
+    const finalColor = val.length === 4 ? expandHex(val) : val;
+    colorPicker.value = finalColor;
+    hexInput.value = finalColor;
     errorText.textContent = '';
   } else {
-    errorText.textContent = 'Неверный формат цвета';
+    errorText.textContent = 'Invalid color';
   }
 }
 
@@ -1029,4 +1030,7 @@ window.onload = function() {
   const hexInput = document.getElementById('hexInput');
   
   hexInput.value = colorPicker.value;
+  
+  colorPicker.setAttribute('oninput', 'colorPickerChange()');
+  hexInput.setAttribute('oninput', 'hexInputChange()');
 };
