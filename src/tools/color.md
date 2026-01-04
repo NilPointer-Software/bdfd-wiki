@@ -33,7 +33,7 @@
     font-family: monospace;
     font-size: 14px;
     height: 3.5rem;
-    width: 75%;
+    width: 70%;
     outline: none;
 	touch-action: manipulation;
 	-webkit-user-select: none;
