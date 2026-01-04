@@ -15,12 +15,12 @@ This function counts as a component. A message can have a maximum of 40 componen
 ```
 
 ### Parameters
-- `Content` `(Type: String || Flag: Required)`: The text that will be displayed. The total number of characters in the message, section and container bodies cannot exceed 4000 characters. 
+- `Content` `(Type: String || Flag: Required)`: The text that will be displayed. The total number of characters in the message, [section](./addSection.md) and [container bodies](./addContainer.md) cannot exceed 4000 characters. 
 ```admonish info
 Supports discord highlighting.
 ```
 
-- `Container/Section name` `(Type: String || Flag: Optional)`: The name of the container body or section to which the component will be attached. If nothing is specified, it will be attached to the message.
+- `Container/Section name` `(Type: String || Flag: Optional)`: The name of the [container body](./addContainer.md) or [section](./addSection) to which the component will be attached. If nothing is specified, it will be attached to the message.
 
 ## Example
 ```
