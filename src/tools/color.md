@@ -55,6 +55,7 @@
 
 <div class="picker-container">
   <h2>Color picker</h2>
+  <p>Select a color in hex format</p>
   <div class="input-row">
     <input type="text" id="hexInput" class="hex-input" maxlength="7" placeholder="#000000" oninput="hexInputChange()">
     <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
