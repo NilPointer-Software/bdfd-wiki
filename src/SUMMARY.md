@@ -44,7 +44,6 @@
 
 - [Tools]()
     - [Color](./tools/color.md)
-    - [Character Escaping](./tools/escape.md)
     - [Code Editor](./tools/editor.md)
     - [Timestamp Converter](./tools/timestamp.md)
 
