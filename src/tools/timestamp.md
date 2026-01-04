@@ -56,7 +56,14 @@
         .timestamp {
             color: #7f8c8d;
             margin-top: 5px;
-        }       
+        }
+        .time-buttons,
+            user-select: none;
+	    -webkit-user-select: none;
+	    display: flex;
+	    justify-content: center;
+	    flex-wrap: wrap;
+        }
         .converter-section button {
 	    outline: none;
 	    touch-action: manipulation;
