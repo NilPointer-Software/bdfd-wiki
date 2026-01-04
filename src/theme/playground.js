@@ -865,6 +865,7 @@ const dateDisplay = document.getElementById('date-display');
 const dateInfo = document.getElementById('date-info');
 const currentTimeEl = document.getElementById('current-time');
 const timezoneInput = document.getElementById('timezone');
+const timezoneError = document.querySelector('.timezone-error');
 
 let currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let isTimezoneValid = true;
@@ -887,6 +888,7 @@ function updateTimezone() {
     if (!timezoneValue) {
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         isTimezoneValid = true;
+        timezoneError.textContent = '';
         updateDateFromUnix();
         updateCurrentTime();
         return;
@@ -902,10 +904,11 @@ function updateTimezone() {
         
         currentTimezone = timezoneValue;
         isTimezoneValid = true;
+        timezoneError.textContent = '';
         updateDateFromUnix();
         updateCurrentTime();
     } catch (error) {
-        console.log('invalid timezone');
+        timezoneError.textContent = 'Invalid timezone';
         isTimezoneValid = false;
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         updateDateFromUnix();
