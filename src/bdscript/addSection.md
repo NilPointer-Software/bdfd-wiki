@@ -11,7 +11,7 @@ $addSection[Section name]
 ```
 
 ```admonish fail title="It's important!"
-The section body must contain all [section components](#section-components), otherwise the function will not work!
+The section must contain all [section components](#section-components), otherwise the function will not work!
 ```
 
 ### Parameters
