@@ -51,18 +51,18 @@
             margin-bottom: 0.5rem;
         }
         .result {
-            margin-top: 40px;
+            margin-top: 10px;
             padding: 5px;
             background: hsl(0deg 0% 100% / 7%);
             border-radius: 10px;
             font-weight: bold;
             word-break: break-all;
             display: flex;
+            width: 3.5rem !important;
             align-items: center;
         }
         .timestamp {
             color: #7f8c8d;
-            width: 3.5rem !important;
         }
         .time-buttons {
             user-select: none;
