@@ -24,6 +24,7 @@
 }
 .hex-input {
     flex: 1;
+    color: #bbb;
     padding: 10px;
     background: hsl(0deg 0% 100% / 7%);
     border-radius: 10px;
@@ -36,7 +37,6 @@
 }
 .color-input {
     background: hsl(0deg 0% 100% / 7%);
-	color: #bbb;
 	font-size: 1.5rem;
 	display: block;
 	outline: none;
