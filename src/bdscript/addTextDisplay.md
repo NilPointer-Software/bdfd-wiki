@@ -3,24 +3,24 @@
   <span id="ComponentTag">Components v2</span>
 </div>
 
-Adds a text display component to the container body or message.
+Adds a text display component.
 
 ## Syntax
 ```
-$addTextDisplay[Content;(Container name)]
+$addTextDisplay[Content;(Container/Section name)]
 ```
 
 ```admonish warning title="Limit"
-This function counts as a container component. A message can have a maximum of 40 container components.
+This function counts as a component. A message can have a maximum of 40 components.
 ```
 
 ### Parameters
-- `Content` `(Type: String || Flag: Required)`: The text that will be displayed. The total number of characters in the message and container bodies cannot exceed 4000 characters. 
+- `Content` `(Type: String || Flag: Required)`: The text that will be displayed. The total number of characters in the message, section and container bodies cannot exceed 4000 characters. 
 ```admonish info
 Supports discord highlighting.
 ```
 
-- `Container name` `(Type: String || Flag: Optional)`: The name of the container body to which the component will be attached. If nothing is specified, it will be attached to the message.
+- `Container/Section name` `(Type: String || Flag: Optional)`: The name of the container body or section to which the component will be attached. If nothing is specified, it will be attached to the message.
 
 ## Example
 ```
