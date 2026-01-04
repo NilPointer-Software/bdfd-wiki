@@ -63,6 +63,8 @@
 	    display: flex;
 	    justify-content: center;
 	    flex-wrap: wrap;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
         }
         .converter-section button {
 	    outline: none;
