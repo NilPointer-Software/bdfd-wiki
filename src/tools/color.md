@@ -72,7 +72,19 @@
 </div>
 
 ### Functions
+- **SET**:
 - `$color[]`
-- `$isValidHex[]`
 - `$sendEmbedMessage[]`
 - `$addContainer[]`
+- `$colorRole[]`
+- `$editEmbedIn[]`
+- `$modifyRole[]`
+- `$createRole[]
+- `$editMessage[]`
+- `$embedSuppressErrors[]`
+- **GET**:
+- `$getRoleColor[]`
+- `$roleInfo[]`
+- `$userBannerColor[]`
+- **CHECK**:
+- `$isValidHex[]`
