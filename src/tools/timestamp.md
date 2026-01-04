@@ -41,6 +41,7 @@
             font-family: monospace;
             font-size: 14px;
             height: 3rem;
+            margin-bottom: 1rem;
             outline: none;
 	    touch-action: manipulation;
 	    -webkit-user-select: none;
