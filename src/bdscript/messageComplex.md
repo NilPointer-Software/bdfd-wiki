@@ -10,12 +10,16 @@ $message[Argument number;(Argument name)]
 - `Argument number` `(Type: HowMany, String || Flag: Required)`: Returns the argument matching the provided number.
 - `Argument name` `(Type: String || Flag: Optional)`: Returns the input of the matching slash command option.
 
-> For example, `$message[1]` would just return the first word of the message. You can also use `$message[>]` to get the last argument/word of the user's message.
+```admonish example
+For example, `$message[1]` would just return the first word of the message. You can also use `$message[>]` to get the last argument/word of the user's message.
+```
 
 ### Optimization
 If you want this function to work in a slash command **only**, then you can use `$message[Argument name]`. If this function should work in a normal **and** slash command, then you can use `$message[Argument number;Argument name]`.
 
-> For example, `$message[message]` would just return the input of the slash command option named "message". `$message[1;text]` would return the first word of the message **or** the input of the slash command option named "text". 
+```admonish example
+For example, `$message[message]` would just return the input of the slash command option named "message". `$message[1;text]` would return the first word of the message **or** the input of the slash command option named "text". 
+```
 
 Find more info about optimizing `$message[]` for slash commands [here](../guides/general/interactions/slashCommands/aboutSlashCommands.md#retrieving-value-from-options).
 
