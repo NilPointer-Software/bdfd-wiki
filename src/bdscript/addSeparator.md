@@ -11,7 +11,7 @@ $addSeparator[(Divider?;Spacing type;Container name)]
 ```
 
 ```admonish warning title="Limit"
-This function counts as a container component. A message can have a maximum of 40 container components.
+This function counts as a container component. A message can have a maximum of 40 components.
 ```
 
 ### Parameters
