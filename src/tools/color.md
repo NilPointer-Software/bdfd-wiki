@@ -81,7 +81,7 @@ Here you can choose a color to use in your command.
   <div class="error" id="errorText"></div>
 </div>
 
-### Functions
+## Functions
 Here are all the functions related to hex colors.
 - **SET**:
 - [`$color[]`](../bdscript/color.md)
