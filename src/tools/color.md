@@ -8,35 +8,27 @@
     border-radius: 10px;
     font-family: sans-serif;
 }
-.color-input {
-    width: 100%;
-    height: 50px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 0;
-    margin-bottom: 15px;
-}
-.input-group {
+.input-row {
     display: flex;
+    gap: 10px;
     align-items: center;
     margin-bottom: 5px;
 }
-input[type="text"] {
+.hex-input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ced4da;
-    border-radius: 6px 0 0 6px;
+    border-radius: 6px;
     font-family: monospace;
     font-size: 14px;
 }
-.preview {
-    width: 48px;
+.color-input {
+    width: 50px;
     height: 40px;
+    cursor: pointer;
     border: 1px solid #ced4da;
-    border-left: none;
-    border-radius: 0 6px 6px 0;
-    background: #ffffff;
+    border-radius: 6px;
+    padding: 0;
 }
 .error {
     color: #dc3545;
@@ -47,11 +39,9 @@ input[type="text"] {
 </style>
 
 <div class="picker-container">
-  <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
-  
-  <div class="input-group">
-    <input type="text" id="hexInput" maxlength="7" placeholder="#000000" oninput="hexInputChange()">
-    <div class="preview" id="colorPreview"></div>
+  <div class="input-row">
+    <input type="text" id="hexInput" class="hex-input" maxlength="7" placeholder="#000000">
+    <input type="color" id="colorPicker" class="color-input" value="#000000">
   </div>
   <div class="error" id="errorText"></div>
 </div>
