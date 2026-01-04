@@ -21,6 +21,9 @@
     margin-top: 60px;
     padding-top: 15px;
 }
+.picker-container p {
+    margin-top: -15px;
+}
 .input-row {
     display: flex;
     gap: 10px;
