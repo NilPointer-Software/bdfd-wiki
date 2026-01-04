@@ -50,12 +50,6 @@
     min-height: 16px;
     margin-top: 2px;
 }
-.hex-input:invalid {
-    border-color: #dc3545;
-}
-.hex-input:valid {
-    border-color: #28a745;
-}
 </style>
 
 <div class="picker-container">
