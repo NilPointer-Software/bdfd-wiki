@@ -31,17 +31,19 @@
             color: #34495e;
         }
         input {
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #ddd;
-                border-radius: 10px;
-                margin-bottom: 10px;
-                box-sizing: border-box;
-                transition: border-color 0.3s;
-        }
-        input:focus {
+            color: #bbb;
+            padding: 10px;
+            background: hsl(0deg 0% 100% / 7%);
+            border-radius: 10px;
+            border-width: 0;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            height: 3rem;
             outline: none;
-            border-color: #3498db;
+	    touch-action: manipulation;
+	    -webkit-user-select: none;
+	    user-select: none;
         }
         .result {
             margin-top: 15px;
