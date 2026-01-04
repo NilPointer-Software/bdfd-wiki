@@ -57,7 +57,7 @@
             color: #7f8c8d;
             margin-top: 5px;
         }
-        .time-buttons,
+        .time-buttons {
             user-select: none;
 	    -webkit-user-select: none;
 	    display: flex;
