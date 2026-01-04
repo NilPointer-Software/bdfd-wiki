@@ -21,6 +21,9 @@ You can't have multiple sections and [containers](./addContainer.md) **with the 
 ```
 
 ## Container Components
+```admonish warning title="Limit" 
+Only 3 components can be added to the section.
+```
 - [`$addTextDisplay[]`](./addTextDisplay.md)
 - [`$addThumbnail[]`](./addThumbnail.md)
 
