@@ -70,3 +70,9 @@
   </div>
   <div class="error" id="errorText"></div>
 </div>
+
+### Functions
+`$color[]`
+`$isValidHex[]`
+`$sendEmbedMessage[]`
+`$addContainer[]`
