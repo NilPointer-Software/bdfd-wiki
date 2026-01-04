@@ -116,6 +116,12 @@ The timezone selected on your device is used.
 ```
 
 <div class="converter-section">
+    <h2>Timezone</h2>
+    <p>Specify the timezone you want to use for calculating time.</p>
+    <input type="timestamp" id="timezone" placeholder="e.g., Europe/London" oninput="updateTimezone()" onkeypress="if(event.key === 'Enter') updateTimezone()">
+</div>
+
+<div class="converter-section">
     <h2>Date to Unix Time</h2>
     <p>Date:</p>
     <input type="datetime-local" id="datetimepicker" oninput="updateUnixTime()">
