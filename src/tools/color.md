@@ -34,6 +34,10 @@
     font-size: 14px;
     height: 3.5rem;
     width: 80%;
+    outline: none;
+	touch-action: manipulation;
+	-webkit-user-select: none;
+	user-select: none;
 }
 .color-input {
     background: hsl(0deg 0% 100% / 7%);
@@ -45,6 +49,9 @@
 	height: 4rem;
     padding: 0;
     width: 4rem;
+    touch-action: manipulation;
+	-webkit-user-select: none;
+	user-select: none;
 }
 .error {
     color: #dc3545;
