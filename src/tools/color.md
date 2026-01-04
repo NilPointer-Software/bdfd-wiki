@@ -33,7 +33,7 @@
     font-family: monospace;
     font-size: 14px;
     height: 3.5rem;
-    width: 80%;
+    width: 75%;
     outline: none;
 	touch-action: manipulation;
 	-webkit-user-select: none;
@@ -46,9 +46,9 @@
 	outline: none;
 	border-radius: 10px;
 	border-width: 0;
-	height: 4rem;
+	height: 5rem;
     padding: 0;
-    width: 4rem;
+    width: 5rem;
     touch-action: manipulation;
 	-webkit-user-select: none;
 	user-select: none;
