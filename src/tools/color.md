@@ -31,12 +31,15 @@
     font-size: 14px;
 }
 .color-input {
-    width: 50px;
-    height: 40px;
-    cursor: pointer;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    padding: 0;
+    background: hsl(0deg 0% 100% / 7%);
+	color: #bbb;
+	font-size: 1.5rem;
+	display: block;
+	outline: none;
+	border-radius: 10px;
+	border-width: 0;
+	width: 70%;
+	height: 7rem;
 }
 .error {
     color: #dc3545;
