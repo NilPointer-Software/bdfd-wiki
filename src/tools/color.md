@@ -80,7 +80,7 @@ Here you can choose a color to use in your command.
 
 <div class="picker-container">
   <h2>Color Picker</h2>
-  <p>Select the color</p>
+  <p>Select the color.</p>
   <div class="input-row">
     <input type="text" id="hexInput" class="hex-input" maxlength="20" placeholder="#000000" oninput="hexInputChange()">
     <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
