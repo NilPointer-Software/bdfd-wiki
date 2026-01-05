@@ -1181,6 +1181,7 @@ function hexInputChange() {
   
   if (hexColor) {
     colorPicker.value = hexColor;
+    hexInput.value = hexColor;
     errorText.textContent = '';
     validColorDisplay.innerHTML = `<div class="valid-color" style="background:${hexColor}">${hexColor}</div>`;
     return;
@@ -1191,10 +1192,11 @@ function hexInputChange() {
   if (isValid) {
     const finalColor = val.length === 4 ? expandHex(val) : val;
     colorPicker.value = finalColor;
+    hexInput.value = finalColor;
     errorText.textContent = '';
     validColorDisplay.innerHTML = `<div class="valid-color" style="background:${finalColor}">${finalColor}</div>`;
   } else {
-    errorText.textContent = 'Неверный формат цвета или название';
+    errorText.textContent = 'Invalid color input: Failed to find HEX';
     validColorDisplay.innerHTML = '';
   }
 }
