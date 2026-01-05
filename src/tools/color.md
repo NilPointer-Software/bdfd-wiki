@@ -65,20 +65,26 @@
     font-size: 12px;
     min-height: 16px;
     margin-top: 2px;
-    margin-bottom: 2.5px;
+}
+.valid-color {
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: inline-block;
 }
 </style>
 
 Here you can choose a color to use in your command.
 
 <div class="picker-container">
-  <h2>Color picker</h2>
-  <p>Select a color in hex format.</p>
   <div class="input-row">
-    <input type="text" id="hexInput" class="hex-input" maxlength="7" placeholder="#000000" oninput="hexInputChange()">
+    <input type="text" id="hexInput" class="hex-input" maxlength="20" placeholder="#000000" oninput="hexInputChange()">
     <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
   </div>
   <div class="error" id="errorText"></div>
+  <div id="validColorDisplay"></div>
 </div>
 
 ## Functions
