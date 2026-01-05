@@ -1196,7 +1196,7 @@ function hexInputChange() {
     errorText.textContent = '';
     validColorDisplay.innerHTML = `<div class="valid-color" style="background:${finalColor}">${finalColor}</div>`;
   } else {
-    errorText.textContent = 'Invalid color input: Failed to find HEX';
+    errorText.textContent = 'Неверный формат цвета или название';
     validColorDisplay.innerHTML = '';
   }
 }
@@ -1212,6 +1212,9 @@ window.onload = function() {
   const colorPicker = document.getElementById('colorPicker');
   const hexInput = document.getElementById('hexInput');
   const validColorDisplay = document.getElementById('validColorDisplay');
+  
+  colorPicker.oninput = colorPickerChange;
+  hexInput.oninput = hexInputChange;
   
   hexInput.value = colorPicker.value;
   validColorDisplay.innerHTML = `<div class="valid-color" style="background:${colorPicker.value}">${colorPicker.value}</div>`;
