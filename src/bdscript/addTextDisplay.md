@@ -11,7 +11,7 @@ $addTextDisplay[Content;(Container/Section name)]
 ```
 
 ```admonish warning title="Limit"
-This function counts as a component. A message can have a maximum of 40 components.
+This function counts as a component. A message can have a maximum of 40 components. [One section](./addSection.md) can have only 3 components.
 ```
 
 ### Parameters
