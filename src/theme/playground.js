@@ -87,7 +87,7 @@ function isValidHexPlayground(inputValue) {
 function isBooleanPlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
   const booleanValues = ['true', 'false', 'on', 'off', 'enable', 'disable', 'yes', 'no'];
-  playOutput.textContent = `Is valid HEX? ${booleanValues.includes(inputValue)}`;
+  playOutput.textContent = `Is boolean? ${booleanValues.includes(inputValue)}`;
 }
 
 function preserveLineBreaks(text) {
@@ -179,3 +179,4 @@ function editInputHeight() {
     playInputt.style.width = "fit-content";
   }
 }
+
