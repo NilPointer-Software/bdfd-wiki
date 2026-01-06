@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
     <!-- Discord Components -->
-    <script type="module" src="https://unpkg.com/@skyra/discord-components-core"></script>
+    <script type="module" src="https://unpkg.com/@skyra/discord-components-core@3.6.1"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
@@ -213,10 +213,10 @@ $addField[The field name 2!;The field value 2!]
 $addField[The field name 3!;The field value 3!]
 </code></pre>
 <discord-messages>
-    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png">
+    <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png">
         !example
     </discord-message>
-    <discord-message verified bot author="Wiki Bot" role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png">
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" verified author="Wiki Bot">
         <none>
         <discord-embed slot="embeds">
             <discord-embed-fields slot="fields">
@@ -242,20 +242,20 @@ $addField[The field name 2!;The field value 2!;yes]
 $addField[The field name 3!;The field value 3!;yes]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" author="Nicky" role-color="#EE7908">
+    <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png">
         !example
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" verified author="Wiki Bot" bot>
+    <discord-message author="Wiki Bot" role-color="#748BD4" verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot>
         <none>
         <discord-embed slot="embeds">
             <discord-embed-fields slot="fields">
-                <discord-embed-field inline-index="1" inline field-title="The field name 1!">
+                <discord-embed-field inline field-title="The field name 1!" inline-index="1">
                     The field value 1!
                 </discord-embed-field>
-                <discord-embed-field inline-index="2" inline field-title="The field name 2!">
+                <discord-embed-field field-title="The field name 2!" inline inline-index="2">
                     The field value 2!
                 </discord-embed-field>
-                <discord-embed-field inline field-title="The field name 3!" inline-index="3">
+                <discord-embed-field field-title="The field name 3!" inline-index="3" inline>
                     The field value 3!
                 </discord-embed-field>
             </discord-embed-fields>
