@@ -21,8 +21,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |-
-          gh release download -R rust-lang/mdBook -p mdbook-v0.4.52-x86_64-unknown-linux-gnu.tar.gz
-          gh release download -R tommilligan/mdbook-admonish -p mdbook-admonish-v1.20.0-x86_64-unknown-linux-gnu.tar.gz
+          gh release download v0.4.52 -R rust-lang/mdBook -p mdbook-*-x86_64-unknown-linux-gnu.tar.gz
+          gh release download v1.20.0 -R tommilligan/mdbook-admonish -p mdbook-admonish-*-x86_64-unknown-linux-gnu.tar.gz
           gh release download -R NilPointer-Software/mdbook-discord-components -p mdbook-discord-components-*.tar.gz
 
           for file in *.tar.gz
