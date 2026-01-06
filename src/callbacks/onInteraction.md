@@ -1,8 +1,4 @@
 # $onInteraction
-<div class="functionTags">
-  <span id="CallbackTag">Callback</span>
-</div>
-
 Triggered upon an interaction being emitted (e.g. a button being clicked).
 
 ## Syntax
@@ -115,4 +111,4 @@ $endif
     I can't use the button
 ```
 
-> How [`$if[]`](../guides/general/ifStatements.md) or [`$customID[]`](../bdscript/customID.md) works?
+> How does [`$if[]`](../guides/general/ifStatements.md) and [`$customID[]`](../bdscript/customID.md) work?

@@ -5,6 +5,19 @@
       visibility: hidden;
   }
 </style>
+# 2026
+
+## January
+Added multiple Components V2 functions:
+- Added `$addTextDisplay[]`
+- Added `$addSeparator[]`
+- Added `$addContainer[]`
+- Added `$addSection[]`
+- Added `$addThumbnail[]`
+- Added `$addMediaGallery[]`
+- Added `$addMediaGallery[]`
+- Added `$addMediaGalleryItem[]`
+- Added `$addActionRow[]`
 
 # 2025
 

@@ -1,4 +1,16 @@
 {
+	"2026": {
+		"january": [
+			"Added `$addTextDisplay[]`",
+			"Added `$addSeparator[]`",
+			"Added `$addContainer[]`",
+			"Added `$addSection[]`",
+			"Added `$addThumbnail[]`",
+			"Added `$addMediaGallery[]`",
+			"Added `$addMediaGalleryItem[]`",
+			"Added `$addActionRow[]`"
+		]
+	},
 	"2025": {
 		"january": [
 			"Added `$afkChannelID`",
