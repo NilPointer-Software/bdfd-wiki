@@ -14,20 +14,12 @@
 - Added `$addContainer[]`
 - Added `$addSection[]`
 - Added `$addThumbnail[]`
-- Added `$isJson[]`
-- Added `$pi`
-- Added `$startsWith[]`
-- Added `$endsWith[]`
+- Added `$addMediaGallery[]`
+- Added `$addMediaGalleryItem[]`
+- Added `$addActionRow[]`
+- Added `$addButtonCV2[]`
 
 # 2025
-
-### Upcoming
-- Components v2 (A lot of new functions!)
-- Channel & Role select menu
-- AI tool to generate BDScript codes 
-- Removing the "Translation Endpoints" setting
-- Text in the app is automatically translated using AI
-- Ability to change app icon — New app icons!
 
 ## December
 - Added "Sign out other sessions" button
