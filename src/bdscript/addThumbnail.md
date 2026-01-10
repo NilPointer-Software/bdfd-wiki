@@ -25,7 +25,7 @@ You can't add more than 3 components to [a section](./addSection.md).
 ```
 $nomention
 $addSection[Section]
-$addTextDisplay[Hallow world!;Section]
+$addTextDisplay[Hello world!;Section]
 $addThumbnail[$authorAvatar;My avatar;;Section]
 ```
 
