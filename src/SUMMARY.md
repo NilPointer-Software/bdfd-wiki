@@ -75,6 +75,7 @@
     - [$addSeparator](./bdscript/addSeparator.md)
     - [$addTextDisplay](./bdscript/addTextDisplay.md)
     - [$addTextInput](./bdscript/addTextInput.md)
+    - [$addThumbnail](./bdscript/addThumbnail.md)
     - [$addTimestamp](./bdscript/addTimestamp.md)
     - [$addTimestamp[]](./bdscript/addTimestampComplex.md)
     - [$afkChannelID](./bdscript/afkChannelID.md)
