@@ -17,7 +17,7 @@ This function counts as a container component. A message can have a maximum of 4
 ### Parameters
 - `Divider?` `(Type: Bool || Flag: Vacantable)`: Should the message show a visual divider?
 - `Spacing type` `(Type: Enum || Flag: Vacantable)`: Type of the divider. [Possible types](#spacing-types).
-- `Container name` `(Type: String || Flag: Optional)`: The name of the container body to which the component will be attached. If nothing is specified, it will be attached to the message.
+- `Container name` `(Type: String || Flag: Optional)`: The name of [the container body](./addContainer.md) to which the component will be attached. If nothing is specified, it will be attached to the message.
 
 ### Spacing Types
 - `small`
