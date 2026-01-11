@@ -859,8 +859,6 @@ function changeAutocomplete() {
 
 // Color
 
-
-
 const colorNames = {
   aliceblue: "#f0f8ff", antiquewhite: "#faebd7", aqua: "#00ffff",
   aquamarine: "#7fffd4", azure: "#f0ffff", beige: "#f5f5dc",
@@ -911,7 +909,61 @@ const colorNames = {
   teal: "#008080", thistle: "#d8bfd8", tomato: "#ff6347",
   turquoise: "#40e0d0", violet: "#ee82ee", wheat: "#f5deb3",
   white: "#ffffff", whitesmoke: "#f5f5f5", yellow: "#ffff00",
-  yellowgreen: "#9acd32"
+  yellowgreen: "#9acd32",
+  
+  // Дополнительные цвета
+  amaranth: "#e52b50", amber: "#ffbf00", amethyst: "#9966cc",
+  apricot: "#fbceb1", asparagus: "#87a96b", atomic: "#ff9966",
+  avocado: "#568203", babyblue: "#89cff0", babypink: "#f4c2c2",
+  bananayellow: "#ffe135", battleshipgrey: "#848482", bazaar: "#98777b",
+  beaublue: "#bcd4e6", bgirlblue: "#1f75fe", bigdip: "#1cac78",
+  bittersweet: "#fe6f5e", blond: "#faf0be", bloodred: "#660000",
+  blueberry: "#4f86f7", bluegreen: "#0d98ba", blush: "#de5d83",
+  brass: "#b5a642", brightgreen: "#66ff00", brightpink: "#ff007f",
+  brightturquoise: "#08e8de", brilliantrose: "#ff55a3", bronze: "#cd7f32",
+  bubblegum: "#ffc1cc", burgundy: "#800020", burntorange: "#cc5500",
+  byzantine: "#bd33a4", byzantium: "#702963", cadet: "#536872",
+  cambridgeblue: "#a3c1ad", camel: "#c19a6b", camouflage: "#78866b",
+  canary: "#ffff99", candyapplered: "#ff0800", capri: "#00bfff",
+  cardinal: "#c41e3a", caribbeangreen: "#00cc99", carnation: "#ffa6c9",
+  carmine: "#960018", carnelian: "#b31b1b", carolinablue: "#56a0d3",
+  carrot: "#ed9121", celadon: "#ace1af", cerise: "#de3163",
+  cerulean: "#007ba7", ceruleanblue: "#2a52be", champagne: "#f7e7ce",
+  charcoal: "#36454f", cherry: "#de3163", chestnut: "#954535",
+  chocolate: "#7b3f00", cinnabar: "#e34234", cinnamon: "#d2691e",
+  cobalt: "#0047ab", coffee: "#6f4e37", columbiablue: "#c4d8e2",
+  coolgrey: "#8c92ac", copper: "#b87333", copperrose: "#996666",
+  coralpink: "#f88379", cordovan: "#893f45", corn: "#fbec5d",
+  cottoncandy: "#ffbcd9", cream: "#fffdd0", crimsonred: "#990000",
+  cyanazure: "#4e82b4", cyberyellow: "#ffd300", daffodil: "#ffff31",
+  dandelion: "#f0e130", darkbrown: "#654321", darkbyzantium: "#5d3954",
+  darkcandyapple: "#a40000", darkcerulean: "#08457e", darkchestnut: "#986960",
+  darkcoral: "#cd5b45", darkelectricblue: "#536878", darkjungle: "#1a2421",
+  darklava: "#483c32", darkliver: "#534b4f", darkmediumgray: "#a9a9a9",
+  darkmidnightblue: "#003366", darkmossgreen: "#4a5d23", darkpastelblue: "#779ecb",
+  darkpastelgreen: "#03c03c", darkpastelpurple: "#966fd6", darkpastelred: "#c23b22",
+  darkpink: "#e75480", darkraspberry: "#872657", darkscarlet: "#560319",
+  darksienna: "#3c1414", darkspringgreen: "#177245", darktan: "#918151",
+  darktangerine: "#ffa812", darktaupe: "#483c32", darkterracotta: "#cc4e5c",
+  darkvanilla: "#d1bea8", dartmouthgreen: "#00693e", deeppuce: "#a95c68",
+  deeplilac: "#9955bb", deepmauve: "#d473d4", deeptaupe: "#7e5e60",
+  desert: "#c19a6b", desertsand: "#edc9af", dimgray: "#696969",
+  dodgerblue: "#1e90ff", dogwoodrose: "#d71868", dollarbill: "#85bb65",
+  drab: "#967117", dukeblue: "#00009c", earthyellow: "#e1a95f",
+  eggplant: "#614051", egghite: "#f0ead6", electricblue: "#7df9ff",
+  electriccrimson: "#ff003f", electricgreen: "#00ff00", electricindigo: "#6f00ff",
+  electriclime: "#ccff00", electricpurple: "#bf00ff", electricultramarine: "#3f00ff",
+  electricviolet: "#8f00ff", electricyellow: "#ffff33", emerald: "#50c878",
+  engineeringorange: "#be0032", etonblue: "#96c8a2", fallow: "#c19a6b",
+  falured: "#801818", fandango: "#b53389", fashionfuchsia: "#f400a1",
+  fawn: "#e5aa70", feldgrau: "#4d5d53", ferrarired: "#ff2800",
+  fielddrab: "#6c541e", fireenginered: "#ce2029", flame: "#e25822",
+  flamingopink: "#fc8eac", flavescent: "#f7e98e", flax: "#eedc82",
+  fluorescentorange: "#ffbf00", fluorescentpink: "#ff1493", fluorescentyellow: "#ccff00",
+  folly: "#ff004f", forestgreen: "#228b22", frenchbeige: "#a67b5b",
+  frenchblue: "#0072bb", frenchlilac: "#86608e", frenchrose: "#f64a8a",
+  fuchsiapink: "#ff77ff", fuchsiapurple: "#cc397b", fulvous: "#e48400",
+  fuzzywuzzy: "#cc6666"
 };
 
 function colorPickerChange() {
