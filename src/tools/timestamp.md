@@ -1,17 +1,17 @@
 # Timestamp Converter
 
 <style>
-        .converter-section {
-                position: relative;
-        	background-color: var(--color3);
-        	border-radius: 10px;
-        	margin-top: -10%;
-        	padding-bottom: 1.5rem;
-        	padding-left: 15px;
-        	padding-right: 15px;
-        	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        	transition: 0.3s;
-        }
+.converter-section {
+    position: relative;
+    background-color: var(--color3);
+    border-radius: 10px;
+    margin-top: -5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
         .converter-section:hover, .current-time:hover {
         	transform: scale(1.015);
         	border-radius: 12.5px;
