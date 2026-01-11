@@ -859,6 +859,7 @@ function changeAutocomplete() {
 
 // Color
 
+
 const colorNames = {
   aliceblue: "#f0f8ff", antiquewhite: "#faebd7", aqua: "#00ffff",
   aquamarine: "#7fffd4", azure: "#f0ffff", beige: "#f5f5dc",
@@ -948,7 +949,6 @@ function hexInputChange() {
   
   if (hexColor) {
     colorPicker.value = hexColor;
-    hexInput.value = hexColor;
     errorText.textContent = '';
     validColorDisplay.innerHTML = `<div class="valid-color" style="background:${hexColor}">${hexColor}</div>`;
     return;
@@ -959,7 +959,6 @@ function hexInputChange() {
   if (isValid) {
     const finalColor = val.length === 4 ? expandHex(val) : val;
     colorPicker.value = finalColor;
-    hexInput.value = finalColor;
     errorText.textContent = '';
     validColorDisplay.innerHTML = `<div class="valid-color" style="background:${finalColor}">${finalColor}</div>`;
   } else {
@@ -975,14 +974,4 @@ function expandHex(short) {
   return short;
 }
 
-window.onload = function() {
-  const colorPicker = document.getElementById('colorPicker');
-  const hexInput = document.getElementById('hexInput');
-  const validColorDisplay = document.getElementById('validColorDisplay');
-  
-  colorPicker.oninput = colorPickerChange;
-  hexInput.oninput = hexInputChange;
-  
-  hexInput.value = colorPicker.value;
-  validColorDisplay.innerHTML = `<div class="valid-color" style="background:${colorPicker.value}">${colorPicker.value}</div>`;
-};
+document.getElementById('validColorDisplay').innerHTML = `<div class="valid-color" style="background:#000000">#000000</div>`;
