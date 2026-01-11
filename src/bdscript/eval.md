@@ -9,8 +9,9 @@ Evaluates the provided BDScript code.
 Can only be used in **[BDScript 2](../guides/general/bds2/aboutBDScript2.md)**.
 ```
 
-> ⚠️ **Should be used with caution!** ⚠️
-
+```admonish danger
+⚠️ **Should be used with caution!** ⚠️
+```
 
 ## Syntax
 ```
@@ -41,15 +42,21 @@ $eval[$message]
     Hello! My username is Nicky
 ```
 
-> How [`$message`](./message.md) works?
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
 
-> ⚠️ **Should be used with caution!** ⚠️
-> 
-> It is recommended to restrict the command to be only used by the bot developers, this can be done with:
+~~~admonish danger
+⚠️ **Should be used with caution!** ⚠️
+
+It is recommended to restrict the command to be only used by the bot developers, this can be done with:
+
 ```
 $nomention
 $onlyForIDs[$botOwnerID;❌ You are not my owner!]
 $eval[$message]
 ```
 
-> How [`$onlyForIDs[]`](./onlyForIDs.md) and [`$botOwnerID`](./botOwnerID.md) works?
+How [`$onlyForIDs[]`](./onlyForIDs.md) and [`$botOwnerID`](./botOwnerID.md) works?
+
+~~~
