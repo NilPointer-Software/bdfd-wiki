@@ -7,7 +7,7 @@ Adds a section to the message.
 
 ## Syntax
 ```
-$addSection[Section name]
+$addSection[Section name;(Container name)]
 ```
 
 ```admonish fail title="It's important!"
@@ -19,6 +19,8 @@ The section must contain all [section components](#section-components), otherwis
 ```admonish warning
 You can't have multiple sections and [containers](./addContainer.md) **with the same name** in one message. So for example, you can’t have two sections with the name set to `section`.
 ```
+
+- `Container name` `(Type: String || Flag: Optional)`: To which [container body](./addContainer.md) should the section be attached.
 
 ## Section Components
 ```admonish warning title="Limit" 
