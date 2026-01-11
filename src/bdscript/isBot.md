@@ -45,3 +45,7 @@ Bot?: $isBot[$mentioned[1]]
   content: |
     Bot?: <code>true</code>
 ```
+
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
+```
