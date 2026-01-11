@@ -39,5 +39,5 @@ $isMessageEdited[$channelID;$lastMessageID]
 >  [How to get the Message/Channel ID guide.](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 
 ```admonish question title="What is this?"
-How [`$lastMessageID`](./lastMessageID.md) works?
+How [`$channelID`](./channelID.md) and [`$lastMessageID`](./lastMessageID.md) works?
 ```
