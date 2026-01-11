@@ -13,8 +13,10 @@ $kick[User ID;(Reason)]
 ## Example
 ```
 $nomention
-$kick[$mentioned[1];$noMentionMessage]
-✅ Kicked `$username[$mentioned[1]]#$discriminator[$mentioned[1]]`!
+$kick[$mentioned[1];Bad guy]
+✅ Kicked!
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123518740-4742a600-d675-11eb-8581-1707b6989203.png)
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
+```
