@@ -1140,6 +1140,7 @@ const timezoneError = document.querySelector('.timezone-error');
 let currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let isTimezoneValid = true;
 let clickCounters = {};
+let relativeOffset = 0;
 
 const now = new Date();
 const year = now.getFullYear();
@@ -1260,30 +1261,67 @@ function getCurrentTimeInTimezone() {
     }
 }
 
-function getUnixTimeForDateInTimezone(year, month, day, hour, minute, second, timezone) {
+function getUnixTimeForNewYear(year, timezone) {
     try {
-        const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
+        const dateString = `${year}-01-01T00:00:00`;
         
-        if (timezone && timezone !== 'UTC') {
-            const dateInTimezone = new Date(dateString);
-            const dateInUTC = new Date(dateInTimezone.toLocaleString('en-US', { timeZone: timezone }));
+        if (timezone) {
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: timezone,
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
             
-            const utcDateString = dateInUTC.toISOString();
-            return Math.floor(new Date(utcDateString).getTime() / 1000);
+            const date = new Date(dateString);
+            const formatted = formatter.format(date);
+            
+            const adjustedDate = new Date(formatted);
+            return Math.floor(adjustedDate.getTime() / 1000);
         } else {
             return Math.floor(new Date(dateString + 'Z').getTime() / 1000);
         }
     } catch (error) {
-        const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}Z`;
-        return Math.floor(new Date(dateString).getTime() / 1000);
+        return Math.floor(new Date(`${year}-01-01T00:00:00Z`).getTime() / 1000);
     }
 }
 
-function getNextNewYearUnixTime() {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-    const nextYear = currentYear + 1;
-    return getUnixTimeForDateInTimezone(nextYear, 1, 1, 0, 0, 0, currentTimezone);
+function getUnixTimeForNextDay(timezone) {
+    try {
+        const now = new Date();
+        const tomorrow = new Date(now);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setHours(0, 0, 0, 0);
+        
+        if (timezone) {
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: timezone,
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            
+            const formatted = formatter.format(tomorrow);
+            const adjustedDate = new Date(formatted);
+            return Math.floor(adjustedDate.getTime() / 1000);
+        } else {
+            tomorrow.setUTCHours(0, 0, 0, 0);
+            return Math.floor(tomorrow.getTime() / 1000);
+        }
+    } catch (error) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setHours(0, 0, 0, 0);
+        return Math.floor(tomorrow.getTime() / 1000);
+    }
 }
 
 function updateCurrentTime() {
@@ -1354,6 +1392,7 @@ function createQuickButtons() {
         {id: 'hourLater', label: 'in 1 hour', type: 'relative', seconds: 3600},
         {id: 'dayLater', label: 'in 1 day', type: 'relative', seconds: 86400},
         {id: 'weekLater', label: 'in 1 week', type: 'relative', seconds: 604800},
+        {id: 'newDay', label: 'Next day', type: 'newDay'},
         {id: 'newYear', label: 'Next New Year', type: 'newYear'}
     ];
     
@@ -1365,6 +1404,8 @@ function createQuickButtons() {
             const now = new Date();
             const nextYear = now.getFullYear() + 1;
             button.textContent = `New Year ${nextYear}`;
+        } else if (time.type === 'newDay') {
+            button.textContent = time.label;
         } else {
             button.textContent = time.label;
         }
@@ -1378,17 +1419,26 @@ function createQuickButtons() {
             
             const multiplier = clickCounters[time.id];
             let unixTime;
+            let baseTime = Math.floor(Date.now() / 1000) + relativeOffset;
             
             if (time.type === 'now') {
                 unixTime = Math.floor(Date.now() / 1000);
-                clickCounters[time.id] = 0;
+                relativeOffset = 0;
+                for (const key in clickCounters) {
+                    if (key !== 'newDay' && key !== 'newYear') {
+                        clickCounters[key] = 0;
+                    }
+                }
             } else if (time.type === 'relative') {
-                unixTime = Math.floor(Date.now() / 1000) + (time.seconds * multiplier);
+                relativeOffset += time.seconds;
+                unixTime = Math.floor(Date.now() / 1000) + relativeOffset;
             } else if (time.type === 'newYear') {
                 const now = new Date();
                 const nextYear = now.getFullYear() + multiplier;
                 button.textContent = `New Year ${nextYear}`;
-                unixTime = getUnixTimeForDateInTimezone(nextYear, 1, 1, 0, 0, 0, currentTimezone);
+                unixTime = getUnixTimeForNewYear(nextYear, currentTimezone);
+            } else if (time.type === 'newDay') {
+                unixTime = getUnixTimeForNextDay(currentTimezone) + (86400 * (multiplier - 1));
             }
             
             unixInput.value = unixTime;
@@ -1401,6 +1451,7 @@ function createQuickButtons() {
     const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset counters';
     resetButton.onclick = function() {
+        relativeOffset = 0;
         for (const key in clickCounters) {
             clickCounters[key] = 0;
         }
@@ -1417,6 +1468,38 @@ function createQuickButtons() {
     };
     
     quickButtons.appendChild(resetButton);
+    
+    const counterDisplay = document.createElement('div');
+    counterDisplay.id = 'counter-display';
+    counterDisplay.style.marginTop = '10px';
+    counterDisplay.style.fontSize = '14px';
+    counterDisplay.style.color = '#666';
+    quickButtons.appendChild(counterDisplay);
+    
+    function updateCounterDisplay() {
+        let displayText = 'Counters: ';
+        const activeCounters = [];
+        
+        for (const key in clickCounters) {
+            if (clickCounters[key] > 0) {
+                activeCounters.push(`${key}: ${clickCounters[key]}`);
+            }
+        }
+        
+        if (activeCounters.length > 0) {
+            displayText += activeCounters.join(', ');
+        } else {
+            displayText += 'none';
+        }
+        
+        if (relativeOffset !== 0) {
+            displayText += ` | Total offset: ${relativeOffset} seconds`;
+        }
+        
+        counterDisplay.textContent = displayText;
+    }
+    
+    setInterval(updateCounterDisplay, 100);
     
     unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
 }
