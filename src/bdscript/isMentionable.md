@@ -18,7 +18,11 @@ $isMentionable[Role ID]
 ## Example
 ```
 $nomention
-$isMentionable[$findRole[$message]]
+$isMentionable[$message]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/126853667-5263fa7a-3e79-4691-b33d-509f507670c5.png)
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
