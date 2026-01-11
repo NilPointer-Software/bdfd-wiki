@@ -23,6 +23,13 @@ $changeUsernameWithID[$botID;$message]
   color: "#E67E22"
   content: |
     !example The best bot
+- user_id: 1009018156494368798
+  username: The best bot
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Successfuly changed!
 ```
 
 ```admonish question title="What is this?"
