@@ -911,7 +911,7 @@ const colorNames = {
   white: "#ffffff", whitesmoke: "#f5f5f5", yellow: "#ffff00",
   yellowgreen: "#9acd32",
   
-  // Дополнительные цвета
+  // Extra colors
   amaranth: "#e52b50", amber: "#ffbf00", amethyst: "#9966cc",
   apricot: "#fbceb1", asparagus: "#87a96b", atomic: "#ff9966",
   avocado: "#568203", babyblue: "#89cff0", babypink: "#f4c2c2",
