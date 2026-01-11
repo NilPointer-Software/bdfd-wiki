@@ -16,10 +16,6 @@ $sendMessage[I left out `$serverName[$message]` server.]
 $botLeave[$message]
 ```
 
-```admonish question title="What is this?"
-How [`$sendMessage[]`](./sendMessage.md), [`$serverName[]`](./serverName.md) and [`$message`](./message.md) works?
-```
-
 ```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
@@ -36,6 +32,10 @@ How [`$sendMessage[]`](./sendMessage.md), [`$serverName[]`](./serverName.md) and
 ```
 \
 ![example](https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png)
+
+```admonish question title="What is this?"
+How [`$sendMessage[]`](./sendMessage.md), [`$serverName[]`](./serverName.md) and [`$message`](./message.md) works?
+```
 
 > If you are using **BDScript 2**, put `$botLeave[]` at the very bottom of the code so that the code works correctly i.e:
 > 
