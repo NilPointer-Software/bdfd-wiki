@@ -107,6 +107,11 @@ input {
     margin-top: 20px;
     transition: 0.3s;
 }
+.timezone-error {
+    color: #dc3545;
+    font-size: 12px;
+    min-height: 16px;
+}
 </style>
 
 Here you can manage UnixTime for your commands.
