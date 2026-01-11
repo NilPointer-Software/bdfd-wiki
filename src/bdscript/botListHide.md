@@ -5,7 +5,10 @@ Hides this command from being shown on the BDL command list (if the bot is on [*
 ```
 $botListHide
 ```
-> This function does not hide the command for [`$botCommands[]`](./botCommands.md).
+
+```admonish warning
+This function does not hide the command for [`$botCommands[]`](./botCommands.md).
+```
 
 ## Example
 1. Create two commands and set the trigger `!ping` for one command and `!secret` for the other.
