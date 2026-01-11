@@ -13,15 +13,36 @@ $ignoreChannels[Channel IDs;...;Error message]
 ## Example
 ```
 $nomention
-$ignoreChannels[1099033713687404614;❌ That command can't be used in this channel!]
-
-Hello $username!
+$ignoreChannels[566370477967147018;❌ That command can't be used in this channel!]
+Hello world!
 ```
 
-**Ignored channel**
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      ❌ That command can't be used in this channel!
+```
+\
 
-![example1](https://user-images.githubusercontent.com/111157596/233706189-0d168572-a0e8-4c3d-803e-abf31826bb43.png)
-
-**Whitelisted channel**
-
-![example2](https://user-images.githubusercontent.com/111157596/233706206-0926d4bc-f0de-47b4-acb0-e7802772575b.png)
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      Hello world!
+```
