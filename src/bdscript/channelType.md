@@ -6,11 +6,12 @@ Returns the type of a channel.
 $channelType[Channel ID]
 ```
 
-> The different channel types that the bot will return are: `text`, `voice`, `category`, `thread`, `dm`, `stage`, `announcement` and `forum`.
+```admonish note
+The different channel types that the bot will return are: `text`, `voice`, `category`, `thread`, `dm`, `stage`, `announcement` and `forum`.
+```
 
 ### Parameters 
 - `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel which type will be returned.
-
 
 ## Example
 ```
