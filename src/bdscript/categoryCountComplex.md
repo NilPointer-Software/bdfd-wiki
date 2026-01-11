@@ -20,7 +20,7 @@ There are $categoryCount[$message] categories in the server!
   username: Nicky
   color: "#EE7908"
   content: |
-    !categories 790676954247725106
+    !example 790676954247725106
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
