@@ -24,8 +24,8 @@ The `count` option does not list anything, instead it will return the number of 
 ## Example
 ```
 $nomention
-Total $categoryChannels[$categoryID[BDFD];;count] channels!
-$categoryChannels[$categoryID[BDFD];
+Total $categoryChannels[$parentID;;count] channels!
+$categoryChannels[$parentID;
 ;mention]
 ```
 
@@ -51,5 +51,5 @@ $categoryChannels[$categoryID[BDFD];
 ```
 
 ```admonish question title="What is this?"
-How [`$categoryID[]`](./categoryID.md) works?
+How [`$parentID`](./parentID.md) works?
 ```
