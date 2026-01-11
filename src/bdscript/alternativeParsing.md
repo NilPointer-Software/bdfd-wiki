@@ -68,7 +68,7 @@ This function was added at the end of 2019 as an experiment, and it can be unsta
     description: "\"helloworld\""
 ```
 
-    - Without `$alternativeParsing`:
+- Without `$alternativeParsing`:
 
 ``` discord yaml
 - user_id: 729343563401265193
