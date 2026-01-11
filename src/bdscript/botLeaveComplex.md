@@ -37,18 +37,21 @@ $botLeave[$message]
 How [`$sendMessage[]`](./sendMessage.md), [`$serverName[]`](./serverName.md) and [`$message`](./message.md) works?
 ```
 
-> If you are using **BDScript 2**, put `$botLeave[]` at the very bottom of the code so that the code works correctly i.e:
-> 
-> ❌ Not correct:
-> ```
-> $botLeave[$message]
-> $nomention
-> $sendMessage[I left this server!]
-> ```
->
-> ✅ Correct:
-> ```
-> $nomention
-> $sendMessage[I left this server!]
-> $botLeave[$message]
-> ```
+~~~admonish warning
+If you are using **BDScript 2**, put `$botLeave[]` at the very bottom of the code so that the code works correctly i.e:
+
+❌ Not correct:
+```
+$botLeave[$message]
+$nomention
+$sendMessage[I left this server!]
+```
+
+✅ Correct:
+```
+$nomention
+$sendMessage[I left this server!]
+$botLeave[$message]
+```
+
+~~~
