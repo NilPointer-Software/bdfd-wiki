@@ -1015,7 +1015,7 @@ function hexInputChange() {
     errorText.textContent = '';
     validColorDisplay.innerHTML = `<div class="valid-color" style="background:${finalColor}">${finalColor}</div>`;
   } else {
-    errorText.textContent = 'Неверный формат цвета или название';
+    errorText.textContent = 'Invalid color hex or name.';
     validColorDisplay.innerHTML = '';
   }
 }
