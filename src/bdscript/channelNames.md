@@ -5,15 +5,22 @@ List all channel names separated by a given separator.
 ```
 $channelNames[Separator;(Guild ID)]
 ```
+
+```admonish note
+It can return names of the `category`, `channel`, `forum` channel types.
+```
+
 ### Parameters
 - `Seperator` `(Type: String || Flag: Emptiable)`: The separator used to separate the channel names.
 - `Guild ID` `(Type: Snowflake || Flag: Optional)`: The guild for which to return the channel names. _(Defaults to the current guild)_
+
 ## Example
 ```
 $nomention
 #$channelNames[ 
 #]
 ```
+
 ``` discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
@@ -31,6 +38,3 @@ $nomention
     #suggestions
     #Category
 ```
-
-> It can return names of the `category`, `channel`, `forum`.
-
