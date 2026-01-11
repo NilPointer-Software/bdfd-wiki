@@ -34,6 +34,7 @@ $botLeave
 How [`$sendMessage[]`](./sendMessage.md) works?
 ```
 
+~~~admonish warning
 > If you are using **BDScript 2**, put `$botLeave` at the very bottom of the code so that the code works correctly i.e:
 > 
 > ❌ Not correct:
@@ -49,3 +50,5 @@ How [`$sendMessage[]`](./sendMessage.md) works?
 > $sendMessage[I left this server!]
 > $botLeave
 > ```
+
+~~~
