@@ -31,4 +31,8 @@ $joinSplitText[+]
     hello+world+!
 ```
 
+```admonish question title="What is this?"
+How [`$textSplit[]`](./textSplit.md) and [`$message`](./message.md) works?
+```
+
 > For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
