@@ -34,7 +34,7 @@ $botListHide
     !secret
 - user_id: 1009018156494368798
   username: BDFD Support
-  color: "#ffffff"
+  color: "#378afa"
   bot: true
   verified: true
   content: |
@@ -46,7 +46,7 @@ $botListHide
     !ping
 - user_id: 1009018156494368798
   username: BDFD Support
-  color: "#ffffff"
+  color: "#378afa"
   bot: true
   verified: true
   content: |
