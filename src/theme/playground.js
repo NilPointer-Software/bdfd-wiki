@@ -1122,8 +1122,6 @@ function expandHex(short) {
   return short;
 }
 
-document.getElementById('validColorDisplay').innerHTML = `<div class="valid-color" style="background:#000000">#000000</div>`;
-
 
 
 // Timestamp
