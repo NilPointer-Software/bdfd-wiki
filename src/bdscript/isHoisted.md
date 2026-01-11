@@ -16,7 +16,11 @@ $isHoisted[Role ID]
 ## Example
 ```
 $nomention
-$isHoisted[$findRole[$message]]
+$isHoisted[$message]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/126853587-2be4d152-7254-4424-9fa0-5ab1d93837f7.png)
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
