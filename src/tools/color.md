@@ -70,10 +70,12 @@
 .valid-color {
     color: white;
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 10px;
     font-weight: bold;
-    margin-top: 5px;
-    display: inline-block;
+    width: fit-content;
+    margin-left: -1.6rem;
+    margin-top: -2.5rem;
+    display: flex;
 }
 </style>
 
