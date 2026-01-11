@@ -65,6 +65,7 @@
     font-size: 12px;
     min-height: 16px;
     margin-top: 2px;
+    padding-bottom: 1rem;
 }
 .valid-color {
     color: white;
