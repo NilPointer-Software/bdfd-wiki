@@ -35,7 +35,6 @@ $categoryChannels[$parentID;
   color: "#EE7908"
   content: |
     !example
-
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -44,7 +43,7 @@ $categoryChannels[$parentID;
   content: |
     Total 5 channels!
     <#rules>
-    <#news>
+    <#example>
     <#update-logs>
     <#main-chat>
     <#secret-channel>
