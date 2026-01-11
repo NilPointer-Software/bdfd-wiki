@@ -90,7 +90,7 @@ Here you can choose a color to use in your command.
     <input type="color" id="colorPicker" class="color-input" value="#000000" oninput="colorPickerChange()">
   </div>
   <div class="error" id="errorText"></div>
-  <div id="validColorDisplay"></div>
+  <div id="validColorDisplay"><div class="valid-color" style="background:#000000">#000000</div></div>
 </div>
 
 ## Functions
