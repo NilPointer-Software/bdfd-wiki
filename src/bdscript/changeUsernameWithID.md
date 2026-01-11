@@ -13,8 +13,8 @@ $changeUsernameWithID[User ID;New nickname]
 ## Example
 ```
 $nomention
-$addCmdReactions[❤️]
-$changeUsernameWithID[$message[1];$message[2]]
+Successfuly changed!
+$changeUsernameWithID[$botID;$message]
 ```
 
 ``` discord yaml
@@ -22,13 +22,9 @@ $changeUsernameWithID[$message[1];$message[2]]
   username: RainbowKey
   color: "#E67E22"
   content: |
-    !example 154148273307910144 Owner
-  reactions:
-    - emoji: https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png
-      count: 1
-      reacted: false
+    !example The best bot
 ```
 
 ```admonish question title="What is this?"
-How [`$addCmdReactions[]`](./addCmdReactions.md) and [`$message[]`](./messageComplex.md) works?
+How [`$botID`](./botID.md) and [`$message`](./message.md) works?
 ```
