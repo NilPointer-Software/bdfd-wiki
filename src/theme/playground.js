@@ -913,8 +913,8 @@ const colorNames = {
   yellowgreen: "#9acd32"
 };
 
-function colorPickerChange() {
-  const colorPicker = document.getElementById('colorPicker');
+function colorPickerChange(e) {
+  const colorPicker = e.target;
   const hexInput = document.getElementById('hexInput');
   const errorText = document.getElementById('errorText');
   const validColorDisplay = document.getElementById('validColorDisplay');
@@ -925,9 +925,9 @@ function colorPickerChange() {
   validColorDisplay.innerHTML = `<div class="valid-color" style="background:${color}">${color}</div>`;
 }
 
-function hexInputChange() {
+function hexInputChange(e) {
+  const hexInput = e.target;
   const colorPicker = document.getElementById('colorPicker');
-  const hexInput = document.getElementById('hexInput');
   const errorText = document.getElementById('errorText');
   const validColorDisplay = document.getElementById('validColorDisplay');
   
