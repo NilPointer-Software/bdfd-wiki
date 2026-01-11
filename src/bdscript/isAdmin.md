@@ -33,3 +33,7 @@ Are you an admin?: `$isAdmin[$authorID]`
   content: |
     Are you an admin?: <code>true</code>
 ```
+
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) works?
+```
