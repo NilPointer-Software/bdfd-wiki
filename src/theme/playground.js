@@ -860,6 +860,7 @@ function changeAutocomplete() {
 // Color
 
 
+
 const colorNames = {
   aliceblue: "#f0f8ff", antiquewhite: "#faebd7", aqua: "#00ffff",
   aquamarine: "#7fffd4", azure: "#f0ffff", beige: "#f5f5dc",
@@ -913,8 +914,8 @@ const colorNames = {
   yellowgreen: "#9acd32"
 };
 
-function colorPickerChange(e) {
-  const colorPicker = e.target;
+function colorPickerChange() {
+  const colorPicker = document.getElementById('colorPicker');
   const hexInput = document.getElementById('hexInput');
   const errorText = document.getElementById('errorText');
   const validColorDisplay = document.getElementById('validColorDisplay');
@@ -925,8 +926,8 @@ function colorPickerChange(e) {
   validColorDisplay.innerHTML = `<div class="valid-color" style="background:${color}">${color}</div>`;
 }
 
-function hexInputChange(e) {
-  const hexInput = e.target;
+function hexInputChange() {
+  const hexInput = document.getElementById('hexInput');
   const colorPicker = document.getElementById('colorPicker');
   const errorText = document.getElementById('errorText');
   const validColorDisplay = document.getElementById('validColorDisplay');
