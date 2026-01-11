@@ -149,6 +149,14 @@ The timezone selected on your device is used.
     </div>
 </div>
 
+<div class="converter-section">
+    <h2>Timer</h2>
+    <p>This shows when UnixTime will be </p>
+    <div class="result">
+        <span id="timer-display">Loading...</span>
+    </div>
+</div>
+
 <div class="current-time">
     <span id="current-time"></span>
 </div>
