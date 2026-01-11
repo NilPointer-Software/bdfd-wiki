@@ -17,7 +17,9 @@ $categoryChannels[Category ID;Separator;(Option)]
 - `mention` - The mentions of the channels.
 - `count` - The amount of channels in the category.
 
-> The `count` option does not list anything, instead it will return the number of channels under the given category.
+```admonish note
+The `count` option does not list anything, instead it will return the number of channels under the given category.
+```
 
 ## Example
 ```
