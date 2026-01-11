@@ -1124,6 +1124,7 @@ function expandHex(short) {
 
 
 
+
 // Timestamp
 
 const datetimePicker = document.getElementById('datetimepicker');
@@ -1136,14 +1137,9 @@ const currentTimeEl = document.getElementById('current-time');
 const timezoneInput = document.getElementById('timezone');
 const timezoneError = document.querySelector('.timezone-error');
 
-console.log('timezoneInput:', timezoneInput); // Добавьте эту строку для отладки
-
-if (!timezoneInput) {
-    console.error('Element with id "timezone" not found');
-}
-
 let currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let isTimezoneValid = true;
+let clickCounters = {};
 
 const now = new Date();
 const year = now.getFullYear();
@@ -1158,17 +1154,12 @@ const currentUnixTime = Math.floor(now.getTime() / 1000);
 unixInput.value = currentUnixTime;
 
 function updateTimezone() {
-    if (!timezoneInput) {
-        console.error('timezoneInput is null');
-        return;
-    }
-    
     const timezoneValue = timezoneInput.value.trim();
     
     if (!timezoneValue) {
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         isTimezoneValid = true;
-        if (timezoneError) timezoneError.textContent = '';
+        timezoneError.textContent = '';
         updateDateFromUnix();
         updateCurrentTime();
         return;
@@ -1184,11 +1175,11 @@ function updateTimezone() {
         
         currentTimezone = timezoneValue;
         isTimezoneValid = true;
-        if (timezoneError) timezoneError.textContent = '';
+        timezoneError.textContent = '';
         updateDateFromUnix();
         updateCurrentTime();
     } catch (error) {
-        if (timezoneError) timezoneError.textContent = 'Invalid timezone';
+        timezoneError.textContent = 'Invalid timezone';
         isTimezoneValid = false;
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         updateDateFromUnix();
@@ -1269,11 +1260,35 @@ function getCurrentTimeInTimezone() {
     }
 }
 
+function getUnixTimeForDateInTimezone(year, month, day, hour, minute, second, timezone) {
+    try {
+        const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
+        
+        if (timezone && timezone !== 'UTC') {
+            const dateInTimezone = new Date(dateString);
+            const dateInUTC = new Date(dateInTimezone.toLocaleString('en-US', { timeZone: timezone }));
+            
+            const utcDateString = dateInUTC.toISOString();
+            return Math.floor(new Date(utcDateString).getTime() / 1000);
+        } else {
+            return Math.floor(new Date(dateString + 'Z').getTime() / 1000);
+        }
+    } catch (error) {
+        const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}Z`;
+        return Math.floor(new Date(dateString).getTime() / 1000);
+    }
+}
+
+function getNextNewYearUnixTime() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const nextYear = currentYear + 1;
+    return getUnixTimeForDateInTimezone(nextYear, 1, 1, 0, 0, 0, currentTimezone);
+}
+
 function updateCurrentTime() {
     const timeInfo = getCurrentTimeInTimezone();
-    if (currentTimeEl) {
-        currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}`;
-    }
+    currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}`;
 }
 
 function updateUnixTime() {
@@ -1283,7 +1298,7 @@ function updateUnixTime() {
         const unixTime = Math.floor(selectedDate.getTime() / 1000);
         const dateString = formatDateInTimezone(selectedDate, currentTimezone);
         
-        if (unixTimeDisplay) unixTimeDisplay.textContent = unixTime;
+        unixTimeDisplay.textContent = unixTime;
         
         if (parseInt(unixInput.value) !== unixTime) {
             unixInput.value = unixTime;
@@ -1300,7 +1315,7 @@ function updateDateFromUnix() {
         
         if (!isNaN(date.getTime())) {
             const dateString = formatDateInTimezone(date, currentTimezone);
-            if (dateDisplay) dateDisplay.textContent = dateString;
+            dateDisplay.textContent = dateString;
             
             const year = date.getFullYear();
             const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -1315,11 +1330,11 @@ function updateDateFromUnix() {
             }
         }
     } else if (unixInput.value === '') {
-        if (dateDisplay) dateDisplay.textContent = 'Not set';
-        if (dateInfo) dateInfo.textContent = '';
+        dateDisplay.textContent = 'Not set';
+        dateInfo.textContent = '';
     } else {
-        if (dateDisplay) dateDisplay.textContent = 'Invalid timestamp';
-        if (dateInfo) dateInfo.textContent = 'Please enter a valid Unix timestamp';
+        dateDisplay.textContent = 'Invalid timestamp';
+        dateInfo.textContent = 'Please enter a valid Unix timestamp';
     }
 }
 
@@ -1332,25 +1347,48 @@ function createQuickButtons() {
     quickButtons.className = 'time-buttons';
     
     const times = [
-        {label: 'Now', seconds: 0},
-        {label: '1 hour ago', seconds: -3600},
-        {label: '1 day ago', seconds: -86400},
-        {label: '1 week ago', seconds: -604800},
-        {label: 'New Year 2027', seconds: 1798761600}
+        {id: 'now', label: 'Now', type: 'now'},
+        {id: 'hourAgo', label: '1 hour ago', type: 'relative', seconds: -3600},
+        {id: 'dayAgo', label: '1 day ago', type: 'relative', seconds: -86400},
+        {id: 'weekAgo', label: '1 week ago', type: 'relative', seconds: -604800},
+        {id: 'hourLater', label: 'in 1 hour', type: 'relative', seconds: 3600},
+        {id: 'dayLater', label: 'in 1 day', type: 'relative', seconds: 86400},
+        {id: 'weekLater', label: 'in 1 week', type: 'relative', seconds: 604800},
+        {id: 'newYear', label: 'Next New Year', type: 'newYear'}
     ];
     
     times.forEach(time => {
         const button = document.createElement('button');
-        button.textContent = time.label;
+        button.id = time.id;
+        
+        if (time.type === 'newYear') {
+            const now = new Date();
+            const nextYear = now.getFullYear() + 1;
+            button.textContent = `New Year ${nextYear}`;
+        } else {
+            button.textContent = time.label;
+        }
         
         button.onclick = function() {
-            let unixTime;
-            if (time.seconds === 0) {
-                unixTime = Math.floor(Date.now() / 1000);
-            } else if (time.seconds > 0) {
-                unixTime = time.seconds;
+            if (!clickCounters[time.id]) {
+                clickCounters[time.id] = 1;
             } else {
-                unixTime = Math.floor(Date.now() / 1000) + time.seconds;
+                clickCounters[time.id]++;
+            }
+            
+            const multiplier = clickCounters[time.id];
+            let unixTime;
+            
+            if (time.type === 'now') {
+                unixTime = Math.floor(Date.now() / 1000);
+                clickCounters[time.id] = 0;
+            } else if (time.type === 'relative') {
+                unixTime = Math.floor(Date.now() / 1000) + (time.seconds * multiplier);
+            } else if (time.type === 'newYear') {
+                const now = new Date();
+                const nextYear = now.getFullYear() + multiplier;
+                button.textContent = `New Year ${nextYear}`;
+                unixTime = getUnixTimeForDateInTimezone(nextYear, 1, 1, 0, 0, 0, currentTimezone);
             }
             
             unixInput.value = unixTime;
@@ -1359,6 +1397,26 @@ function createQuickButtons() {
         
         quickButtons.appendChild(button);
     });
+    
+    const resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset counters';
+    resetButton.onclick = function() {
+        for (const key in clickCounters) {
+            clickCounters[key] = 0;
+        }
+        
+        const newYearButton = document.getElementById('newYear');
+        if (newYearButton) {
+            const now = new Date();
+            const nextYear = now.getFullYear() + 1;
+            newYearButton.textContent = `New Year ${nextYear}`;
+        }
+        
+        unixInput.value = Math.floor(Date.now() / 1000);
+        updateDateFromUnix();
+    };
+    
+    quickButtons.appendChild(resetButton);
     
     unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
 }
