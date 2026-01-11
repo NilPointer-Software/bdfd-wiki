@@ -1136,6 +1136,7 @@ const dateInfo = document.getElementById('date-info');
 const currentTimeEl = document.getElementById('current-time');
 const timezoneInput = document.getElementById('timezone');
 const timezoneError = document.querySelector('.timezone-error');
+const timerDisplay = document.getElementById('timer-display');
 
 let currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let isTimezoneValid = true;
@@ -1324,9 +1325,53 @@ function getUnixTimeForNextDay(timezone) {
     }
 }
 
+function formatTimeDifference(timestamp) {
+    const now = Math.floor(Date.now() / 1000);
+    const diff = timestamp - now;
+    const absDiff = Math.abs(diff);
+    
+    if (absDiff < 60) {
+        return diff >= 0 ? `in ${absDiff} second${absDiff !== 1 ? 's' : ''}` : `${absDiff} second${absDiff !== 1 ? 's' : ''} ago`;
+    }
+    
+    const years = Math.floor(absDiff / 31536000);
+    const months = Math.floor((absDiff % 31536000) / 2592000);
+    const days = Math.floor((absDiff % 2592000) / 86400);
+    const hours = Math.floor((absDiff % 86400) / 3600);
+    const minutes = Math.floor((absDiff % 3600) / 60);
+    const seconds = absDiff % 60;
+    
+    const parts = [];
+    
+    if (years > 0) parts.push(`${years} year${years !== 1 ? 's' : ''}`);
+    if (months > 0) parts.push(`${months} month${months !== 1 ? 's' : ''}`);
+    if (days > 0) parts.push(`${days} day${days !== 1 ? 's' : ''}`);
+    if (hours > 0) parts.push(`${hours} hour${hours !== 1 ? 's' : ''}`);
+    if (minutes > 0) parts.push(`${minutes} minute${minutes !== 1 ? 's' : ''}`);
+    if (seconds > 0) parts.push(`${seconds} second${seconds !== 1 ? 's' : ''}`);
+    
+    if (parts.length === 0) {
+        return diff >= 0 ? 'now' : 'just now';
+    }
+    
+    const timeString = parts.join(', ');
+    return diff >= 0 ? `in ${timeString}` : `${timeString} ago`;
+}
+
+function updateTimerDisplay() {
+    const timestamp = parseInt(unixInput.value);
+    
+    if (!isNaN(timestamp)) {
+        timerDisplay.textContent = formatTimeDifference(timestamp);
+    } else {
+        timerDisplay.textContent = 'Invalid timestamp';
+    }
+}
+
 function updateCurrentTime() {
     const timeInfo = getCurrentTimeInTimezone();
     currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}`;
+    updateTimerDisplay();
 }
 
 function updateUnixTime() {
@@ -1370,10 +1415,14 @@ function updateDateFromUnix() {
     } else if (unixInput.value === '') {
         dateDisplay.textContent = 'Not set';
         dateInfo.textContent = '';
+        timerDisplay.textContent = 'Not set';
     } else {
         dateDisplay.textContent = 'Invalid timestamp';
         dateInfo.textContent = 'Please enter a valid Unix timestamp';
+        timerDisplay.textContent = 'Invalid timestamp';
     }
+    
+    updateTimerDisplay();
 }
 
 window.updateTimezone = updateTimezone;
@@ -1468,38 +1517,6 @@ function createQuickButtons() {
     };
     
     quickButtons.appendChild(resetButton);
-    
-    const counterDisplay = document.createElement('div');
-    counterDisplay.id = 'counter-display';
-    counterDisplay.style.marginTop = '10px';
-    counterDisplay.style.fontSize = '14px';
-    counterDisplay.style.color = '#666';
-    quickButtons.appendChild(counterDisplay);
-    
-    function updateCounterDisplay() {
-        let displayText = 'Counters: ';
-        const activeCounters = [];
-        
-        for (const key in clickCounters) {
-            if (clickCounters[key] > 0) {
-                activeCounters.push(`${key}: ${clickCounters[key]}`);
-            }
-        }
-        
-        if (activeCounters.length > 0) {
-            displayText += activeCounters.join(', ');
-        } else {
-            displayText += 'none';
-        }
-        
-        if (relativeOffset !== 0) {
-            displayText += ` | Total offset: ${relativeOffset} seconds`;
-        }
-        
-        counterDisplay.textContent = displayText;
-    }
-    
-    setInterval(updateCounterDisplay, 100);
     
     unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
 }
