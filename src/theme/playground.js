@@ -852,11 +852,6 @@ function changeAutocomplete() {
 
 
 
-
-// Timestamp
-
-
-
 // Color
 
 const colorNames = {
@@ -1128,3 +1123,253 @@ function expandHex(short) {
 }
 
 document.getElementById('validColorDisplay').innerHTML = `<div class="valid-color" style="background:#000000">#000000</div>`;
+
+
+
+// Timestamp
+
+const datetimePicker = document.getElementById('datetimepicker');
+const unixTimeDisplay = document.getElementById('unixtime-display');
+const timestampInfo = document.getElementById('timestamp-info');
+const unixInput = document.getElementById('unix-input');
+const dateDisplay = document.getElementById('date-display');
+const dateInfo = document.getElementById('date-info');
+const currentTimeEl = document.getElementById('current-time');
+const timezoneInput = document.getElementById('timezone');
+const timezoneError = document.querySelector('.timezone-error');
+
+console.log('timezoneInput:', timezoneInput); // Добавьте эту строку для отладки
+
+if (!timezoneInput) {
+    console.error('Element with id "timezone" not found');
+}
+
+let currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+let isTimezoneValid = true;
+
+const now = new Date();
+const year = now.getFullYear();
+const month = String(now.getMonth() + 1).padStart(2, '0');
+const day = String(now.getDate()).padStart(2, '0');
+const hours = String(now.getHours()).padStart(2, '0');
+const minutes = String(now.getMinutes()).padStart(2, '0');
+
+datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+const currentUnixTime = Math.floor(now.getTime() / 1000);
+unixInput.value = currentUnixTime;
+
+function updateTimezone() {
+    if (!timezoneInput) {
+        console.error('timezoneInput is null');
+        return;
+    }
+    
+    const timezoneValue = timezoneInput.value.trim();
+    
+    if (!timezoneValue) {
+        currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        isTimezoneValid = true;
+        if (timezoneError) timezoneError.textContent = '';
+        updateDateFromUnix();
+        updateCurrentTime();
+        return;
+    }
+    
+    try {
+        const testDate = new Date();
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: timezoneValue,
+            timeZoneName: 'short'
+        });
+        const parts = formatter.formatToParts(testDate);
+        
+        currentTimezone = timezoneValue;
+        isTimezoneValid = true;
+        if (timezoneError) timezoneError.textContent = '';
+        updateDateFromUnix();
+        updateCurrentTime();
+    } catch (error) {
+        if (timezoneError) timezoneError.textContent = 'Invalid timezone';
+        isTimezoneValid = false;
+        currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        updateDateFromUnix();
+        updateCurrentTime();
+    }
+}
+
+function formatDateInTimezone(date, timezone) {
+    if (!isTimezoneValid || !timezone) {
+        return date.toLocaleString();
+    }
+    
+    try {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: timezone,
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: false
+        });
+        
+        const parts = formatter.formatToParts(date);
+        const year = parts.find(p => p.type === 'year').value;
+        const month = parts.find(p => p.type === 'month').value.padStart(2, '0');
+        const day = parts.find(p => p.type === 'day').value.padStart(2, '0');
+        const hour = parts.find(p => p.type === 'hour').value.padStart(2, '0');
+        const minute = parts.find(p => p.type === 'minute').value.padStart(2, '0');
+        const second = parts.find(p => p.type === 'second')?.value.padStart(2, '0') || '00';
+        
+        return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+    } catch (error) {
+        return date.toLocaleString();
+    }
+}
+
+function getCurrentTimeInTimezone() {
+    const now = new Date();
+    
+    if (!isTimezoneValid || !currentTimezone) {
+        return {
+            dateString: now.toLocaleDateString(),
+            unixTime: Math.floor(now.getTime() / 1000)
+        };
+    }
+    
+    try {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: currentTimezone,
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: false
+        });
+        
+        const dateParts = formatter.formatToParts(now);
+        const year = dateParts.find(p => p.type === 'year').value;
+        const month = dateParts.find(p => p.type === 'month').value.padStart(2, '0');
+        const day = dateParts.find(p => p.type === 'day').value.padStart(2, '0');
+        const hour = dateParts.find(p => p.type === 'hour').value.padStart(2, '0');
+        const minute = dateParts.find(p => p.type === 'minute').value.padStart(2, '0');
+        const second = dateParts.find(p => p.type === 'second')?.value.padStart(2, '0') || '00';
+        
+        return {
+            dateString: `${year}-${month}-${day} ${hour}:${minute}:${second}`,
+            unixTime: Math.floor(now.getTime() / 1000)
+        };
+    } catch (error) {
+        return {
+            dateString: now.toLocaleDateString(),
+            unixTime: Math.floor(now.getTime() / 1000)
+        };
+    }
+}
+
+function updateCurrentTime() {
+    const timeInfo = getCurrentTimeInTimezone();
+    if (currentTimeEl) {
+        currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}`;
+    }
+}
+
+function updateUnixTime() {
+    const selectedDate = new Date(datetimePicker.value);
+    
+    if (!isNaN(selectedDate.getTime())) {
+        const unixTime = Math.floor(selectedDate.getTime() / 1000);
+        const dateString = formatDateInTimezone(selectedDate, currentTimezone);
+        
+        if (unixTimeDisplay) unixTimeDisplay.textContent = unixTime;
+        
+        if (parseInt(unixInput.value) !== unixTime) {
+            unixInput.value = unixTime;
+            updateDateFromUnix();
+        }
+    }
+}
+
+function updateDateFromUnix() {
+    const unixTime = parseInt(unixInput.value);
+    
+    if (!isNaN(unixTime) && unixTime >= 0) {
+        const date = new Date(unixTime * 1000);
+        
+        if (!isNaN(date.getTime())) {
+            const dateString = formatDateInTimezone(date, currentTimezone);
+            if (dateDisplay) dateDisplay.textContent = dateString;
+            
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            
+            const datetimeLocalValue = `${year}-${month}-${day}T${hours}:${minutes}`;
+            
+            if (datetimePicker.value !== datetimeLocalValue) {
+                datetimePicker.value = datetimeLocalValue;
+            }
+        }
+    } else if (unixInput.value === '') {
+        if (dateDisplay) dateDisplay.textContent = 'Not set';
+        if (dateInfo) dateInfo.textContent = '';
+    } else {
+        if (dateDisplay) dateDisplay.textContent = 'Invalid timestamp';
+        if (dateInfo) dateInfo.textContent = 'Please enter a valid Unix timestamp';
+    }
+}
+
+window.updateTimezone = updateTimezone;
+window.updateUnixTime = updateUnixTime;
+window.updateDateFromUnix = updateDateFromUnix;
+
+function createQuickButtons() {
+    const quickButtons = document.createElement('div');
+    quickButtons.className = 'time-buttons';
+    
+    const times = [
+        {label: 'Now', seconds: 0},
+        {label: '1 hour ago', seconds: -3600},
+        {label: '1 day ago', seconds: -86400},
+        {label: '1 week ago', seconds: -604800},
+        {label: 'New Year 2027', seconds: 1798761600}
+    ];
+    
+    times.forEach(time => {
+        const button = document.createElement('button');
+        button.textContent = time.label;
+        
+        button.onclick = function() {
+            let unixTime;
+            if (time.seconds === 0) {
+                unixTime = Math.floor(Date.now() / 1000);
+            } else if (time.seconds > 0) {
+                unixTime = time.seconds;
+            } else {
+                unixTime = Math.floor(Date.now() / 1000) + time.seconds;
+            }
+            
+            unixInput.value = unixTime;
+            updateDateFromUnix();
+        };
+        
+        quickButtons.appendChild(button);
+    });
+    
+    unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
+}
+
+updateCurrentTime();
+setInterval(updateCurrentTime, 1000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    createQuickButtons();
+    updateDateFromUnix();
+    updateUnixTime();
+});
