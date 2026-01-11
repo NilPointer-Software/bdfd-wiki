@@ -13,9 +13,9 @@ Discord allows users to create up to 500 channels per server. This includes all 
 ### Parameters
 - `Name` `(Type: String || Flag: Required)`: The name of the new channel.
   
-  ```admonish warning title="Limit"
-  Channel names can have a maximum of 100 characters.
-  ```
+```admonish warning title="Limit"
+Channel names can have a maximum of 100 characters.
+```
 
 - `Type` `(Type: Enum || Flag: Required)`: The channel type. Channel types:
   - `category`
