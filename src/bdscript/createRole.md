@@ -47,4 +47,28 @@ New role created!
 \
 ![example](https://user-images.githubusercontent.com/69215413/125973030-7c9b980c-cffb-4f8e-aacc-a644a6fa23c3.png)
 
-> [You can use `$roleID[]` to return the role ID.](./roleID.md)
+~~~admonish tip
+You can use [`$roleID[]`](./roleID.md) to return the role ID.
+
+```
+$nomention
+$createRole[Staff;#FFFF00;no;no]
+New role created! ID: $roleID[Staff]
+```
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    New role created! ID: 659789148806447134
+```
+
+~~~
