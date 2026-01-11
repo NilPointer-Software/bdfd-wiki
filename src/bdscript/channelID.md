@@ -26,9 +26,8 @@ Channel ID: $channelID
       Channel ID: 566370477967147018
 ```
 
-```admonish note
+~~~admonish note
 It will return `none` if you use it in a DM:
-```
 
 ```discord yaml
 - user_id: 803569638084313098
@@ -42,4 +41,6 @@ It will return `none` if you use it in a DM:
   content: |
       Channel ID: none
 ```
+
+~~~
 
