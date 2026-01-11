@@ -121,17 +121,17 @@ The timezone selected on your device is used.
 ```
 
 <div class="converter-section">
-    <h2>Zone</h2>
-    <p>Specify the timezone you want to use for calculating time.</p>
-    <input type="timestamp" id="timezone" placeholder="e.g., Europe/London" oninput="updateTimezone()" onkeypress="if(event.key === 'Enter') updateTimezone()">
+    <h2>Timezone</h2>
+    <p>Select timezone for time calculations</p>
+    <input type="text" id="timezone" placeholder="e.g., Europe/London, America/New_York" oninput="updateTimezone()" onkeypress="if(event.key === 'Enter') updateTimezone()">
     <label class="timezone-error"></label>
 </div>
 
 <div class="converter-section">
-    <h2>Date to Unix Time</h2>
-    <p>Date:</p>
+    <h2>Date to Unix Timestamp</h2>
+    <p>Select a date and time:</p>
     <input type="datetime-local" id="datetimepicker" oninput="updateUnixTime()">
-    <p>Unix Timestamp:</p>
+    <p>Unix timestamp:</p>
     <div class="result">
         <span id="unixtime-display">0</span>
         <div class="timestamp" id="timestamp-info"></div>
@@ -139,10 +139,10 @@ The timezone selected on your device is used.
 </div>
 
 <div class="converter-section">
-    <h2>Unix Time to Date</h2>
-    <p>Unix Timestamp:</p>
+    <h2>Unix Timestamp to Date</h2>
+    <p>Enter Unix timestamp:</p>
     <input type="number" id="unix-input" placeholder="e.g., 1704067200" oninput="updateDateFromUnix()" onkeypress="if(event.key === 'Enter') updateDateFromUnix()">
-    <p>Date and Time:</p>
+    <p>Date and time:</p>
     <div class="result">
         <span id="date-display">Not set</span>
         <div class="timestamp" id="date-info"></div>
@@ -150,8 +150,8 @@ The timezone selected on your device is used.
 </div>
 
 <div class="converter-section">
-    <h2>Timer</h2>
-    <p>This shows when UnixTime will be </p>
+    <h2>Time Remaining</h2>
+    <p>Time until selected Unix timestamp:</p>
     <div class="result">
         <span id="timer-display">Loading...</span>
     </div>
