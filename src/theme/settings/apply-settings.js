@@ -231,8 +231,8 @@ function applySettings() {
 	const mainHue = data["theme-main"]; // Мяу
 
 	if (data["theme-text"] === "#000") {
-		const lightSaturation = 60;
-		const lightLightness = 90;
+		const setSaturation = 60;
+		const setSaturation = 90;
 	} else {
 		const setSaturation = 80;
 		const setLightness = 50;
