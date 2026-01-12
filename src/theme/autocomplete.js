@@ -1,10 +1,42 @@
+// Setting
+let autocompleteEnabled = true;
+
+function changeAutocomplete() {
+  autocompleteEnabled = !autocompleteEnabled;
+  
+  const autocompleteElement = document.getElementById('autocomplete');
+  
+  if (autocompleteEnabled) {
+    autocompleteElement.style.display = 'block';
+  } else {
+    autocompleteElement.style.display = 'none';
+  }
+  
+  autoSettingChange('changeAutocompleteButton', autocompleteEnabled);
+  updateAutocompleteState();
+}
+
+function autoSettingChange(buttonName, status) {
+  const button = document.getElementById(buttonName);
+
+  if (!button) {
+    console.error(`Failed to find "${buttonName}" button.`);
+    return;
+  }
+
+  const activeGradient = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
+  const inactiveGradient = 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
+
+  button.style.background = status ? activeGradient : inactiveGradient;
+}
+
 function autocomplete() {
   const functionsHeader = Array.from(document.querySelectorAll('li.chapter-item')).find(li => li.querySelector('div')?.textContent.trim() === 'Functions');
   if (!functionsHeader) return;
   const sectionList = functionsHeader.nextElementSibling;
   if (!sectionList) return;
-  const html = sectionList.innerHTML;
-  const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a')).map(a => a.textContent).filter(text => text.startsWith('$'));
+    const html = sectionList.innerHTML;
+    const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a')).map(a => a.textContent).filter(text => text.startsWith('$'));
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
   let cursorInactiveTimeout;
@@ -14,18 +46,24 @@ function autocomplete() {
     autocompleteOutput.innerHTML = '';
     clearTimeout(cursorInactiveTimeout);
     selectedIndex = -1;
+        Array.from(autocompleteOutput.children).forEach(child => child.classList.remove('selected'));
   }
 
   function updateAutocomplete() {
+      if (!autocompleteEnabled) {
+          hideAutocomplete();
+          return;
+      }
     const inputText = textarea.value;
     const cursorPosition = textarea.selectionStart;
     let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
     if (dollarIndex === -1) { hideAutocomplete(); return; }
     const searchTerm = inputText.substring(dollarIndex, cursorPosition).toLowerCase();
     autocompleteOutput.innerHTML = '';
+
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
     const displayedFunctions = matchingFunctions.slice(0, 5);
-   selectedIndex = -1;
+    selectedIndex = -1;
         Array.from(autocompleteOutput.children).forEach(child => child.classList.remove('selected'));
 
     const { left, top } = textarea.getBoundingClientRect();
@@ -59,8 +97,7 @@ function autocomplete() {
   }
 
   function handleArrowKeys(event) {
-    if (autocompleteOutput.children.length === 0) return;
-
+         if (autocompleteOutput.children.length === 0) return;
     if (event.key === 'ArrowDown') {
       event.preventDefault();
       selectedIndex = Math.min(selectedIndex + 1, autocompleteOutput.children.length - 1);
@@ -89,15 +126,14 @@ function autocomplete() {
   textarea.addEventListener('input', updateAutocomplete);
   textarea.addEventListener('mouseup', updateAutocomplete);
   textarea.addEventListener('keydown', event => {
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter') {
+           if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter') {
             handleArrowKeys(event);
         }
   });
-
-
     textarea.addEventListener('blur', () => {
         setTimeout(hideAutocomplete, 200);
     });
+
 
   document.addEventListener('click', event => {
     if (!autocompleteOutput.contains(event.target) && event.target !== textarea) {
@@ -119,6 +155,11 @@ function addTooltips() {
   textarea.addEventListener('mouseup', updateTooltip);
 
   function updateTooltip() {
+    if (!autocompleteEnabled) {
+      tooltip.style.display = 'none';
+      return;
+    }
+
     const text = textarea.value;
     const cursor = textarea.selectionStart;
     const commandTrigger = '$commandTrigger';
@@ -142,6 +183,7 @@ function addTooltips() {
       const timestamp = Math.floor(Date.now() / 1000);
       tooltipText = `Returns '${timestamp}'`;
     }
+
     if (tooltipText) {
       const { left, top } = textarea.getBoundingClientRect();
       const textareaStyle = window.getComputedStyle(textarea);
@@ -149,7 +191,6 @@ function addTooltips() {
       lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
       const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
       const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
-
       const x = left + cursor * 8;
       const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
       tooltip.style.left = `${x}px`;
@@ -162,9 +203,28 @@ function addTooltips() {
   }
 }
 
+function updateAutocompleteState() {
+    const textarea = document.getElementById('editor');
+    const autocompleteOutput = document.getElementById('autocomplete');
+  if (!autocompleteEnabled) {
+       autocompleteOutput.innerHTML = '';
+       textarea.removeEventListener('input', updateAutocomplete);
+       textarea.removeEventListener('mouseup', updateAutocomplete);
+       document.getElementById('tooltip').style.display = 'none'; // Hide tooltip
+      textarea.removeEventListener('keyup',updateTooltip)
+      textarea.removeEventListener('mouseup',updateTooltip)
+  } else {
+        textarea.addEventListener('input', updateAutocomplete);
+        textarea.addEventListener('mouseup', updateAutocomplete);
+        textarea.addEventListener('keyup', updateTooltip);
+        textarea.addEventListener('mouseup', updateTooltip);
+
+  }
+}
 document.addEventListener("DOMContentLoaded", function() {
-  autocomplete();
-  addTooltips();
+    autocomplete();
+    addTooltips();
+    updateAutocompleteState(); // Initial setup
 });
 
 window.addEventListener('beforeunload', function (event) {
