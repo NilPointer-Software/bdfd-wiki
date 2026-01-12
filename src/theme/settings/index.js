@@ -617,13 +617,13 @@ function loadSettings() {
 		"theme-main": "270",
 		"theme-bg": "270",
 		"theme-text": "270",
-		folders: false,
+		"folders": false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
-		language: "en",
+		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		effects: "hidden",
+		"effects": "hidden",
 		"code-hg": {
 			defaultTextHighlight: {
 				color: 4288341353,
