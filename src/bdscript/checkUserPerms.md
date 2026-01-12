@@ -22,13 +22,25 @@ Admin perms?: $checkUserPerms[$authorID;admin]
   color: "#EE7908"
   content: |
     !example
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
     Admin perms?: false
+- user_id: 1262009115689881702
+  username: GettingBeatenByKito
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Admin perms?: true
 ```
 
 ```admonish question title="What is this?"
