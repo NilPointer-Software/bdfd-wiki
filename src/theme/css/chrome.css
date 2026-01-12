@@ -411,7 +411,7 @@ a:link:not(
 	text-decoration: none;
 	width: 60px;
 	border-radius: 10px;
-	background-color: var(--color3) !important;
+	background: hsl(0deg 0% 0% / 30%) !important;
 	color: var(--color1) !important;
 }
 
@@ -1009,6 +1009,7 @@ ul#searchresults span.teaser em {
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: ease-in;
 }
+
 
 
 
