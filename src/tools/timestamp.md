@@ -131,8 +131,8 @@ The timezone selected on your device is used.
     <h2>Date to Unix Timestamp</h2>
     <p>Select a date and time:</p>
     <input type="datetime-local" id="datetimepicker" oninput="updateUnixTime()">
-    <p>Unix timestamp:</p>
     <div class="result">
+		<p>Unix timestamp:</p>
         <span id="unixtime-display">0</span>
         <div class="timestamp" id="timestamp-info"></div>
     </div>
@@ -142,8 +142,8 @@ The timezone selected on your device is used.
     <h2>Unix Timestamp to Date</h2>
     <p>Enter Unix timestamp:</p>
     <input type="number" id="unix-input" placeholder="e.g., 1704067200" oninput="updateDateFromUnix()" onkeypress="if(event.key === 'Enter') updateDateFromUnix()">
-    <p>Date and time:</p>
     <div class="result">
+		<p>Date and time:</p>
         <span id="date-display">Not set</span>
         <div class="timestamp" id="date-info"></div>
     </div>
