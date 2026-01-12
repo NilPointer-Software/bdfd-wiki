@@ -12,7 +12,7 @@ $botLeave[Guild ID]
 ## Example
 ```
 $nomention
-$sendMessage[I left out `$serverName[$message]` server.]
+I left out `$serverName[$message]` server.
 $botLeave[$message]
 ```
 
@@ -34,7 +34,7 @@ $botLeave[$message]
 ![example](https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png)
 
 ```admonish question title="What is this?"
-How [`$sendMessage[]`](./sendMessage.md), [`$serverName[]`](./serverName.md) and [`$message`](./message.md) works?
+How [`$serverName[]`](./serverName.md) and [`$message`](./message.md) works?
 ```
 
 ~~~admonish warning
