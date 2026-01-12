@@ -422,15 +422,14 @@ function checkBrackets() {
 }
 
 let caseSensitive = false;
+let highlightEnabled = true;
+let lineNumberingEnabled = true;
 
 function editorFindCase() {
   caseSensitive = !caseSensitive;
-
   callButtonChange('caseSensitiveButton', caseSensitive);
   toggleHighlight();
 }
-
-let highlightEnabled = true;
 
 function toggleHighlight() {
   const highlightedTextDiv = document.getElementById("highlightedText");
@@ -449,7 +448,7 @@ function toggleHighlight() {
         return `<span class="highlight">${match}</span>`;
       });
     } catch (e) {
-      const escapedSearchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const escapedSearchText = searchText.replace(/[.*+?^${}()|[\\]\\\]/g, '\\$&');
       const flags = caseSensitive ? 'g' : 'gi';
       const regex = new RegExp(escapedSearchText, flags);
 
@@ -544,7 +543,7 @@ function toggleHighlight() {
       }
       return `<span class="timestamp">${formattedDate}</span>`;
     });
-    
+
     // Headers
     highlighted = highlighted.replace(/^# (.*)$/gm, '<h1>$1</h1>');
     highlighted = highlighted.replace(/^## (.*)$/gm, '<h2>$1</h2>');
@@ -577,6 +576,12 @@ function toggleHighlight() {
 function textHighlighting() {
   highlightEnabled = !highlightEnabled;
   callButtonChange('findHighlightingButton', highlightEnabled);
+  toggleHighlight();
+}
+
+function changeCodeLines() {
+  lineNumberingEnabled = !lineNumberingEnabled;
+  callButtonChange('changeCodeLines', lineNumberingEnabled);
   toggleHighlight();
 }
 
@@ -1531,3 +1536,4 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDateFromUnix();
     updateUnixTime();
 });
+
