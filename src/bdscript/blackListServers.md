@@ -86,5 +86,5 @@ Pong! $ping ms
 ```
 
 ```admonish question title="What is this?"
-How [`$ping`](./ping.md) works?
+How [`$ping`](./ping.md) and [`$guildID`](./guildID.md) works?
 ```
