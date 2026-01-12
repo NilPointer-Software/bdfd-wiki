@@ -3,40 +3,31 @@ let autocompleteEnabled = true;
 
 function changeAutocomplete() {
   autocompleteEnabled = !autocompleteEnabled;
-  
   const autocompleteElement = document.getElementById('autocomplete');
-  
-  if (autocompleteEnabled) {
-    autocompleteElement.style.display = 'block';
-  } else {
-    autocompleteElement.style.display = 'none';
-  }
-  
+  autocompleteElement.style.display = autocompleteEnabled ? 'block' : 'none';
   autoSettingChange('changeAutocompleteButton', autocompleteEnabled);
   updateAutocompleteState();
 }
 
 function autoSettingChange(buttonName, status) {
   const button = document.getElementById(buttonName);
-
   if (!button) {
     console.error(`Failed to find "${buttonName}" button.`);
     return;
   }
-
   const activeGradient = 'linear-gradient(to right, rgb(255 255 255 / 40%), rgb(1 192 36 / 75%))';
   const inactiveGradient = 'linear-gradient(to left, rgb(255 255 255 / 40%), rgb(192 1 1 / 75%))';
-
   button.style.background = status ? activeGradient : inactiveGradient;
 }
 
+// Main autocomplete
 function autocomplete() {
   const functionsHeader = Array.from(document.querySelectorAll('li.chapter-item')).find(li => li.querySelector('div')?.textContent.trim() === 'Functions');
   if (!functionsHeader) return;
   const sectionList = functionsHeader.nextElementSibling;
   if (!sectionList) return;
-    const html = sectionList.innerHTML;
-    const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a')).map(a => a.textContent).filter(text => text.startsWith('$'));
+  const html = sectionList.innerHTML;
+  const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a')).map(a => a.textContent).filter(text => text.startsWith('$'));
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
   let cursorInactiveTimeout;
@@ -46,7 +37,7 @@ function autocomplete() {
     autocompleteOutput.innerHTML = '';
     clearTimeout(cursorInactiveTimeout);
     selectedIndex = -1;
-        Array.from(autocompleteOutput.children).forEach(child => child.classList.remove('selected'));
+    Array.from(autocompleteOutput.children).forEach(child => child.classList.remove('selected'));
   }
 
   function updateAutocomplete() {
@@ -60,18 +51,20 @@ function autocomplete() {
     if (dollarIndex === -1) { hideAutocomplete(); return; }
     const searchTerm = inputText.substring(dollarIndex, cursorPosition).toLowerCase();
     autocompleteOutput.innerHTML = '';
-
     const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
     const displayedFunctions = matchingFunctions.slice(0, 5);
     selectedIndex = -1;
-        Array.from(autocompleteOutput.children).forEach(child => child.classList.remove('selected'));
+    Array.from(autocompleteOutput.children).forEach(child => child.classList.remove('selected'));
 
     const { left, top } = textarea.getBoundingClientRect();
+
     const textareaStyle = window.getComputedStyle(textarea);
     let lineHeight = parseInt(textareaStyle.lineHeight) || 16;
     const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
     const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
+
     const x = left + textarea.selectionStart * 8;
+
     let y = top + paddingTop + borderTopWidth + (Math.floor(inputText.substring(0, cursorPosition).split('\n').length)) * lineHeight + 30;
 
     autocompleteOutput.style.position = 'absolute';
@@ -89,6 +82,7 @@ function autocomplete() {
     clearTimeout(cursorInactiveTimeout);
     cursorInactiveTimeout = setTimeout(hideAutocomplete, 10000);
   }
+
     function selectFunction(func,dollarIndex,cursorPosition,inputText) {
         textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
         textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
@@ -117,6 +111,7 @@ function autocomplete() {
 
     highlightSelected();
   }
+
     function highlightSelected() {
         Array.from(autocompleteOutput.children).forEach((child, index) => {
             child.classList.toggle('selected', index === selectedIndex);
@@ -126,10 +121,12 @@ function autocomplete() {
   textarea.addEventListener('input', updateAutocomplete);
   textarea.addEventListener('mouseup', updateAutocomplete);
   textarea.addEventListener('keydown', event => {
-           if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter') {
-            handleArrowKeys(event);
-        }
+          if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter') {
+              handleArrowKeys(event);
+          }
   });
+
+
     textarea.addEventListener('blur', () => {
         setTimeout(hideAutocomplete, 200);
     });
@@ -165,34 +162,30 @@ function addTooltips() {
     const commandTrigger = '$commandTrigger';
     const isSlashTrigger = '$isSlash';
     const timestampTrigger = '$getTimestamp';
-
     let tooltipText = '';
 
-    //  $commandTrigger
     if (text.substring(cursor - commandTrigger.length, cursor) === commandTrigger) {
       const name = document.getElementById('name').value || 'trigger';
       tooltipText = `Returns '${name}'`;
-    }
-    //  $isSlash
-    else if (text.substring(cursor - isSlashTrigger.length, cursor) === isSlashTrigger) {
+    } else if (text.substring(cursor - isSlashTrigger.length, cursor) === isSlashTrigger) {
       const slash = document.getElementById('scriptType').textContent.includes('Slash Command') ? 'true' : 'false';
       tooltipText = `Returns '${slash}'`;
-    }
-    //  $getTimestamp
-    else if (text.substring(cursor - timestampTrigger.length, cursor).startsWith(timestampTrigger)) {
+    } else if (text.substring(cursor - timestampTrigger.length, cursor).startsWith(timestampTrigger)) {
       const timestamp = Math.floor(Date.now() / 1000);
       tooltipText = `Returns '${timestamp}'`;
     }
 
     if (tooltipText) {
-      const { left, top } = textarea.getBoundingClientRect();
-      const textareaStyle = window.getComputedStyle(textarea);
-      let lineHeight = parseInt(textareaStyle.lineHeight);
-      lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
-      const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
-      const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
-      const x = left + cursor * 8;
-      const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
+        const { left, top } = textarea.getBoundingClientRect();
+        const textareaStyle = window.getComputedStyle(textarea);
+        let lineHeight = parseInt(textareaStyle.lineHeight);
+        lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
+        const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
+        const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
+        const x = left + cursor * 8;
+        const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
+
+
       tooltip.style.left = `${x}px`;
       tooltip.style.top = `${y}px`;
       tooltip.textContent = tooltipText;
@@ -207,7 +200,7 @@ function updateAutocompleteState() {
     const textarea = document.getElementById('editor');
     const autocompleteOutput = document.getElementById('autocomplete');
   if (!autocompleteEnabled) {
-       autocompleteOutput.innerHTML = '';
+       autocompleteOutput.innerHTML = ''; // Clear autocomplete
        textarea.removeEventListener('input', updateAutocomplete);
        textarea.removeEventListener('mouseup', updateAutocomplete);
        document.getElementById('tooltip').style.display = 'none'; // Hide tooltip
@@ -221,11 +214,13 @@ function updateAutocompleteState() {
 
   }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     autocomplete();
     addTooltips();
-    updateAutocompleteState(); // Initial setup
+    updateAutocompleteState();
 });
+
 
 window.addEventListener('beforeunload', function (event) {
   const textarea = document.getElementById('editor');
