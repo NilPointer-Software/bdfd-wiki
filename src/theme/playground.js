@@ -847,20 +847,6 @@ function callButtonChange(buttonName, status) {
   }
 }
 
-let autocompleteEnabled = true;
-function changeAutocomplete() {
-  autocompleteEnabled = !autocompleteEnabled;
-
-  const autocompleteElement = document.getElementById('autocomplete');
-
-  if (autocompleteEnabled) {
-    autocompleteElement.style.display = 'block';
-  } else {
-    autocompleteElement.style.display = 'none';
-  }
-  callButtonChange('changeAutocompleteButton', autocompleteEnabled);
-}
-
 
 
 
@@ -1542,5 +1528,6 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDateFromUnix();
     updateUnixTime();
 });
+
 
 
