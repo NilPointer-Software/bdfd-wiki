@@ -162,5 +162,14 @@ The timezone selected on your device is used.
 </div>
 
 ## Functions
-- `$getTimestamp`
-- `$getTimestamp[]`
+Here are all the functions related to timestamp.
+
+**GET**:
+- [`$getEmbedData[]`](./getEmbedData.md)
+- [`$getTimestamp`](./getTimestamp.md)
+- [`$getTimestamp[]`](./getTimestampComplex.md)
+- [`$hostingExpireTime`](./hostingExpireTime.md)
+- [`$hostingExpireTime[]`](./hostingExpireTimeComplex.md)
+- [`$lastPinTimestamp`](./lastPinTimestamp.md)
+- [`$messageEditedTimestamp[]`](./messageEditedTimestamp.md)
+- [`$premiumExpireTime`](./premiumExpireTime.md)
