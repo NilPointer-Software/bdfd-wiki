@@ -23,9 +23,14 @@ The default style is `f`, if no style provided.
 
 ## Usability
 Functions which return UNIX timestamp:
-- [`$getTimestamp`](../bdscript/getTimestamp.md)
-- [`$hostingExpireTime`](../bdscript/hostingExpireTime.md)
-- [`$premiumExpireTime`](../bdscript/premiumExpireTime.md)
+- [`$getEmbedData[]`](../getEmbedData.md)
+- [`$getTimestamp`](../getTimestamp.md)
+- [`$getTimestamp[]`](../getTimestampComplex.md)
+- [`$hostingExpireTime`](../hostingExpireTime.md)
+- [`$hostingExpireTime[]`](../hostingExpireTimeComplex.md)
+- [`$lastPinTimestamp`](../lastPinTimestamp.md)
+- [`$messageEditedTimestamp[]`](../messageEditedTimestamp.md)
+- [`$premiumExpireTime`](../premiumExpireTime.md)
 
 ### Example
 ```
