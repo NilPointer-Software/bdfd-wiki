@@ -230,16 +230,21 @@ function applySettings() {
 
 	const mainHue = data["theme-main"]; // Мяу
 
+	let setSaturation;
+	let setLightness;
+	let set3Saturation;
+	let set3Lightness;
+	
 	if (data["theme-text"] === "rgb(0, 0, 0)") {
-		const setSaturation = 60;
-		const setLightness = 90;
-		const set3Saturation = 60;
-		const set3Lightness = 70;
+		setSaturation = 60;
+		setLightness = 90;
+		set3Saturation = 60;
+		set3Lightness = 70;
 	} else {
-		const setSaturation = 80;
-		const setLightness = 50;
-		const set3Saturation = 80;
-		const set3Lightness = 15;
+		setSaturation = 80;
+		setLightness = 50;
+		set3Saturation = 80;
+		set3Lightness = 15;
 	}
 
 	const colorTheme1 = `hsl(${mainHue}, ${setSaturation}%, ${setLightness}%)`;
