@@ -13,8 +13,7 @@ $checkUserPerms[User ID;Permissions]
 ## Example
 ```
 $nomention
-$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are an administrator.] 
-You aren't an admin!
+Admin perms?: $checkUserPerms[$authorID;admin]
 ```
 
 ``` discord yaml
@@ -29,7 +28,7 @@ You aren't an admin!
   bot: true
   verified: true
   content: |
-    You can't use this command, because you are an administrator.
+    Admin perms?: false
 ```
 
 ```admonish question title="What is this?"
