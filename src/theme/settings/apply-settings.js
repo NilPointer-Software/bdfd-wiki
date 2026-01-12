@@ -233,9 +233,13 @@ function applySettings() {
 	if (data["theme-text"] === "#000") {
 		const setSaturation = 60;
 		const setLightness = 90;
+		const set3Saturation = 60;
+		const set3Lightness = 70;
 	} else {
 		const setSaturation = 80;
 		const setLightness = 50;
+		const set3Saturation = 80;
+		const set3Lightness = 15;
 	}
 
 	const colorTheme1 = `hsl(${mainHue}, ${setSaturation}%, ${setLightness}%)`;
