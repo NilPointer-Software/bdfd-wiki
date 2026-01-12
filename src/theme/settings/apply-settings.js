@@ -230,7 +230,7 @@ function applySettings() {
 
 	const mainHue = data["theme-main"]; // Мяу
 
-	if (data["theme-text"] === "#000") {
+	if (data["theme-text"] === "rgb(0, 0, 0)") {
 		const setSaturation = 60;
 		const setLightness = 90;
 		const set3Saturation = 60;
@@ -246,7 +246,7 @@ function applySettings() {
 	const colorTheme2 = `hsl(${mainHue}, ${setSaturation}%, ${
 		setLightness - 20
 	}%)`;
-	const colorTheme3 = `hsl(${mainHue}, 80%, 15%)`;
+	const colorTheme3 = `hsl(${mainHue}, ${set3Saturation}%, ${set3Lightness}%)`;
 
 	const html = document.querySelector("html");
 
