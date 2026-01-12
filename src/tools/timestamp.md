@@ -25,7 +25,6 @@
     margin-top: -15px;
 }
 label {
-    font-weight: bold;
     display: block;
     margin-bottom: 8px;
     color: #34495e;
@@ -162,7 +161,7 @@ The timezone selected on your device is used.
 </div>
 
 ## Functions
-Here are all the functions related to timestamp.
+Here are all the functions related to unix timestamp.
 
 **GET**:
 - [`$getEmbedData[]`](../bdscript/getEmbedData.md)
