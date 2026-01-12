@@ -160,13 +160,13 @@ function applySettings() {
 		"theme-main": "270",
 		"theme-bg": "270",
 		"theme-text": "270",
-		folders: false,
+		"folders": false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
-		language: "en",
+		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		effects: "hidden",
+		"effects": "hidden",
 		"code-hg": {
 			defaultTextHighlight: {
 				color: 4288341353,
@@ -230,8 +230,13 @@ function applySettings() {
 
 	const mainHue = data["theme-main"]; // Мяу
 
-	const setSaturation = 80;
-	const setLightness = 50;
+	if (data["theme-text"] === "#000") {
+		const lightSaturation = 60;
+		const lightLightness = 90;
+	} else {
+		const setSaturation = 80;
+		const setLightness = 50;
+	}
 
 	const colorTheme1 = `hsl(${mainHue}, ${setSaturation}%, ${setLightness}%)`;
 	const colorTheme2 = `hsl(${mainHue}, ${setSaturation}%, ${
