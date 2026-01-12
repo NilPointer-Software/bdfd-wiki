@@ -564,13 +564,19 @@ function toggleHighlight() {
 
   // Lines
   const lines = highlighted.split('\n');
-  let numberedText = "";
-  for (let i = 0; i < lines.length; i++) {
-    numberedText += `<span class="line-number">${i + 1} </span>${lines[i]}<br>`;
+  let numberedText = ""; 
+  if (lineNumberingEnabled) {
+    for (let i = 0; i < lines.length; i++) {
+      numberedText += `<span class="line-number">${i + 1} </span>${lines[i]}<br>`;
+    }
+  } else {
+    for (let i = 0; i < lines.length; i++) {
+      numberedText += `${lines[i]}<br>`;
+    }
   }
 
   const resultsString = `<p>Results: ${matches}</p>`;
-  highlightedTextDiv.innerHTML = resultsString + numberedText;
+  highlightedTextDiv.innerHTML = resultsString + numberedText; 
 }
 
 function textHighlighting() {
@@ -1536,4 +1542,5 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDateFromUnix();
     updateUnixTime();
 });
+
 
