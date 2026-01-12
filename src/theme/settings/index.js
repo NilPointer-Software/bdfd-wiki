@@ -390,10 +390,34 @@ function useDarkBackground() {
 }
 
 function useLightBackground() {
+	const colorSlider = document.getElementById("themeSlider");
+	const headers = document.querySelectorAll(".content .header:link");
+	const sidePages = document.querySelectorAll(".chapter li a");
+	const sideChapterBar = document.querySelector(".chapter li a.active");
+	const sideMainPages = document.querySelectorAll(".chapter li");
+	const searchBar = document.getElementById("searchbar");
+	const hue = colorSlider.value;
+
+	if (searchBar) {
+		searchBar.style.color = `#000`;
+	}
+	sidePages.forEach((page) => {
+		page.style.color = `#000`;
+	});
+	sideMainPages.forEach((mainPage) => {
+		mainPage.style.color = `#000`;
+	});
+	headers.forEach((head) => {
+		head.style.color = `#000`;
+	});
+	document.body.style.color = `#000`;
+	sideChapterBar.style.color = `hsl(${hue}, 80%, 50%)`;
+	
 	document.body.style.background = `#fff`;
 	document.documentElement.style.scrollbarColor = `#000` + `#fff`;
 	setStatusBar("light");
 	updateJsonFile("theme-bg", document.body.style.background);
+	updateJsonFile("theme-text", document.body.style.color);
 }
 
 function resetTheme() {
