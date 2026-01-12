@@ -232,7 +232,7 @@ function applySettings() {
 
 	if (data["theme-text"] === "#000") {
 		const setSaturation = 60;
-		const setSaturation = 90;
+		const setLightness = 90;
 	} else {
 		const setSaturation = 80;
 		const setLightness = 50;
