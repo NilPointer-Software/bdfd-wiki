@@ -621,16 +621,17 @@ function copyCodeText() {
     return;
   }
 
-  textarea.select();
+  const code = textarea.value;
 
-  try {
-    document.execCommand("copy");
-  } catch (err) {
-    console.error("Unable to copy text: ", err);
-  } finally {
-    window.getSelection().removeAllRanges();
-  }
+  navigator.clipboard.writeText(code)
+    .then(() => {
+      console.log("Copied");
+    })
+    .catch(err => {
+      console.error("Invalid object to be copied: ", err);
+    });
 }
+
 
 function saveFile() {
   const fileName = document.getElementById('name').value;
@@ -848,6 +849,7 @@ function changeAutocomplete() {
   }
   callButtonChange('changeAutocompleteButton', autocompleteEnabled);
 }
+
 
 
 
