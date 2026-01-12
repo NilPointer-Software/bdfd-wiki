@@ -41,6 +41,11 @@ Admin perms?: $checkUserPerms[$authorID;admin]
   verified: true
   content: |
     Admin perms?: true
+- user_id: 1262009115689881702
+  username: GettingBeatenByKito
+  color: "#E67E22"
+  content: |
+    Yay! I have admin perms😎
 ```
 
 ```admonish question title="What is this?"
