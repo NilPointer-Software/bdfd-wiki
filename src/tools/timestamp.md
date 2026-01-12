@@ -165,11 +165,11 @@ The timezone selected on your device is used.
 Here are all the functions related to timestamp.
 
 **GET**:
-- [`$getEmbedData[]`](./getEmbedData.md)
-- [`$getTimestamp`](./getTimestamp.md)
-- [`$getTimestamp[]`](./getTimestampComplex.md)
-- [`$hostingExpireTime`](./hostingExpireTime.md)
-- [`$hostingExpireTime[]`](./hostingExpireTimeComplex.md)
-- [`$lastPinTimestamp`](./lastPinTimestamp.md)
-- [`$messageEditedTimestamp[]`](./messageEditedTimestamp.md)
-- [`$premiumExpireTime`](./premiumExpireTime.md)
+- [`$getEmbedData[]`](../bdscript/getEmbedData.md)
+- [`$getTimestamp`](../bdscript/getTimestamp.md)
+- [`$getTimestamp[]`](../bdscript/getTimestampComplex.md)
+- [`$hostingExpireTime`](../bdscript/hostingExpireTime.md)
+- [`$hostingExpireTime[]`](../bdscript/hostingExpireTimeComplex.md)
+- [`$lastPinTimestamp`](../bdscript/lastPinTimestamp.md)
+- [`$messageEditedTimestamp[]`](../bdscript/messageEditedTimestamp.md)
+- [`$premiumExpireTime`](../bdscript/premiumExpireTime.md)
