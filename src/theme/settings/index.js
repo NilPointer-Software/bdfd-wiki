@@ -366,13 +366,19 @@ function lockTheme() {
 function useBackground() {
 	const colorSlider = document.getElementById("themeSlider");
 
+	let inv = JSON.parse(localStorage.getItem("json")) || {};
+	let theme = inv["theme-name"] || "dark";
+	
+	const saturation = 80;
+	const BackLightness = (theme === "dark") ? 8 : 75;
+	
 	const hue = colorSlider.value;
 
-	const backgroundColor = `hsl(${hue}, 80%, 8%)`;
+	const backgroundColor = `hsl(${hue}, ${saturation}%, ${BackLightness}%)`;
 	setStatusBar(hue);
 	document.body.style.background = backgroundColor;
 	document.documentElement.style.scrollbarColor =
-		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
+		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, ${saturation}%, ${BackLightness}%)`;
 	updateJsonFile("theme-bg", backgroundColor);
 }
 
@@ -445,15 +451,22 @@ function resetTheme() {
 function gradientBackground() {
 	const colorSlider = document.getElementById("themeSlider");
 
+	let inv = JSON.parse(localStorage.getItem("json")) || {};
+	let theme = inv["theme-name"] || "dark";
+	
+	const saturation = 80;
+	const GradientLightness = (theme === "dark") ? 20 : 80;
+	const BackLightness = (theme === "dark") ? 8 : 75;
+	
 	const hue = colorSlider.value;
 
-	const color1 = `hsl(${hue}, 80%, 20%)`;
-	const color2 = `hsl(${hue}, 80%, 5%)`;
+	const color1 = `hsl(${hue}, ${saturation}%, ${GradientLightness}%)`;
+	const color2 = `hsl(${hue}, ${saturation}%, ${GradientLightness - 15}%)`;
 
 	setStatusBar(hue);
 	document.body.style.background = `linear-gradient(to bottom right, ${color1}, ${color2})`;
 	document.documentElement.style.scrollbarColor =
-		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
+		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, ${saturation}%, ${BackLightness}%)`;
 
 	updateJsonFile("theme-bg", document.body.style.background);
 }
