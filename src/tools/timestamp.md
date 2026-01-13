@@ -121,6 +121,8 @@ input {
     color: #dc3545;
     font-size: 12px;
     min-height: 16px;
+	margin-top: -0.75rem;
+	margin-bottom: -0.75rem !important;
 }
 </style>
 
