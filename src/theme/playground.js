@@ -1149,7 +1149,9 @@ const day = String(now.getDate()).padStart(2, '0');
 const hours = String(now.getHours()).padStart(2, '0');
 const minutes = String(now.getMinutes()).padStart(2, '0');
 
-datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
+if (datetimePicker) {
+  datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
+}
 
 const currentUnixTime = Math.floor(now.getTime() / 1000);
 unixInput.value = currentUnixTime;
@@ -1528,6 +1530,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDateFromUnix();
     updateUnixTime();
 });
+
 
 
 
