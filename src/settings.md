@@ -30,7 +30,7 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
     <button class="tbutton" id="gradientTheme" onClick="gradientBackground()">Gradient</button>
     <button class="tbutton" id="setDarkBackground" onClick="setBackground('dark')">Dark background</button>
     <button class="tbutton" id="setLightBackground" onClick="setBackground('light')">Light background</button>
-	<button class="tbutton" id="setBlackColor" onClick="setFontColor('set'">Set text color</button>
+	<button class="tbutton" id="setBlackColor" onClick="setFontColor('set')">Set text color</button>
 	<button class="tbutton" id="setBlackColor" onClick="setFontColor('dark')">Dark text</button>
 	<button class="tbutton" id="setWhiteColor" onClick="setFontColor('light')">Light text</button>
 	<button class="tbutton" id="setDarkTheme" onClick="setTheme('dark')">Dark theme</button>
