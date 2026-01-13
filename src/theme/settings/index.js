@@ -424,7 +424,8 @@ function resetTheme() {
 	const colorSlider = document.getElementById("themeSlider");
 
 	colorSlider.value = 270;
-
+	
+	updateJsonFile("theme-name", "dark");
 	setStatusBar(colorSlider.value);
 	updateColor();
 	useBackground();
