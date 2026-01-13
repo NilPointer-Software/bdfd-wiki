@@ -27,12 +27,12 @@
 .converter-section p {
     margin-top: -15px;
 }
-label {
+.converter-section label {
     display: block;
     margin-bottom: 8px;
     color: #34495e;
 }
-input {
+.converter-section input {
     color: #bbb;
     padding: 10px;
     width: 100%;
