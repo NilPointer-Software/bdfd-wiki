@@ -277,6 +277,8 @@ function applySettings() {
 	if (searchBar) {
 		searchBar.style.background = `hsl(${mainHue}, 60%, ${SearchLightness}%)`;
 		searchBar.style.color = document.body.style.color;
+	} else {
+    	console.log('Error');
 	}
 	if (bdsCode) {
 		bdsCode.style.scrollbarColor =
