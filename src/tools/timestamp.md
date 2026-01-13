@@ -60,6 +60,17 @@ input {
     height: 3.5rem !important;
     align-items: center;
 }
+.result p {
+	margin-top: 1.5rem !important;
+	padding: 5px;
+	border-radius: 10px;
+	word-break: break-all;
+	display: flex;
+	height: 3.5rem !important;
+	align-items: center;
+	user-select: none;
+	-webkit-user-select: none;
+}
 .timestamp {
     color: #7f8c8d;
 }
