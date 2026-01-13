@@ -109,6 +109,7 @@ Here are all the functions related to hex colors.
 - [`$embedSuppressErrors[]`](../bdscript/embedSuppressErrors.md)
 - [`$modifyRole[]`](../bdscript/modifyRole.md)
 - [`$sendEmbedMessage[]`](../bdscript/sendEmbedMessage.md)
+- [`$webhookSend[]`](../bdscript/webhookSend.md)
 
 **GET**:
 - [`$getRoleColor[]`](../bdscript/getRoleColor.md)
