@@ -267,29 +267,34 @@ function updateColor() {
 	// Search changes
 	const searchBar = document.getElementById("searchbar");
 
+	// Theme setting
+	let inv = JSON.parse(localStorage.getItem("json")) || {};
+	let theme = inv["theme-name"] || "dark";
+
 	// Color Settings
 	const hue = colorSlider.value;
 	const saturation = 80;
-	const lightness = 50;
+	const lightness = (theme === "dark") ? 82 : 50;
+	const BackLightness = (theme === "dark") ? 75 : 8;
 
 	// Creating cute HSL colors
 	const color1 = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 	const color2 = `hsl(${hue}, ${saturation}%, ${lightness - 20}%)`;
-	const color3 = `hsl(${hue}, 80%, 15%)`;
+	const color3 = `hsl(${hue}, ${saturation}%, 15%)`;
 
 	// Locked text gameplay
 	if (isLocked) {
 		if (document.body.style.background.includes("linear-gradient")) {
-			const colorGradient1 = `hsl(${hue}, 80%, 20%)`;
-			const colorGradient2 = `hsl(${hue}, 80%, 5%)`;
+			const colorGradient1 = `hsl(${hue}, ${saturation}%, 20%)`;
+			const colorGradient2 = `hsl(${hue}, ${saturation}%, 5%)`;
 			document.body.style.background = `linear-gradient(to bottom right, ${colorGradient1}, ${colorGradient2})`;
 			updateJsonFile(
 				"theme-bg",
 				`linear-gradient(to bottom right, ${colorGradient1}, ${colorGradient2})`
 			);
 		} else {
-			document.body.style.background = `hsl(${hue}, 80%, 8%)`;
-			updateJsonFile("theme-bg", `hsl(${hue}, 80%, 8%)`);
+			document.body.style.background = `hsl(${hue}, ${saturation}%, ${BackLightness}%)`;
+			updateJsonFile("theme-bg", `hsl(${hue}, ${saturation}%, ${BackLightness}%)`);
 		}
 		setStatusBar(hue);
 		document.body.style.color = `hsl(${hue}, 100%, 90%)`;
@@ -297,7 +302,7 @@ function updateColor() {
 			head.style.color = document.body.style.color;
 		});
 		document.documentElement.style.scrollbarColor =
-			`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
+			`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, ${saturation}%, ${BackLightness}%)`;
 		updateJsonFile("theme-text", document.body.style.color);
 	}
 
@@ -404,6 +409,11 @@ function setBackground(theme) {
         setStatusBar("light");
     }
     updateJsonFile("theme-bg", document.body.style.background);
+}
+
+function setTheme(theme) {
+	updateJsonFile("theme-name", theme);
+	updateColor()
 }
 
 function resetTheme() {
