@@ -270,6 +270,7 @@ function updateColor() {
 	// Theme setting
 	let inv = JSON.parse(localStorage.getItem("json")) || {};
 	let theme = inv["theme-name"] || "dark";
+	let back = inv["theme-bg"]
 
 	// Color Settings
 	const hue = colorSlider.value;
@@ -330,6 +331,16 @@ function updateColor() {
 		searchBar.style.color = document.body.style.color;
 	}
 
+	if (back === "rgb(0, 0, 0)") {
+		document.body.style.background = `#000`;
+        document.documentElement.style.scrollbarColor = `#fff` + `#000`;
+		setStatusBar('light');
+	} else if (back === "rgb(255, 255, 255)") {
+		document.body.style.background = `#fff`;
+        document.documentElement.style.scrollbarColor = `#000` + `#fff`;
+		setStatusBar('dark');
+	}
+	
 	colorDisplay.textContent = hue + "°";
 	jsonInput.style.scrollbarColor =
 		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 60%, 20%)`;
