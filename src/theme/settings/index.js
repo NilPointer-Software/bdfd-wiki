@@ -274,10 +274,12 @@ function updateColor() {
 	// Color Settings
 	const hue = colorSlider.value;
 	const saturation = 80;
-	const lightness = (theme === "dark") ? 50 : 82;
+	const TextSaturation = (theme === "dark") ? 100 : 50;
+	const lightness = (theme === "dark") ? 50 : 60;
 	const UILightness = (theme === "dark") ? 15 : 82;
 	const GradientLightness = (theme === "dark") ? 20 : 80;
 	const BackLightness = (theme === "dark") ? 8 : 75;
+	const TextLightness = (theme === "dark") ? 90 : 50;
 
 	// Creating cute HSL colors
 	const color1 = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
@@ -299,7 +301,7 @@ function updateColor() {
 			updateJsonFile("theme-bg", `hsl(${hue}, ${saturation}%, ${BackLightness}%)`);
 		}
 		setStatusBar(hue);
-		document.body.style.color = `hsl(${hue}, 100%, 90%)`;
+		document.body.style.color = `hsl(${hue}, ${TextSaturation}%, ${TextLightness}%)`;
 		headers.forEach((head) => {
 			head.style.color = document.body.style.color;
 		});
