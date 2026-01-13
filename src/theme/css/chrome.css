@@ -620,6 +620,7 @@ mark.fade-out {
 	height: 3rem;
 	padding: 2%;
 	font-size: 80%;
+	color: #fff;
 	transition: box-shadow 300ms ease-in-out;
 	border: 1px solid var(--color1);
 	border-radius: 10px;
@@ -1009,6 +1010,7 @@ ul#searchresults span.teaser em {
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: ease-in;
 }
+
 
 
 
