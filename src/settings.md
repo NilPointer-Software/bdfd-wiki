@@ -26,11 +26,15 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
     <div class="lock-text" id="lockText" onClick="lockTheme()">Locked</div>
   </div>
   <div class="themebuttons">
-    <button class="tbutton" id="setBackground" onClick="useBackground()">Set background</button>
+    <button class="tbutton" id="setBackground" onClick="useBackground()">Background</button>
     <button class="tbutton" id="gradientTheme" onClick="gradientBackground()">Gradient</button>
-    <button class="tbutton" id="setDarkBackground" onClick="useDarkBackground()">Dark background</button>
-    <button class="tbutton" id="setLightBackground" onClick="useLightBackground()">Light background</button>
-    <button class="tbutton" id="setWhiteColor" onClick="useFontColor()">Light text</button>
+    <button class="tbutton" id="setDarkBackground" onClick="setBackground('dark')">Dark background</button>
+    <button class="tbutton" id="setLightBackground" onClick="setBackground('light')">Light background</button>
+	<button class="tbutton" id="setBlackColor" onClick="useFontColor()">Set text color</button>
+	<button class="tbutton" id="setBlackColor" onClick="setFontColor('dark')">Dark text</button>
+	<button class="tbutton" id="setWhiteColor" onClick="setFontColor('light')">Light text</button>
+	<button class="tbutton" id="setDarkTheme" onClick="setTheme('dark')">Dark theme</button>
+	<button class="tbutton" id="setLightTheme" onClick="setTheme('light')">Light theme</button>
   </div>
   <p id="default-is">270°</p>
 </div>
