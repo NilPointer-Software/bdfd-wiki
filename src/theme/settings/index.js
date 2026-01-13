@@ -356,30 +356,32 @@ function useBackground() {
 	updateJsonFile("theme-bg", backgroundColor);
 }
 
-function useFontColor() {
-	const colorSlider = document.getElementById("themeSlider");
-	const headers = document.querySelectorAll(".content .header:link");
-	const sidePages = document.querySelectorAll(".chapter li a");
-	const sideChapterBar = document.querySelector(".chapter li a.active");
-	const sideMainPages = document.querySelectorAll(".chapter li");
-	const searchBar = document.getElementById("searchbar");
-	const hue = colorSlider.value;
+function setFontColor(theme) {
+    const colorSlider = document.getElementById("themeSlider");
+    const headers = document.querySelectorAll(".content .header:link");
+    const sidePages = document.querySelectorAll(".chapter li a");
+    const sideChapterBar = document.querySelector(".chapter li a.active");
+    const sideMainPages = document.querySelectorAll(".chapter li");
+    const searchBar = document.getElementById("searchbar");
+    const hue = colorSlider.value;
 
-	if (searchBar) {
-		searchBar.style.color = `#fff`;
-	}
-	sidePages.forEach((page) => {
-		page.style.color = `#fff`;
-	});
-	sideMainPages.forEach((mainPage) => {
-		mainPage.style.color = `#fff`;
-	});
-	headers.forEach((head) => {
-		head.style.color = `#fff`;
-	});
-	document.body.style.color = `#fff`;
-	sideChapterBar.style.color = `hsl(${hue}, 80%, 50%)`;
-	updateJsonFile("theme-text", document.body.style.color);
+    const textColor = theme === 'light' ? '#fff' : '#000';
+
+    if (searchBar) {
+        searchBar.style.color = textColor;
+    }
+    sidePages.forEach((page) => {
+        page.style.color = textColor;
+    });
+    sideMainPages.forEach((mainPage) => {
+        mainPage.style.color = textColor;
+    });
+    headers.forEach((head) => {
+        head.style.color = textColor;
+    });
+    document.body.style.color = textColor;
+    sideChapterBar.style.color = `hsl(${hue}, 80%, 50%)`;
+    updateJsonFile("theme-text", textColor);
 }
 
 function setBackground(theme) {
