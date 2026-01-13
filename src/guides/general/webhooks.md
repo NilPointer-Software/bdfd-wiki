@@ -43,6 +43,8 @@ You can use [`$var[]`](../../bdscript/var.md) or [other variable functions](../v
 ```$nomention
 $var[Webhook;$webhookCreate[$channelID;Secret]]
 Created and saved!
+```
+
 ~~~
 
 # $webhookSend
@@ -62,52 +64,123 @@ $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookSend[$var[webhook];I'm the best webhook;Title;;It's description!;#000;;;;;;false]
 ```
 
+# $webhookDelete
+Deletes the wehook.
 
+## Syntax
 ```
-$webhookAvatarURL[webhookURL;avatarURL]
+$webhookDelete[Webhook URL]
 ```
-Changes the provided webhook's avatar.
 
-```
-$webhookUsername[webhookURL;username]
-```
-Changes the provided webhook's username.
-
-## Webhook Messages
-You can send messages via a webhook using the following functions:
-
-- `$webhookTitle[webhookURL;text]` - Adds a title to the webhook embed.
-- `$webhookDescription[webhookURL;text]` - Adds a description to the webhook embed.
-- `$webhookFooter[webhookURL;text]` - Adds a footer to the webhook embed.
-- `$webhookContent[webhookURL;text]` - The webhook non-embedded message content.
-- `$webhookColor[webhookURL;colorHex]` - The color of the webhook embed.
-
-Alternatively, you can use `$webhookSend[]` for more options and condensement:
-```
-$webhookSend[webhookURL;content;title;titleURL;description;color;author;authorIcon;footer;footerIcon;thumbnail;image;addTimestamp (yes/no)]
-```
-> **Note:** Unneeded fields can be left empty. 
-
-## Deleting A Webhook
-```
-$webhookDelete[webhookURL]
-```
-Deletes the provided webhook.
+### Parameters
 
 ## Example
 ```
 $nomention
-$var[webhookURL;$webhookCreate[$channelID;Cool Webhook;]]
-$webhookContent[$var[webhookURL];Hello World!]
-$c[❗️This example requires BDScript 2 enabled❗️]
 ```
 
-__Explaination:__
+# $webhookAvatarURL
+Changes the webhook's avatar.
 
-This code is storing the newly created webhook URL returned from `$webhookCreate[]` *(using $var[])*. Then, in the rest of the code `$var[webhookURL]` was called to get the webhook URL, which allowed the webhook message to send using `$webhookContent[]`.
-> Remember, you need to be in BDScript 2 mode to use `$var[]`!
+## Syntax
+```
+$webhookAvatarURL[Webhook URL;Avatar URL]
+```
 
-__Output:__
+### Parameters
 
-![example](https://user-images.githubusercontent.com/69215413/128615389-30e9dadc-2cce-4868-af33-540f612fcf27.png)
+## Example
+```
+$nomention
+```
+
+# $webhookUsername
+Changes the webhook's username.
+
+## Syntax
+```
+$webhookUsername[Webhook URL;Username]
+```
+
+### Parameters
+
+## Example
+```
+$nomention
+```
+
+# $webhookTitle
+Adds title to the webhook.
+
+## Syntax
+```
+$webhookTitle[Webhook URL;Text]
+```
+
+### Parameters
+
+## Example
+```
+$nomention
+```
+
+# $webhookDescription
+Adds description to the webhook.
+
+## Syntax
+```
+$webhookDescription[Webhook URL;Text]
+```
+
+### Parameters
+
+## Example
+```
+$nomention
+```
+
+# $webhookFooter
+Adds footer to the webhook.
+
+## Syntax
+```
+$webhookFooter[Webhook URL;Text]
+```
+
+### Parameters
+
+## Example
+```
+$nomention
+```
+
+# $webhookContent
+Adds content to the webhook.
+
+## Syntax
+```
+$webhookContent[Webhook URL;Text]
+```
+
+### Parameters
+
+## Example
+```
+$nomention
+```
+
+# $webhookColor
+Adds color to the webhook.
+
+## Syntax
+```
+$webhookContent[Webhook URL;Color]
+```
+
+### Parameters
+
+## Example
+```
+$nomention
+```
 
