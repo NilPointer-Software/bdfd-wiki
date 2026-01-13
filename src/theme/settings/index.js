@@ -274,19 +274,21 @@ function updateColor() {
 	// Color Settings
 	const hue = colorSlider.value;
 	const saturation = 80;
-	const lightness = (theme === "dark") ? 82 : 50;
-	const BackLightness = (theme === "dark") ? 75 : 8;
+	const lightness = (theme === "dark") ? 50 : 82;
+	const UILightness = (theme === "dark") ? 15 : 82;
+	const GradientLightness = (theme === "dark") ? 20 : 80;
+	const BackLightness = (theme === "dark") ? 8 : 75;
 
 	// Creating cute HSL colors
 	const color1 = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 	const color2 = `hsl(${hue}, ${saturation}%, ${lightness - 20}%)`;
-	const color3 = `hsl(${hue}, ${saturation}%, 15%)`;
+	const color3 = `hsl(${hue}, ${saturation}%, ${UILightness}%)`;
 
 	// Locked text gameplay
 	if (isLocked) {
 		if (document.body.style.background.includes("linear-gradient")) {
-			const colorGradient1 = `hsl(${hue}, ${saturation}%, 20%)`;
-			const colorGradient2 = `hsl(${hue}, ${saturation}%, 5%)`;
+			const colorGradient1 = `hsl(${hue}, ${saturation}%, ${GradientLightness}%)`;
+			const colorGradient2 = `hsl(${hue}, ${saturation}%, ${GradientLightness - 15}%)`;
 			document.body.style.background = `linear-gradient(to bottom right, ${colorGradient1}, ${colorGradient2})`;
 			updateJsonFile(
 				"theme-bg",
