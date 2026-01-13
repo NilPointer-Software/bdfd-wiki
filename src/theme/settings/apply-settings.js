@@ -160,7 +160,7 @@ function applySettings() {
 		"theme-main": "270",
 		"theme-bg": "270",
 		"theme-text": "270",
-		"theme-name": "270",
+		"theme-name": "dark",
 		"folders": false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
