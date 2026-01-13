@@ -6,18 +6,33 @@
   }
 </style>
 
-# 2026
+<link rel="stylesheet" href="./theme/css/changelog.css">
 
-## January
-- Added `$addTextDisplay[]`
-- Added `$addSeparator[]`
-- Added `$addContainer[]`
-- Added `$addSection[]`
-- Added `$addThumbnail[]`
-- Added `$addMediaGallery[]`
-- Added `$addMediaGalleryItem[]`
-- Added `$addActionRow[]`
-- Added `$addButtonCV2[]`
+<div class="changelog">
+  <div class="changePrev" id="year">
+    <h2>2026</h2>
+    <p>What new has been added?</p>
+  </div>
+</div>
+
+<div class="changelog">
+  <div class="changePrev">
+    <h2>January</h2>
+    <p>Discord Components V2.0 Update</p>
+    <span id="newUpdate">NEW</span>
+  </div>
+  <ul>
+    <li>Added <code class="hljs">$addTextDisplay[]</code></li>
+    <li>Added <code class="hljs">$addSeparator[]</code></li>
+    <li>Added <code class="hljs">$addContainer[]</code></li>
+    <li>Added <code class="hljs">$addSection[]</code></li>
+    <li>Added <code class="hljs">$addThumbnail[]</code></li>
+    <li>Added <code class="hljs">$addMediaGallery[]</code></li>
+    <li>Added <code class="hljs">$addMediaGalleryItem[]</code></li>
+    <li>Added <code class="hljs">$addActionRow[]</code></li>
+    <li>Added <code class="hljs">$addButtonCV2[]</code></li>
+  </ul>
+</div>
 
 # 2025
 
@@ -794,3 +809,4 @@ If you want to see the BDScript changelog, [click here](./FLOWCHART_CHANGELOG.md
 ```admonish tip
 If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
 ```
+
