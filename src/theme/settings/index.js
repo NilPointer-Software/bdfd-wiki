@@ -281,6 +281,7 @@ function updateColor() {
 	const GradientLightness = (theme === "dark") ? 20 : 80;
 	const BackLightness = (theme === "dark") ? 8 : 75;
 	const TextLightness = (theme === "dark") ? 90 : 50;
+	const SearchLightness = (theme === "dark") ? 20 : 70;
 
 	// Creating cute HSL colors
 	const color1 = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
@@ -327,7 +328,7 @@ function updateColor() {
 		nextPage.style.background = `hsl(${hue}, 45%, 25%)`;
 	}
 	if (searchBar) {
-		searchBar.style.background = `hsl(${hue}, 60%, 20%)`;
+		searchBar.style.background = `hsl(${hue}, 60%, ${SearchLightness}%)`;
 		searchBar.style.color = document.body.style.color;
 	}
 
