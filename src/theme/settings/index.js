@@ -356,6 +356,7 @@ function useBackground() {
 	updateJsonFile("theme-bg", backgroundColor);
 }
 
+
 function setFontColor(theme) {
     const colorSlider = document.getElementById("themeSlider");
     const headers = document.querySelectorAll(".content .header:link");
@@ -365,7 +366,15 @@ function setFontColor(theme) {
     const searchBar = document.getElementById("searchbar");
     const hue = colorSlider.value;
 
-    const textColor = theme === 'light' ? '#fff' : '#000';
+    let textColor;
+
+    if (theme === 'light') {
+        textColor = '#fff';
+    } else if (theme === 'dark') {
+        textColor = '#000';
+    } else if (theme === 'set') {
+        textColor = `hsl(${hue}, 100%, 90%)`;
+    }
 
     if (searchBar) {
         searchBar.style.color = textColor;
