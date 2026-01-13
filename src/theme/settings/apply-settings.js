@@ -230,29 +230,22 @@ function applySettings() {
 	data ??= defaultData;
 
 	const mainHue = data["theme-main"]; // Мяу
+	const theme = data["theme-name"] || "dark"; // Гав
+	const back = data["theme-bg"]
 
-	let setSaturation;
-	let setLightness;
-	let set3Saturation;
-	let set3Lightness;
-	
-	if (data["theme-text"] === "rgb(0, 0, 0)") {
-		setSaturation = 60;
-		setLightness = 90;
-		set3Saturation = 60;
-		set3Lightness = 70;
-	} else {
-		setSaturation = 80;
-		setLightness = 50;
-		set3Saturation = 80;
-		set3Lightness = 15;
-	}
+	const saturation = 80;
+	const TextSaturation = (theme === "dark") ? 100 : 50;
+	const lightness = (theme === "dark") ? 50 : 60;
+	const UILightness = (theme === "dark") ? 15 : 82;
+	const GradientLightness = (theme === "dark") ? 20 : 80;
+	const BackLightness = (theme === "dark") ? 8 : 75;
+	const TextLightness = (theme === "dark") ? 90 : 50;
+	const SearchLightness = (theme === "dark") ? 20 : 70;
 
-	const colorTheme1 = `hsl(${mainHue}, ${setSaturation}%, ${setLightness}%)`;
-	const colorTheme2 = `hsl(${mainHue}, ${setSaturation}%, ${
-		setLightness - 20
-	}%)`;
-	const colorTheme3 = `hsl(${mainHue}, ${set3Saturation}%, ${set3Lightness}%)`;
+	// Creating cute HSL colors
+	const colorTheme1 = `hsl(${mainHue}, ${saturation}%, ${lightness}%)`;
+	const colorTheme2 = `hsl(${mainHue}, ${saturation}%, ${lightness - 20}%)`;
+	const colorTheme3 = `hsl(${mainHue}, ${saturation}%, ${UILightness}%)`;
 
 	const html = document.querySelector("html");
 
@@ -269,7 +262,7 @@ function applySettings() {
 	document.body.style.background = data["theme-bg"];
 	document.body.style.color = data["theme-text"];
 	document.documentElement.style.scrollbarColor =
-		`hsl(${mainHue}, 70%, 25%)` + `hsl(${mainHue}, 80%, 8%)`;
+			`hsl(${hue}, 70%, 25%)` + `hsl(${mainHue}, ${saturation}%, ${BackLightness}%)`;
 
 	sidePages.forEach((page) => {
 		page.style.color = document.body.style.color;
@@ -282,7 +275,7 @@ function applySettings() {
 		nextPage.style.background = `hsl(${mainHue}, 45%, 25%)`;
 	}
 	if (searchBar) {
-		searchBar.style.background = `hsl(${mainHue}, 60%, 20%)`;
+		searchBar.style.background = `hsl(${mainHue}, 60%, ${SearchLightness}%)`;
 		searchBar.style.color = document.body.style.color;
 	}
 	if (bdsCode) {
@@ -293,16 +286,28 @@ function applySettings() {
 		head.style.color = document.body.style.color;
 	});
 
+	if (back === "rgb(0, 0, 0)") {
+		document.body.style.background = `#000`;
+        document.documentElement.style.scrollbarColor = `#fff` + `#000`;
+	} else if (back === "rgb(255, 255, 255)") {
+		document.body.style.background = `#fff`;
+        document.documentElement.style.scrollbarColor = `#000` + `#fff`;
+	}
+
 	if (document.body.style.background == "#000") {
 		document
 			.querySelector('meta[name="theme-color"]')
 			.setAttribute("content", `#000`);
+	} else if (document.body.style.background == "#fff") {
+		document
+			.querySelector('meta[name="theme-color"]')
+			.setAttribute("content", `#fff`);
 	} else {
 		document
 			.querySelector('meta[name="theme-color"]')
 			.setAttribute("content", `hsl(${mainHue}, 80%, 8%)`);
 	}
-
+	
 	setDiscordTheme(data["discord-example-theme"]);
 }
 
