@@ -37,7 +37,32 @@ $nomention
 $webhookCreate[$channelID;BDFD Webhook 🤖]
 ```
 
-## Editing A Webhook
+~~~admonish tip
+You can use [`$var[]`](../../bdscript/var.md) or [other variable functions](../variables.md) to store the Webhook URL.
+
+```$nomention
+$var[Webhook;$webhookCreate[$channelID;Secret]]
+Created and saved!
+~~~
+
+# $webhookSend
+Sends message as the webhook.
+
+## Syntax
+```
+$webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color;Author;Author icon URL;Footer;Footer icon URL;Thumbnail URL;Image URL;Add timestamp?)]
+```
+
+### Parameters
+
+## Example
+```
+$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookSend[$var[webhook];I'm the best webhook;Title;;It's description!;#000;;;;;;false]
+```
+
+
 ```
 $webhookAvatarURL[webhookURL;avatarURL]
 ```
@@ -85,3 +110,4 @@ This code is storing the newly created webhook URL returned from `$webhookCreate
 __Output:__
 
 ![example](https://user-images.githubusercontent.com/69215413/128615389-30e9dadc-2cce-4868-af33-540f612fcf27.png)
+
