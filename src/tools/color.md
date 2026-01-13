@@ -1,6 +1,9 @@
 # Color
 
 <style>
+.editPage {
+	visibility: hidden;
+}
 .picker-container {
     position: relative;
     background-color: var(--color3);
