@@ -1,6 +1,9 @@
 # Timestamp Converter
 
 <style>
+.editPage {
+	visibility: hidden;
+}
 .converter-section {
     position: relative;
     background-color: var(--color3);
