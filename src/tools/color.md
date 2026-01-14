@@ -190,6 +190,30 @@ You can use color hex in the "Color hex" parameters.
 - [`$isValidHex[]`](../bdscript/isValidHex.md)
 
 ## Example
-```$nomention
-$color[]
+```
+$nomention
+$description[⬅️ Border color hex]
+$color[#673ab7]
+```
+
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    !example
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: <none>
+  embed:
+    description: ⬅️ Border color hex
+    color: "#673ab7"
+```
+
+
+```admonish question title="What is this?"
+How [`$color[]`](../bdscript/color.md) and [`$description[]`](../bdscript/description.md) works?
 ```
