@@ -61,4 +61,6 @@ $onInteraction[Interaction ID]
        Hello Nicky!
    ```
    
-> How [`$addButton[]`](../bdscript/addButton.md) works?
+```admonish question title="What is this?"
+How [`$addButton[]`](../bdscript/addButton.md) works?
+```
