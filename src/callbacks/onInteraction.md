@@ -112,5 +112,5 @@ $endif
 ```
 
 ```admonish question title="What is this?"
-How [`$if[]`](../guides/general/ifStatements.md) and [`$customID[]`](../bdscript/customID.md) work?
+How [`$if[]`](../bdscript/if.md) and [`$customID[]`](../bdscript/customID.md) work?
 ```
