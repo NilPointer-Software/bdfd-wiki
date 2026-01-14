@@ -194,3 +194,27 @@ Here are all the functions related to unix timestamp.
 - [`$lastPinTimestamp`](../bdscript/lastPinTimestamp.md)
 - [`$messageEditedTimestamp[]`](../bdscript/messageEditedTimestamp.md)
 - [`$premiumExpireTime`](../bdscript/premiumExpireTime.md)
+
+## Example
+```
+$nomention
+Unix date: <t:1917043200:D>
+```
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Unix date: <div class="discord-time-mark">January 10, 2030</div>
+```
+
+```admonish example
+text
+```
