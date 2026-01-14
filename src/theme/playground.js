@@ -1392,7 +1392,7 @@ function updateCurrentTime() {
     if (!currentTimeEl) return;
     
     const timeInfo = getCurrentTimeInTimezone();
-    currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}<br><span style="font-size: 0.9em; color: #666;">${timeInfo.timezone}</span>`;
+    currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}<br><span style="font-size: 0.9em;">${timeInfo.timezone}</span>`;
     updateTimerDisplay();
 }
 
@@ -1559,3 +1559,4 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDateFromUnix();
     updateUnixTime();
 });
+
