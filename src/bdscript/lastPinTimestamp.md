@@ -1,5 +1,5 @@
 # $lastPinTimestamp
-Returns the last pinned message timestamp in the current channel.
+Returns the last pinned message unixtime in the current channel.
 
 ## Syntax
 ```
