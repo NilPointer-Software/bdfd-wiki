@@ -144,7 +144,7 @@ The timezone selected on your device is used as default.
 <div class="converter-section">
     <h2>Time zone</h2>
     <p>Select timezone for time calculations</p>
-    <input type="timestamp" id="timezone" placeholder="e.g., Europe/London, America/New_York" oninput="updateTimezone()" onkeypress="if(event.key === 'Enter') updateTimezone()">
+    <input type="timestamp" id="timezone" placeholder="e.g., Europe/London" oninput="updateTimezone()" onkeypress="if(event.key === 'Enter') updateTimezone()">
     <label class="timezone-error"></label>
 </div>
 
