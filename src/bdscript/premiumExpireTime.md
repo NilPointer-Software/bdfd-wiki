@@ -10,6 +10,10 @@ Returns `expired` if the bot is not premium.
 $premiumExpireTime[(Return unix timestamp?)]
 ```
 
+```admonish tip title="Timestamp Converter"
+You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
+```
+
 ### Parameters 
 - `Return unix timestamp?` `(Type: Bool || Flag: Optional)`: If "yes" is written, it will return the premium expiration value in UNIX timestamp and if "no", it will output as normal time format. Defaults to "no".
 
@@ -45,3 +49,4 @@ My premium expires in: $premiumExpireTime (Unix Timestamp: $premiumExpireTime[ye
   content: |
     My premium expires in: expired (Unix Timestamp: expired)
 ```
+
