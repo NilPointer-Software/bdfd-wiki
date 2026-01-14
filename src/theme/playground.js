@@ -1160,7 +1160,10 @@ if (datetimePicker) {
 }
 
 const currentUnixTime = Math.floor(now.getTime() / 1000);
-unixInput.value = currentUnixTime;
+
+if (unixInput) {
+  unixInput.value = currentUnixTime;
+}
 
 function updateTimezone() {
     const timezoneValue = timezoneInput.value.trim();
@@ -1536,6 +1539,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDateFromUnix();
     updateUnixTime();
 });
+
 
 
 
