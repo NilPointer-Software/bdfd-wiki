@@ -122,8 +122,8 @@
     margin-top: 20px;
     transition: 0.3s;
 }
-.timezone-error {
-    color: #dc3545;
+.timezone-error, #date-info {
+    color: #dc3545 !important;
     font-size: 12px;
     min-height: 16px;
 	margin-top: -0.75rem;
@@ -166,8 +166,8 @@ The timezone selected on your device is used as default.
     <div class="result">
 		<p>Date and time:</p>
         <span id="date-display">Not set</span>
-        <div class="timestamp" id="date-info"></div>
     </div>
+	<div class="timestamp" id="date-info"></div>
 </div>
 
 <div class="converter-section">
