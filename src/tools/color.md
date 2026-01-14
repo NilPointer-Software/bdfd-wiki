@@ -63,6 +63,33 @@
 	-webkit-user-select: none;
 	user-select: none;
 }
+#randomColorButton {
+	outline: none;
+	touch-action: manipulation;
+	-webkit-user-select: none;
+	user-select: none;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	height: 4rem;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: -1rem !important;
+    margin-right: 1rem !important;
+	font-size: 1.5rem;
+	margin: 0.25%;
+	color: #fff;
+	background: hsl(0deg 0% 100% / 7%);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	transition: 0.2s;
+}
+
+#randomColorButton:hover {
+	transform: scale(1.05);
+	border-radius: 8px;
+    border-width: 1px;
+	transition: 0.2s;
+}
 .error {
     color: #dc3545;
     font-size: 12px;
