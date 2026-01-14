@@ -24,7 +24,11 @@ The container body must contain [container components](#container-components), o
 You can't have multiple containers and [sections](./addSection.md) **with the same name** in one message. So for example, you can’t have two containers with the name set to `Container1`.
 ```
 
-- `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](https://htmlcolorcodes.com/color-picker) to set the container border color as. You can also use color integer number.
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../tools/color.md) to set the container border color as. You can also use color integer number.
+```admonish tip title="Color Picker"
+You can use our ["Color" tool](../tools/color.md) to select the best color!
+```
+
 - `Spoiler?` `(Type: Bool || Flag: Optional)`: Will the container have a spoiler effect?
 
 ## Container Components
