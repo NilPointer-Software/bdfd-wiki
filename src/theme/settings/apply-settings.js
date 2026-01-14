@@ -262,7 +262,7 @@ function applySettings() {
 	document.body.style.background = data["theme-bg"];
 	document.body.style.color = data["theme-text"];
 	document.documentElement.style.scrollbarColor =
-			`hsl(${hue}, 70%, 25%)` + `hsl(${mainHue}, ${saturation}%, ${BackLightness}%)`;
+			`hsl(${mainHue}, 70%, 25%)` + `hsl(${mainHue}, ${saturation}%, ${BackLightness}%)`;
 
 	sidePages.forEach((page) => {
 		page.style.color = document.body.style.color;
