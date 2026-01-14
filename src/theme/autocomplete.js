@@ -41,10 +41,10 @@ function autocomplete() {
   }
 
   function updateAutocomplete() {
-      if (!autocompleteEnabled) {
-          hideAutocomplete();
-          return;
-      }
+    if (!autocompleteEnabled) {
+        hideAutocomplete();
+        return;
+    }
     const inputText = textarea.value;
     const cursorPosition = textarea.selectionStart;
     let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
@@ -83,54 +83,52 @@ function autocomplete() {
     cursorInactiveTimeout = setTimeout(hideAutocomplete, 10000);
   }
 
-    function selectFunction(func,dollarIndex,cursorPosition,inputText) {
-        textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
-        textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
-        hideAutocomplete();
-        textarea.focus();
+  function selectFunction(func,dollarIndex,cursorPosition,inputText) {
+    textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
+    textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
+    hideAutocomplete();
+    textarea.focus();
   }
 
   function handleArrowKeys(event) {
-         if (autocompleteOutput.children.length === 0) return;
+    if (autocompleteOutput.children.length === 0) return;
     if (event.key === 'ArrowDown') {
       event.preventDefault();
       selectedIndex = Math.min(selectedIndex + 1, autocompleteOutput.children.length - 1);
-
     } else if (event.key === 'ArrowUp') {
       event.preventDefault();
       selectedIndex = Math.max(selectedIndex - 1, 0);
     } else if (event.key === 'Enter' && selectedIndex !== -1) {
-            event.preventDefault();
-            const selectedFunction = autocompleteOutput.children[selectedIndex].textContent;
-            const inputText = textarea.value;
-            const cursorPosition = textarea.selectionStart;
-            let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
-             selectFunction(selectedFunction,dollarIndex,cursorPosition,inputText);
-             return;
-        }
-
+      event.preventDefault();
+      const selectedFunction = autocompleteOutput.children[selectedIndex].textContent;
+      const inputText = textarea.value;
+      const cursorPosition = textarea.selectionStart;
+      let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
+      selectFunction(selectedFunction,dollarIndex,cursorPosition,inputText);
+      return;
+    }
     highlightSelected();
   }
 
-    function highlightSelected() {
-        Array.from(autocompleteOutput.children).forEach((child, index) => {
-            child.classList.toggle('selected', index === selectedIndex);
-        });
-    }
+  function highlightSelected() {
+    Array.from(autocompleteOutput.children).forEach((child, index) => {
+      child.classList.toggle('selected', index === selectedIndex);
+    });
+  }
 
-  textarea.addEventListener('input', updateAutocomplete);
-  textarea.addEventListener('mouseup', updateAutocomplete);
-  textarea.addEventListener('keydown', event => {
-          if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter') {
-              handleArrowKeys(event);
-          }
-  });
-
-
-    textarea.addEventListener('blur', () => {
-        setTimeout(hideAutocomplete, 200);
+  if (textarea) {
+    textarea.addEventListener('input', updateAutocomplete);
+    textarea.addEventListener('mouseup', updateAutocomplete);
+    textarea.addEventListener('keydown', event => {
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter') {
+        handleArrowKeys(event);
+      }
     });
 
+    textarea.addEventListener('blur', () => {
+      setTimeout(hideAutocomplete, 200);
+    });
+  } 
 
   document.addEventListener('click', event => {
     if (!autocompleteOutput.contains(event.target) && event.target !== textarea) {
@@ -176,15 +174,14 @@ function addTooltips() {
     }
 
     if (tooltipText) {
-        const { left, top } = textarea.getBoundingClientRect();
-        const textareaStyle = window.getComputedStyle(textarea);
-        let lineHeight = parseInt(textareaStyle.lineHeight);
-        lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
-        const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
-        const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
-        const x = left + cursor * 8;
-        const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
-
+      const { left, top } = textarea.getBoundingClientRect();
+      const textareaStyle = window.getComputedStyle(textarea);
+      let lineHeight = parseInt(textareaStyle.lineHeight);
+      lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
+      const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
+      const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
+      const x = left + cursor * 8;
+      const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
 
       tooltip.style.left = `${x}px`;
       tooltip.style.top = `${y}px`;
@@ -197,28 +194,27 @@ function addTooltips() {
 }
 
 function updateAutocompleteState() {
-    const textarea = document.getElementById('editor');
-    const autocompleteOutput = document.getElementById('autocomplete');
+  const textarea = document.getElementById('editor');
+  const autocompleteOutput = document.getElementById('autocomplete');
   if (!autocompleteEnabled) {
-       autocompleteOutput.innerHTML = ''; // Clear autocomplete
-       textarea.removeEventListener('input', updateAutocomplete);
-       textarea.removeEventListener('mouseup', updateAutocomplete);
-       document.getElementById('tooltip').style.display = 'none'; // Hide tooltip
-      textarea.removeEventListener('keyup',updateTooltip)
-      textarea.removeEventListener('mouseup',updateTooltip)
+    autocompleteOutput.innerHTML = ''; // Clear autocomplete
+    textarea.removeEventListener('input', updateAutocomplete);
+    textarea.removeEventListener('mouseup', updateAutocomplete);
+    document.getElementById('tooltip').style.display = 'none'; // Hide tooltip
+    textarea.removeEventListener('keyup',updateTooltip)
+    textarea.removeEventListener('mouseup',updateTooltip)
   } else {
-        textarea.addEventListener('input', updateAutocomplete);
-        textarea.addEventListener('mouseup', updateAutocomplete);
-        textarea.addEventListener('keyup', updateTooltip);
-        textarea.addEventListener('mouseup', updateTooltip);
-
+    textarea.addEventListener('input', updateAutocomplete);
+    textarea.addEventListener('mouseup', updateAutocomplete);
+    textarea.addEventListener('keyup', updateTooltip);
+    textarea.addEventListener('mouseup', updateTooltip);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    autocomplete();
-    addTooltips();
-    updateAutocompleteState();
+  autocomplete();
+  addTooltips();
+  updateAutocompleteState();
 });
 
 
