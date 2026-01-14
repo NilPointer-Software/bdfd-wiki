@@ -63,6 +63,10 @@
 	-webkit-user-select: none;
 	user-select: none;
 }
+.color-input::-webkit-color-swatch {
+	border-radius: 10px;
+	border-width: 0;
+}
 .random-result {
     display: flex;
     align-items: center;
