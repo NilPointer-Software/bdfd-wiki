@@ -72,7 +72,8 @@
 	padding: .9rem;
 	width: 100%;
 	border-radius: 10px;
-	margin-bottom: 1rem;
+	margin-top: -2.5rem !important;
+	margin-bottom: 0 !important;
 	color: #fff;
 	font-weight: bold;
 	transition: .3s;
@@ -94,6 +95,7 @@
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
+	margin-bottom: 1.5rem !important;
 	margin-top: -1rem !important;
     margin-right: 1rem !important;
 	font-size: 1.5rem;
