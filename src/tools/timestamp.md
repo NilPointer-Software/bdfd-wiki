@@ -34,7 +34,7 @@
 }
 .converter-section input {
     color: #bbb;
-    padding: 10px;
+    padding: 2.25rem !important;
     width: 100%;
 	box-sizing: border-box;
     background: hsl(0deg 0% 100% / 7%);
