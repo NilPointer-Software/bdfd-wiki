@@ -111,4 +111,6 @@ $endif
     I can't use the button
 ```
 
-> How does [`$if[]`](../guides/general/ifStatements.md) and [`$customID[]`](../bdscript/customID.md) work?
+```admonish question title="What is this?"
+How [`$if[]`](../guides/general/ifStatements.md) and [`$customID[]`](../bdscript/customID.md) work?
+```
