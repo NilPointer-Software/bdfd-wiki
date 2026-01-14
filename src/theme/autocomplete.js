@@ -128,13 +128,13 @@ function autocomplete() {
     textarea.addEventListener('blur', () => {
       setTimeout(hideAutocomplete, 200);
     });
-  } 
 
-  document.addEventListener('click', event => {
-    if (!autocompleteOutput.contains(event.target) && event.target !== textarea) {
-      hideAutocomplete();
-    }
-  });
+    document.addEventListener('click', event => {
+      if (!autocompleteOutput.contains(event.target) && event.target !== textarea) {
+        hideAutocomplete();
+      }
+    });
+  }
 }
 
 function addTooltips() {
@@ -212,11 +212,12 @@ function updateAutocompleteState() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  autocomplete();
-  addTooltips();
-  updateAutocompleteState();
+  if (window.location.href.includes('editor.html')) {
+    autocomplete();
+    addTooltips();
+    updateAutocompleteState();
+  }
 });
-
 
 window.addEventListener('beforeunload', function (event) {
   const textarea = document.getElementById('editor');
