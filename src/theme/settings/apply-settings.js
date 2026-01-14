@@ -285,7 +285,7 @@ function applySettings() {
 			`hsl(${mainHue}, 70%, 25%)` + colorTheme3;
 	}
 	headers.forEach((head) => {
-		head.style.color = document.body.style.color;
+		head.style.color = data["theme-text"];
 	});
 
 	if (back === "rgb(0, 0, 0)") {
