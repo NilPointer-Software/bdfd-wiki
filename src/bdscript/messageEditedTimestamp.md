@@ -1,9 +1,13 @@
 # $messageEditedTimestamp
-Returns a timestamp of when the message was edited.
+Returns an unixtime of when the message was edited.
 
 ## Syntax
 ```
 $messageEditedTimestamp[Channel ID;Message ID]
+```
+
+```admonish tip title="Timestamp Converter"
+You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
 ```
 
 ### Parameters
