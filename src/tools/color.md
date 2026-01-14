@@ -63,6 +63,26 @@
 	-webkit-user-select: none;
 	user-select: none;
 }
+.random-result {
+    display: flex;
+    align-items: center;
+}
+
+#randomColorResult {
+	padding: .9rem;
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	color: #fff;
+	font-weight: bold;
+	transition: .3s;
+}
+
+#randomColorResult:hover {
+	color: #000;
+	opacity: 0.6;
+	transition: .3s;
+}
 #randomColorButton {
 	outline: none;
 	touch-action: manipulation;
