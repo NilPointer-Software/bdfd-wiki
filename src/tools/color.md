@@ -96,6 +96,13 @@ Here you can choose a color to use in your command.
   <div id="validColorDisplay"><div class="valid-color" style="background:#000000">#000000</div></div>
 </div>
 
+<div class="picker-container">
+  <h2>Random Color</h2>
+  <p>Generate a random color.</p>
+  <button id="randomColorButton" onclick="generateRandomColor()">Generate</button>
+  <div id="randomColorResult" class="random-color-result"></div>
+</div>
+
 ## Functions
 Here are all the functions related to hex colors.
 
