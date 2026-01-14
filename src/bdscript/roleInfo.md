@@ -17,6 +17,10 @@ You can use the following "commands" within `$roleInfo[]`:
 - `{mentionable}` - Returns if the role is mentionable by everyone.
 - `{hoist}` - Returns if the role is hoisted (displayed separately).
 - `{color}` - Returns the role's color.
+```admonish tip title="Color Picker"
+You can use our ["Color" tool](../tools/color.md) to test colors!
+```
+
 - `{position}` - Returns the role's position on the "roles list".
 
 > `$roleInfo[]` automatically generates a description. So, `$description[]` should not be used in the code.
@@ -34,3 +38,4 @@ $title[Role Info]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/122831224-8f4d7b80-d2b7-11eb-838a-fc2ba7cd7476.png)
+
