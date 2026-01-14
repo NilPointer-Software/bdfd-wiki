@@ -1143,6 +1143,10 @@ const timezoneInput = document.getElementById('timezone');
 const timezoneError = document.querySelector('.timezone-error');
 const timerDisplay = document.getElementById('timer-display');
 
+if (!datetimePicker || !unixInput || !currentTimeEl) {
+    console.error('Required elements not found');
+}
+
 let currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let isTimezoneValid = true;
 let clickCounters = {};
@@ -1156,22 +1160,23 @@ const hours = String(now.getHours()).padStart(2, '0');
 const minutes = String(now.getMinutes()).padStart(2, '0');
 
 if (datetimePicker) {
-  datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
+    datetimePicker.value = `${year}-${month}-${day}T${hours}:${minutes}`;
 }
 
 const currentUnixTime = Math.floor(now.getTime() / 1000);
-
 if (unixInput) {
-  unixInput.value = currentUnixTime;
+    unixInput.value = currentUnixTime;
 }
 
 function updateTimezone() {
+    if (!timezoneInput) return;
+    
     const timezoneValue = timezoneInput.value.trim();
     
     if (!timezoneValue) {
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         isTimezoneValid = true;
-        timezoneError.textContent = '';
+        if (timezoneError) timezoneError.textContent = '';
         updateDateFromUnix();
         updateCurrentTime();
         return;
@@ -1187,11 +1192,11 @@ function updateTimezone() {
         
         currentTimezone = timezoneValue;
         isTimezoneValid = true;
-        timezoneError.textContent = '';
+        if (timezoneError) timezoneError.textContent = '';
         updateDateFromUnix();
         updateCurrentTime();
     } catch (error) {
-        timezoneError.textContent = 'Invalid timezone';
+        if (timezoneError) timezoneError.textContent = 'Invalid timezone';
         isTimezoneValid = false;
         currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         updateDateFromUnix();
@@ -1236,7 +1241,8 @@ function getCurrentTimeInTimezone() {
     if (!isTimezoneValid || !currentTimezone) {
         return {
             dateString: now.toLocaleDateString(),
-            unixTime: Math.floor(now.getTime() / 1000)
+            unixTime: Math.floor(now.getTime() / 1000),
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
         };
     }
     
@@ -1262,12 +1268,14 @@ function getCurrentTimeInTimezone() {
         
         return {
             dateString: `${year}-${month}-${day} ${hour}:${minute}:${second}`,
-            unixTime: Math.floor(now.getTime() / 1000)
+            unixTime: Math.floor(now.getTime() / 1000),
+            timezone: currentTimezone
         };
     } catch (error) {
         return {
             dateString: now.toLocaleDateString(),
-            unixTime: Math.floor(now.getTime() / 1000)
+            unixTime: Math.floor(now.getTime() / 1000),
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
         };
     }
 }
@@ -1369,6 +1377,8 @@ function formatTimeDifference(timestamp) {
 }
 
 function updateTimerDisplay() {
+    if (!timerDisplay) return;
+    
     const timestamp = parseInt(unixInput.value);
     
     if (!isNaN(timestamp)) {
@@ -1379,12 +1389,16 @@ function updateTimerDisplay() {
 }
 
 function updateCurrentTime() {
+    if (!currentTimeEl) return;
+    
     const timeInfo = getCurrentTimeInTimezone();
-    currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}`;
+    currentTimeEl.innerHTML = `${timeInfo.dateString}<br>${timeInfo.unixTime}<br><span style="font-size: 0.9em; color: #666;">${timeInfo.timezone}</span>`;
     updateTimerDisplay();
 }
 
 function updateUnixTime() {
+    if (!datetimePicker || !unixTimeDisplay || !unixInput) return;
+    
     const selectedDate = new Date(datetimePicker.value);
     
     if (!isNaN(selectedDate.getTime())) {
@@ -1401,6 +1415,8 @@ function updateUnixTime() {
 }
 
 function updateDateFromUnix() {
+    if (!unixInput || !dateDisplay || !datetimePicker || !timerDisplay) return;
+    
     const unixTime = parseInt(unixInput.value);
     
     if (!isNaN(unixTime) && unixTime >= 0) {
@@ -1424,11 +1440,11 @@ function updateDateFromUnix() {
         }
     } else if (unixInput.value === '') {
         dateDisplay.textContent = 'Not set';
-        dateInfo.textContent = '';
+        if (dateInfo) dateInfo.textContent = '';
         timerDisplay.textContent = 'Not set';
     } else {
         dateDisplay.textContent = 'Invalid timestamp';
-        dateInfo.textContent = 'Please enter a valid Unix timestamp';
+        if (dateInfo) dateInfo.textContent = 'Please enter a valid Unix timestamp';
         timerDisplay.textContent = 'Invalid timestamp';
     }
     
@@ -1440,6 +1456,8 @@ window.updateUnixTime = updateUnixTime;
 window.updateDateFromUnix = updateDateFromUnix;
 
 function createQuickButtons() {
+    if (!unixInput) return;
+    
     const quickButtons = document.createElement('div');
     quickButtons.className = 'time-buttons';
     
@@ -1531,17 +1549,13 @@ function createQuickButtons() {
     unixInput.parentNode.insertBefore(quickButtons, unixInput.nextSibling);
 }
 
-updateCurrentTime();
-setInterval(updateCurrentTime, 1000);
+if (currentTimeEl) {
+    updateCurrentTime();
+    setInterval(updateCurrentTime, 1000);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     createQuickButtons();
     updateDateFromUnix();
     updateUnixTime();
 });
-
-
-
-
-
-
