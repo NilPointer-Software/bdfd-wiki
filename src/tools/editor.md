@@ -172,15 +172,15 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 #highlightedText h1 {
-  display: inline;
+  	display: inline;
 }
 
 #highlightedText h2 {
-  display: inline;
+  	display: inline;
 }
 
 #highlightedText h3 {
-  display: inline;
+  	display: inline;
 }
 
 #highlightedText spoiler {
@@ -194,11 +194,11 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 #highlightedText spoiler.spoiler-active {
-  background: #2e2e2e94;
-  color: #ababab;
-  cursor: text !important;
-  user-select: auto;
-  -webkit-user-select: auto;
+  	background: #2e2e2e94;
+  	color: #ababab;
+  	cursor: text !important;
+  	user-select: auto;
+  	-webkit-user-select: auto;
 }
 
 #highlightedText quote::before {
@@ -364,15 +364,15 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 @media (max-width: 950px) {
-  #nameScript span {
-    top: -35%;
-  }
+	#nameScript span {
+    	top: -35%;
+  	}
 		
-		#nameScript textarea {
-		  border-radius: 15px;
-				font-size: 2rem;
-				height: 2.75rem;
-		}
+	#nameScript textarea {
+		border-radius: 15px;
+		font-size: 2rem;
+		height: 2.75rem;
+	}
 }
 
 #selectors {
@@ -389,18 +389,18 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 #selectors select {
-  cursor: pointer;
-  outline: none;
-  text-decoration: none;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  width: 15rem;
-  padding: 8px 5px;
-  background: rgb(255 255 255 / 10%);
-  color: rgb(255 255 255 / 80%);
-  border-radius: 10px;
-  box-sizing: border-box;
-  border: 0;
+	cursor: pointer;
+  	outline: none;
+  	text-decoration: none;
+  	touch-action: manipulation;
+  	-webkit-tap-highlight-color: transparent;
+  	width: 15rem;
+ 	padding: 8px 5px;
+  	background: rgb(255 255 255 / 10%);
+  	color: rgb(255 255 255 / 80%);
+  	border-radius: 10px;
+  	box-sizing: border-box;
+  	border: 0;
 }
 
 @media (max-width: 350px) {
@@ -423,7 +423,7 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 #tips em, #tips strong, #tips a {
-  display: block;
+  	display: block;
 }
 
 #tips h1 {
@@ -616,7 +616,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	<input type="text" id="searchText"><br>
 	<label for="replaceText">Replace:</label>
 	<input type="text" id="replaceText"><br>
-	<button id="highlightButton" onclick="toggleHighlight()">Find</button><br>
+	<button id="highlightButton" onclick="toggleHighlight()">Find</button>
 	<button onclick="replaceOneText()">Replace</button>
 	<button onclick="replaceText()">Replace all</button>
 	<p><i class="fa fa-info" aria-hidden="true"></i> Regex is supported</p>
