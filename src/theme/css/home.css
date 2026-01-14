@@ -46,6 +46,10 @@
 	transition: 0.3s;
 }
 
+#truelol {
+	padding: 1rem;
+}
+
 .download,
 .resources {
 	text-align: center;
@@ -233,3 +237,4 @@ button a {
 		transition: 0.3s;
 	}
 }
+
