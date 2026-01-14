@@ -36,6 +36,7 @@
     color: #bbb;
     padding: 2.25rem !important;
     width: 100%;
+	max-width: 100%;
 	box-sizing: border-box;
     background: hsl(0deg 0% 100% / 7%);
     border-radius: 10px;
