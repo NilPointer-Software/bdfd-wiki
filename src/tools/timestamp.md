@@ -219,5 +219,5 @@ Unix date: <t:1917043200:D>
 ```
 
 ```admonish example
-text
+You can use [Discord timestamp highlighting](../resources/discordTimestamps.md) to make your code look nicer!
 ```
