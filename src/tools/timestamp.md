@@ -133,8 +133,12 @@
 
 Here you can manage UnixTime for your commands.
 
+```admonish note
+Unix time is a system for tracking time by counting the number of seconds that have passed since January 1st, 1970. This value is stored as a simple integer, which computers can easily process and calculate with. For example, the function [`$getTimestamp`](../bdscript/getTimestamp.md) in BDFD can be used to get the current Unix timestamp or perform time-based operations for your bot.
+```
+
 ```admonish info
-The timezone selected on your device is used.
+The timezone selected on your device is used as default.
 ```
 
 <div class="converter-section">
