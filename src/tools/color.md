@@ -138,6 +138,10 @@
 
 Here you can choose a color to use in your command.
 
+```admonish note
+Hex colors are codes that represent colors using hexadecimal values for red, green, and blue. A shorthand like #090 is a compact version of #009900, meaning no red, full green, and no blue, resulting in a pure green. The format #RGB expands each digit to RRGGBB, making it easy to define web colors, including in BDFD's color functions for customizing bot messages.
+```
+
 <div class="picker-container">
 	<h2>Color Picker</h2>
   	<p>Select the color.</p>
@@ -161,6 +165,10 @@ Here you can choose a color to use in your command.
 ## Functions
 Here are all the functions related to hex colors.
 
+```admonish note
+You can use color hex in the "Color hex" parameters.
+```
+
 **SET**:
 - [`$addContainer[]`](../bdscript/addContainer.md)
 - [`$color[]`](../bdscript/color.md)
@@ -180,3 +188,8 @@ Here are all the functions related to hex colors.
 
 **CHECK**:
 - [`$isValidHex[]`](../bdscript/isValidHex.md)
+
+## Example
+```$nomention
+$color[]
+```
