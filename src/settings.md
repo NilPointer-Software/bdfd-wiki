@@ -220,7 +220,7 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
     <button class="hgButton">
       <p><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><i class="fa fa-book" aria-hidden="true"></i> What is this?</a></p>
     </button>
-    <textarea id="jsonhginput" oninput="updateCodeHG()" maxlength="10000"></textarea>
+    <textarea id="jsonhginput" oninput="updateCodeHG()" maxlength="25000"></textarea>
   </div>
   <p class="charCount">0 / 25000</p>
 </div>
