@@ -579,9 +579,9 @@ function updateCodeHG() {
 	const jsonHG = codeInput.value;
 
 	const charCount = codeInput.value.replace(/[\s\n]/g, "").length; // Ignore spaces and new rows
-	charCountElement.textContent = `${charCount} / 10000`;
+	charCountElement.textContent = `${charCount} / 25000`;
 
-	if (charCount >= 10000) {
+	if (charCount > 25000) {
 		charCountElement.style.color = "red";
 	} else {
 		charCountElement.style.color = document.body.style.color;
