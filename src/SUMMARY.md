@@ -43,6 +43,7 @@
         - [Common BDFD Errors](./guides/other/commonErrors.md)
 
 - [Tools]()
+    - [Permission Calculator](./tools/permissionscalculator.md)
     - [Color](./tools/color.md)
     - [Code Editor](./tools/editor.md)
     - [Timestamp Converter](./tools/timestamp.md)
