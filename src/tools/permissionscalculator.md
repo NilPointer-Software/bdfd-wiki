@@ -1,5 +1,5 @@
 # Permission Calculator
-Example
+Example text
 
 <style>
         .control-buttons {
