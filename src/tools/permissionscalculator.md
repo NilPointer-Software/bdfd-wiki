@@ -274,7 +274,7 @@ Example
     </div>
 </div>
 
-<script>
+<script defer>
         // All Discord permissions with categories
         const discordPermissions = [
             {
