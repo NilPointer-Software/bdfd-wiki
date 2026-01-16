@@ -14,8 +14,7 @@ Example text!
 	    touch-action: manipulation;
 	    -webkit-user-select: none;
 	    user-select: none;
-	    padding-left: 1rem;
-	    padding-right: 1rem;
+	    padding: 2rem;
 	    height: 4rem;
 	    border: none;
 	    border-radius: 10px;
@@ -212,15 +211,24 @@ Example text!
             flex-grow: 1;
         }
         .category-toggle {
-            background-color: #43b581;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 4px 10px;
-            font-size: 12px;
-            cursor: pointer;
-            margin-left: 10px;
+            outline: none;
+	    touch-action: manipulation;
+	    -webkit-user-select: none;
+	    user-select: none;
+	    padding: 2rem;
+	    height: 4rem;
+	    border: none;
+	    border-radius: 10px;
+	    cursor: pointer;
+	    font-size: 0.75rem;
+	    margin: 0.25%;
+	    color: #fff;
+	    background: hsl(0deg 0% 100% / 7%);
+	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	    transition: 0.2s;
+            flex: 1
             transition: all 0.2s;
+            text-align: center;
         }
         .category-toggle:hover {
             background-color: #3ca374;
