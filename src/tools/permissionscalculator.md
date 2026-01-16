@@ -64,7 +64,6 @@ Example text!
         }
         .permission-value {
             color: #fff;
-            font-family: 'Consolas', monospace;
             font-size: 14px;
             margin-left: 15px;
             background-color: rgba(114, 137, 218, 0.1);
@@ -74,7 +73,7 @@ Example text!
         input[type="checkbox"] {
             transform: scale(1.2);
             cursor: pointer;
-            accent-color: #7289da;
+            accent-color: var(--color2);
         }
         .total-section {
             background-color: #202225;
