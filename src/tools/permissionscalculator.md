@@ -1,6 +1,8 @@
 # Permission Calculator
 Example text!
 
+<script src="./permcalc.js" defer></script>
+
 <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -586,5 +588,3 @@ Example text!
         </div>
     </div>
 </div>
-
-<script> </script>
