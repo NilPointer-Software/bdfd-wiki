@@ -49,7 +49,6 @@ Example text!
             border-left: 4px solid transparent;
         }
         .permission-item:hover {
-            background-color: #484c54;
             transform: translateY(-2px);
         }
         .permission-item.checked {
@@ -66,7 +65,7 @@ Example text!
             align-items: center;
         }
         .permission-value {
-            color: #7289da;
+            color: #fff;
             font-family: 'Consolas', monospace;
             font-size: 14px;
             margin-left: 15px;
