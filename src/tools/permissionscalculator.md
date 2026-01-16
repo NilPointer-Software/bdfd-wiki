@@ -43,7 +43,7 @@ Example text!
             align-items: center;
             padding: 12px;
             background-color: var(--color3);
-            border-radius: 6px;
+            border-radius: 10px;
             transition: all 0.2s;
             margin-bottom: 5px;
             border-left: 4px solid transparent;
@@ -52,8 +52,8 @@ Example text!
             transform: translateY(-2px);
         }
         .permission-item.checked {
-            border-left-color: #7289da;
-            background-color: #40444b;
+            border-left-color: var(--color1);
+            background-color: var(--color2);
         }
         .permission-item label {
             margin-left: 12px;
