@@ -15,7 +15,7 @@ Example text!
             background-color: #7289da;
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 10px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
