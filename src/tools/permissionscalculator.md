@@ -32,10 +32,12 @@ Example text!
      transition: all 0.2s;
      text-align: center;
 }
-        .control-button:hover {
-            background-color: #5b6eae;
-            transform: translateY(-2px);
-        }
+.control-button:hover, .category-toggle:hover {
+				transform: scale(1.05);
+				border-radius: 8px;
+    border-width: 1px;
+	   transition: 0.2s;
+}
         .permission-item {
             display: flex;
             align-items: center;
@@ -230,10 +232,7 @@ Example text!
     transition: all 0.2s;
     text-align: center;
 }
-        .category-toggle:hover {
-            background-color: #3ca374;
-        }
-    </style>
+</style>
 
 <div class="control-buttons">
     <button class="control-button" id="enableAll">Enable All</button>
