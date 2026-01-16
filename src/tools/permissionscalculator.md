@@ -4,31 +4,32 @@ Example text!
 <script src="./permcalc.js" defer></script>
 
 <style>
-        .control-buttons {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        .control-button {
-            outline: none;
+.control-buttons {
+					display: flex;
+     gap: 15px;
+     margin-bottom: 25px;
+}
+.control-button {
+					outline: none;
 	    touch-action: manipulation;
 	    -webkit-user-select: none;
 	    user-select: none;
-	    padding: 2rem;
-	    height: 4rem;
+	    padding-left: 1rem;
+					padding-right: 1rem;
+	    height: 5rem;
 	    border: none;
 	    border-radius: 10px;
 	    cursor: pointer;
-	    font-size: 1.5rem;
+	    font-size: 3rem;
 	    margin: 0.25%;
 	    color: #fff;
 	    background: hsl(0deg 0% 100% / 7%);
 	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	    transition: 0.2s;
-            flex: 1
-            transition: all 0.2s;
-            text-align: center;
-        }
+     flex: 1
+     transition: all 0.2s;
+     text-align: center;
+}
         .control-button:hover {
             background-color: #5b6eae;
             transform: translateY(-2px);
@@ -220,7 +221,7 @@ Example text!
 	    border: none;
 	    border-radius: 10px;
 	    cursor: pointer;
-	    font-size: 0.75rem;
+	    font-size: 1rem;
 	    margin: 0.25%;
 	    color: #fff;
 	    background: hsl(0deg 0% 100% / 7%);
