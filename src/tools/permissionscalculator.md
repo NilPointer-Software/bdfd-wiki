@@ -1,5 +1,5 @@
 # Permission Calculator
-Example text.
+Example text!
 
 <script src="./permcalc.js" defer></script>
 
@@ -42,9 +42,10 @@ Example text.
             display: flex;
             align-items: center;
             padding: 12px;
-            background-color: #40444b;
+            background-color: var(--color3);
             border-radius: 6px;
             transition: all 0.2s;
+            margin-bottom: 5px;
             border-left: 4px solid transparent;
         }
         .permission-item:hover {
@@ -208,12 +209,11 @@ Example text.
             margin: 20px 0 10px 0;
         }
         .category-header .category-title {
-            color: #99aab5;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
             padding-bottom: 5px;
-            border-bottom: 1px solid #40444b;
+            border-bottom: 1px solid var(--color2);
             flex-grow: 1;
         }
         .category-toggle {
