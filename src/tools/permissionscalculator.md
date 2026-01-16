@@ -4,26 +4,6 @@ Example text!
 <script src="./permcalc.js" defer></script>
 
 <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #36393f;
-            color: #dcddde;
-        }
-        .container {
-            background-color: #2f3136;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 28px;
-        }
         .control-buttons {
             display: flex;
             gap: 15px;
@@ -57,15 +37,6 @@ Example text!
         }
         .control-button.category:hover {
             background-color: #3ca374;
-        }
-        .permissions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 12px;
-            margin-bottom: 25px;
-            max-height: 500px;
-            overflow-y: auto;
-            padding: 10px;
         }
         .permission-item {
             display: flex;
