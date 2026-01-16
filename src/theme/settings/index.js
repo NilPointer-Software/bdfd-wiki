@@ -720,7 +720,7 @@ function loadSettings() {
 		var inputcodedesign = JSON.stringify(codedesign);
 		const charJSONCount = inputcodedesign.length;
 
-		charCountElement.textContent = `${charJSONCount} / 10000`;
+		charCountElement.textContent = `${charJSONCount} / 25000`;
 		codeTextInput.value = inputcodedesign;
 	}
 
