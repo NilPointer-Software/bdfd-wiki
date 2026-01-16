@@ -8,6 +8,8 @@ Example text!
 					display: flex;
      gap: 15px;
      margin-bottom: 25px;
+					justify-content: center;
+     align-items: center;
 }
 .control-button {
 					outline: none;
@@ -16,16 +18,16 @@ Example text!
 	    user-select: none;
 	    padding-left: 1rem;
 					padding-right: 1rem;
-	    height: 5rem;
+	    height: 4rem;
 	    border: none;
+					font-weight: 600;
 	    border-radius: 10px;
 	    cursor: pointer;
-	    font-size: 3rem;
+	    font-size: 2.25rem;
 	    margin: 0.25%;
 	    color: #fff;
 	    background: hsl(0deg 0% 100% / 7%);
 	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-	    transition: 0.2s;
      flex: 1
      transition: all 0.2s;
      text-align: center;
