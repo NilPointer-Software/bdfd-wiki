@@ -213,26 +213,24 @@ Example text!
             border-bottom: 1px solid var(--color2);
             flex-grow: 1;
         }
-        .category-toggle {
-            outline: none;
-	    touch-action: manipulation;
-	    -webkit-user-select: none;
-	    user-select: none;
-	    padding: 2rem;
-	    height: 4rem;
-	    border: none;
-	    border-radius: 10px;
-	    cursor: pointer;
-	    font-size: 1rem;
-	    margin: 0.25%;
-	    color: #fff;
-	    background: hsl(0deg 0% 100% / 7%);
-	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-	    transition: 0.2s;
-            flex: 1
-            transition: all 0.2s;
-            text-align: center;
-        }
+.category-toggle {
+				outline: none;
+	   touch-action: manipulation;
+	   -webkit-user-select: none;
+	   user-select: none;
+	   padding: 1rem;
+	   border: none;
+	   border-radius: 10px;
+	   cursor: pointer;
+	   font-size: 12px;
+	   margin-left: 10px;
+	   color: #fff;
+	   background: hsl(0deg 0% 100% / 7%);
+	   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    flex: 1
+    transition: all 0.2s;
+    text-align: center;
+}
         .category-toggle:hover {
             background-color: #3ca374;
         }
