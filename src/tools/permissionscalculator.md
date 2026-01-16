@@ -1,5 +1,5 @@
 # Permission Calculator
-Example text!
+Example text.
 
 <script src="./permcalc.js" defer></script>
 
