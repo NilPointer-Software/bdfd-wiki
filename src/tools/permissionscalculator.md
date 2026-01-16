@@ -142,7 +142,7 @@ Example text!
             padding: 15px 0;
         }
         .combination {
-            background-color: #2f3136;
+            background-color: var(--color2);
             padding: 12px;
             margin: 10px 0;
             border-radius: 6px;
@@ -186,7 +186,7 @@ Example text!
             border-top: 1px solid #40444b;
         }
         .current-selection {
-            background-color: #2f3136;
+            background-color: var(--color2);
             padding: 12px;
             border-radius: 6px;
             margin: 15px 0;
