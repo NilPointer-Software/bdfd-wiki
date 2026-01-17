@@ -272,6 +272,22 @@ $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookFooter[$var[webhook];Footer Text Here]
 ```
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 887433921657176065
+  username: Test webhook
+  color: "#fff"
+  bot: true
+  verified: false
+  embed:
+    footer:
+      text: Footer Text Here
+```
+
 ```admonish question title="What is this?"
 How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
