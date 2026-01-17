@@ -44,7 +44,7 @@
 
 - [Tools]()
     - [Color](./tools/color.md)
-    - [Code Editor](./tools/editor.md)
+    - [Text Editor](./tools/editor.md)
     - [Permission Calculator](./tools/permissionscalculator.md)
     - [Timestamp Converter](./tools/timestamp.md)
 
