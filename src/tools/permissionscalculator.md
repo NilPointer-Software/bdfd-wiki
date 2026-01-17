@@ -148,7 +148,7 @@ Example text!
             border-left: 4px solid #43b581;
         }
         .combination-title {
-            color: #43b581;
+            color: #fff;
             font-weight: bold;
             margin-bottom: 8px;
         }
