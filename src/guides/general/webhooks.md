@@ -1,6 +1,10 @@
 # Webhooks
 This wiki explains how to create and use webhooks in BDFD.
 
+```admonish warning
+In this wiki we use functions that only work on [BDScript 2](../introduction/variables.md). We recommend you to use the same script language to avoid problems with examples.
+```
+
 ## Content
 [**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) > [**$webhookSend[]**](#webhooksend) > [**$webhookDelete[]**](#webhookDelete) > [**$webhookAvatarURL[]**](#webhookavatarurl)  > [**$webhookUsername[]**](#webhookusername) > [**$webhookTitle[]**](#webhooktitle) > [**$webhookDescription[]**](#webhookdescription) > [**$webhookFooter[]**](#webhookfooter) > [**$webhookContent[]**](#webhookcontent) > [**$webhookColor[]**](#webhookcolor) > [Beautiful Webhook](#beautiful-webhook)
 
