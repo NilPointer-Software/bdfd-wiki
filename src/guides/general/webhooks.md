@@ -300,9 +300,9 @@ Here is one example of how to use a webhook.
 ```
 $nomention
 $var[webhook;$webhookCreate[$channelID;I'm webhook 😎;$serverIcon]]
-$webhookContent[👇 Read before chatting]
-$webhookTitle[📚 Rules]
-$webhookDescription[1. Be patient
+$webhookContent[$var[webhook];👇 Read before chatting]
+$webhookTitle[$var[webhook];📚 Rules]
+$webhookDescription[$var[webhook];1. Be patient
 2. Just chill]
-$webhookFooter[Made by BDFD]
+$webhookFooter[$var[webhook];Made by BDFD]
 ```
