@@ -165,7 +165,7 @@ The timezone selected on your device is used as default.
 <div class="converter-section">
     <h2>Unix Timestamp to Date</h2>
     <p>Enter Unix timestamp:</p>
-    <input type="number" id="unix-input" placeholder="e.g., 1704067200" oninput="updateDateFromUnix()" onkeypress="if(event.key === 'Enter') updateDateFromUnix()">
+    <input type="number" id="unix-input" placeholder="e.g., 1704067200" oninput="updateDateFromUnix()" onkeypress="if(event.key === 'Enter') updateDateFromUnix()" min="0">
     <div class="result">
 		<p>Date and time:</p>
         <span id="date-display">Not set</span>
