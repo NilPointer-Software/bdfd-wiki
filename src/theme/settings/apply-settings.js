@@ -90,9 +90,9 @@ function setDiscordTheme(colorId) {
 					".discord-message .discord-message-markup"
 				);
 
-				const botToApp = 
+				const botToApp =
 					document.querySelectorAll('.discord-application-tag');
-				
+
 				if (styles.background)
 					mutation.target.style.background = styles.background;
 					mutation.target.style.backgroundColor = styles.exampleColor;
@@ -111,7 +111,7 @@ function setDiscordTheme(colorId) {
 						tag.setAttribute("aria-label", "Verified App");
         				}
     				});
-				
+
 				// Changes "00/00/0000" to "Today at 00:00".
 				const timestamps = document.querySelectorAll(
 					".discord-message-timestamp"
@@ -140,14 +140,6 @@ function setDiscordTheme(colorId) {
 }
 
 function applySettings() {
-	const bdsCode = document.querySelector("code.hljs");
-	const previousPage = document.querySelector(".previous");
-	const nextPage = document.querySelector(".next");
-	const headers = document.querySelectorAll(".content .header:link");
-	const sidePages = document.querySelectorAll(".chapter li a");
-	const sideMainPages = document.querySelectorAll(".chapter li");
-	const searchBar = document.getElementById("searchbar");
-	const manageEffectButton = document.getElementById("manageEffect");
 	const snowflakes = document.querySelector(".snowflakes");
 
 	let data;
@@ -157,9 +149,6 @@ function applySettings() {
 	} catch {}
 
 	const defaultData = {
-		"theme-main": "270",
-		"theme-bg": "270",
-		"theme-text": "270",
 		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
@@ -228,64 +217,14 @@ function applySettings() {
 	if (!data) localStorage.setItem("json", JSON.stringify(defaultData));
 	data ??= defaultData;
 
-	const mainHue = data["theme-main"]; // Мяу
-
-	const setSaturation = 80;
-	const setLightness = 50;
-
-	const colorTheme1 = `hsl(${mainHue}, ${setSaturation}%, ${setLightness}%)`;
-	const colorTheme2 = `hsl(${mainHue}, ${setSaturation}%, ${
-		setLightness - 20
-	}%)`;
-	const colorTheme3 = `hsl(${mainHue}, 80%, 15%)`;
-
 	const html = document.querySelector("html");
 
 	html.style.fontFamily = data["text-font"];
 	html.style.fontSize = data["text-size"];
 	html.style.textShadow = data["text-hg"];
 
-	snowflakes.style.visibility = data["effects"];
-
-	document.documentElement.style.setProperty("--color1", colorTheme1);
-	document.documentElement.style.setProperty("--color2", colorTheme2);
-	document.documentElement.style.setProperty("--color3", colorTheme3);
-
-	document.body.style.background = data["theme-bg"];
-	document.body.style.color = data["theme-text"];
-	document.documentElement.style.scrollbarColor =
-		`hsl(${mainHue}, 70%, 25%)` + `hsl(${mainHue}, 80%, 8%)`;
-
-	sidePages.forEach((page) => {
-		page.style.color = document.body.style.color;
-	});
-	sideMainPages.forEach((mainPage) => {
-		mainPage.style.color = document.body.style.color;
-	});
-	if (previousPage) {
-		previousPage.style.background = `hsl(${mainHue}, 45%, 25%)`;
-		nextPage.style.background = `hsl(${mainHue}, 45%, 25%)`;
-	}
-	if (searchBar) {
-		searchBar.style.background = `hsl(${mainHue}, 60%, 20%)`;
-		searchBar.style.color = document.body.style.color;
-	}
-	if (bdsCode) {
-		bdsCode.style.scrollbarColor =
-			`hsl(${mainHue}, 70%, 25%)` + colorTheme3;
-	}
-	headers.forEach((head) => {
-		head.style.color = document.body.style.color;
-	});
-
-	if (document.body.style.background == "#000") {
-		document
-			.querySelector('meta[name="theme-color"]')
-			.setAttribute("content", `#000`);
-	} else {
-		document
-			.querySelector('meta[name="theme-color"]')
-			.setAttribute("content", `hsl(${mainHue}, 80%, 8%)`);
+	if (snowflakes) {
+		snowflakes.style.visibility = data["effects"];
 	}
 
 	setDiscordTheme(data["discord-example-theme"]);

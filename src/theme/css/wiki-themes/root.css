@@ -1,12 +1,37 @@
 :root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --dark-bg: #0d0d0d;
+    --card-bg: #1a1a2e;
+    --card-hover: #16213e;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #6b7280;
+    --border-radius: 16px;
+    --link-color: #667eea;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
     --sidebar-width: 320px;
     --page-padding: 5px;
     --content-max-width: 750px;
     --menu-bar-height: 45px;
     --menu-bar-border-radius: 10px;
-    --color1: hsl(270, 80%, 50%);
-    --color2: hsl(270, 80%, 30%);
-    --color3: hsl(270, 80%, 15%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: var(--dark-bg) !important;
+    background-color: var(--dark-bg) !important;
+}
+
+body {
+    margin-bottom: 22px;
+    min-height: 100vh;
 }
 
 :root code {

@@ -3,15 +3,247 @@
 @import "variables.css";
 
 ::-webkit-scrollbar {
-	background: var(--color3);
+	background: var(--card-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--color2);
+	background: var(--card-hover);
 }
 
 html {
-	scrollbar-color: var(--color2) var(--color3);
+	scrollbar-color: var(--card-hover) var(--card-bg);
+}
+
+/* ===== Page Layout ===== */
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== Content Card ===== */
+.content-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.content-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.content-card h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-card h3:first-of-type {
+    margin-top: 20px;
+}
+
+.content-card ul,
+.content-card ol {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+.content-card li {
+    margin-bottom: 12px;
+}
+
+.content-card ol ol {
+    margin-top: 12px;
+    list-style-type: lower-alpha;
+}
+
+.content-card a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.content-card a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.content-card code {
+    background: rgba(102, 126, 234, 0.15);
+    color: var(--link-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content-card em {
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+.intro-text {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.third-party-box {
+    background: rgba(102, 126, 234, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.third-party-box p {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.third-party-box ul {
+    margin-bottom: 0;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+    padding: 16px 32px;
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    padding: 16px 32px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: rgba(102, 126, 234, 0.5);
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+/* ===== Legacy Card Styles ===== */
+.commandCard {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 4px 16px;
+    transition: 0.1s all ease;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.commandDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.commandControls {
+    display: flex;
+    flex-direction: row;
+    font-size: 50px;
+}
+
+.commandCard:hover {
+    background-color: var(--card-hover);
+    color: white;
+    text-decoration: none;
+}
+
+.commandTitle {
+    color: whitesmoke;
+}
+
+.commandDesc {
+    color: var(--text-secondary);
+}
+
+.commandIconAlign {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 12px;
+}
+
+.botCard {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2px 16px;
+    transition: 0.1s all ease;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.botCard:hover {
+    background-color: var(--card-hover);
+    color: white;
+    text-decoration: none;
+}
+
+.mailChip {
+    word-break: break-all;
+    text-wrap: wrap;
 }
 
 /* Tags */
@@ -33,8 +265,8 @@ html {
 	font-weight: bold;
 	padding: 0.25rem 0.5rem 0.25rem 0.5rem;
 	transition: 0.3s;
-	border-color: var(--color1);
-	color: var(--color1);
+	border-color: var(--link-color);
+	color: var(--link-color);
 }
 
 .functionTags #PremiumTag {
@@ -73,7 +305,7 @@ html {
 /* Playground */
 
 .function-playground {
-	background: var(--color3);
+	background: var(--card-bg);
 	border-radius: 10px;
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -117,7 +349,7 @@ html {
 	padding: 0.5rem;
 	padding-left: 0.75rem;
 	border-radius: 10px;
-	color: var(--color1);
+	color: var(--link-color);
 	width: 97.75%;
 }
 
@@ -132,7 +364,7 @@ html {
 	background: hsl(0deg 0% 100% / 5%);
 	width: fit-content;
 	margin-bottom: -0.7rem;
-	border-color: var(--color2);
+	border-color: var(--card-hover);
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	max-width: 97%;
@@ -140,7 +372,7 @@ html {
 	resize: none;
 	border-radius: 5px;
 	outline: none;
-	color: var(--color1);
+	color: var(--link-color);
 	height: 1.75rem;
 	overflow: hidden;
 	field-sizing: content;
@@ -167,7 +399,7 @@ html {
 .content a:link,
 a:visited,
 a > .hljs {
-	color: var(--color1);
+	color: var(--link-color);
 	position: relative;
 	text-decoration: none;
 }
@@ -190,7 +422,7 @@ a:link:not(
 	position: absolute;
 	width: 100%;
 	height: 1px;
-	background-color: var(--color1);
+	background-color: var(--link-color);
 	bottom: 0;
 	left: 0;
 	transform-origin: right;
@@ -226,7 +458,7 @@ a:link:not(
 #menu-bar > #menu-bar-sticky-container {
 	display: flex;
 	flex-wrap: wrap;
-	background: linear-gradient(to bottom right, var(--color1), var(--color2));
+	background: var(--primary-gradient);
 	border-radius: 10px;
 }
 
@@ -319,7 +551,7 @@ a:link:not(
 		height: 80%;
 		margin-top: 15%;
 		margin-left: -15%;
-		background: var(--color2);
+		background: rgba(0, 0, 0, 0.2);
 	}
 
 	.menu-title:after {
@@ -335,8 +567,8 @@ a:link:not(
 	border: solid;
 	border-width: 1px;
 	border-radius: 10px;
-	border-color: var(--color2);
-	color: var(--color1);
+	border-color: var(--card-hover);
+	color: var(--link-color);
 	width: fit-content;
 	padding: 5px;
 	text-decoration: none;
@@ -352,7 +584,7 @@ a:link:not(
 .editPage:hover {
 	font-size: 87.5%;
 	border-radius: 8px;
-	border-color: var(--color1);
+	border-color: var(--link-color);
 	transition: 0.3s;
 }
 
@@ -411,8 +643,8 @@ a:link:not(
 	text-decoration: none;
 	width: 60px;
 	border-radius: 10px;
-	background-color: var(--color3) !important;
-	color: var(--color1) !important;
+	background-color: var(--card-bg) !important;
+	color: var(--link-color) !important;
 }
 
 .mobile-nav-chapters:hover i {
@@ -458,7 +690,7 @@ a:link:not(
 }
 
 :not(pre):not(a) > .hljs:not(.discord-message code) {
-	color: var(--color1);
+	color: var(--link-color);
 	overflow-x: initial;
 }
 
@@ -472,7 +704,7 @@ pre {
 }
 
 code.hljs:not(.discord-message code) {
-	background: var(--color3);
+	background: var(--card-bg);
 	padding: 0.8em;
 	margin-bottom: -0.5rem;
 }
@@ -487,7 +719,7 @@ code.hljs:not(.discord-message code) {
 /* Warnings */
 
 :is(.admonition) {
-	background-color: var(--color3) !important;
+	background-color: var(--card-bg) !important;
 	border-radius: 0 10px 10px 0 !important;
 }
 
@@ -508,7 +740,7 @@ summary {
 	user-select: none;
 	-webkit-user-select: none;
 	outline: none;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	padding: 10px;
 	border-radius: 10px;
 	cursor: pointer;
@@ -521,19 +753,19 @@ details > h2 {
 }
 
 details:hover {
-	border-color: var(--color2);
+	border-color: var(--card-hover);
 	transition: 0.3s;
 }
 
 details {
 	border: solid;
 	margin-top: 1rem;
-	border-color: var(--color3);
+	border-color: var(--card-bg);
 	border-radius: 10px;
 	padding: 0 10px 10px 10px;
 	transition: 0.3s;
 }
-/* Buttons */
+/* Code Block Buttons */
 
 pre:hover > .buttons {
 	visibility: visible;
@@ -553,8 +785,8 @@ pre > .buttons {
 }
 
 pre > .buttons :hover {
-	color: var(--color1);
-	border-color: var(--color1);
+	color: var(--link-color);
+	border-color: var(--link-color);
 	border-radius: 9px;
 	opacity: 0.9;
 	transition: 0.2s;
@@ -589,15 +821,15 @@ pre > .result {
 
 #searchresults a {
 	text-decoration: none;
-	color: var(--color1);
+	color: var(--link-color);
 }
 
 mark {
 	border-radius: 10px;
 	padding: 0 5px;
 	margin: 0 -5px -1px -5px;
-	background-color: var(--color1);
-	color: var(--color3);
+	background-color: var(--link-color);
+	color: var(--card-bg);
 	transition: background-color 300ms linear;
 	cursor: pointer;
 }
@@ -621,9 +853,9 @@ mark.fade-out {
 	padding: 2%;
 	font-size: 80%;
 	transition: box-shadow 300ms ease-in-out;
-	border: 1px solid var(--color1);
+	border: 1px solid var(--link-color);
 	border-radius: 10px;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	outline: none;
 }
 
@@ -644,7 +876,7 @@ mark.fade-out {
 	margin-right: auto;
 	max-width: 750px;
 	border-radius: 10px;
-	border-bottom: 2px dashed var(--color2);
+	border-bottom: 2px dashed var(--card-hover);
 }
 
 ul#searchresults {
@@ -655,7 +887,7 @@ ul#searchresults {
 ul#searchresults li {
 	margin: 1rem;
 	padding: 2px;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	border-radius: 8px;
 	padding: 7px;
 	transition: 0.2s;
@@ -673,7 +905,7 @@ ul#searchresults li.focus {
 	font-size: 105%;
 	outline: none;
 	border-width: 1px;
-	border-color: var(--color1);
+	border-color: var(--link-color);
 	border-style: solid;
 }
 
@@ -703,9 +935,9 @@ ul#searchresults span.teaser em {
 	height: 97%;
 	-webkit-overflow-scrolling: touch;
 	overscroll-behavior: none;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
-	scrollbar-color: var(--color2) rgba(255, 0, 0, 0) !important;
+	scrollbar-color: var(--card-hover) rgba(255, 0, 0, 0) !important;
 }
 
 .sidebar code {
@@ -782,7 +1014,7 @@ ul#searchresults span.teaser em {
 }
 
 .chapter li a:hover {
-	color: var(--color1) !important;
+	color: var(--link-color) !important;
 	transition: 0.3s;
 }
 
@@ -794,7 +1026,7 @@ ul#searchresults span.teaser em {
 }
 
 .chapter li a.active {
-	color: var(--color1) !important;
+	color: var(--link-color) !important;
 }
 
 .chapter li > a.toggle {
@@ -847,7 +1079,7 @@ ul#searchresults span.teaser em {
 	color: hsl(0deg 0% 100% / 75%);
 	font-size: 60%;
 	margin-left: 1rem;
-	background: var(--color2);
+	background: var(--card-hover);
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	border-radius: 10px;
@@ -861,7 +1093,7 @@ ul#searchresults span.teaser em {
 }
 
 .chapter .spacer {
-	background-color: var(--color1);
+	background-color: var(--link-color);
 }
 
 @media (-moz-touch-enabled: 1), (pointer: coarse) {
@@ -1007,4 +1239,15 @@ ul#searchresults span.teaser em {
 	-webkit-animation-delay: 3.5s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: ease-in;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 24px;
+    }
+
+    .page-container {
+        padding: 20px 16px 60px;
+    }
 }
