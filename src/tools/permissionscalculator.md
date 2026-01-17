@@ -53,75 +53,73 @@ Example text!
 .permission-item.checked {
 	border-left-color: var(--color1);
 }
-        .permission-item label {
-            margin-left: 12px;
-            font-size: 15px;
-            cursor: pointer;
-            flex-grow: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .permission-value {
-            color: #fff;
-            font-size: 14px;
-            margin-left: 15px;
-            background-color: rgba(114, 137, 218, 0.1);
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
-        input[type="checkbox"] {
-            transform: scale(1.2);
-            cursor: pointer;
-            accent-color: var(--color2);
-        }
-        .total-section {
-            background-color: var(--color3);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-            text-align: center;
-        }
-        .total-section h2 {
-            margin-top: 0;
-            color: #ffffff;
-            font-size: 20px;
-        }
-        .total-value {
-            font-family: 'Consolas', monospace;
-            font-size: 28px;
-            color: #43b581;
-            font-weight: bold;
-            margin: 10px 0;
-            word-break: break-all;
-        }
-        .hex-value {
-            font-family: 'Consolas', monospace;
-            font-size: 18px;
-            color: #faa61a;
-            margin-top: 5px;
-        }
-        .input-section {
-            margin: 25px 0;
-        }
-        .input-section input {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            background-color: #40444b;
-            border: 2px solid #202225;
-            border-radius: 8px;
-            color: #ffffff;
-            box-sizing: border-box;
-            font-family: 'Consolas', monospace;
-        }
-        .input-section input:focus {
-            outline: none;
-            border-color: #7289da;
-        }
-        .input-section input::placeholder {
-            color: #72767d;
-        }
+.permission-item label {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.permission-value {
+	color: #fff;
+	font-size: 1.4rem;
+	margin-left: 1rem;
+	background-color: rgb(145 145 145 / 10%);
+	padding: .5rem 1rem;
+	border-radius: 10px;
+}
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+    accent-color: var(--color2);
+}
+.total-section {
+	background-color: var(--color3);
+	padding: 1rem;
+	border-radius: 10px;
+	margin: 3rem 0;
+	text-align: center;
+}
+.total-section h2 {
+	margin-top: 0;
+	color: #ffffff;
+	font-size: 2.25rem;
+}
+.total-value {
+	font-family: 'Consolas', monospace;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: -1rem 0;
+	word-break: break-all;
+}
+.hex-value {
+	font-family: 'Consolas', monospace;
+	font-size: 1.4rem;
+	color: var(--color1);
+	margin-top: 1rem;
+}
+.input-section {
+	margin: 2rem 0;
+}
+.input-section input {
+	width: 100%;
+	padding: 1.5rem;
+	font-size: 1.5rem;
+	background-color: var(--color3);
+	border: 2px solid var(--color2);
+	border-radius: 10px;
+	color: #ffff;
+	box-sizing: border-box;
+}
+.input-section input:focus {
+	outline: none;
+	border-color: var(--color1);
+}
+.input-section input::placeholder {
+    color: #fff;
+}
 .results {
 	 background-color: var(--color3);
 	 padding: 1.5rem;
