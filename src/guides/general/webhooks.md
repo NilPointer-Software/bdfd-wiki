@@ -194,6 +194,22 @@ $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookTitle[$var[webhook];My Webhook Title]
 ```
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 674344467746258975
+  username: Test webhook
+  color: "#fff"
+  bot: true
+  verified: false
+  content: |
+  embed:
+    title: My Webhook Title
+```
+
 ```admonish question title="What is this?"
 How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
