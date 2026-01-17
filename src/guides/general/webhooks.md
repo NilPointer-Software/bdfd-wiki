@@ -127,7 +127,27 @@ You can use our ["Color" tool](../../tools/color.md) to select the best color!
 ```
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
-$webhookSend[$var[webhook];I'm the best webhook;Title;;It's description!;#673ab7;;;;;;false]
+$webhookSend[$var[webhook];I'm the best webhook;Title;;It's a description!;#673ab7;;;;;;false]
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: Test webhook
+  color: "#fff"
+  bot: true
+  verified: true
+  content: |
+    I'm the best webhook
+  embed:
+    title: Title
+    description: It's a description!
+    color: "#673ab7"
+    footer:
+      text: Footer Text Here
 ```
 
 ```admonish question title="What is this?"
