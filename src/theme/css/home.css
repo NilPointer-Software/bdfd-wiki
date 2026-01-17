@@ -2,13 +2,6 @@
 
 .discord-messages {
 	margin-top: 1.7rem;
-	transition: 0.5s;
-}
-
-.discord-messages:hover {
-	transform: scale(1.015);
-	border-radius: 12.5px;
-	transition: 0.5s;
 }
 
 .discord-left-border {
@@ -40,12 +33,6 @@
 	padding-top: 0.02px;
 	border-radius: 10px;
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
-	transition: 0.3s;
-}
-
-.bdfd-is:hover {
-	transform: scale(1.015);
-	transition: 0.3s;
 }
 
 .download,
@@ -101,7 +88,14 @@
 	font-weight: 700;
 	padding: 0 15px;
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
-	transition: 0.3s;
+	transition: background-color 0.2s, opacity 0.2s;
+}
+
+.getHelp:hover,
+.createMyBot:hover,
+.downButton:hover,
+.resButton:hover {
+	opacity: 0.85;
 }
 
 .downButton,
@@ -110,15 +104,6 @@
 	font-size: 90%;
 	padding-left: 15px;
 	padding-right: 15px;
-}
-
-.getHelp:hover,
-.createMyBot:hover,
-.downButton:hover,
-.resButton:hover {
-	border-color: var(--link-color);
-	transform: scale(1.05);
-	transition: 0.3s;
 }
 
 .getHelp i,
@@ -186,8 +171,15 @@ button a {
 	border-radius: 10px;
 	box-sizing: border-box;
 	padding: 1.5rem;
-	transition: 0.3s;
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.2s;
+}
+
+.hosting:hover,
+.anywhere:hover,
+.alotfunctions:hover,
+.community:hover {
+	background: var(--card-hover);
 }
 
 @media (max-width: 1025px) {
@@ -206,49 +198,5 @@ button a {
 	.community {
 		width: 100%;
 		min-height: auto;
-	}
-}
-
-@media (min-width: 900px) {
-	.hosting:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 0 2px 2px 0;
-		border-color: var(--link-color);
-		transition: 0.3s;
-	}
-
-	.anywhere:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 0 0 2px 2px;
-		border-color: var(--link-color);
-		transition: 0.3s;
-	}
-
-	.alotfunctions:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 2px 2px 0 0;
-		border-color: var(--link-color);
-		transition: 0.3s;
-	}
-
-	.community:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 2px 0 0 2px;
-		border-color: var(--link-color);
-		transition: 0.3s;
-	}
-}
-
-@media (max-width: 900px) {
-	.why-bdfd-embed > div:hover {
-		transform: scale(1.025);
-		border: solid;
-		border-width: 1px;
-		border-color: var(--link-color);
-		transition: 0.3s;
 	}
 }

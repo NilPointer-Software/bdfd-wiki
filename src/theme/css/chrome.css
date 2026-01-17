@@ -91,12 +91,10 @@ html {
 .content-card a {
     color: var(--link-color);
     text-decoration: none;
-    transition: opacity 0.2s ease;
 }
 
 .content-card a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
+    opacity: 0.85;
 }
 
 .content-card code {
@@ -407,40 +405,6 @@ a > .hljs {
 .discord-message-markup a:link:hover,
 .discord-embed-grid a:link:hover {
 	text-decoration: underline;
-}
-
-a:link:not(
-		.breadcrumb a,
-		.editPage,
-		.mobile-nav-chapters,
-		.chapter li a,
-		.discord-button,
-		.discord-embed-grid a,
-		.discord-message-markup a
-	)::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 1px;
-	background-color: var(--link-color);
-	bottom: 0;
-	left: 0;
-	transform-origin: right;
-	transform: scaleX(0);
-	transition: transform 0.3s ease-in-out;
-}
-
-a:link:not(
-		.breadcrumb a,
-		.editPage,
-		.mobile-nav-chapters,
-		.chapter li a,
-		.discord-button,
-		.discord-embed-grid a,
-		.discord-message-markup a
-	):hover::before {
-	transform-origin: left;
-	transform: scaleX(1);
 }
 
 /* Menu Bar */
@@ -1118,7 +1082,7 @@ ul#searchresults span.teaser em {
 	color: hsl(0deg 0% 100% / 85%);
 	text-decoration: none;
 	-webkit-tap-highlight-color: transparent;
-	transition: 0.3s;
+	transition: color 0.15s ease;
 }
 
 .chapter li a:not(a.toggle) {
@@ -1127,14 +1091,6 @@ ul#searchresults span.teaser em {
 
 .chapter li a:hover {
 	color: var(--link-color) !important;
-	transition: 0.3s;
-}
-
-.chapter li a:not(a.toggle):hover {
-	font-weight: bold;
-	border-radius: 10px;
-	padding-left: 10px;
-	background: hsl(0deg 0% 100% / 4%);
 }
 
 .chapter li a.active {
@@ -1157,7 +1113,7 @@ ul#searchresults span.teaser em {
 }
 
 .chapter li > a.toggle div {
-	transition: transform 0.5s;
+	transition: transform 0.2s ease;
 }
 
 /* collapse the section */
@@ -1178,13 +1134,11 @@ ul#searchresults span.teaser em {
 	font-weight: bold;
 	background: rgba(255, 255, 255, 0.03);
 	border: 1px solid rgba(255, 255, 255, 0.04);
-	transition: background 0.2s ease, border-color 0.2s ease;
 	cursor: pointer;
 }
 
 .chapter-item:not(.section .chapter-item, .chapter-item.affix):hover {
 	background: rgba(255, 255, 255, 0.06);
-	border-color: rgba(255, 255, 255, 0.08);
 }
 
 

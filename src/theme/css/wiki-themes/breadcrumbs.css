@@ -4,7 +4,6 @@
     display: -webkit-box;
     color: var(--link-color);
     padding-top: 10px;
-    transition: .3s;
 }
 
 .breadcrumb p {
@@ -21,6 +20,5 @@
 
 .breadcrumb a:hover {
     text-decoration: none;
-    transition: .2s;
     background-color: rgba(0, 0, 0, 0.3);
 }

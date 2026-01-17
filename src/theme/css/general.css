@@ -99,13 +99,6 @@ h4 a.header:target {
 	max-width: 750px;
 }
 
-/* Center content relative to viewport (not page-wrapper) on very large screens */
-@media only screen and (min-width: 2100px) {
-	.content main {
-		transform: translateX(calc(var(--sidebar-width) / -2));
-	}
-}
-
 .content a {
 	text-decoration: none;
 }
