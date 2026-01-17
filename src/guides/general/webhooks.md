@@ -62,6 +62,21 @@ $var[Webhook;$webhookCreate[$channelID;Secret]]
 Created and saved!
 ```
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Created ans saved!
+```
+
 > How [`$var[]`](../../bdscript/var.md) and [`$channelID`](../../bdscript/channelID.md) works?
 
 ~~~
@@ -123,6 +138,21 @@ $webhookDelete[$var[webhook]]
 Deleted!
 ```
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Deleted!
+```
+
 ```admonish question title="What is this?"
 How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
@@ -144,7 +174,22 @@ $webhookAvatarURL[Webhook URL;New avatar URL]
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookAvatarURL[$var[webhook];$authorAvatar]
-New avatar!
+New avatar for webhook!
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    New avatar for webhook!
 ```
 
 ```admonish question title="What is this?"
@@ -168,7 +213,22 @@ $webhookUsername[Webhook URL;New username]
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookUsername[$var[webhook];BDFD Support]
-New username!
+New username for webhook!
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    New username for webhook!
 ```
 
 ```admonish question title="What is this?"
@@ -309,6 +369,21 @@ $webhookContent[Webhook URL;Text]
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookContent[$var[webhook];Hello from my webhook!]
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 674344467746258975
+  username: Test webhook
+  color: "#fff"
+  bot: true
+  verified: true
+  content: |
+    Hello from my webhook!
 ```
 
 ```admonish question title="What is this?"
