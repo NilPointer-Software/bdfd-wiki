@@ -223,7 +223,7 @@ $webhookDescription[$var[webhook];This is a detailed description for my webhook.
   color: "#E67E22"
   content: |
     !example
-- user_id: 674344467746258975
+- user_id: 887433921657176065
   username: Test webhook
   color: "#fff"
   bot: true
