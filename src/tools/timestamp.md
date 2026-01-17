@@ -33,7 +33,7 @@
     color: #34495e;
 }
 .converter-section input {
-    color: #bbb;
+    color: #fff;
     padding: 2.25rem !important;
     width: 100%;
 	max-width: 100%;
