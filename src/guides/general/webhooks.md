@@ -2,7 +2,7 @@
 This wiki explains how to create and use webhooks in BDFD.
 
 ## Content
-[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) > [**$webhookSend[]**](#webhooksend) > [**$webhookDelete[]**](#webhookDelete) > [**$webhookAvatarURL[]**](#webhookavatarurl)  > [**$webhookUsername[]**](#webhookusername) > [**$webhookTitle[]**](#webhooktitle) > [**$webhookDescription[]**](#webhookdescription) > [**$webhookFooter[]**](#webhookfooter) > [**$webhookContent[]**](#webhookcontent) > [**$webhookColor[]**](#webhookcolor)
+[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) > [**$webhookSend[]**](#webhooksend) > [**$webhookDelete[]**](#webhookDelete) > [**$webhookAvatarURL[]**](#webhookavatarurl)  > [**$webhookUsername[]**](#webhookusername) > [**$webhookTitle[]**](#webhooktitle) > [**$webhookDescription[]**](#webhookdescription) > [**$webhookFooter[]**](#webhookfooter) > [**$webhookContent[]**](#webhookcontent) > [**$webhookColor[]**](#webhookcolor) >[Beautiful Webhook](#beautiful-webhook)
 
 ## Functions Used
 - [`$webhookCreate[]`](../../bdscript/webhookCreate.md)
@@ -273,9 +273,17 @@ You can use our ["Color" tool](../../tools/color.md) to select the best color!
 ```
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
-$webhookColor[$var[webhook];#00FF00]
+$webhookColor[$var[webhook];#000]
 ```
 
 ```admonish question title="What is this?"
 How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
+```
+
+# Beautiful webhook
+Here is one example of how to use a webhook.
+
+```
+$nomention
+$var[webhook;$webhookCreate[$channelID;I'm webhook 😎]]
 ```
