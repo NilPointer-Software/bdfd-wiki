@@ -76,10 +76,15 @@ function initializePermissionValues() {
     
     checkboxes.forEach(checkbox => {
         const permissionName = checkbox.id;
-        const permissionValue = BigInt(checkbox.value);
+        // Используем функцию permission() для получения значения
+        const permissionValue = permission(permissionName);
+        
+        // Получаем название права из label
+        const label = document.querySelector(`label[for="${permissionName}"]`);
+        const permissionLabel = label ? label.textContent.trim().split('\n')[0] : permissionName;
         
         permissionValues.set(permissionName, {
-            name: document.querySelector(`label[for="${permissionName}"]`).textContent.trim().split('\n')[0],
+            name: permissionLabel,
             value: permissionValue
         });
     });
@@ -165,7 +170,8 @@ function updateTotal() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
     
     checkboxes.forEach(checkbox => {
-        total += BigInt(checkbox.value);
+        // Используем функцию permission() для получения значения
+        total += permission(checkbox.id);
         
         // Add class for highlighting selected element
         document.getElementById(`item-${checkbox.id}`).classList.add('checked');
@@ -222,7 +228,7 @@ function findCombinations() {
     // Get currently selected permissions
     const checkedBoxes = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'));
     const checkedPerms = checkedBoxes.map(cb => cb.id);
-    const checkedSum = checkedBoxes.reduce((sum, cb) => sum + BigInt(cb.value), 0n);
+    const checkedSum = checkedBoxes.reduce((sum, cb) => sum + permission(cb.id), 0n);
     
     // If input field is empty
     if (!targetValue) {
@@ -364,4 +370,6 @@ function formatBinarySum(combination) {
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', initializeInterface);
+
+// Export permission function to global scope for easy testing
 window.permission = permission;
