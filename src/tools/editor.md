@@ -100,7 +100,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #searchText, #replaceText {
 	background: hsl(0deg 0% 100% / 7%);
-	color: #bbb;
+	color: #fff;
 	font-size: 1.5rem;
 	display: block;
 	outline: none;
