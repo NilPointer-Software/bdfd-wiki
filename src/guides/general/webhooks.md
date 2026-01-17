@@ -287,7 +287,24 @@ You can use our ["Color" tool](../../tools/color.md) to select the best color!
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookColor[$var[webhook];#673ab7]
-$webhookDescriprion[⬅️ Embed border color] 
+$webhookDescriprion[⬅️ Embed border color.] 
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: Test webhook
+  color: "#fff"
+  bot: true
+  verified: true
+  content: <none>
+  embed:
+    description: ⬅️ Embed border color.
+    color: "#673ab7"
 ```
 
 ```admonish question title="What is this?"
