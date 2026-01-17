@@ -50,6 +50,21 @@ $nomention
 $webhookCreate[$channelID;BDFD Webhook 🤖]
 ```
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    1234abcd567ABCDEFG890H_654679203GDGJEMFNXH.6479304948
+```
+
 ```admonish question title="What is this?"
 How [`$channelID`](../../bdscript/channelID.md) works?
 ```
