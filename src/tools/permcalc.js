@@ -179,7 +179,10 @@ function updateTotal() {
     
     // Remove class from unselected elements
     document.querySelectorAll('input[type="checkbox"]:not(:checked)').forEach(checkbox => {
-        document.getElementById(`item-${checkbox.id}`).classList.remove('checked');
+        const itemElement = document.getElementById(`item-${checkbox.id}`);
+        if (itemElement) {
+            itemElement.classList.remove('checked');
+        }
     });
     
     // Update category states and toggle button texts
