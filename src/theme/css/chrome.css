@@ -1033,12 +1033,14 @@ ul#searchresults span.teaser em {
 	width: var(--sidebar-width);
 	font-size: 95%;
 	box-sizing: border-box;
-	border-radius: 0;
 	height: calc(100vh - 70px);
 	-webkit-overflow-scrolling: touch;
 	overscroll-behavior: none;
-	background-color: var(--card-bg);
-	border-right: 1px solid rgba(255, 255, 255, 0.05);
+	background: rgba(26, 26, 46, 0.85);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-right: 1px solid rgba(255, 255, 255, 0.08);
+	box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
 	scrollbar-color: var(--card-hover) rgba(255, 0, 0, 0) !important;
 	z-index: 999;
 }
@@ -1054,7 +1056,7 @@ ul#searchresults span.teaser em {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 16px 12px;
+	padding: 20px 16px;
 }
 
 .sidebar-hidden .sidebar {
@@ -1137,6 +1139,12 @@ ul#searchresults span.teaser em {
 
 .chapter li a.active {
 	color: var(--link-color) !important;
+	font-weight: 600;
+	background: rgba(102, 126, 234, 0.1);
+	border-radius: 8px;
+	padding-left: 10px;
+	margin-left: -2px;
+	border-left: 2px solid var(--link-color);
 }
 
 .chapter li > a.toggle {
@@ -1164,16 +1172,21 @@ ul#searchresults span.teaser em {
 .chapter-item:not(.section .chapter-item, .chapter-item.affix) {
 	user-select: none;
 	-webkit-user-select: none;
-	border-radius: 10px;
-	padding: 10px;
+	border-radius: 12px;
+	padding: 12px;
 	margin-bottom: 10px;
 	font-weight: bold;
-	background: linear-gradient(
-		-50deg,
-		hsl(0deg 0% 100% / 1%),
-		hsl(0deg 0% 100% / 5%)
-	);
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.04);
+	transition: background 0.2s ease, border-color 0.2s ease;
+	cursor: pointer;
 }
+
+.chapter-item:not(.section .chapter-item, .chapter-item.affix):hover {
+	background: rgba(255, 255, 255, 0.06);
+	border-color: rgba(255, 255, 255, 0.08);
+}
+
 
 /* Deprecated function tag */
 /* $ <- ITS IMPORTANT! */
@@ -1197,13 +1210,9 @@ ul#searchresults span.teaser em {
 
 .spacer {
 	width: 100%;
-	height: 3px;
-	margin: 5px 0px;
+	height: 2px;
+	margin: 8px 0px;
 	border-radius: 10px;
-}
-
-.chapter .spacer {
-	background-color: var(--link-color);
 }
 
 @media (-moz-touch-enabled: 1), (pointer: coarse) {
