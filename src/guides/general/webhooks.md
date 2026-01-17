@@ -45,6 +45,8 @@ $var[Webhook;$webhookCreate[$channelID;Secret]]
 Created and saved!
 ```
 
+> How [`$var[]`](../../bdscript/var.md) works?
+
 ~~~
 
 # $webhookSend
@@ -63,7 +65,7 @@ $webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color hex;Author;A
 - `Description` `(Type: String || Flag: Vacantable)`: The description that will be applied to the embed.
 - `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../tools/color.md) to set the embed border color as. You can also use color integer number.
 ```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to select the best color!
+You can use our ["Color" tool](../../tools/color.md) to select the best color!
 ```
 
 - `Author` `(Type: String || Flag: Vacantable )`: The text that appears at the author.
@@ -79,6 +81,10 @@ You can use our ["Color" tool](../tools/color.md) to select the best color!
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookSend[$var[webhook];I'm the best webhook;Title;;It's description!;#000;;;;;;false]
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookDelete
