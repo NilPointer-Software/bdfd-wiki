@@ -6,8 +6,8 @@ Example text!
 <style>
 .control-buttons {
 	display: flex;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 1rem;
+    margin-bottom: 1rem;
 	justify-content: center;
     align-items: center;
 }
@@ -20,7 +20,6 @@ Example text!
 	padding-right: 1rem;
 	height: 4rem;
 	border: none;
-	font-weight: 600;
 	border-radius: 10px;
 	cursor: pointer;
 	font-size: 2.25rem;
@@ -41,11 +40,11 @@ Example text!
 .permission-item {
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 1rem;
     background-color: var(--color3);
     border-radius: 10px;
     transition: all 0.2s;
-    margin-bottom: 5px;
+    margin-bottom: .75rem;
     border-left: 4px solid transparent;
 }
 .permission-item:hover {
@@ -141,15 +140,15 @@ Example text!
 	padding: 0rem 0;
 }
 .combination {
-	background-color: rgb(145 145 145 / 25%) !important;
-	padding: 1rem !important;
-	margin: 1rem 0 !important;
-	border-radius: 10px !important;
-	border-left: 0 !important;
+	background-color: rgb(145 145 145 / 25%);
+	padding: 1rem;
+	margin: 1rem 0;
+	border-radius: 10px;
+	border-left: 0;
 }
 .combination-title {
 	font-weight: bold;
-	margin-bottom: 0rem !important;
+	margin-bottom: 0rem;
 }
         .permission-list {
             list-style-type: none;
