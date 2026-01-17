@@ -197,7 +197,7 @@ $description[⬅️ Border color hex]
 $color[#673ab7]
 ```
 
-``` discord yaml
+```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
