@@ -548,8 +548,7 @@ input[type="checkbox"] {
         <div class="hex-value" id="hexValue">0x0</div>
     </div>
     <div class="input-section">
-        <input type="number" id="targetValue" 
-               placeholder="Enter permission value to find combinations." min="0">
+        <input type="number" id="targetValue" placeholder="Enter permission value to find combinations." min="0">
     </div>
     <div class="results">
         <h3>Search Results:</h3>
