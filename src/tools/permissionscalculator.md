@@ -225,7 +225,6 @@ input[type="checkbox"] {
 	color: #fff;
 	background: hsl(0deg 0% 100% / 7%);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-	flex: 1;
 	transition: all 0.2s;
 	text-align: center;
 }
