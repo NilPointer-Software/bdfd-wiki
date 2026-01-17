@@ -197,5 +197,7 @@ $threadAddMember[$var[id];$authorID]
   content: |
     <i style="color: #378afa">BDFD Support</i> added <i style="color: #E67E22">RainbowKey</i> to the thread.
 ```
-\
-> If you want to learn more about threads, read [Discord's support article](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ).
+
+```admonish note
+If you want to learn more about threads, read [Discord's support article](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ).
+```
