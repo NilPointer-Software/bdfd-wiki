@@ -217,6 +217,22 @@ $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookDescription[$var[webhook];This is a detailed description for my webhook.]
 ```
 
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 674344467746258975
+  username: Test webhook
+  color: "#fff"
+  bot: true
+  verified: false
+  content: <none>
+  embed:
+    description: This is a detailed description for my webhook.
+```
+
 ```admonish question title="What is this?"
 How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
@@ -296,11 +312,11 @@ $webhookDescriprion[⬅️ Embed border color.]
   color: "#E67E22"
   content: |
     !example
-- user_id: 1009018156494368798
+- user_id: 674344467746258975
   username: Test webhook
   color: "#fff"
   bot: true
-  verified: true
+  verified: false
   content: <none>
   embed:
     description: ⬅️ Embed border color.
