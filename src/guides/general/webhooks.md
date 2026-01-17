@@ -2,7 +2,7 @@
 This wiki explains how to create and use webhooks in BDFD.
 
 ## Content
-[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) 
+[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) > [**$webhookSend[]**](#webhooksend) > [**$webhookDelete[]**](#webhookDelete) > [**$webhookAvatarURL[]**](#webhookavatarurl)  > [**$webhookUsername[]**](#webhookusername) > [**$webhookTitle[]**](#webhooktitle) > [**$webhookDescription[]**](#webhookdescription) > [**$webhookFooter[]**](#webhookfooter) > [**$webhookContent[]**](#webhookcontent) > [**$webhookColor[]**](#webhookcolor)
 
 ## Functions Used
 - [`$webhookCreate[]`](../../bdscript/webhookCreate.md)
@@ -52,7 +52,7 @@ Sends message as the webhook.
 
 ## Syntax
 ```
-$webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color;Author;Author icon URL;Footer;Footer icon URL;Thumbnail URL;Image URL;Add timestamp?)]
+$webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color hex;Author;Author icon URL;Footer;Footer icon URL;Thumbnail URL;Image URL;Add timestamp?)]
 ```
 
 ### Parameters
