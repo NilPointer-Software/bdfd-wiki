@@ -119,11 +119,12 @@ Changes the webhook's avatar.
 
 ## Syntax
 ```
-$webhookAvatarURL[Webhook URL;Avatar URL]
+$webhookAvatarURL[Webhook URL;New avatar URL]
 ```
 
 ### Parameters
 - `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to modify.
+- `New avatar URL` `(Type: URL || Flag: Required)`: The new avatar image URL for the webhook.
 
 ## Example
 ```
@@ -142,11 +143,12 @@ Changes the webhook's username.
 
 ## Syntax
 ```
-$webhookUsername[Webhook URL;Username]
+$webhookUsername[Webhook URL;New username]
 ```
 
 ### Parameters
 - `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to modify.
+- `New username` `(Type: String || Flag: Required)`: The new username for the webhook.
 
 ## Example
 ```
@@ -170,6 +172,7 @@ $webhookTitle[Webhook URL;Text]
 
 ### Parameters
 - `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
+- `Text` `(Type: String || Flag: Required)`: The title text to add to the embed of the webhook.
 
 ## Example
 ```
@@ -192,6 +195,7 @@ $webhookDescription[Webhook URL;Text]
 
 ### Parameters
 - `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
+- `Text` `(Type: String || Flag: Required)`: The description text to add to the embed of the webhook.
 
 ## Example
 ```
@@ -214,6 +218,7 @@ $webhookFooter[Webhook URL;Text]
 
 ### Parameters
 - `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
+- `Text` `(Type: String || Flag: Required)`: The footer text to add to the embed of the webhook.
 
 ## Example
 ```
@@ -236,6 +241,7 @@ $webhookContent[Webhook URL;Text]
 
 ### Parameters
 - `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
+- `Text` `(Type: String || Flag: Required)`: The content text to add to the webhook.
 
 ## Example
 ```
