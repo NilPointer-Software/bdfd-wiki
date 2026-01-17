@@ -81,6 +81,16 @@ input[type="checkbox"] {
 	border-radius: 10px;
 	margin: 3rem 0;
 	text-align: center;
+	transition: 0.3s;
+}
+.total-section:hover {
+    transform: scale(1.015);
+    border-radius: 12.5px;
+    transition: 0.3s;
+}
+.total-section:hover > .total-value {
+    color: var(--color1);
+    transition: 0.3s;
 }
 .total-section h2 {
 	margin-top: 0;
@@ -90,9 +100,11 @@ input[type="checkbox"] {
 .total-value {
 	font-family: 'Consolas', monospace;
 	font-size: 3rem;
+	color: #fff;
 	font-weight: bold;
 	margin: -1rem 0;
 	word-break: break-all;
+	transition: 0.3s;
 }
 .hex-value {
 	font-family: 'Consolas', monospace;
