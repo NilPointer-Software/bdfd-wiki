@@ -149,7 +149,7 @@ input[type="checkbox"] {
 	min-height: 1rem;
 	padding: 0rem 0;
 }
-.combination {
+.combination, .current-selection {
 	background-color: rgb(145 145 145 / 25%);
 	padding: 1rem;
 	margin: 1rem 0;
@@ -160,45 +160,36 @@ input[type="checkbox"] {
 	font-weight: bold;
 	margin-bottom: 0rem;
 }
-        .permission-list {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 5px 0;
-        }
-        .permission-list li {
-            padding: 5px 10px;
-            margin: 3px 0;
-            background-color: #40444b;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        .combination-total {
-            font-family: 'Consolas', monospace;
-            color: #faa61a;
-            font-weight: bold;
-            margin-top: 8px;
-            font-size: 15px;
-        }
-        .no-results {
-            color: #f04747;
-            font-style: italic;
-            text-align: center;
-            padding: 20px;
-        }
-        .search-info {
-            color: #72767d;
-            font-size: 14px;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #40444b;
-        }
-        .current-selection {
-            background-color: var(--color2);
-            padding: 12px;
-            border-radius: 6px;
-            margin: 15px 0;
-            border-left: 4px solid #7289da;
-        }
+.permission-list {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 1rem 0;
+}
+.permission-list li {
+	padding: .75rem 1rem;
+	margin: .5rem 0;
+	background-color: rgb(0 0 0 / 10%);
+	border-radius: 10px;
+	font-size: 1.5rem;
+}
+.combination-total {
+	font-family: 'Consolas', monospace;
+	color: var(--color2);
+	font-weight: bold;
+	margin-top: 1rem;
+	font-size: 1rem;
+}
+.no-results {
+	font-style: italic;
+	text-align: center;
+	padding: 1rem;
+}
+.search-info {
+	color: var(--color1);
+	font-size: 1.6rem;
+	margin-top: -1.5rem;
+	padding-top: 0;
+}
         .warning {
             color: #faa61a;
             font-size: 14px;
