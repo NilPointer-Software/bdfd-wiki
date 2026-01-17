@@ -50,7 +50,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	max-height: 100em;
 	border-radius: 10px;
 	border-width: 0;
-	color: #bbb;
+	color: #fff;
 	background: hsl(0deg 0% 100% / 7%);
 	padding: 7px;
 	font-size: 1.5rem;
@@ -156,7 +156,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #highlightedText {
 	overflow-x: auto;
-	color: #bbb;
+	color: #fff;
 	font-size: 1.5rem;
 	border-radius: 10px;
 	border-width: 0;
