@@ -2,14 +2,23 @@
 This wiki explains how to create and use webhooks in BDFD.
 
 ```admonish warning
-In this wiki we use functions that only work on [BDScript 2](./bds2/aboutBDScript2.md). We recommend you to use the same script language to avoid problems with examples.
+In this wiki we use functions that only work on [**BDScript 2**](./bds2/aboutBDScript2.md). We recommend you to use the same script language to avoid problems with examples.
 ```
 
 ## Content
-[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) > [**$webhookSend[]**](#webhooksend) > [**$webhookDelete[]**](#webhookDelete) > [**$webhookAvatarURL[]**](#webhookavatarurl)  > [**$webhookUsername[]**](#webhookusername) > [**$webhookTitle[]**](#webhooktitle) > [**$webhookDescription[]**](#webhookdescription) > [**$webhookFooter[]**](#webhookfooter) > [**$webhookContent[]**](#webhookcontent) > [**$webhookColor[]**](#webhookcolor) > [Beautiful Webhook](#beautiful-webhook)
+[**Functions Used**](#functions-used) > [**$webhookCreate[]**](#webhookcreate) > [**$webhookSend[]**](#webhooksend) > [**$webhookDelete[]**](#webhookDelete) > [**$webhookAvatarURL[]**](#webhookavatarurl)  > [**$webhookUsername[]**](#webhookusername) > [**$webhookTitle[]**](#webhooktitle) > [**$webhookDescription[]**](#webhookdescription) > [**$webhookFooter[]**](#webhookfooter) > [**$webhookContent[]**](#webhookcontent) > [**$webhookColor[]**](#webhookcolor) > [**Beautiful Webhook**](#beautiful-webhook)
 
 ## Functions Used
 - [`$webhookCreate[]`](../../bdscript/webhookCreate.md)
+- [`$webhookSend[]`](../../bdscript/webhookSend.md)
+- [`$webhookDelete[]`](../../bdscript/webhookDelete.md)
+- [`$webhookAvatarURL[]`](../../bdscript/webhookAvatarURL.md)
+- [`$webhookUsername[]`](../../bdscript/webhookUsername.md)
+- [`$webhookTitle[]`](../../bdscript/webhookTitle.md)
+- [`$webhookDescription[]`](../../bdscript/webhookDescription.md)
+- [`$webhookFooter[]`](../../bdscript/webhookFooter.md)
+- [`$webhookContent[]`](../../bdscript/webhookContent.md)
+- [`$webhookColor[]`](../../bdscript/webhookColor.md)
 
 ## Support Functions Used
 - [`$var[]`](../../bdscript/var.md)
