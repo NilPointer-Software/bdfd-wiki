@@ -42,7 +42,7 @@ How [`$channelID`](../../bdscript/channelID.md) works?
 ```
 
 ~~~admonish tip
-You can use [`$var[]`](../../bdscript/var.md) or [other variable functions](../variables.md) to store the Webhook URL.
+You can use [`$var[]`](../../bdscript/var.md) or [other variable functions](../guides/introduction/variables.md) to store the Webhook URL.
 
 ```$nomention
 $var[Webhook;$webhookCreate[$channelID;Secret]]
