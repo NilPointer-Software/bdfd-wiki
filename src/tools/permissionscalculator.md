@@ -174,7 +174,7 @@ input[type="checkbox"] {
 }
 .combination-total {
 	font-family: 'Consolas', monospace;
-	color: var(--color2);
+	color: #fff;
 	font-weight: bold;
 	margin-top: 1rem;
 	font-size: 1rem;
