@@ -448,59 +448,110 @@ a:link:not(
 #menu-bar {
 	user-select: none;
 	-webkit-user-select: none;
-	position: -webkit-sticky;
-	position: sticky;
+	position: fixed;
 	top: 0;
-	z-index: 101;
-	padding: 10px;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding: 16px 24px;
+	background: rgba(13, 13, 13, 0.8);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	transition: all 0.3s ease;
 }
 
 #menu-bar > #menu-bar-sticky-container {
+	max-width: 1200px;
+	margin: 0 auto;
 	display: flex;
-	flex-wrap: wrap;
-	background: var(--primary-gradient);
-	border-radius: 10px;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
 }
 
 .js #menu-bar > #menu-bar-sticky-container {
-	transition: transform 0.3s;
+	transition: none;
 }
 
 #menu-bar i,
 #menu-bar .icon-button {
 	position: relative;
-	padding: 0 5.5px;
+	padding: 0 8px;
 	cursor: pointer;
-	transition: color 0.2s;
+	transition: all 0.2s ease;
 }
 
 .icon-button {
 	border: 0;
 	background: none;
+	color: rgba(255, 255, 255, 0.7);
+	padding: 10px 12px;
+	border-radius: 8px;
+}
+
+.icon-button:hover {
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.1);
 }
 
 #menu-bar:not(:hover).folded > #menu-bar-sticky-container {
-	transform: translateY(calc(-10px - 45px));
+	transform: none;
+}
+
+.navbar-brand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 1.1rem;
+	transition: opacity 0.3s ease;
+	flex: 1;
+}
+
+.navbar-brand:hover {
+	opacity: 0.8;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.navbar-brand-icon {
+	width: 36px;
+	height: 36px;
+	background: var(--primary-gradient);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar-brand-icon i {
+	color: white;
+	font-size: 16px;
+}
+
+.navbar-brand-text {
+	font-weight: 600;
+	font-size: 1.6rem;
+	color: #ffffff;
 }
 
 .menu-buttons {
 	display: flex;
-	margin: 0 10px;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Sidebar toggle positioned on the left */
+#menu-bar > #menu-bar-sticky-container > #sidebar-toggle {
+	order: -1;
+	margin-right: 12px;
 }
 
 .menu-title {
-	display: inline-block;
-	font-weight: 400;
-	font-size: 2rem;
-	line-height: 45px;
-	text-align: center;
-	margin: 0;
-	flex: 1;
-	margin-right: 5%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	color: #fff;
+	display: none;
 }
 
 .js .menu-title {
@@ -515,13 +566,13 @@ a:link:not(
 .mobile-nav-chapters:visited,
 .menu-bar .icon-button,
 .menu-bar a i {
-	color: #fff;
+	color: rgba(255, 255, 255, 0.7);
 }
 
 .menu-bar i:hover,
 .menu-bar .icon-button:hover,
 .nav-chapters:hover {
-	color: #ded;
+	color: #ffffff;
 }
 
 #sidebar-toggle,
@@ -530,11 +581,32 @@ a:link:not(
 	-webkit-tap-highlight-color: transparent;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+#sidebar-toggle:hover,
+#search-toggle:hover {
+	background: rgba(255, 255, 255, 0.1);
 }
 
 #search-toggle i,
 #sidebar-toggle i {
-	font-size: 14.5px !important;
+	font-size: 14px !important;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#sidebar-toggle:hover i,
+#search-toggle:hover i {
+	color: #ffffff;
+}
+
+/* Navbar spacer to prevent content from going under fixed navbar */
+.navbar-spacer {
+	height: 70px;
 }
 
 /* Hide sidebar button for PC & Add text in the menu bar */
@@ -545,17 +617,47 @@ a:link:not(
 	}
 
 	#search-toggle {
-		border: solid;
-		border-radius: 10px;
-		border-width: 0;
-		height: 80%;
-		margin-top: 15%;
-		margin-left: -15%;
-		background: rgba(0, 0, 0, 0.2);
+		width: 40px;
+		height: 40px;
+	}
+}
+
+/* Mobile responsive navbar */
+@media (max-width: 749px) {
+	#menu-bar {
+		padding: 12px 16px;
 	}
 
-	.menu-title:after {
-		content: " ·  Wiki";
+	#menu-bar > #menu-bar-sticky-container > #sidebar-toggle {
+		display: flex;
+		margin-right: 12px;
+	}
+
+	.navbar-brand {
+		flex: 1;
+		justify-content: flex-start;
+	}
+
+	.navbar-brand-text {
+		font-size: 1.6rem;
+	}
+
+	.navbar-brand-icon {
+		width: 32px;
+		height: 32px;
+	}
+
+	.navbar-brand-icon i {
+		font-size: 14px;
+	}
+
+	.navbar-spacer {
+		height: 60px;
+	}
+
+	.sidebar {
+		top: 60px;
+		height: calc(100vh - 60px);
 	}
 }
 
@@ -633,7 +735,7 @@ a:link:not(
 }
 
 .nav-wrapper {
-	margin-top: 50px;
+	margin-top: 20px;
 	display: none;
 }
 
@@ -925,19 +1027,20 @@ ul#searchresults span.teaser em {
 
 .sidebar {
 	position: fixed;
-	left: 5px;
-	top: 10px;
+	left: 0;
+	top: 70px; /* Account for fixed navbar height */
 	bottom: 0;
-	width: 320px;
+	width: var(--sidebar-width);
 	font-size: 95%;
 	box-sizing: border-box;
-	border-radius: 10px;
-	height: 97%;
+	border-radius: 0;
+	height: calc(100vh - 70px);
 	-webkit-overflow-scrolling: touch;
 	overscroll-behavior: none;
 	background-color: var(--card-bg);
-	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+	border-right: 1px solid rgba(255, 255, 255, 0.05);
 	scrollbar-color: var(--card-hover) rgba(255, 0, 0, 0) !important;
+	z-index: 999;
 }
 
 .sidebar code {
@@ -951,38 +1054,45 @@ ul#searchresults span.teaser em {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 10px 10px;
+	padding: 16px 12px;
 }
 
 .sidebar-hidden .sidebar {
-	transform: translateX(calc(-10px - 320px));
-	transition: transform 0.3s;
+	transform: translateX(calc(-1 * var(--sidebar-width)));
+	transition: transform 0.3s ease;
 }
 
 .sidebar-visible .sidebar {
 	transform: translateX(0);
-	transition: transform 0.3s;
+	transition: transform 0.3s ease;
 }
 
 .sidebar-visible .page-wrapper {
-	transform: translateX(320px);
+	margin-left: var(--sidebar-width);
+	transition: margin-left 0.3s ease;
+}
+
+.sidebar-hidden .page-wrapper {
+	margin-left: 0;
+	transition: margin-left 0.3s ease;
 }
 
 @media only screen and (min-width: 620px) {
 	.sidebar-visible .page-wrapper {
 		transform: none;
-		margin-left: 320px;
+		margin-left: var(--sidebar-width);
 	}
 }
 
-/* Fixed  sidebar for PX */
+/* Fixed sidebar for desktop */
 @media only screen and (min-width: 750px) {
 	.sidebar-hidden .sidebar {
 		transform: translateX(0);
 	}
 
-	.sidebar-hidden .page-wrapper {
-		transform: translateX(320px);
+	.sidebar-hidden .page-wrapper,
+	.sidebar-visible .page-wrapper {
+		margin-left: var(--sidebar-width);
 	}
 }
 

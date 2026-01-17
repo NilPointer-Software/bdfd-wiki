@@ -76,7 +76,7 @@ h1 a.header:target,
 h2 a.header:target,
 h3 a.header:target,
 h4 a.header:target {
-	scroll-margin-top: calc(45px + 0.5em);
+	scroll-margin-top: calc(70px + 0.5em);
 }
 
 .page {

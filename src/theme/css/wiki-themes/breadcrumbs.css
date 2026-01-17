@@ -15,17 +15,12 @@
     text-decoration: none;
     text-align: center;
     padding: 5px;
-    text-decoration: none;
-    transition: .3s;
     color: var(--link-color) !important;
     border-radius: 12px;
 }
 
-.breadcrumb a:hover{
-    padding: 6px;
-    font-size: 105%;
+.breadcrumb a:hover {
     text-decoration: none;
-    transition: .3s;
+    transition: .2s;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
 }

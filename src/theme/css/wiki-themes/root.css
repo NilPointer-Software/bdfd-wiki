@@ -16,8 +16,8 @@
     --sidebar-width: 320px;
     --page-padding: 5px;
     --content-max-width: 750px;
-    --menu-bar-height: 45px;
-    --menu-bar-border-radius: 10px;
+    --menu-bar-height: 70px;
+    --menu-bar-border-radius: 0;
 }
 
 * {
