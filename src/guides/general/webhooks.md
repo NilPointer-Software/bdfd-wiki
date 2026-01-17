@@ -2,7 +2,7 @@
 This wiki explains how to create and use webhooks in BDFD.
 
 ```admonish warning
-In this wiki we use functions that only work on [BDScript 2](./bds2/AboutBDS2/variables.md). We recommend you to use the same script language to avoid problems with examples.
+In this wiki we use functions that only work on [BDScript 2](./bds2/aboutBDScript2.md). We recommend you to use the same script language to avoid problems with examples.
 ```
 
 ## Content
