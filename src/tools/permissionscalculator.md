@@ -78,7 +78,7 @@ Example text!
             accent-color: var(--color2);
         }
         .total-section {
-            background-color: #202225;
+            background-color: var(--color3);
             padding: 20px;
             border-radius: 8px;
             margin: 25px 0;
@@ -125,7 +125,7 @@ Example text!
             color: #72767d;
         }
         .results {
-            background-color: #202225;
+            background-color: var(--color3);
             padding: 20px;
             border-radius: 8px;
             margin-top: 20px;
@@ -134,7 +134,7 @@ Example text!
             margin-top: 0;
             color: #ffffff;
             font-size: 18px;
-            border-bottom: 2px solid #7289da;
+            border-bottom: 2px solid var(--color2);
             padding-bottom: 10px;
         }
         .result-content {
