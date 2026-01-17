@@ -105,6 +105,13 @@ $webhookDelete[Webhook URL]
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookDelete[$var[webhook]]
+Deleted!
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookAvatarURL
@@ -121,6 +128,13 @@ $webhookAvatarURL[Webhook URL;Avatar URL]
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookAvatarURL[$var[webhook];$authorAvatar]
+New avatar!
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookUsername
@@ -137,6 +151,13 @@ $webhookUsername[Webhook URL;Username]
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookUsername[$var[webhook];BDFD Support]
+New username!
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookTitle
@@ -153,6 +174,12 @@ $webhookTitle[Webhook URL;Text]
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookTitle[$var[webhook];My Webhook Title]
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookDescription
@@ -169,6 +196,12 @@ $webhookDescription[Webhook URL;Text]
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookDescription[$var[webhook];This is a detailed description for my webhook.]
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookFooter
@@ -185,6 +218,12 @@ $webhookFooter[Webhook URL;Text]
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookFooter[$var[webhook];Footer Text Here]
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookContent
