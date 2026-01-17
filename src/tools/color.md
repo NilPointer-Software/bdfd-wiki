@@ -179,6 +179,7 @@ You can use color hex in the "Color hex" parameters.
 - [`$embedSuppressErrors[]`](../bdscript/embedSuppressErrors.md)
 - [`$modifyRole[]`](../bdscript/modifyRole.md)
 - [`$sendEmbedMessage[]`](../bdscript/sendEmbedMessage.md)
+- [`$webhookColor[]`](../bdscript/webhookColor.md)
 - [`$webhookSend[]`](../bdscript/webhookSend.md)
 
 **GET**:
