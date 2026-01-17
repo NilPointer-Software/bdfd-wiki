@@ -95,7 +95,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	margin-bottom: -.5rem;
 	margin-top: .5rem;
 	font-size: 1rem;
-	color: #9e9e9e;
+	color: var(--color2);
 }
 
 #searchText, #replaceText {
