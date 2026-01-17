@@ -123,35 +123,34 @@ Example text!
         .input-section input::placeholder {
             color: #72767d;
         }
-        .results {
-            background-color: var(--color3);
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .results h3 {
-            margin-top: 0;
-            color: #ffffff;
-            font-size: 18px;
-            border-bottom: 2px solid var(--color2);
-            padding-bottom: 10px;
-        }
-        .result-content {
-            min-height: 80px;
-            padding: 15px 0;
-        }
-        .combination {
-            background-color: var(--color2);
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 6px;
-            border-left: 4px solid #43b581;
-        }
-        .combination-title {
-            color: #fff;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
+.results {
+	 background-color: var(--color3);
+	 padding: 1.5rem;
+	 border-radius: 10px;
+	 margin-top: -1rem;
+}
+.results h3 {
+	margin-top: 0;
+	color: #ffffff;
+	font-size: 2rem;
+	border-bottom: 2px solid var(--color2);
+	padding-bottom: 0.75rem;
+}    
+.result-content {
+	min-height: 1rem;
+	padding: 0rem 0;
+}
+.combination {
+	background-color: rgb(145 145 145 / 25%) !important;
+	padding: 1rem !important;
+	margin: 1rem 0 !important;
+	border-radius: 10px !important;
+	border-left: 0 !important;
+}
+.combination-title {
+	font-weight: bold;
+	margin-bottom: 0rem !important;
+}
         .permission-list {
             list-style-type: none;
             padding-left: 0;
