@@ -56,6 +56,23 @@ $webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color hex;Author;A
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
+- `Content` `(Type: String || Flag: Vacantable)`: The text that is shown above the embed.
+- `Title` `(Type: String || Flag: Vacantable)`: The text that will be used as the title.
+- `Title URL` `(Type: URL || Flag: Vacantable)`: The URL that will be applied to the title.
+- `Description` `(Type: String || Flag: Vacantable)`: The description that will be applied to the embed.
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../tools/color.md) to set the embed border color as. You can also use color integer number.
+```admonish tip title="Color Picker"
+You can use our ["Color" tool](../tools/color.md) to select the best color!
+```
+
+- `Author` `(Type: String || Flag: Vacantable )`: The text that appears at the author.
+- `Author icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to the author.
+- `Footer` `(Type: String || Flag: Vacantable)`: The text to set the footer as.
+- `Footer icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to the footer.
+- `Thumbnail` `(Type: URL || Flag: Vacantable)`: The image to set as the thumbnail.
+- `Image` `(Type: URL || Flag: Vacantable)`: The image that appears above the footer.
+- `Add timestamp?` `(Type: Bool || Flag: Vacantable)`: Adds a timestamp to the footer.
 
 ## Example
 ```
@@ -73,6 +90,7 @@ $webhookDelete[Webhook URL]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to delete.
 
 ## Example
 ```
