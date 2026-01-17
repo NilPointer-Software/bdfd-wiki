@@ -202,7 +202,7 @@ Adds color to the webhook.
 
 ## Syntax
 ```
-$webhookContent[Webhook URL;Color]
+$webhookColor[Webhook URL;Color hex]
 ```
 
 ### Parameters
