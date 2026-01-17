@@ -97,7 +97,7 @@ You can use our ["Color" tool](../../tools/color.md) to select the best color!
 ```
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
-$webhookSend[$var[webhook];I'm the best webhook;Title;;It's description!;#000;;;;;;false]
+$webhookSend[$var[webhook];I'm the best webhook;Title;;It's description!;#673ab7;;;;;;false]
 ```
 
 ```admonish question title="What is this?"
@@ -286,11 +286,12 @@ You can use our ["Color" tool](../../tools/color.md) to select the best color!
 ```
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
-$webhookColor[$var[webhook];#000]
+$webhookColor[$var[webhook];#673ab7]
+$webhookDescriprion[⬅️ Embed border color] 
 ```
 
 ```admonish question title="What is this?"
-How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
+How [`$webhookCreate[]`](#webhookcreate), [`$webhookDescriprion[]`](#webhookdescriprion), [`$channelID`](../../bdscript/channelID.md), [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # Beautiful webhook
@@ -298,5 +299,10 @@ Here is one example of how to use a webhook.
 
 ```
 $nomention
-$var[webhook;$webhookCreate[$channelID;I'm webhook 😎]]
+$var[webhook;$webhookCreate[$channelID;I'm webhook 😎;$serverIcon]]
+$webhookContent[👇 Read before chatting]
+$webhookTitle[📚 Rules]
+$webhookDescription[1. Be patient
+2. Just chill]
+$webhookFooter[Made by BDFD]
 ```
