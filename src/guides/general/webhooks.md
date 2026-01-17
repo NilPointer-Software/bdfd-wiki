@@ -67,7 +67,7 @@ $webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color hex;Author;A
 - `Title` `(Type: String || Flag: Vacantable)`: The text that will be used as the title.
 - `Title URL` `(Type: URL || Flag: Vacantable)`: The URL that will be applied to the title.
 - `Description` `(Type: String || Flag: Vacantable)`: The description that will be applied to the embed.
-- `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../tools/color.md) to set the embed border color as. You can also use color integer number.
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../../tools/color.md) to set the embed border color as. You can also use color integer number.
 ```admonish tip title="Color Picker"
 You can use our ["Color" tool](../../tools/color.md) to select the best color!
 ```
@@ -116,6 +116,7 @@ $webhookAvatarURL[Webhook URL;Avatar URL]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to modify.
 
 ## Example
 ```
@@ -131,6 +132,7 @@ $webhookUsername[Webhook URL;Username]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to modify.
 
 ## Example
 ```
@@ -146,6 +148,7 @@ $webhookTitle[Webhook URL;Text]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
 
 ## Example
 ```
@@ -161,6 +164,7 @@ $webhookDescription[Webhook URL;Text]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
 
 ## Example
 ```
@@ -176,6 +180,7 @@ $webhookFooter[Webhook URL;Text]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
 
 ## Example
 ```
@@ -191,10 +196,17 @@ $webhookContent[Webhook URL;Text]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
 
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookContent[$var[webhook];Hello from my webhook!]
+```
+
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
 ```
 
 # $webhookColor
@@ -206,9 +218,19 @@ $webhookColor[Webhook URL;Color hex]
 ```
 
 ### Parameters
+- `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
+- `Color hex` `(Type: Color || Flag: Required)`: The [color hex](../../tools/color.md) to set the embed border color as. You can also use color integer number.
+```admonish tip title="Color Picker"
+You can use our ["Color" tool](../../tools/color.md) to select the best color!
+```
 
 ## Example
 ```
 $nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookColor[$var[webhook];#00FF00]
 ```
 
+```admonish question title="What is this?"
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
+```
