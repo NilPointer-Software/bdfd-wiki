@@ -5,56 +5,55 @@ Example text!
 
 <style>
 .control-buttons {
-					display: flex;
-     gap: 15px;
-     margin-bottom: 25px;
-					justify-content: center;
-     align-items: center;
+	display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+	justify-content: center;
+    align-items: center;
 }
 .control-button {
-					outline: none;
-	    touch-action: manipulation;
-	    -webkit-user-select: none;
-	    user-select: none;
-	    padding-left: 1rem;
-					padding-right: 1rem;
-	    height: 4rem;
-	    border: none;
-					font-weight: 600;
-	    border-radius: 10px;
-	    cursor: pointer;
-	    font-size: 2.25rem;
-	    margin: 0.25%;
-	    color: #fff;
-	    background: hsl(0deg 0% 100% / 7%);
-	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-     flex: 1
-     transition: all 0.2s;
-     text-align: center;
+	outline: none;
+	touch-action: manipulation;
+	-webkit-user-select: none;
+	user-select: none;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	height: 4rem;
+	border: none;
+	font-weight: 600;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 2.25rem;
+	margin: 0.25%;
+	color: #fff;
+	background: hsl(0deg 0% 100% / 7%);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    flex: 1
+    transition: all 0.2s;
+    text-align: center;
 }
 .control-button:hover, .category-toggle:hover {
-				transform: scale(1.05);
-				border-radius: 8px;
+	transform: scale(1.05);
+	border-radius: 8px;
     border-width: 1px;
-	   transition: 0.2s;
+	transition: 0.2s;
 }
-        .permission-item {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            background-color: var(--color3);
-            border-radius: 10px;
-            transition: all 0.2s;
-            margin-bottom: 5px;
-            border-left: 4px solid transparent;
-        }
-        .permission-item:hover {
-            transform: translateY(-2px);
-        }
-        .permission-item.checked {
-            border-left-color: var(--color1);
-            background-color: var(--color2);
-        }
+.permission-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--color3);
+    border-radius: 10px;
+    transition: all 0.2s;
+    margin-bottom: 5px;
+    border-left: 4px solid transparent;
+}
+.permission-item:hover {
+    transform: translateY(-2px);
+}
+.permission-item.checked {
+	border-left-color: var(--color1);
+}
         .permission-item label {
             margin-left: 12px;
             font-size: 15px;
