@@ -134,7 +134,7 @@ New avatar!
 ```
 
 ```admonish question title="What is this?"
-How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md) and [`$var[]`](../../bdscript/var.md) works?
+How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelID.md), [`$var[]`](../../bdscript/var.md) and [`$authorAvatar`](../../bdscript/authorAvatar.md) works?
 ```
 
 # $webhookUsername
