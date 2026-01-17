@@ -76,10 +76,10 @@ function initializePermissionValues() {
     
     checkboxes.forEach(checkbox => {
         const permissionName = checkbox.id;
-        // Используем функцию permission() для получения значения
+        // Function permission() to get value
         const permissionValue = permission(permissionName);
         
-        // Получаем название права из label
+        // Perm name
         const label = document.querySelector(`label[for="${permissionName}"]`);
         const permissionLabel = label ? label.textContent.trim().split('\n')[0] : permissionName;
         
@@ -127,9 +127,14 @@ function initializeInterface() {
 
 function toggleAllPermissions(enable) {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    // Set all checkboxes
     checkboxes.forEach(checkbox => {
         checkbox.checked = enable;
     });
+    
+    // Update visual state for all permission items
+    updateAllPermissionItemsVisualState();
     
     // Update all category states
     Object.keys(categoryMapping).forEach(category => {
@@ -137,6 +142,20 @@ function toggleAllPermissions(enable) {
     });
     
     updateTotal();
+}
+
+function updateAllPermissionItemsVisualState() {
+    // Update visual state for all permission items
+    document.querySelectorAll('.permission-item').forEach(item => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        if (checkbox) {
+            if (checkbox.checked) {
+                item.classList.add('checked');
+            } else {
+                item.classList.remove('checked');
+            }
+        }
+    });
 }
 
 function toggleCategoryPermissions(categoryId) {
@@ -156,6 +175,16 @@ function toggleCategoryPermissions(categoryId) {
         const checkbox = document.getElementById(permissionId);
         if (checkbox) {
             checkbox.checked = newState;
+            
+            // Update visual state for this permission item
+            const permissionItem = document.querySelector(`#item-${permissionId}`);
+            if (permissionItem) {
+                if (newState) {
+                    permissionItem.classList.add('checked');
+                } else {
+                    permissionItem.classList.remove('checked');
+                }
+            }
         }
     });
     
@@ -172,20 +201,21 @@ function updateTotal() {
     checkboxes.forEach(checkbox => {
         // Используем функцию permission() для получения значения
         total += permission(checkbox.id);
-        
-        // Add class for highlighting selected element
-        document.getElementById(`item-${checkbox.id}`).classList.add('checked');
     });
     
-    // Remove class from unselected elements
-    document.querySelectorAll('input[type="checkbox"]:not(:checked)').forEach(checkbox => {
-        const itemElement = document.getElementById(`item-${checkbox.id}`);
-        if (itemElement) {
-            itemElement.classList.remove('checked');
+    // Update visual state for all permission items
+    document.querySelectorAll('.permission-item').forEach(item => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        if (checkbox) {
+            if (checkbox.checked) {
+                item.classList.add('checked');
+            } else {
+                item.classList.remove('checked');
+            }
         }
     });
     
-    // Update category states and toggle button texts
+    // Update category states (без изменения цвета кнопок)
     Object.keys(categoryMapping).forEach(category => {
         const permissionIds = categoryMapping[category];
         const allChecked = permissionIds.every(id => {
@@ -200,25 +230,32 @@ function updateTotal() {
         // Update category state
         categoryStates.set(category, allChecked);
         
-        // Update category toggle button text
+        // Update category toggle button text (без изменения цвета)
         const toggleButton = document.querySelector(`.category-toggle[data-category="${category}"]`);
         if (toggleButton) {
             if (allChecked) {
                 toggleButton.textContent = 'Disable All';
-                toggleButton.style.backgroundColor = '#ed4245';
+                // Не меняем цвет кнопки
             } else if (anyChecked) {
                 toggleButton.textContent = 'Enable All';
-                toggleButton.style.backgroundColor = '#43b581';
+                // Не меняем цвет кнопки
             } else {
                 toggleButton.textContent = 'Enable All';
-                toggleButton.style.backgroundColor = '#43b581';
+                // Не меняем цвет кнопки
             }
         }
     });
     
     // Update display
-    document.getElementById('totalValue').textContent = total.toString();
-    document.getElementById('hexValue').textContent = `0x${total.toString(16).toUpperCase()}`;
+    const totalValueElement = document.getElementById('totalValue');
+    const hexValueElement = document.getElementById('hexValue');
+    
+    if (totalValueElement) {
+        totalValueElement.textContent = total.toString();
+    }
+    if (hexValueElement) {
+        hexValueElement.textContent = `0x${total.toString(16).toUpperCase()}`;
+    }
     
     findCombinations();
 }
