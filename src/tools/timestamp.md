@@ -22,9 +22,9 @@
     margin-top: -1.5rem;
 }
 .converter-section label {
-    display: block;
-    margin-bottom: 8px;
-    color: #34495e;
+	display: block;
+	margin-bottom: .5rem !important;
+	color: #f20000;
 }
 .converter-section input {
     color: #fff;
