@@ -151,24 +151,6 @@ function changeDiscordTheme(colorId) {
 	updateJsonFile("discord-example-theme", colorId);
 }
 
-function foldersSetting() {
-	const manageFolderButton = document.getElementById("manageFolder");
-	let inv = JSON.parse(localStorage.getItem("json"));
-
-	if (inv["folders"] === false) {
-		// Enabled
-		var folderStatus = "Disable";
-		var boolFolderStatus = true;
-	} else {
-		// Disabled
-		var folderStatus = "Enable";
-		var boolFolderStatus = false;
-	}
-
-	manageFolderButton.textContent = folderStatus;
-	updateJsonFile("folders", boolFolderStatus);
-}
-
 function effectsSetting() {
 	const manageEffectButton = document.getElementById("manageEffect");
 	const snowflakes = document.querySelector(".snowflakes");
@@ -364,7 +346,6 @@ function loadSettings() {
 	const charCountElement = document.querySelector(".charCount");
 	const uiManageEffectButton = document.getElementById("manageEffect");
 	const uiSnowflakes = document.querySelector(".snowflakes");
-	const uiManageFolderButton = document.getElementById("manageFolder");
 
 	let data;
 
@@ -373,7 +354,6 @@ function loadSettings() {
 	} catch {}
 
 	data ??= {
-		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
 		"language": "en",
@@ -466,14 +446,6 @@ function loadSettings() {
 
 	uiSnowflakes.style.visibility = data["effects"];
 	uiManageEffectButton.textContent = effectStatus;
-
-	if (data["folders"] === false) {
-		var folderStatus = "Enable";
-	} else {
-		var folderStatus = "Disable";
-	}
-
-	uiManageFolderButton.textContent = folderStatus;
 
 	const button = document.querySelector(".resetToDefault");
 	button.addEventListener("mousedown", resetAllHover);
