@@ -2,6 +2,9 @@
 Here you can use the basic editor features to write codes more conveniently.
 
 <style>
+.editPage {
+	visibility: hidden;
+}
 #stats-container p, #another-info p {
     display: inline-block;
     margin-right: 7.5px;
