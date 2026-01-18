@@ -4,6 +4,9 @@ Example text!
 <script src="./permcalc.js" defer></script>
 
 <style>
+.editPage {
+	visibility: hidden;
+}
 .control-buttons {
 	display: flex;
     gap: 1rem;
