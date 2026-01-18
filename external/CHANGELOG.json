@@ -13,7 +13,7 @@
    "Added `$addMentionableSelect[]`",
    "Added `$getMentionableSelectUserID[]`",
    "Added `$getMentionableSelectUserIDs[]`",
-   "Added `$getMentionableSelectUserCount`",
+   "Added `$getMentionableSelectUserCount`"
   ]
  },
  "2025": {
@@ -748,4 +748,5 @@
 		]
 	}
 }
+
 
