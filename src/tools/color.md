@@ -9,17 +9,17 @@
 	border-radius: var(--border-radius);
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	margin-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-bottom: 0rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .picker-container h2 {
-    margin-top: 60px;
-    padding-top: 15px;
+    margin-top: -.5rem;
+    padding-top: 1.5rem;
 }
 .picker-container p {
-    margin-top: -15px;
+    margin-top: 1.5rem;
 }
 .input-row {
     display: flex;
