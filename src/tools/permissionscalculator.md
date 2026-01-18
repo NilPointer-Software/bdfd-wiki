@@ -1,5 +1,5 @@
 # Permission Calculator
-Example text!
+Here you can use the discord permissions calculator to later use in the bot invitation link.
 
 <script src="./permcalc.js" defer></script>
 
