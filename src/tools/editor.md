@@ -87,10 +87,11 @@ Here you can use the basic editor features to write codes more conveniently.
 	margin-bottom: -.5rem;
 	margin-top: .5rem;
 	font-size: 1rem;
-	color: var(--color2);
+	color: var(--text-secondary);
 }
 
 #searchText, #replaceText {
+	padding: 1rem;
 	background: hsl(0deg 0% 100% / 7%);
 	color: #fff;
 	font-size: 1.5rem;
@@ -119,14 +120,6 @@ Here you can use the basic editor features to write codes more conveniently.
 	color: #fff;
 	background: hsl(0deg 0% 100% / 7%);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-	transition: 0.2s;
-}
-
-#text-editorui button:hover {
-	transform: scale(1.05);
-	border-radius: 8px;
-	border-width: 1px;
-	transition: 0.4s;
 }
 
 #error-message {
@@ -255,9 +248,9 @@ Here you can use the basic editor features to write codes more conveniently.
 	-webkit-user-select: none;
 	outline: none;
 	transition: .3s;
-    color: hsl(0deg 0% 100% / 75%); ! important;
+    color: hsl(0deg 0% 100% / 75%) !important;
     padding: 1px 7px;
-	border-color: hsl(0deg 0% 100% / 15%);
+	border-color: var(--link-color) !important;
     width: 25px;
 	border-radius: 60px;
 	cursor: pointer;
@@ -265,7 +258,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 .close-btn:hover {
 	transition: .3s;
-    background-color: hsl(0deg 0% 100% / 10%);
+    background-color: var(--card-bg);
     border-style: solid;
 	border-width: 1px;
 }
@@ -305,13 +298,13 @@ Here you can use the basic editor features to write codes more conveniently.
     opacity: 0.8;
     transition: 0.2s;
 }
-
+	
 .scriptdiv button:nth-of-type(1) {
-	right: 4rem;
+	right: 4.4rem;
 }
 
 .scriptdiv button:nth-of-type(2) {
-  	right: 0.3rem;
+  	right: 0.8rem;
 }
 
 #error-message {
@@ -404,7 +397,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #selectors select option {
 	outline: none;
-	color: #d3d3d3;
+	color: var(--text-primary);
 	background-color: var(--card-bg);
 }
 
@@ -529,8 +522,8 @@ Here you can use the basic editor features to write codes more conveniently.
     margin-top: -1.75rem;
     display: block !important;
 	border-radius: 10px;
-	background: var(--card=bg) !important;
-	border-color: hsl(0deg 0% 100% / 10%) !important;
+	background: var(--card-bg);
+	border-color: hsl(0deg 0% 100% / 10%);
 }
 
 #autocomplete span {
