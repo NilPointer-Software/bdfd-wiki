@@ -1273,7 +1273,7 @@ li li.chapter-item > div:first-child {
 	-webkit-user-select: none;
 	border-radius: 10px;
 	padding: .2rem 1rem .2rem 1rem;
-	margin-bottom: .9rem;
+	margin-bottom: .5rem;
 	background: rgba(255, 255, 255, 0.03);
 	border: 1px solid rgba(255, 255, 255, 0.04);
 	cursor: pointer;
@@ -1508,4 +1508,5 @@ li li.chapter-item > div:first-child:hover {
         font-size: 1rem;
     }
 }
+
 
