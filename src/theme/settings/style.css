@@ -51,19 +51,8 @@ body {
 /* Discord Message Preview*/
 
 .discord-messages {
-	margin-top: 3%;
-	margin-bottom: 10%;
-	transition: 0.5s;
-}
-
-.discord-messages:hover {
-	transform: scale(1.025);
-	border-radius: 12.5px;
-	transition: 0.5s;
-}
-
-.discord-reaction {
-	transition: 0.1s;
+	margin-top: 1.5rem;
+	margin-bottom: 2.5rem;
 }
 
 /* Main Setting UI */
@@ -72,30 +61,11 @@ body {
 	background: var(--card-bg);
 	border-radius: var(--border-radius);
 	border: 1px solid rgba(255, 255, 255, 0.05);
-	margin-top: -6%;
+	margin-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	padding-left: 15px;
 	padding-right: 15px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-	transition: 0.3s;
-}
-
-@media (max-width: 600px) {
-	.settingembed {
-		margin-top: -10%;
-	}
-}
-
-@media (max-width: 550px) {
-	.settingembed {
-		margin-top: -12%;
-	}
-}
-
-.settingembed:hover {
-	transform: scale(1.015);
-	border-radius: 12.5px;
-	transition: 0.3s;
 }
 
 .settingembed h2 {
@@ -156,7 +126,6 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 	margin-top: 3%;
 	color: #fff;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-	transition: 0.2s;
 }
 
 .hbutton {
@@ -320,10 +289,7 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 .hbutton:hover,
 .ebutton:hover,
 .folderbutton:hover {
-	transform: scale(1.1);
-	border-radius: 8px;
-	border-width: 1px;
-	transition: 0.4s;
+	background: hsl(0deg 0% 100% / 12%);
 }
 
 .dbutton {
@@ -338,12 +304,10 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	transition: 0.2s;
 }
 
 .dbutton:hover {
-	transform: scale(1.05);
-	transition: 0.4s;
+	background: hsl(0deg 0% 100% / 12%);
 }
 
 .display-color {
@@ -356,17 +320,6 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	transition: 0.5s;
-}
-
-.dbutton:hover > .display-color {
-	width: 100%;
-	height: 100%;
-	border-radius: 15px;
-	transform: none;
-	top: -10%;
-	left: 0;
-	transition: 0.4s;
 }
 
 .dbutton#light-button > .display-text {
@@ -496,12 +449,10 @@ input[type="range"]::-moz-range-thumb {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: 0.2s;
 }
 
 .resetSettingButton:hover {
-	transform: scale(1.1);
-	transition: 0.3s;
+	background: hsl(0deg 0% 100% / 12%);
 }
 
 .codehighlighting {
@@ -537,7 +488,6 @@ input[type="range"]::-moz-range-thumb {
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	transition: transform 0.1s ease;
 	border: solid;
 	border-width: 1px;
 	border-radius: 10px;
@@ -546,7 +496,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .resetToDefault.pulsating {
-	transform: scale(1.1);
+	background: hsl(0deg 0% 100% / 10%) !important;
 }
 
 .progress {
