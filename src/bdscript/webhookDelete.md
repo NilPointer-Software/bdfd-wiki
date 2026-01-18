@@ -1,5 +1,5 @@
 # $webhookDelete
-Deletes the wehook.
+Deletes the webhook.
 
 ## Syntax
 ```
