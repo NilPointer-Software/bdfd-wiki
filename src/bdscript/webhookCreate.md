@@ -41,11 +41,11 @@ $webhookCreate[$channelID;BDFD Webhook 🤖]
 ```
 
 ```admonish question title="What is this?"
-How [`$channelID`](../../bdscript/channelID.md) works?
+How [`$channelID`](./channelID.md) works?
 ```
 
 ~~~admonish tip
-You can use [`$var[]`](../../bdscript/var.md) or [other variable functions](../introduction/variables.md) to store the Webhook URL.
+You can use [`$var[]`](./var.md) or [other variable functions](../guides/introduction/variables.md) to store the Webhook URL.
 
 ```$nomention
 $var[Webhook;$webhookCreate[$channelID;Secret]]
@@ -67,7 +67,7 @@ Created and saved!
     Created ans saved!
 ```
 
-> How [`$var[]`](../../bdscript/var.md) and [`$channelID`](../../bdscript/channelID.md) works?
+> How [`$var[]`](./var.md) and [`$channelID`](./channelID.md) works?
 
 ~~~
 
