@@ -97,7 +97,7 @@ input[type="checkbox"] {
 .hex-value {
 	font-family: 'Consolas', monospace;
 	font-size: 1.4rem;
-	color: var(--color1);
+	color: var(--text-muted);
 	margin-top: 1rem;
 }
 .input-section {
@@ -108,14 +108,14 @@ input[type="checkbox"] {
 	padding: 1.5rem;
 	font-size: 1.5rem;
 	background-color: var(--card-bg);
-	border: 2px solid var(--color2);
+	border: 2px solid var(--card-hover);
 	border-radius: 10px;
 	color: #ffff;
 	box-sizing: border-box;
 }
 .input-section input:focus {
 	outline: none;
-	border-color: var(--color1);
+	border-color: var(--link-color);
 }
 .input-section input::placeholder {
     color: #fff;
@@ -196,7 +196,7 @@ input[type="checkbox"] {
 	text-transform: uppercase;
 	letter-spacing: .1rem ;
 	padding-bottom: .5rem;
-	border-bottom: 1px solid var(--color2);
+	border-bottom: 1px solid var(--card-bg);
 	flex-grow: 1;
 }
 .category-toggle {
