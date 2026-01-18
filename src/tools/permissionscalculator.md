@@ -142,6 +142,9 @@ input[type="checkbox"] {
 	min-height: 1rem;
 	padding: 0rem 0;
 }
+#resultContent {
+	margin-top: -2rem;
+}
 .combination, .current-selection {
 	background-color: rgb(10 10 10 / 15%);
 	padding: 1rem;
