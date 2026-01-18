@@ -10,7 +10,7 @@ $webhookColor[Webhook URL;Color hex]
 - `Webhook URL` `(Type: URL || Flag: Required)`: The URL of the webhook you want to use.
 - `Color hex` `(Type: Color || Flag: Required)`: The [color hex](../tools/color.md) to set the embed border color as. You can also use color integer number.
 ```admonish tip title="Color Picker"
-You can use our ["Color" tool](../../tools/color.md) to select the best color!
+You can use our ["Color" tool](../tools/color.md) to select the best color!
 ```
 
 ## Example
