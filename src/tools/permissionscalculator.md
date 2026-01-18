@@ -1,3 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Permission Calculator
 Example text!
 
@@ -20,7 +40,7 @@ Example text!
 	padding-right: 1rem;
 	height: 4rem;
 	border: none;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	cursor: pointer;
 	font-size: 2.25rem;
 	margin: 0.25%;
@@ -35,7 +55,7 @@ Example text!
     align-items: center;
     padding: 1rem;
     background-color: var(--card-bg);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     transition: all 0.2s;
     margin-bottom: .75rem;
     border-left: 4px solid transparent;
@@ -62,7 +82,7 @@ Example text!
 	margin-left: 1rem;
 	background-color: rgb(145 145 145 / 10%);
 	padding: .5rem 1rem;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 }
 input[type="checkbox"] {
 	transform: scale(1.2);
@@ -70,9 +90,10 @@ input[type="checkbox"] {
 	accent-color: var(--link-color);
 }
 .total-section {
+	border-radius: var(--border-radius);
+	border: 1px solid rgba(255, 255, 255, 0.05);
 	background-color: var(--card-bg);
 	padding: 1rem;
-	border-radius: 10px;
 	margin: 3rem 0;
 	text-align: center;
 }
@@ -109,7 +130,7 @@ input[type="checkbox"] {
 	font-size: 1.5rem;
 	background-color: var(--card-bg);
 	border: 2px solid var(--card-hover);
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	color: #ffff;
 	box-sizing: border-box;
 }
@@ -123,7 +144,7 @@ input[type="checkbox"] {
 .results {
 	 background-color: var(--card-bg);
 	 padding: 1.5rem;
-	 border-radius: 10px;
+	 border-radius: var(--border-radius);
 	 margin-top: -1rem;
 }
 .results h3 {
@@ -141,7 +162,7 @@ input[type="checkbox"] {
 	background-color: rgb(145 145 145 / 25%);
 	padding: 1rem;
 	margin: 1rem 0;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	border-left: 0;
 }
 .combination-title {
@@ -157,7 +178,7 @@ input[type="checkbox"] {
 	padding: .75rem 1rem;
 	margin: .5rem 0;
 	background-color: rgb(0 0 0 / 10%);
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	font-size: 1.5rem;
 }
 .combination-total {
@@ -183,7 +204,7 @@ input[type="checkbox"] {
     font-size: 1.4rem;
     margin-top: 1rem;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 .category-header {
 	display: flex;
@@ -206,7 +227,7 @@ input[type="checkbox"] {
 	user-select: none;
 	padding: 1rem;
 	border: none;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	cursor: pointer;
 	font-size: 1.1rem;
 	margin-left: .5rem;
