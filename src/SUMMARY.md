@@ -474,6 +474,7 @@
     - [$varExists](./bdscript/varExists.md)
     - [$variablesCount](./bdscript/variablesCount.md)
     - [$voiceUserLimit](./bdscript/voiceUserLimit.md)
+    - [$webhookCreate](./bdscript/webhookCreate.md)
     - [$year](./bdscript/year.md)
 
 - [Callbacks]()
