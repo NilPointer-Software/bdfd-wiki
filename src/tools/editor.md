@@ -345,23 +345,23 @@ Here you can use the basic editor features to write codes more conveniently.
 	-webkit-user-select: none;
     position: absolute;
     top: 50%;
-    right: 1.5rem;
+    right: 2rem;
     transform: translateY(-50%);
     color: #888;
     font-size: 0.8em;    
+}
+
+#nameScript textarea {
+	padding: 1rem;
+	border-radius: 10px;
+	font-size: 1.5rem;
+	height: 3.5rem;
 }
 
 @media (max-width: 950px) {
 	#nameScript span {
     	top: -35%;
   	}
-		
-	#nameScript textarea {
-		padding: 1rem;
-		border-radius: 10px;
-		font-size: 1.5rem;
-		height: 3.5rem;
-	}
 }
 
 #selectors {
