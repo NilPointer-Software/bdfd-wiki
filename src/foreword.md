@@ -2,13 +2,13 @@
 
 <div class="bdfd-is">
   <h1 id="bdfd-case">Bot Designer For Discord</h1>
-  <p id="truelol"><bold>BDFD</bold> makes building Discord bots easy, from simple to advanced.</p>
+  <p id="truelol">Build powerful Discord bots without coding experience.</p>
   <div class="homeButtons">
     <button class="createMyBot">
-      <p><a href="https://app.botdesignerdiscord.com/"><i class="fa fa-plus" aria-hidden="true"></i> Create bot</a></p>
+      <p><a href="https://app.botdesignerdiscord.com/"><i class="fa fa-plus" aria-hidden="true"></i> Create Bot</a></p>
     </button>
     <button class="getHelp">
-      <p><a href="https://discord.gg/bot-designer-for-discord-official-server-566363823137882154"><i class="fa fa-share" aria-hidden="true"></i> Need support? Join our Discord!</a></p>
+      <p><a href="https://discord.gg/bot-designer-for-discord-official-server-566363823137882154"><i class="fa fa-comments" aria-hidden="true"></i> Join Discord</a></p>
     </button>
   </div>
 </div>
@@ -16,25 +16,33 @@
 <div class="why-bdfd">
   <h1>Why BDFD?</h1>
   <div class="why-bdfd-embed">
-    <div class="hosting">
-      <i class="fa fa-play-circle" aria-hidden="true"></i>
-      <p id="title">Free hosting</p>
-      <p id="content">By simply watching ads. No need for complicated setup or expensive hosting plans.</p>
+    <div class="feature-card hosting">
+      <div class="feature-header">
+        <i class="fa fa-play-circle" aria-hidden="true"></i>
+        <span class="feature-title">Free Hosting</span>
+      </div>
+      <p class="feature-content">Host your bot for free. No complicated setup or expensive hosting plans required.</p>
     </div>
-    <div class="anywhere">
-      <i class="fa fa-desktop" aria-hidden="true"></i>
-      <p id="title">Anywhere</p>
-      <p id="content">Use our app on your phone, tablet, or computer - your bot is always accessible.</p>
+    <div class="feature-card anywhere">
+      <div class="feature-header">
+        <i class="fa fa-desktop" aria-hidden="true"></i>
+        <span class="feature-title">Build Anywhere</span>
+      </div>
+      <p class="feature-content">Create and manage your bot from any device. Works on phones, tablets, and computers.</p>
     </div>
-    <div class="alotfunctions">
-      <i class="fa fa-star" aria-hidden="true"></i>
-      <p id="title">Functions</p>
-      <p id="content">From basic "ping! pong!" commands to advanced AI features, BDFD provides everything you need to create unique and engaging bots.</p>
+    <div class="feature-card alotfunctions">
+      <div class="feature-header">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span class="feature-title">Powerful Functions</span>
+      </div>
+      <p class="feature-content">Access 400+ built-in functions for moderation, economy systems, AI integration, and more.</p>
     </div>
-    <div class="community">
-      <i class="fa fa-info-circle" aria-hidden="true"></i>
-      <p id="title">Support</p>
-      <p id="content">Join our friendly Discord server, where we’re always happy to help you out with any questions related to BDFD.</p>
+    <div class="feature-card community">
+      <div class="feature-header">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <span class="feature-title">Active Community</span>
+      </div>
+      <p class="feature-content">Get help from our friendly Discord community with over 60,000 members.</p>
     </div>
   </div>
 </div>
@@ -43,34 +51,22 @@
   <h1 id="resources">Resources</h1>
   <div class="resourcesButtons">
     <button class="resButton">
-      <p><a href="./resources/api.md"><i class="fa fa-bookmark-o" aria-hidden="true"></i> BDFD API</a></p>
+      <p><a href="./resources/api.md"><i class="fa fa-code" aria-hidden="true"></i> API Reference</a></p>
     </button>
     <button class="resButton">
-      <p><a href="https://botdesignerdiscord.com/status"><i class="fa fa-user" aria-hidden="true"></i> Node Status</a></p>
+      <p><a href="https://botdesignerdiscord.com/status"><i class="fa fa-server" aria-hidden="true"></i> Status</a></p>
     </button>
     <button class="resButton">
-      <p><a href="./terms.md"><i class="fa fa-ban" aria-hidden="true"></i> Terms of Service</a></p>
+      <p><a href="https://botdesignerdiscord.com/tos"><i class="fa fa-file-text-o" aria-hidden="true"></i> Terms</a></p>
     </button>
     <button class="resButton">
-      <p><a href="./entityTransferPolicy"><i class="fa fa-exclamation" aria-hidden="true"></i> Entity Transfer Policy</a></p>
-    </button>
-    <button class="resButton">
-      <p><a href="https://discord.gg/bot-designer-for-discord-official-server-566363823137882154"><i class="fa fa-phone" aria-hidden="true"></i> Discord Server</a></p>
-    </button>
-    <button class="resButton">
-      <p><a href="https://wiki.botdesignerdiscord.com/"><i class="fa fa-sun-o" aria-hidden="true"></i> BDFD Wiki</a></p>
-    </button>
-    <button class="resButton">
-      <p><a href="https://wiki.botdesignerdiscord.com/nightly/"><i class="fa fa-moon-o" aria-hidden="true"></i> BDFD Nightly Wiki</a></p>
-    </button>
-    <button class="resButton">
-      <p><a href="https://nilpointer.software/"><i class="fa fa-users" aria-hidden="true"></i> NilPointer Software</a></p>
+      <p><a href="https://nilpointer.software/"><i class="fa fa-building" aria-hidden="true"></i> NilPointer Software</a></p>
     </button>
   </div>
 </div>
 
 <div class="download">
-  <h1 id="bdfd-case">Download</h1>
+  <h1 id="bdfd-case">Get Started</h1>
   <div class="downloadButtons">
     <button class="downButton">
       <p><a href="https://apps.apple.com/app/bot-designer-for-discord/id1495536477"><i class="fa fa-apple" aria-hidden="true"></i> iOS</a></p>
@@ -78,16 +74,15 @@
     <button class="downButton">
       <p><a href="https://play.google.com/store/apps/details?id=com.jakubtomana.discordbotdesinger"><i class="fa fa-android" aria-hidden="true"></i> Android</a></p>
     </button>
-    <bold>or use</bold>
     <button class="downButton">
-      <p><a href="https://app.botdesignerdiscord.com/"><i class="fa fa-laptop" aria-hidden="true"></i> Web App</a></p>
+      <p><a href="https://app.botdesignerdiscord.com/"><i class="fa fa-globe" aria-hidden="true"></i> Web App (alpha)</a></p>
     </button>
   </div>
 </div>
 
 <div class="preview">
-  <h2 id="preview-header">Preview</h2>
-  <p>Let’s see what we can do with BDFD! It’s time to dive deep into the world of this powerful tool and unlock its full potential!</p>
+  <h2 id="preview-header">See It In Action</h2>
+  <p>Here's what bots built with BDFD can do:</p>
 </div>
 
 ```discord yaml
