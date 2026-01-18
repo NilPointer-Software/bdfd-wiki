@@ -1,23 +1,10 @@
 # Changelog
 
 <style>
-  .editPage {
-      visibility: hidden;
-  }
+.editPage {
+  visibility: hidden;
+}
 </style>
-# 2026
-
-## January
-Added multiple Components V2 functions:
-- Added `$addTextDisplay[]`
-- Added `$addSeparator[]`
-- Added `$addContainer[]`
-- Added `$addSection[]`
-- Added `$addThumbnail[]`
-- Added `$addMediaGallery[]`
-- Added `$addMediaGallery[]`
-- Added `$addMediaGalleryItem[]`
-- Added `$addActionRow[]`
 
 <link rel="stylesheet" href="./theme/css/changelog.css">
 
@@ -822,4 +809,5 @@ If you want to see the BDScript changelog, [click here](./FLOWCHART_CHANGELOG.md
 ```admonish tip
 If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
 ```
+
 
