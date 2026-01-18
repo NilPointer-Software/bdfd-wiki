@@ -70,3 +70,7 @@ Created and saved!
 > How [`$var[]`](../../bdscript/var.md) and [`$channelID`](../../bdscript/channelID.md) works?
 
 ~~~
+
+```admonish info title="Read more"
+For more information, read the the [Webhooks Guide](../guides/general/webhooks.md).
+```
