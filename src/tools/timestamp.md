@@ -28,7 +28,7 @@
 }
 .converter-section input {
     color: #fff;
-    padding: 2.25rem !important;
+    padding: 2.25rem;
     width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
