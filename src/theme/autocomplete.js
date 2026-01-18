@@ -1,110 +1,5 @@
 // Setting
 let autocompleteEnabled = true;
-let allFunctions = []; // Array to store all functions from API
-let allFunctionNames = []; // Array to store simplified function names (without parameters)
-
-// Load functions from API on page load
-async function loadFunctionsFromAPI() {
-  try {
-    const response = await fetch('https://botdesignerdiscord.com/public/api/function_list');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    
-    // Store all functions with their full tag information
-    allFunctions = data;
-    
-    // Extract simplified function names for autocomplete matching
-    // This includes both versions with and without brackets
-    allFunctionNames = [];
-    
-    data.forEach(func => {
-      const tag = func.tag;
-      // Extract base function name (without parameters)
-      const baseName = tag.split('[')[0];
-      
-      // Add both versions to the array for better autocomplete
-      if (tag.includes('[')) {
-        // Add version with brackets
-        allFunctionNames.push({
-          simpleName: baseName + '[]',
-          fullTag: tag,
-          hasParams: true,
-          baseName: baseName
-        });
-        
-        // Also add version without brackets if it doesn't exist already
-        if (!allFunctionNames.some(f => f.simpleName === baseName)) {
-          allFunctionNames.push({
-            simpleName: baseName,
-            fullTag: baseName,
-            hasParams: false,
-            baseName: baseName
-          });
-        }
-      } else {
-        // Function without brackets
-        allFunctionNames.push({
-          simpleName: baseName,
-          fullTag: tag,
-          hasParams: false,
-          baseName: baseName
-        });
-      }
-    });
-    
-    console.log(`Loaded ${allFunctions.length} functions from API`);
-    return true;
-  } catch (error) {
-    console.error('Error loading functions from API:', error);
-    // If API fails, use fallback to DOM parsing
-    loadFunctionsFromDOM();
-    return false;
-  }
-}
-
-// Fallback function to load functions from DOM if API fails
-function loadFunctionsFromDOM() {
-  const functionsHeader = Array.from(document.querySelectorAll('li.chapter-item')).find(li => li.querySelector('div')?.textContent.trim() === 'Functions');
-  if (!functionsHeader) return;
-  
-  const sectionList = functionsHeader.nextElementSibling;
-  if (!sectionList) return;
-  
-  const html = sectionList.innerHTML;
-  const domFunctions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a')).map(a => a.textContent).filter(text => text.startsWith('$'));
-  
-  allFunctionNames = [];
-  domFunctions.forEach(func => {
-    const baseName = func.split('[')[0];
-    
-    if (func.includes('[')) {
-      allFunctionNames.push({
-        simpleName: baseName + '[]',
-        fullTag: func,
-        hasParams: true,
-        baseName: baseName
-      });
-      
-      if (!allFunctionNames.some(f => f.simpleName === baseName)) {
-        allFunctionNames.push({
-          simpleName: baseName,
-          fullTag: baseName,
-          hasParams: false,
-          baseName: baseName
-        });
-      }
-    } else {
-      allFunctionNames.push({
-        simpleName: baseName,
-        fullTag: func,
-        hasParams: false,
-        baseName: baseName
-      });
-    }
-  });
-}
 
 function changeAutocomplete() {
   autocompleteEnabled = !autocompleteEnabled;
@@ -125,8 +20,14 @@ function autoSettingChange(buttonName, status) {
   button.style.background = status ? activeGradient : inactiveGradient;
 }
 
-// Main autocomplete function
-function initAutocomplete() {
+// Main autocomplete
+function autocomplete() {
+  const functionsHeader = Array.from(document.querySelectorAll('li.chapter-item')).find(li => li.querySelector('div')?.textContent.trim() === 'Functions');
+  if (!functionsHeader) return;
+  const sectionList = functionsHeader.nextElementSibling;
+  if (!sectionList) return;
+  const html = sectionList.innerHTML;
+  const functions = Array.from(new DOMParser().parseFromString(html, 'text/html').querySelectorAll('a')).map(a => a.textContent).filter(text => text.startsWith('$'));
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
   let cursorInactiveTimeout;
@@ -140,73 +41,41 @@ function initAutocomplete() {
   }
 
   function updateAutocomplete() {
-    if (!autocompleteEnabled || allFunctionNames.length === 0) {
-      hideAutocomplete();
-      return;
+    if (!autocompleteEnabled) {
+        hideAutocomplete();
+        return;
     }
-    
     const inputText = textarea.value;
     const cursorPosition = textarea.selectionStart;
-    
-    // Find the last $ before cursor position
     let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
-    if (dollarIndex === -1) { 
-      hideAutocomplete(); 
-      return; 
-    }
-    
-    // Get what user typed after $ (search term)
+    if (dollarIndex === -1) { hideAutocomplete(); return; }
     const searchTerm = inputText.substring(dollarIndex, cursorPosition).toLowerCase();
     autocompleteOutput.innerHTML = '';
-    
-    // Filter functions based on search term
-    const matchingFunctions = allFunctionNames.filter(func => 
-      func.simpleName.toLowerCase().startsWith(searchTerm.toLowerCase())
-    );
-    
-    // Remove duplicates (keep only one entry per simpleName)
-    const uniqueFunctions = [];
-    const seenNames = new Set();
-    
-    matchingFunctions.forEach(func => {
-      if (!seenNames.has(func.simpleName)) {
-        seenNames.add(func.simpleName);
-        uniqueFunctions.push(func);
-      }
-    });
-    
-    // Take first 5 functions
-    const displayedFunctions = uniqueFunctions.slice(0, 5);
+    const matchingFunctions = functions.filter(func => func.toLowerCase().startsWith(searchTerm));
+    const displayedFunctions = matchingFunctions.slice(0, 5);
     selectedIndex = -1;
     Array.from(autocompleteOutput.children).forEach(child => child.classList.remove('selected'));
 
-    // Calculate position for autocomplete dropdown
     const { left, top } = textarea.getBoundingClientRect();
+
     const textareaStyle = window.getComputedStyle(textarea);
     let lineHeight = parseInt(textareaStyle.lineHeight) || 16;
     const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
     const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
-    
-    // Calculate position based on cursor
-    const cursorLine = inputText.substring(0, cursorPosition).split('\n').length - 1;
-    const cursorInLine = cursorPosition - inputText.substring(0, cursorPosition).lastIndexOf('\n') - 1;
-    
-    // Approximate cursor position (this is a simplification)
-    const x = left + cursorInLine * 8; // 8px per character approximation
-    const y = top + paddingTop + borderTopWidth + cursorLine * lineHeight + 30;
+
+    const x = left + textarea.selectionStart * 8;
+
+    let y = top + paddingTop + borderTopWidth + (Math.floor(inputText.substring(0, cursorPosition).split('\n').length)) * lineHeight + 30;
 
     autocompleteOutput.style.position = 'absolute';
     autocompleteOutput.style.left = `${x}px`;
     autocompleteOutput.style.top = `${y}px`;
     autocompleteOutput.style.zIndex = '1000';
 
-    // Create autocomplete items
     displayedFunctions.forEach((func, index) => {
       const span = document.createElement('span');
-      span.textContent = func.simpleName;
-      span.addEventListener('click', () => {
-        selectFunction(func.fullTag, dollarIndex, cursorPosition, inputText);
-      });
+      span.textContent = func;
+      span.addEventListener('click', () => selectFunction(func,dollarIndex,cursorPosition,inputText));
       autocompleteOutput.appendChild(span);
     });
 
@@ -214,20 +83,15 @@ function initAutocomplete() {
     cursorInactiveTimeout = setTimeout(hideAutocomplete, 10000);
   }
 
-  // Function to insert selected function
-  function selectFunction(funcToInsert, dollarIndex, cursorPosition, inputText) {
-    textarea.value = inputText.substring(0, dollarIndex) + funcToInsert + inputText.substring(cursorPosition);
-    
-    // Position cursor after inserted function
-    textarea.selectionStart = textarea.selectionEnd = dollarIndex + funcToInsert.length;
-    
+  function selectFunction(func,dollarIndex,cursorPosition,inputText) {
+    textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
+    textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
     hideAutocomplete();
     textarea.focus();
   }
 
   function handleArrowKeys(event) {
     if (autocompleteOutput.children.length === 0) return;
-    
     if (event.key === 'ArrowDown') {
       event.preventDefault();
       selectedIndex = Math.min(selectedIndex + 1, autocompleteOutput.children.length - 1);
@@ -236,21 +100,13 @@ function initAutocomplete() {
       selectedIndex = Math.max(selectedIndex - 1, 0);
     } else if (event.key === 'Enter' && selectedIndex !== -1) {
       event.preventDefault();
-      const selectedSpan = autocompleteOutput.children[selectedIndex];
-      const selectedFunctionName = selectedSpan.textContent;
-      
-      // Find the full tag for this function
-      const funcData = allFunctionNames.find(f => f.simpleName === selectedFunctionName);
-      const funcToInsert = funcData ? funcData.fullTag : selectedFunctionName;
-      
+      const selectedFunction = autocompleteOutput.children[selectedIndex].textContent;
       const inputText = textarea.value;
       const cursorPosition = textarea.selectionStart;
       let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
-      
-      selectFunction(funcToInsert, dollarIndex, cursorPosition, inputText);
+      selectFunction(selectedFunction,dollarIndex,cursorPosition,inputText);
       return;
     }
-    
     highlightSelected();
   }
 
@@ -260,11 +116,9 @@ function initAutocomplete() {
     });
   }
 
-  // Setup event listeners for textarea
   if (textarea) {
     textarea.addEventListener('input', updateAutocomplete);
     textarea.addEventListener('mouseup', updateAutocomplete);
-    
     textarea.addEventListener('keydown', event => {
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter') {
         handleArrowKeys(event);
@@ -326,10 +180,8 @@ function addTooltips() {
       lineHeight = isNaN(lineHeight) ? 16 : lineHeight;
       const paddingTop = parseInt(textareaStyle.paddingTop) || 0;
       const borderTopWidth = parseInt(textareaStyle.borderTopWidth) || 0;
-      
-      const cursorLine = text.substring(0, cursor).split('\n').length - 1;
-      const x = left + (cursor - text.substring(0, cursor).lastIndexOf('\n') - 1) * 8;
-      const y = top + paddingTop + borderTopWidth + cursorLine * lineHeight + 30;
+      const x = left + cursor * 8;
+      const y = top + paddingTop + borderTopWidth + (Math.floor(textarea.value.substring(0, textarea.selectionStart).split('\n').length)) * lineHeight + 30;
 
       tooltip.style.left = `${x}px`;
       tooltip.style.top = `${y}px`;
@@ -344,21 +196,14 @@ function addTooltips() {
 function updateAutocompleteState() {
   const textarea = document.getElementById('editor');
   const autocompleteOutput = document.getElementById('autocomplete');
-  
   if (!autocompleteEnabled) {
     autocompleteOutput.innerHTML = ''; // Clear autocomplete
     textarea.removeEventListener('input', updateAutocomplete);
     textarea.removeEventListener('mouseup', updateAutocomplete);
-    
-    // Hide tooltip
-    const tooltip = document.getElementById('tooltip');
-    if (tooltip) {
-      tooltip.style.display = 'none';
-    }
-    textarea.removeEventListener('keyup', updateTooltip);
-    textarea.removeEventListener('mouseup', updateTooltip);
+    document.getElementById('tooltip').style.display = 'none'; // Hide tooltip
+    textarea.removeEventListener('keyup',updateTooltip)
+    textarea.removeEventListener('mouseup',updateTooltip)
   } else {
-    // Re-add event listeners if they were removed
     textarea.addEventListener('input', updateAutocomplete);
     textarea.addEventListener('mouseup', updateAutocomplete);
     textarea.addEventListener('keyup', updateTooltip);
@@ -366,17 +211,9 @@ function updateAutocompleteState() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", function() {
   if (window.location.href.includes('editor.html')) {
-    // Load functions from API first
-    const apiLoaded = await loadFunctionsFromAPI();
-    
-    if (!apiLoaded) {
-      console.log('Falling back to DOM parsing for functions');
-    }
-    
-    // Initialize autocomplete with loaded functions
-    initAutocomplete();
+    autocomplete();
     addTooltips();
     updateAutocompleteState();
   }
@@ -385,7 +222,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 window.addEventListener('beforeunload', function (event) {
   const textarea = document.getElementById('editor');
 
-  if (textarea && textarea.value.trim() === '') {
+  if (textarea.value.trim() === '') {
     return;
   }
 
