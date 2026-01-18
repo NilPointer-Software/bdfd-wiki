@@ -19,7 +19,7 @@
     padding-top: 1.5rem;
 }
 .converter-section p {
-    margin-top: -15px;
+    margin-top: -1.5rem;
 }
 .converter-section label {
     display: block;
