@@ -19,22 +19,20 @@
     padding-top: 1.5rem;
 }
 .picker-container p {
-    margin-top: 1.5rem;
+    margin-top: .75rem;
 }
 .input-row {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 2.5px;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
 }
 .hex-input {
     flex: 1;
     color: #fff;
     padding: 10px;
     background: hsl(0deg 0% 100% / 7%);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 	border-width: 0;
-    border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
     height: 3rem;
@@ -49,7 +47,7 @@
 	font-size: 1.5rem;
 	display: block;
 	outline: none;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	border-width: 0;
 	height: 5.5rem;
     padding: 0;
@@ -59,7 +57,7 @@
 	user-select: none;
 }
 .color-input::-webkit-color-swatch {
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	border-width: 0;
 }
 .random-result {
@@ -70,7 +68,7 @@
 #randomColorResult {
 	padding: .9rem;
 	width: 100%;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	margin-top: -2.5rem !important;
 	margin-bottom: 0 !important;
 	color: #fff;
@@ -92,7 +90,7 @@
 	padding-right: 1rem;
 	height: 4rem;
 	border: none;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	cursor: pointer;
 	margin-bottom: 1.5rem !important;
 	margin-top: -1rem !important;
@@ -114,7 +112,7 @@
 .valid-color {
     color: white;
     padding: 4px 8px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     font-weight: bold;
     width: fit-content;
     margin-left: -1.6rem;
