@@ -27,14 +27,16 @@
 	align-items: center;
 }
 .hex-input {
-    flex: 1;
+    flex: 1 !important;
     color: #fff;
-    padding: 10px;
+    padding-top: 2.25rem;
+	padding-bottom: 2.25rem;
+	padding-left: 1rem;
     background: hsl(0deg 0% 100% / 7%);
     border-radius: var(--border-radius);
 	border-width: 0;
     font-family: monospace;
-    font-size: 14px;
+    font-size: 1.5rem;
     height: 3rem;
     width: 65%;
     outline: none;
@@ -75,7 +77,6 @@
 	font-weight: bold;
 	transition: .3s;
 }
-
 #randomColorResult:hover {
 	color: #000;
 	opacity: 0.6;
@@ -100,13 +101,11 @@
 	color: #fff;
 	background: hsl(0deg 0% 100% / 7%);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-	transition: 0.2s;
 }
 .error {
     color: #dc3545;
-    font-size: 12px;
-    min-height: 16px;
-    margin-top: 2px;
+    font-size: 1rem;
+    min-height: 1rem;
     padding-bottom: 1rem;
 }
 .valid-color {
