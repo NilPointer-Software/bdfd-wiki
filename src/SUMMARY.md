@@ -172,7 +172,6 @@
         - [$channelNames](./bdscript/channelNames.md)
         - [$channelPosition](./bdscript/channelPosition.md)
         - [$channelPosition[]](./bdscript/channelPositionComplex.md)
-        - [$channelSendMessage](./bdscript/channelSendMessage.md)
         - [$channelTopic](./bdscript/channelTopic.md)
         - [$channelTopic[]](./bdscript/channelTopicComplex.md)
         - [$channelType](./bdscript/channelType.md)
