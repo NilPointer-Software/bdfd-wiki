@@ -10,13 +10,13 @@
 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="The official documentation of BDFD. It covers guides, examples related to BDScript, BDJS and as well features too.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="theme-color" content="#633fb3">
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no"/>
 
-    <link rel="icon" href="../favicon.png">
-    <link rel="apple-touch-icon" href="../favicon.png">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
     <link rel="stylesheet" href="../theme/css/variables.css">
     <link rel="stylesheet" href="../theme/css/general.css">
@@ -24,12 +24,13 @@
     <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
     <!-- Discord Components -->
-    <script type="module" src="https://unpkg.com/@skyra/discord-components-core@3.6.1"></script>
+    <script type="module"
+            src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
@@ -39,100 +40,117 @@
     <link rel="stylesheet" href="../ayu-highlight.css">
 
     <!-- Custom theme stylesheets -->
-    <link rel="stylesheet" href=".././src/theme/mdbook-admonish.css">
-
+        <link rel="stylesheet" href=".././src/theme/mdbook-admonish.css">
 </head>
 
 <body>
-    <!-- Provide site root to javascript -->
-    <script>
-        var path_to_root = "../";
-        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
-    </script>
-    <!-- Start loading toc.js asap -->
-    <script src="../toc.js"></script>
+<!-- Provide site root to javascript -->
+<script>
+    var path_to_root = "../";
+    var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+</script>
+<!-- Start loading toc.js asap -->
+<script src="../toc.js"></script>
 
-    <!-- Work around some values being stored in localStorage wrapped in quotes -->
-    <script>
-        try {
-            var theme = localStorage.getItem('mdbook-theme');
-            var sidebar = localStorage.getItem('mdbook-sidebar');
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script>
+    try {
+        var theme = localStorage.getItem('mdbook-theme');
+        var sidebar = localStorage.getItem('mdbook-sidebar');
 
-            if (theme.startsWith('"') && theme.endsWith('"')) {
-                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-            }
-
-            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-            }
-        } catch (e) { }
-    </script>
-
-    <!-- Set the theme before any content is loaded, prevents flash -->
-    <script>
-        var theme;
-        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
-        if (theme === null || theme === undefined) { theme = default_theme; }
-        const html = document.documentElement;
-        html.classList.remove('bdfd')
-        html.classList.add(theme);
-        html.classList.add("js");
-    </script>
-
-    <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
-
-    <!-- Hide / unhide sidebar before it is displayed -->
-    <script>
-        var sidebar = null;
-        var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
-        if (document.body.clientWidth >= 1080) {
-            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
-            sidebar = sidebar || 'visible';
-        } else {
-            sidebar = 'hidden';
+        if (theme.startsWith('"') && theme.endsWith('"')) {
+            localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
         }
-        sidebar_toggle.checked = sidebar === 'visible';
-        html.classList.remove('sidebar-visible');
-        html.classList.add("sidebar-" + sidebar);
-    </script>
 
-    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-        <!-- populated by js -->
-        <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
-        <noscript>
-            <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
-        </noscript>
-        <div id="sidebar-resize-handle" class="sidebar-resize-handle">
-            <div class="sidebar-resize-indicator"></div>
+        if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+            localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+        }
+    } catch (e) {
+    }
+</script>
+
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script>
+    var theme;
+    try {
+        theme = localStorage.getItem('mdbook-theme');
+    } catch (e) {
+    }
+    if (theme === null || theme === undefined) {
+        theme = default_theme;
+    }
+    const html = document.documentElement;
+    html.classList.remove('bdfd')
+    html.classList.add(theme);
+    html.classList.add("js");
+</script>
+
+<input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+<!-- Hide / unhide sidebar before it is displayed -->
+<script>
+    var sidebar = null;
+    var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+    if (document.body.clientWidth >= 1080) {
+        try {
+            sidebar = localStorage.getItem('mdbook-sidebar');
+        } catch (e) {
+        }
+        sidebar = sidebar || 'visible';
+    } else {
+        sidebar = 'hidden';
+    }
+    sidebar_toggle.checked = sidebar === 'visible';
+    html.classList.remove('sidebar-visible');
+    html.classList.add("sidebar-" + sidebar);
+</script>
+
+<nav id="sidebar" class="sidebar" aria-label="Table of contents">
+    <!-- populated by js -->
+    <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+    <noscript>
+        <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+    </noscript>
+    <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+        <div class="sidebar-resize-indicator"></div>
+    </div>
+</nav>
+
+<div id="menu-bar" class="menu-bar">
+    <div id="menu-bar-sticky-container">
+        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+               title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
+               aria-controls="sidebar">
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <a href="../index.html" class="navbar-brand">
+            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <span class="navbar-brand-text">BDFD Wiki</span>
+        </a>
+
+        <div class="menu-buttons">
+            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                    aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                    aria-controls="searchbar">
+                <i class="fa fa-search"></i>
+            </button>
         </div>
-    </nav>
 
-    <div id="page-wrapper" class="page-wrapper">
-        <div class="page">
-            <div id="menu-bar" class="menu-bar">
-                <div id="menu-bar-sticky-container">
-                    <div class="menu-buttons">
-                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
-                            title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
-                            aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </label>
+        <h1 class="menu-title">Bot Designer For Discord</h1>
+    </div>
+</div>
 
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
-                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
-                            aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
+<div class="navbar-spacer"></div>
 
-                    <h1 class="menu-title">Bot Designer For Discord</h1>
-                </div>
-            </div>
+<div id="page-wrapper" class="page-wrapper">
+    <div class="page">
 
             <div id="search-wrapper" class="hidden">
                 <form id="searchbar-outer" class="searchbar-outer">
-                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book..."
-                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search documentation..."
+                           aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    <div class="search-hint">Press <kbd>ESC</kbd> or click outside to close</div>
                 </form>
                 <div id="searchresults-outer" class="searchresults-outer hidden">
                     <div id="searchresults-header" class="searchresults-header"></div>
@@ -141,38 +159,38 @@
                 </div>
             </div>
 
-            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-            <script>
-                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
-                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                });
-            </script>
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script>
+            document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+            document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+            Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            });
+        </script>
 
-            <div class="snowflakes">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i>
-            </div>
+        <div class="snowflakes">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+        </div>
 
-            <div id="content" class="content">
-                <main>
-                    <nav class="breadcrumb">
-                        <script src="../theme/breadcrumbs.js"></script>
-                    </nav>
+        <div id="content" class="content">
+            <main>
+                <nav class="breadcrumb">
+                    <script src="../theme/breadcrumbs.js"></script>
+                </nav>
 
-                    <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/resources/troubleshooting.md" class="editPage">
-                        <i class='fa fa-edit' id="editPageIcon"></i>
-                    </a>
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/resources/troubleshooting.md" class="editPage">
+                    <i class='fa fa-edit' id="editPageIcon"></i>
+                </a>
 
-                    <h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
+                <h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
 <p>This page contains a number of troubleshooting that can help you to solve problems that BDFD users often encounter.</p>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <h3 id="troubleshooting-for"><a class="header" href="#troubleshooting-for">Troubleshooting for…</a></h3>
@@ -933,21 +951,21 @@ The advertising provider we use is blocked in your country or region. There is n
 <h3 id="ghost-functions-from-the-changelog"><a class="header" href="#ghost-functions-from-the-changelog">Ghost Functions From The Changelog</a></h3>
 <p>In this section, the easiest way to explain everything is through dialogue:</p>
 <discord-messages>
-    <discord-message role-color="#FFFC2B" author="Random Guy">
+    <discord-message author="Random Guy" role-color="#FFFC2B">
         I was told by a friend that a new function, <code>$botOwnerID</code>, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:
         <discord-attachment url="https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png" slot="attachments">
         </discord-attachment>
     </discord-message>
-    <discord-message author="Nakidamiru" avatar="https://cdn.discordapp.com/avatars/437154602626973697/866113963662bdcda89b5857f9cd5a32.png" role-color="#57CEE8">
+    <discord-message author="Nakidamiru" role-color="#57CEE8" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png">
         This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.
     </discord-message>
-    <discord-message role-color="#57CEE8" author="Nakidamiru" avatar="https://cdn.discordapp.com/avatars/437154602626973697/866113963662bdcda89b5857f9cd5a32.png">
+    <discord-message author="Nakidamiru" role-color="#57CEE8" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png">
         Usually, all nodes are updated by the end of the month.
     </discord-message>
     <discord-message author="Random Guy" role-color="#FFFC2B">
         Allright, thank you! I will wait patiently!
     </discord-message>
-    <discord-message role-color="#57CEE8" author="Nakidamiru" avatar="https://cdn.discordapp.com/avatars/437154602626973697/866113963662bdcda89b5857f9cd5a32.png">
+    <discord-message role-color="#57CEE8" author="Nakidamiru" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png">
         You're welcome, Random Guy.
     </discord-message>
 </discord-messages>
@@ -966,42 +984,44 @@ So, for example, if you have English as your main system language and Russian as
 <h2 id="thats-where-the-list-of-troubleshootings-ends"><a class="header" href="#thats-where-the-list-of-troubleshootings-ends">That’s Where The List Of Troubleshootings Ends</a></h2>
 <p>If you know of other problems that users often encounter or have suggestions, feel free to let us know on the <a href="https://discord.gg/botdesigner">support server</a> or by <a href="https://github.com/NilPointer-Software/bdfd-wiki/blob/dev/CONTRIBUTING.md">contributing</a>!</p>
 
-                </main>
+            </main>
 
-                <nav class="nav-wrapper" aria-label="Page navigation">
-                    <!-- Mobile navigation buttons -->
+            <nav class="nav-wrapper" aria-label="Page navigation">
+                <!-- Mobile navigation buttons -->
                     <a rel="prev" href="../resources/timeFormat.html" class="mobile-nav-chapters previous"
-                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                       title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
                     <a rel="next" href="../bdscript/introduction.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                       title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
 
-                    <div style="clear: both"></div>
-                </nav>
-            </div>
+                <div style="clear: both"></div>
+            </nav>
         </div>
-
-        <nav class="nav-wide-wrapper" aria-label="Page navigation">
-            <a href="../resources/timeFormat.html" class="nav-chapters previous" title="Previous chapter"
-                aria-label="Previous chapter" aria-keyshortcuts="Left">
-                <a href="../resources/timeFormat.html" class="nav-chapters previous" title="Previous page"
-                    aria-label="Previous page" aria-keyshortcuts="Left">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-
-                <a href="../bdscript/introduction.html" class="nav-chapters next" title="Next chapter"
-                    aria-label="Next chapter" aria-keyshortcuts="Right">
-                    <a href="../bdscript/introduction.html" class="nav-chapters next" title="Next page"
-                        aria-label="Next page" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-        </nav>
-
     </div>
+
+    <nav class="nav-wide-wrapper" aria-label="Page navigation">
+        <a href="../resources/timeFormat.html" class="nav-chapters previous" title="Previous chapter"
+           aria-label="Previous chapter" aria-keyshortcuts="Left">
+            <a href="../resources/timeFormat.html" class="nav-chapters previous" title="Previous page"
+               aria-label="Previous page" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a href="../bdscript/introduction.html" class="nav-chapters next" title="Next chapter"
+               aria-label="Next chapter" aria-keyshortcuts="Right">
+                <a href="../bdscript/introduction.html" class="nav-chapters next" title="Next page"
+                   aria-label="Next page" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </a>
+    </a>
+    </nav>
+
+</div>
 
 
 
@@ -1013,18 +1033,18 @@ So, for example, if you have English as your main system language and Russian as
     <script src="../mark.min.js" charset="utf-8"></script>
     <script src="../theme/searcher.js" charset="utf-8"></script>
 
-    <script src="../clipboard.min.js" charset="utf-8"></script>
-    <script src="../highlight.js" charset="utf-8"></script>
-    <script src="../book.js" charset="utf-8"></script>
-    <script src="../theme/playground.js"></script>
+<script src="../clipboard.min.js" charset="utf-8"></script>
+<script src="../highlight.js" charset="utf-8"></script>
+<script src="../book.js" charset="utf-8"></script>
+<script src="../theme/playground.js"></script>
 
-    <!-- Custom JS scripts -->
+<!-- Custom JS scripts -->
 
 
-    <script src="../theme/settings/code-hg.js" defer></script>
+<script src="../theme/settings/code-hg.js" defer></script>
 
-    <!-- Override some theme attributes with the custom settings -->
-    <script src="../theme/settings/apply-settings.js"></script>
+<!-- Override some theme attributes with the custom settings -->
+<script src="../theme/settings/apply-settings.js"></script>
 </body>
 
 </html>

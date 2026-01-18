@@ -24,6 +24,7 @@ window.search = window.search || {};
         searchresults_outer = document.getElementById('searchresults-outer'),
         searchresults_header = document.getElementById('searchresults-header'),
         searchicon = document.getElementById('search-toggle'),
+        searchclose = document.getElementById('search-close'),
         content = document.getElementById('content'),
 
         searchindex = null,
@@ -151,9 +152,9 @@ window.search = window.search || {};
         var searchterms = encodeURIComponent(searchterms.join(" ")).replace(/\'/g, "%27");
 
         return '<a href="' + path_to_root + url[0] + '?' + URL_MARK_PARAM + '=' + searchterms + '#' + url[1]
-            + '" aria-details="teaser_' + teaser_count + '">' + result.doc.breadcrumbs + '</a>'
-            + '<span class="teaser" id="teaser_' + teaser_count + '" aria-label="Search Result Teaser">' 
-            + teaser + '</span>';
+            + '"><span class="search-result-title">' + result.doc.breadcrumbs + '</span>'
+            + '<span class="teaser" id="teaser_' + teaser_count + '" aria-label="Search Result Teaser">'
+            + teaser + '</span></a>';
     }
     
     function makeTeaser(body, searchterms) {
@@ -263,6 +264,14 @@ window.search = window.search || {};
         searchicon.addEventListener('click', function(e) { searchIconClickHandler(); }, false);
         searchbar.addEventListener('keyup', function(e) { searchbarKeyUpHandler(); }, false);
         document.addEventListener('keydown', function(e) { globalKeyHandler(e); }, false);
+        // Close search when clicking on the backdrop
+        search_wrap.addEventListener('click', function(e) {
+            if (e.target === search_wrap) { showSearch(false); }
+        }, false);
+        // Close button handler
+        if (searchclose) {
+            searchclose.addEventListener('click', function(e) { showSearch(false); }, false);
+        }
         // If the user uses the browser buttons, do the same as if a reload happened
         window.onpopstate = function(e) { doSearchOrMarkFromUrl(); };
         // Suppress "submit" events so the page doesn't reload when the user presses Enter

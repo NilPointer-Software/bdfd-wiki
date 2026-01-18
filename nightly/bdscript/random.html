@@ -10,13 +10,13 @@
 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="The official documentation of BDFD. It covers guides, examples related to BDScript, BDJS and as well features too.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="theme-color" content="#633fb3">
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no"/>
 
-    <link rel="icon" href="../favicon.png">
-    <link rel="apple-touch-icon" href="../favicon.png">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
     <link rel="stylesheet" href="../theme/css/variables.css">
     <link rel="stylesheet" href="../theme/css/general.css">
@@ -24,12 +24,13 @@
     <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
     <!-- Discord Components -->
-    <script type="module" src="https://unpkg.com/@skyra/discord-components-core@3.6.1"></script>
+    <script type="module"
+            src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
@@ -39,100 +40,117 @@
     <link rel="stylesheet" href="../ayu-highlight.css">
 
     <!-- Custom theme stylesheets -->
-    <link rel="stylesheet" href=".././src/theme/mdbook-admonish.css">
-
+        <link rel="stylesheet" href=".././src/theme/mdbook-admonish.css">
 </head>
 
 <body>
-    <!-- Provide site root to javascript -->
-    <script>
-        var path_to_root = "../";
-        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
-    </script>
-    <!-- Start loading toc.js asap -->
-    <script src="../toc.js"></script>
+<!-- Provide site root to javascript -->
+<script>
+    var path_to_root = "../";
+    var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+</script>
+<!-- Start loading toc.js asap -->
+<script src="../toc.js"></script>
 
-    <!-- Work around some values being stored in localStorage wrapped in quotes -->
-    <script>
-        try {
-            var theme = localStorage.getItem('mdbook-theme');
-            var sidebar = localStorage.getItem('mdbook-sidebar');
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script>
+    try {
+        var theme = localStorage.getItem('mdbook-theme');
+        var sidebar = localStorage.getItem('mdbook-sidebar');
 
-            if (theme.startsWith('"') && theme.endsWith('"')) {
-                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-            }
-
-            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-            }
-        } catch (e) { }
-    </script>
-
-    <!-- Set the theme before any content is loaded, prevents flash -->
-    <script>
-        var theme;
-        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
-        if (theme === null || theme === undefined) { theme = default_theme; }
-        const html = document.documentElement;
-        html.classList.remove('bdfd')
-        html.classList.add(theme);
-        html.classList.add("js");
-    </script>
-
-    <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
-
-    <!-- Hide / unhide sidebar before it is displayed -->
-    <script>
-        var sidebar = null;
-        var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
-        if (document.body.clientWidth >= 1080) {
-            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
-            sidebar = sidebar || 'visible';
-        } else {
-            sidebar = 'hidden';
+        if (theme.startsWith('"') && theme.endsWith('"')) {
+            localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
         }
-        sidebar_toggle.checked = sidebar === 'visible';
-        html.classList.remove('sidebar-visible');
-        html.classList.add("sidebar-" + sidebar);
-    </script>
 
-    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-        <!-- populated by js -->
-        <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
-        <noscript>
-            <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
-        </noscript>
-        <div id="sidebar-resize-handle" class="sidebar-resize-handle">
-            <div class="sidebar-resize-indicator"></div>
+        if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+            localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+        }
+    } catch (e) {
+    }
+</script>
+
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script>
+    var theme;
+    try {
+        theme = localStorage.getItem('mdbook-theme');
+    } catch (e) {
+    }
+    if (theme === null || theme === undefined) {
+        theme = default_theme;
+    }
+    const html = document.documentElement;
+    html.classList.remove('bdfd')
+    html.classList.add(theme);
+    html.classList.add("js");
+</script>
+
+<input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+<!-- Hide / unhide sidebar before it is displayed -->
+<script>
+    var sidebar = null;
+    var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+    if (document.body.clientWidth >= 1080) {
+        try {
+            sidebar = localStorage.getItem('mdbook-sidebar');
+        } catch (e) {
+        }
+        sidebar = sidebar || 'visible';
+    } else {
+        sidebar = 'hidden';
+    }
+    sidebar_toggle.checked = sidebar === 'visible';
+    html.classList.remove('sidebar-visible');
+    html.classList.add("sidebar-" + sidebar);
+</script>
+
+<nav id="sidebar" class="sidebar" aria-label="Table of contents">
+    <!-- populated by js -->
+    <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+    <noscript>
+        <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+    </noscript>
+    <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+        <div class="sidebar-resize-indicator"></div>
+    </div>
+</nav>
+
+<div id="menu-bar" class="menu-bar">
+    <div id="menu-bar-sticky-container">
+        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+               title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
+               aria-controls="sidebar">
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <a href="../index.html" class="navbar-brand">
+            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <span class="navbar-brand-text">BDFD Wiki</span>
+        </a>
+
+        <div class="menu-buttons">
+            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                    aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                    aria-controls="searchbar">
+                <i class="fa fa-search"></i>
+            </button>
         </div>
-    </nav>
 
-    <div id="page-wrapper" class="page-wrapper">
-        <div class="page">
-            <div id="menu-bar" class="menu-bar">
-                <div id="menu-bar-sticky-container">
-                    <div class="menu-buttons">
-                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
-                            title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
-                            aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </label>
+        <h1 class="menu-title">Bot Designer For Discord</h1>
+    </div>
+</div>
 
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
-                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
-                            aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
+<div class="navbar-spacer"></div>
 
-                    <h1 class="menu-title">Bot Designer For Discord</h1>
-                </div>
-            </div>
+<div id="page-wrapper" class="page-wrapper">
+    <div class="page">
 
             <div id="search-wrapper" class="hidden">
                 <form id="searchbar-outer" class="searchbar-outer">
-                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book..."
-                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search documentation..."
+                           aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    <div class="search-hint">Press <kbd>ESC</kbd> or click outside to close</div>
                 </form>
                 <div id="searchresults-outer" class="searchresults-outer hidden">
                     <div id="searchresults-header" class="searchresults-header"></div>
@@ -141,38 +159,38 @@
                 </div>
             </div>
 
-            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-            <script>
-                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
-                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                });
-            </script>
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script>
+            document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+            document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+            Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            });
+        </script>
 
-            <div class="snowflakes">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i>
-            </div>
+        <div class="snowflakes">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+        </div>
 
-            <div id="content" class="content">
-                <main>
-                    <nav class="breadcrumb">
-                        <script src="../theme/breadcrumbs.js"></script>
-                    </nav>
+        <div id="content" class="content">
+            <main>
+                <nav class="breadcrumb">
+                    <script src="../theme/breadcrumbs.js"></script>
+                </nav>
 
-                    <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/random.md" class="editPage">
-                        <i class='fa fa-edit' id="editPageIcon"></i>
-                    </a>
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/random.md" class="editPage">
+                    <i class='fa fa-edit' id="editPageIcon"></i>
+                </a>
 
-                    <h1 id="random"><a class="header" href="#random">$random</a></h1>
+                <h1 id="random"><a class="header" href="#random">$random</a></h1>
 <p>Returns a random number between 0 and 9.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$random
@@ -182,50 +200,52 @@
 The random number is **$random**
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
-    <discord-message verified bot author="BDFD Support" role-color="#378afa">
+    <discord-message verified bot role-color="#378afa" author="BDFD Support">
         The random number is <b>4</b>
     </discord-message>
 </discord-messages>
 
-                </main>
+            </main>
 
-                <nav class="nav-wrapper" aria-label="Page navigation">
-                    <!-- Mobile navigation buttons -->
+            <nav class="nav-wrapper" aria-label="Page navigation">
+                <!-- Mobile navigation buttons -->
                     <a rel="prev" href="../bdscript/publishMessage.html" class="mobile-nav-chapters previous"
-                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                       title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
                     <a rel="next" href="../bdscript/randomComplex.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                       title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
 
-                    <div style="clear: both"></div>
-                </nav>
-            </div>
+                <div style="clear: both"></div>
+            </nav>
         </div>
-
-        <nav class="nav-wide-wrapper" aria-label="Page navigation">
-            <a href="../bdscript/publishMessage.html" class="nav-chapters previous" title="Previous chapter"
-                aria-label="Previous chapter" aria-keyshortcuts="Left">
-                <a href="../bdscript/publishMessage.html" class="nav-chapters previous" title="Previous page"
-                    aria-label="Previous page" aria-keyshortcuts="Left">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-
-                <a href="../bdscript/randomComplex.html" class="nav-chapters next" title="Next chapter"
-                    aria-label="Next chapter" aria-keyshortcuts="Right">
-                    <a href="../bdscript/randomComplex.html" class="nav-chapters next" title="Next page"
-                        aria-label="Next page" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-        </nav>
-
     </div>
+
+    <nav class="nav-wide-wrapper" aria-label="Page navigation">
+        <a href="../bdscript/publishMessage.html" class="nav-chapters previous" title="Previous chapter"
+           aria-label="Previous chapter" aria-keyshortcuts="Left">
+            <a href="../bdscript/publishMessage.html" class="nav-chapters previous" title="Previous page"
+               aria-label="Previous page" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a href="../bdscript/randomComplex.html" class="nav-chapters next" title="Next chapter"
+               aria-label="Next chapter" aria-keyshortcuts="Right">
+                <a href="../bdscript/randomComplex.html" class="nav-chapters next" title="Next page"
+                   aria-label="Next page" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </a>
+    </a>
+    </nav>
+
+</div>
 
 
 
@@ -237,18 +257,18 @@ The random number is **$random**
     <script src="../mark.min.js" charset="utf-8"></script>
     <script src="../theme/searcher.js" charset="utf-8"></script>
 
-    <script src="../clipboard.min.js" charset="utf-8"></script>
-    <script src="../highlight.js" charset="utf-8"></script>
-    <script src="../book.js" charset="utf-8"></script>
-    <script src="../theme/playground.js"></script>
+<script src="../clipboard.min.js" charset="utf-8"></script>
+<script src="../highlight.js" charset="utf-8"></script>
+<script src="../book.js" charset="utf-8"></script>
+<script src="../theme/playground.js"></script>
 
-    <!-- Custom JS scripts -->
+<!-- Custom JS scripts -->
 
 
-    <script src="../theme/settings/code-hg.js" defer></script>
+<script src="../theme/settings/code-hg.js" defer></script>
 
-    <!-- Override some theme attributes with the custom settings -->
-    <script src="../theme/settings/apply-settings.js"></script>
+<!-- Override some theme attributes with the custom settings -->
+<script src="../theme/settings/apply-settings.js"></script>
 </body>
 
 </html>
