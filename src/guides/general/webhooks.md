@@ -155,7 +155,7 @@ How [`$webhookCreate[]`](#webhookcreate), [`$channelID`](../../bdscript/channelI
 ```
 
 # $webhookDelete
-Deletes the wehook.
+Deletes the webhook.
 
 ## Syntax
 ```
