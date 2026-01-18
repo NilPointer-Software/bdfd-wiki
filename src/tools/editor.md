@@ -336,7 +336,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #error-message button:hover {
 	transition: .4s;
-	color: var(--color1);
+	color: var(--error);
 	border-style: solid;
 }
 
@@ -388,7 +388,7 @@ Here you can use the basic editor features to write codes more conveniently.
   	-webkit-tap-highlight-color: transparent;
   	width: 15rem;
  	padding: 8px 5px;
-  	background: rgb(255 255 255 / 10%);
+  	background: var(--card-bg);
   	color: rgb(255 255 255 / 80%);
   	border-radius: 10px;
   	box-sizing: border-box;
@@ -404,7 +404,7 @@ Here you can use the basic editor features to write codes more conveniently.
 #selectors select option {
 	outline: none;
 	color: #d3d3d3;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 }
 
 #settings, #tips {
