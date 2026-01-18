@@ -24,7 +24,7 @@
 .converter-section label {
 	display: block;
 	margin-bottom: .5rem !important;
-	color: #dc3545;
+	color: var(--error);
 }
 .converter-section input {
     color: #fff;
@@ -114,7 +114,7 @@
 	color: #a5a5a5;
 }
 .timezone-error, #date-info {
-    color: #dc3545 !important;
+    color: var(--error) !important;
     font-size: 1rem;
     min-height: 1rem;
 	margin-top: -0.75rem;
