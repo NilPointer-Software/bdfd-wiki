@@ -532,8 +532,10 @@ Here you can use the basic editor features to write codes more conveniently.
 #autocomplete span {
     display: block;
     color: var(--text-secondary);
-    border-radius: 10px;
+	margin-top: .5rem;
     margin-bottom: .5rem;
+	margin-left: .5rem;
+	margin-right: 1rem;
     cursor: pointer;
     padding: .5rem;
     width: 100%;
@@ -541,7 +543,6 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 #autocomplete span.selected, #autocomplete span:hover {
-    margin-left: .5rem;
 	border-left-color: var(--link-color);
 	border-left-width: 2.5px;
 	border-top-left-radius: 0;
