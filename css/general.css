@@ -9,8 +9,7 @@
 
 html {
 	font-family: "Open Sans", sans-serif;
-	color: #fff;
-	background-color: hsl(270, 80%, 8%);
+	color: var(--text-primary);
 	text-size-adjust: none;
 }
 
@@ -77,7 +76,7 @@ h1 a.header:target,
 h2 a.header:target,
 h3 a.header:target,
 h4 a.header:target {
-	scroll-margin-top: calc(45px + 0.5em);
+	scroll-margin-top: calc(70px + 0.5em);
 }
 
 .page {
@@ -133,7 +132,7 @@ table td {
 }
 
 table thead {
-	background: var(--color3);
+	background: var(--card-bg);
 	border-radius: 10px 10px 0 0;
 }
 
@@ -152,7 +151,7 @@ table thead tr {
 
 table tbody tr:nth-child(2n) {
 	opacity: 0.9;
-	background: var(--color3);
+	background: var(--card-bg);
 }
 
 table tbody tr:last-child td:first-child {
@@ -166,11 +165,11 @@ table tbody tr:last-child td:last-child {
 blockquote {
 	margin: 20px 0;
 	padding: 0.1px 20px;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	border: solid !important;
 	border-radius: 0 10px 10px 0 !important;
 	border-width: 0 0 0 4px !important;
-	border-color: var(--color1) !important;
+	border-color: var(--link-color) !important;
 	box-shadow: 2.5px 2.5px 10px rgb(0 0 0 / 50%);
 }
 
@@ -190,7 +189,7 @@ blockquote {
 	position: absolute;
 	visibility: hidden;
 	color: #fff;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	transform: translateX(-50%);
 	left: 80%;
 	top: -90%;

@@ -10,13 +10,13 @@
 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="The official documentation of BDFD. It covers guides, examples related to BDScript, BDJS and as well features too.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="theme-color" content="#633fb3">
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no"/>
 
-    <link rel="icon" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" type="image/png" href="favicon.png">
 
     <link rel="stylesheet" href="theme/css/variables.css">
     <link rel="stylesheet" href="theme/css/general.css">
@@ -24,12 +24,13 @@
     <link rel="stylesheet" href="theme/css/print.css" media="print">
 
     <!-- Discord Components -->
-    <script type="module" src="https://unpkg.com/@skyra/discord-components-core@3.6.1"></script>
+    <script type="module"
+            src="assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
@@ -39,100 +40,117 @@
     <link rel="stylesheet" href="ayu-highlight.css">
 
     <!-- Custom theme stylesheets -->
-    <link rel="stylesheet" href="./src/theme/mdbook-admonish.css">
-
+        <link rel="stylesheet" href="./src/theme/mdbook-admonish.css">
 </head>
 
 <body>
-    <!-- Provide site root to javascript -->
-    <script>
-        var path_to_root = "";
-        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
-    </script>
-    <!-- Start loading toc.js asap -->
-    <script src="toc.js"></script>
+<!-- Provide site root to javascript -->
+<script>
+    var path_to_root = "";
+    var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+</script>
+<!-- Start loading toc.js asap -->
+<script src="toc.js"></script>
 
-    <!-- Work around some values being stored in localStorage wrapped in quotes -->
-    <script>
-        try {
-            var theme = localStorage.getItem('mdbook-theme');
-            var sidebar = localStorage.getItem('mdbook-sidebar');
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script>
+    try {
+        var theme = localStorage.getItem('mdbook-theme');
+        var sidebar = localStorage.getItem('mdbook-sidebar');
 
-            if (theme.startsWith('"') && theme.endsWith('"')) {
-                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-            }
-
-            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-            }
-        } catch (e) { }
-    </script>
-
-    <!-- Set the theme before any content is loaded, prevents flash -->
-    <script>
-        var theme;
-        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
-        if (theme === null || theme === undefined) { theme = default_theme; }
-        const html = document.documentElement;
-        html.classList.remove('bdfd')
-        html.classList.add(theme);
-        html.classList.add("js");
-    </script>
-
-    <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
-
-    <!-- Hide / unhide sidebar before it is displayed -->
-    <script>
-        var sidebar = null;
-        var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
-        if (document.body.clientWidth >= 1080) {
-            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
-            sidebar = sidebar || 'visible';
-        } else {
-            sidebar = 'hidden';
+        if (theme.startsWith('"') && theme.endsWith('"')) {
+            localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
         }
-        sidebar_toggle.checked = sidebar === 'visible';
-        html.classList.remove('sidebar-visible');
-        html.classList.add("sidebar-" + sidebar);
-    </script>
 
-    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-        <!-- populated by js -->
-        <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
-        <noscript>
-            <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
-        </noscript>
-        <div id="sidebar-resize-handle" class="sidebar-resize-handle">
-            <div class="sidebar-resize-indicator"></div>
+        if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+            localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+        }
+    } catch (e) {
+    }
+</script>
+
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script>
+    var theme;
+    try {
+        theme = localStorage.getItem('mdbook-theme');
+    } catch (e) {
+    }
+    if (theme === null || theme === undefined) {
+        theme = default_theme;
+    }
+    const html = document.documentElement;
+    html.classList.remove('bdfd')
+    html.classList.add(theme);
+    html.classList.add("js");
+</script>
+
+<input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+<!-- Hide / unhide sidebar before it is displayed -->
+<script>
+    var sidebar = null;
+    var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+    if (document.body.clientWidth >= 1080) {
+        try {
+            sidebar = localStorage.getItem('mdbook-sidebar');
+        } catch (e) {
+        }
+        sidebar = sidebar || 'visible';
+    } else {
+        sidebar = 'hidden';
+    }
+    sidebar_toggle.checked = sidebar === 'visible';
+    html.classList.remove('sidebar-visible');
+    html.classList.add("sidebar-" + sidebar);
+</script>
+
+<nav id="sidebar" class="sidebar" aria-label="Table of contents">
+    <!-- populated by js -->
+    <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+    <noscript>
+        <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+    </noscript>
+    <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+        <div class="sidebar-resize-indicator"></div>
+    </div>
+</nav>
+
+<div id="menu-bar" class="menu-bar">
+    <div id="menu-bar-sticky-container">
+        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
+               title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
+               aria-controls="sidebar">
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <a href="index.html" class="navbar-brand">
+            <img class="navbar-brand-icon" src="/assets/logo192.png" alt="BDFD Wiki Logo">
+            <span class="navbar-brand-text">BDFD Wiki</span>
+        </a>
+
+        <div class="menu-buttons">
+            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                    aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                    aria-controls="searchbar">
+                <i class="fa fa-search"></i>
+            </button>
         </div>
-    </nav>
 
-    <div id="page-wrapper" class="page-wrapper">
-        <div class="page">
-            <div id="menu-bar" class="menu-bar">
-                <div id="menu-bar-sticky-container">
-                    <div class="menu-buttons">
-                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor"
-                            title="Toggle Table of Contents" aria-label="Toggle Table of Contents"
-                            aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </label>
+        <h1 class="menu-title">Bot Designer For Discord</h1>
+    </div>
+</div>
 
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
-                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
-                            aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
+<div class="navbar-spacer"></div>
 
-                    <h1 class="menu-title">Bot Designer For Discord</h1>
-                </div>
-            </div>
+<div id="page-wrapper" class="page-wrapper">
+    <div class="page">
 
             <div id="search-wrapper" class="hidden">
                 <form id="searchbar-outer" class="searchbar-outer">
-                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book..."
-                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search documentation..."
+                           aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    <div class="search-hint">Press <kbd>ESC</kbd> or click outside to close</div>
                 </form>
                 <div id="searchresults-outer" class="searchresults-outer hidden">
                     <div id="searchresults-header" class="searchresults-header"></div>
@@ -141,191 +159,84 @@
                 </div>
             </div>
 
-            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-            <script>
-                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
-                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                });
-            </script>
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script>
+            document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+            document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+            Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            });
+        </script>
 
-            <div class="snowflakes">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i>
-            </div>
+        <div class="snowflakes">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+        </div>
 
-            <div id="content" class="content">
-                <main>
-                    <nav class="breadcrumb">
-                        <script src="theme/breadcrumbs.js"></script>
-                    </nav>
+        <div id="content" class="content">
+            <main>
+                <nav class="breadcrumb">
+                    <script src="theme/breadcrumbs.js"></script>
+                </nav>
 
-                    <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/terms.md" class="editPage">
-                        <i class='fa fa-edit' id="editPageIcon"></i>
-                    </a>
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/terms.md" class="editPage">
+                    <i class='fa fa-edit' id="editPageIcon"></i>
+                </a>
 
-                    <style>
+                <style>
   .editPage {
       visibility: hidden;
   }
 </style>
-<h1 id="terms-of-service"><a class="header" href="#terms-of-service">Terms of service</a></h1>
-<p>Your use of our service (“<em><strong>Bot Designer for Discord</strong></em>”) implies that you agree to the Terms stated on this page, and these Terms will remain in effect while you use the service.</p>
-<h2 id="context-and-reference"><a class="header" href="#context-and-reference">Context and Reference</a></h2>
-<ul>
-<li>
-<p>“<em><strong>Bot Designer for Discord</strong></em>” refers to “our service”.</p>
-</li>
-<li>
-<p>“our service” refers to the mobile application, “web app”, and any other related product or service that <em><strong>Bot Designer for Discord</strong></em> provides.
-It should be noted that <em><strong>Bot Designer for Discord</strong></em> is a service provided by company <em><strong><a href="https://nilpointer.software">NilPointer Software</a></strong></em>.</p>
-</li>
-<li>
-<p>“web app” refers to our <a href="https://botdesignerdiscord.com/app">web panel</a> (the “web app” is accessible via most major web browsers) from which users may modify their bot(s) and/or account.</p>
-</li>
-<li>
-<p>“template store” refers to the platform which <em><strong>Bot Designer for Discord</strong></em>’s mobile application provides. It serves as a way for users to share and use bot command code(s).</p>
-</li>
-<li>
-<p>“bot” refers to a user’s <a href="https://discord.com/developers">Discord Bot</a>. A “(bot) command” is a certain order which can be called by a user (a “user” referring to anyone that has access, not just a user of our service in this case) typically in a Discord text or DM channel.</p>
-</li>
-<li>
-<p>“using our service” refers to having the application installed on your device, being logged in to our web app, or accessing any related product or service. If you use our service, you are considered a “user”. When the phrase “user” is utilized in these Terms; it refers to an individual using our service (unless stated otherwise).</p>
-</li>
-<li>
-<p>“spam” refers to an action that’s repeated in mass form.</p>
-</li>
-<li>
-<p>“Premium Points” are our in-app currency which users can buy via the premium points store. A premium point grants the user one week of premium-hosting for a singular bot, which allows for some extra functionalities that the app provides for said amount of time. For premium-hosted bots, we do guarantee 90% of uptime per week. If it is less, the user (after contacting support), will receive some sort of compensation (e.g. Premium Points) if applicable.</p>
-</li>
-<li>
-<p>“promo codes” or “promocodes” are codes (randomized text) that transfer into bot hosting time. Promo codes can be earned by winning an event, giveaway, or <a href="https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ">Discord Nitro Boosting</a> our <a href="https://botdesignerdiscord.com/discord">Discord Server</a>.</p>
-</li>
-<li>
-<p>Users can get free bot hosting time by watching advertisements; using the one-time hosting without-AD button; using Premium Point(s); or by receiving a hosting time promo code.</p>
-</li>
-<li>
-<p>“bug” refers to unintended behavior happening, often these “bugs” can be observed by users.</p>
-</li>
-<li>
-<p>“token” refers to a Discord Bot Token, a token is essentially a password (and should be treated as such) which grants full access to the bot.</p>
-</li>
-<li>
-<p>“ban” refers to a user of our service being temporarily or permanently suspended from using our service.</p>
-</li>
-<li>
-<p>“warn”/“warning” refers to a user of our service being notified that they neglected to comply with one or more of our Terms.</p>
-</li>
-</ul>
-<h2 id="terms"><a class="header" href="#terms">Terms</a></h2>
-<ol>
-<li>
-<p>You agree that you will not contribute any content/actions that use our service or interact with our service in a manner that:</p>
-<p><code>1.</code> is dangerous, harmful, fraudulent, deceptive, threatening, harassing, defamatory, obscene, or otherwise objectionable.</p>
-<p><code>2.</code> is any form of “spam”, or any processes that interfere with <em><strong>Bot Designer for Discord</strong></em>’s services. As an example, mass creating or modifying your bot(s) with the intent of crashing or otherwise harming the service.</p>
-<p><code>3.</code> infringes or violates the intellectual property rights or any other rights of anyone else, including ours.</p>
-</li>
-<li>
-<p>You agree to not decompile or modify our software in any way. We may take legal steps if we detect these actions.</p>
-</li>
-<li>
-<p>You understand that we reserve the right to warn/ban users of our service, for any reason and without previous notice; even if the user isn’t directly violating our Terms.
-You also understand, we may ban any user that breaks <a href="https://discord.com/terms">Discord’s Terms of Service</a> and/or <a href="https://discord.com/guidelines">Discord’s Community Guidelines</a>.</p>
-</li>
-<li>
-<p>You agree not to spam or overuse our computing/storage resources.</p>
-</li>
-<li>
-<p>You agree not to resell your <em><strong>Bot Designer for Discord</strong></em> account, “Premium Points”, or “promo codes”.</p>
-</li>
-<li>
-<p>You agree not to exploit a detected bug. It should be sent as a report to the developers instead.</p>
-</li>
-<li>
-<p>You agree to cope with any applicable limitations that <em><strong>Bot Designer for Discord</strong></em> has. This includes the 2,399 guild limit per bot. We do not guarantee any amount of uptime (for non-premium hosted bots), however hosting is our best effort.</p>
-</li>
-<li>
-<p>You understand that prices for Premium Points should, but may not include; sales and use taxes. If they do not, the user is responsible for the payment of such taxes related to the purchase.</p>
-</li>
-<li>
-<p>When submitting or using <em><strong>Bot Designer for Discord</strong></em>’s “Template store” feature, you are agreeing to the <a href="https://botdesignerdiscord.com/template-store-tos">Template Store Terms</a>.</p>
-</li>
-<li>
-<p>You agree to our <a href="https://botdesignerdiscord.com/privacy-policy">Privacy Policy</a>.</p>
-</li>
-<li>
-<p>You agree to first contact support before reversing your payment method if you have purchased Premium Points.</p>
-</li>
-<li>
-<p>You agree we shall not be held liable for users that abuse our service to perform malicious, or otherwise unlawful ventures. However, as stated previously in these Terms; we do uphold the right to warn/ban in these circumstances.</p>
-</li>
-</ol>
-<hr />
-<p><em>Effective Date: 3 January, 2023.</em></p>
-<p>We reserve the right to change, modify, add, or remove portions of our Terms at any time, and you will still be expected to comply. It is recommended to check this page periodically for changes.</p>
-<p>We may warn/ban users if we discover they didn’t comply with these Terms.</p>
-<p>All your usage and access to our service is subject to these stated Terms, if you do not agree with them, you shall not use the service.</p>
-<p>In case we change our Terms, if you don’t agree with the new Terms, you are free to reject them by no longer using our service.</p>
-<div id="admonition-info" class="admonition admonish-info" role="note" aria-labelledby="admonition-info-title">
-<div class="admonition-title">
-<div id="admonition-info-title">
-<p>Info</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-info"></a>
-</div>
-<div>
-<p>Registered users may withdraw their data through the mobile application, and request the deletion of data by contacting support.</p>
-</div>
-</div>
-<h2 id="contact"><a class="header" href="#contact">Contact</a></h2>
-<p>If you have questions/concerns about these Terms or our service, you may contact us via email.</p>
-<p>Support for regular users is available at <a href="mailto:support@mail.botdesignerdiscord.com"><code>support@mail.botdesignerdiscord.com</code></a>
-and for premium-realted problems at <a href="mailto:premium-support@mail.botdesignerdiscord.com"><code>premium-support@mail.botdesignerdiscord.com</code></a>.</p>
+<h1 id="terms-of-service"><a class="header" href="#terms-of-service">Terms of Service</a></h1>
+<p>The Terms of Service for Bot Designer for Discord can be found at:</p>
+<p><strong><a href="https://botdesignerdiscord.com/tos">https://botdesignerdiscord.com/tos</a></strong></p>
 
-                </main>
+            </main>
 
-                <nav class="nav-wrapper" aria-label="Page navigation">
-                    <!-- Mobile navigation buttons -->
+            <nav class="nav-wrapper" aria-label="Page navigation">
+                <!-- Mobile navigation buttons -->
                     <a rel="prev" href="FLOWCHART_CHANGELOG.html" class="mobile-nav-chapters previous"
-                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                       title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
                     <a rel="next" href="entityTransferPolicy.html" class="mobile-nav-chapters next"
-                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                       title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
 
-                    <div style="clear: both"></div>
-                </nav>
-            </div>
+                <div style="clear: both"></div>
+            </nav>
         </div>
-
-        <nav class="nav-wide-wrapper" aria-label="Page navigation">
-            <a href="FLOWCHART_CHANGELOG.html" class="nav-chapters previous" title="Previous chapter"
-                aria-label="Previous chapter" aria-keyshortcuts="Left">
-                <a href="FLOWCHART_CHANGELOG.html" class="nav-chapters previous" title="Previous page"
-                    aria-label="Previous page" aria-keyshortcuts="Left">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-
-                <a href="entityTransferPolicy.html" class="nav-chapters next" title="Next chapter"
-                    aria-label="Next chapter" aria-keyshortcuts="Right">
-                    <a href="entityTransferPolicy.html" class="nav-chapters next" title="Next page"
-                        aria-label="Next page" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-        </nav>
-
     </div>
+
+    <nav class="nav-wide-wrapper" aria-label="Page navigation">
+        <a href="FLOWCHART_CHANGELOG.html" class="nav-chapters previous" title="Previous chapter"
+           aria-label="Previous chapter" aria-keyshortcuts="Left">
+            <a href="FLOWCHART_CHANGELOG.html" class="nav-chapters previous" title="Previous page"
+               aria-label="Previous page" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a href="entityTransferPolicy.html" class="nav-chapters next" title="Next chapter"
+               aria-label="Next chapter" aria-keyshortcuts="Right">
+                <a href="entityTransferPolicy.html" class="nav-chapters next" title="Next page"
+                   aria-label="Next page" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </a>
+    </a>
+    </nav>
+
+</div>
 
 
 
@@ -337,18 +248,18 @@ and for premium-realted problems at <a href="mailto:premium-support@mail.botdesi
     <script src="mark.min.js" charset="utf-8"></script>
     <script src="theme/searcher.js" charset="utf-8"></script>
 
-    <script src="clipboard.min.js" charset="utf-8"></script>
-    <script src="highlight.js" charset="utf-8"></script>
-    <script src="book.js" charset="utf-8"></script>
-    <script src="theme/playground.js"></script>
+<script src="clipboard.min.js" charset="utf-8"></script>
+<script src="highlight.js" charset="utf-8"></script>
+<script src="book.js" charset="utf-8"></script>
+<script src="theme/playground.js"></script>
 
-    <!-- Custom JS scripts -->
+<!-- Custom JS scripts -->
 
 
-    <script src="theme/settings/code-hg.js" defer></script>
+<script src="theme/settings/code-hg.js" defer></script>
 
-    <!-- Override some theme attributes with the custom settings -->
-    <script src="theme/settings/apply-settings.js"></script>
+<!-- Override some theme attributes with the custom settings -->
+<script src="theme/settings/apply-settings.js"></script>
 </body>
 
 </html>
