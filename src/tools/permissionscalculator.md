@@ -1,23 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Permission Calculator
 Example text!
 
@@ -142,10 +122,11 @@ input[type="checkbox"] {
     color: #fff;
 }
 .results {
-	 background-color: var(--card-bg);
-	 padding: 1.5rem;
-	 border-radius: var(--border-radius);
-	 margin-top: -1rem;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	background-color: var(--card-bg);
+	padding: 1.5rem;
+	border-radius: var(--border-radius);
+	margin-top: -1rem;
 }
 .results h3 {
 	margin-top: 0;
@@ -159,7 +140,7 @@ input[type="checkbox"] {
 	padding: 0rem 0;
 }
 .combination, .current-selection {
-	background-color: rgb(145 145 145 / 25%);
+	background-color: rgb(10 10 10 / 15%);
 	padding: 1rem;
 	margin: 1rem 0;
 	border-radius: var(--border-radius);
@@ -176,9 +157,7 @@ input[type="checkbox"] {
 }
 .permission-list li {
 	padding: .75rem 1rem;
-	margin: .5rem 0;
-	background-color: rgb(0 0 0 / 10%);
-	border-radius: var(--border-radius);
+	margin: -1rem 0;
 	font-size: 1.5rem;
 }
 .combination-total {
@@ -194,13 +173,13 @@ input[type="checkbox"] {
 	padding: 1rem;
 }
 .search-info {
-	color: var(--color1);
+	color: var(--text-secondary);
 	font-size: 1.6rem;
 	margin-top: -1.5rem;
 	padding-top: 0;
 }
 .warning {
-    color: var(--color1);
+    color: var(--error);
     font-size: 1.4rem;
     margin-top: 1rem;
     padding: 1rem;
