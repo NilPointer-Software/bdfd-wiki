@@ -361,9 +361,10 @@ Here you can use the basic editor features to write codes more conveniently.
   	}
 		
 	#nameScript textarea {
-		border-radius: 15px;
-		font-size: 2rem;
-		height: 2.75rem;
+		padding: 1rem;
+		border-radius: 10px;
+		font-size: 1.5rem;
+		height: 3.5rem;
 	}
 }
 
