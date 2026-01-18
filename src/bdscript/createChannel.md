@@ -52,7 +52,7 @@ New channel created!
 ![example](https://user-images.githubusercontent.com/69215413/125972524-95307b17-bfcc-4525-a4fa-1d58a30a1fa9.png)
 
 ~~~admonish tip
-You can use [`$channelID[]`](./authorIDComplex.md) to return the channel ID.
+You can use [`$channelID[]`](./channelIDComplex.md) to return the channel ID.
 
 ```
 $nomention
