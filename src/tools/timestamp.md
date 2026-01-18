@@ -15,8 +15,8 @@
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .converter-section h2 {
-    margin-top: 60px;
-    padding-top: 15px;
+    margin-top: -.5rem;
+    padding-top: 1.5rem;
 }
 .converter-section p {
     margin-top: -15px;
