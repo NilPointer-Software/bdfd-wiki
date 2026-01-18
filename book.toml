@@ -81,7 +81,6 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 "/bdscript/webhookAvatarURL.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookColor.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookContent.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookCreate.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookDelete.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookDescription.html" = "../guides/general/webhooks.html"
 "/bdscript/webhookFooter.html" = "../guides/general/webhooks.html"
