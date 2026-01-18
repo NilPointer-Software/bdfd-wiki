@@ -470,14 +470,40 @@ How [`$webhookCreate[]`](#webhookcreate), [`$webhookDescriprion[]`](#webhookdesc
 ```
 
 # Beautiful webhook
+
 Here is one example of how to use a webhook.
 
 ```
 $nomention
-$var[webhook;$webhookCreate[$channelID;I'm webhook 😎;$serverIcon]]
+$var[webhook;$webhookCreate[$channelID;I'm webhook 😎;$authorAvatar]]
 $webhookContent[$var[webhook];👇 Read before chatting]
 $webhookTitle[$var[webhook];📚 Rules]
-$webhookDescription[$var[webhook];1. Be patient
-2. Just chill]
+$webhookDescription[$var[webhook];Just be cool!]
 $webhookFooter[$var[webhook];Made by BDFD]
+$webhookColor[$var[webhook];#673ab7]
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 803569638084313098
+  username: I'm webhook 😎
+  color: "#fff"
+  bot: true
+  verified: false
+  content: |
+    👇 Read before chatting
+  embed:
+    title: 📚 Rules
+    description: Just be cool!
+    color: "#673ab7"
+    footer:
+      text: Made by BDFD
+```
+
+```admonish question title="What is this?"
+How [`$authorAvatar`](../../bdscript/authorAvatar.md) works?
 ```
