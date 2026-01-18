@@ -1,7 +1,7 @@
 # $isNumber
 Returns whether the provided value is a number or not.
 
-```admonish tip
+```admonish info
 `true` means the value is a number, `false` means it isn’t.
 ```
 

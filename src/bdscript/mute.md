@@ -3,7 +3,9 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
-> This function is deprecated, instead better use [`$timeout[]`](https://nilpointer-software.github.io/bdfd-wiki/bdscript/timeout.html).
+```admonish warning
+As of December 2021, this function has been deprecated in favor of [`$timeout[]`](./timeout.md).
+```
 
 Mutes the mentioned user.
 

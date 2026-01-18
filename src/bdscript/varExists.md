@@ -44,3 +44,7 @@ $varExists[$message]
 ```admonish question title="What is this?"
 How [`$message`](./message.md) works?
 ```
+
+```admonish info title="Read more"
+For more information, read the the [Variables Guide](../guides/introduction/variables.md).
+```

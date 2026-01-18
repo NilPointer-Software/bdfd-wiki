@@ -1,7 +1,9 @@
 # $isBooster
 Returns if user is boosting guild with nitro.
 
-> "true" means the user is a booster, "false" means it isn't.
+```admonish info
+"true" means the user is a booster, "false" means it isn't.
+```
 
 ## Syntax
 ```
@@ -31,5 +33,10 @@ Booster? $isBooster[$mentioned[1]]
     Booster? true
 ```
 
-> You can use `$isBooster[]` to get the status of author.\
-> [How `$mentioned[]` works?](./mentioned.md)
+```admonish tip
+You can use empty `$isBooster[]` to get the information about author.\
+```
+
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
+```

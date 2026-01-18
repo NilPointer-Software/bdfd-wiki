@@ -361,7 +361,7 @@ With error handling you can embed an error for...
 - "Only If" Functions: [`$onlyAdmin[]`](../../../bdscript/onlyAdmin.md), [`$onlyIf[]`](../../../bdscript/onlyIf.md) and other similar "Only If" functions...;
 - Enabled function: [`$enabled[]`](../../../bdscript/enabled.md).
 
-Let's create embed error for `$coodlwon[]` function:
+Let's create embed error for `$cooldown[]` function:
 
 ```
 $nomention
@@ -409,3 +409,4 @@ How [`$cooldown[]`](../../../bdscript/cooldown.md) and [`$getCooldown[]`](../../
 ```admonish danger title="BDScript 2"
 Don't forget to choose **BDScript 2** when using the [Error Handling functions](#functions-used)!
 ```
+

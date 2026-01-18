@@ -328,9 +328,9 @@ function updateCodeHG() {
 	const jsonHG = codeInput.value;
 
 	const charCount = codeInput.value.replace(/[\s\n]/g, "").length; // Ignore spaces and new rows
-	charCountElement.textContent = `${charCount} / 10000`;
+	charCountElement.textContent = `${charCount} / 25000`;
 
-	if (charCount >= 10000) {
+	if (charCount > 25000) {
 		charCountElement.style.color = "red";
 	} else {
 		charCountElement.style.color = "";
@@ -376,10 +376,10 @@ function loadSettings() {
 		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
-		language: "en",
+		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		effects: "hidden",
+		"effects": "hidden",
 		"code-hg": {
 			defaultTextHighlight: {
 				color: 4288341353,
@@ -449,7 +449,7 @@ function loadSettings() {
 		var inputcodedesign = JSON.stringify(codedesign);
 		const charJSONCount = inputcodedesign.length;
 
-		charCountElement.textContent = `${charJSONCount} / 10000`;
+		charCountElement.textContent = `${charJSONCount} / 25000`;
 		codeTextInput.value = inputcodedesign;
 	}
 

@@ -34,4 +34,6 @@ $customImage[NiceImage]
     image: https://user-images.githubusercontent.com/111157596/257596077-9836bafb-1c2a-4e1e-9cb3-9ca7725dcbf3.png
 ```
 
-> For more info, see the [Custom Images Guide](../premium/customImages.md).
+```admonish info title="Read more"
+For more information, read the the [Custom Images Guide](../premium/customImages.md).
+```

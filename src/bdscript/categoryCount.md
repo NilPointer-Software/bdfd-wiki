@@ -15,8 +15,7 @@ There are $categoryCount categories in this server!
   username: Nicky
   color: "#EE7908"
   content: |
-    !categories
-
+    !example
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"

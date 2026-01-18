@@ -152,10 +152,10 @@ function applySettings() {
 		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
-		language: "en",
+		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		effects: "hidden",
+		"effects": "hidden",
 		"code-hg": {
 			defaultTextHighlight: {
 				color: 4288341353,
@@ -217,6 +217,24 @@ function applySettings() {
 	if (!data) localStorage.setItem("json", JSON.stringify(defaultData));
 	data ??= defaultData;
 
+	const mainHue = data["theme-main"]; // Мяу
+	const theme = data["theme-name"] || "dark"; // Гав
+	const back = data["theme-bg"]
+
+	const saturation = 80;
+	const TextSaturation = (theme === "dark") ? 100 : 50;
+	const lightness = (theme === "dark") ? 50 : 60;
+	const UILightness = (theme === "dark") ? 15 : 82;
+	const GradientLightness = (theme === "dark") ? 20 : 80;
+	const BackLightness = (theme === "dark") ? 8 : 75;
+	const TextLightness = (theme === "dark") ? 90 : 50;
+	const SearchLightness = (theme === "dark") ? 20 : 70;
+
+	// Creating cute HSL colors
+	const colorTheme1 = `hsl(${mainHue}, ${saturation}%, ${lightness}%)`;
+	const colorTheme2 = `hsl(${mainHue}, ${saturation}%, ${lightness - 20}%)`;
+	const colorTheme3 = `hsl(${mainHue}, ${saturation}%, ${UILightness}%)`;
+
 	const html = document.querySelector("html");
 
 	html.style.fontFamily = data["text-font"];
@@ -226,7 +244,7 @@ function applySettings() {
 	if (snowflakes) {
 		snowflakes.style.visibility = data["effects"];
 	}
-
+	
 	setDiscordTheme(data["discord-example-theme"]);
 }
 

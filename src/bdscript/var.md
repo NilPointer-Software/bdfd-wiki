@@ -6,7 +6,9 @@ Instead, it creates the variable automatically during it's runtime and gets dele
 
 The data stored in the temporary variable can only be retrieved during its execution period and is removed once it's finished.
 
-> 📌 This function can only be used in `BDScript 2` script language.
+```admonish danger title="BDScript 2"
+Can only be used in **[BDScript 2](../guides/general/bds2/aboutBDScript2.md)**.
+```
 
 ## Syntax
 ```
@@ -17,15 +19,18 @@ $var[Name;(Value)]
 - `Name` `(Type: String || Flag: Required)`: The name of the temporary variable.
 - `Value` `(Type: String || Flag: Vacantable)`: The data to store
 
-> 📌 To retrieve the temporary stored value, type `$var[Name]`, where *"Name"* is the temporary variable name.
+```admonish info
+To retrieve the temporary stored value, type `$var[Name]`, where *"Name"* is the temporary variable name.
+```
 
 ## Example
 ```
 $nomention
-$argsCheck[>1;Type a message!]
-
 $var[ID;$sendMessage[$toLowercase[$message];yes]]
-
 $addButton[no;interactionID;Example;secondary;;;$var[ID]]
 ```
 ![Example](https://user-images.githubusercontent.com/70456337/189480166-d37cbdb8-05ce-44e8-8f2e-14d030baa9a9.png)
+
+```admonish info title="Read more"
+For more information, read the the [Variables Guide](../guides/introduction/variables.md).
+```

@@ -1,11 +1,17 @@
 # $premiumExpireTime
 Returns how long until premium expires.
 
-> Returns "expired" if the bot is not premium.
+```admonish info
+Returns `expired` if the bot is not premium.
+```
 
 ## Syntax
 ```
 $premiumExpireTime[(Return unix timestamp?)]
+```
+
+```admonish tip title="Timestamp Converter"
+You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
 ```
 
 ### Parameters 
@@ -43,3 +49,4 @@ My premium expires in: $premiumExpireTime (Unix Timestamp: $premiumExpireTime[ye
   content: |
     My premium expires in: expired (Unix Timestamp: expired)
 ```
+

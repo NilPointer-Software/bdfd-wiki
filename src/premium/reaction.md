@@ -12,7 +12,7 @@ $reaction[Name]
 ```
 
 ### Parameters
-- `Name` `(Type: String || Flag: Required)`: The value used in "command name" argument of `$awaitReactions[]`.
+- `Name` `(Type: String || Flag: Required)`: The value used in "Command name" parameter of [`$awaitReactions[]`](../bdscript/awaitReactions.md).
 
 ## Example
 ### Trigger `$reaction[click]`
@@ -48,4 +48,6 @@ $sendMessage[$username clicked on the reaction]
     Nicky clicked on the reaction
 ```
 
-> For more info, see the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+```admonish info title="Read more"
+For more information, read the the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+```

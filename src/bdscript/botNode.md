@@ -5,7 +5,10 @@ Returns the bot's node ID.
 ```
 $botNode
 ```
-> See list of Nodes and Status, [Click here](https://botdesignerdiscord.com/status).
+
+```admonish note
+See list of Nodes and Status, [Click here](https://botdesignerdiscord.com/status).
+```
 
 ## Example
 ```

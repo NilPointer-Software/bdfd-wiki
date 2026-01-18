@@ -14,9 +14,13 @@ $modifyChannel[Channel ID;(Channel Name;Topic;Make NSFW?;Position;Category ID)]
 - `Position` `(Type: Integer || Flag: Vacantable)`: The new channel position *(1 = top)*.
 - `Category ID` `(Type: Snowflake || Flag: Vacantable)`: The category to which the channel should belong to.
 
-> You can use `!unchanged` as an parameter for the option to remain in its current state.
+```admonish tip
+You can use `!unchanged` as an parameter for the option to remain in its current state.
+```
 
-> You can use `$channelID[Category/Channel Name]` to get the ID of a category or channel.
+```admonish tip
+You can use [`$channelID[Category/Channel Name]`](./channelIDComplex.md) to get the ID of a category or channel.
+```
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly :

@@ -12,12 +12,8 @@ $botLeave[Guild ID]
 ## Example
 ```
 $nomention
-$sendMessage[I left out `$serverName[$message]` server.]
+I left out `$serverName[$message]` server.
 $botLeave[$message]
-```
-
-```admonish question title="What is this?"
-How [`$sendMessage[]`](./sendMessage.md), [`$serverName[]`](./serverName.md) and [`$message`](./message.md) works?
 ```
 
 ```discord yaml
@@ -37,18 +33,25 @@ How [`$sendMessage[]`](./sendMessage.md), [`$serverName[]`](./serverName.md) and
 \
 ![example](https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png)
 
-> If you are using **BDScript 2**, put `$botLeave[]` at the very bottom of the code so that the code works correctly i.e:
-> 
-> ❌ Not correct:
-> ```
-> $botLeave[$message]
-> $nomention
-> $sendMessage[I left this server!]
-> ```
->
-> ✅ Correct:
-> ```
-> $nomention
-> $sendMessage[I left this server!]
-> $botLeave[$message]
-> ```
+```admonish question title="What is this?"
+How [`$serverName[]`](./serverName.md) and [`$message`](./message.md) works?
+```
+
+~~~admonish warning
+If you are using **[BDScript 2](../guides/general/bds2/aboutBDScript2.md)**, put `$botLeave[]` at the very bottom of the code so that the code works correctly i.e:
+
+❌ Not correct:
+```
+$botLeave[$message]
+$nomention
+$sendMessage[I left this server!]
+```
+
+✅ Correct:
+```
+$nomention
+$sendMessage[I left this server!]
+$botLeave[$message]
+```
+
+~~~

@@ -6,6 +6,10 @@ Returns your bot's hosting expiration date.
 $hostingExpireTime
 ```
 
+```admonish tip title="Timestamp Converter"
+You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
+```
+
 ## Example
 ``` 
 $nomention 
@@ -25,3 +29,4 @@ My hosting expiration date: $hostingExpireTime
   content: |
     My hosting expiration date: San, 3 Sep 2029 23:59:00 UTC
 ```
+

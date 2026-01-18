@@ -1,7 +1,9 @@
 # $isNSFW
 Returns whether the provided channel is NSFW (Not Safe For Work) or not.
 
-> "true" means the channel is NSFW, "false" means it isn't.
+```admonish info
+"true" means the channel is NSFW, "false" means it isn't.
+```
 
 ## Syntax
 ```

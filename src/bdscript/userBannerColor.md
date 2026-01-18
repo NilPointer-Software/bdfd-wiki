@@ -6,6 +6,10 @@ Returns the color of the given user banner. Returns an empty string if no banner
 $userBannerColor[User ID]
 ```
 
+```admonish tip title="Color Picker"
+You can use our ["Color" tool](../tools/color.md) to test colors!
+```
+
 ### Parameters
 - `User ID` `(Type: Snowflake || Flag: Required)`: The user to get the banner color from.
 
@@ -35,3 +39,4 @@ $nomention
 ```admonish question title="What is this?"
 How [`$authorID`](./authorID.md) works?
 ```
+

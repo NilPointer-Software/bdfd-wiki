@@ -1,7 +1,9 @@
 # $isBanned
 Returns whether a user is banned from the current server or not. Requires the `BAN_MEMBERS` permission.
 
-> "true" means the user is banned, "false" means they aren't.
+```admonish info
+`true` means the user is banned, `false` means they aren't.
+```
 
 ## Syntax
 ```
@@ -14,6 +16,10 @@ $isBanned[User ID]
 ## Example
 ```
 $nomention
-$isBanned[$message[1]]
+$isBanned[$message]
 ```
 ![example](https://user-images.githubusercontent.com/111157596/233709040-50d9987e-094d-4ddb-b85e-d01db865c840.png)
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

@@ -3,7 +3,7 @@ Sends an embed message to the provided channel. Not needed fields can be left em
 
 ## Syntax
 ```
-$sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color;Author;Author icon;Footer;Footer icon;Thumbnail;Image;Add timestamp?;Return ID?)]
+$sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color hex;Author;Author icon;Footer;Footer icon;Thumbnail;Image;Add timestamp?;Return ID?)]
 ```
 
 ### Parameters 
@@ -12,7 +12,11 @@ $sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color;Author;A
 - `Title` `(Type: String || Flag: Vacantable)`: The text that will be used as the title.
 - `Title URL` `(Type: URL || Flag: Vacantable)`: The URL that will be applied to the title.
 - `Description` `(Type: String || Flag: Vacantable)`: The description that will be applied to the embed.
-- `Color` `(Type: Color || Flag: Vacantable)`: The [color hex](https://htmlcolorcodes.com/color-picker/) or integer to set the embed border color as.
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../tools/color.md) to set the embed border color as. You can also use color integer number.
+```admonish tip title="Color Picker"
+You can use our ["Color" tool](../tools/color.md) to select the best color!
+```
+
 - `Author` `(Type: String || Flag: Vacantable )`: The text that appears at the author.
 - `Author icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to the author. Must be a valid image URL.
 - `Footer` `(Type: String || Flag: Vacantable)`: The text to set the footer as.
@@ -28,3 +32,4 @@ $nomention
 $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;author;$authorAvatar;footer;$authorAvatar;$authorAvatar;$authorAvatar;no;no]
 ```
 ![image](https://user-images.githubusercontent.com/42785890/151873621-10b17532-93ee-421c-8eea-515f40f1a124.png)
+

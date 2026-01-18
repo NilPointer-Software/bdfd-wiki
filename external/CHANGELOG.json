@@ -1,18 +1,44 @@
 {
-	"2026": {
-		"january": [
-			"Added `$addTextDisplay[]`",
-			"Added `$addSeparator[]`",
-			"Added `$addContainer[]`",
-			"Added `$addSection[]`",
-			"Added `$addThumbnail[]`",
-			"Added `$addMediaGallery[]`",
-			"Added `$addMediaGalleryItem[]`",
-			"Added `$addActionRow[]`"
-		]
-	},
-	"2025": {
-		"january": [
+ "2026": {
+  "january": [
+   "Added `$addTextDisplay[]`",
+   "Added `$addSeparator[]`",
+   "Added `$addContainer[]`",
+   "Added `$addSection[]`",
+   "Added `$addThumbnail[]`",
+   "Added `$addMediaGallery[]`",
+   "Added `$addMediaGalleryItem[]`",
+   "Added `$addActionRow[]`",
+   "Added `$addButtonCV2[]`"
+  ]
+ },
+ "2025": {
+  "december": [
+   "Added \"Sign out other sessions\" button",
+   "Smoother animations in the app",
+   "Redesigned Premium Points shop",
+   "A lot of app bug fixes",
+   "HTTP Awaiting Limit: 5s > 35s",
+   "Fixed `$ceil[]`",
+   "Fixed `$floor[]`",
+   "Fixed `$getLeaderboardPosition[]`",
+   "AI Quota: 5000 > 10000",
+   "Log Quota: 1500 > 3000",
+   "Updated BDFD App icon for Android"
+  ],
+  "november": [
+   "Major improvements to hosting infrastructure",
+   "Reworked bot status preview",
+   "HTTP Awaiting Limit: 15s > 5s"
+  ],
+  "october": ["Added setting to disable code highlighting in the command editor"],
+  "september": [
+   "Updated BDFD App icon for iOS 26",
+   "Reworked bot list"
+  ],
+  "july": ["BDScript bug fixes"],
+  "february": ["Fixed app crashing during premium points purchases"],
+  "january": [
 			"Added `$afkChannelID`",
 			"Added `$afkTimeout[]`",
 			"Added `$boostLevel`",
@@ -54,7 +80,10 @@
 			"Added `$setUserRoles[]`",
 			"Added `$getLeaderboardPosition[]`"
 		],
-		"june": ["Added `$ai[]`", "Added `$aiQuota`"],
+		"june": [
+			"Added `$ai[]`",
+		 "Added `$aiQuota`"
+		],
 		"march": [
 			"Fixed the bot sometimes duplicating its answer",
 			"Fixed `$onlyForIDs[]` not working correctly on big nodes"

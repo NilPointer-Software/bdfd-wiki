@@ -1,7 +1,9 @@
 # $isUserDMEnabled
 Checks whether the bot can DM the user or not.
 
-> "true" means the bot can DM the user, "false" means it can't.
+```admonish info
+"true" means the bot can DM the user, "false" means it can't.
+```
 
 ## Syntax
 ```

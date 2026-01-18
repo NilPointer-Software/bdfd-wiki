@@ -9,3 +9,10 @@ $kick
 ### Permissions
 Required permissions that the bot must have for this function to work properly:
 - `kick`
+
+## Example
+```
+$nomention
+$kick
+Bye
+```

@@ -13,7 +13,6 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
 <link rel="stylesheet" href="./theme/settings/style.css">
 <script src="./theme/settings/index.js" defer></script>
 
-
 <div class="settingembed">
   <h2>Text Size</h2>
   <p>Easily modify the size of text for optimal viewing and readability.</p>
@@ -176,9 +175,9 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
     <button class="hgButton">
       <p><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><i class="fa fa-book" aria-hidden="true"></i> What is this?</a></p>
     </button>
-    <textarea id="jsonhginput" oninput="updateCodeHG()" maxlength="10000"></textarea>
+    <textarea id="jsonhginput" oninput="updateCodeHG()" maxlength="25000"></textarea>
   </div>
-  <p class="charCount">0 / 10000</p>
+  <p class="charCount">0 / 25000</p>
 </div>
 
 ```

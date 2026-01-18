@@ -34,3 +34,7 @@ $isMentioned[$mentioned[1]]
   content: |
     true
 ```
+
+```admonish question title="What is this?"
+How [`$mentioned[]`](./mentioned.md) works?
+```

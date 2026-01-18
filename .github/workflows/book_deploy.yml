@@ -151,3 +151,4 @@ jobs:
               style: 5
               label: Preview site
               url: https://wiki.botdesignerdiscord.com/nightly/${{ env.LINK }}
+

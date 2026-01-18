@@ -1,7 +1,9 @@
 # $url
 Encodes or decodes the provided text in the URL encoding format.
 
-> URL encoding is a method of converting reserved, unsafe, or non-ASCII characters to a URL format that is universally accepted and understood by all web browsers and servers while URL decoding is the vice-versa of URL encoding.
+```admonish info
+URL encoding is a method of converting reserved, unsafe, or non-ASCII characters to a URL format that is universally accepted and understood by all web browsers and servers while URL decoding is the vice-versa of URL encoding.
+```
 
 ## Syntax
 ```

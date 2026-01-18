@@ -5,6 +5,14 @@
 
 Sends a notification to your mobile phone.
 
+```admonish warning title="Limit"
+Can be used every 20 minutes.
+```
+
+```admonish warning title="Limit"
+Only for Android. Can't be used on iOS.
+```
+
 ## Syntax
 ```
 $sendNotification[Message;(Image URL)]
@@ -17,7 +25,11 @@ $sendNotification[Message;(Image URL)]
 ## Example
 ```
 $nomention
-$sendNotification[Hello, I miss you!;$userAvatar[$botID]]
+$sendNotification[Hello world!;$authorAvatar]
 ```
 
 ![example](https://i.imgur.com/yfSTLVY.png)
+
+```admonish question title="What is this?"
+How [`$authorAvatar`](../bdscript/authorAvatar.md) works?
+```

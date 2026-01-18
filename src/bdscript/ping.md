@@ -1,5 +1,5 @@
 # $ping
-Returns the ping of the bot's node, in milliseconds.
+Returns the ping of **the bot's node**, in milliseconds.
 
 ## Syntax
 ```

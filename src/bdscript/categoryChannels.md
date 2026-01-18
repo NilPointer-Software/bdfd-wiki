@@ -17,13 +17,15 @@ $categoryChannels[Category ID;Separator;(Option)]
 - `mention` - The mentions of the channels.
 - `count` - The amount of channels in the category.
 
-> The `count` option does not list anything, instead it will return the number of channels under the given category.
+```admonish note
+The `count` option does not list anything, instead it will return the number of channels under the given category.
+```
 
 ## Example
 ```
 $nomention
-Total $categoryChannels[$categoryID[BDFD];;count] channels!
-$categoryChannels[$categoryID[BDFD];
+Total $categoryChannels[$parentID;;count] channels!
+$categoryChannels[$parentID;
 ;mention]
 ```
 
@@ -33,7 +35,6 @@ $categoryChannels[$categoryID[BDFD];
   color: "#EE7908"
   content: |
     !example
-
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -42,12 +43,12 @@ $categoryChannels[$categoryID[BDFD];
   content: |
     Total 5 channels!
     <#rules>
-    <#news>
+    <#example>
     <#update-logs>
     <#main-chat>
     <#secret-channel>
 ```
 
 ```admonish question title="What is this?"
-How [`$categoryID[]`](./categoryID.md) works?
+How [`$parentID`](./parentID.md) works?
 ```

@@ -18,7 +18,7 @@ $awaitReactions[<Command name;Reaction>;...]
 ```
 $nomention
 Yes or no?
-$awaitReactions[✅;yes;❌;no]
+$awaitReactions[yes;✅;no;❌]
 $addReactions[✅;❌]
 ```
 ``` discord yaml
@@ -44,4 +44,10 @@ $addReactions[✅;❌]
       count: 1
 ```
 
-> For more info, see the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+```admonish question title="What is this?"
+How [`$addReactions[]`](../bdscript/addReactions.md) works?
+```
+
+```admonish info title="Read more"
+For more information, read the the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+```

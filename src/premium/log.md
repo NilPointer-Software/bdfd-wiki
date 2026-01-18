@@ -6,7 +6,7 @@
 Logs an error message to the bot logs upon encountering a specific issue (`Type` parameter).
 
 ```admonish info
-You can use this function 1500 times per day.
+You can use this function 3000 times per day.
 ```
 
 ## Syntax
@@ -15,7 +15,7 @@ $log[Text;(Type)]
 ```
 
 ### Parameters
-- `Log Message` `(Type: String || Flag: Required)`: The text to be output to the logs.
+- `Text` `(Type: String || Flag: Required)`: The text to be output to the logs.
 - `Type` `(Type: Enum || Flag: Optional)`: The log type to be displayed. Default is `info`.
 
 #### Log Types
@@ -23,7 +23,7 @@ $log[Text;(Type)]
 - `info`: Blue color
 - `warning`: Yellow color
 - `error`: Red color
-- `bdscript`: Can't be used in `$log[]` function. Appears automatically when an error is made in the code. Can be disabled by [`$suppressErrorLogging`](./suppressErrorLogging.md).
+- `bdscript`: **Can't be used** in `$log[]` function. Appears automatically when an error is made in the code. Can be disabled by [`$suppressErrorLogging`](./suppressErrorLogging.md).
 - Default input for "`Type`" parameter is `info`.
 
 ## Example

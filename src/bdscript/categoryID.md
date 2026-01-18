@@ -24,7 +24,7 @@ Category ID: $categoryID[$message]
   username: Nicky
   color: "#EE7908"
   content: |
-    !categoryID Information
+    !example Information
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"

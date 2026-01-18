@@ -21,7 +21,7 @@ $c[This is a say command. You are reading a comment!]
   username: Nicky
   color: "#EE7908"
   content: |
-    !say As you can see, the comment doesn't appear! Pretty cool; right?
+    !example As you can see, the comment doesn't appear! Pretty cool; right?
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"
@@ -29,8 +29,4 @@ $c[This is a say command. You are reading a comment!]
   verified: true
   content: |
     As you can see, the comment doesn't appear! Pretty cool; right?
-```
-
-```admonish question title="What is this?"
-How [`$message`](./message.md) works?
 ```

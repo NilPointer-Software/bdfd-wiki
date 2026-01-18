@@ -162,7 +162,7 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 	max-height: 35em;
 	border-radius: 10px;
 	border-width: 0;
-	color: #bbb;
+	color: #fff;
 	background: hsl(0deg 0% 100% / 7%);
 	padding: 7px;
 	font-size: 1.5rem;

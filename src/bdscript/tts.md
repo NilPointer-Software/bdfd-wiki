@@ -1,7 +1,9 @@
 # $tts
 Enables Text-to-Speech (TTS) functionality on the bot's response message.
 
-> 📌 The [TTS](https://support.discord.com/hc/en-us/articles/212517297-Text-to-Speech-101) feature is currently supported only in Discord Desktop and Webapp.
+```admonish warning
+The [TTS](https://support.discord.com/hc/en-us/articles/212517297-Text-to-Speech-101) feature is currently supported only in Discord Desktop and Webapp.
+```
 
 ## Syntax
 ```

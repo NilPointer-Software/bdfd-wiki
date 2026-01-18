@@ -3,7 +3,9 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
-> As of December 2021, this function has been deprecated in favor of [`$untimeout[]`](./untimeout.md).
+```admonish warning
+As of December 2021, this function has been deprecated in favor of [`$untimeout[]`](./untimeout.md).
+```
 
 Unmutes the mentioned user.
 
