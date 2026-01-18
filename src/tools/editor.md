@@ -3,10 +3,9 @@ Here you can use the basic editor features to write codes more conveniently.
 
 <style>
 #stats-container p, #another-info p {
-    transition: .4s;
     display: inline-block;
     margin-right: 7.5px;
-    background-color: var(--color3);
+    background-color: var(--card-hover);
     padding: 5px;
     font-size: 1.5rem;
     border-radius: 10px;
@@ -16,13 +15,6 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #stats-container span {
     font-weight: bold;
-}
-
-#stats-container p:hover, #another-info p:hover {
-    transform: scale(1.1);
-    border-radius: 8px;
-    border-width: 1px;
-    transition: .4s;
 }
 
 #stats-container, #another-info {
@@ -84,7 +76,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	-webkit-user-select: none;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	padding: 10px;
 	border-radius: 10px;
 }
@@ -147,7 +139,7 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 #highlightedText span {
-	color: var(--color1);
+	color: var(--link-color);
 }
 
 #highlightedText a {
@@ -332,7 +324,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	transition: .4s;
 	display: inline-block;
 	margin-right: 7.5px;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	padding: 1rem;
 	color: hsl(0deg 0% 100% / 70%);;
 	font-size: 1.5rem;
@@ -417,7 +409,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #settings, #tips {
 	margin-top: 1rem;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	border-radius: 10px;
 	padding: 1rem;
 }
@@ -446,7 +438,7 @@ Here you can use the basic editor features to write codes more conveniently.
 	user-select: none;
 	-webkit-user-select: none;
 	outline: none;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	border-radius: 10px;
 	cursor: pointer;
 	padding: 0rem;
@@ -536,7 +528,7 @@ Here you can use the basic editor features to write codes more conveniently.
     margin-top: -1.75rem;
     display: block !important;
 	border-radius: 10px;
-	background: var(--color3) !important;
+	background: var(--card=bg) !important;
 	border-color: hsl(0deg 0% 100% / 10%) !important;
 }
 
@@ -553,7 +545,7 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #autocomplete span.selected, #autocomplete span:hover {
     margin-left: .5rem;
-	border-left-color: var(--color1);
+	border-left-color: var(--link-color;
 	border-left-width: 2.5px;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
