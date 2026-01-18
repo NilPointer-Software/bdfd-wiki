@@ -19,11 +19,13 @@
     padding-top: 1.5rem;
 }
 .picker-container p {
-    margin-top: .75rem;
+	margin-top: -1.5rem;
 }
 .input-row {
 	display: flex;
 	gap: 1rem;
+	margin-top: -1rem;
+	margin-bottom: 1.5rem;
 	align-items: center;
 }
 .hex-input {
@@ -103,10 +105,11 @@
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .error {
-    color: #dc3545;
-    font-size: 1rem;
-    min-height: 1rem;
-    padding-bottom: 1rem;
+	color: #dc3545;
+	font-size: 1rem;
+	min-height: 1rem;
+	padding-bottom: 1rem;
+	margin-top: -1.5rem;
 }
 .valid-color {
     color: white;
