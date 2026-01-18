@@ -558,6 +558,8 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 </style>
 
+<script src="../theme/autocomplete.js" defer></script>
+
 <div id="stats-container">
 	<p>Words: <span id="wordCount">0</span></p>
 	<p>Spaces: <span id="spaceCount">0</span></p>
