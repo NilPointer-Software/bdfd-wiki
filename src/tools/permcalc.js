@@ -288,7 +288,8 @@ function findCombinations() {
                 </div>
             `;
         } else {
-            resultDiv.innerHTML = '<div class="no-results">Select permissions from the list above</div>';
+            // No permissions selected and no search value
+            resultDiv.innerHTML = '<div class="no-results">Select permissions from the list above or enter a value to find combinations</div>';
         }
         return;
     }
@@ -321,14 +322,17 @@ function findCombinations() {
         return;
     }
     
-    // Search for all combinations
+    // Search for a single combination
     const allPerms = Array.from(permissionValues.entries());
-    const foundCombinations = [];
+    let foundCombination = null;
     
-    // Function for recursive combination search (up to 5 permissions for performance)
-    function findCombinationsRecursive(startIndex, currentSum, currentPerms) {
+    // Function for recursive combination search (finds first match)
+    function findCombinationRecursive(startIndex, currentSum, currentPerms) {
+        // If we found a match, stop searching
+        if (foundCombination) return;
+        
         if (currentSum === targetBigInt && currentPerms.length > 0) {
-            foundCombinations.push([...currentPerms]);
+            foundCombination = [...currentPerms];
             return;
         }
         
@@ -336,51 +340,47 @@ function findCombinations() {
             return;
         }
         
-        // Skip already selected permissions
+        // Search for a combination
         for (let i = startIndex; i < allPerms.length; i++) {
             const [id, perm] = allPerms[i];
             // Skip permissions with zero value
             if (!perm.value || perm.value === 0n || perm.value === undefined) continue;
             
-            findCombinationsRecursive(
+            findCombinationRecursive(
                 i + 1,
                 currentSum + perm.value,
                 [...currentPerms, { id, ...perm }]
             );
+            
+            // Stop if we found a combination
+            if (foundCombination) return;
         }
     }
     
     // Start search
-    findCombinationsRecursive(0, 0n, []);
+    findCombinationRecursive(0, 0n, []);
     
-    // Display results
-    if (foundCombinations.length > 0) {
-        let resultHTML = `<div class="search-info">Found ${foundCombinations.length} combinations for value ${targetBigInt.toString()}:</div>`;
+    // Display result
+    if (foundCombination) {
+        const sum = foundCombination.reduce((s, perm) => s + perm.value, 0n);
+        let resultHTML = `
+            <div class="search-info">Found a combination for value ${targetBigInt.toString()}:</div>
+            <div class="combination">
+                <div class="combination-title">Permission Combination:</div>
+                <ul class="permission-list">
+                    ${foundCombination.map(perm => `<li>${perm.name} (${perm.value.toString()})</li>`).join('')}
+                </ul>
+                <div class="combination-total">Total: ${sum.toString()} = ${formatBinarySum(foundCombination)}</div>
+            </div>
+        `;
         
-        foundCombinations.slice(0, 10).forEach((combination, index) => {
-            const sum = combination.reduce((s, perm) => s + perm.value, 0n);
-            resultHTML += `
-                <div class="combination">
-                    <div class="combination-title">Combination ${index + 1}:</div>
-                    <ul class="permission-list">
-                        ${combination.map(perm => `<li>${perm.name} (${perm.value.toString()})</li>`).join('')}
-                    </ul>
-                    <div class="combination-total">Total: ${sum.toString()} = ${formatBinarySum(combination)}</div>
-                </div>
-            `;
-        });
-        
-        if (foundCombinations.length > 10) {
-            resultHTML += `<div class="warning">Showing first 10 of ${foundCombinations.length} found combinations</div>`;
-        }
-        
-        // Add current selection info
+        // Add current selection info if any permissions are selected
         if (checkedPerms.length > 0) {
             const permNames = checkedPerms.map(id => permissionValues.get(id)?.name).filter(name => name);
             if (permNames.length > 0) {
                 resultHTML += `
                     <div class="current-selection">
-                        <div class="combination-title">Current Selection:</div>
+                        <div class="combination-title">Currently Selected Permissions:</div>
                         <ul class="permission-list">
                             ${permNames.map(name => `<li>${name}</li>`).join('')}
                         </ul>
@@ -392,14 +392,15 @@ function findCombinations() {
         
         resultDiv.innerHTML = resultHTML;
     } else {
-        let noResultHTML = `<div class="no-results">No permission combinations found for value ${targetBigInt.toString()}</div>`;
+        let resultHTML = `<div class="no-results">No permission combination found for value ${targetBigInt.toString()}</div>`;
         
+        // Only show current selection if permissions are actually selected
         if (checkedPerms.length > 0) {
             const permNames = checkedPerms.map(id => permissionValues.get(id)?.name).filter(name => name);
             if (permNames.length > 0) {
-                noResultHTML += `
+                resultHTML += `
                     <div class="current-selection">
-                        <div class="combination-title">Current Selection:</div>
+                        <div class="combination-title">Currently Selected Permissions:</div>
                         <ul class="permission-list">
                             ${permNames.map(name => `<li>${name}</li>`).join('')}
                         </ul>
@@ -409,7 +410,7 @@ function findCombinations() {
             }
         }
         
-        resultDiv.innerHTML = noResultHTML;
+        resultDiv.innerHTML = resultHTML;
     }
 }
 
