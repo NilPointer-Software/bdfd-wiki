@@ -323,18 +323,19 @@ function findCombinations() {
     
     // Function for recursive combination search (up to 5 permissions for performance)
     function findCombinationsRecursive(startIndex, currentSum, currentPerms) {
-        if (currentSum === targetBigInt) {
+        if (currentSum === targetBigInt && currentPerms.length > 0) {
             foundCombinations.push([...currentPerms]);
             return;
         }
-        
+    
         if (currentSum > targetBigInt || currentPerms.length >= 5 || startIndex >= allPerms.length) {
             return;
         }
-        
-        // Skip already selected permissions
+    
         for (let i = startIndex; i < allPerms.length; i++) {
             const [id, perm] = allPerms[i];
+            if (perm.value === 0n) continue;
+        
             findCombinationsRecursive(
                 i + 1,
                 currentSum + perm.value,
