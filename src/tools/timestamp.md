@@ -5,20 +5,14 @@
 	visibility: hidden;
 }
 .converter-section {
-    position: relative;
-    background-color: var(--color3);
-    border-radius: 10px;
-    margin-top: -5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
-}
-.converter-section:hover, .current-time:hover {
-    transform: scale(1.015);
-    border-radius: 12.5px;
-    transition: 0.3s;
+    background: var(--card-bg);
+	border-radius: var(--border-radius);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	margin-top: 1.5rem;
+	padding-bottom: 0rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .converter-section h2 {
     margin-top: 60px;
