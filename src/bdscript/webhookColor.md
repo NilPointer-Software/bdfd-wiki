@@ -39,7 +39,7 @@ $webhookDescriprion[⬅️ Embed border color.]
 ```
 
 ```admonish question title="What is this?"
-How [`$webhookCreate[]`](./webhookCreate.md), [`$webhookDescriprion[]`](./webhookDescriprion.md), [`$channelID`](./channelID.md), [`$var[]`](./var.md) works?
+How [`$webhookCreate[]`](./webhookCreate.md), [`$webhookDescription[]`](./webhookDescription.md), [`$channelID`](./channelID.md), [`$var[]`](./var.md) works?
 ```
 
 ```admonish info title="Read more"
