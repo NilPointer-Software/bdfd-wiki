@@ -15,28 +15,24 @@
   </div>
 </div>
 
-<div class="changelog">
-  <div class="changePrev">
-    <h2>January</h2>
-    <p>Discord Components V2.0 Update</p>
-    <span id="newUpdate">NEW</span>
-  </div>
-  <ul>
-    <li>Added <code class="hljs">$addTextDisplay[]</code></li>
-    <li>Added <code class="hljs">$addSeparator[]</code></li>
-    <li>Added <code class="hljs">$addContainer[]</code></li>
-    <li>Added <code class="hljs">$addSection[]</code></li>
-    <li>Added <code class="hljs">$addThumbnail[]</code></li>
-    <li>Added <code class="hljs">$addMediaGallery[]</code></li>
-    <li>Added <code class="hljs">$addMediaGalleryItem[]</code></li>
-    <li>Added <code class="hljs">$addActionRow[]</code></li>
-    <li>Added <code class="hljs">$addButtonCV2[]</code></li>
-    <li>Added <code class="hljs">$addMentionableSelect[]</code></li>
-    <li>Added <code class="hljs">$getMentionableSelectUserID[]</code></li>
-    <li>Added <code class="hljs">$getMentionableSelectUserIDs[]</code></li>
-    <li>Added <code class="hljs">$getMentionableSelectUserCount</code></li>
-  </ul>
-</div>
+# 2026
+
+## January
+Added Components V2 functions:
+- Added `$addTextDisplay[]`
+- Added `$addSeparator[]`
+- Added `$addContainer[]`
+- Added `$addSection[]`
+- Added `$addThumbnail[]`
+- Added `$addMediaGallery[]`
+- Added `$addMediaGallery[]`
+- Added `$addMediaGalleryItem[]`
+- Added `$addActionRow[]`
+- Added `$addButtonCV2[]`
+- Added `$addMentionableSelect[]`
+- Added `$getMentionableSelectUserID[]`
+- Added `$getMentionableSelectUserIDs[]`
+- Added `$getMentionableSelectUserCount`
 
 # 2025
 
@@ -45,7 +41,7 @@
 - Smoother animations in the app
 - Redesigned Premium Points shop 
 - A lot of app bug fixes
-- HTTP Awaiting Limit: 5s > 35s
+- HTTP Timeout Limit: 5s > 35s
 - Fixed `$ceil[]`
 - Fixed `$floor[]`
 - Fixed `$getLeaderboardPosition[]`
@@ -58,7 +54,7 @@
 ## November
 - Major improvements to hosting infrastructure 
 - Reworked bot status preview
-- HTTP Awaiting Limit: 15s > 5s
+- HTTP Timeout Limit: 15s > 5s
 
 ## October
 - Added setting to disable code highlighting in the command editor
