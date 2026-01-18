@@ -98,7 +98,6 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 }
 
 .textfontbuttons,
-.folderbuttons,
 .effectbuttons {
 	user-select: none;
 	-webkit-user-select: none;
@@ -110,8 +109,7 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 .fbutton,
 .hgButton,
 .hbutton,
-.ebutton,
-.folderbutton {
+.ebutton {
 	-webkit-user-select: none;
 	user-select: none;
 	touch-action: manipulation;
@@ -287,8 +285,7 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 .fbutton:hover,
 .hgButton:hover,
 .hbutton:hover,
-.ebutton:hover,
-.folderbutton:hover {
+.ebutton:hover {
 	background: hsl(0deg 0% 100% / 12%);
 }
 
