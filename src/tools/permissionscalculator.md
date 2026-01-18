@@ -41,7 +41,7 @@ Example text!
     display: flex;
     align-items: center;
     padding: 1rem;
-    background-color: var(--color3);
+    background-color: var(--card-bg);
     border-radius: 10px;
     transition: all 0.2s;
     margin-bottom: .75rem;
@@ -76,7 +76,7 @@ input[type="checkbox"] {
     accent-color: var(--color2);
 }
 .total-section {
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	padding: 1rem;
 	border-radius: 10px;
 	margin: 3rem 0;
@@ -119,7 +119,7 @@ input[type="checkbox"] {
 	width: 100%;
 	padding: 1.5rem;
 	font-size: 1.5rem;
-	background-color: var(--color3);
+	background-color: var(--card-bg);
 	border: 2px solid var(--color2);
 	border-radius: 10px;
 	color: #ffff;
@@ -133,7 +133,7 @@ input[type="checkbox"] {
     color: #fff;
 }
 .results {
-	 background-color: var(--color3);
+	 background-color: var(--card-bg);
 	 padding: 1.5rem;
 	 border-radius: 10px;
 	 margin-top: -1rem;
