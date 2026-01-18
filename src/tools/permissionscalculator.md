@@ -44,7 +44,8 @@ Example text!
     transform: translateY(-2px);
 }
 .permission-item.checked {
-	border-left-color: var(--color1);
+	border-left-color: var(--link-color);
+	background: rgb(102 126 234 / 20%);
 }
 .permission-item label {
     margin-left: 1.5rem;
@@ -64,9 +65,9 @@ Example text!
 	border-radius: 10px;
 }
 input[type="checkbox"] {
-    transform: scale(1.2);
-    cursor: pointer;
-    accent-color: var(--color2);
+	transform: scale(1.2);
+	cursor: pointer;
+	accent-color: var(--link-color);
 }
 .total-section {
 	background-color: var(--card-bg);
@@ -74,15 +75,9 @@ input[type="checkbox"] {
 	border-radius: 10px;
 	margin: 3rem 0;
 	text-align: center;
-	transition: 0.3s;
-}
-.total-section:hover {
-    transform: scale(1.015);
-    border-radius: 12.5px;
-    transition: 0.3s;
 }
 .total-section:hover > .total-value {
-    color: var(--color1);
+    color: var(--link-color);
     transition: 0.3s;
 }
 .total-section h2 {
