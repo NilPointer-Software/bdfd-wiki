@@ -64,7 +64,7 @@ Created and saved!
   bot: true
   verified: true
   content: |
-    Created ans saved!
+    Created and saved!
 ```
 
 > How [`$var[]`](./var.md) and [`$channelID`](./channelID.md) works?
