@@ -104,13 +104,6 @@
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	transition: 0.2s;
 }
-
-#randomColorButton:hover {
-	transform: scale(1.05);
-	border-radius: 8px;
-    border-width: 1px;
-	transition: 0.2s;
-}
 .error {
     color: #dc3545;
     font-size: 12px;
