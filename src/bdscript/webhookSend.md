@@ -14,7 +14,7 @@ $webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color hex;Author;A
 - `Description` `(Type: String || Flag: Vacantable)`: The description that will be applied to the embed.
 - `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../tools/color.md) to set the embed border color as. You can also use color integer number.
 ```admonish tip title="Color Picker"
-You can use our ["Color" tool](../../tools/color.md) to select the best color!
+You can use our ["Color" tool](../tools/color.md) to select the best color!
 ```
 
 - `Author` `(Type: String || Flag: Vacantable )`: The text that appears at the author.
