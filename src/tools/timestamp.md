@@ -24,7 +24,7 @@
 .converter-section label {
 	display: block;
 	margin-bottom: .5rem !important;
-	color: #f20000;
+	color: #dc3545;
 }
 .converter-section input {
     color: #fff;
@@ -33,9 +33,8 @@
 	max-width: 100%;
 	box-sizing: border-box;
     background: hsl(0deg 0% 100% / 7%);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     border-width: 0;
-    border-radius: 10px;
     font-family: monospace;
     font-size: 14px;
     height: 3rem;
@@ -52,7 +51,7 @@
     margin-top: 10px;
     padding: 5px;
     background: hsl(0deg 0% 100% / 7%);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     font-weight: bold;
     word-break: break-all;
     display: flex;
@@ -62,7 +61,7 @@
 .result p {
 	margin-top: 1.5rem !important;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	word-break: break-all;
 	display: flex;
 	height: 3.5rem !important;
@@ -112,7 +111,7 @@
     text-align: center;
     padding: 10px;
     background-color: var(--color3);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     margin-top: 20px;
     transition: 0.3s;
 }
