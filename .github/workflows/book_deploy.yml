@@ -54,6 +54,7 @@ jobs:
       - name: Prepare to fetch book
         run: |-
           mv nightly ..
+          mv CNAME ..
           rm -rf *
 
       - name: Fetch book artifact
@@ -64,6 +65,7 @@ jobs:
       - name: Deploy
         run: |-
           mv ../nightly .
+          mv ../CNAME .
           git add -A
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
