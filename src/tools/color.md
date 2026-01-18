@@ -118,7 +118,7 @@
     font-weight: bold;
     width: fit-content;
     margin-left: -1.6rem;
-    margin-top: -2.5rem;
+    margin-top: -.5rem;
     display: flex;
 	text-shadow: 0px 0px 5px rgb(0 0 0 / 100%);
 }
