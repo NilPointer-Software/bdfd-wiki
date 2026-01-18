@@ -13,45 +13,6 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
 <link rel="stylesheet" href="./theme/settings/style.css">
 <script src="./theme/settings/index.js" defer></script>
 
-<div class="settingembed">
-  <h2>Wiki Theme</h2>
-  <p>You can choose a color scheme that best suits your preferences and requirements.</p>
-  <button class="resetSettingButton" id="resetTheme" onClick="resetTheme()" title="Reset" aria-label="Reset">
-    <i class="fa fa-refresh" aria-hidden="true"></i>
-  </button>
-  <input type="range" id="themeSlider" min="0" max="360" oninput="updateColor()">
-  <div id="themePreview">
-    <div id="colorThemeDisplay"></div>
-    <div id="hexColor"></div>
-    <div class="lock-text" id="lockText" onClick="lockTheme()">Locked</div>
-  </div>
-  <div class="themebuttons">
-    <button class="tbutton" id="setBackground" onClick="useBackground()">Set background</button>
-    <button class="tbutton" id="gradientTheme" onClick="gradientBackground()">Gradient</button>
-    <button class="tbutton" id="setDarkBackground" onClick="useDarkBackground()">Dark background</button>
-    <button class="tbutton" id="setWhiteColor" onClick="useFontColor()">Light text</button>
-  </div>
-  <p id="default-is">270°</p>
-</div>
-
-<div class="settingembed">
-  <h2>Text Highlighting</h2>
-  <p>Improve readability and make your text stand out with  text highlighting.</p>
-  <div class="texthighbuttons">
-    <button id="high-none" onClick="changeTextHigh('none')" class="hbutton">Disable</button>
-    <button id="high-white" onClick="changeTextHigh('white')" class="hbutton">White</button>
-    <button id="high-black" onClick="changeTextHigh('black')" class="hbutton">Black</button>
-    <button id="high-red" onClick="changeTextHigh('red')" class="hbutton">Red</button>
-    <button id="high-pink" onClick="changeTextHigh('pink')" class="hbutton">Pink</button>
-    <button id="high-orange" onClick="changeTextHigh('orange')" class="hbutton">Orange</button>
-    <button id="high-yellow" onClick="changeTextHigh('yellow')" class="hbutton">Yellow</button>
-    <button id="high-green" onClick="changeTextHigh('green')" class="hbutton">Green</button>
-    <button id="high-blue" onClick="changeTextHigh('blue')" class="hbutton">Blue</button>
-    <button id="high-purple" onClick="changeTextHigh('purple')" class="hbutton">Purple</button>
-    <button id="high-sync" onClick="changeTextHigh('sync')" class="hbutton">Sync</button>
-  </div>
-  <p id="default-is">"Disable" (Disabled)</p>
-</div>
 
 <div class="settingembed">
   <h2>Text Size</h2>

@@ -108,8 +108,7 @@ function resetHGInput() {
 	const charJSONCount = inputcodedesign.length;
 
 	charCountElement.textContent = `${charJSONCount} / 10000`;
-	charCountElement.style.color = document.body.style.color;
-	
+
 	codeInput.style.boxShadow = "none";
 	codeInput.value = inputcodedesign;
 
@@ -209,206 +208,17 @@ function updateJsonFile(key, value) {
 }
 
 function changeTextHigh(colorId) {
-	const fonntHtml = document.querySelector("html");
+	const fontHtml = document.querySelector("html");
 	let color = textHighlights[colorId] || "none";
 
-	if (colorId === "sync") {
-		const originalShasowColor = document.body.style.color;
-		const [r, g, b] = originalShasowColor.match(/\d+/g).map(Number);
-		const darkerShadowColor = darkenRGB(r, g, b, 0.6);
-		fonntHtml.style.textShadow = "0 0 10px " + darkerShadowColor;
+	if (color === "none") {
+		fontHtml.style.textShadow = color;
 	} else {
-		if (color === "none") {
-			fonntHtml.style.textShadow = color;
-		} else {
-			fonntHtml.style.textShadow = "0 0 10px" + " #" + color;
-		}
+		fontHtml.style.textShadow = "0 0 10px" + " #" + color;
 	}
 
 	// Save in Storage
-	updateJsonFile("text-hg", fonntHtml.style.textShadow);
-}
-
-let isLocked = true;
-
-// Used in status bar (iPhone).
-function setStatusBar(HueInput) {
-	if (HueInput != "dark") {
-		document
-			.querySelector('meta[name="theme-color"]')
-			.setAttribute("content", `hsl(${HueInput}, 80%, 8%)`);
-	} else {
-		document
-			.querySelector('meta[name="theme-color"]')
-			.setAttribute("content", `#000`);
-	}
-}
-
-function updateColor() {
-	// Settings page
-	const colorSlider = document.getElementById("themeSlider");
-	const colorDisplay = document.getElementById("colorThemeDisplay");
-	const jsonInput = document.getElementById("jsonhginput");
-
-	// Main changes
-	const bdsCode = document.querySelector("code.hljs");
-	const previousPage = document.querySelector(".previous");
-	const nextPage = document.querySelector(".next");
-	const headers = document.querySelectorAll(".content .header:link");
-
-	// Sidebar
-	const sidePages = document.querySelectorAll(".chapter li a");
-	const sideMainPages = document.querySelectorAll(".chapter li");
-
-	// Search changes
-	const searchBar = document.getElementById("searchbar");
-
-	// Color Settings
-	const hue = colorSlider.value;
-	const saturation = 80;
-	const lightness = 50;
-
-	// Creating cute HSL colors
-	const color1 = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-	const color2 = `hsl(${hue}, ${saturation}%, ${lightness - 20}%)`;
-	const color3 = `hsl(${hue}, 80%, 15%)`;
-
-	// Locked text gameplay
-	if (isLocked) {
-		if (document.body.style.background.includes("linear-gradient")) {
-			const colorGradient1 = `hsl(${hue}, 80%, 20%)`;
-			const colorGradient2 = `hsl(${hue}, 80%, 5%)`;
-			document.body.style.background = `linear-gradient(to bottom right, ${colorGradient1}, ${colorGradient2})`;
-			updateJsonFile(
-				"theme-bg",
-				`linear-gradient(to bottom right, ${colorGradient1}, ${colorGradient2})`
-			);
-		} else {
-			document.body.style.background = `hsl(${hue}, 80%, 8%)`;
-			updateJsonFile("theme-bg", `hsl(${hue}, 80%, 8%)`);
-		}
-		setStatusBar(hue);
-		document.body.style.color = `hsl(${hue}, 100%, 90%)`;
-		headers.forEach((head) => {
-			head.style.color = document.body.style.color;
-		});
-		document.documentElement.style.scrollbarColor =
-			`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
-		updateJsonFile("theme-text", document.body.style.color);
-	}
-
-	// Updating design
-	document.documentElement.style.setProperty("--color1", color1);
-	document.documentElement.style.setProperty("--color2", color2);
-	document.documentElement.style.setProperty("--color3", color3);
-
-	sidePages.forEach((page) => {
-		page.style.color = document.body.style.color;
-	});
-	sideMainPages.forEach((mainPage) => {
-		mainPage.style.color = document.body.style.color;
-	});
-	if (previousPage) {
-		previousPage.style.background = `hsl(${hue}, 45%, 25%)`;
-		nextPage.style.background = `hsl(${hue}, 45%, 25%)`;
-	}
-	if (searchBar) {
-		searchBar.style.background = `hsl(${hue}, 60%, 20%)`;
-		searchBar.style.color = document.body.style.color;
-	}
-
-	colorDisplay.textContent = hue + "°";
-	jsonInput.style.scrollbarColor =
-		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 60%, 20%)`;
-	bdsCode.style.scrollbarColor = `hsl(${hue}, 70%, 25%)` + color3;
-
-	hexColor.textContent = rgbToHex(color1);
-
-	updateJsonFile("theme-main", hue);
-}
-
-// Lock is used to sync text color and background with main color
-function lockTheme() {
-	const lockText = document.getElementById("lockText");
-	if (!isLocked) {
-		lockText.textContent = "Locked";
-		isLocked = true;
-	} else {
-		lockText.textContent = "Unlocked";
-		isLocked = false;
-	}
-}
-
-function useBackground() {
-	const colorSlider = document.getElementById("themeSlider");
-
-	const hue = colorSlider.value;
-
-	const backgroundColor = `hsl(${hue}, 80%, 8%)`;
-	setStatusBar(hue);
-	document.body.style.background = backgroundColor;
-	document.documentElement.style.scrollbarColor =
-		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
-	updateJsonFile("theme-bg", backgroundColor);
-}
-
-function useFontColor() {
-	const colorSlider = document.getElementById("themeSlider");
-	const headers = document.querySelectorAll(".content .header:link");
-	const sidePages = document.querySelectorAll(".chapter li a");
-	const sideChapterBar = document.querySelector(".chapter li a.active");
-	const sideMainPages = document.querySelectorAll(".chapter li");
-	const searchBar = document.getElementById("searchbar");
-	const hue = colorSlider.value;
-
-	if (searchBar) {
-		searchBar.style.color = `#fff`;
-	}
-	sidePages.forEach((page) => {
-		page.style.color = `#fff`;
-	});
-	sideMainPages.forEach((mainPage) => {
-		mainPage.style.color = `#fff`;
-	});
-	headers.forEach((head) => {
-		head.style.color = `#fff`;
-	});
-	document.body.style.color = `#fff`;
-	sideChapterBar.style.color = `hsl(${hue}, 80%, 50%)`;
-	updateJsonFile("theme-text", document.body.style.color);
-}
-
-function useDarkBackground() {
-	document.body.style.background = `#000`;
-	document.documentElement.style.scrollbarColor = `#fff` + `#000`;
-	setStatusBar("dark");
-	updateJsonFile("theme-bg", document.body.style.background);
-}
-
-function resetTheme() {
-	const colorSlider = document.getElementById("themeSlider");
-
-	colorSlider.value = 270;
-
-	setStatusBar(colorSlider.value);
-	updateColor();
-	useBackground();
-}
-
-function gradientBackground() {
-	const colorSlider = document.getElementById("themeSlider");
-
-	const hue = colorSlider.value;
-
-	const color1 = `hsl(${hue}, 80%, 20%)`;
-	const color2 = `hsl(${hue}, 80%, 5%)`;
-
-	setStatusBar(hue);
-	document.body.style.background = `linear-gradient(to bottom right, ${color1}, ${color2})`;
-	document.documentElement.style.scrollbarColor =
-		`hsl(${hue}, 70%, 25%)` + `hsl(${hue}, 80%, 8%)`;
-
-	updateJsonFile("theme-bg", document.body.style.background);
+	updateJsonFile("text-hg", fontHtml.style.textShadow);
 }
 
 let timer;
@@ -523,7 +333,7 @@ function updateCodeHG() {
 	if (charCount >= 10000) {
 		charCountElement.style.color = "red";
 	} else {
-		charCountElement.style.color = document.body.style.color;
+		charCountElement.style.color = "";
 	}
 
 	if (isJson(jsonHG)) {
@@ -543,20 +353,6 @@ function isJson(str) {
 	}
 }
 
-function rgbToHex(rgb) {
-	const c = rgb.match(/\d+/g).map(Number);
-	return (
-		"#" +
-		("000000" + ((c[0] << 16) | (c[1] << 8) | c[2]).toString(16)).slice(-6)
-	);
-}
-
-function darkenRGB(r, g, b) {
-	return `rgb(${Math.round(r * 0.5)}, ${Math.round(g * 0.5)}, ${Math.round(
-		b * 0.5
-	)})`;
-}
-
 function reloadHGPage() {
 	location.reload();
 }
@@ -564,10 +360,8 @@ function reloadHGPage() {
 function loadSettings() {
 	const displaySize = document.getElementById("display-size");
 	const range = document.getElementById("textsize");
-	const themeChangerRange = document.getElementById("themeSlider");
 	const codeTextInput = document.getElementById("jsonhginput");
 	const charCountElement = document.querySelector(".charCount");
-	const effectButton = document.getElementById("manageEffect");
 	const uiManageEffectButton = document.getElementById("manageEffect");
 	const uiSnowflakes = document.querySelector(".snowflakes");
 	const uiManageFolderButton = document.getElementById("manageFolder");
@@ -579,9 +373,6 @@ function loadSettings() {
 	} catch {}
 
 	data ??= {
-		"theme-main": "270",
-		"theme-bg": "270",
-		"theme-text": "270",
 		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
@@ -662,10 +453,6 @@ function loadSettings() {
 		codeTextInput.value = inputcodedesign;
 	}
 
-	if (themeChangerRange) {
-		themeChangerRange.value = parseInt(data["theme-main"].replace("%", ""));
-	}
-
 	if (displaySize) {
 		displaySize.textContent = data["text-size"].replace("%", "");
 		range.value = parseInt(data["text-size"].replace("%", ""));
@@ -695,8 +482,3 @@ function loadSettings() {
 }
 
 loadSettings();
-try {
-	updateColor();
-} catch (err) {
-	console.error("Failed to update color", err);
-}
