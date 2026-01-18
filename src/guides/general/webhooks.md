@@ -89,7 +89,7 @@ Created and saved!
   bot: true
   verified: true
   content: |
-    Created ans saved!
+    Created and saved!
 ```
 
 > How [`$var[]`](../../bdscript/var.md) and [`$channelID`](../../bdscript/channelID.md) works?
