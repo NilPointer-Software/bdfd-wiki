@@ -149,7 +149,6 @@ function applySettings() {
 	} catch {}
 
 	const defaultData = {
-		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
 		"language": "en",
