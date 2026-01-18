@@ -44,15 +44,6 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
 </div>
 
 <div class="settingembed">
-  <h2>Folders (Soon...)</h2>
-  <p>Folders make it easier to find the functions you need.</p>
-  <div class="folderbuttons">
-  	<button id="manageFolder" class="folderbutton" onClick="foldersSetting()">Enable</button>
-  </div>
-  <p id="default-is">"Enable" (Disabled)</p>
-</div>
-
-<div class="settingembed">
   <h2>Effects</h2>
   <p>It's only decoration for wiki.</p>
   <div class="effectbuttons">
