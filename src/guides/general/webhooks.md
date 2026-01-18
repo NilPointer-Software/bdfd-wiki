@@ -445,7 +445,7 @@ You can use our ["Color" tool](../../tools/color.md) to select the best color!
 $nomention
 $var[webhook;$webhookCreate[$channelID;Test webhook]]
 $webhookColor[$var[webhook];#673ab7]
-$webhookDescriprion[⬅️ Embed border color.] 
+$webhookDescription[⬅️ Embed border color.] 
 ```
 
 ```discord yaml
