@@ -75,7 +75,12 @@ function autocomplete() {
     displayedFunctions.forEach((func, index) => {
       const span = document.createElement('span');
       span.textContent = func;
-      span.addEventListener('click', () => selectFunction(func,dollarIndex,cursorPosition,inputText));
+      span.addEventListener('click', () => {
+        const inputText = textarea.value;
+        const cursorPosition = textarea.selectionStart;
+        let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
+        selectFunction(func, dollarIndex, cursorPosition, inputText);
+      });
       autocompleteOutput.appendChild(span);
     });
 
@@ -83,11 +88,42 @@ function autocomplete() {
     cursorInactiveTimeout = setTimeout(hideAutocomplete, 10000);
   }
 
-  function selectFunction(func,dollarIndex,cursorPosition,inputText) {
-    textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
-    textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
-    hideAutocomplete();
-    textarea.focus();
+  // Function to insert a selected function with API data
+  function selectFunction(func, dollarIndex, cursorPosition, inputText) {
+    // Get function name without brackets and arguments
+    const functionName = func.split('[')[0];
+    
+    // Send request to API
+    fetch(`https://botdesignerdiscord.com/public/api/function/${functionName}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data && data.tag) {
+          // If tag is received from API response, use it
+          const functionToInsert = data.tag;
+          textarea.value = inputText.substring(0, dollarIndex) + functionToInsert + inputText.substring(cursorPosition);
+          textarea.selectionStart = textarea.selectionEnd = dollarIndex + functionToInsert.length;
+        } else {
+          // If tag is not found, use original function name
+          console.warn('No tag found in API response for function:', functionName);
+          textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
+          textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
+        }
+        hideAutocomplete();
+        textarea.focus();
+      })
+      .catch(error => {
+        console.error('Error fetching function info:', error);
+        // In case of error, use original function name
+        textarea.value = inputText.substring(0, dollarIndex) + func + inputText.substring(cursorPosition);
+        textarea.selectionStart = textarea.selectionEnd = dollarIndex + func.length;
+        hideAutocomplete();
+        textarea.focus();
+      });
   }
 
   function handleArrowKeys(event) {
@@ -104,7 +140,7 @@ function autocomplete() {
       const inputText = textarea.value;
       const cursorPosition = textarea.selectionStart;
       let dollarIndex = inputText.substring(0, cursorPosition).lastIndexOf('$');
-      selectFunction(selectedFunction,dollarIndex,cursorPosition,inputText);
+      selectFunction(selectedFunction, dollarIndex, cursorPosition, inputText);
       return;
     }
     highlightSelected();
