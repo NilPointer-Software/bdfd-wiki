@@ -293,6 +293,50 @@ if (window.playground_copyable) {
 	});
 })();
 
+// Make entire category headers clickable to expand/collapse
+(function expandableChapters() {
+	const observer = new MutationObserver(function(mutations, obs) {
+		const sidebar = document.querySelector('.sidebar-scrollbox');
+		if (sidebar && sidebar.children.length > 0) {
+			setupExpandableChapters();
+			obs.disconnect();
+		}
+	});
+
+	observer.observe(document.body, {
+		childList: true,
+		subtree: true
+	});
+
+	setupExpandableChapters();
+
+	function setupExpandableChapters() {
+		const toggleButtons = document.querySelectorAll('.chapter li > a.toggle');
+
+		toggleButtons.forEach(function(toggle) {
+			const parentLi = toggle.parentElement;
+
+			if (!parentLi.dataset.expandSetup) {
+				parentLi.dataset.expandSetup = 'true';
+
+				parentLi.addEventListener('click', function(e) {
+					const clickedLink = e.target.closest('a:not(.toggle)');
+					if (clickedLink) {
+						const href = clickedLink.getAttribute('href');
+						if (href && href !== '#' && !href.endsWith('#')) {
+							return;
+						}
+					}
+
+					e.preventDefault();
+					e.stopPropagation();
+					parentLi.classList.toggle('expanded');
+				});
+			}
+		});
+	}
+})();
+
 (function autoHideMenu() {
 	var menu = document.getElementById("menu-bar");
 

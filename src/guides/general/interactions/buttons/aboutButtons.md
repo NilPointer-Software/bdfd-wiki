@@ -68,11 +68,11 @@ Here, are all possible values for the `style` function argument.
     - 
       - type: secondary
         label: Link
-        url: https://nilpointer-software.github.io/bdfd-wiki/nightly/
+        url: https://wiki.botdesignerdiscord.com
       - type: secondary
         label: Link
         disabled: true
-        url: https://nilpointer-software.github.io/bdfd-wiki/nightly/
+        url: https://wiki.botdesignerdiscord.com
     - 
       - type: secondary
         label: Emoji
