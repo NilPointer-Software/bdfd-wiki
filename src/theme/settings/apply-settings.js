@@ -218,6 +218,10 @@ function applySettings() {
 
 	const html = document.querySelector("html");
 
+ html.style.fontFamily = data["text-font"];
+	html.style.fontSize = data["text-size"];
+	html.style.textShadow = data["text-hg"];
+	
 	if (snowflakes) {
 		snowflakes.style.visibility = data["effects"];
 	}
