@@ -143,7 +143,6 @@
         - [$checkUserPerms](./bdscript/checkUserPerms.md)
         - [$clear](./bdscript/clear.md)
         - [$clear[]](./bdscript/clearComplex.md)
-        - [$closeTicket](./bdscript/closeTicket.md)
         - [$getBanReason](./bdscript/getBanReason.md)
         - [$isBanned](./bdscript/isBanned.md)
         - [$isTimedOut](./bdscript/isTimedOut.md)
