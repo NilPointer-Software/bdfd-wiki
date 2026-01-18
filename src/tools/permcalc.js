@@ -71,22 +71,18 @@ const permissionValues = new Map();
 
 // Initialize permission values from HTML
 function initializePermissionValues() {
-    // Get all permission checkboxes
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    
-    checkboxes.forEach(checkbox => {
-        const permissionName = checkbox.id;
-        // Function permission() to get value
-        const permissionValue = permission(permissionName);
-        
-        // Perm name
-        const label = document.querySelector(`label[for="${permissionName}"]`);
-        const permissionLabel = label ? label.textContent.trim().split('\n')[0] : permissionName;
-        
-        permissionValues.set(permissionName, {
-            name: permissionLabel,
-            value: permissionValue
-        });
+    Object.keys(permissions).forEach(permissionName => {
+        const checkbox = document.getElementById(permissionName);
+        if (checkbox) {
+            const permissionValue = permission(permissionName);
+            const label = document.querySelector(`label[for="${permissionName}"]`);
+            const permissionLabel = label ? label.textContent.trim().split('\n')[0] : permissionName;
+            
+            permissionValues.set(permissionName, {
+                name: permissionLabel,
+                value: permissionValue
+            });
+        }
     });
 }
 
