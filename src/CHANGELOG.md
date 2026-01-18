@@ -18,6 +18,11 @@ Added multiple Components V2 functions:
 - Added `$addMediaGallery[]`
 - Added `$addMediaGalleryItem[]`
 - Added `$addActionRow[]`
+- Added `$addButtonCV2[]`
+- Added `$addMentionableSelect[]`
+- Added `$getMentionableSelectUserID[]`
+- Added `$getMentionableSelectUserIDs[]`
+- Added `$getMentionableSelectUserCount`
 
 # 2025
 
