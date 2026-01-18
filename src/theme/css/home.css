@@ -2,17 +2,10 @@
 
 .discord-messages {
 	margin-top: 1.7rem;
-	transition: 0.5s;
-}
-
-.discord-messages:hover {
-	transform: scale(1.015);
-	border-radius: 12.5px;
-	transition: 0.5s;
 }
 
 .discord-left-border {
-	background: var(--color1) !important;
+	background: var(--link-color) !important;
 }
 
 .editPage,
@@ -25,25 +18,23 @@
 }
 
 .preview p {
-	margin-top: -2rem;
+	margin-top: 0;
+	color: var(--fg);
+	opacity: 0.8;
 }
 .bdfd-is {
 	text-align: center;
 	font-size: 110%;
 	border: solid;
 	border-width: 0;
-	background: var(--color3);
+	background: var(--card-bg);
 	margin-top: 1rem;
 	padding-bottom: 20px;
-	padding-top: 0.02px;
+	padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
 	border-radius: 10px;
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
-	transition: 0.3s;
-}
-
-.bdfd-is:hover {
-	transform: scale(1.015);
-	transition: 0.3s;
 }
 
 #truelol {
@@ -70,10 +61,22 @@
 	-webkit-user-select: none;
 }
 
+.homeButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
 .downloadButtons,
 .resourcesButtons {
-	text-align: center;
-	margin-top: -1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 0;
 }
 
 .getHelp,
@@ -84,44 +87,29 @@
 	outline: none;
 	border-radius: 50px;
 	font-size: 80%;
-	margin-top: 1rem;
+	margin: 0;
 	border: solid;
 	border-width: 0;
-	background-color: var(--color2);
+	background-color: var(--card-hover);
 	font-weight: 700;
-	padding: 0 10px 0 10px;
+	padding: 0 15px;
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
-	transition: 0.3s;
-}
-
-.downButton,
-.resButton {
-	margin-top: 0.5rem !important;
-	font-size: 90%;
-	padding-left: 15px;
-	padding-right: 15px;
-	margin: -1rem 0.5rem 0 0.5rem;
+	transition: background-color 0.2s, opacity 0.2s;
 }
 
 .getHelp:hover,
 .createMyBot:hover,
 .downButton:hover,
 .resButton:hover {
-	border-color: var(--color1);
-	transform: scale(1.05);
-	padding: 0 12px 0 12px;
-	margin-right: 1rem;
-	margin-left: 1rem;
-	transition: 0.3s;
+	opacity: 0.85;
 }
 
-.downButton:hover,
-.resButton:hover {
-	padding: 0 18px 0 18px;
-}
-
-bold {
-	font-weight: 800;
+.downButton,
+.resButton {
+	margin: 0;
+	font-size: 90%;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .getHelp i,
@@ -148,13 +136,32 @@ button a {
 	justify-content: center;
 }
 
-#title {
+.feature-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.feature-header {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.feature-header i {
+	font-size: 1.5rem;
+	color: var(--link-color);
+}
+
+.feature-title {
 	font-weight: bold;
-	font-size: 110%;
-	margin-left: 2.5rem;
-	margin-bottom: -5rem;
-	position: relative;
-	top: -4.2rem;
+	font-size: 1.1rem;
+}
+
+.feature-content {
+	margin: 0;
+	line-height: 1.6;
+	opacity: 0.9;
 }
 
 .hosting,
@@ -163,15 +170,22 @@ button a {
 .community {
 	touch-action: manipulation;
 	white-space: normal;
-	background: var(--color3);
-	width: 45.5%;
-	height: 16.25rem;
-	margin: 1rem;
+	background: var(--card-bg);
+	width: calc(50% - 2rem);
+	min-height: 10rem;
+	margin: 0.75rem;
 	border-radius: 10px;
 	box-sizing: border-box;
-	padding: 2rem;
-	transition: 0.3s;
+	padding: 1.5rem;
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.2s;
+}
+
+.hosting:hover,
+.anywhere:hover,
+.alotfunctions:hover,
+.community:hover {
+	background: var(--card-hover);
 }
 
 @media (max-width: 1025px) {
@@ -179,8 +193,7 @@ button a {
 	.anywhere,
 	.alotfunctions,
 	.community {
-		height: 21.65rem;
-		overflow-x: hidden;
+		min-height: auto;
 	}
 }
 
@@ -190,51 +203,7 @@ button a {
 	.alotfunctions,
 	.community {
 		width: 100%;
-		height: fit-content;
-	}
-}
-
-@media (min-width: 900px) {
-	.hosting:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 0 2px 2px 0;
-		border-color: var(--color1);
-		transition: 0.3s;
-	}
-
-	.anywhere:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 0 0 2px 2px;
-		border-color: var(--color1);
-		transition: 0.3s;
-	}
-
-	.alotfunctions:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 2px 2px 0 0;
-		border-color: var(--color1);
-		transition: 0.3s;
-	}
-
-	.community:hover {
-		transform: scale(1.05);
-		border: solid;
-		border-width: 2px 0 0 2px;
-		border-color: var(--color1);
-		transition: 0.3s;
-	}
-}
-
-@media (max-width: 900px) {
-	.why-bdfd-embed > div:hover {
-		transform: scale(1.025);
-		border: solid;
-		border-width: 1px;
-		border-color: var(--color1);
-		transition: 0.3s;
+		min-height: auto;
 	}
 }
 
