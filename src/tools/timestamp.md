@@ -56,7 +56,6 @@
     background: hsl(0deg 0% 100% / 7%);
     border-radius: var(--border-radius);
     font-weight: bold;
-	white-space: nowrap;
     word-break: break-all;
     display: flex;
     height: 3.5rem !important;
@@ -111,6 +110,9 @@
     border-radius: var(--border-radius);
     margin-top: 3rem;
 }
+#current-time span {
+	color: #a5a5a5;
+}
 .timezone-error, #date-info {
     color: #dc3545 !important;
     font-size: 1rem;
@@ -119,7 +121,8 @@
 	margin-bottom: -0.75rem !important;
 }
 #date-info {
-	margin-top: -1rem;
+	margin-top: -2rem !important;
+	margin-left: -1rem;
 	padding: 1rem;
 }
 </style>
