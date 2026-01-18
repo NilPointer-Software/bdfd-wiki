@@ -48,11 +48,15 @@
     margin-bottom: 1rem !important;
 }
 .result {
-    margin-top: 10px;
-    padding: 5px;
+    margin-top: 1rem;
+	margin-bottom: 1.5rem;
+    padding: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
     background: hsl(0deg 0% 100% / 7%);
     border-radius: var(--border-radius);
     font-weight: bold;
+	white-space: nowrap;
     word-break: break-all;
     display: flex;
     height: 3.5rem !important;
@@ -60,7 +64,7 @@
 }
 .result p {
 	margin-top: 1.5rem !important;
-	padding: 5px;
+	padding: .5rem;
 	border-radius: var(--border-radius);
 	word-break: break-all;
 	display: flex;
@@ -90,7 +94,7 @@
 	padding-right: 1rem;
 	height: 4rem;
 	border: none;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	cursor: pointer;
 	margin-top: 1rem !important;
     margin-right: 1rem !important;
@@ -102,21 +106,21 @@
 }
 .current-time {
     text-align: center;
-    padding: 10px;
-    background-color: var(--color3);
+    padding: 1.5rem;
+    background-color: var(--card-bg);
     border-radius: var(--border-radius);
-    margin-top: 20px;
-    transition: 0.3s;
+    margin-top: 3rem;
 }
 .timezone-error, #date-info {
     color: #dc3545 !important;
-    font-size: 12px;
-    min-height: 16px;
+    font-size: 1rem;
+    min-height: 1rem;
 	margin-top: -0.75rem;
 	margin-bottom: -0.75rem !important;
 }
 #date-info {
-	margin-top: .5rem !important;
+	margin-top: -1rem;
+	padding: 1rem;
 }
 </style>
 
