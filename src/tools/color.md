@@ -5,19 +5,14 @@
 	visibility: hidden;
 }
 .picker-container {
-    position: relative;
-    background-color: var(--color3);
-    border-radius: 10px;
-    margin-top: -5rem;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
-}
-.picker-container:hover {
-    transform: scale(1.015);
-    border-radius: 12.5px;
-    transition: 0.3s;
+    background: var(--card-bg);
+	border-radius: var(--border-radius);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	margin-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .picker-container h2 {
     margin-top: 60px;
