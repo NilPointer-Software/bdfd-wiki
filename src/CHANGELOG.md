@@ -31,6 +31,10 @@
     <li>Added <code class="hljs">$addMediaGalleryItem[]</code></li>
     <li>Added <code class="hljs">$addActionRow[]</code></li>
     <li>Added <code class="hljs">$addButtonCV2[]</code></li>
+    <li>Added <code class="hljs">$addMentionableSelect[]</code></li>
+    <li>Added <code class="hljs">$getMentionableSelectUserID[]</code></li>
+    <li>Added <code class="hljs">$getMentionableSelectUserIDs[]</code></li>
+    <li>Added <code class="hljs">$getMentionableSelectUserCount</code></li>
   </ul>
 </div>
 
@@ -809,5 +813,6 @@ If you want to see the BDScript changelog, [click here](./FLOWCHART_CHANGELOG.md
 ```admonish tip
 If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
 ```
+
 
 
