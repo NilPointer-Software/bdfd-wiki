@@ -526,12 +526,12 @@ Here you can use the basic editor features to write codes more conveniently.
     display: block !important;
 	border-radius: 10px;
 	background: var(--card-bg);
-	border-color: hsl(0deg 0% 100% / 10%);
+	border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #autocomplete span {
     display: block;
-    color: hsl(0deg 0% 100% / 65%);
+    color: var(--text-secondary);
     border-radius: 10px;
     margin-bottom: .5rem;
     cursor: pointer;
@@ -542,16 +542,12 @@ Here you can use the basic editor features to write codes more conveniently.
 
 #autocomplete span.selected, #autocomplete span:hover {
     margin-left: .5rem;
-	border-left-color: var(--link-color;
+	border-left-color: var(--link-color);
 	border-left-width: 2.5px;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	border-left-style: solid;
 	transition: 0.2s;
-}
-
-.editPage {
-	visibility: hidden;
 }
 </style>
 
