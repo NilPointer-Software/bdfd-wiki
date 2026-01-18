@@ -28,14 +28,7 @@ Example text!
 	background: hsl(0deg 0% 100% / 7%);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     flex: 1;
-    transition: all 0.2s;
     text-align: center;
-}
-.control-button:hover, .category-toggle:hover {
-	transform: scale(1.05);
-	border-radius: 8px;
-    border-width: 1px;
-	transition: 0.2s;
 }
 .permission-item {
     display: flex;
