@@ -105,7 +105,7 @@
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .error {
-	color: #dc3545;
+	color: var(--error);
 	font-size: 1rem;
 	min-height: 1rem;
 	padding-bottom: 1rem;
