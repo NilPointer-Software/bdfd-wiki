@@ -226,7 +226,7 @@ function applySettings() {
 		snowflakes.style.visibility = data["effects"];
 	}
 
-	document.querySelectorAll('.chapter > li.chapter-item.expanded').forEach(el => {
+	document.querySelectorAll('.chapter > li.chapter-item').forEach(el => {
     	if (el.querySelector('div') && el.querySelector('div').textContent.trim() === 'Functions') {
         	el.classList.add('functions-section');
     	}
