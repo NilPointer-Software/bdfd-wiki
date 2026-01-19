@@ -1267,7 +1267,7 @@ ul#searchresults span.teaser em {
 	background: rgba(255, 255, 255, 0.06);
 }
 
-.chapter: nth-child(4) + li .section li.chapter-item > div:first-child {
+li li.chapter-item > > div:first-child {
 	user-select: none;
 	width: 100%;
 	-webkit-user-select: none;
