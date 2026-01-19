@@ -18,8 +18,8 @@ summary {
 }
 
 .mainAPI h2 {
-    padding-top: 1rem;
-    margin-top: 1rem;
+	padding-top: 1rem !important;
+	margin-top: 0rem !important;
 }
 
 .mainAPI code {
@@ -32,11 +32,12 @@ summary {
 }
 
 .endpoint h3 {
-    padding-top: 1rem;
+	margin-top: 1.5rem !important;
+	padding-top: 0rem !important;
 }
 
 .endpoint #GET {
-    background: var(--card-hover);
+    background: var(--link-color);
     padding: .25rem;
     border-radius: 10px;
 }
@@ -264,4 +265,5 @@ Possible argument types:
 - `URL`
 - `Enum`
 - `Tuple`
+
 
