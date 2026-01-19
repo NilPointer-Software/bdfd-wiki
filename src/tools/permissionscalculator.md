@@ -135,7 +135,7 @@ input[type="checkbox"] {
 	margin-top: 0;
 	color: #ffffff;
 	font-size: 2rem;
-	border-bottom: 2px solid var(--color2);
+	border-bottom: 2px solid var(--link-color);
 	padding-bottom: 0.75rem;
 }    
 .result-content {
