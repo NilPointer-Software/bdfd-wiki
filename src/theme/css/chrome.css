@@ -1267,7 +1267,7 @@ ul#searchresults span.teaser em {
 	background: rgba(255, 255, 255, 0.06);
 }
 
-li li.chapter-item > div:first-child {
+.functions-section + li .section li.chapter-item > div:first-child {
 	user-select: none;
 	width: 100%;
 	-webkit-user-select: none;
@@ -1279,7 +1279,7 @@ li li.chapter-item > div:first-child {
 	cursor: pointer;
 }
 
-li li.chapter-item > div:first-child:hover {
+.functions-section + li .section li.chapter-item > div:first-child:hover {
 	background: rgba(255, 255, 255, 0.06);
 }
 
@@ -1508,5 +1508,6 @@ li li.chapter-item > div:first-child:hover {
         font-size: 1rem;
     }
 }
+
 
 
