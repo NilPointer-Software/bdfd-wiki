@@ -6,15 +6,15 @@ summary {
     background: hsl(0deg 0% 100% / 5%) !important;
 }
     
-.mainAPI {
-    position: relative;
-    background-color: var(--color3);
-    border-radius: 10px;
-    padding-bottom: 1.5rem;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    transition: .3s;
+.mainAPI, .endpoint {
+    background: var(--card-bg);
+	border-radius: var(--border-radius);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	margin-top: 1.5rem;
+	padding-bottom: 0rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .mainAPI h2 {
@@ -23,7 +23,7 @@ summary {
 }
 
 .mainAPI code {
-    color: var(--color1) !important;
+    color: var(--link-color) !important;
 }
 
 .wrap-button,
@@ -31,37 +31,14 @@ summary {
     visibility: hidden;
 }
 
-.endpoint {
-    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    background: var(--color3);
-    border-radius: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 1.25rem;
-    margin-top: -1rem;
-    transition: .3s;
-}
-
 .endpoint h3 {
     padding-top: 1rem;
 }
 
 .endpoint #GET {
-    background: var(--color2);
+    background: var(--card-hover);
     padding: .25rem;
     border-radius: 10px;
-    transition: .3s;
-}
-
-.endpoint:hover {
-    transform: scale(1.01);
-    transition: .3s;
-}
-
-.endpoint:hover #GET {
-    border-radius: 7px;
-    transition: .3s;
 }
 </style>
 
@@ -287,3 +264,4 @@ Possible argument types:
 - `URL`
 - `Enum`
 - `Tuple`
+
