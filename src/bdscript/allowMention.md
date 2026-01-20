@@ -28,6 +28,8 @@ $message
     <@RainbowKey>
 ```
 
+~~~admonish example
+
 - Without `$allowMention`:
 
 ```discord yaml
@@ -44,6 +46,8 @@ $message
   content: |
     @RainbowKey
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$message`](./message.md) works?
