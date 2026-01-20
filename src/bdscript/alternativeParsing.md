@@ -68,6 +68,8 @@ This function was added at the end of 2019 as an experiment, and it can be unsta
     description: "\"helloworld\""
 ```
 
+~~~admonish example
+
 - Without `$alternativeParsing`:
 
 ``` discord yaml
@@ -99,3 +101,5 @@ This function was added at the end of 2019 as an experiment, and it can be unsta
     - description: "\"helloworld\""
     - description: "\"hello\""
 ```
+
+~~~
