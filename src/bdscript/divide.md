@@ -3,7 +3,7 @@ Divides the provided numbers.
 
 ## Syntax
 ```
-$divide[Number;...]
+$divide[Numbers;...]
 ```
 
 ### Parameters
