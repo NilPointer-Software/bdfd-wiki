@@ -70,5 +70,5 @@ Hello world!
 ```
 
 ```admonish question title="What is this?"
-How [`$username`](./username.md) works?
+How [`$message`](./message.md) works?
 ```
