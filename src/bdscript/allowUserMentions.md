@@ -29,4 +29,9 @@ Hi <@390515191819010058>! I mentioned you, but you didn't get pinged.
   verified: true
   content: |
     Hi <@Kuba>! I mentioned you, but you didn't get pinged.
+- user_id: 390515191819010058
+  username: kubastick
+  color: "#FF0000"
+  content: |
+    Wow really! No notification 😎
 ```
