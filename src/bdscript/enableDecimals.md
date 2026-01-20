@@ -38,6 +38,8 @@ Result: $random[1;5]
     Result: 3.381
 ```
 
+~~~admonish example
+
 - Without `$enableDecimals[]` (or result with `$enableDecimals[no]`):
 
 ``` discord yaml
@@ -54,6 +56,8 @@ Result: $random[1;5]
   content: |
     Result: 3
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$random[]`](./randomComplex.md) works?
