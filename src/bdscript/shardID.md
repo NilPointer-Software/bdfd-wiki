@@ -26,3 +26,7 @@ Shard: $shardID
   content: |
     Shard: 1
 ```
+
+```admonish info title="Read more"
+For more information, read the the ["Sharding" article](../resources/sharding.md).
+```
