@@ -3,7 +3,7 @@ Sorts the provided numbers.
 
 ## Syntax
 ```
-$sort[Numbers;...;Direction;Return amount?;Separator]
+$sort[Numbers;...;Direction;Return amount;Separator]
 ```
 
 ### Parameters
@@ -11,7 +11,7 @@ $sort[Numbers;...;Direction;Return amount?;Separator]
 - `Direction` `(Type: Enum || Flag : Required)`: The direction in which to sort. Direction types:
   - `asc` - Sorts the numbers in ascending order.
   - `desc` - Sorts the numbers in descending order.
-- `Return amount?` `(Type: Integer || Flag: Required)`: How many numbers will be returned. Use `-1` to return all numbers.
+- `Return amount` `(Type: Integer || Flag: Required)`: How many numbers will be returned. Use `-1` to return all numbers.
 - `Separator` `(Type: String || Flag: Required)`: The separator between each number.
 
 ## Example
