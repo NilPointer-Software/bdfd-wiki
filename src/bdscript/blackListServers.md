@@ -7,8 +7,8 @@ Blocks certain servers from using the command.
 }
 
 .discord-messages > .discord-message:first-of-type:before {
-    color: var(--color1);
-    background: var(--color3);
+    color: var(--link-color);
+    background: var(--card-bg);
     border-radius: 10px;
     padding-left: 1rem;
     padding-right: 1rem;
