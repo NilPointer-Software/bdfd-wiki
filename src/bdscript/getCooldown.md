@@ -2,7 +2,7 @@
 Returns how long is left on the cooldown, in seconds.
 
 ```admonish note
-This function can be used in the "Error message" field of cooldown functions.
+This function can be used in the "Error message" parameter of cooldown functions.
 ```
 
 ## Syntax
