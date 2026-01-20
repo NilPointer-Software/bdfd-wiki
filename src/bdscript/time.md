@@ -44,7 +44,7 @@ Moscow Time: $optOff[$hour:$minute, $day]
 ```
 
 ```admonish question title="What is this?"
-How [`$hour`](./hour.md), [`$minute`](./minute.md), [`$day`](./day.md), [`$optOff[]`](./optOff.md) works?
+How [`$hour`](./hour.md), [`$minute`](./minute.md), [`$day`](./day.md) and [`$optOff[]`](./optOff.md) works?
 ```
 
 <script src="../theme/livetime.js"></script>
