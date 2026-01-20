@@ -24,7 +24,7 @@ There are $emoteCount emojis in $serverName[$guildID]!
   bot: true
   verified: true
   content: |
-    There are 26 emojis in Bot Designer for Discord Official Server!
+    There are 149 emojis in Bot Designer for Discord Official Server!
 ```
 
 ```admonish question title="What is this?"
