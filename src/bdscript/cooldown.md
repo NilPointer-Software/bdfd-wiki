@@ -79,11 +79,3 @@ $sendMessage[You worked successfully and earned 5 🪙]
 How [`$setUserVar[]`](./findUser.md), [`$sum[]`](/sum.md) and [`$sendMessage[]`](./sendMessage.md) works?
 
 ~~~
-
-```admonish note
-You can also use these functions:
-- [`$changeCooldownTime[]`](./changeCooldownTime.md)
-- [`$getCooldown[]`](./getCooldown.md)
-- [`$serverCooldown[]`](./serverCooldown.md)
-- [`$globalCooldown[]`](./globalCooldown.md)
-```
