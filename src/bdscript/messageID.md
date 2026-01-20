@@ -2,7 +2,7 @@
 Returns the ID of the author's message.
 
 ```admonish info
-If this function is written in `$onInteraction`/`$onInteraction[]` commands, it will return the bot's message ID.
+If this function is written in [`$onInteraction`](../callbacks/onInteraction.md) or [`$onInteraction[]`](../callbacks/onInteractionComplex.md) callbacks, it will return the bot's message ID.
 ```
 
 ## Syntax
