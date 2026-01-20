@@ -271,8 +271,8 @@ Here you can use the basic editor features to write codes more conveniently.
 }
 
 .scriptdiv button:hover {
-	color: var(--color1);
-	border-color: var(--color1);
+	color: var(--link-color);
+	border-color: var(--link-color);
 	border-radius: 9px;
 	opacity: 0.9;
 	transition: 0.2s;
