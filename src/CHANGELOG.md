@@ -8,13 +8,6 @@
 
 <link rel="stylesheet" href="./theme/css/changelog.css">
 
-<div class="changelog">
-  <div class="changePrev" id="year">
-    <h2>2026</h2>
-    <p>What new has been added?</p>
-  </div>
-</div>
-
 # 2026
 
 ## January
