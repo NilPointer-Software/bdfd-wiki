@@ -3,11 +3,11 @@ Returns the subtraction of the provided numbers.
 
 ## Syntax
 ```
-$sub[Number;...]
+$sub[Numbers;...]
 ```
 
 ### Parameters
-- `Number` `(Type: Integer, Float || Flag: Required)`: The numbers to subtract. Separate multiple values using `;`.
+- `Numbers` `(Type: Integer, Float || Flag: Required)`: The numbers to subtract. Separate multiple values using `;`.
 
 ## Example
 ```
