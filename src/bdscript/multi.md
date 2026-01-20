@@ -3,11 +3,11 @@ Muliplies the provided numbers.
 
 ## Syntax
 ```
-$multi[Number;..]
+$multi[Numbers;..]
 ```
 
 ### Parameters 
-- `Number` `(Type: Float, Integer || Flag: Required)`: The numbers to multiply. Use semicolons `;` as a separator to separate multiple numbers.
+- `Numbers` `(Type: Float, Integer || Flag: Required)`: The numbers to multiply. Use semicolons `;` as a separator to separate multiple numbers.
 
 ## Example
 ```
