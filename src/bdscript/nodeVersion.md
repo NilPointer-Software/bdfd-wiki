@@ -27,4 +27,6 @@ Node version: $nodeVersion
     Node version: 06-09-2024-6c7eada
 ```
 
-> You can use [`$botNode`](./botNode.md) to find out which node your bot is on.
+```admonish tip
+You can use [`$botNode`](./botNode.md) to find out which node your bot is on.
+```
