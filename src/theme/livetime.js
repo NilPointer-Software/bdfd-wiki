@@ -59,17 +59,23 @@ In Nanoseconds - ${unixTimeMs * 1000000}`;
         dateElement.innerHTML = "Current Date: " + formattedDate;
     }
 
-    function getUTCFormattedTime() {
+    function getFormattedTime(timezone) {
         const date = new Date();
-        const utcHours = date.getUTCHours().toString().padStart(2, '0');
-        const utcMinutes = date.getUTCMinutes().toString().padStart(2, '0');
-        return `${utcHours}:${utcMinutes}`;
+        const options = {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+            timeZone: timezone,
+        };
+        return date.toLocaleTimeString("en-US", options);
     }
 
     var timeElement = document.getElementById("time-mark");
     if (timeElement) {
-        var utcTime = getUTCFormattedTime();
+        var utcTime = getFormattedTime("UTC");
+        var moscowTime = getFormattedTime("Europe/Moscow");
         var utcDay = now.getUTCDate();
-        timeElement.innerHTML = `New York Time: ${utcTime}, ${utcDay}<br>Moscow Time: ${utcTime}, ${utcDay}`;
+        
+        timeElement.innerHTML = `New York Time: ${utcTime}, ${utcDay}<br>Moscow Time: ${moscowTime}, ${utcDay}`;
     }
 });
