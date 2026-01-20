@@ -30,3 +30,7 @@ $c[This is a say command. You are reading a comment!]
   content: |
     As you can see, the comment doesn't appear! Pretty cool; right?
 ```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
