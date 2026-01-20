@@ -53,5 +53,5 @@ It can return the `@everyone` role ID!
 ~~~
 
 ```admonish question title="What is this?"
-How [`$roleName`](./roleName.md) works?
+How [`$roleName[]`](./roleName.md) works?
 ```
