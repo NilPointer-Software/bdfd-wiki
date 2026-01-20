@@ -13,10 +13,12 @@ You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with
 ### Parameters
 - `Time unit` `(Type: Enum || Flag: Required)`: Sets timestamp time unit.
 
-> Time unit value can either be :
-> - `s` (seconds)
-> - `ms` (milliseconds)
-> - `ns` (nanoseconds)
+```admonish info title="Possible input"
+- Time unit value can either be:
+- `s` (seconds)
+- `ms` (milliseconds)
+- `ns` (nanoseconds)
+```
 
 ## Example
 ```
