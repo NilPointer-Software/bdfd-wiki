@@ -27,6 +27,8 @@ Hello World!
     Hello world!
 ```
 
+~~~admonish example
+
 -  Without `$nomention`:
 
 ``` discord yaml
@@ -44,3 +46,5 @@ Hello World!
   content: |
     <@RainbowKey> Hello world!
 ```
+
+~~~
