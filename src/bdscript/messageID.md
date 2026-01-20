@@ -28,5 +28,5 @@ Message ID: `$messageID`
   bot: true
   verified: true
   content: |
-    Message ID: 1446827813184208896
+    Message ID: <code>1446827813184208896</code>
 ```
