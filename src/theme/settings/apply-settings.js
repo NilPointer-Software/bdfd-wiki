@@ -227,12 +227,15 @@ function applySettings() {
 	}
 
 	document.querySelectorAll('.chapter > li.chapter-item').forEach(el => {
-    	if (el.querySelector('div') && el.querySelector('div').textContent.trim() === 'Functions') {
-        	el.classList.add('functions-section');
-    	}
+	 if (el.querySelector('div')) {
+	  const text = el.querySelector('div').textContent.trim();
+   if (text === 'Functions' || text === 'Premium') {
+	   el.classList.add('functions-section');
+   }
+  }
 	});
 	
-	setDiscordTheme(data["discord-example-theme"]);
+ setDiscordTheme(data["discord-example-theme"]);
 }
 
 applySettings();
