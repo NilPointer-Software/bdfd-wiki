@@ -1,5 +1,5 @@
 # $emoteCount
-Returns the number of emojis in the current server.
+Returns the number of emojis (static and animated) in the current server.
 
 ## Syntax
 ```
