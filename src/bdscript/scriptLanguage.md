@@ -6,16 +6,29 @@ Returns the name of scripting language used by the command.
 $scriptLanguage
 ```
 
+```admonish note title="Possible Outputs"
+- BDScript
+- BDScript 2
+- BDScript Unstable
+```
+
 ## Example
 ```
 $nomention
 This command uses `$scriptLanguage`.
 ```
-![](https://user-images.githubusercontent.com/70456337/183467283-fb264df3-27ea-4111-85bd-9d336d221fa9.png)
 
-> **Note:** After each execution of the command, we changed the script to another one.
-
-### Output value
-- BDScript
-- BDScript 2
-- BDScript Unstable
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This command uses BDScript 2.
+```
