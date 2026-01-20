@@ -14,6 +14,7 @@ $sendMessage[Text;(Return message ID?)]
 ```
 $nomention
 $sendMessage[Hello world!]
+```
 
 ``` discord yaml
 - user_id: 803569638084313098
