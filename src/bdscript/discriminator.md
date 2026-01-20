@@ -35,7 +35,7 @@ Discriminator: #$discriminator[$mentioned[1]]
 ```
 
 ```admonish note
-You can use `$discriminator[]` get the discriminator of the author.
+You can use `$discriminator[]` to get the discriminator of the author.
 ```
 
 ```admonish question title="What is this?"
