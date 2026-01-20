@@ -15,7 +15,7 @@ $scriptLanguage
 ## Example
 ```
 $nomention
-This command uses `$scriptLanguage`.
+This command uses $scriptLanguage.
 ```
 
 ``` discord yaml
