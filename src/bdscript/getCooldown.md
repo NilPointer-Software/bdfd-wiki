@@ -7,7 +7,7 @@ This function can be used in the "Error message" field of cooldown functions.
 
 ## Syntax
 ```
-$getCooldown[Cooldown type (normal/server/global)]
+$getCooldown[Cooldown type]
 ```
 
 ### Parameters
@@ -48,4 +48,8 @@ Hello world!
   verified: true
   content: |
     You're on cooldown! (<div class="discord-time-mark">In 1 hour</div>)
+```
+
+```admonish question title="What is this?"
+How [`$cooldown[]`](./cooldown.md), [`$sum[]`](./sum.md) and [`$getTimestamp`](./getTimestamp.md) works?
 ```
