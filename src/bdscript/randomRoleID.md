@@ -30,7 +30,7 @@ Random Role: $roleName[$randomRoleID[]]
     Random Role: Owner
 ```
 
-~~~admonish warn
+~~~admonish warning
 
 It can return the `@everyone` role ID!
 
