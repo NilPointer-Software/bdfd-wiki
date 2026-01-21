@@ -26,6 +26,14 @@ Added Components V2 functions:
 - Added `$getMentionableSelectUserID[]`
 - Added `$getMentionableSelectUserIDs[]`
 - Added `$getMentionableSelectUserCount`
+- Added `$addUserSelect`
+- Added `$getUserSelectUserID`
+- Added `$getUserSelectUserIDs`
+- Added `$getUserSelectUserCount`
+- Added `$addRoleSelect`
+- Added `$getRoleSelectRoleID`
+- Added `$getRoleSelectRoleIDs`
+- Added `$getRoleSelectRoleCount`
 
 # 2025
 
