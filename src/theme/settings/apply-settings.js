@@ -235,6 +235,16 @@ function applySettings() {
   }
 	});
 	
+	const allLinks = document.querySelectorAll('a[href]');
+
+	allLinks.forEach(link => {
+	 const href = link.getAttribute('href');
+  if (href && href.indexOf('../tools/') === 0) {
+	  const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
+   link.setAttribute('href', newHref);
+	 }
+	});
+	
  setDiscordTheme(data["discord-example-theme"]);
 }
 
