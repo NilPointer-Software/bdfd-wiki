@@ -82,6 +82,12 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 "/bdscript/autoCompleteOptionName.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
 "/bdscript/autoCompleteOptionValue.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
 
+# Tools
+"/tools/timestamp.html" = "https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/timestamp.html"
+"/tools/editor.html" = "https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/editor.html"
+"/tools/color.html" = "https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/color.html"
+"/tools/permissionscalculator.html" = "https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/permissionscalculator.html"
+
 # Premium functions - Don't touch!
 "/bdscript/ai.html" = "../premium/ai.html"
 "/bdscript/aiQuota.html" = "../premium/aiQuota.html"
