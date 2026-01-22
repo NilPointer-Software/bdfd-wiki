@@ -235,15 +235,23 @@ function applySettings() {
   }
 	});
 	
-	const allLinks = document.querySelectorAll('a[href]');
+const allLinks = document.querySelectorAll('a[href]');
 
-	allLinks.forEach(link => {
-	 const href = link.getAttribute('href');
-  if (href && href.indexOf('../tools/') === 0) {
-	  const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
-   link.setAttribute('href', newHref);
-	 }
-	});
+allLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    
+    if (href) {
+        if (href.indexOf('../tools/') === 0) {
+            const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
+            link.setAttribute('href', newHref);
+        }
+        
+        if (href.includes('terms.html')) {
+            link.setAttribute('href', 'https://botdesignerdiscord.com/tos');
+        }
+        
+    }
+});
 	
  setDiscordTheme(data["discord-example-theme"]);
 }
