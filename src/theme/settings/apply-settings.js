@@ -235,23 +235,36 @@ function applySettings() {
   }
 	});
 	
-const allLinks = document.querySelectorAll('a[href]');
+	// Tools redirecting & ToS
+	
+const currentPath = window.location.pathname;
+const currentHref = window.location.href;
 
-allLinks.forEach(link => {
-    const href = link.getAttribute('href');
+if (currentPath.includes('/tools/')) {
+    const fileName = currentPath.split('/').pop();
+    window.location.replace('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + fileName);
+}
+else if (currentPath.includes('/terms.html') || currentHref.includes('terms.html')) {
+    window.location.replace('https://botdesignerdiscord.com/tos');
+}
+else {
+    const allLinks = document.querySelectorAll('a[href]');
     
-    if (href) {
-        if (href.indexOf('../tools/') === 0) {
-            const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
-            link.setAttribute('href', newHref);
-        }
+    allLinks.forEach(link => {
+        const href = link.getAttribute('href');
         
-        if (href.includes('terms.html')) {
-            link.setAttribute('href', 'https://botdesignerdiscord.com/tos');
+        if (href) {
+            if (href.indexOf('../tools/') === 0) {
+                const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
+                link.setAttribute('href', newHref);
+            }
+            
+            if (href.includes('terms.html')) {
+                link.setAttribute('href', 'https://botdesignerdiscord.com/tos');
+            }
         }
-        
-    }
-});
+    });
+}
 	
  setDiscordTheme(data["discord-example-theme"]);
 }
