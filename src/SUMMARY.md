@@ -4,7 +4,7 @@
 [Settings](./settings.md)
 [Changelog](./CHANGELOG.md)
 [Flowchart Changelog](./FLOWCHART_CHANGELOG.md)
-[Terms of Service](./terms.md)
+[Terms of Service](https://botdesignerdiscord.com/tos)
 [Entity Transfer Policy](./entityTransferPolicy.md)
 
 ---
@@ -45,7 +45,7 @@
 - [Tools]()
     - [Color](./tools/color.md)
     - [Text Editor](./tools/editor.md)
-    - [Permission Calculator](./tools/permissionscalculator.md)
+    - [Permission Calculator](https://botdesignerdiscord.com/tools/permission-calculator)
     - [Timestamp Converter](./tools/timestamp.md)
 
 - [Resources]()
