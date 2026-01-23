@@ -6,6 +6,10 @@ Returns the server joining date of a given user.
 $userJoined[User ID;(Format)]
 ```
 
+```admonish info
+Uses GoLang date format.
+```
+
 ### Parameters
 - `User ID` `(Type: Snowflake || Flag: Required)`: The user whose join date will be returned.
 - `Format` `(Type: String || Flag: Optional)`: Customize the default time format output.
