@@ -48,7 +48,6 @@ Discriminator: #$discriminator[$mentioned[1]]
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
-  highlight: true
   content: |
     Returned 0000 because it only works for bot IDs.
 ```
