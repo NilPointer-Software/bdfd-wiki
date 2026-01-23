@@ -40,6 +40,7 @@ $creationDate[$authorID]
 ~~~admonish example
 
 Example with custom format:
+
 ```
 $nomention
 $creationDate[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
