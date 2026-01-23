@@ -185,7 +185,7 @@ html {
   margin: 20px 0;
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  background-color: var(--bg-color);
+  background-color: var(--card-bg);
   border-radius: var(--border-radius);
 }
 
