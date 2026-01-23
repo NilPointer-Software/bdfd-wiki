@@ -1,13 +1,43 @@
 async function createAndUpdateLastEdit() {
   try {
+    const currentPath = window.location.pathname;
+    let pagePath = '';
+
+    if (currentPath.includes('/nightly/')) {
+      const nightlyIndex = currentPath.indexOf('/nightly/') + 8;
+      pagePath = currentPath.substring(nightlyIndex);
+    } else {
+      pagePath = currentPath.startsWith('/') ? currentPath.substring(1) : currentPath;
+    }
+
+    if (!pagePath || pagePath === '' || pagePath === 'index.html') {
+      pagePath = 'index.md';
+    } else {
+      pagePath = pagePath.replace('.html', '.md');
+      if (!pagePath.startsWith('src/')) {
+        pagePath = 'src/' + pagePath;
+      }
+    }
+
     const response = await fetch(
-      'https://api.github.com/repos/Rainb0wKey/bdfd-wiki/commits?path=src/bdscript/addButton.md&per_page=1'
+      `https://api.github.com/repos/Rainb0wKey/bdfd-wiki/commits?path=${pagePath}&per_page=1`
     );
     
-    if (!response.ok) return;
-    
-    const commits = await response.json();
-    
+    if (!response.ok) {
+      if (response.status === 404) {
+        const dirPath = pagePath.replace(/\.md$/, '/index.md');
+        const retryResponse = await fetch(
+          `https://api.github.com/repos/Rainb0wKey/bdfd-wiki/commits?path=${dirPath}&per_page=1`
+        );
+        if (!retryResponse.ok) return;
+        var commits = await retryResponse.json();
+      } else {
+        return;
+      }
+    } else {
+      var commits = await response.json();
+    }
+
     if (commits && commits.length > 0) {
       const lastCommit = commits[0];
       const lastModified = new Date(lastCommit.commit.committer.date);
