@@ -6,7 +6,7 @@ Returns whether the provided channel is NSFW (Not Safe For Work) or not.
     margin-top: 1.5rem;
 }
 
-.discord-messages > .discord-message:before {
+.discord-messages > .discord-message:first-of-type:before {
     color: var(--link-color);
     background: var(--card-bg);
     border-radius: 10px;
@@ -19,15 +19,15 @@ Returns whether the provided channel is NSFW (Not Safe For Work) or not.
     z-index: 1000;
 }
 
-.discord-messages > .discord-message:before {
-    content: 'Not NSFW channel';
+.discord-messages > .discord-message:first-of-type:before {
+    content: 'Not NSFW';
 }
 
-.discord-messages:first-of-type > .discord-message:before {
+.discord-messages:first-of-type > .discord-message:first-of-type:before {
     content: 'NSFW Channel';
 }
 
-.discord-messages > .discord-message:hover:before {
+.discord-messages:hover > .discord-message:before {
     transform: scale(1.025);
     transform: rotate(-2.5deg);
     border-radius: 12.5px;
