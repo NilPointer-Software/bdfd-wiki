@@ -39,3 +39,7 @@ $footer[⬆️ Title hyperlink]
     footer:
       text: ⬆️ Title hyperlink
 ```
+
+```admonish question title="What is this?"
+How [`$title[]`](./title.md) and [`$footer[]`](./footer.md) works?
+```
