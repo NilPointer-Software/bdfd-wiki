@@ -15,6 +15,10 @@ $userJoinedDiscord[ID;(Format)]
 ```
 
 ```admonish info
+Uses GoLang date format.
+```
+
+```admonish tip
 Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of any valid Discord Snowflake ID.
 ```
 
@@ -23,11 +27,10 @@ Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of an
 - `Format` `(Type: String || Flag: Optional)`: Customize the default [time format](../resources/timeFormat.md) output.
 
 ## Example
-- Default format
-   ```
-   $nomention
-   $userJoinedDiscord[$authorID]
-   ```
+```
+$nomention
+$userJoinedDiscord[$authorID]
+```
    
 ``` discord yaml
 - user_id: 803569638084313098
@@ -43,12 +46,15 @@ Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of an
   content: |
     2021-01-26
 ```
-  
-- Custom format
-   ```
-   $nomention
-   $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
-   ```
+
+~~~admonish example
+
+Example with custom format:
+
+```
+$nomention
+$userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
+```
 
 ``` discord yaml
 - user_id: 803569638084313098
@@ -64,6 +70,8 @@ Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of an
   content: |
     January 26, 2021 at 10:18 AM (UTC +00:00)
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$authorID`](./authorID.md) works?
