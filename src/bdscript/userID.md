@@ -12,7 +12,7 @@ $userID[Username#Discriminator / Username]
 ## Example
 ```
 $nomention
-$userID[$username]
+$userID[$message]
 ```
 
 ``` discord yaml
@@ -20,7 +20,7 @@ $userID[$username]
   username: RainbowKey
   color: "#E67E22"
   content: |
-    !example
+    !example rainbow_key
 - username: BDFD Support
   user_id: 1009018156494368798
   color: "#378afa"
@@ -28,8 +28,32 @@ $userID[$username]
   verified: true
   content: |
     803569638084313098
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example kubastick
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    390515191819010058
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example BDFD Support#7678
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    1009018156494368798
 ```
 
 ```admonish question title="What is this?"
-How [`$username`](./username.md) works?
+How [`$message`](./message.md) works?
 ```
