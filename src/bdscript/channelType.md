@@ -16,24 +16,48 @@ The different channel types that the bot will return are: `text`, `voice`, `cate
 ## Example
 ```
 $nomention
-$channelType[$channelID]
+$channelType[$mentionedChannels[1]]
 ```
 
-``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
-    !example
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+    !example <#main-chat>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
     text
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#Events>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    stage
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#disco>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    voice
 ```
 
 ```admonish question title="What is this?"
-How [`$channelID`](./channelID.md) works?
+How [`$mentionedChannels[]`](./mentionedChannels.md) works?
 ```
