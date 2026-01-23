@@ -12,6 +12,40 @@ $parentID[Channel ID]
 ## Example
 ```
 $nomention
-Category ID: $parentID[$mentionedChannels[1]]
+Category: $parentID[$mentionedChannels[1]]
 ```
-![example](https://user-images.githubusercontent.com/94063167/199022843-84b86272-d690-4630-99ba-80e024ffea52.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#bot-commands-1>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Category: 612065938715574273
+```
+
+~~~admonish example
+Returns empty if no parent (category) was found:
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#developers>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Category:
+```
+
+~~~
