@@ -13,11 +13,10 @@ $userJoined[User ID;(Format)]
    > Click [me](../resources/timeFormat.md) to check all supported time format values.
 
 ## Example
-- Default format
-   ```
-   $nomention
-   $userJoined[$authorID]
-   ```
+```
+$nomention
+$userJoined[$authorID]
+```
 
 ``` discord yaml
 - user_id: 803569638084313098
@@ -34,13 +33,16 @@ $userJoined[User ID;(Format)]
     2022-08-16
 ```
 
-- Custom format
-   ```
-   $nomention
-   $userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
-   ```
+~~~admonish example
 
-``` discord yaml
+Example with custom format:
+
+```
+$nomention
+$userJoined[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
+```
+
+```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -54,6 +56,8 @@ $userJoined[User ID;(Format)]
   content: |
     August 16, 2022 at 8:39 AM (UTC +00:00)
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$authorID`](./authorID.md) works?
