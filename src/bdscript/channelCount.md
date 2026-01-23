@@ -55,6 +55,6 @@ There are $sub[$channelCount;$categoryCount] channels in this server!
       There are 21 channels in this server!
 ```
 
-> How [`$sum[]`](./sum.md) and [`$categoryCount`](./categoryCount.md) works?
+> How [`$sub[]`](./sub.md) and [`$categoryCount`](./categoryCount.md) works?
 
 ~~~
