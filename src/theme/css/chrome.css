@@ -184,7 +184,7 @@ html {
   color: #57606a;
   margin: 20px 0;
   padding: 15px;
-  border-top: 1px solid #eaecef;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   background-color: var(--bg-color);
   border-radius: var(--border-radius);
 }
