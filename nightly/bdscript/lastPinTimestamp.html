@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -194,19 +194,30 @@
                 </a>
 
                 <h1 id="lastpintimestamp"><a class="header" href="#lastpintimestamp">$lastPinTimestamp</a></h1>
-<p>Returns the last pinned message timestamp in the current channel.</p>
+<p>Returns the last pinned message unixtime in the current channel.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$lastPinTimestamp
 </code></pre>
+<div id="admonition-timestamp-converter" class="admonition admonish-tip" role="note" aria-labelledby="admonition-timestamp-converter-title">
+<div class="admonition-title">
+<div id="admonition-timestamp-converter-title">
+<p>Timestamp Converter</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-timestamp-converter"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/timestamp.html">“Timestamp Converter” tool</a> to work with unixtime!</p>
+</div>
+</div>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 Last Pin Timestamp: $lastPinTimestamp
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified author="BDFD Support" role-color="#378afa" bot>
+    <discord-message role-color="#378afa" verified author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot>
         Last Pin Timestamp: 1753454520
     </discord-message>
 </discord-messages>
@@ -220,7 +231,7 @@ Last Pin Timestamp: $lastPinTimestamp
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/linesCount.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/modifyChannel.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -238,9 +249,9 @@ Last Pin Timestamp: $lastPinTimestamp
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/linesCount.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/modifyChannel.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/linesCount.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/modifyChannel.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

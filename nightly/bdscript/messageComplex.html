@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -203,14 +203,30 @@
 <li><code>Argument number</code> <code>(Type: HowMany, String || Flag: Required)</code>: Returns the argument matching the provided number.</li>
 <li><code>Argument name</code> <code>(Type: String || Flag: Optional)</code>: Returns the input of the matching slash command option.</li>
 </ul>
-<blockquote>
+<div id="admonition-example" class="admonition admonish-example" role="note" aria-labelledby="admonition-example-title">
+<div class="admonition-title">
+<div id="admonition-example-title">
+<p>Example</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-example"></a>
+</div>
+<div>
 <p>For example, <code>$message[1]</code> would just return the first word of the message. You can also use <code>$message[&gt;]</code> to get the last argument/word of the user’s message.</p>
-</blockquote>
+</div>
+</div>
 <h3 id="optimization"><a class="header" href="#optimization">Optimization</a></h3>
 <p>If you want this function to work in a slash command <strong>only</strong>, then you can use <code>$message[Argument name]</code>. If this function should work in a normal <strong>and</strong> slash command, then you can use <code>$message[Argument number;Argument name]</code>.</p>
-<blockquote>
+<div id="admonition-example-1" class="admonition admonish-example" role="note" aria-labelledby="admonition-example-1-title">
+<div class="admonition-title">
+<div id="admonition-example-1-title">
+<p>Example</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-example-1"></a>
+</div>
+<div>
 <p>For example, <code>$message[message]</code> would just return the input of the slash command option named “message”. <code>$message[1;text]</code> would return the first word of the message <strong>or</strong> the input of the slash command option named “text”.</p>
-</blockquote>
+</div>
+</div>
 <p>Find more info about optimizing <code>$message[]</code> for slash commands <a href="../guides/general/interactions/slashCommands/aboutSlashCommands.html#retrieving-value-from-options">here</a>.</p>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="normal-command"><a class="header" href="#normal-command">Normal command</a></h3>
@@ -247,7 +263,7 @@ $message[1;text]
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/messageEditedTimestamp.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/messageID.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -265,9 +281,9 @@ $message[1;text]
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/messageEditedTimestamp.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/messageID.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/messageEditedTimestamp.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/messageID.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

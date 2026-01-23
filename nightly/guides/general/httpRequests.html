@@ -128,7 +128,7 @@
         </label>
 
         <a href="../../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="../..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -214,31 +214,31 @@
 <ul>
 <li>The data sent to the server with POST is stored in the request body of the HTTP request.</li>
 </ul>
-<pre><code>$httpPost[url;(body)]
+<pre><code>$httpPost[URL;(Body)]
 </code></pre>
 <p><strong>PUT</strong></p>
 <ul>
 <li>The PUT method replaces all current representations of the target resource with the request payload.</li>
 </ul>
-<pre><code>$httpPut[url;(body)]
+<pre><code>$httpPut[URL;(Body)]
 </code></pre>
 <p><strong>DELETE</strong></p>
 <ul>
 <li>The DELETE method deletes the specified resource.</li>
 </ul>
-<pre><code>$httpDelete[url;(body)]
+<pre><code>$httpDelete[URL;(Body)]
 </code></pre>
 <p><strong>PATCH</strong></p>
 <ul>
 <li>The PATCH method applies partial modifications to a resource.</li>
 </ul>
-<pre><code>$httpPatch[url;(body)]
+<pre><code>$httpPatch[URL;(Body)]
 </code></pre>
 <h2 id="http-headers"><a class="header" href="#http-headers">HTTP Headers</a></h2>
 <ul>
 <li>HTTP Headers is used to add more information. Most of the time, this is used to send an API Key to the API.</li>
 </ul>
-<pre><code>$httpAddHeader[header name;header value]
+<pre><code>$httpAddHeader[Header name;Header value]
 </code></pre>
 <h2 id="http-statuses"><a class="header" href="#http-statuses">HTTP Statuses</a></h2>
 <ul>

@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$changeUsernameWithID - Bot Designer For Discord - Wiki</title>
+    <title>$addThumbnail - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -189,34 +189,43 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/changeUsernameWithID.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addThumbnail.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="changeusernamewithid"><a class="header" href="#changeusernamewithid">$changeUsernameWithID</a></h1>
-<p>Changes a user’s nickname using their ID.</p>
+                <h1 id="addthumbnail"><a class="header" href="#addthumbnail">$addThumbnail</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a thumbnail component to <a href="./addSection.html">the section</a>.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$changeUsernameWithID[User ID;New nickname]
+<pre><code>$addThumbnail[Image URL;Image description;Spoiler?;Section name]
 </code></pre>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>This function counts as a component. A message can have a maximum of 40 components.
+You can’t add more than 3 components to <a href="./addSection.html">a section</a>.</p>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the user whose nickname will be changed.</li>
-<li><code>New nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user’s nickname to. It cannot exceed more than 32 characters, using <code>%username%</code> will be replaced by real user’s username.</li>
+<li><code>Image URL</code> <code>(Type: URL || Flag: Required)</code>: URL of the thumbnail image.</li>
+<li><code>Image description</code> <code>(Type: String || Flag: Emptiable)</code>: Alt text description for the image.</li>
+<li><code>Spoiler?</code> <code>(Type: Bool || Flag: Emptiable)</code>: Will the image have a spoiler effect?</li>
+<li><code>Section name</code> <code>(Type: String || Flag: Required)</code>: The name of <a href="./addSection.html">the section</a> to which the component will be attached.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$addCmdReactions[❤️]
-$changeUsernameWithID[$message[1];$message[2]]
+$addSection[Section]
+$addTextDisplay[Hello world!;Section]
+$addThumbnail[$authorAvatar;My avatar;;Section]
 </code></pre>
-<discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
-        !example 154148273307910144 Owner
-        <discord-reactions slot="reactions">
-            <discord-reaction name=":emoji:" count="1" emoji="https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png">
-            </discord-reaction>
-        </discord-reactions>
-    </discord-message>
-</discord-messages>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
 <div class="admonition-title">
 <div id="admonition-what-is-this-title">
@@ -225,20 +234,19 @@ $changeUsernameWithID[$message[1];$message[2]]
 <a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>How <a href="./addCmdReactions.html"><code>$addCmdReactions[]</code></a> and <a href="./messageComplex.html"><code>$message[]</code></a> works?</p>
+<p>How <a href="./addSection.html"><code>$addSection[]</code></a>, <a href="./authorAvatar.html"><code>$authorAvatar</code></a> and <a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a> works?</p>
 </div>
 </div>
-
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/changeUsername.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addSection.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/channelCount.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addTimestamp.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -249,16 +257,16 @@ $changeUsernameWithID[$message[1];$message[2]]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/changeUsername.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addSection.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/changeUsername.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addSection.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/channelCount.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addTimestamp.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/channelCount.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addTimestamp.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

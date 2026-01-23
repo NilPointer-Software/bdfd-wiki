@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$findUser - Bot Designer For Discord - Wiki</title>
+    <title>$addTextDisplay - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -189,30 +189,64 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/findUser.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addTextDisplay.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="finduser"><a class="header" href="#finduser">$findUser</a></h1>
-<p>Finds a user’s ID using username, ID, or mention in the current server.</p>
+                <h1 id="addtextdisplay"><a class="header" href="#addtextdisplay">$addTextDisplay</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a text display component.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$findUser[User;(Return author ID?)]
+<pre><code>$addTextDisplay[Content;(Container/Section name)]
 </code></pre>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>This function counts as a component. A message can have a maximum of 40 components. <a href="./addSection.html">One section</a> can have only 3 components.</p>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>User</code> <code>(Type: String || Flag: Emptiable)</code>: The user’s username, ID, or mention to find.</li>
-<li><code>Return author ID?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the author ID if no user was found. The default is <code>yes</code>.</li>
+<li><code>Content</code> <code>(Type: String || Flag: Required)</code>: The text that will be displayed. The total number of characters in the message, <a href="./addSection.html">section</a> and <a href="./addContainer.html">container bodies</a> cannot exceed 4000 characters.</li>
+</ul>
+<div id="admonition-info" class="admonition admonish-info" role="note" aria-labelledby="admonition-info-title">
+<div class="admonition-title">
+<div id="admonition-info-title">
+<p>Info</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-info"></a>
+</div>
+<div>
+<p>Supports discord highlighting.</p>
+</div>
+</div>
+<ul>
+<li><code>Container/Section name</code> <code>(Type: String || Flag: Optional)</code>: The name of the <a href="./addContainer.html">container body</a> or <a href="./addSection">section</a> to which the component will be attached. If nothing is specified, it will be attached to the message.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-User ID: $findUser[$message]
+$addTextDisplay[Simple text]
+$addContainer[Container1;#673ab7;false]
+$addTextDisplay[Hello world!;Container1]
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
-        !example BDFD Support
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
     </discord-message>
-    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified role-color="#378afa" bot>
-        User ID: 1009018156494368798
+    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot verified role-color="#378afa">
+        Simple text
+        <discord-embed slot="embeds" color="#673ab7">
+            <discord-embed-description slot="description">
+                Hello world!
+            </discord-embed-description>
+        </discord-embed>
     </discord-message>
 </discord-messages>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
@@ -223,20 +257,19 @@ User ID: $findUser[$message]
 <a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>How <a href="./message.html"><code>$message</code></a> works?</p>
+<p>How <a href="./addContainer.html"><code>$addContainer[]</code></a> works?</p>
 </div>
 </div>
-
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/findRole.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addSeparator.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/floor.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addTextInput.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -247,16 +280,16 @@ User ID: $findUser[$message]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/findRole.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addSeparator.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/findRole.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addSeparator.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/floor.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addTextInput.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/floor.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addTextInput.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

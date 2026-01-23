@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -211,30 +211,44 @@
 <tr><td>Minute</td><td>m</td><td>100688478068</td></tr>
 <tr><td>Second</td><td>s</td><td>6041308684139</td></tr>
 </tbody></table>
+</div><div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
 </div>
-<blockquote>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
 <p><code>%time%</code> returns how much time is left on the cooldown.</p>
-</blockquote>
+</div>
+</div>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $cooldown[30s;Please wait %time%, then use that command again!]
 Hi!
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" verified bot>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" author="BDFD Support" verified>
         Hi
     </discord-message>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
-    <discord-message role-color="#378afa" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot author="BDFD Support" verified>
+    <discord-message verified bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" author="BDFD Support">
         Please wait 27 Seconds, then use that command again!
     </discord-message>
 </discord-messages>
-<blockquote>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
 <p>If you are using <strong>BDScript 2</strong>, then all functions above <code>$cooldown[]</code> will always work.</p>
 <p>❌ Not correct:</p>
 <pre><code>$nomention
@@ -249,26 +263,20 @@ $cooldown[30s;Please wait %time%, then use !work command again!]
 $setUserVar[Money;$sum[$getUserVar[Money];5]]
 $sendMessage[You worked successfully and earned 5 🪙]
 </code></pre>
-<p>How <a href="./findUser.html"><code>$setUserVar[]</code></a> and <a href="./sendMessage.html"><code>$sendMessage[]</code></a> works?</p>
-</blockquote>
-<h3 id="recommendation"><a class="header" href="#recommendation">Recommendation</a></h3>
-<p>You can also use these functions:</p>
-<ul>
-<li><a href="./getCooldown.html"><code>$getCooldown[]</code></a></li>
-<li><a href="./serverCooldown.html"><code>$serverCooldown[]</code></a></li>
-<li><a href="./globalCooldown.html"><code>$globalCooldown[]</code></a></li>
-</ul>
+<p>How <a href="./findUser.html"><code>$setUserVar[]</code></a>, <a href="/sum.html"><code>$sum[]</code></a> and <a href="./sendMessage.html"><code>$sendMessage[]</code></a> works?</p>
+</div>
+</div>
 
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/commandsCount.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/changeCooldownTime.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/createChannel.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/getCooldown.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -279,16 +287,16 @@ $sendMessage[You worked successfully and earned 5 🪙]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/commandsCount.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/changeCooldownTime.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/commandsCount.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/changeCooldownTime.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/createChannel.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/getCooldown.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/createChannel.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/getCooldown.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

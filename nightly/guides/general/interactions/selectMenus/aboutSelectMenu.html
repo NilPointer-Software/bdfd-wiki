@@ -128,7 +128,7 @@
         </label>
 
         <a href="../../../../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="../../../..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../../../../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -208,10 +208,10 @@
 <li><code>Message ID</code> - ID of a message that should have select menu added to it. By default it’s the bot’s response.</li>
 </ul>
 <h2 id="adding-an-option"><a class="header" href="#adding-an-option">Adding an Option</a></h2>
-<pre><code>$addSelectMenuOption[Menu option ID;Label;Value;Description;(Default;Emoji;Message ID)]
+<pre><code>$addSelectMenuOption[Menu ID;Label;Value;Description;(Default;Emoji;Message ID)]
 </code></pre>
 <ul>
-<li><code>Menu option ID</code> - it has to be the same as the ID used in <code>$newSelectMenu[]</code>.</li>
+<li><code>Menu ID</code> - it has to be the same as the ID used in <code>$newSelectMenu[]</code>.</li>
 <li><code>Label</code> - the name of the option.</li>
 <li><code>Value</code> - it’s the data that gets passed to <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
 <li><code>Description</code> - it shows up under the <code>label</code>.</li>
@@ -280,7 +280,7 @@ $endif
 </code></pre>
 <h2 id="editselectmenuoption"><a class="header" href="#editselectmenuoption">$editSelectMenuOption</a></h2>
 <h3 id="usage-3"><a class="header" href="#usage-3">Usage</a></h3>
-<pre><code>$editSelectMenuOption[Menu option ID;Label;Value;Description;(Default;Emoji;Message ID)]
+<pre><code>$editSelectMenuOption[Menu ID;Label;Value;Description;(Default;Emoji;Message ID)]
 </code></pre>
 <blockquote>
 <p>As you can notice, the arguments are exactly the same.</p>

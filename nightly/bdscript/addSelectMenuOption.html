@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -196,11 +196,11 @@
                 <h1 id="addselectmenuoption"><a class="header" href="#addselectmenuoption">$addSelectMenuOption</a></h1>
 <p>Adds a new select menu option to an existing select menu.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addSelectMenuOption[Menu option ID;Label;Value;Description;(Default?;Emoji;Message ID)]
+<pre><code>$addSelectMenuOption[Menu ID;Label;Value;Description;(Default?;Emoji;Message ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Menu option ID</code> <code>(Type: String || Flag: Required)</code>: The ID used in <a href="./newSelectMenu.html"><code>$newSelectMenu[]</code></a>.</li>
+<li><code>Menu ID</code> <code>(Type: String || Flag: Required)</code>: The ID used in <a href="./newSelectMenu.html"><code>$newSelectMenu[]</code></a>.</li>
 <li><code>Label</code> <code>(Type: String || Flag: Required)</code>: The name of the option.</li>
 <li><code>Value</code> <code>(Type: String || Flag: Required)</code>: It’s the data that gets passed to the <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
 <li><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: A text which shows up under the <code>Label</code>.</li>
@@ -225,12 +225,12 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/addReactions.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addButton.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/addTextInput.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addSeparator.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -241,16 +241,16 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/addReactions.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addButton.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/addReactions.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addButton.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/addTextInput.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addSeparator.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/addTextInput.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addSeparator.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

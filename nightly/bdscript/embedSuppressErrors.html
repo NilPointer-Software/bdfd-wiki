@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -196,7 +196,7 @@
                 <h1 id="embedsuppresserrors"><a class="header" href="#embedsuppresserrors">$embedSuppressErrors</a></h1>
 <p>Suppresses the error messages, responds with the embed if there is an error.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$embedSuppressErrors[Title;Description;(Color;Author;Footer;Footer icon)]
+<pre><code>$embedSuppressErrors[Title;Description;(Color hex;Author;Footer;Footer icon)]
 </code></pre>
 <blockquote>
 <p>All fields are optional, leave the field empty to not include it. At least one field needs to be inputted, however.</p>
@@ -205,7 +205,20 @@
 <ul>
 <li><code>Title</code> <code>(Type: String || Flag: Emptiable)</code>: The title of the embed.</li>
 <li><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: The embed description.</li>
-<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a>.</li>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="../tools/color.html">color hex</a>. You can also use color integer number.</li>
+</ul>
+<div id="admonition-color-picker" class="admonition admonish-tip" role="note" aria-labelledby="admonition-color-picker-title">
+<div class="admonition-title">
+<div id="admonition-color-picker-title">
+<p>Color Picker</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-color-picker"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/color.html">“Color” tool</a> to select the best color!</p>
+</div>
+</div>
+<ul>
 <li><code>Author</code> <code>(Type: String || Flag: Vacantable)</code>: The embed author text.</li>
 <li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The embed footer text.</li>
 <li><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The embed footer icon, must be a valid image URL.</li>
@@ -232,12 +245,12 @@ You typed "$message"
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/embeddedURL.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/stop.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/emojiExists.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/checkUserPerms.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -248,16 +261,16 @@ You typed "$message"
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/embeddedURL.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/stop.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/embeddedURL.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/stop.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/emojiExists.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/checkUserPerms.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/emojiExists.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/checkUserPerms.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

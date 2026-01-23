@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -195,9 +195,17 @@
 
                 <h1 id="isadmin"><a class="header" href="#isadmin">$isAdmin</a></h1>
 <p>Returns whether the provided user has the administrator permission or not.</p>
-<blockquote>
-<p>“true” means the user has the administrator permission, “false” means they don’t.</p>
-</blockquote>
+<div id="admonition-info" class="admonition admonish-info" role="note" aria-labelledby="admonition-info-title">
+<div class="admonition-title">
+<div id="admonition-info-title">
+<p>Info</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-info"></a>
+</div>
+<div>
+<p><code>true</code> means the user has the administrator permission, <code>false</code> means they don’t.</p>
+</div>
+</div>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$isAdmin[User ID]
 </code></pre>
@@ -210,24 +218,43 @@
 Are you an admin?: `$isAdmin[$authorID]`
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
-    <discord-message role-color="#378afa" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot verified author="BDFD Support">
+    <discord-message role-color="#378afa" bot author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified>
         Are you an admin?: <code>true</code>
     </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/863865579483037726/1a8081a2ff25d6ddeb6e7b2ac1f02bbe.png" author="Kemi" role-color="#000000">
+        !example
+    </discord-message>
+    <discord-message verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot author="BDFD Support" role-color="#378afa">
+        Are you an admin?: <code>false</code>
+    </discord-message>
+    <discord-message author="Kemi" role-color="#000000" avatar="https://cdn.discordapp.com/avatars/863865579483037726/1a8081a2ff25d6ddeb6e7b2ac1f02bbe.png">
+        Sadly
+    </discord-message>
 </discord-messages>
-
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./authorID.html"><code>$authorID</code></a> works?</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/input.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/getCustomStatus.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/isBanned.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/isBooster.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -238,16 +265,16 @@ Are you an admin?: `$isAdmin[$authorID]`
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/input.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/getCustomStatus.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/input.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/getCustomStatus.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/isBanned.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/isBooster.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/isBanned.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/isBooster.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -194,10 +194,7 @@
                 </a>
 
                 <h1 id="splittext"><a class="header" href="#splittext">$splitText</a></h1>
-<p>Retrieves a value from <a href="./textSplit.html"><code>$textSplit[]</code></a>.</p>
-<blockquote>
-<p>⚠️ This function is used with <code>$textSplit[]</code>.</p>
-</blockquote>
+<p>Each separated text has a number, i.e. an index. <code>$splitText</code> is a function that returns one of the elements of the separated text by an index or the sign <code>&lt;</code> - the very first element, or <code>&gt;</code> - the very last element.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$splitText[Index]
 </code></pre>
@@ -207,26 +204,40 @@
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$textSplit[Hi-Hello-Hey;-]
-$splitText[2]
+$textSplit[hello world !; ]
+&gt; $splitText[&lt;]
+&gt; $splitText[2]
+&gt; $splitText[&gt;]
 </code></pre>
-<blockquote>
-<p>The above example will return output as <code>Hello</code>.</p>
-</blockquote>
-<blockquote>
-<p>For more info, see the <a href="../guides/general/textSplitting.html">Text Splitting Guide</a>.</p>
-</blockquote>
-
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" role-color="#378afa" verified bot>
+        <discord-quote>hello<br />world<br />!</discord-quote>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./textSplit.html"><code>$textSplit[]</code></a> works?</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/sort.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/replaceText.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/sqrt.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/textSplit.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -237,16 +248,16 @@ $splitText[2]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/sort.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/replaceText.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/sort.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/replaceText.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/sqrt.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/textSplit.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/sqrt.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/textSplit.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

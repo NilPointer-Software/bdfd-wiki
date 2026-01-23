@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -198,14 +198,35 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$modifyRole[Role ID;(Role name;Color hex;Hoisted?;Mentionable?)]
 </code></pre>
-<blockquote>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
 <p>You can use <code>!unchanged</code> as an argument to leave the setting as-is.</p>
-</blockquote>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Role ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the role to modify.</li>
 <li><code>Role name</code> <code>(Type: String || Flag: Optional)</code>: The new role name.</li>
-<li><code>Color hex</code> <code>(Type: Color || Flag: Optional)</code>: The new role color.</li>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Optional)</code>: The new role <a href="../tools/color.html">color hex</a>. You can also use color integer number.</li>
+</ul>
+<div id="admonition-color-picker" class="admonition admonish-tip" role="note" aria-labelledby="admonition-color-picker-title">
+<div class="admonition-title">
+<div id="admonition-color-picker-title">
+<p>Color Picker</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-color-picker"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/color.html">“Color” tool</a> to select the best color!</p>
+</div>
+</div>
+<ul>
 <li><code>Hoisted?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether the role should be displayed separately or not.</li>
 <li><code>Mentionable?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether the role should be mentionable by everyone or not.</li>
 </ul>
@@ -225,7 +246,7 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/modifyChannelPerms.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/mentionedRoles.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
@@ -241,9 +262,9 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/modifyChannelPerms.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/mentionedRoles.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/modifyChannelPerms.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/mentionedRoles.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>

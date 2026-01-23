@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -200,15 +200,21 @@
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>How many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.</p>
-<blockquote>
+<li><code>How many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.</li>
+</ul>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
 <p>If you want users to have <strong>3 or more arguments</strong> in their message, you can use <code>&gt;3</code>. If you want users to have <strong>less than 3 arguments</strong> in their message, you can use <code>&lt;3</code>. If you want the users to have <strong>exactly 3 arguments</strong> in their message, put <code>3</code>.</p>
-</blockquote>
-</li>
-<li>
-<p><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/few arguments.</p>
-</li>
+</div>
+</div>
+<ul>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/few arguments.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
@@ -216,16 +222,16 @@ $argsCheck[&gt;1;❌ Please provide something for me to say!]
 $message
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
-    <discord-message verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" bot role-color="#378afa">
+    <discord-message role-color="#378afa" author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot verified>
         ❌ Please provide something for me to say!
     </discord-message>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
         !example Hello World!
     </discord-message>
-    <discord-message bot author="BDFD Support" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa">
+    <discord-message author="BDFD Support" bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" verified>
         Hello World!
     </discord-message>
 </discord-messages>
@@ -239,7 +245,7 @@ $message
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/author.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/and.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -257,9 +263,9 @@ $message
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/author.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/and.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/author.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/and.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

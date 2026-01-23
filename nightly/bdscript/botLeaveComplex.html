@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -204,9 +204,18 @@
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$sendMessage[I left out `$serverName[$message]` server.]
+I left out `$serverName[$message]` server.
 $botLeave[$message]
 </code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+        !example 1009018156494368798
+    </discord-message>
+    <discord-message role-color="#378afa" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" verified bot>
+        I left out <discord-inline-code>BDFD Support</discord-inline-code> server.
+    </discord-message>
+</discord-messages>
+<p><img src="https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png" alt="example" /></p>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
 <div class="admonition-title">
 <div id="admonition-what-is-this-title">
@@ -215,20 +224,18 @@ $botLeave[$message]
 <a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>How <a href="./sendMessage.html"><code>$sendMessage[]</code></a>, <a href="./serverName.html"><code>$serverName[]</code></a> and <a href="./message.html"><code>$message</code></a> works?</p>
+<p>How <a href="./serverName.html"><code>$serverName[]</code></a> and <a href="./message.html"><code>$message</code></a> works?</p>
 </div>
 </div>
-<discord-messages>
-    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
-        !example 1009018156494368798
-    </discord-message>
-    <discord-message verified author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" bot>
-        I left out <discord-inline-code>BDFD Support</discord-inline-code> server.
-    </discord-message>
-</discord-messages>
-<p><img src="https://user-images.githubusercontent.com/113303649/210337078-dbdb0539-6f4a-4271-8574-afc43551d0e8.png" alt="example" /></p>
-<blockquote>
-<p>If you are using <strong>BDScript 2</strong>, put <code>$botLeave[]</code> at the very bottom of the code so that the code works correctly i.e:</p>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
+<p>If you are using <strong><a href="../guides/general/bds2/aboutBDScript2.html">BDScript 2</a></strong>, put <code>$botLeave[]</code> at the very bottom of the code so that the code works correctly i.e:</p>
 <p>❌ Not correct:</p>
 <pre><code>$botLeave[$message]
 $nomention
@@ -239,8 +246,8 @@ $sendMessage[I left this server!]
 $sendMessage[I left this server!]
 $botLeave[$message]
 </code></pre>
-</blockquote>
-
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">

@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -196,7 +196,7 @@
                 <h1 id="sendembedmessage"><a class="header" href="#sendembedmessage">$sendEmbedMessage</a></h1>
 <p>Sends an embed message to the provided channel. Not needed fields can be left empty.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color;Author;Author icon;Footer;Footer icon;Thumbnail;Image;Add timestamp?;Return ID?)]
+<pre><code>$sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color hex;Author;Author icon;Footer;Footer icon;Thumbnail;Image;Add timestamp?;Return ID?)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
@@ -205,7 +205,20 @@
 <li><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The text that will be used as the title.</li>
 <li><code>Title URL</code> <code>(Type: URL || Flag: Vacantable)</code>: The URL that will be applied to the title.</li>
 <li><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The description that will be applied to the embed.</li>
-<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The <a href="https://htmlcolorcodes.com/color-picker/">color hex</a> or integer to set the embed border color as.</li>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The <a href="../tools/color.html">color hex</a> to set the embed border color as. You can also use color integer number.</li>
+</ul>
+<div id="admonition-color-picker" class="admonition admonish-tip" role="note" aria-labelledby="admonition-color-picker-title">
+<div class="admonition-title">
+<div id="admonition-color-picker-title">
+<p>Color Picker</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-color-picker"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/color.html">“Color” tool</a> to select the best color!</p>
+</div>
+</div>
+<ul>
 <li><code>Author</code> <code>(Type: String || Flag: Vacantable )</code>: The text that appears at the author.</li>
 <li><code>Author icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to the author. Must be a valid image URL.</li>
 <li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The text to set the footer as.</li>
@@ -225,7 +238,7 @@ $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;auth
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/second.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/noMentionMessageComplex.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
@@ -241,9 +254,9 @@ $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;auth
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/second.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/noMentionMessageComplex.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/second.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/noMentionMessageComplex.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>

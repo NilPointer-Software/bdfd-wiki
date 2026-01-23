@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$changeUsername - Bot Designer For Discord - Wiki</title>
+    <title>$addContainer - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -189,30 +189,93 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/changeUsername.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addContainer.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="changeusername"><a class="header" href="#changeusername">$changeUsername</a></h1>
-<p>Changes the mentioned user’s nickname.</p>
+                <h1 id="addcontainer"><a class="header" href="#addcontainer">$addContainer</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a container body to the message.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$changeUsername[New nickname]
+<pre><code>$addContainer[Container name;(Color hex;Spoiler?)]
 </code></pre>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>A message can have a maximum of 20 container bodies (40 container components).</p>
+</div>
+</div>
+<div id="admonition-its-important" class="admonition admonish-failure" role="note" aria-labelledby="admonition-its-important-title">
+<div class="admonition-title">
+<div id="admonition-its-important-title">
+<p>It’s important!</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-its-important"></a>
+</div>
+<div>
+<p>The container body must contain <a href="#container-components">container components</a>, otherwise the function will not work!</p>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>New nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user’s nickname to. It cannot exceed more than 32 characters. Using <code>%username%</code> will be replaced by the real user’s username.</li>
+<li><code>Container name</code> <code>(Type: String || Flag: Required)</code>: Name for attaching other container components to the container body.</li>
+</ul>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
+<p>You can’t have multiple containers and <a href="./addSection.html">sections</a> <strong>with the same name</strong> in one message. So for example, you can’t have two containers with the name set to <code>Container1</code>.</p>
+</div>
+</div>
+<ul>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The <a href="../tools/color.html">color hex</a> to set the container border color as. You can also use color integer number.</li>
+</ul>
+<div id="admonition-color-picker" class="admonition admonish-tip" role="note" aria-labelledby="admonition-color-picker-title">
+<div class="admonition-title">
+<div id="admonition-color-picker-title">
+<p>Color Picker</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-color-picker"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/color.html">“Color” tool</a> to select the best color!</p>
+</div>
+</div>
+<ul>
+<li><code>Spoiler?</code> <code>(Type: Bool || Flag: Optional)</code>: Will the container have a spoiler effect?</li>
+</ul>
+<h2 id="container-components"><a class="header" href="#container-components">Container Components</a></h2>
+<ul>
+<li><a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a></li>
+<li><a href="./addSeparator.html"><code>$addSeparator[]</code></a></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$changeUsername[$noMentionMessage]
-Changed &lt;@$mentioned[1]&gt;'s nickname to **$noMentionMessage**.
+$addContainer[Container1;#673ab7;false]
+$addTextDisplay[Hello world!;Container1]
 </code></pre>
 <discord-messages>
-    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#EE7908">
-        !example <discord-mention>Cool Bot</discord-mention> Cool Bot
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
     </discord-message>
-    <discord-message author="Wiki Bot" role-color="#748BD4" verified bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png">
-        Changed <discord-mention>Cool Bot</discord-mention>'s nickname to <b>Cool Bot</b>.
+    <discord-message verified author="BDFD Support" role-color="#378afa" bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
+        <none>
+        <discord-embed slot="embeds" color="#673ab7">
+            <discord-embed-description slot="description">
+                Hello world!
+            </discord-embed-description>
+        </discord-embed>
     </discord-message>
 </discord-messages>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
@@ -223,7 +286,7 @@ Changed &lt;@$mentioned[1]&gt;'s nickname to **$noMentionMessage**.
 <a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>How <a href="./noMentionMessage.html"><code>$noMentionMessage</code></a> and <a href="./mentioned.html"><code>$mentioned[]</code></a> works?</p>
+<p>How <a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a> works?</p>
 </div>
 </div>
 
@@ -231,12 +294,12 @@ Changed &lt;@$mentioned[1]&gt;'s nickname to **$noMentionMessage**.
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/changeCooldownTime.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/defer.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/changeUsernameWithID.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addField.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -247,16 +310,16 @@ Changed &lt;@$mentioned[1]&gt;'s nickname to **$noMentionMessage**.
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/changeCooldownTime.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/defer.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/changeCooldownTime.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/defer.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/changeUsernameWithID.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addField.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/changeUsernameWithID.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addField.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

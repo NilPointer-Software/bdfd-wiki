@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -205,15 +205,23 @@
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are an administrator.] 
-You aren't an admin!
+Admin perms?: $checkUserPerms[$authorID;admin]
 </code></pre>
 <discord-messages>
     <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#EE7908">
         !example
     </discord-message>
-    <discord-message verified bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" author="Wiki Bot">
-        You can't use this command, because you are an administrator.
+    <discord-message bot author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" verified>
+        Admin perms?: false
+    </discord-message>
+    <discord-message author="GettingBeatenByKito" avatar="https://cdn.discordapp.com/avatars/1262009115689881702/e416ade6efa36e0e84bade0858fb74b9.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message verified bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" author="BDFD Support">
+        Admin perms?: true
+    </discord-message>
+    <discord-message author="GettingBeatenByKito" avatar="https://cdn.discordapp.com/avatars/1262009115689881702/e416ade6efa36e0e84bade0858fb74b9.png" role-color="#E67E22">
+        Yay! I have admin perms😎
     </discord-message>
 </discord-messages>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
@@ -232,12 +240,12 @@ You aren't an admin!
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/checkContains.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/embedSuppressErrors.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/clear.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/ignoreChannels.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -248,16 +256,16 @@ You aren't an admin!
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/checkContains.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/embedSuppressErrors.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/checkContains.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/embedSuppressErrors.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/clear.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/ignoreChannels.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/clear.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/ignoreChannels.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

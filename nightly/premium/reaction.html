@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -204,7 +204,7 @@
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The value used in “command name” argument of <code>$awaitReactions[]</code>.</li>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The value used in “Command name” parameter of <a href="../bdscript/awaitReactions.html"><code>$awaitReactions[]</code></a>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <h3 id="trigger-reactionclick"><a class="header" href="#trigger-reactionclick">Trigger <code>$reaction[click]</code></a></h3>
@@ -212,24 +212,31 @@
 $sendMessage[$username clicked on the reaction]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#EE7908" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" author="Nicky" role-color="#EE7908">
         !example
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot author="Wiki Bot" role-color="#748BD4" verified>
+    <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" verified role-color="#748BD4" bot>
         Click
         <discord-reactions slot="reactions">
-            <discord-reaction name=":emoji:" emoji="https://cdn.discordapp.com/emojis/766607515445231637.webp" count="2" reacted>
+            <discord-reaction name=":emoji:" emoji="https://cdn.discordapp.com/emojis/766607515445231637.webp" reacted count="2">
             </discord-reaction>
         </discord-reactions>
     </discord-message>
-    <discord-message verified role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot author="Wiki Bot">
+    <discord-message bot verified author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4">
         Nicky clicked on the reaction
     </discord-message>
 </discord-messages>
-<blockquote>
-<p>For more info, see the <a href="../premium/awaitedReactions.html">Awaited Reactions Guide</a>.</p>
-</blockquote>
-
+<div id="admonition-read-more" class="admonition admonish-info" role="note" aria-labelledby="admonition-read-more-title">
+<div class="admonition-title">
+<div id="admonition-read-more-title">
+<p>Read more</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-read-more"></a>
+</div>
+<div>
+<p>For more information, read the the <a href="../premium/awaitedReactions.html">Awaited Reactions Guide</a>.</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">

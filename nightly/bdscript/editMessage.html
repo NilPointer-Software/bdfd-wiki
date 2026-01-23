@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -196,7 +196,7 @@
                 <h1 id="editmessage"><a class="header" href="#editmessage">$editMessage</a></h1>
 <p>Edits one of the bot’s messages.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$editMessage[Channel ID;Message ID;Content;(Title;Description;Color;Footer)]
+<pre><code>$editMessage[Channel ID;Message ID;Content;(Title;Description;Color hex;Footer)]
 </code></pre>
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">How Do I Get The Channel / Message ID? (click-me)</a></p>
@@ -208,7 +208,20 @@
 <li><code>Content</code> <code>(Type: String || Flag: Emptiable)</code>: The new message contents.</li>
 <li><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed title.</li>
 <li><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed description.</li>
-<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The new embed color border hex.</li>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The new embed <a href="../tools/color.html">color border hex</a>. You can also use color integer number.</li>
+</ul>
+<div id="admonition-color-picker" class="admonition admonish-tip" role="note" aria-labelledby="admonition-color-picker-title">
+<div class="admonition-title">
+<div id="admonition-color-picker-title">
+<p>Color Picker</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-color-picker"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/color.html">“Color” tool</a> to select the best color!</p>
+</div>
+</div>
+<ul>
 <li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>:  The new embed footer text.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
@@ -230,7 +243,7 @@ $editMessage[853070225398693898;857040509549281292;This message has been edited!
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/editSelectMenu.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/ephemeral.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -248,9 +261,9 @@ $editMessage[853070225398693898;857040509549281292;This message has been edited!
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/editSelectMenu.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/ephemeral.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/editSelectMenu.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/ephemeral.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

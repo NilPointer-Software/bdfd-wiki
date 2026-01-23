@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -203,15 +203,26 @@
 $image[$authorAvatar]
 </code></pre>
 <discord-messages>
-    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#EE7908">
+    <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png">
         !example
     </discord-message>
-    <discord-message author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" verified bot>
+    <discord-message role-color="#748BD4" verified author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot>
         <none>
-        <discord-embed image="https://user-images.githubusercontent.com/111157596/257052136-4b8d5715-b381-4d5f-8c46-8ae0be53c8d8.png" slot="embeds">
+        <discord-embed slot="embeds" image="https://user-images.githubusercontent.com/111157596/257052136-4b8d5715-b381-4d5f-8c46-8ae0be53c8d8.png">
         </discord-embed>
     </discord-message>
 </discord-messages>
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./image.html"><code>$image[]</code></a> works?</p>
+</div>
+</div>
 <div id="admonition-image-size" class="admonition admonish-tip" role="note" aria-labelledby="admonition-image-size-title">
 <div class="admonition-title">
 <div id="admonition-image-size-title">
@@ -220,7 +231,7 @@ $image[$authorAvatar]
 <a class="admonition-anchor-link" href="#admonition-image-size"></a>
 </div>
 <div>
-<p>You can use <code>?size=size</code> at the end of the banner URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096.
+<p>You can use <code>?size=size</code> at the end of the avatar URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096.
 (e.g. <code>$image[$authorAvatar?size=4096]</code>)</p>
 </div>
 </div>
@@ -229,12 +240,12 @@ $image[$authorAvatar]
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/author.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/title.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/authorIcon.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/authorID.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -245,16 +256,16 @@ $image[$authorAvatar]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/author.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/title.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/author.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/title.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/authorIcon.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/authorID.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/authorIcon.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/authorID.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

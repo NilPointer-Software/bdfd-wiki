@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -196,23 +196,52 @@
                 <h1 id="createrole"><a class="header" href="#createrole">$createRole</a></h1>
 <p>Creates a new role.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$createRole[Role name;Color;(Display Role;Mentionable)]
+<pre><code>$createRole[Role name;Color hex;(Display role?;Mentionable?)]
 </code></pre>
-<blockquote>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
 <p>Discord allows users to create up to 250 roles per server.</p>
-</blockquote>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Role name</code> <code>(Type: String || Flag: Required)</code>: The name to give the new role.</li>
 </ul>
-<blockquote>
+<div id="admonition-limit-1" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-1-title">
+<div class="admonition-title">
+<div id="admonition-limit-1-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit-1"></a>
+</div>
+<div>
 <p>Role names can have a maximum of 100 characters.</p>
-</blockquote>
+</div>
+</div>
 <ul>
-<li><code>Color</code> <code>(Type: Color || Flag: Required)</code>: The <a href="https://htmlcolorcodes.com/color-picker">color hex</a> of the new role.</li>
-<li><code>Display Role</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be displayed separately (hoisted) or not. <code>no</code> means the role won’t be hoisted, <code>yes</code> means it will.<br />
+<li><code>Color hex</code> <code>(Type: Color || Flag: Required)</code>: The <a href="../tools/color.html">color hex</a> of the new role. You can also use color integer number.</li>
+</ul>
+<div id="admonition-color-picker" class="admonition admonish-tip" role="note" aria-labelledby="admonition-color-picker-title">
+<div class="admonition-title">
+<div id="admonition-color-picker-title">
+<p>Color Picker</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-color-picker"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/color.html">“Color” tool</a> to select the best color!</p>
+</div>
+</div>
+<ul>
+<li><code>Display role?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be displayed separately (hoisted) or not. <code>no</code> means the role won’t be hoisted, <code>yes</code> means it will.<br />
 <img src="https://user-images.githubusercontent.com/69215413/122795705-965e9480-d28b-11eb-8e4e-98338f143ecb.png" alt="example" /></li>
-<li><code>Mentionable</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be mentionable by everyone. <code>no</code> means the role won’t be mentionable, <code>yes</code> means it will.<br />
+<li><code>Mentionable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Whether the role should be mentionable by everyone. <code>no</code> means the role won’t be mentionable, <code>yes</code> means it will.<br />
 <img src="https://user-images.githubusercontent.com/69215413/122795765-a37b8380-d28b-11eb-8f06-c23e01bafc11.png" alt="example" /></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
@@ -221,28 +250,48 @@ $createRole[Cool Role;#FFFF00;yes;no]
 New role created!
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
-    <discord-message role-color="#378afa" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified bot author="BDFD Support">
+    <discord-message verified author="BDFD Support" bot role-color="#378afa" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
         New role created!
     </discord-message>
 </discord-messages>
 <p><img src="https://user-images.githubusercontent.com/69215413/125973030-7c9b980c-cffb-4f8e-aacc-a644a6fa23c3.png" alt="example" /></p>
-<blockquote>
-<p><a href="./roleID.html">You can use <code>$roleID[]</code> to return the role ID.</a></p>
-</blockquote>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>You can use <a href="./roleID.html"><code>$roleID[]</code></a> to return the role ID.</p>
+<pre><code>$nomention
+$createRole[Staff;#FFFF00;no;no]
+New role created! ID: $roleID[Staff]
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message author="BDFD Support" role-color="#378afa" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot>
+        New role created! ID: 659789148806447134
+    </discord-message>
+</discord-messages>
+</div>
+</div>
 
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/createChannel.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/colorRole.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/creationDate.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/deleteRole.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -253,16 +302,16 @@ New role created!
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/createChannel.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/colorRole.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/createChannel.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/colorRole.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/creationDate.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/deleteRole.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/creationDate.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/deleteRole.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

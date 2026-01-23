@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -198,19 +198,34 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$createChannel[Name;Type;(Category ID)]
 </code></pre>
-<blockquote>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
 <p>Discord allows users to create up to 500 channels per server. This includes all channel types.</p>
-</blockquote>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li>
-<p><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.</p>
-<blockquote>
+<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name of the new channel.</li>
+</ul>
+<div id="admonition-limit-1" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-1-title">
+<div class="admonition-title">
+<div id="admonition-limit-1-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit-1"></a>
+</div>
+<div>
 <p>Channel names can have a maximum of 100 characters.</p>
-</blockquote>
-</li>
-<li>
-<p><code>Type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:</p>
+</div>
+</div>
+<ul>
+<li><code>Type</code> <code>(Type: Enum || Flag: Required)</code>: The channel type. Channel types:
 <ul>
 <li><code>category</code></li>
 <li><code>text</code></li>
@@ -219,9 +234,7 @@
 <li><code>forum</code></li>
 </ul>
 </li>
-<li>
-<p><code>Category ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The category to put the channel in (if applicable).</p>
-</li>
+<li><code>Category ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The category to put the channel in (if applicable).</li>
 </ul>
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get the Category ID guide.</a></p>
@@ -232,28 +245,51 @@ $createChannel[cool-channel;text]
 New channel created!
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" bot role-color="#378afa" verified>
         New channel created!
     </discord-message>
 </discord-messages>
 <p><img src="https://user-images.githubusercontent.com/69215413/125972524-95307b17-bfcc-4525-a4fa-1d58a30a1fa9.png" alt="example" /></p>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>You can use <a href="./channelIDComplex.html"><code>$channelID[]</code></a> to return the channel ID.</p>
+<pre><code>$nomention
+$createChannel[main-chat;text]
+New channel created! ID: $channelID[main-chat]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message bot role-color="#378afa" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support">
+        New channel created! ID: 566370477967147018
+    </discord-message>
+</discord-messages>
 <blockquote>
-<p><a href="./authorIDComplex.html">You can use <code>$channelID[]</code> to return the channel ID.</a></p>
+<p>How <a href="./channelIDComplex.html"><code>$channelID[]</code></a> works?</p>
 </blockquote>
+</div>
+</div>
 
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/cooldown.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/channelType.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/createRole.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/deleteChannels.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -264,16 +300,16 @@ New channel created!
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/cooldown.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/channelType.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/cooldown.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/channelType.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/createRole.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/deleteChannels.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/createRole.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/deleteChannels.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

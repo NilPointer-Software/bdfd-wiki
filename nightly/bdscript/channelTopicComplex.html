@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -204,14 +204,23 @@
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-&lt;#$noMentionMessage&gt;'s channel topic is: $channelTopic[$noMentionMessage]
+Channel Topic: $channelTopic[$mentionedChannels[1]]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" author="Nicky" role-color="#EE7908">
-        !example 860870690323300359
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example <discord-mention type="channel">media</discord-mention>
     </discord-message>
-    <discord-message role-color="#748BD4" verified author="Wiki Bot" bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png">
-        <discord-mention type="channel">demo</discord-mention>'s channel topic is: Demos, examples and more!
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified role-color="#378afa" author="BDFD Support">
+        Channel Topic: Post cat pictures here!
+    </discord-message>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example <discord-mention type="channel">secret</discord-mention>
+    </discord-message>
+    <discord-message author="BDFD Support" bot verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa">
+        Channel Topic:
+    </discord-message>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        ⬆️ Returns empty value if no description.
     </discord-message>
 </discord-messages>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
@@ -222,10 +231,9 @@
 <a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>How <a href="./noMentionMessage.html"><code>$noMentionMessage</code></a> works?</p>
+<p>How <a href="./mentionedChannels.html"><code>$mentionedChannels[]</code></a> works?</p>
 </div>
 </div>
-
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">

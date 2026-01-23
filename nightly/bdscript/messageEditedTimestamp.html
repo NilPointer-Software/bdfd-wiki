@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -194,10 +194,21 @@
                 </a>
 
                 <h1 id="messageeditedtimestamp"><a class="header" href="#messageeditedtimestamp">$messageEditedTimestamp</a></h1>
-<p>Returns a timestamp of when the message was edited.</p>
+<p>Returns an unixtime of when the message was edited.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$messageEditedTimestamp[Channel ID;Message ID]
 </code></pre>
+<div id="admonition-timestamp-converter" class="admonition admonish-tip" role="note" aria-labelledby="admonition-timestamp-converter-title">
+<div class="admonition-title">
+<div id="admonition-timestamp-converter-title">
+<p>Timestamp Converter</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-timestamp-converter"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/timestamp.html">“Timestamp Converter” tool</a> to work with unixtime!</p>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel ID where the message is.</li>
@@ -208,20 +219,28 @@
 $messageEditedTimestamp[$channelID;$lastMessageID]
 </code></pre>
 <p><img src="https://github.com/user-attachments/assets/a432d7ba-6824-481c-8cec-2d7880ebbd2f" alt="" /></p>
-<blockquote>
+<div id="admonition-help" class="admonition admonish-question" role="note" aria-labelledby="admonition-help-title">
+<div class="admonition-title">
+<div id="admonition-help-title">
+<p>Help</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-help"></a>
+</div>
+<div>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get the Message/Channel ID guide.</a></p>
-</blockquote>
+</div>
+</div>
 
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/messageComplex.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/hostingExpireTimeComplex.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/messageID.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/minute.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -232,16 +251,16 @@ $messageEditedTimestamp[$channelID;$lastMessageID]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/messageComplex.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/hostingExpireTimeComplex.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/messageComplex.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/hostingExpireTimeComplex.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/messageID.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/minute.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/messageID.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/minute.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

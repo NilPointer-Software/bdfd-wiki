@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$input - Bot Designer For Discord - Wiki</title>
+    <title>$addSection - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -189,41 +189,90 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/input.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addSection.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="input"><a class="header" href="#input">$input</a></h1>
-<p>Retrieves input from a modal.</p>
+                <h1 id="addsection"><a class="header" href="#addsection">$addSection</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a section to the message.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$input[Text Input ID]
+<pre><code>$addSection[Section name;(Container name)]
 </code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<div id="admonition-its-important" class="admonition admonish-failure" role="note" aria-labelledby="admonition-its-important-title">
+<div class="admonition-title">
+<div id="admonition-its-important-title">
+<p>It’s important!</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-its-important"></a>
+</div>
+<div>
+<p>The section must contain all <a href="#section-components">section components</a>, otherwise the function will not work!</p>
+</div>
+</div>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Text Input ID</code> <code>(Type: String || Flag: Required)</code>: The input ID in <a href="../bdscript/addTextInput.html"><code>$addTextInput[]</code></a>.</li>
+<li><code>Section name</code> <code>(Type: String || Flag: Required)</code>: Name for attaching other section components to the section.</li>
+</ul>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
+<p>You can’t have multiple sections and <a href="./addContainer.html">containers</a> <strong>with the same name</strong> in one message. So for example, you can’t have two sections with the name set to <code>section</code>.</p>
+</div>
+</div>
+<ul>
+<li><code>Container name</code> <code>(Type: String || Flag: Optional)</code>: To which <a href="./addContainer.html">container body</a> should the section be attached.</li>
+</ul>
+<h2 id="section-components"><a class="header" href="#section-components">Section Components</a></h2>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>Only 3 components can be added to the section.</p>
+</div>
+</div>
+<ul>
+<li><a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a></li>
+<li><a href="./addThumbnail.html"><code>$addThumbnail[]</code></a></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<h3 id="interaction-command-code"><a class="header" href="#interaction-command-code">Interaction command code</a></h3>
 <pre><code>$nomention
-Name : $input[modalInput1]
-Pronouns : $input[modalInput2]
-About me : $input[modalInput3]
+$addSection[section]
+$addTextDisplay[Hello world!;section]
+$addThumbnail[$authorAvatar;;;section]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/168921575-9c2e3106-4ac0-4388-8b41-46e640e6126a.png" alt="example" /></p>
-<blockquote>
-<p>For more info, see the <a href="../guides/general/interactions/modals/aboutModals.html">Modals Guide</a>.</p>
-</blockquote>
-
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a>, <a href="./addThumbnail.html"><code>$addThumbnail[]</code></a> and <a href="./authorAvatar.html"><code>$authorAvatar</code></a> works?</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/image.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addField.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/isAdmin.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addThumbnail.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -234,16 +283,16 @@ About me : $input[modalInput3]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/image.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addField.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/image.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addField.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/isAdmin.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addThumbnail.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/isAdmin.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addThumbnail.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -198,9 +198,17 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$userBanner[User ID]
 </code></pre>
-<blockquote>
+<div id="admonition-fail" class="admonition admonish-failure" role="note" aria-labelledby="admonition-fail-title">
+<div class="admonition-title">
+<div id="admonition-fail-title">
+<p>Fail</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-fail"></a>
+</div>
+<div>
 <p>The function is unable to return the user’s server banner.</p>
-</blockquote>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The user to get the banner for.</li>
@@ -211,10 +219,18 @@ $sendMessage[$userBanner[$findUser[$message]]?size=4096]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/113303649/212497271-e2ebad00-2d78-4bdf-a697-c2863df527e2.png" alt="example" /></p>
 <p><img src="https://user-images.githubusercontent.com/113303649/212497313-3824e855-d634-4e8a-848e-975d6d768df3.png" alt="example" /></p>
-<blockquote>
+<div id="admonition-image-size" class="admonition admonish-tip" role="note" aria-labelledby="admonition-image-size-title">
+<div class="admonition-title">
+<div id="admonition-image-size-title">
+<p>Image size</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-image-size"></a>
+</div>
+<div>
 <p>You can use <code>?size=size</code> at the end of the banner URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096.
 (e.g. <code>$image[$userBanner[$findUser[$message]]?size=4096]</code>)</p>
-</blockquote>
+</div>
+</div>
 
             </main>
 

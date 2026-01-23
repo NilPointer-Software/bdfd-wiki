@@ -128,7 +128,7 @@
         </label>
 
         <a href="../../../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="../../..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../../../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -195,9 +195,17 @@
 
                 <h1 id="async"><a class="header" href="#async">Async</a></h1>
 <p>Runs functions in the background. Using async features properly can optimize your code and make it faster!</p>
-<blockquote>
-<p><strong>Warning:</strong> Async features only work in <a href="./aboutBDScript2.html">BDScript 2</a>.</p>
-</blockquote>
+<div id="admonition-bdscript-2" class="admonition admonish-danger" role="note" aria-labelledby="admonition-bdscript-2-title">
+<div class="admonition-title">
+<div id="admonition-bdscript-2-title">
+<p>BDScript 2</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-bdscript-2"></a>
+</div>
+<div>
+<p>Can only be used in <strong><a href="./aboutBDScript2.html">BDScript 2</a></strong>.</p>
+</div>
+</div>
 <h3 id="basics"><a class="header" href="#basics">Basics</a></h3>
 <ul>
 <li>Use <code>$async[name]</code> to start an async block. The name must be unique for each block. Functions inside async blocks run in the background without blocking the command’s thread.</li>

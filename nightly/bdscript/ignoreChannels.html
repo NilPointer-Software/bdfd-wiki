@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -195,6 +195,39 @@
 
                 <h1 id="ignorechannels"><a class="header" href="#ignorechannels">$ignoreChannels</a></h1>
 <p>The command can’t be executed in any of the provided channels. If the channel is ignored, then the provided “Error message” is returned.</p>
+<style>
+.discord-messages {
+    margin-top: 1.5rem;
+}
+
+.discord-messages > .discord-message:first-of-type:before {
+    color: var(--link-color);
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1.8rem;
+    margin-top: -.9rem;
+    width: fit-content;
+    transition: .3s;
+    z-index: 1000;
+}
+
+.discord-messages > .discord-message:first-of-type:before {
+    content: 'Another channel';
+}
+
+.discord-messages:first-of-type > .discord-message:first-of-type:before {
+    content: 'Ignored channel';
+}
+
+.discord-messages:hover > .discord-message:before {
+    transform: scale(1.025);
+    transform: rotate(-2.5deg);
+    border-radius: 12.5px;
+    transition: .3s;
+}
+</style>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$ignoreChannels[Channel IDs;...;Error message]
 </code></pre>
@@ -205,25 +238,36 @@
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$ignoreChannels[1099033713687404614;❌ That command can't be used in this channel!]
-
-Hello $username!
+$ignoreChannels[566370477967147018;❌ That command can't be used in this channel!]
+Hello world!
 </code></pre>
-<p><strong>Ignored channel</strong></p>
-<p><img src="https://user-images.githubusercontent.com/111157596/233706189-0d168572-a0e8-4c3d-803e-abf31826bb43.png" alt="example1" /></p>
-<p><strong>Whitelisted channel</strong></p>
-<p><img src="https://user-images.githubusercontent.com/111157596/233706206-0926d4bc-f0de-47b4-acb0-e7802772575b.png" alt="example2" /></p>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message bot role-color="#378afa" author="BDFD Support" verified>
+        ❌ That command can't be used in this channel!
+    </discord-message>
+</discord-messages>
+<discord-messages>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message role-color="#378afa" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" bot>
+        Hello world!
+    </discord-message>
+</discord-messages>
 
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/if.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/checkUserPerms.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/ignoreLinks.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/onlyAdmin.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -234,16 +278,16 @@ Hello $username!
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/if.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/checkUserPerms.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/if.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/checkUserPerms.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/ignoreLinks.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/onlyAdmin.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/ignoreLinks.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/onlyAdmin.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

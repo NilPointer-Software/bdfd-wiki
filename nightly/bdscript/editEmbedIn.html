@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -196,7 +196,7 @@
                 <h1 id="editembedin"><a class="header" href="#editembedin">$editEmbedIn</a></h1>
 <p>Edits the bot’s message after the given time, as an embed.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$editEmbedIn[Time;(Title;Description;Footer;Color)]
+<pre><code>$editEmbedIn[Time;(Title;Description;Footer;Color hex)]
 </code></pre>
 <blockquote>
 <p>📝 Optional fields can be left empty. At least one embed field (<code>Title</code>, <code>Description</code>, or <code>Footer</code>) needs to be inputted.</p>
@@ -207,8 +207,19 @@
 <li><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed title. Optional.</li>
 <li><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed description. Optional.</li>
 <li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The new embed footer. Optional.</li>
-<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a> or color integer number. Use <code>0</code> for the default color. Optional.</li>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="../tools/color.html">color hex</a>. You can also use color integer number.</li>
 </ul>
+<div id="admonition-color-picker" class="admonition admonish-tip" role="note" aria-labelledby="admonition-color-picker-title">
+<div class="admonition-title">
+<div id="admonition-color-picker-title">
+<p>Color Picker</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-color-picker"></a>
+</div>
+<div>
+<p>You can use our <a href="../tools/color.html">“Color” tool</a> to select the best color!</p>
+</div>
+</div>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $title[Cool Title]
@@ -226,7 +237,7 @@ $editEmbedIn[5s;Epic Title;This is the edited description!;;#E46AFC]
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/editChannelPerms.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/dmComplex.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
@@ -242,9 +253,9 @@ $editEmbedIn[5s;Epic Title;This is the edited description!;;#E46AFC]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/editChannelPerms.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/dmComplex.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/editChannelPerms.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/dmComplex.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>

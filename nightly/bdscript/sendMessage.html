@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -203,20 +203,18 @@
 <li><code>Text</code> <code>(Type: String || Flag: Required)</code>: The text to send in the new message.</li>
 <li><code>Return message ID?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the ID of the newly sent message, in another message. Defaults to <code>no</code>.</li>
 </ul>
-<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
-<h3 id="example-1"><a class="header" href="#example-1">Example #1</a></h3>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$sendMessage[This is message #1!]
-$sendMessage[This is message #2!]
-$sendMessage[This is message #3!]
+$sendMessage[Hello world!]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/126246807-7beaac06-4fd4-4ae3-a944-dcc66f7c0774.png" alt="example1" /></p>
-<h3 id="example-2"><a class="header" href="#example-2">Example #2</a></h3>
-<pre><code>$nomention
-$sendMessage[This is message #1!;yes]
-$sendMessage[This is message #2!;yes]
-</code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/126246945-2fb29b3f-ab58-4de3-8341-a56a574db423.png" alt="example2" /></p>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message bot role-color="#378afa" author="BDFD Support" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
+        Hello world!
+    </discord-message>
+</discord-messages>
 
             </main>
 
@@ -227,7 +225,7 @@ $sendMessage[This is message #2!;yes]
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/serverChannelExists.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/unpinMessage.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -245,9 +243,9 @@ $sendMessage[This is message #2!;yes]
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/serverChannelExists.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/unpinMessage.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/serverChannelExists.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/unpinMessage.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

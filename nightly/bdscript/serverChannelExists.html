@@ -128,7 +128,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -196,28 +196,51 @@
                 <h1 id="serverchannelexists"><a class="header" href="#serverchannelexists">$serverChannelExists</a></h1>
 <p>Checks if the channel exists in the current server.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$serverChannelExists[Channel ID]
+<pre><code>$serverChannelExists[Channel]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Channel ID</code> <code>(Type: Snowflake, String || Flag: Emptiable)</code>: Returns “true” if the channel exists, otherwise “false” is returned.</li>
+<li><code>Channel</code> <code>(Type: Snowflake, String || Flag: Emptiable)</code>: Returns “true” if the channel exists, otherwise “false” is returned.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$serverChannelExists[$message[1]]
+Exists?: $serverChannelExists[$message]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/111157596/234031742-e57f230d-5086-4552-83e9-31b6c6bbe7b6.png" alt="example" /></p>
-
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example 566370477967147018
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified author="BDFD Support">
+        Exists?: true
+    </discord-message>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example dhjejemxndj
+    </discord-message>
+    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" verified bot>
+        Exists?: false
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./message.html"><code>$message</code></a> works?</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/sendMessage.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/rulesChannelID.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/serverCooldown.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/slowmode.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -228,16 +251,16 @@ $serverChannelExists[$message[1]]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/sendMessage.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/rulesChannelID.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/sendMessage.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/rulesChannelID.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/serverCooldown.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/slowmode.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/serverCooldown.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/slowmode.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>
