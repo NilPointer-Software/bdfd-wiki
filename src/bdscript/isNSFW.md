@@ -58,11 +58,6 @@ Is this channel NSFW?: `$isNSFW[$channelID]`
   username: RainbowKey
   color: "#E67E22"
   content: |
-    NSFW Channel 🤫
-- user_id: 803569638084313098
-  username: RainbowKey
-  color: "#E67E22"
-  content: |
     !example
 - user_id: 1009018156494368798
   username: BDFD Support
@@ -74,11 +69,6 @@ Is this channel NSFW?: `$isNSFW[$channelID]`
 ```
 
 ```discord yaml
-- user_id: 803569638084313098
-  username: RainbowKey
-  color: "#E67E22"
-  content: |
-    It's a main chat here!
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
