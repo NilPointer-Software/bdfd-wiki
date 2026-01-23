@@ -37,7 +37,10 @@ Executes the following block of code if the provided condition is `true`.
 ```
 $if[Condition]
 ```
-> `$if[]` uses the format of: if `x` is related accordingly (based on the "sign") with `y` then the code below runs.
+
+```admonish info title="It's interesting!"
+`$if[]` uses the format of: if `x` is related accordingly (based on the "sign") with `y` then the code below runs.
+```
 
 ### Parameters
 - `Condition` `(Type: String || Flag: Required)`: Check that will be carried out. Use [Signs](#signs).
@@ -169,8 +172,13 @@ $endif
 
 # $elseif
 Checks provided condition only if previous `$if[]` or `$elseif[]` conditions returned `false`. If the provided condition is `true`, the following block of code will be executed.
-> You can use multiple `$elseif`s.
-> Only for **BDScript 2**!
+```admonish tip
+You can use multiple `$elseif`'s.
+```
+
+```admonish danger title="BDScript 2"
+Can only be used in **[BDScript 2](./bds2/aboutBDScript2.md)**.
+```
 
 ## Syntax
 ```

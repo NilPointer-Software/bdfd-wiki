@@ -6,6 +6,10 @@ Returns your bot's hosting expiration date. If "yes" is provided, the function r
 $hostingExpireTime[Return unix timestamp?]
 ``` 
 
+```admonish tip title="Timestamp Converter"
+You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
+```
+
 ### Parameters
 - `Return unix timestamp?` `(Type: Bool || Flag: Required)`: Whether to return the expiration date in a UNIX timestamp or not.
 
@@ -21,10 +25,12 @@ I will be offline <t:$hostingExpireTime[yes]:R>
   color: "#E67E22"
   content: |
     !example
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
   content: |
     I will be offline <div class="discord-time-mark">In 4 years</div>
 ```
+

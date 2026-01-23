@@ -22,7 +22,8 @@ $checkContains[$message;hi;hello]
   color: "#E67E22"
   content: |
     !example bye
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -33,7 +34,8 @@ $checkContains[$message;hi;hello]
   color: "#E67E22"
   content: |
     !example hello
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -44,7 +46,8 @@ $checkContains[$message;hi;hello]
   color: "#E67E22"
   content: |
     !example hi bye
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true

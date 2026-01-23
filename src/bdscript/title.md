@@ -23,7 +23,7 @@ $title[This is a title!]
 $description[⬆️ That is a nice title.]
 ```
 
-``` discord yaml
+```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -38,4 +38,8 @@ $description[⬆️ That is a nice title.]
   embed:
     title: This is a title!
     description: ⬆️ That is a nice title.
+```
+
+```admonish question title="What is this?"
+How [`$description[]`](./description.md) works?
 ```

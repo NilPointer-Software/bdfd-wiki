@@ -27,5 +27,5 @@ $botCommands[🔹]
   bot: true
   verified: true
   content: |
-    !help🔹!server🔹!bdfd
+    !help🔹!server🔹!bdfd🔹!example
 ```

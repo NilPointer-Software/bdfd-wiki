@@ -149,13 +149,12 @@ function applySettings() {
 	} catch {}
 
 	const defaultData = {
-		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
-		language: "en",
+		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		effects: "hidden",
+		"effects": "hidden",
 		"code-hg": {
 			defaultTextHighlight: {
 				color: 4288341353,
@@ -222,12 +221,52 @@ function applySettings() {
 	html.style.fontFamily = data["text-font"];
 	html.style.fontSize = data["text-size"];
 	html.style.textShadow = data["text-hg"];
-
+	
 	if (snowflakes) {
 		snowflakes.style.visibility = data["effects"];
 	}
 
-	setDiscordTheme(data["discord-example-theme"]);
+	document.querySelectorAll('.chapter > li.chapter-item').forEach(el => {
+	 if (el.querySelector('div')) {
+	  const text = el.querySelector('div').textContent.trim();
+   if (text === 'Functions' || text === 'Premium') {
+	   el.classList.add('functions-section');
+   }
+  }
+	});
+	
+	// Tools redirecting & ToS
+	
+const currentPath = window.location.pathname;
+const currentHref = window.location.href;
+
+if (currentPath.includes('/tools/')) {
+    const fileName = currentPath.split('/').pop();
+    window.location.replace('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + fileName);
+}
+else if (currentPath.includes('/terms.html') || currentHref.includes('terms.html')) {
+    window.location.replace('https://botdesignerdiscord.com/tos');
+}
+else {
+    const allLinks = document.querySelectorAll('a[href]');
+    
+    allLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        if (href) {
+            if (href.indexOf('../tools/') === 0) {
+                const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
+                link.setAttribute('href', newHref);
+            }
+            
+            if (href.includes('terms.html')) {
+                link.setAttribute('href', 'https://botdesignerdiscord.com/tos');
+            }
+        }
+    });
+}
+	
+ setDiscordTheme(data["discord-example-theme"]);
 }
 
 applySettings();

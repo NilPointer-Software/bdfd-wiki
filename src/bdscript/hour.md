@@ -1,7 +1,9 @@
 # $hour
 Returns the current hour.
 
-> The `$hour` function uses the twenty-four-hour clock instead of two groups of twelve hours; this is also known as "Military Time".
+```admonish note
+The `$hour` function uses the twenty-four-hour clock instead of two groups of twelve hours; this is also known as "Military Time".
+```
 
 ## Syntax
 ```
@@ -14,16 +16,17 @@ $nomention
 Current Hour: $hour
 ```
 
-``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
-    !hour
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+    !example 
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
+  verified: true
   content: |
     <div id="hour-mark"></div>
 ```

@@ -1,9 +1,13 @@
 # $lastPinTimestamp
-Returns the last pinned message timestamp in the current channel.
+Returns the last pinned message unixtime in the current channel.
 
 ## Syntax
 ```
 $lastPinTimestamp
+```
+
+```admonish tip title="Timestamp Converter"
+You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
 ```
 
 ## Example

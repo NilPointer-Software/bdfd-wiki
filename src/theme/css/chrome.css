@@ -1267,6 +1267,21 @@ ul#searchresults span.teaser em {
 	background: rgba(255, 255, 255, 0.06);
 }
 
+.functions-section + li .section li.chapter-item > div:first-child {
+	user-select: none;
+	width: 100%;
+	-webkit-user-select: none;
+	border-radius: 10px;
+	padding: .2rem 1rem .2rem 1rem;
+	margin-bottom: .5rem;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.04);
+	cursor: pointer;
+}
+
+.functions-section + li .section li.chapter-item > div:first-child:hover {
+	background: rgba(255, 255, 255, 0.06);
+}
 
 /* Deprecated function tag */
 /* $ <- ITS IMPORTANT! */
@@ -1493,3 +1508,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
+
+
+

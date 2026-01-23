@@ -6,13 +6,19 @@ Returns the current [unix timestamp](https://www.unixtimestamp.com/) in the sele
 $getTimestamp[Time unit]
 ```
 
+```admonish tip title="Timestamp Converter"
+You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
+```
+
 ### Parameters
 - `Time unit` `(Type: Enum || Flag: Required)`: Sets timestamp time unit.
 
-> Time unit value can either be :
-> - `s` (seconds)
-> - `ms` (milliseconds)
-> - `ns` (nanoseconds)
+```admonish info title="Possible input"
+- Time unit value can either be:
+- `s` (seconds)
+- `ms` (milliseconds)
+- `ns` (nanoseconds)
+```
 
 ## Example
 ```
@@ -38,6 +44,10 @@ In Nanoseconds - $getTimestamp[ns]
     <div id="moreunix-mark"></div>
 ```
 
-> For more info about UNIX timestamps on Discord click [here](../resources/discordTimestamps.md).
+```admonish note
+For more info about UNIX timestamps on Discord click [here](../resources/discordTimestamps.md).
+```
 
 <script src="../theme/livetime.js"></script>
+
+

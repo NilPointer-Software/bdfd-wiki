@@ -1,6 +1,10 @@
 # $botOwnerID
 Returns the bot owner's ID.
 
+```admonish warning
+Only works if you logged into the app via your Discord account. Otherwise, if you log in via your Google/Apple account or other methods, it will return `<unknown>`.
+```
+
 ## Syntax
 ```
 $botOwnerID

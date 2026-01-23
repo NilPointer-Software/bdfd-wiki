@@ -12,7 +12,7 @@ $voiceUserLimit[(Voice Channnel ID)]
 ## Example
 ```
 $nomention
-Voice User Limit: $voiceUserLimit[$message]
+Voice User Limit: $voiceUserLimit[$mentionedChannels[1]]
 ```
 
 ``` discord yaml
@@ -20,30 +20,35 @@ Voice User Limit: $voiceUserLimit[$message]
   username: RainbowKey
   color: "#E67E22"
   content: |
-    !example 611281459080331274
+    !example <#voice-1>
 - username: BDFD Support
   user_id: 1009018156494368798
   color: "#378afa"
   bot: true
   verified: true
   content: |
-    0
+    Voice User Limit: 0
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
   content: |
-    !example 827255538705236019
+    ⬆️ No limits
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#general>
 - username: BDFD Support
   user_id: 1009018156494368798
   color: "#378afa"
   bot: true
   verified: true
   content: |
-    99
+    Voice User Limit: 99
 ```
 
 ```admonish question title="What is this?"
-How [`$message`](./message.md) works?
+How [`$mentionedChannels[]`](./mentionedChannels.md) works?
 ```
 
 ```admonish tip

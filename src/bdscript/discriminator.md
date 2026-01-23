@@ -32,10 +32,28 @@ Discriminator: #$discriminator[$mentioned[1]]
   verified: true
   content: |
     Discriminator: #7678
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  highlight: true
+  content: |
+    !example <@RainbowKey>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Discriminator: #0000
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    Returned 0000 because it only works for bot IDs.
 ```
 
 ```admonish note
-You can use `$discriminator[]` get the discriminator of the author.
+You can use `$discriminator[]` to get the discriminator of the author.
 ```
 
 ```admonish question title="What is this?"

@@ -81,7 +81,8 @@ Send a `!ping` command in a channel of the server you invited your bot to.
   color: "#E67E22"
   content: |
     !ping
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true

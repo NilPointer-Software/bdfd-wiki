@@ -30,7 +30,9 @@ Random Role: $roleName[$randomRoleID[]]
     Random Role: Owner
 ```
 
-> It can return the `@everyone` role ID!
+~~~admonish warning
+
+It can return the `@everyone` role ID!
 
 ``` discord yaml
 - user_id: 803569638084313098
@@ -48,6 +50,8 @@ Random Role: $roleName[$randomRoleID[]]
   highlight: true
 ```
 
+~~~
+
 ```admonish question title="What is this?"
-How [`$roleName`](./roleName.md) works?
+How [`$roleName[]`](./roleName.md) works?
 ```

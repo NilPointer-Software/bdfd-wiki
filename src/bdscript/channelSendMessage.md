@@ -7,8 +7,8 @@ Sends a message in the provided channel.
 }
 
 .discord-messages > .discord-message:before {
-    color: var(--color1);
-    background: var(--color3);
+    color: var(--link-color);
+    background: var(--card-bg);
     border-radius: 10px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -59,7 +59,8 @@ $channelSendMessage[$mentionedChannels[1];Hello!]
 ```
 
 ``` discord yaml
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true

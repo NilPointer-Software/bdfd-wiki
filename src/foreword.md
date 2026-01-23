@@ -2,7 +2,7 @@
 
 <div class="bdfd-is">
   <h1 id="bdfd-case">Bot Designer For Discord</h1>
-  <p id="truelol">Build powerful Discord bots without coding experience.</p>
+  <p id="bdfd-about">Build powerful Discord bots without coding experience.</p>
   <div class="homeButtons">
     <button class="createMyBot">
       <p><a href="https://app.botdesignerdiscord.com/"><i class="fa fa-plus" aria-hidden="true"></i> Create Bot</a></p>

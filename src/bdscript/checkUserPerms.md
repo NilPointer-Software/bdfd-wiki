@@ -13,8 +13,7 @@ $checkUserPerms[User ID;Permissions]
 ## Example
 ```
 $nomention
-$onlyIf[$checkUserPerms[$authorID;admin]==false;You can't use this command, because you are an administrator.] 
-You aren't an admin!
+Admin perms?: $checkUserPerms[$authorID;admin]
 ```
 
 ``` discord yaml
@@ -23,13 +22,30 @@ You aren't an admin!
   color: "#EE7908"
   content: |
     !example
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
-    You can't use this command, because you are an administrator.
+    Admin perms?: false
+- user_id: 1262009115689881702
+  username: GettingBeatenByKito
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Admin perms?: true
+- user_id: 1262009115689881702
+  username: GettingBeatenByKito
+  color: "#E67E22"
+  content: |
+    Yay! I have admin perms😎
 ```
 
 ```admonish question title="What is this?"

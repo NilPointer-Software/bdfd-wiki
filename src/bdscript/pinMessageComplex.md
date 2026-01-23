@@ -1,7 +1,9 @@
 # $pinMessage[]
 Pins a specific message using its channel and message ID.
 
-> ⚠️ A channel can have a maximum of 50 pinned messages.
+```admonish warning title="Limit"
+A channel can have a maximum of 250 pinned messages.
+```
 
 ## Syntax
 ```

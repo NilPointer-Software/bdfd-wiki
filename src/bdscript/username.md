@@ -13,14 +13,16 @@ Hello $username!
 ```
 
 ``` discord yaml
-- user_id: 696368083517964288
-  username: Spen
-  color: "#b9a0e0"
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
     !example
-- username: Wiki Bot
-  color: "#b9a0e0"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
+  verified: true
   content: |
-    Hello Spen!
+    Hello rainbow_key!
 ```

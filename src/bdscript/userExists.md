@@ -21,7 +21,8 @@ $userExists[$mentioned[1]]
   color: "#E67E22"
   content: |
     !example <@Spen>
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true

@@ -29,3 +29,7 @@ $disableSpecialEscaping
   content: |
       Hello Planet!
   ```
+
+```admonish question title="What is this?"
+How [`$replaceText[]`](./replaceTText.md) works?
+```

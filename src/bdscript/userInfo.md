@@ -37,6 +37,7 @@ Discriminator: {discriminator}]
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
+  highlight: true
   content: |
     !example <@RainbowKey>
 - user_id: 1009018156494368798

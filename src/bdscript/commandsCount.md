@@ -17,7 +17,7 @@ I have $commandsCount commands!
   username: RainbowKey
   color: "#E67E22"
   content: |
-    !example Hello world!
+    !example
 - username: BDFD Support
   user_id: 1009018156494368798
   color: "#378afa"

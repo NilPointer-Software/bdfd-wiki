@@ -24,8 +24,8 @@ Entry Point ➤ - ➤ Add response embed (Title: `Meowing Title`, Description: `
   color: "#748bd4"
   bot: true
   command:
-    user_id: 713752533763489893
-    author: Fai-Kun
+    user_id: 803569638084313098
+    author: RainbowKey
     command: /example
     color: "#E67E22" 
   content: ""

@@ -78,17 +78,6 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 "/bdscript/jsonStringify.html" = "../guides/general/jsonFunctions.html#jsonstringify"
 "/bdscript/jsonUnset.html" = "../guides/general/jsonFunctions.html#jsonunset"
 
-"/bdscript/webhookAvatarURL.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookColor.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookContent.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookCreate.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookDelete.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookDescription.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookFooter.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookSend.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookTitle.html" = "../guides/general/webhooks.html"
-"/bdscript/webhookUsername.html" = "../guides/general/webhooks.html"
-
 "/bdscript/appendOptionSuggestion.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
 "/bdscript/autoCompleteOptionName.html" = "../guides/general/interactions/slashCommands/autoComplete.html"
 "/bdscript/autoCompleteOptionValue.html" = "../guides/general/interactions/slashCommands/autoComplete.html"

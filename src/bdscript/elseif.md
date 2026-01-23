@@ -1,7 +1,9 @@
 # $elseif
 Checks provided condition only if previous `$if[]` or `$elseif[]` conditions returned false. If the provided condition is true, the following block of code will be executed.
 
-> Only for **BDScript 2**!
+```admonish danger title="BDScript 2"
+Can only be used in **[BDScript 2](../guides/general/bds2/aboutBDScript2.md)**.
+```
 
 ## Syntax
 ```
@@ -42,7 +44,8 @@ $endif
   color: "#E67E22"
   content: |
     !example
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -53,7 +56,8 @@ $endif
   color: "#FF0000"
   content: |
     !example
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true

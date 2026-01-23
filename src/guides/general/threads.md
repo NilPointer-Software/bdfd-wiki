@@ -2,7 +2,9 @@
 
 In this section, you'll learn how to integrate threads in your bot.
 
-> Make sure your bot has `SEND_MESSAGES_IN_THREADS` permission.
+```admonish warning
+Make sure your bot has `SEND_MESSAGES_IN_THREADS` permission.
+```
 
 ## Content
 [**Functions Used**](#functions-used) > [**Archive Duration**](#archive-duration) > [**$startThread[]**](#startthread) > [**$editThread[]**](#editthread) > [**$threadAddMember[]**](#threadaddmember) > [**$threadRemoveMember[]**](#threadremovemember) > [**Simple Code**](#simple-code)
@@ -27,8 +29,10 @@ Creates a new thread in the provided channel.
 $startThread[Thread name;Channel ID;Message ID;(Archive duration;Return thread ID?)]
 ```
 
-> Required permissions that the bot must have for this function to work properly:
+```admonish info
+Required permissions that the bot must have for this function to work properly:
 - `createpublicthreads`
+```
 
 ### Parameters
 - `Thread name` `(Type: String || Flag: Required)`: The name of the newly created thread.
@@ -78,7 +82,9 @@ $editThread[Thread ID;(Thread name;Archived?;Archive duration;Locked?;Slowmode)]
 - `Locked?` `(Type: Bool || Flag: Optional)`: Whether to lock this thread or not. Note that archived threads can't be locked.
 - `Slowmode` `(Type: Integer || Flag: Optional)`: The slowmode of this channel, expressed in seconds.
 
->  Use `!unchanged` as an argument for the option to remain in its current state.
+```admonish tip
+Use `!unchanged` as an argument for the option to remain in its current state.
+```
 
 ## Example
 ```
@@ -191,5 +197,7 @@ $threadAddMember[$var[id];$authorID]
   content: |
     <i style="color: #378afa">BDFD Support</i> added <i style="color: #E67E22">RainbowKey</i> to the thread.
 ```
-\
-> If you want to learn more about threads, read [Discord's support article](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ).
+
+```admonish note
+If you want to learn more about threads, read [Discord's support article](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ).
+```

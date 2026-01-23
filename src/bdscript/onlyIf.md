@@ -18,8 +18,6 @@ $onlyIf[Condition;Error message]
 - `<=` - Less Than Or Equal To
 - `>=` - Greater Than Or Equal To
 
-> ⚠️ The signs `<`, `>`, `<=` and `>=` only work with numbers.
-
 ## Examples
 #### Equal (`==`)
 ```

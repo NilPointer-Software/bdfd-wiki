@@ -151,24 +151,6 @@ function changeDiscordTheme(colorId) {
 	updateJsonFile("discord-example-theme", colorId);
 }
 
-function foldersSetting() {
-	const manageFolderButton = document.getElementById("manageFolder");
-	let inv = JSON.parse(localStorage.getItem("json"));
-
-	if (inv["folders"] === false) {
-		// Enabled
-		var folderStatus = "Disable";
-		var boolFolderStatus = true;
-	} else {
-		// Disabled
-		var folderStatus = "Enable";
-		var boolFolderStatus = false;
-	}
-
-	manageFolderButton.textContent = folderStatus;
-	updateJsonFile("folders", boolFolderStatus);
-}
-
 function effectsSetting() {
 	const manageEffectButton = document.getElementById("manageEffect");
 	const snowflakes = document.querySelector(".snowflakes");
@@ -328,9 +310,9 @@ function updateCodeHG() {
 	const jsonHG = codeInput.value;
 
 	const charCount = codeInput.value.replace(/[\s\n]/g, "").length; // Ignore spaces and new rows
-	charCountElement.textContent = `${charCount} / 10000`;
+	charCountElement.textContent = `${charCount} / 25000`;
 
-	if (charCount >= 10000) {
+	if (charCount > 25000) {
 		charCountElement.style.color = "red";
 	} else {
 		charCountElement.style.color = "";
@@ -364,7 +346,6 @@ function loadSettings() {
 	const charCountElement = document.querySelector(".charCount");
 	const uiManageEffectButton = document.getElementById("manageEffect");
 	const uiSnowflakes = document.querySelector(".snowflakes");
-	const uiManageFolderButton = document.getElementById("manageFolder");
 
 	let data;
 
@@ -373,13 +354,12 @@ function loadSettings() {
 	} catch {}
 
 	data ??= {
-		folders: false,
 		"discord-example-theme": "dark",
 		"text-size": "60%",
-		language: "en",
+		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		effects: "hidden",
+		"effects": "hidden",
 		"code-hg": {
 			defaultTextHighlight: {
 				color: 4288341353,
@@ -449,7 +429,7 @@ function loadSettings() {
 		var inputcodedesign = JSON.stringify(codedesign);
 		const charJSONCount = inputcodedesign.length;
 
-		charCountElement.textContent = `${charJSONCount} / 10000`;
+		charCountElement.textContent = `${charJSONCount} / 25000`;
 		codeTextInput.value = inputcodedesign;
 	}
 
@@ -466,14 +446,6 @@ function loadSettings() {
 
 	uiSnowflakes.style.visibility = data["effects"];
 	uiManageEffectButton.textContent = effectStatus;
-
-	if (data["folders"] === false) {
-		var folderStatus = "Enable";
-	} else {
-		var folderStatus = "Disable";
-	}
-
-	uiManageFolderButton.textContent = folderStatus;
 
 	const button = document.querySelector(".resetToDefault");
 	button.addEventListener("mousedown", resetAllHover);

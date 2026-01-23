@@ -1,7 +1,9 @@
 # $isAdmin
 Returns whether the provided user has the administrator permission or not.
 
-> "true" means the user has the administrator permission, "false" means they don't.
+```admonish info
+`true` means the user has the administrator permission, `false` means they don't.
+```
 
 ## Syntax
 ```
@@ -30,4 +32,25 @@ Are you an admin?: `$isAdmin[$authorID]`
   verified: true
   content: |
     Are you an admin?: <code>true</code>
+- user_id: 863865579483037726
+  username: Kemi
+  color: "#000000"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Are you an admin?: <code>false</code>
+- user_id: 863865579483037726
+  username: Kemi
+  color: "#000000"
+  content: |
+    Sadly
+```
+
+```admonish question title="What is this?"
+How [`$authorID`](./authorID.md) works?
 ```

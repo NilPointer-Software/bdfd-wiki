@@ -50,7 +50,7 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    height: 0.9375rem;
+    height: 2rem;
     padding: 0 0.275rem;
     margin-top: 0.075em;
     border-radius: 4px;
@@ -269,3 +269,4 @@
 .discord-message [id$="-mark"] {
     line-height: 19px;
 }
+

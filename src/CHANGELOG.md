@@ -1,14 +1,17 @@
 # Changelog
 
 <style>
-  .editPage {
-      visibility: hidden;
-  }
+.editPage {
+  visibility: hidden;
+}
 </style>
+
+<link rel="stylesheet" href="./theme/css/changelog.css">
+
 # 2026
 
 ## January
-Added multiple Components V2 functions:
+Added Components V2 functions:
 - Added `$addTextDisplay[]`
 - Added `$addSeparator[]`
 - Added `$addContainer[]`
@@ -23,8 +26,49 @@ Added multiple Components V2 functions:
 - Added `$getMentionableSelectUserID[]`
 - Added `$getMentionableSelectUserIDs[]`
 - Added `$getMentionableSelectUserCount`
+- Added `$addUserSelect`
+- Added `$getUserSelectUserID`
+- Added `$getUserSelectUserIDs`
+- Added `$getUserSelectUserCount`
+- Added `$addRoleSelect`
+- Added `$getRoleSelectRoleID`
+- Added `$getRoleSelectRoleIDs`
+- Added `$getRoleSelectRoleCount`
 
 # 2025
+
+## December
+- Added "Sign out other sessions" button
+- Smoother animations in the app
+- Redesigned Premium Points shop 
+- A lot of app bug fixes
+- HTTP Timeout Limit: 5s > 35s
+- Fixed `$ceil[]`
+- Fixed `$floor[]`
+- Fixed `$getLeaderboardPosition[]`
+- AI Quota: 5000 > 10000
+- Log Quota: 1500 > 3000
+- Updated BDFD App icon for Android
+
+<details><summary>Previous Updates</summary>
+
+## November
+- Major improvements to hosting infrastructure 
+- Reworked bot status preview
+- HTTP Timeout Limit: 15s > 5s
+
+## October
+- Added setting to disable code highlighting in the command editor
+
+## September
+- Updated BDFD App icon for iOS 26
+- Reworked bot list
+
+## July
+- BDScript bug fixes
+
+## February
+- Fixed app crashing during premium points purchases
 
 ## January
 - Added `$afkChannelID`
@@ -51,6 +95,8 @@ Added multiple Components V2 functions:
 - Added `$threadMessageCount`
 - Added `$threadUserCount`
 - Added `$voiceUserLimit[]`
+
+</details>
 
 # 2024
    
@@ -757,10 +803,13 @@ Added multiple Components V2 functions:
 - Released new stable version
 </details>
 
+```admonish abstract title="Flowchart Changelog"
+If you want to see the BDScript changelog, [click here](./FLOWCHART_CHANGELOG.md).
+```
+
 ```admonish tip
 If you want to access this changelog externally, we have a [JSON version](https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json) of the changelog to which you can send a GET request and work with a JSON document further.
 ```
 
-```admonish abstract title="Flowchart Changelog"
-If you want to see the BDScript changelog, [click here](./FLOWCHART_CHANGELOG.md).
-```
+
+

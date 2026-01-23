@@ -43,5 +43,7 @@ $ai[What is 2+5?;You are a math teacher]
 
 *We spent 3 tokens because the bot response length is 15. 15/4=3 (no rounding)*
 
-> Use [`$aiQuota`](./aiQuota.md) to know how many tokens you have left.
-> 
+
+```admonish tip
+Use [`$aiQuota`](./aiQuota.md) to know how many tokens you have left.
+```

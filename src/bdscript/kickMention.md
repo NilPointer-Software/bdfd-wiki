@@ -1,7 +1,9 @@
 # $kickMention
-A simplified version of `$kick`. Kicks the mentioned user.
+A simplified version of [`$kick`](./kick.md). Kicks the mentioned user.
 
-> **Note:** The user running the command must have the "kick" permission.
+```admonish warning
+The user running the command must have the "kick" permission.
+```
 
 ## Syntax
 ```
@@ -19,7 +21,9 @@ Required permissions that the bot must have for this function to work properly:
 ```
 $nomention
 $kickMention[$noMentionMessage]
-✅ Kicked `$username[$mentioned[1]]#$discriminator[$mentioned[1]]`!
+✅ Kicked!
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123518897-0f882e00-d676-11eb-9c32-4ee9bddd787d.png)
+```admonish question title="What is this?"
+How [`$noMentionMessage`](./noMentionMessage.md) works?
+```

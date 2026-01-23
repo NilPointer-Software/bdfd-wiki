@@ -27,7 +27,11 @@ $image[$authorAvatar]
     image: https://user-images.githubusercontent.com/111157596/257052136-4b8d5715-b381-4d5f-8c46-8ae0be53c8d8.png
 ```
 
+```admonish question title="What is this?"
+How [`$image[]`](./image.md) works?
+```
+
 ```admonish tip title="Image size"
-You can use `?size=size` at the end of the banner URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096.
+You can use `?size=size` at the end of the avatar URL to increase/decrease the image size. Example sizes: 1024, 2048, 4096.
 (e.g. `$image[$authorAvatar?size=4096]`)
 ```

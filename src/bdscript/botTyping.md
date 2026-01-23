@@ -24,7 +24,7 @@ Using `$botTyping` will add a 2-3 second delay before your bot’s response, sim
 ```
 $nomention
 $botTyping
-Hello $username!
+Hello world!
 ```
 
 ``` discord yaml
@@ -49,5 +49,5 @@ Hello $username!
   bot: true
   verified: true
   content: |
-    Hello RainbowKey!
+    Hello world!
 ```

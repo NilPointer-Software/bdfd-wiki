@@ -19,7 +19,9 @@ Hour               | h                     | 1678141301
 Minute             | m                     | 100688478068
 Second             | s                     | 6041308684139
 
-> `%time%` returns how much time is left on the cooldown.
+```admonish tip
+`%time%` returns how much time is left on the cooldown.
+```
 
 ## Example
 ```
@@ -54,30 +56,26 @@ Hi!
   content: |
     Please wait 27 Seconds, then use that command again!
 ```
-\
 
-> If you are using **BDScript 2**, then all functions above `$cooldown[]` will always work.
-> 
-> ❌ Not correct:
-> ```
-> $nomention
-> $setUserVar[Money;$sum[$getUserVar[Money];5]]
-> $sendMessage[You worked successfully and earned 5 🪙]
-> $cooldown[30s;Please wait %time%, then use !work command again!]
-> ```
-> Your bot will always add 5🪙 to "Money" variable.
-> 
-> ✅ Correct:
-> ```
-> $nomention
-> $cooldown[30s;Please wait %time%, then use !work command again!]
-> $setUserVar[Money;$sum[$getUserVar[Money];5]]
-> $sendMessage[You worked successfully and earned 5 🪙]
-> ```
-> How [`$setUserVar[]`](./findUser.md) and [`$sendMessage[]`](./sendMessage.md) works?
+~~~admonish warning
+If you are using **BDScript 2**, then all functions above `$cooldown[]` will always work.
 
-### Recommendation
-You can also use these functions:
-- [`$getCooldown[]`](./getCooldown.md)
-- [`$serverCooldown[]`](./serverCooldown.md)
-- [`$globalCooldown[]`](./globalCooldown.md)
+❌ Not correct:
+```
+$nomention
+$setUserVar[Money;$sum[$getUserVar[Money];5]]
+$sendMessage[You worked successfully and earned 5 🪙]
+$cooldown[30s;Please wait %time%, then use !work command again!]
+```
+Your bot will always add 5🪙 to "Money" variable.
+
+✅ Correct:
+```
+$nomention
+$cooldown[30s;Please wait %time%, then use !work command again!]
+$setUserVar[Money;$sum[$getUserVar[Money];5]]
+$sendMessage[You worked successfully and earned 5 🪙]
+```
+How [`$setUserVar[]`](./findUser.md), [`$sum[]`](/sum.md) and [`$sendMessage[]`](./sendMessage.md) works?
+
+~~~

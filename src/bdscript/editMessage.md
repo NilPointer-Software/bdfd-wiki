@@ -3,7 +3,7 @@ Edits one of the bot's messages.
 
 ## Syntax
 ```
-$editMessage[Channel ID;Message ID;Content;(Title;Description;Color;Footer)]
+$editMessage[Channel ID;Message ID;Content;(Title;Description;Color hex;Footer)]
 ```
 > [How Do I Get The Channel / Message ID? (click-me)](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
 
@@ -13,7 +13,11 @@ $editMessage[Channel ID;Message ID;Content;(Title;Description;Color;Footer)]
 - `Content` `(Type: String || Flag: Emptiable)`: The new message contents.
 - `Title` `(Type: String || Flag: Vacantable)`: The new embed title.
 - `Description` `(Type: String || Flag: Vacantable)`: The new embed description.
-- `Color` `(Type: Color || Flag: Vacantable)`: The new embed color border hex.
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The new embed [color border hex](../tools/color.md). You can also use color integer number.
+```admonish tip title="Color Picker"
+You can use our ["Color" tool](../tools/color.md) to select the best color!
+```
+
 - `Footer` `(Type: String || Flag: Vacantable)`:  The new embed footer text.
 
 ## Example
@@ -30,3 +34,4 @@ $editMessage[853070225398693898;857040509549281292;This message has been edited!
 **After**
 
 ![example2](https://user-images.githubusercontent.com/69215413/125876457-cf834ed3-f57c-41f3-b862-20433ec21b83.png)
+
