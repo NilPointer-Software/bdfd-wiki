@@ -44,6 +44,10 @@ Checks whether the current or specified channel is a ticket or not.
 $isTicket[(Channel ID)]
 ```
 
+```admonish info
+This function uses the channel name to determine whether it is a ticket or not. If the channel name contains `ticket` word, the function will return `true`.
+```
+
 ### Parameters
 - `Channel ID` `(Type: Snowflake || Flag: Optional)`: The channel to check. _(Defaults to the current channel)_
 
