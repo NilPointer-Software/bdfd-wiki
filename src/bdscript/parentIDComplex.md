@@ -49,3 +49,7 @@ Returns empty if no parent (category) was found:
 ```
 
 ~~~
+
+```admonish question title="What is this?"
+How [`$mentionedChannels[]`](./mentionedChannels.md) works?
+```
