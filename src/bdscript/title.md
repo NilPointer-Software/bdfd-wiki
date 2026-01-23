@@ -39,3 +39,7 @@ $description[⬆️ That is a nice title.]
     title: This is a title!
     description: ⬆️ That is a nice title.
 ```
+
+```admonish question title="What is this?"
+How [`$description[]`](./description.md) works?
+```
