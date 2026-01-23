@@ -3,11 +3,11 @@ Deletes the provided channel(s).
 
 ## Syntax
 ```
-$deleteChannels[Channel ID;...]
+$deleteChannels[Channel IDs;...]
 ```
 
 ### Parameters
-- `Channel ID` `(Type: Snowflake || Flag: Required)`: The channels to delete. Use semicolons `;` as a separator to separate multiple channel IDs.
+- `Channel IDs` `(Type: Snowflake || Flag: Required)`: The channels to delete. Use semicolons `;` as a separator to separate multiple channel IDs.
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly:
