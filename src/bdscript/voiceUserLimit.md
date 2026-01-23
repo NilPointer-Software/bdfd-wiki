@@ -27,7 +27,7 @@ Voice User Limit: $voiceUserLimit[$message]
   bot: true
   verified: true
   content: |
-    0
+    Voice User Limit: 0
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -39,7 +39,7 @@ Voice User Limit: $voiceUserLimit[$message]
   bot: true
   verified: true
   content: |
-    99
+    Voice User Limit: 99
 ```
 
 ```admonish question title="What is this?"
