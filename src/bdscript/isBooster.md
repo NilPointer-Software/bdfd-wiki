@@ -15,7 +15,7 @@ $isBooster[(User ID;Guild ID)]
 ## Example
 ```
 $nomention
-Booster? $isBooster[$mentioned[1]]
+Booster?: $isBooster[$mentioned[1]]
 ```
 
 ``` discord yaml
@@ -30,7 +30,7 @@ Booster? $isBooster[$mentioned[1]]
   bot: true
   verified: true
   content: |
-    Booster? true
+    Booster?: true
 ```
 
 ```admonish tip
