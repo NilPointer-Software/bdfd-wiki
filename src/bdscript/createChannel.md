@@ -75,5 +75,7 @@ New channel created! ID: $channelID[main-chat]
     New channel created! ID: 566370477967147018
 ```
 
+> How [`$channelID[]`](./channelIDComplex.md) works?
+
 ~~~
 
