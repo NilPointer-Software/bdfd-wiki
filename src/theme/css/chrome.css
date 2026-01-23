@@ -176,6 +176,81 @@ html {
     text-decoration: none;
 }
 
+.last_file_edit {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #57606a;
+  margin: 20px 0;
+  padding: 15px;
+  border-top: 1px solid #eaecef;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+
+.last_file_edit .edit-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.last_file_edit .edit-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.last_file_edit .edit-details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.last_file_edit .edit-date-line {
+  margin-bottom: 3px;
+}
+
+.last_file_edit .edit-date {
+  color: #24292f;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.last_file_edit .edit-author-line {
+  color: #57606a;
+}
+
+.last_file_edit .edit-author {
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .last_file_edit {
+    margin: 15px 0;
+    padding: 12px;
+    font-size: 12px;
+  }
+  
+  .last_file_edit .edit-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .last_file_edit .edit-date {
+    font-size: 13px;
+  }
+  
+  .last_file_edit .edit-author {
+    font-size: 12px;
+  }
+}
+
 /* ===== Legacy Card Styles ===== */
 .commandCard {
     display: flex;
