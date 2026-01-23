@@ -16,11 +16,39 @@ $isTicket[(Channel ID)]
 ## Example
 ```
 $nomention
-$onlyIf[$isTicket[]==true;This command can only be used in a ticket!]
+$onlyIf[$isTicket[]==true;❌ This command can only be used in a ticket!]
 This is a ticket!
 ```
-![example](https://user-images.githubusercontent.com/113303649/212466758-7a11f906-f356-438d-8f64-0977c28b5a3c.png)\
-![example](https://user-images.githubusercontent.com/113303649/212466712-3e8d1768-af20-4ea3-9402-8668ae8d9ccc.png)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    ❌ This command can only be used in a ticket!
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This is a ticket!
+```
 
 ```admonish tip
 To create a ticket, use the [`$newTicket[]`](./newTicket.md) function.
