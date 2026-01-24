@@ -35,3 +35,7 @@ $textSplit[Hello-world-!;-]
 ```admonish question title="What is this?"
 How [`$splitText[]`](./splitText.md) works?
 ```
+
+```admonish info title="Read more"
+For more information, read the the [Text Splitting Guide](../guides/general/textSplitting.md).
+```
