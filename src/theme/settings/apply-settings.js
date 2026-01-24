@@ -10,10 +10,8 @@ function enhanceNavigationSimple() {
     const href = prevLink.href;
     if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/')) {
       const prevFileName = href.split('/').pop().replace('.html', '');
-      const prevContainer = document.createElement('p');
-      prevContainer.className = 'prev-page-info';
-      prevContainer.textContent = `← ${formatFunctionName(prevFileName, href)}`;
-      prevLink.parentNode.insertBefore(prevContainer, prevLink.nextSibling);
+      prevLink.textContent = formatFunctionName(prevFileName, href);
+      prevLink.insertAdjacentHTML('afterbegin', '<i class="fa fa-angle-left"></i> ');
     }
   }
   
@@ -21,10 +19,8 @@ function enhanceNavigationSimple() {
     const href = nextLink.href;
     if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/')) {
       const nextFileName = href.split('/').pop().replace('.html', '');
-      const nextContainer = document.createElement('p');
-      nextContainer.className = 'next-page-info';
-      nextContainer.textContent = `→ ${formatFunctionName(nextFileName, href)}`;
-      nextLink.parentNode.insertBefore(nextContainer, nextLink.nextSibling);
+      nextLink.textContent = formatFunctionName(nextFileName, href);
+      nextLink.insertAdjacentHTML('beforeend', ' <i class="fa fa-angle-right"></i>');
     }
   }
 }
