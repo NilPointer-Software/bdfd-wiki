@@ -32,5 +32,5 @@ $guildBanner[$guildID]
 ```
 
 ```admonish question title="What is this?"
-How [`$message`](./message.md) works?
+How [`$guildID`](./guildID.md) works?
 ```
