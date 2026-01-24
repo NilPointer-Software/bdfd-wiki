@@ -11,15 +11,11 @@ function createObjectInfo() {
             const container = document.createElement('div');
             container.className = 'objectInfo';
             h1.after(container);
-            
             container.append(h1, p);
-
-            if (tags) {
-                container.append(tags);
-            }
+            if (tags) container.append(tags);
         }
     }
-}}
+}
 
 // Example "Today at"
 function removeTimestamp() {
