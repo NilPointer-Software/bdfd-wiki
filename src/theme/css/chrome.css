@@ -43,6 +43,24 @@ html {
     margin: 0 auto;
 }
 
+.objectInfo {
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	background-color: var(--card-bg);
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	margin-top: 2rem;
+}
+
+.objectInfo h1 {
+	margin-top: -.1rem;
+	margin-bottom: -1.2rem;
+}
+
+.objectInfo p {
+	color: var(--text-secondary);
+	margin-bottom: 1rem;
+}
+
 /* ===== Content Card ===== */
 .content-card {
     background: var(--card-bg);
@@ -1610,6 +1628,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
