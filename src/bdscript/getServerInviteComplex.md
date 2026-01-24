@@ -27,3 +27,7 @@ $nomention
 $getServerInvite[$message]
 ```
 ![example](https://user-images.githubusercontent.com/111157596/232099171-ab1a4cea-836a-45e7-9a93-2012ac4012e5.png)
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
