@@ -208,6 +208,12 @@
     transform: scale(1.4);
 }
 
+.discord-button {
+    margin-top: -2px;
+    border-radius: 10px;
+    border: 1px solid hsl(0deg 0% 100% / 10%);
+}
+
 .discord-button.discord-button-secondary {
     color: #fff !important;
 }
@@ -269,4 +275,5 @@
 .discord-message [id$="-mark"] {
     line-height: 19px;
 }
+
 
