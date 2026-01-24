@@ -35,16 +35,30 @@ function formatFunctionName(fileName, href) {
   }
   
   if (href.includes('/guides/') || href.includes('/resources/')) {
+    const customTitles = {
+      'api': 'BDFD API',
+      '2fa': '2FA',
+      'faq': 'FAQ'
+    };
+    
+    if (customTitles[fileName.toLowerCase()]) {
+      return customTitles[fileName.toLowerCase()];
+    }
+    
     let result = fileName
       .replace(/([a-z])([A-Z])/g, '$1 $2')
+      .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
       .replace(/^./, str => str.toUpperCase())
       .trim();
     
     result = result.replace(/\bBdfd\b/gi, 'BDFD');
+    result = result.replace(/\b2fa\b/gi, '2FA');
     result = result.replace(/\bId\b/g, 'ID');
     result = result.replace(/\bAi\b/g, 'AI');
     result = result.replace(/\bI D\b/g, 'ID');
     result = result.replace(/\bA I\b/g, 'AI');
+    result = result.replace(/\bU I\b/g, 'UI');
+    result = result.replace(/\bF A Q\b/g, 'FAQ');
     
     return result;
   }
