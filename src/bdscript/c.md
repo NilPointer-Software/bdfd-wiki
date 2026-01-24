@@ -22,9 +22,9 @@ $c[This is a say command. You are reading a comment!]
   color: "#EE7908"
   content: |
     !example As you can see, the comment doesn't appear! Pretty cool; right?
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
