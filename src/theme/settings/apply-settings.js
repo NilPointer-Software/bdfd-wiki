@@ -1,17 +1,25 @@
 // Container
 function createObjectInfo() {
+    if (/introduction/i.test(location.pathname)) return;
+    
     if (/bdscript|callbacks/.test(location.pathname)) {
         const h1 = document.querySelector('main h1');
         const p = document.querySelector('main p:not(.breadcrumb p)');
+        const tags = document.querySelector('main .functionTags');
         
         if (h1 && p) {
             const container = document.createElement('div');
             container.className = 'objectInfo';
             h1.after(container);
+            
             container.append(h1, p);
+
+            if (tags) {
+                container.append(tags);
+            }
         }
     }
-}
+}}
 
 // Example "Today at"
 function removeTimestamp() {
