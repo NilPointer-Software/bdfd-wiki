@@ -41,3 +41,7 @@ ID: $guildID[$message]
   content: |
       ID: 1009018669982031912
 ```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
