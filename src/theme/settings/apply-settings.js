@@ -38,7 +38,7 @@ function formatFunctionName(fileName, href) {
     const customTitles = {
       'api': 'BDFD API',
       '2fa': '2FA',
-      'faq': 'FAQ'
+      'discordIDSystem': 'Discord ID System'
     };
     
     if (customTitles[fileName.toLowerCase()]) {
