@@ -36,13 +36,15 @@ function formatFunctionName(fileName, href) {
   
   if (href.includes('/guides/') || href.includes('/resources/')) {
     let result = fileName
-      .replace(/([A-Z])/g, ' $1')
+      .replace(/([a-z])([A-Z])/g, '$1 $2')
       .replace(/^./, str => str.toUpperCase())
       .trim();
     
     result = result.replace(/\bBdfd\b/gi, 'BDFD');
-    result = result.replace(/\bId\b/gi, 'ID');
-    result = result.replace(/\bAi\b/gi, 'AI');
+    result = result.replace(/\bId\b/g, 'ID');
+    result = result.replace(/\bAi\b/g, 'AI');
+    result = result.replace(/\bI D\b/g, 'ID');
+    result = result.replace(/\bA I\b/g, 'AI');
     
     return result;
   }
