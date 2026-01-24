@@ -43,4 +43,8 @@ $textSplit[hello_world_!;_]
     <discord-quote>-1</discord-quote>
 ```
 
+```admonish question title="What is this?"
+How [`$textSplit[]`](./textSplit.md) works?
+```
+
 > For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
