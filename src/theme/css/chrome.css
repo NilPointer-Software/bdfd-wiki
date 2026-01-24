@@ -808,13 +808,11 @@ a > .hljs {
 	right: var(--page-padding);
 }
 
-@media only screen and (max-width: 1080px) {
-	.nav-wide-wrapper {
-		display: none;
-	}
-	.nav-wrapper {
-		display: block;
-	}
+.nav-wide-wrapper {
+	display: none;
+}
+.nav-wrapper {
+	display: block;
 }
 
 @media only screen and (max-width: 1380px) {
@@ -1608,6 +1606,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
