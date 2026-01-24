@@ -1,3 +1,18 @@
+// Container
+function createObjectInfo() {
+    if (/bdscript|callbacks/.test(location.pathname)) {
+        const h1 = document.querySelector('main h1');
+        const p = document.querySelector('main p:not(.breadcrumb p)');
+        
+        if (h1 && p) {
+            const container = document.createElement('div');
+            container.className = 'objectInfo';
+            h1.after(container);
+            container.append(h1, p);
+        }
+    }
+}
+
 // Example "Today at"
 function removeTimestamp() {
   const timestamps = document.querySelectorAll('discord-system-message[type] .discord-message-timestamp');
@@ -463,5 +478,6 @@ function applySettings() {
 document.addEventListener('DOMContentLoaded', function() {
   createAndUpdateLastEdit();
   enhanceNavigationSimple();
+  createObjectInfo();
   applySettings();
 });
