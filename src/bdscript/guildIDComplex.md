@@ -12,6 +12,32 @@ $guildID[Server name]
 ## Example 
 ```
 $nomention
-$noMentionMessage ID is : $guildID[$noMentionMessage]
+ID: $guildID[$message]
 ```
-![example](https://user-images.githubusercontent.com/70468667/219971506-204ba3e1-0909-448c-bf3f-63361ffdc62e.jpg)
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example Bot Designer For Discord Official Server
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      ID: 566363823137882154
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example B. Support
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+      ID: 1009018669982031912
+```
