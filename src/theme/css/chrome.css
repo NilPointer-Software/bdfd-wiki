@@ -898,6 +898,10 @@ summary.admonition-title {
 	margin-bottom: -1.75rem !important;
 }
 
+.admonition-anchor-link {
+	display: none !important;
+}
+
 /* Summary */
 
 summary {
@@ -1606,6 +1610,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
