@@ -141,12 +141,17 @@ async function createAndUpdateLastEdit() {
       const container = document.createElement('div');
       container.className = 'last_file_edit';
       
+      const editUrl = `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${pagePath}`;
+      
       container.innerHTML = `
         <div class="edit-info">
           <img src="${avatarUrl}" alt="${authorName}" class="edit-avatar">
           <div class="edit-details">
             <div class="edit-date-line">
               <span class="edit-date">Last edited at ${formattedDate}</span>
+              <a href="${editUrl}" class="editPage">
+                <i class="fa fa-edit" id="editPageIcon"></i>
+              </a>
             </div>
             <div class="edit-author-line">
               <span class="edit-author">${authorName}</span>
