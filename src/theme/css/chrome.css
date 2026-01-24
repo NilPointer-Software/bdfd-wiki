@@ -176,6 +176,48 @@ html {
     text-decoration: none;
 }
 
+/* ===== Next/Prev page ===== */
+.prev-page-info,
+.next-page-info {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.prev-page-info {
+  text-align: left;
+}
+
+.next-page-info {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .prev-page-info,
+  .next-page-info {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+}
+
+.nav-wrapper {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+
+.mobile-nav-chapters {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.mobile-nav-chapters .fa {
+  font-size: 14px;
+}
+
 /* ===== Last edited ===== */
 
 .last_file_edit {
