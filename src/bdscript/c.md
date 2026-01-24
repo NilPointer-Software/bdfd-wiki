@@ -17,7 +17,7 @@ $c[This is a say command. You are reading a comment!]
 ```
 
 ``` discord yaml
- user_id: 803569638084313098
+- user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
   content: |
