@@ -27,4 +27,6 @@ I'm currently in $serverCount servers!
     I'm currently in 203 servers!
 ```
 
-> Can be used in bot status
+```admonish note
+Can be used in bot status.
+```
