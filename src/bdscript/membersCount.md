@@ -27,7 +27,10 @@ This server has $membersCount members!
     This server has 5281 members!
 ```
 
-## Note
+```admonish example
+
 You can use `$membersCount` in the bot status to display how many users are in all servers of the bot.
 
-![example2](https://user-images.githubusercontent.com/70468667/219971617-d3cd270f-792a-415b-b9de-2651fc9d7f08.jpg)
+![example](https://user-images.githubusercontent.com/70468667/219971617-d3cd270f-792a-415b-b9de-2651fc9d7f08.jpg)
+
+```
