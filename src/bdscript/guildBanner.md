@@ -30,3 +30,7 @@ $guildBanner[$guildID]
   attachments: 
   - url: https://cdn.discordapp.com/banners/566363823137882154/a8cd6ed3d5c665e1443e5fe8fa2ab8c8.jpg
 ```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
