@@ -28,4 +28,8 @@ $textSplit[hello%world%!;%]
     <discord-quote>3</discord-quote>
 ```
 
+```admonish question title="What is this?"
+How [`$textSplit[]`](./textSplit.md) works?
+```
+
 > For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
