@@ -224,7 +224,7 @@ html {
 }
 
 .last_file_edit .edit-author-line {
-	margin-top: -2.25rem;
+	margin-top: -1.5rem;
 	color: var(--text-secondary);
 }
 
@@ -1608,6 +1608,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
