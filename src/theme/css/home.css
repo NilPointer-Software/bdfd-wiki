@@ -9,7 +9,8 @@
 }
 
 .editPage,
-.breadcrumb {
+.breadcrumb,
+.last_file_edit {
 	visibility: hidden;
 }
 
