@@ -85,6 +85,7 @@
         - [$addContainer](./bdscript/addContainer.md)
         - [$addField](./bdscript/addField.md)
         - [$addMediaGallery](./bdscript/addMediaGallery.md)
+        - [$addMediaGalleryItem](./bdscript/addMediaGalleryItem.md)
         - [$addSection](./bdscript/addSection.md)
         - [$addThumbnail](./bdscript/addThumbnail.md)
         - [$addTimestamp](./bdscript/addTimestamp.md)
