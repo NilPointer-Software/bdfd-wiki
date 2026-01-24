@@ -219,13 +219,13 @@ html {
 }
 
 .last_file_edit .edit-date {
-  color: #24292f;
+  color: var(--text-secondary);
   font-weight: 600;
   font-size: 14px;
 }
 
 .last_file_edit .edit-author-line {
-  color: #57606a;
+  color: var(--text-secondary);
 }
 
 .last_file_edit .edit-author {
