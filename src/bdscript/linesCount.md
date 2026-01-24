@@ -16,8 +16,8 @@ $linesCount[$message]
 ```
 
 ``` discord yaml
-- username: Ivaylo
-  user_id: 1251981607468798089
+- user_id: 803569638084313098
+  username: RainbowKey
   color: "#E67E22"
   content: |
     !example Hello World!
