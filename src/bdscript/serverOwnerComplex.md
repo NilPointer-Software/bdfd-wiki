@@ -31,8 +31,7 @@ This server is owned by <@$serverOwner[$guildID]>!
   bot: true
   verified: true
   content: |
-    This server is owned by <@RainbowKey>!
-  highlight: true
+    This server is owned by <@Kuba>!
 ```
 
 ```admonish question title="What is this?"
