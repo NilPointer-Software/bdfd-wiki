@@ -1,22 +1,3 @@
-// Params
-function formatArgFlags() {
-    document.querySelectorAll('ul').forEach(ul => {
-        ul.querySelectorAll('code.hljs').forEach(code => {
-            const html = code.innerHTML;
-            
-            const updated = html.replace(
-                /\(Type:\s*([^) ]+)\s+Flag:\s*([^) ]+)\)/gi,
-                '<span id="type">$1</span> <span id="flag">$2</span>'
-            );
-            
-            if (updated !== html) {
-                code.innerHTML = updated;
-                console.log('Updated:', code);
-            }
-        });
-    });
-}
-
 // Example "Today at"
 function removeTimestamp() {
   const timestamps = document.querySelectorAll('discord-system-message[type] .discord-message-timestamp');
@@ -482,6 +463,5 @@ function applySettings() {
 document.addEventListener('DOMContentLoaded', function() {
   createAndUpdateLastEdit();
   enhanceNavigationSimple();
-  formatArgFlags();
   applySettings();
 });
