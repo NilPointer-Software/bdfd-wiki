@@ -13,14 +13,24 @@ $threadAddMember[Thread ID;User ID]
 ## Example
 ```
 $nomention
-$var[thread;$startThread[Cool Thread;$channelID;;60;yes]]
-$threadAddMember[$var[thread];$authorID]
+$threadAddMember[1021054508975009793;$authorID]
 ```
-![example1](https://user-images.githubusercontent.com/69215413/130260166-768cb59f-2377-49e3-9588-6425028484d9.png)\
-![example2](https://user-images.githubusercontent.com/69215413/130260148-0c6b54ec-96ea-4f94-9aee-8a583667d80d.png)
 
-## Related Resources
-- [Threads Guide](../guides/threads.md)
-- [$editThread](./editThread.md)
-- [$startThread](./startThread.md)
-- [$threadRemoveMember](./threadRemoveMember.md)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+```
+- In the thread:
+
+``` discord yaml
+- type: join
+  content: |
+    <i style="color: #378afa">BDFD Support</i> added <i style="color: #E67E22">RainbowKey</i> to the thread.
+```
+
+```admonish info title="Read more"
+For more information, read the the [Threads Guide](../guides/general/threads.md).
+```
