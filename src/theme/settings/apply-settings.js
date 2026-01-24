@@ -11,8 +11,10 @@ function createObjectInfo() {
             const container = document.createElement('div');
             container.className = 'objectInfo';
             h1.after(container);
-            container.append(h1, p);
+            
+            container.append(h1);
             if (tags) container.append(tags);
+            container.append(p);
         }
     }
 }
