@@ -17,7 +17,20 @@ $mentionedChannels[Mention number;(Return current?)]
 ## Example
 ```
 $nomention
-$mentionedChannels[1]
+Channel: $mentionedChannels[1]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/126917253-33db5d96-fdb3-43a3-b614-1ac061701fb1.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#main-chat>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Channel: 566370477967147018
+```
