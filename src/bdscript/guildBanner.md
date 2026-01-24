@@ -26,7 +26,7 @@ $guildBanner[$guildID]
   color: "#378afa"
   bot: true
   verified: true
-  content: " "
+  content: <none>
   attachments: 
   - url: https://cdn.discordapp.com/banners/566363823137882154/a8cd6ed3d5c665e1443e5fe8fa2ab8c8.jpg
 ```
