@@ -44,6 +44,10 @@ code {
 
 h1 {
 	margin-top: 2%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
 }
 
 h2,
@@ -206,3 +210,4 @@ blockquote {
 .tooltipped .tooltiptext {
 	visibility: visible;
 }
+
