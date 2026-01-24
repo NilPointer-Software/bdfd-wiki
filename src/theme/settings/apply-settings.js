@@ -1,6 +1,21 @@
 async function createAndUpdateLastEdit() {
   try {
     const currentPath = window.location.pathname;
+    
+    const allowedPaths = ['premium', 'bdscript', 'guides', 'resources', 'flowchart', 'callbacks'];
+    
+    let shouldAddBlock = false;
+    for (const path of allowedPaths) {
+      if (currentPath.includes(`/${path}/`) || 
+          currentPath.endsWith(`/${path}`) || 
+          currentPath.endsWith(`/${path}.html`)) {
+        shouldAddBlock = true;
+        break;
+      }
+    }
+    
+    if (!shouldAddBlock) return;
+    
     let pagePath = '';
 
     if (currentPath.includes('/nightly/')) {
@@ -73,7 +88,12 @@ async function createAndUpdateLastEdit() {
         </div>
       `;
       
-      document.body.appendChild(container);
+      const mainElement = document.querySelector('main');
+      if (mainElement) {
+        mainElement.appendChild(container);
+      } else {
+        document.body.appendChild(container);
+      }
       
       const DiscordThemes = {
         light: {
