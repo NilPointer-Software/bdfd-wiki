@@ -9,7 +9,9 @@ $serverOwner[Guild ID]
 ### Parameters 
 - `Guild ID` `(Type: Snowflake || Flag: Required)`: The server to get the owner ID for.
 
-> The bot must be present in the server in order to get the server owner ID.
+```admonish warning
+The bot must be present in the server in order to get the server owner ID.
+```
 
 ## Example
 ```
