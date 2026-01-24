@@ -64,6 +64,12 @@
     margin-left: -0.25rem;
 }
 
+.discord-embed-wrapper {
+    border-top: 1.5px solid hsl(0deg 0% 50% / 10%) !important;
+    border-bottom: 1.5px solid hsl(0deg 0% 50% / 10%) !important;
+    border-right: 1.5px solid hsl(0deg 0% 50% / 10%) !important;
+}
+
 .discord-embed .discord-embed-author {
     -webkit-box-align: center;
     align-items: center;
@@ -275,6 +281,7 @@
 .discord-message [id$="-mark"] {
     line-height: 19px;
 }
+
 
 
 
