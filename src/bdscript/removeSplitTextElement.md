@@ -31,3 +31,7 @@ $removeSplitTextElement[3]
   content: |
     <discord-quote>hello-world</discord-quote>
 ```
+
+```admonish info title="Read more"
+For more information, read the the [Text Splitting Guide](../guides/general/textSplitting.md).
+```
