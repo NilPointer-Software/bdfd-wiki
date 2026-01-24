@@ -12,13 +12,10 @@ $boostCount[Guild ID]
 ## Example
 ```
 $nomention
-This server currently has $boostCount[$message] boost(s).
+Boosts: $boostCount[$message]
 ```
 
 ```discord yaml
-- type: boost
-  content: |
-    <discord-bold>RainbowKey</discord-bold> just boosted the server!
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -30,5 +27,9 @@ This server currently has $boostCount[$message] boost(s).
   bot: true
   verified: true
   content: |
-    This server currently has 38 boost(s).
+    Boosts: 38
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
 ```
