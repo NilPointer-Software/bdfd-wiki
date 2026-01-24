@@ -1,7 +1,7 @@
 # $customEmoji
 Returns a custom emoji on the current server. 
 
-```admonish danger title="Important"
+```admonish warning title="Important"
 We recommend emoji IDs instead of `$customEmoji[]` **for public** bots.
 ```
 
