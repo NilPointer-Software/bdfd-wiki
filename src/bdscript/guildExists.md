@@ -24,7 +24,7 @@ $guildExists[$message]
   username: RainbowKey
   color: "#E67E22"
   content: |
-    !example
+    !example 566363823137882154
 - user_id: 1009018156494368798
   username: BDFD Support
   color: "#378afa"
@@ -32,6 +32,18 @@ $guildExists[$message]
   verified: true
   content: |
     true
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example hdiroxkxjjwos6729394
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    false
 ```
 
 ```admonish question title="What is this?"
