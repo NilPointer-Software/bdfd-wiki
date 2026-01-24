@@ -8,7 +8,7 @@ function enhanceNavigationSimple() {
   
   if (prevLink) {
     const href = prevLink.href;
-    if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/')) {
+    if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/') || href.includes('/flowchart/')) {
       const prevFileName = href.split('/').pop().replace('.html', '');
       prevLink.textContent = formatFunctionName(prevFileName, href);
       prevLink.insertAdjacentHTML('afterbegin', '<i class="fa fa-angle-left"></i> ');
@@ -17,7 +17,7 @@ function enhanceNavigationSimple() {
   
   if (nextLink) {
     const href = nextLink.href;
-    if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/')) {
+    if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/') || href.includes('/flowchart/')) {
       const nextFileName = href.split('/').pop().replace('.html', '');
       nextLink.textContent = formatFunctionName(nextFileName, href);
       nextLink.insertAdjacentHTML('beforeend', ' <i class="fa fa-angle-right"></i>');
@@ -30,10 +30,14 @@ function formatFunctionName(fileName, href) {
     return 'Introduction';
   }
   
-  if (href.includes('/guides/') || href.includes('/resources/')) {
+  if (href.includes('/guides/') || href.includes('/resources/') || href.includes('/flowchart/')) {
     const customTitles = {
       'api': 'BDFD API',
       '2fa': '2FA',
+      'aboutSelectMenu': 'Select Menus',
+      'aboutModals': 'Modals',
+      'aboutButtons': 'Buttons',
+      'aboutSlashCommands': 'Slash Commands',
       'discordIDSystem': 'Discord ID System'
     };
     
@@ -41,11 +45,21 @@ function formatFunctionName(fileName, href) {
       return customTitles[fileName.toLowerCase()];
     }
     
-    let result = fileName
-      .replace(/([a-z])([A-Z])/g, '$1 $2')
-      .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
-      .replace(/^./, str => str.toUpperCase())
-      .trim();
+    let result = fileName;
+    
+    if (href.includes('/flowchart/')) {
+      result = result
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        .toLowerCase()
+        .replace(/^./, str => str.toUpperCase());
+    } else {
+      result = result
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
+        .replace(/^./, str => str.toUpperCase());
+    }
+    
+    result = result.trim();
     
     result = result.replace(/\bBdfd\b/gi, 'BDFD');
     result = result.replace(/\b2fa\b/gi, '2FA');
