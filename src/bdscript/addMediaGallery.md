@@ -18,7 +18,7 @@ $addMediaGallery[Gallery name;(Container name)]
 ```
 $nomention
 $addMediaGallery[pictures]
-$addMediaGalleryItem[$authorAvatar;avatar;false;pictures]
+$addMediaGalleryItem[$authorAvatar;;;pictures]
 ```
 
 ```admonish question title="What is this?"
