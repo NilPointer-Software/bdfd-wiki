@@ -18,7 +18,6 @@ Added Components V2 functions:
 - Added `$addSection[]`
 - Added `$addThumbnail[]`
 - Added `$addMediaGallery[]`
-- Added `$addMediaGallery[]`
 - Added `$addMediaGalleryItem[]`
 - Added `$addActionRow[]`
 - Added `$addButtonCV2[]`
