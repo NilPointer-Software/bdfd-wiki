@@ -32,3 +32,7 @@ $editSplitText[2;bdfd]
   content: |
     <discord-quote>Hello-bdfd-!</discord-quote>
 ```
+
+```admonish question title="What is this?"
+How [`$textSplit[]`](./textSplit.md) and [`$joinSplitText[]`](./joinSplitText.md) works?
+```
