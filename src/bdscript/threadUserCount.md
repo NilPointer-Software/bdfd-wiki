@@ -26,3 +26,7 @@ This thread has $threadUserCount users!
   content: |
     This thread has 29 users!
 ```
+
+```admonish info title="Read more"
+For more information, read the the [Threads Guide](../guides/general/threads.md).
+```
