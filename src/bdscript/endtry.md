@@ -18,7 +18,6 @@ $try
 $endtry
 ```
 
-- With `$endtry`:
 ```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
@@ -33,6 +32,8 @@ $endtry
   content: |
     7
 ```
+
+~~~admonish example
 
 - Without `$endtry`:
 ```discord yaml
@@ -49,6 +50,8 @@ $endtry
   content: |
     <code>$try</code> not closed with <code>$endtry</code> or invalid use of <code>$sum</code>
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$calculate[]`](./calculate.md), [`$message`](./message.md) and [`$try`](./try.md) works?
