@@ -21,6 +21,20 @@ This function requires the following privileged intents:
 ## Example 
 ```
 $nomention 
-there are $membersCount[online] online users in this server
+There are $membersCount[online] online users in this server!
 ```
-![example](https://user-images.githubusercontent.com/70468667/219971665-9185a0b7-52e8-44eb-8d43-e5e2455bcbe3.jpg)
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    There are 67 online users in this server!
+```
