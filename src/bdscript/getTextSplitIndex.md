@@ -47,4 +47,6 @@ $textSplit[hello_world_!;_]
 How [`$textSplit[]`](./textSplit.md) works?
 ```
 
-> For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
+```admonish info title="Read more"
+For more information, read the the [Text Splitting Guide](../guides/general/textSplitting.md).
+```
