@@ -6,26 +6,32 @@ function enhanceNavigationSimple() {
   const prevLink = navWrapper.querySelector('a.previous');
   const nextLink = navWrapper.querySelector('a.next');
   
-  if (prevLink && prevLink.href.includes('/bdscript/')) {
+  if (prevLink && (prevLink.href.includes('/bdscript/') || prevLink.href.includes('/callbacks/'))) {
     const prevFileName = prevLink.href.split('/').pop().replace('.html', '');
     const prevContainer = document.createElement('p');
     prevContainer.className = 'prev-page-info';
-    prevContainer.style.cssText = 'font-size:12px;color:#666;margin-top:5px;';
-    prevContainer.textContent = `← ${formatFunctionName(prevFileName)}`;
+    prevContainer.textContent = `← ${formatFunctionName(prevFileName, prevLink.href.includes('/callbacks/'))}`;
     prevLink.parentNode.insertBefore(prevContainer, prevLink.nextSibling);
   }
   
-  if (nextLink && nextLink.href.includes('/bdscript/')) {
+  if (nextLink && (nextLink.href.includes('/bdscript/') || nextLink.href.includes('/callbacks/'))) {
     const nextFileName = nextLink.href.split('/').pop().replace('.html', '');
     const nextContainer = document.createElement('p');
     nextContainer.className = 'next-page-info';
-    nextContainer.style.cssText = 'font-size:12px;color:#666;margin-top:5px;text-align:right;';
-    nextContainer.textContent = `→ ${formatFunctionName(nextFileName)}`;
+    nextContainer.textContent = `→ ${formatFunctionName(nextFileName, nextLink.href.includes('/callbacks/'))}`;
     nextLink.parentNode.insertBefore(nextContainer, nextLink.nextSibling);
   }
 }
 
-function formatFunctionName(fileName) {
+function formatFunctionName(fileName, isCallback = false) {
+  if (fileName.toLowerCase() === 'introduction') {
+    return 'Introduction';
+  }
+  
+  if (isCallback) {
+    return fileName.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
+  }
+  
   let result = '$' + fileName;
   result = result.replace(/Complex$/i, '[]');
   return result;
