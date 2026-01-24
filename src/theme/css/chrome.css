@@ -344,7 +344,8 @@ html {
 .functionTags {
 	user-select: none;
 	-webkit-user-select: none;
-	margin-top: -1rem;
+	margin-top: 1.5rem;
+	margin-bottom: -1rem;
 }
 
 .functionTags span {
@@ -354,10 +355,9 @@ html {
 	border: solid;
 	border-width: 1px;
 	border-radius: 10px;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-weight: bold;
 	padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-	transition: 0.3s;
 	border-color: var(--link-color);
 	color: var(--link-color);
 }
@@ -388,11 +388,6 @@ html {
 }
 .functionTags #DangerousTag:before {
 	content: "❗ ";
-}
-
-.functionTags span:hover {
-	border-radius: 12.5px;
-	transition: 0.3s;
 }
 
 /* Playground */
@@ -1628,6 +1623,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
