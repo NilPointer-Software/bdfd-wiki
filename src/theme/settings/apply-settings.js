@@ -1,3 +1,36 @@
+function enhanceNavigationSimple() {
+  const navWrapper = document.querySelector('.nav-wrapper');
+  if (!navWrapper) return;
+  
+  const prevLink = navWrapper.querySelector('a.previous');
+  const nextLink = navWrapper.querySelector('a.next');
+  
+  if (prevLink && prevLink.href.includes('/bdscript/')) {
+    const prevFileName = prevLink.href.split('/').pop().replace('.html', '');
+    const prevContainer = document.createElement('p');
+    prevContainer.className = 'prev-page-info';
+    prevContainer.style.cssText = 'font-size:12px;color:#666;margin-top:5px;';
+    prevContainer.textContent = `← ${formatFunctionName(prevFileName)}`;
+    prevLink.parentNode.insertBefore(prevContainer, prevLink.nextSibling);
+  }
+  
+  if (nextLink && nextLink.href.includes('/bdscript/')) {
+    const nextFileName = nextLink.href.split('/').pop().replace('.html', '');
+    const nextContainer = document.createElement('p');
+    nextContainer.className = 'next-page-info';
+    nextContainer.style.cssText = 'font-size:12px;color:#666;margin-top:5px;text-align:right;';
+    nextContainer.textContent = `→ ${formatFunctionName(nextFileName)}`;
+    nextLink.parentNode.insertBefore(nextContainer, nextLink.nextSibling);
+  }
+}
+
+function formatFunctionName(fileName) {
+  return fileName
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/^./, str => str.toUpperCase())
+    .trim();
+}
+
 async function createAndUpdateLastEdit() {
   try {
     const currentPath = window.location.pathname;
@@ -366,5 +399,6 @@ function applySettings() {
 
 document.addEventListener('DOMContentLoaded', function() {
   createAndUpdateLastEdit();
+  enhanceNavigationSimple();
   applySettings();
 });
