@@ -23,7 +23,6 @@ This server is owned by <@$serverOwner>!
   color: "#378afa"
   bot: true
   verified: true
-  highlight: true
   content: |
-    This server is owned by <@RainbowKey>!
+    This server is owned by <@Kuba>!
 ```
