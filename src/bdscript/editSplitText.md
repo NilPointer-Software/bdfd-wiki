@@ -1,5 +1,5 @@
 # $editSplitText
-Edits a splitted text element using its index.
+This function replaces the element at the specified index with a new element instead of the previous one.
 
 ## Syntax
 ```
@@ -13,23 +13,22 @@ $editSplitText[Index;Value]
 ## Example
 ```
 $nomention
-
-$textSplit[$message; ]
-
-$var[Index;$splitText[$sub[$getTextSplitLength;1]]]
-$var[Value;$splitText[$getTextSplitLength]]
-
-$removeSplitTextElement[$getTextSplitLength]
-$removeSplitTextElement[$getTextSplitLength]
-
-$var[Text;$joinSplitText[ ]]
-
-$textSplit[$var[Text];]
-$editSplitText[$var[Index];$var[Value]]
-
-Original Text: $var[Text]
-New Text: $joinSplitText[]
+$textSplit[Hello-world-!;-]
+$editSplitText[2;bdfd]
+> $joinSplitText[-]
 ```
-![example](https://user-images.githubusercontent.com/95774950/202880969-9ce5041a-cc6c-4bd2-a275-76e9d80be5b5.png)
 
-> For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>Hello-bdfd-!</discord-quote>
+```
