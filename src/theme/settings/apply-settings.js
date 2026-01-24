@@ -1,3 +1,4 @@
+// Next function
 function enhanceNavigationSimple() {
   const navWrapper = document.querySelector('.nav-wrapper');
   if (!navWrapper) return;
@@ -25,12 +26,12 @@ function enhanceNavigationSimple() {
 }
 
 function formatFunctionName(fileName) {
-  return fileName
-    .replace(/([A-Z])/g, ' $1')
-    .replace(/^./, str => str.toUpperCase())
-    .trim();
+  let result = '$' + fileName;
+  result = result.replace(/Complex$/i, '[]');
+  return result;
 }
 
+// Last edited
 async function createAndUpdateLastEdit() {
   try {
     const currentPath = window.location.pathname;
