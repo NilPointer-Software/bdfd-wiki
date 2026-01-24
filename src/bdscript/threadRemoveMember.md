@@ -11,14 +11,21 @@ $threadRemoveMember[Thread ID;User ID]
 - `User ID` `(Type: Snowflake || Flag: Required)`: The user to remove from the thread.
 
 ## Example
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
 ```
-$nomention
-$threadRemoveMember[878305123707785218;$authorID]
-```
-![example](https://user-images.githubusercontent.com/69215413/130261147-1d44af9b-a951-4286-88a3-1908702d3fe0.png)
+- In the thread:
 
-## Related Resources
-- [Threads Guide](../guides/threads.md)
-- [$editThread](./editThread.md)
-- [$startThread](./startThread.md)
-- [$threadAddMember](./threadAddMember.md)
+``` discord yaml
+- type: leave
+  content: |
+    <i style="color: #378afa">BDFD Support</i> removed <i style="color: #E67E22">RainbowKey</i> from the thread.
+```
+
+```admonish info title="Read more"
+For more information, read the the [Threads Guide](../guides/general/threads.md).
+```
