@@ -778,29 +778,44 @@ a > .hljs {
 }
 
 .mobile-nav-chapters {
+	font-size: 1.5rem;
 	text-align: center;
 	text-decoration: none;
-	color: var(--link-color) !important;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-radius: var(--border-radius);
+	color: var(--text-secondary) !important;
+	transition: 0.4s;
 }
 
 .mobile-nav-chapters i {
-	transition: 0.2s;
+	color: var(--link-color);
+	background-color: var(--card-bg);
+	padding: 1rem;
+	width: 4rem;
+	border-radius: var(--border-radius);
+	font-size: 2rem;
+	transition: 0.4s;
 }
 
 .mobile-nav-chapters:hover i {
-	color: #ded;
-	transition: 0.2s;
+	color: #ded !important;
+	border-radius: 20px;
+	transition: 0.4s;
+}
+
+.mobile-nav-chapters:hover {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	transition: 0.4s;
 }
 
 .previous {
 	float: left;
 	padding-right: 1.5rem;
-	margin-top: -.2rem;
 }
 
 .next {
 	padding-left: 1.5rem;
-	margin-top: -.2rem;
 	float: right;
 	right: var(--page-padding);
 }
@@ -839,8 +854,7 @@ a > .hljs {
 @media (max-width: 768px) {
   .prev-page-info,
   .next-page-info {
-    font-size: 11px;
-    margin-top: 3px;
+    font-size: 1rem;
   }
 }
 
@@ -1606,6 +1620,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
