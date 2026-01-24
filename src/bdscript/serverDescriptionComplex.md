@@ -29,3 +29,7 @@ Server description: $serverDescription[$message]
   content: |
     Server description: Welcome to the BDFD Support server! Enjoy stay with us!
 ```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```
