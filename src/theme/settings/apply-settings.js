@@ -1,3 +1,11 @@
+// Example "Today at"
+function removeTimestamp() {
+  const timestamps = document.querySelectorAll('discord-system-message[type] .discord-message-timestamp');
+  timestamps.forEach(timestamp => {
+    timestamp.remove();
+  });
+}
+
 // Next function
 function enhanceNavigationSimple() {
   const navWrapper = document.querySelector('.nav-wrapper');
@@ -312,6 +320,8 @@ function setDiscordTheme(colorId) {
           const formattedTime = `Today at ${formattedHour}:${formattedMinute}`;
           timestamp.textContent = formattedTime;
         });
+
+        removeTimestamp();
       }
     }
   };
