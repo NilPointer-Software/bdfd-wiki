@@ -36,3 +36,7 @@ $editSplitText[2;bdfd]
 ```admonish question title="What is this?"
 How [`$textSplit[]`](./textSplit.md) and [`$joinSplitText[]`](./joinSplitText.md) works?
 ```
+
+```admonish info title="Read more"
+For more information, read the the [Text Splitting Guide](../guides/general/textSplitting.md).
+```
