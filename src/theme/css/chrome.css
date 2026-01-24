@@ -224,6 +224,7 @@ html {
 }
 
 .last_file_edit .edit-author-line {
+	margin-top: -2.25rem;
 	color: var(--text-secondary);
 }
 
@@ -712,8 +713,7 @@ a > .hljs {
 	width: fit-content;
 	padding: 1rem;
 	text-decoration: none;
-	margin-right: 1rem;
-	margin-top: -1rem;
+	margin-top: -2rem;
 	text-align: center;
 	display: block;
 	margin-left: auto;
@@ -1608,6 +1608,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
