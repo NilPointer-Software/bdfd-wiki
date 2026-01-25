@@ -64,16 +64,8 @@ function functionHighlight(func, scheme, match) {
 	return `<span class="function" style="color: #${color}; ${style}">${match}</span>`;
 }
 
-function styling(type, scheme) {
-	if (scheme[type]) {
-		let color = (scheme[type].color & 0xffffff)
-			.toString(16)
-			.padStart(6, "0")
-			.toUpperCase();
-		let style = fontStyle(scheme[type].style);
-		return `<span style="color: #${color}; ${style}">$&</span>`;
-	}
-	return `<span>$&</span>`;
+function createStyledSpan(color, style, content) {
+	return `<span style="color: #${color}; ${style}">${content}</span>`;
 }
 
 function fontStyle(style) {
@@ -95,6 +87,23 @@ function escapeHtml(unsafe) {
 		.replace(/</g, "&lt;")
 		.replace(/>/g, "&gt;")
 		.replace(/"/g, "&quot;");
+}
+
+function getColorFromScheme(type, scheme) {
+	if (scheme[type]) {
+		return (scheme[type].color & 0xffffff)
+			.toString(16)
+			.padStart(6, "0")
+			.toUpperCase();
+	}
+	return "FFFFFF";
+}
+
+function getStyleFromScheme(type, scheme) {
+	if (scheme[type]) {
+		return fontStyle(scheme[type].style);
+	}
+	return fontStyle(0);
 }
 
 function highlight(scheme) {
@@ -119,27 +128,8 @@ function highlight(scheme) {
 		const codeContent = document.createElement('div');
 		codeContent.className = 'code-content';
 		
-		let code = escapeHtml(codeBlock.textContent);
-		
-		let keys = Object.keys(scheme.functionsHighlights || {}).sort(
-			(a, b) => b.length - a.length
-		);
-		
-		keys.forEach((key) => {
-			code = code.replace(
-				new RegExp(`\\${key}\\b`, "g"),
-				(match) => functionHighlight(key, scheme, match)
-			);
-		});
-
-		code = code
-			.replace(/\;/g, styling("semicolonHighlight", scheme))
-			.replace(/\[/g, styling("bracketHighlight", scheme))
-			.replace(/\]/g, styling("bracketHighlight", scheme))
-			.replace(/\$(?!catch|else|elseif|endif|endtry|error|if|try|nomention\b)[a-zA-Z]+\b/g, styling("fallbackHighlight", scheme))
-			.replace(/[^\n]*/g, styling("defaultTextHighlight", scheme));
-		
-		const lines = code.split('\n');
+		let originalCode = codeBlock.textContent;
+		const lines = originalCode.split('\n');
 		
 		let lineNumbersHTML = '';
 		let codeLinesHTML = '';
@@ -147,7 +137,66 @@ function highlight(scheme) {
 		for (let i = 0; i < lines.length; i++) {
 			const lineNumber = i + 1;
 			lineNumbersHTML += `<div class="line-number" data-line-number="${lineNumber}">${lineNumber}</div>`;
-			codeLinesHTML += `<div class="code-line">${lines[i] || '&nbsp;'}</div>`;
+			
+			let line = escapeHtml(lines[i]);
+			
+			// Process specific functions first
+			let keys = Object.keys(scheme.functionsHighlights || {}).sort(
+				(a, b) => b.length - a.length
+			);
+			
+			keys.forEach((key) => {
+				const regex = new RegExp(`\\${key}\\b`, "g");
+				line = line.replace(regex, (match) => {
+					return functionHighlight(key, scheme, match);
+				});
+			});
+
+			// Process other patterns
+			// Semicolons
+			line = line.replace(/;/g, (match) => {
+				return createStyledSpan(
+					getColorFromScheme("semicolonHighlight", scheme),
+					getStyleFromScheme("semicolonHighlight", scheme),
+					match
+				);
+			});
+			
+			// Brackets
+			line = line.replace(/\[/g, (match) => {
+				return createStyledSpan(
+					getColorFromScheme("bracketHighlight", scheme),
+					getStyleFromScheme("bracketHighlight", scheme),
+					match
+				);
+			});
+			
+			line = line.replace(/\]/g, (match) => {
+				return createStyledSpan(
+					getColorFromScheme("bracketHighlight", scheme),
+					getStyleFromScheme("bracketHighlight", scheme),
+					match
+				);
+			});
+			
+			// Remaining functions not processed earlier
+			line = line.replace(/\$(?!catch|else|elseif|endif|endtry|error|if|try|nomention\b)[a-zA-Z]+\b/g, (match) => {
+				return createStyledSpan(
+					getColorFromScheme("fallbackHighlight", scheme),
+					getStyleFromScheme("fallbackHighlight", scheme),
+					match
+				);
+			});
+			
+			// Apply default text highlight to the entire line
+			// If line is empty, keep it empty
+			if (line.trim() === '' && line.length === 0) {
+				codeLinesHTML += `<div class="code-line">&nbsp;</div>`;
+			} else {
+				const defaultColor = getColorFromScheme("defaultTextHighlight", scheme);
+				const defaultStyle = getStyleFromScheme("defaultTextHighlight", scheme);
+				codeLinesHTML += `<div class="code-line" style="color: #${defaultColor}; ${defaultStyle}">${line}</div>`;
+			}
 		}
 		
 		lineNumbers.innerHTML = lineNumbersHTML;
