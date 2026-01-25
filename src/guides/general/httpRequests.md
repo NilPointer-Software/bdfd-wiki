@@ -14,31 +14,31 @@ $httpGet[url]
 **POST**
 - The data sent to the server with POST is stored in the request body of the HTTP request.
 ```
-$httpPost[url;(body)]
+$httpPost[URL;(Body)]
 ```
 
 **PUT**
 - The PUT method replaces all current representations of the target resource with the request payload.
 ```
-$httpPut[url;(body)]
+$httpPut[URL;(Body)]
 ```
 
 **DELETE**
 - The DELETE method deletes the specified resource.
 ```
-$httpDelete[url;(body)]
+$httpDelete[URL;(Body)]
 ```
 
 **PATCH**
 - The PATCH method applies partial modifications to a resource.
 ```
-$httpPatch[url;(body)]
+$httpPatch[URL;(Body)]
 ```
 
 ## HTTP Headers
 - HTTP Headers is used to add more information. Most of the time, this is used to send an API Key to the API.
 ```
-$httpAddHeader[header name;header value]
+$httpAddHeader[Header name;Header value]
 ```
 
 ## HTTP Statuses

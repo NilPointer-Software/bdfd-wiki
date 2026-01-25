@@ -43,3 +43,7 @@ You are now cool!
   content: |
     You are now cool!
 ```
+
+```admonish info title="Read more"
+For more information, read the the [Variables Guide](../guides/introduction/variables.md).
+```

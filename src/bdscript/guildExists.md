@@ -1,7 +1,9 @@
 # $guildExists
 Checks if the provided guild/server exists.
 
-> Returns `true` if the server exists. Returns `false` if the server doesn't exist or the bot isn't present in the provided server.
+```admonish info
+Returns `true` if the server exists. Returns `false` if the server doesn't exist or the bot isn't present in the provided server.
+```
 
 ## Syntax
 ```
@@ -14,7 +16,7 @@ $guildExists[Guild ID]
 ## Example
 ```
 $nomention
-$guildExists[$message[1]]
+$guildExists[$message]
 ```
 
 ``` discord yaml
@@ -29,4 +31,8 @@ $guildExists[$message[1]]
   verified: true
   content: |
     true
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
 ```

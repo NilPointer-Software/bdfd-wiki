@@ -30,9 +30,8 @@ Channel ID: $channelID[$message]
     Channel ID: 566370477967147018
 ```
 
-```admonish note
+~~~admonish note
 It supports category names:
-```
 
 ``` discord yaml
 - user_id: 803569638084313098
@@ -48,6 +47,8 @@ It supports category names:
   content: |
     Channel ID: 1009019011545178132
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$message`](./message.md) works?

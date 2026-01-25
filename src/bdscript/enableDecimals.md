@@ -13,8 +13,9 @@ You can use [`$round[]`](./round.md), [`$ceil[]`](./ceil.md), [`$floor[]`](./flo
 ### Parameters
 - `Enable?` `(Type: Bool || Flag: Required)`: Whether to enable decimals in math functions or not, `yes` means it's enabled and `no` means it's disabled.
 
-### Explaination
-By default, decimals in math functions (e.g `$sum`, `$sub`, `$multi`, etc) are disabled. The only use for this function is to enable decimals, if you want decimals enabled for math functions in that command.
+```admonish example title="Explaination"
+By default, decimals in math or random functions (e.g [`$sum[]`](./sum.md), [`$multi[]`](./multi.md), [`$random`](./random.md), etc) are disabled. The only use for this function is to enable decimals, if you want decimals enabled for math functions in that command.
+```
 
 ## Example
 ```
@@ -38,6 +39,8 @@ Result: $random[1;5]
     Result: 3.381
 ```
 
+~~~admonish example
+
 - Without `$enableDecimals[]` (or result with `$enableDecimals[no]`):
 
 ``` discord yaml
@@ -54,6 +57,8 @@ Result: $random[1;5]
   content: |
     Result: 3
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$random[]`](./randomComplex.md) works?

@@ -7,12 +7,29 @@ $rolePosition[Role ID]
 ```
 
 ### Parameters
-- `Role ID` `(Type: Snowflake || Flag: Required)`: The role for which to get its position.
+- `Role ID` `(Type: Snowflake || Flag: Required)`: The role for which to get it's position.
 
 ## Example
 ```
 $nomention
-$description[<@&$findRole[$message]>'s Position: $rolePosition[$findRole[$message]]]
+Role Position: $rolePosition[$message]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/126246527-d3ca814d-8c7d-4acf-bb1e-ec7286c741f0.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example 568155071997542410
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Role Position: 6
+```
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

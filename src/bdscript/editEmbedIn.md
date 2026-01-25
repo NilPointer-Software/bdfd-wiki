@@ -3,7 +3,7 @@ Edits the bot's message after the given time, as an embed.
 
 ## Syntax
 ```
-$editEmbedIn[Time;(Title;Description;Footer;Color)]
+$editEmbedIn[Time;(Title;Description;Footer;Color hex)]
 ```
 
 > 📝 Optional fields can be left empty. At least one embed field (`Title`, `Description`, or `Footer`) needs to be inputted.
@@ -13,7 +13,7 @@ $editEmbedIn[Time;(Title;Description;Footer;Color)]
 - `Title` `(Type: String || Flag: Vacantable)`: The new embed title. Optional.
 - `Description` `(Type: String || Flag: Vacantable)`: The new embed description. Optional.
 - `Footer` `(Type: String || Flag: Vacantable)`: The new embed footer. Optional.
-- `Color` `(Type: Color || Flag: Vacantable)`: The embed border color, must be a valid [color hex](https://htmlcolorcodes.com/color-picker) or color integer number. Use `0` for the default color. Optional.
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The embed border color, must be a valid color hex. You can also use color integer number.
 
 ## Example
 ```
@@ -32,3 +32,4 @@ $editEmbedIn[5s;Epic Title;This is the edited description!;;#E46AFC]
 **After**
 
 ![example2](https://user-images.githubusercontent.com/69215413/123012680-b7f57400-d390-11eb-866c-6f0aa0fdf9f7.png)
+

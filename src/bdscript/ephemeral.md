@@ -33,6 +33,8 @@ Hello!
     Hello!
 ```
 
+~~~admonish example
+
 - Without `$ephemeral`:
 
 ``` discord yaml
@@ -49,3 +51,5 @@ Hello!
   content: |
     Hello!
 ```
+
+~~~

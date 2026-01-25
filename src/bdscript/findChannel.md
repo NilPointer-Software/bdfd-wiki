@@ -1,7 +1,9 @@
 # $findChannel
 Finds a channel's ID from the given channel name, ID, or mention.
 
-> This function can only find channels of **the current** server.
+```admonish warning
+This function can only find channels of **the current** server.
+```
 
 ## Syntax
 ```

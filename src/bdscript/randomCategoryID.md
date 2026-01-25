@@ -31,5 +31,5 @@ Random Category: $channelName[$randomCategoryID[]]
 ```
 
 ```admonish question title="What is this?"
-How [`$channelName`](./channelName.md) works?
+How [`$channelName[]`](./channelName.md) works?
 ```

@@ -7,7 +7,7 @@ $colorRole[Color hex]
 ```
 
 ### Parameters
-- `Color hex` `(Type: Color || Flag: Required)`: The [color hex](https://htmlcolorcodes.com/color-picker) to change the mentioned role color to.
+- `Color hex` `(Type: Color || Flag: Required)`: The color hex to change the mentioned role color to. You can also use color integer number.
 
 ## Example
 ```
@@ -34,3 +34,8 @@ $colorRole[$noMentionMessage]
 ```
 \
 ![example](https://user-images.githubusercontent.com/111157596/257056832-3040aa89-91ea-428e-b362-3ed075cf620e.png)
+
+```admonish question title="What is this?"
+How [`$noMentionMessage`](./noMentionMessage.md) and [`$mentionedRoles[]`](./mentionedRoles.md) works?
+```
+

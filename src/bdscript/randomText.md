@@ -27,7 +27,7 @@ $randomText[Hello;Hi;Hey]!
   bot: true
   verified: true
   content: |
-    Random Text: Hello!
+    Hello!
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -39,7 +39,7 @@ $randomText[Hello;Hi;Hey]!
   bot: true
   verified: true
   content: |
-    Random Text: Hey!
+    Hey!
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -51,7 +51,7 @@ $randomText[Hello;Hi;Hey]!
   bot: true
   verified: true
   content: |
-    Random Text: Hello!
+    Hello!
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -63,5 +63,5 @@ $randomText[Hello;Hi;Hey]!
   bot: true
   verified: true
   content: |
-    Random Text: Hi!
+    Hi!
 ```

@@ -32,3 +32,4 @@ Color: #$getRoleColor[$highestRole[$authorID]]
 ```admonish question title="What is this?"
 How [`$authorID`](./authorID.md) and [`$highestRole[]`](./highestRoleComplex.md) works?
 ```
+

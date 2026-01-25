@@ -24,5 +24,5 @@ Commmand name: $commandName
   bot: true
   verified: true
   content: |
-    Commmand name: example
+    Commmand name: !example
 ```

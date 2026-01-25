@@ -23,12 +23,17 @@ $joinSplitText[+]
   color: "#E67E22"
   content: |
     !example hello-world-!
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
   content: |
     hello+world+!
+```
+
+```admonish question title="What is this?"
+How [`$textSplit[]`](./textSplit.md) and [`$message`](./message.md) works?
 ```
 
 > For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).

@@ -7,8 +7,8 @@ Blocks certain servers from using the command.
 }
 
 .discord-messages > .discord-message:first-of-type:before {
-    color: var(--color1);
-    background: var(--color3);
+    color: var(--link-color);
+    background: var(--card-bg);
     border-radius: 10px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -60,7 +60,8 @@ Pong! $ping ms
   color: "#E67E22"
   content: |
     !example
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -86,5 +87,5 @@ Pong! $ping ms
 ```
 
 ```admonish question title="What is this?"
-How [`$ping`](./ping.md) works?
+How [`$ping`](./ping.md) and [`$guildID`](./guildID.md) works?
 ```

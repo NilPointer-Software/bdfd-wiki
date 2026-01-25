@@ -28,9 +28,11 @@ Hello               $displayName!
       Hello RainbowKey!
 ```
 
+~~~admonish example
+
 - Without `$disableInnerSpaceRemoval`:
 
-``` discord yaml
+```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -43,7 +45,9 @@ Hello               $displayName!
   verified: true
   content: |
       HelloㅤㅤㅤㅤRainbowKey!
-  ```
+```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$displayName`](./displayName.md) works?

@@ -5,7 +5,10 @@ Hides this command from being shown on the BDL command list (if the bot is on [*
 ```
 $botListHide
 ```
-> This function does not hide the command for [`$botCommands[]`](./botCommands.md).
+
+```admonish warning
+This function does not hide the command for [`$botCommands[]`](./botCommands.md).
+```
 
 ## Example
 1. Create two commands and set the trigger `!ping` for one command and `!secret` for the other.
@@ -26,7 +29,32 @@ $botListHide
    ```
 3. Execute commands
 
-   ![example](https://user-images.githubusercontent.com/113303649/210347402-7b36f8f4-fc8f-4804-9310-1ed2de0392dc.png)
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !secret
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This is a secret command! 🤫
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !ping
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Pong!
+```
 
 ### With `$botListHide`
  ![example](https://user-images.githubusercontent.com/113303649/210349185-677b00f3-df10-4443-a9b5-25ec9c2c2e29.png)

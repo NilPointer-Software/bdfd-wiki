@@ -17,7 +17,7 @@ $message
   username: Nicky
   color: "#EE7908"
   content: |
-    !say Hello everyone 👋
+    !example Hello everyone 👋
 - user_id: 566613317972394004
   username: Wiki Bot
   color: "#748BD4"

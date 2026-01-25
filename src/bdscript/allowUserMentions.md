@@ -13,7 +13,7 @@ $allowUserMentions[User IDs;...]
 ```
 $nomention
 $allowUserMentions[]
-Hi <@696368083517964288>! I mentioned you, but you didn't get pinged.
+Hi <@390515191819010058>! I mentioned you, but you didn't get pinged.
 ```
 
 ``` discord yaml
@@ -28,5 +28,10 @@ Hi <@696368083517964288>! I mentioned you, but you didn't get pinged.
   bot: true
   verified: true
   content: |
-    Hi <@Spen>! I mentioned you, but you didn't get pinged.
+    Hi <@Kuba>! I mentioned you, but you didn't get pinged.
+- user_id: 390515191819010058
+  username: kubastick
+  color: "#FF0000"
+  content: |
+    Wow really! No notification 😎
 ```

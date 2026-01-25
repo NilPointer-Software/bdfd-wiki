@@ -15,7 +15,7 @@ $authorOfMessage[Channel ID;Message ID]
 ## Example
 ```
 $nomention
-Author of message: $username[$authorOfMessage[$message[1];$message[2]]]
+Author of message: $displayName[$authorOfMessage[$message[1];$message[2]]]
 ```
 
 ``` discord yaml
@@ -39,5 +39,5 @@ Author of message: $username[$authorOfMessage[$message[1];$message[2]]]
 ```
 
 ```admonish question title="What is this?"
-How [`$username`](./username.md) and [`$message[]`](./messageComplex.md) works?
+How [`$displayName[]`](./displayNameComplex.md) and [`$message[]`](./messageComplex.md) works?
 ```

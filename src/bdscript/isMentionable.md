@@ -1,7 +1,9 @@
 # $isMentionable
 Returns whether a role is mentionable by everyone or not.
 
-> "true" means the role is mentionable, "false" means it isn't.
+```admonish info
+"true" means the role is mentionable, "false" means it isn't.
+```
 
 ![example](https://user-images.githubusercontent.com/69215413/123517230-e5327280-d66d-11eb-8337-35dac5f276e7.png)
 
@@ -16,7 +18,11 @@ $isMentionable[Role ID]
 ## Example
 ```
 $nomention
-$isMentionable[$findRole[$message]]
+$isMentionable[$message]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/126853667-5263fa7a-3e79-4691-b33d-509f507670c5.png)
+
+```admonish question title="What is this?"
+How [`$message`](./message.md) works?
+```

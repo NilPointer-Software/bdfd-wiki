@@ -1,7 +1,7 @@
 # $isBoolean
 Returns whether the provided text is a boolean or not.
 
-```admonish note
+```admonish info
 `true` means the text is a boolean, `false` means it isn’t.
 ```
 

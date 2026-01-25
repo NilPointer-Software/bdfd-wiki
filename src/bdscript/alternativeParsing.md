@@ -17,7 +17,10 @@ Changes the way how triggers are read.
 ```
 $alternativeParsing
 ```
-> This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. You should not use `$alternativeParsing` when making your bot.
+
+```admonish fail
+This function was added at the end of 2019 as an experiment, and it can be unstable and break your commands. You should not use `$alternativeParsing` when making your bot.
+```
 
 ## Example
 1. Create two commands and set the trigger `hello` for one command and `helloworld` for the other.
@@ -35,69 +38,68 @@ $alternativeParsing
     $description["helloworld"]
     ```
 3. Execute commands.
-    ``` discord yaml
-    - user_id: 729343563401265193
-      username: Nicky
-      color: "#EE7908"
-      content: |
-        hello
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    hello
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: <none>
+  embed:
+    description: "\"hello\""
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    helloworld
     
-    - user_id: 566613317972394004
-      username: Wiki Bot
-      color: "#748BD4"
-      bot: true
-      verified: true
-      content: <none>
-      embed:
-        description: "\"hello\""
-    
-    - user_id: 729343563401265193
-      username: Nicky
-      color: "#EE7908"
-      content: |
-        helloworld
-    
-    - user_id: 566613317972394004
-      username: Wiki Bot
-      color: "#748BD4"
-      bot: true
-      verified: true
-      content: <none>
-      embed:
-        description: "\"helloworld\""
-    ```
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: <none>
+  embed:
+    description: "\"helloworld\""
+```
 
-    - Without `$alternativeParsing`:
+~~~admonish example
 
-    ``` discord yaml
-    - user_id: 729343563401265193
-      username: Nicky
-      color: "#EE7908"
-      content: |
-        hello
-    
-    - user_id: 566613317972394004
-      username: Wiki Bot
-      color: "#748BD4"
-      bot: true
-      verified: true
-      content: <none>
-      embed:
-        description: "\"hello\""
-    
-    - user_id: 729343563401265193
-      username: Nicky
-      color: "#EE7908"
-      content: |
-        helloworld
-    
-    - user_id: 566613317972394004
-      username: Wiki Bot
-      color: "#748BD4"
-      bot: true
-      verified: true
-      content: <none>
-      embeds:
-      - description: "\"helloworld\""
-      - description: "\"hello\""
-    ```
+- Without `$alternativeParsing`:
+
+``` discord yaml
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    hello
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: <none>
+  embed:
+    description: "\"hello\""
+- user_id: 729343563401265193
+  username: Nicky
+  color: "#EE7908"
+  content: |
+    helloworld
+- user_id: 566613317972394004
+  username: Wiki Bot
+  color: "#748BD4"
+  bot: true
+  verified: true
+  content: <none>
+  embeds:
+    - description: "\"helloworld\""
+    - description: "\"hello\""
+```
+
+~~~

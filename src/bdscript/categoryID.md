@@ -20,14 +20,14 @@ Category ID: $categoryID[$message]
 ```
 
 ``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
-    !categoryID Information
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
   bot: true
   verified: true
   content: |

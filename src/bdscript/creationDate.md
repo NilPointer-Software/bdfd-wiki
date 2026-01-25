@@ -6,7 +6,9 @@ Returns the creation date of any valid Discord Snowflake ID.
 $creationDate[ID;(Format)]
 ```
 
-> Uses GoLang date format
+```admonish info
+Uses GoLang date format.
+```
 
 ### Parameters
 - `ID` `(Type: Snowflake || Flag: Required)`: The ID from which to get the creation date. The ID can be a `User ID`, a `Role ID`, a `Message ID`, a `Emoji ID`, or a `Guild ID`.
@@ -15,13 +17,12 @@ $creationDate[ID;(Format)]
 > Click [me](../resources/timeFormat.md) to check all supported time format values.
 
 ## Example
-- Default format
-   ```
-   $nomention
-   $creationDate[$authorID]
-   ```
+```
+$nomention
+$creationDate[$authorID]
+```
    
-``` discord yaml
+```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -35,15 +36,17 @@ $creationDate[ID;(Format)]
   content: |
     2021-01-26
 ```
-\
 
-- Custom format
-   ```
-   $nomention
-   $creationDate[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
-   ```
+~~~admonish example
 
-``` discord yaml
+Example with custom format:
+
+```
+$nomention
+$creationDate[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
+```
+
+```discord yaml
 - user_id: 803569638084313098
   username: RainbowKey
   color: "#E67E22"
@@ -57,6 +60,8 @@ $creationDate[ID;(Format)]
   content: |
     January 26, 2021 at 10:18 AM (UTC +00:00)
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$authorID`](./authorID.md) works?

@@ -11,7 +11,9 @@ $clear[Amount;(User ID;Remove pinned messages?)]
 - `User ID` `(Type: Snowflake || Flag: Vacantable)`: If a user ID is provided, the bot will only delete messages from that user.
 - `Remove pinned messages?` `(Type: Bool || Flag: Optional)`: Decides whether to delete pinned messages or not. The default is `yes`.
 
-> Discord doesn't allow deleting messages in bulk which are over 2 weeks old.
+```admonish warning
+Discord doesn't allow deleting messages in bulk which are over 2 weeks old.
+```
 
 ### Permissions
 Required permissions that the bot must have for this function to work properly:

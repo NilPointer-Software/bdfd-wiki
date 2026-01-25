@@ -26,3 +26,7 @@ Random Guild: $serverName[$randomGuildID]
     Random Guild: Bot Designer for Discord Official Server
 ```
 
+```admonish question title="What is this?"
+How [`$serverName[]`](./serverName.md) works?
+```
+

@@ -17,3 +17,7 @@ $image[$userAvatar[$botID]]
 ```
 
 ![example](https://user-images.githubusercontent.com/69215413/123516701-76ecb080-d66b-11eb-9c65-fb7bbb5710b4.png)
+
+```admonish question title="What is this?"
+How [`$userAvatar[]`](./userAvatar.md) and [`$botID`](./botID.md) works?
+```

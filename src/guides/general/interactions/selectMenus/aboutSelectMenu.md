@@ -16,9 +16,9 @@ $newSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
 
 ## Adding an Option
 ```
-$addSelectMenuOption[Menu option ID;Label;Value;Description;(Default;Emoji;Message ID)]
+$addSelectMenuOption[Menu ID;Label;Value;Description;(Default;Emoji;Message ID)]
 ```
-- `Menu option ID` - it has to be the same as the ID used in `$newSelectMenu[]`.
+- `Menu ID` - it has to be the same as the ID used in `$newSelectMenu[]`.
 - `Label` - the name of the option.
 - `Value` - it's the data that gets passed to `$onInteraction[]` callback. **The value has to be unique in the select menu!**
 - `Description` - it shows up under the `label`.
@@ -89,7 +89,7 @@ $editSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
 ## $editSelectMenuOption
 ### Usage
 ```
-$editSelectMenuOption[Menu option ID;Label;Value;Description;(Default;Emoji;Message ID)]
+$editSelectMenuOption[Menu ID;Label;Value;Description;(Default;Emoji;Message ID)]
 ```
 
 > As you can notice, the arguments are exactly the same.

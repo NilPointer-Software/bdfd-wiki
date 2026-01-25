@@ -23,3 +23,7 @@ $description[This is the thumbnail ↘️]
 $thumbnail[$authorAvatar]
 ```
 ![example](https://user-images.githubusercontent.com/69215413/126551913-b3746b47-615a-48a3-9729-d07529e33f97.png)
+
+```admonish question title="What is this?"
+How [`$description[]`](./description.md) and [`$authorAvatar`](./authorAvatar.md) works?
+```

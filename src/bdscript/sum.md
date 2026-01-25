@@ -3,11 +3,11 @@ Returns the addition of the provided numbers.
 
 ## Syntax
 ```
-$sum[Number;...]
+$sum[Numbers;...]
 ```
 
 ### Parameters
-- `Number` `(Type: Integer, Float || Flag: Required)`: The numbers to add. Separate multiple values using `;`.
+- `Numbers` `(Type: Integer, Float || Flag: Required)`: The numbers to add. Separate multiple values using `;`.
 
 ## Example
 ```

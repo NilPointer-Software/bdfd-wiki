@@ -9,7 +9,24 @@ $randomChannelID
 ## Example
 ```
 $nomention
-Here's A Random Channel: <#$randomChannelID>
+Random Channel: $channelName[$randomChannelID]
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/123358259-2aa15380-d539-11eb-995e-71d92bd9e67c.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Random Channel: 😎main-chat
+```
+
+```admonish question title="What is this?"
+How [`$channelName[]`](./channelName.md) works?
+```

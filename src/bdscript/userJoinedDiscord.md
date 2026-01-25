@@ -3,27 +3,34 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
-> As of November 2022, this function has been deprecated in favor of [`$creationDate[]`](./creationDate.md).
-
-> Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of any valid Discord Snowflake ID.
+```admonish warning
+As of November 2022, this function has been deprecated in favor of [`$creationDate[]`](./creationDate.md).
+```
 
 Returns the account creation date of a given user.
 
 ## Syntax
 ```
-$userJoinedDiscord[User ID;(Format)]
+$userJoinedDiscord[ID;(Format)]
+```
+
+```admonish info
+Uses GoLang date format.
+```
+
+```admonish tip
+Besides user IDs, `$userJoinedDiscord[]` can also return the creation date of any valid Discord Snowflake ID.
 ```
 
 ### Parameters
-- `User ID` `(Type: Snowflake || Flag: Required)`: The user whose account creation date will be returned. 
+- `ID` `(Type: Snowflake || Flag: Required)`: The user/channel/role/guild/message id whose creation date will be returned. 
 - `Format` `(Type: String || Flag: Optional)`: Customize the default [time format](../resources/timeFormat.md) output.
 
 ## Example
-- Default format
-   ```
-   $nomention
-   $userJoinedDiscord[$authorID]
-   ```
+```
+$nomention
+$userJoinedDiscord[$authorID]
+```
    
 ``` discord yaml
 - user_id: 803569638084313098
@@ -39,12 +46,15 @@ $userJoinedDiscord[User ID;(Format)]
   content: |
     2021-01-26
 ```
-  
-- Custom format
-   ```
-   $nomention
-   $userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
-   ```
+
+~~~admonish example
+
+Example with custom format:
+
+```
+$nomention
+$userJoinedDiscord[$authorID;January 2, 2006 at 3:04 PM (MST -07:00)]
+```
 
 ``` discord yaml
 - user_id: 803569638084313098
@@ -60,6 +70,8 @@ $userJoinedDiscord[User ID;(Format)]
   content: |
     January 26, 2021 at 10:18 AM (UTC +00:00)
 ```
+
+~~~
 
 ```admonish question title="What is this?"
 How [`$authorID`](./authorID.md) works?

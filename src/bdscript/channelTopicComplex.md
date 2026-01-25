@@ -12,23 +12,41 @@ $channelTopic[Channel ID]
 ## Example
 ```
 $nomention
-<#$noMentionMessage>'s channel topic is: $channelTopic[$noMentionMessage]
+Channel Topic: $channelTopic[$mentionedChannels[1]]
 ```
-``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
-    !example 860870690323300359
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+    !example <#media>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
-    <#demo>'s channel topic is: Demos, examples and more!
+    Channel Topic: Post cat pictures here!
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example <#secret>
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Channel Topic:
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    ⬆️ Returns empty value if no description.
 ```
 
 ```admonish question title="What is this?"
-How [`$noMentionMessage`](./noMentionMessage.md) works?
+How [`$mentionedChannels[]`](./mentionedChannels.md) works?
 ```

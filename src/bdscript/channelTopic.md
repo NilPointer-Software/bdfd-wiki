@@ -9,23 +9,20 @@ $channelTopic
 ## Example
 ```
 $nomention
-<#$channelID>'s channel topic is: $channelTopic
+Topic of this channel is: $channelTopic
 ```
+
 ``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
     !example
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: |
-    <#testing>'s channel topic is: A testing channel!
-```
-
-```admonish question title="What is this?"
-How [`$channelID`](./channelID.md) works?
+    Topic of this channel is: A testing channel!
 ```
