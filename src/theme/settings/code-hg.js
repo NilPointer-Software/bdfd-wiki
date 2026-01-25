@@ -100,7 +100,6 @@ function escapeHtml(unsafe) {
 function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
     
-	// Check if the domain contains "javascript"
 	if (window.location.href.includes("javascript")) {
 		return;
 	}
@@ -111,8 +110,17 @@ function highlight(scheme) {
 	} catch {}
 
 	codeBlocks.forEach((codeBlock) => {
+		const container = document.createElement('div');
+		container.className = 'code-container';
+		
+		const lineNumbers = document.createElement('div');
+		lineNumbers.className = 'line-numbers';
+		
+		const codeContent = document.createElement('div');
+		codeContent.className = 'code-content';
+		
 		let code = escapeHtml(codeBlock.textContent);
-
+		
 		let keys = Object.keys(scheme.functionsHighlights || {}).sort(
 			(a, b) => b.length - a.length
 		);
@@ -130,8 +138,26 @@ function highlight(scheme) {
 			.replace(/\]/g, styling("bracketHighlight", scheme))
 			.replace(/\$(?!catch|else|elseif|endif|endtry|error|if|try|nomention\b)[a-zA-Z]+\b/g, styling("fallbackHighlight", scheme))
 			.replace(/[^\n]*/g, styling("defaultTextHighlight", scheme));
-
-		codeBlock.innerHTML = code;
+		
+		const lines = code.split('\n');
+		
+		let lineNumbersHTML = '';
+		let codeLinesHTML = '';
+		
+		for (let i = 0; i < lines.length; i++) {
+			const lineNumber = i + 1;
+			lineNumbersHTML += `<div class="line-number" data-line-number="${lineNumber}">${lineNumber}</div>`;
+			codeLinesHTML += `<div class="code-line">${lines[i] || '&nbsp;'}</div>`;
+		}
+		
+		lineNumbers.innerHTML = lineNumbersHTML;
+		codeContent.innerHTML = codeLinesHTML;
+		
+		container.appendChild(lineNumbers);
+		container.appendChild(codeContent);
+		
+		codeBlock.innerHTML = '';
+		codeBlock.appendChild(container);
 	});
 }
 
