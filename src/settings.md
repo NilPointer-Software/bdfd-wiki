@@ -44,15 +44,6 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
 </div>
 
 <div class="settingembed">
-  <h2>Effects</h2>
-  <p>It's only decoration for wiki.</p>
-  <div class="effectbuttons">
-    <button id="manageEffect" class="ebutton" onClick="effectsSetting()">Enable</button>
-  </div>
-  <p id="default-is">"Enable" (Disabled)</p>
-</div>
-
-<div class="settingembed">
   <h2>Discord Example</h2>
   <p>Let’s give our Discord example previews a color makeover to make them look better.</p>
   <button class="resetSettingButton" onClick="changeDiscordTheme('dark')" title="Reset" aria-label="Reset">
