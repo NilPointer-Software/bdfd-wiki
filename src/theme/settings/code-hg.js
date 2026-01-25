@@ -55,13 +55,13 @@ const scheme = {
 	},
 };
 
-function functionHighlight(func, scheme) {
+function functionHighlight(func, scheme, match) {
 	let color = (scheme.functionsHighlights[func].color & 0xffffff)
 		.toString(16)
 		.padStart(6, "0")
 		.toUpperCase();
 	let style = fontStyle(scheme.functionsHighlights[func].style);
-	return `<span class="function" style="color: #${color}; ${style}">$&</span>`;
+	return `<span class="function" style="color: #${color}; ${style}">${match}</span>`;
 }
 
 function styling(type, scheme) {
@@ -120,7 +120,7 @@ function highlight(scheme) {
 		keys.forEach((key) => {
 			code = code.replace(
 				new RegExp(`\\${key}\\b`, "g"),
-				functionHighlight(key, scheme)
+				(match) => functionHighlight(key, scheme, match)
 			);
 		});
 
@@ -129,7 +129,7 @@ function highlight(scheme) {
 			.replace(/\[/g, styling("bracketHighlight", scheme))
 			.replace(/\]/g, styling("bracketHighlight", scheme))
 			.replace(/\$(?!catch|else|elseif|endif|endtry|error|if|try|nomention\b)[a-zA-Z]+\b/g, styling("fallbackHighlight", scheme))
-			.replace(/.*/g, styling("defaultTextHighlight", scheme));
+			.replace(/[^\n]*/g, styling("defaultTextHighlight", scheme));
 
 		codeBlock.innerHTML = code;
 	});
