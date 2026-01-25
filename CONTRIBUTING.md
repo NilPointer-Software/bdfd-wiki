@@ -8,6 +8,13 @@ Hey! 👋 Thanks for checking out. If you would like to contribute to this repos
 
 ## Guidelines
 
+> **IMPORTANT: Pull requests will be REJECTED if they:**
+> - **Mix JavaScript/HTML code changes with wiki content changes.** These must be submitted as separate pull requests. Code changes go in one PR, documentation/wiki content changes go in another.
+> - **Contain an excessive number of changes (e.g., 100+ file modifications).** Large pull requests are impossible to review properly and will not be accepted. Break your contributions into smaller, focused pull requests that can be reviewed individually.
+> - **Add interactive tools or complex JavaScript applications.** This wiki is for **documentation only**, not a platform for hosting interactive tools. Such tools become a maintenance burden over time. If you have created a useful community tool, we can link to it from the community tools page instead of embedding it in the wiki.
+>
+> This policy exists to ensure quality reviews and maintain the integrity of the wiki. No exceptions.
+
 General guidelines to keep in mind when contributing :
 
 -   All file names must be in "[lowerCamelCase](https://wiki.c2.com/?LowerCamelCase)" format (i.e `fileName.md`).
