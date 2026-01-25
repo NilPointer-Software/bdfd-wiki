@@ -4,7 +4,6 @@
 [Settings](./settings.md)
 [Changelog](./CHANGELOG.md)
 [Flowchart Changelog](./FLOWCHART_CHANGELOG.md)
-[Terms of Service](https://botdesignerdiscord.com/tos)
 [Entity Transfer Policy](./entityTransferPolicy.md)
 
 ---
