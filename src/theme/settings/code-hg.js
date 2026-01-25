@@ -55,48 +55,6 @@ const scheme = {
 	},
 };
 
-function createStyledSpan(color, style, content) {
-	return `<span style="color: #${color}; ${style}">${content}</span>`;
-}
-
-function fontStyle(style) {
-	switch (style) {
-		case 0:
-			return "font-style: normal; font-weight: normal;";
-		case 1:
-			return "font-style: normal; font-weight: bold;";
-		case 2:
-			return "font-style: italic; font-weight: normal;";
-		case 3:
-			return "font-style: italic; font-weight: bold;";
-	}
-}
-
-function escapeHtml(unsafe) {
-	return unsafe
-		.replace(/&/g, "&amp;")
-		.replace(/</g, "&lt;")
-		.replace(/>/g, "&gt;")
-		.replace(/"/g, "&quot;");
-}
-
-function getColorFromScheme(type, scheme) {
-	if (scheme[type]) {
-		return (scheme[type].color & 0xffffff)
-			.toString(16)
-			.padStart(6, "0")
-			.toUpperCase();
-	}
-	return "FFFFFF";
-}
-
-function getStyleFromScheme(type, scheme) {
-	if (scheme[type]) {
-		return fontStyle(scheme[type].style);
-	}
-	return fontStyle(0);
-}
-
 function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
     
@@ -136,114 +94,168 @@ function highlight(scheme) {
 		let lineNumbersHTML = '';
 		let codeLinesHTML = '';
 		
-		// Get colors and styles for all scheme types
-		const defaultColor = getColorFromScheme("defaultTextHighlight", scheme);
-		const defaultStyle = getStyleFromScheme("defaultTextHighlight", scheme);
-		const bracketColor = getColorFromScheme("bracketHighlight", scheme);
-		const bracketStyle = getStyleFromScheme("bracketHighlight", scheme);
-		const semicolonColor = getColorFromScheme("semicolonHighlight", scheme);
-		const semicolonStyle = getStyleFromScheme("semicolonHighlight", scheme);
-		const fallbackColor = getColorFromScheme("fallbackHighlight", scheme);
-		const fallbackStyle = getStyleFromScheme("fallbackHighlight", scheme);
+		// Prepare colors
+		const defaultColor = (scheme.defaultTextHighlight.color & 0xffffff).toString(16).padStart(6, "0").toUpperCase();
+		const bracketColor = (scheme.bracketHighlight.color & 0xffffff).toString(16).padStart(6, "0").toUpperCase();
+		const semicolonColor = (scheme.semicolonHighlight.color & 0xffffff).toString(16).padStart(6, "0").toUpperCase();
+		const fallbackColor = (scheme.fallbackHighlight.color & 0xffffff).toString(16).padStart(6, "0").toUpperCase();
 		
-		// Prepare function highlights
-		const functionHighlights = {};
-		let keys = Object.keys(scheme.functionsHighlights || {}).sort(
-			(a, b) => b.length - a.length
-		);
+		// Prepare styles
+		const defaultStyle = scheme.defaultTextHighlight.style;
+		const bracketStyle = scheme.bracketHighlight.style;
+		const semicolonStyle = scheme.semicolonHighlight.style;
+		const fallbackStyle = scheme.fallbackHighlight.style;
 		
-		keys.forEach((key) => {
-			let color = (scheme.functionsHighlights[key].color & 0xffffff)
-				.toString(16)
-				.padStart(6, "0")
-				.toUpperCase();
-			let style = fontStyle(scheme.functionsHighlights[key].style);
-			functionHighlights[key] = { color, style };
+		// Prepare function styles
+		const functionStyles = {};
+		Object.keys(scheme.functionsHighlights).forEach(key => {
+			functionStyles[key] = {
+				color: (scheme.functionsHighlights[key].color & 0xffffff).toString(16).padStart(6, "0").toUpperCase(),
+				style: scheme.functionsHighlights[key].style
+			};
 		});
+		
+		// Function to get style string
+		function getStyleString(styleNum) {
+			switch (styleNum) {
+				case 0: return "font-style: normal; font-weight: normal;";
+				case 1: return "font-style: normal; font-weight: bold;";
+				case 2: return "font-style: italic; font-weight: normal;";
+				case 3: return "font-style: italic; font-weight: bold;";
+				default: return "font-style: normal; font-weight: normal;";
+			}
+		}
 		
 		for (let i = 0; i < lines.length; i++) {
 			const lineNumber = i + 1;
 			lineNumbersHTML += `<div class="line-number" data-line-number="${lineNumber}">${lineNumber}</div>`;
 			
 			let line = lines[i];
+			let resultLine = '';
+			let currentPos = 0;
 			
-			// Escape HTML first (for plain text parts)
-			line = escapeHtml(line);
+			// Escape HTML in the line
+			line = line.replace(/&/g, "&amp;")
+			           .replace(/</g, "&lt;")
+			           .replace(/>/g, "&gt;")
+			           .replace(/"/g, "&quot;");
 			
-			// Process specific functions first
-			keys.forEach((key) => {
-				const regex = new RegExp(`(${key.replace(/\$/g, '\\$')})(?!\\w)`, 'g');
-				line = line.replace(regex, (match) => {
-					const funcData = functionHighlights[key];
-					return `<span class="function" style="color: #${funcData.color}; ${funcData.style}">${match}</span>`;
+			// Find all special tokens in the line
+			const tokens = [];
+			
+			// Find functions from functionsHighlights
+			Object.keys(functionStyles).forEach(func => {
+				const regex = new RegExp(func.replace(/\$/g, '\\$'), 'g');
+				let match;
+				while ((match = regex.exec(line)) !== null) {
+					tokens.push({
+						start: match.index,
+						end: match.index + func.length,
+						type: 'function',
+						value: func,
+						content: match[0]
+					});
+				}
+			});
+			
+			// Find brackets
+			['[', ']'].forEach(bracket => {
+				let pos = -1;
+				while ((pos = line.indexOf(bracket, pos + 1)) !== -1) {
+					tokens.push({
+						start: pos,
+						end: pos + 1,
+						type: 'bracket',
+						value: bracket,
+						content: bracket
+					});
+				}
+			});
+			
+			// Find semicolons
+			let semicolonPos = -1;
+			while ((semicolonPos = line.indexOf(';', semicolonPos + 1)) !== -1) {
+				tokens.push({
+					start: semicolonPos,
+					end: semicolonPos + 1,
+					type: 'semicolon',
+					value: ';',
+					content: ';'
 				});
-			});
+			}
 			
-			// Process other elements
-			// Brackets
-			line = line.replace(/\[/g, () => {
-				return `<span style="color: #${bracketColor}; ${bracketStyle}">[</span>`;
-			});
+			// Find other $functions (fallback)
+			const funcRegex = /\$[a-zA-Z]+\b/g;
+			let funcMatch;
+			while ((funcMatch = funcRegex.exec(line)) !== null) {
+				// Check if this function is already in tokens
+				const isAlreadyProcessed = tokens.some(token => 
+					token.start === funcMatch.index && token.type === 'function'
+				);
+				
+				if (!isAlreadyProcessed) {
+					tokens.push({
+						start: funcMatch.index,
+						end: funcMatch.index + funcMatch[0].length,
+						type: 'fallback',
+						value: funcMatch[0],
+						content: funcMatch[0]
+					});
+				}
+			}
 			
-			line = line.replace(/\]/g, () => {
-				return `<span style="color: #${bracketColor}; ${bracketStyle}">]</span>`;
-			});
+			// Sort tokens by position
+			tokens.sort((a, b) => a.start - b.start);
 			
-			// Semicolons
-			line = line.replace(/;/g, () => {
-				return `<span style="color: #${semicolonColor}; ${semicolonStyle}">;</span>`;
-			});
+			// Build the line with styled tokens
+			let lastPos = 0;
 			
-			// Remaining functions (not in functionsHighlights)
-			// Create pattern to match $function names
-			const remainingFuncPattern = /\$[a-zA-Z]+\b/g;
-			line = line.replace(remainingFuncPattern, (match) => {
-				// Skip if already inside a span (already processed)
-				if (line.indexOf(`<span`) !== -1) {
-					// Check if this exact match is already wrapped
-					const pos = line.indexOf(match);
-					const before = line.substring(0, pos);
-					const after = line.substring(pos + match.length);
-					
-					// Check if match is inside any span
-					const spansBefore = (before.match(/<span/g) || []).length;
-					const spansClosedBefore = (before.match(/<\/span>/g) || []).length;
-					
-					// If we're inside a span, don't wrap again
-					if (spansBefore > spansClosedBefore) {
-						return match;
-					}
+			tokens.forEach(token => {
+				// Add plain text before token
+				if (token.start > lastPos) {
+					resultLine += line.substring(lastPos, token.start);
 				}
 				
-				// Check if this is a known function (already processed)
-				let isKnown = false;
-				keys.forEach((key) => {
-					if (match === key) {
-						isKnown = true;
-					}
-				});
-				
-				if (!isKnown) {
-					return `<span style="color: #${fallbackColor}; ${fallbackStyle}">${match}</span>`;
+				// Add styled token
+				let color, style;
+				switch (token.type) {
+					case 'function':
+						color = functionStyles[token.value].color;
+						style = getStyleString(functionStyles[token.value].style);
+						break;
+					case 'bracket':
+						color = bracketColor;
+						style = getStyleString(bracketStyle);
+						break;
+					case 'semicolon':
+						color = semicolonColor;
+						style = getStyleString(semicolonStyle);
+						break;
+					case 'fallback':
+						color = fallbackColor;
+						style = getStyleString(fallbackStyle);
+						break;
 				}
 				
-				return match;
+				resultLine += `<span style="color: #${color}; ${style}">${token.content}</span>`;
+				lastPos = token.end;
 			});
+			
+			// Add remaining plain text
+			if (lastPos < line.length) {
+				resultLine += line.substring(lastPos);
+			}
 			
 			// Add the line to output
 			if (line.trim() === '' && line.length === 0) {
 				codeLinesHTML += `<div class="code-line">&nbsp;</div>`;
 			} else {
-				codeLinesHTML += `<div class="code-line">${line}</div>`;
+				codeLinesHTML += `<div class="code-line" style="color: #${defaultColor}; ${getStyleString(defaultStyle)}">${resultLine}</div>`;
 			}
 		}
 		
 		lineNumbers.innerHTML = lineNumbersHTML;
 		codeContent.innerHTML = codeLinesHTML;
-		
-		// Apply default text color to the entire code content
-		codeContent.style.color = `#${defaultColor}`;
-		codeContent.style.cssText += `; ${defaultStyle}`;
 		
 		container.appendChild(lineNumbers);
 		container.appendChild(codeContent);
