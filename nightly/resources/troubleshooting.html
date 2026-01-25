@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -170,18 +185,6 @@
                 link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
             });
         </script>
-
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
 
         <div id="content" class="content">
             <main>
@@ -956,19 +959,19 @@ The advertising provider we use is blocked in your country or region. There is n
 <discord-messages>
     <discord-message author="Random Guy" role-color="#FFFC2B">
         I was told by a friend that a new function, <code>$botOwnerID</code>, has just been added to the changelog or recently. I'm trying to use it, but it just doesn't work. What I mean is:
-        <discord-attachment url="https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png" slot="attachments">
+        <discord-attachment slot="attachments" url="https://user-images.githubusercontent.com/70456337/201180869-83b05576-617c-4bc1-b77c-87bacaac3b32.png">
         </discord-attachment>
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png" role-color="#57CEE8" author="Nakidamiru">
+    <discord-message role-color="#57CEE8" author="Nakidamiru" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png">
         This is normal. Right, the function has already been added and exists, but it can't be used at the moment. The nodes (the place where your bots work) have not yet been updated, or your exact node has not yet been updated. The update will slowly be released to each node over time. It isn't released to all nodes at once for the purpose of testing the stability and performance of the update.
     </discord-message>
-    <discord-message role-color="#57CEE8" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png" author="Nakidamiru">
+    <discord-message author="Nakidamiru" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png" role-color="#57CEE8">
         Usually, all nodes are updated by the end of the month.
     </discord-message>
-    <discord-message author="Random Guy" role-color="#FFFC2B">
+    <discord-message role-color="#FFFC2B" author="Random Guy">
         Allright, thank you! I will wait patiently!
     </discord-message>
-    <discord-message role-color="#57CEE8" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png" author="Nakidamiru">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png" author="Nakidamiru" role-color="#57CEE8">
         You're welcome, Random Guy.
     </discord-message>
 </discord-messages>
