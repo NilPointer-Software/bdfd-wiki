@@ -55,13 +55,13 @@ const scheme = {
 	},
 };
 
-function functionHighlight(func, scheme, match) {
+function functionHighlight(func, scheme) {
 	let color = (scheme.functionsHighlights[func].color & 0xffffff)
 		.toString(16)
 		.padStart(6, "0")
 		.toUpperCase();
 	let style = fontStyle(scheme.functionsHighlights[func].style);
-	return `<span class="function" style="color: #${color}; ${style}">${match}</span>`;
+	return `<span class="function" style="color: #${color}; ${style}">${func}</span>`;
 }
 
 function createStyledSpan(color, style, content) {
@@ -138,22 +138,41 @@ function highlight(scheme) {
 			const lineNumber = i + 1;
 			lineNumbersHTML += `<div class="line-number" data-line-number="${lineNumber}">${lineNumber}</div>`;
 			
-			let line = escapeHtml(lines[i]);
+			let line = lines[i];
+			
+			// Escape HTML first
+			line = escapeHtml(line);
 			
 			// Process specific functions first
 			let keys = Object.keys(scheme.functionsHighlights || {}).sort(
 				(a, b) => b.length - a.length
 			);
 			
-			keys.forEach((key) => {
-				const regex = new RegExp(`\\${key}\\b`, "g");
-				line = line.replace(regex, (match) => {
-					return functionHighlight(key, scheme, match);
+			// Create regex pattern for all functions
+			const functionPattern = new RegExp(`(${keys.map(k => `\\${k}\\b`).join('|')})`, 'g');
+			
+			// Replace all functions at once
+			if (keys.length > 0) {
+				line = line.replace(functionPattern, (match) => {
+					// Find which function was matched
+					const matchedFunc = keys.find(key => {
+						const regex = new RegExp(`\\${key}\\b`);
+						return regex.test(match);
+					});
+					
+					if (matchedFunc) {
+						let color = (scheme.functionsHighlights[matchedFunc].color & 0xffffff)
+							.toString(16)
+							.padStart(6, "0")
+							.toUpperCase();
+						let style = fontStyle(scheme.functionsHighlights[matchedFunc].style);
+						return `<span class="function" style="color: #${color}; ${style}">${match}</span>`;
+					}
+					return match;
 				});
-			});
-
-			// Process other patterns
-			// Semicolons
+			}
+			
+			// Process semicolons
 			line = line.replace(/;/g, (match) => {
 				return createStyledSpan(
 					getColorFromScheme("semicolonHighlight", scheme),
@@ -162,7 +181,7 @@ function highlight(scheme) {
 				);
 			});
 			
-			// Brackets
+			// Process brackets
 			line = line.replace(/\[/g, (match) => {
 				return createStyledSpan(
 					getColorFromScheme("bracketHighlight", scheme),
@@ -179,8 +198,17 @@ function highlight(scheme) {
 				);
 			});
 			
-			// Remaining functions not processed earlier
-			line = line.replace(/\$(?!catch|else|elseif|endif|endtry|error|if|try|nomention\b)[a-zA-Z]+\b/g, (match) => {
+			// Process remaining functions (not in functionsHighlights)
+			// First, we need to skip already processed functions
+			const processedFunctionsPattern = keys.length > 0 
+				? new RegExp(`\\$(?!(${keys.map(k => k.substring(1)).join('|')})\\b)[a-zA-Z]+\\b`, 'g')
+				: /\$[a-zA-Z]+\b/g;
+			
+			line = line.replace(processedFunctionsPattern, (match) => {
+				// Check if this is inside a span tag (already processed)
+				if (/<span[^>]*>.*<\/span>/.test(match)) {
+					return match;
+				}
 				return createStyledSpan(
 					getColorFromScheme("fallbackHighlight", scheme),
 					getStyleFromScheme("fallbackHighlight", scheme),
@@ -188,19 +216,24 @@ function highlight(scheme) {
 				);
 			});
 			
-			// Apply default text highlight to the entire line
-			// If line is empty, keep it empty
+			// Wrap the entire line in default styling if it's not empty
 			if (line.trim() === '' && line.length === 0) {
 				codeLinesHTML += `<div class="code-line">&nbsp;</div>`;
 			} else {
-				const defaultColor = getColorFromScheme("defaultTextHighlight", scheme);
-				const defaultStyle = getStyleFromScheme("defaultTextHighlight", scheme);
-				codeLinesHTML += `<div class="code-line" style="color: #${defaultColor}; ${defaultStyle}">${line}</div>`;
+				// Don't wrap in another span if the line already has styling
+				// Just apply default color to the container
+				codeLinesHTML += `<div class="code-line">${line}</div>`;
 			}
 		}
 		
 		lineNumbers.innerHTML = lineNumbersHTML;
 		codeContent.innerHTML = codeLinesHTML;
+		
+		// Apply default text color to the entire code content
+		const defaultColor = getColorFromScheme("defaultTextHighlight", scheme);
+		const defaultStyle = getStyleFromScheme("defaultTextHighlight", scheme);
+		codeContent.style.color = `#${defaultColor}`;
+		codeContent.style.cssText += `; ${defaultStyle}`;
 		
 		container.appendChild(lineNumbers);
 		container.appendChild(codeContent);
