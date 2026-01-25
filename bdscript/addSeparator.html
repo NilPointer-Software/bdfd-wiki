@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$changeUsername - Bot Designer For Discord - Wiki</title>
+    <title>$addSeparator - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -14,6 +14,21 @@
     <meta name="theme-color" content="#633fb3">
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
+
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
 
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,50 +186,54 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/changeUsername.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addSeparator.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="changeusername"><a class="header" href="#changeusername">$changeUsername</a></h1>
-<p>Changes the mentioned user’s nickname.</p>
+                <h1 id="addseparator"><a class="header" href="#addseparator">$addSeparator</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a separator component to <a href="./addContainer.html">the container body</a> or message.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$changeUsername[New nickname]
+<pre><code>$addSeparator[(Divider?;Spacing type;Container name)]
 </code></pre>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>This function counts as a container component. A message can have a maximum of 40 components.</p>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>New nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user’s nickname to. It cannot exceed more than 32 characters. Using <code>%username%</code> will be replaced by the real user’s username.</li>
+<li><code>Divider?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Should the message show a visual divider?</li>
+<li><code>Spacing type</code> <code>(Type: Enum || Flag: Vacantable)</code>: Type of the divider. <a href="#spacing-types">Possible types</a>.</li>
+<li><code>Container name</code> <code>(Type: String || Flag: Optional)</code>: The name of <a href="./addContainer.html">the container body</a> to which the component will be attached. If nothing is specified, it will be attached to the message.</li>
+</ul>
+<h3 id="spacing-types"><a class="header" href="#spacing-types">Spacing Types</a></h3>
+<ul>
+<li><code>small</code></li>
+<li><code>large</code></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$changeUsername[$noMentionMessage]
-Changed &lt;@$mentioned[1]&gt;'s nickname to **$noMentionMessage**.
+$addTextDisplay[Hello world!]
+$addSeparator[]
+$addTextDisplay[I love BDFD]
+$addSeparator[false]
+$addTextDisplay[Components v2]
 </code></pre>
-<discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#EE7908" author="Nicky">
-        !example <discord-mention>Cool Bot</discord-mention> Cool Bot
-    </discord-message>
-    <discord-message role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" author="Wiki Bot" verified bot>
-        Changed <discord-mention>Cool Bot</discord-mention>'s nickname to <b>Cool Bot</b>.
-    </discord-message>
-</discord-messages>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
 <div class="admonition-title">
 <div id="admonition-what-is-this-title">
@@ -223,20 +242,19 @@ Changed &lt;@$mentioned[1]&gt;'s nickname to **$noMentionMessage**.
 <a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>How <a href="./noMentionMessage.html"><code>$noMentionMessage</code></a> and <a href="./mentioned.html"><code>$mentioned[]</code></a> works?</p>
+<p>How <a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a> works?</p>
 </div>
 </div>
-
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/changeCooldownTime.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addSelectMenuOption.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/changeUsernameWithID.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addTextDisplay.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -247,16 +265,16 @@ Changed &lt;@$mentioned[1]&gt;'s nickname to **$noMentionMessage**.
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/changeCooldownTime.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addSelectMenuOption.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/changeCooldownTime.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addSelectMenuOption.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/changeUsernameWithID.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addTextDisplay.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/changeUsernameWithID.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addTextDisplay.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

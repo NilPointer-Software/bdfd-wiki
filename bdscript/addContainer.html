@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$changeUsernameWithID - Bot Designer For Discord - Wiki</title>
+    <title>$addContainer - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -14,6 +14,21 @@
     <meta name="theme-color" content="#633fb3">
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
+
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
 
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,50 +186,90 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/changeUsernameWithID.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addContainer.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="changeusernamewithid"><a class="header" href="#changeusernamewithid">$changeUsernameWithID</a></h1>
-<p>Changes a user’s nickname using their ID.</p>
+                <h1 id="addcontainer"><a class="header" href="#addcontainer">$addContainer</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a container body to the message.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$changeUsernameWithID[User ID;New nickname]
+<pre><code>$addContainer[Container name;(Color hex;Spoiler?)]
 </code></pre>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>A message can have a maximum of 20 container bodies (40 container components).</p>
+</div>
+</div>
+<div id="admonition-its-important" class="admonition admonish-failure" role="note" aria-labelledby="admonition-its-important-title">
+<div class="admonition-title">
+<div id="admonition-its-important-title">
+<p>It’s important!</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-its-important"></a>
+</div>
+<div>
+<p>The container body must contain <a href="#container-components">container components</a>, otherwise the function will not work!</p>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>User ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the user whose nickname will be changed.</li>
-<li><code>New nickname</code> <code>(Type: String || Flag: Required)</code>: The text to change the user’s nickname to. It cannot exceed more than 32 characters, using <code>%username%</code> will be replaced by real user’s username.</li>
+<li><code>Container name</code> <code>(Type: String || Flag: Required)</code>: Name for attaching other container components to the container body.</li>
+</ul>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
+<p>You can’t have multiple containers and <a href="./addSection.html">sections</a> <strong>with the same name</strong> in one message. So for example, you can’t have two containers with the name set to <code>Container1</code>.</p>
+</div>
+</div>
+<ul>
+<li>
+<p><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The color hex to set the container border color as. You can also use color integer number.</p>
+</li>
+<li>
+<p><code>Spoiler?</code> <code>(Type: Bool || Flag: Optional)</code>: Will the container have a spoiler effect?</p>
+</li>
+</ul>
+<h2 id="container-components"><a class="header" href="#container-components">Container Components</a></h2>
+<ul>
+<li><a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a></li>
+<li><a href="./addSeparator.html"><code>$addSeparator[]</code></a></li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$addCmdReactions[❤️]
-$changeUsernameWithID[$message[1];$message[2]]
+$addContainer[Container1;#673ab7;false]
+$addTextDisplay[Hello world!;Container1]
 </code></pre>
 <discord-messages>
     <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
-        !example 154148273307910144 Owner
-        <discord-reactions slot="reactions">
-            <discord-reaction emoji="https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png" count="1" name=":emoji:">
-            </discord-reaction>
-        </discord-reactions>
+        !example
+    </discord-message>
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" verified author="BDFD Support">
+        <none>
+        <discord-embed slot="embeds" color="#673ab7">
+            <discord-embed-description slot="description">
+                Hello world!
+            </discord-embed-description>
+        </discord-embed>
     </discord-message>
 </discord-messages>
 <div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
@@ -225,7 +280,7 @@ $changeUsernameWithID[$message[1];$message[2]]
 <a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>How <a href="./addCmdReactions.html"><code>$addCmdReactions[]</code></a> and <a href="./messageComplex.html"><code>$message[]</code></a> works?</p>
+<p>How <a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a> works?</p>
 </div>
 </div>
 
@@ -233,12 +288,12 @@ $changeUsernameWithID[$message[1];$message[2]]
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/changeUsername.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/defer.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/channelCount.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addField.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -249,16 +304,16 @@ $changeUsernameWithID[$message[1];$message[2]]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/changeUsername.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/defer.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/changeUsername.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/defer.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/channelCount.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addField.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/channelCount.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addField.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

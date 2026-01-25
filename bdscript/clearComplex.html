@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -204,9 +207,17 @@
 <li><code>User ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: If a user ID is provided, the bot will only delete messages from that user.</li>
 <li><code>Remove pinned messages?</code> <code>(Type: Bool || Flag: Optional)</code>: Decides whether to delete pinned messages or not. The default is <code>yes</code>.</li>
 </ul>
-<blockquote>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
 <p>Discord doesn’t allow deleting messages in bulk which are over 2 weeks old.</p>
-</blockquote>
+</div>
+</div>
 <h3 id="permissions"><a class="header" href="#permissions">Permissions</a></h3>
 <p>Required permissions that the bot must have for this function to work properly:</p>
 <ul>
@@ -218,34 +229,34 @@ $clear[$message]
 </code></pre>
 <h3 id="before"><a class="header" href="#before">Before</a></h3>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey">
         5
     </discord-message>
-    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#509070">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#509070" author="Nicky">
         4
     </discord-message>
-    <discord-message role-color="#FF0000" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png" author="MineBartekSA">
+    <discord-message author="MineBartekSA" role-color="#FF0000" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png">
         3
     </discord-message>
-    <discord-message role-color="#4365ab" author="Kito" avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/437154602626973697/7f50eb72768aaa6dfae81b88e1f723a2.png" author="Kito" role-color="#4365ab">
         2
     </discord-message>
-    <discord-message author="Emperor Toaster" avatar="https://cdn.discordapp.com/avatars/325663449680052227/a09655157ce3453be3c60375e04f7363.png" role-color="#939394">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/325663449680052227/a09655157ce3453be3c60375e04f7363.png" role-color="#939394" author="Emperor Toaster">
         1
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example 3
     </discord-message>
 </discord-messages>
 <h3 id="after"><a class="header" href="#after">After</a></h3>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         5
     </discord-message>
-    <discord-message role-color="#509070" author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png">
+    <discord-message role-color="#509070" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" author="Nicky">
         4
     </discord-message>
-    <discord-message author="MineBartekSA" role-color="#FF0000" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png">
+    <discord-message role-color="#FF0000" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png" author="MineBartekSA">
         3
     </discord-message>
 </discord-messages>
@@ -270,7 +281,7 @@ $clear[$message]
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/clearReactions.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/getBanReason.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -288,9 +299,9 @@ $clear[$message]
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/clearReactions.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/getBanReason.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/clearReactions.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/getBanReason.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

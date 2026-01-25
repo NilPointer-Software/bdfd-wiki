@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -203,10 +206,10 @@
 The random number is **$random**
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message bot role-color="#378afa" verified author="BDFD Support">
+    <discord-message author="BDFD Support" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa">
         The random number is <b>4</b>
     </discord-message>
 </discord-messages>
@@ -215,7 +218,7 @@ The random number is **$random**
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/publishMessage.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/optOff.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
@@ -231,9 +234,9 @@ The random number is **$random**
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/publishMessage.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/optOff.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/publishMessage.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/optOff.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>

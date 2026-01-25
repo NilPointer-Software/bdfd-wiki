@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -216,10 +219,10 @@ $if[$customID==onlyauthor-$authorID]
 $endif
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" author="Nicky" role-color="#EE7908">
+    <discord-message role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" author="Nicky">
         !example
     </discord-message>
-    <discord-message verified bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" author="Wiki Bot">
+    <discord-message verified author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot role-color="#748BD4">
         Click
         <discord-attachments slot="components">
             <discord-action-row>
@@ -229,13 +232,13 @@ $endif
             </discord-action-row>
         </discord-attachments>
     </discord-message>
-    <discord-message author="Wiki Bot" verified role-color="#748BD4" bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" author="Wiki Bot" verified bot role-color="#748BD4">
         Hello!
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#EE7908" author="Nicky">
+    <discord-message author="Nicky" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" role-color="#EE7908">
         !example
     </discord-message>
-    <discord-message verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" bot author="Wiki Bot">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot role-color="#748BD4" author="Wiki Bot" verified>
         Click
         <discord-attachments slot="components">
             <discord-action-row>
@@ -245,15 +248,15 @@ $endif
             </discord-action-row>
         </discord-attachments>
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" verified role-color="#748BD4" author="Wiki Bot" bot>
+    <discord-message author="Wiki Bot" bot avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" verified>
         Hello Nicky!
     </discord-message>
 </discord-messages>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png" author="MineBartekSA" role-color="#F1BDEE">
+    <discord-message role-color="#F1BDEE" author="MineBartekSA" avatar="https://cdn.discordapp.com/avatars/154148273307910144/2cf8dd7b18fd4289835cb5a7fa5eaed3.png">
         !example
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" verified bot role-color="#748BD4" author="Wiki Bot">
+    <discord-message verified avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot role-color="#748BD4" author="Wiki Bot">
         Click
         <discord-attachments slot="components">
             <discord-action-row>
@@ -263,17 +266,24 @@ $endif
             </discord-action-row>
         </discord-attachments>
     </discord-message>
-    <discord-message author="Wiki Bot" role-color="#748BD4" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" verified bot>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" bot role-color="#748BD4" author="Wiki Bot" verified>
         Hello MineBartekSA!
     </discord-message>
     <discord-message author="Nicky" role-color="#EE7908" avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png">
         I can't use the button
     </discord-message>
 </discord-messages>
-<blockquote>
-<p>How does <a href="../guides/general/ifStatements.html"><code>$if[]</code></a> and <a href="../bdscript/customID.html"><code>$customID[]</code></a> work?</p>
-</blockquote>
-
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="../bdscript/if.html"><code>$if[]</code></a> and <a href="../bdscript/customID.html"><code>$customID[]</code></a> work?</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">

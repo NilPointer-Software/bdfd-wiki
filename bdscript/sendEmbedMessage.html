@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -196,24 +199,52 @@
                 <h1 id="sendembedmessage"><a class="header" href="#sendembedmessage">$sendEmbedMessage</a></h1>
 <p>Sends an embed message to the provided channel. Not needed fields can be left empty.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color;Author;Author icon;Footer;Footer icon;Thumbnail;Image;Add timestamp?;Return ID?)]
+<pre><code>$sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color hex;Author;Author icon;Footer;Footer icon;Thumbnail;Image;Add timestamp?;Return ID?)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message will be sent to.</li>
-<li><code>Content</code> <code>(Type: String || Flag: Emptiable)</code>: The text that is shown above the embed.</li>
-<li><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The text that will be used as the title.</li>
-<li><code>Title URL</code> <code>(Type: URL || Flag: Vacantable)</code>: The URL that will be applied to the title.</li>
-<li><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The description that will be applied to the embed.</li>
-<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The <a href="https://htmlcolorcodes.com/color-picker/">color hex</a> or integer to set the embed border color as.</li>
-<li><code>Author</code> <code>(Type: String || Flag: Vacantable )</code>: The text that appears at the author.</li>
-<li><code>Author icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to the author. Must be a valid image URL.</li>
-<li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The text to set the footer as.</li>
-<li><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to the footer. Must be a valid image URL.</li>
-<li><code>Thumbnail</code> <code>(Type: URL || Flag: Vacantable)</code>: The image to set as the thumbnail.</li>
-<li><code>Image</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears above the footer. Must be a valid image URL.</li>
-<li><code>Add timestamp?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Adds a timestamp to the footer (use <code>yes</code> or <code>no</code>).</li>
-<li><code>Return ID?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Outputs the message ID outside the embed (use <code>yes</code> or <code>no</code>).</li>
+<li>
+<p><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message will be sent to.</p>
+</li>
+<li>
+<p><code>Content</code> <code>(Type: String || Flag: Emptiable)</code>: The text that is shown above the embed.</p>
+</li>
+<li>
+<p><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The text that will be used as the title.</p>
+</li>
+<li>
+<p><code>Title URL</code> <code>(Type: URL || Flag: Vacantable)</code>: The URL that will be applied to the title.</p>
+</li>
+<li>
+<p><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The description that will be applied to the embed.</p>
+</li>
+<li>
+<p><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The color hex to set the embed border color as. You can also use color integer number.</p>
+</li>
+<li>
+<p><code>Author</code> <code>(Type: String || Flag: Vacantable )</code>: The text that appears at the author.</p>
+</li>
+<li>
+<p><code>Author icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to the author. Must be a valid image URL.</p>
+</li>
+<li>
+<p><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The text to set the footer as.</p>
+</li>
+<li>
+<p><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to the footer. Must be a valid image URL.</p>
+</li>
+<li>
+<p><code>Thumbnail</code> <code>(Type: URL || Flag: Vacantable)</code>: The image to set as the thumbnail.</p>
+</li>
+<li>
+<p><code>Image</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears above the footer. Must be a valid image URL.</p>
+</li>
+<li>
+<p><code>Add timestamp?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Adds a timestamp to the footer (use <code>yes</code> or <code>no</code>).</p>
+</li>
+<li>
+<p><code>Return ID?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Outputs the message ID outside the embed (use <code>yes</code> or <code>no</code>).</p>
+</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
@@ -225,7 +256,7 @@ $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;auth
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/second.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/noMentionMessageComplex.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
@@ -241,9 +272,9 @@ $sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;auth
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/second.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/noMentionMessageComplex.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/second.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/noMentionMessageComplex.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>

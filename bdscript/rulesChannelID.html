@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -207,13 +210,24 @@
 Rule channel's ID: $rulesChannelID[$guildID]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/1262009115689881702/e416ade6efa36e0e84bade0858fb74b9.png" author="GettingBeatenByKito">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1262009115689881702/e416ade6efa36e0e84bade0858fb74b9.png" role-color="#E67E22" author="GettingBeatenByKito">
         !example
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified author="BDFD Support" role-color="#378afa" bot>
+    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified>
         Rule channel's ID: 594598851155984426
     </discord-message>
 </discord-messages>
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./guildID.html"><code>$guildID</code></a> works?</p>
+</div>
+</div>
 <div id="admonition-how-to-stop-the-error-message" class="admonition admonish-tip" role="note" aria-labelledby="admonition-how-to-stop-the-error-message-title">
 <div class="admonition-title">
 <div id="admonition-how-to-stop-the-error-message-title">
@@ -237,7 +251,7 @@ $endtry
     <discord-message avatar="https://cdn.discordapp.com/avatars/1262009115689881702/e416ade6efa36e0e84bade0858fb74b9.png" author="GettingBeatenByKito" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified>
+    <discord-message role-color="#378afa" author="BDFD Support" verified bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
         ❌ Function <code>$rulesChannelID</code> at <code>2:33</code> returned an error: No rule channel set in this server!
     </discord-message>
 </discord-messages>
@@ -245,10 +259,10 @@ $endtry
 <li>With try block:</li>
 </ul>
 <discord-messages>
-    <discord-message author="GettingBeatenByKito" avatar="https://cdn.discordapp.com/avatars/1262009115689881702/e416ade6efa36e0e84bade0858fb74b9.png" role-color="#E67E22">
+    <discord-message author="GettingBeatenByKito" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/1262009115689881702/e416ade6efa36e0e84bade0858fb74b9.png">
         !example
     </discord-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" author="BDFD Support" verified>
+    <discord-message author="BDFD Support" role-color="#378afa" verified bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
         No rule channel found!
     </discord-message>
 </discord-messages>
@@ -262,12 +276,12 @@ $endtry
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/round.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/parentIDComplex.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/scriptLanguage.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/serverChannelExists.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -278,16 +292,16 @@ $endtry
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/round.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/parentIDComplex.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/round.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/parentIDComplex.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/scriptLanguage.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/serverChannelExists.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/scriptLanguage.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/serverChannelExists.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

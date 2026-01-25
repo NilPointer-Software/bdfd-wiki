@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$input - Bot Designer For Discord - Wiki</title>
+    <title>$addThumbnail - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -14,6 +14,21 @@
     <meta name="theme-color" content="#633fb3">
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
+
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
 
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,59 +186,70 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/input.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addThumbnail.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="input"><a class="header" href="#input">$input</a></h1>
-<p>Retrieves input from a modal.</p>
+                <h1 id="addthumbnail"><a class="header" href="#addthumbnail">$addThumbnail</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a thumbnail component to <a href="./addSection.html">the section</a>.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$input[Text Input ID]
+<pre><code>$addThumbnail[Image URL;Image description;Spoiler?;Section name]
 </code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>This function counts as a component. A message can have a maximum of 40 components.
+You can’t add more than 3 components to <a href="./addSection.html">a section</a>.</p>
+</div>
+</div>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Text Input ID</code> <code>(Type: String || Flag: Required)</code>: The input ID in <a href="../bdscript/addTextInput.html"><code>$addTextInput[]</code></a>.</li>
+<li><code>Image URL</code> <code>(Type: URL || Flag: Required)</code>: URL of the thumbnail image.</li>
+<li><code>Image description</code> <code>(Type: String || Flag: Emptiable)</code>: Alt text description for the image.</li>
+<li><code>Spoiler?</code> <code>(Type: Bool || Flag: Emptiable)</code>: Will the image have a spoiler effect?</li>
+<li><code>Section name</code> <code>(Type: String || Flag: Required)</code>: The name of <a href="./addSection.html">the section</a> to which the component will be attached.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<h3 id="interaction-command-code"><a class="header" href="#interaction-command-code">Interaction command code</a></h3>
 <pre><code>$nomention
-Name : $input[modalInput1]
-Pronouns : $input[modalInput2]
-About me : $input[modalInput3]
+$addSection[Section]
+$addTextDisplay[Hello world!;Section]
+$addThumbnail[$authorAvatar;My avatar;;Section]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/69215413/168921575-9c2e3106-4ac0-4388-8b41-46e640e6126a.png" alt="example" /></p>
-<blockquote>
-<p>For more info, see the <a href="../guides/general/interactions/modals/aboutModals.html">Modals Guide</a>.</p>
-</blockquote>
-
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./addSection.html"><code>$addSection[]</code></a>, <a href="./authorAvatar.html"><code>$authorAvatar</code></a> and <a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a> works?</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/image.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addSection.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/isAdmin.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addTimestamp.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -234,16 +260,16 @@ About me : $input[modalInput3]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/image.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addSection.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/image.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addSection.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/isAdmin.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addTimestamp.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/isAdmin.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addTimestamp.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="/assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -195,13 +198,13 @@
 
                 <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 <style>
-  .editPage {
-      visibility: hidden;
-  }
+.editPage {
+  visibility: hidden;
+}
 </style>
 <h1 id="2026"><a class="header" href="#2026">2026</a></h1>
 <h2 id="january"><a class="header" href="#january">January</a></h2>
-<p>Added multiple Components V2 functions:</p>
+<p>Added Components V2 functions:</p>
 <ul>
 <li>Added <code>$addTextDisplay[]</code></li>
 <li>Added <code>$addSeparator[]</code></li>
@@ -217,8 +220,54 @@
 <li>Added <code>$getMentionableSelectUserID[]</code></li>
 <li>Added <code>$getMentionableSelectUserIDs[]</code></li>
 <li>Added <code>$getMentionableSelectUserCount</code></li>
+<li>Added <code>$addUserSelect</code></li>
+<li>Added <code>$getUserSelectUserID</code></li>
+<li>Added <code>$getUserSelectUserIDs</code></li>
+<li>Added <code>$getUserSelectUserCount</code></li>
+<li>Added <code>$addRoleSelect</code></li>
+<li>Added <code>$getRoleSelectRoleID</code></li>
+<li>Added <code>$getRoleSelectRoleIDs</code></li>
+<li>Added <code>$getRoleSelectRoleCount</code></li>
 </ul>
 <h1 id="2025"><a class="header" href="#2025">2025</a></h1>
+<h2 id="december"><a class="header" href="#december">December</a></h2>
+<ul>
+<li>Added “Sign out other sessions” button</li>
+<li>Smoother animations in the app</li>
+<li>Redesigned Premium Points shop</li>
+<li>A lot of app bug fixes</li>
+<li>HTTP Timeout Limit: 5s &gt; 35s</li>
+<li>Fixed <code>$ceil[]</code></li>
+<li>Fixed <code>$floor[]</code></li>
+<li>Fixed <code>$getLeaderboardPosition[]</code></li>
+<li>AI Quota: 5000 &gt; 10000</li>
+<li>Log Quota: 1500 &gt; 3000</li>
+<li>Updated BDFD App icon for Android</li>
+</ul>
+<details><summary>Previous Updates</summary>
+<h2 id="november"><a class="header" href="#november">November</a></h2>
+<ul>
+<li>Major improvements to hosting infrastructure</li>
+<li>Reworked bot status preview</li>
+<li>HTTP Timeout Limit: 15s &gt; 5s</li>
+</ul>
+<h2 id="october"><a class="header" href="#october">October</a></h2>
+<ul>
+<li>Added setting to disable code highlighting in the command editor</li>
+</ul>
+<h2 id="september"><a class="header" href="#september">September</a></h2>
+<ul>
+<li>Updated BDFD App icon for iOS 26</li>
+<li>Reworked bot list</li>
+</ul>
+<h2 id="july"><a class="header" href="#july">July</a></h2>
+<ul>
+<li>BDScript bug fixes</li>
+</ul>
+<h2 id="february"><a class="header" href="#february">February</a></h2>
+<ul>
+<li>Fixed app crashing during premium points purchases</li>
+</ul>
 <h2 id="january-1"><a class="header" href="#january-1">January</a></h2>
 <ul>
 <li>Added <code>$afkChannelID</code></li>
@@ -246,6 +295,7 @@
 <li>Added <code>$threadUserCount</code></li>
 <li>Added <code>$voiceUserLimit[]</code></li>
 </ul>
+</details>
 <h1 id="2024"><a class="header" href="#2024">2024</a></h1>
 <h2 id="august"><a class="header" href="#august">August</a></h2>
 <ul>
@@ -258,7 +308,7 @@
 <li>Added <code>$isInteger[]</code></li>
 </ul>
 <details><summary>Previous Updates</summary>
-<h2 id="july"><a class="header" href="#july">July</a></h2>
+<h2 id="july-1"><a class="header" href="#july-1">July</a></h2>
 <ul>
 <li>Added <code>$setUserRoles[]</code></li>
 <li>Added <code>$getLeaderboardPosition[]</code></li>
@@ -310,7 +360,7 @@
 <li>Fixed <code>$round[]</code> adding trailing zeros</li>
 <li>Added <code>$removeAllComponents</code></li>
 </ul>
-<h2 id="february"><a class="header" href="#february">February</a></h2>
+<h2 id="february-1"><a class="header" href="#february-1">February</a></h2>
 <ul>
 <li>Fixed caching issues for leaderboards</li>
 <li>Added <code>$jsonArrayShift[]</code></li>
@@ -348,7 +398,7 @@
 </ul>
 </details>
 <h1 id="2022"><a class="header" href="#2022">2022</a></h1>
-<h2 id="december"><a class="header" href="#december">December</a></h2>
+<h2 id="december-1"><a class="header" href="#december-1">December</a></h2>
 <ul>
 <li>Added limit on input numbers to 2<sup>128</sup> on the basic math functions</li>
 <li>Fixed BDScript 2 having problems with handling unicode characters</li>
@@ -358,7 +408,7 @@
 <li>Fixed issues with custom images</li>
 </ul>
 <details><summary>Previous Updates</summary>
-<h2 id="november"><a class="header" href="#november">November</a></h2>
+<h2 id="november-1"><a class="header" href="#november-1">November</a></h2>
 <ul>
 <li>Deprecated <code>$userJoinedDiscord[]</code> in favor of <code>$creationDate[]</code></li>
 <li>Added <code>Format</code> argument to <code>$creationDate[]</code></li>
@@ -370,7 +420,7 @@
 <li>Added <code>channel</code> option to <code>$variablesCount[]</code></li>
 <li>Fixed BDScript 2’s escaping not working in some cases</li>
 </ul>
-<h2 id="october"><a class="header" href="#october">October</a></h2>
+<h2 id="october-1"><a class="header" href="#october-1">October</a></h2>
 <ul>
 <li>Added <code>$publishMessage[]</code></li>
 <li>Made <code>$useChannel[]</code> work with message components</li>
@@ -391,7 +441,7 @@
 <li>Fixed the guild list fetching issue</li>
 <li>Added <code>$parentID</code></li>
 </ul>
-<h2 id="september"><a class="header" href="#september">September</a></h2>
+<h2 id="september-1"><a class="header" href="#september-1">September</a></h2>
 <ul>
 <li>Added <code>channelID</code> field to <code>$awaitFunc[]</code></li>
 <li>Added <code>$trimContent</code></li>
@@ -426,7 +476,7 @@
 <li>Fixed <code>$cropText[]</code> not supporting unicode</li>
 <li>Not putting required slash command options on top no longer breaks the commands</li>
 </ul>
-<h2 id="july-1"><a class="header" href="#july-1">July</a></h2>
+<h2 id="july-2"><a class="header" href="#july-2">July</a></h2>
 <ul>
 <li>Added hex to the color picker</li>
 <li>Fixed <code>$executionTime</code> not working inside embed fields</li>
@@ -471,7 +521,7 @@
 <li>Added <code>$unregisterGuildCommands[]</code></li>
 <li>Added <code>/callback_list</code>, <code>/callback_tag_list</code>, and <code>/callback/:callback_tag</code> endpoints to public BDFD API</li>
 </ul>
-<h2 id="february-1"><a class="header" href="#february-1">February</a></h2>
+<h2 id="february-2"><a class="header" href="#february-2">February</a></h2>
 <ul>
 <li><code>$httpResult[]</code> can return JSON now</li>
 <li>Fixed <code>$httpResult[]</code> not working with multiple requests</li>
@@ -508,7 +558,7 @@
 </ul>
 </details>
 <h1 id="2021"><a class="header" href="#2021">2021</a></h1>
-<h2 id="december-1"><a class="header" href="#december-1">December</a></h2>
+<h2 id="december-2"><a class="header" href="#december-2">December</a></h2>
 <ul>
 <li>Saving a command no longer causes the bot to restart</li>
 <li>Fixed <code>$noMentionMessage[]</code> in BDScript 2</li>
@@ -532,7 +582,7 @@
 <li>The last argument in <code>$replaceText[]</code> is now optional</li>
 </ul>
 <details><summary>Previous Updates</summary>
-<h2 id="november-1"><a class="header" href="#november-1">November</a></h2>
+<h2 id="november-2"><a class="header" href="#november-2">November</a></h2>
 <ul>
 <li>Added <code>$reply[]</code></li>
 <li>Added <code>$trimSpace[]</code></li>
@@ -550,7 +600,7 @@
 <li>Added <code>$'randomChannelID</code> (BDScript Unstable only)</li>
 <li>Fixed <code>$textSplit[]</code> removing space</li>
 </ul>
-<h2 id="october-1"><a class="header" href="#october-1">October</a></h2>
+<h2 id="october-2"><a class="header" href="#october-2">October</a></h2>
 <ul>
 <li>Added <code>$deleteMessage[]</code></li>
 <li>Added <code>$hostingExpireTime[]</code></li>
@@ -570,7 +620,7 @@
 <li>Fixed <code>$deletecommand</code> not getting catched by <code>$try</code> block</li>
 <li>Made it possible to open function’s wiki article from the functions list</li>
 </ul>
-<h2 id="september-1"><a class="header" href="#september-1">September</a></h2>
+<h2 id="september-2"><a class="header" href="#september-2">September</a></h2>
 <ul>
 <li>Updated ToS</li>
 <li>Fixed <code>$executionTime</code> not working in embeds</li>
@@ -621,7 +671,7 @@
 <li>Fixed condition parsing in <code>$if[]</code> for the normal BDScript and BDScript Unstable (BDScript 2 didn’t have any issues)</li>
 <li>Made command saving faster</li>
 </ul>
-<h2 id="july-2"><a class="header" href="#july-2">July</a></h2>
+<h2 id="july-3"><a class="header" href="#july-3">July</a></h2>
 <ul>
 <li>Added <code>$getTimestamp</code></li>
 <li>Added support for decimals in the math functions</li>
@@ -738,7 +788,7 @@
 <li>Fixed some issues with <code>[</code> and <code>]</code></li>
 <li>Fixed problems with slash commands and cooldowns</li>
 </ul>
-<h2 id="february-2"><a class="header" href="#february-2">February</a></h2>
+<h2 id="february-3"><a class="header" href="#february-3">February</a></h2>
 <ul>
 <li>Added <code>$sendMessage[]</code></li>
 <li>Added <code>$reply</code></li>
@@ -767,7 +817,7 @@
 </ul>
 </details>
 <h1 id="2020"><a class="header" href="#2020">2020</a></h1>
-<h2 id="december-2"><a class="header" href="#december-2">December</a></h2>
+<h2 id="december-3"><a class="header" href="#december-3">December</a></h2>
 <ul>
 <li>Timezones in <code>$time[]</code> has been fixed</li>
 <li>Updated Discord API version</li>
@@ -779,7 +829,7 @@
 <li>Added <code>$premiumExpireTime</code></li>
 </ul>
 <details><summary>Previous Updates</summary>
-<h2 id="november-2"><a class="header" href="#november-2">November</a></h2>
+<h2 id="november-3"><a class="header" href="#november-3">November</a></h2>
 <ul>
 <li>Fixed disappearing bot status</li>
 <li>Fixed <code>$serverCount</code> in bot status</li>
@@ -791,7 +841,7 @@
 <li>Added awaited reactions</li>
 <li>Fixed problems with DMs</li>
 </ul>
-<h2 id="october-2"><a class="header" href="#october-2">October</a></h2>
+<h2 id="october-3"><a class="header" href="#october-3">October</a></h2>
 <ul>
 <li>Optimized memory usage</li>
 <li>Added member and presence intents</li>
@@ -806,7 +856,7 @@
 <li>Fixed <code>$serverVerificationLvl</code> not working on very high verification servers</li>
 <li>Fixed reconnecting bots to gateway</li>
 </ul>
-<h2 id="september-2"><a class="header" href="#september-2">September</a></h2>
+<h2 id="september-3"><a class="header" href="#september-3">September</a></h2>
 <ul>
 <li>Added <code>$ignoreTriggerCase</code> for premium bots</li>
 <li>Fixed caching guilds</li>
@@ -829,7 +879,7 @@
 <li>Added <code>$findRole[]</code></li>
 <li>Added <code>$disableSpecialEscaping</code></li>
 </ul>
-<h2 id="july-3"><a class="header" href="#july-3">July</a></h2>
+<h2 id="july-4"><a class="header" href="#july-4">July</a></h2>
 <ul>
 <li>Renamed <code>$splitText[]</code> to <code>$getSplitText[]</code> to avoid confusion <em>(<code>$splitText[]</code> still works)</em></li>
 <li>Added <code>$joinSplitText[]</code></li>
@@ -896,7 +946,7 @@
 <li>Fixed <code>$onlyPerms[]</code></li>
 <li>Fixed the bug with <code>$</code> command prefix and <code>$message</code></li>
 </ul>
-<h2 id="february-3"><a class="header" href="#february-3">February</a></h2>
+<h2 id="february-4"><a class="header" href="#february-4">February</a></h2>
 <ul>
 <li>Fixed errors in <code>$addField</code></li>
 <li>Added <code>$serverRegion</code></li>
@@ -956,7 +1006,7 @@
 </ul>
 </details>
 <h1 id="2019"><a class="header" href="#2019">2019</a></h1>
-<h2 id="december-3"><a class="header" href="#december-3">December</a></h2>
+<h2 id="december-4"><a class="header" href="#december-4">December</a></h2>
 <ul>
 <li>Fixed high ping issues</li>
 <li>Fixed whole bunch of other issues</li>
@@ -986,7 +1036,7 @@
 <li>Preparations for premium points</li>
 </ul>
 <details><summary>Previous Updates</summary>
-<h2 id="november-3"><a class="header" href="#november-3">November</a></h2>
+<h2 id="november-4"><a class="header" href="#november-4">November</a></h2>
 <ul>
 <li>Added <code>$rolePosition[]</code></li>
 <li>Released translation strings to volunteers</li>
@@ -994,17 +1044,6 @@
 <li>Released new stable version</li>
 </ul>
 </details>
-<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
-<div class="admonition-title">
-<div id="admonition-tip-title">
-<p>Tip</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-tip"></a>
-</div>
-<div>
-<p>If you want to access this changelog externally, we have a <a href="https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json">JSON version</a> of the changelog to which you can send a GET request and work with a JSON document further.</p>
-</div>
-</div>
 <div id="admonition-flowchart-changelog" class="admonition admonish-abstract" role="note" aria-labelledby="admonition-flowchart-changelog-title">
 <div class="admonition-title">
 <div id="admonition-flowchart-changelog-title">
@@ -1014,6 +1053,17 @@
 </div>
 <div>
 <p>If you want to see the BDScript changelog, <a href="./FLOWCHART_CHANGELOG.html">click here</a>.</p>
+</div>
+</div>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>If you want to access this changelog externally, we have a <a href="https://raw.githubusercontent.com/NilPointer-Software/bdfd-wiki/dev/external/CHANGELOG.json">JSON version</a> of the changelog to which you can send a GET request and work with a JSON document further.</p>
 </div>
 </div>
 

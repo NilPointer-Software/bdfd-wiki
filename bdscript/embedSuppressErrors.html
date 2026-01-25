@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -196,19 +199,31 @@
                 <h1 id="embedsuppresserrors"><a class="header" href="#embedsuppresserrors">$embedSuppressErrors</a></h1>
 <p>Suppresses the error messages, responds with the embed if there is an error.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$embedSuppressErrors[Title;Description;(Color;Author;Footer;Footer icon)]
+<pre><code>$embedSuppressErrors[Title;Description;(Color hex;Author;Footer;Footer icon)]
 </code></pre>
 <blockquote>
 <p>All fields are optional, leave the field empty to not include it. At least one field needs to be inputted, however.</p>
 </blockquote>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Title</code> <code>(Type: String || Flag: Emptiable)</code>: The title of the embed.</li>
-<li><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: The embed description.</li>
-<li><code>Color</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid <a href="https://htmlcolorcodes.com/color-picker">color hex</a>.</li>
-<li><code>Author</code> <code>(Type: String || Flag: Vacantable)</code>: The embed author text.</li>
-<li><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The embed footer text.</li>
-<li><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The embed footer icon, must be a valid image URL.</li>
+<li>
+<p><code>Title</code> <code>(Type: String || Flag: Emptiable)</code>: The title of the embed.</p>
+</li>
+<li>
+<p><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: The embed description.</p>
+</li>
+<li>
+<p><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The embed border color, must be a valid color hex. You can also use color integer number.</p>
+</li>
+<li>
+<p><code>Author</code> <code>(Type: String || Flag: Vacantable)</code>: The embed author text.</p>
+</li>
+<li>
+<p><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The embed footer text.</p>
+</li>
+<li>
+<p><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The embed footer icon, must be a valid image URL.</p>
+</li>
 </ul>
 <h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
 <h3 id="example-1"><a class="header" href="#example-1">Example #1</a></h3>
@@ -232,12 +247,12 @@ You typed "$message"
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/embeddedURL.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/stop.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/emojiExists.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/checkUserPerms.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -248,16 +263,16 @@ You typed "$message"
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/embeddedURL.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/stop.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/embeddedURL.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/stop.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/emojiExists.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/checkUserPerms.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/emojiExists.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/checkUserPerms.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

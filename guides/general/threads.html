@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="../..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -195,9 +198,17 @@
 
                 <h1 id="threads"><a class="header" href="#threads">Threads</a></h1>
 <p>In this section, you’ll learn how to integrate threads in your bot.</p>
-<blockquote>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
 <p>Make sure your bot has <code>SEND_MESSAGES_IN_THREADS</code> permission.</p>
-</blockquote>
+</div>
+</div>
 <h2 id="content"><a class="header" href="#content">Content</a></h2>
 <p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#archive-duration"><strong>Archive Duration</strong></a> &gt; <a href="#startthread"><strong>$startThread[]</strong></a> &gt; <a href="#editthread"><strong>$editThread[]</strong></a> &gt; <a href="#threadaddmember"><strong>$threadAddMember[]</strong></a> &gt; <a href="#threadremovemember"><strong>$threadRemoveMember[]</strong></a> &gt; <a href="#simple-code"><strong>Simple Code</strong></a></p>
 <h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
@@ -217,12 +228,20 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$startThread[Thread name;Channel ID;Message ID;(Archive duration;Return thread ID?)]
 </code></pre>
-<blockquote>
+<div id="admonition-info" class="admonition admonish-info" role="note" aria-labelledby="admonition-info-title">
+<div class="admonition-title">
+<div id="admonition-info-title">
+<p>Info</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-info"></a>
+</div>
+<div>
 <p>Required permissions that the bot must have for this function to work properly:</p>
-</blockquote>
 <ul>
 <li><code>createpublicthreads</code></li>
 </ul>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Thread name</code> <code>(Type: String || Flag: Required)</code>: The name of the newly created thread.</li>
@@ -236,13 +255,13 @@
 I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
         !example
     </discord-message>
     <discord-system-message type="thread">
         <i style="color: #378afa">BDFD Support</i> Started a thread: <i style="color: white">Cool Thread</i>. See all <i style="color: white">threads</i>.
     </discord-system-message>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" bot verified author="BDFD Support">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" author="BDFD Support" verified bot>
         I created a new thread! <discord-mention type="channel">Cool Thread</discord-mention>
     </discord-message>
 </discord-messages>
@@ -260,15 +279,23 @@ I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 <li><code>Locked?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to lock this thread or not. Note that archived threads can’t be locked.</li>
 <li><code>Slowmode</code> <code>(Type: Integer || Flag: Optional)</code>: The slowmode of this channel, expressed in seconds.</li>
 </ul>
-<blockquote>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
 <p>Use <code>!unchanged</code> as an argument for the option to remain in its current state.</p>
-</blockquote>
+</div>
+</div>
 <h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
 <pre><code>$nomention
 $editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
         !example
     </discord-message>
     <discord-system-message type="edit">
@@ -290,7 +317,7 @@ $editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 $threadAddMember[1021054508975009793;$authorID]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
 </discord-messages>
@@ -314,7 +341,7 @@ $threadAddMember[1021054508975009793;$authorID]
 </ul>
 <h2 id="example-3"><a class="header" href="#example-3">Example</a></h2>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
 </discord-messages>
@@ -351,9 +378,17 @@ $threadAddMember[$var[id];$authorID]
         <i style="color: #378afa">BDFD Support</i> added <i style="color: #E67E22">RainbowKey</i> to the thread.
     </discord-system-message>
 </discord-messages>
-<blockquote>
+<div id="admonition-note" class="admonition admonish-note" role="note" aria-labelledby="admonition-note-title">
+<div class="admonition-title">
+<div id="admonition-note-title">
+<p>Note</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-note"></a>
+</div>
+<div>
 <p>If you want to learn more about threads, read <a href="https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ">Discord’s support article</a>.</p>
-</blockquote>
+</div>
+</div>
 
             </main>
 

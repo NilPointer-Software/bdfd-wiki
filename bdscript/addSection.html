@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>Terms of Service - Bot Designer For Discord - Wiki</title>
+    <title>$addSection - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -15,32 +15,47 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" type="image/png" href="favicon.png">
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
 
-    <link rel="stylesheet" href="theme/css/variables.css">
-    <link rel="stylesheet" href="theme/css/general.css">
-    <link rel="stylesheet" href="theme/css/chrome.css">
-    <link rel="stylesheet" href="theme/css/print.css" media="print">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" type="image/png" href="../favicon.png">
+
+    <link rel="stylesheet" href="../theme/css/variables.css">
+    <link rel="stylesheet" href="../theme/css/general.css">
+    <link rel="stylesheet" href="../theme/css/chrome.css">
+    <link rel="stylesheet" href="../theme/css/print.css" media="print">
 
     <!-- Discord Components -->
     <script type="module"
-            src="assets/vendor/discord-components/skyra-discord-components-core.js"></script>
+            src="../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
-    <link rel="stylesheet" href="highlight.css">
-    <link rel="stylesheet" href="tomorrow-night.css">
-    <link rel="stylesheet" href="ayu-highlight.css">
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
 
     <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="./src/theme/mdbook-admonish.css">
+        <link rel="stylesheet" href=".././src/theme/mdbook-admonish.css">
 
     <!-- Basic analytics setup -->
     <script defer src="https://analytics.nilpointer.software/script.js" data-website-id="2a3354b3-c97b-4538-a9a3-cee0f91af3f3"></script>
@@ -49,11 +64,11 @@
 <body>
 <!-- Provide site root to javascript -->
 <script>
-    var path_to_root = "";
+    var path_to_root = "../";
     var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
 </script>
 <!-- Start loading toc.js asap -->
-<script src="toc.js"></script>
+<script src="../toc.js"></script>
 
 <!-- Work around some values being stored in localStorage wrapped in quotes -->
 <script>
@@ -112,7 +127,7 @@
     <!-- populated by js -->
     <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
     <noscript>
-        <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+        <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
     </noscript>
     <div id="sidebar-resize-handle" class="sidebar-resize-handle">
         <div class="sidebar-resize-indicator"></div>
@@ -127,8 +142,8 @@
             <i class="fa fa-bars"></i>
         </label>
 
-        <a href="index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="/assets/logo192.png" alt="BDFD Wiki Logo">
+        <a href="../index.html" class="navbar-brand">
+            <img class="navbar-brand-icon" src="../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,47 +186,96 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
-                    <script src="theme/breadcrumbs.js"></script>
+                    <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/terms.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addSection.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <style>
-  .editPage {
-      visibility: hidden;
-  }
-</style>
-<h1 id="terms-of-service"><a class="header" href="#terms-of-service">Terms of Service</a></h1>
-<p>The Terms of Service for Bot Designer for Discord can be found at:</p>
-<p><strong><a href="https://botdesignerdiscord.com/tos">https://botdesignerdiscord.com/tos</a></strong></p>
-
+                <h1 id="addsection"><a class="header" href="#addsection">$addSection</a></h1>
+<div class="functionTags">
+  <span id="ComponentTag">Components v2</span>
+</div>
+<p>Adds a section to the message.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$addSection[Section name;(Container name)]
+</code></pre>
+<div id="admonition-its-important" class="admonition admonish-failure" role="note" aria-labelledby="admonition-its-important-title">
+<div class="admonition-title">
+<div id="admonition-its-important-title">
+<p>It’s important!</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-its-important"></a>
+</div>
+<div>
+<p>The section must contain all <a href="#section-components">section components</a>, otherwise the function will not work!</p>
+</div>
+</div>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Section name</code> <code>(Type: String || Flag: Required)</code>: Name for attaching other section components to the section.</li>
+</ul>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
+<p>You can’t have multiple sections and <a href="./addContainer.html">containers</a> <strong>with the same name</strong> in one message. So for example, you can’t have two sections with the name set to <code>section</code>.</p>
+</div>
+</div>
+<ul>
+<li><code>Container name</code> <code>(Type: String || Flag: Optional)</code>: To which <a href="./addContainer.html">container body</a> should the section be attached.</li>
+</ul>
+<h2 id="section-components"><a class="header" href="#section-components">Section Components</a></h2>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>Only 3 components can be added to the section.</p>
+</div>
+</div>
+<ul>
+<li><a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a></li>
+<li><a href="./addThumbnail.html"><code>$addThumbnail[]</code></a></li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$addSection[section]
+$addTextDisplay[Hello world!;section]
+$addThumbnail[$authorAvatar;;;section]
+</code></pre>
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./addTextDisplay.html"><code>$addTextDisplay[]</code></a>, <a href="./addThumbnail.html"><code>$addThumbnail[]</code></a> and <a href="./authorAvatar.html"><code>$authorAvatar</code></a> works?</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="FLOWCHART_CHANGELOG.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addField.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="entityTransferPolicy.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addThumbnail.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -222,16 +286,16 @@
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="FLOWCHART_CHANGELOG.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addField.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="FLOWCHART_CHANGELOG.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addField.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="entityTransferPolicy.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addThumbnail.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="entityTransferPolicy.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addThumbnail.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>
@@ -247,22 +311,22 @@
         window.playground_copyable = true;
     </script>
 
-    <script src="elasticlunr.min.js" charset="utf-8"></script>
-    <script src="mark.min.js" charset="utf-8"></script>
-    <script src="theme/searcher.js" charset="utf-8"></script>
+    <script src="../elasticlunr.min.js" charset="utf-8"></script>
+    <script src="../mark.min.js" charset="utf-8"></script>
+    <script src="../theme/searcher.js" charset="utf-8"></script>
 
-<script src="clipboard.min.js" charset="utf-8"></script>
-<script src="highlight.js" charset="utf-8"></script>
-<script src="book.js" charset="utf-8"></script>
-<script src="theme/playground.js"></script>
+<script src="../clipboard.min.js" charset="utf-8"></script>
+<script src="../highlight.js" charset="utf-8"></script>
+<script src="../book.js" charset="utf-8"></script>
+<script src="../theme/playground.js"></script>
 
 <!-- Custom JS scripts -->
 
 
-<script src="theme/settings/code-hg.js" defer></script>
+<script src="../theme/settings/code-hg.js" defer></script>
 
 <!-- Override some theme attributes with the custom settings -->
-<script src="theme/settings/apply-settings.js"></script>
+<script src="../theme/settings/apply-settings.js"></script>
 </body>
 
 </html>

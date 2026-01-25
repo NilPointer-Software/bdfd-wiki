@@ -62,19 +62,19 @@ body {
 	border-radius: var(--border-radius);
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	margin-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-bottom: 1rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .settingembed h2 {
-	margin-top: 60px;
-	padding-top: 15px;
+	margin-top: 0rem;
+	padding-top: 1rem;
 }
 
 .settingembed p {
-	margin-top: -15px;
+	margin-top: -1.5rem;
 }
 
 /* Buttons */
@@ -98,7 +98,6 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 }
 
 .textfontbuttons,
-.folderbuttons,
 .effectbuttons {
 	user-select: none;
 	-webkit-user-select: none;
@@ -110,8 +109,7 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 .fbutton,
 .hgButton,
 .hbutton,
-.ebutton,
-.folderbutton {
+.ebutton {
 	-webkit-user-select: none;
 	user-select: none;
 	touch-action: manipulation;
@@ -162,7 +160,7 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 	max-height: 35em;
 	border-radius: 10px;
 	border-width: 0;
-	color: #bbb;
+	color: #fff;
 	background: hsl(0deg 0% 100% / 7%);
 	padding: 7px;
 	font-size: 1.5rem;
@@ -287,8 +285,7 @@ button:not(#menu-bar i, #menu-bar .icon-button) {
 .fbutton:hover,
 .hgButton:hover,
 .hbutton:hover,
-.ebutton:hover,
-.folderbutton:hover {
+.ebutton:hover {
 	background: hsl(0deg 0% 100% / 12%);
 }
 

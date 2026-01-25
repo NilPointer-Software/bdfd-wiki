@@ -15,6 +15,21 @@
     <meta name="og:image" content="https://app.botdesignerdiscord.com/icons/Icon-512.png">
     <meta name="format-detection" content="telephone=no"/>
 
+    <!-- Apply user settings early to prevent layout shift -->
+    <script>
+        (function() {
+            try {
+                var data = JSON.parse(localStorage.getItem("json"));
+                if (data) {
+                    var style = document.documentElement.style;
+                    if (data["text-font"]) style.fontFamily = data["text-font"];
+                    if (data["text-size"]) style.fontSize = data["text-size"];
+                    if (data["text-hg"]) style.textShadow = data["text-hg"];
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="icon" type="image/png" href="../../favicon.png">
     <link rel="apple-touch-icon" type="image/png" href="../../favicon.png">
 
@@ -27,12 +42,12 @@
     <script type="module"
             src="../../assets/vendor/discord-components/skyra-discord-components-core.js"></script>
 
-    <!-- Fonts -->
+    <!-- Fonts - preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Source+Code+Pro:wght@500&family=Montserrat&display=swap">
 
     <!-- Highlight.js Stylesheets -->
     <link rel="stylesheet" href="../../highlight.css">
@@ -128,7 +143,7 @@
         </label>
 
         <a href="../../index.html" class="navbar-brand">
-            <img class="navbar-brand-icon" src="../..//assets/logo192.png" alt="BDFD Wiki Logo">
+            <img class="navbar-brand-icon" src="../../assets/logo192.png" alt="BDFD Wiki Logo">
             <span class="navbar-brand-text">BDFD Wiki</span>
         </a>
 
@@ -171,18 +186,6 @@
             });
         </script>
 
-        <div class="snowflakes">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i>
-        </div>
-
         <div id="content" class="content">
             <main>
                 <nav class="breadcrumb">
@@ -195,52 +198,523 @@
 
                 <h1 id="webhooks"><a class="header" href="#webhooks">Webhooks</a></h1>
 <p>This wiki explains how to create and use webhooks in BDFD.</p>
-<h2 id="creating-a-webhook"><a class="header" href="#creating-a-webhook">Creating A Webhook</a></h2>
-<pre><code>$webhookCreate[channelID;username;avatarURL (can be left empty)]
-</code></pre>
-<p>Creates a webhook in the provided ‘channelID’, with the inputted ‘username’ and ‘avatarURL’ assets. This function returns the URL of the newly created webhook <strong>(webhook URLs should be kept private, treat them like a password)</strong>.</p>
-<blockquote>
-<p><strong>Note:</strong> Only ten webhooks can be created per channel.</p>
-</blockquote>
-<h2 id="editing-a-webhook"><a class="header" href="#editing-a-webhook">Editing A Webhook</a></h2>
-<pre><code>$webhookAvatarURL[webhookURL;avatarURL]
-</code></pre>
-<p>Changes the provided webhook’s avatar.</p>
-<pre><code>$webhookUsername[webhookURL;username]
-</code></pre>
-<p>Changes the provided webhook’s username.</p>
-<h2 id="webhook-messages"><a class="header" href="#webhook-messages">Webhook Messages</a></h2>
-<p>You can send messages via a webhook using the following functions:</p>
+<div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
+<div class="admonition-title">
+<div id="admonition-warning-title">
+<p>Warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-warning"></a>
+</div>
+<div>
+<p>In this wiki we use functions that only work on <a href="./bds2/aboutBDScript2.html"><strong>BDScript 2</strong></a>. We recommend you to use the same script language to avoid problems with examples.</p>
+</div>
+</div>
+<h2 id="content"><a class="header" href="#content">Content</a></h2>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#webhookcreate"><strong>$webhookCreate[]</strong></a> &gt; <a href="#webhooksend"><strong>$webhookSend[]</strong></a> &gt; <a href="#webhookDelete"><strong>$webhookDelete[]</strong></a> &gt; <a href="#webhookavatarurl"><strong>$webhookAvatarURL[]</strong></a>  &gt; <a href="#webhookusername"><strong>$webhookUsername[]</strong></a> &gt; <a href="#webhooktitle"><strong>$webhookTitle[]</strong></a> &gt; <a href="#webhookdescription"><strong>$webhookDescription[]</strong></a> &gt; <a href="#webhookfooter"><strong>$webhookFooter[]</strong></a> &gt; <a href="#webhookcontent"><strong>$webhookContent[]</strong></a> &gt; <a href="#webhookcolor"><strong>$webhookColor[]</strong></a> &gt; <a href="#beautiful-webhook"><strong>Beautiful Webhook</strong></a></p>
+<h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
-<li><code>$webhookTitle[webhookURL;text]</code> - Adds a title to the webhook embed.</li>
-<li><code>$webhookDescription[webhookURL;text]</code> - Adds a description to the webhook embed.</li>
-<li><code>$webhookFooter[webhookURL;text]</code> - Adds a footer to the webhook embed.</li>
-<li><code>$webhookContent[webhookURL;text]</code> - The webhook non-embedded message content.</li>
-<li><code>$webhookColor[webhookURL;colorHex]</code> - The color of the webhook embed.</li>
+<li><a href="../../bdscript/webhookCreate.html"><code>$webhookCreate[]</code></a></li>
+<li><a href="../../bdscript/webhookSend.html"><code>$webhookSend[]</code></a></li>
+<li><a href="../../bdscript/webhookDelete.html"><code>$webhookDelete[]</code></a></li>
+<li><a href="../../bdscript/webhookAvatarURL.html"><code>$webhookAvatarURL[]</code></a></li>
+<li><a href="../../bdscript/webhookUsername.html"><code>$webhookUsername[]</code></a></li>
+<li><a href="../../bdscript/webhookTitle.html"><code>$webhookTitle[]</code></a></li>
+<li><a href="../../bdscript/webhookDescription.html"><code>$webhookDescription[]</code></a></li>
+<li><a href="../../bdscript/webhookFooter.html"><code>$webhookFooter[]</code></a></li>
+<li><a href="../../bdscript/webhookContent.html"><code>$webhookContent[]</code></a></li>
+<li><a href="../../bdscript/webhookColor.html"><code>$webhookColor[]</code></a></li>
 </ul>
-<p>Alternatively, you can use <code>$webhookSend[]</code> for more options and condensement:</p>
-<pre><code>$webhookSend[webhookURL;content;title;titleURL;description;color;author;authorIcon;footer;footerIcon;thumbnail;image;addTimestamp (yes/no)]
+<h2 id="support-functions-used"><a class="header" href="#support-functions-used">Support Functions Used</a></h2>
+<ul>
+<li><a href="../../bdscript/var.html"><code>$var[]</code></a></li>
+</ul>
+<h1 id="webhookcreate"><a class="header" href="#webhookcreate">$webhookCreate</a></h1>
+<p>Creates and returns the URL of the newly created webhook.</p>
+<div id="admonition-danger" class="admonition admonish-danger" role="note" aria-labelledby="admonition-danger-title">
+<div class="admonition-title">
+<div id="admonition-danger-title">
+<p>Danger</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-danger"></a>
+</div>
+<div>
+<p>Webhook URLs should be kept private, don’t share them!</p>
+</div>
+</div>
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
+<div class="admonition-title">
+<div id="admonition-limit-title">
+<p>Limit</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
+</div>
+<div>
+<p>Only 10 webhooks can be created per channel.</p>
+</div>
+</div>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$webhookCreate[Channel ID;Username;(Avatar URL)]
 </code></pre>
-<blockquote>
-<p><strong>Note:</strong> Unneeded fields can be left empty.</p>
-</blockquote>
-<h2 id="deleting-a-webhook"><a class="header" href="#deleting-a-webhook">Deleting A Webhook</a></h2>
-<pre><code>$webhookDelete[webhookURL]
-</code></pre>
-<p>Deletes the provided webhook.</p>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel in which the webhook will be created.</li>
+<li><code>Username</code> <code>(Type: String || Flag: Required)</code>: Name of the webhook that will be displayed in the channel.</li>
+<li><code>Avatar URL</code> <code>(Type: String || Flag: Vacantable)</code>: Avatar of the webhook that will be displayed in the channel.</li>
+</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$var[webhookURL;$webhookCreate[$channelID;Cool Webhook;]]
-$webhookContent[$var[webhookURL];Hello World!]
-$c[❗️This example requires BDScript 2 enabled❗️]
+$webhookCreate[$channelID;BDFD Webhook 🤖]
 </code></pre>
-<p><strong>Explaination:</strong></p>
-<p>This code is storing the newly created webhook URL returned from <code>$webhookCreate[]</code> <em>(using $var[])</em>. Then, in the rest of the code <code>$var[webhookURL]</code> was called to get the webhook URL, which allowed the webhook message to send using <code>$webhookContent[]</code>.</p>
+<discord-messages>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" bot author="BDFD Support" verified>
+        1234abcd567ABCDEFG890H_654679203GDGJEMFNXH.6479304948
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="../../bdscript/channelID.html"><code>$channelID</code></a> works?</p>
+</div>
+</div>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>You can use <a href="../../bdscript/var.html"><code>$var[]</code></a> or <a href="../introduction/variables.html">other variable functions</a> to store the Webhook URL.</p>
+<pre><code class="language-$nomention">$var[Webhook;$webhookCreate[$channelID;Secret]]
+Created and saved!
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message bot verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" author="BDFD Support">
+        Created and saved!
+    </discord-message>
+</discord-messages>
 <blockquote>
-<p>Remember, you need to be in BDScript 2 mode to use <code>$var[]</code>!</p>
+<p>How <a href="../../bdscript/var.html"><code>$var[]</code></a> and <a href="../../bdscript/channelID.html"><code>$channelID</code></a> works?</p>
 </blockquote>
-<p><strong>Output:</strong></p>
-<p><img src="https://user-images.githubusercontent.com/69215413/128615389-30e9dadc-2cce-4868-af33-540f612fcf27.png" alt="example" /></p>
+</div>
+</div>
+<h1 id="webhooksend"><a class="header" href="#webhooksend">$webhookSend</a></h1>
+<p>Sends message as the webhook.</p>
+<h2 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h2>
+<pre><code>$webhookSend[Webhook URL;(Content;Title;Title URL;Description;Color hex;Author;Author icon URL;Footer;Footer icon URL;Thumbnail URL;Image URL;Add timestamp?)]
+</code></pre>
+<h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h3>
+<ul>
+<li>
+<p><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to use.</p>
+</li>
+<li>
+<p><code>Content</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is shown above the embed.</p>
+</li>
+<li>
+<p><code>Title</code> <code>(Type: String || Flag: Vacantable)</code>: The text that will be used as the title.</p>
+</li>
+<li>
+<p><code>Title URL</code> <code>(Type: URL || Flag: Vacantable)</code>: The URL that will be applied to the title.</p>
+</li>
+<li>
+<p><code>Description</code> <code>(Type: String || Flag: Vacantable)</code>: The description that will be applied to the embed.</p>
+</li>
+<li>
+<p><code>Color hex</code> <code>(Type: Color || Flag: Vacantable)</code>: The color hex to set the embed border color as. You can also use color integer number.</p>
+</li>
+<li>
+<p><code>Author</code> <code>(Type: String || Flag: Vacantable )</code>: The text that appears at the author.</p>
+</li>
+<li>
+<p><code>Author icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to the author.</p>
+</li>
+<li>
+<p><code>Footer</code> <code>(Type: String || Flag: Vacantable)</code>: The text to set the footer as.</p>
+</li>
+<li>
+<p><code>Footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to the footer.</p>
+</li>
+<li>
+<p><code>Thumbnail</code> <code>(Type: URL || Flag: Vacantable)</code>: The image to set as the thumbnail.</p>
+</li>
+<li>
+<p><code>Image</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears above the footer.</p>
+</li>
+<li>
+<p><code>Add timestamp?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Adds a timestamp to the footer.</p>
+</li>
+</ul>
+<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookSend[$var[webhook];I'm the best webhook;Title;;It's a description!;#673ab7;;;;;;false]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message verified bot author="Test webhook" role-color="#fff">
+        I'm the best webhook
+        <discord-embed embed-title="Title" slot="embeds" color="#673ab7">
+            <discord-embed-description slot="description">
+                It's a description!
+            </discord-embed-description>
+            <discord-embed-footer slot="footer">
+                Footer Text Here
+            </discord-embed-footer>
+        </discord-embed>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-1" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-1-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-1-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-1"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a> and <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhookdelete"><a class="header" href="#webhookdelete">$webhookDelete</a></h1>
+<p>Deletes the webhook.</p>
+<h2 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h2>
+<pre><code>$webhookDelete[Webhook URL]
+</code></pre>
+<h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to delete.</li>
+</ul>
+<h2 id="example-2"><a class="header" href="#example-2">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookDelete[$var[webhook]]
+Deleted!
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" verified bot author="BDFD Support">
+        Deleted!
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-2" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-2-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-2-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-2"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a> and <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhookavatarurl"><a class="header" href="#webhookavatarurl">$webhookAvatarURL</a></h1>
+<p>Changes the webhook’s avatar.</p>
+<h2 id="syntax-3"><a class="header" href="#syntax-3">Syntax</a></h2>
+<pre><code>$webhookAvatarURL[Webhook URL;New avatar URL]
+</code></pre>
+<h3 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to modify.</li>
+<li><code>New avatar URL</code> <code>(Type: URL || Flag: Required)</code>: The new avatar image URL for the webhook.</li>
+</ul>
+<h2 id="example-3"><a class="header" href="#example-3">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookAvatarURL[$var[webhook];$authorAvatar]
+New avatar for webhook!
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message role-color="#378afa" author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified bot>
+        New avatar for webhook!
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-3" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-3-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-3-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-3"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a>, <a href="../../bdscript/var.html"><code>$var[]</code></a> and <a href="../../bdscript/authorAvatar.html"><code>$authorAvatar</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhookusername"><a class="header" href="#webhookusername">$webhookUsername</a></h1>
+<p>Changes the webhook’s username.</p>
+<h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
+<pre><code>$webhookUsername[Webhook URL;New username]
+</code></pre>
+<h3 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to modify.</li>
+<li><code>New username</code> <code>(Type: String || Flag: Required)</code>: The new username for the webhook.</li>
+</ul>
+<h2 id="example-4"><a class="header" href="#example-4">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookUsername[$var[webhook];BDFD Support]
+New username for webhook!
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" author="BDFD Support" verified>
+        New username for webhook!
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-4" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-4-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-4-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-4"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a> and <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhooktitle"><a class="header" href="#webhooktitle">$webhookTitle</a></h1>
+<p>Adds title to the webhook.</p>
+<h2 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h2>
+<pre><code>$webhookTitle[Webhook URL;Text]
+</code></pre>
+<h3 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to use.</li>
+<li><code>Text</code> <code>(Type: String || Flag: Required)</code>: The title text to add to the embed of the webhook.</li>
+</ul>
+<h2 id="example-5"><a class="header" href="#example-5">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookTitle[$var[webhook];My Webhook Title]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message bot role-color="#fff" author="Test webhook" avatar="https://cdn.discordapp.com/embed/avatars/3.png">
+        <discord-embed slot="embeds" embed-title="My Webhook Title">
+        </discord-embed>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-5" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-5-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-5-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-5"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a> and <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhookdescription"><a class="header" href="#webhookdescription">$webhookDescription</a></h1>
+<p>Adds description to the webhook.</p>
+<h2 id="syntax-6"><a class="header" href="#syntax-6">Syntax</a></h2>
+<pre><code>$webhookDescription[Webhook URL;Text]
+</code></pre>
+<h3 id="parameters-6"><a class="header" href="#parameters-6">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to use.</li>
+<li><code>Text</code> <code>(Type: String || Flag: Required)</code>: The description text to add to the embed of the webhook.</li>
+</ul>
+<h2 id="example-6"><a class="header" href="#example-6">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookDescription[$var[webhook];This is a detailed description for my webhook.]
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message author="Test webhook" avatar="https://cdn.discordapp.com/embed/avatars/4.png" bot role-color="#fff">
+        <none>
+        <discord-embed slot="embeds">
+            <discord-embed-description slot="description">
+                This is a detailed description for my webhook.
+            </discord-embed-description>
+        </discord-embed>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-6" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-6-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-6-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-6"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a> and <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhookfooter"><a class="header" href="#webhookfooter">$webhookFooter</a></h1>
+<p>Adds footer to the webhook.</p>
+<h2 id="syntax-7"><a class="header" href="#syntax-7">Syntax</a></h2>
+<pre><code>$webhookFooter[Webhook URL;Text]
+</code></pre>
+<h3 id="parameters-7"><a class="header" href="#parameters-7">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to use.</li>
+<li><code>Text</code> <code>(Type: String || Flag: Required)</code>: The footer text to add to the embed of the webhook.</li>
+</ul>
+<h2 id="example-7"><a class="header" href="#example-7">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookFooter[$var[webhook];Footer Text Here]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message author="Test webhook" role-color="#fff" bot avatar="https://cdn.discordapp.com/embed/avatars/4.png">
+        <discord-embed slot="embeds">
+            <discord-embed-footer slot="footer">
+                Footer Text Here
+            </discord-embed-footer>
+        </discord-embed>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-7" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-7-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-7-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-7"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a> and <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhookcontent"><a class="header" href="#webhookcontent">$webhookContent</a></h1>
+<p>Adds content to the webhook.</p>
+<h2 id="syntax-8"><a class="header" href="#syntax-8">Syntax</a></h2>
+<pre><code>$webhookContent[Webhook URL;Text]
+</code></pre>
+<h3 id="parameters-8"><a class="header" href="#parameters-8">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to use.</li>
+<li><code>Text</code> <code>(Type: String || Flag: Required)</code>: The content text to add to the webhook.</li>
+</ul>
+<h2 id="example-8"><a class="header" href="#example-8">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookContent[$var[webhook];Hello from my webhook!]
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message author="Test webhook" avatar="https://cdn.discordapp.com/embed/avatars/3.png" bot verified role-color="#fff">
+        Hello from my webhook!
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-8" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-8-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-8-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-8"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a> and <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="webhookcolor"><a class="header" href="#webhookcolor">$webhookColor</a></h1>
+<p>Adds color to the webhook.</p>
+<h2 id="syntax-9"><a class="header" href="#syntax-9">Syntax</a></h2>
+<pre><code>$webhookColor[Webhook URL;Color hex]
+</code></pre>
+<h3 id="parameters-9"><a class="header" href="#parameters-9">Parameters</a></h3>
+<ul>
+<li><code>Webhook URL</code> <code>(Type: URL || Flag: Required)</code>: The URL of the webhook you want to use.</li>
+<li><code>Color hex</code> <code>(Type: Color || Flag: Required)</code>: The color hex to set the embed border color as. You can also use color integer number.</li>
+</ul>
+<h2 id="example-9"><a class="header" href="#example-9">Example</a></h2>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;Test webhook]]
+$webhookColor[$var[webhook];#673ab7]
+$webhookDescription[⬅️ Embed border color.] 
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+        !example
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/embed/avatars/3.png" author="Test webhook" bot role-color="#fff">
+        <none>
+        <discord-embed slot="embeds" color="#673ab7">
+            <discord-embed-description slot="description">
+                ⬅️ Embed border color.
+            </discord-embed-description>
+        </discord-embed>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-9" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-9-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-9-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-9"></a>
+</div>
+<div>
+<p>How <a href="#webhookcreate"><code>$webhookCreate[]</code></a>, <a href="#webhookdescriprion"><code>$webhookDescriprion[]</code></a>, <a href="../../bdscript/channelID.html"><code>$channelID</code></a>, <a href="../../bdscript/var.html"><code>$var[]</code></a> works?</p>
+</div>
+</div>
+<h1 id="beautiful-webhook"><a class="header" href="#beautiful-webhook">Beautiful webhook</a></h1>
+<p>Here is one example of how to use a webhook.</p>
+<pre><code>$nomention
+$var[webhook;$webhookCreate[$channelID;I'm webhook 😎;$authorAvatar]]
+$webhookContent[$var[webhook];👇 Read before chatting]
+$webhookTitle[$var[webhook];📚 Rules]
+$webhookDescription[$var[webhook];Just be cool!]
+$webhookFooter[$var[webhook];Made by BDFD]
+$webhookColor[$var[webhook];#673ab7]
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message role-color="#fff" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" bot author="I'm webhook 😎">
+        👇 Read before chatting
+        <discord-embed embed-title="📚 Rules" color="#673ab7" slot="embeds">
+            <discord-embed-description slot="description">
+                Just be cool!
+            </discord-embed-description>
+            <discord-embed-footer slot="footer">
+                Made by BDFD
+            </discord-embed-footer>
+        </discord-embed>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this-10" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-10-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-10-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this-10"></a>
+</div>
+<div>
+<p>How <a href="../../bdscript/authorAvatar.html"><code>$authorAvatar</code></a> works?</p>
+</div>
+</div>
 
             </main>
 
