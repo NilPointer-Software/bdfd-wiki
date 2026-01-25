@@ -91,19 +91,19 @@ function fontStyle(style) {
 
 function escapeHtml(unsafe) {
 	return unsafe
-		.replace(/&/g, "&amp")
-		.replace(/</g, "&lt")
-		.replace(/>/g, "&gt")
-		.replace(/"/g, "&quot");
+		.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;");
 }
 
 function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
     
-    	// Check if the domain contains "javascript"
-    	if (window.location.href.includes("javascript")) {
-        	return;
-    	}
+	// Check if the domain contains "javascript"
+	if (window.location.href.includes("javascript")) {
+		return;
+	}
 	
 	try {
 		if (localStorage.getItem("code-hg"))
@@ -113,22 +113,23 @@ function highlight(scheme) {
 	codeBlocks.forEach((codeBlock) => {
 		let code = escapeHtml(codeBlock.textContent);
 
+		let keys = Object.keys(scheme.functionsHighlights || {}).sort(
+			(a, b) => b.length - a.length
+		);
+		
+		keys.forEach((key) => {
+			code = code.replace(
+				new RegExp(`\\${key}\\b`, "g"),
+				functionHighlight(key, scheme)
+			);
+		});
+
 		code = code
 			.replace(/\;/g, styling("semicolonHighlight", scheme))
 			.replace(/\[/g, styling("bracketHighlight", scheme))
 			.replace(/\]/g, styling("bracketHighlight", scheme))
-			.replace(/\$[a-zA-Z]*/g, styling("fallbackHighlight", scheme))
+			.replace(/\$(?!catch|else|elseif|endif|endtry|error|if|try|nomention\b)[a-zA-Z]+\b/g, styling("fallbackHighlight", scheme))
 			.replace(/.*/g, styling("defaultTextHighlight", scheme));
-
-		let keys = Object.keys(scheme.functionsHighlights || {}).sort(
-			(a, b) => b.length - a.length
-		);
-		keys.forEach((key) => {
-			code = code.replace(
-				new RegExp(`\\${key}`, "g"),
-				functionHighlight(key, scheme)
-			);
-		});
 
 		codeBlock.innerHTML = code;
 	});
