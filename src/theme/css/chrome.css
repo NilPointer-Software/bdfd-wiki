@@ -888,7 +888,7 @@ code.hljs:not(.discord-message code) {
 
 .nostyle {
 	/* Disabled Code HL style */
-	color: inherit !important;
+	color: var(--text-secondary) !important;
 	font-weight: inherit !important;
 	font-style: normal !important;
 }
