@@ -129,7 +129,18 @@ function highlight(scheme) {
 		codeContent.className = 'code-content';
 		
 		let originalCode = codeBlock.textContent;
-		const lines = originalCode.split('\n');
+		// Split by newline and remove empty lines at the end
+		let lines = originalCode.split('\n');
+		
+		// Remove trailing empty lines
+		while (lines.length > 0 && lines[lines.length - 1].trim() === '') {
+			lines.pop();
+		}
+		
+		// If no lines left after removing empty ones, add one empty line
+		if (lines.length === 0) {
+			lines = [''];
+		}
 		
 		let lineNumbersHTML = '';
 		let codeLinesHTML = '';
