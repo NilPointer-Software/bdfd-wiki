@@ -55,15 +55,6 @@ const scheme = {
 	},
 };
 
-function functionHighlight(func, scheme) {
-	let color = (scheme.functionsHighlights[func].color & 0xffffff)
-		.toString(16)
-		.padStart(6, "0")
-		.toUpperCase();
-	let style = fontStyle(scheme.functionsHighlights[func].style);
-	return `<span class="function" style="color: #${color}; ${style}">${func}</span>`;
-}
-
 function createStyledSpan(color, style, content) {
 	return `<span style="color: #${color}; ${style}">${content}</span>`;
 }
@@ -145,94 +136,104 @@ function highlight(scheme) {
 		let lineNumbersHTML = '';
 		let codeLinesHTML = '';
 		
+		// Get colors and styles for all scheme types
+		const defaultColor = getColorFromScheme("defaultTextHighlight", scheme);
+		const defaultStyle = getStyleFromScheme("defaultTextHighlight", scheme);
+		const bracketColor = getColorFromScheme("bracketHighlight", scheme);
+		const bracketStyle = getStyleFromScheme("bracketHighlight", scheme);
+		const semicolonColor = getColorFromScheme("semicolonHighlight", scheme);
+		const semicolonStyle = getStyleFromScheme("semicolonHighlight", scheme);
+		const fallbackColor = getColorFromScheme("fallbackHighlight", scheme);
+		const fallbackStyle = getStyleFromScheme("fallbackHighlight", scheme);
+		
+		// Prepare function highlights
+		const functionHighlights = {};
+		let keys = Object.keys(scheme.functionsHighlights || {}).sort(
+			(a, b) => b.length - a.length
+		);
+		
+		keys.forEach((key) => {
+			let color = (scheme.functionsHighlights[key].color & 0xffffff)
+				.toString(16)
+				.padStart(6, "0")
+				.toUpperCase();
+			let style = fontStyle(scheme.functionsHighlights[key].style);
+			functionHighlights[key] = { color, style };
+		});
+		
 		for (let i = 0; i < lines.length; i++) {
 			const lineNumber = i + 1;
 			lineNumbersHTML += `<div class="line-number" data-line-number="${lineNumber}">${lineNumber}</div>`;
 			
 			let line = lines[i];
 			
-			// Escape HTML first
+			// Escape HTML first (for plain text parts)
 			line = escapeHtml(line);
 			
 			// Process specific functions first
-			let keys = Object.keys(scheme.functionsHighlights || {}).sort(
-				(a, b) => b.length - a.length
-			);
-			
-			// Create regex pattern for all functions
-			const functionPattern = new RegExp(`(${keys.map(k => `\\${k}\\b`).join('|')})`, 'g');
-			
-			// Replace all functions at once
-			if (keys.length > 0) {
-				line = line.replace(functionPattern, (match) => {
-					// Find which function was matched
-					const matchedFunc = keys.find(key => {
-						const regex = new RegExp(`\\${key}\\b`);
-						return regex.test(match);
-					});
-					
-					if (matchedFunc) {
-						let color = (scheme.functionsHighlights[matchedFunc].color & 0xffffff)
-							.toString(16)
-							.padStart(6, "0")
-							.toUpperCase();
-						let style = fontStyle(scheme.functionsHighlights[matchedFunc].style);
-						return `<span class="function" style="color: #${color}; ${style}">${match}</span>`;
-					}
-					return match;
+			keys.forEach((key) => {
+				const regex = new RegExp(`(${key.replace(/\$/g, '\\$')})(?!\\w)`, 'g');
+				line = line.replace(regex, (match) => {
+					const funcData = functionHighlights[key];
+					return `<span class="function" style="color: #${funcData.color}; ${funcData.style}">${match}</span>`;
 				});
-			}
-			
-			// Process semicolons
-			line = line.replace(/;/g, (match) => {
-				return createStyledSpan(
-					getColorFromScheme("semicolonHighlight", scheme),
-					getStyleFromScheme("semicolonHighlight", scheme),
-					match
-				);
 			});
 			
-			// Process brackets
-			line = line.replace(/\[/g, (match) => {
-				return createStyledSpan(
-					getColorFromScheme("bracketHighlight", scheme),
-					getStyleFromScheme("bracketHighlight", scheme),
-					match
-				);
+			// Process other elements
+			// Brackets
+			line = line.replace(/\[/g, () => {
+				return `<span style="color: #${bracketColor}; ${bracketStyle}">[</span>`;
 			});
 			
-			line = line.replace(/\]/g, (match) => {
-				return createStyledSpan(
-					getColorFromScheme("bracketHighlight", scheme),
-					getStyleFromScheme("bracketHighlight", scheme),
-					match
-				);
+			line = line.replace(/\]/g, () => {
+				return `<span style="color: #${bracketColor}; ${bracketStyle}">]</span>`;
 			});
 			
-			// Process remaining functions (not in functionsHighlights)
-			// First, we need to skip already processed functions
-			const processedFunctionsPattern = keys.length > 0 
-				? new RegExp(`\\$(?!(${keys.map(k => k.substring(1)).join('|')})\\b)[a-zA-Z]+\\b`, 'g')
-				: /\$[a-zA-Z]+\b/g;
+			// Semicolons
+			line = line.replace(/;/g, () => {
+				return `<span style="color: #${semicolonColor}; ${semicolonStyle}">;</span>`;
+			});
 			
-			line = line.replace(processedFunctionsPattern, (match) => {
-				// Check if this is inside a span tag (already processed)
-				if (/<span[^>]*>.*<\/span>/.test(match)) {
-					return match;
+			// Remaining functions (not in functionsHighlights)
+			// Create pattern to match $function names
+			const remainingFuncPattern = /\$[a-zA-Z]+\b/g;
+			line = line.replace(remainingFuncPattern, (match) => {
+				// Skip if already inside a span (already processed)
+				if (line.indexOf(`<span`) !== -1) {
+					// Check if this exact match is already wrapped
+					const pos = line.indexOf(match);
+					const before = line.substring(0, pos);
+					const after = line.substring(pos + match.length);
+					
+					// Check if match is inside any span
+					const spansBefore = (before.match(/<span/g) || []).length;
+					const spansClosedBefore = (before.match(/<\/span>/g) || []).length;
+					
+					// If we're inside a span, don't wrap again
+					if (spansBefore > spansClosedBefore) {
+						return match;
+					}
 				}
-				return createStyledSpan(
-					getColorFromScheme("fallbackHighlight", scheme),
-					getStyleFromScheme("fallbackHighlight", scheme),
-					match
-				);
+				
+				// Check if this is a known function (already processed)
+				let isKnown = false;
+				keys.forEach((key) => {
+					if (match === key) {
+						isKnown = true;
+					}
+				});
+				
+				if (!isKnown) {
+					return `<span style="color: #${fallbackColor}; ${fallbackStyle}">${match}</span>`;
+				}
+				
+				return match;
 			});
 			
-			// Wrap the entire line in default styling if it's not empty
+			// Add the line to output
 			if (line.trim() === '' && line.length === 0) {
 				codeLinesHTML += `<div class="code-line">&nbsp;</div>`;
 			} else {
-				// Don't wrap in another span if the line already has styling
-				// Just apply default color to the container
 				codeLinesHTML += `<div class="code-line">${line}</div>`;
 			}
 		}
@@ -241,8 +242,6 @@ function highlight(scheme) {
 		codeContent.innerHTML = codeLinesHTML;
 		
 		// Apply default text color to the entire code content
-		const defaultColor = getColorFromScheme("defaultTextHighlight", scheme);
-		const defaultStyle = getStyleFromScheme("defaultTextHighlight", scheme);
 		codeContent.style.color = `#${defaultColor}`;
 		codeContent.style.cssText += `; ${defaultStyle}`;
 		
