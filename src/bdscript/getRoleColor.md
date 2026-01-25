@@ -6,10 +6,6 @@ Returns a role's color hex.
 $getRoleColor[Role ID]
 ```
 
-```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to test colors!
-```
-
 ### Parameters
 - `Role ID` `(Type: Snowflake || Flag: Required)`: The role to get the color hex from.
 

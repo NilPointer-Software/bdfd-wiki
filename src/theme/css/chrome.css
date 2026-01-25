@@ -1274,8 +1274,6 @@ ul#searchresults span.teaser em {
 	border-radius: 10px;
 	padding: .2rem 1rem .2rem 1rem;
 	margin-bottom: .5rem;
-	background: rgba(255, 255, 255, 0.03);
-	border: 1px solid rgba(255, 255, 255, 0.04);
 	cursor: pointer;
 }
 

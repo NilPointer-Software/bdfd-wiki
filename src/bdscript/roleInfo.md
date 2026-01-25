@@ -17,9 +17,6 @@ You can use the following "commands" within `$roleInfo[]`:
 - `{mentionable}` - Returns if the role is mentionable by everyone.
 - `{hoist}` - Returns if the role is hoisted (displayed separately).
 - `{color}` - Returns the role's color.
-```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to test colors!
-```
 
 - `{position}` - Returns the role's position on the "roles list".
 

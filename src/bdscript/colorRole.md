@@ -7,10 +7,7 @@ $colorRole[Color hex]
 ```
 
 ### Parameters
-- `Color hex` `(Type: Color || Flag: Required)`: The [color hex](../tools/color.md) to change the mentioned role color to. You can also use color integer number.
-```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to select the best color!
-```
+- `Color hex` `(Type: Color || Flag: Required)`: The color hex to change the mentioned role color to. You can also use color integer number.
 
 ## Example
 ```

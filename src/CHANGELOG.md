@@ -6,8 +6,6 @@
 }
 </style>
 
-<link rel="stylesheet" href="./theme/css/changelog.css">
-
 # 2026
 
 ## January

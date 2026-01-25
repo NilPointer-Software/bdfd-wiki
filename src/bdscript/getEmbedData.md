@@ -17,9 +17,6 @@ $getEmbedData[Channel ID;Message ID;Embed index;Embed property (title/descriptio
   - `color` - The color border hex of the embed.
   - `image` - The image of the embed.
   - `timestamp` - The timestamp of the embed.
-```admonish tip title="Timestamp Converter"
-You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
-```
 
 ## Example
 ```

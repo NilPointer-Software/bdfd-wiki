@@ -4,7 +4,7 @@
 [Settings](./settings.md)
 [Changelog](./CHANGELOG.md)
 [Flowchart Changelog](./FLOWCHART_CHANGELOG.md)
-[Terms of Service](./terms.md)
+[Terms of Service](https://botdesignerdiscord.com/tos)
 [Entity Transfer Policy](./entityTransferPolicy.md)
 
 ---
@@ -41,12 +41,7 @@
         - [Hyperlinks](./guides/other/hyperlinks.md)
         - [Share Code](./guides/other/sharecode.md)
         - [Common BDFD Errors](./guides/other/commonErrors.md)
-
-- [Tools]()
-    - [Color](./tools/color.md)
-    - [Text Editor](./tools/editor.md)
-    - [Permission Calculator](./tools/permissionscalculator.md)
-    - [Timestamp Converter](./tools/timestamp.md)
+        - [Tools](./tools.md)
 
 - [Resources]()
     - [Introduction](./resources/introduction.md)

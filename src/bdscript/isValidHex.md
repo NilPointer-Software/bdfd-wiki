@@ -62,10 +62,6 @@ Is valid HEX? $isValidHex[$message]
 How [`$message`](./message.md) works?
 ```
 
-```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to choose colors!
-```
-
 <div class=function-playground>
   <h3>🤖 Playground</h3>
   <p>Here you can understand how this function works.</p>

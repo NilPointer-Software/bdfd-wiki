@@ -6,10 +6,6 @@ Returns the current [unix timestamp](https://www.unixtimestamp.com/) in the sele
 $getTimestamp[Time unit]
 ```
 
-```admonish tip title="Timestamp Converter"
-You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
-```
-
 ### Parameters
 - `Time unit` `(Type: Enum || Flag: Required)`: Sets timestamp time unit.
 

@@ -12,10 +12,7 @@ $sendEmbedMessage[Channel ID;Content;(Title;Title URL;Description;Color hex;Auth
 - `Title` `(Type: String || Flag: Vacantable)`: The text that will be used as the title.
 - `Title URL` `(Type: URL || Flag: Vacantable)`: The URL that will be applied to the title.
 - `Description` `(Type: String || Flag: Vacantable)`: The description that will be applied to the embed.
-- `Color hex` `(Type: Color || Flag: Vacantable)`: The [color hex](../tools/color.md) to set the embed border color as. You can also use color integer number.
-```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to select the best color!
-```
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The color hex to set the embed border color as. You can also use color integer number.
 
 - `Author` `(Type: String || Flag: Vacantable )`: The text that appears at the author.
 - `Author icon` `(Type: URL || Flag: Vacantable)`: The image that appears next to the author. Must be a valid image URL.
