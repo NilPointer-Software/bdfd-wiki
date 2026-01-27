@@ -110,7 +110,10 @@ function highlight(scheme) {
 	} catch {}
 
 	codeBlocks.forEach((codeBlock) => {
-		let code = escapeHtml(codeBlock.textContent);
+		let originalText = codeBlock.textContent;
+		originalText = originalText.replace(/\n+$/, '');
+		
+		let code = escapeHtml(originalText);
 
 		code = code
 			.replace(/\;/g, styling("semicolonHighlight", scheme))
@@ -130,23 +133,14 @@ function highlight(scheme) {
 		});
 
 		const lines = code.split('\n');
-		
-		const cleanLines = [];
-		for (let i = 0; i < lines.length; i++) {
-			if (i === lines.length - 1 && lines[i] === '') {
-				continue;
-			}
-			cleanLines.push(lines[i]);
-		}
-		
-		const lineCount = cleanLines.length;
+		const lineCount = lines.length;
 		
 		let lineNumbersHtml = '';
 		for (let i = 1; i <= lineCount; i++) {
 			lineNumbersHtml += `<div class="line-number" data-line-number="${i}">${i}</div>`;
 		}
 		
-		const formattedCode = cleanLines.map(line => {
+		const formattedCode = lines.map(line => {
 			if (line.trim() === '') {
 				return '<div class="code-line">&nbsp;</div>';
 			}
