@@ -130,17 +130,15 @@ function highlight(scheme) {
 		});
 
 		const lines = code.split('\n');
-		const lineCount = lines.length;
+		const filteredLines = lines.filter(line => line.trim() !== '' || lines.length === 1);
+		const lineCount = filteredLines.length;
 		
 		let lineNumbersHtml = '';
 		for (let i = 1; i <= lineCount; i++) {
 			lineNumbersHtml += `<div class="line-number" data-line-number="${i}">${i}</div>`;
 		}
 		
-		const formattedCode = lines.map(line => {
-			if (line.trim() === '') {
-				return '<div class="code-line">&nbsp;</div>';
-			}
+		const formattedCode = filteredLines.map(line => {
 			return `<div class="code-line">${line}</div>`;
 		}).join('');
 		
