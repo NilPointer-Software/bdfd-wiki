@@ -48,6 +48,7 @@ html {
 	background-color: var(--card-bg);
 	border-radius: var(--border-radius);
 	padding: 1rem;
+	padding-left: 1.5rem;
 	margin-top: 2rem;
 }
 
@@ -1703,6 +1704,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
