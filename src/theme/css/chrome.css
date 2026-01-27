@@ -1038,7 +1038,7 @@ pre > .buttons {
 	position: absolute;
 	z-index: 100;
 	right: -3px;
-	margin: 1px;
+	margin: 5px;
 	padding: 1px;
 	visibility: hidden;
 	opacity: 0;
@@ -1704,6 +1704,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
