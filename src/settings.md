@@ -1,13 +1,4 @@
-<div class="tag-beta">
-  <span class="warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
-  <span class="text">
-    <span class="head">Experimental Feature!</span>
-    <span class="desc">If you encountered an error, please contact us on the official BDFD Support Server.</span>
-  </span>
-</div>
-
 # Settings
-
 Let's customize your experience in our Bot Designer For Discord wiki world!
 
 <link rel="stylesheet" href="./theme/settings/style.css">
@@ -41,15 +32,6 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
   	<button id="font6" class="fbutton" onClick="changeTextFont('font6')">System UI</button>
     <p id="default-is">"Open Sans"</p>
   </div>
-</div>
-
-<div class="settingembed">
-  <h2>Effects</h2>
-  <p>It's only decoration for wiki.</p>
-  <div class="effectbuttons">
-    <button id="manageEffect" class="ebutton" onClick="effectsSetting()">Enable</button>
-  </div>
-  <p id="default-is">"Enable" (Disabled)</p>
 </div>
 
 <div class="settingembed">
