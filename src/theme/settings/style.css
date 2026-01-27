@@ -8,46 +8,6 @@ body {
 	visibility: hidden;
 }
 
-/* Tag Beta Feature */
-
-.tag-beta {
-	user-select: none;
-	-webkit-user-select: none;
-	border-style: solid;
-	border-color: rgba(255, 255, 255, 0.1);
-	margin: auto;
-	margin-top: 15px;
-	width: fit-content;
-	padding: 10px 10px;
-	border-width: 1px;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	background: var(--card-bg);
-}
-
-.tag-beta .warn {
-	font-size: 2.25em;
-	margin-right: 7.5px;
-}
-
-.tag-beta .text {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-bottom: 5px;
-}
-
-.tag-beta .head {
-	font-weight: bold;
-	margin-bottom: 2.5px;
-	font-size: 1.1em;
-}
-
-.tag-beta .desc {
-	font-size: 0.9em;
-}
-
 /* Discord Message Preview*/
 
 .discord-messages {
