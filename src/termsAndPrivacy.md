@@ -15,7 +15,7 @@ Review our Terms of Service and Privacy Policy. These legal documents outline th
     <a href="./entityTransferPolicy.md" class="document-card ettp">
       <div class="doc-header">
         <i class="fa fa-shield-alt" aria-hidden="true"></i>
-        <span class="doc-title">ETTP</span>
+        <span class="doc-title">Entity Transfer Policy</span>
       </div>
       <p class="doc-content">Extended Terms & Third-Party Policies. Additional terms for specific services and third-party integrations.</p>
       <span class="doc-link">Read full document →</span>
