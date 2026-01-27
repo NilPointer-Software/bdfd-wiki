@@ -151,26 +151,6 @@ function changeDiscordTheme(colorId) {
 	updateJsonFile("discord-example-theme", colorId);
 }
 
-function effectsSetting() {
-	const manageEffectButton = document.getElementById("manageEffect");
-	const snowflakes = document.querySelector(".snowflakes");
-	let inv = JSON.parse(localStorage.getItem("json"));
-
-	if (inv["effects"] === "hidden") {
-		// Enabled
-		var effectStatus = "Disable";
-		var boolEffectStatus = "visible";
-	} else {
-		// Disabled
-		var effectStatus = "Enable";
-		var boolEffectStatus = "hidden";
-	}
-
-	snowflakes.style.visibility = boolEffectStatus;
-	manageEffectButton.textContent = effectStatus;
-	updateJsonFile("effects", boolEffectStatus);
-}
-
 function changeTextFont(fontId) {
 	const fontHtml = document.querySelector("html");
 	let font = fonts[fontId] || "Open Sans, sans-serif";
@@ -344,7 +324,6 @@ function loadSettings() {
 	const range = document.getElementById("textsize");
 	const codeTextInput = document.getElementById("jsonhginput");
 	const charCountElement = document.querySelector(".charCount");
-	const uiManageEffectButton = document.getElementById("manageEffect");
 	const uiSnowflakes = document.querySelector(".snowflakes");
 
 	let data;
@@ -359,7 +338,6 @@ function loadSettings() {
 		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		"effects": "hidden",
 		"code-hg": {
 			defaultTextHighlight: {
 				color: 4288341353,
@@ -437,15 +415,6 @@ function loadSettings() {
 		displaySize.textContent = data["text-size"].replace("%", "");
 		range.value = parseInt(data["text-size"].replace("%", ""));
 	}
-
-	if (data["effects"] === "hidden") {
-		var effectStatus = "Enable";
-	} else {
-		var effectStatus = "Disable";
-	}
-
-	uiSnowflakes.style.visibility = data["effects"];
-	uiManageEffectButton.textContent = effectStatus;
 
 	const button = document.querySelector(".resetToDefault");
 	button.addEventListener("mousedown", resetAllHover);
