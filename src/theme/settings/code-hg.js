@@ -130,15 +130,26 @@ function highlight(scheme) {
 		});
 
 		const lines = code.split('\n');
-		const filteredLines = lines.filter(line => line.trim() !== '' || lines.length === 1);
-		const lineCount = filteredLines.length;
+		
+		const cleanLines = [];
+		for (let i = 0; i < lines.length; i++) {
+			if (i === lines.length - 1 && lines[i] === '') {
+				continue;
+			}
+			cleanLines.push(lines[i]);
+		}
+		
+		const lineCount = cleanLines.length;
 		
 		let lineNumbersHtml = '';
 		for (let i = 1; i <= lineCount; i++) {
 			lineNumbersHtml += `<div class="line-number" data-line-number="${i}">${i}</div>`;
 		}
 		
-		const formattedCode = filteredLines.map(line => {
+		const formattedCode = cleanLines.map(line => {
+			if (line.trim() === '') {
+				return '<div class="code-line">&nbsp;</div>';
+			}
 			return `<div class="code-line">${line}</div>`;
 		}).join('');
 		
