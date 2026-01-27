@@ -886,8 +886,8 @@ code.hljs:not(.discord-message code) {
 }
 
 .code-container {
-	margin-top: -12px;
-	margin-bottom: -6px;
+	margin-top: -47px;
+	margin-bottom: -40px;
 	margin-left: -6px;
     display: flex;
 }
@@ -1658,6 +1658,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
