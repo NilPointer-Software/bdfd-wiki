@@ -3,7 +3,7 @@
 @import "variables.css";
 
 ::-webkit-scrollbar {
-	background: var(--card-bg);
+	background: var(--dark-bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -11,7 +11,7 @@
 }
 
 html {
-	scrollbar-color: var(--card-hover) var(--card-bg);
+	scrollbar-color: var(--card-hover) var(--dark-bg);
 }
 
 /* ===== Page Layout ===== */
@@ -1707,6 +1707,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
