@@ -888,8 +888,7 @@ code.hljs:not(.discord-message code) {
 
 .code-container {
     display: flex;
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
     background: #1e1e1e;
     border-radius: 4px;
@@ -1697,6 +1696,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
