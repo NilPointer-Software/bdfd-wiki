@@ -272,17 +272,45 @@ if (window.playground_copyable) {
 })();
 
 (function syntax() {
-	const syntaxButtons = document.querySelectorAll(".syntax-button");
-	syntaxButtons.forEach((hgButton) => {
-		hgButton.addEventListener("click", (e) => {
-			const playground = hgButton.closest("pre");
-			const codeBlock = playground.querySelector("code");
-			const spans = codeBlock.querySelectorAll("span");
-			spans.forEach((span) => {
-				span.classList.toggle("nostyle");
-			});
-		});
-	});
+  const syntaxButtons = document.querySelectorAll(".syntax-button");
+  syntaxButtons.forEach((hgButton) => {
+    hgButton.addEventListener("click", (e) => {
+      const playground = hgButton.closest("pre");
+      const codeBlock = playground.querySelector("code");
+      const codeLines = codeBlock.querySelectorAll(".code-line");
+      
+      codeLines.forEach((codeLine) => {
+        codeLine.classList.toggle("nostyle");
+        
+        const walker = document.createTreeWalker(
+          codeLine,
+          NodeFilter.SHOW_TEXT,
+          null,
+          false
+        );
+        
+        let node;
+        while (node = walker.nextNode()) {
+          if (node.textContent.trim() !== '' && 
+              node.parentNode.nodeType === Node.ELEMENT_NODE &&
+              node.parentNode.tagName !== 'SPAN') {
+            
+            const span = document.createElement('span');
+            span.className = 'nostyle';
+            span.textContent = node.textContent;
+            node.parentNode.replaceChild(span, node);
+          }
+        }
+      });
+      
+      const spans = codeBlock.querySelectorAll("span");
+      spans.forEach((span) => {
+        if (!span.closest('.code-line')) {
+          span.classList.toggle("nostyle");
+        }
+      });
+    });
+  });
 })();
 
 (function scrollToTop() {
@@ -379,3 +407,4 @@ if (window.playground_copyable) {
 		{ passive: true }
 	);
 })();
+
