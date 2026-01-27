@@ -220,40 +220,52 @@ if (window.playground_copyable) {
 })();
 
 (function clipboard() {
-	const clipButtons = document.querySelectorAll(".clip-button");
+  const clipButtons = document.querySelectorAll(".clip-button");
 
-	function hideTooltip(elem) {
-		elem.firstChild.innerText = "";
-		elem.className = "fa far fa-clipboard clip-button";
-	}
+  function hideTooltip(elem) {
+    elem.firstChild.innerText = "";
+    elem.className = "fa far fa-clipboard clip-button";
+  }
 
-	function showTooltip(elem, msg) {
-		elem.firstChild.innerText = msg;
-		elem.className = "fa far fa-clipboard tooltipped";
-	}
+  function showTooltip(elem, msg) {
+    elem.firstChild.innerText = msg;
+    elem.className = "fa far fa-clipboard tooltipped";
+  }
 
-	const clipboardSnippets = new ClipboardJS(".clip-button", {
-		text: (trigger) => {
-			hideTooltip(trigger);
-			const playground = trigger.closest("pre");
-			return playground.querySelector("code").textContent;
-		},
-	});
+  const clipboardSnippets = new ClipboardJS(".clip-button", {
+    text: (trigger) => {
+      hideTooltip(trigger);
+      const playground = trigger.closest("pre");
 
-	clipButtons.forEach((clipButton) => {
-		clipButton.addEventListener("mouseout", (e) => {
-			hideTooltip(e.currentTarget);
-		});
-	});
+      const codeElement = playground.querySelector("code");
+      const codeLines = codeElement.querySelectorAll(".code-line");
+      
+      if (codeLines.length > 0) {
+        const lines = [];
+        codeLines.forEach(line => {
+          lines.push(line.textContent);
+        });
+        return lines.join('\n');
+      } else {
+        return codeElement.textContent;
+      }
+    },
+  });
 
-	clipboardSnippets.on("success", (e) => {
-		e.clearSelection();
-		showTooltip(e.trigger, "Copied!");
-	});
+  clipButtons.forEach((clipButton) => {
+    clipButton.addEventListener("mouseout", (e) => {
+      hideTooltip(e.currentTarget);
+    });
+  });
 
-	clipboardSnippets.on("error", (e) => {
-		showTooltip(e.trigger, "Clipboard error!");
-	});
+  clipboardSnippets.on("success", (e) => {
+    e.clearSelection();
+    showTooltip(e.trigger, "Copied!");
+  });
+
+  clipboardSnippets.on("error", (e) => {
+    showTooltip(e.trigger, "Clipboard error!");
+  });
 })();
 
 (function wrap() {
@@ -392,6 +404,7 @@ if (window.playground_copyable) {
 		{ passive: true }
 	);
 })();
+
 
 
 
