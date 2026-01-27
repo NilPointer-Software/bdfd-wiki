@@ -881,9 +881,44 @@ pre {
 }
 
 code.hljs:not(.discord-message code) {
-	background: var(--card-bg);
-	padding: 0.8em;
-	margin-bottom: -0.5rem;
+    background: var(--card-bg);
+    margin-bottom: -0.5rem;
+}
+
+.code-container {
+    margin-top: -7px;
+    margin-bottom: -6px;
+    margin-left: -6px;
+   display: flex;
+}
+
+.line-numbers {
+   background: hsl(0deg 0% 100% / 3%);
+   color: var(--text-muted);
+   padding: 1em 0.5em;
+   text-align: right;
+   user-select: none;
+   min-width: 4rem;
+   border-right: 1px solid var(--text-muted);
+}
+
+.line-number {
+   padding: 0 0.5em;
+   min-height: 1.4em;
+}
+
+
+.code-content {
+    flex: 1;
+    padding: 15px;
+    overflow-x: auto;
+   tab-size: 4;
+   line-height: 1.4;
+}
+
+.code-line {
+    margin-left: -5px !important;
+   line-height: 1.4;
 }
 
 .nostyle {
@@ -1623,6 +1658,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
