@@ -109,18 +109,6 @@ Review our Terms of Service and Privacy Policy. These legal documents outline th
 .document-card.privacy .doc-link {
     color: #8b5cf6;
 }
-
-@media (max-width: 768px) {
-  .documents-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .legal-documents h1 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-}
 </style>
 
 <div class="legal-documents">
