@@ -274,24 +274,17 @@ if (window.playground_copyable) {
     button.addEventListener("click", (e) => {
       const playground = button.closest("pre");
       const codeContainer = playground.querySelector(".code-container");
-      const codeContent = playground.querySelector(".code-content");
-      const codeLines = playground.querySelectorAll(".code-line");
-      
+      const lineNumbers = codeContainer.querySelectorAll(".line-number");
+      const codeLines = codeContainer.querySelectorAll(".code-line");
+
       codeContainer.classList.toggle("wrap-enabled");
-      
-      if (codeContent.style.whiteSpace == "pre-wrap") {
-        codeContent.style.whiteSpace = "pre";
-        codeLines.forEach(line => {
-          line.style.whiteSpace = "pre";
-        });
-      } else {
-        codeContent.style.whiteSpace = "pre-wrap";
-        codeLines.forEach(line => {
-          line.style.whiteSpace = "pre-wrap";
-          line.style.wordWrap = "break-word";
-          line.style.wordBreak = "break-word";
-        });
-      }
+
+      codeLines.forEach((line, index) => {
+        if (lineNumbers[index]) {
+          const lineHeight = line.scrollHeight;
+          lineNumbers[index].style.height = lineHeight + 'px';
+        }
+      });
     });
   });
 })();
@@ -404,6 +397,7 @@ if (window.playground_copyable) {
 		{ passive: true }
 	);
 })();
+
 
 
 
