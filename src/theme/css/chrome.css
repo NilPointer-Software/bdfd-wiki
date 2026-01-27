@@ -881,7 +881,6 @@ pre {
 }
 
 code.hljs:not(.discord-message code) {
-	background: var(--card-bg);
 	margin-bottom: -0.5rem;
 	padding: 0;
 	overflow-y: hidden;
@@ -1708,6 +1707,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
