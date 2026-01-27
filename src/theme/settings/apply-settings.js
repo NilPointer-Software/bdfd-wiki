@@ -368,7 +368,6 @@ function applySettings() {
     "language": "en",
     "text-hg": "none",
     "text-font": "Open Sans, sans-serif",
-    "effects": "hidden",
     "code-hg": {
       defaultTextHighlight: {
         color: 4288341353,
@@ -435,10 +434,6 @@ function applySettings() {
   html.style.fontFamily = data["text-font"];
   html.style.fontSize = data["text-size"];
   html.style.textShadow = data["text-hg"];
-  
-  if (snowflakes) {
-    snowflakes.style.visibility = data["effects"];
-  }
 
   document.querySelectorAll('.chapter > li.chapter-item').forEach(el => {
    if (el.querySelector('div')) {
