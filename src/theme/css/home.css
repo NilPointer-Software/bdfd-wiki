@@ -38,6 +38,14 @@
 	box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
 }
 
+.bdfd-is h1 {
+	margin-top: 2%;
+	white-space: normal;
+	overflow: visible !important;
+	text-overflow: clip !important;
+	width: auto;
+}
+
 #bdfd-about {
 	padding: 1rem;
 }
@@ -207,4 +215,5 @@ button a {
 		min-height: auto;
 	}
 }
+
 
