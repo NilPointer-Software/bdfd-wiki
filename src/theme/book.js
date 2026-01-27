@@ -257,18 +257,31 @@ if (window.playground_copyable) {
 })();
 
 (function wrap() {
-	const wrapButtons = document.querySelectorAll(".wrap-button");
-	wrapButtons.forEach((button) => {
-		button.addEventListener("click", (e) => {
-			const playground = button.closest("pre");
-			const codeBlock = playground.querySelector("code");
-			if (codeBlock.style.whiteSpace == "pre-wrap") {
-				codeBlock.style.whiteSpace = "pre";
-			} else {
-				codeBlock.style.whiteSpace = "pre-wrap";
-			}
-		});
-	});
+  const wrapButtons = document.querySelectorAll(".wrap-button");
+  wrapButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const playground = button.closest("pre");
+      const codeContainer = playground.querySelector(".code-container");
+      const codeContent = playground.querySelector(".code-content");
+      const codeLines = playground.querySelectorAll(".code-line");
+      
+      codeContainer.classList.toggle("wrap-enabled");
+      
+      if (codeContent.style.whiteSpace == "pre-wrap") {
+        codeContent.style.whiteSpace = "pre";
+        codeLines.forEach(line => {
+          line.style.whiteSpace = "pre";
+        });
+      } else {
+        codeContent.style.whiteSpace = "pre-wrap";
+        codeLines.forEach(line => {
+          line.style.whiteSpace = "pre-wrap";
+          line.style.wordWrap = "break-word";
+          line.style.wordBreak = "break-word";
+        });
+      }
+    });
+  });
 })();
 
 (function syntax() {
@@ -379,5 +392,6 @@ if (window.playground_copyable) {
 		{ passive: true }
 	);
 })();
+
 
 
