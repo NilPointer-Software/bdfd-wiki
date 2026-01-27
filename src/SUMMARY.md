@@ -4,8 +4,7 @@
 [Settings](./settings.md)
 [Changelog](./CHANGELOG.md)
 [Flowchart Changelog](./FLOWCHART_CHANGELOG.md)
-[Terms of Service](./terms.md)
-[Entity Transfer Policy](./entityTransferPolicy.md)
+[Terms & Privacy](./termsAndPrivacy.md)
 
 ---
 
