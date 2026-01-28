@@ -1359,6 +1359,7 @@ ul#searchresults span.teaser em {
 	left: 0;
 	right: 0;
 	padding: .1rem 16px;
+	padding-bottom: 2rem;
 }
 
 .sidebar-hidden .sidebar {
@@ -1606,6 +1607,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
