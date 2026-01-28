@@ -121,23 +121,37 @@ h4 a.header:target {
 	text-decoration: none;
 }
 
+/* Tables */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
 table {
 	border-collapse: separate;
 	border-spacing: 0;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	overflow: hidden;
+	width: 100%;
 	box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
+	table-layout: auto;
+}
+
+table td, table th {
+	max-width: 100rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 table td {
-	padding: 6px 25px;
+	padding: 1rem 2rem;
 	border: 0;
 	border-radius: 0px !important;
 }
 
 table thead {
 	background: var(--card-bg);
-	border-radius: 10px 10px 0 0;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 table thead td {
@@ -145,12 +159,13 @@ table thead td {
 }
 
 table thead th {
-	padding: 3px 20px;
+	padding: 1rem;
+	border-bottom: 1px solid hsl(0deg 0% 100% / 10%);
 }
 
 table thead tr {
 	border: 1px;
-	border-radius: 10px 10px 0 0;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 table tbody tr:nth-child(2n) {
@@ -159,12 +174,14 @@ table tbody tr:nth-child(2n) {
 }
 
 table tbody tr:last-child td:first-child {
-	border-radius: 0 0 0 10px;
+	border-radius: 0 0 0 var(--border-radius);
 }
 
 table tbody tr:last-child td:last-child {
-	border-radius: 0 0 10px 0;
+	border-radius: 0 0 var(--border-radius) 0;
 }
+
+/* Blockquote */
 
 blockquote {
 	margin: 20px 0;
@@ -210,4 +227,5 @@ blockquote {
 .tooltipped .tooltiptext {
 	visibility: visible;
 }
+
 
