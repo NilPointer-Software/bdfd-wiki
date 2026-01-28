@@ -134,7 +134,7 @@ Review our Terms of Service and Privacy Policy. These legal documents outline th
       <p class="doc-content">The official rules and guidelines for using our platform. Learn about user responsibilities and platform policies.</p>
       <span class="doc-link">Read full document →</span>
     </a>
-    <a href="./entityTransferPolicy.md" class="document-card ettp">
+    <a href="https://raw.githubusercontent.com/Rainb0wKey/bdfd-wiki/refs/heads/dev/external/entityTransferPolicy.txt" class="document-card ettp">
       <div class="doc-header">
         <i class="fa fa-shield-alt" aria-hidden="true"></i>
         <span class="doc-title">Entity Transfer Policy</span>
