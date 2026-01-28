@@ -1343,7 +1343,7 @@ ul#searchresults span.teaser em {
 	border-right: 1px solid rgba(255, 255, 255, 0.08);
 	box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
 	scrollbar-color: var(--card-hover) rgba(255, 0, 0, 0) !important;
-	z-index: 999;
+	z-index: 2500;
 }
 
 .sidebar code {
@@ -1605,5 +1605,6 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
