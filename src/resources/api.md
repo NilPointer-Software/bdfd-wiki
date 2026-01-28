@@ -5,7 +5,20 @@ Public Bot Designer for Discord API.
 summary {
     background: hsl(0deg 0% 100% / 5%) !important;
 }
-    
+
+.code-container {
+    background: transparent !important;
+}
+
+.line-numbers {
+	visibility: hidden !important;
+	border: none !important;
+}
+
+.line-number {
+    display: none !important;
+}
+
 .mainAPI, .endpoint {
     background: var(--card-bg);
 	border-radius: var(--border-radius);
@@ -265,5 +278,6 @@ Possible argument types:
 - `URL`
 - `Enum`
 - `Tuple`
+
 
 
