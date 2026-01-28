@@ -11,6 +11,7 @@ summary {
 }
 
 .line-numbers {
+	display: none !important;
 	visibility: hidden !important;
 	border: none !important;
 }
@@ -278,6 +279,7 @@ Possible argument types:
 - `URL`
 - `Enum`
 - `Tuple`
+
 
 
 
