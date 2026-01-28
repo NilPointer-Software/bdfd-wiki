@@ -784,6 +784,7 @@ a > .hljs {
 	display: none;
 }
 .mobile-nav-chapters {
+	height: 4.5rem;
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
@@ -799,8 +800,8 @@ a > .hljs {
 .mobile-nav-chapters i {
     color: var(--link-color);
     background-color: var(--card-bg);
-    padding: 1rem;
-    width: 4rem;
+    padding: 1.15rem;
+    width: 4.5rem;
     border-radius: var(--border-radius);
     font-size: 2rem;
     transition: 0.4s;
@@ -1605,6 +1606,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
