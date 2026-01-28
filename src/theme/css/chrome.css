@@ -775,7 +775,7 @@ a > .hljs {
 }
 
 .nav-wrapper {
-	margin-top: 20px;
+	margin-top: 3rem;
 	display: none;
 }
 
@@ -797,6 +797,14 @@ a > .hljs {
 	border-radius: var(--border-radius);
 	font-size: 2rem;
 	transition: 0.4s;
+}
+
+.mobile-nav-chapters.previous .fa-angle-left {
+    margin-right: .4rem;
+}
+
+.mobile-nav-chapters.next .fa-angle-right {
+    margin-left: .4rem;
 }
 
 .mobile-nav-chapters:hover i {
@@ -1590,3 +1598,4 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
