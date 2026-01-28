@@ -111,9 +111,7 @@ function formatFunctionName(fileName, href) {
 async function createAndUpdateLastEdit() {
   try {
     const currentPath = window.location.pathname;
-    
     const allowedPaths = ['premium', 'bdscript', 'guides', 'resources', 'flowchart', 'callbacks'];
-    
     let shouldAddBlock = false;
     for (const path of allowedPaths) {
       if (currentPath.includes(`/${path}/`) || 
@@ -125,7 +123,6 @@ async function createAndUpdateLastEdit() {
     }
     
     if (!shouldAddBlock) return;
-    
     let pagePath = '';
 
     if (currentPath.includes('/nightly/')) {
@@ -144,25 +141,15 @@ async function createAndUpdateLastEdit() {
       }
     }
 
-    const response = await fetch(
-      `https://api.github.com/repos/Rainb0wKey/bdfd-wiki/commits?path=${pagePath}&per_page=1`
-    );
+    const apiUrl = `https://api.github.com/repos/NilPointer-Software/bdfd-wiki/commits?path=${pagePath}&per_page=1`;
+    const response = await fetch(apiUrl);
     
     if (!response.ok) {
-      if (response.status === 404) {
-        const dirPath = pagePath.replace(/\.md$/, '/index.md');
-        const retryResponse = await fetch(
-          `https://api.github.com/repos/Rainb0wKey/bdfd-wiki/commits?path=${dirPath}&per_page=1`
-        );
-        if (!retryResponse.ok) return;
-        var commits = await retryResponse.json();
-      } else {
-        return;
-      }
-    } else {
-      var commits = await response.json();
+      throw new Error(`API Error: ${response.status}`);
     }
 
+    const commits = await response.json();
+    
     if (commits && commits.length > 0) {
       const lastCommit = commits[0];
       const lastModified = new Date(lastCommit.commit.committer.date);
@@ -209,8 +196,44 @@ async function createAndUpdateLastEdit() {
       } else {
         document.body.appendChild(container);
       }
+    } else {
+      createFallbackBlock(pagePath);
     }
-  } catch (error) {}
+  } catch (error) {
+    console.error('Error loading last edit data:', error);
+    createFallbackBlock();
+  }
+}
+
+function createFallbackBlock(pagePath = '') {
+  const container = document.createElement('div');
+  container.className = 'last_file_edit';
+  
+  const editUrl = pagePath ? `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${pagePath}` : '#';
+  
+  container.innerHTML = `
+    <div class="edit-info">
+      <img src="https://github.com/identicons/identicon.png" alt="GitHub" class="edit-avatar">
+      <div class="edit-details">
+        <div class="edit-date-line">
+          <span class="edit-date">Last edited at Failed to load</span>
+          <a href="${editUrl}" class="editPage">
+            <i class="fa fa-edit" id="editPageIcon"></i>
+          </a>
+        </div>
+        <div class="edit-author-line">
+          <span class="edit-author">GitHub API may be experiencing issues loading data.</span>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  const mainElement = document.querySelector('main');
+  if (mainElement) {
+    mainElement.appendChild(container);
+  } else {
+    document.body.appendChild(container);
+  }
 }
 
 const DiscordThemes = {
