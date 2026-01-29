@@ -10,6 +10,10 @@ Adds a media to the gallery.
 $addMediaGalleryItem[Media URL;Description;Spoiler?;(Gallery name)]
 ```
 
+```admonish warning title="Limit"
+You can add up to 10 media items to the 1 media.
+```
+
 ### Parameters
 - `Spoiler?` `(Type: Bool || Flag: Emptiable)`: Will the media have a spoiler effect?
 
