@@ -3,11 +3,11 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
+Mutes the mentioned user.
+
 ```admonish warning
 As of December 2021, this function has been deprecated in favor of [`$timeout[]`](./timeout.md).
 ```
-
-Mutes the mentioned user.
 
 ## Syntax
 ```
