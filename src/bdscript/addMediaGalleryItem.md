@@ -9,3 +9,7 @@ Adds a media to the gallery.
 ```
 $addMediaGalleryItem[Media URL;Description;Spoiler?;(Gallery name)]
 ```
+
+### Parameters
+
+## Example
