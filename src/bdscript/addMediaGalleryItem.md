@@ -11,6 +11,7 @@ $addMediaGalleryItem[Media URL;Description;Spoiler?;(Gallery name)]
 ```
 
 ### Parameters
+- `Spoiler?` `(Type: Bool || Flag: Emptiable)`: Will the media have a spoiler effect?
 
 ## Example
 ```
