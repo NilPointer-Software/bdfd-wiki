@@ -244,29 +244,29 @@ Read more about intents in the our "[Gateway Intents](../guides/introduction/gat
 | Field name       | Type                            | Description                                            | Can be empty? | Can be omitted? |
 |------------------|---------------------------------|--------------------------------------------------------|---------------|----------------|
 | tag              | String                          | Function name                                          | False         | False          |
-| shortDescription | String                          | Description for a function without arguments           | True          | False          |
-| longDescription  | String                          | Description for a function with arguments              | True          | False          |
-| arguments        | Array of [Arguments](#Argument) | Arguments needed by a function                         | True          | False          |
+| shortDescription | String                          | Description for a function without parameters          | True          | False          |
+| longDescription  | String                          | Description for a function with parameters             | True          | False          |
+| arguments        | Array of [Parameters](#parameters) | Parameters needed by a function                     | True          | False          |
 | intents          | Integer                         | Discord intents needed by bot to execute this function | False         | False          |
-| premium          | Bool                            | function needs premium                                 | False         | False          |
-| deprecated       | Bool                            | function is deprecated                                 | False         | True           |
+| premium          | Bool                            | Function needs premium                                 | False         | False          |
+| deprecated       | Bool                            | Dunction is deprecated                                 | False         | True           |
 | deprecatedFor    | String                          | Name of the function that should be used instead       | False         | True           |
 
-### Argument
+### Parameter
 | Field name  | Type                                     | Description                                                                                 | Can be omitted? |
 |-------------|------------------------------------------|---------------------------------------------------------------------------------------------|----------------|
-| name        | String                                   | Argument name                                                                               | False          |
-| description | String                                   | Description for a function's argument                                                       | True           |
-| type        | String [Argument Types](#Argument-Types) | Argument type. `\|` is used for a compound type                                             | False          |
-| required    | bool                                     | Argument is required                                                                        | False          |
-| tupleTypes  | Array of [Arguments](#Argument)          | Array of arguments which can be repeated, i.e `Channel ID;Message ID;Channel ID;Message ID;...` | True           |
-| empty       | Bool                                     | Argument can be empty                                                                       | True           |
-| ellipsis    | Bool                                     | Argument accepts more data, i.e `Username 1;Username 2;Username 3;...`                         | True           |
-| enumData    | Array of Strings                         | Possible options accepted as argument, i.e `primary/secondary/or/etc`                       | True           |
+| name        | String                                   | Parameter name                                                                               | False          |
+| description | String                                   | Description for a function's parameter                                                       | True           |
+| type        | String [Parameter Types](#parameter-types) | Parameter type. `\|` is used for a compound type                                             | False          |
+| required    | bool                                     | Parameter is required                                                                        | False          |
+| tupleTypes  | Array of [Parameters](#parameters)     | Array of parameters which can be repeated, i.e `Channel ID;Message ID;Channel ID;Message ID;...` | True           |
+| empty       | Bool                                     | Parameter can be empty                                                                       | True           |
+| ellipsis    | Bool                                     | Parameter accepts more data, i.e `Username 1;Username 2;Username 3;...`                         | True           |
+| enumData    | Array of Strings                         | Possible options accepted as parameter, i.e `primary/secondary/or/etc`                       | True           |
 
-### Argument Types
+### Parameter Types
 Multiple types can be merged together with `|` *(OR)*. \
-Possible argument types:
+Possible parameter types:
 - `String`
 - `Integer`
 - `Float`
