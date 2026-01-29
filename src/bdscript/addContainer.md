@@ -34,6 +34,7 @@ You can use our ["Color" tool](../tools/color.md) to select the best color!
 ## Container Components
 - [`$addTextDisplay[]`](./addTextDisplay.md)
 - [`$addSeparator[]`](./addSeparator.md)
+- [`$addMediaGallery[]`](./addMediaGallery.md)
 
 ## Example
 ```
