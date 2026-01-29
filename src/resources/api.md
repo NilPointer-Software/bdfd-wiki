@@ -237,8 +237,8 @@ Read more about intents in the our "[Gateway Intents](../guides/introduction/gat
 ```
 
 ## Data Structures
-- `Can be empty` means the field can be set to a default value.
-- `Can be omitted` means the field might not be included in the response.
+- `Can be empty?` means the field can be set to a default value.
+- `Can be omitted?` means the field might not be included in the response.
 
 ### Function
 | Field name       | Type                            | Description                                            | Can be empty? | Can be omitted? |
