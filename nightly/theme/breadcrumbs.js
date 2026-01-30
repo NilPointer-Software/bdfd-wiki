@@ -64,15 +64,38 @@ for (let i = 0; i < paths.length; i++) {
 	}
 }
 
-document.write(`<a href="${root}">Home</a><p>/</p>`);
-breadcrumbLinks.forEach((link, index) => {
-	if (link.href) {
-		document.write(`<a href="${link.href}">${link.name}</a>`);
-		if (index < breadcrumbLinks.length - 1) {
-			// Add separator if not last
-			document.write(`<p>/</p>`);
-		}
-	} else if (link.name !== "Introduction") {
-		document.write(`<a>${link.name}</a>`);
+// Helper to safely create elements
+function createBreadcrumbLink(href, text) {
+	const link = document.createElement('a');
+	if (href) {
+		link.href = href;
 	}
-});
+	link.textContent = text;
+	return link;
+}
+
+function createSeparator() {
+	const sep = document.createElement('p');
+	sep.textContent = '/';
+	return sep;
+}
+
+// Build breadcrumbs using DOM methods instead of document.write
+(function renderBreadcrumbs() {
+	const container = document.currentScript.parentElement;
+
+	// Home link
+	container.appendChild(createBreadcrumbLink(root, 'Home'));
+	container.appendChild(createSeparator());
+
+	breadcrumbLinks.forEach((link, index) => {
+		if (link.href) {
+			container.appendChild(createBreadcrumbLink(link.href, link.name));
+			if (index < breadcrumbLinks.length - 1) {
+				container.appendChild(createSeparator());
+			}
+		} else if (link.name !== "Introduction") {
+			container.appendChild(createBreadcrumbLink(null, link.name));
+		}
+	});
+})();

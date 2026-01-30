@@ -1,10 +1,43 @@
+// Helper to escape HTML special characters
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Helper to create error message element safely
+function createErrorMessage(functionName, lineNumber, position, errorText) {
+  const playOutput = document.getElementById('play-output');
+  playOutput.textContent = '';
+
+  const container = document.createDocumentFragment();
+
+  container.appendChild(document.createTextNode('\u274C Function '));
+
+  const funcNameEl = document.createElement('span');
+  funcNameEl.id = 'errorFunctionName';
+  funcNameEl.textContent = functionName;
+  container.appendChild(funcNameEl);
+
+  container.appendChild(document.createTextNode(' at '));
+
+  const lineNumEl = document.createElement('span');
+  lineNumEl.id = 'errorLineNumber';
+  lineNumEl.textContent = `${lineNumber}:${position}`;
+  container.appendChild(lineNumEl);
+
+  container.appendChild(document.createTextNode(` returned an error: ${errorText}`));
+
+  playOutput.appendChild(container);
+}
+
 // Math
 function handlePlaygroundInput(inputValue, functionName, operation) {
   const playOutput = document.getElementById('play-output');
 
   if (!isNaN(inputValue) && inputValue !== "") {
     if (functionName === '$sqrt' && parseFloat(inputValue) < 0) {
-      playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 4}</p> returned an error: the input number can't be negative`;
+      createErrorMessage(functionName, 1, functionName.length + 4, "the input number can't be negative");
     } else {
       const result = operation(inputValue);
       playOutput.textContent = `Result: ${result}`;
@@ -13,21 +46,21 @@ function handlePlaygroundInput(inputValue, functionName, operation) {
     if (inputValue === "") {
       outputEmptyValueError(functionName, 1, 1);
     } else {
-      let nonNumericIndex = inputValue.search(/[^0-9\.]/); 
+      let nonNumericIndex = inputValue.search(/[^0-9\.]/);
       nonNumericIndex = nonNumericIndex === -1 ? inputValue.length : nonNumericIndex + functionName.length + 3;
-      playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${nonNumericIndex}</p> returned an error: expected integer in position 1, got '${inputValue}'`;
+      createErrorMessage(functionName, 1, nonNumericIndex, `expected integer in position 1, got '${escapeHTML(inputValue)}'`);
     }
   }
 }
 
 // $ceil[]
 function ceilPlayground(inputValue) {
-  handlePlaygroundInput(inputValue, '$ceil', Math.ceil); 
+  handlePlaygroundInput(inputValue, '$ceil', Math.ceil);
 }
 
 // $floor[]
 function floorPlayground(inputValue) {
-  handlePlaygroundInput(inputValue, '$floor', Math.floor); 
+  handlePlaygroundInput(inputValue, '$floor', Math.floor);
 }
 
 // $sqrt[]
@@ -37,7 +70,7 @@ function sqrtPlayground(inputValue) {
 
 // $round[]
 function roundPlayground(inputValue) {
-  handlePlaygroundInput(inputValue, '$round', Math.round); 
+  handlePlaygroundInput(inputValue, '$round', Math.round);
 }
 
 // $charCount[]
@@ -64,7 +97,7 @@ function argCountPlayground(inputValue) {
 // $isNumber[]
 function isNumberPlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
-  playOutput.textContent = `Is number? ${!isNaN(parseFloat(inputValue)) && isFinite(inputValue)}`; 
+  playOutput.textContent = `Is number? ${!isNaN(parseFloat(inputValue)) && isFinite(inputValue)}`;
 }
 
 // $isInteger[]
@@ -90,42 +123,51 @@ function isBooleanPlayground(inputValue) {
   playOutput.textContent = `Is boolean? ${booleanValues.includes(inputValue)}`;
 }
 
-function preserveLineBreaks(text) {
-  return text.replace(/\n/g, '<br>');
-}
-
 function limitLines(text, maxLines) {
   const lines = text.split('\n');
   return lines.slice(0, maxLines).join('\n');
 }
 
+// Helper to safely display multiline text
+function displayMultilineText(element, text) {
+  element.textContent = '';
+  const lines = text.split('\n');
+  lines.forEach((line, index) => {
+    element.appendChild(document.createTextNode(line));
+    if (index < lines.length - 1) {
+      element.appendChild(document.createElement('br'));
+    }
+  });
+}
+
 // $trimSpace[]
 function trimSpacePlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
-  playOutput.innerHTML = preserveLineBreaks(limitLines(inputValue.trim(), 20));
+  displayMultilineText(playOutput, limitLines(inputValue.trim(), 20));
   editInputHeight()
 }
 
 // $toLowercase[]
 function toLowercasePlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
-  playOutput.innerHTML = preserveLineBreaks(limitLines(inputValue.toLowerCase(), 20));
+  displayMultilineText(playOutput, limitLines(inputValue.toLowerCase(), 20));
   editInputHeight()
 }
 
 // $toUppercase[]
 function toUppercasePlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
-  playOutput.innerHTML = preserveLineBreaks(limitLines(inputValue.toUpperCase(), 20));
+  displayMultilineText(playOutput, limitLines(inputValue.toUpperCase(), 20));
   editInputHeight()
 }
 
 // $toTitleCase[]
 function toTitleCasePlayground(inputValue) {
   const playOutput = document.getElementById('play-output');
-  playOutput.innerHTML = preserveLineBreaks(limitLines(inputValue.replace(/\w\S*/g, (word) => 
-    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() 
-  ), 20));
+  const titleCased = inputValue.replace(/\w\S*/g, (word) =>
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  );
+  displayMultilineText(playOutput, limitLines(titleCased, 20));
   editInputHeight()
 }
 
@@ -139,11 +181,11 @@ function randomStringPlayground(inputValue) {
   } else if (isNaN(inputValue)) {
     let nonNumericIndex = inputValue.search(/[^0-9]/);
     nonNumericIndex = nonNumericIndex === -1 ? inputValue.length : nonNumericIndex + functionName.length + 3;
-    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${nonNumericIndex}</p> returned an error: expected integer in position 1, got '${inputValue}'`;
+    createErrorMessage(functionName, 1, nonNumericIndex, `expected integer in position 1, got '${escapeHTML(inputValue)}'`);
   } else if (parseInt(inputValue) > 10) {
-    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: String length has to be leser than 10`;
-  } else if (parseInt(inputValue) < 1) { 
-    playOutput.innerHTML = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">1:${functionName.length + 3}</p> returned an error: String length has to be bigger than 0`;
+    createErrorMessage(functionName, 1, functionName.length + 3, "String length has to be leser than 10");
+  } else if (parseInt(inputValue) < 1) {
+    createErrorMessage(functionName, 1, functionName.length + 3, "String length has to be bigger than 0");
   } else {
     let length = parseInt(inputValue);
     playOutput.textContent = `Random String: ` + generateRandomString(length);
@@ -162,8 +204,7 @@ function generateRandomString(length) {
 
 // Empty value error
 function outputEmptyValueError(functionName, lineNumber, position) {
-  const playOutput = document.getElementById('play-output');
-  playOutput.innerHTML  = `❌ Function <p id="errorFunctionName">${functionName}</p> at <p id="errorLineNumber">${lineNumber}:${functionName.length + 2}</p> returned an error: expected valid value in position ${position}, got empty value`;
+  createErrorMessage(functionName, lineNumber, functionName.length + 2, `expected valid value in position ${position}, got empty value`);
 }
 
 // Better input size for large values
