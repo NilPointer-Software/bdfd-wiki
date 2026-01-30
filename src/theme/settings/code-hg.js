@@ -91,10 +91,10 @@ function fontStyle(style) {
 
 function escapeHtml(unsafe) {
 	return unsafe
-		.replace(/&/g, "&amp")
-		.replace(/</g, "&lt")
-		.replace(/>/g, "&gt")
-		.replace(/"/g, "&quot");
+		.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;");
 }
 
 function highlight(scheme) {
@@ -113,7 +113,12 @@ function highlight(scheme) {
 		let originalText = codeBlock.textContent;
 		originalText = originalText.replace(/\n+$/, '');
 		
-		let code = escapeHtml(originalText);
+		let code = originalText;
+
+		code = code
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;");
 
 		code = code
 			.replace(/\;/g, styling("semicolonHighlight", scheme))
@@ -137,7 +142,8 @@ function highlight(scheme) {
 		
 		let lineNumbersHtml = '';
 		for (let i = 1; i <= lineCount; i++) {
-			lineNumbersHtml += `<div class="line-number" data-line-number="${i}">${i}</div>`;
+			const safeI = String(i).replace(/[&<>"']/g, '');
+			lineNumbersHtml += `<div class="line-number" data-line-number="${safeI}">${safeI}</div>`;
 		}
 		
 		const formattedCode = lines.map(line => {
