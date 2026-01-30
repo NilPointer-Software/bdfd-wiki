@@ -219,7 +219,7 @@ async function createAndUpdateLastEdit() {
       }
     }
 
-    const apiUrl = `https://api.github.com/repos/NilPointer-Software/bdfd-wiki/commits?path=${pagePath}&per_page=1`;
+    const apiUrl = `https://api.github.com/repos/NilPointer-Software/bdfd-wiki/commits?path=${encodeURIComponent(pagePath)}&per_page=1`;
     const response = await fetch(apiUrl);
     
     if (!response.ok) {
@@ -246,34 +246,7 @@ async function createAndUpdateLastEdit() {
                        lastCommit.author.avatar_url : 
                        'https://github.com/identicons/identicon.png';
       
-      const container = document.createElement('div');
-      container.className = 'last_file_edit';
-      
-      const editUrl = `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${pagePath}`;
-      
-      container.innerHTML = `
-        <div class="edit-info">
-          <img src="${avatarUrl}" alt="${authorName}" class="edit-avatar">
-          <div class="edit-details">
-            <div class="edit-date-line">
-              <span class="edit-date">Last edited at ${formattedDate}</span>
-              <a href="${editUrl}" class="editPage">
-                <i class="fa fa-edit" id="editPageIcon"></i>
-              </a>
-            </div>
-            <div class="edit-author-line">
-              <span class="edit-author">${authorName}</span>
-            </div>
-          </div>
-        </div>
-      `;
-      
-      const mainElement = document.querySelector('main');
-      if (mainElement) {
-        mainElement.appendChild(container);
-      } else {
-        document.body.appendChild(container);
-      }
+      createEditBlock(formattedDate, authorName, avatarUrl, pagePath);
     } else {
       createFallbackBlock(pagePath);
     }
@@ -283,28 +256,118 @@ async function createAndUpdateLastEdit() {
   }
 }
 
+function createEditBlock(formattedDate, authorName, avatarUrl, pagePath) {
+  const container = document.createElement('div');
+  container.className = 'last_file_edit';
+  
+  const editUrl = `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${encodeURI(pagePath)}`;
+  
+  // Create elements using DOM methods instead of innerHTML
+  const editInfo = document.createElement('div');
+  editInfo.className = 'edit-info';
+  
+  const avatarImg = document.createElement('img');
+  avatarImg.className = 'edit-avatar';
+  avatarImg.src = encodeURI(avatarUrl);
+  avatarImg.alt = '';
+  
+  const editDetails = document.createElement('div');
+  editDetails.className = 'edit-details';
+  
+  const dateLine = document.createElement('div');
+  dateLine.className = 'edit-date-line';
+  
+  const dateSpan = document.createElement('span');
+  dateSpan.className = 'edit-date';
+  dateSpan.textContent = `Last edited at ${formattedDate}`;
+  
+  const editLink = document.createElement('a');
+  editLink.href = editUrl;
+  editLink.className = 'editPage';
+  
+  const editIcon = document.createElement('i');
+  editIcon.className = 'fa fa-edit';
+  editIcon.id = 'editPageIcon';
+  
+  editLink.appendChild(editIcon);
+  dateLine.appendChild(dateSpan);
+  dateLine.appendChild(editLink);
+  
+  const authorLine = document.createElement('div');
+  authorLine.className = 'edit-author-line';
+  
+  const authorSpan = document.createElement('span');
+  authorSpan.className = 'edit-author';
+  authorSpan.textContent = authorName;
+  
+  authorLine.appendChild(authorSpan);
+
+  editDetails.appendChild(dateLine);
+  editDetails.appendChild(authorLine);
+  editInfo.appendChild(avatarImg);
+  editInfo.appendChild(editDetails);
+  container.appendChild(editInfo);
+  
+  // Insert into DOM
+  const mainElement = document.querySelector('main');
+  if (mainElement) {
+    mainElement.appendChild(container);
+  } else {
+    document.body.appendChild(container);
+  }
+}
+
 function createFallbackBlock(pagePath = '') {
   const container = document.createElement('div');
   container.className = 'last_file_edit';
   
-  const editUrl = pagePath ? `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${pagePath}` : '#';
+  const editUrl = pagePath ? `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${encodeURI(pagePath)}` : '#';
   
-  container.innerHTML = `
-    <div class="edit-info">
-      <img src="https://github.com/identicons/identicon.png" alt="GitHub" class="edit-avatar">
-      <div class="edit-details">
-        <div class="edit-date-line">
-          <span class="edit-date">Last edited at Failed to load</span>
-          <a href="${editUrl}" class="editPage">
-            <i class="fa fa-edit" id="editPageIcon"></i>
-          </a>
-        </div>
-        <div class="edit-author-line">
-          <span class="edit-author">GitHub API may be experiencing issues loading data.</span>
-        </div>
-      </div>
-    </div>
-  `;
+  // Create elements using DOM methods
+  const editInfo = document.createElement('div');
+  editInfo.className = 'edit-info';
+  
+  const avatarImg = document.createElement('img');
+  avatarImg.className = 'edit-avatar';
+  avatarImg.src = 'https://github.com/identicons/identicon.png';
+  avatarImg.alt = '';
+  
+  const editDetails = document.createElement('div');
+  editDetails.className = 'edit-details';
+  
+  const dateLine = document.createElement('div');
+  dateLine.className = 'edit-date-line';
+  
+  const dateSpan = document.createElement('span');
+  dateSpan.className = 'edit-date';
+  dateSpan.textContent = 'Last edited at Failed to load';
+  
+  const editLink = document.createElement('a');
+  editLink.href = editUrl;
+  editLink.className = 'editPage';
+  
+  const editIcon = document.createElement('i');
+  editIcon.className = 'fa fa-edit';
+  editIcon.id = 'editPageIcon';
+  
+  editLink.appendChild(editIcon);
+  dateLine.appendChild(dateSpan);
+  dateLine.appendChild(editLink);
+  
+  const authorLine = document.createElement('div');
+  authorLine.className = 'edit-author-line';
+  
+  const authorSpan = document.createElement('span');
+  authorSpan.className = 'edit-author';
+  authorSpan.textContent = 'GitHub API may be experiencing issues loading data.';
+  
+  authorLine.appendChild(authorSpan);
+  
+  editDetails.appendChild(dateLine);
+  editDetails.appendChild(authorLine);
+  editInfo.appendChild(avatarImg);
+  editInfo.appendChild(editDetails);
+  container.appendChild(editInfo);
   
   const mainElement = document.querySelector('main');
   if (mainElement) {
