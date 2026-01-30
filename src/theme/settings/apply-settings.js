@@ -82,6 +82,10 @@ function formatFunctionName(fileName, href, category = null) {
     return 'Home';
   }
   
+  if (category === 'tools') {
+    return 'Tools';
+  }
+  
   if (lowerFileName === 'introduction') {
     if (category) {
       const categoryMap = {
@@ -121,19 +125,25 @@ function formatFunctionName(fileName, href, category = null) {
     
     let result = fileName;
     
+    result = result
+      .replace(/_/g, ' ')
+      .replace(/([a-z])([A-Z])/g, '$1 $2')
+      .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
+      .replace(/^./, str => str.toUpperCase());
+    
     if (category === 'flowchart') {
-      result = result
-        .replace(/([a-z])([A-Z])/g, '$1 $2')
-        .toLowerCase()
-        .replace(/^./, str => str.toUpperCase());
-    } else {
-      result = result
-        .replace(/([a-z])([A-Z])/g, '$1 $2')
-        .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
-        .replace(/^./, str => str.toUpperCase());
+      result = result.toLowerCase();
     }
     
-    result = result.trim();
+    const words = result.split(' ');
+    const formattedWords = words.map(word => {
+      if (word === word.toUpperCase() && word.length > 1) {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }
+      return word;
+    });
+    
+    result = formattedWords.join(' ');
     
     result = result.replace(/\bBdfd\b/gi, 'BDFD');
     result = result.replace(/\b2fa\b/gi, '2FA');
@@ -143,8 +153,9 @@ function formatFunctionName(fileName, href, category = null) {
     result = result.replace(/\bA I\b/g, 'AI');
     result = result.replace(/\bU I\b/g, 'UI');
     result = result.replace(/\bF A Q\b/g, 'FAQ');
+    result = result.replace(/\bChangelog\b/g, 'Changelog');
     
-    return result;
+    return result.trim();
   }
   
   let result = '$' + fileName;
