@@ -42,5 +42,5 @@ $editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Threads Guide](../guides/general/threads.md).
+For more information, read the [Threads Guide](../guides/general/threads.md).
 ```
