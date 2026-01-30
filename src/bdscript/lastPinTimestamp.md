@@ -6,10 +6,6 @@ Returns the last pinned message unixtime in the current channel.
 $lastPinTimestamp
 ```
 
-```admonish tip title="Timestamp Converter"
-You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
-```
-
 ## Example
 ```
 $nomention

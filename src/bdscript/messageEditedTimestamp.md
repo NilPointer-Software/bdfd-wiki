@@ -6,10 +6,6 @@ Returns an unixtime of when the message was edited.
 $messageEditedTimestamp[Channel ID;Message ID]
 ```
 
-```admonish tip title="Timestamp Converter"
-You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
-```
-
 ### Parameters
 - `Channel ID` `(Type: Snowflake || Flag: Required)`: The channel ID where the message is.
 - `Message ID` `(Type: Snowflake || Flag: Required)`: The message ID of the message.

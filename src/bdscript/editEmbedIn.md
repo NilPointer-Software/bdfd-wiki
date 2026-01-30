@@ -13,10 +13,7 @@ $editEmbedIn[Time;(Title;Description;Footer;Color hex)]
 - `Title` `(Type: String || Flag: Vacantable)`: The new embed title. Optional.
 - `Description` `(Type: String || Flag: Vacantable)`: The new embed description. Optional.
 - `Footer` `(Type: String || Flag: Vacantable)`: The new embed footer. Optional.
-- `Color hex` `(Type: Color || Flag: Vacantable)`: The embed border color, must be a valid [color hex](../tools/color.md). You can also use color integer number.
-```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to select the best color!
-```
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The embed border color, must be a valid color hex. You can also use color integer number.
 
 ## Example
 ```

@@ -13,10 +13,7 @@ $editMessage[Channel ID;Message ID;Content;(Title;Description;Color hex;Footer)]
 - `Content` `(Type: String || Flag: Emptiable)`: The new message contents.
 - `Title` `(Type: String || Flag: Vacantable)`: The new embed title.
 - `Description` `(Type: String || Flag: Vacantable)`: The new embed description.
-- `Color hex` `(Type: Color || Flag: Vacantable)`: The new embed [color border hex](../tools/color.md). You can also use color integer number.
-```admonish tip title="Color Picker"
-You can use our ["Color" tool](../tools/color.md) to select the best color!
-```
+- `Color hex` `(Type: Color || Flag: Vacantable)`: The new embed color border hex. You can also use color integer number.
 
 - `Footer` `(Type: String || Flag: Vacantable)`:  The new embed footer text.
 

@@ -6,10 +6,6 @@ Returns the current [unix timestamp](https://www.unixtimestamp.com/) in seconds.
 $getTimestamp
 ```
 
-```admonish tip title="Timestamp Converter"
-You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
-```
-
 ## Example
 ```
 $nomention

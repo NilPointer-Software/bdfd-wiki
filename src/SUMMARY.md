@@ -40,12 +40,7 @@
         - [Hyperlinks](./guides/other/hyperlinks.md)
         - [Share Code](./guides/other/sharecode.md)
         - [Common BDFD Errors](./guides/other/commonErrors.md)
-
-- [Tools]()
-    - [Color](./tools/color.md)
-    - [Text Editor](./tools/editor.md)
-    - [Permission Calculator](./tools/permissionscalculator.md)
-    - [Timestamp Converter](./tools/timestamp.md)
+        - [Tools](./tools.md)
 
 - [Resources]()
     - [Introduction](./resources/introduction.md)

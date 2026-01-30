@@ -4,10 +4,6 @@ Returns your bot's hosting expiration date. If "yes" is provided, the function r
 ## Syntax
 ``` 
 $hostingExpireTime[Return unix timestamp?]
-``` 
-
-```admonish tip title="Timestamp Converter"
-You can use our ["Timestamp Converter" tool](../tools/timestamp.md) to work with unixtime!
 ```
 
 ### Parameters
