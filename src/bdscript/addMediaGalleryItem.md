@@ -11,7 +11,7 @@ $addMediaGalleryItem[Media URL;Description;Spoiler?;(Gallery name)]
 ```
 
 ```admonish warning title="Limit"
-You can add up to 10 media items to the 1 media.
+You can add up to 10 media items to a gallery.
 ```
 
 ### Parameters
