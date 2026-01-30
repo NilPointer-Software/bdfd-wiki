@@ -249,7 +249,7 @@ Read more about intents in the our "[Gateway Intents](../guides/introduction/gat
 | arguments        | Array of [Parameters](#parameters) | Parameters needed by a function                     | True          | False          |
 | intents          | Integer                         | Discord intents needed by bot to execute this function | False         | False          |
 | premium          | Bool                            | Function needs premium                                 | False         | False          |
-| deprecated       | Bool                            | Dunction is deprecated                                 | False         | True           |
+| deprecated       | Bool                            | Function is deprecated                                 | False         | True           |
 | deprecatedFor    | String                          | Name of the function that should be used instead       | False         | True           |
 
 ### Parameter
