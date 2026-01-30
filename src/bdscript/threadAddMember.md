@@ -32,5 +32,5 @@ $threadAddMember[1021054508975009793;$authorID]
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Threads Guide](../guides/general/threads.md).
+For more information, read the [Threads Guide](../guides/general/threads.md).
 ```
