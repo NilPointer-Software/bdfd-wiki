@@ -324,8 +324,6 @@ function loadSettings() {
 	const range = document.getElementById("textsize");
 	const codeTextInput = document.getElementById("jsonhginput");
 	const charCountElement = document.querySelector(".charCount");
-	const uiSnowflakes = document.querySelector(".snowflakes");
-
 	let data;
 
 	try {
