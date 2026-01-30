@@ -518,8 +518,6 @@ function setDiscordTheme(colorId) {
 }
 
 function applySettings() {
-  const snowflakes = document.querySelector(".snowflakes");
-
   let data;
 
   try {
