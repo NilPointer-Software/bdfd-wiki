@@ -45,6 +45,7 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 "/guides/buttons.html" = "./general/interactions/buttons/aboutButtons.html"
 "/guides/selectmenu.html" = "./general/interactions/selectMenus/aboutSelectMenu.html"
 "/guides/try.html" = "./general/bds2/errorHandling.html"
+"/guides/trycatch.html" = "./general/bds2/errorHandling.html"
 
 "/bdscript/httpAddHeader.html" = "../guides/general/httpRequests.html"
 "/bdscript/httpDelete.html" = "../guides/general/httpRequests.html"
