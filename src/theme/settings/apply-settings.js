@@ -104,48 +104,41 @@ function formatFunctionName(fileName, href, category = null) {
     return 'Introduction';
   }
   
-  if (category === 'javascript') {
-    if (lowerFileName === 'objects') {
-      return 'Objects';
-    }
-    if (lowerFileName === 'enablingjavascript') {
-      return 'Enabling JavaScript';
-    }
-    return fileName;
+  const customTitles = {
+    'api': 'BDFD API',
+    '2fa': '2FA',
+    'aboutSelectMenu': 'Select Menus',
+    'aboutModals': 'Modals',
+    'aboutButtons': 'Buttons',
+    'aboutSlashCommands': 'Slash Commands',
+    'discordIDSystem': 'Discord ID System',
+    'settings': 'Settings',
+    'foreword': 'Home',
+    'httprequests': 'HTTP Requests',
+    'awaitreactions': 'Awaited Reactions',
+    'customimages': 'Custom Images',
+    'customprefixes': 'Custom Prefixes',
+    'embedbuilder': 'Embed Builder',
+    'enablingjavascript': 'Enabling JavaScript',
+    'objects': 'Objects'
+  };
+  
+  if (customTitles[lowerFileName]) {
+    return customTitles[lowerFileName];
   }
   
-  const titleCategories = ['guides', 'resources', 'flowchart', 'tools', 'premium', 'javascript'];
+  const titleCategories = ['guides', 'resources', 'flowchart', 'tools', 'javascript'];
+  const functionCategories = ['bdscript', 'callbacks', 'premium'];
+  
+  if (category && functionCategories.includes(category)) {
+    let result = '$' + fileName;
+    result = result.replace(/Complex$/i, '[]');
+    return result;
+  }
+  
   const isTitleCategory = category ? titleCategories.includes(category) : true;
   
   if (isTitleCategory) {
-    const customTitles = {
-      'api': 'BDFD API',
-      '2fa': '2FA',
-      'aboutSelectMenu': 'Select Menus',
-      'aboutModals': 'Modals',
-      'aboutButtons': 'Buttons',
-      'aboutSlashCommands': 'Slash Commands',
-      'discordIDSystem': 'Discord ID System',
-      'settings': 'Settings',
-      'foreword': 'Home',
-      'ai': '$ai',
-      'aiQuota': '$aiQuota',
-      'awaitReactions': '$awaitReactions',
-      'customImage': '$customImage',
-      'ignoreTriggerCase': '$ignoreTriggerCase',
-      'log': '$log',
-      'logQuota': '$logQuota',
-      'sendNotification': '$sendNotification',
-      'suppressErrorLogging': '$suppressErrorLogging',
-      'usedEmoji': '$usedEmoji',
-      'alwaysReply': '$alwaysReply',
-      'httprequests': 'HTTP Requests'
-    };
-    
-    if (customTitles[lowerFileName]) {
-      return customTitles[lowerFileName];
-    }
-    
     let result = fileName;
     
     result = result
@@ -182,9 +175,7 @@ function formatFunctionName(fileName, href, category = null) {
     return result.trim();
   }
   
-  let result = '$' + fileName;
-  result = result.replace(/Complex$/i, '[]');
-  return result;
+  return fileName;
 }
 
 // Last edited
