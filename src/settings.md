@@ -141,44 +141,6 @@ Let's customize your experience in our Bot Designer For Discord wiki world!
     Added!
 ```
 
-<div class="settingembed">
-  <h2>Code Highlighting</h2>
-  <p>Input your  highlighting code here! Reload the page when you finish.</p>
-  <button class="resetSettingButton" id="resetHG" onClick="resetHGInput()" title="Reset" aria-label="Reset">
-    <i class="fa fa-refresh" aria-hidden="true"></i>
-  </button>
-  <div class="codehighlighting">
-    <button id="copyHG" onClick="copyHGInput()" class="hgButton">
-      <p><i class="fa fa-clipboard" aria-hidden="true"></i> Copy</p>
-    </button>
-    <button id="reloadHG" onClick="reloadHGPage()" class="hgButton">
-      <p><i class="fa fa-circle-o-notch" aria-hidden="true"></i> Save and reload</p>
-    </button>
-    <button class="hgButton">
-      <p><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><i class="fa fa-book" aria-hidden="true"></i> What is this?</a></p>
-    </button>
-    <textarea id="jsonhginput" oninput="updateCodeHG()" maxlength="25000"></textarea>
-  </div>
-  <p class="charCount">0 / 25000</p>
-</div>
-
-```
-$nomention
-$allowUserMentions[]
-$reply
-$botTyping
-
-$try
-  $sendMessage[Hello, $username 👋, ping: $ping ms]
-  $if[$toLowercase[$message]==secret]
-    $footer[BDFD 🤩]
-  $endif
-$catch
-  $sendMessage[Bye!]
-  $botLeave $c[Magic😉]
-$endtry
-```
-
 <div class="importantReset">
 	<button class="resetToDefault" onmousedown="resetAllHover()" onmouseup="resettAllNone()" onmouseleave="resetAllLeave()">
 		<span>Reset to default settings</span>

@@ -1,60 +1,3 @@
-const codeScheme = {
-	defaultTextHighlight: {
-		color: 4288341353,
-		style: 0,
-	},
-	fallbackHighlight: {
-		color: 4285791231,
-		style: 0,
-	},
-	bracketHighlight: {
-		color: 4294921292,
-		style: 1,
-	},
-	semicolonHighlight: {
-		color: 4294920266,
-		style: 1,
-	},
-	functionsHighlights: {
-		$nomention: {
-			color: 4294932473,
-			style: 0,
-		},
-		$catch: {
-			color: 4288905212,
-			style: 0,
-		},
-		$else: {
-			color: 4288905212,
-			style: 0,
-		},
-		$elseif: {
-			color: 4288905212,
-			style: 0,
-		},
-		$endif: {
-			color: 4288905212,
-			style: 0,
-		},
-		$endtry: {
-			color: 4288905212,
-			style: 0,
-		},
-		$error: {
-			color: 4288905212,
-			style: 0,
-		},
-		$if: {
-			color: 4288905212,
-			style: 0,
-		},
-		$try: {
-			color: 4288905212,
-			style: 0,
-		},
-	},
-};
-
 const fonts = {
 	font2: "Georgia, serif",
 	font3: "Montserrat",
@@ -100,28 +43,6 @@ function resetFontSize() {
 	updateJsonFile("text-size", range.value + "%");
 }
 
-function resetHGInput() {
-	const codeInput = document.getElementById("jsonhginput");
-	const charCountElement = document.querySelector(".charCount");
-
-	var inputcodedesign = JSON.stringify(codeScheme);
-	const charJSONCount = inputcodedesign.length;
-
-	charCountElement.textContent = `${charJSONCount} / 10000`;
-
-	codeInput.style.boxShadow = "none";
-	codeInput.value = inputcodedesign;
-
-	localStorage.setItem("code-hg", inputcodedesign);
-}
-
-function copyHGInput() {
-	const textarea = document.getElementById("jsonhginput");
-	navigator.clipboard
-		.writeText(textarea.value)
-		.catch((err) => console.error("Failed copying to clipboard", err));
-}
-
 function changeDiscordTheme(colorId) {
 	const discordMessages = document.getElementsByTagName("discord-messages");
 
@@ -162,7 +83,12 @@ function changeTextFont(fontId) {
 }
 
 function updateJsonFile(key, value) {
-	let data = JSON.parse(localStorage.getItem("json")) || {};
+	let data = {};
+	try {
+		data = JSON.parse(localStorage.getItem("json")) || {};
+	} catch (e) {
+		data = {};
+	}
 
 	data[key] = value;
 
@@ -284,46 +210,9 @@ function resetAllLeave() {
 	}
 }
 
-function updateCodeHG() {
-	const codeInput = document.getElementById("jsonhginput");
-	const charCountElement = document.querySelector(".charCount");
-	const jsonHG = codeInput.value;
-
-	const charCount = codeInput.value.replace(/[\s\n]/g, "").length; // Ignore spaces and new rows
-	charCountElement.textContent = `${charCount} / 25000`;
-
-	if (charCount > 25000) {
-		charCountElement.style.color = "red";
-	} else {
-		charCountElement.style.color = "";
-	}
-
-	if (isJson(jsonHG)) {
-		codeInput.style.boxShadow = "0 0 10px green";
-		localStorage.setItem("code-hg", jsonHG);
-	} else {
-		codeInput.style.boxShadow = "0 0 10px red";
-	}
-}
-
-function isJson(str) {
-	try {
-		JSON.parse(str);
-		return true;
-	} catch {
-		return false;
-	}
-}
-
-function reloadHGPage() {
-	location.reload();
-}
-
 function loadSettings() {
 	const displaySize = document.getElementById("display-size");
 	const range = document.getElementById("textsize");
-	const codeTextInput = document.getElementById("jsonhginput");
-	const charCountElement = document.querySelector(".charCount");
 
 	let data;
 
@@ -337,78 +226,7 @@ function loadSettings() {
 		"language": "en",
 		"text-hg": "none",
 		"text-font": "Open Sans, sans-serif",
-		"code-hg": {
-			defaultTextHighlight: {
-				color: 4288341353,
-				style: 0,
-			},
-			fallbackHighlight: {
-				color: 4285791231,
-				style: 0,
-			},
-			bracketHighlight: {
-				color: 4294921292,
-				style: 1,
-			},
-			semicolonHighlight: {
-				color: 4294920266,
-				style: 1,
-			},
-			functionsHighlights: {
-				$nomention: {
-					color: 4294932473,
-					style: 0,
-				},
-				$catch: {
-					color: 4288905212,
-					style: 0,
-				},
-				$else: {
-					color: 4288905212,
-					style: 0,
-				},
-				$elseif: {
-					color: 4288905212,
-					style: 0,
-				},
-				$endif: {
-					color: 4288905212,
-					style: 0,
-				},
-				$endtry: {
-					color: 4288905212,
-					style: 0,
-				},
-				$error: {
-					color: 4288905212,
-					style: 0,
-				},
-				$if: {
-					color: 4288905212,
-					style: 0,
-				},
-				$try: {
-					color: 4288905212,
-					style: 0,
-				},
-			},
-		},
 	};
-
-	var codedesign = data["code-hg"];
-
-	if (codeTextInput) {
-		try {
-			if (localStorage.getItem("code-hg"))
-				codedesign = JSON.parse(localStorage.getItem("code-hg"));
-		} catch {}
-
-		var inputcodedesign = JSON.stringify(codedesign);
-		const charJSONCount = inputcodedesign.length;
-
-		charCountElement.textContent = `${charJSONCount} / 25000`;
-		codeTextInput.value = inputcodedesign;
-	}
 
 	if (displaySize) {
 		displaySize.textContent = data["text-size"].replace("%", "");
