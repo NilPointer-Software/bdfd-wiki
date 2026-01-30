@@ -132,6 +132,7 @@
         - [$userServerAvatar](./bdscript/userServerAvatar.md)
         - [$findUser](./bdscript/findUser.md)
     - [Moderation]()
+        - [$changeUsername](./bdscript/changeUsername.md)
         - [$ban](./bdscript/ban.md)
         - [$ban[]](./bdscript/banComplex.md)
         - [$banID](./bdscript/banID.md)
