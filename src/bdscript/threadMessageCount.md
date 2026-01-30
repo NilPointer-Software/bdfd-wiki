@@ -1,5 +1,5 @@
 # $threadMessageCount
-Returns the total number of users in the current thread. (**not including bot's response**)
+Returns the total number of messages in the current thread. (**not including bot's response**)
 
 ## Syntax
 ```
@@ -43,5 +43,5 @@ This thread has a total of $threadMessageCount messages sent!
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Threads Guide](../guides/general/threads.md).
+For more information, read the [Threads Guide](../guides/general/threads.md).
 ```
