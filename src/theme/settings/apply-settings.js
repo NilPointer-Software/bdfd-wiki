@@ -1,4 +1,4 @@
-// Container
+// Function Container
 function createObjectInfo() {
     if (/introduction/i.test(location.pathname)) return;
     
@@ -27,7 +27,7 @@ function removeTimestamp() {
   });
 }
 
-// Next function
+// Next & Prev function
 function enhanceNavigationSimple() {
   const navWrapper = document.querySelector('.nav-wrapper');
   if (!navWrapper) return;
@@ -35,31 +35,74 @@ function enhanceNavigationSimple() {
   const prevLink = navWrapper.querySelector('a.previous');
   const nextLink = navWrapper.querySelector('a.next');
   
+  const supportedCategories = ['bdscript', 'callbacks', 'guides', 'resources', 'flowchart', 'tools', 'premium'];
+  
+  function isSupportedCategory(href) {
+    const hasCategory = supportedCategories.some(category => href.includes(`/${category}/`));
+    const isRootPage = !supportedCategories.some(category => href.includes(`/${category}/`)) && 
+                       (href.includes('.html') && !href.includes('/category/'));
+    
+    return hasCategory || isRootPage;
+  }
+  
+  function getCategoryFromUrl(href) {
+    for (const category of supportedCategories) {
+      if (href.includes(`/${category}/`)) {
+        return category;
+      }
+    }
+    return null;
+  }
+  
   if (prevLink) {
     const href = prevLink.href;
-    if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/') || href.includes('/flowchart/')) {
+    if (isSupportedCategory(href)) {
       const prevFileName = href.split('/').pop().replace('.html', '');
-      prevLink.textContent = formatFunctionName(prevFileName, href);
+      const category = getCategoryFromUrl(href);
+      prevLink.textContent = formatFunctionName(prevFileName, href, category);
       prevLink.insertAdjacentHTML('afterbegin', '<i class="fa fa-angle-left"></i> ');
     }
   }
   
   if (nextLink) {
     const href = nextLink.href;
-    if (href.includes('/bdscript/') || href.includes('/callbacks/') || href.includes('/guides/') || href.includes('/resources/') || href.includes('/flowchart/')) {
+    if (isSupportedCategory(href)) {
       const nextFileName = href.split('/').pop().replace('.html', '');
-      nextLink.textContent = formatFunctionName(nextFileName, href);
+      const category = getCategoryFromUrl(href);
+      nextLink.textContent = formatFunctionName(nextFileName, href, category);
       nextLink.insertAdjacentHTML('beforeend', ' <i class="fa fa-angle-right"></i>');
     }
   }
 }
 
-function formatFunctionName(fileName, href) {
-  if (fileName.toLowerCase() === 'introduction') {
+function formatFunctionName(fileName, href, category = null) {
+  const lowerFileName = fileName.toLowerCase();
+  
+  if (lowerFileName === 'foreword') {
+    return 'Home';
+  }
+  
+  if (lowerFileName === 'introduction') {
+    if (category) {
+      const categoryMap = {
+        'bdscript': 'BDScript',
+        'callbacks': 'Callbacks',
+        'guides': 'Guides',
+        'resources': 'Resources',
+        'flowchart': 'Flowchart',
+        'tools': 'Tools',
+        'premium': 'Premium'
+      };
+      
+      return categoryMap[category] || category.charAt(0).toUpperCase() + category.slice(1);
+    }
     return 'Introduction';
   }
   
-  if (href.includes('/guides/') || href.includes('/resources/') || href.includes('/flowchart/')) {
+  const titleCategories = ['guides', 'resources', 'flowchart', 'tools', 'premium'];
+  const isTitleCategory = category ? titleCategories.includes(category) : true;
+  
+  if (isTitleCategory) {
     const customTitles = {
       'api': 'BDFD API',
       '2fa': '2FA',
@@ -67,16 +110,18 @@ function formatFunctionName(fileName, href) {
       'aboutModals': 'Modals',
       'aboutButtons': 'Buttons',
       'aboutSlashCommands': 'Slash Commands',
-      'discordIDSystem': 'Discord ID System'
+      'discordIDSystem': 'Discord ID System',
+      'settings': 'Settings',
+      'foreword': 'Home'
     };
     
-    if (customTitles[fileName.toLowerCase()]) {
-      return customTitles[fileName.toLowerCase()];
+    if (customTitles[lowerFileName]) {
+      return customTitles[lowerFileName];
     }
     
     let result = fileName;
     
-    if (href.includes('/flowchart/')) {
+    if (category === 'flowchart') {
       result = result
         .replace(/([a-z])([A-Z])/g, '$1 $2')
         .toLowerCase()
