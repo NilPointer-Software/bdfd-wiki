@@ -470,6 +470,7 @@
     - [Webhooks]()
         - [$webhookAvatarURL](./bdscript/webhookAvatarURL.md)
         - [$webhookColor](./bdscript/webhookColor.md)
+        - [$webhookContent](./bdscript/webhookContent.md)
         - [$webhookCreate](./bdscript/webhookCreate.md)
         - [$webhookDelete](./bdscript/webhookDelete.md)
         - [$webhookDescription](./bdscript/webhookDescription.md)
