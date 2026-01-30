@@ -72,6 +72,7 @@
         - [$editButton](./bdscript/editButton.md)
         - [$editSelectMenu](./bdscript/editSelectMenu.md)
         - [$editSelectMenuOption](./bdscript/editSelectMenuOption.md)
+        - [$input](./bdscript/input.md)
         - [$newModal](./bdscript/newModal.md)
         - [$newSelectMenu](./bdscript/newSelectMenu.md)
         - [$removeAllComponents](./bdscript/removeAllComponents.md)
