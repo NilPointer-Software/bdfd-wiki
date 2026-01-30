@@ -128,6 +128,17 @@ function formatFunctionName(fileName, href, category = null) {
       'discordIDSystem': 'Discord ID System',
       'settings': 'Settings',
       'foreword': 'Home',
+      'ai': '$ai',
+      'aiQuota': '$aiQuota',
+      'awaitReactions': '$awaitReactions',
+      'customImage': '$customImage',
+      'ignoreTriggerCase': '$ignoreTriggerCase',
+      'log': '$log',
+      'logQuota': '$logQuota',
+      'sendNotification': '$sendNotification',
+      'suppressErrorLogging': '$suppressErrorLogging',
+      'usedEmoji': '$usedEmoji',
+      'alwaysReply': '$alwaysReply',
       'httprequests': 'HTTP Requests'
     };
     
