@@ -2,12 +2,12 @@
 
 <style>
 .changelog {
-    background: var(--color3);
+    background: var(--card-bg);
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 2px;
     border-radius: 10px;
-    border-top: 2px solid var(--color3);
+    border-top: 2px solid var(--card-bg);
     position: relative;
 }
 
@@ -15,7 +15,7 @@
     margin-top: 10px;
     border: solid;
     border-width: 2px;
-    border-color: var(--color1);
+    border-color: var(--link-collr);
     border-radius: 10px;
     height: 10rem;
     display: flex; 
@@ -26,7 +26,7 @@
 }
 
 .changelog:hover > .changePrev {
-    border-color: var(--color2);
+    border-color: var(--hover-bg);
     border-radius: 15px;
     transition: .3s;
 }
@@ -41,7 +41,7 @@
 }
 
 .changelog:hover > .changePrev > #newUpdate {
-    background-color: var(--color2);
+    background-color: var(--hover-bg);
     border-radius: 12px;
     transform: scale(1.05);
     transition: .3s;
@@ -53,7 +53,7 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: var(--color1);
+    background-color: var(--link-color);
     color: #e1e1e1;
     padding: 5px 10px;
     border-radius: 10px;
