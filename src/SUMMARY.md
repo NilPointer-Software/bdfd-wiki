@@ -130,6 +130,7 @@
         - [$username[]](./bdscript/usernameComplex.md)
         - [$userPerms](./bdscript/userPerms.md)
         - [$userServerAvatar](./bdscript/userServerAvatar.md)
+        - [$findUser](./bdscript/findUser.md)
     - [Moderation]()
         - [$ban](./bdscript/ban.md)
         - [$ban[]](./bdscript/banComplex.md)
