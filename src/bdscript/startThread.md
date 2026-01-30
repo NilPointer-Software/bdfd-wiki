@@ -49,5 +49,5 @@ I created a new thread! <#$startThread[Cool Thread;$channelID;;1440;yes]>
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Threads Guide](../guides/general/threads.md).
+For more information, read the [Threads Guide](../guides/general/threads.md).
 ```
