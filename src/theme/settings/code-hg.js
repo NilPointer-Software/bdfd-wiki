@@ -91,24 +91,18 @@ function fontStyle(style) {
 
 function escapeHtml(unsafe) {
 	return unsafe
-		.replace(/&/g, "&amp")
-		.replace(/</g, "&lt")
-		.replace(/>/g, "&gt")
-		.replace(/"/g, "&quot");
+		.replace(/&/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;")
+		.replace(/"/g, "&quot;");
 }
 
 function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
-    
-    	// Check if the domain contains "javascript"
-    	if (window.location.href.includes("javascript")) {
-        	return;
-    	}
-	
-	try {
-		if (localStorage.getItem("code-hg"))
-			scheme = JSON.parse(localStorage.getItem("code-hg"));
-	} catch {}
+
+	if (window.location.href.includes("javascript")) {
+		return;
+	}
 
 	codeBlocks.forEach((codeBlock) => {
 		let code = escapeHtml(codeBlock.textContent);
