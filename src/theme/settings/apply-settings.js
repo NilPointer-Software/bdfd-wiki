@@ -35,7 +35,7 @@ function enhanceNavigationSimple() {
   const prevLink = navWrapper.querySelector('a.previous');
   const nextLink = navWrapper.querySelector('a.next');
   
-  const supportedCategories = ['bdscript', 'callbacks', 'guides', 'resources', 'flowchart', 'tools', 'premium'];
+  const supportedCategories = ['bdscript', 'callbacks', 'guides', 'resources', 'flowchart', 'tools', 'premium', 'javascript'];
   
   function isSupportedCategory(href) {
     const hasCategory = supportedCategories.some(category => href.includes(`/${category}/`));
@@ -95,7 +95,8 @@ function formatFunctionName(fileName, href, category = null) {
         'resources': 'Resources',
         'flowchart': 'Flowchart',
         'tools': 'Tools',
-        'premium': 'Premium'
+        'premium': 'Premium',
+        'javascript': 'JavaScript'
       };
       
       return categoryMap[category] || category.charAt(0).toUpperCase() + category.slice(1);
@@ -103,7 +104,17 @@ function formatFunctionName(fileName, href, category = null) {
     return 'Introduction';
   }
   
-  const titleCategories = ['guides', 'resources', 'flowchart', 'tools', 'premium'];
+  if (category === 'javascript') {
+    if (lowerFileName === 'objects') {
+      return 'Objects';
+    }
+    if (lowerFileName === 'enablingjavascript') {
+      return 'Enabling JavaScript';
+    }
+    return fileName;
+  }
+  
+  const titleCategories = ['guides', 'resources', 'flowchart', 'tools', 'premium', 'javascript'];
   const isTitleCategory = category ? titleCategories.includes(category) : true;
   
   if (isTitleCategory) {
@@ -116,7 +127,8 @@ function formatFunctionName(fileName, href, category = null) {
       'aboutSlashCommands': 'Slash Commands',
       'discordIDSystem': 'Discord ID System',
       'settings': 'Settings',
-      'foreword': 'Home'
+      'foreword': 'Home',
+      'httprequests': 'HTTP Requests'
     };
     
     if (customTitles[lowerFileName]) {
@@ -154,6 +166,7 @@ function formatFunctionName(fileName, href, category = null) {
     result = result.replace(/\bU I\b/g, 'UI');
     result = result.replace(/\bF A Q\b/g, 'FAQ');
     result = result.replace(/\bChangelog\b/g, 'Changelog');
+    result = result.replace(/\bHttp\b/gi, 'HTTP');
     
     return result.trim();
   }
