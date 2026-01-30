@@ -47,7 +47,7 @@ You can use [`$enableDecimals[]`](./enableDecimals.md) to disable or enable deci
 ```
 $nomention
 $enableDecimals[yes]
-The random number is **$random[1;21**
+The random number is **$random[1;21]**
 ```
 
 ``` discord yaml
