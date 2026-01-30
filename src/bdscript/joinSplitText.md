@@ -37,5 +37,5 @@ How [`$textSplit[]`](./textSplit.md) and [`$message`](./message.md) works?
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Text Splitting Guide](../guides/general/textSplitting.md).
+For more information, read the [Text Splitting Guide](../guides/general/textSplitting.md).
 ```
