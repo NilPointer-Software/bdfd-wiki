@@ -32,5 +32,5 @@ $addButton[no;interactionID;Example;secondary;;;$var[ID]]
 ![Example](https://user-images.githubusercontent.com/70456337/189480166-d37cbdb8-05ce-44e8-8f2e-14d030baa9a9.png)
 
 ```admonish info title="Read more"
-For more information, read the the [Variables Guide](../guides/introduction/variables.md).
+For more information, read the [Variables Guide](../guides/introduction/variables.md).
 ```
