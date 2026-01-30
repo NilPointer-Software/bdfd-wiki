@@ -831,6 +831,7 @@ a > .hljs {
 	justify-content: flex-start;
     float: left;
     padding-right: 1.5rem;
+	margin-left: -.25rem;
 }
 
 .next {
@@ -838,6 +839,7 @@ a > .hljs {
     padding-left: 1.5rem;
     float: right;
     right: var(--page-padding);
+	margin-right: -.25rem;
 }
 
 .prev-page-info,
@@ -1607,6 +1609,7 @@ ul#searchresults span.teaser em {
         font-size: 1rem;
     }
 }
+
 
 
 
