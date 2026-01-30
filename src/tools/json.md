@@ -4,4 +4,4 @@
 }
 </style>
 
-Redirectig to https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/json.html
+Redirecting to https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/json.html
