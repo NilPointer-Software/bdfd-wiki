@@ -115,7 +115,7 @@ function formatFunctionName(fileName, href, category = null) {
     'settings': 'Settings',
     'foreword': 'Home',
     'httprequests': 'HTTP Requests',
-    'awaitreactions': 'Awaited Reactions',
+    'awaitedReactions': 'Awaited Reactions',
     'customimages': 'Custom Images',
     'customprefixes': 'Custom Prefixes',
     'embedbuilder': 'Embed Builder',
