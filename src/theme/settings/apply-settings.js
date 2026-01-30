@@ -127,7 +127,18 @@ function formatFunctionName(fileName, href, category = null) {
     return customTitles[lowerFileName];
   }
   
-  const titleCategories = ['guides', 'resources', 'flowchart', 'tools', 'javascript'];
+  if (category === 'javascript') {
+    return fileName;
+  }
+  
+  if (category === 'flowchart') {
+    let result = fileName;
+    result = result.replace(/([a-z])([A-Z])/g, '$1 $2');
+    result = result.charAt(0).toUpperCase() + result.slice(1).toLowerCase();
+    return result;
+  }
+  
+  const titleCategories = ['guides', 'resources', 'tools'];
   const functionCategories = ['bdscript', 'callbacks', 'premium'];
   
   if (category && functionCategories.includes(category)) {
@@ -146,10 +157,6 @@ function formatFunctionName(fileName, href, category = null) {
       .replace(/([a-z])([A-Z])/g, '$1 $2')
       .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
       .replace(/^./, str => str.toUpperCase());
-    
-    if (category === 'flowchart') {
-      result = result.toLowerCase();
-    }
     
     const words = result.split(' ');
     const formattedWords = words.map(word => {
