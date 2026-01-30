@@ -314,52 +314,17 @@
   <p id="default-is">"Discord Dark"</p>
 </div>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
         !example ❤️
         <discord-reactions slot="reactions">
-            <discord-reaction emoji="https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png" count="1" name=":emoji:">
+            <discord-reaction count="1" name=":emoji:" emoji="https://upload.wikimedia.org/wikipedia/commons/7/70/Symbolic_Love_Heart.png">
             </discord-reaction>
         </discord-reactions>
     </discord-message>
-    <discord-message role-color="#378afa" author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot verified>
+    <discord-message role-color="#378afa" author="BDFD Support" bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified>
         Added!
     </discord-message>
 </discord-messages>
-<div class="settingembed">
-  <h2 id="code-highlighting"><a class="header" href="#code-highlighting">Code Highlighting</a></h2>
-  <p>Input your  highlighting code here! Reload the page when you finish.</p>
-  <button class="resetSettingButton" id="resetHG" onClick="resetHGInput()" title="Reset" aria-label="Reset">
-    <i class="fa fa-refresh" aria-hidden="true"></i>
-  </button>
-  <div class="codehighlighting">
-    <button id="copyHG" onClick="copyHGInput()" class="hgButton">
-      <p><i class="fa fa-clipboard" aria-hidden="true"></i> Copy</p>
-    </button>
-    <button id="reloadHG" onClick="reloadHGPage()" class="hgButton">
-      <p><i class="fa fa-circle-o-notch" aria-hidden="true"></i> Save and reload</p>
-    </button>
-    <button class="hgButton">
-      <p><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><i class="fa fa-book" aria-hidden="true"></i> What is this?</a></p>
-    </button>
-    <textarea id="jsonhginput" oninput="updateCodeHG()" maxlength="25000"></textarea>
-  </div>
-  <p class="charCount">0 / 25000</p>
-</div>
-<pre><code>$nomention
-$allowUserMentions[]
-$reply
-$botTyping
-
-$try
-  $sendMessage[Hello, $username 👋, ping: $ping ms]
-  $if[$toLowercase[$message]==secret]
-    $footer[BDFD 🤩]
-  $endif
-$catch
-  $sendMessage[Bye!]
-  $botLeave $c[Magic😉]
-$endtry
-</code></pre>
 <div class="importantReset">
 	<button class="resetToDefault" onmousedown="resetAllHover()" onmouseup="resettAllNone()" onmouseleave="resetAllLeave()">
 		<span>Reset to default settings</span>

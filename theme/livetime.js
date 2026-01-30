@@ -13,50 +13,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var dayElement = document.getElementById("day-mark");
     if (dayElement) {
-        dayElement.innerHTML = "Current Day: " + day;
+        dayElement.textContent = "Current Day: " + day;
     }
 
     var unixElement = document.getElementById("unix-mark");
     if (unixElement) {
-        unixElement.innerHTML = "Current Unix-time: " + unixTimeSec;
+        unixElement.textContent = "Current Unix-time: " + unixTimeSec;
     }
 
     var moreUnixElement = document.getElementById("moreunix-mark");
     if (moreUnixElement) {
-        moreUnixElement.innerHTML = `Unix Timestamp<br>
-In Seconds - ${unixTimeSec}<br>
-In Milliseconds - ${unixTimeMs}<br>
-In Nanoseconds - ${unixTimeMs * 1000000}`;
+        moreUnixElement.textContent = '';
+        moreUnixElement.appendChild(document.createTextNode('Unix Timestamp'));
+        moreUnixElement.appendChild(document.createElement('br'));
+        moreUnixElement.appendChild(document.createTextNode('In Seconds - ' + unixTimeSec));
+        moreUnixElement.appendChild(document.createElement('br'));
+        moreUnixElement.appendChild(document.createTextNode('In Milliseconds - ' + unixTimeMs));
+        moreUnixElement.appendChild(document.createElement('br'));
+        moreUnixElement.appendChild(document.createTextNode('In Nanoseconds - ' + (unixTimeMs * 1000000)));
     }
 
     var secondElement = document.getElementById("second-mark");
     if (secondElement) {
-        secondElement.innerHTML = "Current Second: " + second;
+        secondElement.textContent = "Current Second: " + second;
     }
 
     var minuteElement = document.getElementById("minute-mark");
     if (minuteElement) {
-        minuteElement.innerHTML = "Current Minute: " + minute;
+        minuteElement.textContent = "Current Minute: " + minute;
     }
 
     var hourElement = document.getElementById("hour-mark");
     if (hourElement) {
-        hourElement.innerHTML = "Current Hour: " + hour;
+        hourElement.textContent = "Current Hour: " + hour;
     }
 
     var yearElement = document.getElementById("year-mark");
     if (yearElement) {
-        yearElement.innerHTML = "Current Year: " + year;
+        yearElement.textContent = "Current Year: " + year;
     }
 
     var monthElement = document.getElementById("month-mark");
     if (monthElement) {
-        monthElement.innerHTML = "Current Month: " + month;
+        monthElement.textContent = "Current Month: " + month;
     }
 
     var dateElement = document.getElementById("date-mark");
     if (dateElement) {
-        dateElement.innerHTML = "Current Date: " + formattedDate;
+        dateElement.textContent = "Current Date: " + formattedDate;
     }
 
     function getFormattedTime(timezone) {
@@ -75,7 +79,10 @@ In Nanoseconds - ${unixTimeMs * 1000000}`;
         var utcTime = getFormattedTime("UTC");
         var moscowTime = getFormattedTime("Europe/Moscow");
         var utcDay = now.getUTCDate();
-        
-        timeElement.innerHTML = `New York Time: ${utcTime}, ${utcDay}<br>Moscow Time: ${moscowTime}, ${utcDay}`;
+
+        timeElement.textContent = '';
+        timeElement.appendChild(document.createTextNode('New York Time: ' + utcTime + ', ' + utcDay));
+        timeElement.appendChild(document.createElement('br'));
+        timeElement.appendChild(document.createTextNode('Moscow Time: ' + moscowTime + ', ' + utcDay));
     }
 });
