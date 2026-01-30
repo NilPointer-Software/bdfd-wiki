@@ -97,6 +97,13 @@ function escapeHtml(unsafe) {
 		.replace(/"/g, "&quot");
 }
 
+function escapeUnsafeHtml(html) {
+	const temp = document.createElement('div');
+	temp.textContent = html;
+	const escapedText = temp.innerHTML;
+	return escapedText.replace(/<(?!\/?span\b[^>]*>)/gi, '&lt;').replace(/(?<!<\/?span\b[^>]*)>/gi, '&gt;');
+}
+
 function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
     
@@ -137,14 +144,15 @@ function highlight(scheme) {
 		
 		let lineNumbersHtml = '';
 		for (let i = 1; i <= lineCount; i++) {
-			lineNumbersHtml += `<div class="line-number" data-line-number="${i}">${i}</div>`;
+			const safeI = String(i).replace(/[&<>"']/g, '');
+			lineNumbersHtml += `<div class="line-number" data-line-number="${safeI}">${safeI}</div>`;
 		}
 		
 		const formattedCode = lines.map(line => {
 			if (line.trim() === '') {
 				return '<div class="code-line">&nbsp;</div>';
 			}
-			return `<div class="code-line">${line}</div>`;
+			return `<div class="code-line">${escapeUnsafeHtml(line)}</div>`;
 		}).join('');
 		
 		codeBlock.innerHTML = `
