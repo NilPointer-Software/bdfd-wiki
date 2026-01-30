@@ -1,6 +1,70 @@
 # Flowchart Changelog
 
-<link rel="stylesheet" href="./theme/css/changelog.css">
+<style>
+.changelog {
+    background: var(--color3);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    border-top: 2px solid var(--color3);
+    position: relative;
+}
+
+.changePrev {
+    margin-top: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: var(--color1);
+    border-radius: 10px;
+    height: 10rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s;
+}
+
+.changelog:hover > .changePrev {
+    border-color: var(--color2);
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.changePrev h2 {
+    font-size: 200%;
+}
+
+.changePrev p {
+    margin-top: -20px;
+    margin-bottom: 85px;
+}
+
+.changelog:hover > .changePrev > #newUpdate {
+    background-color: var(--color2);
+    border-radius: 12px;
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+#newUpdate {
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--color1);
+    color: #e1e1e1;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+#newUpdate:before {
+    content: '🔥';
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+</style>
 
 <div class="changelog">
   <div class="changePrev" id="year">
