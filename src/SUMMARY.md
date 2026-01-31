@@ -126,8 +126,6 @@
         - [$username[]](./bdscript/usernameComplex.md)
         - [$userPerms](./bdscript/userPerms.md)
         - [$userServerAvatar](./bdscript/userServerAvatar.md)
-        - [$changeUsername](./bdscript/changeUsername.md)
-        - [$changeUsernameWithID](./bdscript/changeUsernameWithID.md)
         - [$findUser](./bdscript/findUser.md)
     - [Moderation]()
         - [$ban](./bdscript/ban.md)
