@@ -477,7 +477,6 @@
         - [$webhookSend](./bdscript/webhookSend.md)
         - [$webhookTitle](./bdscript/webhookTitle.md)
         - [$webhookUsername](./bdscript/webhookUsername.md)
-        - [$webhookContent](./bdscript/webhookContent.md)
     - [Error Handling]()
         - [$catch](./bdscript/catch.md)
         - [$embedSuppressErrors](./bdscript/embedSuppressErrors.md)
