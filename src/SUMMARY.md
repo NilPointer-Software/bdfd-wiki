@@ -104,7 +104,6 @@
         - [$discriminator](./bdscript/discriminator.md)
         - [$displayName](./bdscript/displayName.md)
         - [$displayName[]](./bdscript/displayNameComplex.md)
-        - [$findUser](./bdscript/findUser.md)
         - [$getCustomStatus](./bdscript/getCustomStatus.md)
         - [$getUserStatus](./bdscript/getUserStatus.md)
         - [$hypesquad](./bdscript/hypesquad.md)
