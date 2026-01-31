@@ -99,15 +99,10 @@ function escapeHtml(unsafe) {
 
 function highlight(scheme) {
 	const codeBlocks = document.querySelectorAll("pre code");
-    
+
 	if (window.location.href.includes("javascript")) {
 		return;
 	}
-	
-	try {
-		if (localStorage.getItem("code-hg"))
-			scheme = JSON.parse(localStorage.getItem("code-hg"));
-	} catch {}
 
 	codeBlocks.forEach((codeBlock) => {
 		let originalText = codeBlock.textContent;

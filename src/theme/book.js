@@ -29,7 +29,9 @@ if (window.playground_copyable) {
 			clipButton.className = "fa fa-regular fa-paste clip-button";
 			clipButton.title = "Copy";
 			clipButton.setAttribute("aria-label", clipButton.title);
-			clipButton.innerHTML = '<i class="tooltiptext"></i>';
+			const tooltipEl = document.createElement('i');
+			tooltipEl.className = 'tooltiptext';
+			clipButton.appendChild(tooltipEl);
 
 			const wrapButton = document.createElement("button");
 			wrapButton.className = "fa fa-solid fa-paragraph wrap-button";
@@ -223,12 +225,12 @@ if (window.playground_copyable) {
   const clipButtons = document.querySelectorAll(".clip-button");
 
   function hideTooltip(elem) {
-    elem.firstChild.innerText = "";
+    elem.firstChild.textContent = "";
     elem.className = "fa far fa-clipboard clip-button";
   }
 
   function showTooltip(elem, msg) {
-    elem.firstChild.innerText = msg;
+    elem.firstChild.textContent = msg;
     elem.className = "fa far fa-clipboard tooltipped";
   }
 

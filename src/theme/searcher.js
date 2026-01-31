@@ -152,7 +152,7 @@ window.search = window.search || {};
         var searchterms = encodeURIComponent(searchterms.join(" ")).replace(/\'/g, "%27");
 
         return '<a href="' + path_to_root + url[0] + '?' + URL_MARK_PARAM + '=' + searchterms + '#' + url[1]
-            + '"><span class="search-result-title">' + result.doc.breadcrumbs + '</span>'
+            + '"><span class="search-result-title">' + escapeHTML(result.doc.breadcrumbs) + '</span>'
             + '<span class="teaser" id="teaser_' + teaser_count + '" aria-label="Search Result Teaser">'
             + teaser + '</span></a>';
     }
@@ -368,7 +368,18 @@ window.search = window.search || {};
                     searchbar.select();
                 }
             } else { // SELECT_KEYCODE
-                window.location.assign(focused.querySelector('a'));
+                var link = focused.querySelector('a');
+                if (link && link.href) {
+                    // Validate URL is relative or same origin
+                    try {
+                        var url = new URL(link.href, window.location.origin);
+                        if (url.origin === window.location.origin) {
+                            window.location.assign(link.href);
+                        }
+                    } catch (e) {
+                        // Invalid URL, ignore
+                    }
+                }
             }
         }
     }
