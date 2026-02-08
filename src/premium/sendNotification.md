@@ -9,10 +9,6 @@ Sends a notification to your mobile phone.
 Can be used every 20 minutes.
 ```
 
-```admonish warning title="Limit"
-Only for Android. Can't be used on iOS.
-```
-
 ## Syntax
 ```
 $sendNotification[Message;(Image URL)]
