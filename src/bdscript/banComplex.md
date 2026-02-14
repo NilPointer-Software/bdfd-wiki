@@ -41,3 +41,4 @@ $ban[$noMentionMessage]
 ```admonish question title="What is this?"
 How [`$noMentionMessage`](./noMentionMessage.md) and [`$mentioned[]`](./mentioned.md) works?
 ```
+
