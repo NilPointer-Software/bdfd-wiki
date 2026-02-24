@@ -15,7 +15,7 @@ $random[Min;Max]
 - `Max` `(Type: Integer, Float || Flag: Required)`: The maximum value.
 
 ```admonish failure
-The `Max` value cannot be greater than or equal to the `Min` value.
+The `Min` value cannot be greater than or equal to the `Max` value.
 - ❌ `Max` <= `Min`
 - ✅ `Max` > `Min`
 ```
