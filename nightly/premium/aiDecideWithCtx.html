@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$c - Bot Designer For Discord - Wiki</title>
+    <title>$aiDecideWithCtx - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -192,54 +192,73 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/c.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/premium/aiDecideWithCtx.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="c"><a class="header" href="#c">$c</a></h1>
-<p>Adds a comment to the code. Comments do not appear in the bot’s response.</p>
-<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$c[Comment]
-</code></pre>
-<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>Comment</code> <code>(Type: String || Flag: Emptiable)</code>: Any text. This text will not be taken into account during processing. Commonly used to add notes to the code.</li>
-</ul>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
-<pre><code>$nomention
-$message
-$c[This is a say command. You are reading a comment!]
-</code></pre>
-<discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/729343563401265193/bd91eedd77a95b9f81be39997613d295.png" author="Nicky" role-color="#EE7908">
-        !example As you can see, the comment doesn't appear! Pretty cool; right?
-    </discord-message>
-    <discord-message verified role-color="#748BD4" bot author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png">
-        As you can see, the comment doesn't appear! Pretty cool; right?
-    </discord-message>
-</discord-messages>
-<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
-<div class="admonition-title">
-<div id="admonition-what-is-this-title">
-<p>What is this?</p>
+                <h1 id="aidecidewithctx"><a class="header" href="#aidecidewithctx">$aiDecideWithCtx</a></h1>
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
 </div>
-<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+<p>Asks AI a yes/no question about the Discord message context and returns <code>true</code> or <code>false</code>.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$aiDecideWithCtx[Question]
+</code></pre>
+<div id="admonition-ai-quota" class="admonition admonish-tip" role="note" aria-labelledby="admonition-ai-quota-title">
+<div class="admonition-title">
+<div id="admonition-ai-quota-title">
+<p>AI Quota</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-ai-quota"></a>
 </div>
 <div>
-<p>How <a href="./message.html"><code>$message</code></a> works?</p>
+<p>Each call to <code>$aiDecideWithCtx[]</code> consumes tokens from your daily quota. Use <a href="./aiQuota.html"><code>$aiQuota</code></a> to check how many tokens you have left.</p>
 </div>
 </div>
-
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Question</code> <code>(Type: String || Flag: Required)</code>: A yes/no question about the message context, for example: “Does this message contain profanity?”.</li>
+</ul>
+<h3 id="returns"><a class="header" href="#returns">Returns</a></h3>
+<p>Returns <code>true</code> if the AI answers yes, or <code>false</code> if it answers no.</p>
+<h3 id="context-provided-to-ai"><a class="header" href="#context-provided-to-ai">Context provided to AI</a></h3>
+<p>The same Discord message context as <a href="./aiWithCtx.html"><code>$aiWithCtx[]</code></a> is automatically included, along with the full message content.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$if[$aiDecideWithCtx[Does this message contain profanity?]==true]
+  $deleteMessage
+  Please keep it clean!
+$endif
+</code></pre>
+<discord-messages>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+        !example What the heck is going on?
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" bot author="BDFD Support" verified>
+        Please keep it clean!
+    </discord-message>
+</discord-messages>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>Use <a href="./aiDecide.html"><code>$aiDecide[]</code></a> if you want to provide the content to evaluate manually instead of using the message context.</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/byteCount.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../premium/aiWithCtx.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/charCount.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../premium/aiQuota.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -250,16 +269,16 @@ $c[This is a say command. You are reading a comment!]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/byteCount.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../premium/aiWithCtx.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/byteCount.html" class="nav-chapters previous" title="Previous page"
+            <a href="../premium/aiWithCtx.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/charCount.html" class="nav-chapters next" title="Next chapter"
+            <a href="../premium/aiQuota.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/charCount.html" class="nav-chapters next" title="Next page"
+                <a href="../premium/aiQuota.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>
