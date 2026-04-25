@@ -550,7 +550,7 @@ function applySettings() {
   const currentPath = window.location.pathname;
   const currentHref = window.location.href;
 
-  if (currentPath.includes('/tools/')) {
+  if (currentPath.includes('/tools/') && !currentHref.includes('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/')) {
     const fileName = currentPath.split('/').pop();
     window.location.replace('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + fileName);
   }
