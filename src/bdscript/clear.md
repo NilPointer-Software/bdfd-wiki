@@ -14,6 +14,10 @@ $clear
 Discord doesn't allow deleting messages in bulk which are over 2 weeks old.
 ```
 
+```admonish warning
+Use [`$clear[]`](./clearComplex.md) for slash commands.
+```
+
 ### Permissions
 Required permissions that the bot must have for this function to work properly:
 - `managemessages`
