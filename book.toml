@@ -85,7 +85,10 @@ assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 # Premium functions - Don't touch!
 "/bdscript/ai.html" = "../premium/ai.html"
+"/bdscript/aiDecide.html" = "../premium/aiDecide.html"
+"/bdscript/aiDecideWithCtx.html" = "../premium/aiDecideWithCtx.html"
 "/bdscript/aiQuota.html" = "../premium/aiQuota.html"
+"/bdscript/aiWithCtx.html" = "../premium/aiWithCtx.html"
 "/bdscript/awaitReactions.html" = "../premium/awaitReactions.html"
 "/bdscript/customImage.html" = "../premium/customImage.html"
 "/bdscript/ignoreTriggerCase.html" = "../premium/ignoreTriggerCase.html"
