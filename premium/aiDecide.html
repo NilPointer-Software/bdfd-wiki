@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$onBanRemove - Bot Designer For Discord - Wiki</title>
+    <title>$aiDecide - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -192,84 +192,73 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/callbacks/onBanRemove.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/premium/aiDecide.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="onbanremove"><a class="header" href="#onbanremove">$onBanRemove</a></h1>
+                <h1 id="aidecide"><a class="header" href="#aidecide">$aiDecide</a></h1>
 <div class="functionTags">
-  <span id="CallbackTag">Callback</span>
+  <span id="PremiumTag">Premium</span>
 </div>
-<p><em>Triggered when a user gets unbanned from the server.</em></p>
-<p><code>$onBanRemove[Channel ID]</code> is a callback, which means it’s used in the command trigger <em>(not the code)</em>. The command is ran when a user is unbanned from the server.</p>
+<p>Asks AI a yes/no question about the provided content and returns <code>true</code> or <code>false</code>.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$onBanRemove[Channel ID]
+<pre><code>$aiDecide[Content;Question]
 </code></pre>
+<div id="admonition-ai-quota" class="admonition admonish-tip" role="note" aria-labelledby="admonition-ai-quota-title">
+<div class="admonition-title">
+<div id="admonition-ai-quota-title">
+<p>AI Quota</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-ai-quota"></a>
+</div>
+<div>
+<p>Each call to <code>$aiDecide[]</code> consumes tokens from your daily quota. Use <a href="./aiQuota.html"><code>$aiQuota</code></a> to check how many tokens you have left.</p>
+</div>
+</div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
+<li><code>Content</code> <code>(Type: String || Flag: Required)</code>: The content to evaluate, for example: a message or variable.</li>
+<li><code>Question</code> <code>(Type: String || Flag: Required)</code>: A yes/no question about the content, for example: “Does this message contain profanity?”.</li>
 </ul>
+<h3 id="returns"><a class="header" href="#returns">Returns</a></h3>
+<p>Returns <code>true</code> if the AI answers yes, or <code>false</code> if it answers no.</p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<ol>
-<li>
-<p>Create a command with <code>$onBanRemove[Channel ID]</code> as the trigger.</p>
-<blockquote>
-<p>🧙‍♂️ You must replace “Channel ID” with a <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">valid channel ID</a> or a server variable that holds the channel ID <a href="#advanced"><em>(See more here…)</em></a>!</p>
-</blockquote>
-<p><img src="https://user-images.githubusercontent.com/69215413/129492147-3d51dd5c-9628-43f7-a175-faed03442501.png" alt="example1" /></p>
-</li>
-<li>
-<p>Input your code/reply text.</p>
-<blockquote>
-<p>🧙‍♂️ You can use functions like <code>$username</code>, <code>$authorID</code>, <code>$authorAvatar</code> here.</p>
-</blockquote>
-<p><img src="https://user-images.githubusercontent.com/69215413/129492022-8acd4877-638c-4855-8970-13dab37b032e.png" alt="example2" /></p>
-</li>
-<li>
-<p>Now you have an unban message! ✨</p>
+<pre><code>$nomention
+$if[$aiDecide[$message;Is this message a question?]==true]
+  That looks like a question!
+$else
+  That's not a question.
+$endif
+</code></pre>
 <discord-messages>
-    <discord-message bot author="Wiki Bot" avatar="https://cdn.discordapp.com/avatars/566613317972394004/05f26f2f951578db660f1bdf25a027ea.png" role-color="#748BD4" verified>
-        Carl-bot (235148962103951360) was unbanned!
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example What time is it?
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" role-color="#378afa" bot verified>
+        That looks like a question!
     </discord-message>
 </discord-messages>
-</li>
-</ol>
-<h2 id="advanced"><a class="header" href="#advanced">Advanced</a></h2>
-<h3 id="per-server-onbanremove"><a class="header" href="#per-server-onbanremove">Per-Server $onBanRemove</a></h3>
-<p>Both free and premium users can use <code>$onBanRemove[]</code>, and all users can put <code>$getServerVar[]</code> within <code>$onBanRemove[]</code>. However, non-premium users can not use <code>$getServerVar[]</code> outside of callbacks.<br />
-If you own a public bot and want to make it so multiple different servers can use <code>$onBanRemove[]</code> <em>(e.g. set their own logging channel)</em>, follow these steps:</p>
-<ol>
-<li>
-<p>Create a variable named “<code>logs</code>” and the value set to nothing.<br />
-<img src="https://user-images.githubusercontent.com/111157596/239278501-dae381e3-4fe0-4e5f-9cc8-e18d0f56215f.png" alt="image" /></p>
-</li>
-<li>
-<p>Create a command for setting the logging channel, then put the following in your code:</p>
-<pre><code>$nomention
-$onlyAdmin[You need the admin permission to use that!]
-$argsCheck[&gt;1;Please mention a channel!]
-Logging channel updated!
-$setServerVar[logs;$mentionedChannels[1]]
-</code></pre>
-<blockquote>
-<p>📝 Servers will need to setup the channel they want the unban message to send to <em>(by running a command with the code above)</em>.</p>
-</blockquote>
-</li>
-<li>
-<p>Now replace <code>$onBanRemove[Channel ID]</code> in your command trigger, with <code>$onBanRemove[$getServerVar[logs]]</code> and you’re all set!</p>
-</li>
-</ol>
-
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>Use <a href="./aiDecideWithCtx.html"><code>$aiDecideWithCtx[]</code></a> if you want AI to automatically receive the full Discord message context.</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../callbacks/onBanAdd.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../premium/ai.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../callbacks/onMessageDelete.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../premium/aiWithCtx.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -280,16 +269,16 @@ $setServerVar[logs;$mentionedChannels[1]]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../callbacks/onBanAdd.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../premium/ai.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../callbacks/onBanAdd.html" class="nav-chapters previous" title="Previous page"
+            <a href="../premium/ai.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../callbacks/onMessageDelete.html" class="nav-chapters next" title="Next chapter"
+            <a href="../premium/aiWithCtx.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../callbacks/onMessageDelete.html" class="nav-chapters next" title="Next page"
+                <a href="../premium/aiWithCtx.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>
