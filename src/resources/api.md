@@ -252,7 +252,7 @@ Read more about intents in the our "[Gateway Intents](../guides/introduction/gat
 | deprecated       | Bool                            | Function is deprecated                                 | False         | True           |
 | deprecatedFor    | String                          | Name of the function that should be used instead       | False         | True           |
 
-### Parameter
+### Parameters
 | Field name  | Type                                     | Description                                                                                 | Can be omitted? |
 |-------------|------------------------------------------|---------------------------------------------------------------------------------------------|----------------|
 | name        | String                                   | Parameter name                                                                               | False          |
