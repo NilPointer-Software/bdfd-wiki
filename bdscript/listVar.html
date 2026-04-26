@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$guildID - Bot Designer For Discord - Wiki</title>
+    <title>$listVar - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -192,38 +192,52 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/guildID.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/listVar.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="guildid"><a class="header" href="#guildid">$guildID</a></h1>
-<p>Returns the current server’s ID.</p>
+                <h1 id="listvar"><a class="header" href="#listvar">$listVar</a></h1>
+<p>Returns a list of all variable names defined for this bot.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$guildID
+<pre><code>$listVar[(Separator)]
 </code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Separator</code> <code>(Type: String || Flag: Optional)</code>: The string used to separate variable names. Defaults to <code>, </code>.</li>
+</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
-<pre><code>$nomention 
-Server's ID: $guildID
+<pre><code>$nomention
+$listVar[, ]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
-    <discord-message role-color="#378afa" author="BDFD Support" bot verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
-        Server's ID: 566363823137882154
+    <discord-message role-color="#378afa" bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified author="BDFD Support">
+        Money, Level, XP
     </discord-message>
 </discord-messages>
-
+<div id="admonition-read-more" class="admonition admonish-info" role="note" aria-labelledby="admonition-read-more-title">
+<div class="admonition-title">
+<div id="admonition-read-more-title">
+<p>Read more</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-read-more"></a>
+</div>
+<div>
+<p>For more information, read the <a href="../guides/introduction/variables.html">Variables Guide</a>.</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/guildExists.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/globalUserLeaderboard.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/guildIDComplex.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/resetChannelVar.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -234,16 +248,16 @@ Server's ID: $guildID
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/guildExists.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/globalUserLeaderboard.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/guildExists.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/globalUserLeaderboard.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/guildIDComplex.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/resetChannelVar.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/guildIDComplex.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/resetChannelVar.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>
