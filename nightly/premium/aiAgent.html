@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$channelSendMessage - Bot Designer For Discord - Wiki</title>
+    <title>$aiAgent - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -192,89 +192,125 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/channelSendMessage.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/premium/aiAgent.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="channelsendmessage"><a class="header" href="#channelsendmessage">$channelSendMessage</a></h1>
-<p>Sends a message in the provided channel.</p>
-<style>
-.discord-messages {
-    margin-top: 1.5rem;
-}
-
-.discord-messages > .discord-message:before {
-    color: var(--link-color);
-    background: var(--card-bg);
-    border-radius: 10px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: -1.8rem;
-    margin-top: -.9rem;
-    width: fit-content;
-    transition: .3s;
-    z-index: 1000;
-}
-
-.discord-messages > .discord-message:before {
-    content: '#secret-channel';
-}
-
-.discord-messages:first-of-type > .discord-message:before {
-    content: '#main-chat';
-}
-
-.discord-messages > .discord-message:hover:before {
-    transform: scale(1.025);
-    transform: rotate(-2.5deg);
-    border-radius: 12.5px;
-    transition: .3s;
-}
-</style>
-<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$channelSendMessage[Channel ID;Message]
-</code></pre>
-<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>Channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to send the message in.</li>
-<li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The message that gets sent to the channel.</li>
-</ul>
-<h2 id="example"><a class="header" href="#example">Example</a></h2>
-<pre><code>$nomention
-$channelSendMessage[$mentionedChannels[1];Hello!]
-</code></pre>
-<discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
-        !example <discord-mention type="channel">secret-channel</discord-mention>
-    </discord-message>
-</discord-messages>
-<discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified role-color="#378afa" author="BDFD Support" bot>
-        Hello!
-    </discord-message>
-</discord-messages>
-<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
-<div class="admonition-title">
-<div id="admonition-what-is-this-title">
-<p>What is this?</p>
+                <h1 id="aiagent"><a class="header" href="#aiagent">$aiAgent</a></h1>
+<div class="functionTags">
+  <span id="PremiumTag">Premium</span>
 </div>
-<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+<p>Prompts AI with Discord message context, an optional system prompt, and a list of BDScript functions it can call as tools. The AI may invoke those functions iteratively (up to 10 times) before producing a final response.</p>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
+<pre><code>$aiAgent[Prompt;(System prompt;Functions;Response token limit)]
+</code></pre>
+<div id="admonition-ai-quota" class="admonition admonish-tip" role="note" aria-labelledby="admonition-ai-quota-title">
+<div class="admonition-title">
+<div id="admonition-ai-quota-title">
+<p>AI Quota</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-ai-quota"></a>
 </div>
 <div>
-<p>How <a href="./mentionedChannels.html"><code>$mentionedChannels[]</code></a> works?</p>
+<p><a href="./ai.html">4 characters in the AI answer</a> = <a href="./aiQuota.html">1 token</a></p>
 </div>
 </div>
-
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<ul>
+<li><code>Prompt</code> <code>(Type: String || Flag: Required)</code>: The prompt sent to the AI, for example: “What is the user’s score?”.</li>
+<li><code>System prompt</code> <code>(Type: String || Flag: Optional)</code>: Additional system prompt appended after the message context.</li>
+<li><code>Functions</code> <code>(Type: String || Flag: Optional)</code>: Comma-separated list of BDScript function names the AI may call as tools, for example: <code>getVar,setVar,title</code>.</li>
+<li><code>Response token limit</code> <code>(Type: Integer || Flag: Optional)</code>: Limit the response length per iteration. Approximately 4 characters equals 1 token.</li>
+</ul>
+<h3 id="context-provided-to-ai"><a class="header" href="#context-provided-to-ai">Context provided to AI</a></h3>
+<p>The following information from the triggering Discord message is automatically included:</p>
+<div class="table-wrapper"><table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody>
+<tr><td>Author</td><td>Username and user ID</td></tr>
+<tr><td>Author nickname</td><td>Server nickname, if set</td></tr>
+<tr><td>Channel</td><td>Channel name</td></tr>
+<tr><td>Server</td><td>Server name</td></tr>
+<tr><td>Timestamp</td><td>Message sent time</td></tr>
+<tr><td>Edited at</td><td>Edit time, if the message was edited</td></tr>
+<tr><td>Mentions everyone</td><td>Whether <code>@everyone</code> was used</td></tr>
+<tr><td>Mentions</td><td>Usernames and IDs of mentioned users</td></tr>
+<tr><td>Attachments</td><td>Filenames of attached files</td></tr>
+<tr><td>Reactions</td><td>Emoji name and reaction count</td></tr>
+</tbody></table>
+</div>
+<h3 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h3>
+<p>The AI can call any of the listed BDScript functions as tools. After each tool call the result is fed back to the AI, which may call another tool or return its final answer. This loop runs for at most <strong>10 iterations</strong>. If the limit is reached, the last assistant message is returned.</p>
+<div id="admonition-security-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-security-warning-title">
+<div class="admonition-title">
+<div id="admonition-security-warning-title">
+<p>Security warning</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-security-warning"></a>
+</div>
+<div>
+<p>Be cautious when granting access to powerful or sensitive functions (e.g. <code>setVar</code>, <code>setUserVar</code>, <code>ban</code>). Any user who can trigger the command can craft a prompt that instructs the AI to call those functions on their behalf — a risk known as <strong>prompt injection</strong>. Consider restricting such commands to bot owners or trusted roles.</p>
+</div>
+</div>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$aiAgent[$message;Answer the user's question using their stored score if needed.;listVar,getUserVar]
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example What is my score?
+    </discord-message>
+    <discord-message role-color="#378afa" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" bot>
+        Your current score is 42!
+    </discord-message>
+</discord-messages>
+<h2 id="example-with-embed"><a class="header" href="#example-with-embed">Example with embed</a></h2>
+<pre><code>$nomention
+$aiAgent[$message;;listVar,getUserVar,setUserVar,title,description,color]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example Can you send an embed with title "test" and a description showing the value of my coins variable and pink color?
+    </discord-message>
+    <discord-message role-color="#378afa" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot author="BDFD Support">
+        The embed has been created with the title "test", a description of your coins value (123), and is colored pink. If you need anything else, let me know!
+        <discord-embed embed-title="test" color="#FF69B4" slot="embeds">
+            <discord-embed-description slot="description">
+                Your coins value: 123
+            </discord-embed-description>
+        </discord-embed>
+    </discord-message>
+</discord-messages>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>Use <a href="./aiWithCtx.html"><code>$aiWithCtx[]</code></a> if you don’t need the AI to call any BDScript functions as tools.</p>
+</div>
+</div>
+<div id="admonition-tip-1" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-1-title">
+<div class="admonition-title">
+<div id="admonition-tip-1-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip-1"></a>
+</div>
+<div>
+<p>Use <a href="./aiQuota.html"><code>$aiQuota</code></a> to check how many tokens you have left.</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/allowUserMentions.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../premium/aiDecideWithCtx.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../bdscript/deleteIn.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../premium/aiQuota.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -285,16 +321,16 @@ $channelSendMessage[$mentionedChannels[1];Hello!]
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/allowUserMentions.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../premium/aiDecideWithCtx.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/allowUserMentions.html" class="nav-chapters previous" title="Previous page"
+            <a href="../premium/aiDecideWithCtx.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../bdscript/deleteIn.html" class="nav-chapters next" title="Next chapter"
+            <a href="../premium/aiQuota.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../bdscript/deleteIn.html" class="nav-chapters next" title="Next page"
+                <a href="../premium/aiQuota.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>
