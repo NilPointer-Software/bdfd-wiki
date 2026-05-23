@@ -42,5 +42,5 @@ $endif
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [If Statements Guide](../guides/ifStatements.md).
+For more information, read the [If Statements Guide](../guides/ifStatements.md).
 ```

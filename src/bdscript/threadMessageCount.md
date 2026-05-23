@@ -1,5 +1,5 @@
 # $threadMessageCount
-Returns the total number of users in the current thread. (**not including bot's response**)
+Returns the total number of messages in the current thread. (**not including bot's response**)
 
 ## Syntax
 ```

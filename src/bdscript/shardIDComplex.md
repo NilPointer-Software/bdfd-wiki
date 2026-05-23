@@ -35,5 +35,5 @@ How [`$message`](./message.md) works?
 ```
 
 ```admonish info title="Read more"
-For more information, read the the ["Sharding" article](../resources/sharding.md).
+For more information, read the ["Sharding" article](../resources/sharding.md).
 ```

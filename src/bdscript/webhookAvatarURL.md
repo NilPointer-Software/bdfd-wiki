@@ -38,5 +38,5 @@ How [`$webhookCreate[]`](./webhookCreate.md), [`$channelID`](./channelID.md), [`
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Webhooks Guide](../guides/general/webhooks.md).
+For more information, read the [Webhooks Guide](../guides/general/webhooks.md).
 ```

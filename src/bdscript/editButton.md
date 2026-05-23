@@ -90,5 +90,5 @@ $addButton[no;http://botdesignerdiscord.com;Check our website;link;no;👀]
 ![](https://user-images.githubusercontent.com/16838075/120207246-7d366b00-c22c-11eb-8d04-9cf569ced8ae.png)
 
 ```admonish info title="Read more"
-For more information, read the the [Buttons Guide](../guides/general/interactions/buttons/aboutButtons.md).
+For more information, read the [Buttons Guide](../guides/general/interactions/buttons/aboutButtons.md).
 ```

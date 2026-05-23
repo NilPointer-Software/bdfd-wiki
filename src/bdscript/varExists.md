@@ -46,5 +46,5 @@ How [`$message`](./message.md) works?
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Variables Guide](../guides/introduction/variables.md).
+For more information, read the [Variables Guide](../guides/introduction/variables.md).
 ```
