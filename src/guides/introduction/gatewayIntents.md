@@ -4,7 +4,7 @@ In this guide, you will learn about Discord's Gateway Intents and how to enable 
 ## What are Gateway Intents?
 When a bot is connected to the [Discord Gateway](https://discord.com/developers/docs/topics/gateway), it receives events on actions happening on Discord.
 Bots can receive a large amount of events from Discord, so in order to decrease the amount of events each bot receives, Discord requires bots to send Gateway Intents when connecting to the Gateway.\
-Gateway Intents allow to specify which events the bot wants to receive.
+Gateway Intents allow you to specify which events the bot wants to receive.
 
 Gateway Intents can be further divided into:
 - Standard Intents[^1]
