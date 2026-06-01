@@ -221,14 +221,14 @@ Here, are all possible values for the <code>style</code> function argument.</p>
 <li><code>link</code> - Redirect button</li>
 </ul>
 <discord-messages>
-    <discord-message role-color="#378afa" author="BDFD Support" verified bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
+    <discord-message author="BDFD Support" bot role-color="#378afa" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
         Buttons:
         <discord-attachments slot="components">
             <discord-action-row>
                 <discord-button type="primary">
                     Primary
                 </discord-button>
-                <discord-button type="primary" disabled>
+                <discord-button disabled type="primary">
                     Primary
                 </discord-button>
             </discord-action-row>
@@ -236,7 +236,7 @@ Here, are all possible values for the <code>style</code> function argument.</p>
                 <discord-button type="success">
                     Success
                 </discord-button>
-                <discord-button type="success" disabled>
+                <discord-button disabled type="success">
                     Success
                 </discord-button>
             </discord-action-row>
@@ -252,20 +252,20 @@ Here, are all possible values for the <code>style</code> function argument.</p>
                 <discord-button type="secondary">
                     Secondary
                 </discord-button>
-                <discord-button disabled type="secondary">
+                <discord-button type="secondary" disabled>
                     Secondary
                 </discord-button>
             </discord-action-row>
         </discord-attachments>
     </discord-message>
-    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified>
+    <discord-message bot role-color="#378afa" verified author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
         Other Buttons:
         <discord-attachments slot="components">
             <discord-action-row>
-                <discord-button url="https://wiki.botdesignerdiscord.com" type="secondary">
+                <discord-button type="secondary" url="https://wiki.botdesignerdiscord.com">
                     Link
                 </discord-button>
-                <discord-button type="secondary" disabled url="https://wiki.botdesignerdiscord.com">
+                <discord-button type="secondary" url="https://wiki.botdesignerdiscord.com" disabled>
                     Link
                 </discord-button>
             </discord-action-row>
@@ -293,7 +293,7 @@ $addButton[no;http://botdesignerdiscord.com;Check our website;link;no;👀]
 <a class="admonition-anchor-link" href="#admonition-read-more"></a>
 </div>
 <div>
-<p>For more information, read the the <a href="../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
+<p>For more information, read the <a href="../guides/general/interactions/buttons/aboutButtons.html">Buttons Guide</a>.</p>
 </div>
 </div>
 
