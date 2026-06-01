@@ -5,7 +5,7 @@
 
 _Triggered when an awaited command gets initiated._
 
-`$awaitedCommand[]` is a callback, which means it's used in the command trigger (not the code). The command is ran when an awaited command gets initiated.
+`$awaitedCommand[]` is a callback, which means it's used in the command trigger (not the code). The command is run when an awaited command gets initiated.
 
 ## Syntax
 ```

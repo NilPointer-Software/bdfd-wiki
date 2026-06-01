@@ -49,5 +49,5 @@ $sendMessage[$username clicked on the reaction]
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+For more information, read the [Awaited Reactions Guide](../premium/awaitedReactions.md).
 ```
