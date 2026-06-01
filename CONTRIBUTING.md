@@ -59,7 +59,7 @@ Some of the frequently asked questions from users -
 
 ### Shortening Headers
 
-Always keep section headers short, consise, and in [Title Case](https://en.m.wikipedia.org/wiki/Title_case) format. For example,
+Always keep section headers short, concise, and in [Title Case](https://en.m.wikipedia.org/wiki/Title_case) format. For example,
 
 ```diff
 - How to create embeds
@@ -243,7 +243,7 @@ To test your custom code block, you can use the [official test site](https://nil
 - user_id: 154148273307910144
   username: MineBartekSA
   content: |
-      You can embed links by using the <code>a</code> HTML tag with the <code>href</code> attrubute: <a href="https://nilpointer-software.github.io/mdbook-discord-components/">Test site</a>
+      You can embed links by using the <code>a</code> HTML tag with the <code>href</code> attribute: <a href="https://nilpointer-software.github.io/mdbook-discord-components/">Test site</a>
 - user_id: 154148273307910144
   username: MineBartekSA
   content: " "
@@ -251,7 +251,7 @@ To test your custom code block, you can use the [official test site](https://nil
       title: Embed Text Formatting
       color: "#00FFFF"
       description: |
-          <i>Italics</i>, <b>Bold</b>, <del>Line-Truough</del>, <u>Underline</u>, <a href="https://nilpointer-software.github.io/mdbook-discord-components/">Links</a>, and <code>Code Snippets</code> use the same HTML tags.
+          <i>Italics</i>, <b>Bold</b>, <del>Line-Through</del>, <u>Underline</u>, <a href="https://nilpointer-software.github.io/mdbook-discord-components/">Links</a>, and <code>Code Snippets</code> use the same HTML tags.
 
           Embeds can contain multiline code blocks.
           Add a <code>multiline</code> class to a <code>code</code> HTML tag:
@@ -263,7 +263,7 @@ To test your custom code block, you can use the [official test site](https://nil
           <span class="spoiler">Spoiler</span>
 ```
 
-> Please note, that the empty `content` filed in the message with embed is a bug that will be resolved.
+> Please note, that the empty `content` field in the message with embed is a bug that will be resolved.
 
 -   On our wiki, messages can use the `user_id` yaml field for automatic and up-to-date avatar and username.
     When using `user_id`, the `username` field is no longer required and will overwrite the username fetched from Discord.
