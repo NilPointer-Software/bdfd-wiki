@@ -23,7 +23,7 @@ $getUserStatus[User ID]
 ## Example
 ```
 $nomention
-My status is: `$getUserStatus[$authorID]`
+Your status is: `$getUserStatus[$authorID]`
 ```
 
 ``` discord yaml
@@ -38,7 +38,7 @@ My status is: `$getUserStatus[$authorID]`
   bot: true
   verified: true
   content: |
-    My status is: <code>dnd</code>
+    Your status is: <code>dnd</code>
 ```
 
 ```admonish question title="What is this?"
