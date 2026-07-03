@@ -26,4 +26,20 @@ $slowmode[$mentionedChannels[1;yes];$message[1]]
 Slowmode changed to $message[1]!
 ```
 
-![example](https://user-images.githubusercontent.com/69215413/126920569-eef1a425-e57d-4062-ba1f-84a09c17ed84.png)
+``` discord yaml
+- user_id: 1251981607468798089
+  color: "#E67E22"
+  content: |
+    !slowmode 5s
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Slowmode changed to 5s!
+```
+
+```admonish question title="What is this?"
+How [`$argsCheck`](./argsCheck.md) works?
+```
