@@ -518,19 +518,22 @@ function setDiscordTheme(colorId) {
 }
 
 function applySettings() {
+  const defaultData = {
+    "discord-example-theme": "dark",
+    "text-size": "60%",
+    "language": "en",
+    "text-hg": "none",
+    "text-font": "Open Sans, sans-serif",
+  };
+
   let data;
 
   try {
-    data = JSON.parse(localStorage.getItem("json"));
-  } catch {}
-
-    const defaultData = {
-        "discord-example-theme": "dark",
-        "text-size": "60%",
-        "language": "en",
-        "text-hg": "none",
-        "text-font": "Open Sans, sans-serif",
-    };
+    const localData = JSON.parse(localStorage.getItem("json"));
+    data = Object.assign({}, defaultData, localData);
+  } catch {
+    data = defaultData;
+  }
 
   const html = document.querySelector("html");
 
@@ -539,23 +542,23 @@ function applySettings() {
   html.style.textShadow = data["text-hg"];
 
   document.querySelectorAll('.chapter > li.chapter-item').forEach(el => {
-   if (el.querySelector('div')) {
-    const text = el.querySelector('div').textContent.trim();
- if (text === 'Functions' || text === 'Premium') {
-   el.classList.add('functions-section');
- }
-  }
+    if (el.querySelector('div')) {
+      const text = el.querySelector('div').textContent.trim();
+      if (text === 'Functions' || text === 'Premium') {
+        el.classList.add('functions-section');
+      }
+    }
   });
   
   const currentPath = window.location.pathname;
   const currentHref = window.location.href;
 
-  if (currentPath.includes('/tools/') && !currentHref.includes('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/')) {
+  if (currentPath.includes('/tools/') && !currentHref.includes('https://github.io')) {
     const fileName = currentPath.split('/').pop();
-    window.location.replace('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + fileName);
+    window.location.replace('https://github.io' + fileName);
   }
   else if (currentPath.includes('/terms.html') || currentHref.includes('terms.html')) {
-    window.location.replace('https://botdesignerdiscord.com/tos');
+    window.location.replace('https://botdesignerdiscord.com');
   }
   else {
     const allLinks = document.querySelectorAll('a[href]');
@@ -565,12 +568,12 @@ function applySettings() {
       
       if (href) {
         if (href.indexOf('../tools/') === 0) {
-          const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
+          const newHref = 'https://github.io' + href.substring(9);
           link.setAttribute('href', newHref);
         }
         
         if (href.includes('terms.html')) {
-          link.setAttribute('href', 'https://botdesignerdiscord.com/tos');
+          link.setAttribute('href', 'https://botdesignerdiscord.com');
         }
       }
     });
