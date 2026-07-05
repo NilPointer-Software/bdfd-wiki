@@ -471,9 +471,12 @@ function setDiscordTheme(colorId) {
         const botToApp =
           document.querySelectorAll('.discord-application-tag');
 
-        if (styles.background)
+        if (styles.background) {
           mutation.target.style.background = styles.background;
-          mutation.target.style.backgroundColor = styles.exampleColor;
+          if (styles.exampleColor) {
+            mutation.target.style.backgroundColor = styles.exampleColor;
+          }
+        }
         for (const reaction of reactions) {
           reaction.children.item(0).style.backgroundColor =
             styles.reactionColor;
@@ -510,6 +513,7 @@ function setDiscordTheme(colorId) {
       }
     }
   };
+
 
     for (const message of discordMessages) {
         const mutObv = new MutationObserver(callback);
