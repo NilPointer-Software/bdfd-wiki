@@ -22,7 +22,8 @@ $endif
   color: "#E67E22"
   content: |
     !example
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -33,7 +34,8 @@ $endif
   color: "#FF0000"
   content: |
     !example 
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -42,5 +44,5 @@ $endif
 ```
 
 ```admonish info title="Read more"
-For more information, read the [If Statements Guide](../guides/ifStatements.md).
+For more information, read the [If Statements Guide](../guides/ifStatements.md).
 ```

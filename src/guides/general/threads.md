@@ -7,13 +7,15 @@ Make sure your bot has `SEND_MESSAGES_IN_THREADS` permission.
 ```
 
 ## Content
-[**Functions Used**](#functions-used) > [**Archive Duration**](#archive-duration) > [**$startThread[]**](#startthread) > [**$editThread[]**](#editthread) > [**$threadAddMember[]**](#threadaddmember) > [**$threadRemoveMember[]**](#threadremovemember) > [**Simple Code**](#simple-code)
+[**Functions Used**](#functions-used) > [**Archive Duration**](#archive-duration) > [**$startThread[]**](#startthread) > [**$editThread[]**](#editthread) > [**$threadAddMember[]**](#threadaddmember) > [**$threadRemoveMember[]**](#threadremovemember) > [**$threadUserCount[]**](#threadusercount) > [**$threadMessageCount[]**](#threadmessagecount) > [**Simple Code**](#simple-code)
 
 ## Functions Used
 - [`$startThread[]`](../../bdscript/startThread.md)
 - [`$editThread[]`](../../bdscript/editThread.md)
 - [`$threadAddMember`](../../bdscript/threadAddMember.md)
 - [`$threadRemoveMember[]`](../../bdscript/threadRemoveMember.md)
+- [`$threadUserCount`](../../bdscript/threadUserCount.md)
+- [`$threadMessageCount[]`](../../bdscript/threadMessageCount.md)
 
 ## Archive Duration
 `60` - 1 Hour\
@@ -165,6 +167,79 @@ $threadRemoveMember[Thread ID;User ID]
 ```
 \
 
+# $threadUserCount
+Returns the total number of users in the current thread.
+
+## Syntax
+```
+$threadUserCount
+```
+
+## Example
+```
+$nomention
+This thread has $threadUserCount users!
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This thread has 29 users!
+```
+
+# $threadMessageCount
+Returns the total number of messages in the current thread. (**not including bot's response**)
+
+## Syntax
+```
+$threadMessageCount
+```
+
+## Example
+```
+$nomention
+This thread has a total of $threadMessageCount messages sent!
+```
+
+```discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    Hello guys!
+- user_id: 390515191819010058
+  username: kubastick
+  color: "#FF0000"
+  content: |
+    Hello RainbowKey! 👋
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This thread has a total of 3 messages sent!
+- user_id: 390515191819010058
+  username: kubastick
+  color: "#FF0000"
+  content: |
+    Nice!
+```
+
 # Simple Code
 ```
 $nomention
@@ -200,4 +275,5 @@ $threadAddMember[$var[id];$authorID]
 
 ```admonish note
 If you want to learn more about threads, read [Discord's support article](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ).
+
 ```

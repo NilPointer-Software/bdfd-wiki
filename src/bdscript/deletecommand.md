@@ -1,14 +1,18 @@
 # $deletecommand
 Deletes the author's command message.
 
-> The bot must have the `manage_messages` permission.
+```admonish warning
+The bot must have the `manage_messages` permission.
+```
 
 ## Syntax
 ```
 $deletecommand
 ```
 
-> Sometimes a message may be deleted, but you will still see it. This is a discord bug.
+```admonish note
+Sometimes a message may be deleted, but you will still see it. This is a Discord bug.
+```
 
 ## Example
 ```

@@ -41,3 +41,7 @@ This thread has a total of $threadMessageCount messages sent!
   content: |
     Nice!
 ```
+
+```admonish info title="Read more"
+For more information, read the [Threads Guide](../guides/general/threads.md).
+```
