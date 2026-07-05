@@ -245,7 +245,13 @@ if (window.playground_copyable) {
       if (codeLines.length > 0) {
         const lines = [];
         codeLines.forEach(line => {
-          lines.push(line.textContent);
+          const text = line.textContent;
+          
+          if (text.trim() === '') {
+            lines.push('');
+          } else {
+            lines.push(text);
+          }
         });
         return lines.join('\n');
       } else {
