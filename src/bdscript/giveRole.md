@@ -3,9 +3,9 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
-> This function is deprecated, instead better to use [`$roleGrant[]`](./roleGrant.md).
-
 Adds a role to the provided user.
+
+> This function is deprecated, instead better to use [`$roleGrant[]`](./roleGrant.md).
 
 ## Syntax
 ```

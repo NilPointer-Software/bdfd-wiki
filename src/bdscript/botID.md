@@ -9,7 +9,7 @@ $botID
 ## Example
 ```
 $nomention
-My ID is: $botID
+My ID: $botID
 ```
 
 ```discord yaml
