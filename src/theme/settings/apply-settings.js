@@ -1,27 +1,25 @@
-// Function Container
 function createObjectInfo() {
-    if (/introduction/i.test(location.pathname)) return;
-    
-    if (/bdscript|callbacks/.test(location.pathname)) {
-        const h1 = document.querySelector('main h1');
-        const p = document.querySelector('main p:not(.breadcrumb p)');
-        const tags = document.querySelector('main .functionTags');
-        
-        if (h1 && p) {
-            const container = document.createElement('div');
-            container.className = 'objectInfo';
-            h1.after(container);
-            
-            container.append(h1);
-            if (tags) container.append(tags);
-            container.append(p);
-        }
+  if (/introduction/i.test(location.pathname)) return;
+
+  if (/bdscript|callbacks/.test(location.pathname)) {
+    const h1 = document.querySelector('main h1');
+    const p = Array.from(document.querySelectorAll('main > p')).find(el => !el.closest('.breadcrumb'));
+    const tags = document.querySelector('main .functionTags');
+
+    if (h1 && p) {
+      const container = document.createElement('div');
+      container.className = 'objectInfo';
+      h1.parentNode.insertBefore(container, h1);
+      container.appendChild(h1);
+      if (tags) container.appendChild(tags);
+      container.appendChild(p);
     }
+  }
 }
 
 // Example "Today at"
 function removeTimestamp() {
-  const timestamps = document.querySelectorAll('discord-system-message[type] .discord-message-timestamp');
+  const timestamps = document.querySelectorAll('.discord-message-timestamp');
   timestamps.forEach(timestamp => {
     timestamp.remove();
   });
@@ -37,17 +35,27 @@ function enhanceNavigationSimple() {
   
   const supportedCategories = ['bdscript', 'callbacks', 'guides', 'resources', 'flowchart', 'tools', 'premium', 'javascript'];
   
+  function getPathname(href) {
+    try {
+      return new URL(href, location.href).pathname;
+    } catch (e) {
+      return href || '';
+    }
+  }
+
   function isSupportedCategory(href) {
-    const hasCategory = supportedCategories.some(category => href.includes(`/${category}/`));
-    const isRootPage = !supportedCategories.some(category => href.includes(`/${category}/`)) && 
-                       (href.includes('.html') && !href.includes('/category/'));
+    const pathname = getPathname(href);
+    const hasCategory = supportedCategories.some(category => pathname.includes(`/${category}/`));
+    const isRootPage = !supportedCategories.some(category => pathname.includes(`/${category}/`)) && 
+                       (pathname.endsWith('.html') && !pathname.includes('/category/'));
     
     return hasCategory || isRootPage;
   }
   
   function getCategoryFromUrl(href) {
+    const pathname = getPathname(href);
     for (const category of supportedCategories) {
-      if (href.includes(`/${category}/`)) {
+      if (pathname.includes(`/${category}/`)) {
         return category;
       }
     }
@@ -55,9 +63,10 @@ function enhanceNavigationSimple() {
   }
   
   if (prevLink) {
-    const href = prevLink.href;
+    const href = prevLink.getAttribute('href') || prevLink.href;
     if (isSupportedCategory(href)) {
-      const prevFileName = href.split('/').pop().replace('.html', '');
+      const pathname = getPathname(href);
+      const prevFileName = decodeURIComponent(pathname.split('/').pop().replace('.html', ''));
       const category = getCategoryFromUrl(href);
       prevLink.textContent = formatFunctionName(prevFileName, href, category);
       prevLink.insertAdjacentHTML('afterbegin', '<i class="fa fa-angle-left"></i> ');
@@ -65,9 +74,10 @@ function enhanceNavigationSimple() {
   }
   
   if (nextLink) {
-    const href = nextLink.href;
+    const href = nextLink.getAttribute('href') || nextLink.href;
     if (isSupportedCategory(href)) {
-      const nextFileName = href.split('/').pop().replace('.html', '');
+      const pathname = getPathname(href);
+      const nextFileName = decodeURIComponent(pathname.split('/').pop().replace('.html', ''));
       const category = getCategoryFromUrl(href);
       nextLink.textContent = formatFunctionName(nextFileName, href, category);
       nextLink.insertAdjacentHTML('beforeend', ' <i class="fa fa-angle-right"></i>');
@@ -78,12 +88,28 @@ function enhanceNavigationSimple() {
 function formatFunctionName(fileName, href, category = null) {
   const lowerFileName = fileName.toLowerCase();
   
-  if (lowerFileName === 'foreword') {
-    return 'Home';
-  }
-  
-  if (category === 'tools') {
-    return 'Tools';
+  const customTitles = {
+    'api': 'BDFD API',
+    '2fa': '2FA',
+    'aboutselectmenu': 'Select Menus',
+    'aboutmodals': 'Modals',
+    'aboutbuttons': 'Buttons',
+    'aboutslashcommands': 'Slash Commands',
+    'discordidsystem': 'Discord ID System',
+    'settings': 'Settings',
+    'foreword': 'Home',
+    'httprequests': 'HTTP Requests',
+    'awaitedreactions': 'Awaited Reactions',
+    'customimages': 'Custom Images',
+    'customprefixes': 'Custom Prefixes',
+    'embedbuilder': 'Embed Builder',
+    'enablingjavascript': 'Enabling JavaScript',
+    'objects': 'Objects',
+    'tools': 'Tools'
+  };
+
+  if (customTitles[lowerFileName]) {
+    return customTitles[lowerFileName];
   }
   
   if (lowerFileName === 'introduction') {
@@ -99,32 +125,9 @@ function formatFunctionName(fileName, href, category = null) {
         'javascript': 'JavaScript'
       };
       
-      return categoryMap[category] || category.charAt(0).toUpperCase() + category.slice(1);
+      return categoryMap[category] || (category.charAt(0).toUpperCase() + category.slice(1));
     }
     return 'Introduction';
-  }
-  
-  const customTitles = {
-    'api': 'BDFD API',
-    '2fa': '2FA',
-    'aboutSelectMenu': 'Select Menus',
-    'aboutModals': 'Modals',
-    'aboutButtons': 'Buttons',
-    'aboutSlashCommands': 'Slash Commands',
-    'discordIDSystem': 'Discord ID System',
-    'settings': 'Settings',
-    'foreword': 'Home',
-    'httprequests': 'HTTP Requests',
-    'awaitedReactions': 'Awaited Reactions',
-    'customimages': 'Custom Images',
-    'customprefixes': 'Custom Prefixes',
-    'embedbuilder': 'Embed Builder',
-    'enablingjavascript': 'Enabling JavaScript',
-    'objects': 'Objects'
-  };
-  
-  if (customTitles[lowerFileName]) {
-    return customTitles[lowerFileName];
   }
   
   if (category === 'javascript') {
@@ -219,10 +222,13 @@ async function createAndUpdateLastEdit() {
       }
     }
 
-    const apiUrl = `https://api.github.com/repos/NilPointer-Software/bdfd-wiki/commits?path=${encodeURIComponent(pagePath)}&per_page=1`;
+    const owner = 'Rainb0wKey';
+    const repo = 'bdfd-wiki';
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?path=${encodeURIComponent(pagePath)}&per_page=1`;
     const response = await fetch(apiUrl);
     
     if (!response.ok) {
+      // handle rate limits or permission issues gracefully
       throw new Error(`API Error: ${response.status}`);
     }
 
@@ -260,7 +266,9 @@ function createEditBlock(formattedDate, authorName, avatarUrl, pagePath) {
   const container = document.createElement('div');
   container.className = 'last_file_edit';
   
-  const editUrl = `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${encodeURI(pagePath)}`;
+  const owner = 'Rainb0wKey';
+  const repo = 'bdfd-wiki';
+  const editUrl = `https://github.com/${owner}/${repo}/edit/dev/${encodeURIComponent(pagePath)}`;
   
   // Create elements using DOM methods instead of innerHTML
   const editInfo = document.createElement('div');
@@ -268,7 +276,7 @@ function createEditBlock(formattedDate, authorName, avatarUrl, pagePath) {
   
   const avatarImg = document.createElement('img');
   avatarImg.className = 'edit-avatar';
-  avatarImg.src = encodeURI(avatarUrl);
+  avatarImg.src = avatarUrl || 'https://github.com/identicons/identicon.png';
   avatarImg.alt = '';
   
   const editDetails = document.createElement('div');
@@ -321,7 +329,9 @@ function createFallbackBlock(pagePath = '') {
   const container = document.createElement('div');
   container.className = 'last_file_edit';
   
-  const editUrl = pagePath ? `https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/${encodeURI(pagePath)}` : '#';
+  const owner = 'Rainb0wKey';
+  const repo = 'bdfd-wiki';
+  const editUrl = pagePath ? `https://github.com/${owner}/${repo}/edit/dev/${encodeURIComponent(pagePath)}` : '#';
   
   // Create elements using DOM methods
   const editInfo = document.createElement('div');
@@ -456,34 +466,46 @@ function setDiscordTheme(colorId) {
     ...(DiscordThemes[colorId] || {}),
   };
 
-  const callback = (mutationList, observer) => {
+  // Disconnect previous observers to avoid duplicates/leaks
+  if (window.__discordThemeObservers && Array.isArray(window.__discordThemeObservers)) {
+    window.__discordThemeObservers.forEach(o => {
+      try { o.disconnect(); } catch (e) {}
+    });
+  }
+  window.__discordThemeObservers = [];
+
+  const callback = (mutationList) => {
     for (const mutation of mutationList) {
       if (
         mutation.type === "attributes" &&
-        mutation.attributeName === "class"
+        mutation.attributeName === "class" &&
+        mutation.target && mutation.target.style
       ) {
-        const reactions =
-          document.getElementsByTagName("discord-reaction");
+        const reactions = document.getElementsByTagName("discord-reaction");
         const messageColors = document.querySelectorAll(
           ".discord-message .discord-message-markup"
         );
 
-        const botToApp =
-          document.querySelectorAll('.discord-application-tag');
+        const botToApp = document.querySelectorAll('.discord-application-tag');
 
-        if (styles.background)
+        if (styles.background) {
           mutation.target.style.background = styles.background;
-          mutation.target.style.backgroundColor = styles.exampleColor;
+          if (styles.exampleColor) {
+            mutation.target.style.backgroundColor = styles.exampleColor;
+          }
+        }
         for (const reaction of reactions) {
-          reaction.children.item(0).style.backgroundColor =
-            styles.reactionColor;
+          const child = reaction.children && reaction.children.item(0);
+          if (child && child.style) {
+            child.style.backgroundColor = styles.reactionColor;
+          }
         }
         messageColors.forEach((text) => {
-          text.style.color = styles.messageTextColor;
+          if (text && text.style) text.style.color = styles.messageTextColor;
         });
 
         botToApp.forEach(tag => {
-          if (tag.textContent.includes("Bot")) {
+          if (tag.textContent && tag.textContent.includes("Bot")) {
             tag.textContent = tag.textContent.replace("Bot", "App");
             tag.setAttribute("aria-label", "Verified App");
           }
@@ -492,45 +514,55 @@ function setDiscordTheme(colorId) {
         const timestamps = document.querySelectorAll(
           ".discord-message-timestamp"
         );
-        timestamps.forEach((timestamp) => {
-          var time = new Date().getTime();
-          var minuteExample = new Date().getMinutes();
-          var hourExample = new Date().getHours();
-          const formattedMinute =
-            minuteExample < 10
-              ? `0${minuteExample}`
-              : minuteExample;
-          const formattedHour =
-            hourExample < 10 ? `0${hourExample}` : hourExample;
+        if (timestamps && timestamps.length) {
+          const now = new Date();
+          const minuteExample = now.getMinutes();
+          const hourExample = now.getHours();
+          const formattedMinute = minuteExample < 10 ? `0${minuteExample}` : minuteExample;
+          const formattedHour = hourExample < 10 ? `0${hourExample}` : hourExample;
           const formattedTime = `Today at ${formattedHour}:${formattedMinute}`;
-          timestamp.textContent = formattedTime;
-        });
+          timestamps.forEach((timestamp) => {
+            timestamp.textContent = formattedTime;
+          });
+        }
 
         removeTimestamp();
       }
     }
   };
 
-  for (message of discordMessages) {
-    const mutObv = new MutationObserver(callback);
-    mutObv.observe(message, { attributes: true });
-  }
+
+    for (const message of discordMessages) {
+        const mutObv = new MutationObserver(callback);
+        mutObv.observe(message, { attributes: true });
+        window.__discordThemeObservers.push(mutObv);
+    }
 }
 
 function applySettings() {
+  const defaultData = {
+    "discord-example-theme": "dark",
+    "text-size": "60%",
+    "language": "en",
+    "text-hg": "none",
+    "text-font": "Open Sans, sans-serif",
+  };
+
   let data;
-
+  let localData = {};
   try {
-    data = JSON.parse(localStorage.getItem("json"));
-  } catch {}
-
-    const defaultData = {
-        "discord-example-theme": "dark",
-        "text-size": "60%",
-        "language": "en",
-        "text-hg": "none",
-        "text-font": "Open Sans, sans-serif",
-    };
+    const ls = localStorage.getItem("json");
+    if (ls) {
+      try {
+        localData = JSON.parse(ls) || {};
+      } catch (e) {
+        localData = {};
+      }
+    }
+    data = Object.assign({}, defaultData, localData);
+  } catch {
+    data = defaultData;
+  }
 
   const html = document.querySelector("html");
 
@@ -539,23 +571,26 @@ function applySettings() {
   html.style.textShadow = data["text-hg"];
 
   document.querySelectorAll('.chapter > li.chapter-item').forEach(el => {
-   if (el.querySelector('div')) {
-    const text = el.querySelector('div').textContent.trim();
- if (text === 'Functions' || text === 'Premium') {
-   el.classList.add('functions-section');
- }
-  }
+    const div = el.querySelector('div');
+    if (div) {
+      const text = div.textContent.trim();
+      if (text === 'Functions' || text === 'Premium') {
+        el.classList.add('functions-section');
+      }
+    }
   });
   
   const currentPath = window.location.pathname;
   const currentHref = window.location.href;
+  const owner = 'Rainb0wKey';
+  const ghPagesBase = `https://${owner}.github.io/`;
 
-  if (currentPath.includes('/tools/') && !currentHref.includes('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/')) {
+  if (currentPath.includes('/tools/') && !currentHref.includes(`${owner}.github.io`)) {
     const fileName = currentPath.split('/').pop();
-    window.location.replace('https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + fileName);
+    window.location.replace(ghPagesBase + fileName);
   }
   else if (currentPath.includes('/terms.html') || currentHref.includes('terms.html')) {
-    window.location.replace('https://botdesignerdiscord.com/tos');
+    window.location.replace('https://botdesignerdiscord.com');
   }
   else {
     const allLinks = document.querySelectorAll('a[href]');
@@ -565,12 +600,12 @@ function applySettings() {
       
       if (href) {
         if (href.indexOf('../tools/') === 0) {
-          const newHref = 'https://bdfd-tool.github.io/bdfd-wiki/nightly/tools/' + href.substring(9);
+          const newHref = ghPagesBase + href.substring(9);
           link.setAttribute('href', newHref);
         }
         
         if (href.includes('terms.html')) {
-          link.setAttribute('href', 'https://botdesignerdiscord.com/tos');
+          link.setAttribute('href', 'https://botdesignerdiscord.com');
         }
       }
     });
