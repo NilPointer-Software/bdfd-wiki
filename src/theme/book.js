@@ -245,7 +245,13 @@ if (window.playground_copyable) {
       if (codeLines.length > 0) {
         const lines = [];
         codeLines.forEach(line => {
-          lines.push(line.textContent);
+          const text = line.textContent;
+          
+          if (text.trim() === '') {
+            lines.push('');
+          } else {
+            lines.push(text);
+          }
         });
         return lines.join('\n');
       } else {
@@ -275,21 +281,28 @@ if (window.playground_copyable) {
   wrapButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const playground = button.closest("pre");
-      const codeContainer = playground.querySelector(".code-container");
-      const lineNumbers = codeContainer.querySelectorAll(".line-number");
-      const codeLines = codeContainer.querySelectorAll(".code-line");
+      if (!playground) return;
+
+      const codeContainer = playground.querySelector(".code-container") || playground.querySelector("code");
+      if (!codeContainer) return;
 
       codeContainer.classList.toggle("wrap-enabled");
 
-      codeLines.forEach((line, index) => {
-        if (lineNumbers[index]) {
-          const lineHeight = line.scrollHeight;
-          lineNumbers[index].style.height = lineHeight + 'px';
-        }
-      });
+      const lineNumbers = codeContainer.querySelectorAll(".line-number");
+      const codeLines = codeContainer.querySelectorAll(".code-line");
+
+      if (lineNumbers.length > 0) {
+        codeLines.forEach((line, index) => {
+          if (lineNumbers[index]) {
+            const lineHeight = line.scrollHeight;
+            lineNumbers[index].style.height = lineHeight + 'px';
+          }
+        });
+      }
     });
   });
 })();
+
 
 (function syntax() {
 	const syntaxButtons = document.querySelectorAll(".syntax-button");
@@ -399,8 +412,3 @@ if (window.playground_copyable) {
 		{ passive: true }
 	);
 })();
-
-
-
-
-
