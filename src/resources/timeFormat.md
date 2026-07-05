@@ -2,7 +2,7 @@
 Custom time formatting values for [`$creationDate[]`](../bdscript/creationDate.md), [`$userJoinedDiscord[]`](../bdscript/userJoinedDiscord.md) and [`$userJoined[]`](../bdscript/userJoined.md) functions.
 
 ### Time Formats
-List of supported time format values :
+List of supported time format values:
 
 Value                   | Return Information
 --------------- | ----------------------------------------
@@ -35,5 +35,8 @@ MST                    |   Timezone name
 -070000[^1]      |  Timezone offset (±hhmmss)
 -07:00:00[^1]    |  Timezone offset (±hh:mm:ss)
 
-> All time format values are case insensitive (i.e both `MOH` and `Mon` will work).
+```admonish info
+All time format values are case insensitive (i.e both `MOH` and `Mon` will work).
+```
+
 [^1]: Replacing the sign in the format with a Z character triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC (+00:00) zone.

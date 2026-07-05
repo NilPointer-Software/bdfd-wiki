@@ -1,13 +1,4 @@
-<div class="tag-beta">
-  <span class="warn"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
-  <span class="text">
-    <span class="head">Experimental Feature!</span>
-    <span class="desc">If you encountered an error, please contact us on the official BDFD Support Server.</span>
-  </span>
-</div>
-
 # Settings
-
 Let's customize your experience in our Bot Designer For Discord wiki world!
 
 <link rel="stylesheet" href="./theme/settings/style.css">

@@ -31,6 +31,7 @@ You can't have multiple containers and [sections](./addSection.md) **with the sa
 ## Container Components
 - [`$addTextDisplay[]`](./addTextDisplay.md)
 - [`$addSeparator[]`](./addSeparator.md)
+- [`$addMediaGallery[]`](./addMediaGallery.md)
 
 ## Example
 ```

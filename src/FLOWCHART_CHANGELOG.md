@@ -1,7 +1,5 @@
 # Flowchart Changelog
 
-<link rel="stylesheet" href="./theme/css/changelog.css">
-
 <div class="changelog">
   <div class="changePrev" id="year">
     <h2>2024</h2>

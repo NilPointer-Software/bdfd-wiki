@@ -15,7 +15,7 @@ $random[Min;Max]
 - `Max` `(Type: Integer, Float || Flag: Required)`: The maximum value.
 
 ```admonish failure
-The `Max` value cannot be greater than or equal to the `Min` value.
+The `Min` value cannot be greater than or equal to the `Max` value.
 - ❌ `Max` <= `Min`
 - ✅ `Max` > `Min`
 ```
@@ -40,3 +40,29 @@ The random number is **$random[1;21]**
   content: |
     The random number is <b>16</b>
 ```
+
+~~~admonish example
+You can use [`$enableDecimals[]`](./enableDecimals.md) to disable or enable decimals:
+
+```
+$nomention
+$enableDecimals[yes]
+The random number is **$random[1;21]**
+```
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    The random number is <b>13.1</b>
+```
+
+~~~

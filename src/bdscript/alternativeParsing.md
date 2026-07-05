@@ -39,28 +39,28 @@ This function was added at the end of 2019 as an experiment, and it can be unsta
     ```
 3. Execute commands.
 ``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
     hello
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: <none>
   embed:
     description: "\"hello\""
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
     helloworld
     
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: <none>
@@ -73,27 +73,27 @@ This function was added at the end of 2019 as an experiment, and it can be unsta
 - Without `$alternativeParsing`:
 
 ``` discord yaml
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
     hello
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: <none>
   embed:
     description: "\"hello\""
-- user_id: 729343563401265193
-  username: Nicky
-  color: "#EE7908"
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
   content: |
     helloworld
-- user_id: 566613317972394004
-  username: Wiki Bot
-  color: "#748BD4"
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
   bot: true
   verified: true
   content: <none>

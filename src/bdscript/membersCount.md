@@ -9,13 +9,28 @@ $membersCount
 ## Example 
 ```
 $nomention
-This server has $membersCount members 
+This server has $membersCount members!
 ```
 
-![example1](https://user-images.githubusercontent.com/70468667/219971581-9eca0e8e-0b85-4ee3-b5e1-42b4fae2178a.jpg)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- username: BDFD Support
+  user_id: 1009018156494368798
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    This server has 5281 members!
+```
 
+```admonish example
 
-## Note
 You can use `$membersCount` in the bot status to display how many users are in all servers of the bot.
 
-![example2](https://user-images.githubusercontent.com/70468667/219971617-d3cd270f-792a-415b-b9de-2651fc9d7f08.jpg)
+![example](https://user-images.githubusercontent.com/70468667/219971617-d3cd270f-792a-415b-b9de-2651fc9d7f08.jpg)
+
+```

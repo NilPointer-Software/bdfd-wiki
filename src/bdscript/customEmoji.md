@@ -1,7 +1,7 @@
 # $customEmoji
-Returns a custom emoji. 
+Returns a custom emoji on the current server. 
 
-```admonish danger title="Important"
+```admonish warning title="Important"
 We recommend emoji IDs instead of `$customEmoji[]` **for public** bots.
 ```
 
@@ -16,7 +16,20 @@ $customEmoji[Emoji name]
 ## Example
 ```
 $nomention
-Hello there! $customEmoji[Wave]
+Hello bdfd! $customEmoji[BDFD]
 ```
 
-![Example](https://user-images.githubusercontent.com/69215413/122825469-fa934f80-d2af-11eb-9563-67552204beb5.png)
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello bdfd! <e:https://avatars.githubusercontent.com/u/63750675>
+```
