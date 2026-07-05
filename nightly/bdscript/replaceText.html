@@ -206,7 +206,7 @@
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text where the bot is searching for the ‘Sample’.</li>
 <li><code>Sample</code> <code>(Type: String || Flag: Emptiable)</code>: The text to replace with ‘New’.</li>
 <li><code>New</code> <code>(Type: String || Flag: Emptiable)</code>: The text to replace ‘Sample’ with.</li>
-<li><code>Amount</code> <code>(Type: Integer || Flag: Optional)</code>: The number of times, at most, the bot should replace the sample. Use <code>-1</code> to replace all ‘Sample’ in ‘Text’ with ‘New’. Default is <code>1</code>.</li>
+<li><code>Amount</code> <code>(Type: Integer || Flag: Optional)</code>: The number of times, at most, the bot should replace the sample. Use <code>-1</code> to replace all ‘Sample’ in ‘Text’ with ‘New’. Default is <code>-1</code>.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
@@ -218,7 +218,7 @@ Result 3: $replaceText[Hello world!;!;]
     <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
         !example
     </discord-message>
-    <discord-message role-color="#378afa" author="BDFD Support" verified avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot>
+    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified>
         Result 1: Bye world!<br /> Result 2: Heoo world!<br /> Result 3: Hello world
     </discord-message>
 </discord-messages>

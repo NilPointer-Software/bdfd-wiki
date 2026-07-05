@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>$aiDecideWithCtx - Bot Designer For Discord - Wiki</title>
+    <title>$addMediaGalleryItem - Bot Designer For Discord - Wiki</title>
 
 
 
@@ -192,73 +192,62 @@
                     <script src="../theme/breadcrumbs.js"></script>
                 </nav>
 
-                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/premium/aiDecideWithCtx.md" class="editPage">
+                <a href="https://github.com/NilPointer-Software/bdfd-wiki/edit/dev/src/bdscript/addMediaGalleryItem.md" class="editPage">
                     <i class='fa fa-edit' id="editPageIcon"></i>
                 </a>
 
-                <h1 id="aidecidewithctx"><a class="header" href="#aidecidewithctx">$aiDecideWithCtx</a></h1>
+                <h1 id="addmediagalleryitem"><a class="header" href="#addmediagalleryitem">$addMediaGalleryItem</a></h1>
 <div class="functionTags">
-  <span id="PremiumTag">Premium</span>
+  <span id="ComponentTag">Components v2</span>
 </div>
-<p>Asks AI a yes/no question about the Discord message context and returns <code>true</code> or <code>false</code>.</p>
+<p>Adds a media to the gallery.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$aiDecideWithCtx[Question]
+<pre><code>$addMediaGalleryItem[Media URL;Description;Spoiler?;Gallery name]
 </code></pre>
-<div id="admonition-ai-quota" class="admonition admonish-tip" role="note" aria-labelledby="admonition-ai-quota-title">
+<div id="admonition-limit" class="admonition admonish-warning" role="note" aria-labelledby="admonition-limit-title">
 <div class="admonition-title">
-<div id="admonition-ai-quota-title">
-<p>AI Quota</p>
+<div id="admonition-limit-title">
+<p>Limit</p>
 </div>
-<a class="admonition-anchor-link" href="#admonition-ai-quota"></a>
+<a class="admonition-anchor-link" href="#admonition-limit"></a>
 </div>
 <div>
-<p>Each call to <code>$aiDecideWithCtx[]</code> consumes tokens from your daily quota. Use <a href="./aiQuota.html"><code>$aiQuota</code></a> to check how many tokens you have left.</p>
+<p>You can add up to 10 media items to a gallery.</p>
 </div>
 </div>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>Question</code> <code>(Type: String || Flag: Required)</code>: A yes/no question about the message context, for example: “Does this message contain profanity?”.</li>
+<li><code>Media URL</code> <code>(Type: URL || Flag: Required)</code>: URL of the media (image or video).</li>
+<li><code>Description</code> <code>(Type: String || Flag: Emptiable)</code>: Alt text for the media item.</li>
+<li><code>Spoiler?</code> <code>(Type: Bool || Flag: Emptiable)</code>: Will the media have a spoiler effect?</li>
+<li><code>Gallery name</code> <code>(Type: String || Flag: Required)</code>: Name of the media gallery to add item to.</li>
 </ul>
-<h3 id="returns"><a class="header" href="#returns">Returns</a></h3>
-<p>Returns <code>true</code> if the AI answers yes, or <code>false</code> if it answers no.</p>
-<h3 id="context-provided-to-ai"><a class="header" href="#context-provided-to-ai">Context provided to AI</a></h3>
-<p>The same Discord message context as <a href="./aiWithCtx.html"><code>$aiWithCtx[]</code></a> is automatically included, along with the full message content.</p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$if[$aiDecideWithCtx[Does this message contain profanity?]==true]
-  $deleteMessage
-  Please keep it clean!
-$endif
+$addMediaGallery[pictures]
+$addMediaGalleryItem[$authorAvatar;;;pictures]
 </code></pre>
-<discord-messages>
-    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey">
-        !example What the heck is going on?
-    </discord-message>
-    <discord-message role-color="#378afa" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot author="BDFD Support" verified>
-        Please keep it clean!
-    </discord-message>
-</discord-messages>
-<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
 <div class="admonition-title">
-<div id="admonition-tip-title">
-<p>Tip</p>
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
 </div>
-<a class="admonition-anchor-link" href="#admonition-tip"></a>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
 </div>
 <div>
-<p>Use <a href="./aiDecide.html"><code>$aiDecide[]</code></a> if you want to provide the content to evaluate manually instead of using the message context.</p>
+<p>How <a href="./addMediaGallery.html"><code>$addMediaGallery[]</code></a> and <a href="./authorAvatar.html"><code>$authorAvatar</code></a> works?</p>
 </div>
 </div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../premium/aiWithCtx.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/addMediaGallery.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../premium/aiAgent.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="../bdscript/addSection.html" class="mobile-nav-chapters next"
                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -269,16 +258,16 @@ $endif
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../premium/aiWithCtx.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/addMediaGallery.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../premium/aiWithCtx.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/addMediaGallery.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
 
-            <a href="../premium/aiAgent.html" class="nav-chapters next" title="Next chapter"
+            <a href="../bdscript/addSection.html" class="nav-chapters next" title="Next chapter"
                aria-label="Next chapter" aria-keyshortcuts="Right">
-                <a href="../premium/aiAgent.html" class="nav-chapters next" title="Next page"
+                <a href="../bdscript/addSection.html" class="nav-chapters next" title="Next page"
                    aria-label="Next page" aria-keyshortcuts="Right">
                     <i class="fa fa-angle-right"></i>
                 </a>

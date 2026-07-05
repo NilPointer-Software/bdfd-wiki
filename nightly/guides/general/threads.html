@@ -210,13 +210,15 @@
 </div>
 </div>
 <h2 id="content"><a class="header" href="#content">Content</a></h2>
-<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#archive-duration"><strong>Archive Duration</strong></a> &gt; <a href="#startthread"><strong>$startThread[]</strong></a> &gt; <a href="#editthread"><strong>$editThread[]</strong></a> &gt; <a href="#threadaddmember"><strong>$threadAddMember[]</strong></a> &gt; <a href="#threadremovemember"><strong>$threadRemoveMember[]</strong></a> &gt; <a href="#simple-code"><strong>Simple Code</strong></a></p>
+<p><a href="#functions-used"><strong>Functions Used</strong></a> &gt; <a href="#archive-duration"><strong>Archive Duration</strong></a> &gt; <a href="#startthread"><strong>$startThread[]</strong></a> &gt; <a href="#editthread"><strong>$editThread[]</strong></a> &gt; <a href="#threadaddmember"><strong>$threadAddMember[]</strong></a> &gt; <a href="#threadremovemember"><strong>$threadRemoveMember[]</strong></a> &gt; <a href="#threadusercount"><strong>$threadUserCount[]</strong></a> &gt; <a href="#threadmessagecount"><strong>$threadMessageCount[]</strong></a> &gt; <a href="#simple-code"><strong>Simple Code</strong></a></p>
 <h2 id="functions-used"><a class="header" href="#functions-used">Functions Used</a></h2>
 <ul>
 <li><a href="../../bdscript/startThread.html"><code>$startThread[]</code></a></li>
 <li><a href="../../bdscript/editThread.html"><code>$editThread[]</code></a></li>
 <li><a href="../../bdscript/threadAddMember.html"><code>$threadAddMember</code></a></li>
 <li><a href="../../bdscript/threadRemoveMember.html"><code>$threadRemoveMember[]</code></a></li>
+<li><a href="../../bdscript/threadUserCount.html"><code>$threadUserCount</code></a></li>
+<li><a href="../../bdscript/threadMessageCount.html"><code>$threadMessageCount[]</code></a></li>
 </ul>
 <h2 id="archive-duration"><a class="header" href="#archive-duration">Archive Duration</a></h2>
 <p><code>60</code> - 1 Hour<br />
@@ -255,13 +257,13 @@
 I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 </code></pre>
 <discord-messages>
-    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
         !example
     </discord-message>
     <discord-system-message type="thread">
         <i style="color: #378afa">BDFD Support</i> Started a thread: <i style="color: white">Cool Thread</i>. See all <i style="color: white">threads</i>.
     </discord-system-message>
-    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" verified author="BDFD Support" role-color="#378afa" bot>
         I created a new thread! <discord-mention type="channel">Cool Thread</discord-mention>
     </discord-message>
 </discord-messages>
@@ -295,7 +297,7 @@ I created a new thread! &lt;#$startThread[Cool Thread;$channelID;;1440;yes]&gt;
 $editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey">
         !example
     </discord-message>
     <discord-system-message type="edit">
@@ -317,7 +319,7 @@ $editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 $threadAddMember[1021054508975009793;$authorID]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
         !example
     </discord-message>
 </discord-messages>
@@ -353,6 +355,49 @@ $threadAddMember[1021054508975009793;$authorID]
         <i style="color: #378afa">BDFD Support</i> removed <i style="color: #E67E22">RainbowKey</i> from the thread.
     </discord-system-message>
 </discord-messages>
+<h1 id="threadusercount"><a class="header" href="#threadusercount">$threadUserCount</a></h1>
+<p>Returns the total number of users in the current thread.</p>
+<h2 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h2>
+<pre><code>$threadUserCount
+</code></pre>
+<h2 id="example-4"><a class="header" href="#example-4">Example</a></h2>
+<pre><code>$nomention
+This thread has $threadUserCount users!
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message author="BDFD Support" avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot role-color="#378afa" verified>
+        This thread has 29 users!
+    </discord-message>
+</discord-messages>
+<h1 id="threadmessagecount"><a class="header" href="#threadmessagecount">$threadMessageCount</a></h1>
+<p>Returns the total number of messages in the current thread. (<strong>not including bot’s response</strong>)</p>
+<h2 id="syntax-5"><a class="header" href="#syntax-5">Syntax</a></h2>
+<pre><code>$threadMessageCount
+</code></pre>
+<h2 id="example-5"><a class="header" href="#example-5">Example</a></h2>
+<pre><code>$nomention
+This thread has a total of $threadMessageCount messages sent!
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        Hello guys!
+    </discord-message>
+    <discord-message author="kubastick" role-color="#FF0000" avatar="https://cdn.discordapp.com/avatars/390515191819010058/223b5a30c03c41562492da815990ea43.png">
+        Hello RainbowKey! 👋
+    </discord-message>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" author="BDFD Support" verified>
+        This thread has a total of 3 messages sent!
+    </discord-message>
+    <discord-message role-color="#FF0000" author="kubastick" avatar="https://cdn.discordapp.com/avatars/390515191819010058/223b5a30c03c41562492da815990ea43.png">
+        Nice!
+    </discord-message>
+</discord-messages>
 <h1 id="simple-code"><a class="header" href="#simple-code">Simple Code</a></h1>
 <pre><code>$nomention
 $var[id;$startThread[Cool Thread;$channelID;;1440;yes]]
@@ -360,7 +405,7 @@ New thread - &lt;#$var[id]&gt;
 $threadAddMember[$var[id];$authorID]
 </code></pre>
 <discord-messages>
-    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22" author="RainbowKey">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" author="RainbowKey" role-color="#E67E22">
         !example
     </discord-message>
     <discord-system-message type="thread">

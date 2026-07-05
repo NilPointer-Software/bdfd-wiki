@@ -199,34 +199,45 @@
                 <h1 id="repeatmessage"><a class="header" href="#repeatmessage">$repeatMessage</a></h1>
 <p>Repeats the provided text a certain amount of times.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$repeatMessage[Amount;Message]
+<pre><code>$repeatMessage[Amount;Text]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Amount</code> <code>(Type: Integer || Flag: Required)</code>: The number of times to repeat the given text (max <code>10</code> times).</li>
-<li><code>Message</code> <code>(Type: String || Flag: Emptiable)</code>: The text to repeat.</li>
+<li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to repeat.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $repeatMessage[5;Hello World!]
 </code></pre>
 <discord-messages>
-    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
         !example
     </discord-message>
-    <discord-message author="BDFD Support" verified role-color="#378afa" bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" bot author="BDFD Support" verified role-color="#378afa">
         Hello World!Hello World!Hello World!Hello World!Hello World!
     </discord-message>
 </discord-messages>
-<div id="admonition-info" class="admonition admonish-info" role="note" aria-labelledby="admonition-info-title">
+<div id="admonition-example" class="admonition admonish-example" role="note" aria-labelledby="admonition-example-title">
 <div class="admonition-title">
-<div id="admonition-info-title">
-<p>Info</p>
+<div id="admonition-example-title">
+<p>Example</p>
 </div>
-<a class="admonition-anchor-link" href="#admonition-info"></a>
+<a class="admonition-anchor-link" href="#admonition-example"></a>
 </div>
 <div>
-<p>You can use a space at the end of “text” in the <code>Message</code> parameter, so there are spaces in-between repeats.</p>
+<p>You can use a space at the end of “text” in the <code>Text</code> parameter, so there are spaces in-between repeats:</p>
+<pre><code>$nomention
+$repeatMessage[5;Hello World! ]
+</code></pre>
+<discord-messages>
+    <discord-message role-color="#E67E22" author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message author="BDFD Support" role-color="#378afa" verified bot avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png">
+        Hello World! Hello World! Hello World! Hello World! Hello World! 
+    </discord-message>
+</discord-messages>
 </div>
 </div>
 

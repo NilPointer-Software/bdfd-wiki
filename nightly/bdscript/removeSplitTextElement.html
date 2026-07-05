@@ -197,10 +197,7 @@
                 </a>
 
                 <h1 id="removesplittextelement"><a class="header" href="#removesplittextelement">$removeSplitTextElement</a></h1>
-<p>Removes a certain element from the <a href="./textSplit.html"><code>$textSplit[]</code></a> values.</p>
-<blockquote>
-<p>This function is unneeded, if <code>$textSplit[]</code> isn’t present in the code.</p>
-</blockquote>
+<p>This function removes an element from the separated text by the specified index.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$removeSplitTextElement[Index]
 </code></pre>
@@ -208,15 +205,37 @@
 <ul>
 <li><code>Index</code> <code>(Type: Integer || Flag: Required)</code>: The index of the <code>$textSplit[]</code> value to remove.</li>
 </ul>
-<blockquote>
-<p>For more info, see the <a href="../guides/general/textSplitting.html">Text Splitting Guide</a>.</p>
-</blockquote>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>$nomention
+$textSplit[hello-world-!;-]
+$removeSplitTextElement[3]
+&gt; $joinSplitText[-]
+</code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" role-color="#378afa" bot verified author="BDFD Support">
+        <discord-quote>hello-world</discord-quote>
+    </discord-message>
+</discord-messages>
+<div id="admonition-read-more" class="admonition admonish-info" role="note" aria-labelledby="admonition-read-more-title">
+<div class="admonition-title">
+<div id="admonition-read-more-title">
+<p>Read more</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-read-more"></a>
+</div>
+<div>
+<p>For more information, read the <a href="../guides/general/textSplitting.html">Text Splitting Guide</a>.</p>
+</div>
+</div>
 
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">
                 <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="../bdscript/removeContains.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="../bdscript/numberSeparator.html" class="mobile-nav-chapters previous"
                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
@@ -232,9 +251,9 @@
     </div>
 
     <nav class="nav-wide-wrapper" aria-label="Page navigation">
-        <a href="../bdscript/removeContains.html" class="nav-chapters previous" title="Previous chapter"
+        <a href="../bdscript/numberSeparator.html" class="nav-chapters previous" title="Previous chapter"
            aria-label="Previous chapter" aria-keyshortcuts="Left">
-            <a href="../bdscript/removeContains.html" class="nav-chapters previous" title="Previous page"
+            <a href="../bdscript/numberSeparator.html" class="nav-chapters previous" title="Previous page"
                aria-label="Previous page" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>

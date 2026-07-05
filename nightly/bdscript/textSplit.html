@@ -198,9 +198,6 @@
 
                 <h1 id="textsplit"><a class="header" href="#textsplit">$textSplit</a></h1>
 <p>Splits the provided text by a given separator and saves the value temporarily.</p>
-<blockquote>
-<p>📌 To retrieve the split values, use <a href="./splitText.html"><code>$splitText</code></a>.</p>
-</blockquote>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$textSplit[Text;Separator]
 </code></pre>
@@ -209,23 +206,41 @@
 <li><code>Text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to split.</li>
 <li><code>Separator</code> <code>(Type: String || Flag: Emptiable)</code>: The separator to split the text with. If this parameter is empty, it separates the text by each character.</li>
 </ul>
-<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$textSplit[Coffee, Tea, Milk;,]
-$splitText[1]
+$textSplit[Hello-world-!;-]
+&gt; $splitText[2]
 </code></pre>
-<p><img src="https://user-images.githubusercontent.com/95774950/198839569-338c0892-80ef-4e7a-bbb7-dd696c6ab15b.png" alt="Screenshot_20221029_203537" /></p>
-<h6 id="in-the-above-example-textsplit-splits-the-provided-text-using-a-comma--as-the-separator-after-that-splittext-is-used-to-retrieve-the-first-split-value"><a class="header" href="#in-the-above-example-textsplit-splits-the-provided-text-using-a-comma--as-the-separator-after-that-splittext-is-used-to-retrieve-the-first-split-value"><em>In the above example, <a href="#textsplit"><code>$textSplit</code></a> splits the provided text using a comma (<code>,</code>) as the separator. After that, <a href="./splitText.html"><code>$splitText</code></a> is used to retrieve the first split value.</em></a></h6>
-<h2 id="related-resources"><a class="header" href="#related-resources">Related Resources</a></h2>
-<ul>
-<li><a href="../guides/general/textSplitting.html">Text Splitting Guide</a></li>
-<li><a href="./getTextSplitIndex.html">$getTextSplitIndex</a></li>
-<li><a href="./getTextSplitLength.html">$getTextSplitLength</a></li>
-<li><a href="./joinSplitText.html">$joinSplitText</a></li>
-<li><a href="./removeSplitTextElement.html">$removeSplitTextElement</a></li>
-<li><a href="./splitText.html">$splitText</a></li>
-</ul>
-
+<discord-messages>
+    <discord-message author="RainbowKey" role-color="#E67E22" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png">
+        !example
+    </discord-message>
+    <discord-message avatar="https://cdn.discordapp.com/avatars/1009018156494368798/612acd98b01ab110615a2524ee2b6360.png" author="BDFD Support" verified bot role-color="#378afa">
+        <discord-quote>world</discord-quote>
+    </discord-message>
+</discord-messages>
+<div id="admonition-what-is-this" class="admonition admonish-question" role="note" aria-labelledby="admonition-what-is-this-title">
+<div class="admonition-title">
+<div id="admonition-what-is-this-title">
+<p>What is this?</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-what-is-this"></a>
+</div>
+<div>
+<p>How <a href="./splitText.html"><code>$splitText[]</code></a> works?</p>
+</div>
+</div>
+<div id="admonition-read-more" class="admonition admonish-info" role="note" aria-labelledby="admonition-read-more-title">
+<div class="admonition-title">
+<div id="admonition-read-more-title">
+<p>Read more</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-read-more"></a>
+</div>
+<div>
+<p>For more information, read the <a href="../guides/general/textSplitting.html">Text Splitting Guide</a>.</p>
+</div>
+</div>
             </main>
 
             <nav class="nav-wrapper" aria-label="Page navigation">

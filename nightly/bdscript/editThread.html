@@ -199,24 +199,56 @@
                 <h1 id="editthread"><a class="header" href="#editthread">$editThread</a></h1>
 <p>Modifies an existing thread.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$editThread[Thread ID;(Name;Archived;Archive duration;Locked;Slowmode)]
+<pre><code>$editThread[Thread ID;(Thread name;Archived?;Archive duration;Locked?;Slowmode)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Thread ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The thread channel to edit.</li>
-<li><code>Name</code> <code>(Type: String || Flag: Optional)</code>: The new name of the thread.</li>
-<li><code>Archived</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to archive this thread or not.</li>
-<li><code>Archive duration</code> <code>(Type: Integer || Flag: Optional)</code>: The archive duration of this thread in minutes. Only 60, 1440,4320, 10080 can be used. Note that for the 4320 archive duration option, the server needs to be level 1 boosted, and for 10080 the server needs level 2.</li>
-<li><code>Locked</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to lock this thread or not. Note that archived threads can’t be locked.</li>
+<li><code>Thread name</code> <code>(Type: String || Flag: Optional)</code>: The new name of the thread.</li>
+<li><code>Archived?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to archive this thread or not.</li>
+<li><code>Archive duration</code> <code>(Type: Integer || Flag: Optional)</code>: The <a href="#archive-duration">archive duration</a> after which the thread will be auto-archived due to inactivity. Defaults to <code>60</code>.</li>
+<li><code>Locked?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to lock this thread or not. Note that archived threads can’t be locked.</li>
 <li><code>Slowmode</code> <code>(Type: Integer || Flag: Optional)</code>: The slowmode of this channel, expressed in seconds.</li>
 </ul>
-<blockquote>
-<p>You can use <code>!unchanged</code> as an parameter for the option to remain in its current state.</p>
-</blockquote>
+<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
+<div class="admonition-title">
+<div id="admonition-tip-title">
+<p>Tip</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-tip"></a>
+</div>
+<div>
+<p>Use <code>!unchanged</code> as an argument for the option to remain in its current state.</p>
+</div>
+</div>
+<h3 id="archive-duration"><a class="header" href="#archive-duration">Archive Duration</a></h3>
+<p><code>60</code> - 1 Hour<br />
+<code>1440</code> - 1 Day<br />
+<code>4320</code> - 3 Days (Only for servers with level 1 boosted)<br />
+<code>10080</code> - 7 Days (Only for servers with level 2 boosted)</p>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $editThread[1098166444111433819;Cool Thread 😎;no;!unchanged;!unchanged;5]
 </code></pre>
+<discord-messages>
+    <discord-message author="RainbowKey" avatar="https://cdn.discordapp.com/avatars/803569638084313098/1c0a70609cdd326f9265bb2040e83b7e.png" role-color="#E67E22">
+        !example
+    </discord-message>
+    <discord-system-message type="edit">
+        <i style="color: #378afa">BDFD Support</i> <i style="color: white">changed the channel name: <b>Cool Thread 😎</b></i>
+    </discord-system-message>
+</discord-messages>
+<div id="admonition-read-more" class="admonition admonish-info" role="note" aria-labelledby="admonition-read-more-title">
+<div class="admonition-title">
+<div id="admonition-read-more-title">
+<p>Read more</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-read-more"></a>
+</div>
+<div>
+<p>For more information, read the <a href="../guides/general/threads.html">Threads Guide</a>.</p>
+</div>
+</div>
 
             </main>
 
