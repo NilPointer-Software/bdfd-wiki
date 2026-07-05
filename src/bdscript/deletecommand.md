@@ -11,7 +11,7 @@ $deletecommand
 ```
 
 ```admonish note
-Sometimes a message may be deleted, but you will still see it. This is a discord bug.
+Sometimes a message may be deleted, but you will still see it. This is a Discord bug.
 ```
 
 ## Example

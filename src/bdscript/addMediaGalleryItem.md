@@ -7,7 +7,7 @@ Adds a media to the gallery.
 
 ## Syntax
 ```
-$addMediaGalleryItem[Media URL;Description;Spoiler?;(Gallery name)]
+$addMediaGalleryItem[Media URL;Description;Spoiler?;Gallery name]
 ```
 
 ```admonish warning title="Limit"

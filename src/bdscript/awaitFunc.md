@@ -34,5 +34,5 @@ $awaitFunc[say]
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Awaited Commands Guide](../guides/general/awaitedCommands.md).
+For more information, read the [Awaited Commands Guide](../guides/general/awaitedCommands.md).
 ```
