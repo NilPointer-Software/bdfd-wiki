@@ -222,55 +222,73 @@ if (window.playground_copyable) {
 })();
 
 (function clipboard() {
-	const clipButtons = document.querySelectorAll(".clip-button");
+  const clipButtons = document.querySelectorAll(".clip-button");
 
-	function hideTooltip(elem) {
-		elem.firstChild.textContent = "";
-		elem.className = "fa far fa-clipboard clip-button";
-	}
+  function hideTooltip(elem) {
+    elem.firstChild.textContent = "";
+    elem.className = "fa far fa-clipboard clip-button";
+  }
 
-	function showTooltip(elem, msg) {
-		elem.firstChild.textContent = msg;
-		elem.className = "fa far fa-clipboard tooltipped";
-	}
+  function showTooltip(elem, msg) {
+    elem.firstChild.textContent = msg;
+    elem.className = "fa far fa-clipboard tooltipped";
+  }
 
-	const clipboardSnippets = new ClipboardJS(".clip-button", {
-		text: (trigger) => {
-			hideTooltip(trigger);
-			const playground = trigger.closest("pre");
-			return playground.querySelector("code").textContent;
-		},
-	});
+  const clipboardSnippets = new ClipboardJS(".clip-button", {
+    text: (trigger) => {
+      hideTooltip(trigger);
+      const playground = trigger.closest("pre");
 
-	clipButtons.forEach((clipButton) => {
-		clipButton.addEventListener("mouseout", (e) => {
-			hideTooltip(e.currentTarget);
-		});
-	});
+      const codeElement = playground.querySelector("code");
+      const codeLines = codeElement.querySelectorAll(".code-line");
+      
+      if (codeLines.length > 0) {
+        const lines = [];
+        codeLines.forEach(line => {
+          lines.push(line.textContent);
+        });
+        return lines.join('\n');
+      } else {
+        return codeElement.textContent;
+      }
+    },
+  });
 
-	clipboardSnippets.on("success", (e) => {
-		e.clearSelection();
-		showTooltip(e.trigger, "Copied!");
-	});
+  clipButtons.forEach((clipButton) => {
+    clipButton.addEventListener("mouseout", (e) => {
+      hideTooltip(e.currentTarget);
+    });
+  });
 
-	clipboardSnippets.on("error", (e) => {
-		showTooltip(e.trigger, "Clipboard error!");
-	});
+  clipboardSnippets.on("success", (e) => {
+    e.clearSelection();
+    showTooltip(e.trigger, "Copied!");
+  });
+
+  clipboardSnippets.on("error", (e) => {
+    showTooltip(e.trigger, "Clipboard error!");
+  });
 })();
 
 (function wrap() {
-	const wrapButtons = document.querySelectorAll(".wrap-button");
-	wrapButtons.forEach((button) => {
-		button.addEventListener("click", (e) => {
-			const playground = button.closest("pre");
-			const codeBlock = playground.querySelector("code");
-			if (codeBlock.style.whiteSpace == "pre-wrap") {
-				codeBlock.style.whiteSpace = "pre";
-			} else {
-				codeBlock.style.whiteSpace = "pre-wrap";
-			}
-		});
-	});
+  const wrapButtons = document.querySelectorAll(".wrap-button");
+  wrapButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const playground = button.closest("pre");
+      const codeContainer = playground.querySelector(".code-container");
+      const lineNumbers = codeContainer.querySelectorAll(".line-number");
+      const codeLines = codeContainer.querySelectorAll(".code-line");
+
+      codeContainer.classList.toggle("wrap-enabled");
+
+      codeLines.forEach((line, index) => {
+        if (lineNumbers[index]) {
+          const lineHeight = line.scrollHeight;
+          lineNumbers[index].style.height = lineHeight + 'px';
+        }
+      });
+    });
+  });
 })();
 
 (function syntax() {
@@ -381,3 +399,8 @@ if (window.playground_copyable) {
 		{ passive: true }
 	);
 })();
+
+
+
+
+

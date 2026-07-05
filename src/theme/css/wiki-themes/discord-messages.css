@@ -1,5 +1,11 @@
-.discord-message .discord-message-markup, .discord-system-message {
+.discord-message .discord-message-markup {
     font-size: 16px !important;
+}
+
+.discord-system-message {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    font-size: 12px !important;
 }
 
 .discord-message a {
@@ -45,12 +51,11 @@
     color: #fff;
     font-size: 12px;
     margin-left: 4px;
-    border-radius: 3px;
     line-height: 100%;
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    height: 2rem;
+    height: 1.5rem;
     padding: 0 0.275rem;
     margin-top: 0.075em;
     border-radius: 4px;
@@ -62,6 +67,12 @@
     height: 17px;
     width: 17px;
     margin-left: -0.25rem;
+}
+
+.discord-embed-wrapper {
+    border-top: 1.5px solid hsl(0deg 0% 50% / 10%) !important;
+    border-bottom: 1.5px solid hsl(0deg 0% 50% / 10%) !important;
+    border-right: 1.5px solid hsl(0deg 0% 50% / 10%) !important;
 }
 
 .discord-embed .discord-embed-author {
@@ -208,6 +219,12 @@
     transform: scale(1.4);
 }
 
+.discord-button {
+    margin-top: -2px;
+    border-radius: 10px;
+    border: 1px solid hsl(0deg 0% 100% / 10%);
+}
+
 .discord-button.discord-button-secondary {
     color: #fff !important;
 }
@@ -269,4 +286,9 @@
 .discord-message [id$="-mark"] {
     line-height: 19px;
 }
+
+
+
+
+
 
