@@ -511,10 +511,10 @@ function setDiscordTheme(colorId) {
     }
   };
 
-  for (message of discordMessages) {
-    const mutObv = new MutationObserver(callback);
-    mutObv.observe(message, { attributes: true });
-  }
+    for (const message of discordMessages) {
+        const mutObv = new MutationObserver(callback);
+        mutObv.observe(message, { attributes: true });
+    }
 }
 
 function applySettings() {
