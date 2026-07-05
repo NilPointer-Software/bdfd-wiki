@@ -1,24 +1,20 @@
-// Function Container
 function createObjectInfo() {
-    if (/introduction/i.test(location.pathname)) return;
-    
-    if (/bdscript|callbacks/.test(location.pathname)) {
-        const h1 = document.querySelector('main h1');
-        // select a <p> that does not have class "breadcrumb"
-        const p = document.querySelector('main p:not(.breadcrumb)');
-        const tags = document.querySelector('main .functionTags');
-        
-        if (h1 && p) {
-            const container = document.createElement('div');
-            container.className = 'objectInfo';
-            // Insert container and move h1 inside it
-            h1.replaceWith(container);
-            container.append(h1);
-            
-            if (tags) container.append(tags);
-            container.append(p);
-        }
+  if (/introduction/i.test(location.pathname)) return;
+
+  if (/bdscript|callbacks/.test(location.pathname)) {
+    const h1 = document.querySelector('main h1');
+    const p = Array.from(document.querySelectorAll('main > p')).find(el => !el.closest('.breadcrumb'));
+    const tags = document.querySelector('main .functionTags');
+
+    if (h1 && p) {
+      const container = document.createElement('div');
+      container.className = 'objectInfo';
+      h1.parentNode.insertBefore(container, h1);
+      container.appendChild(h1);
+      if (tags) container.appendChild(tags);
+      container.appendChild(p);
     }
+  }
 }
 
 // Example "Today at"
