@@ -18,3 +18,29 @@ $eval[$message]
 
 $c[This can only be executed in BDScript 2.]
 ```
+```discord yaml
+- user_id: 1081869405245407262
+  username: mrskraba101
+  color: "#E67E22"
+  content: |
+    !example Hello!
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    ❌ You are not my owner!
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example Hello!
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Hello!
+```
