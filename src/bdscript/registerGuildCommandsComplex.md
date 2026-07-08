@@ -18,8 +18,20 @@ $nomention
 $registerGuildCommands[help]
 Successfully registered the guild slash command `/help`!
 ```
-![example1](https://user-images.githubusercontent.com/111157596/233842038-1477b1f9-2e82-4cfc-90d9-ba318a9e8856.png)
-
+``` discord yaml
+- user_id: 1081869405245407262
+  username: mrskraba101
+  color: "#E67E22"
+  content: |
+    !register
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Successfully registered the guild slash command `/help`!
+  ```
 ### Example #2:
 ```
 $nomention
@@ -28,5 +40,19 @@ $argsCheck[>1;Provide guild slash command names!]
 $registerGuildCommands[$unescape[$toLowercase[$replaceText[$trimSpace[$message]; ;]]]]
 Successfully registered the provided guild slash commands!
 ```
-![example2](https://user-images.githubusercontent.com/111157596/233842084-413aec63-8cdd-4295-b3d3-0fe660b13792.png)
+``` discord yaml
+- user_id: 1081869405245407262
+  username: mrskraba101
+  color: "#E67E22"
+  content: |
+    !register ban ; help ; work
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Successfully registered the provided guild slash commands!
+  ```
 
+How [`$unescape[]`](./unescape.md), [`$toLowercase[]`](./toLowercase.md), [`$replaceText[]`](./replaceText.md), [`$trimSpace[]`](./trimSpace.md), [`$message`](./message.md) and [`$argsCheck[]`](./argsCheck.md) works?
