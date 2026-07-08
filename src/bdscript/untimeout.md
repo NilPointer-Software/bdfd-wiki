@@ -28,3 +28,7 @@ Required permissions that the bot must have for this function to work properly :
    $untimeout[$findUser[$message[1];no]]
    ```
    ![](https://user-images.githubusercontent.com/70456337/183473060-8a2a74d0-594c-4794-a22d-c5d2a4732365.gif)
+
+```admonish question title="What is this?"
+How [`$AllowMention`](./allowMention.md), [`$message[]`](./messageComplex.md), [`$finUser[]`](./findUser.md) works?
+```
