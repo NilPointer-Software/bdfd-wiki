@@ -17,6 +17,23 @@ Name : $input[modalInput1]
 Pronouns : $input[modalInput2]
 About me : $input[modalInput3]
 ```
-![example](https://user-images.githubusercontent.com/69215413/168921575-9c2e3106-4ac0-4388-8b41-46e640e6126a.png)
+
+```discord yaml
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  reply:
+    user_id: 1009018156494368798
+    author: BDFD Support
+    mentions: true
+    content: "Modal example"
+  highlight: true
+  content: |
+    Name : mrskraba101
+    Pronouns : He/Him
+    About me : Support in BDFD
+  ```
 
 > For more info, see the [Modals Guide](../guides/general/interactions/modals/aboutModals.md).
