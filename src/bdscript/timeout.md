@@ -33,3 +33,7 @@ Required permissions that the bot must have for this function to work properly:
 ## Related Resources
 - [Time Out FAQ](https://support.discord.com/hc/en-us/articles/4413305239191-Time-Out-FAQ)
 - [$untimeout](./untimeout.md)
+
+```admonish question title="What is this?"
+How [`$AllowMention`](./allowMention.md), [`$message[]`](./messageComplex.md), [`$finUser[]`](./findUser.md) works?
+```
