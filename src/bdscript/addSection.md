@@ -29,6 +29,7 @@ Only 3 components can be added to the section.
 
 - [`$addTextDisplay[]`](./addTextDisplay.md)
 - [`$addThumbnail[]`](./addThumbnail.md)
+-  [`$addButtonCV2[]`](./addButtonCV2.md)
 
 ## Example
 ```
