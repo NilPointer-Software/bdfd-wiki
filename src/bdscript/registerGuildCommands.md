@@ -12,4 +12,17 @@ $nomention
 $registerGuildCommands
 Successfully registered all guild slash commands!
 ```
-![example](https://user-images.githubusercontent.com/111157596/231836696-5a87d5a5-cb1a-47f2-89d6-cc117f20f801.png)
+``` discord yaml
+- user_id: 1081869405245407262
+  username: mrskraba101
+  color: "#E67E22"
+  content: |
+    !register
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    Successfully registered all guild slash commands!
+```
