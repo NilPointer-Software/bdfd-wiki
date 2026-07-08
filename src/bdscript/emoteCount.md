@@ -9,7 +9,7 @@ $emoteCount
 ## Example
 ```
 $nomention
-There are $emoteCount emojis in $serverName[$guildID]!
+There are $emoteCount emojis in this server!
 ```
 
 ```discord yaml
@@ -24,9 +24,5 @@ There are $emoteCount emojis in $serverName[$guildID]!
   bot: true
   verified: true
   content: |
-    There are 149 emojis in Bot Designer for Discord Official Server!
-```
-
-```admonish question title="What is this?"
-How [`$serverName[]`](./serverName.md) and [`$guildID`](./guildID.md) works?
+    There are 149 emojis in this server!
 ```

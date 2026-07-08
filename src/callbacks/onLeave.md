@@ -5,7 +5,7 @@
 
 *Triggered when a user leaves the server.*
 
-`$onLeave[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is ran when a user leaves the server.
+`$onLeave[Channel ID]` is a callback, which means it's used in the command trigger *(not the code)*. The command is run when a user leaves the server.
 
 > You can only have **1** single `$onLeave[]` per bot.
 

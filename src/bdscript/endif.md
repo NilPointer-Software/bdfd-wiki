@@ -20,13 +20,16 @@ $endif
   color: "#E67E22"
   content: |
     !example BDFD
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
   content: |
     I love BDFD!
 ```
+
+~~~admonish example
 
 - Without `$endif`:
 
@@ -36,7 +39,8 @@ $endif
   color: "#E67E22"
   content: |
     !example BDFD
-- username: BDFD Support
+- user_id: 1009018156494368798
+  username: BDFD Support
   color: "#378afa"
   bot: true
   verified: true
@@ -44,7 +48,8 @@ $endif
     <code>$if</code> not closed with <code>$endif</code>
 ```
 
+~~~
 
 ```admonish info title="Read more"
-For more information, read the the [If Statements Guide](../guides/ifStatements.md).
+For more information, read the [If Statements Guide](../guides/ifStatements.md).
 ```

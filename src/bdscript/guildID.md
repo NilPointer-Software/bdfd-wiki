@@ -9,7 +9,7 @@ $guildID
 ## Example
 ```
 $nomention 
-Server's ID: $guildID
+ID: $guildID
 ```
 
 ```discord yaml
@@ -24,5 +24,5 @@ Server's ID: $guildID
   bot: true
   verified: true
   content: |
-      Server's ID: 566363823137882154
+      ID: 566363823137882154
 ```

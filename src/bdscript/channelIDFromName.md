@@ -3,9 +3,9 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
-> This function is deprecated, instead better use [`$channelID[]`](./channelIDComplex.md).
-
 Returns a channel's ID from its name.
+
+> This function is deprecated, instead better use [`$channelID[]`](./channelIDComplex.md).
 
 ## Syntax
 ```

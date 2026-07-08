@@ -31,29 +31,29 @@ One premium point equals one week (7 days) of premium hosting.
 
 ## Premium Perks
 
-Feature                                                                                         | Without premium | With premium   |
--------------------------------------------------------------------------------------------------------------------  | --- | ----- |
-Access to AI functions. ([`$ai[]`](./ai.md) and [`$aiQuota`](./aiQuota.md))                                          | ❌ | ✅    |
-AI Tokens (per day)                                                                                                  | 0   | 10000  |
-Access to Bot Logs and to Bot Logs functions. (`$log[]`, `$disableErrorLogging` and `$logQuota`)                     | ❌  | ✅   |
-Logs Quota (per day)                                                                                                 | 0   | 3000  |
-Access to [`$messageContains[]`](./messageContains.md) and [`$alwaysReply`](./alwaysReply.md) callbacks.             | ❌  | ✅   |
-Access to [`$ignoreTriggerCase`](./ignoreTriggerCase.md) and [`$sendNotification`](./sendNotification.md) functions. | ❌  | ✅   | 
-Access to ["Awaited Reactions"](./awaitedReactions.md).                                                              | ❌  | ✅   |
-Access to ["Custom  Images"](./customImage.md).                                                                      | ❌  | ✅   |
-Access to use `$getServerVar[]` in triggers. [(Custom prefixes)](./customPrefixes.md)                                | ❌  | ✅   |
-Access to the "Bot guild (server) list" in the app.                                                                  | ❌  | ✅   |
-Access to the ["Embed builder"](./embedBuilder.md) in the app.                                                       | ❌  | ✅   |
-Sharding.                                                                                                            | ❌  | ✅   |
-Priority bot hosting and startup.                                                                                    | ❌  | ✅   |
-Ad-free hosting time.                                                                                                | ✅  | ✅   |
-Character limit per code.                                                                                            | 65k  | 65k  |
-Variable limit.                                                                                                      | 100  | ∞    |
-Command limit.                                                                                                       | 230  | ∞    |
-Maximum time in the "Time" parameter in  `$replyIn[]`, `$editIn[]`, `$deleteIn[]` and `$editEmbedIn[]` functions.    | 40m  | 120m |
-Server & Global variable value character limit.                                                                      | 499  | 4999 |
-User variable value character limit.                                                                                 | 4999 | 4999 |
-Channel variable value character limit.                                                                              | 499  | 499  |
+| Feature                                                                                                                                                                                     | Without premium | With premium |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|--------------|
+| Access to AI functions. ([`$ai[]`](./ai.md), [`$aiDecide[]`](./aiDecide.md), [`$aiWithCtx[]`](./aiWithCtx.md), [`$aiDecideWithCtx[]`](./aiDecideWithCtx.md) and [`$aiQuota`](./aiQuota.md)) | ❌               | ✅            |
+| AI Tokens (per day)                                                                                                                                                                         | 0               | 10000        |
+| Access to Bot Logs and to Bot Logs functions. (`$log[]`, `$disableErrorLogging` and `$logQuota`)                                                                                            | ❌               | ✅            |
+| Logs Quota (per day)                                                                                                                                                                        | 0               | 3000         |
+| Access to [`$messageContains[]`](./messageContains.md) and [`$alwaysReply`](./alwaysReply.md) callbacks.                                                                                    | ❌               | ✅            |
+| Access to [`$ignoreTriggerCase`](./ignoreTriggerCase.md) and [`$sendNotification`](./sendNotification.md) functions.                                                                        | ❌               | ✅            | 
+| Access to ["Awaited Reactions"](./awaitedReactions.md).                                                                                                                                     | ❌               | ✅            |
+| Access to ["Custom  Images"](./customImage.md).                                                                                                                                             | ❌               | ✅            |
+| Access to use `$getServerVar[]` in triggers. [(Custom prefixes)](./customPrefixes.md)                                                                                                       | ❌               | ✅            |
+| Access to the "Bot guild (server) list" in the app.                                                                                                                                         | ❌               | ✅            |
+| Access to the ["Embed builder"](./embedBuilder.md) in the app.                                                                                                                              | ❌               | ✅            |
+| Sharding.                                                                                                                                                                                   | ❌               | ✅            |
+| Priority bot hosting and startup.                                                                                                                                                           | ❌               | ✅            |
+| Ad-free hosting time.                                                                                                                                                                       | ✅               | ✅            |
+| Character limit per code.                                                                                                                                                                   | 65k             | 65k          |
+| Variable limit.                                                                                                                                                                             | 100             | ∞            |
+| Command limit.                                                                                                                                                                              | 230             | ∞            |
+| Maximum time in the "Time" parameter in  `$replyIn[]`, `$editIn[]`, `$deleteIn[]` and `$editEmbedIn[]` functions.                                                                           | 40m             | 120m         |
+| Server & Global variable value character limit.                                                                                                                                             | 499             | 4999         |
+| User variable value character limit.                                                                                                                                                        | 4999            | 4999         |
+| Channel variable value character limit.                                                                                                                                                     | 499             | 499          |
 
 #### [Discord Server](https://discord.gg/bot-designer-for-discord-official-server-566363823137882154) Perks
 - The premium role. Run `/getPremiumRole`.

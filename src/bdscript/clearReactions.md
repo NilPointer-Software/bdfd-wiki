@@ -47,3 +47,7 @@ $clearReactions[$channelID;$message;✅]
   content: |
     !example 1216863258708021248
 ```
+
+```admonish question title="What is this?"
+How [`$channelID`](./channelID.md) and [`$message`](./message.md) works?
+```

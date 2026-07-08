@@ -1,7 +1,5 @@
 # $removeSplitTextElement
-Removes a certain element from the [`$textSplit[]`](./textSplit.md) values.
-
-> This function is unneeded, if `$textSplit[]` isn't present in the code.
+This function removes an element from the separated text by the specified index.
 
 ## Syntax
 ```
@@ -11,4 +9,29 @@ $removeSplitTextElement[Index]
 ### Parameters
 - `Index` `(Type: Integer || Flag: Required)`: The index of the `$textSplit[]` value to remove.
 
-> For more info, see the [Text Splitting Guide](../guides/general/textSplitting.md).
+## Example
+```
+$nomention
+$textSplit[hello-world-!;-]
+$removeSplitTextElement[3]
+> $joinSplitText[-]
+```
+
+``` discord yaml
+- user_id: 803569638084313098
+  username: RainbowKey
+  color: "#E67E22"
+  content: |
+    !example
+- user_id: 1009018156494368798
+  username: BDFD Support
+  color: "#378afa"
+  bot: true
+  verified: true
+  content: |
+    <discord-quote>hello-world</discord-quote>
+```
+
+```admonish info title="Read more"
+For more information, read the [Text Splitting Guide](../guides/general/textSplitting.md).
+```

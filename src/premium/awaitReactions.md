@@ -49,5 +49,5 @@ How [`$addReactions[]`](../bdscript/addReactions.md) works?
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Awaited Reactions Guide](../premium/awaitedReactions.md).
+For more information, read the [Awaited Reactions Guide](../premium/awaitedReactions.md).
 ```

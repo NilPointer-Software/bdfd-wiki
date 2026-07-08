@@ -122,5 +122,5 @@ $addButton[no;test;Say hello!;primary;no;]
 ```
 
 ```admonish info title="Read more"
-For more information, read the the [Buttons Guide](../guides/general/interactions/buttons/aboutButtons.md).
+For more information, read the [Buttons Guide](../guides/general/interactions/buttons/aboutButtons.md).
 ```

@@ -62,11 +62,11 @@ To create a slash option,
 - Integer - Accepts only integer value input. For example: 3, -70 etc.
 - Number - Accepts only number value input. For example: 5.3, -35, 23 etc.
 - Boolean - Accepts either true or false input.
-- User - It allows to mention any user.
-- Channel - It allows to mention any channel.
-- Role - It allows to mention any role.
-- Mentionable - It allows to mention any user or role.
-- Attachments - It allows to upload attachments.
+- User - It allows you to mention any user.
+- Channel - It allows you to mention any channel.
+- Role - It allows you to mention any role.
+- Mentionable - It allows you to mention any user or role.
+- Attachments - It allows you to upload attachments.
 
 ### Retrieving value from options
 To retrieve a value from an option, use  `$message[<option name>]`.

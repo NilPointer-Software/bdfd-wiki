@@ -3,11 +3,11 @@
   <span id="DeprecatedTag">Deprecated</span>
 </div>
 
+Returns the account creation date of a given user.
+
 ```admonish warning
 As of November 2022, this function has been deprecated in favor of [`$creationDate[]`](./creationDate.md).
 ```
-
-Returns the account creation date of a given user.
 
 ## Syntax
 ```
