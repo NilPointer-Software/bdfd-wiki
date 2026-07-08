@@ -37,14 +37,14 @@ $addReactions[✅;:x:]
   content: |
     Yes or No?
   reactions:
-    - emoji: https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Twemoji12_2705.svg/640px-Twemoji12_2705.svg.png
+    - emoji: https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/2705.png
       name: ":white_check_mark:"
       count: 1
-    - emoji: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Twemoji2_274c.svg/640px-Twemoji2_274c.svg.png
+    - emoji: https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/274c.png
       name: ":x:"
       count: 1
 ```
-\
+
 ### How to get emoji ID?
 
 ```admonish warning
